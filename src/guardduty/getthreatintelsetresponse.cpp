@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetThreatIntelSetResponse
+/*!
+ * \class QtAws::GuardDuty::GetThreatIntelSetResponse
  *
- * @brief  Handles GuardDuty GetThreatIntelSet responses.
+ * \brief The GetThreatIntelSetResponse class encapsulates GuardDuty GetThreatIntelSet responses.
  *
- * @see    GuardDutyClient::getThreatIntelSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getThreatIntelSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetThreatIntelSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetThreatIntelSetRequest * GetThreatIntelSetResponse::request() const
     return static_cast<const GetThreatIntelSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty GetThreatIntelSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetThreatIntelSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetThreatIntelSetResponsePrivate
+ * \class GetThreatIntelSetResponsePrivate
  *
- * @brief  Private implementation for GetThreatIntelSetResponse.
+ * \brief Private implementation for GetThreatIntelSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetThreatIntelSetResponsePrivate object.
@@ -91,7 +94,7 @@ GetThreatIntelSetResponsePrivate::GetThreatIntelSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty GetThreatIntelSetResponse element.
  *
  * @param  xml  XML stream to parse.

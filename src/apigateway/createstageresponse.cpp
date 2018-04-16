@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateStageResponse
+/*!
+ * \class QtAws::APIGateway::CreateStageResponse
  *
- * @brief  Handles APIGateway CreateStage responses.
+ * \brief The CreateStageResponse class encapsulates APIGateway CreateStage responses.
  *
- * @see    APIGatewayClient::createStage
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createStage
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateStageRequest * CreateStageResponse::request() const
     return static_cast<const CreateStageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateStage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateStageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateStageResponsePrivate
+ * \class CreateStageResponsePrivate
  *
- * @brief  Private implementation for CreateStageResponse.
+ * \brief Private implementation for CreateStageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStageResponsePrivate object.
@@ -91,7 +99,7 @@ CreateStageResponsePrivate::CreateStageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateStageResponse element.
  *
  * @param  xml  XML stream to parse.

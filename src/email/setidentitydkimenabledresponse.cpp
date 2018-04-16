@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityDkimEnabledResponse
+/*!
+ * \class QtAws::SES::SetIdentityDkimEnabledResponse
  *
- * @brief  Handles SES SetIdentityDkimEnabled responses.
+ * \brief The SetIdentityDkimEnabledResponse class encapsulates SES SetIdentityDkimEnabled responses.
  *
- * @see    SESClient::setIdentityDkimEnabled
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityDkimEnabled
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityDkimEnabledResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetIdentityDkimEnabledRequest * SetIdentityDkimEnabledResponse::request() 
     return static_cast<const SetIdentityDkimEnabledRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SetIdentityDkimEnabled response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetIdentityDkimEnabledResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetIdentityDkimEnabledResponsePrivate
+ * \class SetIdentityDkimEnabledResponsePrivate
  *
- * @brief  Private implementation for SetIdentityDkimEnabledResponse.
+ * \brief Private implementation for SetIdentityDkimEnabledResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityDkimEnabledResponsePrivate object.
@@ -91,7 +105,7 @@ SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SetIdentityDkimEnabledResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSecurityGroupResponse
+/*!
+ * \class QtAws::EC2::DeleteSecurityGroupResponse
  *
- * @brief  Handles EC2 DeleteSecurityGroup responses.
+ * \brief The DeleteSecurityGroupResponse class encapsulates EC2 DeleteSecurityGroup responses.
  *
- * @see    EC2Client::deleteSecurityGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSecurityGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteSecurityGroupRequest * DeleteSecurityGroupResponse::request() const
     return static_cast<const DeleteSecurityGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteSecurityGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteSecurityGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSecurityGroupResponsePrivate
+ * \class DeleteSecurityGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteSecurityGroupResponse.
+ * \brief Private implementation for DeleteSecurityGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSecurityGroupResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteSecurityGroupResponsePrivate::DeleteSecurityGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteSecurityGroupResponse element.
  *
  * @param  xml  XML stream to parse.

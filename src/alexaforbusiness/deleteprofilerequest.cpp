@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteProfileRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteProfileRequest
  *
- * @brief  Implements AlexaForBusiness DeleteProfile requests.
+ * \brief The DeleteProfileRequest class encapsulates AlexaForBusiness DeleteProfile requests.
  *
- * @see    AlexaForBusinessClient::deleteProfile
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteProfileRequest::DeleteProfileRequest(const DeleteProfileRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteProfileRequest object.
  */
 DeleteProfileRequest::DeleteProfileRequest()
@@ -53,13 +61,16 @@ DeleteProfileRequest::DeleteProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProfileRequest::response(QNetworkReply 
     return new DeleteProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProfileRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProfileRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteProfileRequestPrivate::DeleteProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProfileRequestPrivate object, copying another.

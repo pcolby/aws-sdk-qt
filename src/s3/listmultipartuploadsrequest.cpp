@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListMultipartUploadsRequest
+/*!
+ * \class QtAws::S3::ListMultipartUploadsRequest
  *
- * @brief  Implements S3 ListMultipartUploads requests.
+ * \brief The ListMultipartUploadsRequest class encapsulates S3 ListMultipartUploads requests.
  *
- * @see    S3Client::listMultipartUploads
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listMultipartUploads
  */
 
-/**
+/*!
  * @brief  Constructs a new ListMultipartUploadsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListMultipartUploadsRequest::ListMultipartUploadsRequest(const ListMultipartUplo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListMultipartUploadsRequest object.
  */
 ListMultipartUploadsRequest::ListMultipartUploadsRequest()
@@ -53,13 +56,16 @@ ListMultipartUploadsRequest::ListMultipartUploadsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListMultipartUploadsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListMultipartUploadsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListMultipartUploadsRequest::response(QNetwor
     return new ListMultipartUploadsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListMultipartUploadsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListMultipartUploadsRequest::response(QNetwor
  * @brief  Private implementation for ListMultipartUploadsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMultipartUploadsRequestPrivate object.
@@ -97,7 +103,7 @@ ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMultipartUploadsRequestPrivate object, copying another.

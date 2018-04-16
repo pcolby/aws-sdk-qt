@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetDataflowGraphRequest
+/*!
+ * \class QtAws::Glue::GetDataflowGraphRequest
  *
- * @brief  Implements Glue GetDataflowGraph requests.
+ * \brief The GetDataflowGraphRequest class encapsulates Glue GetDataflowGraph requests.
  *
- * @see    GlueClient::getDataflowGraph
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getDataflowGraph
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataflowGraphRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetDataflowGraphRequest::GetDataflowGraphRequest(const GetDataflowGraphRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDataflowGraphRequest object.
  */
 GetDataflowGraphRequest::GetDataflowGraphRequest()
@@ -53,13 +59,16 @@ GetDataflowGraphRequest::GetDataflowGraphRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDataflowGraphRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDataflowGraphResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkRep
     return new GetDataflowGraphResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDataflowGraphRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkRep
  * @brief  Private implementation for GetDataflowGraphRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataflowGraphRequestPrivate object.
@@ -97,7 +106,7 @@ GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataflowGraphRequestPrivate object, copying another.

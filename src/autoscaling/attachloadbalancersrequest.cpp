@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AttachLoadBalancersRequest
+/*!
+ * \class QtAws::AutoScaling::AttachLoadBalancersRequest
  *
- * @brief  Implements AutoScaling AttachLoadBalancers requests.
+ * \brief The AttachLoadBalancersRequest class encapsulates AutoScaling AttachLoadBalancers requests.
  *
- * @see    AutoScalingClient::attachLoadBalancers
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::attachLoadBalancers
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ AttachLoadBalancersRequest::AttachLoadBalancersRequest(const AttachLoadBalancers
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancersRequest object.
  */
 AttachLoadBalancersRequest::AttachLoadBalancersRequest()
@@ -53,13 +61,16 @@ AttachLoadBalancersRequest::AttachLoadBalancersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachLoadBalancersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachLoadBalancersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancersRequest::response(QNetwork
     return new AttachLoadBalancersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachLoadBalancersRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancersRequest::response(QNetwork
  * @brief  Private implementation for AttachLoadBalancersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancersRequestPrivate object.
@@ -97,7 +108,7 @@ AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancersRequestPrivate object, copying another.

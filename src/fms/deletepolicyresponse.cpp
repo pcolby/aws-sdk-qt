@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  DeletePolicyResponse
+/*!
+ * \class QtAws::FMS::DeletePolicyResponse
  *
- * @brief  Handles FMS DeletePolicy responses.
+ * \brief The DeletePolicyResponse class encapsulates FMS DeletePolicy responses.
  *
- * @see    FMSClient::deletePolicy
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::deletePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeletePolicyRequest * DeletePolicyResponse::request() const
     return static_cast<const DeletePolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS DeletePolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeletePolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePolicyResponsePrivate
+ * \class DeletePolicyResponsePrivate
  *
- * @brief  Private implementation for DeletePolicyResponse.
+ * \brief Private implementation for DeletePolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyResponsePrivate object.
@@ -91,7 +100,7 @@ DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS DeletePolicyResponse element.
  *
  * @param  xml  XML stream to parse.

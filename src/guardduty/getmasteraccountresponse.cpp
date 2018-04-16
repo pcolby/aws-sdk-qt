@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetMasterAccountResponse
+/*!
+ * \class QtAws::GuardDuty::GetMasterAccountResponse
  *
- * @brief  Handles GuardDuty GetMasterAccount responses.
+ * \brief The GetMasterAccountResponse class encapsulates GuardDuty GetMasterAccount responses.
  *
- * @see    GuardDutyClient::getMasterAccount
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getMasterAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMasterAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetMasterAccountRequest * GetMasterAccountResponse::request() const
     return static_cast<const GetMasterAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty GetMasterAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetMasterAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetMasterAccountResponsePrivate
+ * \class GetMasterAccountResponsePrivate
  *
- * @brief  Private implementation for GetMasterAccountResponse.
+ * \brief Private implementation for GetMasterAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMasterAccountResponsePrivate object.
@@ -91,7 +94,7 @@ GetMasterAccountResponsePrivate::GetMasterAccountResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty GetMasterAccountResponse element.
  *
  * @param  xml  XML stream to parse.

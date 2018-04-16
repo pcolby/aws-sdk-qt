@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  UpdateApplicationRequest
+/*!
+ * \class QtAws::ElasticBeanstalk::UpdateApplicationRequest
  *
- * @brief  Implements ElasticBeanstalk UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class encapsulates ElasticBeanstalk UpdateApplication requests.
  *
- * @see    ElasticBeanstalkClient::updateApplication
+ * \ingroup ElasticBeanstalk
+ *
+ *  <fullname>AWS Elastic Beanstalk</fullname>
+ * 
+ *  AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
+ *  on the Amazon Web Services
+ * 
+ *  cloud>
+ * 
+ *  For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
+ *  Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
+ *  href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
+ *  To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
+ *  tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services
+ *
+ * \sa ElasticBeanstalkClient::updateApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ UpdateApplicationRequest::UpdateApplicationRequest(const UpdateApplicationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationRequest object.
  */
 UpdateApplicationRequest::UpdateApplicationRequest()
@@ -53,13 +78,16 @@ UpdateApplicationRequest::UpdateApplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
     return new UpdateApplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApplicationRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateApplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationRequestPrivate object.
@@ -97,7 +125,7 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationRequestPrivate object, copying another.

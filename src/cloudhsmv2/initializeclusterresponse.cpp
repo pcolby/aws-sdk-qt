@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  InitializeClusterResponse
+/*!
+ * \class QtAws::CloudHSMV2::InitializeClusterResponse
  *
- * @brief  Handles CloudHSMV2 InitializeCluster responses.
+ * \brief The InitializeClusterResponse class encapsulates CloudHSMV2 InitializeCluster responses.
  *
- * @see    CloudHSMV2Client::initializeCluster
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::initializeCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new InitializeClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const InitializeClusterRequest * InitializeClusterResponse::request() const
     return static_cast<const InitializeClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSMV2 InitializeCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void InitializeClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  InitializeClusterResponsePrivate
+ * \class InitializeClusterResponsePrivate
  *
- * @brief  Private implementation for InitializeClusterResponse.
+ * \brief Private implementation for InitializeClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitializeClusterResponsePrivate object.
@@ -91,7 +96,7 @@ InitializeClusterResponsePrivate::InitializeClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSMV2 InitializeClusterResponse element.
  *
  * @param  xml  XML stream to parse.

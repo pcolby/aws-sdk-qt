@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ListOperationsRequest
+/*!
+ * \class QtAws::ServiceDiscovery::ListOperationsRequest
  *
- * @brief  Implements ServiceDiscovery ListOperations requests.
+ * \brief The ListOperationsRequest class encapsulates ServiceDiscovery ListOperations requests.
  *
- * @see    ServiceDiscoveryClient::listOperations
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::listOperations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOperationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListOperationsRequest::ListOperationsRequest(const ListOperationsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOperationsRequest object.
  */
 ListOperationsRequest::ListOperationsRequest()
@@ -53,13 +60,16 @@ ListOperationsRequest::ListOperationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOperationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOperationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
     return new ListOperationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOperationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
  * @brief  Private implementation for ListOperationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOperationsRequestPrivate object.
@@ -97,7 +107,7 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOperationsRequestPrivate object, copying another.

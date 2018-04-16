@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetUploadRequest
+/*!
+ * \class QtAws::DeviceFarm::GetUploadRequest
  *
- * @brief  Implements DeviceFarm GetUpload requests.
+ * \brief The GetUploadRequest class encapsulates DeviceFarm GetUpload requests.
  *
- * @see    DeviceFarmClient::getUpload
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetUploadRequest::GetUploadRequest(const GetUploadRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUploadRequest object.
  */
 GetUploadRequest::GetUploadRequest()
@@ -53,13 +58,16 @@ GetUploadRequest::GetUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetUploadRequest::response(QNetworkReply * co
     return new GetUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUploadRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetUploadRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUploadRequestPrivate object.
@@ -97,7 +105,7 @@ GetUploadRequestPrivate::GetUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUploadRequestPrivate object, copying another.

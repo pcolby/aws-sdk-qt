@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetGraphqlApiRequest
+/*!
+ * \class QtAws::AppSync::GetGraphqlApiRequest
  *
- * @brief  Implements AppSync GetGraphqlApi requests.
+ * \brief The GetGraphqlApiRequest class encapsulates AppSync GetGraphqlApi requests.
  *
- * @see    AppSyncClient::getGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGraphqlApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetGraphqlApiRequest::GetGraphqlApiRequest(const GetGraphqlApiRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGraphqlApiRequest object.
  */
 GetGraphqlApiRequest::GetGraphqlApiRequest()
@@ -53,13 +57,16 @@ GetGraphqlApiRequest::GetGraphqlApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGraphqlApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGraphqlApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply 
     return new GetGraphqlApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGraphqlApiRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply 
  * @brief  Private implementation for GetGraphqlApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGraphqlApiRequestPrivate object.
@@ -97,7 +104,7 @@ GetGraphqlApiRequestPrivate::GetGraphqlApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGraphqlApiRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  PutLifecycleHookResponse
+/*!
+ * \class QtAws::AutoScaling::PutLifecycleHookResponse
  *
- * @brief  Handles AutoScaling PutLifecycleHook responses.
+ * \brief The PutLifecycleHookResponse class encapsulates AutoScaling PutLifecycleHook responses.
  *
- * @see    AutoScalingClient::putLifecycleHook
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::putLifecycleHook
  */
 
-/**
+/*!
  * @brief  Constructs a new PutLifecycleHookResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const PutLifecycleHookRequest * PutLifecycleHookResponse::request() const
     return static_cast<const PutLifecycleHookRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling PutLifecycleHook response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void PutLifecycleHookResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutLifecycleHookResponsePrivate
+ * \class PutLifecycleHookResponsePrivate
  *
- * @brief  Private implementation for PutLifecycleHookResponse.
+ * \brief Private implementation for PutLifecycleHookResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutLifecycleHookResponsePrivate object.
@@ -91,7 +99,7 @@ PutLifecycleHookResponsePrivate::PutLifecycleHookResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling PutLifecycleHookResponse element.
  *
  * @param  xml  XML stream to parse.

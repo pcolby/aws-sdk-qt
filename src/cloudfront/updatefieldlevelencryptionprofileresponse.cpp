@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateFieldLevelEncryptionProfileResponse
+/*!
+ * \class QtAws::CloudFront::UpdateFieldLevelEncryptionProfileResponse
  *
- * @brief  Handles CloudFront UpdateFieldLevelEncryptionProfile responses.
+ * \brief The UpdateFieldLevelEncryptionProfileResponse class encapsulates CloudFront UpdateFieldLevelEncryptionProfile responses.
  *
- * @see    CloudFrontClient::updateFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFieldLevelEncryptionProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateFieldLevelEncryptionProfileRequest * UpdateFieldLevelEncryptionProfi
     return static_cast<const UpdateFieldLevelEncryptionProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront UpdateFieldLevelEncryptionProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateFieldLevelEncryptionProfileResponsePrivate
+ * \class UpdateFieldLevelEncryptionProfileResponsePrivate
  *
- * @brief  Private implementation for UpdateFieldLevelEncryptionProfileResponse.
+ * \brief Private implementation for UpdateFieldLevelEncryptionProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFieldLevelEncryptionProfileResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateFieldLevelEncryptionProfileResponsePrivate::UpdateFieldLevelEncryptionProf
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront UpdateFieldLevelEncryptionProfileResponse element.
  *
  * @param  xml  XML stream to parse.

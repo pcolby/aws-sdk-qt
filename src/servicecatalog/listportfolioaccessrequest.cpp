@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListPortfolioAccessRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListPortfolioAccessRequest
  *
- * @brief  Implements ServiceCatalog ListPortfolioAccess requests.
+ * \brief The ListPortfolioAccessRequest class encapsulates ServiceCatalog ListPortfolioAccess requests.
  *
- * @see    ServiceCatalogClient::listPortfolioAccess
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listPortfolioAccess
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPortfolioAccessRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListPortfolioAccessRequest::ListPortfolioAccessRequest(const ListPortfolioAccess
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPortfolioAccessRequest object.
  */
 ListPortfolioAccessRequest::ListPortfolioAccessRequest()
@@ -53,13 +62,16 @@ ListPortfolioAccessRequest::ListPortfolioAccessRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPortfolioAccessRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPortfolioAccessResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetwork
     return new ListPortfolioAccessResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPortfolioAccessRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetwork
  * @brief  Private implementation for ListPortfolioAccessRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPortfolioAccessRequestPrivate object.
@@ -97,7 +109,7 @@ ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPortfolioAccessRequestPrivate object, copying another.

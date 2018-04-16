@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  UpdateProjectResponse
+/*!
+ * \class QtAws::Mobile::UpdateProjectResponse
  *
- * @brief  Handles Mobile UpdateProject responses.
+ * \brief The UpdateProjectResponse class encapsulates Mobile UpdateProject responses.
  *
- * @see    MobileClient::updateProject
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::updateProject
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
     return static_cast<const UpdateProjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile UpdateProject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateProjectResponsePrivate
+ * \class UpdateProjectResponsePrivate
  *
- * @brief  Private implementation for UpdateProjectResponse.
+ * \brief Private implementation for UpdateProjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProjectResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile UpdateProjectResponse element.
  *
  * @param  xml  XML stream to parse.

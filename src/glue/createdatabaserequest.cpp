@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateDatabaseRequest
+/*!
+ * \class QtAws::Glue::CreateDatabaseRequest
  *
- * @brief  Implements Glue CreateDatabase requests.
+ * \brief The CreateDatabaseRequest class encapsulates Glue CreateDatabase requests.
  *
- * @see    GlueClient::createDatabase
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createDatabase
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDatabaseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateDatabaseRequest::CreateDatabaseRequest(const CreateDatabaseRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDatabaseRequest object.
  */
 CreateDatabaseRequest::CreateDatabaseRequest()
@@ -53,13 +59,16 @@ CreateDatabaseRequest::CreateDatabaseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDatabaseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDatabaseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply
     return new CreateDatabaseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDatabaseRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateDatabaseRequest::response(QNetworkReply
  * @brief  Private implementation for CreateDatabaseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDatabaseRequestPrivate object.
@@ -97,7 +106,7 @@ CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDatabaseRequestPrivate object, copying another.

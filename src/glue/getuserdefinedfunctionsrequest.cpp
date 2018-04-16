@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetUserDefinedFunctionsRequest
+/*!
+ * \class QtAws::Glue::GetUserDefinedFunctionsRequest
  *
- * @brief  Implements Glue GetUserDefinedFunctions requests.
+ * \brief The GetUserDefinedFunctionsRequest class encapsulates Glue GetUserDefinedFunctions requests.
  *
- * @see    GlueClient::getUserDefinedFunctions
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getUserDefinedFunctions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUserDefinedFunctionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetUserDefinedFunctionsRequest::GetUserDefinedFunctionsRequest(const GetUserDefi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUserDefinedFunctionsRequest object.
  */
 GetUserDefinedFunctionsRequest::GetUserDefinedFunctionsRequest()
@@ -53,13 +59,16 @@ GetUserDefinedFunctionsRequest::GetUserDefinedFunctionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUserDefinedFunctionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUserDefinedFunctionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetUserDefinedFunctionsRequest::response(QNet
     return new GetUserDefinedFunctionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUserDefinedFunctionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetUserDefinedFunctionsRequest::response(QNet
  * @brief  Private implementation for GetUserDefinedFunctionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserDefinedFunctionsRequestPrivate object.
@@ -97,7 +106,7 @@ GetUserDefinedFunctionsRequestPrivate::GetUserDefinedFunctionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserDefinedFunctionsRequestPrivate object, copying another.

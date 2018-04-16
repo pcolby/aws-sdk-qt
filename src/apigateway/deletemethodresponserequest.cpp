@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteMethodResponseRequest
+/*!
+ * \class QtAws::APIGateway::DeleteMethodResponseRequest
  *
- * @brief  Implements APIGateway DeleteMethodResponse requests.
+ * \brief The DeleteMethodResponseRequest class encapsulates APIGateway DeleteMethodResponse requests.
  *
- * @see    APIGatewayClient::deleteMethodResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteMethodResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMethodResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteMethodResponseRequest::DeleteMethodResponseRequest(const DeleteMethodRespo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteMethodResponseRequest object.
  */
 DeleteMethodResponseRequest::DeleteMethodResponseRequest()
@@ -53,13 +61,16 @@ DeleteMethodResponseRequest::DeleteMethodResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteMethodResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteMethodResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodResponseRequest::response(QNetwor
     return new DeleteMethodResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteMethodResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodResponseRequest::response(QNetwor
  * @brief  Private implementation for DeleteMethodResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMethodResponseRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteMethodResponseRequestPrivate::DeleteMethodResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMethodResponseRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminSetUserMFAPreferenceResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserMFAPreferenceResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminSetUserMFAPreference responses.
+ * \brief The AdminSetUserMFAPreferenceResponse class encapsulates CognitoIdentityProvider AdminSetUserMFAPreference responses.
  *
- * @see    CognitoIdentityProviderClient::adminSetUserMFAPreference
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminSetUserMFAPreference
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminSetUserMFAPreferenceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminSetUserMFAPreferenceRequest * AdminSetUserMFAPreferenceResponse::requ
     return static_cast<const AdminSetUserMFAPreferenceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminSetUserMFAPreference response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminSetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminSetUserMFAPreferenceResponsePrivate
+ * \class AdminSetUserMFAPreferenceResponsePrivate
  *
- * @brief  Private implementation for AdminSetUserMFAPreferenceResponse.
+ * \brief Private implementation for AdminSetUserMFAPreferenceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminSetUserMFAPreferenceResponsePrivate object.
@@ -91,7 +104,7 @@ AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminSetUserMFAPreferenceResponse element.
  *
  * @param  xml  XML stream to parse.

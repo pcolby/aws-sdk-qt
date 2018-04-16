@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DeleteApplicationReferenceDataSourceRequest
+/*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationReferenceDataSourceRequest
  *
- * @brief  Implements KinesisAnalytics DeleteApplicationReferenceDataSource requests.
+ * \brief The DeleteApplicationReferenceDataSourceRequest class encapsulates KinesisAnalytics DeleteApplicationReferenceDataSource requests.
  *
- * @see    KinesisAnalyticsClient::deleteApplicationReferenceDataSource
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::deleteApplicationReferenceDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequest object.
  */
 DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourceRequest()
@@ -53,13 +56,16 @@ DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourc
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApplicationReferenceDataSourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApplicationReferenceDataSourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::
     return new DeleteApplicationReferenceDataSourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApplicationReferenceDataSourceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::
  * @brief  Private implementation for DeleteApplicationReferenceDataSourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDa
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequestPrivate object, copying another.

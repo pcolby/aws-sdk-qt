@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteRateBasedRuleRequest
+/*!
+ * \class QtAws::WAFRegional::DeleteRateBasedRuleRequest
  *
- * @brief  Implements WAFRegional DeleteRateBasedRule requests.
+ * \brief The DeleteRateBasedRuleRequest class encapsulates WAFRegional DeleteRateBasedRule requests.
  *
- * @see    WAFRegionalClient::deleteRateBasedRule
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteRateBasedRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest(const DeleteRateBasedRule
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRateBasedRuleRequest object.
  */
 DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest()
@@ -53,13 +63,16 @@ DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRateBasedRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRateBasedRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
     return new DeleteRateBasedRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRateBasedRuleRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
  * @brief  Private implementation for DeleteRateBasedRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRateBasedRuleRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRateBasedRuleRequestPrivate object, copying another.

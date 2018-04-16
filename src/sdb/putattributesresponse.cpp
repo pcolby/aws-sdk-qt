@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  PutAttributesResponse
+/*!
+ * \class QtAws::SimpleDB::PutAttributesResponse
  *
- * @brief  Handles SimpleDB PutAttributes responses.
+ * \brief The PutAttributesResponse class encapsulates SimpleDB PutAttributes responses.
  *
- * @see    SimpleDBClient::putAttributes
+ * \ingroup SimpleDB
+ *
+ *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
+ *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
+ *  the freedom to focus on application development.
+ * 
+ *  A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often
+ *  requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema,
+ *  automatically indexing your data and providing a simple API for storage and access. This approach eliminates the
+ *  administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this
+ *  functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.
+ * 
+ *  </p
+ * 
+ *  Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information.
+ *
+ * \sa SimpleDBClient::putAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new PutAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const PutAttributesRequest * PutAttributesResponse::request() const
     return static_cast<const PutAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SimpleDB PutAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void PutAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutAttributesResponsePrivate
+ * \class PutAttributesResponsePrivate
  *
- * @brief  Private implementation for PutAttributesResponse.
+ * \brief Private implementation for PutAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutAttributesResponsePrivate object.
@@ -91,7 +107,7 @@ PutAttributesResponsePrivate::PutAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SimpleDB PutAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

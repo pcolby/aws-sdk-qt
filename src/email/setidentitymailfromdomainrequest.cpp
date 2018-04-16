@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityMailFromDomainRequest
+/*!
+ * \class QtAws::SES::SetIdentityMailFromDomainRequest
  *
- * @brief  Implements SES SetIdentityMailFromDomain requests.
+ * \brief The SetIdentityMailFromDomainRequest class encapsulates SES SetIdentityMailFromDomain requests.
  *
- * @see    SESClient::setIdentityMailFromDomain
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityMailFromDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityMailFromDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SetIdentityMailFromDomainRequest::SetIdentityMailFromDomainRequest(const SetIden
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityMailFromDomainRequest object.
  */
 SetIdentityMailFromDomainRequest::SetIdentityMailFromDomainRequest()
@@ -53,13 +67,16 @@ SetIdentityMailFromDomainRequest::SetIdentityMailFromDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetIdentityMailFromDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetIdentityMailFromDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityMailFromDomainRequest::response(QN
     return new SetIdentityMailFromDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetIdentityMailFromDomainRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityMailFromDomainRequest::response(QN
  * @brief  Private implementation for SetIdentityMailFromDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityMailFromDomainRequestPrivate object.
@@ -97,7 +114,7 @@ SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityMailFromDomainRequestPrivate object, copying another.

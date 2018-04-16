@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  CreateCollectionResponse
+/*!
+ * \class QtAws::Rekognition::CreateCollectionResponse
  *
- * @brief  Handles Rekognition CreateCollection responses.
+ * \brief The CreateCollectionResponse class encapsulates Rekognition CreateCollection responses.
  *
- * @see    RekognitionClient::createCollection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::createCollection
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCollectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateCollectionRequest * CreateCollectionResponse::request() const
     return static_cast<const CreateCollectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition CreateCollection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateCollectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCollectionResponsePrivate
+ * \class CreateCollectionResponsePrivate
  *
- * @brief  Private implementation for CreateCollectionResponse.
+ * \brief Private implementation for CreateCollectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCollectionResponsePrivate object.
@@ -91,7 +95,7 @@ CreateCollectionResponsePrivate::CreateCollectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition CreateCollectionResponse element.
  *
  * @param  xml  XML stream to parse.

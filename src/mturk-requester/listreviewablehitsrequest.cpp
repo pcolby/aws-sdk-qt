@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListReviewableHITsRequest
+/*!
+ * \class QtAws::MTurk::ListReviewableHITsRequest
  *
- * @brief  Implements MTurk ListReviewableHITs requests.
+ * \brief The ListReviewableHITsRequest class encapsulates MTurk ListReviewableHITs requests.
  *
- * @see    MTurkClient::listReviewableHITs
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listReviewableHITs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListReviewableHITsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListReviewableHITsRequest::ListReviewableHITsRequest(const ListReviewableHITsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListReviewableHITsRequest object.
  */
 ListReviewableHITsRequest::ListReviewableHITsRequest()
@@ -53,13 +56,16 @@ ListReviewableHITsRequest::ListReviewableHITsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListReviewableHITsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListReviewableHITsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkR
     return new ListReviewableHITsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListReviewableHITsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkR
  * @brief  Private implementation for ListReviewableHITsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReviewableHITsRequestPrivate object.
@@ -97,7 +103,7 @@ ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReviewableHITsRequestPrivate object, copying another.

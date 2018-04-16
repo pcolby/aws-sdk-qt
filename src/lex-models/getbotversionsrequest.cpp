@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotVersionsRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotVersionsRequest
  *
- * @brief  Implements LexModelBuildingService GetBotVersions requests.
+ * \brief The GetBotVersionsRequest class encapsulates LexModelBuildingService GetBotVersions requests.
  *
- * @see    LexModelBuildingServiceClient::getBotVersions
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBotVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBotVersionsRequest::GetBotVersionsRequest(const GetBotVersionsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBotVersionsRequest object.
  */
 GetBotVersionsRequest::GetBotVersionsRequest()
@@ -53,13 +60,16 @@ GetBotVersionsRequest::GetBotVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBotVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBotVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply
     return new GetBotVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBotVersionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply
  * @brief  Private implementation for GetBotVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotVersionsRequestPrivate object.
@@ -97,7 +107,7 @@ GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotVersionsRequestPrivate object, copying another.

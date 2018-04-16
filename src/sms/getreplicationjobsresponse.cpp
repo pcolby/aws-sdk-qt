@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetReplicationJobsResponse
+/*!
+ * \class QtAws::SMS::GetReplicationJobsResponse
  *
- * @brief  Handles SMS GetReplicationJobs responses.
+ * \brief The GetReplicationJobsResponse class encapsulates SMS GetReplicationJobs responses.
  *
- * @see    SMSClient::getReplicationJobs
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getReplicationJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReplicationJobsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetReplicationJobsRequest * GetReplicationJobsResponse::request() const
     return static_cast<const GetReplicationJobsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS GetReplicationJobs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetReplicationJobsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetReplicationJobsResponsePrivate
+ * \class GetReplicationJobsResponsePrivate
  *
- * @brief  Private implementation for GetReplicationJobsResponse.
+ * \brief Private implementation for GetReplicationJobsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReplicationJobsResponsePrivate object.
@@ -91,7 +94,7 @@ GetReplicationJobsResponsePrivate::GetReplicationJobsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS GetReplicationJobsResponse element.
  *
  * @param  xml  XML stream to parse.

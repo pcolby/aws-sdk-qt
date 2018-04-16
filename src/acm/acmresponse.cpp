@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ACMResponse
+/*!
+ * \class QtAws::ACM::ACMResponse
  *
- * @brief  Handles ACM ACM responses.
+ * \brief The ACMResponse class is the base class for all ACM responses.
  *
- * @see    ACMClient::aCM
+ * \ingroup ACM
  */
 
-/**
+/*!
  * @brief  Constructs a new ACMResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ACMResponse::ACMResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ACMResponse object.
@@ -63,7 +63,7 @@ ACMResponse::ACMResponse(ACMResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ACMResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ACMResponsePrivate
@@ -92,7 +92,7 @@ void ACMResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ACMResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ACMResponsePrivate object.

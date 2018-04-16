@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteConstraintRequest
+/*!
+ * \class QtAws::ServiceCatalog::DeleteConstraintRequest
  *
- * @brief  Implements ServiceCatalog DeleteConstraint requests.
+ * \brief The DeleteConstraintRequest class encapsulates ServiceCatalog DeleteConstraint requests.
  *
- * @see    ServiceCatalogClient::deleteConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConstraintRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteConstraintRequest::DeleteConstraintRequest(const DeleteConstraintRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteConstraintRequest object.
  */
 DeleteConstraintRequest::DeleteConstraintRequest()
@@ -53,13 +62,16 @@ DeleteConstraintRequest::DeleteConstraintRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteConstraintRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteConstraintResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkRep
     return new DeleteConstraintResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteConstraintRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteConstraintRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConstraintRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConstraintRequestPrivate object, copying another.

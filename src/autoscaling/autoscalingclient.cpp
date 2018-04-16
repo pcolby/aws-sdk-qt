@@ -122,28 +122,36 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::AutoScaling
+ * \brief The QtAws::AutoScaling contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AutoScalingClient
+/*!
+ * \class QtAws::AutoScaling::AutoScalingClient
  *
- * @brief  Client for Auto Scaling
+ * \brief The AutoScalingClient class provides access the Auto Scaling service.
  *
- * <fullname>Amazon EC2 Auto Scaling</fullname>
+ * \ingroup AutoScaling
  *
- * Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
- * schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
- * Load Balancing
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
  */
 
-/**
- * @brief  Constructs a new AutoScalingClient object.
+/*!
+ * \brief Constructs a AutoScalingClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AutoScalingClient::AutoScalingClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -162,21 +170,16 @@ AutoScalingClient::AutoScalingClient(
     d->serviceName = QStringLiteral("autoscaling");
 }
 
-/**
- * @brief  Constructs a new AutoScalingClient object.
+/*!
+ * \overload AutoScalingClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AutoScalingClient::AutoScalingClient(
     const QUrl &endpoint,
@@ -195,7 +198,7 @@ AutoScalingClient::AutoScalingClient(
     d->serviceName = QStringLiteral("autoscaling");
 }
 
-/**
+/*!
  * Attaches one or more EC2 instances to the specified Auto Scaling
  *
  * group>
@@ -227,7 +230,7 @@ AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstanc
     return qobject_cast<AttachInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches one or more target groups to the specified Auto Scaling
  *
  * group>
@@ -252,7 +255,7 @@ AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTa
     return qobject_cast<AttachLoadBalancerTargetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches one or more Classic Load Balancers to the specified Auto Scaling
  *
  * group>
@@ -281,7 +284,7 @@ AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const Attac
     return qobject_cast<AttachLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Completes the lifecycle action for the specified token or instance with the specified
  *
  * result>
@@ -327,7 +330,7 @@ CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(con
     return qobject_cast<CompleteLifecycleActionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Auto Scaling group with the specified name and
  *
  * attributes>
@@ -353,7 +356,7 @@ CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const
     return qobject_cast<CreateAutoScalingGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a launch
  *
  * configuration>
@@ -380,7 +383,7 @@ CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration
     return qobject_cast<CreateLaunchConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates tags for the specified Auto Scaling
  *
  * group>
@@ -405,7 +408,7 @@ CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateO
     return qobject_cast<CreateOrUpdateTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Auto Scaling
  *
  * group>
@@ -439,7 +442,7 @@ DeleteAutoScalingGroupResponse * AutoScalingClient::deleteAutoScalingGroup(const
     return qobject_cast<DeleteAutoScalingGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified launch
  *
  * configuration>
@@ -458,7 +461,7 @@ DeleteLaunchConfigurationResponse * AutoScalingClient::deleteLaunchConfiguration
     return qobject_cast<DeleteLaunchConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified lifecycle
  *
  * hook>
@@ -477,7 +480,7 @@ DeleteLifecycleHookResponse * AutoScalingClient::deleteLifecycleHook(const Delet
     return qobject_cast<DeleteLifecycleHookResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to Auto Scaling.
@@ -491,7 +494,7 @@ DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationC
     return qobject_cast<DeleteNotificationConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Auto Scaling
  *
  * policy>
@@ -510,7 +513,7 @@ DeletePolicyResponse * AutoScalingClient::deletePolicy(const DeletePolicyRequest
     return qobject_cast<DeletePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified scheduled
  *
  * @param  request Request to send to Auto Scaling.
@@ -524,7 +527,7 @@ DeleteScheduledActionResponse * AutoScalingClient::deleteScheduledAction(const D
     return qobject_cast<DeleteScheduledActionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to Auto Scaling.
@@ -538,7 +541,7 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the current Auto Scaling resource limits for your AWS
  *
  * account>
@@ -558,7 +561,7 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
     return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the policy adjustment types for use with
  *
  * @param  request Request to send to Auto Scaling.
@@ -572,7 +575,7 @@ DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
     return qobject_cast<DescribeAdjustmentTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -586,7 +589,7 @@ DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups
     return qobject_cast<DescribeAutoScalingGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -600,7 +603,7 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
     return qobject_cast<DescribeAutoScalingInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the notification types that are supported by Auto
  *
  * @param  request Request to send to Auto Scaling.
@@ -614,7 +617,7 @@ DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoSc
     return qobject_cast<DescribeAutoScalingNotificationTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more launch
  *
  * @param  request Request to send to Auto Scaling.
@@ -628,7 +631,7 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
     return qobject_cast<DescribeLaunchConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the available types of lifecycle
  *
  * @param  request Request to send to Auto Scaling.
@@ -642,7 +645,7 @@ DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTyp
     return qobject_cast<DescribeLifecycleHookTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the lifecycle hooks for the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -656,7 +659,7 @@ DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const
     return qobject_cast<DescribeLifecycleHooksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the target groups for the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -670,7 +673,7 @@ DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalanc
     return qobject_cast<DescribeLoadBalancerTargetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the load balancers for the specified Auto Scaling
  *
  * group>
@@ -689,7 +692,7 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
     return qobject_cast<DescribeLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the available CloudWatch metrics for Auto
  *
  * Scaling>
@@ -708,7 +711,7 @@ DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollect
     return qobject_cast<DescribeMetricCollectionTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the notification actions associated with the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -722,7 +725,7 @@ DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotifica
     return qobject_cast<DescribeNotificationConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the policies for the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -736,7 +739,7 @@ DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePol
     return qobject_cast<DescribePoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more scaling activities for the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -750,7 +753,7 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
     return qobject_cast<DescribeScalingActivitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the scaling process types for use with <a>ResumeProcesses</a> and
  *
  * @param  request Request to send to Auto Scaling.
@@ -764,7 +767,7 @@ DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessT
     return qobject_cast<DescribeScalingProcessTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the actions scheduled for your Auto Scaling group that haven't run. To describe the actions that have already
  * run, use
  *
@@ -779,7 +782,7 @@ DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(c
     return qobject_cast<DescribeScheduledActionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified
  *
  * tags>
@@ -804,7 +807,7 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the termination policies supported by Auto
  *
  * @param  request Request to send to Auto Scaling.
@@ -818,7 +821,7 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
     return qobject_cast<DescribeTerminationPolicyTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more instances from the specified Auto Scaling
  *
  * group>
@@ -852,7 +855,7 @@ DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstanc
     return qobject_cast<DetachInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches one or more target groups from the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -866,7 +869,7 @@ DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTa
     return qobject_cast<DetachLoadBalancerTargetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches one or more Classic Load Balancers from the specified Auto Scaling
  *
  * group>
@@ -891,7 +894,7 @@ DetachLoadBalancersResponse * AutoScalingClient::detachLoadBalancers(const Detac
     return qobject_cast<DetachLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables group metrics for the specified Auto Scaling
  *
  * @param  request Request to send to Auto Scaling.
@@ -905,7 +908,7 @@ DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(c
     return qobject_cast<DisableMetricsCollectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables group metrics for the specified Auto Scaling group. For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html">Monitoring Your Auto Scaling
  * Groups and Instances</a> in the <i>Auto Scaling User
@@ -921,7 +924,7 @@ EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(con
     return qobject_cast<EnableMetricsCollectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Moves the specified instances into the standby
  *
  * state>
@@ -941,7 +944,7 @@ EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest
     return qobject_cast<EnterStandbyResponse *>(send(request));
 }
 
-/**
+/*!
  * Executes the specified
  *
  * @param  request Request to send to Auto Scaling.
@@ -955,7 +958,7 @@ ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequ
     return qobject_cast<ExecutePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Moves the specified instances out of the standby
  *
  * state>
@@ -975,7 +978,7 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
     return qobject_cast<ExitStandbyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a lifecycle hook for the specified Auto Scaling
  *
  * Group>
@@ -1032,7 +1035,7 @@ PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycl
     return qobject_cast<PutLifecycleHookResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures an Auto Scaling group to send notifications when specified events take place. Subscribers to the specified
  * topic can have messages delivered to an endpoint such as a web server or an email
  *
@@ -1057,7 +1060,7 @@ PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfigu
     return qobject_cast<PutNotificationConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a policy for an Auto Scaling group. To update an existing policy, use the existing policy name and
  * set the parameters you want to change. Any existing parameter not changed in an update to an existing policy is not
  * changed in this update
@@ -1079,7 +1082,7 @@ PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingP
     return qobject_cast<PutScalingPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a scheduled scaling action for an Auto Scaling group. When updating a scheduled scaling action, if
  * you leave a parameter unspecified, the corresponding value remains
  *
@@ -1099,7 +1102,7 @@ PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGro
     return qobject_cast<PutScheduledUpdateGroupActionResponse *>(send(request));
 }
 
-/**
+/*!
  * Records a heartbeat for the lifecycle action associated with the specified token or instance. This extends the timeout
  * by the length of time defined using
  *
@@ -1146,7 +1149,7 @@ RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActio
     return qobject_cast<RecordLifecycleActionHeartbeatResponse *>(send(request));
 }
 
-/**
+/*!
  * Resumes the specified suspended Auto Scaling processes, or all suspended process, for the specified Auto Scaling
  *
  * group>
@@ -1166,7 +1169,7 @@ ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcess
     return qobject_cast<ResumeProcessesResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the size of the specified Auto Scaling
  *
  * group>
@@ -1186,7 +1189,7 @@ SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesi
     return qobject_cast<SetDesiredCapacityResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the health status of the specified
  *
  * instance>
@@ -1205,7 +1208,7 @@ SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstan
     return qobject_cast<SetInstanceHealthResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the instance protection settings of the specified
  *
  * instances>
@@ -1225,7 +1228,7 @@ SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const S
     return qobject_cast<SetInstanceProtectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Suspends the specified Auto Scaling processes, or all processes, for the specified Auto Scaling
  *
  * group>
@@ -1254,7 +1257,7 @@ SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProc
     return qobject_cast<SuspendProcessesResponse *>(send(request));
 }
 
-/**
+/*!
  * Terminates the specified instance and optionally adjusts the desired group
  *
  * size>
@@ -1272,7 +1275,7 @@ TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstan
     return qobject_cast<TerminateInstanceInAutoScalingGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the configuration for the specified Auto Scaling
  *
  * group>
@@ -1317,7 +1320,7 @@ UpdateAutoScalingGroupResponse * AutoScalingClient::updateAutoScalingGroup(const
     return qobject_cast<UpdateAutoScalingGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AutoScalingClientPrivate
@@ -1325,7 +1328,7 @@ UpdateAutoScalingGroupResponse * AutoScalingClient::updateAutoScalingGroup(const
  * @brief  Private implementation for AutoScalingClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AutoScalingClientPrivate object.

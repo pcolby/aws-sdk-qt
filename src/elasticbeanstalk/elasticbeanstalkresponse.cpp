@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  ElasticBeanstalkResponse
+/*!
+ * \class QtAws::ElasticBeanstalk::ElasticBeanstalkResponse
  *
- * @brief  Handles ElasticBeanstalk ElasticBeanstalk responses.
+ * \brief The ElasticBeanstalkResponse class is the base class for all ElasticBeanstalk responses.
  *
- * @see    ElasticBeanstalkClient::elasticBeanstalk
+ * \ingroup ElasticBeanstalk
  */
 
-/**
+/*!
  * @brief  Constructs a new ElasticBeanstalkResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticBeanstalkResponse object.
@@ -63,7 +63,7 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(ElasticBeanstalkResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticBeanstalkResponsePrivate
@@ -92,7 +92,7 @@ void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ElasticBeanstalkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticBeanstalkResponsePrivate object.

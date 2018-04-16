@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminListUserAuthEventsRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminListUserAuthEvents requests.
+ * \brief The AdminListUserAuthEventsRequest class encapsulates CognitoIdentityProvider AdminListUserAuthEvents requests.
  *
- * @see    CognitoIdentityProviderClient::adminListUserAuthEvents
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminListUserAuthEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminListUserAuthEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest(const AdminListUs
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminListUserAuthEventsRequest object.
  */
 AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest()
@@ -53,13 +66,16 @@ AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminListUserAuthEventsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminListUserAuthEventsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNet
     return new AdminListUserAuthEventsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminListUserAuthEventsRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNet
  * @brief  Private implementation for AdminListUserAuthEventsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListUserAuthEventsRequestPrivate object.
@@ -97,7 +113,7 @@ AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListUserAuthEventsRequestPrivate object, copying another.

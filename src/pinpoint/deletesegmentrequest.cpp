@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteSegmentRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteSegmentRequest
  *
- * @brief  Implements Pinpoint DeleteSegment requests.
+ * \brief The DeleteSegmentRequest class encapsulates Pinpoint DeleteSegment requests.
  *
- * @see    PinpointClient::deleteSegment
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteSegment
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSegmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteSegmentRequest::DeleteSegmentRequest(const DeleteSegmentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSegmentRequest object.
  */
 DeleteSegmentRequest::DeleteSegmentRequest()
@@ -53,13 +56,16 @@ DeleteSegmentRequest::DeleteSegmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSegmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSegmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply 
     return new DeleteSegmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSegmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteSegmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSegmentRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSegmentRequestPrivate object, copying another.

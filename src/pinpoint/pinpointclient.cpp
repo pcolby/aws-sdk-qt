@@ -155,23 +155,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Pinpoint
+ * \brief The QtAws::Pinpoint contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  PinpointClient
+/*!
+ * \class QtAws::Pinpoint::PinpointClient
  *
- * @brief  Client for Amazon Pinpoint
+ * \brief The PinpointClient class provides access the Amazon Pinpoint service.
+ *
+ * \ingroup Pinpoint
  *
  */
 
-/**
- * @brief  Constructs a new PinpointClient object.
+/*!
+ * \brief Constructs a PinpointClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 PinpointClient::PinpointClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -190,21 +198,16 @@ PinpointClient::PinpointClient(
     d->serviceName = QStringLiteral("mobiletargeting");
 }
 
-/**
- * @brief  Constructs a new PinpointClient object.
+/*!
+ * \overload PinpointClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 PinpointClient::PinpointClient(
     const QUrl &endpoint,
@@ -223,7 +226,7 @@ PinpointClient::PinpointClient(
     d->serviceName = QStringLiteral("mobiletargeting");
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -236,7 +239,7 @@ CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
     return qobject_cast<CreateAppResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -249,7 +252,7 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
     return qobject_cast<CreateCampaignResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -262,7 +265,7 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
     return qobject_cast<CreateExportJobResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -275,7 +278,7 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
     return qobject_cast<CreateImportJobResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -288,7 +291,7 @@ CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest
     return qobject_cast<CreateSegmentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -301,7 +304,7 @@ DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChann
     return qobject_cast<DeleteAdmChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -314,7 +317,7 @@ DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsCh
     return qobject_cast<DeleteApnsChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -327,7 +330,7 @@ DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(cons
     return qobject_cast<DeleteApnsSandboxChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -340,7 +343,7 @@ DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const Dele
     return qobject_cast<DeleteApnsVoipChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -353,7 +356,7 @@ DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChan
     return qobject_cast<DeleteApnsVoipSandboxChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -366,7 +369,7 @@ DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
     return qobject_cast<DeleteAppResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -379,7 +382,7 @@ DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaid
     return qobject_cast<DeleteBaiduChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -392,7 +395,7 @@ DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequ
     return qobject_cast<DeleteCampaignResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -405,7 +408,7 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
     return qobject_cast<DeleteEmailChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -418,7 +421,7 @@ DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequ
     return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -431,7 +434,7 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
     return qobject_cast<DeleteEventStreamResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -444,7 +447,7 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
     return qobject_cast<DeleteGcmChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -457,7 +460,7 @@ DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest
     return qobject_cast<DeleteSegmentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -470,7 +473,7 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
     return qobject_cast<DeleteSmsChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -483,7 +486,7 @@ GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest
     return qobject_cast<GetAdmChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -496,7 +499,7 @@ GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequ
     return qobject_cast<GetApnsChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -509,7 +512,7 @@ GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetA
     return qobject_cast<GetApnsSandboxChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -522,7 +525,7 @@ GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoi
     return qobject_cast<GetApnsVoipChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -535,7 +538,7 @@ GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(co
     return qobject_cast<GetApnsVoipSandboxChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -548,7 +551,7 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
     return qobject_cast<GetAppResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -561,7 +564,7 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
     return qobject_cast<GetApplicationSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -574,7 +577,7 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
     return qobject_cast<GetAppsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -587,7 +590,7 @@ GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelR
     return qobject_cast<GetBaiduChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -600,7 +603,7 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
     return qobject_cast<GetCampaignResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -613,7 +616,7 @@ GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetC
     return qobject_cast<GetCampaignActivitiesResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -626,7 +629,7 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
     return qobject_cast<GetCampaignVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -639,7 +642,7 @@ GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampa
     return qobject_cast<GetCampaignVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -652,7 +655,7 @@ GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &r
     return qobject_cast<GetCampaignsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -665,7 +668,7 @@ GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelR
     return qobject_cast<GetEmailChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -678,7 +681,7 @@ GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &requ
     return qobject_cast<GetEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -691,7 +694,7 @@ GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequ
     return qobject_cast<GetEventStreamResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -704,7 +707,7 @@ GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &r
     return qobject_cast<GetExportJobResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -717,7 +720,7 @@ GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest
     return qobject_cast<GetExportJobsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -730,7 +733,7 @@ GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest
     return qobject_cast<GetGcmChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -743,7 +746,7 @@ GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &r
     return qobject_cast<GetImportJobResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -756,7 +759,7 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
     return qobject_cast<GetImportJobsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -769,7 +772,7 @@ GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request
     return qobject_cast<GetSegmentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -782,7 +785,7 @@ GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSeg
     return qobject_cast<GetSegmentExportJobsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -795,7 +798,7 @@ GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSeg
     return qobject_cast<GetSegmentImportJobsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -808,7 +811,7 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
     return qobject_cast<GetSegmentVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -821,7 +824,7 @@ GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegment
     return qobject_cast<GetSegmentVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -834,7 +837,7 @@ GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &requ
     return qobject_cast<GetSegmentsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -847,7 +850,7 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
     return qobject_cast<GetSmsChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -860,7 +863,7 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
     return qobject_cast<PutEventStreamResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -873,7 +876,7 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
     return qobject_cast<SendMessagesResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -886,7 +889,7 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
     return qobject_cast<SendUsersMessagesResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -899,7 +902,7 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
     return qobject_cast<UpdateAdmChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -912,7 +915,7 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
     return qobject_cast<UpdateApnsChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -925,7 +928,7 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
     return qobject_cast<UpdateApnsSandboxChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -938,7 +941,7 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
     return qobject_cast<UpdateApnsVoipChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -951,7 +954,7 @@ UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChan
     return qobject_cast<UpdateApnsVoipSandboxChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -964,7 +967,7 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
     return qobject_cast<UpdateApplicationSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -977,7 +980,7 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
     return qobject_cast<UpdateBaiduChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -990,7 +993,7 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
     return qobject_cast<UpdateCampaignResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -1003,7 +1006,7 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
     return qobject_cast<UpdateEmailChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -1016,7 +1019,7 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
     return qobject_cast<UpdateEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -1029,7 +1032,7 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
     return qobject_cast<UpdateEndpointsBatchResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -1042,7 +1045,7 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
     return qobject_cast<UpdateGcmChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -1055,7 +1058,7 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
     return qobject_cast<UpdateSegmentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Pinpoint.
  *
@@ -1068,7 +1071,7 @@ UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChann
     return qobject_cast<UpdateSmsChannelResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PinpointClientPrivate
@@ -1076,7 +1079,7 @@ UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChann
  * @brief  Private implementation for PinpointClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PinpointClientPrivate object.

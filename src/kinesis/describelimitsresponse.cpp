@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DescribeLimitsResponse
+/*!
+ * \class QtAws::Kinesis::DescribeLimitsResponse
  *
- * @brief  Handles Kinesis DescribeLimits responses.
+ * \brief The DescribeLimitsResponse class encapsulates Kinesis DescribeLimits responses.
  *
- * @see    KinesisClient::describeLimits
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::describeLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLimitsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeLimitsRequest * DescribeLimitsResponse::request() const
     return static_cast<const DescribeLimitsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis DescribeLimits response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeLimitsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeLimitsResponsePrivate
+ * \class DescribeLimitsResponsePrivate
  *
- * @brief  Private implementation for DescribeLimitsResponse.
+ * \brief Private implementation for DescribeLimitsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLimitsResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis DescribeLimitsResponse element.
  *
  * @param  xml  XML stream to parse.

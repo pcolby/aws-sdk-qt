@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateDeviceDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::UpdateDeviceDefinitionResponse
  *
- * @brief  Handles Greengrass UpdateDeviceDefinition responses.
+ * \brief The UpdateDeviceDefinitionResponse class encapsulates Greengrass UpdateDeviceDefinition responses.
  *
- * @see    GreengrassClient::updateDeviceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateDeviceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeviceDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateDeviceDefinitionRequest * UpdateDeviceDefinitionResponse::request() 
     return static_cast<const UpdateDeviceDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass UpdateDeviceDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateDeviceDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDeviceDefinitionResponsePrivate
+ * \class UpdateDeviceDefinitionResponsePrivate
  *
- * @brief  Private implementation for UpdateDeviceDefinitionResponse.
+ * \brief Private implementation for UpdateDeviceDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeviceDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateDeviceDefinitionResponsePrivate::UpdateDeviceDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass UpdateDeviceDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

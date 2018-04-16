@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  RotateChannelCredentialsRequest
+/*!
+ * \class QtAws::MediaPackage::RotateChannelCredentialsRequest
  *
- * @brief  Implements MediaPackage RotateChannelCredentials requests.
+ * \brief The RotateChannelCredentialsRequest class encapsulates MediaPackage RotateChannelCredentials requests.
  *
- * @see    MediaPackageClient::rotateChannelCredentials
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::rotateChannelCredentials
  */
 
-/**
+/*!
  * @brief  Constructs a new RotateChannelCredentialsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ RotateChannelCredentialsRequest::RotateChannelCredentialsRequest(const RotateCha
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RotateChannelCredentialsRequest object.
  */
 RotateChannelCredentialsRequest::RotateChannelCredentialsRequest()
@@ -53,13 +56,16 @@ RotateChannelCredentialsRequest::RotateChannelCredentialsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RotateChannelCredentialsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RotateChannelCredentialsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * RotateChannelCredentialsRequest::response(QNe
     return new RotateChannelCredentialsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RotateChannelCredentialsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * RotateChannelCredentialsRequest::response(QNe
  * @brief  Private implementation for RotateChannelCredentialsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RotateChannelCredentialsRequestPrivate object.
@@ -97,7 +103,7 @@ RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RotateChannelCredentialsRequestPrivate object, copying another.

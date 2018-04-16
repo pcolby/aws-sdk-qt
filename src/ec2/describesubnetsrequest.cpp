@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSubnetsRequest
+/*!
+ * \class QtAws::EC2::DescribeSubnetsRequest
  *
- * @brief  Implements EC2 DescribeSubnets requests.
+ * \brief The DescribeSubnetsRequest class encapsulates EC2 DescribeSubnets requests.
  *
- * @see    EC2Client::describeSubnets
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSubnets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubnetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSubnetsRequest::DescribeSubnetsRequest(const DescribeSubnetsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubnetsRequest object.
  */
 DescribeSubnetsRequest::DescribeSubnetsRequest()
@@ -53,13 +60,16 @@ DescribeSubnetsRequest::DescribeSubnetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSubnetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSubnetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkRepl
     return new DescribeSubnetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSubnetsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeSubnetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubnetsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubnetsRequestPrivate object, copying another.

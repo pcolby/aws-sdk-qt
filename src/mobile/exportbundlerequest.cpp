@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  ExportBundleRequest
+/*!
+ * \class QtAws::Mobile::ExportBundleRequest
  *
- * @brief  Implements Mobile ExportBundle requests.
+ * \brief The ExportBundleRequest class encapsulates Mobile ExportBundle requests.
  *
- * @see    MobileClient::exportBundle
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::exportBundle
  */
 
-/**
+/*!
  * @brief  Constructs a new ExportBundleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ExportBundleRequest::ExportBundleRequest(const ExportBundleRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ExportBundleRequest object.
  */
 ExportBundleRequest::ExportBundleRequest()
@@ -53,13 +59,16 @@ ExportBundleRequest::ExportBundleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ExportBundleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ExportBundleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ExportBundleRequest::response(QNetworkReply *
     return new ExportBundleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ExportBundleRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ExportBundleRequest::response(QNetworkReply *
  * @brief  Private implementation for ExportBundleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExportBundleRequestPrivate object.
@@ -97,7 +106,7 @@ ExportBundleRequestPrivate::ExportBundleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExportBundleRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddInstanceFleetRequest
+/*!
+ * \class QtAws::EMR::AddInstanceFleetRequest
  *
- * @brief  Implements EMR AddInstanceFleet requests.
+ * \brief The AddInstanceFleetRequest class encapsulates EMR AddInstanceFleet requests.
  *
- * @see    EMRClient::addInstanceFleet
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addInstanceFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new AddInstanceFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AddInstanceFleetRequest::AddInstanceFleetRequest(const AddInstanceFleetRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddInstanceFleetRequest object.
  */
 AddInstanceFleetRequest::AddInstanceFleetRequest()
@@ -53,13 +59,16 @@ AddInstanceFleetRequest::AddInstanceFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddInstanceFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddInstanceFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AddInstanceFleetRequest::response(QNetworkRep
     return new AddInstanceFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddInstanceFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AddInstanceFleetRequest::response(QNetworkRep
  * @brief  Private implementation for AddInstanceFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddInstanceFleetRequestPrivate object.
@@ -97,7 +106,7 @@ AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddInstanceFleetRequestPrivate object, copying another.

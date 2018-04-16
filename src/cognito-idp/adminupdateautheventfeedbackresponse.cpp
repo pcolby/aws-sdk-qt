@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUpdateAuthEventFeedbackResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateAuthEventFeedbackResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminUpdateAuthEventFeedback responses.
+ * \brief The AdminUpdateAuthEventFeedbackResponse class encapsulates CognitoIdentityProvider AdminUpdateAuthEventFeedback responses.
  *
- * @see    CognitoIdentityProviderClient::adminUpdateAuthEventFeedback
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUpdateAuthEventFeedback
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateAuthEventFeedbackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminUpdateAuthEventFeedbackRequest * AdminUpdateAuthEventFeedbackResponse
     return static_cast<const AdminUpdateAuthEventFeedbackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminUpdateAuthEventFeedback response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminUpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminUpdateAuthEventFeedbackResponsePrivate
+ * \class AdminUpdateAuthEventFeedbackResponsePrivate
  *
- * @brief  Private implementation for AdminUpdateAuthEventFeedbackResponse.
+ * \brief Private implementation for AdminUpdateAuthEventFeedbackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateAuthEventFeedbackResponsePrivate object.
@@ -91,7 +104,7 @@ AdminUpdateAuthEventFeedbackResponsePrivate::AdminUpdateAuthEventFeedbackRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminUpdateAuthEventFeedbackResponse element.
  *
  * @param  xml  XML stream to parse.

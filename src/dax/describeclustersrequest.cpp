@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeClustersRequest
+/*!
+ * \class QtAws::DAX::DescribeClustersRequest
  *
- * @brief  Implements DAX DescribeClusters requests.
+ * \brief The DescribeClustersRequest class encapsulates DAX DescribeClusters requests.
  *
- * @see    DAXClient::describeClusters
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeClusters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClustersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
@@ -53,13 +60,16 @@ DescribeClustersRequest::DescribeClustersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeClustersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeClustersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
     return new DescribeClustersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeClustersRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeClustersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClustersRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClustersRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteDetectorResponse
+/*!
+ * \class QtAws::GuardDuty::DeleteDetectorResponse
  *
- * @brief  Handles GuardDuty DeleteDetector responses.
+ * \brief The DeleteDetectorResponse class encapsulates GuardDuty DeleteDetector responses.
  *
- * @see    GuardDutyClient::deleteDetector
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteDetector
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDetectorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteDetectorRequest * DeleteDetectorResponse::request() const
     return static_cast<const DeleteDetectorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DeleteDetector response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteDetectorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDetectorResponsePrivate
+ * \class DeleteDetectorResponsePrivate
  *
- * @brief  Private implementation for DeleteDetectorResponse.
+ * \brief Private implementation for DeleteDetectorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDetectorResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteDetectorResponsePrivate::DeleteDetectorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DeleteDetectorResponse element.
  *
  * @param  xml  XML stream to parse.

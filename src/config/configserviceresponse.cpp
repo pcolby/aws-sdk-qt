@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ConfigService {
 
-/**
- * @class  ConfigServiceResponse
+/*!
+ * \class QtAws::ConfigService::ConfigServiceResponse
  *
- * @brief  Handles ConfigService ConfigService responses.
+ * \brief The ConfigServiceResponse class is the base class for all ConfigService responses.
  *
- * @see    ConfigServiceClient::configService
+ * \ingroup ConfigService
  */
 
-/**
+/*!
  * @brief  Constructs a new ConfigServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ConfigServiceResponse::ConfigServiceResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfigServiceResponse object.
@@ -63,7 +63,7 @@ ConfigServiceResponse::ConfigServiceResponse(ConfigServiceResponsePrivate * cons
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ConfigServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConfigServiceResponsePrivate
@@ -92,7 +92,7 @@ void ConfigServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ConfigServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfigServiceResponsePrivate object.

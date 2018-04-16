@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  PutTraceSegmentsRequest
+/*!
+ * \class QtAws::XRay::PutTraceSegmentsRequest
  *
- * @brief  Implements XRay PutTraceSegments requests.
+ * \brief The PutTraceSegmentsRequest class encapsulates XRay PutTraceSegments requests.
  *
- * @see    XRayClient::putTraceSegments
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::putTraceSegments
  */
 
-/**
+/*!
  * @brief  Constructs a new PutTraceSegmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ PutTraceSegmentsRequest::PutTraceSegmentsRequest(const PutTraceSegmentsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutTraceSegmentsRequest object.
  */
 PutTraceSegmentsRequest::PutTraceSegmentsRequest()
@@ -53,13 +57,16 @@ PutTraceSegmentsRequest::PutTraceSegmentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutTraceSegmentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutTraceSegmentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * PutTraceSegmentsRequest::response(QNetworkRep
     return new PutTraceSegmentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutTraceSegmentsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * PutTraceSegmentsRequest::response(QNetworkRep
  * @brief  Private implementation for PutTraceSegmentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutTraceSegmentsRequestPrivate object.
@@ -97,7 +104,7 @@ PutTraceSegmentsRequestPrivate::PutTraceSegmentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutTraceSegmentsRequestPrivate object, copying another.

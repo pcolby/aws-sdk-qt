@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DeleteConditionalForwarderRequest
+/*!
+ * \class QtAws::DirectoryService::DeleteConditionalForwarderRequest
  *
- * @brief  Implements DirectoryService DeleteConditionalForwarder requests.
+ * \brief The DeleteConditionalForwarderRequest class encapsulates DirectoryService DeleteConditionalForwarder requests.
  *
- * @see    DirectoryServiceClient::deleteConditionalForwarder
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::deleteConditionalForwarder
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConditionalForwarderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DeleteConditionalForwarderRequest::DeleteConditionalForwarderRequest(const Delet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteConditionalForwarderRequest object.
  */
 DeleteConditionalForwarderRequest::DeleteConditionalForwarderRequest()
@@ -53,13 +70,16 @@ DeleteConditionalForwarderRequest::DeleteConditionalForwarderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteConditionalForwarderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteConditionalForwarderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(Q
     return new DeleteConditionalForwarderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteConditionalForwarderRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(Q
  * @brief  Private implementation for DeleteConditionalForwarderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConditionalForwarderRequestPrivate object.
@@ -97,7 +117,7 @@ DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConditionalForwarderRequestPrivate object, copying another.

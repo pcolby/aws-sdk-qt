@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ListTagsForCertificateResponse
+/*!
+ * \class QtAws::ACM::ListTagsForCertificateResponse
  *
- * @brief  Handles ACM ListTagsForCertificate responses.
+ * \brief The ListTagsForCertificateResponse class encapsulates ACM ListTagsForCertificate responses.
  *
- * @see    ACMClient::listTagsForCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::listTagsForCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ListTagsForCertificateRequest * ListTagsForCertificateResponse::request() 
     return static_cast<const ListTagsForCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM ListTagsForCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ListTagsForCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForCertificateResponsePrivate
+ * \class ListTagsForCertificateResponsePrivate
  *
- * @brief  Private implementation for ListTagsForCertificateResponse.
+ * \brief Private implementation for ListTagsForCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM ListTagsForCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

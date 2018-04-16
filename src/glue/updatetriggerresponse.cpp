@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateTriggerResponse
+/*!
+ * \class QtAws::Glue::UpdateTriggerResponse
  *
- * @brief  Handles Glue UpdateTrigger responses.
+ * \brief The UpdateTriggerResponse class encapsulates Glue UpdateTrigger responses.
  *
- * @see    GlueClient::updateTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTriggerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateTriggerRequest * UpdateTriggerResponse::request() const
     return static_cast<const UpdateTriggerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateTrigger response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateTriggerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTriggerResponsePrivate
+ * \class UpdateTriggerResponsePrivate
  *
- * @brief  Private implementation for UpdateTriggerResponse.
+ * \brief Private implementation for UpdateTriggerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTriggerResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateTriggerResponsePrivate::UpdateTriggerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateTriggerResponse element.
  *
  * @param  xml  XML stream to parse.

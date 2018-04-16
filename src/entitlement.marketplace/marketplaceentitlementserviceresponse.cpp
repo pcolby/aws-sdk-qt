@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
-/**
- * @class  MarketplaceEntitlementServiceResponse
+/*!
+ * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceResponse
  *
- * @brief  Handles MarketplaceEntitlementService MarketplaceEntitlementService responses.
+ * \brief The MarketplaceEntitlementServiceResponse class is the base class for all MarketplaceEntitlementService responses.
  *
- * @see    MarketplaceEntitlementServiceClient::marketplaceEntitlementService
+ * \ingroup MarketplaceEntitlementService
  */
 
-/**
+/*!
  * @brief  Constructs a new MarketplaceEntitlementServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QOb
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceEntitlementServiceResponse object.
@@ -63,7 +63,7 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(Mar
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MarketplaceEntitlementServiceResponsePrivate
@@ -92,7 +92,7 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MarketplaceEntitlementServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceEntitlementServiceResponsePrivate object.

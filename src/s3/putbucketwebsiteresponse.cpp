@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketWebsiteResponse
+/*!
+ * \class QtAws::S3::PutBucketWebsiteResponse
  *
- * @brief  Handles S3 PutBucketWebsite responses.
+ * \brief The PutBucketWebsiteResponse class encapsulates S3 PutBucketWebsite responses.
  *
- * @see    S3Client::putBucketWebsite
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketWebsite
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketWebsiteResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketWebsiteRequest * PutBucketWebsiteResponse::request() const
     return static_cast<const PutBucketWebsiteRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketWebsite response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketWebsiteResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketWebsiteResponsePrivate
+ * \class PutBucketWebsiteResponsePrivate
  *
- * @brief  Private implementation for PutBucketWebsiteResponse.
+ * \brief Private implementation for PutBucketWebsiteResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketWebsiteResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketWebsiteResponse element.
  *
  * @param  xml  XML stream to parse.

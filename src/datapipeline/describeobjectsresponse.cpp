@@ -27,15 +27,36 @@
 namespace QtAws {
 namespace DataPipeline {
 
-/**
- * @class  DescribeObjectsResponse
+/*!
+ * \class QtAws::DataPipeline::DescribeObjectsResponse
  *
- * @brief  Handles DataPipeline DescribeObjects responses.
+ * \brief The DescribeObjectsResponse class encapsulates DataPipeline DescribeObjects responses.
  *
- * @see    DataPipelineClient::describeObjects
+ * \ingroup DataPipeline
+ *
+ *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
+ *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
+ * 
+ *  data>
+ * 
+ *  AWS Data Pipeline provides a JAR implementation of a task runner called AWS Data Pipeline Task Runner. AWS Data Pipeline
+ *  Task Runner provides logic for common data management scenarios, such as performing database queries and running data
+ *  analysis using Amazon Elastic MapReduce (Amazon EMR). You can use AWS Data Pipeline Task Runner as your task runner, or
+ *  you can write your own task runner to provide custom data
+ * 
+ *  management>
+ * 
+ *  AWS Data Pipeline implements two main sets of functionality. Use the first set to create a pipeline and define data
+ *  sources, schedules, dependencies, and the transforms to be performed on the data. Use the second set in your task runner
+ *  application to receive the next task ready for processing. The logic for performing the task, such as querying the data,
+ *  running data analysis, or converting the data from one format to another, is contained within the task runner. The task
+ *  runner performs the task assigned to it by the web service, reporting progress to the web service as it does so. When
+ *  the task is done, the task runner reports the final success or failure of the task to the web
+ *
+ * \sa DataPipelineClient::describeObjects
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeObjectsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +79,7 @@ const DescribeObjectsRequest * DescribeObjectsResponse::request() const
     return static_cast<const DescribeObjectsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DataPipeline DescribeObjects response.
  *
  * @param  response  Response to parse.
@@ -70,15 +91,15 @@ void DescribeObjectsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeObjectsResponsePrivate
+ * \class DescribeObjectsResponsePrivate
  *
- * @brief  Private implementation for DescribeObjectsResponse.
+ * \brief Private implementation for DescribeObjectsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeObjectsResponsePrivate object.
@@ -91,7 +112,7 @@ DescribeObjectsResponsePrivate::DescribeObjectsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DataPipeline DescribeObjectsResponse element.
  *
  * @param  xml  XML stream to parse.

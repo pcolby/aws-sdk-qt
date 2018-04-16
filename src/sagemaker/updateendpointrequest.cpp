@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateEndpointRequest
+/*!
+ * \class QtAws::SageMaker::UpdateEndpointRequest
  *
- * @brief  Implements SageMaker UpdateEndpoint requests.
+ * \brief The UpdateEndpointRequest class encapsulates SageMaker UpdateEndpoint requests.
  *
- * @see    SageMakerClient::updateEndpoint
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateEndpointRequest::UpdateEndpointRequest(const UpdateEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointRequest object.
  */
 UpdateEndpointRequest::UpdateEndpointRequest()
@@ -53,13 +56,16 @@ UpdateEndpointRequest::UpdateEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
     return new UpdateEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointRequestPrivate object, copying another.

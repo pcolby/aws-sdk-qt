@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  SetTopicAttributesResponse
+/*!
+ * \class QtAws::SNS::SetTopicAttributesResponse
  *
- * @brief  Handles SNS SetTopicAttributes responses.
+ * \brief The SetTopicAttributesResponse class encapsulates SNS SetTopicAttributes responses.
  *
- * @see    SNSClient::setTopicAttributes
+ * \ingroup SNS
+ *
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
+ *
+ * \sa SNSClient::setTopicAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new SetTopicAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const SetTopicAttributesRequest * SetTopicAttributesResponse::request() const
     return static_cast<const SetTopicAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SNS SetTopicAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void SetTopicAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetTopicAttributesResponsePrivate
+ * \class SetTopicAttributesResponsePrivate
  *
- * @brief  Private implementation for SetTopicAttributesResponse.
+ * \brief Private implementation for SetTopicAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTopicAttributesResponsePrivate object.
@@ -91,7 +108,7 @@ SetTopicAttributesResponsePrivate::SetTopicAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SNS SetTopicAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

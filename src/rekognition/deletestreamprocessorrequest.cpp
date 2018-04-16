@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DeleteStreamProcessorRequest
+/*!
+ * \class QtAws::Rekognition::DeleteStreamProcessorRequest
  *
- * @brief  Implements Rekognition DeleteStreamProcessor requests.
+ * \brief The DeleteStreamProcessorRequest class encapsulates Rekognition DeleteStreamProcessor requests.
  *
- * @see    RekognitionClient::deleteStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::deleteStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamProcessorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteStreamProcessorRequest::DeleteStreamProcessorRequest(const DeleteStreamPro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamProcessorRequest object.
  */
 DeleteStreamProcessorRequest::DeleteStreamProcessorRequest()
@@ -53,13 +57,16 @@ DeleteStreamProcessorRequest::DeleteStreamProcessorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteStreamProcessorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteStreamProcessorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetwo
     return new DeleteStreamProcessorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteStreamProcessorRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetwo
  * @brief  Private implementation for DeleteStreamProcessorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamProcessorRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamProcessorRequestPrivate object, copying another.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CodeDeploy {
 
-/**
- * @class  CodeDeployResponse
+/*!
+ * \class QtAws::CodeDeploy::CodeDeployResponse
  *
- * @brief  Handles CodeDeploy CodeDeploy responses.
+ * \brief The CodeDeployResponse class is the base class for all CodeDeploy responses.
  *
- * @see    CodeDeployClient::codeDeploy
+ * \ingroup CodeDeploy
  */
 
-/**
+/*!
  * @brief  Constructs a new CodeDeployResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CodeDeployResponse::CodeDeployResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeDeployResponse object.
@@ -63,7 +63,7 @@ CodeDeployResponse::CodeDeployResponse(CodeDeployResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CodeDeployResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodeDeployResponsePrivate
@@ -92,7 +92,7 @@ void CodeDeployResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CodeDeployResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeDeployResponsePrivate object.

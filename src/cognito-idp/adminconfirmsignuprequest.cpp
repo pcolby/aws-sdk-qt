@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminConfirmSignUpRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminConfirmSignUpRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminConfirmSignUp requests.
+ * \brief The AdminConfirmSignUpRequest class encapsulates CognitoIdentityProvider AdminConfirmSignUp requests.
  *
- * @see    CognitoIdentityProviderClient::adminConfirmSignUp
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminConfirmSignUp
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminConfirmSignUpRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminConfirmSignUpRequest::AdminConfirmSignUpRequest(const AdminConfirmSignUpReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminConfirmSignUpRequest object.
  */
 AdminConfirmSignUpRequest::AdminConfirmSignUpRequest()
@@ -53,13 +66,16 @@ AdminConfirmSignUpRequest::AdminConfirmSignUpRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminConfirmSignUpRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminConfirmSignUpResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminConfirmSignUpRequest::response(QNetworkR
     return new AdminConfirmSignUpResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminConfirmSignUpRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminConfirmSignUpRequest::response(QNetworkR
  * @brief  Private implementation for AdminConfirmSignUpRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminConfirmSignUpRequestPrivate object.
@@ -97,7 +113,7 @@ AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminConfirmSignUpRequestPrivate object, copying another.

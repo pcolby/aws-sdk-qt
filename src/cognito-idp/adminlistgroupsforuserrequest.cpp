@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminListGroupsForUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminListGroupsForUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminListGroupsForUser requests.
+ * \brief The AdminListGroupsForUserRequest class encapsulates CognitoIdentityProvider AdminListGroupsForUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminListGroupsForUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminListGroupsForUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminListGroupsForUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminListGroupsForUserRequest::AdminListGroupsForUserRequest(const AdminListGrou
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminListGroupsForUserRequest object.
  */
 AdminListGroupsForUserRequest::AdminListGroupsForUserRequest()
@@ -53,13 +66,16 @@ AdminListGroupsForUserRequest::AdminListGroupsForUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminListGroupsForUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminListGroupsForUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetw
     return new AdminListGroupsForUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminListGroupsForUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetw
  * @brief  Private implementation for AdminListGroupsForUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListGroupsForUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListGroupsForUserRequestPrivate object, copying another.

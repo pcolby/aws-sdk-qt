@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DetachLoadBalancersRequest
+/*!
+ * \class QtAws::AutoScaling::DetachLoadBalancersRequest
  *
- * @brief  Implements AutoScaling DetachLoadBalancers requests.
+ * \brief The DetachLoadBalancersRequest class encapsulates AutoScaling DetachLoadBalancers requests.
  *
- * @see    AutoScalingClient::detachLoadBalancers
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::detachLoadBalancers
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachLoadBalancersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DetachLoadBalancersRequest::DetachLoadBalancersRequest(const DetachLoadBalancers
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachLoadBalancersRequest object.
  */
 DetachLoadBalancersRequest::DetachLoadBalancersRequest()
@@ -53,13 +61,16 @@ DetachLoadBalancersRequest::DetachLoadBalancersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachLoadBalancersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachLoadBalancersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetwork
     return new DetachLoadBalancersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachLoadBalancersRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetwork
  * @brief  Private implementation for DetachLoadBalancersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachLoadBalancersRequestPrivate object.
@@ -97,7 +108,7 @@ DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachLoadBalancersRequestPrivate object, copying another.

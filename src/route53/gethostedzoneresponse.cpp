@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetHostedZoneResponse
+/*!
+ * \class QtAws::Route53::GetHostedZoneResponse
  *
- * @brief  Handles Route53 GetHostedZone responses.
+ * \brief The GetHostedZoneResponse class encapsulates Route53 GetHostedZone responses.
  *
- * @see    Route53Client::getHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHostedZoneResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetHostedZoneRequest * GetHostedZoneResponse::request() const
     return static_cast<const GetHostedZoneRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetHostedZone response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetHostedZoneResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetHostedZoneResponsePrivate
+ * \class GetHostedZoneResponsePrivate
  *
- * @brief  Private implementation for GetHostedZoneResponse.
+ * \brief Private implementation for GetHostedZoneResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostedZoneResponsePrivate object.
@@ -91,7 +94,7 @@ GetHostedZoneResponsePrivate::GetHostedZoneResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetHostedZoneResponse element.
  *
  * @param  xml  XML stream to parse.

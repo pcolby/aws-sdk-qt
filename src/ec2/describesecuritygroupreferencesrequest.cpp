@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSecurityGroupReferencesRequest
+/*!
+ * \class QtAws::EC2::DescribeSecurityGroupReferencesRequest
  *
- * @brief  Implements EC2 DescribeSecurityGroupReferences requests.
+ * \brief The DescribeSecurityGroupReferencesRequest class encapsulates EC2 DescribeSecurityGroupReferences requests.
  *
- * @see    EC2Client::describeSecurityGroupReferences
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSecurityGroupReferences
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSecurityGroupReferencesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSecurityGroupReferencesRequest::DescribeSecurityGroupReferencesRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSecurityGroupReferencesRequest object.
  */
 DescribeSecurityGroupReferencesRequest::DescribeSecurityGroupReferencesRequest()
@@ -53,13 +60,16 @@ DescribeSecurityGroupReferencesRequest::DescribeSecurityGroupReferencesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSecurityGroupReferencesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSecurityGroupReferencesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupReferencesRequest::respo
     return new DescribeSecurityGroupReferencesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSecurityGroupReferencesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupReferencesRequest::respo
  * @brief  Private implementation for DescribeSecurityGroupReferencesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSecurityGroupReferencesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSecurityGroupReferencesRequestPrivate::DescribeSecurityGroupReferencesRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSecurityGroupReferencesRequestPrivate object, copying another.

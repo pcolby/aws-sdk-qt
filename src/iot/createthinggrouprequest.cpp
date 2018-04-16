@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateThingGroupRequest
+/*!
+ * \class QtAws::IoT::CreateThingGroupRequest
  *
- * @brief  Implements IoT CreateThingGroup requests.
+ * \brief The CreateThingGroupRequest class encapsulates IoT CreateThingGroup requests.
  *
- * @see    IoTClient::createThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateThingGroupRequest::CreateThingGroupRequest(const CreateThingGroupRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateThingGroupRequest object.
  */
 CreateThingGroupRequest::CreateThingGroupRequest()
@@ -53,13 +67,16 @@ CreateThingGroupRequest::CreateThingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateThingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateThingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingGroupRequest::response(QNetworkRep
     return new CreateThingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateThingGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingGroupRequest::response(QNetworkRep
  * @brief  Private implementation for CreateThingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingGroupRequestPrivate object.
@@ -97,7 +114,7 @@ CreateThingGroupRequestPrivate::CreateThingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingGroupRequestPrivate object, copying another.

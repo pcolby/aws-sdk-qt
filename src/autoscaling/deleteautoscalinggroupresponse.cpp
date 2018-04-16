@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteAutoScalingGroupResponse
+/*!
+ * \class QtAws::AutoScaling::DeleteAutoScalingGroupResponse
  *
- * @brief  Handles AutoScaling DeleteAutoScalingGroup responses.
+ * \brief The DeleteAutoScalingGroupResponse class encapsulates AutoScaling DeleteAutoScalingGroup responses.
  *
- * @see    AutoScalingClient::deleteAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAutoScalingGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteAutoScalingGroupRequest * DeleteAutoScalingGroupResponse::request() 
     return static_cast<const DeleteAutoScalingGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeleteAutoScalingGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteAutoScalingGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteAutoScalingGroupResponsePrivate
+ * \class DeleteAutoScalingGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteAutoScalingGroupResponse.
+ * \brief Private implementation for DeleteAutoScalingGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAutoScalingGroupResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeleteAutoScalingGroupResponse element.
  *
  * @param  xml  XML stream to parse.

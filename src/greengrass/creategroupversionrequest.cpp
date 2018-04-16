@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateGroupVersionRequest
+/*!
+ * \class QtAws::Greengrass::CreateGroupVersionRequest
  *
- * @brief  Implements Greengrass CreateGroupVersion requests.
+ * \brief The CreateGroupVersionRequest class encapsulates Greengrass CreateGroupVersion requests.
  *
- * @see    GreengrassClient::createGroupVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createGroupVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateGroupVersionRequest::CreateGroupVersionRequest(const CreateGroupVersionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupVersionRequest object.
  */
 CreateGroupVersionRequest::CreateGroupVersionRequest()
@@ -53,13 +59,16 @@ CreateGroupVersionRequest::CreateGroupVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateGroupVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateGroupVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkR
     return new CreateGroupVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateGroupVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupVersionRequest::response(QNetworkR
  * @brief  Private implementation for CreateGroupVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupVersionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateGroupVersionRequestPrivate::CreateGroupVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupVersionRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteQueryLoggingConfigRequest
+/*!
+ * \class QtAws::Route53::DeleteQueryLoggingConfigRequest
  *
- * @brief  Implements Route53 DeleteQueryLoggingConfig requests.
+ * \brief The DeleteQueryLoggingConfigRequest class encapsulates Route53 DeleteQueryLoggingConfig requests.
  *
- * @see    Route53Client::deleteQueryLoggingConfig
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteQueryLoggingConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteQueryLoggingConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteQueryLoggingConfigRequest::DeleteQueryLoggingConfigRequest(const DeleteQue
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteQueryLoggingConfigRequest object.
  */
 DeleteQueryLoggingConfigRequest::DeleteQueryLoggingConfigRequest()
@@ -53,13 +56,16 @@ DeleteQueryLoggingConfigRequest::DeleteQueryLoggingConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteQueryLoggingConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteQueryLoggingConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNe
     return new DeleteQueryLoggingConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteQueryLoggingConfigRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNe
  * @brief  Private implementation for DeleteQueryLoggingConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQueryLoggingConfigRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQueryLoggingConfigRequestPrivate object, copying another.

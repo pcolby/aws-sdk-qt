@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateGroupResponse
+/*!
+ * \class QtAws::Greengrass::UpdateGroupResponse
  *
- * @brief  Handles Greengrass UpdateGroup responses.
+ * \brief The UpdateGroupResponse class encapsulates Greengrass UpdateGroup responses.
  *
- * @see    GreengrassClient::updateGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateGroupRequest * UpdateGroupResponse::request() const
     return static_cast<const UpdateGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass UpdateGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateGroupResponsePrivate
+ * \class UpdateGroupResponsePrivate
  *
- * @brief  Private implementation for UpdateGroupResponse.
+ * \brief Private implementation for UpdateGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass UpdateGroupResponse element.
  *
  * @param  xml  XML stream to parse.

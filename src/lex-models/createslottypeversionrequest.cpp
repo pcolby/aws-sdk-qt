@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  CreateSlotTypeVersionRequest
+/*!
+ * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionRequest
  *
- * @brief  Implements LexModelBuildingService CreateSlotTypeVersion requests.
+ * \brief The CreateSlotTypeVersionRequest class encapsulates LexModelBuildingService CreateSlotTypeVersion requests.
  *
- * @see    LexModelBuildingServiceClient::createSlotTypeVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::createSlotTypeVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSlotTypeVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest(const CreateSlotTypeV
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSlotTypeVersionRequest object.
  */
 CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest()
@@ -53,13 +60,16 @@ CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSlotTypeVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSlotTypeVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetwo
     return new CreateSlotTypeVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSlotTypeVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetwo
  * @brief  Private implementation for CreateSlotTypeVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSlotTypeVersionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSlotTypeVersionRequestPrivate object, copying another.

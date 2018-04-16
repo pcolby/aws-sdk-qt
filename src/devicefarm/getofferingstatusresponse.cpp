@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetOfferingStatusResponse
+/*!
+ * \class QtAws::DeviceFarm::GetOfferingStatusResponse
  *
- * @brief  Handles DeviceFarm GetOfferingStatus responses.
+ * \brief The GetOfferingStatusResponse class encapsulates DeviceFarm GetOfferingStatus responses.
  *
- * @see    DeviceFarmClient::getOfferingStatus
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getOfferingStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOfferingStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetOfferingStatusRequest * GetOfferingStatusResponse::request() const
     return static_cast<const GetOfferingStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm GetOfferingStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetOfferingStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetOfferingStatusResponsePrivate
+ * \class GetOfferingStatusResponsePrivate
  *
- * @brief  Private implementation for GetOfferingStatusResponse.
+ * \brief Private implementation for GetOfferingStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOfferingStatusResponsePrivate object.
@@ -91,7 +96,7 @@ GetOfferingStatusResponsePrivate::GetOfferingStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm GetOfferingStatusResponse element.
  *
  * @param  xml  XML stream to parse.

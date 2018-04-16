@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetAuthorizerRequest
+/*!
+ * \class QtAws::APIGateway::GetAuthorizerRequest
  *
- * @brief  Implements APIGateway GetAuthorizer requests.
+ * \brief The GetAuthorizerRequest class encapsulates APIGateway GetAuthorizer requests.
  *
- * @see    APIGatewayClient::getAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetAuthorizerRequest::GetAuthorizerRequest(const GetAuthorizerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizerRequest object.
  */
 GetAuthorizerRequest::GetAuthorizerRequest()
@@ -53,13 +61,16 @@ GetAuthorizerRequest::GetAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizerRequest::response(QNetworkReply 
     return new GetAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAuthorizerRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizerRequest::response(QNetworkReply 
  * @brief  Private implementation for GetAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizerRequestPrivate object.
@@ -97,7 +108,7 @@ GetAuthorizerRequestPrivate::GetAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizerRequestPrivate object, copying another.

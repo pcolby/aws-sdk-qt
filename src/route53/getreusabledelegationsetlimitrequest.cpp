@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetReusableDelegationSetLimitRequest
+/*!
+ * \class QtAws::Route53::GetReusableDelegationSetLimitRequest
  *
- * @brief  Implements Route53 GetReusableDelegationSetLimit requests.
+ * \brief The GetReusableDelegationSetLimitRequest class encapsulates Route53 GetReusableDelegationSetLimit requests.
  *
- * @see    Route53Client::getReusableDelegationSetLimit
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getReusableDelegationSetLimit
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReusableDelegationSetLimitRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetReusableDelegationSetLimitRequest::GetReusableDelegationSetLimitRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReusableDelegationSetLimitRequest object.
  */
 GetReusableDelegationSetLimitRequest::GetReusableDelegationSetLimitRequest()
@@ -53,13 +56,16 @@ GetReusableDelegationSetLimitRequest::GetReusableDelegationSetLimitRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReusableDelegationSetLimitRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReusableDelegationSetLimitResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::respons
     return new GetReusableDelegationSetLimitResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReusableDelegationSetLimitRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::respons
  * @brief  Private implementation for GetReusableDelegationSetLimitRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReusableDelegationSetLimitRequestPrivate object.
@@ -97,7 +103,7 @@ GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReusableDelegationSetLimitRequestPrivate object, copying another.

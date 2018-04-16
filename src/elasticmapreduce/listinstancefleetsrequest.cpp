@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListInstanceFleetsRequest
+/*!
+ * \class QtAws::EMR::ListInstanceFleetsRequest
  *
- * @brief  Implements EMR ListInstanceFleets requests.
+ * \brief The ListInstanceFleetsRequest class encapsulates EMR ListInstanceFleets requests.
  *
- * @see    EMRClient::listInstanceFleets
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listInstanceFleets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceFleetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListInstanceFleetsRequest::ListInstanceFleetsRequest(const ListInstanceFleetsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceFleetsRequest object.
  */
 ListInstanceFleetsRequest::ListInstanceFleetsRequest()
@@ -53,13 +59,16 @@ ListInstanceFleetsRequest::ListInstanceFleetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInstanceFleetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInstanceFleetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkR
     return new ListInstanceFleetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInstanceFleetsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkR
  * @brief  Private implementation for ListInstanceFleetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceFleetsRequestPrivate object.
@@ -97,7 +106,7 @@ ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceFleetsRequestPrivate object, copying another.

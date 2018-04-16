@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  StartTranscriptionJobResponse
+/*!
+ * \class QtAws::TranscribeService::StartTranscriptionJobResponse
  *
- * @brief  Handles TranscribeService StartTranscriptionJob responses.
+ * \brief The StartTranscriptionJobResponse class encapsulates TranscribeService StartTranscriptionJob responses.
  *
- * @see    TranscribeServiceClient::startTranscriptionJob
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::startTranscriptionJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StartTranscriptionJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartTranscriptionJobRequest * StartTranscriptionJobResponse::request() co
     return static_cast<const StartTranscriptionJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a TranscribeService StartTranscriptionJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartTranscriptionJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartTranscriptionJobResponsePrivate
+ * \class StartTranscriptionJobResponsePrivate
  *
- * @brief  Private implementation for StartTranscriptionJobResponse.
+ * \brief Private implementation for StartTranscriptionJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTranscriptionJobResponsePrivate object.
@@ -91,7 +95,7 @@ StartTranscriptionJobResponsePrivate::StartTranscriptionJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an TranscribeService StartTranscriptionJobResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateAuthEventFeedbackRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateAuthEventFeedback requests.
+ * \brief The UpdateAuthEventFeedbackRequest class encapsulates CognitoIdentityProvider UpdateAuthEventFeedback requests.
  *
- * @see    CognitoIdentityProviderClient::updateAuthEventFeedback
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateAuthEventFeedback
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAuthEventFeedbackRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateAuthEventFeedbackRequest::UpdateAuthEventFeedbackRequest(const UpdateAuthE
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAuthEventFeedbackRequest object.
  */
 UpdateAuthEventFeedbackRequest::UpdateAuthEventFeedbackRequest()
@@ -53,13 +66,16 @@ UpdateAuthEventFeedbackRequest::UpdateAuthEventFeedbackRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAuthEventFeedbackRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAuthEventFeedbackResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNet
     return new UpdateAuthEventFeedbackResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAuthEventFeedbackRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNet
  * @brief  Private implementation for UpdateAuthEventFeedbackRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAuthEventFeedbackRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAuthEventFeedbackRequestPrivate object, copying another.

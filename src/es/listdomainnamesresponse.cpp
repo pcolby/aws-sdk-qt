@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListDomainNamesResponse
+/*!
+ * \class QtAws::ElasticsearchService::ListDomainNamesResponse
  *
- * @brief  Handles ElasticsearchService ListDomainNames responses.
+ * \brief The ListDomainNamesResponse class encapsulates ElasticsearchService ListDomainNames responses.
  *
- * @see    ElasticsearchServiceClient::listDomainNames
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listDomainNames
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDomainNamesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ListDomainNamesRequest * ListDomainNamesResponse::request() const
     return static_cast<const ListDomainNamesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService ListDomainNames response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ListDomainNamesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDomainNamesResponsePrivate
+ * \class ListDomainNamesResponsePrivate
  *
- * @brief  Private implementation for ListDomainNamesResponse.
+ * \brief Private implementation for ListDomainNamesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDomainNamesResponsePrivate object.
@@ -91,7 +103,7 @@ ListDomainNamesResponsePrivate::ListDomainNamesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService ListDomainNamesResponse element.
  *
  * @param  xml  XML stream to parse.

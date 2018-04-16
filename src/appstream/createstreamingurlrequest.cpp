@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateStreamingURLRequest
+/*!
+ * \class QtAws::AppStream::CreateStreamingURLRequest
  *
- * @brief  Implements AppStream CreateStreamingURL requests.
+ * \brief The CreateStreamingURLRequest class encapsulates AppStream CreateStreamingURL requests.
  *
- * @see    AppStreamClient::createStreamingURL
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createStreamingURL
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingURLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateStreamingURLRequest::CreateStreamingURLRequest(const CreateStreamingURLReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingURLRequest object.
  */
 CreateStreamingURLRequest::CreateStreamingURLRequest()
@@ -53,13 +59,16 @@ CreateStreamingURLRequest::CreateStreamingURLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStreamingURLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStreamingURLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkR
     return new CreateStreamingURLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStreamingURLRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkR
  * @brief  Private implementation for CreateStreamingURLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingURLRequestPrivate object.
@@ -97,7 +106,7 @@ CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingURLRequestPrivate object, copying another.

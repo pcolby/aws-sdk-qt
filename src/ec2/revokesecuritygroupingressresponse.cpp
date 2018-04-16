@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RevokeSecurityGroupIngressResponse
+/*!
+ * \class QtAws::EC2::RevokeSecurityGroupIngressResponse
  *
- * @brief  Handles EC2 RevokeSecurityGroupIngress responses.
+ * \brief The RevokeSecurityGroupIngressResponse class encapsulates EC2 RevokeSecurityGroupIngress responses.
  *
- * @see    EC2Client::revokeSecurityGroupIngress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::revokeSecurityGroupIngress
  */
 
-/**
+/*!
  * @brief  Constructs a new RevokeSecurityGroupIngressResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RevokeSecurityGroupIngressRequest * RevokeSecurityGroupIngressResponse::re
     return static_cast<const RevokeSecurityGroupIngressRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RevokeSecurityGroupIngress response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RevokeSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RevokeSecurityGroupIngressResponsePrivate
+ * \class RevokeSecurityGroupIngressResponsePrivate
  *
- * @brief  Private implementation for RevokeSecurityGroupIngressResponse.
+ * \brief Private implementation for RevokeSecurityGroupIngressResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeSecurityGroupIngressResponsePrivate object.
@@ -91,7 +98,7 @@ RevokeSecurityGroupIngressResponsePrivate::RevokeSecurityGroupIngressResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RevokeSecurityGroupIngressResponse element.
  *
  * @param  xml  XML stream to parse.

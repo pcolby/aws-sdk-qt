@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  CreatePresetRequest
+/*!
+ * \class QtAws::MediaConvert::CreatePresetRequest
  *
- * @brief  Implements MediaConvert CreatePreset requests.
+ * \brief The CreatePresetRequest class encapsulates MediaConvert CreatePreset requests.
  *
- * @see    MediaConvertClient::createPreset
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::createPreset
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePresetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreatePresetRequest::CreatePresetRequest(const CreatePresetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePresetRequest object.
  */
 CreatePresetRequest::CreatePresetRequest()
@@ -53,13 +56,16 @@ CreatePresetRequest::CreatePresetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePresetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePresetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply *
     return new CreatePresetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePresetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply *
  * @brief  Private implementation for CreatePresetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePresetRequestPrivate object.
@@ -97,7 +103,7 @@ CreatePresetRequestPrivate::CreatePresetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePresetRequestPrivate object, copying another.

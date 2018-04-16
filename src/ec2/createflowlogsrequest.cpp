@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateFlowLogsRequest
+/*!
+ * \class QtAws::EC2::CreateFlowLogsRequest
  *
- * @brief  Implements EC2 CreateFlowLogs requests.
+ * \brief The CreateFlowLogsRequest class encapsulates EC2 CreateFlowLogs requests.
  *
- * @see    EC2Client::createFlowLogs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createFlowLogs
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFlowLogsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateFlowLogsRequest::CreateFlowLogsRequest(const CreateFlowLogsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFlowLogsRequest object.
  */
 CreateFlowLogsRequest::CreateFlowLogsRequest()
@@ -53,13 +60,16 @@ CreateFlowLogsRequest::CreateFlowLogsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFlowLogsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFlowLogsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply
     return new CreateFlowLogsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFlowLogsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply
  * @brief  Private implementation for CreateFlowLogsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFlowLogsRequestPrivate object.
@@ -97,7 +107,7 @@ CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFlowLogsRequestPrivate object, copying another.

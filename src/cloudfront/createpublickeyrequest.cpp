@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreatePublicKeyRequest
+/*!
+ * \class QtAws::CloudFront::CreatePublicKeyRequest
  *
- * @brief  Implements CloudFront CreatePublicKey requests.
+ * \brief The CreatePublicKeyRequest class encapsulates CloudFront CreatePublicKey requests.
  *
- * @see    CloudFrontClient::createPublicKey
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createPublicKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePublicKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreatePublicKeyRequest::CreatePublicKeyRequest(const CreatePublicKeyRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePublicKeyRequest object.
  */
 CreatePublicKeyRequest::CreatePublicKeyRequest()
@@ -53,13 +61,16 @@ CreatePublicKeyRequest::CreatePublicKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePublicKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePublicKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreatePublicKeyRequest::response(QNetworkRepl
     return new CreatePublicKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePublicKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreatePublicKeyRequest::response(QNetworkRepl
  * @brief  Private implementation for CreatePublicKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePublicKeyRequestPrivate object.
@@ -97,7 +108,7 @@ CreatePublicKeyRequestPrivate::CreatePublicKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePublicKeyRequestPrivate object, copying another.

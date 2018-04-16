@@ -25,15 +25,48 @@
 namespace QtAws {
 namespace MarketplaceMetering {
 
-/**
- * @class  BatchMeterUsageRequest
+/*!
+ * \class QtAws::MarketplaceMetering::BatchMeterUsageRequest
  *
- * @brief  Implements MarketplaceMetering BatchMeterUsage requests.
+ * \brief The BatchMeterUsageRequest class encapsulates MarketplaceMetering BatchMeterUsage requests.
  *
- * @see    MarketplaceMeteringClient::batchMeterUsage
+ * \ingroup MarketplaceMetering
+ *
+ *  <fullname>AWS Marketplace Metering Service</fullname>
+ * 
+ *  This reference provides descriptions of the low-level AWS Marketplace Metering Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace sellers can use this API to submit usage data for custom usage
+ * 
+ *  dimensions>
+ * 
+ *  <b>Submitting Metering Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
+ *  software-as-a-service (SaaS)
+ * 
+ *  application> </li> </ul>
+ * 
+ *  <b>Accepting New Customers</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ *  during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
+ *  resolved through this API to obtain a CustomerIdentifier and Product
+ *
+ * \sa MarketplaceMeteringClient::batchMeterUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchMeterUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +77,7 @@ BatchMeterUsageRequest::BatchMeterUsageRequest(const BatchMeterUsageRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchMeterUsageRequest object.
  */
 BatchMeterUsageRequest::BatchMeterUsageRequest()
@@ -53,13 +86,16 @@ BatchMeterUsageRequest::BatchMeterUsageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchMeterUsageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchMeterUsageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkRepl
     return new BatchMeterUsageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchMeterUsageRequestPrivate
@@ -82,7 +118,7 @@ QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkRepl
  * @brief  Private implementation for BatchMeterUsageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchMeterUsageRequestPrivate object.
@@ -97,7 +133,7 @@ BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchMeterUsageRequestPrivate object, copying another.

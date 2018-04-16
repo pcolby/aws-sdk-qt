@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SignUpResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::SignUpResponse
  *
- * @brief  Handles CognitoIdentityProvider SignUp responses.
+ * \brief The SignUpResponse class encapsulates CognitoIdentityProvider SignUp responses.
  *
- * @see    CognitoIdentityProviderClient::signUp
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::signUp
  */
 
-/**
+/*!
  * @brief  Constructs a new SignUpResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const SignUpRequest * SignUpResponse::request() const
     return static_cast<const SignUpRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider SignUp response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void SignUpResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SignUpResponsePrivate
+ * \class SignUpResponsePrivate
  *
- * @brief  Private implementation for SignUpResponse.
+ * \brief Private implementation for SignUpResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SignUpResponsePrivate object.
@@ -91,7 +104,7 @@ SignUpResponsePrivate::SignUpResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider SignUpResponse element.
  *
  * @param  xml  XML stream to parse.

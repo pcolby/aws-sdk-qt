@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  SelectObjectContentResponse
+/*!
+ * \class QtAws::S3::SelectObjectContentResponse
  *
- * @brief  Handles S3 SelectObjectContent responses.
+ * \brief The SelectObjectContentResponse class encapsulates S3 SelectObjectContent responses.
  *
- * @see    S3Client::selectObjectContent
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::selectObjectContent
  */
 
-/**
+/*!
  * @brief  Constructs a new SelectObjectContentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const SelectObjectContentRequest * SelectObjectContentResponse::request() const
     return static_cast<const SelectObjectContentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 SelectObjectContent response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void SelectObjectContentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SelectObjectContentResponsePrivate
+ * \class SelectObjectContentResponsePrivate
  *
- * @brief  Private implementation for SelectObjectContentResponse.
+ * \brief Private implementation for SelectObjectContentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SelectObjectContentResponsePrivate object.
@@ -91,7 +94,7 @@ SelectObjectContentResponsePrivate::SelectObjectContentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 SelectObjectContentResponse element.
  *
  * @param  xml  XML stream to parse.

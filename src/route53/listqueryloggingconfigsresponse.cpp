@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListQueryLoggingConfigsResponse
+/*!
+ * \class QtAws::Route53::ListQueryLoggingConfigsResponse
  *
- * @brief  Handles Route53 ListQueryLoggingConfigs responses.
+ * \brief The ListQueryLoggingConfigsResponse class encapsulates Route53 ListQueryLoggingConfigs responses.
  *
- * @see    Route53Client::listQueryLoggingConfigs
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listQueryLoggingConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListQueryLoggingConfigsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListQueryLoggingConfigsRequest * ListQueryLoggingConfigsResponse::request(
     return static_cast<const ListQueryLoggingConfigsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ListQueryLoggingConfigs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListQueryLoggingConfigsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListQueryLoggingConfigsResponsePrivate
+ * \class ListQueryLoggingConfigsResponsePrivate
  *
- * @brief  Private implementation for ListQueryLoggingConfigsResponse.
+ * \brief Private implementation for ListQueryLoggingConfigsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQueryLoggingConfigsResponsePrivate object.
@@ -91,7 +94,7 @@ ListQueryLoggingConfigsResponsePrivate::ListQueryLoggingConfigsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ListQueryLoggingConfigsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeTagOptionResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeTagOptionResponse
  *
- * @brief  Handles ServiceCatalog DescribeTagOption responses.
+ * \brief The DescribeTagOptionResponse class encapsulates ServiceCatalog DescribeTagOption responses.
  *
- * @see    ServiceCatalogClient::describeTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagOptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeTagOptionRequest * DescribeTagOptionResponse::request() const
     return static_cast<const DescribeTagOptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeTagOption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeTagOptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeTagOptionResponsePrivate
+ * \class DescribeTagOptionResponsePrivate
  *
- * @brief  Private implementation for DescribeTagOptionResponse.
+ * \brief Private implementation for DescribeTagOptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagOptionResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeTagOptionResponsePrivate::DescribeTagOptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeTagOptionResponse element.
  *
  * @param  xml  XML stream to parse.

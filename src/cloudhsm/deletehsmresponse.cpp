@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DeleteHsmResponse
+/*!
+ * \class QtAws::CloudHSM::DeleteHsmResponse
  *
- * @brief  Handles CloudHSM DeleteHsm responses.
+ * \brief The DeleteHsmResponse class encapsulates CloudHSM DeleteHsm responses.
  *
- * @see    CloudHSMClient::deleteHsm
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::deleteHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHsmResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const DeleteHsmRequest * DeleteHsmResponse::request() const
     return static_cast<const DeleteHsmRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM DeleteHsm response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void DeleteHsmResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteHsmResponsePrivate
+ * \class DeleteHsmResponsePrivate
  *
- * @brief  Private implementation for DeleteHsmResponse.
+ * \brief Private implementation for DeleteHsmResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHsmResponsePrivate object.
@@ -91,7 +106,7 @@ DeleteHsmResponsePrivate::DeleteHsmResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM DeleteHsmResponse element.
  *
  * @param  xml  XML stream to parse.

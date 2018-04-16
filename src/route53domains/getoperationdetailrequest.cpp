@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  GetOperationDetailRequest
+/*!
+ * \class QtAws::Route53Domains::GetOperationDetailRequest
  *
- * @brief  Implements Route53Domains GetOperationDetail requests.
+ * \brief The GetOperationDetailRequest class encapsulates Route53Domains GetOperationDetail requests.
  *
- * @see    Route53DomainsClient::getOperationDetail
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::getOperationDetail
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOperationDetailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetOperationDetailRequest::GetOperationDetailRequest(const GetOperationDetailReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetOperationDetailRequest object.
  */
 GetOperationDetailRequest::GetOperationDetailRequest()
@@ -53,13 +57,16 @@ GetOperationDetailRequest::GetOperationDetailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetOperationDetailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetOperationDetailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationDetailRequest::response(QNetworkR
     return new GetOperationDetailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetOperationDetailRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationDetailRequest::response(QNetworkR
  * @brief  Private implementation for GetOperationDetailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationDetailRequestPrivate object.
@@ -97,7 +104,7 @@ GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationDetailRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ForgetDeviceResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ForgetDeviceResponse
  *
- * @brief  Handles CognitoIdentityProvider ForgetDevice responses.
+ * \brief The ForgetDeviceResponse class encapsulates CognitoIdentityProvider ForgetDevice responses.
  *
- * @see    CognitoIdentityProviderClient::forgetDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::forgetDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new ForgetDeviceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ForgetDeviceRequest * ForgetDeviceResponse::request() const
     return static_cast<const ForgetDeviceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ForgetDevice response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ForgetDeviceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ForgetDeviceResponsePrivate
+ * \class ForgetDeviceResponsePrivate
  *
- * @brief  Private implementation for ForgetDeviceResponse.
+ * \brief Private implementation for ForgetDeviceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ForgetDeviceResponsePrivate object.
@@ -91,7 +104,7 @@ ForgetDeviceResponsePrivate::ForgetDeviceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ForgetDeviceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateImageBuilderRequest
+/*!
+ * \class QtAws::AppStream::CreateImageBuilderRequest
  *
- * @brief  Implements AppStream CreateImageBuilder requests.
+ * \brief The CreateImageBuilderRequest class encapsulates AppStream CreateImageBuilder requests.
  *
- * @see    AppStreamClient::createImageBuilder
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createImageBuilder
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateImageBuilderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateImageBuilderRequest::CreateImageBuilderRequest(const CreateImageBuilderReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateImageBuilderRequest object.
  */
 CreateImageBuilderRequest::CreateImageBuilderRequest()
@@ -53,13 +59,16 @@ CreateImageBuilderRequest::CreateImageBuilderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateImageBuilderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateImageBuilderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderRequest::response(QNetworkR
     return new CreateImageBuilderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateImageBuilderRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderRequest::response(QNetworkR
  * @brief  Private implementation for CreateImageBuilderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageBuilderRequestPrivate object.
@@ -97,7 +106,7 @@ CreateImageBuilderRequestPrivate::CreateImageBuilderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageBuilderRequestPrivate object, copying another.

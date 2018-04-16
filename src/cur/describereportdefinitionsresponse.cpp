@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  DescribeReportDefinitionsResponse
+/*!
+ * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsResponse
  *
- * @brief  Handles CostandUsageReportService DescribeReportDefinitions responses.
+ * \brief The DescribeReportDefinitionsResponse class encapsulates CostandUsageReportService DescribeReportDefinitions responses.
  *
- * @see    CostandUsageReportServiceClient::describeReportDefinitions
+ * \ingroup CostandUsageReportService
+ *
+ *
+ * \sa CostandUsageReportServiceClient::describeReportDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReportDefinitionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeReportDefinitionsRequest * DescribeReportDefinitionsResponse::requ
     return static_cast<const DescribeReportDefinitionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostandUsageReportService DescribeReportDefinitions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeReportDefinitionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReportDefinitionsResponsePrivate
+ * \class DescribeReportDefinitionsResponsePrivate
  *
- * @brief  Private implementation for DescribeReportDefinitionsResponse.
+ * \brief Private implementation for DescribeReportDefinitionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReportDefinitionsResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an CostandUsageReportService DescribeReportDefinitionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ModifyEndpointRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::ModifyEndpointRequest
  *
- * @brief  Implements DatabaseMigrationService ModifyEndpoint requests.
+ * \brief The ModifyEndpointRequest class encapsulates DatabaseMigrationService ModifyEndpoint requests.
  *
- * @see    DatabaseMigrationServiceClient::modifyEndpoint
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::modifyEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ModifyEndpointRequest::ModifyEndpointRequest(const ModifyEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyEndpointRequest object.
  */
 ModifyEndpointRequest::ModifyEndpointRequest()
@@ -53,13 +67,16 @@ ModifyEndpointRequest::ModifyEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ModifyEndpointRequest::response(QNetworkReply
     return new ModifyEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyEndpointRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ModifyEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for ModifyEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyEndpointRequestPrivate object.
@@ -97,7 +114,7 @@ ModifyEndpointRequestPrivate::ModifyEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyEndpointRequestPrivate object, copying another.

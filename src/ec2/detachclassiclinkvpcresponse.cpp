@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachClassicLinkVpcResponse
+/*!
+ * \class QtAws::EC2::DetachClassicLinkVpcResponse
  *
- * @brief  Handles EC2 DetachClassicLinkVpc responses.
+ * \brief The DetachClassicLinkVpcResponse class encapsulates EC2 DetachClassicLinkVpc responses.
  *
- * @see    EC2Client::detachClassicLinkVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachClassicLinkVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachClassicLinkVpcResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DetachClassicLinkVpcRequest * DetachClassicLinkVpcResponse::request() cons
     return static_cast<const DetachClassicLinkVpcRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DetachClassicLinkVpc response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DetachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachClassicLinkVpcResponsePrivate
+ * \class DetachClassicLinkVpcResponsePrivate
  *
- * @brief  Private implementation for DetachClassicLinkVpcResponse.
+ * \brief Private implementation for DetachClassicLinkVpcResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachClassicLinkVpcResponsePrivate object.
@@ -91,7 +98,7 @@ DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DetachClassicLinkVpcResponse element.
  *
  * @param  xml  XML stream to parse.

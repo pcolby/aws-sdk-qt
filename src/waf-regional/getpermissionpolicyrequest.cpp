@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetPermissionPolicyRequest
+/*!
+ * \class QtAws::WAFRegional::GetPermissionPolicyRequest
  *
- * @brief  Implements WAFRegional GetPermissionPolicy requests.
+ * \brief The GetPermissionPolicyRequest class encapsulates WAFRegional GetPermissionPolicy requests.
  *
- * @see    WAFRegionalClient::getPermissionPolicy
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getPermissionPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPermissionPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicy
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPermissionPolicyRequest object.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest()
@@ -53,13 +63,16 @@ GetPermissionPolicyRequest::GetPermissionPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPermissionPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPermissionPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
     return new GetPermissionPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPermissionPolicyRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
  * @brief  Private implementation for GetPermissionPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPermissionPolicyRequestPrivate object.
@@ -97,7 +110,7 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPermissionPolicyRequestPrivate object, copying another.

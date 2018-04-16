@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetDeviceRequest
+/*!
+ * \class QtAws::DeviceFarm::GetDeviceRequest
  *
- * @brief  Implements DeviceFarm GetDevice requests.
+ * \brief The GetDeviceRequest class encapsulates DeviceFarm GetDevice requests.
  *
- * @see    DeviceFarmClient::getDevice
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetDeviceRequest::GetDeviceRequest(const GetDeviceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceRequest object.
  */
 GetDeviceRequest::GetDeviceRequest()
@@ -53,13 +58,16 @@ GetDeviceRequest::GetDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * co
     return new GetDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDeviceRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceRequestPrivate object.
@@ -97,7 +105,7 @@ GetDeviceRequestPrivate::GetDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceRequestPrivate object, copying another.

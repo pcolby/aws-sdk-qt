@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  DescribeDomainRequest
+/*!
+ * \class QtAws::SWF::DescribeDomainRequest
  *
- * @brief  Implements SWF DescribeDomain requests.
+ * \brief The DescribeDomainRequest class encapsulates SWF DescribeDomain requests.
  *
- * @see    SWFClient::describeDomain
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::describeDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ DescribeDomainRequest::DescribeDomainRequest(const DescribeDomainRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDomainRequest object.
  */
 DescribeDomainRequest::DescribeDomainRequest()
@@ -53,13 +72,16 @@ DescribeDomainRequest::DescribeDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply
     return new DescribeDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDomainRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDomainRequestPrivate object.
@@ -97,7 +119,7 @@ DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDomainRequestPrivate object, copying another.

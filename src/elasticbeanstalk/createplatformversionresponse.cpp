@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  CreatePlatformVersionResponse
+/*!
+ * \class QtAws::ElasticBeanstalk::CreatePlatformVersionResponse
  *
- * @brief  Handles ElasticBeanstalk CreatePlatformVersion responses.
+ * \brief The CreatePlatformVersionResponse class encapsulates ElasticBeanstalk CreatePlatformVersion responses.
  *
- * @see    ElasticBeanstalkClient::createPlatformVersion
+ * \ingroup ElasticBeanstalk
+ *
+ *  <fullname>AWS Elastic Beanstalk</fullname>
+ * 
+ *  AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
+ *  on the Amazon Web Services
+ * 
+ *  cloud>
+ * 
+ *  For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
+ *  Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
+ *  href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
+ *  To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
+ *  tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services
+ *
+ * \sa ElasticBeanstalkClient::createPlatformVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePlatformVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const CreatePlatformVersionRequest * CreatePlatformVersionResponse::request() co
     return static_cast<const CreatePlatformVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticBeanstalk CreatePlatformVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void CreatePlatformVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePlatformVersionResponsePrivate
+ * \class CreatePlatformVersionResponsePrivate
  *
- * @brief  Private implementation for CreatePlatformVersionResponse.
+ * \brief Private implementation for CreatePlatformVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePlatformVersionResponsePrivate object.
@@ -91,7 +116,7 @@ CreatePlatformVersionResponsePrivate::CreatePlatformVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticBeanstalk CreatePlatformVersionResponse element.
  *
  * @param  xml  XML stream to parse.

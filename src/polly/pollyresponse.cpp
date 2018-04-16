@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  PollyResponse
+/*!
+ * \class QtAws::Polly::PollyResponse
  *
- * @brief  Handles Polly Polly responses.
+ * \brief The PollyResponse class is the base class for all Polly responses.
  *
- * @see    PollyClient::polly
+ * \ingroup Polly
  */
 
-/**
+/*!
  * @brief  Constructs a new PollyResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ PollyResponse::PollyResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PollyResponse object.
@@ -63,7 +63,7 @@ PollyResponse::PollyResponse(PollyResponsePrivate * const d, QObject * const par
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void PollyResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PollyResponsePrivate
@@ -92,7 +92,7 @@ void PollyResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for PollyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PollyResponsePrivate object.

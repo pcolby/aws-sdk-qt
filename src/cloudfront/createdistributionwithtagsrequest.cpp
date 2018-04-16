@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateDistributionWithTagsRequest
+/*!
+ * \class QtAws::CloudFront::CreateDistributionWithTagsRequest
  *
- * @brief  Implements CloudFront CreateDistributionWithTags requests.
+ * \brief The CreateDistributionWithTagsRequest class encapsulates CloudFront CreateDistributionWithTags requests.
  *
- * @see    CloudFrontClient::createDistributionWithTags
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createDistributionWithTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDistributionWithTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest(const Creat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDistributionWithTagsRequest object.
  */
 CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest()
@@ -53,13 +61,16 @@ CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDistributionWithTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDistributionWithTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionWithTagsRequest::response(Q
     return new CreateDistributionWithTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDistributionWithTagsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionWithTagsRequest::response(Q
  * @brief  Private implementation for CreateDistributionWithTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDistributionWithTagsRequestPrivate object.
@@ -97,7 +108,7 @@ CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDistributionWithTagsRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetFpgaImageAttributeRequest
+/*!
+ * \class QtAws::EC2::ResetFpgaImageAttributeRequest
  *
- * @brief  Implements EC2 ResetFpgaImageAttribute requests.
+ * \brief The ResetFpgaImageAttributeRequest class encapsulates EC2 ResetFpgaImageAttribute requests.
  *
- * @see    EC2Client::resetFpgaImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetFpgaImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetFpgaImageAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest(const ResetFpgaIm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetFpgaImageAttributeRequest object.
  */
 ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest()
@@ -53,13 +60,16 @@ ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetFpgaImageAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetFpgaImageAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNet
     return new ResetFpgaImageAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetFpgaImageAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNet
  * @brief  Private implementation for ResetFpgaImageAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetFpgaImageAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetFpgaImageAttributeRequestPrivate object, copying another.

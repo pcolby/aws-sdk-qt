@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  ListBundlesResponse
+/*!
+ * \class QtAws::Mobile::ListBundlesResponse
  *
- * @brief  Handles Mobile ListBundles responses.
+ * \brief The ListBundlesResponse class encapsulates Mobile ListBundles responses.
  *
- * @see    MobileClient::listBundles
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::listBundles
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBundlesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListBundlesRequest * ListBundlesResponse::request() const
     return static_cast<const ListBundlesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile ListBundles response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListBundlesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListBundlesResponsePrivate
+ * \class ListBundlesResponsePrivate
  *
- * @brief  Private implementation for ListBundlesResponse.
+ * \brief Private implementation for ListBundlesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBundlesResponsePrivate object.
@@ -91,7 +97,7 @@ ListBundlesResponsePrivate::ListBundlesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile ListBundlesResponse element.
  *
  * @param  xml  XML stream to parse.

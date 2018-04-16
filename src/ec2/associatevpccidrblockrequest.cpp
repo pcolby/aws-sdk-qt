@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateVpcCidrBlockRequest
+/*!
+ * \class QtAws::EC2::AssociateVpcCidrBlockRequest
  *
- * @brief  Implements EC2 AssociateVpcCidrBlock requests.
+ * \brief The AssociateVpcCidrBlockRequest class encapsulates EC2 AssociateVpcCidrBlock requests.
  *
- * @see    EC2Client::associateVpcCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateVpcCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateVpcCidrBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest(const AssociateVpcCid
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateVpcCidrBlockRequest object.
  */
 AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest()
@@ -53,13 +60,16 @@ AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateVpcCidrBlockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateVpcCidrBlockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetwo
     return new AssociateVpcCidrBlockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateVpcCidrBlockRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetwo
  * @brief  Private implementation for AssociateVpcCidrBlockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateVpcCidrBlockRequestPrivate object.
@@ -97,7 +107,7 @@ AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateVpcCidrBlockRequestPrivate object, copying another.

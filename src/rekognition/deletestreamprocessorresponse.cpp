@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DeleteStreamProcessorResponse
+/*!
+ * \class QtAws::Rekognition::DeleteStreamProcessorResponse
  *
- * @brief  Handles Rekognition DeleteStreamProcessor responses.
+ * \brief The DeleteStreamProcessorResponse class encapsulates Rekognition DeleteStreamProcessor responses.
  *
- * @see    RekognitionClient::deleteStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::deleteStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamProcessorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteStreamProcessorRequest * DeleteStreamProcessorResponse::request() co
     return static_cast<const DeleteStreamProcessorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DeleteStreamProcessor response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteStreamProcessorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteStreamProcessorResponsePrivate
+ * \class DeleteStreamProcessorResponsePrivate
  *
- * @brief  Private implementation for DeleteStreamProcessorResponse.
+ * \brief Private implementation for DeleteStreamProcessorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamProcessorResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteStreamProcessorResponsePrivate::DeleteStreamProcessorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DeleteStreamProcessorResponse element.
  *
  * @param  xml  XML stream to parse.

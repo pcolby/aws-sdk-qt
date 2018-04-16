@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachInternetGatewayResponse
+/*!
+ * \class QtAws::EC2::AttachInternetGatewayResponse
  *
- * @brief  Handles EC2 AttachInternetGateway responses.
+ * \brief The AttachInternetGatewayResponse class encapsulates EC2 AttachInternetGateway responses.
  *
- * @see    EC2Client::attachInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachInternetGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AttachInternetGatewayRequest * AttachInternetGatewayResponse::request() co
     return static_cast<const AttachInternetGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AttachInternetGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AttachInternetGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachInternetGatewayResponsePrivate
+ * \class AttachInternetGatewayResponsePrivate
  *
- * @brief  Private implementation for AttachInternetGatewayResponse.
+ * \brief Private implementation for AttachInternetGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInternetGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AttachInternetGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

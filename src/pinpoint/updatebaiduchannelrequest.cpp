@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateBaiduChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateBaiduChannelRequest
  *
- * @brief  Implements Pinpoint UpdateBaiduChannel requests.
+ * \brief The UpdateBaiduChannelRequest class encapsulates Pinpoint UpdateBaiduChannel requests.
  *
- * @see    PinpointClient::updateBaiduChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateBaiduChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBaiduChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateBaiduChannelRequest::UpdateBaiduChannelRequest(const UpdateBaiduChannelReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateBaiduChannelRequest object.
  */
 UpdateBaiduChannelRequest::UpdateBaiduChannelRequest()
@@ -53,13 +56,16 @@ UpdateBaiduChannelRequest::UpdateBaiduChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateBaiduChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateBaiduChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkR
     return new UpdateBaiduChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateBaiduChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkR
  * @brief  Private implementation for UpdateBaiduChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBaiduChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBaiduChannelRequestPrivate object, copying another.

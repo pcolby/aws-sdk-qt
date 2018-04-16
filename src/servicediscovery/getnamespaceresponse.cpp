@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetNamespaceResponse
+/*!
+ * \class QtAws::ServiceDiscovery::GetNamespaceResponse
  *
- * @brief  Handles ServiceDiscovery GetNamespace responses.
+ * \brief The GetNamespaceResponse class encapsulates ServiceDiscovery GetNamespace responses.
  *
- * @see    ServiceDiscoveryClient::getNamespace
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getNamespace
  */
 
-/**
+/*!
  * @brief  Constructs a new GetNamespaceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetNamespaceRequest * GetNamespaceResponse::request() const
     return static_cast<const GetNamespaceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery GetNamespace response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetNamespaceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetNamespaceResponsePrivate
+ * \class GetNamespaceResponsePrivate
  *
- * @brief  Private implementation for GetNamespaceResponse.
+ * \brief Private implementation for GetNamespaceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetNamespaceResponsePrivate object.
@@ -91,7 +98,7 @@ GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery GetNamespaceResponse element.
  *
  * @param  xml  XML stream to parse.

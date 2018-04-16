@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  DeleteNotificationChannelRequest
+/*!
+ * \class QtAws::FMS::DeleteNotificationChannelRequest
  *
- * @brief  Implements FMS DeleteNotificationChannel requests.
+ * \brief The DeleteNotificationChannelRequest class encapsulates FMS DeleteNotificationChannel requests.
  *
- * @see    FMSClient::deleteNotificationChannel
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::deleteNotificationChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotificationChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteNotificationChannelRequest::DeleteNotificationChannelRequest(const DeleteN
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotificationChannelRequest object.
  */
 DeleteNotificationChannelRequest::DeleteNotificationChannelRequest()
@@ -53,13 +62,16 @@ DeleteNotificationChannelRequest::DeleteNotificationChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNotificationChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNotificationChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationChannelRequest::response(QN
     return new DeleteNotificationChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNotificationChannelRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationChannelRequest::response(QN
  * @brief  Private implementation for DeleteNotificationChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotificationChannelRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotificationChannelRequestPrivate object, copying another.

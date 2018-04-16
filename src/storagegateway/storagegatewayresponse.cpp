@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace StorageGateway {
 
-/**
- * @class  StorageGatewayResponse
+/*!
+ * \class QtAws::StorageGateway::StorageGatewayResponse
  *
- * @brief  Handles StorageGateway StorageGateway responses.
+ * \brief The StorageGatewayResponse class is the base class for all StorageGateway responses.
  *
- * @see    StorageGatewayClient::storageGateway
+ * \ingroup StorageGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new StorageGatewayResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StorageGatewayResponse object.
@@ -63,7 +63,7 @@ StorageGatewayResponse::StorageGatewayResponse(StorageGatewayResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void StorageGatewayResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StorageGatewayResponsePrivate
@@ -92,7 +92,7 @@ void StorageGatewayResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for StorageGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StorageGatewayResponsePrivate object.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingGroupsRequest
+/*!
+ * \class QtAws::IoT::ListThingGroupsRequest
  *
- * @brief  Implements IoT ListThingGroups requests.
+ * \brief The ListThingGroupsRequest class encapsulates IoT ListThingGroups requests.
  *
- * @see    IoTClient::listThingGroups
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThingGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListThingGroupsRequest::ListThingGroupsRequest(const ListThingGroupsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListThingGroupsRequest object.
  */
 ListThingGroupsRequest::ListThingGroupsRequest()
@@ -53,13 +67,16 @@ ListThingGroupsRequest::ListThingGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListThingGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListThingGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListThingGroupsRequest::response(QNetworkRepl
     return new ListThingGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListThingGroupsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListThingGroupsRequest::response(QNetworkRepl
  * @brief  Private implementation for ListThingGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingGroupsRequestPrivate object.
@@ -97,7 +114,7 @@ ListThingGroupsRequestPrivate::ListThingGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingGroupsRequestPrivate object, copying another.

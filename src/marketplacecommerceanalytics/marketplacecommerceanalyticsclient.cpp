@@ -29,23 +29,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MarketplaceCommerceAnalytics
+ * \brief The QtAws::MarketplaceCommerceAnalytics contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-/**
- * @class  MarketplaceCommerceAnalyticsClient
+/*!
+ * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsClient
  *
- * @brief  Client for AWS Marketplace Commerce Analytics
+ * \brief The MarketplaceCommerceAnalyticsClient class provides access the AWS Marketplace Commerce Analytics service.
+ *
+ * \ingroup MarketplaceCommerceAnalytics
  *
  */
 
-/**
- * @brief  Constructs a new MarketplaceCommerceAnalyticsClient object.
+/*!
+ * \brief Constructs a MarketplaceCommerceAnalyticsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -64,21 +72,16 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
 
-/**
- * @brief  Constructs a new MarketplaceCommerceAnalyticsClient object.
+/*!
+ * \overload MarketplaceCommerceAnalyticsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     const QUrl &endpoint,
@@ -97,7 +100,7 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
 
-/**
+/*!
  * Given a data set type and data set publication date, asynchronously publishes the requested data set to the specified S3
  * bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be
  * used to correlate requests with notifications from the SNS topic. Data sets will be published in comma-separated values
@@ -116,7 +119,7 @@ GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(co
     return qobject_cast<GenerateDataSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Given a data set type and a from date, asynchronously publishes the requested customer support data to the specified S3
  * bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be
  * used to correlate requests with notifications from the SNS topic. Data sets will be published in comma-separated values
@@ -135,7 +138,7 @@ StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSuppor
     return qobject_cast<StartSupportDataExportResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MarketplaceCommerceAnalyticsClientPrivate
@@ -143,7 +146,7 @@ StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSuppor
  * @brief  Private implementation for MarketplaceCommerceAnalyticsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceCommerceAnalyticsClientPrivate object.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetDistributionResponse
+/*!
+ * \class QtAws::CloudFront::GetDistributionResponse
  *
- * @brief  Handles CloudFront GetDistribution responses.
+ * \brief The GetDistributionResponse class encapsulates CloudFront GetDistribution responses.
  *
- * @see    CloudFrontClient::getDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDistributionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetDistributionRequest * GetDistributionResponse::request() const
     return static_cast<const GetDistributionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetDistribution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetDistributionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDistributionResponsePrivate
+ * \class GetDistributionResponsePrivate
  *
- * @brief  Private implementation for GetDistributionResponse.
+ * \brief Private implementation for GetDistributionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDistributionResponsePrivate object.
@@ -91,7 +99,7 @@ GetDistributionResponsePrivate::GetDistributionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetDistributionResponse element.
  *
  * @param  xml  XML stream to parse.

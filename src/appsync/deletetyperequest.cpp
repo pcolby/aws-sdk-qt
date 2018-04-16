@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteTypeRequest
+/*!
+ * \class QtAws::AppSync::DeleteTypeRequest
  *
- * @brief  Implements AppSync DeleteType requests.
+ * \brief The DeleteTypeRequest class encapsulates AppSync DeleteType requests.
  *
- * @see    AppSyncClient::deleteType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteTypeRequest::DeleteTypeRequest(const DeleteTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTypeRequest object.
  */
 DeleteTypeRequest::DeleteTypeRequest()
@@ -53,13 +57,16 @@ DeleteTypeRequest::DeleteTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * c
     return new DeleteTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTypeRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTypeRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTypeRequestPrivate object, copying another.

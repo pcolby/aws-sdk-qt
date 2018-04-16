@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListGraphqlApisResponse
+/*!
+ * \class QtAws::AppSync::ListGraphqlApisResponse
  *
- * @brief  Handles AppSync ListGraphqlApis responses.
+ * \brief The ListGraphqlApisResponse class encapsulates AppSync ListGraphqlApis responses.
  *
- * @see    AppSyncClient::listGraphqlApis
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listGraphqlApis
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGraphqlApisResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListGraphqlApisRequest * ListGraphqlApisResponse::request() const
     return static_cast<const ListGraphqlApisRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync ListGraphqlApis response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListGraphqlApisResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListGraphqlApisResponsePrivate
+ * \class ListGraphqlApisResponsePrivate
  *
- * @brief  Private implementation for ListGraphqlApisResponse.
+ * \brief Private implementation for ListGraphqlApisResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGraphqlApisResponsePrivate object.
@@ -91,7 +95,7 @@ ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync ListGraphqlApisResponse element.
  *
  * @param  xml  XML stream to parse.

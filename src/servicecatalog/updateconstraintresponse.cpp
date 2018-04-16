@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateConstraintResponse
+/*!
+ * \class QtAws::ServiceCatalog::UpdateConstraintResponse
  *
- * @brief  Handles ServiceCatalog UpdateConstraint responses.
+ * \brief The UpdateConstraintResponse class encapsulates ServiceCatalog UpdateConstraint responses.
  *
- * @see    ServiceCatalogClient::updateConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConstraintResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const UpdateConstraintRequest * UpdateConstraintResponse::request() const
     return static_cast<const UpdateConstraintRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog UpdateConstraint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void UpdateConstraintResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateConstraintResponsePrivate
+ * \class UpdateConstraintResponsePrivate
  *
- * @brief  Private implementation for UpdateConstraintResponse.
+ * \brief Private implementation for UpdateConstraintResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConstraintResponsePrivate object.
@@ -91,7 +100,7 @@ UpdateConstraintResponsePrivate::UpdateConstraintResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog UpdateConstraintResponse element.
  *
  * @param  xml  XML stream to parse.

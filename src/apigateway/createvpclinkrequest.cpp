@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateVpcLinkRequest
+/*!
+ * \class QtAws::APIGateway::CreateVpcLinkRequest
  *
- * @brief  Implements APIGateway CreateVpcLink requests.
+ * \brief The CreateVpcLinkRequest class encapsulates APIGateway CreateVpcLink requests.
  *
- * @see    APIGatewayClient::createVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateVpcLinkRequest::CreateVpcLinkRequest(const CreateVpcLinkRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcLinkRequest object.
  */
 CreateVpcLinkRequest::CreateVpcLinkRequest()
@@ -53,13 +61,16 @@ CreateVpcLinkRequest::CreateVpcLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVpcLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVpcLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply 
     return new CreateVpcLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVpcLinkRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateVpcLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcLinkRequestPrivate object.
@@ -97,7 +108,7 @@ CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcLinkRequestPrivate object, copying another.

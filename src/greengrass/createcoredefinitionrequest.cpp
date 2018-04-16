@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateCoreDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::CreateCoreDefinitionRequest
  *
- * @brief  Implements Greengrass CreateCoreDefinition requests.
+ * \brief The CreateCoreDefinitionRequest class encapsulates Greengrass CreateCoreDefinition requests.
  *
- * @see    GreengrassClient::createCoreDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createCoreDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCoreDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateCoreDefinitionRequest::CreateCoreDefinitionRequest(const CreateCoreDefinit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateCoreDefinitionRequest object.
  */
 CreateCoreDefinitionRequest::CreateCoreDefinitionRequest()
@@ -53,13 +59,16 @@ CreateCoreDefinitionRequest::CreateCoreDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateCoreDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateCoreDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionRequest::response(QNetwor
     return new CreateCoreDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateCoreDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionRequest::response(QNetwor
  * @brief  Private implementation for CreateCoreDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCoreDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateCoreDefinitionRequestPrivate::CreateCoreDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCoreDefinitionRequestPrivate object, copying another.

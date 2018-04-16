@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketLoggingRequest
+/*!
+ * \class QtAws::S3::PutBucketLoggingRequest
  *
- * @brief  Implements S3 PutBucketLogging requests.
+ * \brief The PutBucketLoggingRequest class encapsulates S3 PutBucketLogging requests.
  *
- * @see    S3Client::putBucketLogging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketLogging
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketLoggingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketLoggingRequest::PutBucketLoggingRequest(const PutBucketLoggingRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketLoggingRequest object.
  */
 PutBucketLoggingRequest::PutBucketLoggingRequest()
@@ -53,13 +56,16 @@ PutBucketLoggingRequest::PutBucketLoggingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketLoggingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketLoggingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketLoggingRequest::response(QNetworkRep
     return new PutBucketLoggingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketLoggingRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketLoggingRequest::response(QNetworkRep
  * @brief  Private implementation for PutBucketLoggingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketLoggingRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketLoggingRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListResourceServersResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListResourceServersResponse
  *
- * @brief  Handles CognitoIdentityProvider ListResourceServers responses.
+ * \brief The ListResourceServersResponse class encapsulates CognitoIdentityProvider ListResourceServers responses.
  *
- * @see    CognitoIdentityProviderClient::listResourceServers
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listResourceServers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceServersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ListResourceServersRequest * ListResourceServersResponse::request() const
     return static_cast<const ListResourceServersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ListResourceServers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ListResourceServersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListResourceServersResponsePrivate
+ * \class ListResourceServersResponsePrivate
  *
- * @brief  Private implementation for ListResourceServersResponse.
+ * \brief Private implementation for ListResourceServersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceServersResponsePrivate object.
@@ -91,7 +104,7 @@ ListResourceServersResponsePrivate::ListResourceServersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ListResourceServersResponse element.
  *
  * @param  xml  XML stream to parse.

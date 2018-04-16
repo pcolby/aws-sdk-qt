@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateQualificationTypeRequest
+/*!
+ * \class QtAws::MTurk::CreateQualificationTypeRequest
  *
- * @brief  Implements MTurk CreateQualificationType requests.
+ * \brief The CreateQualificationTypeRequest class encapsulates MTurk CreateQualificationType requests.
  *
- * @see    MTurkClient::createQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateQualificationTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateQualificationTypeRequest::CreateQualificationTypeRequest(const CreateQuali
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateQualificationTypeRequest object.
  */
 CreateQualificationTypeRequest::CreateQualificationTypeRequest()
@@ -53,13 +56,16 @@ CreateQualificationTypeRequest::CreateQualificationTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateQualificationTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateQualificationTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateQualificationTypeRequest::response(QNet
     return new CreateQualificationTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateQualificationTypeRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateQualificationTypeRequest::response(QNet
  * @brief  Private implementation for CreateQualificationTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQualificationTypeRequestPrivate object.
@@ -97,7 +103,7 @@ CreateQualificationTypeRequestPrivate::CreateQualificationTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQualificationTypeRequestPrivate object, copying another.

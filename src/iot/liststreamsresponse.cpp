@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListStreamsResponse
+/*!
+ * \class QtAws::IoT::ListStreamsResponse
  *
- * @brief  Handles IoT ListStreams responses.
+ * \brief The ListStreamsResponse class encapsulates IoT ListStreams responses.
  *
- * @see    IoTClient::listStreams
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListStreamsRequest * ListStreamsResponse::request() const
     return static_cast<const ListStreamsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListStreams response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListStreamsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStreamsResponsePrivate
+ * \class ListStreamsResponsePrivate
  *
- * @brief  Private implementation for ListStreamsResponse.
+ * \brief Private implementation for ListStreamsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsResponsePrivate object.
@@ -91,7 +105,7 @@ ListStreamsResponsePrivate::ListStreamsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListStreamsResponse element.
  *
  * @param  xml  XML stream to parse.

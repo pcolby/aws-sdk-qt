@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateAuthEventFeedbackResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackResponse
  *
- * @brief  Handles CognitoIdentityProvider UpdateAuthEventFeedback responses.
+ * \brief The UpdateAuthEventFeedbackResponse class encapsulates CognitoIdentityProvider UpdateAuthEventFeedback responses.
  *
- * @see    CognitoIdentityProviderClient::updateAuthEventFeedback
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateAuthEventFeedback
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAuthEventFeedbackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const UpdateAuthEventFeedbackRequest * UpdateAuthEventFeedbackResponse::request(
     return static_cast<const UpdateAuthEventFeedbackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider UpdateAuthEventFeedback response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void UpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateAuthEventFeedbackResponsePrivate
+ * \class UpdateAuthEventFeedbackResponsePrivate
  *
- * @brief  Private implementation for UpdateAuthEventFeedbackResponse.
+ * \brief Private implementation for UpdateAuthEventFeedbackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAuthEventFeedbackResponsePrivate object.
@@ -91,7 +104,7 @@ UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider UpdateAuthEventFeedbackResponse element.
  *
  * @param  xml  XML stream to parse.

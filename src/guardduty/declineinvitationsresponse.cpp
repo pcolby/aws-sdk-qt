@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeclineInvitationsResponse
+/*!
+ * \class QtAws::GuardDuty::DeclineInvitationsResponse
  *
- * @brief  Handles GuardDuty DeclineInvitations responses.
+ * \brief The DeclineInvitationsResponse class encapsulates GuardDuty DeclineInvitations responses.
  *
- * @see    GuardDutyClient::declineInvitations
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::declineInvitations
  */
 
-/**
+/*!
  * @brief  Constructs a new DeclineInvitationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeclineInvitationsRequest * DeclineInvitationsResponse::request() const
     return static_cast<const DeclineInvitationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DeclineInvitations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeclineInvitationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeclineInvitationsResponsePrivate
+ * \class DeclineInvitationsResponsePrivate
  *
- * @brief  Private implementation for DeclineInvitationsResponse.
+ * \brief Private implementation for DeclineInvitationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeclineInvitationsResponsePrivate object.
@@ -91,7 +94,7 @@ DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DeclineInvitationsResponse element.
  *
  * @param  xml  XML stream to parse.

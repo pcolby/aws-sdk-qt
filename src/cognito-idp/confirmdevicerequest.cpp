@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ConfirmDeviceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmDeviceRequest
  *
- * @brief  Implements CognitoIdentityProvider ConfirmDevice requests.
+ * \brief The ConfirmDeviceRequest class encapsulates CognitoIdentityProvider ConfirmDevice requests.
  *
- * @see    CognitoIdentityProviderClient::confirmDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::confirmDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new ConfirmDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ConfirmDeviceRequest::ConfirmDeviceRequest(const ConfirmDeviceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ConfirmDeviceRequest object.
  */
 ConfirmDeviceRequest::ConfirmDeviceRequest()
@@ -53,13 +66,16 @@ ConfirmDeviceRequest::ConfirmDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ConfirmDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ConfirmDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmDeviceRequest::response(QNetworkReply 
     return new ConfirmDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConfirmDeviceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmDeviceRequest::response(QNetworkReply 
  * @brief  Private implementation for ConfirmDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmDeviceRequestPrivate object.
@@ -97,7 +113,7 @@ ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmDeviceRequestPrivate object, copying another.

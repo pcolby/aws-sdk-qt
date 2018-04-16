@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeExpressionsRequest
+/*!
+ * \class QtAws::CloudSearch::DescribeExpressionsRequest
  *
- * @brief  Implements CloudSearch DescribeExpressions requests.
+ * \brief The DescribeExpressionsRequest class encapsulates CloudSearch DescribeExpressions requests.
  *
- * @see    CloudSearchClient::describeExpressions
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeExpressions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeExpressionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeExpressionsRequest::DescribeExpressionsRequest(const DescribeExpressions
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeExpressionsRequest object.
  */
 DescribeExpressionsRequest::DescribeExpressionsRequest()
@@ -53,13 +67,16 @@ DescribeExpressionsRequest::DescribeExpressionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeExpressionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeExpressionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeExpressionsRequest::response(QNetwork
     return new DescribeExpressionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeExpressionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeExpressionsRequest::response(QNetwork
  * @brief  Private implementation for DescribeExpressionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeExpressionsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeExpressionsRequestPrivate object, copying another.

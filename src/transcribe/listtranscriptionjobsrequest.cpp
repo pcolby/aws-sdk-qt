@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  ListTranscriptionJobsRequest
+/*!
+ * \class QtAws::TranscribeService::ListTranscriptionJobsRequest
  *
- * @brief  Implements TranscribeService ListTranscriptionJobs requests.
+ * \brief The ListTranscriptionJobsRequest class encapsulates TranscribeService ListTranscriptionJobs requests.
  *
- * @see    TranscribeServiceClient::listTranscriptionJobs
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::listTranscriptionJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTranscriptionJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListTranscriptionJobsRequest::ListTranscriptionJobsRequest(const ListTranscripti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTranscriptionJobsRequest object.
  */
 ListTranscriptionJobsRequest::ListTranscriptionJobsRequest()
@@ -53,13 +57,16 @@ ListTranscriptionJobsRequest::ListTranscriptionJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTranscriptionJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTranscriptionJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListTranscriptionJobsRequest::response(QNetwo
     return new ListTranscriptionJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTranscriptionJobsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListTranscriptionJobsRequest::response(QNetwo
  * @brief  Private implementation for ListTranscriptionJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTranscriptionJobsRequestPrivate object.
@@ -97,7 +104,7 @@ ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTranscriptionJobsRequestPrivate object, copying another.

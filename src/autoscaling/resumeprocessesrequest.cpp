@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  ResumeProcessesRequest
+/*!
+ * \class QtAws::AutoScaling::ResumeProcessesRequest
  *
- * @brief  Implements AutoScaling ResumeProcesses requests.
+ * \brief The ResumeProcessesRequest class encapsulates AutoScaling ResumeProcesses requests.
  *
- * @see    AutoScalingClient::resumeProcesses
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::resumeProcesses
  */
 
-/**
+/*!
  * @brief  Constructs a new ResumeProcessesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ResumeProcessesRequest::ResumeProcessesRequest(const ResumeProcessesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResumeProcessesRequest object.
  */
 ResumeProcessesRequest::ResumeProcessesRequest()
@@ -53,13 +61,16 @@ ResumeProcessesRequest::ResumeProcessesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResumeProcessesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResumeProcessesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkRepl
     return new ResumeProcessesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResumeProcessesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkRepl
  * @brief  Private implementation for ResumeProcessesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResumeProcessesRequestPrivate object.
@@ -97,7 +108,7 @@ ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResumeProcessesRequestPrivate object, copying another.

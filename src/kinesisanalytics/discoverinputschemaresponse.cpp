@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DiscoverInputSchemaResponse
+/*!
+ * \class QtAws::KinesisAnalytics::DiscoverInputSchemaResponse
  *
- * @brief  Handles KinesisAnalytics DiscoverInputSchema responses.
+ * \brief The DiscoverInputSchemaResponse class encapsulates KinesisAnalytics DiscoverInputSchema responses.
  *
- * @see    KinesisAnalyticsClient::discoverInputSchema
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::discoverInputSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new DiscoverInputSchemaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DiscoverInputSchemaRequest * DiscoverInputSchemaResponse::request() const
     return static_cast<const DiscoverInputSchemaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics DiscoverInputSchema response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DiscoverInputSchemaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DiscoverInputSchemaResponsePrivate
+ * \class DiscoverInputSchemaResponsePrivate
  *
- * @brief  Private implementation for DiscoverInputSchemaResponse.
+ * \brief Private implementation for DiscoverInputSchemaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DiscoverInputSchemaResponsePrivate object.
@@ -91,7 +94,7 @@ DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics DiscoverInputSchemaResponse element.
  *
  * @param  xml  XML stream to parse.

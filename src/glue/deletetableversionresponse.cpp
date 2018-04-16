@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteTableVersionResponse
+/*!
+ * \class QtAws::Glue::DeleteTableVersionResponse
  *
- * @brief  Handles Glue DeleteTableVersion responses.
+ * \brief The DeleteTableVersionResponse class encapsulates Glue DeleteTableVersion responses.
  *
- * @see    GlueClient::deleteTableVersion
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteTableVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTableVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteTableVersionRequest * DeleteTableVersionResponse::request() const
     return static_cast<const DeleteTableVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteTableVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteTableVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTableVersionResponsePrivate
+ * \class DeleteTableVersionResponsePrivate
  *
- * @brief  Private implementation for DeleteTableVersionResponse.
+ * \brief Private implementation for DeleteTableVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTableVersionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteTableVersionResponsePrivate::DeleteTableVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteTableVersionResponse element.
  *
  * @param  xml  XML stream to parse.

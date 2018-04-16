@@ -33,32 +33,40 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::AutoScalingPlans
+ * \brief The QtAws::AutoScalingPlans contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  AutoScalingPlansClient
+/*!
+ * \class QtAws::AutoScalingPlans::AutoScalingPlansClient
  *
- * @brief  Client for AWS Auto Scaling Plans
+ * \brief The AutoScalingPlansClient class provides access the AWS Auto Scaling Plans service.
  *
- * Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
- * scaling for your scalable
+ * \ingroup AutoScalingPlans
  *
- * resources>
- *
- * To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
- * resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
- * your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
- * maintain resource utilization at the target value that you
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
  */
 
-/**
- * @brief  Constructs a new AutoScalingPlansClient object.
+/*!
+ * \brief Constructs a AutoScalingPlansClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AutoScalingPlansClient::AutoScalingPlansClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -77,21 +85,16 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->serviceName = QStringLiteral("autoscaling-plans");
 }
 
-/**
- * @brief  Constructs a new AutoScalingPlansClient object.
+/*!
+ * \overload AutoScalingPlansClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AutoScalingPlansClient::AutoScalingPlansClient(
     const QUrl &endpoint,
@@ -110,7 +113,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->serviceName = QStringLiteral("autoscaling-plans");
 }
 
-/**
+/*!
  * Creates a scaling
  *
  * plan>
@@ -129,7 +132,7 @@ CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const Crea
     return qobject_cast<CreateScalingPlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified scaling
  *
  * @param  request Request to send to AWS Auto Scaling Plans.
@@ -143,7 +146,7 @@ DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const Dele
     return qobject_cast<DeleteScalingPlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the scalable resources in the specified scaling
  *
  * @param  request Request to send to AWS Auto Scaling Plans.
@@ -157,7 +160,7 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
     return qobject_cast<DescribeScalingPlanResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified scaling plans or all of your scaling
  *
  * @param  request Request to send to AWS Auto Scaling Plans.
@@ -171,7 +174,7 @@ DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(cons
     return qobject_cast<DescribeScalingPlansResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AutoScalingPlansClientPrivate
@@ -179,7 +182,7 @@ DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(cons
  * @brief  Private implementation for AutoScalingPlansClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AutoScalingPlansClientPrivate object.

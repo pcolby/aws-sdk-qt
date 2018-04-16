@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeRiskConfigurationResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeRiskConfigurationResponse
  *
- * @brief  Handles CognitoIdentityProvider DescribeRiskConfiguration responses.
+ * \brief The DescribeRiskConfigurationResponse class encapsulates CognitoIdentityProvider DescribeRiskConfiguration responses.
  *
- * @see    CognitoIdentityProviderClient::describeRiskConfiguration
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeRiskConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRiskConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DescribeRiskConfigurationRequest * DescribeRiskConfigurationResponse::requ
     return static_cast<const DescribeRiskConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DescribeRiskConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DescribeRiskConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeRiskConfigurationResponsePrivate
+ * \class DescribeRiskConfigurationResponsePrivate
  *
- * @brief  Private implementation for DescribeRiskConfigurationResponse.
+ * \brief Private implementation for DescribeRiskConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRiskConfigurationResponsePrivate object.
@@ -91,7 +104,7 @@ DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DescribeRiskConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

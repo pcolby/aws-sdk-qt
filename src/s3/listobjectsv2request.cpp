@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListObjectsV2Request
+/*!
+ * \class QtAws::S3::ListObjectsV2Request
  *
- * @brief  Implements S3 ListObjectsV2 requests.
+ * \brief The ListObjectsV2Request class encapsulates S3 ListObjectsV2 requests.
  *
- * @see    S3Client::listObjectsV2
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listObjectsV2
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectsV2Request object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListObjectsV2Request::ListObjectsV2Request(const ListObjectsV2Request &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListObjectsV2Request object.
  */
 ListObjectsV2Request::ListObjectsV2Request()
@@ -53,13 +56,16 @@ ListObjectsV2Request::ListObjectsV2Request()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListObjectsV2Request::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListObjectsV2Response object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectsV2Request::response(QNetworkReply 
     return new ListObjectsV2Response(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListObjectsV2RequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectsV2Request::response(QNetworkReply 
  * @brief  Private implementation for ListObjectsV2Request.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectsV2RequestPrivate object.
@@ -97,7 +103,7 @@ ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectsV2RequestPrivate object, copying another.

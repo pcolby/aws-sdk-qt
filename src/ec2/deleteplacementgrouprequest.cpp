@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeletePlacementGroupRequest
+/*!
+ * \class QtAws::EC2::DeletePlacementGroupRequest
  *
- * @brief  Implements EC2 DeletePlacementGroup requests.
+ * \brief The DeletePlacementGroupRequest class encapsulates EC2 DeletePlacementGroup requests.
  *
- * @see    EC2Client::deletePlacementGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deletePlacementGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePlacementGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeletePlacementGroupRequest::DeletePlacementGroupRequest(const DeletePlacementGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePlacementGroupRequest object.
  */
 DeletePlacementGroupRequest::DeletePlacementGroupRequest()
@@ -53,13 +60,16 @@ DeletePlacementGroupRequest::DeletePlacementGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePlacementGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePlacementGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetwor
     return new DeletePlacementGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePlacementGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetwor
  * @brief  Private implementation for DeletePlacementGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePlacementGroupRequestPrivate object.
@@ -97,7 +107,7 @@ DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePlacementGroupRequestPrivate object, copying another.

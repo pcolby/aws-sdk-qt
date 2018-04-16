@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateTopicRuleRequest
+/*!
+ * \class QtAws::IoT::CreateTopicRuleRequest
  *
- * @brief  Implements IoT CreateTopicRule requests.
+ * \brief The CreateTopicRuleRequest class encapsulates IoT CreateTopicRule requests.
  *
- * @see    IoTClient::createTopicRule
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createTopicRule
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTopicRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateTopicRuleRequest::CreateTopicRuleRequest(const CreateTopicRuleRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTopicRuleRequest object.
  */
 CreateTopicRuleRequest::CreateTopicRuleRequest()
@@ -53,13 +67,16 @@ CreateTopicRuleRequest::CreateTopicRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTopicRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTopicRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRuleRequest::response(QNetworkRepl
     return new CreateTopicRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTopicRuleRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRuleRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateTopicRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTopicRuleRequestPrivate object.
@@ -97,7 +114,7 @@ CreateTopicRuleRequestPrivate::CreateTopicRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTopicRuleRequestPrivate object, copying another.

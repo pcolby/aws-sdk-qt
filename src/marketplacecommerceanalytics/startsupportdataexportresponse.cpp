@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-/**
- * @class  StartSupportDataExportResponse
+/*!
+ * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportResponse
  *
- * @brief  Handles MarketplaceCommerceAnalytics StartSupportDataExport responses.
+ * \brief The StartSupportDataExportResponse class encapsulates MarketplaceCommerceAnalytics StartSupportDataExport responses.
  *
- * @see    MarketplaceCommerceAnalyticsClient::startSupportDataExport
+ * \ingroup MarketplaceCommerceAnalytics
+ *
+ *
+ * \sa MarketplaceCommerceAnalyticsClient::startSupportDataExport
  */
 
-/**
+/*!
  * @brief  Constructs a new StartSupportDataExportResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StartSupportDataExportRequest * StartSupportDataExportResponse::request() 
     return static_cast<const StartSupportDataExportRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MarketplaceCommerceAnalytics StartSupportDataExport response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StartSupportDataExportResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartSupportDataExportResponsePrivate
+ * \class StartSupportDataExportResponsePrivate
  *
- * @brief  Private implementation for StartSupportDataExportResponse.
+ * \brief Private implementation for StartSupportDataExportResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSupportDataExportResponsePrivate object.
@@ -91,7 +94,7 @@ StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MarketplaceCommerceAnalytics StartSupportDataExportResponse element.
  *
  * @param  xml  XML stream to parse.

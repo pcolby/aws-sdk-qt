@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ListPresetsRequest
+/*!
+ * \class QtAws::ElasticTranscoder::ListPresetsRequest
  *
- * @brief  Implements ElasticTranscoder ListPresets requests.
+ * \brief The ListPresetsRequest class encapsulates ElasticTranscoder ListPresets requests.
  *
- * @see    ElasticTranscoderClient::listPresets
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::listPresets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPresetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListPresetsRequest::ListPresetsRequest(const ListPresetsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPresetsRequest object.
  */
 ListPresetsRequest::ListPresetsRequest()
@@ -53,13 +59,16 @@ ListPresetsRequest::ListPresetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPresetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPresetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * 
     return new ListPresetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPresetsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListPresetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPresetsRequestPrivate object.
@@ -97,7 +106,7 @@ ListPresetsRequestPrivate::ListPresetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPresetsRequestPrivate object, copying another.

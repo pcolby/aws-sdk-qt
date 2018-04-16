@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateEventSubscriptionRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateEventSubscriptionRequest
  *
- * @brief  Implements DatabaseMigrationService CreateEventSubscription requests.
+ * \brief The CreateEventSubscriptionRequest class encapsulates DatabaseMigrationService CreateEventSubscription requests.
  *
- * @see    DatabaseMigrationServiceClient::createEventSubscription
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createEventSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEventSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEvent
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEventSubscriptionRequest object.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest()
@@ -53,13 +67,16 @@ CreateEventSubscriptionRequest::CreateEventSubscriptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEventSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEventSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
     return new CreateEventSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEventSubscriptionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
  * @brief  Private implementation for CreateEventSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEventSubscriptionRequestPrivate object.
@@ -97,7 +114,7 @@ CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEventSubscriptionRequestPrivate object, copying another.

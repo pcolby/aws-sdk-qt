@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetRateBasedRuleRequest
+/*!
+ * \class QtAws::WAFRegional::GetRateBasedRuleRequest
  *
- * @brief  Implements WAFRegional GetRateBasedRule requests.
+ * \brief The GetRateBasedRuleRequest class encapsulates WAFRegional GetRateBasedRule requests.
  *
- * @see    WAFRegionalClient::getRateBasedRule
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getRateBasedRule
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRateBasedRuleRequest object.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest()
@@ -53,13 +63,16 @@ GetRateBasedRuleRequest::GetRateBasedRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRateBasedRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRateBasedRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkRep
     return new GetRateBasedRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRateBasedRuleRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkRep
  * @brief  Private implementation for GetRateBasedRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRateBasedRuleRequestPrivate object.
@@ -97,7 +110,7 @@ GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRateBasedRuleRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  AddTagsRequest
+/*!
+ * \class QtAws::MachineLearning::AddTagsRequest
  *
- * @brief  Implements MachineLearning AddTags requests.
+ * \brief The AddTagsRequest class encapsulates MachineLearning AddTags requests.
  *
- * @see    MachineLearningClient::addTags
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::addTags
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
@@ -53,13 +56,16 @@ AddTagsRequest::AddTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
     return new AddTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for AddTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsRequestPrivate object.
@@ -97,7 +103,7 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsRequestPrivate object, copying another.

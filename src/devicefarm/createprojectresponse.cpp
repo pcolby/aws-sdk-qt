@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateProjectResponse
+/*!
+ * \class QtAws::DeviceFarm::CreateProjectResponse
  *
- * @brief  Handles DeviceFarm CreateProject responses.
+ * \brief The CreateProjectResponse class encapsulates DeviceFarm CreateProject responses.
  *
- * @see    DeviceFarmClient::createProject
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createProject
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateProjectRequest * CreateProjectResponse::request() const
     return static_cast<const CreateProjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm CreateProject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateProjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateProjectResponsePrivate
+ * \class CreateProjectResponsePrivate
  *
- * @brief  Private implementation for CreateProjectResponse.
+ * \brief Private implementation for CreateProjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProjectResponsePrivate object.
@@ -91,7 +96,7 @@ CreateProjectResponsePrivate::CreateProjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm CreateProjectResponse element.
  *
  * @param  xml  XML stream to parse.

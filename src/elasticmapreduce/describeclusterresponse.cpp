@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeClusterResponse
+/*!
+ * \class QtAws::EMR::DescribeClusterResponse
  *
- * @brief  Handles EMR DescribeCluster responses.
+ * \brief The DescribeClusterResponse class encapsulates EMR DescribeCluster responses.
  *
- * @see    EMRClient::describeCluster
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeClusterRequest * DescribeClusterResponse::request() const
     return static_cast<const DescribeClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR DescribeCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeClusterResponsePrivate
+ * \class DescribeClusterResponsePrivate
  *
- * @brief  Private implementation for DescribeClusterResponse.
+ * \brief Private implementation for DescribeClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClusterResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR DescribeClusterResponse element.
  *
  * @param  xml  XML stream to parse.

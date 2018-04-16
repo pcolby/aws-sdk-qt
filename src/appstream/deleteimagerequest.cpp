@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteImageRequest
+/*!
+ * \class QtAws::AppStream::DeleteImageRequest
  *
- * @brief  Implements AppStream DeleteImage requests.
+ * \brief The DeleteImageRequest class encapsulates AppStream DeleteImage requests.
  *
- * @see    AppStreamClient::deleteImage
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteImage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteImageRequest::DeleteImageRequest(const DeleteImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteImageRequest object.
  */
 DeleteImageRequest::DeleteImageRequest()
@@ -53,13 +59,16 @@ DeleteImageRequest::DeleteImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * 
     return new DeleteImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteImageRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteImageRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteImageRequestPrivate::DeleteImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteImageRequestPrivate object, copying another.

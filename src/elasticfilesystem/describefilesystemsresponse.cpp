@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeFileSystemsResponse
+/*!
+ * \class QtAws::EFS::DescribeFileSystemsResponse
  *
- * @brief  Handles EFS DescribeFileSystems responses.
+ * \brief The DescribeFileSystemsResponse class encapsulates EFS DescribeFileSystems responses.
  *
- * @see    EFSClient::describeFileSystems
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeFileSystems
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFileSystemsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
     return static_cast<const DescribeFileSystemsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DescribeFileSystems response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeFileSystemsResponsePrivate
+ * \class DescribeFileSystemsResponsePrivate
  *
- * @brief  Private implementation for DescribeFileSystemsResponse.
+ * \brief Private implementation for DescribeFileSystemsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFileSystemsResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DescribeFileSystemsResponse element.
  *
  * @param  xml  XML stream to parse.

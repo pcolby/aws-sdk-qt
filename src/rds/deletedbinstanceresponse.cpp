@@ -27,15 +27,82 @@
 namespace QtAws {
 namespace RDS {
 
-/**
- * @class  DeleteDBInstanceResponse
+/*!
+ * \class QtAws::RDS::DeleteDBInstanceResponse
  *
- * @brief  Handles RDS DeleteDBInstance responses.
+ * \brief The DeleteDBInstanceResponse class encapsulates RDS DeleteDBInstance responses.
  *
- * @see    RDSClient::deleteDBInstance
+ * \ingroup RDS
+ *
+ *  <fullname>Amazon Relational Database Service</fullname>
+ * 
+ * 
+ *  </p
+ * 
+ *  Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a
+ *  relational database in the cloud. It provides cost-efficient, resizable capacity for an industry-standard relational
+ *  database and manages common database administration tasks, freeing up developers to focus on what makes their
+ *  applications and businesses
+ * 
+ *  unique>
+ * 
+ *  Amazon RDS gives you access to the capabilities of a MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle, or Amazon
+ *  Aurora database server. These capabilities mean that the code, applications, and tools you already use today with your
+ *  existing databases work with Amazon RDS without modification. Amazon RDS automatically backs up your database and
+ *  maintains the database software that powers your DB instance. Amazon RDS is flexible: you can scale your DB instance's
+ *  compute resources and storage capacity to meet your application's demand. As with all Amazon Web Services, there are no
+ *  up-front investments, and you pay only for the resources you
+ * 
+ *  use>
+ * 
+ *  This interface reference for Amazon RDS contains documentation for a programming or command line interface you can use
+ *  to manage Amazon RDS. Note that Amazon RDS is asynchronous, which means that some interfaces might require techniques
+ *  such as polling or callback functions to determine when a command has been applied. In this reference, the parameter
+ *  descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the maintenance
+ *  window. The reference structure is as follows, and we list following some related topics from the user
+ * 
+ *  guide>
+ * 
+ *  <b>Amazon RDS API Reference</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  For the alphabetical list of API actions, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
+ * 
+ *  Actions</a>> </li> <li>
+ * 
+ *  For the alphabetical list of data types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
+ * 
+ *  Types</a>> </li> <li>
+ * 
+ *  For a list of common query parameters, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
+ * 
+ *  Parameters</a>> </li> <li>
+ * 
+ *  For descriptions of the error codes, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
+ * 
+ *  Errors</a>> </li> </ul>
+ * 
+ *  <b>Amazon RDS User Guide</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  For a summary of the Amazon RDS interfaces, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
+ * 
+ *  Interfaces</a>> </li> <li>
+ * 
+ *  For more information about how to use the Query API, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
+ *
+ * \sa RDSClient::deleteDBInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDBInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +125,7 @@ const DeleteDBInstanceRequest * DeleteDBInstanceResponse::request() const
     return static_cast<const DeleteDBInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a RDS DeleteDBInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +137,15 @@ void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDBInstanceResponsePrivate
+ * \class DeleteDBInstanceResponsePrivate
  *
- * @brief  Private implementation for DeleteDBInstanceResponse.
+ * \brief Private implementation for DeleteDBInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDBInstanceResponsePrivate object.
@@ -91,7 +158,7 @@ DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an RDS DeleteDBInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

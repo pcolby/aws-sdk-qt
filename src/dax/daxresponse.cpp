@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DAXResponse
+/*!
+ * \class QtAws::DAX::DAXResponse
  *
- * @brief  Handles DAX DAX responses.
+ * \brief The DAXResponse class is the base class for all DAX responses.
  *
- * @see    DAXClient::dAX
+ * \ingroup DAX
  */
 
-/**
+/*!
  * @brief  Constructs a new DAXResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DAXResponse::DAXResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DAXResponse object.
@@ -63,7 +63,7 @@ DAXResponse::DAXResponse(DAXResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DAXResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DAXResponsePrivate
@@ -92,7 +92,7 @@ void DAXResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DAXResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DAXResponsePrivate object.

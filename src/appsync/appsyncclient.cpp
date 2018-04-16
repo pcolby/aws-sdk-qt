@@ -79,24 +79,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::AppSync
+ * \brief The QtAws::AppSync contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  AppSyncClient
+/*!
+ * \class QtAws::AppSync::AppSyncClient
  *
- * @brief  Client for AWS AppSync
+ * \brief The AppSyncClient class provides access the AWS AppSync service.
  *
- * AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  */
 
-/**
- * @brief  Constructs a new AppSyncClient object.
+/*!
+ * \brief Constructs a AppSyncClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AppSyncClient::AppSyncClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -115,21 +123,16 @@ AppSyncClient::AppSyncClient(
     d->serviceName = QStringLiteral("appsync");
 }
 
-/**
- * @brief  Constructs a new AppSyncClient object.
+/*!
+ * \overload AppSyncClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AppSyncClient::AppSyncClient(
     const QUrl &endpoint,
@@ -148,7 +151,7 @@ AppSyncClient::AppSyncClient(
     d->serviceName = QStringLiteral("appsync");
 }
 
-/**
+/*!
  * Creates a unique key that you can distribute to clients who are executing your
  *
  * @param  request Request to send to AWS AppSync.
@@ -162,7 +165,7 @@ CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &re
     return qobject_cast<CreateApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>DataSource</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -176,7 +179,7 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
     return qobject_cast<CreateDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>GraphqlApi</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -190,7 +193,7 @@ CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlAp
     return qobject_cast<CreateGraphqlApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>Resolver</code>
  *
  * object>
@@ -209,7 +212,7 @@ CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverReque
     return qobject_cast<CreateResolverResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>Type</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -223,7 +226,7 @@ CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
     return qobject_cast<CreateTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an API
  *
  * @param  request Request to send to AWS AppSync.
@@ -237,7 +240,7 @@ DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &re
     return qobject_cast<DeleteApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <code>DataSource</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -251,7 +254,7 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
     return qobject_cast<DeleteDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <code>GraphqlApi</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -265,7 +268,7 @@ DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlAp
     return qobject_cast<DeleteGraphqlApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <code>Resolver</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -279,7 +282,7 @@ DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverReque
     return qobject_cast<DeleteResolverResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <code>Type</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -293,7 +296,7 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
     return qobject_cast<DeleteTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a <code>DataSource</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -307,7 +310,7 @@ GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest 
     return qobject_cast<GetDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a <code>GraphqlApi</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -321,7 +324,7 @@ GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest 
     return qobject_cast<GetGraphqlApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the introspection schema for a GraphQL
  *
  * @param  request Request to send to AWS AppSync.
@@ -335,7 +338,7 @@ GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const Get
     return qobject_cast<GetIntrospectionSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a <code>Resolver</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -349,7 +352,7 @@ GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &reque
     return qobject_cast<GetResolverResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the current status of a schema creation
  *
  * @param  request Request to send to AWS AppSync.
@@ -363,7 +366,7 @@ GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const G
     return qobject_cast<GetSchemaCreationStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a <code>Type</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -377,7 +380,7 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
     return qobject_cast<GetTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the API keys for a given
  *
  * @param  request Request to send to AWS AppSync.
@@ -391,7 +394,7 @@ ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &reque
     return qobject_cast<ListApiKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the data sources for a given
  *
  * @param  request Request to send to AWS AppSync.
@@ -405,7 +408,7 @@ ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRe
     return qobject_cast<ListDataSourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists your GraphQL
  *
  * @param  request Request to send to AWS AppSync.
@@ -419,7 +422,7 @@ ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRe
     return qobject_cast<ListGraphqlApisResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the resolvers for a given API and
  *
  * @param  request Request to send to AWS AppSync.
@@ -433,7 +436,7 @@ ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest 
     return qobject_cast<ListResolversResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the types for a given
  *
  * @param  request Request to send to AWS AppSync.
@@ -447,7 +450,7 @@ ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
     return qobject_cast<ListTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a new schema to your GraphQL
  *
  * API>
@@ -465,7 +468,7 @@ StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSche
     return qobject_cast<StartSchemaCreationResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an API
  *
  * @param  request Request to send to AWS AppSync.
@@ -479,7 +482,7 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
     return qobject_cast<UpdateApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <code>DataSource</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -493,7 +496,7 @@ UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourc
     return qobject_cast<UpdateDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <code>GraphqlApi</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -507,7 +510,7 @@ UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlAp
     return qobject_cast<UpdateGraphqlApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <code>Resolver</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -521,7 +524,7 @@ UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverReque
     return qobject_cast<UpdateResolverResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <code>Type</code>
  *
  * @param  request Request to send to AWS AppSync.
@@ -535,7 +538,7 @@ UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
     return qobject_cast<UpdateTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AppSyncClientPrivate
@@ -543,7 +546,7 @@ UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
  * @brief  Private implementation for AppSyncClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppSyncClientPrivate object.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateAddressBookRequest
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateAddressBookRequest
  *
- * @brief  Implements AlexaForBusiness UpdateAddressBook requests.
+ * \brief The UpdateAddressBookRequest class encapsulates AlexaForBusiness UpdateAddressBook requests.
  *
- * @see    AlexaForBusinessClient::updateAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAddressBookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateAddressBookRequest::UpdateAddressBookRequest(const UpdateAddressBookReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAddressBookRequest object.
  */
 UpdateAddressBookRequest::UpdateAddressBookRequest()
@@ -53,13 +61,16 @@ UpdateAddressBookRequest::UpdateAddressBookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAddressBookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAddressBookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAddressBookRequest::response(QNetworkRe
     return new UpdateAddressBookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAddressBookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAddressBookRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateAddressBookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAddressBookRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateAddressBookRequestPrivate::UpdateAddressBookRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAddressBookRequestPrivate object, copying another.

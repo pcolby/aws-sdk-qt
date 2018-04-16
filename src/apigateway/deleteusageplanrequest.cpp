@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteUsagePlanRequest
+/*!
+ * \class QtAws::APIGateway::DeleteUsagePlanRequest
  *
- * @brief  Implements APIGateway DeleteUsagePlan requests.
+ * \brief The DeleteUsagePlanRequest class encapsulates APIGateway DeleteUsagePlan requests.
  *
- * @see    APIGatewayClient::deleteUsagePlan
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteUsagePlan
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUsagePlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteUsagePlanRequest::DeleteUsagePlanRequest(const DeleteUsagePlanRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUsagePlanRequest object.
  */
 DeleteUsagePlanRequest::DeleteUsagePlanRequest()
@@ -53,13 +61,16 @@ DeleteUsagePlanRequest::DeleteUsagePlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUsagePlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUsagePlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkRepl
     return new DeleteUsagePlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUsagePlanRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteUsagePlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUsagePlanRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteUsagePlanRequestPrivate::DeleteUsagePlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUsagePlanRequestPrivate object, copying another.

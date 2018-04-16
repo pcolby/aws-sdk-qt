@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationInputProcessingConfigurationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationInputProcessingConfigurationResponse
  *
- * @brief  Handles KinesisAnalytics AddApplicationInputProcessingConfiguration responses.
+ * \brief The AddApplicationInputProcessingConfigurationResponse class encapsulates KinesisAnalytics AddApplicationInputProcessingConfiguration responses.
  *
- * @see    KinesisAnalyticsClient::addApplicationInputProcessingConfiguration
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationInputProcessingConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationInputProcessingConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AddApplicationInputProcessingConfigurationRequest * AddApplicationInputPro
     return static_cast<const AddApplicationInputProcessingConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics AddApplicationInputProcessingConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AddApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevice 
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddApplicationInputProcessingConfigurationResponsePrivate
+ * \class AddApplicationInputProcessingConfigurationResponsePrivate
  *
- * @brief  Private implementation for AddApplicationInputProcessingConfigurationResponse.
+ * \brief Private implementation for AddApplicationInputProcessingConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationInputProcessingConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ AddApplicationInputProcessingConfigurationResponsePrivate::AddApplicationInputPr
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics AddApplicationInputProcessingConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

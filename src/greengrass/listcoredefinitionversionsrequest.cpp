@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListCoreDefinitionVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListCoreDefinitionVersionsRequest
  *
- * @brief  Implements Greengrass ListCoreDefinitionVersions requests.
+ * \brief The ListCoreDefinitionVersionsRequest class encapsulates Greengrass ListCoreDefinitionVersions requests.
  *
- * @see    GreengrassClient::listCoreDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listCoreDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCoreDefinitionVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListCoreDefinitionVersionsRequest::ListCoreDefinitionVersionsRequest(const ListC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListCoreDefinitionVersionsRequest object.
  */
 ListCoreDefinitionVersionsRequest::ListCoreDefinitionVersionsRequest()
@@ -53,13 +59,16 @@ ListCoreDefinitionVersionsRequest::ListCoreDefinitionVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListCoreDefinitionVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListCoreDefinitionVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListCoreDefinitionVersionsRequest::response(Q
     return new ListCoreDefinitionVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListCoreDefinitionVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListCoreDefinitionVersionsRequest::response(Q
  * @brief  Private implementation for ListCoreDefinitionVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCoreDefinitionVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListCoreDefinitionVersionsRequestPrivate::ListCoreDefinitionVersionsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCoreDefinitionVersionsRequestPrivate object, copying another.

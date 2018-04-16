@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  RegisterCrossAccountAccessRoleRequest
+/*!
+ * \class QtAws::Inspector::RegisterCrossAccountAccessRoleRequest
  *
- * @brief  Implements Inspector RegisterCrossAccountAccessRole requests.
+ * \brief The RegisterCrossAccountAccessRoleRequest class encapsulates Inspector RegisterCrossAccountAccessRole requests.
  *
- * @see    InspectorClient::registerCrossAccountAccessRole
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::registerCrossAccountAccessRole
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterCrossAccountAccessRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterCrossAccountAccessRoleRequest object.
  */
 RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest()
@@ -53,13 +61,16 @@ RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterCrossAccountAccessRoleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterCrossAccountAccessRoleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::respon
     return new RegisterCrossAccountAccessRoleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterCrossAccountAccessRoleRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::respon
  * @brief  Private implementation for RegisterCrossAccountAccessRoleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCrossAccountAccessRoleRequestPrivate object.
@@ -97,7 +108,7 @@ RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCrossAccountAccessRoleRequestPrivate object, copying another.

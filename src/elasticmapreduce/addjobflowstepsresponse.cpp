@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddJobFlowStepsResponse
+/*!
+ * \class QtAws::EMR::AddJobFlowStepsResponse
  *
- * @brief  Handles EMR AddJobFlowSteps responses.
+ * \brief The AddJobFlowStepsResponse class encapsulates EMR AddJobFlowSteps responses.
  *
- * @see    EMRClient::addJobFlowSteps
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addJobFlowSteps
  */
 
-/**
+/*!
  * @brief  Constructs a new AddJobFlowStepsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
     return static_cast<const AddJobFlowStepsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR AddJobFlowSteps response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddJobFlowStepsResponsePrivate
+ * \class AddJobFlowStepsResponsePrivate
  *
- * @brief  Private implementation for AddJobFlowStepsResponse.
+ * \brief Private implementation for AddJobFlowStepsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddJobFlowStepsResponsePrivate object.
@@ -91,7 +97,7 @@ AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR AddJobFlowStepsResponse element.
  *
  * @param  xml  XML stream to parse.

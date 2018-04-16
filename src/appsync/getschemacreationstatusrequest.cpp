@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetSchemaCreationStatusRequest
+/*!
+ * \class QtAws::AppSync::GetSchemaCreationStatusRequest
  *
- * @brief  Implements AppSync GetSchemaCreationStatus requests.
+ * \brief The GetSchemaCreationStatusRequest class encapsulates AppSync GetSchemaCreationStatus requests.
  *
- * @see    AppSyncClient::getSchemaCreationStatus
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getSchemaCreationStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSchemaCreationStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetSchemaCreationStatusRequest::GetSchemaCreationStatusRequest(const GetSchemaCr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSchemaCreationStatusRequest object.
  */
 GetSchemaCreationStatusRequest::GetSchemaCreationStatusRequest()
@@ -53,13 +57,16 @@ GetSchemaCreationStatusRequest::GetSchemaCreationStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSchemaCreationStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSchemaCreationStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNet
     return new GetSchemaCreationStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSchemaCreationStatusRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNet
  * @brief  Private implementation for GetSchemaCreationStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSchemaCreationStatusRequestPrivate object.
@@ -97,7 +104,7 @@ GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSchemaCreationStatusRequestPrivate object, copying another.

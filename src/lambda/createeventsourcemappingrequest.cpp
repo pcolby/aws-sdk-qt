@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  CreateEventSourceMappingRequest
+/*!
+ * \class QtAws::Lambda::CreateEventSourceMappingRequest
  *
- * @brief  Implements Lambda CreateEventSourceMapping requests.
+ * \brief The CreateEventSourceMappingRequest class encapsulates Lambda CreateEventSourceMapping requests.
  *
- * @see    LambdaClient::createEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::createEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEventSourceMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateEventSourceMappingRequest::CreateEventSourceMappingRequest(const CreateEve
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEventSourceMappingRequest object.
  */
 CreateEventSourceMappingRequest::CreateEventSourceMappingRequest()
@@ -53,13 +67,16 @@ CreateEventSourceMappingRequest::CreateEventSourceMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEventSourceMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEventSourceMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateEventSourceMappingRequest::response(QNe
     return new CreateEventSourceMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEventSourceMappingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateEventSourceMappingRequest::response(QNe
  * @brief  Private implementation for CreateEventSourceMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEventSourceMappingRequestPrivate object.
@@ -97,7 +114,7 @@ CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEventSourceMappingRequestPrivate object, copying another.

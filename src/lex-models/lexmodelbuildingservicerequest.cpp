@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  LexModelBuildingServiceRequest
+/*!
+ * \class QtAws::LexModelBuildingService::LexModelBuildingServiceRequest
  *
- * @brief  Interface class for providing LexModelBuildingService requests
+ * \brief The LexModelBuildingServiceRequest class is the base class for all LexModelBuildingService requests.
+ *
+ * \ingroup LexModelBuildingService
  */
 
-
-/**
+/*!
  * @brief  Constructs a new LexModelBuildingServiceRequest object.
  *
  * @param  action  The LexModelBuildingService action to request.
@@ -41,7 +42,7 @@ LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const Action acti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new LexModelBuildingServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const LexModelBui
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ LexModelBuildingServiceRequest& LexModelBuildingServiceRequest::operator=(const 
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexModelBuildingServiceRequest object.
@@ -85,10 +86,8 @@ LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(LexModelBuildingS
 
 }
 
-/**
- * @brief  Get the LexModelBuildingService action to be performed by this request.
- *
- * @return The LexModelBuildingService action to be performed by this request.
+/*!
+ * \brief Returns the LexModelBuildingService action to be performed by this request.
  */
 LexModelBuildingServiceRequest::Action LexModelBuildingServiceRequest::action() const
 {
@@ -96,20 +95,16 @@ LexModelBuildingServiceRequest::Action LexModelBuildingServiceRequest::action() 
     return d->action;
 }
 
-/**
- * @brief Get the name of the LexModelBuildingService action to be performed by this request.
- *
- * @return The name of the LexModelBuildingService action to be performed by this request.
+/*!
+ * \brief Returns the name of the LexModelBuildingService action to be performed by this request.
  */
 QString LexModelBuildingServiceRequest::actionString() const
 {
     return LexModelBuildingServiceRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the LexModelBuildingService API version implemented by this request.
- *
- * @return The LexModelBuildingService API version implmented by this request.
+/*!
+ * \brief Returns the LexModelBuildingService API version implemented by this request.
  */
 QString LexModelBuildingServiceRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString LexModelBuildingServiceRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the LexModelBuildingService action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the LexModelBuildingService action to be performed by this request to \a action.
  */
 void LexModelBuildingServiceRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void LexModelBuildingServiceRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the LexModelBuildingService API version to include in this request.
- *
- * @param  version  The LexModelBuildingService API version to include in this request.
+/*!
+ * Set the LexModelBuildingService API version to include in this request to \a version.
  */
 void LexModelBuildingServiceRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void LexModelBuildingServiceRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool LexModelBuildingServiceRequest::operator==(const LexModelBuildingServiceRequest &other) const
 {
@@ -159,7 +146,7 @@ bool LexModelBuildingServiceRequest::operator==(const LexModelBuildingServiceReq
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid LexModelBuildingService queue name.
  *
  * @par From LexModelBuildingService FAQs:
@@ -178,12 +165,10 @@ bool LexModelBuildingServiceRequest::operator==(const LexModelBuildingServiceReq
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int LexModelBuildingServiceRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int LexModelBuildingServiceRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void LexModelBuildingServiceRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void LexModelBuildingServiceRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this LexModelBuildingService request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant LexModelBuildingServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant LexModelBuildingServiceRequest::parameter(const QString &name, const QV
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this LexModelBuildingService request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &LexModelBuildingServiceRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &LexModelBuildingServiceRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this LexModelBuildingService request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void LexModelBuildingServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void LexModelBuildingServiceRequest::setParameter(const QString &name, const QVa
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this LexModelBuildingService request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void LexModelBuildingServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void LexModelBuildingServiceRequest::setParameters(const QVariantMap &parameters
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this LexModelBuildingService request.
+/*!
+ * \brief Returns a network request for this LexModelBuildingService request using the given \a endpoint.
  *
  * This LexModelBuildingService implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this LexModelBuildingService request using the given \a endpoint.
  */
 QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endp
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  LexModelBuildingServiceRequestPrivate
+ * \class  LexModelBuildingServiceRequestPrivate
  *
- * @brief  Private implementation for LexModelBuildingServiceRequest.
+ * \brief  Private implementation for LexModelBuildingServiceRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new LexModelBuildingServiceRequestPrivate object.
- *
- * @param  action  LexModelBuildingService action being performed by the \a q request.
- * @param  q       Pointer to this object's public LexModelBuildingServiceRequest instance.
+ * \brief Constructs a new LexModelBuildingServiceRequestPrivate object.
  */
 LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequest::Action action, LexModelBuildingServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(con
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new LexModelBuildingServiceRequestPrivate object from an existing one.
+ * \brief Constructs a new LexModelBuildingServiceRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the LexModelBuildingServiceRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public LexModelBuildingServiceRequest instance.
  */
 LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequestPrivate &other,
                                      LexModelBuildingServiceRequest * const q)
@@ -312,14 +275,14 @@ LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(con
 
 }
 
-/**
- * @brief  Convert and LexModelBuildingService action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts LexModelBuildingServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the LexModelBuildingService service's Action
  * query parameters.
- *
- * @param  action  LexModelBuildingService action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

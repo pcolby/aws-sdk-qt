@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateGroupResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateGroupResponse
  *
- * @brief  Handles CognitoIdentityProvider UpdateGroup responses.
+ * \brief The UpdateGroupResponse class encapsulates CognitoIdentityProvider UpdateGroup responses.
  *
- * @see    CognitoIdentityProviderClient::updateGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const UpdateGroupRequest * UpdateGroupResponse::request() const
     return static_cast<const UpdateGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider UpdateGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void UpdateGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateGroupResponsePrivate
+ * \class UpdateGroupResponsePrivate
  *
- * @brief  Private implementation for UpdateGroupResponse.
+ * \brief Private implementation for UpdateGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupResponsePrivate object.
@@ -91,7 +104,7 @@ UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider UpdateGroupResponse element.
  *
  * @param  xml  XML stream to parse.

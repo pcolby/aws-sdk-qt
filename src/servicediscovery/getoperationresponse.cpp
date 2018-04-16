@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetOperationResponse
+/*!
+ * \class QtAws::ServiceDiscovery::GetOperationResponse
  *
- * @brief  Handles ServiceDiscovery GetOperation responses.
+ * \brief The GetOperationResponse class encapsulates ServiceDiscovery GetOperation responses.
  *
- * @see    ServiceDiscoveryClient::getOperation
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getOperation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOperationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetOperationRequest * GetOperationResponse::request() const
     return static_cast<const GetOperationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery GetOperation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetOperationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetOperationResponsePrivate
+ * \class GetOperationResponsePrivate
  *
- * @brief  Private implementation for GetOperationResponse.
+ * \brief Private implementation for GetOperationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationResponsePrivate object.
@@ -91,7 +98,7 @@ GetOperationResponsePrivate::GetOperationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery GetOperationResponse element.
  *
  * @param  xml  XML stream to parse.

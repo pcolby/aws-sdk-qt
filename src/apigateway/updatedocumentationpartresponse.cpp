@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateDocumentationPartResponse
+/*!
+ * \class QtAws::APIGateway::UpdateDocumentationPartResponse
  *
- * @brief  Handles APIGateway UpdateDocumentationPart responses.
+ * \brief The UpdateDocumentationPartResponse class encapsulates APIGateway UpdateDocumentationPart responses.
  *
- * @see    APIGatewayClient::updateDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDocumentationPartResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateDocumentationPartRequest * UpdateDocumentationPartResponse::request(
     return static_cast<const UpdateDocumentationPartRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateDocumentationPart response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDocumentationPartResponsePrivate
+ * \class UpdateDocumentationPartResponsePrivate
  *
- * @brief  Private implementation for UpdateDocumentationPartResponse.
+ * \brief Private implementation for UpdateDocumentationPartResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDocumentationPartResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateDocumentationPartResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  BatchDetectSentimentRequest
+/*!
+ * \class QtAws::Comprehend::BatchDetectSentimentRequest
  *
- * @brief  Implements Comprehend BatchDetectSentiment requests.
+ * \brief The BatchDetectSentimentRequest class encapsulates Comprehend BatchDetectSentiment requests.
  *
- * @see    ComprehendClient::batchDetectSentiment
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::batchDetectSentiment
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectSentimentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchDetectSentimentRequest::BatchDetectSentimentRequest(const BatchDetectSentim
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectSentimentRequest object.
  */
 BatchDetectSentimentRequest::BatchDetectSentimentRequest()
@@ -53,13 +59,16 @@ BatchDetectSentimentRequest::BatchDetectSentimentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDetectSentimentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDetectSentimentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetwor
     return new BatchDetectSentimentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDetectSentimentRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetwor
  * @brief  Private implementation for BatchDetectSentimentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectSentimentRequestPrivate object.
@@ -97,7 +106,7 @@ BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectSentimentRequestPrivate object, copying another.

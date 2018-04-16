@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetCoreDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::GetCoreDefinitionVersionResponse
  *
- * @brief  Handles Greengrass GetCoreDefinitionVersion responses.
+ * \brief The GetCoreDefinitionVersionResponse class encapsulates Greengrass GetCoreDefinitionVersion responses.
  *
- * @see    GreengrassClient::getCoreDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getCoreDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCoreDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetCoreDefinitionVersionRequest * GetCoreDefinitionVersionResponse::reques
     return static_cast<const GetCoreDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetCoreDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetCoreDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCoreDefinitionVersionResponsePrivate
+ * \class GetCoreDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for GetCoreDefinitionVersionResponse.
+ * \brief Private implementation for GetCoreDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCoreDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ GetCoreDefinitionVersionResponsePrivate::GetCoreDefinitionVersionResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetCoreDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  PutReportDefinitionRequest
+/*!
+ * \class QtAws::CostandUsageReportService::PutReportDefinitionRequest
  *
- * @brief  Implements CostandUsageReportService PutReportDefinition requests.
+ * \brief The PutReportDefinitionRequest class encapsulates CostandUsageReportService PutReportDefinition requests.
  *
- * @see    CostandUsageReportServiceClient::putReportDefinition
+ * \ingroup CostandUsageReportService
+ *
+ *
+ * \sa CostandUsageReportServiceClient::putReportDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new PutReportDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutReportDefinitionRequest::PutReportDefinitionRequest(const PutReportDefinition
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutReportDefinitionRequest object.
  */
 PutReportDefinitionRequest::PutReportDefinitionRequest()
@@ -53,13 +56,16 @@ PutReportDefinitionRequest::PutReportDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutReportDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutReportDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetwork
     return new PutReportDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutReportDefinitionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetwork
  * @brief  Private implementation for PutReportDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutReportDefinitionRequestPrivate object.
@@ -97,7 +103,7 @@ PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutReportDefinitionRequestPrivate object, copying another.

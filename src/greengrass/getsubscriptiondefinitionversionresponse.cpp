@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetSubscriptionDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::GetSubscriptionDefinitionVersionResponse
  *
- * @brief  Handles Greengrass GetSubscriptionDefinitionVersion responses.
+ * \brief The GetSubscriptionDefinitionVersionResponse class encapsulates Greengrass GetSubscriptionDefinitionVersion responses.
  *
- * @see    GreengrassClient::getSubscriptionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getSubscriptionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetSubscriptionDefinitionVersionRequest * GetSubscriptionDefinitionVersion
     return static_cast<const GetSubscriptionDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetSubscriptionDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetSubscriptionDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSubscriptionDefinitionVersionResponsePrivate
+ * \class GetSubscriptionDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for GetSubscriptionDefinitionVersionResponse.
+ * \brief Private implementation for GetSubscriptionDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ GetSubscriptionDefinitionVersionResponsePrivate::GetSubscriptionDefinitionVersio
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetSubscriptionDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

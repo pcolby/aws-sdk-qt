@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateTableResponse
+/*!
+ * \class QtAws::Glue::CreateTableResponse
  *
- * @brief  Handles Glue CreateTable responses.
+ * \brief The CreateTableResponse class encapsulates Glue CreateTable responses.
  *
- * @see    GlueClient::createTable
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createTable
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTableResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateTableRequest * CreateTableResponse::request() const
     return static_cast<const CreateTableRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue CreateTable response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateTableResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTableResponsePrivate
+ * \class CreateTableResponsePrivate
  *
- * @brief  Private implementation for CreateTableResponse.
+ * \brief Private implementation for CreateTableResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTableResponsePrivate object.
@@ -91,7 +97,7 @@ CreateTableResponsePrivate::CreateTableResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue CreateTableResponse element.
  *
  * @param  xml  XML stream to parse.

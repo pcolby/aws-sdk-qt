@@ -29,8 +29,8 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsSignatureV0
+/*!
+ * \class QtAws::Core::AwsSignatureV0
  *
  * @brief  Implements AWS Signature Version 0 \ref deprecated "(deprecated by Amazon)"
  *
@@ -45,7 +45,7 @@ namespace Core {
  * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsSignatureV0 object.
  *
  * Use instances of this object to provide Version 0 signatures for AWS services.
@@ -55,7 +55,7 @@ AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Privat
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsSignatureV0 object with a specific private implementation.
@@ -109,10 +109,10 @@ int AwsSignatureV0::version() const
     return 0;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsSignatureV0Private
+ * \class QtAws::Core::AwsSignatureV0Private
  *
  * @brief  Private implementation for AwsSignatureV0.
  *
@@ -122,7 +122,7 @@ int AwsSignatureV0::version() const
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsSignatureV0Private object.
@@ -134,7 +134,7 @@ AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbst
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Add AWS Signature Version 0 adornments to an AWS request.
@@ -188,7 +188,7 @@ void AwsSignatureV0Private::adornRequest(QNetworkRequest &request,
     }
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Create an AWS Signature version 0 canonical query.

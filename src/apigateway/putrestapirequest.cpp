@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  PutRestApiRequest
+/*!
+ * \class QtAws::APIGateway::PutRestApiRequest
  *
- * @brief  Implements APIGateway PutRestApi requests.
+ * \brief The PutRestApiRequest class encapsulates APIGateway PutRestApi requests.
  *
- * @see    APIGatewayClient::putRestApi
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::putRestApi
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRestApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutRestApiRequest::PutRestApiRequest(const PutRestApiRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutRestApiRequest object.
  */
 PutRestApiRequest::PutRestApiRequest()
@@ -53,13 +61,16 @@ PutRestApiRequest::PutRestApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutRestApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutRestApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutRestApiRequest::response(QNetworkReply * c
     return new PutRestApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutRestApiRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutRestApiRequest::response(QNetworkReply * c
  * @brief  Private implementation for PutRestApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRestApiRequestPrivate object.
@@ -97,7 +108,7 @@ PutRestApiRequestPrivate::PutRestApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRestApiRequestPrivate object, copying another.

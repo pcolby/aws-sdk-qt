@@ -47,26 +47,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Comprehend
+ * \brief The QtAws::Comprehend contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  ComprehendClient
+/*!
+ * \class QtAws::Comprehend::ComprehendClient
  *
- * @brief  Client for Amazon Comprehend
+ * \brief The ComprehendClient class provides access the Amazon Comprehend service.
  *
- * Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
- * the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
- * predominant language used, and
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
  */
 
-/**
- * @brief  Constructs a new ComprehendClient object.
+/*!
+ * \brief Constructs a ComprehendClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ComprehendClient::ComprehendClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -85,21 +93,16 @@ ComprehendClient::ComprehendClient(
     d->serviceName = QStringLiteral("comprehend");
 }
 
-/**
- * @brief  Constructs a new ComprehendClient object.
+/*!
+ * \overload ComprehendClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ComprehendClient::ComprehendClient(
     const QUrl &endpoint,
@@ -118,7 +121,7 @@ ComprehendClient::ComprehendClient(
     d->serviceName = QStringLiteral("comprehend");
 }
 
-/**
+/*!
  * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon
  * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
  * Comprehend Supported Languages</a>.
@@ -134,7 +137,7 @@ BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLangu
     return qobject_cast<BatchDetectDominantLanguageResponse *>(send(request));
 }
 
-/**
+/*!
  * Inspects the text of a batch of documents and returns information about them. For more information about entities, see
  * <a>how-entities</a>
  *
@@ -149,7 +152,7 @@ BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchD
     return qobject_cast<BatchDetectEntitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects the key noun phrases found in a batch of
  *
  * @param  request Request to send to Amazon Comprehend.
@@ -163,7 +166,7 @@ BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const Ba
     return qobject_cast<BatchDetectKeyPhrasesResponse *>(send(request));
 }
 
-/**
+/*!
  * Inspects a batch of documents and returns an inference of the prevailing sentiment, <code>POSITIVE</code>,
  * <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>, in each
  *
@@ -178,7 +181,7 @@ BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const Batc
     return qobject_cast<BatchDetectSentimentResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
  *
  * @param  request Request to send to Amazon Comprehend.
@@ -192,7 +195,7 @@ DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJo
     return qobject_cast<DescribeTopicsDetectionJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a
  * href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
  *
@@ -207,7 +210,7 @@ DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const 
     return qobject_cast<DetectDominantLanguageResponse *>(send(request));
 }
 
-/**
+/*!
  * Inspects text for entities, and returns information about them. For more information, about entities, see
  * <a>how-entities</a>.
  *
@@ -222,7 +225,7 @@ DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRe
     return qobject_cast<DetectEntitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects the key noun phrases found in the text.
  *
  * @param  request Request to send to Amazon Comprehend.
@@ -236,7 +239,7 @@ DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhr
     return qobject_cast<DetectKeyPhrasesResponse *>(send(request));
 }
 
-/**
+/*!
  * Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>,
  * <code>MIXED</code>, or <code>NEGATIVE</code>).
  *
@@ -251,7 +254,7 @@ DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimen
     return qobject_cast<DetectSentimentResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of the topic detection jobs that you have
  *
  * @param  request Request to send to Amazon Comprehend.
@@ -265,7 +268,7 @@ ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(cons
     return qobject_cast<ListTopicsDetectionJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts an asynchronous topic detection job. Use the <code>DescribeTopicDetectionJob</code> operation to track the status
  * of a
  *
@@ -280,7 +283,7 @@ StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(cons
     return qobject_cast<StartTopicsDetectionJobResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ComprehendClientPrivate
@@ -288,7 +291,7 @@ StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(cons
  * @brief  Private implementation for ComprehendClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ComprehendClientPrivate object.

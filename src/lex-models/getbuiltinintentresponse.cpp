@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBuiltinIntentResponse
+/*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinIntentResponse
  *
- * @brief  Handles LexModelBuildingService GetBuiltinIntent responses.
+ * \brief The GetBuiltinIntentResponse class encapsulates LexModelBuildingService GetBuiltinIntent responses.
  *
- * @see    LexModelBuildingServiceClient::getBuiltinIntent
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBuiltinIntent
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinIntentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetBuiltinIntentRequest * GetBuiltinIntentResponse::request() const
     return static_cast<const GetBuiltinIntentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService GetBuiltinIntent response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetBuiltinIntentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBuiltinIntentResponsePrivate
+ * \class GetBuiltinIntentResponsePrivate
  *
- * @brief  Private implementation for GetBuiltinIntentResponse.
+ * \brief Private implementation for GetBuiltinIntentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinIntentResponsePrivate object.
@@ -91,7 +98,7 @@ GetBuiltinIntentResponsePrivate::GetBuiltinIntentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService GetBuiltinIntentResponse element.
  *
  * @param  xml  XML stream to parse.

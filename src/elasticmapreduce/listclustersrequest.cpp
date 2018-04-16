@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListClustersRequest
+/*!
+ * \class QtAws::EMR::ListClustersRequest
  *
- * @brief  Implements EMR ListClusters requests.
+ * \brief The ListClustersRequest class encapsulates EMR ListClusters requests.
  *
- * @see    EMRClient::listClusters
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listClusters
  */
 
-/**
+/*!
  * @brief  Constructs a new ListClustersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListClustersRequest object.
  */
 ListClustersRequest::ListClustersRequest()
@@ -53,13 +59,16 @@ ListClustersRequest::ListClustersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListClustersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListClustersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
     return new ListClustersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListClustersRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
  * @brief  Private implementation for ListClustersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClustersRequestPrivate object.
@@ -97,7 +106,7 @@ ListClustersRequestPrivate::ListClustersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClustersRequestPrivate object, copying another.

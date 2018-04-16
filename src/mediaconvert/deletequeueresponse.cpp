@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DeleteQueueResponse
+/*!
+ * \class QtAws::MediaConvert::DeleteQueueResponse
  *
- * @brief  Handles MediaConvert DeleteQueue responses.
+ * \brief The DeleteQueueResponse class encapsulates MediaConvert DeleteQueue responses.
  *
- * @see    MediaConvertClient::deleteQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::deleteQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteQueueResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteQueueRequest * DeleteQueueResponse::request() const
     return static_cast<const DeleteQueueRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert DeleteQueue response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteQueueResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteQueueResponsePrivate
+ * \class DeleteQueueResponsePrivate
  *
- * @brief  Private implementation for DeleteQueueResponse.
+ * \brief Private implementation for DeleteQueueResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQueueResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteQueueResponsePrivate::DeleteQueueResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert DeleteQueueResponse element.
  *
  * @param  xml  XML stream to parse.

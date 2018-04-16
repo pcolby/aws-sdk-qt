@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  DescribeJobRequest
+/*!
+ * \class QtAws::Snowball::DescribeJobRequest
  *
- * @brief  Implements Snowball DescribeJob requests.
+ * \brief The DescribeJobRequest class encapsulates Snowball DescribeJob requests.
  *
- * @see    SnowballClient::describeJob
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::describeJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobRequest object.
  */
 DescribeJobRequest::DescribeJobRequest()
@@ -53,13 +62,16 @@ DescribeJobRequest::DescribeJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
     return new DescribeJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeJobRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
  * @brief  Private implementation for DescribeJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobRequestPrivate object, copying another.

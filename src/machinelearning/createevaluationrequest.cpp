@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateEvaluationRequest
+/*!
+ * \class QtAws::MachineLearning::CreateEvaluationRequest
  *
- * @brief  Implements MachineLearning CreateEvaluation requests.
+ * \brief The CreateEvaluationRequest class encapsulates MachineLearning CreateEvaluation requests.
  *
- * @see    MachineLearningClient::createEvaluation
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createEvaluation
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEvaluationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateEvaluationRequest::CreateEvaluationRequest(const CreateEvaluationRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEvaluationRequest object.
  */
 CreateEvaluationRequest::CreateEvaluationRequest()
@@ -53,13 +56,16 @@ CreateEvaluationRequest::CreateEvaluationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEvaluationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEvaluationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateEvaluationRequest::response(QNetworkRep
     return new CreateEvaluationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEvaluationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateEvaluationRequest::response(QNetworkRep
  * @brief  Private implementation for CreateEvaluationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEvaluationRequestPrivate object.
@@ -97,7 +103,7 @@ CreateEvaluationRequestPrivate::CreateEvaluationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEvaluationRequestPrivate object, copying another.

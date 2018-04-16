@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeTagsResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeTagsResponse
  *
- * @brief  Handles AutoScaling DescribeTags responses.
+ * \brief The DescribeTagsResponse class encapsulates AutoScaling DescribeTags responses.
  *
- * @see    AutoScalingClient::describeTags
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
     return static_cast<const DescribeTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeTagsResponsePrivate
+ * \class DescribeTagsResponsePrivate
  *
- * @brief  Private implementation for DescribeTagsResponse.
+ * \brief Private implementation for DescribeTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeTagsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListNetworkProfilesResponse
+/*!
+ * \class QtAws::DeviceFarm::ListNetworkProfilesResponse
  *
- * @brief  Handles DeviceFarm ListNetworkProfiles responses.
+ * \brief The ListNetworkProfilesResponse class encapsulates DeviceFarm ListNetworkProfiles responses.
  *
- * @see    DeviceFarmClient::listNetworkProfiles
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listNetworkProfiles
  */
 
-/**
+/*!
  * @brief  Constructs a new ListNetworkProfilesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListNetworkProfilesRequest * ListNetworkProfilesResponse::request() const
     return static_cast<const ListNetworkProfilesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm ListNetworkProfiles response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListNetworkProfilesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListNetworkProfilesResponsePrivate
+ * \class ListNetworkProfilesResponsePrivate
  *
- * @brief  Private implementation for ListNetworkProfilesResponse.
+ * \brief Private implementation for ListNetworkProfilesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNetworkProfilesResponsePrivate object.
@@ -91,7 +96,7 @@ ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm ListNetworkProfilesResponse element.
  *
  * @param  xml  XML stream to parse.

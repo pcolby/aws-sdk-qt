@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ChangeResourceRecordSetsResponse
+/*!
+ * \class QtAws::Route53::ChangeResourceRecordSetsResponse
  *
- * @brief  Handles Route53 ChangeResourceRecordSets responses.
+ * \brief The ChangeResourceRecordSetsResponse class encapsulates Route53 ChangeResourceRecordSets responses.
  *
- * @see    Route53Client::changeResourceRecordSets
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::changeResourceRecordSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ChangeResourceRecordSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ChangeResourceRecordSetsRequest * ChangeResourceRecordSetsResponse::reques
     return static_cast<const ChangeResourceRecordSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ChangeResourceRecordSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ChangeResourceRecordSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ChangeResourceRecordSetsResponsePrivate
+ * \class ChangeResourceRecordSetsResponsePrivate
  *
- * @brief  Private implementation for ChangeResourceRecordSetsResponse.
+ * \brief Private implementation for ChangeResourceRecordSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ChangeResourceRecordSetsResponsePrivate object.
@@ -91,7 +94,7 @@ ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ChangeResourceRecordSetsResponse element.
  *
  * @param  xml  XML stream to parse.

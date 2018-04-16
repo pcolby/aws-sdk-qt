@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CreateAutoScalingGroupResponse
+/*!
+ * \class QtAws::AutoScaling::CreateAutoScalingGroupResponse
  *
- * @brief  Handles AutoScaling CreateAutoScalingGroup responses.
+ * \brief The CreateAutoScalingGroupResponse class encapsulates AutoScaling CreateAutoScalingGroup responses.
  *
- * @see    AutoScalingClient::createAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::createAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAutoScalingGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateAutoScalingGroupRequest * CreateAutoScalingGroupResponse::request() 
     return static_cast<const CreateAutoScalingGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling CreateAutoScalingGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAutoScalingGroupResponsePrivate
+ * \class CreateAutoScalingGroupResponsePrivate
  *
- * @brief  Private implementation for CreateAutoScalingGroupResponse.
+ * \brief Private implementation for CreateAutoScalingGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAutoScalingGroupResponsePrivate object.
@@ -91,7 +99,7 @@ CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling CreateAutoScalingGroupResponse element.
  *
  * @param  xml  XML stream to parse.

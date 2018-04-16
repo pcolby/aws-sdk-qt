@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  EnableMetricsCollectionRequest
+/*!
+ * \class QtAws::AutoScaling::EnableMetricsCollectionRequest
  *
- * @brief  Implements AutoScaling EnableMetricsCollection requests.
+ * \brief The EnableMetricsCollectionRequest class encapsulates AutoScaling EnableMetricsCollection requests.
  *
- * @see    AutoScalingClient::enableMetricsCollection
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::enableMetricsCollection
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableMetricsCollectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ EnableMetricsCollectionRequest::EnableMetricsCollectionRequest(const EnableMetri
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableMetricsCollectionRequest object.
  */
 EnableMetricsCollectionRequest::EnableMetricsCollectionRequest()
@@ -53,13 +61,16 @@ EnableMetricsCollectionRequest::EnableMetricsCollectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableMetricsCollectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableMetricsCollectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * EnableMetricsCollectionRequest::response(QNet
     return new EnableMetricsCollectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableMetricsCollectionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * EnableMetricsCollectionRequest::response(QNet
  * @brief  Private implementation for EnableMetricsCollectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableMetricsCollectionRequestPrivate object.
@@ -97,7 +108,7 @@ EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableMetricsCollectionRequestPrivate object, copying another.

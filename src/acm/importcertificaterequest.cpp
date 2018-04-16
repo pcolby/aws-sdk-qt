@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ImportCertificateRequest
+/*!
+ * \class QtAws::ACM::ImportCertificateRequest
  *
- * @brief  Implements ACM ImportCertificate requests.
+ * \brief The ImportCertificateRequest class encapsulates ACM ImportCertificate requests.
  *
- * @see    ACMClient::importCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::importCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportCertificateRequest object.
  */
 ImportCertificateRequest::ImportCertificateRequest()
@@ -53,13 +65,16 @@ ImportCertificateRequest::ImportCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
     return new ImportCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  * @brief  Private implementation for ImportCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportCertificateRequestPrivate object, copying another.

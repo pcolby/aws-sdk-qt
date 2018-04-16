@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeAnalysisSchemesRequest
+/*!
+ * \class QtAws::CloudSearch::DescribeAnalysisSchemesRequest
  *
- * @brief  Implements CloudSearch DescribeAnalysisSchemes requests.
+ * \brief The DescribeAnalysisSchemesRequest class encapsulates CloudSearch DescribeAnalysisSchemes requests.
  *
- * @see    CloudSearchClient::describeAnalysisSchemes
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeAnalysisSchemes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAnalysisSchemesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeAnalysisSchemesRequest::DescribeAnalysisSchemesRequest(const DescribeAna
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAnalysisSchemesRequest object.
  */
 DescribeAnalysisSchemesRequest::DescribeAnalysisSchemesRequest()
@@ -53,13 +67,16 @@ DescribeAnalysisSchemesRequest::DescribeAnalysisSchemesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAnalysisSchemesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAnalysisSchemesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAnalysisSchemesRequest::response(QNet
     return new DescribeAnalysisSchemesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAnalysisSchemesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAnalysisSchemesRequest::response(QNet
  * @brief  Private implementation for DescribeAnalysisSchemesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAnalysisSchemesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeAnalysisSchemesRequestPrivate::DescribeAnalysisSchemesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAnalysisSchemesRequestPrivate object, copying another.

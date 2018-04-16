@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateFieldLevelEncryptionProfileRequest
+/*!
+ * \class QtAws::CloudFront::UpdateFieldLevelEncryptionProfileRequest
  *
- * @brief  Implements CloudFront UpdateFieldLevelEncryptionProfile requests.
+ * \brief The UpdateFieldLevelEncryptionProfileRequest class encapsulates CloudFront UpdateFieldLevelEncryptionProfile requests.
  *
- * @see    CloudFrontClient::updateFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateFieldLevelEncryptionProfileRequest::UpdateFieldLevelEncryptionProfileReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequest object.
  */
 UpdateFieldLevelEncryptionProfileRequest::UpdateFieldLevelEncryptionProfileRequest()
@@ -53,13 +61,16 @@ UpdateFieldLevelEncryptionProfileRequest::UpdateFieldLevelEncryptionProfileReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateFieldLevelEncryptionProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateFieldLevelEncryptionProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFieldLevelEncryptionProfileRequest::res
     return new UpdateFieldLevelEncryptionProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateFieldLevelEncryptionProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFieldLevelEncryptionProfileRequest::res
  * @brief  Private implementation for UpdateFieldLevelEncryptionProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateFieldLevelEncryptionProfileRequestPrivate::UpdateFieldLevelEncryptionProfi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFieldLevelEncryptionProfileRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateEndpointRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateEndpointRequest
  *
- * @brief  Implements DatabaseMigrationService CreateEndpoint requests.
+ * \brief The CreateEndpointRequest class encapsulates DatabaseMigrationService CreateEndpoint requests.
  *
- * @see    DatabaseMigrationServiceClient::createEndpoint
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEndpointRequest object.
  */
 CreateEndpointRequest::CreateEndpointRequest()
@@ -53,13 +67,16 @@ CreateEndpointRequest::CreateEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
     return new CreateEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEndpointRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for CreateEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEndpointRequestPrivate object.
@@ -97,7 +114,7 @@ CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEndpointRequestPrivate object, copying another.

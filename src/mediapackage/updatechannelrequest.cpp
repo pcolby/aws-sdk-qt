@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  UpdateChannelRequest
+/*!
+ * \class QtAws::MediaPackage::UpdateChannelRequest
  *
- * @brief  Implements MediaPackage UpdateChannel requests.
+ * \brief The UpdateChannelRequest class encapsulates MediaPackage UpdateChannel requests.
  *
- * @see    MediaPackageClient::updateChannel
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::updateChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateChannelRequest::UpdateChannelRequest(const UpdateChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateChannelRequest object.
  */
 UpdateChannelRequest::UpdateChannelRequest()
@@ -53,13 +56,16 @@ UpdateChannelRequest::UpdateChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply 
     return new UpdateChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateChannelRequestPrivate object, copying another.

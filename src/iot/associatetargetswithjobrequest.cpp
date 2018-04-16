@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  AssociateTargetsWithJobRequest
+/*!
+ * \class QtAws::IoT::AssociateTargetsWithJobRequest
  *
- * @brief  Implements IoT AssociateTargetsWithJob requests.
+ * \brief The AssociateTargetsWithJobRequest class encapsulates IoT AssociateTargetsWithJob requests.
  *
- * @see    IoTClient::associateTargetsWithJob
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::associateTargetsWithJob
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateTargetsWithJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest(const AssociateTa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateTargetsWithJobRequest object.
  */
 AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest()
@@ -53,13 +67,16 @@ AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateTargetsWithJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateTargetsWithJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNet
     return new AssociateTargetsWithJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateTargetsWithJobRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNet
  * @brief  Private implementation for AssociateTargetsWithJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateTargetsWithJobRequestPrivate object.
@@ -97,7 +114,7 @@ AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateTargetsWithJobRequestPrivate object, copying another.

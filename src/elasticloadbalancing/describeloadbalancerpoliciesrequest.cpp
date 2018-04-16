@@ -25,15 +25,46 @@
 namespace QtAws {
 namespace ElasticLoadBalancing {
 
-/**
- * @class  DescribeLoadBalancerPoliciesRequest
+/*!
+ * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancerPoliciesRequest
  *
- * @brief  Implements ElasticLoadBalancing DescribeLoadBalancerPolicies requests.
+ * \brief The DescribeLoadBalancerPoliciesRequest class encapsulates ElasticLoadBalancing DescribeLoadBalancerPolicies requests.
  *
- * @see    ElasticLoadBalancingClient::describeLoadBalancerPolicies
+ * \ingroup ElasticLoadBalancing
+ *
+ *  <fullname>Elastic Load Balancing</fullname>
+ * 
+ *  A load balancer can distribute incoming traffic across your EC2 instances. This enables you to increase the availability
+ *  of your application. The load balancer also monitors the health of its registered instances and ensures that it routes
+ *  traffic only to healthy instances. You configure your load balancer to accept incoming traffic by specifying one or more
+ *  listeners, which are configured with a protocol and port number for connections from clients to the load balancer and a
+ *  protocol and port number for connections from the load balancer to the
+ * 
+ *  instances>
+ * 
+ *  Elastic Load Balancing supports three types of load balancers: Application Load Balancers, Network Load Balancers, and
+ *  Classic Load Balancers. You can select a load balancer based on your application needs. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
+ * 
+ *  Guide</a>>
+ * 
+ *  This reference covers the 2012-06-01 API, which supports Classic Load Balancers. The 2015-12-01 API supports Application
+ *  Load Balancers and Network Load
+ * 
+ *  Balancers>
+ * 
+ *  To get started, create a load balancer with one or more listeners using <a>CreateLoadBalancer</a>. Register your
+ *  instances with the load balancer using
+ * 
+ *  <a>RegisterInstancesWithLoadBalancer</a>>
+ * 
+ *  All Elastic Load Balancing operations are <i>idempotent</i>, which means that they complete at most one time. If you
+ *  repeat an operation, it succeeds with a 200 OK response
+ *
+ * \sa ElasticLoadBalancingClient::describeLoadBalancerPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancerPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +75,7 @@ DescribeLoadBalancerPoliciesRequest::DescribeLoadBalancerPoliciesRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancerPoliciesRequest object.
  */
 DescribeLoadBalancerPoliciesRequest::DescribeLoadBalancerPoliciesRequest()
@@ -53,13 +84,16 @@ DescribeLoadBalancerPoliciesRequest::DescribeLoadBalancerPoliciesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLoadBalancerPoliciesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLoadBalancerPoliciesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +108,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerPoliciesRequest::response
     return new DescribeLoadBalancerPoliciesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLoadBalancerPoliciesRequestPrivate
@@ -82,7 +116,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerPoliciesRequest::response
  * @brief  Private implementation for DescribeLoadBalancerPoliciesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancerPoliciesRequestPrivate object.
@@ -97,7 +131,7 @@ DescribeLoadBalancerPoliciesRequestPrivate::DescribeLoadBalancerPoliciesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancerPoliciesRequestPrivate object, copying another.

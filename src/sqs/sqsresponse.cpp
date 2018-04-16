@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SQS {
 
-/**
- * @class  SQSResponse
+/*!
+ * \class QtAws::SQS::SQSResponse
  *
- * @brief  Handles SQS SQS responses.
+ * \brief The SQSResponse class is the base class for all SQS responses.
  *
- * @see    SQSClient::sQS
+ * \ingroup SQS
  */
 
-/**
+/*!
  * @brief  Constructs a new SQSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SQSResponse::SQSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SQSResponse object.
@@ -63,7 +63,7 @@ SQSResponse::SQSResponse(SQSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SQSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SQSResponsePrivate
@@ -92,7 +92,7 @@ void SQSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SQSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SQSResponsePrivate object.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetUserDefinedFunctionsResponse
+/*!
+ * \class QtAws::Glue::GetUserDefinedFunctionsResponse
  *
- * @brief  Handles Glue GetUserDefinedFunctions responses.
+ * \brief The GetUserDefinedFunctionsResponse class encapsulates Glue GetUserDefinedFunctions responses.
  *
- * @see    GlueClient::getUserDefinedFunctions
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getUserDefinedFunctions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUserDefinedFunctionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetUserDefinedFunctionsRequest * GetUserDefinedFunctionsResponse::request(
     return static_cast<const GetUserDefinedFunctionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetUserDefinedFunctions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetUserDefinedFunctionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetUserDefinedFunctionsResponsePrivate
+ * \class GetUserDefinedFunctionsResponsePrivate
  *
- * @brief  Private implementation for GetUserDefinedFunctionsResponse.
+ * \brief Private implementation for GetUserDefinedFunctionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserDefinedFunctionsResponsePrivate object.
@@ -91,7 +97,7 @@ GetUserDefinedFunctionsResponsePrivate::GetUserDefinedFunctionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetUserDefinedFunctionsResponse element.
  *
  * @param  xml  XML stream to parse.

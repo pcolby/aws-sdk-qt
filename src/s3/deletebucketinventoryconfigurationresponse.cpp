@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketInventoryConfigurationResponse
+/*!
+ * \class QtAws::S3::DeleteBucketInventoryConfigurationResponse
  *
- * @brief  Handles S3 DeleteBucketInventoryConfiguration responses.
+ * \brief The DeleteBucketInventoryConfigurationResponse class encapsulates S3 DeleteBucketInventoryConfiguration responses.
  *
- * @see    S3Client::deleteBucketInventoryConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketInventoryConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketInventoryConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteBucketInventoryConfigurationRequest * DeleteBucketInventoryConfigura
     return static_cast<const DeleteBucketInventoryConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 DeleteBucketInventoryConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteBucketInventoryConfigurationResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBucketInventoryConfigurationResponsePrivate
+ * \class DeleteBucketInventoryConfigurationResponsePrivate
  *
- * @brief  Private implementation for DeleteBucketInventoryConfigurationResponse.
+ * \brief Private implementation for DeleteBucketInventoryConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketInventoryConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryConfigur
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 DeleteBucketInventoryConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

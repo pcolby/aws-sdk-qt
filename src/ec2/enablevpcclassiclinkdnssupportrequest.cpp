@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVpcClassicLinkDnsSupportRequest
+/*!
+ * \class QtAws::EC2::EnableVpcClassicLinkDnsSupportRequest
  *
- * @brief  Implements EC2 EnableVpcClassicLinkDnsSupport requests.
+ * \brief The EnableVpcClassicLinkDnsSupportRequest class encapsulates EC2 EnableVpcClassicLinkDnsSupport requests.
  *
- * @see    EC2Client::enableVpcClassicLinkDnsSupport
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVpcClassicLinkDnsSupport
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequest object.
  */
 EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest()
@@ -53,13 +60,16 @@ EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableVpcClassicLinkDnsSupportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableVpcClassicLinkDnsSupportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkDnsSupportRequest::respon
     return new EnableVpcClassicLinkDnsSupportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableVpcClassicLinkDnsSupportRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkDnsSupportRequest::respon
  * @brief  Private implementation for EnableVpcClassicLinkDnsSupportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequestPrivate object.
@@ -97,7 +107,7 @@ EnableVpcClassicLinkDnsSupportRequestPrivate::EnableVpcClassicLinkDnsSupportRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequestPrivate object, copying another.

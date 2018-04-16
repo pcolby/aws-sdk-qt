@@ -65,23 +65,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MediaConvert
+ * \brief The QtAws::MediaConvert contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  MediaConvertClient
+/*!
+ * \class QtAws::MediaConvert::MediaConvertClient
  *
- * @brief  Client for AWS Elemental MediaConvert
+ * \brief The MediaConvertClient class provides access the AWS Elemental MediaConvert service.
+ *
+ * \ingroup MediaConvert
  *
  */
 
-/**
- * @brief  Constructs a new MediaConvertClient object.
+/*!
+ * \brief Constructs a MediaConvertClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MediaConvertClient::MediaConvertClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -100,21 +108,16 @@ MediaConvertClient::MediaConvertClient(
     d->serviceName = QStringLiteral("mediaconvert");
 }
 
-/**
- * @brief  Constructs a new MediaConvertClient object.
+/*!
+ * \overload MediaConvertClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MediaConvertClient::MediaConvertClient(
     const QUrl &endpoint,
@@ -133,7 +136,7 @@ MediaConvertClient::MediaConvertClient(
     d->serviceName = QStringLiteral("mediaconvert");
 }
 
-/**
+/*!
  * Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -147,7 +150,7 @@ CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &reques
     return qobject_cast<CancelJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new transcoding job. For information about jobs and job settings, see the User Guide at
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -161,7 +164,7 @@ CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &reques
     return qobject_cast<CreateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new job template. For information about job templates see the User Guide at
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -175,7 +178,7 @@ CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJo
     return qobject_cast<CreateJobTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new preset. For information about job templates see the User Guide at
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -189,7 +192,7 @@ CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetReques
     return qobject_cast<CreatePresetResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new transcoding queue. For information about job templates see the User Guide at
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -203,7 +206,7 @@ CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &
     return qobject_cast<CreateQueueResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -216,7 +219,7 @@ DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJo
     return qobject_cast<DeleteJobTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -229,7 +232,7 @@ DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetReques
     return qobject_cast<DeletePresetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -242,7 +245,7 @@ DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &
     return qobject_cast<DeleteQueueResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -255,7 +258,7 @@ DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const Describe
     return qobject_cast<DescribeEndpointsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -268,7 +271,7 @@ GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
     return qobject_cast<GetJobResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -281,7 +284,7 @@ GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplate
     return qobject_cast<GetJobTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -294,7 +297,7 @@ GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &reques
     return qobject_cast<GetPresetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -307,7 +310,7 @@ GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
     return qobject_cast<GetQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a JSON array of up to twenty of your job templates. This will return the templates themselves, not just a list
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -321,7 +324,7 @@ ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTem
     return qobject_cast<ListJobTemplatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a JSON array of up to twenty of your most recently created jobs. This array includes in-process, completed, and
  * errored jobs. This will return the jobs themselves, not just a list of the jobs. To retrieve the twenty next most recent
  *
@@ -336,7 +339,7 @@ ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
     return qobject_cast<ListJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a JSON array of up to twenty of your presets. This will return the presets themselves, not just a list of them.
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -350,7 +353,7 @@ ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &
     return qobject_cast<ListPresetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a JSON array of up to twenty of your queues. This will return the queues themselves, not just a list of them.
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
@@ -364,7 +367,7 @@ ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &req
     return qobject_cast<ListQueuesResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -377,7 +380,7 @@ UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJo
     return qobject_cast<UpdateJobTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -390,7 +393,7 @@ UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetReques
     return qobject_cast<UpdatePresetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaConvert.
  *
@@ -403,7 +406,7 @@ UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &
     return qobject_cast<UpdateQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaConvertClientPrivate
@@ -411,7 +414,7 @@ UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &
  * @brief  Private implementation for MediaConvertClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaConvertClientPrivate object.

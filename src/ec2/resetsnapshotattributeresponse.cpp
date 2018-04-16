@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetSnapshotAttributeResponse
+/*!
+ * \class QtAws::EC2::ResetSnapshotAttributeResponse
  *
- * @brief  Handles EC2 ResetSnapshotAttribute responses.
+ * \brief The ResetSnapshotAttributeResponse class encapsulates EC2 ResetSnapshotAttribute responses.
  *
- * @see    EC2Client::resetSnapshotAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetSnapshotAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetSnapshotAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ResetSnapshotAttributeRequest * ResetSnapshotAttributeResponse::request() 
     return static_cast<const ResetSnapshotAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ResetSnapshotAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ResetSnapshotAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetSnapshotAttributeResponsePrivate
+ * \class ResetSnapshotAttributeResponsePrivate
  *
- * @brief  Private implementation for ResetSnapshotAttributeResponse.
+ * \brief Private implementation for ResetSnapshotAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetSnapshotAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ResetSnapshotAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

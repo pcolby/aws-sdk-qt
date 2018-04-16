@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  MergeShardsRequest
+/*!
+ * \class QtAws::Kinesis::MergeShardsRequest
  *
- * @brief  Implements Kinesis MergeShards requests.
+ * \brief The MergeShardsRequest class encapsulates Kinesis MergeShards requests.
  *
- * @see    KinesisClient::mergeShards
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::mergeShards
  */
 
-/**
+/*!
  * @brief  Constructs a new MergeShardsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ MergeShardsRequest::MergeShardsRequest(const MergeShardsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MergeShardsRequest object.
  */
 MergeShardsRequest::MergeShardsRequest()
@@ -53,13 +59,16 @@ MergeShardsRequest::MergeShardsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool MergeShardsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an MergeShardsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * 
     return new MergeShardsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MergeShardsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * 
  * @brief  Private implementation for MergeShardsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MergeShardsRequestPrivate object.
@@ -97,7 +106,7 @@ MergeShardsRequestPrivate::MergeShardsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MergeShardsRequestPrivate object, copying another.

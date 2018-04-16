@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListDeviceDefinitionVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListDeviceDefinitionVersionsRequest
  *
- * @brief  Implements Greengrass ListDeviceDefinitionVersions requests.
+ * \brief The ListDeviceDefinitionVersionsRequest class encapsulates Greengrass ListDeviceDefinitionVersions requests.
  *
- * @see    GreengrassClient::listDeviceDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listDeviceDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDeviceDefinitionVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListDeviceDefinitionVersionsRequest::ListDeviceDefinitionVersionsRequest(const L
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDeviceDefinitionVersionsRequest object.
  */
 ListDeviceDefinitionVersionsRequest::ListDeviceDefinitionVersionsRequest()
@@ -53,13 +59,16 @@ ListDeviceDefinitionVersionsRequest::ListDeviceDefinitionVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDeviceDefinitionVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDeviceDefinitionVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionVersionsRequest::response
     return new ListDeviceDefinitionVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDeviceDefinitionVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionVersionsRequest::response
  * @brief  Private implementation for ListDeviceDefinitionVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeviceDefinitionVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeviceDefinitionVersionsRequestPrivate object, copying another.

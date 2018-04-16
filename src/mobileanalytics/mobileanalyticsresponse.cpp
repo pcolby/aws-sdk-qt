@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MobileAnalytics {
 
-/**
- * @class  MobileAnalyticsResponse
+/*!
+ * \class QtAws::MobileAnalytics::MobileAnalyticsResponse
  *
- * @brief  Handles MobileAnalytics MobileAnalytics responses.
+ * \brief The MobileAnalyticsResponse class is the base class for all MobileAnalytics responses.
  *
- * @see    MobileAnalyticsClient::mobileAnalytics
+ * \ingroup MobileAnalytics
  */
 
-/**
+/*!
  * @brief  Constructs a new MobileAnalyticsResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MobileAnalyticsResponse object.
@@ -63,7 +63,7 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(MobileAnalyticsResponsePrivate 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MobileAnalyticsResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MobileAnalyticsResponsePrivate
@@ -92,7 +92,7 @@ void MobileAnalyticsResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MobileAnalyticsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MobileAnalyticsResponsePrivate object.

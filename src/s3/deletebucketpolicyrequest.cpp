@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketPolicyRequest
+/*!
+ * \class QtAws::S3::DeleteBucketPolicyRequest
  *
- * @brief  Implements S3 DeleteBucketPolicy requests.
+ * \brief The DeleteBucketPolicyRequest class encapsulates S3 DeleteBucketPolicy requests.
  *
- * @see    S3Client::deleteBucketPolicy
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketPolicyRequest::DeleteBucketPolicyRequest(const DeleteBucketPolicyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketPolicyRequest object.
  */
 DeleteBucketPolicyRequest::DeleteBucketPolicyRequest()
@@ -53,13 +56,16 @@ DeleteBucketPolicyRequest::DeleteBucketPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketPolicyRequest::response(QNetworkR
     return new DeleteBucketPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketPolicyRequest::response(QNetworkR
  * @brief  Private implementation for DeleteBucketPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketPolicyRequestPrivate::DeleteBucketPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketPolicyRequestPrivate object, copying another.

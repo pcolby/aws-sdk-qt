@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetIPSetResponse
+/*!
+ * \class QtAws::GuardDuty::GetIPSetResponse
  *
- * @brief  Handles GuardDuty GetIPSet responses.
+ * \brief The GetIPSetResponse class encapsulates GuardDuty GetIPSet responses.
  *
- * @see    GuardDutyClient::getIPSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIPSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetIPSetRequest * GetIPSetResponse::request() const
     return static_cast<const GetIPSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty GetIPSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetIPSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIPSetResponsePrivate
+ * \class GetIPSetResponsePrivate
  *
- * @brief  Private implementation for GetIPSetResponse.
+ * \brief Private implementation for GetIPSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIPSetResponsePrivate object.
@@ -91,7 +94,7 @@ GetIPSetResponsePrivate::GetIPSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty GetIPSetResponse element.
  *
  * @param  xml  XML stream to parse.

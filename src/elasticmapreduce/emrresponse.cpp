@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  EMRResponse
+/*!
+ * \class QtAws::EMR::EMRResponse
  *
- * @brief  Handles EMR EMR responses.
+ * \brief The EMRResponse class is the base class for all EMR responses.
  *
- * @see    EMRClient::eMR
+ * \ingroup EMR
  */
 
-/**
+/*!
  * @brief  Constructs a new EMRResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ EMRResponse::EMRResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EMRResponse object.
@@ -63,7 +63,7 @@ EMRResponse::EMRResponse(EMRResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void EMRResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EMRResponsePrivate
@@ -92,7 +92,7 @@ void EMRResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for EMRResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EMRResponsePrivate object.

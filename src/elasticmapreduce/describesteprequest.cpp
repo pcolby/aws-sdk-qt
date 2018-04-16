@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeStepRequest
+/*!
+ * \class QtAws::EMR::DescribeStepRequest
  *
- * @brief  Implements EMR DescribeStep requests.
+ * \brief The DescribeStepRequest class encapsulates EMR DescribeStep requests.
  *
- * @see    EMRClient::describeStep
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeStep
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStepRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeStepRequest::DescribeStepRequest(const DescribeStepRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStepRequest object.
  */
 DescribeStepRequest::DescribeStepRequest()
@@ -53,13 +59,16 @@ DescribeStepRequest::DescribeStepRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStepRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStepResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply *
     return new DescribeStepResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStepRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeStepRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStepRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeStepRequestPrivate::DescribeStepRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStepRequestPrivate object, copying another.

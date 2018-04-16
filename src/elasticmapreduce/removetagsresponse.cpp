@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  RemoveTagsResponse
+/*!
+ * \class QtAws::EMR::RemoveTagsResponse
  *
- * @brief  Handles EMR RemoveTags responses.
+ * \brief The RemoveTagsResponse class encapsulates EMR RemoveTags responses.
  *
- * @see    EMRClient::removeTags
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::removeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
     return static_cast<const RemoveTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR RemoveTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsResponsePrivate
+ * \class RemoveTagsResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsResponse.
+ * \brief Private implementation for RemoveTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsResponsePrivate object.
@@ -91,7 +97,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR RemoveTagsResponse element.
  *
  * @param  xml  XML stream to parse.

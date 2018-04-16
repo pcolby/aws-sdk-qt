@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  GetProfileRequest
+/*!
+ * \class QtAws::AlexaForBusiness::GetProfileRequest
  *
- * @brief  Implements AlexaForBusiness GetProfile requests.
+ * \brief The GetProfileRequest class encapsulates AlexaForBusiness GetProfile requests.
  *
- * @see    AlexaForBusinessClient::getProfile
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::getProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new GetProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetProfileRequest::GetProfileRequest(const GetProfileRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetProfileRequest object.
  */
 GetProfileRequest::GetProfileRequest()
@@ -53,13 +61,16 @@ GetProfileRequest::GetProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetProfileRequest::response(QNetworkReply * c
     return new GetProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetProfileRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetProfileRequestPrivate object.
@@ -97,7 +108,7 @@ GetProfileRequestPrivate::GetProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetProfileRequestPrivate object, copying another.

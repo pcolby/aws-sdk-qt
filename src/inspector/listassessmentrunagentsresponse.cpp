@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListAssessmentRunAgentsResponse
+/*!
+ * \class QtAws::Inspector::ListAssessmentRunAgentsResponse
  *
- * @brief  Handles Inspector ListAssessmentRunAgents responses.
+ * \brief The ListAssessmentRunAgentsResponse class encapsulates Inspector ListAssessmentRunAgents responses.
  *
- * @see    InspectorClient::listAssessmentRunAgents
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listAssessmentRunAgents
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentRunAgentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListAssessmentRunAgentsRequest * ListAssessmentRunAgentsResponse::request(
     return static_cast<const ListAssessmentRunAgentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector ListAssessmentRunAgents response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListAssessmentRunAgentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAssessmentRunAgentsResponsePrivate
+ * \class ListAssessmentRunAgentsResponsePrivate
  *
- * @brief  Private implementation for ListAssessmentRunAgentsResponse.
+ * \brief Private implementation for ListAssessmentRunAgentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentRunAgentsResponsePrivate object.
@@ -91,7 +99,7 @@ ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector ListAssessmentRunAgentsResponse element.
  *
  * @param  xml  XML stream to parse.

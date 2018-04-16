@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  DeleteReplicationJobRequest
+/*!
+ * \class QtAws::SMS::DeleteReplicationJobRequest
  *
- * @brief  Implements SMS DeleteReplicationJob requests.
+ * \brief The DeleteReplicationJobRequest class encapsulates SMS DeleteReplicationJob requests.
  *
- * @see    SMSClient::deleteReplicationJob
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::deleteReplicationJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteReplicationJobRequest::DeleteReplicationJobRequest(const DeleteReplication
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationJobRequest object.
  */
 DeleteReplicationJobRequest::DeleteReplicationJobRequest()
@@ -53,13 +56,16 @@ DeleteReplicationJobRequest::DeleteReplicationJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReplicationJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReplicationJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetwor
     return new DeleteReplicationJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReplicationJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetwor
  * @brief  Private implementation for DeleteReplicationJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationJobRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationJobRequestPrivate object, copying another.

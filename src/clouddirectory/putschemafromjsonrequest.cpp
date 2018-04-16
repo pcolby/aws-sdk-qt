@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  PutSchemaFromJsonRequest
+/*!
+ * \class QtAws::CloudDirectory::PutSchemaFromJsonRequest
  *
- * @brief  Implements CloudDirectory PutSchemaFromJson requests.
+ * \brief The PutSchemaFromJsonRequest class encapsulates CloudDirectory PutSchemaFromJson requests.
  *
- * @see    CloudDirectoryClient::putSchemaFromJson
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::putSchemaFromJson
  */
 
-/**
+/*!
  * @brief  Constructs a new PutSchemaFromJsonRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ PutSchemaFromJsonRequest::PutSchemaFromJsonRequest(const PutSchemaFromJsonReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutSchemaFromJsonRequest object.
  */
 PutSchemaFromJsonRequest::PutSchemaFromJsonRequest()
@@ -53,13 +63,16 @@ PutSchemaFromJsonRequest::PutSchemaFromJsonRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutSchemaFromJsonRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutSchemaFromJsonResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkRe
     return new PutSchemaFromJsonResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutSchemaFromJsonRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkRe
  * @brief  Private implementation for PutSchemaFromJsonRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutSchemaFromJsonRequestPrivate object.
@@ -97,7 +110,7 @@ PutSchemaFromJsonRequestPrivate::PutSchemaFromJsonRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutSchemaFromJsonRequestPrivate object, copying another.

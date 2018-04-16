@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  TerminateInstanceInAutoScalingGroupRequest
+/*!
+ * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupRequest
  *
- * @brief  Implements AutoScaling TerminateInstanceInAutoScalingGroup requests.
+ * \brief The TerminateInstanceInAutoScalingGroupRequest class encapsulates AutoScaling TerminateInstanceInAutoScalingGroup requests.
  *
- * @see    AutoScalingClient::terminateInstanceInAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::terminateInstanceInAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object.
  */
 TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupRequest()
@@ -53,13 +61,16 @@ TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupR
 
 }
 
+/*!
+ * \reimp
+ */
 bool TerminateInstanceInAutoScalingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TerminateInstanceInAutoScalingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::r
     return new TerminateInstanceInAutoScalingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TerminateInstanceInAutoScalingGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::r
  * @brief  Private implementation for TerminateInstanceInAutoScalingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequestPrivate object.
@@ -97,7 +108,7 @@ TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalin
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequestPrivate object, copying another.

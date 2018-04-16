@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListTrafficPolicyInstancesByHostedZoneRequest
+/*!
+ * \class QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneRequest
  *
- * @brief  Implements Route53 ListTrafficPolicyInstancesByHostedZone requests.
+ * \brief The ListTrafficPolicyInstancesByHostedZoneRequest class encapsulates Route53 ListTrafficPolicyInstancesByHostedZone requests.
  *
- * @see    Route53Client::listTrafficPolicyInstancesByHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listTrafficPolicyInstancesByHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListTrafficPolicyInstancesByHostedZoneRequest::ListTrafficPolicyInstancesByHoste
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequest object.
  */
 ListTrafficPolicyInstancesByHostedZoneRequest::ListTrafficPolicyInstancesByHostedZoneRequest()
@@ -53,13 +56,16 @@ ListTrafficPolicyInstancesByHostedZoneRequest::ListTrafficPolicyInstancesByHoste
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTrafficPolicyInstancesByHostedZoneRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTrafficPolicyInstancesByHostedZoneResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByHostedZoneRequest
     return new ListTrafficPolicyInstancesByHostedZoneResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTrafficPolicyInstancesByHostedZoneRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByHostedZoneRequest
  * @brief  Private implementation for ListTrafficPolicyInstancesByHostedZoneRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequestPrivate object.
@@ -97,7 +103,7 @@ ListTrafficPolicyInstancesByHostedZoneRequestPrivate::ListTrafficPolicyInstances
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneRequestPrivate object, copying another.

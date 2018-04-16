@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteMembersResponse
+/*!
+ * \class QtAws::GuardDuty::DeleteMembersResponse
  *
- * @brief  Handles GuardDuty DeleteMembers responses.
+ * \brief The DeleteMembersResponse class encapsulates GuardDuty DeleteMembers responses.
  *
- * @see    GuardDutyClient::deleteMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMembersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteMembersRequest * DeleteMembersResponse::request() const
     return static_cast<const DeleteMembersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DeleteMembers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteMembersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteMembersResponsePrivate
+ * \class DeleteMembersResponsePrivate
  *
- * @brief  Private implementation for DeleteMembersResponse.
+ * \brief Private implementation for DeleteMembersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMembersResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteMembersResponsePrivate::DeleteMembersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DeleteMembersResponse element.
  *
  * @param  xml  XML stream to parse.

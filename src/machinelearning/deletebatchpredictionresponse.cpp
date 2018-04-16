@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteBatchPredictionResponse
+/*!
+ * \class QtAws::MachineLearning::DeleteBatchPredictionResponse
  *
- * @brief  Handles MachineLearning DeleteBatchPrediction responses.
+ * \brief The DeleteBatchPredictionResponse class encapsulates MachineLearning DeleteBatchPrediction responses.
  *
- * @see    MachineLearningClient::deleteBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBatchPredictionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteBatchPredictionRequest * DeleteBatchPredictionResponse::request() co
     return static_cast<const DeleteBatchPredictionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DeleteBatchPrediction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteBatchPredictionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBatchPredictionResponsePrivate
+ * \class DeleteBatchPredictionResponsePrivate
  *
- * @brief  Private implementation for DeleteBatchPredictionResponse.
+ * \brief Private implementation for DeleteBatchPredictionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBatchPredictionResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DeleteBatchPredictionResponse element.
  *
  * @param  xml  XML stream to parse.

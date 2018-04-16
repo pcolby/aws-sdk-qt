@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeImportSnapshotTasksResponse
+/*!
+ * \class QtAws::EC2::DescribeImportSnapshotTasksResponse
  *
- * @brief  Handles EC2 DescribeImportSnapshotTasks responses.
+ * \brief The DescribeImportSnapshotTasksResponse class encapsulates EC2 DescribeImportSnapshotTasks responses.
  *
- * @see    EC2Client::describeImportSnapshotTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeImportSnapshotTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImportSnapshotTasksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeImportSnapshotTasksRequest * DescribeImportSnapshotTasksResponse::
     return static_cast<const DescribeImportSnapshotTasksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeImportSnapshotTasks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeImportSnapshotTasksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeImportSnapshotTasksResponsePrivate
+ * \class DescribeImportSnapshotTasksResponsePrivate
  *
- * @brief  Private implementation for DescribeImportSnapshotTasksResponse.
+ * \brief Private implementation for DescribeImportSnapshotTasksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImportSnapshotTasksResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeImportSnapshotTasksResponse element.
  *
  * @param  xml  XML stream to parse.

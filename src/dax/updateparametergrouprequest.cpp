@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UpdateParameterGroupRequest
+/*!
+ * \class QtAws::DAX::UpdateParameterGroupRequest
  *
- * @brief  Implements DAX UpdateParameterGroup requests.
+ * \brief The UpdateParameterGroupRequest class encapsulates DAX UpdateParameterGroup requests.
  *
- * @see    DAXClient::updateParameterGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::updateParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateParameterGroupRequest::UpdateParameterGroupRequest(const UpdateParameterGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateParameterGroupRequest object.
  */
 UpdateParameterGroupRequest::UpdateParameterGroupRequest()
@@ -53,13 +60,16 @@ UpdateParameterGroupRequest::UpdateParameterGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateParameterGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateParameterGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetwor
     return new UpdateParameterGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateParameterGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetwor
  * @brief  Private implementation for UpdateParameterGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateParameterGroupRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateParameterGroupRequestPrivate object, copying another.

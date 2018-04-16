@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DisableDirectoryRequest
+/*!
+ * \class QtAws::CloudDirectory::DisableDirectoryRequest
  *
- * @brief  Implements CloudDirectory DisableDirectory requests.
+ * \brief The DisableDirectoryRequest class encapsulates CloudDirectory DisableDirectory requests.
  *
- * @see    CloudDirectoryClient::disableDirectory
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::disableDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableDirectoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DisableDirectoryRequest::DisableDirectoryRequest(const DisableDirectoryRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableDirectoryRequest object.
  */
 DisableDirectoryRequest::DisableDirectoryRequest()
@@ -53,13 +63,16 @@ DisableDirectoryRequest::DisableDirectoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableDirectoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableDirectoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkRep
     return new DisableDirectoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableDirectoryRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkRep
  * @brief  Private implementation for DisableDirectoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDirectoryRequestPrivate object.
@@ -97,7 +110,7 @@ DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDirectoryRequestPrivate object, copying another.

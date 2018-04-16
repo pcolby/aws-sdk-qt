@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListTagsForResourceRequest
+/*!
+ * \class QtAws::Inspector::ListTagsForResourceRequest
  *
- * @brief  Implements Inspector ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class encapsulates Inspector ListTagsForResource requests.
  *
- * @see    InspectorClient::listTagsForResource
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
@@ -53,13 +61,16 @@ ListTagsForResourceRequest::ListTagsForResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
     return new ListTagsForResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  * @brief  Private implementation for ListTagsForResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
@@ -97,7 +108,7 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.

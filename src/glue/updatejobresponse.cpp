@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateJobResponse
+/*!
+ * \class QtAws::Glue::UpdateJobResponse
  *
- * @brief  Handles Glue UpdateJob responses.
+ * \brief The UpdateJobResponse class encapsulates Glue UpdateJob responses.
  *
- * @see    GlueClient::updateJob
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateJob
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateJobRequest * UpdateJobResponse::request() const
     return static_cast<const UpdateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateJobResponsePrivate
+ * \class UpdateJobResponsePrivate
  *
- * @brief  Private implementation for UpdateJobResponse.
+ * \brief Private implementation for UpdateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateJobResponsePrivate::UpdateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateJobResponse element.
  *
  * @param  xml  XML stream to parse.

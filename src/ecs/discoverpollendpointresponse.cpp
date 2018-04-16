@@ -27,15 +27,35 @@
 namespace QtAws {
 namespace ECS {
 
-/**
- * @class  DiscoverPollEndpointResponse
+/*!
+ * \class QtAws::ECS::DiscoverPollEndpointResponse
  *
- * @brief  Handles ECS DiscoverPollEndpoint responses.
+ * \brief The DiscoverPollEndpointResponse class encapsulates ECS DiscoverPollEndpoint responses.
  *
- * @see    ECSClient::discoverPollEndpoint
+ * \ingroup ECS
+ *
+ *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
+ *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
+ *  that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
+ *  can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
+ *  launch type. For more information about launch types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ * 
+ *  Types</a>>
+ * 
+ *  Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
+ *  your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ * 
+ *  features>
+ * 
+ *  You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
+ *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
+ *  management and configuration management systems or worry about scaling your management
+ *
+ * \sa ECSClient::discoverPollEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DiscoverPollEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +78,7 @@ const DiscoverPollEndpointRequest * DiscoverPollEndpointResponse::request() cons
     return static_cast<const DiscoverPollEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECS DiscoverPollEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +90,15 @@ void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DiscoverPollEndpointResponsePrivate
+ * \class DiscoverPollEndpointResponsePrivate
  *
- * @brief  Private implementation for DiscoverPollEndpointResponse.
+ * \brief Private implementation for DiscoverPollEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DiscoverPollEndpointResponsePrivate object.
@@ -91,7 +111,7 @@ DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECS DiscoverPollEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

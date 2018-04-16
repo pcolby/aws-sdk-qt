@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  GetFacetResponse
+/*!
+ * \class QtAws::CloudDirectory::GetFacetResponse
  *
- * @brief  Handles CloudDirectory GetFacet responses.
+ * \brief The GetFacetResponse class encapsulates CloudDirectory GetFacet responses.
  *
- * @see    CloudDirectoryClient::getFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::getFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFacetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetFacetRequest * GetFacetResponse::request() const
     return static_cast<const GetFacetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory GetFacet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetFacetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFacetResponsePrivate
+ * \class GetFacetResponsePrivate
  *
- * @brief  Private implementation for GetFacetResponse.
+ * \brief Private implementation for GetFacetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFacetResponsePrivate object.
@@ -91,7 +101,7 @@ GetFacetResponsePrivate::GetFacetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory GetFacetResponse element.
  *
  * @param  xml  XML stream to parse.

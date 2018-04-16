@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  PutIdentityPolicyResponse
+/*!
+ * \class QtAws::SES::PutIdentityPolicyResponse
  *
- * @brief  Handles SES PutIdentityPolicy responses.
+ * \brief The PutIdentityPolicyResponse class encapsulates SES PutIdentityPolicy responses.
  *
- * @see    SESClient::putIdentityPolicy
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::putIdentityPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutIdentityPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
     return static_cast<const PutIdentityPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES PutIdentityPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutIdentityPolicyResponsePrivate
+ * \class PutIdentityPolicyResponsePrivate
  *
- * @brief  Private implementation for PutIdentityPolicyResponse.
+ * \brief Private implementation for PutIdentityPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIdentityPolicyResponsePrivate object.
@@ -91,7 +105,7 @@ PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES PutIdentityPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

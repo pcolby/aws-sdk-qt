@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  CreateSubnetGroupResponse
+/*!
+ * \class QtAws::DAX::CreateSubnetGroupResponse
  *
- * @brief  Handles DAX CreateSubnetGroup responses.
+ * \brief The CreateSubnetGroupResponse class encapsulates DAX CreateSubnetGroup responses.
  *
- * @see    DAXClient::createSubnetGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::createSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateSubnetGroupRequest * CreateSubnetGroupResponse::request() const
     return static_cast<const CreateSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX CreateSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSubnetGroupResponsePrivate
+ * \class CreateSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for CreateSubnetGroupResponse.
+ * \brief Private implementation for CreateSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubnetGroupResponsePrivate object.
@@ -91,7 +98,7 @@ CreateSubnetGroupResponsePrivate::CreateSubnetGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX CreateSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

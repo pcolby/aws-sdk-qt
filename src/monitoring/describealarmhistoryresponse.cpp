@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace CloudWatch {
 
-/**
- * @class  DescribeAlarmHistoryResponse
+/*!
+ * \class QtAws::CloudWatch::DescribeAlarmHistoryResponse
  *
- * @brief  Handles CloudWatch DescribeAlarmHistory responses.
+ * \brief The DescribeAlarmHistoryResponse class encapsulates CloudWatch DescribeAlarmHistory responses.
  *
- * @see    CloudWatchClient::describeAlarmHistory
+ * \ingroup CloudWatch
+ *
+ *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+ *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ * 
+ *  applications>
+ * 
+ *  CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you
+ *  define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use
+ *  this data to determine whether you should launch additional instances to handle increased load. You can also use this
+ *  data to stop under-used instances to save
+ * 
+ *  money>
+ * 
+ *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
+ *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *
+ * \sa CloudWatchClient::describeAlarmHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAlarmHistoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeAlarmHistoryRequest * DescribeAlarmHistoryResponse::request() cons
     return static_cast<const DescribeAlarmHistoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatch DescribeAlarmHistory response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeAlarmHistoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAlarmHistoryResponsePrivate
+ * \class DescribeAlarmHistoryResponsePrivate
  *
- * @brief  Private implementation for DescribeAlarmHistoryResponse.
+ * \brief Private implementation for DescribeAlarmHistoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAlarmHistoryResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatch DescribeAlarmHistoryResponse element.
  *
  * @param  xml  XML stream to parse.

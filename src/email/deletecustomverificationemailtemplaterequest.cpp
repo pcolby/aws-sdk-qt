@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteCustomVerificationEmailTemplateRequest
+/*!
+ * \class QtAws::SES::DeleteCustomVerificationEmailTemplateRequest
  *
- * @brief  Implements SES DeleteCustomVerificationEmailTemplate requests.
+ * \brief The DeleteCustomVerificationEmailTemplateRequest class encapsulates SES DeleteCustomVerificationEmailTemplate requests.
  *
- * @see    SESClient::deleteCustomVerificationEmailTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteCustomVerificationEmailTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTempl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequest object.
  */
 DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTemplateRequest()
@@ -53,13 +67,16 @@ DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTempl
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCustomVerificationEmailTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCustomVerificationEmailTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest:
     return new DeleteCustomVerificationEmailTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCustomVerificationEmailTemplateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest:
  * @brief  Private implementation for DeleteCustomVerificationEmailTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEma
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequestPrivate object, copying another.

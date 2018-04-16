@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreatePolicyVersionRequest
+/*!
+ * \class QtAws::IoT::CreatePolicyVersionRequest
  *
- * @brief  Implements IoT CreatePolicyVersion requests.
+ * \brief The CreatePolicyVersionRequest class encapsulates IoT CreatePolicyVersion requests.
  *
- * @see    IoTClient::createPolicyVersion
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createPolicyVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePolicyVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersion
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePolicyVersionRequest object.
  */
 CreatePolicyVersionRequest::CreatePolicyVersionRequest()
@@ -53,13 +67,16 @@ CreatePolicyVersionRequest::CreatePolicyVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePolicyVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePolicyVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetwork
     return new CreatePolicyVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePolicyVersionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetwork
  * @brief  Private implementation for CreatePolicyVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePolicyVersionRequestPrivate object.
@@ -97,7 +114,7 @@ CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePolicyVersionRequestPrivate object, copying another.

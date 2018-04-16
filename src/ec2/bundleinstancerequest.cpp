@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  BundleInstanceRequest
+/*!
+ * \class QtAws::EC2::BundleInstanceRequest
  *
- * @brief  Implements EC2 BundleInstance requests.
+ * \brief The BundleInstanceRequest class encapsulates EC2 BundleInstance requests.
  *
- * @see    EC2Client::bundleInstance
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::bundleInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new BundleInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ BundleInstanceRequest::BundleInstanceRequest(const BundleInstanceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BundleInstanceRequest object.
  */
 BundleInstanceRequest::BundleInstanceRequest()
@@ -53,13 +60,16 @@ BundleInstanceRequest::BundleInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BundleInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BundleInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply
     return new BundleInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BundleInstanceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply
  * @brief  Private implementation for BundleInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BundleInstanceRequestPrivate object.
@@ -97,7 +107,7 @@ BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BundleInstanceRequestPrivate object, copying another.

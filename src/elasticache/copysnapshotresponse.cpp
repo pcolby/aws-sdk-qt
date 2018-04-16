@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  CopySnapshotResponse
+/*!
+ * \class QtAws::ElastiCache::CopySnapshotResponse
  *
- * @brief  Handles ElastiCache CopySnapshot responses.
+ * \brief The CopySnapshotResponse class encapsulates ElastiCache CopySnapshot responses.
  *
- * @see    ElastiCacheClient::copySnapshot
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::copySnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new CopySnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const CopySnapshotRequest * CopySnapshotResponse::request() const
     return static_cast<const CopySnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache CopySnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void CopySnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopySnapshotResponsePrivate
+ * \class CopySnapshotResponsePrivate
  *
- * @brief  Private implementation for CopySnapshotResponse.
+ * \brief Private implementation for CopySnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopySnapshotResponsePrivate object.
@@ -91,7 +108,7 @@ CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache CopySnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

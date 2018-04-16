@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityHeadersInNotificationsEnabledResponse
+/*!
+ * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponse
  *
- * @brief  Handles SES SetIdentityHeadersInNotificationsEnabled responses.
+ * \brief The SetIdentityHeadersInNotificationsEnabledResponse class encapsulates SES SetIdentityHeadersInNotificationsEnabled responses.
  *
- * @see    SESClient::setIdentityHeadersInNotificationsEnabled
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityHeadersInNotificationsEnabled
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetIdentityHeadersInNotificationsEnabledRequest * SetIdentityHeadersInNoti
     return static_cast<const SetIdentityHeadersInNotificationsEnabledRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SetIdentityHeadersInNotificationsEnabled response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &r
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetIdentityHeadersInNotificationsEnabledResponsePrivate
+ * \class SetIdentityHeadersInNotificationsEnabledResponsePrivate
  *
- * @brief  Private implementation for SetIdentityHeadersInNotificationsEnabledResponse.
+ * \brief Private implementation for SetIdentityHeadersInNotificationsEnabledResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledResponsePrivate object.
@@ -91,7 +105,7 @@ SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNot
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SetIdentityHeadersInNotificationsEnabledResponse element.
  *
  * @param  xml  XML stream to parse.

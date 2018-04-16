@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  DisassociateAdminAccountRequest
+/*!
+ * \class QtAws::FMS::DisassociateAdminAccountRequest
  *
- * @brief  Implements FMS DisassociateAdminAccount requests.
+ * \brief The DisassociateAdminAccountRequest class encapsulates FMS DisassociateAdminAccount requests.
  *
- * @see    FMSClient::disassociateAdminAccount
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::disassociateAdminAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateAdminAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DisassociateAdminAccountRequest::DisassociateAdminAccountRequest(const Disassoci
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateAdminAccountRequest object.
  */
 DisassociateAdminAccountRequest::DisassociateAdminAccountRequest()
@@ -53,13 +62,16 @@ DisassociateAdminAccountRequest::DisassociateAdminAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateAdminAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateAdminAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateAdminAccountRequest::response(QNe
     return new DisassociateAdminAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateAdminAccountRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateAdminAccountRequest::response(QNe
  * @brief  Private implementation for DisassociateAdminAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateAdminAccountRequestPrivate object.
@@ -97,7 +109,7 @@ DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateAdminAccountRequestPrivate object, copying another.

@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  ListTagsForResourceRequest
+/*!
+ * \class QtAws::ElastiCache::ListTagsForResourceRequest
  *
- * @brief  Implements ElastiCache ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class encapsulates ElastiCache ListTagsForResource requests.
  *
- * @see    ElastiCacheClient::listTagsForResource
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
@@ -53,13 +70,16 @@ ListTagsForResourceRequest::ListTagsForResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
     return new ListTagsForResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForResourceRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  * @brief  Private implementation for ListTagsForResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
@@ -97,7 +117,7 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.

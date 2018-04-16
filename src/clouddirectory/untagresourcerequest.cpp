@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UntagResourceRequest
+/*!
+ * \class QtAws::CloudDirectory::UntagResourceRequest
  *
- * @brief  Implements CloudDirectory UntagResource requests.
+ * \brief The UntagResourceRequest class encapsulates CloudDirectory UntagResource requests.
  *
- * @see    CloudDirectoryClient::untagResource
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
@@ -53,13 +63,16 @@ UntagResourceRequest::UntagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
     return new UntagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagResourceRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  * @brief  Private implementation for UntagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object.
@@ -97,7 +110,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeSessionsResponse
+/*!
+ * \class QtAws::AppStream::DescribeSessionsResponse
  *
- * @brief  Handles AppStream DescribeSessions responses.
+ * \brief The DescribeSessionsResponse class encapsulates AppStream DescribeSessions responses.
  *
- * @see    AppStreamClient::describeSessions
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeSessions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSessionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeSessionsRequest * DescribeSessionsResponse::request() const
     return static_cast<const DescribeSessionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DescribeSessions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeSessionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSessionsResponsePrivate
+ * \class DescribeSessionsResponsePrivate
  *
- * @brief  Private implementation for DescribeSessionsResponse.
+ * \brief Private implementation for DescribeSessionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSessionsResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeSessionsResponsePrivate::DescribeSessionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DescribeSessionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetUserMFAPreferenceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceRequest
  *
- * @brief  Implements CognitoIdentityProvider SetUserMFAPreference requests.
+ * \brief The SetUserMFAPreferenceRequest class encapsulates CognitoIdentityProvider SetUserMFAPreference requests.
  *
- * @see    CognitoIdentityProviderClient::setUserMFAPreference
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setUserMFAPreference
  */
 
-/**
+/*!
  * @brief  Constructs a new SetUserMFAPreferenceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest(const SetUserMFAPrefere
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetUserMFAPreferenceRequest object.
  */
 SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest()
@@ -53,13 +66,16 @@ SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetUserMFAPreferenceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetUserMFAPreferenceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetwor
     return new SetUserMFAPreferenceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetUserMFAPreferenceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetwor
  * @brief  Private implementation for SetUserMFAPreferenceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserMFAPreferenceRequestPrivate object.
@@ -97,7 +113,7 @@ SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserMFAPreferenceRequestPrivate object, copying another.

@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
-/**
- * @class  StartNextPendingJobExecutionRequest
+/*!
+ * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionRequest
  *
- * @brief  Implements IoTJobsDataPlane StartNextPendingJobExecution requests.
+ * \brief The StartNextPendingJobExecutionRequest class encapsulates IoTJobsDataPlane StartNextPendingJobExecution requests.
  *
- * @see    IoTJobsDataPlaneClient::startNextPendingJobExecution
+ * \ingroup IoTJobsDataPlane
+ *
+ *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
+ *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
+ *  and install application or firmware updates, reboot, rotate certificates, or perform remote troubleshooting
+ * 
+ *  operations>
+ * 
+ *  To create a job, you make a job document which is a description of the remote operations to be performed, and you
+ *  specify a list of targets that should perform the operations. The targets can be individual things, thing groups or
+ * 
+ *  both>
+ * 
+ *  AWS IoT Jobs sends a message to inform the targets that a job is available. The target starts the execution of the job
+ *  by downloading the job document, performing the operations it specifies, and reporting its progress to AWS IoT. The Jobs
+ *  service provides commands to track the progress of a job on a specific target and for all the targets of the
+ *
+ * \sa IoTJobsDataPlaneClient::startNextPendingJobExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new StartNextPendingJobExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest(const S
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartNextPendingJobExecutionRequest object.
  */
 StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest()
@@ -53,13 +70,16 @@ StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartNextPendingJobExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartNextPendingJobExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * StartNextPendingJobExecutionRequest::response
     return new StartNextPendingJobExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartNextPendingJobExecutionRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * StartNextPendingJobExecutionRequest::response
  * @brief  Private implementation for StartNextPendingJobExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartNextPendingJobExecutionRequestPrivate object.
@@ -97,7 +117,7 @@ StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartNextPendingJobExecutionRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeRegionsResponse
+/*!
+ * \class QtAws::EC2::DescribeRegionsResponse
  *
- * @brief  Handles EC2 DescribeRegions responses.
+ * \brief The DescribeRegionsResponse class encapsulates EC2 DescribeRegions responses.
  *
- * @see    EC2Client::describeRegions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeRegions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRegionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeRegionsRequest * DescribeRegionsResponse::request() const
     return static_cast<const DescribeRegionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeRegions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeRegionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeRegionsResponsePrivate
+ * \class DescribeRegionsResponsePrivate
  *
- * @brief  Private implementation for DescribeRegionsResponse.
+ * \brief Private implementation for DescribeRegionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRegionsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeRegionsResponsePrivate::DescribeRegionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeRegionsResponse element.
  *
  * @param  xml  XML stream to parse.

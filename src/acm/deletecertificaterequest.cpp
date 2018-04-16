@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  DeleteCertificateRequest
+/*!
+ * \class QtAws::ACM::DeleteCertificateRequest
  *
- * @brief  Implements ACM DeleteCertificate requests.
+ * \brief The DeleteCertificateRequest class encapsulates ACM DeleteCertificate requests.
  *
- * @see    ACMClient::deleteCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::deleteCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateRequest object.
  */
 DeleteCertificateRequest::DeleteCertificateRequest()
@@ -53,13 +65,16 @@ DeleteCertificateRequest::DeleteCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
     return new DeleteCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateRequestPrivate object, copying another.

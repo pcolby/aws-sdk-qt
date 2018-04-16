@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DetachFromIndexResponse
+/*!
+ * \class QtAws::CloudDirectory::DetachFromIndexResponse
  *
- * @brief  Handles CloudDirectory DetachFromIndex responses.
+ * \brief The DetachFromIndexResponse class encapsulates CloudDirectory DetachFromIndex responses.
  *
- * @see    CloudDirectoryClient::detachFromIndex
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::detachFromIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachFromIndexResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DetachFromIndexRequest * DetachFromIndexResponse::request() const
     return static_cast<const DetachFromIndexRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory DetachFromIndex response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DetachFromIndexResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachFromIndexResponsePrivate
+ * \class DetachFromIndexResponsePrivate
  *
- * @brief  Private implementation for DetachFromIndexResponse.
+ * \brief Private implementation for DetachFromIndexResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachFromIndexResponsePrivate object.
@@ -91,7 +101,7 @@ DetachFromIndexResponsePrivate::DetachFromIndexResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory DetachFromIndexResponse element.
  *
  * @param  xml  XML stream to parse.

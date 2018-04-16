@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetIdentityNotificationAttributesRequest
+/*!
+ * \class QtAws::SES::GetIdentityNotificationAttributesRequest
  *
- * @brief  Implements SES GetIdentityNotificationAttributes requests.
+ * \brief The GetIdentityNotificationAttributesRequest class encapsulates SES GetIdentityNotificationAttributes requests.
  *
- * @see    SESClient::getIdentityNotificationAttributes
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getIdentityNotificationAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityNotificationAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityNotificationAttributesRequest object.
  */
 GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesRequest()
@@ -53,13 +67,16 @@ GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIdentityNotificationAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIdentityNotificationAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityNotificationAttributesRequest::res
     return new GetIdentityNotificationAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIdentityNotificationAttributesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityNotificationAttributesRequest::res
  * @brief  Private implementation for GetIdentityNotificationAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityNotificationAttributesRequestPrivate object.
@@ -97,7 +114,7 @@ GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttribut
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityNotificationAttributesRequestPrivate object, copying another.

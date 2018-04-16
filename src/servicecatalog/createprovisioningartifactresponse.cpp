@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateProvisioningArtifactResponse
+/*!
+ * \class QtAws::ServiceCatalog::CreateProvisioningArtifactResponse
  *
- * @brief  Handles ServiceCatalog CreateProvisioningArtifact responses.
+ * \brief The CreateProvisioningArtifactResponse class encapsulates ServiceCatalog CreateProvisioningArtifact responses.
  *
- * @see    ServiceCatalogClient::createProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProvisioningArtifactResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateProvisioningArtifactRequest * CreateProvisioningArtifactResponse::re
     return static_cast<const CreateProvisioningArtifactRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog CreateProvisioningArtifact response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateProvisioningArtifactResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateProvisioningArtifactResponsePrivate
+ * \class CreateProvisioningArtifactResponsePrivate
  *
- * @brief  Private implementation for CreateProvisioningArtifactResponse.
+ * \brief Private implementation for CreateProvisioningArtifactResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProvisioningArtifactResponsePrivate object.
@@ -91,7 +100,7 @@ CreateProvisioningArtifactResponsePrivate::CreateProvisioningArtifactResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog CreateProvisioningArtifactResponse element.
  *
  * @param  xml  XML stream to parse.

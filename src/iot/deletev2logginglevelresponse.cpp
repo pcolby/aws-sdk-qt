@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteV2LoggingLevelResponse
+/*!
+ * \class QtAws::IoT::DeleteV2LoggingLevelResponse
  *
- * @brief  Handles IoT DeleteV2LoggingLevel responses.
+ * \brief The DeleteV2LoggingLevelResponse class encapsulates IoT DeleteV2LoggingLevel responses.
  *
- * @see    IoTClient::deleteV2LoggingLevel
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteV2LoggingLevel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteV2LoggingLevelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteV2LoggingLevelRequest * DeleteV2LoggingLevelResponse::request() cons
     return static_cast<const DeleteV2LoggingLevelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeleteV2LoggingLevel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteV2LoggingLevelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteV2LoggingLevelResponsePrivate
+ * \class DeleteV2LoggingLevelResponsePrivate
  *
- * @brief  Private implementation for DeleteV2LoggingLevelResponse.
+ * \brief Private implementation for DeleteV2LoggingLevelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteV2LoggingLevelResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeleteV2LoggingLevelResponse element.
  *
  * @param  xml  XML stream to parse.

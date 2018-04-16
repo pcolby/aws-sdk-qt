@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelSpotInstanceRequestsRequest
+/*!
+ * \class QtAws::EC2::CancelSpotInstanceRequestsRequest
  *
- * @brief  Implements EC2 CancelSpotInstanceRequests requests.
+ * \brief The CancelSpotInstanceRequestsRequest class encapsulates EC2 CancelSpotInstanceRequests requests.
  *
- * @see    EC2Client::cancelSpotInstanceRequests
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelSpotInstanceRequests
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelSpotInstanceRequestsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest(const Cance
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelSpotInstanceRequestsRequest object.
  */
 CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest()
@@ -53,13 +60,16 @@ CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelSpotInstanceRequestsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelSpotInstanceRequestsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(Q
     return new CancelSpotInstanceRequestsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelSpotInstanceRequestsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(Q
  * @brief  Private implementation for CancelSpotInstanceRequestsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSpotInstanceRequestsRequestPrivate object.
@@ -97,7 +107,7 @@ CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSpotInstanceRequestsRequestPrivate object, copying another.

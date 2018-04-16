@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserPoolRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserPoolRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteUserPool requests.
+ * \brief The DeleteUserPoolRequest class encapsulates CognitoIdentityProvider DeleteUserPool requests.
  *
- * @see    CognitoIdentityProviderClient::deleteUserPool
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUserPool
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteUserPoolRequest::DeleteUserPoolRequest(const DeleteUserPoolRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolRequest object.
  */
 DeleteUserPoolRequest::DeleteUserPoolRequest()
@@ -53,13 +66,16 @@ DeleteUserPoolRequest::DeleteUserPoolRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserPoolRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserPoolResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolRequest::response(QNetworkReply
     return new DeleteUserPoolResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserPoolRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteUserPoolRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteUserPoolRequestPrivate::DeleteUserPoolRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolRequestPrivate object, copying another.

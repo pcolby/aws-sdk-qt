@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  DescribeActivityTypeResponse
+/*!
+ * \class QtAws::SWF::DescribeActivityTypeResponse
  *
- * @brief  Handles SWF DescribeActivityType responses.
+ * \brief The DescribeActivityTypeResponse class encapsulates SWF DescribeActivityType responses.
  *
- * @see    SWFClient::describeActivityType
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::describeActivityType
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeActivityTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const DescribeActivityTypeRequest * DescribeActivityTypeResponse::request() cons
     return static_cast<const DescribeActivityTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF DescribeActivityType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void DescribeActivityTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeActivityTypeResponsePrivate
+ * \class DescribeActivityTypeResponsePrivate
  *
- * @brief  Private implementation for DescribeActivityTypeResponse.
+ * \brief Private implementation for DescribeActivityTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeActivityTypeResponsePrivate object.
@@ -91,7 +110,7 @@ DescribeActivityTypeResponsePrivate::DescribeActivityTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF DescribeActivityTypeResponse element.
  *
  * @param  xml  XML stream to parse.

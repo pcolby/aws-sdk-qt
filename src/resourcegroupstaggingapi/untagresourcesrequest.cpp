@@ -25,15 +25,73 @@
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
-/**
- * @class  UntagResourcesRequest
+/*!
+ * \class QtAws::ResourceGroupsTaggingAPI::UntagResourcesRequest
  *
- * @brief  Implements ResourceGroupsTaggingAPI UntagResources requests.
+ * \brief The UntagResourcesRequest class encapsulates ResourceGroupsTaggingAPI UntagResources requests.
  *
- * @see    ResourceGroupsTaggingAPIClient::untagResources
+ * \ingroup ResourceGroupsTaggingAPI
+ *
+ *  <fullname>Resource Groups Tagging API</fullname>
+ * 
+ *  This guide describes the API operations for the resource groups
+ * 
+ *  tagging>
+ * 
+ *  A tag is a label that you assign to an AWS resource. A tag consists of a key and a value, both of which you define. For
+ *  example, if you have two Amazon EC2 instances, you might assign both a tag key of "Stack." But the value of "Stack"
+ *  might be "Testing" for one and "Production" for the
+ * 
+ *  other>
+ * 
+ *  Tagging can help you organize your resources and enables you to simplify resource management, access management and cost
+ *  allocation. For more information about tagging, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html">Working with Tag Editor</a> and <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/resource-groups.html">Working with Resource Groups</a>.
+ *  For more information about permissions you need to use the resource groups tagging APIs, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-resource-groups.html">Obtaining
+ *  Permissions for Resource Groups </a> and <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
+ *  Permissions for Tagging
+ * 
+ *  </a>>
+ * 
+ *  You can use the resource groups tagging APIs to complete the following
+ * 
+ *  tasks> <ul> <li>
+ * 
+ *  Tag and untag supported resources located in the specified region for the AWS
+ * 
+ *  accoun> </li> <li>
+ * 
+ *  Use tag-based filters to search for resources located in the specified region for the AWS
+ * 
+ *  accoun> </li> <li>
+ * 
+ *  List all existing tag keys in the specified region for the AWS
+ * 
+ *  accoun> </li> <li>
+ * 
+ *  List all existing values for the specified key in the specified region for the AWS
+ * 
+ *  accoun> </li> </ul>
+ * 
+ *  Not all resources can have tags. For a lists of resources that you can tag, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/supported-resources.html">Supported Resources</a> in the
+ *  <i>AWS Resource Groups and Tag Editor User
+ * 
+ *  Guide</i>>
+ * 
+ *  To make full use of the resource groups tagging APIs, you might need additional IAM permissions, including permission to
+ *  access the resources of individual services as well as permission to view and apply tags to those resources. For more
+ *  information, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
+ *  Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
+ *
+ * \sa ResourceGroupsTaggingAPIClient::untagResources
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +102,7 @@ UntagResourcesRequest::UntagResourcesRequest(const UntagResourcesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagResourcesRequest object.
  */
 UntagResourcesRequest::UntagResourcesRequest()
@@ -53,13 +111,16 @@ UntagResourcesRequest::UntagResourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagResourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagResourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +135,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourcesRequest::response(QNetworkReply
     return new UntagResourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagResourcesRequestPrivate
@@ -82,7 +143,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourcesRequest::response(QNetworkReply
  * @brief  Private implementation for UntagResourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourcesRequestPrivate object.
@@ -97,7 +158,7 @@ UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourcesRequestPrivate object, copying another.

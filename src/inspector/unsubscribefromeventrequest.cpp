@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  UnsubscribeFromEventRequest
+/*!
+ * \class QtAws::Inspector::UnsubscribeFromEventRequest
  *
- * @brief  Implements Inspector UnsubscribeFromEvent requests.
+ * \brief The UnsubscribeFromEventRequest class encapsulates Inspector UnsubscribeFromEvent requests.
  *
- * @see    InspectorClient::unsubscribeFromEvent
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::unsubscribeFromEvent
  */
 
-/**
+/*!
  * @brief  Constructs a new UnsubscribeFromEventRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UnsubscribeFromEventRequest::UnsubscribeFromEventRequest(const UnsubscribeFromEv
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UnsubscribeFromEventRequest object.
  */
 UnsubscribeFromEventRequest::UnsubscribeFromEventRequest()
@@ -53,13 +61,16 @@ UnsubscribeFromEventRequest::UnsubscribeFromEventRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UnsubscribeFromEventRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UnsubscribeFromEventResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetwor
     return new UnsubscribeFromEventResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UnsubscribeFromEventRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetwor
  * @brief  Private implementation for UnsubscribeFromEventRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnsubscribeFromEventRequestPrivate object.
@@ -97,7 +108,7 @@ UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnsubscribeFromEventRequestPrivate object, copying another.

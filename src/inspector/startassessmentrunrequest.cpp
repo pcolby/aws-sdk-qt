@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  StartAssessmentRunRequest
+/*!
+ * \class QtAws::Inspector::StartAssessmentRunRequest
  *
- * @brief  Implements Inspector StartAssessmentRun requests.
+ * \brief The StartAssessmentRunRequest class encapsulates Inspector StartAssessmentRun requests.
  *
- * @see    InspectorClient::startAssessmentRun
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::startAssessmentRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StartAssessmentRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ StartAssessmentRunRequest::StartAssessmentRunRequest(const StartAssessmentRunReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartAssessmentRunRequest object.
  */
 StartAssessmentRunRequest::StartAssessmentRunRequest()
@@ -53,13 +61,16 @@ StartAssessmentRunRequest::StartAssessmentRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartAssessmentRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartAssessmentRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * StartAssessmentRunRequest::response(QNetworkR
     return new StartAssessmentRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartAssessmentRunRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * StartAssessmentRunRequest::response(QNetworkR
  * @brief  Private implementation for StartAssessmentRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartAssessmentRunRequestPrivate object.
@@ -97,7 +108,7 @@ StartAssessmentRunRequestPrivate::StartAssessmentRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartAssessmentRunRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointServiceConfigurationsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsRequest
  *
- * @brief  Implements EC2 DescribeVpcEndpointServiceConfigurations requests.
+ * \brief The DescribeVpcEndpointServiceConfigurationsRequest class encapsulates EC2 DescribeVpcEndpointServiceConfigurations requests.
  *
- * @see    EC2Client::describeVpcEndpointServiceConfigurations
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointServiceConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequest object.
  */
 DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfigurationsRequest()
@@ -53,13 +60,16 @@ DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfi
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcEndpointServiceConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcEndpointServiceConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsReque
     return new DescribeVpcEndpointServiceConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcEndpointServiceConfigurationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsReque
  * @brief  Private implementation for DescribeVpcEndpointServiceConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateReservedInstancesListingResponse
+/*!
+ * \class QtAws::EC2::CreateReservedInstancesListingResponse
  *
- * @brief  Handles EC2 CreateReservedInstancesListing responses.
+ * \brief The CreateReservedInstancesListingResponse class encapsulates EC2 CreateReservedInstancesListing responses.
  *
- * @see    EC2Client::createReservedInstancesListing
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createReservedInstancesListing
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReservedInstancesListingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateReservedInstancesListingRequest * CreateReservedInstancesListingResp
     return static_cast<const CreateReservedInstancesListingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateReservedInstancesListing response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateReservedInstancesListingResponsePrivate
+ * \class CreateReservedInstancesListingResponsePrivate
  *
- * @brief  Private implementation for CreateReservedInstancesListingResponse.
+ * \brief Private implementation for CreateReservedInstancesListingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReservedInstancesListingResponsePrivate object.
@@ -91,7 +98,7 @@ CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateReservedInstancesListingResponse element.
  *
  * @param  xml  XML stream to parse.

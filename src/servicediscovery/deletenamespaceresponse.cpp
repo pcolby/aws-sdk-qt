@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  DeleteNamespaceResponse
+/*!
+ * \class QtAws::ServiceDiscovery::DeleteNamespaceResponse
  *
- * @brief  Handles ServiceDiscovery DeleteNamespace responses.
+ * \brief The DeleteNamespaceResponse class encapsulates ServiceDiscovery DeleteNamespace responses.
  *
- * @see    ServiceDiscoveryClient::deleteNamespace
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::deleteNamespace
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNamespaceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteNamespaceRequest * DeleteNamespaceResponse::request() const
     return static_cast<const DeleteNamespaceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery DeleteNamespace response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteNamespaceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNamespaceResponsePrivate
+ * \class DeleteNamespaceResponsePrivate
  *
- * @brief  Private implementation for DeleteNamespaceResponse.
+ * \brief Private implementation for DeleteNamespaceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNamespaceResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteNamespaceResponsePrivate::DeleteNamespaceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery DeleteNamespaceResponse element.
  *
  * @param  xml  XML stream to parse.

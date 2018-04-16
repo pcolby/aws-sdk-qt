@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetConnectivityInfoRequest
+/*!
+ * \class QtAws::Greengrass::GetConnectivityInfoRequest
  *
- * @brief  Implements Greengrass GetConnectivityInfo requests.
+ * \brief The GetConnectivityInfoRequest class encapsulates Greengrass GetConnectivityInfo requests.
  *
- * @see    GreengrassClient::getConnectivityInfo
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getConnectivityInfo
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConnectivityInfoRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetConnectivityInfoRequest::GetConnectivityInfoRequest(const GetConnectivityInfo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetConnectivityInfoRequest object.
  */
 GetConnectivityInfoRequest::GetConnectivityInfoRequest()
@@ -53,13 +59,16 @@ GetConnectivityInfoRequest::GetConnectivityInfoRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetConnectivityInfoRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetConnectivityInfoResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectivityInfoRequest::response(QNetwork
     return new GetConnectivityInfoResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetConnectivityInfoRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectivityInfoRequest::response(QNetwork
  * @brief  Private implementation for GetConnectivityInfoRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectivityInfoRequestPrivate object.
@@ -97,7 +106,7 @@ GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectivityInfoRequestPrivate object, copying another.

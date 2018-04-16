@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  CreateQueueRequest
+/*!
+ * \class QtAws::MediaConvert::CreateQueueRequest
  *
- * @brief  Implements MediaConvert CreateQueue requests.
+ * \brief The CreateQueueRequest class encapsulates MediaConvert CreateQueue requests.
  *
- * @see    MediaConvertClient::createQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::createQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateQueueRequest::CreateQueueRequest(const CreateQueueRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateQueueRequest object.
  */
 CreateQueueRequest::CreateQueueRequest()
@@ -53,13 +56,16 @@ CreateQueueRequest::CreateQueueRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateQueueRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateQueueResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * 
     return new CreateQueueResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateQueueRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateQueueRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQueueRequestPrivate object.
@@ -97,7 +103,7 @@ CreateQueueRequestPrivate::CreateQueueRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQueueRequestPrivate object, copying another.

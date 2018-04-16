@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteApiKeyResponse
+/*!
+ * \class QtAws::APIGateway::DeleteApiKeyResponse
  *
- * @brief  Handles APIGateway DeleteApiKey responses.
+ * \brief The DeleteApiKeyResponse class encapsulates APIGateway DeleteApiKey responses.
  *
- * @see    APIGatewayClient::deleteApiKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApiKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
     return static_cast<const DeleteApiKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteApiKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteApiKeyResponsePrivate
+ * \class DeleteApiKeyResponsePrivate
  *
- * @brief  Private implementation for DeleteApiKeyResponse.
+ * \brief Private implementation for DeleteApiKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApiKeyResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteApiKeyResponse element.
  *
  * @param  xml  XML stream to parse.

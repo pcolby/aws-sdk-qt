@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeIndexRequest
+/*!
+ * \class QtAws::IoT::DescribeIndexRequest
  *
- * @brief  Implements IoT DescribeIndex requests.
+ * \brief The DescribeIndexRequest class encapsulates IoT DescribeIndex requests.
  *
- * @see    IoTClient::describeIndex
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeIndexRequest::DescribeIndexRequest(const DescribeIndexRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeIndexRequest object.
  */
 DescribeIndexRequest::DescribeIndexRequest()
@@ -53,13 +67,16 @@ DescribeIndexRequest::DescribeIndexRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeIndexRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeIndexResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexRequest::response(QNetworkReply 
     return new DescribeIndexResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeIndexRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexRequest::response(QNetworkReply 
  * @brief  Private implementation for DescribeIndexRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIndexRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIndexRequestPrivate object, copying another.

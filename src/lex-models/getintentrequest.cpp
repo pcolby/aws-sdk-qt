@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetIntentRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetIntentRequest
  *
- * @brief  Implements LexModelBuildingService GetIntent requests.
+ * \brief The GetIntentRequest class encapsulates LexModelBuildingService GetIntent requests.
  *
- * @see    LexModelBuildingServiceClient::getIntent
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getIntent
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetIntentRequest::GetIntentRequest(const GetIntentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIntentRequest object.
  */
 GetIntentRequest::GetIntentRequest()
@@ -53,13 +60,16 @@ GetIntentRequest::GetIntentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIntentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIntentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetIntentRequest::response(QNetworkReply * co
     return new GetIntentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIntentRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIntentRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetIntentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntentRequestPrivate object.
@@ -97,7 +107,7 @@ GetIntentRequestPrivate::GetIntentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntentRequestPrivate object, copying another.

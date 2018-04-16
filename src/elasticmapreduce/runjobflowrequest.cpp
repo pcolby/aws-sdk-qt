@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  RunJobFlowRequest
+/*!
+ * \class QtAws::EMR::RunJobFlowRequest
  *
- * @brief  Implements EMR RunJobFlow requests.
+ * \brief The RunJobFlowRequest class encapsulates EMR RunJobFlow requests.
  *
- * @see    EMRClient::runJobFlow
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::runJobFlow
  */
 
-/**
+/*!
  * @brief  Constructs a new RunJobFlowRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ RunJobFlowRequest::RunJobFlowRequest(const RunJobFlowRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RunJobFlowRequest object.
  */
 RunJobFlowRequest::RunJobFlowRequest()
@@ -53,13 +59,16 @@ RunJobFlowRequest::RunJobFlowRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RunJobFlowRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RunJobFlowResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * c
     return new RunJobFlowResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RunJobFlowRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * c
  * @brief  Private implementation for RunJobFlowRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunJobFlowRequestPrivate object.
@@ -97,7 +106,7 @@ RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunJobFlowRequestPrivate object, copying another.

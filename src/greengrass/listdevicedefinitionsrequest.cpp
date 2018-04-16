@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListDeviceDefinitionsRequest
+/*!
+ * \class QtAws::Greengrass::ListDeviceDefinitionsRequest
  *
- * @brief  Implements Greengrass ListDeviceDefinitions requests.
+ * \brief The ListDeviceDefinitionsRequest class encapsulates Greengrass ListDeviceDefinitions requests.
  *
- * @see    GreengrassClient::listDeviceDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listDeviceDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDeviceDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListDeviceDefinitionsRequest::ListDeviceDefinitionsRequest(const ListDeviceDefin
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDeviceDefinitionsRequest object.
  */
 ListDeviceDefinitionsRequest::ListDeviceDefinitionsRequest()
@@ -53,13 +59,16 @@ ListDeviceDefinitionsRequest::ListDeviceDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDeviceDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDeviceDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionsRequest::response(QNetwo
     return new ListDeviceDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDeviceDefinitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionsRequest::response(QNetwo
  * @brief  Private implementation for ListDeviceDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeviceDefinitionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListDeviceDefinitionsRequestPrivate::ListDeviceDefinitionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeviceDefinitionsRequestPrivate object, copying another.

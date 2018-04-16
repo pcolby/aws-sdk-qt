@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetLoggerDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::GetLoggerDefinitionRequest
  *
- * @brief  Implements Greengrass GetLoggerDefinition requests.
+ * \brief The GetLoggerDefinitionRequest class encapsulates Greengrass GetLoggerDefinition requests.
  *
- * @see    GreengrassClient::getLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLoggerDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetLoggerDefinitionRequest::GetLoggerDefinitionRequest(const GetLoggerDefinition
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLoggerDefinitionRequest object.
  */
 GetLoggerDefinitionRequest::GetLoggerDefinitionRequest()
@@ -53,13 +59,16 @@ GetLoggerDefinitionRequest::GetLoggerDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLoggerDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLoggerDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionRequest::response(QNetwork
     return new GetLoggerDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLoggerDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionRequest::response(QNetwork
  * @brief  Private implementation for GetLoggerDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLoggerDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ GetLoggerDefinitionRequestPrivate::GetLoggerDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLoggerDefinitionRequestPrivate object, copying another.

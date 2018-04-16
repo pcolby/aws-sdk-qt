@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetBasePathMappingRequest
+/*!
+ * \class QtAws::APIGateway::GetBasePathMappingRequest
  *
- * @brief  Implements APIGateway GetBasePathMapping requests.
+ * \brief The GetBasePathMappingRequest class encapsulates APIGateway GetBasePathMapping requests.
  *
- * @see    APIGatewayClient::getBasePathMapping
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getBasePathMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBasePathMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetBasePathMappingRequest::GetBasePathMappingRequest(const GetBasePathMappingReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBasePathMappingRequest object.
  */
 GetBasePathMappingRequest::GetBasePathMappingRequest()
@@ -53,13 +61,16 @@ GetBasePathMappingRequest::GetBasePathMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBasePathMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBasePathMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetBasePathMappingRequest::response(QNetworkR
     return new GetBasePathMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBasePathMappingRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetBasePathMappingRequest::response(QNetworkR
  * @brief  Private implementation for GetBasePathMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBasePathMappingRequestPrivate object.
@@ -97,7 +108,7 @@ GetBasePathMappingRequestPrivate::GetBasePathMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBasePathMappingRequestPrivate object, copying another.

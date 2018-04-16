@@ -25,15 +25,42 @@
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  DeregisterManagedInstanceRequest
+/*!
+ * \class QtAws::SSM::DeregisterManagedInstanceRequest
  *
- * @brief  Implements SSM DeregisterManagedInstance requests.
+ * \brief The DeregisterManagedInstanceRequest class encapsulates SSM DeregisterManagedInstance requests.
  *
- * @see    SSMClient::deregisterManagedInstance
+ * \ingroup SSM
+ *
+ *  <fullname>AWS Systems Manager</fullname>
+ * 
+ *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
+ *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
+ *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
+ *  configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
+ *  your hybrid environment that has been configured for Systems
+ * 
+ *  Manager>
+ * 
+ *  This reference is intended to be used with the <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  To get started, verify prerequisites and configure managed instances. For more information, see <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ * 
+ *  Prerequisites</a>>
+ * 
+ *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
+ *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
+ *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
+ *  Requests</a>.
+ *
+ * \sa SSMClient::deregisterManagedInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeregisterManagedInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +71,7 @@ DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest(const Deregis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeregisterManagedInstanceRequest object.
  */
 DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest()
@@ -53,13 +80,16 @@ DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeregisterManagedInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeregisterManagedInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QN
     return new DeregisterManagedInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeregisterManagedInstanceRequestPrivate
@@ -82,7 +112,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QN
  * @brief  Private implementation for DeregisterManagedInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterManagedInstanceRequestPrivate object.
@@ -97,7 +127,7 @@ DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterManagedInstanceRequestPrivate object, copying another.

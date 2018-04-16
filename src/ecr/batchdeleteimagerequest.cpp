@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  BatchDeleteImageRequest
+/*!
+ * \class QtAws::ECR::BatchDeleteImageRequest
  *
- * @brief  Implements ECR BatchDeleteImage requests.
+ * \brief The BatchDeleteImageRequest class encapsulates ECR BatchDeleteImage requests.
  *
- * @see    ECRClient::batchDeleteImage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::batchDeleteImage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteImageRequest object.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest()
@@ -53,13 +60,16 @@ BatchDeleteImageRequest::BatchDeleteImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDeleteImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDeleteImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
     return new BatchDeleteImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDeleteImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
  * @brief  Private implementation for BatchDeleteImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteImageRequestPrivate object.
@@ -97,7 +107,7 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteImageRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetAssignmentResponse
+/*!
+ * \class QtAws::MTurk::GetAssignmentResponse
  *
- * @brief  Handles MTurk GetAssignment responses.
+ * \brief The GetAssignmentResponse class encapsulates MTurk GetAssignment responses.
  *
- * @see    MTurkClient::getAssignment
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getAssignment
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAssignmentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetAssignmentRequest * GetAssignmentResponse::request() const
     return static_cast<const GetAssignmentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk GetAssignment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetAssignmentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAssignmentResponsePrivate
+ * \class GetAssignmentResponsePrivate
  *
- * @brief  Private implementation for GetAssignmentResponse.
+ * \brief Private implementation for GetAssignmentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssignmentResponsePrivate object.
@@ -91,7 +94,7 @@ GetAssignmentResponsePrivate::GetAssignmentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk GetAssignmentResponse element.
  *
  * @param  xml  XML stream to parse.

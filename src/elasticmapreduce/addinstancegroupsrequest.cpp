@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddInstanceGroupsRequest
+/*!
+ * \class QtAws::EMR::AddInstanceGroupsRequest
  *
- * @brief  Implements EMR AddInstanceGroups requests.
+ * \brief The AddInstanceGroupsRequest class encapsulates EMR AddInstanceGroups requests.
  *
- * @see    EMRClient::addInstanceGroups
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addInstanceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new AddInstanceGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AddInstanceGroupsRequest::AddInstanceGroupsRequest(const AddInstanceGroupsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddInstanceGroupsRequest object.
  */
 AddInstanceGroupsRequest::AddInstanceGroupsRequest()
@@ -53,13 +59,16 @@ AddInstanceGroupsRequest::AddInstanceGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddInstanceGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddInstanceGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkRe
     return new AddInstanceGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddInstanceGroupsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkRe
  * @brief  Private implementation for AddInstanceGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddInstanceGroupsRequestPrivate object.
@@ -97,7 +106,7 @@ AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddInstanceGroupsRequestPrivate object, copying another.

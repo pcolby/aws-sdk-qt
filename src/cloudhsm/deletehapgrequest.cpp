@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DeleteHapgRequest
+/*!
+ * \class QtAws::CloudHSM::DeleteHapgRequest
  *
- * @brief  Implements CloudHSM DeleteHapg requests.
+ * \brief The DeleteHapgRequest class encapsulates CloudHSM DeleteHapg requests.
  *
- * @see    CloudHSMClient::deleteHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::deleteHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHapgRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ DeleteHapgRequest::DeleteHapgRequest(const DeleteHapgRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteHapgRequest object.
  */
 DeleteHapgRequest::DeleteHapgRequest()
@@ -53,13 +68,16 @@ DeleteHapgRequest::DeleteHapgRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteHapgRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteHapgResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * c
     return new DeleteHapgResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteHapgRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteHapgRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHapgRequestPrivate object.
@@ -97,7 +115,7 @@ DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHapgRequestPrivate object, copying another.

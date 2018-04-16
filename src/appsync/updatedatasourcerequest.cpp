@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateDataSourceRequest
+/*!
+ * \class QtAws::AppSync::UpdateDataSourceRequest
  *
- * @brief  Implements AppSync UpdateDataSource requests.
+ * \brief The UpdateDataSourceRequest class encapsulates AppSync UpdateDataSource requests.
  *
- * @see    AppSyncClient::updateDataSource
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDataSourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateDataSourceRequest::UpdateDataSourceRequest(const UpdateDataSourceRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDataSourceRequest object.
  */
 UpdateDataSourceRequest::UpdateDataSourceRequest()
@@ -53,13 +57,16 @@ UpdateDataSourceRequest::UpdateDataSourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDataSourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDataSourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
     return new UpdateDataSourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDataSourceRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateDataSourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDataSourceRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDataSourceRequestPrivate object, copying another.

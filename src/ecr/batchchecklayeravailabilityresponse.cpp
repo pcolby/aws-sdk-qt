@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  BatchCheckLayerAvailabilityResponse
+/*!
+ * \class QtAws::ECR::BatchCheckLayerAvailabilityResponse
  *
- * @brief  Handles ECR BatchCheckLayerAvailability responses.
+ * \brief The BatchCheckLayerAvailabilityResponse class encapsulates ECR BatchCheckLayerAvailability responses.
  *
- * @see    ECRClient::batchCheckLayerAvailability
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::batchCheckLayerAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchCheckLayerAvailabilityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const BatchCheckLayerAvailabilityRequest * BatchCheckLayerAvailabilityResponse::
     return static_cast<const BatchCheckLayerAvailabilityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR BatchCheckLayerAvailability response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchCheckLayerAvailabilityResponsePrivate
+ * \class BatchCheckLayerAvailabilityResponsePrivate
  *
- * @brief  Private implementation for BatchCheckLayerAvailabilityResponse.
+ * \brief Private implementation for BatchCheckLayerAvailabilityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchCheckLayerAvailabilityResponsePrivate object.
@@ -91,7 +98,7 @@ BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR BatchCheckLayerAvailabilityResponse element.
  *
  * @param  xml  XML stream to parse.

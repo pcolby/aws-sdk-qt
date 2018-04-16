@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StopCrawlerScheduleResponse
+/*!
+ * \class QtAws::Glue::StopCrawlerScheduleResponse
  *
- * @brief  Handles Glue StopCrawlerSchedule responses.
+ * \brief The StopCrawlerScheduleResponse class encapsulates Glue StopCrawlerSchedule responses.
  *
- * @see    GlueClient::stopCrawlerSchedule
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::stopCrawlerSchedule
  */
 
-/**
+/*!
  * @brief  Constructs a new StopCrawlerScheduleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopCrawlerScheduleRequest * StopCrawlerScheduleResponse::request() const
     return static_cast<const StopCrawlerScheduleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue StopCrawlerSchedule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopCrawlerScheduleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopCrawlerScheduleResponsePrivate
+ * \class StopCrawlerScheduleResponsePrivate
  *
- * @brief  Private implementation for StopCrawlerScheduleResponse.
+ * \brief Private implementation for StopCrawlerScheduleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopCrawlerScheduleResponsePrivate object.
@@ -91,7 +97,7 @@ StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue StopCrawlerScheduleResponse element.
  *
  * @param  xml  XML stream to parse.

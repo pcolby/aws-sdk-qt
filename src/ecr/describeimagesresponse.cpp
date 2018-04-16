@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DescribeImagesResponse
+/*!
+ * \class QtAws::ECR::DescribeImagesResponse
  *
- * @brief  Handles ECR DescribeImages responses.
+ * \brief The DescribeImagesResponse class encapsulates ECR DescribeImages responses.
  *
- * @see    ECRClient::describeImages
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::describeImages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeImagesRequest * DescribeImagesResponse::request() const
     return static_cast<const DescribeImagesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR DescribeImages response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeImagesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeImagesResponsePrivate
+ * \class DescribeImagesResponsePrivate
  *
- * @brief  Private implementation for DescribeImagesResponse.
+ * \brief Private implementation for DescribeImagesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR DescribeImagesResponse element.
  *
  * @param  xml  XML stream to parse.

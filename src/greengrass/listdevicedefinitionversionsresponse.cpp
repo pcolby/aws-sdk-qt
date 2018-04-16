@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListDeviceDefinitionVersionsResponse
+/*!
+ * \class QtAws::Greengrass::ListDeviceDefinitionVersionsResponse
  *
- * @brief  Handles Greengrass ListDeviceDefinitionVersions responses.
+ * \brief The ListDeviceDefinitionVersionsResponse class encapsulates Greengrass ListDeviceDefinitionVersions responses.
  *
- * @see    GreengrassClient::listDeviceDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listDeviceDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDeviceDefinitionVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListDeviceDefinitionVersionsRequest * ListDeviceDefinitionVersionsResponse
     return static_cast<const ListDeviceDefinitionVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListDeviceDefinitionVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListDeviceDefinitionVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDeviceDefinitionVersionsResponsePrivate
+ * \class ListDeviceDefinitionVersionsResponsePrivate
  *
- * @brief  Private implementation for ListDeviceDefinitionVersionsResponse.
+ * \brief Private implementation for ListDeviceDefinitionVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeviceDefinitionVersionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListDeviceDefinitionVersionsResponsePrivate::ListDeviceDefinitionVersionsRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListDeviceDefinitionVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

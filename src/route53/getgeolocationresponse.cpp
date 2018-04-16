@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetGeoLocationResponse
+/*!
+ * \class QtAws::Route53::GetGeoLocationResponse
  *
- * @brief  Handles Route53 GetGeoLocation responses.
+ * \brief The GetGeoLocationResponse class encapsulates Route53 GetGeoLocation responses.
  *
- * @see    Route53Client::getGeoLocation
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getGeoLocation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGeoLocationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetGeoLocationRequest * GetGeoLocationResponse::request() const
     return static_cast<const GetGeoLocationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetGeoLocation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetGeoLocationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGeoLocationResponsePrivate
+ * \class GetGeoLocationResponsePrivate
  *
- * @brief  Private implementation for GetGeoLocationResponse.
+ * \brief Private implementation for GetGeoLocationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGeoLocationResponsePrivate object.
@@ -91,7 +94,7 @@ GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetGeoLocationResponse element.
  *
  * @param  xml  XML stream to parse.

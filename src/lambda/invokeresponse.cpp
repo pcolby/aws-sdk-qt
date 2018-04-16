@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  InvokeResponse
+/*!
+ * \class QtAws::Lambda::InvokeResponse
  *
- * @brief  Handles Lambda Invoke responses.
+ * \brief The InvokeResponse class encapsulates Lambda Invoke responses.
  *
- * @see    LambdaClient::invoke
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::invoke
  */
 
-/**
+/*!
  * @brief  Constructs a new InvokeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const InvokeRequest * InvokeResponse::request() const
     return static_cast<const InvokeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda Invoke response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void InvokeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  InvokeResponsePrivate
+ * \class InvokeResponsePrivate
  *
- * @brief  Private implementation for InvokeResponse.
+ * \brief Private implementation for InvokeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InvokeResponsePrivate object.
@@ -91,7 +105,7 @@ InvokeResponsePrivate::InvokeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda InvokeResponse element.
  *
  * @param  xml  XML stream to parse.

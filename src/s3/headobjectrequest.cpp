@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  HeadObjectRequest
+/*!
+ * \class QtAws::S3::HeadObjectRequest
  *
- * @brief  Implements S3 HeadObject requests.
+ * \brief The HeadObjectRequest class encapsulates S3 HeadObject requests.
  *
- * @see    S3Client::headObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::headObject
  */
 
-/**
+/*!
  * @brief  Constructs a new HeadObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ HeadObjectRequest::HeadObjectRequest(const HeadObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new HeadObjectRequest object.
  */
 HeadObjectRequest::HeadObjectRequest()
@@ -53,13 +56,16 @@ HeadObjectRequest::HeadObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool HeadObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an HeadObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * HeadObjectRequest::response(QNetworkReply * c
     return new HeadObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  HeadObjectRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * HeadObjectRequest::response(QNetworkReply * c
  * @brief  Private implementation for HeadObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new HeadObjectRequestPrivate object.
@@ -97,7 +103,7 @@ HeadObjectRequestPrivate::HeadObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new HeadObjectRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelReservedInstancesListingRequest
+/*!
+ * \class QtAws::EC2::CancelReservedInstancesListingRequest
  *
- * @brief  Implements EC2 CancelReservedInstancesListing requests.
+ * \brief The CancelReservedInstancesListingRequest class encapsulates EC2 CancelReservedInstancesListing requests.
  *
- * @see    EC2Client::cancelReservedInstancesListing
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelReservedInstancesListing
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelReservedInstancesListingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelReservedInstancesListingRequest object.
  */
 CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest()
@@ -53,13 +60,16 @@ CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelReservedInstancesListingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelReservedInstancesListingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::respon
     return new CancelReservedInstancesListingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelReservedInstancesListingRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::respon
  * @brief  Private implementation for CancelReservedInstancesListingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelReservedInstancesListingRequestPrivate object.
@@ -97,7 +107,7 @@ CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelReservedInstancesListingRequestPrivate object, copying another.

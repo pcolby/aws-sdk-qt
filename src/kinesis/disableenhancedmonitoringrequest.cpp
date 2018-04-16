@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DisableEnhancedMonitoringRequest
+/*!
+ * \class QtAws::Kinesis::DisableEnhancedMonitoringRequest
  *
- * @brief  Implements Kinesis DisableEnhancedMonitoring requests.
+ * \brief The DisableEnhancedMonitoringRequest class encapsulates Kinesis DisableEnhancedMonitoring requests.
  *
- * @see    KinesisClient::disableEnhancedMonitoring
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::disableEnhancedMonitoring
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableEnhancedMonitoringRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DisableEnhancedMonitoringRequest::DisableEnhancedMonitoringRequest(const Disable
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableEnhancedMonitoringRequest object.
  */
 DisableEnhancedMonitoringRequest::DisableEnhancedMonitoringRequest()
@@ -53,13 +59,16 @@ DisableEnhancedMonitoringRequest::DisableEnhancedMonitoringRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableEnhancedMonitoringRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableEnhancedMonitoringResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DisableEnhancedMonitoringRequest::response(QN
     return new DisableEnhancedMonitoringResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableEnhancedMonitoringRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DisableEnhancedMonitoringRequest::response(QN
  * @brief  Private implementation for DisableEnhancedMonitoringRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableEnhancedMonitoringRequestPrivate object.
@@ -97,7 +106,7 @@ DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableEnhancedMonitoringRequestPrivate object, copying another.

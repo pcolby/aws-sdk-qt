@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetCheckerIpRangesResponse
+/*!
+ * \class QtAws::Route53::GetCheckerIpRangesResponse
  *
- * @brief  Handles Route53 GetCheckerIpRanges responses.
+ * \brief The GetCheckerIpRangesResponse class encapsulates Route53 GetCheckerIpRanges responses.
  *
- * @see    Route53Client::getCheckerIpRanges
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getCheckerIpRanges
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCheckerIpRangesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetCheckerIpRangesRequest * GetCheckerIpRangesResponse::request() const
     return static_cast<const GetCheckerIpRangesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetCheckerIpRanges response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetCheckerIpRangesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCheckerIpRangesResponsePrivate
+ * \class GetCheckerIpRangesResponsePrivate
  *
- * @brief  Private implementation for GetCheckerIpRangesResponse.
+ * \brief Private implementation for GetCheckerIpRangesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCheckerIpRangesResponsePrivate object.
@@ -91,7 +94,7 @@ GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetCheckerIpRangesResponse element.
  *
  * @param  xml  XML stream to parse.

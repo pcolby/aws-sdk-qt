@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateIdentityProviderRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateIdentityProviderRequest
  *
- * @brief  Implements CognitoIdentityProvider CreateIdentityProvider requests.
+ * \brief The CreateIdentityProviderRequest class encapsulates CognitoIdentityProvider CreateIdentityProvider requests.
  *
- * @see    CognitoIdentityProviderClient::createIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIdentityProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ CreateIdentityProviderRequest::CreateIdentityProviderRequest(const CreateIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateIdentityProviderRequest object.
  */
 CreateIdentityProviderRequest::CreateIdentityProviderRequest()
@@ -53,13 +66,16 @@ CreateIdentityProviderRequest::CreateIdentityProviderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateIdentityProviderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateIdentityProviderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateIdentityProviderRequest::response(QNetw
     return new CreateIdentityProviderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateIdentityProviderRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * CreateIdentityProviderRequest::response(QNetw
  * @brief  Private implementation for CreateIdentityProviderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIdentityProviderRequestPrivate object.
@@ -97,7 +113,7 @@ CreateIdentityProviderRequestPrivate::CreateIdentityProviderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIdentityProviderRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  ExitStandbyResponse
+/*!
+ * \class QtAws::AutoScaling::ExitStandbyResponse
  *
- * @brief  Handles AutoScaling ExitStandby responses.
+ * \brief The ExitStandbyResponse class encapsulates AutoScaling ExitStandby responses.
  *
- * @see    AutoScalingClient::exitStandby
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::exitStandby
  */
 
-/**
+/*!
  * @brief  Constructs a new ExitStandbyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ExitStandbyRequest * ExitStandbyResponse::request() const
     return static_cast<const ExitStandbyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling ExitStandby response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ExitStandbyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ExitStandbyResponsePrivate
+ * \class ExitStandbyResponsePrivate
  *
- * @brief  Private implementation for ExitStandbyResponse.
+ * \brief Private implementation for ExitStandbyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExitStandbyResponsePrivate object.
@@ -91,7 +99,7 @@ ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling ExitStandbyResponse element.
  *
  * @param  xml  XML stream to parse.

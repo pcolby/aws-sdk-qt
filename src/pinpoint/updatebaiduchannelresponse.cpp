@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateBaiduChannelResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateBaiduChannelResponse
  *
- * @brief  Handles Pinpoint UpdateBaiduChannel responses.
+ * \brief The UpdateBaiduChannelResponse class encapsulates Pinpoint UpdateBaiduChannel responses.
  *
- * @see    PinpointClient::updateBaiduChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateBaiduChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBaiduChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateBaiduChannelRequest * UpdateBaiduChannelResponse::request() const
     return static_cast<const UpdateBaiduChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateBaiduChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateBaiduChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateBaiduChannelResponsePrivate
+ * \class UpdateBaiduChannelResponsePrivate
  *
- * @brief  Private implementation for UpdateBaiduChannelResponse.
+ * \brief Private implementation for UpdateBaiduChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBaiduChannelResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateBaiduChannelResponse element.
  *
  * @param  xml  XML stream to parse.

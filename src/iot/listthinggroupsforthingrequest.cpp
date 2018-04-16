@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingGroupsForThingRequest
+/*!
+ * \class QtAws::IoT::ListThingGroupsForThingRequest
  *
- * @brief  Implements IoT ListThingGroupsForThing requests.
+ * \brief The ListThingGroupsForThingRequest class encapsulates IoT ListThingGroupsForThing requests.
  *
- * @see    IoTClient::listThingGroupsForThing
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThingGroupsForThing
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingGroupsForThingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListThingGroupsForThingRequest::ListThingGroupsForThingRequest(const ListThingGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListThingGroupsForThingRequest object.
  */
 ListThingGroupsForThingRequest::ListThingGroupsForThingRequest()
@@ -53,13 +67,16 @@ ListThingGroupsForThingRequest::ListThingGroupsForThingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListThingGroupsForThingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListThingGroupsForThingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListThingGroupsForThingRequest::response(QNet
     return new ListThingGroupsForThingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListThingGroupsForThingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListThingGroupsForThingRequest::response(QNet
  * @brief  Private implementation for ListThingGroupsForThingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingGroupsForThingRequestPrivate object.
@@ -97,7 +114,7 @@ ListThingGroupsForThingRequestPrivate::ListThingGroupsForThingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingGroupsForThingRequestPrivate object, copying another.

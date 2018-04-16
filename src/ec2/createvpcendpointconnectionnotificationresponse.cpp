@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpcEndpointConnectionNotificationResponse
+/*!
+ * \class QtAws::EC2::CreateVpcEndpointConnectionNotificationResponse
  *
- * @brief  Handles EC2 CreateVpcEndpointConnectionNotification responses.
+ * \brief The CreateVpcEndpointConnectionNotificationResponse class encapsulates EC2 CreateVpcEndpointConnectionNotification responses.
  *
- * @see    EC2Client::createVpcEndpointConnectionNotification
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpcEndpointConnectionNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcEndpointConnectionNotificationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateVpcEndpointConnectionNotificationRequest * CreateVpcEndpointConnecti
     return static_cast<const CreateVpcEndpointConnectionNotificationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateVpcEndpointConnectionNotification response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &re
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateVpcEndpointConnectionNotificationResponsePrivate
+ * \class CreateVpcEndpointConnectionNotificationResponsePrivate
  *
- * @brief  Private implementation for CreateVpcEndpointConnectionNotificationResponse.
+ * \brief Private implementation for CreateVpcEndpointConnectionNotificationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcEndpointConnectionNotificationResponsePrivate object.
@@ -91,7 +98,7 @@ CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnect
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateVpcEndpointConnectionNotificationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListSqlInjectionMatchSetsRequest
+/*!
+ * \class QtAws::WAF::ListSqlInjectionMatchSetsRequest
  *
- * @brief  Implements WAF ListSqlInjectionMatchSets requests.
+ * \brief The ListSqlInjectionMatchSetsRequest class encapsulates WAF ListSqlInjectionMatchSets requests.
  *
- * @see    WAFClient::listSqlInjectionMatchSets
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listSqlInjectionMatchSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSql
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object.
  */
 ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
@@ -53,13 +61,16 @@ ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSqlInjectionMatchSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSqlInjectionMatchSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
     return new ListSqlInjectionMatchSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSqlInjectionMatchSetsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
  * @brief  Private implementation for ListSqlInjectionMatchSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequestPrivate object.
@@ -97,7 +108,7 @@ ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequestPrivate object, copying another.

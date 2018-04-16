@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionProfileConfigResponse
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileConfigResponse
  *
- * @brief  Handles CloudFront GetFieldLevelEncryptionProfileConfig responses.
+ * \brief The GetFieldLevelEncryptionProfileConfigResponse class encapsulates CloudFront GetFieldLevelEncryptionProfileConfig responses.
  *
- * @see    CloudFrontClient::getFieldLevelEncryptionProfileConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryptionProfileConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionProfileConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetFieldLevelEncryptionProfileConfigRequest * GetFieldLevelEncryptionProfi
     return static_cast<const GetFieldLevelEncryptionProfileConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetFieldLevelEncryptionProfileConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetFieldLevelEncryptionProfileConfigResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFieldLevelEncryptionProfileConfigResponsePrivate
+ * \class GetFieldLevelEncryptionProfileConfigResponsePrivate
  *
- * @brief  Private implementation for GetFieldLevelEncryptionProfileConfigResponse.
+ * \brief Private implementation for GetFieldLevelEncryptionProfileConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionProfileConfigResponsePrivate object.
@@ -91,7 +99,7 @@ GetFieldLevelEncryptionProfileConfigResponsePrivate::GetFieldLevelEncryptionProf
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetFieldLevelEncryptionProfileConfigResponse element.
  *
  * @param  xml  XML stream to parse.

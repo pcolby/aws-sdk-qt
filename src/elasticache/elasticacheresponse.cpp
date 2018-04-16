@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  ElastiCacheResponse
+/*!
+ * \class QtAws::ElastiCache::ElastiCacheResponse
  *
- * @brief  Handles ElastiCache ElastiCache responses.
+ * \brief The ElastiCacheResponse class is the base class for all ElastiCache responses.
  *
- * @see    ElastiCacheClient::elastiCache
+ * \ingroup ElastiCache
  */
 
-/**
+/*!
  * @brief  Constructs a new ElastiCacheResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ElastiCacheResponse::ElastiCacheResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElastiCacheResponse object.
@@ -63,7 +63,7 @@ ElastiCacheResponse::ElastiCacheResponse(ElastiCacheResponsePrivate * const d, Q
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ElastiCacheResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElastiCacheResponsePrivate
@@ -92,7 +92,7 @@ void ElastiCacheResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ElastiCacheResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElastiCacheResponsePrivate object.

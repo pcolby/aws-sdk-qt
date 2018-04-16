@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DescribeElasticsearchInstanceTypeLimitsRequest
+/*!
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsRequest
  *
- * @brief  Implements ElasticsearchService DescribeElasticsearchInstanceTypeLimits requests.
+ * \brief The DescribeElasticsearchInstanceTypeLimitsRequest class encapsulates ElasticsearchService DescribeElasticsearchInstanceTypeLimits requests.
  *
- * @see    ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTyp
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequest object.
  */
 DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTypeLimitsRequest()
@@ -53,13 +65,16 @@ DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTyp
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeElasticsearchInstanceTypeLimitsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeElasticsearchInstanceTypeLimitsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsReques
     return new DescribeElasticsearchInstanceTypeLimitsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeElasticsearchInstanceTypeLimitsRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsReques
  * @brief  Private implementation for DescribeElasticsearchInstanceTypeLimitsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequestPrivate object.
@@ -97,7 +112,7 @@ DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInst
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsRequestPrivate object, copying another.

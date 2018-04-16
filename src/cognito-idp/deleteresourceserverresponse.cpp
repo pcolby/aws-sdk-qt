@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteResourceServerResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteResourceServerResponse
  *
- * @brief  Handles CognitoIdentityProvider DeleteResourceServer responses.
+ * \brief The DeleteResourceServerResponse class encapsulates CognitoIdentityProvider DeleteResourceServer responses.
  *
- * @see    CognitoIdentityProviderClient::deleteResourceServer
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteResourceServer
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceServerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DeleteResourceServerRequest * DeleteResourceServerResponse::request() cons
     return static_cast<const DeleteResourceServerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DeleteResourceServer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DeleteResourceServerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteResourceServerResponsePrivate
+ * \class DeleteResourceServerResponsePrivate
  *
- * @brief  Private implementation for DeleteResourceServerResponse.
+ * \brief Private implementation for DeleteResourceServerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceServerResponsePrivate object.
@@ -91,7 +104,7 @@ DeleteResourceServerResponsePrivate::DeleteResourceServerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DeleteResourceServerResponse element.
  *
  * @param  xml  XML stream to parse.

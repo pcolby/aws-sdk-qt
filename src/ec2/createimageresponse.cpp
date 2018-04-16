@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateImageResponse
+/*!
+ * \class QtAws::EC2::CreateImageResponse
  *
- * @brief  Handles EC2 CreateImage responses.
+ * \brief The CreateImageResponse class encapsulates EC2 CreateImage responses.
  *
- * @see    EC2Client::createImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateImageRequest * CreateImageResponse::request() const
     return static_cast<const CreateImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateImageResponsePrivate
+ * \class CreateImageResponsePrivate
  *
- * @brief  Private implementation for CreateImageResponse.
+ * \brief Private implementation for CreateImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageResponsePrivate object.
@@ -91,7 +98,7 @@ CreateImageResponsePrivate::CreateImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateImageResponse element.
  *
  * @param  xml  XML stream to parse.

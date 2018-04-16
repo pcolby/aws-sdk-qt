@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  TagStreamRequest
+/*!
+ * \class QtAws::KinesisVideo::TagStreamRequest
  *
- * @brief  Implements KinesisVideo TagStream requests.
+ * \brief The TagStreamRequest class encapsulates KinesisVideo TagStream requests.
  *
- * @see    KinesisVideoClient::tagStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::tagStream
  */
 
-/**
+/*!
  * @brief  Constructs a new TagStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ TagStreamRequest::TagStreamRequest(const TagStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TagStreamRequest object.
  */
 TagStreamRequest::TagStreamRequest()
@@ -53,13 +56,16 @@ TagStreamRequest::TagStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TagStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TagStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * co
     return new TagStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TagStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * co
  * @brief  Private implementation for TagStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagStreamRequestPrivate object.
@@ -97,7 +103,7 @@ TagStreamRequestPrivate::TagStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagStreamRequestPrivate object, copying another.

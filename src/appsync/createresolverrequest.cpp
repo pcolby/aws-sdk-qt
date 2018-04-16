@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateResolverRequest
+/*!
+ * \class QtAws::AppSync::CreateResolverRequest
  *
- * @brief  Implements AppSync CreateResolver requests.
+ * \brief The CreateResolverRequest class encapsulates AppSync CreateResolver requests.
  *
- * @see    AppSyncClient::createResolver
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createResolver
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResolverRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateResolverRequest::CreateResolverRequest(const CreateResolverRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateResolverRequest object.
  */
 CreateResolverRequest::CreateResolverRequest()
@@ -53,13 +57,16 @@ CreateResolverRequest::CreateResolverRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateResolverRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateResolverResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateResolverRequest::response(QNetworkReply
     return new CreateResolverResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateResolverRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateResolverRequest::response(QNetworkReply
  * @brief  Private implementation for CreateResolverRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResolverRequestPrivate object.
@@ -97,7 +104,7 @@ CreateResolverRequestPrivate::CreateResolverRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResolverRequestPrivate object, copying another.

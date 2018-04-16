@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  CreatePublicDnsNamespaceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::CreatePublicDnsNamespaceRequest
  *
- * @brief  Implements ServiceDiscovery CreatePublicDnsNamespace requests.
+ * \brief The CreatePublicDnsNamespaceRequest class encapsulates ServiceDiscovery CreatePublicDnsNamespace requests.
  *
- * @see    ServiceDiscoveryClient::createPublicDnsNamespace
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::createPublicDnsNamespace
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePublicDnsNamespaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreatePublicDnsNamespaceRequest::CreatePublicDnsNamespaceRequest(const CreatePub
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePublicDnsNamespaceRequest object.
  */
 CreatePublicDnsNamespaceRequest::CreatePublicDnsNamespaceRequest()
@@ -53,13 +60,16 @@ CreatePublicDnsNamespaceRequest::CreatePublicDnsNamespaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePublicDnsNamespaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePublicDnsNamespaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreatePublicDnsNamespaceRequest::response(QNe
     return new CreatePublicDnsNamespaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePublicDnsNamespaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePublicDnsNamespaceRequest::response(QNe
  * @brief  Private implementation for CreatePublicDnsNamespaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePublicDnsNamespaceRequestPrivate object.
@@ -97,7 +107,7 @@ CreatePublicDnsNamespaceRequestPrivate::CreatePublicDnsNamespaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePublicDnsNamespaceRequestPrivate object, copying another.

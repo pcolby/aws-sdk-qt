@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateNetworkProfileResponse
+/*!
+ * \class QtAws::DeviceFarm::UpdateNetworkProfileResponse
  *
- * @brief  Handles DeviceFarm UpdateNetworkProfile responses.
+ * \brief The UpdateNetworkProfileResponse class encapsulates DeviceFarm UpdateNetworkProfile responses.
  *
- * @see    DeviceFarmClient::updateNetworkProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateNetworkProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNetworkProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const UpdateNetworkProfileRequest * UpdateNetworkProfileResponse::request() cons
     return static_cast<const UpdateNetworkProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm UpdateNetworkProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void UpdateNetworkProfileResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateNetworkProfileResponsePrivate
+ * \class UpdateNetworkProfileResponsePrivate
  *
- * @brief  Private implementation for UpdateNetworkProfileResponse.
+ * \brief Private implementation for UpdateNetworkProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNetworkProfileResponsePrivate object.
@@ -91,7 +96,7 @@ UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm UpdateNetworkProfileResponse element.
  *
  * @param  xml  XML stream to parse.

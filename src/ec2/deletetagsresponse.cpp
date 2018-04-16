@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteTagsResponse
+/*!
+ * \class QtAws::EC2::DeleteTagsResponse
  *
- * @brief  Handles EC2 DeleteTags responses.
+ * \brief The DeleteTagsResponse class encapsulates EC2 DeleteTags responses.
  *
- * @see    EC2Client::deleteTags
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
     return static_cast<const DeleteTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagsResponsePrivate
+ * \class DeleteTagsResponsePrivate
  *
- * @brief  Private implementation for DeleteTagsResponse.
+ * \brief Private implementation for DeleteTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteTagsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  CreateSegmentRequest
+/*!
+ * \class QtAws::Pinpoint::CreateSegmentRequest
  *
- * @brief  Implements Pinpoint CreateSegment requests.
+ * \brief The CreateSegmentRequest class encapsulates Pinpoint CreateSegment requests.
  *
- * @see    PinpointClient::createSegment
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::createSegment
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSegmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateSegmentRequest::CreateSegmentRequest(const CreateSegmentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSegmentRequest object.
  */
 CreateSegmentRequest::CreateSegmentRequest()
@@ -53,13 +56,16 @@ CreateSegmentRequest::CreateSegmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSegmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSegmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateSegmentRequest::response(QNetworkReply 
     return new CreateSegmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSegmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateSegmentRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateSegmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSegmentRequestPrivate object.
@@ -97,7 +103,7 @@ CreateSegmentRequestPrivate::CreateSegmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSegmentRequestPrivate object, copying another.

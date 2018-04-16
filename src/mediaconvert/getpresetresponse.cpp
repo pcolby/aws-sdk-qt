@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  GetPresetResponse
+/*!
+ * \class QtAws::MediaConvert::GetPresetResponse
  *
- * @brief  Handles MediaConvert GetPreset responses.
+ * \brief The GetPresetResponse class encapsulates MediaConvert GetPreset responses.
  *
- * @see    MediaConvertClient::getPreset
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::getPreset
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPresetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetPresetRequest * GetPresetResponse::request() const
     return static_cast<const GetPresetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert GetPreset response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetPresetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPresetResponsePrivate
+ * \class GetPresetResponsePrivate
  *
- * @brief  Private implementation for GetPresetResponse.
+ * \brief Private implementation for GetPresetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPresetResponsePrivate object.
@@ -91,7 +94,7 @@ GetPresetResponsePrivate::GetPresetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert GetPresetResponse element.
  *
  * @param  xml  XML stream to parse.

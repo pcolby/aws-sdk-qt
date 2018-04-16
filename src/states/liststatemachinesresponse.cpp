@@ -27,15 +27,37 @@
 namespace QtAws {
 namespace SFN {
 
-/**
- * @class  ListStateMachinesResponse
+/*!
+ * \class QtAws::SFN::ListStateMachinesResponse
  *
- * @brief  Handles SFN ListStateMachines responses.
+ * \brief The ListStateMachinesResponse class encapsulates SFN ListStateMachines responses.
  *
- * @see    SFNClient::listStateMachines
+ * \ingroup SFN
+ *
+ *  <fullname>AWS Step Functions</fullname>
+ * 
+ *  AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
+ *  using visual
+ * 
+ *  workflows>
+ * 
+ *  You can use Step Functions to build applications from individual components, each of which performs a discrete function,
+ *  or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps
+ *  visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each
+ *  step, and retries steps when there are errors, so your application executes predictably and in the right order every
+ *  time. Step Functions logs the state of each step, so you can quickly diagnose and debug any
+ * 
+ *  issues>
+ * 
+ *  Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
+ *  You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
+ *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
+ *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
+ *
+ * \sa SFNClient::listStateMachines
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStateMachinesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +80,7 @@ const ListStateMachinesRequest * ListStateMachinesResponse::request() const
     return static_cast<const ListStateMachinesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SFN ListStateMachines response.
  *
  * @param  response  Response to parse.
@@ -70,15 +92,15 @@ void ListStateMachinesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStateMachinesResponsePrivate
+ * \class ListStateMachinesResponsePrivate
  *
- * @brief  Private implementation for ListStateMachinesResponse.
+ * \brief Private implementation for ListStateMachinesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStateMachinesResponsePrivate object.
@@ -91,7 +113,7 @@ ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SFN ListStateMachinesResponse element.
  *
  * @param  xml  XML stream to parse.

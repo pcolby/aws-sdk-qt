@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DeleteApplicationInputProcessingConfigurationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationRequest
  *
- * @brief  Implements KinesisAnalytics DeleteApplicationInputProcessingConfiguration requests.
+ * \brief The DeleteApplicationInputProcessingConfigurationRequest class encapsulates KinesisAnalytics DeleteApplicationInputProcessingConfiguration requests.
  *
- * @see    KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApplicationInputProcessingConfigurationRequest::DeleteApplicationInputProc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequest object.
  */
 DeleteApplicationInputProcessingConfigurationRequest::DeleteApplicationInputProcessingConfigurationRequest()
@@ -53,13 +56,16 @@ DeleteApplicationInputProcessingConfigurationRequest::DeleteApplicationInputProc
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApplicationInputProcessingConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApplicationInputProcessingConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationInputProcessingConfiguration
     return new DeleteApplicationInputProcessingConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApplicationInputProcessingConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationInputProcessingConfiguration
  * @brief  Private implementation for DeleteApplicationInputProcessingConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationIn
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequestPrivate object, copying another.

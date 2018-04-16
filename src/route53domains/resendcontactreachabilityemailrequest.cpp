@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ResendContactReachabilityEmailRequest
+/*!
+ * \class QtAws::Route53Domains::ResendContactReachabilityEmailRequest
  *
- * @brief  Implements Route53Domains ResendContactReachabilityEmail requests.
+ * \brief The ResendContactReachabilityEmailRequest class encapsulates Route53Domains ResendContactReachabilityEmail requests.
  *
- * @see    Route53DomainsClient::resendContactReachabilityEmail
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::resendContactReachabilityEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new ResendContactReachabilityEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResendContactReachabilityEmailRequest object.
  */
 ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest()
@@ -53,13 +57,16 @@ ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResendContactReachabilityEmailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResendContactReachabilityEmailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::respon
     return new ResendContactReachabilityEmailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResendContactReachabilityEmailRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::respon
  * @brief  Private implementation for ResendContactReachabilityEmailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendContactReachabilityEmailRequestPrivate object.
@@ -97,7 +104,7 @@ ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendContactReachabilityEmailRequestPrivate object, copying another.

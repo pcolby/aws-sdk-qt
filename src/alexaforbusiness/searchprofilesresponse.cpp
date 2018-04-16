@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SearchProfilesResponse
+/*!
+ * \class QtAws::AlexaForBusiness::SearchProfilesResponse
  *
- * @brief  Handles AlexaForBusiness SearchProfiles responses.
+ * \brief The SearchProfilesResponse class encapsulates AlexaForBusiness SearchProfiles responses.
  *
- * @see    AlexaForBusinessClient::searchProfiles
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::searchProfiles
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProfilesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SearchProfilesRequest * SearchProfilesResponse::request() const
     return static_cast<const SearchProfilesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness SearchProfiles response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SearchProfilesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchProfilesResponsePrivate
+ * \class SearchProfilesResponsePrivate
  *
- * @brief  Private implementation for SearchProfilesResponse.
+ * \brief Private implementation for SearchProfilesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProfilesResponsePrivate object.
@@ -91,7 +99,7 @@ SearchProfilesResponsePrivate::SearchProfilesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness SearchProfilesResponse element.
  *
  * @param  xml  XML stream to parse.

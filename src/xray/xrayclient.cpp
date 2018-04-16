@@ -37,24 +37,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::XRay
+ * \brief The QtAws::XRay contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  XRayClient
+/*!
+ * \class QtAws::XRay::XRayClient
  *
- * @brief  Client for AWS X-Ray
+ * \brief The XRayClient class provides access the AWS X-Ray service.
  *
- * AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  */
 
-/**
- * @brief  Constructs a new XRayClient object.
+/*!
+ * \brief Constructs a XRayClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 XRayClient::XRayClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -73,21 +81,16 @@ XRayClient::XRayClient(
     d->serviceName = QStringLiteral("xray");
 }
 
-/**
- * @brief  Constructs a new XRayClient object.
+/*!
+ * \overload XRayClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 XRayClient::XRayClient(
     const QUrl &endpoint,
@@ -106,7 +109,7 @@ XRayClient::XRayClient(
     d->serviceName = QStringLiteral("xray");
 }
 
-/**
+/*!
  * Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a
  * single request. Use <code>GetTraceSummaries</code> to get a list of trace
  *
@@ -121,7 +124,7 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
     return qobject_cast<BatchGetTracesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a document that describes services that process incoming requests, and downstream services that they call as a
  * result. Root services process incoming requests and make calls to downstream services. Root services are applications
  * that use the AWS X-Ray SDK. Downstream services can be other applications, AWS resources, HTTP web APIs, or SQL
@@ -137,7 +140,7 @@ GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphReque
     return qobject_cast<GetServiceGraphResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a service graph for one or more specific trace
  *
  * @param  request Request to send to AWS X-Ray.
@@ -151,7 +154,7 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
     return qobject_cast<GetTraceGraphResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves IDs and metadata for traces available for a specified time frame using an optional filter. To get the full
  * traces, pass the trace IDs to
  *
@@ -189,7 +192,7 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
     return qobject_cast<GetTraceSummariesResponse *>(send(request));
 }
 
-/**
+/*!
  * Used by the AWS X-Ray daemon to upload
  *
  * @param  request Request to send to AWS X-Ray.
@@ -203,7 +206,7 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
     return qobject_cast<PutTelemetryRecordsResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon,
  * which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of
  *
@@ -275,7 +278,7 @@ PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRe
     return qobject_cast<PutTraceSegmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  XRayClientPrivate
@@ -283,7 +286,7 @@ PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRe
  * @brief  Private implementation for XRayClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new XRayClientPrivate object.

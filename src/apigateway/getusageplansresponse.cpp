@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetUsagePlansResponse
+/*!
+ * \class QtAws::APIGateway::GetUsagePlansResponse
  *
- * @brief  Handles APIGateway GetUsagePlans responses.
+ * \brief The GetUsagePlansResponse class encapsulates APIGateway GetUsagePlans responses.
  *
- * @see    APIGatewayClient::getUsagePlans
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getUsagePlans
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlansResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetUsagePlansRequest * GetUsagePlansResponse::request() const
     return static_cast<const GetUsagePlansRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetUsagePlans response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetUsagePlansResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetUsagePlansResponsePrivate
+ * \class GetUsagePlansResponsePrivate
  *
- * @brief  Private implementation for GetUsagePlansResponse.
+ * \brief Private implementation for GetUsagePlansResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlansResponsePrivate object.
@@ -91,7 +99,7 @@ GetUsagePlansResponsePrivate::GetUsagePlansResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetUsagePlansResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateAddressRequest
+/*!
+ * \class QtAws::EC2::AssociateAddressRequest
  *
- * @brief  Implements EC2 AssociateAddress requests.
+ * \brief The AssociateAddressRequest class encapsulates EC2 AssociateAddress requests.
  *
- * @see    EC2Client::associateAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssociateAddressRequest::AssociateAddressRequest(const AssociateAddressRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateAddressRequest object.
  */
 AssociateAddressRequest::AssociateAddressRequest()
@@ -53,13 +60,16 @@ AssociateAddressRequest::AssociateAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssociateAddressRequest::response(QNetworkRep
     return new AssociateAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateAddressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateAddressRequest::response(QNetworkRep
  * @brief  Private implementation for AssociateAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateAddressRequestPrivate object.
@@ -97,7 +107,7 @@ AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateAddressRequestPrivate object, copying another.

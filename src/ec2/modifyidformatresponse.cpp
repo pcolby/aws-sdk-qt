@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyIdFormatResponse
+/*!
+ * \class QtAws::EC2::ModifyIdFormatResponse
  *
- * @brief  Handles EC2 ModifyIdFormat responses.
+ * \brief The ModifyIdFormatResponse class encapsulates EC2 ModifyIdFormat responses.
  *
- * @see    EC2Client::modifyIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyIdFormatResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyIdFormatRequest * ModifyIdFormatResponse::request() const
     return static_cast<const ModifyIdFormatRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyIdFormat response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyIdFormatResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyIdFormatResponsePrivate
+ * \class ModifyIdFormatResponsePrivate
  *
- * @brief  Private implementation for ModifyIdFormatResponse.
+ * \brief Private implementation for ModifyIdFormatResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyIdFormatResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyIdFormatResponsePrivate::ModifyIdFormatResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyIdFormatResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateKeysAndCertificateResponse
+/*!
+ * \class QtAws::IoT::CreateKeysAndCertificateResponse
  *
- * @brief  Handles IoT CreateKeysAndCertificate responses.
+ * \brief The CreateKeysAndCertificateResponse class encapsulates IoT CreateKeysAndCertificate responses.
  *
- * @see    IoTClient::createKeysAndCertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createKeysAndCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateKeysAndCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateKeysAndCertificateRequest * CreateKeysAndCertificateResponse::reques
     return static_cast<const CreateKeysAndCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreateKeysAndCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateKeysAndCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateKeysAndCertificateResponsePrivate
+ * \class CreateKeysAndCertificateResponsePrivate
  *
- * @brief  Private implementation for CreateKeysAndCertificateResponse.
+ * \brief Private implementation for CreateKeysAndCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateKeysAndCertificateResponsePrivate object.
@@ -91,7 +105,7 @@ CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreateKeysAndCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

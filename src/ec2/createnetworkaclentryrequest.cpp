@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateNetworkAclEntryRequest
+/*!
+ * \class QtAws::EC2::CreateNetworkAclEntryRequest
  *
- * @brief  Implements EC2 CreateNetworkAclEntry requests.
+ * \brief The CreateNetworkAclEntryRequest class encapsulates EC2 CreateNetworkAclEntry requests.
  *
- * @see    EC2Client::createNetworkAclEntry
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createNetworkAclEntry
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkAclEntryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest(const CreateNetworkAc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkAclEntryRequest object.
  */
 CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest()
@@ -53,13 +60,16 @@ CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateNetworkAclEntryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateNetworkAclEntryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclEntryRequest::response(QNetwo
     return new CreateNetworkAclEntryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateNetworkAclEntryRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclEntryRequest::response(QNetwo
  * @brief  Private implementation for CreateNetworkAclEntryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkAclEntryRequestPrivate object.
@@ -97,7 +107,7 @@ CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkAclEntryRequestPrivate object, copying another.

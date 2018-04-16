@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ResetDeploymentsRequest
+/*!
+ * \class QtAws::Greengrass::ResetDeploymentsRequest
  *
- * @brief  Implements Greengrass ResetDeployments requests.
+ * \brief The ResetDeploymentsRequest class encapsulates Greengrass ResetDeployments requests.
  *
- * @see    GreengrassClient::resetDeployments
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::resetDeployments
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetDeploymentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ResetDeploymentsRequest::ResetDeploymentsRequest(const ResetDeploymentsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetDeploymentsRequest object.
  */
 ResetDeploymentsRequest::ResetDeploymentsRequest()
@@ -53,13 +59,16 @@ ResetDeploymentsRequest::ResetDeploymentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetDeploymentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetDeploymentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkRep
     return new ResetDeploymentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetDeploymentsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkRep
  * @brief  Private implementation for ResetDeploymentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetDeploymentsRequestPrivate object.
@@ -97,7 +106,7 @@ ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetDeploymentsRequestPrivate object, copying another.

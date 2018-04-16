@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketEncryptionResponse
+/*!
+ * \class QtAws::S3::PutBucketEncryptionResponse
  *
- * @brief  Handles S3 PutBucketEncryption responses.
+ * \brief The PutBucketEncryptionResponse class encapsulates S3 PutBucketEncryption responses.
  *
- * @see    S3Client::putBucketEncryption
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketEncryptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketEncryptionRequest * PutBucketEncryptionResponse::request() const
     return static_cast<const PutBucketEncryptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketEncryption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketEncryptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketEncryptionResponsePrivate
+ * \class PutBucketEncryptionResponsePrivate
  *
- * @brief  Private implementation for PutBucketEncryptionResponse.
+ * \brief Private implementation for PutBucketEncryptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketEncryptionResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketEncryptionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,51 @@
 namespace QtAws {
 namespace WorkMail {
 
-/**
- * @class  CreateGroupRequest
+/*!
+ * \class QtAws::WorkMail::CreateGroupRequest
  *
- * @brief  Implements WorkMail CreateGroup requests.
+ * \brief The CreateGroupRequest class encapsulates WorkMail CreateGroup requests.
  *
- * @see    WorkMailClient::createGroup
+ * \ingroup WorkMail
+ *
+ *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
+ *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
+ *  iOS and Android email applications. You can integrate Amazon WorkMail with your existing corporate directory and control
+ *  both the keys that encrypt your data and the location in which your data is
+ * 
+ *  stored>
+ * 
+ *  The Amazon WorkMail API is designed for the following
+ * 
+ *  scenarios> <ul> <li>
+ * 
+ *  Listing and describing
+ * 
+ *  organization> </li> </ul> <ul> <li>
+ * 
+ *  Managing
+ * 
+ *  user> </li> </ul> <ul> <li>
+ * 
+ *  Managing
+ * 
+ *  group> </li> </ul> <ul> <li>
+ * 
+ *  Managing
+ * 
+ *  resource> </li> </ul>
+ * 
+ *  All Amazon WorkMail API actions are Amazon-authenticated and certificate-signed. They not only require the use of the
+ *  AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission
+ *  policies. By creating a role and allowing an IAM user to access the Amazon WorkMail site, the IAM user gains full
+ *  administrative visibility into the entire Amazon WorkMail organization (or as set in the IAM policy). This includes, but
+ *  is not limited to, the ability to create, update, and delete users, groups, and resources. This allows developers to
+ *  perform the scenarios listed above, as well as give users the ability to grant access on a selective basis using the IAM
+ *
+ * \sa WorkMailClient::createGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +80,7 @@ CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupRequest object.
  */
 CreateGroupRequest::CreateGroupRequest()
@@ -53,13 +89,16 @@ CreateGroupRequest::CreateGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +113,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
     return new CreateGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateGroupRequestPrivate
@@ -82,7 +121,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupRequestPrivate object.
@@ -97,7 +136,7 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupRequestPrivate object, copying another.

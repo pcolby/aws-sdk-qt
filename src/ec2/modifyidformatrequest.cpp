@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyIdFormatRequest
+/*!
+ * \class QtAws::EC2::ModifyIdFormatRequest
  *
- * @brief  Implements EC2 ModifyIdFormat requests.
+ * \brief The ModifyIdFormatRequest class encapsulates EC2 ModifyIdFormat requests.
  *
- * @see    EC2Client::modifyIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyIdFormatRequest::ModifyIdFormatRequest(const ModifyIdFormatRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyIdFormatRequest object.
  */
 ModifyIdFormatRequest::ModifyIdFormatRequest()
@@ -53,13 +60,16 @@ ModifyIdFormatRequest::ModifyIdFormatRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyIdFormatRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyIdFormatResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply
     return new ModifyIdFormatResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyIdFormatRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply
  * @brief  Private implementation for ModifyIdFormatRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyIdFormatRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyIdFormatRequestPrivate object, copying another.

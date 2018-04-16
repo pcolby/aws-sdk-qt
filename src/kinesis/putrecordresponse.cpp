@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  PutRecordResponse
+/*!
+ * \class QtAws::Kinesis::PutRecordResponse
  *
- * @brief  Handles Kinesis PutRecord responses.
+ * \brief The PutRecordResponse class encapsulates Kinesis PutRecord responses.
  *
- * @see    KinesisClient::putRecord
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::putRecord
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRecordResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const PutRecordRequest * PutRecordResponse::request() const
     return static_cast<const PutRecordRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis PutRecord response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void PutRecordResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutRecordResponsePrivate
+ * \class PutRecordResponsePrivate
  *
- * @brief  Private implementation for PutRecordResponse.
+ * \brief Private implementation for PutRecordResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordResponsePrivate object.
@@ -91,7 +97,7 @@ PutRecordResponsePrivate::PutRecordResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis PutRecordResponse element.
  *
  * @param  xml  XML stream to parse.

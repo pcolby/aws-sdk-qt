@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  UntagStreamResponse
+/*!
+ * \class QtAws::KinesisVideo::UntagStreamResponse
  *
- * @brief  Handles KinesisVideo UntagStream responses.
+ * \brief The UntagStreamResponse class encapsulates KinesisVideo UntagStream responses.
  *
- * @see    KinesisVideoClient::untagStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::untagStream
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UntagStreamRequest * UntagStreamResponse::request() const
     return static_cast<const UntagStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideo UntagStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UntagStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UntagStreamResponsePrivate
+ * \class UntagStreamResponsePrivate
  *
- * @brief  Private implementation for UntagStreamResponse.
+ * \brief Private implementation for UntagStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagStreamResponsePrivate object.
@@ -91,7 +94,7 @@ UntagStreamResponsePrivate::UntagStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideo UntagStreamResponse element.
  *
  * @param  xml  XML stream to parse.

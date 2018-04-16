@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetSubscriptionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::GetSubscriptionDefinitionRequest
  *
- * @brief  Implements Greengrass GetSubscriptionDefinition requests.
+ * \brief The GetSubscriptionDefinitionRequest class encapsulates Greengrass GetSubscriptionDefinition requests.
  *
- * @see    GreengrassClient::getSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetSubscriptionDefinitionRequest::GetSubscriptionDefinitionRequest(const GetSubs
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionDefinitionRequest object.
  */
 GetSubscriptionDefinitionRequest::GetSubscriptionDefinitionRequest()
@@ -53,13 +59,16 @@ GetSubscriptionDefinitionRequest::GetSubscriptionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSubscriptionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSubscriptionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionDefinitionRequest::response(QN
     return new GetSubscriptionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSubscriptionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionDefinitionRequest::response(QN
  * @brief  Private implementation for GetSubscriptionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ GetSubscriptionDefinitionRequestPrivate::GetSubscriptionDefinitionRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionDefinitionRequestPrivate object, copying another.

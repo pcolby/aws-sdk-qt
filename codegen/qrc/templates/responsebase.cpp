@@ -8,15 +8,15 @@
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
-/**
- * @class  {{ClassName}}
+/*!
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * @brief  Handles {{ServiceName}} {{ClassName|cut:"Response"}} responses.
+ * \brief The {{ClassName}} class is the base class for all {{ServiceName}} responses.
  *
- * @see    {{ServiceName}}Client::{{ClassName|slice:"0:1"|lower}}{{ClassName|slice:"01:-1"|cut:"Response"}}
+ * \ingroup {{NameSpaceName}}
  */
 
-/**
+/*!
  * @brief  Constructs a new {{ClassName}} object.
  *
  * @param  parent   This object's parent.
@@ -27,7 +27,7 @@ namespace {{NameSpaceName}} {
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new {{ClassName}} object.
@@ -45,7 +45,7 @@ namespace {{NameSpaceName}} {
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -66,7 +66,7 @@ void {{ClassName}}::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  {{ClassName}}Private
@@ -74,7 +74,7 @@ void {{ClassName}}::parseFailure(QIODevice &response)
  * @brief  Private implementation for {{ClassName}}.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new {{ClassName}}Private object.

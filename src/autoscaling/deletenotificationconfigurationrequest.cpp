@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteNotificationConfigurationRequest
+/*!
+ * \class QtAws::AutoScaling::DeleteNotificationConfigurationRequest
  *
- * @brief  Implements AutoScaling DeleteNotificationConfiguration requests.
+ * \brief The DeleteNotificationConfigurationRequest class encapsulates AutoScaling DeleteNotificationConfiguration requests.
  *
- * @see    AutoScalingClient::deleteNotificationConfiguration
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteNotificationConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotificationConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotificationConfigurationRequest object.
  */
 DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest()
@@ -53,13 +61,16 @@ DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNotificationConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNotificationConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::respo
     return new DeleteNotificationConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNotificationConfigurationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::respo
  * @brief  Private implementation for DeleteNotificationConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotificationConfigurationRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotificationConfigurationRequestPrivate object, copying another.

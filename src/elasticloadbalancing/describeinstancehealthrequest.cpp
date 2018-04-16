@@ -25,15 +25,46 @@
 namespace QtAws {
 namespace ElasticLoadBalancing {
 
-/**
- * @class  DescribeInstanceHealthRequest
+/*!
+ * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthRequest
  *
- * @brief  Implements ElasticLoadBalancing DescribeInstanceHealth requests.
+ * \brief The DescribeInstanceHealthRequest class encapsulates ElasticLoadBalancing DescribeInstanceHealth requests.
  *
- * @see    ElasticLoadBalancingClient::describeInstanceHealth
+ * \ingroup ElasticLoadBalancing
+ *
+ *  <fullname>Elastic Load Balancing</fullname>
+ * 
+ *  A load balancer can distribute incoming traffic across your EC2 instances. This enables you to increase the availability
+ *  of your application. The load balancer also monitors the health of its registered instances and ensures that it routes
+ *  traffic only to healthy instances. You configure your load balancer to accept incoming traffic by specifying one or more
+ *  listeners, which are configured with a protocol and port number for connections from clients to the load balancer and a
+ *  protocol and port number for connections from the load balancer to the
+ * 
+ *  instances>
+ * 
+ *  Elastic Load Balancing supports three types of load balancers: Application Load Balancers, Network Load Balancers, and
+ *  Classic Load Balancers. You can select a load balancer based on your application needs. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
+ * 
+ *  Guide</a>>
+ * 
+ *  This reference covers the 2012-06-01 API, which supports Classic Load Balancers. The 2015-12-01 API supports Application
+ *  Load Balancers and Network Load
+ * 
+ *  Balancers>
+ * 
+ *  To get started, create a load balancer with one or more listeners using <a>CreateLoadBalancer</a>. Register your
+ *  instances with the load balancer using
+ * 
+ *  <a>RegisterInstancesWithLoadBalancer</a>>
+ * 
+ *  All Elastic Load Balancing operations are <i>idempotent</i>, which means that they complete at most one time. If you
+ *  repeat an operation, it succeeds with a 200 OK response
+ *
+ * \sa ElasticLoadBalancingClient::describeInstanceHealth
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceHealthRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +75,7 @@ DescribeInstanceHealthRequest::DescribeInstanceHealthRequest(const DescribeInsta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceHealthRequest object.
  */
 DescribeInstanceHealthRequest::DescribeInstanceHealthRequest()
@@ -53,13 +84,16 @@ DescribeInstanceHealthRequest::DescribeInstanceHealthRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeInstanceHealthRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeInstanceHealthResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +108,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceHealthRequest::response(QNetw
     return new DescribeInstanceHealthResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeInstanceHealthRequestPrivate
@@ -82,7 +116,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceHealthRequest::response(QNetw
  * @brief  Private implementation for DescribeInstanceHealthRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceHealthRequestPrivate object.
@@ -97,7 +131,7 @@ DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceHealthRequestPrivate object, copying another.

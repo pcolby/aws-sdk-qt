@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteRequestValidatorRequest
+/*!
+ * \class QtAws::APIGateway::DeleteRequestValidatorRequest
  *
- * @brief  Implements APIGateway DeleteRequestValidator requests.
+ * \brief The DeleteRequestValidatorRequest class encapsulates APIGateway DeleteRequestValidator requests.
  *
- * @see    APIGatewayClient::deleteRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRequestValidatorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteRequestValidatorRequest::DeleteRequestValidatorRequest(const DeleteRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRequestValidatorRequest object.
  */
 DeleteRequestValidatorRequest::DeleteRequestValidatorRequest()
@@ -53,13 +61,16 @@ DeleteRequestValidatorRequest::DeleteRequestValidatorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRequestValidatorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRequestValidatorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetw
     return new DeleteRequestValidatorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRequestValidatorRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetw
  * @brief  Private implementation for DeleteRequestValidatorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRequestValidatorRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRequestValidatorRequestPrivate object, copying another.

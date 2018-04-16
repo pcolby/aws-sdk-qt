@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteIntentVersionRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteIntentVersionRequest
  *
- * @brief  Implements LexModelBuildingService DeleteIntentVersion requests.
+ * \brief The DeleteIntentVersionRequest class encapsulates LexModelBuildingService DeleteIntentVersion requests.
  *
- * @see    LexModelBuildingServiceClient::deleteIntentVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteIntentVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntentVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteIntentVersionRequest::DeleteIntentVersionRequest(const DeleteIntentVersion
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntentVersionRequest object.
  */
 DeleteIntentVersionRequest::DeleteIntentVersionRequest()
@@ -53,13 +60,16 @@ DeleteIntentVersionRequest::DeleteIntentVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIntentVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIntentVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentVersionRequest::response(QNetwork
     return new DeleteIntentVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIntentVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentVersionRequest::response(QNetwork
  * @brief  Private implementation for DeleteIntentVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntentVersionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntentVersionRequestPrivate object, copying another.

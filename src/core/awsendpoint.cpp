@@ -27,8 +27,8 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsEndpoint
+/*!
+ * \class QtAws::Core::AwsEndpoint
  *
  * @brief  Provides AWS endpoint information.
  *
@@ -67,7 +67,7 @@ namespace Core {
  * @see    AwsService
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsEndpoint object.
  *
  * @param  hostName  Name of an AWS host, encoded as UTF-8.
@@ -86,7 +86,7 @@ AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     }
 }
 
-/**
+/*!
  * @brief  Constructs a new AwsEndpoint object.
  *
  * @param  hostName  Name of an AWS host.
@@ -105,7 +105,7 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
     }
 }
 
-/**
+/*!
  * @brief AwsEndpoint destructor.
  */
 AwsEndpoint::~AwsEndpoint()
@@ -113,7 +113,7 @@ AwsEndpoint::~AwsEndpoint()
     delete d_ptr;
 }
 
-/**
+/*!
  * @brief  Get a QUrl for an AWS endpoint.
  *
  * This function will return a QUrl object for accessing an AWS service.  The
@@ -186,7 +186,7 @@ QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceN
     return url;
 }
 
-/**
+/*!
  * @brief   Get the name of host represented by this endpoint.
  *
  * @return  Name of host represented by this endpoint.
@@ -197,7 +197,7 @@ QString AwsEndpoint::hostName() const
     return d->hostName;
 }
 
-/**
+/*!
  * @brief  Is a region / service / transport combination supported by Amazon?
  *
  * @param regionName   AWS region name to check support for.
@@ -216,7 +216,7 @@ bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceN
             (AwsEndpointPrivate::regions[regionName].services[serviceName].transports & transport));
 }
 
-/**
+/*!
  * @brief  Is the given transport supported by this endpoint?
  *
  * @param  transport  Transport to check for support for.
@@ -228,7 +228,7 @@ bool AwsEndpoint::isSupported(const Transport transport) const
     return isSupported(regionName(), serviceName(), AwsEndpoint::Transports(transport));
 }
 
-/**
+/*!
  * @brief  Is this endpoint valid?
  *
  * An endpoint is considered valid if the host specified during construction is
@@ -249,7 +249,7 @@ bool AwsEndpoint::isValid() const
     return ((!hostName().isEmpty()) && (!regionName().isEmpty()) && (!serviceName().isEmpty()));
 }
 
-/**
+/*!
  * @brief  Get this endpoint's full service name.
  *
  * The full service name is a human-readbale form.  For example, the full name for
@@ -265,7 +265,7 @@ QString AwsEndpoint::fullServiceName() const
     return fullServiceName(serviceName());
 }
 
-/**
+/*!
  * @brief  Get the full name for given service.
  *
  * The full service name is a human-readbale form.  For example, the full name for
@@ -287,7 +287,7 @@ QString AwsEndpoint::fullServiceName(const QString &serviceName)
     return (service == AwsEndpointPrivate::services.constEnd()) ? QString() : service.value().fullName;
 }
 
-/**
+/*!
  * @brief  Get this endpoint's _primary_ region name.
  *
  * It is possible for a single endpiont to support multuple regions, such as
@@ -308,7 +308,7 @@ QString AwsEndpoint::regionName() const
     return d->regionName;
 }
 
-/**
+/*!
  * @brief  Get this endpoint's service name.
  *
  * @return This endpoint's service name.
@@ -321,7 +321,7 @@ QString AwsEndpoint::serviceName() const
     return d->serviceName;
 }
 
-/**
+/*!
  * @brief  Get the full list of regions this endpoint supports.
  *
  * Alternatvely, AwsEndpoint::regionName may be used to get this endpoint's
@@ -339,7 +339,7 @@ QStringList AwsEndpoint::supportedRegions(const Transports transport) const
     return supportedRegions(serviceName(), transport);
 }
 
-/**
+/*!
  * @brief  Get a list of regions that supported for a given service.
  *
  * @param  serviceName  AWS service to get the supported regions for.
@@ -365,7 +365,7 @@ QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Tran
     return regions;
 }
 
-/**
+/*!
  * @brief  Get a list of services that support a given region.
  *
  * @param  regionName  AWS region to get the supported services for.
@@ -392,10 +392,10 @@ QStringList AwsEndpoint::supportedServices(const QString &regionName, const Tran
     return serviceNames;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsEndpointPrivate
+ * \class QtAws::Core::AwsEndpointPrivate
  *
  * @brief  Private implementation for AwsEndpoint.
  */
@@ -406,7 +406,7 @@ QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services; //
 
 QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); ///< Mutex for protecting access to static members.
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsEndpointPrivate object.
@@ -421,7 +421,7 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     loadEndpointData();
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Load endpoint data
@@ -447,7 +447,7 @@ void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
     loadEndpointData(file);
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Load endpoint data
@@ -479,7 +479,7 @@ void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
     loadEndpointData(xml);
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Load endpoint data
@@ -519,7 +519,7 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
     Q_ASSERT(!services.isEmpty());
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Parse a `Region` element from Amazon's endpoint XML data
@@ -597,7 +597,7 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
     }
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Parse a `Regions` element from Amazon's endpoint XML data
@@ -624,7 +624,7 @@ void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
     }
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Parse a `Service` element from Amazon's endpoint XML data
@@ -673,7 +673,7 @@ void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
     }
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Parse a `Services` element from Amazon's endpoint XML data

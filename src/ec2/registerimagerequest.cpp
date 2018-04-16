@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RegisterImageRequest
+/*!
+ * \class QtAws::EC2::RegisterImageRequest
  *
- * @brief  Implements EC2 RegisterImage requests.
+ * \brief The RegisterImageRequest class encapsulates EC2 RegisterImage requests.
  *
- * @see    EC2Client::registerImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::registerImage
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RegisterImageRequest::RegisterImageRequest(const RegisterImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterImageRequest object.
  */
 RegisterImageRequest::RegisterImageRequest()
@@ -53,13 +60,16 @@ RegisterImageRequest::RegisterImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RegisterImageRequest::response(QNetworkReply 
     return new RegisterImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterImageRequest::response(QNetworkReply 
  * @brief  Private implementation for RegisterImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterImageRequestPrivate object.
@@ -97,7 +107,7 @@ RegisterImageRequestPrivate::RegisterImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterImageRequestPrivate object, copying another.

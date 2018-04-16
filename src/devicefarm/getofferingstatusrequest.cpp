@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetOfferingStatusRequest
+/*!
+ * \class QtAws::DeviceFarm::GetOfferingStatusRequest
  *
- * @brief  Implements DeviceFarm GetOfferingStatus requests.
+ * \brief The GetOfferingStatusRequest class encapsulates DeviceFarm GetOfferingStatus requests.
  *
- * @see    DeviceFarmClient::getOfferingStatus
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getOfferingStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOfferingStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetOfferingStatusRequest::GetOfferingStatusRequest(const GetOfferingStatusReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetOfferingStatusRequest object.
  */
 GetOfferingStatusRequest::GetOfferingStatusRequest()
@@ -53,13 +58,16 @@ GetOfferingStatusRequest::GetOfferingStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetOfferingStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetOfferingStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetOfferingStatusRequest::response(QNetworkRe
     return new GetOfferingStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetOfferingStatusRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetOfferingStatusRequest::response(QNetworkRe
  * @brief  Private implementation for GetOfferingStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOfferingStatusRequestPrivate object.
@@ -97,7 +105,7 @@ GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOfferingStatusRequestPrivate object, copying another.

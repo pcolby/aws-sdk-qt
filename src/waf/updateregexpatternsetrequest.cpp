@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateRegexPatternSetRequest
+/*!
+ * \class QtAws::WAF::UpdateRegexPatternSetRequest
  *
- * @brief  Implements WAF UpdateRegexPatternSet requests.
+ * \brief The UpdateRegexPatternSetRequest class encapsulates WAF UpdateRegexPatternSet requests.
  *
- * @see    WAFClient::updateRegexPatternSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateRegexPatternSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRegexPatternSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateRegexPatternSetRequest object.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest()
@@ -53,13 +61,16 @@ UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateRegexPatternSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateRegexPatternSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetwo
     return new UpdateRegexPatternSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateRegexPatternSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetwo
  * @brief  Private implementation for UpdateRegexPatternSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRegexPatternSetRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRegexPatternSetRequestPrivate object, copying another.

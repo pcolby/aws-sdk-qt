@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListObjectsV2Response
+/*!
+ * \class QtAws::S3::ListObjectsV2Response
  *
- * @brief  Handles S3 ListObjectsV2 responses.
+ * \brief The ListObjectsV2Response class encapsulates S3 ListObjectsV2 responses.
  *
- * @see    S3Client::listObjectsV2
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listObjectsV2
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectsV2Response object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListObjectsV2Request * ListObjectsV2Response::request() const
     return static_cast<const ListObjectsV2Request *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 ListObjectsV2 response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListObjectsV2Response::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListObjectsV2ResponsePrivate
+ * \class ListObjectsV2ResponsePrivate
  *
- * @brief  Private implementation for ListObjectsV2Response.
+ * \brief Private implementation for ListObjectsV2Response.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectsV2ResponsePrivate object.
@@ -91,7 +94,7 @@ ListObjectsV2ResponsePrivate::ListObjectsV2ResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 ListObjectsV2Response element.
  *
  * @param  xml  XML stream to parse.

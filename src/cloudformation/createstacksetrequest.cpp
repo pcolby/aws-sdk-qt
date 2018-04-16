@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  CreateStackSetRequest
+/*!
+ * \class QtAws::CloudFormation::CreateStackSetRequest
  *
- * @brief  Implements CloudFormation CreateStackSet requests.
+ * \brief The CreateStackSetRequest class encapsulates CloudFormation CreateStackSet requests.
  *
- * @see    CloudFormationClient::createStackSet
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::createStackSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStackSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ CreateStackSetRequest::CreateStackSetRequest(const CreateStackSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStackSetRequest object.
  */
 CreateStackSetRequest::CreateStackSetRequest()
@@ -53,13 +78,16 @@ CreateStackSetRequest::CreateStackSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStackSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStackSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * CreateStackSetRequest::response(QNetworkReply
     return new CreateStackSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStackSetRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * CreateStackSetRequest::response(QNetworkReply
  * @brief  Private implementation for CreateStackSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStackSetRequestPrivate object.
@@ -97,7 +125,7 @@ CreateStackSetRequestPrivate::CreateStackSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStackSetRequestPrivate object, copying another.

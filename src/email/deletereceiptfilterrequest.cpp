@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteReceiptFilterRequest
+/*!
+ * \class QtAws::SES::DeleteReceiptFilterRequest
  *
- * @brief  Implements SES DeleteReceiptFilter requests.
+ * \brief The DeleteReceiptFilterRequest class encapsulates SES DeleteReceiptFilter requests.
  *
- * @see    SESClient::deleteReceiptFilter
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteReceiptFilter
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReceiptFilterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteReceiptFilterRequest::DeleteReceiptFilterRequest(const DeleteReceiptFilter
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReceiptFilterRequest object.
  */
 DeleteReceiptFilterRequest::DeleteReceiptFilterRequest()
@@ -53,13 +67,16 @@ DeleteReceiptFilterRequest::DeleteReceiptFilterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReceiptFilterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReceiptFilterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptFilterRequest::response(QNetwork
     return new DeleteReceiptFilterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReceiptFilterRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptFilterRequest::response(QNetwork
  * @brief  Private implementation for DeleteReceiptFilterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReceiptFilterRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReceiptFilterRequestPrivate object, copying another.

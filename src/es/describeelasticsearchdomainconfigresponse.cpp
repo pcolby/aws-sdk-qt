@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DescribeElasticsearchDomainConfigResponse
+/*!
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainConfigResponse
  *
- * @brief  Handles ElasticsearchService DescribeElasticsearchDomainConfig responses.
+ * \brief The DescribeElasticsearchDomainConfigResponse class encapsulates ElasticsearchService DescribeElasticsearchDomainConfig responses.
  *
- * @see    ElasticsearchServiceClient::describeElasticsearchDomainConfig
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::describeElasticsearchDomainConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchDomainConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DescribeElasticsearchDomainConfigRequest * DescribeElasticsearchDomainConf
     return static_cast<const DescribeElasticsearchDomainConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService DescribeElasticsearchDomainConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DescribeElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeElasticsearchDomainConfigResponsePrivate
+ * \class DescribeElasticsearchDomainConfigResponsePrivate
  *
- * @brief  Private implementation for DescribeElasticsearchDomainConfigResponse.
+ * \brief Private implementation for DescribeElasticsearchDomainConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchDomainConfigResponsePrivate object.
@@ -91,7 +103,7 @@ DescribeElasticsearchDomainConfigResponsePrivate::DescribeElasticsearchDomainCon
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService DescribeElasticsearchDomainConfigResponse element.
  *
  * @param  xml  XML stream to parse.

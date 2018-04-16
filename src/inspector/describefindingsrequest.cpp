@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeFindingsRequest
+/*!
+ * \class QtAws::Inspector::DescribeFindingsRequest
  *
- * @brief  Implements Inspector DescribeFindings requests.
+ * \brief The DescribeFindingsRequest class encapsulates Inspector DescribeFindings requests.
  *
- * @see    InspectorClient::describeFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeFindingsRequest::DescribeFindingsRequest(const DescribeFindingsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeFindingsRequest object.
  */
 DescribeFindingsRequest::DescribeFindingsRequest()
@@ -53,13 +61,16 @@ DescribeFindingsRequest::DescribeFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkRep
     return new DescribeFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeFindingsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFindingsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFindingsRequestPrivate object, copying another.

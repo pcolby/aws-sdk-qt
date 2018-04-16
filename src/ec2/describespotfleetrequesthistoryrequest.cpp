@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotFleetRequestHistoryRequest
+/*!
+ * \class QtAws::EC2::DescribeSpotFleetRequestHistoryRequest
  *
- * @brief  Implements EC2 DescribeSpotFleetRequestHistory requests.
+ * \brief The DescribeSpotFleetRequestHistoryRequest class encapsulates EC2 DescribeSpotFleetRequestHistory requests.
  *
- * @see    EC2Client::describeSpotFleetRequestHistory
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotFleetRequestHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequest object.
  */
 DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest()
@@ -53,13 +60,16 @@ DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSpotFleetRequestHistoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSpotFleetRequestHistoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestHistoryRequest::respo
     return new DescribeSpotFleetRequestHistoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSpotFleetRequestHistoryRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestHistoryRequest::respo
  * @brief  Private implementation for DescribeSpotFleetRequestHistoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequestPrivate object, copying another.

@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace CloudSearchDomain {
 
-/**
- * @class  CloudSearchDomainRequest
+/*!
+ * \class QtAws::CloudSearchDomain::CloudSearchDomainRequest
  *
- * @brief  Interface class for providing CloudSearchDomain requests
+ * \brief The CloudSearchDomainRequest class is the base class for all CloudSearchDomain requests.
+ *
+ * \ingroup CloudSearchDomain
  */
 
-
-/**
+/*!
  * @brief  Constructs a new CloudSearchDomainRequest object.
  *
  * @param  action  The CloudSearchDomain action to request.
@@ -41,7 +42,7 @@ CloudSearchDomainRequest::CloudSearchDomainRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CloudSearchDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ CloudSearchDomainRequest::CloudSearchDomainRequest(const CloudSearchDomainReques
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ CloudSearchDomainRequest& CloudSearchDomainRequest::operator=(const CloudSearchD
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudSearchDomainRequest object.
@@ -85,10 +86,8 @@ CloudSearchDomainRequest::CloudSearchDomainRequest(CloudSearchDomainRequestPriva
 
 }
 
-/**
- * @brief  Get the CloudSearchDomain action to be performed by this request.
- *
- * @return The CloudSearchDomain action to be performed by this request.
+/*!
+ * \brief Returns the CloudSearchDomain action to be performed by this request.
  */
 CloudSearchDomainRequest::Action CloudSearchDomainRequest::action() const
 {
@@ -96,20 +95,16 @@ CloudSearchDomainRequest::Action CloudSearchDomainRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the CloudSearchDomain action to be performed by this request.
- *
- * @return The name of the CloudSearchDomain action to be performed by this request.
+/*!
+ * \brief Returns the name of the CloudSearchDomain action to be performed by this request.
  */
 QString CloudSearchDomainRequest::actionString() const
 {
     return CloudSearchDomainRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the CloudSearchDomain API version implemented by this request.
- *
- * @return The CloudSearchDomain API version implmented by this request.
+/*!
+ * \brief Returns the CloudSearchDomain API version implemented by this request.
  */
 QString CloudSearchDomainRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString CloudSearchDomainRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the CloudSearchDomain action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the CloudSearchDomain action to be performed by this request to \a action.
  */
 void CloudSearchDomainRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void CloudSearchDomainRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the CloudSearchDomain API version to include in this request.
- *
- * @param  version  The CloudSearchDomain API version to include in this request.
+/*!
+ * Set the CloudSearchDomain API version to include in this request to \a version.
  */
 void CloudSearchDomainRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void CloudSearchDomainRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool CloudSearchDomainRequest::operator==(const CloudSearchDomainRequest &other) const
 {
@@ -159,7 +146,7 @@ bool CloudSearchDomainRequest::operator==(const CloudSearchDomainRequest &other)
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid CloudSearchDomain queue name.
  *
  * @par From CloudSearchDomain FAQs:
@@ -178,12 +165,10 @@ bool CloudSearchDomainRequest::operator==(const CloudSearchDomainRequest &other)
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int CloudSearchDomainRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int CloudSearchDomainRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void CloudSearchDomainRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void CloudSearchDomainRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this CloudSearchDomain request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant CloudSearchDomainRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant CloudSearchDomainRequest::parameter(const QString &name, const QVariant
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this CloudSearchDomain request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &CloudSearchDomainRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &CloudSearchDomainRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this CloudSearchDomain request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void CloudSearchDomainRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void CloudSearchDomainRequest::setParameter(const QString &name, const QVariant 
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this CloudSearchDomain request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void CloudSearchDomainRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void CloudSearchDomainRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this CloudSearchDomain request.
+/*!
+ * \brief Returns a network request for this CloudSearchDomain request using the given \a endpoint.
  *
  * This CloudSearchDomain implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this CloudSearchDomain request using the given \a endpoint.
  */
 QNetworkRequest CloudSearchDomainRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest CloudSearchDomainRequest::unsignedRequest(const QUrl &endpoint) 
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CloudSearchDomainRequestPrivate
+ * \class  CloudSearchDomainRequestPrivate
  *
- * @brief  Private implementation for CloudSearchDomainRequest.
+ * \brief  Private implementation for CloudSearchDomainRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new CloudSearchDomainRequestPrivate object.
- *
- * @param  action  CloudSearchDomain action being performed by the \a q request.
- * @param  q       Pointer to this object's public CloudSearchDomainRequest instance.
+ * \brief Constructs a new CloudSearchDomainRequestPrivate object.
  */
 CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSearchDomainRequest::Action action, CloudSearchDomainRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSear
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new CloudSearchDomainRequestPrivate object from an existing one.
+ * \brief Constructs a new CloudSearchDomainRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the CloudSearchDomainRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CloudSearchDomainRequest instance.
  */
 CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSearchDomainRequestPrivate &other,
                                      CloudSearchDomainRequest * const q)
@@ -312,14 +275,14 @@ CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSear
 
 }
 
-/**
- * @brief  Convert and CloudSearchDomain action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts CloudSearchDomainRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudSearchDomain service's Action
  * query parameters.
- *
- * @param  action  CloudSearchDomain action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

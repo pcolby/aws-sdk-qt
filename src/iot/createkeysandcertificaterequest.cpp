@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateKeysAndCertificateRequest
+/*!
+ * \class QtAws::IoT::CreateKeysAndCertificateRequest
  *
- * @brief  Implements IoT CreateKeysAndCertificate requests.
+ * \brief The CreateKeysAndCertificateRequest class encapsulates IoT CreateKeysAndCertificate requests.
  *
- * @see    IoTClient::createKeysAndCertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createKeysAndCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateKeysAndCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest(const CreateKey
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateKeysAndCertificateRequest object.
  */
 CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest()
@@ -53,13 +67,16 @@ CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateKeysAndCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateKeysAndCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNe
     return new CreateKeysAndCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateKeysAndCertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNe
  * @brief  Private implementation for CreateKeysAndCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateKeysAndCertificateRequestPrivate object.
@@ -97,7 +114,7 @@ CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateKeysAndCertificateRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  DeleteVocabularyResponse
+/*!
+ * \class QtAws::TranscribeService::DeleteVocabularyResponse
  *
- * @brief  Handles TranscribeService DeleteVocabulary responses.
+ * \brief The DeleteVocabularyResponse class encapsulates TranscribeService DeleteVocabulary responses.
  *
- * @see    TranscribeServiceClient::deleteVocabulary
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::deleteVocabulary
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVocabularyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteVocabularyRequest * DeleteVocabularyResponse::request() const
     return static_cast<const DeleteVocabularyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a TranscribeService DeleteVocabulary response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteVocabularyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteVocabularyResponsePrivate
+ * \class DeleteVocabularyResponsePrivate
  *
- * @brief  Private implementation for DeleteVocabularyResponse.
+ * \brief Private implementation for DeleteVocabularyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVocabularyResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteVocabularyResponsePrivate::DeleteVocabularyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an TranscribeService DeleteVocabularyResponse element.
  *
  * @param  xml  XML stream to parse.

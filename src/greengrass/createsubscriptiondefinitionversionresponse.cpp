@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateSubscriptionDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionVersionResponse
  *
- * @brief  Handles Greengrass CreateSubscriptionDefinitionVersion responses.
+ * \brief The CreateSubscriptionDefinitionVersionResponse class encapsulates Greengrass CreateSubscriptionDefinitionVersion responses.
  *
- * @see    GreengrassClient::createSubscriptionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createSubscriptionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateSubscriptionDefinitionVersionRequest * CreateSubscriptionDefinitionV
     return static_cast<const CreateSubscriptionDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateSubscriptionDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateSubscriptionDefinitionVersionResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSubscriptionDefinitionVersionResponsePrivate
+ * \class CreateSubscriptionDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for CreateSubscriptionDefinitionVersionResponse.
+ * \brief Private implementation for CreateSubscriptionDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefinition
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateSubscriptionDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

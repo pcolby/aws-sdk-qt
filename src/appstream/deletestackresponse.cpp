@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteStackResponse
+/*!
+ * \class QtAws::AppStream::DeleteStackResponse
  *
- * @brief  Handles AppStream DeleteStack responses.
+ * \brief The DeleteStackResponse class encapsulates AppStream DeleteStack responses.
  *
- * @see    AppStreamClient::deleteStack
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteStack
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteStackRequest * DeleteStackResponse::request() const
     return static_cast<const DeleteStackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DeleteStack response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteStackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteStackResponsePrivate
+ * \class DeleteStackResponsePrivate
  *
- * @brief  Private implementation for DeleteStackResponse.
+ * \brief Private implementation for DeleteStackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStackResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteStackResponsePrivate::DeleteStackResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DeleteStackResponse element.
  *
  * @param  xml  XML stream to parse.

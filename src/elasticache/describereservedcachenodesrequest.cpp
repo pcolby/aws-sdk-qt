@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeReservedCacheNodesRequest
+/*!
+ * \class QtAws::ElastiCache::DescribeReservedCacheNodesRequest
  *
- * @brief  Implements ElastiCache DescribeReservedCacheNodes requests.
+ * \brief The DescribeReservedCacheNodesRequest class encapsulates ElastiCache DescribeReservedCacheNodes requests.
  *
- * @see    ElastiCacheClient::describeReservedCacheNodes
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeReservedCacheNodes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedCacheNodesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedCacheNodesRequest object.
  */
 DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest()
@@ -53,13 +70,16 @@ DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReservedCacheNodesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReservedCacheNodesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(Q
     return new DescribeReservedCacheNodesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReservedCacheNodesRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(Q
  * @brief  Private implementation for DescribeReservedCacheNodesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedCacheNodesRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedCacheNodesRequestPrivate object, copying another.

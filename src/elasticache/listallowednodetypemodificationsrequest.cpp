@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  ListAllowedNodeTypeModificationsRequest
+/*!
+ * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsRequest
  *
- * @brief  Implements ElastiCache ListAllowedNodeTypeModifications requests.
+ * \brief The ListAllowedNodeTypeModificationsRequest class encapsulates ElastiCache ListAllowedNodeTypeModifications requests.
  *
- * @see    ElastiCacheClient::listAllowedNodeTypeModifications
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::listAllowedNodeTypeModifications
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAllowedNodeTypeModificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAllowedNodeTypeModificationsRequest object.
  */
 ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest()
@@ -53,13 +70,16 @@ ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAllowedNodeTypeModificationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAllowedNodeTypeModificationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::resp
     return new ListAllowedNodeTypeModificationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAllowedNodeTypeModificationsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::resp
  * @brief  Private implementation for ListAllowedNodeTypeModificationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAllowedNodeTypeModificationsRequestPrivate object.
@@ -97,7 +117,7 @@ ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModifications
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAllowedNodeTypeModificationsRequestPrivate object, copying another.

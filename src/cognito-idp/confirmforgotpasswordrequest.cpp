@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ConfirmForgotPasswordRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordRequest
  *
- * @brief  Implements CognitoIdentityProvider ConfirmForgotPassword requests.
+ * \brief The ConfirmForgotPasswordRequest class encapsulates CognitoIdentityProvider ConfirmForgotPassword requests.
  *
- * @see    CognitoIdentityProviderClient::confirmForgotPassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::confirmForgotPassword
  */
 
-/**
+/*!
  * @brief  Constructs a new ConfirmForgotPasswordRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest(const ConfirmForgotPa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ConfirmForgotPasswordRequest object.
  */
 ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest()
@@ -53,13 +66,16 @@ ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ConfirmForgotPasswordRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ConfirmForgotPasswordResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetwo
     return new ConfirmForgotPasswordResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConfirmForgotPasswordRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetwo
  * @brief  Private implementation for ConfirmForgotPasswordRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmForgotPasswordRequestPrivate object.
@@ -97,7 +113,7 @@ ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmForgotPasswordRequestPrivate object, copying another.

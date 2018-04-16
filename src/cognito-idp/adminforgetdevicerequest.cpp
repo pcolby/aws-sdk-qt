@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminForgetDeviceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminForgetDevice requests.
+ * \brief The AdminForgetDeviceRequest class encapsulates CognitoIdentityProvider AdminForgetDevice requests.
  *
- * @see    CognitoIdentityProviderClient::adminForgetDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminForgetDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminForgetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminForgetDeviceRequest::AdminForgetDeviceRequest(const AdminForgetDeviceReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminForgetDeviceRequest object.
  */
 AdminForgetDeviceRequest::AdminForgetDeviceRequest()
@@ -53,13 +66,16 @@ AdminForgetDeviceRequest::AdminForgetDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminForgetDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminForgetDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkRe
     return new AdminForgetDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminForgetDeviceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminForgetDeviceRequest::response(QNetworkRe
  * @brief  Private implementation for AdminForgetDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminForgetDeviceRequestPrivate object.
@@ -97,7 +113,7 @@ AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminForgetDeviceRequestPrivate object, copying another.

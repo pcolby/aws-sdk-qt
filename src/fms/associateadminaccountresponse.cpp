@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  AssociateAdminAccountResponse
+/*!
+ * \class QtAws::FMS::AssociateAdminAccountResponse
  *
- * @brief  Handles FMS AssociateAdminAccount responses.
+ * \brief The AssociateAdminAccountResponse class encapsulates FMS AssociateAdminAccount responses.
  *
- * @see    FMSClient::associateAdminAccount
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::associateAdminAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateAdminAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const AssociateAdminAccountRequest * AssociateAdminAccountResponse::request() co
     return static_cast<const AssociateAdminAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS AssociateAdminAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void AssociateAdminAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateAdminAccountResponsePrivate
+ * \class AssociateAdminAccountResponsePrivate
  *
- * @brief  Private implementation for AssociateAdminAccountResponse.
+ * \brief Private implementation for AssociateAdminAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateAdminAccountResponsePrivate object.
@@ -91,7 +100,7 @@ AssociateAdminAccountResponsePrivate::AssociateAdminAccountResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS AssociateAdminAccountResponse element.
  *
  * @param  xml  XML stream to parse.

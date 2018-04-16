@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeExportTasksResponse
+/*!
+ * \class QtAws::EC2::DescribeExportTasksResponse
  *
- * @brief  Handles EC2 DescribeExportTasks responses.
+ * \brief The DescribeExportTasksResponse class encapsulates EC2 DescribeExportTasks responses.
  *
- * @see    EC2Client::describeExportTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeExportTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeExportTasksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
     return static_cast<const DescribeExportTasksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeExportTasks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeExportTasksResponsePrivate
+ * \class DescribeExportTasksResponsePrivate
  *
- * @brief  Private implementation for DescribeExportTasksResponse.
+ * \brief Private implementation for DescribeExportTasksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeExportTasksResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeExportTasksResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -45,36 +45,44 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SimpleDB
+ * \brief The QtAws::SimpleDB contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  SimpleDBClient
+/*!
+ * \class QtAws::SimpleDB::SimpleDBClient
  *
- * @brief  Client for Amazon SimpleDB
+ * \brief The SimpleDBClient class provides access the Amazon SimpleDB service.
  *
- * Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
- * offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
- * the freedom to focus on application development.
+ * \ingroup SimpleDB
  *
- * A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often
- * requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema,
- * automatically indexing your data and providing a simple API for storage and access. This approach eliminates the
- * administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this
- * functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.
- *
- * </p
- *
- * Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information.
+ *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
+ *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
+ *  the freedom to focus on application development.
+ * 
+ *  A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often
+ *  requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema,
+ *  automatically indexing your data and providing a simple API for storage and access. This approach eliminates the
+ *  administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this
+ *  functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.
+ * 
+ *  </p
+ * 
+ *  Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information.
  */
 
-/**
- * @brief  Constructs a new SimpleDBClient object.
+/*!
+ * \brief Constructs a SimpleDBClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SimpleDBClient::SimpleDBClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -93,21 +101,16 @@ SimpleDBClient::SimpleDBClient(
     d->serviceName = QStringLiteral("sdb");
 }
 
-/**
- * @brief  Constructs a new SimpleDBClient object.
+/*!
+ * \overload SimpleDBClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SimpleDBClient::SimpleDBClient(
     const QUrl &endpoint,
@@ -126,7 +129,7 @@ SimpleDBClient::SimpleDBClient(
     d->serviceName = QStringLiteral("sdb");
 }
 
-/**
+/*!
  * Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables
  * Amazon SimpleDB to optimize requests, which generally yields better throughput.
  *
@@ -146,7 +149,7 @@ BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const Batc
     return qobject_cast<BatchDeleteAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>BatchPutAttributes</code> operation creates or replaces attributes within one or more items. By using this
  * operation, the client can perform multiple <a>PutAttribute</a> operation with a single call. This helps yield savings in
  * round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput.
@@ -199,7 +202,7 @@ BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAt
     return qobject_cast<BatchPutAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>CreateDomain</code> operation creates a new domain. The domain name should be unique among the domains
  * associated with the Access Key ID provided in the request. The <code>CreateDomain</code> operation may take 10 or more
  * seconds to complete.
@@ -224,7 +227,7 @@ CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &r
     return qobject_cast<CreateDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted.
  *
  * </p
@@ -249,7 +252,7 @@ DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttribut
     return qobject_cast<DeleteAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as
  * well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete.
  *
@@ -264,7 +267,7 @@ DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &r
     return qobject_cast<DeleteDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the domain, including when the domain was created, the number of items and attributes in the
  * domain, and the size of the attribute names and values.
  *
@@ -279,7 +282,7 @@ DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequ
     return qobject_cast<DomainMetadataResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to
  * one or more attributes by specifying an attribute name parameter.
  *
@@ -299,7 +302,7 @@ GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest
     return qobject_cast<GetAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up
  * to the limit set by <a href="#MaxNumberOfDomains">MaxNumberOfDomains</a>. A <a href="#NextToken">NextToken</a> is
  * returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive
@@ -317,7 +320,7 @@ ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &requ
     return qobject_cast<ListDomainsResponse *>(send(request));
 }
 
-/**
+/*!
  * The PutAttributes operation creates or replaces attributes in an item. The client may specify new attributes using a
  * combination of the <code>Attribute.X.Name</code> and <code>Attribute.X.Value</code> parameters. The client specifies the
  * first attribute by the parameters <code>Attribute.0.Name</code> and <code>Attribute.0.Value</code>, the second attribute
@@ -365,7 +368,7 @@ PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest
     return qobject_cast<PutAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>Select</code> operation returns a set of attributes for <code>ItemNames</code> that match the select
  * expression. <code>Select</code> is similar to the standard SQL SELECT statement.
  *
@@ -392,7 +395,7 @@ SelectResponse * SimpleDBClient::select(const SelectRequest &request)
     return qobject_cast<SelectResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SimpleDBClientPrivate
@@ -400,7 +403,7 @@ SelectResponse * SimpleDBClient::select(const SelectRequest &request)
  * @brief  Private implementation for SimpleDBClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SimpleDBClientPrivate object.

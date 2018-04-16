@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeIamInstanceProfileAssociationsRequest
+/*!
+ * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsRequest
  *
- * @brief  Implements EC2 DescribeIamInstanceProfileAssociations requests.
+ * \brief The DescribeIamInstanceProfileAssociationsRequest class encapsulates EC2 DescribeIamInstanceProfileAssociations requests.
  *
- * @see    EC2Client::describeIamInstanceProfileAssociations
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeIamInstanceProfileAssociations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssocia
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequest object.
  */
 DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssociationsRequest()
@@ -53,13 +60,16 @@ DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssocia
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeIamInstanceProfileAssociationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeIamInstanceProfileAssociationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest
     return new DescribeIamInstanceProfileAssociationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeIamInstanceProfileAssociationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest
  * @brief  Private implementation for DescribeIamInstanceProfileAssociationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfile
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequestPrivate object, copying another.

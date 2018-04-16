@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  DescribeUserResponse
+/*!
+ * \class QtAws::MQ::DescribeUserResponse
  *
- * @brief  Handles MQ DescribeUser responses.
+ * \brief The DescribeUserResponse class encapsulates MQ DescribeUser responses.
  *
- * @see    MQClient::describeUser
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::describeUser
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DescribeUserRequest * DescribeUserResponse::request() const
     return static_cast<const DescribeUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ DescribeUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DescribeUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeUserResponsePrivate
+ * \class DescribeUserResponsePrivate
  *
- * @brief  Private implementation for DescribeUserResponse.
+ * \brief Private implementation for DescribeUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserResponsePrivate object.
@@ -91,7 +96,7 @@ DescribeUserResponsePrivate::DescribeUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ DescribeUserResponse element.
  *
  * @param  xml  XML stream to parse.

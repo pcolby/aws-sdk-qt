@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  ListJobsRequest
+/*!
+ * \class QtAws::Snowball::ListJobsRequest
  *
- * @brief  Implements Snowball ListJobs requests.
+ * \brief The ListJobsRequest class encapsulates Snowball ListJobs requests.
  *
- * @see    SnowballClient::listJobs
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
@@ -53,13 +62,16 @@ ListJobsRequest::ListJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
     return new ListJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object.
@@ -97,7 +109,7 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object, copying another.

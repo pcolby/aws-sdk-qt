@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  PutRoomSkillParameterRequest
+/*!
+ * \class QtAws::AlexaForBusiness::PutRoomSkillParameterRequest
  *
- * @brief  Implements AlexaForBusiness PutRoomSkillParameter requests.
+ * \brief The PutRoomSkillParameterRequest class encapsulates AlexaForBusiness PutRoomSkillParameter requests.
  *
- * @see    AlexaForBusinessClient::putRoomSkillParameter
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::putRoomSkillParameter
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRoomSkillParameterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutRoomSkillParameterRequest::PutRoomSkillParameterRequest(const PutRoomSkillPar
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutRoomSkillParameterRequest object.
  */
 PutRoomSkillParameterRequest::PutRoomSkillParameterRequest()
@@ -53,13 +61,16 @@ PutRoomSkillParameterRequest::PutRoomSkillParameterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutRoomSkillParameterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutRoomSkillParameterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutRoomSkillParameterRequest::response(QNetwo
     return new PutRoomSkillParameterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutRoomSkillParameterRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutRoomSkillParameterRequest::response(QNetwo
  * @brief  Private implementation for PutRoomSkillParameterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRoomSkillParameterRequestPrivate object.
@@ -97,7 +108,7 @@ PutRoomSkillParameterRequestPrivate::PutRoomSkillParameterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRoomSkillParameterRequestPrivate object, copying another.

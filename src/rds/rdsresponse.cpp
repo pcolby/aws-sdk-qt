@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace RDS {
 
-/**
- * @class  RDSResponse
+/*!
+ * \class QtAws::RDS::RDSResponse
  *
- * @brief  Handles RDS RDS responses.
+ * \brief The RDSResponse class is the base class for all RDS responses.
  *
- * @see    RDSClient::rDS
+ * \ingroup RDS
  */
 
-/**
+/*!
  * @brief  Constructs a new RDSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ RDSResponse::RDSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RDSResponse object.
@@ -63,7 +63,7 @@ RDSResponse::RDSResponse(RDSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void RDSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RDSResponsePrivate
@@ -92,7 +92,7 @@ void RDSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for RDSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RDSResponsePrivate object.

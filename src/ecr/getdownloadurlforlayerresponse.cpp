@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetDownloadUrlForLayerResponse
+/*!
+ * \class QtAws::ECR::GetDownloadUrlForLayerResponse
  *
- * @brief  Handles ECR GetDownloadUrlForLayer responses.
+ * \brief The GetDownloadUrlForLayerResponse class encapsulates ECR GetDownloadUrlForLayer responses.
  *
- * @see    ECRClient::getDownloadUrlForLayer
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getDownloadUrlForLayer
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDownloadUrlForLayerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetDownloadUrlForLayerRequest * GetDownloadUrlForLayerResponse::request() 
     return static_cast<const GetDownloadUrlForLayerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR GetDownloadUrlForLayer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDownloadUrlForLayerResponsePrivate
+ * \class GetDownloadUrlForLayerResponsePrivate
  *
- * @brief  Private implementation for GetDownloadUrlForLayerResponse.
+ * \brief Private implementation for GetDownloadUrlForLayerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDownloadUrlForLayerResponsePrivate object.
@@ -91,7 +98,7 @@ GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR GetDownloadUrlForLayerResponse element.
  *
  * @param  xml  XML stream to parse.

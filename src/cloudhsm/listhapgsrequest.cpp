@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListHapgsRequest
+/*!
+ * \class QtAws::CloudHSM::ListHapgsRequest
  *
- * @brief  Implements CloudHSM ListHapgs requests.
+ * \brief The ListHapgsRequest class encapsulates CloudHSM ListHapgs requests.
  *
- * @see    CloudHSMClient::listHapgs
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listHapgs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHapgsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ListHapgsRequest::ListHapgsRequest(const ListHapgsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListHapgsRequest object.
  */
 ListHapgsRequest::ListHapgsRequest()
@@ -53,13 +68,16 @@ ListHapgsRequest::ListHapgsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListHapgsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListHapgsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * co
     return new ListHapgsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListHapgsRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListHapgsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHapgsRequestPrivate object.
@@ -97,7 +115,7 @@ ListHapgsRequestPrivate::ListHapgsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHapgsRequestPrivate object, copying another.

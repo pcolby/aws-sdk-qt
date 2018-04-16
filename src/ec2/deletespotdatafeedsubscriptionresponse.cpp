@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSpotDatafeedSubscriptionResponse
+/*!
+ * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionResponse
  *
- * @brief  Handles EC2 DeleteSpotDatafeedSubscription responses.
+ * \brief The DeleteSpotDatafeedSubscriptionResponse class encapsulates EC2 DeleteSpotDatafeedSubscription responses.
  *
- * @see    EC2Client::deleteSpotDatafeedSubscription
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSpotDatafeedSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSpotDatafeedSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteSpotDatafeedSubscriptionRequest * DeleteSpotDatafeedSubscriptionResp
     return static_cast<const DeleteSpotDatafeedSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteSpotDatafeedSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSpotDatafeedSubscriptionResponsePrivate
+ * \class DeleteSpotDatafeedSubscriptionResponsePrivate
  *
- * @brief  Private implementation for DeleteSpotDatafeedSubscriptionResponse.
+ * \brief Private implementation for DeleteSpotDatafeedSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSpotDatafeedSubscriptionResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteSpotDatafeedSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

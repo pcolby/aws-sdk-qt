@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDeleteUserAttributesResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDeleteUserAttributesResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminDeleteUserAttributes responses.
+ * \brief The AdminDeleteUserAttributesResponse class encapsulates CognitoIdentityProvider AdminDeleteUserAttributes responses.
  *
- * @see    CognitoIdentityProviderClient::adminDeleteUserAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDeleteUserAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDeleteUserAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminDeleteUserAttributesRequest * AdminDeleteUserAttributesResponse::requ
     return static_cast<const AdminDeleteUserAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminDeleteUserAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminDeleteUserAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminDeleteUserAttributesResponsePrivate
+ * \class AdminDeleteUserAttributesResponsePrivate
  *
- * @brief  Private implementation for AdminDeleteUserAttributesResponse.
+ * \brief Private implementation for AdminDeleteUserAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDeleteUserAttributesResponsePrivate object.
@@ -91,7 +104,7 @@ AdminDeleteUserAttributesResponsePrivate::AdminDeleteUserAttributesResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminDeleteUserAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

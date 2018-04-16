@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListAppliedSchemaArnsRequest
+/*!
+ * \class QtAws::CloudDirectory::ListAppliedSchemaArnsRequest
  *
- * @brief  Implements CloudDirectory ListAppliedSchemaArns requests.
+ * \brief The ListAppliedSchemaArnsRequest class encapsulates CloudDirectory ListAppliedSchemaArns requests.
  *
- * @see    CloudDirectoryClient::listAppliedSchemaArns
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listAppliedSchemaArns
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAppliedSchemaArnsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListAppliedSchemaArnsRequest::ListAppliedSchemaArnsRequest(const ListAppliedSche
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAppliedSchemaArnsRequest object.
  */
 ListAppliedSchemaArnsRequest::ListAppliedSchemaArnsRequest()
@@ -53,13 +63,16 @@ ListAppliedSchemaArnsRequest::ListAppliedSchemaArnsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAppliedSchemaArnsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAppliedSchemaArnsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListAppliedSchemaArnsRequest::response(QNetwo
     return new ListAppliedSchemaArnsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAppliedSchemaArnsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListAppliedSchemaArnsRequest::response(QNetwo
  * @brief  Private implementation for ListAppliedSchemaArnsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAppliedSchemaArnsRequestPrivate object.
@@ -97,7 +110,7 @@ ListAppliedSchemaArnsRequestPrivate::ListAppliedSchemaArnsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAppliedSchemaArnsRequestPrivate object, copying another.

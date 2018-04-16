@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketNotificationResponse
+/*!
+ * \class QtAws::S3::GetBucketNotificationResponse
  *
- * @brief  Handles S3 GetBucketNotification responses.
+ * \brief The GetBucketNotificationResponse class encapsulates S3 GetBucketNotification responses.
  *
- * @see    S3Client::getBucketNotification
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketNotificationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketNotificationRequest * GetBucketNotificationResponse::request() co
     return static_cast<const GetBucketNotificationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketNotification response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketNotificationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketNotificationResponsePrivate
+ * \class GetBucketNotificationResponsePrivate
  *
- * @brief  Private implementation for GetBucketNotificationResponse.
+ * \brief Private implementation for GetBucketNotificationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketNotificationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketNotificationResponsePrivate::GetBucketNotificationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketNotificationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListEventSourceMappingsResponse
+/*!
+ * \class QtAws::Lambda::ListEventSourceMappingsResponse
  *
- * @brief  Handles Lambda ListEventSourceMappings responses.
+ * \brief The ListEventSourceMappingsResponse class encapsulates Lambda ListEventSourceMappings responses.
  *
- * @see    LambdaClient::listEventSourceMappings
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listEventSourceMappings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListEventSourceMappingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListEventSourceMappingsRequest * ListEventSourceMappingsResponse::request(
     return static_cast<const ListEventSourceMappingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda ListEventSourceMappings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListEventSourceMappingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListEventSourceMappingsResponsePrivate
+ * \class ListEventSourceMappingsResponsePrivate
  *
- * @brief  Private implementation for ListEventSourceMappingsResponse.
+ * \brief Private implementation for ListEventSourceMappingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEventSourceMappingsResponsePrivate object.
@@ -91,7 +105,7 @@ ListEventSourceMappingsResponsePrivate::ListEventSourceMappingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda ListEventSourceMappingsResponse element.
  *
  * @param  xml  XML stream to parse.

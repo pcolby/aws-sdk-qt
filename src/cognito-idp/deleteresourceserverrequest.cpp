@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteResourceServerRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteResourceServerRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteResourceServer requests.
+ * \brief The DeleteResourceServerRequest class encapsulates CognitoIdentityProvider DeleteResourceServer requests.
  *
- * @see    CognitoIdentityProviderClient::deleteResourceServer
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteResourceServer
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceServerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteResourceServerRequest::DeleteResourceServerRequest(const DeleteResourceSer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceServerRequest object.
  */
 DeleteResourceServerRequest::DeleteResourceServerRequest()
@@ -53,13 +66,16 @@ DeleteResourceServerRequest::DeleteResourceServerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteResourceServerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteResourceServerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetwor
     return new DeleteResourceServerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteResourceServerRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetwor
  * @brief  Private implementation for DeleteResourceServerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceServerRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceServerRequestPrivate object, copying another.

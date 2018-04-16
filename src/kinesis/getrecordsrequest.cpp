@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  GetRecordsRequest
+/*!
+ * \class QtAws::Kinesis::GetRecordsRequest
  *
- * @brief  Implements Kinesis GetRecords requests.
+ * \brief The GetRecordsRequest class encapsulates Kinesis GetRecords requests.
  *
- * @see    KinesisClient::getRecords
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::getRecords
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetRecordsRequest::GetRecordsRequest(const GetRecordsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRecordsRequest object.
  */
 GetRecordsRequest::GetRecordsRequest()
@@ -53,13 +59,16 @@ GetRecordsRequest::GetRecordsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRecordsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRecordsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * c
     return new GetRecordsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRecordsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetRecordsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRecordsRequestPrivate object.
@@ -97,7 +106,7 @@ GetRecordsRequestPrivate::GetRecordsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRecordsRequestPrivate object, copying another.

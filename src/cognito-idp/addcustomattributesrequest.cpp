@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AddCustomAttributesRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AddCustomAttributesRequest
  *
- * @brief  Implements CognitoIdentityProvider AddCustomAttributes requests.
+ * \brief The AddCustomAttributesRequest class encapsulates CognitoIdentityProvider AddCustomAttributes requests.
  *
- * @see    CognitoIdentityProviderClient::addCustomAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::addCustomAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new AddCustomAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AddCustomAttributesRequest::AddCustomAttributesRequest(const AddCustomAttributes
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddCustomAttributesRequest object.
  */
 AddCustomAttributesRequest::AddCustomAttributesRequest()
@@ -53,13 +66,16 @@ AddCustomAttributesRequest::AddCustomAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddCustomAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddCustomAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AddCustomAttributesRequest::response(QNetwork
     return new AddCustomAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddCustomAttributesRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AddCustomAttributesRequest::response(QNetwork
  * @brief  Private implementation for AddCustomAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddCustomAttributesRequestPrivate object.
@@ -97,7 +113,7 @@ AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddCustomAttributesRequestPrivate object, copying another.

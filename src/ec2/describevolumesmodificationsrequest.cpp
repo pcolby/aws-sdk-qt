@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVolumesModificationsRequest
+/*!
+ * \class QtAws::EC2::DescribeVolumesModificationsRequest
  *
- * @brief  Implements EC2 DescribeVolumesModifications requests.
+ * \brief The DescribeVolumesModificationsRequest class encapsulates EC2 DescribeVolumesModifications requests.
  *
- * @see    EC2Client::describeVolumesModifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVolumesModifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumesModificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumesModificationsRequest object.
  */
 DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest()
@@ -53,13 +60,16 @@ DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVolumesModificationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVolumesModificationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response
     return new DescribeVolumesModificationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVolumesModificationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response
  * @brief  Private implementation for DescribeVolumesModificationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumesModificationsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumesModificationsRequestPrivate object, copying another.

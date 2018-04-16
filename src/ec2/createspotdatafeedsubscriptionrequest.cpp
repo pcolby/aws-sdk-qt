@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateSpotDatafeedSubscriptionRequest
+/*!
+ * \class QtAws::EC2::CreateSpotDatafeedSubscriptionRequest
  *
- * @brief  Implements EC2 CreateSpotDatafeedSubscription requests.
+ * \brief The CreateSpotDatafeedSubscriptionRequest class encapsulates EC2 CreateSpotDatafeedSubscription requests.
  *
- * @see    EC2Client::createSpotDatafeedSubscription
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createSpotDatafeedSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequest object.
  */
 CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest()
@@ -53,13 +60,16 @@ CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSpotDatafeedSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSpotDatafeedSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateSpotDatafeedSubscriptionRequest::respon
     return new CreateSpotDatafeedSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSpotDatafeedSubscriptionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSpotDatafeedSubscriptionRequest::respon
  * @brief  Private implementation for CreateSpotDatafeedSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketCorsResponse
+/*!
+ * \class QtAws::S3::DeleteBucketCorsResponse
  *
- * @brief  Handles S3 DeleteBucketCors responses.
+ * \brief The DeleteBucketCorsResponse class encapsulates S3 DeleteBucketCors responses.
  *
- * @see    S3Client::deleteBucketCors
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketCors
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketCorsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteBucketCorsRequest * DeleteBucketCorsResponse::request() const
     return static_cast<const DeleteBucketCorsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 DeleteBucketCors response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteBucketCorsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBucketCorsResponsePrivate
+ * \class DeleteBucketCorsResponsePrivate
  *
- * @brief  Private implementation for DeleteBucketCorsResponse.
+ * \brief Private implementation for DeleteBucketCorsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketCorsResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteBucketCorsResponsePrivate::DeleteBucketCorsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 DeleteBucketCorsResponse element.
  *
  * @param  xml  XML stream to parse.

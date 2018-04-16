@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  GetConfigRequest
+/*!
+ * \class QtAws::CloudHSM::GetConfigRequest
  *
- * @brief  Implements CloudHSM GetConfig requests.
+ * \brief The GetConfigRequest class encapsulates CloudHSM GetConfig requests.
  *
- * @see    CloudHSMClient::getConfig
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::getConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ GetConfigRequest::GetConfigRequest(const GetConfigRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetConfigRequest object.
  */
 GetConfigRequest::GetConfigRequest()
@@ -53,13 +68,16 @@ GetConfigRequest::GetConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * co
     return new GetConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetConfigRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConfigRequestPrivate object.
@@ -97,7 +115,7 @@ GetConfigRequestPrivate::GetConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConfigRequestPrivate object, copying another.

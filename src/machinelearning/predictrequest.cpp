@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  PredictRequest
+/*!
+ * \class QtAws::MachineLearning::PredictRequest
  *
- * @brief  Implements MachineLearning Predict requests.
+ * \brief The PredictRequest class encapsulates MachineLearning Predict requests.
  *
- * @see    MachineLearningClient::predict
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::predict
  */
 
-/**
+/*!
  * @brief  Constructs a new PredictRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PredictRequest::PredictRequest(const PredictRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PredictRequest object.
  */
 PredictRequest::PredictRequest()
@@ -53,13 +56,16 @@ PredictRequest::PredictRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PredictRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PredictResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * cons
     return new PredictResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PredictRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * cons
  * @brief  Private implementation for PredictRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PredictRequestPrivate object.
@@ -97,7 +103,7 @@ PredictRequestPrivate::PredictRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PredictRequestPrivate object, copying another.

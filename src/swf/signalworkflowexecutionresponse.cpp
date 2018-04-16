@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  SignalWorkflowExecutionResponse
+/*!
+ * \class QtAws::SWF::SignalWorkflowExecutionResponse
  *
- * @brief  Handles SWF SignalWorkflowExecution responses.
+ * \brief The SignalWorkflowExecutionResponse class encapsulates SWF SignalWorkflowExecution responses.
  *
- * @see    SWFClient::signalWorkflowExecution
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::signalWorkflowExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new SignalWorkflowExecutionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request(
     return static_cast<const SignalWorkflowExecutionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF SignalWorkflowExecution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SignalWorkflowExecutionResponsePrivate
+ * \class SignalWorkflowExecutionResponsePrivate
  *
- * @brief  Private implementation for SignalWorkflowExecutionResponse.
+ * \brief Private implementation for SignalWorkflowExecutionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SignalWorkflowExecutionResponsePrivate object.
@@ -91,7 +110,7 @@ SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF SignalWorkflowExecutionResponse element.
  *
  * @param  xml  XML stream to parse.

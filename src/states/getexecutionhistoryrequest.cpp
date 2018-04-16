@@ -25,15 +25,37 @@
 namespace QtAws {
 namespace SFN {
 
-/**
- * @class  GetExecutionHistoryRequest
+/*!
+ * \class QtAws::SFN::GetExecutionHistoryRequest
  *
- * @brief  Implements SFN GetExecutionHistory requests.
+ * \brief The GetExecutionHistoryRequest class encapsulates SFN GetExecutionHistory requests.
  *
- * @see    SFNClient::getExecutionHistory
+ * \ingroup SFN
+ *
+ *  <fullname>AWS Step Functions</fullname>
+ * 
+ *  AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
+ *  using visual
+ * 
+ *  workflows>
+ * 
+ *  You can use Step Functions to build applications from individual components, each of which performs a discrete function,
+ *  or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps
+ *  visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each
+ *  step, and retries steps when there are errors, so your application executes predictably and in the right order every
+ *  time. Step Functions logs the state of each step, so you can quickly diagnose and debug any
+ * 
+ *  issues>
+ * 
+ *  Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
+ *  You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
+ *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
+ *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
+ *
+ * \sa SFNClient::getExecutionHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new GetExecutionHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +66,7 @@ GetExecutionHistoryRequest::GetExecutionHistoryRequest(const GetExecutionHistory
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetExecutionHistoryRequest object.
  */
 GetExecutionHistoryRequest::GetExecutionHistoryRequest()
@@ -53,13 +75,16 @@ GetExecutionHistoryRequest::GetExecutionHistoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetExecutionHistoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetExecutionHistoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
     return new GetExecutionHistoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetExecutionHistoryRequestPrivate
@@ -82,7 +107,7 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
  * @brief  Private implementation for GetExecutionHistoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExecutionHistoryRequestPrivate object.
@@ -97,7 +122,7 @@ GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExecutionHistoryRequestPrivate object, copying another.

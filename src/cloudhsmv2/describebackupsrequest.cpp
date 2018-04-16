@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  DescribeBackupsRequest
+/*!
+ * \class QtAws::CloudHSMV2::DescribeBackupsRequest
  *
- * @brief  Implements CloudHSMV2 DescribeBackups requests.
+ * \brief The DescribeBackupsRequest class encapsulates CloudHSMV2 DescribeBackups requests.
  *
- * @see    CloudHSMV2Client::describeBackups
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::describeBackups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBackupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeBackupsRequest object.
  */
 DescribeBackupsRequest::DescribeBackupsRequest()
@@ -53,13 +58,16 @@ DescribeBackupsRequest::DescribeBackupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeBackupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeBackupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
     return new DescribeBackupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeBackupsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeBackupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBackupsRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBackupsRequestPrivate object, copying another.

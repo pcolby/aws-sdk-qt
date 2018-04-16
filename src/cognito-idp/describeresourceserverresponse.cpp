@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeResourceServerResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeResourceServerResponse
  *
- * @brief  Handles CognitoIdentityProvider DescribeResourceServer responses.
+ * \brief The DescribeResourceServerResponse class encapsulates CognitoIdentityProvider DescribeResourceServer responses.
  *
- * @see    CognitoIdentityProviderClient::describeResourceServer
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeResourceServer
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeResourceServerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DescribeResourceServerRequest * DescribeResourceServerResponse::request() 
     return static_cast<const DescribeResourceServerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DescribeResourceServer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DescribeResourceServerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeResourceServerResponsePrivate
+ * \class DescribeResourceServerResponsePrivate
  *
- * @brief  Private implementation for DescribeResourceServerResponse.
+ * \brief Private implementation for DescribeResourceServerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeResourceServerResponsePrivate object.
@@ -91,7 +104,7 @@ DescribeResourceServerResponsePrivate::DescribeResourceServerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DescribeResourceServerResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateDhcpOptionsRequest
+/*!
+ * \class QtAws::EC2::AssociateDhcpOptionsRequest
  *
- * @brief  Implements EC2 AssociateDhcpOptions requests.
+ * \brief The AssociateDhcpOptionsRequest class encapsulates EC2 AssociateDhcpOptions requests.
  *
- * @see    EC2Client::associateDhcpOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateDhcpOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateDhcpOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest(const AssociateDhcpOpti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateDhcpOptionsRequest object.
  */
 AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest()
@@ -53,13 +60,16 @@ AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateDhcpOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateDhcpOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetwor
     return new AssociateDhcpOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateDhcpOptionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetwor
  * @brief  Private implementation for AssociateDhcpOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateDhcpOptionsRequestPrivate object.
@@ -97,7 +107,7 @@ AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateDhcpOptionsRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  PutTelemetryRecordsRequest
+/*!
+ * \class QtAws::XRay::PutTelemetryRecordsRequest
  *
- * @brief  Implements XRay PutTelemetryRecords requests.
+ * \brief The PutTelemetryRecordsRequest class encapsulates XRay PutTelemetryRecords requests.
  *
- * @see    XRayClient::putTelemetryRecords
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::putTelemetryRecords
  */
 
-/**
+/*!
  * @brief  Constructs a new PutTelemetryRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ PutTelemetryRecordsRequest::PutTelemetryRecordsRequest(const PutTelemetryRecords
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutTelemetryRecordsRequest object.
  */
 PutTelemetryRecordsRequest::PutTelemetryRecordsRequest()
@@ -53,13 +57,16 @@ PutTelemetryRecordsRequest::PutTelemetryRecordsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutTelemetryRecordsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutTelemetryRecordsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetwork
     return new PutTelemetryRecordsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutTelemetryRecordsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetwork
  * @brief  Private implementation for PutTelemetryRecordsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutTelemetryRecordsRequestPrivate object.
@@ -97,7 +104,7 @@ PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutTelemetryRecordsRequestPrivate object, copying another.

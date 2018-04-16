@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  DescribeAddressRequest
+/*!
+ * \class QtAws::Snowball::DescribeAddressRequest
  *
- * @brief  Implements Snowball DescribeAddress requests.
+ * \brief The DescribeAddressRequest class encapsulates Snowball DescribeAddress requests.
  *
- * @see    SnowballClient::describeAddress
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::describeAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeAddressRequest::DescribeAddressRequest(const DescribeAddressRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAddressRequest object.
  */
 DescribeAddressRequest::DescribeAddressRequest()
@@ -53,13 +62,16 @@ DescribeAddressRequest::DescribeAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkRepl
     return new DescribeAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAddressRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAddressRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAddressRequestPrivate object, copying another.

@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  ListLexiconsRequest
+/*!
+ * \class QtAws::Polly::ListLexiconsRequest
  *
- * @brief  Implements Polly ListLexicons requests.
+ * \brief The ListLexiconsRequest class encapsulates Polly ListLexicons requests.
  *
- * @see    PollyClient::listLexicons
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::listLexicons
  */
 
-/**
+/*!
  * @brief  Constructs a new ListLexiconsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListLexiconsRequest::ListLexiconsRequest(const ListLexiconsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListLexiconsRequest object.
  */
 ListLexiconsRequest::ListLexiconsRequest()
@@ -53,13 +63,16 @@ ListLexiconsRequest::ListLexiconsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListLexiconsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListLexiconsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListLexiconsRequest::response(QNetworkReply *
     return new ListLexiconsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListLexiconsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListLexiconsRequest::response(QNetworkReply *
  * @brief  Private implementation for ListLexiconsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLexiconsRequestPrivate object.
@@ -97,7 +110,7 @@ ListLexiconsRequestPrivate::ListLexiconsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLexiconsRequestPrivate object, copying another.

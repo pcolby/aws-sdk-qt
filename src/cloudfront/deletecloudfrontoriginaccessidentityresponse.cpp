@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteCloudFrontOriginAccessIdentityResponse
+/*!
+ * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityResponse
  *
- * @brief  Handles CloudFront DeleteCloudFrontOriginAccessIdentity responses.
+ * \brief The DeleteCloudFrontOriginAccessIdentityResponse class encapsulates CloudFront DeleteCloudFrontOriginAccessIdentity responses.
  *
- * @see    CloudFrontClient::deleteCloudFrontOriginAccessIdentity
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteCloudFrontOriginAccessIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteCloudFrontOriginAccessIdentityRequest * DeleteCloudFrontOriginAccess
     return static_cast<const DeleteCloudFrontOriginAccessIdentityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront DeleteCloudFrontOriginAccessIdentity response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCloudFrontOriginAccessIdentityResponsePrivate
+ * \class DeleteCloudFrontOriginAccessIdentityResponsePrivate
  *
- * @brief  Private implementation for DeleteCloudFrontOriginAccessIdentityResponse.
+ * \brief Private implementation for DeleteCloudFrontOriginAccessIdentityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAcces
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront DeleteCloudFrontOriginAccessIdentityResponse element.
  *
  * @param  xml  XML stream to parse.

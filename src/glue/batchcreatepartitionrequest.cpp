@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchCreatePartitionRequest
+/*!
+ * \class QtAws::Glue::BatchCreatePartitionRequest
  *
- * @brief  Implements Glue BatchCreatePartition requests.
+ * \brief The BatchCreatePartitionRequest class encapsulates Glue BatchCreatePartition requests.
  *
- * @see    GlueClient::batchCreatePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchCreatePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchCreatePartitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchCreatePartitionRequest::BatchCreatePartitionRequest(const BatchCreatePartit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchCreatePartitionRequest object.
  */
 BatchCreatePartitionRequest::BatchCreatePartitionRequest()
@@ -53,13 +59,16 @@ BatchCreatePartitionRequest::BatchCreatePartitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchCreatePartitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchCreatePartitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchCreatePartitionRequest::response(QNetwor
     return new BatchCreatePartitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchCreatePartitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchCreatePartitionRequest::response(QNetwor
  * @brief  Private implementation for BatchCreatePartitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchCreatePartitionRequestPrivate object.
@@ -97,7 +106,7 @@ BatchCreatePartitionRequestPrivate::BatchCreatePartitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchCreatePartitionRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportInstanceRequest
+/*!
+ * \class QtAws::EC2::ImportInstanceRequest
  *
- * @brief  Implements EC2 ImportInstance requests.
+ * \brief The ImportInstanceRequest class encapsulates EC2 ImportInstance requests.
  *
- * @see    EC2Client::importInstance
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ImportInstanceRequest::ImportInstanceRequest(const ImportInstanceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportInstanceRequest object.
  */
 ImportInstanceRequest::ImportInstanceRequest()
@@ -53,13 +60,16 @@ ImportInstanceRequest::ImportInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply
     return new ImportInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportInstanceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply
  * @brief  Private implementation for ImportInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportInstanceRequestPrivate object.
@@ -97,7 +107,7 @@ ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportInstanceRequestPrivate object, copying another.

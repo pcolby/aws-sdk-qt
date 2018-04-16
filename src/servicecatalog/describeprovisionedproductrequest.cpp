@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProvisionedProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProvisionedProductRequest
  *
- * @brief  Implements ServiceCatalog DescribeProvisionedProduct requests.
+ * \brief The DescribeProvisionedProductRequest class encapsulates ServiceCatalog DescribeProvisionedProduct requests.
  *
- * @see    ServiceCatalogClient::describeProvisionedProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProvisionedProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisionedProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProvisionedProductRequest::DescribeProvisionedProductRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisionedProductRequest object.
  */
 DescribeProvisionedProductRequest::DescribeProvisionedProductRequest()
@@ -53,13 +62,16 @@ DescribeProvisionedProductRequest::DescribeProvisionedProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProvisionedProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProvisionedProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisionedProductRequest::response(Q
     return new DescribeProvisionedProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProvisionedProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisionedProductRequest::response(Q
  * @brief  Private implementation for DescribeProvisionedProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisionedProductRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisionedProductRequestPrivate object, copying another.

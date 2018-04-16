@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ListReceiptFiltersRequest
+/*!
+ * \class QtAws::SES::ListReceiptFiltersRequest
  *
- * @brief  Implements SES ListReceiptFilters requests.
+ * \brief The ListReceiptFiltersRequest class encapsulates SES ListReceiptFilters requests.
  *
- * @see    SESClient::listReceiptFilters
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::listReceiptFilters
  */
 
-/**
+/*!
  * @brief  Constructs a new ListReceiptFiltersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListReceiptFiltersRequest::ListReceiptFiltersRequest(const ListReceiptFiltersReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListReceiptFiltersRequest object.
  */
 ListReceiptFiltersRequest::ListReceiptFiltersRequest()
@@ -53,13 +67,16 @@ ListReceiptFiltersRequest::ListReceiptFiltersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListReceiptFiltersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListReceiptFiltersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListReceiptFiltersRequest::response(QNetworkR
     return new ListReceiptFiltersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListReceiptFiltersRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListReceiptFiltersRequest::response(QNetworkR
  * @brief  Private implementation for ListReceiptFiltersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReceiptFiltersRequestPrivate object.
@@ -97,7 +114,7 @@ ListReceiptFiltersRequestPrivate::ListReceiptFiltersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReceiptFiltersRequestPrivate object, copying another.

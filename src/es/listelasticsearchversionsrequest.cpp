@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListElasticsearchVersionsRequest
+/*!
+ * \class QtAws::ElasticsearchService::ListElasticsearchVersionsRequest
  *
- * @brief  Implements ElasticsearchService ListElasticsearchVersions requests.
+ * \brief The ListElasticsearchVersionsRequest class encapsulates ElasticsearchService ListElasticsearchVersions requests.
  *
- * @see    ElasticsearchServiceClient::listElasticsearchVersions
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listElasticsearchVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListElasticsearchVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest(const ListEla
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListElasticsearchVersionsRequest object.
  */
 ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest()
@@ -53,13 +65,16 @@ ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListElasticsearchVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListElasticsearchVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QN
     return new ListElasticsearchVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListElasticsearchVersionsRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QN
  * @brief  Private implementation for ListElasticsearchVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListElasticsearchVersionsRequestPrivate object.
@@ -97,7 +112,7 @@ ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListElasticsearchVersionsRequestPrivate object, copying another.

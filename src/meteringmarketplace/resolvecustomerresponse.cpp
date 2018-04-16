@@ -27,15 +27,48 @@
 namespace QtAws {
 namespace MarketplaceMetering {
 
-/**
- * @class  ResolveCustomerResponse
+/*!
+ * \class QtAws::MarketplaceMetering::ResolveCustomerResponse
  *
- * @brief  Handles MarketplaceMetering ResolveCustomer responses.
+ * \brief The ResolveCustomerResponse class encapsulates MarketplaceMetering ResolveCustomer responses.
  *
- * @see    MarketplaceMeteringClient::resolveCustomer
+ * \ingroup MarketplaceMetering
+ *
+ *  <fullname>AWS Marketplace Metering Service</fullname>
+ * 
+ *  This reference provides descriptions of the low-level AWS Marketplace Metering Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace sellers can use this API to submit usage data for custom usage
+ * 
+ *  dimensions>
+ * 
+ *  <b>Submitting Metering Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
+ *  software-as-a-service (SaaS)
+ * 
+ *  application> </li> </ul>
+ * 
+ *  <b>Accepting New Customers</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ *  during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
+ *  resolved through this API to obtain a CustomerIdentifier and Product
+ *
+ * \sa MarketplaceMeteringClient::resolveCustomer
  */
 
-/**
+/*!
  * @brief  Constructs a new ResolveCustomerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +91,7 @@ const ResolveCustomerRequest * ResolveCustomerResponse::request() const
     return static_cast<const ResolveCustomerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MarketplaceMetering ResolveCustomer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +103,15 @@ void ResolveCustomerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResolveCustomerResponsePrivate
+ * \class ResolveCustomerResponsePrivate
  *
- * @brief  Private implementation for ResolveCustomerResponse.
+ * \brief Private implementation for ResolveCustomerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResolveCustomerResponsePrivate object.
@@ -91,7 +124,7 @@ ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MarketplaceMetering ResolveCustomerResponse element.
  *
  * @param  xml  XML stream to parse.

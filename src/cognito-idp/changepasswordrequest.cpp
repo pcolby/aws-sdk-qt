@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ChangePasswordRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ChangePasswordRequest
  *
- * @brief  Implements CognitoIdentityProvider ChangePassword requests.
+ * \brief The ChangePasswordRequest class encapsulates CognitoIdentityProvider ChangePassword requests.
  *
- * @see    CognitoIdentityProviderClient::changePassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::changePassword
  */
 
-/**
+/*!
  * @brief  Constructs a new ChangePasswordRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ChangePasswordRequest::ChangePasswordRequest(const ChangePasswordRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ChangePasswordRequest object.
  */
 ChangePasswordRequest::ChangePasswordRequest()
@@ -53,13 +66,16 @@ ChangePasswordRequest::ChangePasswordRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ChangePasswordRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ChangePasswordResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
     return new ChangePasswordResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ChangePasswordRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
  * @brief  Private implementation for ChangePasswordRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ChangePasswordRequestPrivate object.
@@ -97,7 +113,7 @@ ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ChangePasswordRequestPrivate object, copying another.

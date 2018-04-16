@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetWebACLResponse
+/*!
+ * \class QtAws::WAFRegional::GetWebACLResponse
  *
- * @brief  Handles WAFRegional GetWebACL responses.
+ * \brief The GetWebACLResponse class encapsulates WAFRegional GetWebACL responses.
  *
- * @see    WAFRegionalClient::getWebACL
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new GetWebACLResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetWebACLRequest * GetWebACLResponse::request() const
     return static_cast<const GetWebACLRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional GetWebACL response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetWebACLResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetWebACLResponsePrivate
+ * \class GetWebACLResponsePrivate
  *
- * @brief  Private implementation for GetWebACLResponse.
+ * \brief Private implementation for GetWebACLResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetWebACLResponsePrivate object.
@@ -91,7 +101,7 @@ GetWebACLResponsePrivate::GetWebACLResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional GetWebACLResponse element.
  *
  * @param  xml  XML stream to parse.

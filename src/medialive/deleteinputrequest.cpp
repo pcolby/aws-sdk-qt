@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DeleteInputRequest
+/*!
+ * \class QtAws::MediaLive::DeleteInputRequest
  *
- * @brief  Implements MediaLive DeleteInput requests.
+ * \brief The DeleteInputRequest class encapsulates MediaLive DeleteInput requests.
  *
- * @see    MediaLiveClient::deleteInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::deleteInput
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteInputRequest::DeleteInputRequest(const DeleteInputRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteInputRequest object.
  */
 DeleteInputRequest::DeleteInputRequest()
@@ -53,13 +56,16 @@ DeleteInputRequest::DeleteInputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteInputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteInputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * 
     return new DeleteInputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteInputRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteInputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInputRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteInputRequestPrivate::DeleteInputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInputRequestPrivate object, copying another.

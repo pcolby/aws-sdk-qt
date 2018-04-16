@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StopImageBuilderRequest
+/*!
+ * \class QtAws::AppStream::StopImageBuilderRequest
  *
- * @brief  Implements AppStream StopImageBuilder requests.
+ * \brief The StopImageBuilderRequest class encapsulates AppStream StopImageBuilder requests.
  *
- * @see    AppStreamClient::stopImageBuilder
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::stopImageBuilder
  */
 
-/**
+/*!
  * @brief  Constructs a new StopImageBuilderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopImageBuilderRequest::StopImageBuilderRequest(const StopImageBuilderRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopImageBuilderRequest object.
  */
 StopImageBuilderRequest::StopImageBuilderRequest()
@@ -53,13 +59,16 @@ StopImageBuilderRequest::StopImageBuilderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopImageBuilderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopImageBuilderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkRep
     return new StopImageBuilderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopImageBuilderRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkRep
  * @brief  Private implementation for StopImageBuilderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopImageBuilderRequestPrivate object.
@@ -97,7 +106,7 @@ StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopImageBuilderRequestPrivate object, copying another.

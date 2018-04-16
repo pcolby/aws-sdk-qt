@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateResourceResponse
+/*!
+ * \class QtAws::APIGateway::CreateResourceResponse
  *
- * @brief  Handles APIGateway CreateResource responses.
+ * \brief The CreateResourceResponse class encapsulates APIGateway CreateResource responses.
  *
- * @see    APIGatewayClient::createResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createResource
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateResourceRequest * CreateResourceResponse::request() const
     return static_cast<const CreateResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateResourceResponsePrivate
+ * \class CreateResourceResponsePrivate
  *
- * @brief  Private implementation for CreateResourceResponse.
+ * \brief Private implementation for CreateResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceResponsePrivate object.
@@ -91,7 +99,7 @@ CreateResourceResponsePrivate::CreateResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateResourceResponse element.
  *
  * @param  xml  XML stream to parse.

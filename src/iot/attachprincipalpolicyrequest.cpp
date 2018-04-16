@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  AttachPrincipalPolicyRequest
+/*!
+ * \class QtAws::IoT::AttachPrincipalPolicyRequest
  *
- * @brief  Implements IoT AttachPrincipalPolicy requests.
+ * \brief The AttachPrincipalPolicyRequest class encapsulates IoT AttachPrincipalPolicy requests.
  *
- * @see    IoTClient::attachPrincipalPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::attachPrincipalPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachPrincipalPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ AttachPrincipalPolicyRequest::AttachPrincipalPolicyRequest(const AttachPrincipal
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachPrincipalPolicyRequest object.
  */
 AttachPrincipalPolicyRequest::AttachPrincipalPolicyRequest()
@@ -53,13 +67,16 @@ AttachPrincipalPolicyRequest::AttachPrincipalPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachPrincipalPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachPrincipalPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetwo
     return new AttachPrincipalPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachPrincipalPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * AttachPrincipalPolicyRequest::response(QNetwo
  * @brief  Private implementation for AttachPrincipalPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachPrincipalPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ AttachPrincipalPolicyRequestPrivate::AttachPrincipalPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachPrincipalPolicyRequestPrivate object, copying another.

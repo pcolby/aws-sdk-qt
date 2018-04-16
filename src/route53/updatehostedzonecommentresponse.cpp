@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  UpdateHostedZoneCommentResponse
+/*!
+ * \class QtAws::Route53::UpdateHostedZoneCommentResponse
  *
- * @brief  Handles Route53 UpdateHostedZoneComment responses.
+ * \brief The UpdateHostedZoneCommentResponse class encapsulates Route53 UpdateHostedZoneComment responses.
  *
- * @see    Route53Client::updateHostedZoneComment
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::updateHostedZoneComment
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateHostedZoneCommentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateHostedZoneCommentRequest * UpdateHostedZoneCommentResponse::request(
     return static_cast<const UpdateHostedZoneCommentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 UpdateHostedZoneComment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateHostedZoneCommentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateHostedZoneCommentResponsePrivate
+ * \class UpdateHostedZoneCommentResponsePrivate
  *
- * @brief  Private implementation for UpdateHostedZoneCommentResponse.
+ * \brief Private implementation for UpdateHostedZoneCommentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHostedZoneCommentResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 UpdateHostedZoneCommentResponse element.
  *
  * @param  xml  XML stream to parse.

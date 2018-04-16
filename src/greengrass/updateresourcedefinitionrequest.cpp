@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateResourceDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::UpdateResourceDefinitionRequest
  *
- * @brief  Implements Greengrass UpdateResourceDefinition requests.
+ * \brief The UpdateResourceDefinitionRequest class encapsulates Greengrass UpdateResourceDefinition requests.
  *
- * @see    GreengrassClient::updateResourceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateResourceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateResourceDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateResourceDefinitionRequest::UpdateResourceDefinitionRequest(const UpdateRes
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateResourceDefinitionRequest object.
  */
 UpdateResourceDefinitionRequest::UpdateResourceDefinitionRequest()
@@ -53,13 +59,16 @@ UpdateResourceDefinitionRequest::UpdateResourceDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateResourceDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateResourceDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceDefinitionRequest::response(QNe
     return new UpdateResourceDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateResourceDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceDefinitionRequest::response(QNe
  * @brief  Private implementation for UpdateResourceDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResourceDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateResourceDefinitionRequestPrivate::UpdateResourceDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResourceDefinitionRequestPrivate object, copying another.

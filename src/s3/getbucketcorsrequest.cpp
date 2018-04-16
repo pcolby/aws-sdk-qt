@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketCorsRequest
+/*!
+ * \class QtAws::S3::GetBucketCorsRequest
  *
- * @brief  Implements S3 GetBucketCors requests.
+ * \brief The GetBucketCorsRequest class encapsulates S3 GetBucketCors requests.
  *
- * @see    S3Client::getBucketCors
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketCors
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketCorsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketCorsRequest::GetBucketCorsRequest(const GetBucketCorsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketCorsRequest object.
  */
 GetBucketCorsRequest::GetBucketCorsRequest()
@@ -53,13 +56,16 @@ GetBucketCorsRequest::GetBucketCorsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketCorsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketCorsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply 
     return new GetBucketCorsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketCorsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply 
  * @brief  Private implementation for GetBucketCorsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketCorsRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketCorsRequestPrivate object, copying another.

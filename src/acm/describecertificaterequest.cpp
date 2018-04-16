@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  DescribeCertificateRequest
+/*!
+ * \class QtAws::ACM::DescribeCertificateRequest
  *
- * @brief  Implements ACM DescribeCertificate requests.
+ * \brief The DescribeCertificateRequest class encapsulates ACM DescribeCertificate requests.
  *
- * @see    ACMClient::describeCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::describeCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DescribeCertificateRequest::DescribeCertificateRequest(const DescribeCertificate
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCertificateRequest object.
  */
 DescribeCertificateRequest::DescribeCertificateRequest()
@@ -53,13 +65,16 @@ DescribeCertificateRequest::DescribeCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
     return new DescribeCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
  * @brief  Private implementation for DescribeCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCertificateRequestPrivate object, copying another.

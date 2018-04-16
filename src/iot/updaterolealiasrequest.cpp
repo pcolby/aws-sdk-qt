@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateRoleAliasRequest
+/*!
+ * \class QtAws::IoT::UpdateRoleAliasRequest
  *
- * @brief  Implements IoT UpdateRoleAlias requests.
+ * \brief The UpdateRoleAliasRequest class encapsulates IoT UpdateRoleAlias requests.
  *
- * @see    IoTClient::updateRoleAlias
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateRoleAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRoleAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateRoleAliasRequest::UpdateRoleAliasRequest(const UpdateRoleAliasRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateRoleAliasRequest object.
  */
 UpdateRoleAliasRequest::UpdateRoleAliasRequest()
@@ -53,13 +67,16 @@ UpdateRoleAliasRequest::UpdateRoleAliasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateRoleAliasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateRoleAliasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleAliasRequest::response(QNetworkRepl
     return new UpdateRoleAliasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateRoleAliasRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleAliasRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdateRoleAliasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRoleAliasRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRoleAliasRequestPrivate object, copying another.

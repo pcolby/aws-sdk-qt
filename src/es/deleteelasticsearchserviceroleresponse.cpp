@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DeleteElasticsearchServiceRoleResponse
+/*!
+ * \class QtAws::ElasticsearchService::DeleteElasticsearchServiceRoleResponse
  *
- * @brief  Handles ElasticsearchService DeleteElasticsearchServiceRole responses.
+ * \brief The DeleteElasticsearchServiceRoleResponse class encapsulates ElasticsearchService DeleteElasticsearchServiceRole responses.
  *
- * @see    ElasticsearchServiceClient::deleteElasticsearchServiceRole
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::deleteElasticsearchServiceRole
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteElasticsearchServiceRoleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DeleteElasticsearchServiceRoleRequest * DeleteElasticsearchServiceRoleResp
     return static_cast<const DeleteElasticsearchServiceRoleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService DeleteElasticsearchServiceRole response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DeleteElasticsearchServiceRoleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteElasticsearchServiceRoleResponsePrivate
+ * \class DeleteElasticsearchServiceRoleResponsePrivate
  *
- * @brief  Private implementation for DeleteElasticsearchServiceRoleResponse.
+ * \brief Private implementation for DeleteElasticsearchServiceRoleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteElasticsearchServiceRoleResponsePrivate object.
@@ -91,7 +103,7 @@ DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleRes
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService DeleteElasticsearchServiceRoleResponse element.
  *
  * @param  xml  XML stream to parse.

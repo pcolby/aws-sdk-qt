@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  CreateFileSystemResponse
+/*!
+ * \class QtAws::EFS::CreateFileSystemResponse
  *
- * @brief  Handles EFS CreateFileSystem responses.
+ * \brief The CreateFileSystemResponse class encapsulates EFS CreateFileSystem responses.
  *
- * @see    EFSClient::createFileSystem
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::createFileSystem
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFileSystemResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateFileSystemRequest * CreateFileSystemResponse::request() const
     return static_cast<const CreateFileSystemRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS CreateFileSystem response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateFileSystemResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateFileSystemResponsePrivate
+ * \class CreateFileSystemResponsePrivate
  *
- * @brief  Private implementation for CreateFileSystemResponse.
+ * \brief Private implementation for CreateFileSystemResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFileSystemResponsePrivate object.
@@ -91,7 +100,7 @@ CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS CreateFileSystemResponse element.
  *
  * @param  xml  XML stream to parse.

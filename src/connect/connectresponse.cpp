@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Connect {
 
-/**
- * @class  ConnectResponse
+/*!
+ * \class QtAws::Connect::ConnectResponse
  *
- * @brief  Handles Connect Connect responses.
+ * \brief The ConnectResponse class is the base class for all Connect responses.
  *
- * @see    ConnectClient::connect
+ * \ingroup Connect
  */
 
-/**
+/*!
  * @brief  Constructs a new ConnectResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ConnectResponse::ConnectResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConnectResponse object.
@@ -63,7 +63,7 @@ ConnectResponse::ConnectResponse(ConnectResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ConnectResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConnectResponsePrivate
@@ -92,7 +92,7 @@ void ConnectResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ConnectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConnectResponsePrivate object.

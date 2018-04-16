@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetWebACLForResourceResponse
+/*!
+ * \class QtAws::WAFRegional::GetWebACLForResourceResponse
  *
- * @brief  Handles WAFRegional GetWebACLForResource responses.
+ * \brief The GetWebACLForResourceResponse class encapsulates WAFRegional GetWebACLForResource responses.
  *
- * @see    WAFRegionalClient::getWebACLForResource
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getWebACLForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new GetWebACLForResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetWebACLForResourceRequest * GetWebACLForResourceResponse::request() cons
     return static_cast<const GetWebACLForResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional GetWebACLForResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetWebACLForResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetWebACLForResourceResponsePrivate
+ * \class GetWebACLForResourceResponsePrivate
  *
- * @brief  Private implementation for GetWebACLForResourceResponse.
+ * \brief Private implementation for GetWebACLForResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetWebACLForResourceResponsePrivate object.
@@ -91,7 +101,7 @@ GetWebACLForResourceResponsePrivate::GetWebACLForResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional GetWebACLForResourceResponse element.
  *
  * @param  xml  XML stream to parse.

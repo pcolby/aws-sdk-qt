@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  PutScheduledUpdateGroupActionResponse
+/*!
+ * \class QtAws::AutoScaling::PutScheduledUpdateGroupActionResponse
  *
- * @brief  Handles AutoScaling PutScheduledUpdateGroupAction responses.
+ * \brief The PutScheduledUpdateGroupActionResponse class encapsulates AutoScaling PutScheduledUpdateGroupAction responses.
  *
- * @see    AutoScalingClient::putScheduledUpdateGroupAction
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::putScheduledUpdateGroupAction
  */
 
-/**
+/*!
  * @brief  Constructs a new PutScheduledUpdateGroupActionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const PutScheduledUpdateGroupActionRequest * PutScheduledUpdateGroupActionRespon
     return static_cast<const PutScheduledUpdateGroupActionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling PutScheduledUpdateGroupAction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void PutScheduledUpdateGroupActionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutScheduledUpdateGroupActionResponsePrivate
+ * \class PutScheduledUpdateGroupActionResponsePrivate
  *
- * @brief  Private implementation for PutScheduledUpdateGroupActionResponse.
+ * \brief Private implementation for PutScheduledUpdateGroupActionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutScheduledUpdateGroupActionResponsePrivate object.
@@ -91,7 +99,7 @@ PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling PutScheduledUpdateGroupActionResponse element.
  *
  * @param  xml  XML stream to parse.

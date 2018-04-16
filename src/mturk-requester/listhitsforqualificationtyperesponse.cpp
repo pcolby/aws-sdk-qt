@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListHITsForQualificationTypeResponse
+/*!
+ * \class QtAws::MTurk::ListHITsForQualificationTypeResponse
  *
- * @brief  Handles MTurk ListHITsForQualificationType responses.
+ * \brief The ListHITsForQualificationTypeResponse class encapsulates MTurk ListHITsForQualificationType responses.
  *
- * @see    MTurkClient::listHITsForQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listHITsForQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHITsForQualificationTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListHITsForQualificationTypeRequest * ListHITsForQualificationTypeResponse
     return static_cast<const ListHITsForQualificationTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListHITsForQualificationType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListHITsForQualificationTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListHITsForQualificationTypeResponsePrivate
+ * \class ListHITsForQualificationTypeResponsePrivate
  *
- * @brief  Private implementation for ListHITsForQualificationTypeResponse.
+ * \brief Private implementation for ListHITsForQualificationTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHITsForQualificationTypeResponsePrivate object.
@@ -91,7 +94,7 @@ ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListHITsForQualificationTypeResponse element.
  *
  * @param  xml  XML stream to parse.

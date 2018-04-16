@@ -25,15 +25,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  DeleteItemRequest
+/*!
+ * \class QtAws::DynamoDB::DeleteItemRequest
  *
- * @brief  Implements DynamoDB DeleteItem requests.
+ * \brief The DeleteItemRequest class encapsulates DynamoDB DeleteItem requests.
  *
- * @see    DynamoDBClient::deleteItem
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::deleteItem
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteItemRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +66,7 @@ DeleteItemRequest::DeleteItemRequest(const DeleteItemRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteItemRequest object.
  */
 DeleteItemRequest::DeleteItemRequest()
@@ -53,13 +75,16 @@ DeleteItemRequest::DeleteItemRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteItemRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteItemResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * c
     return new DeleteItemResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteItemRequestPrivate
@@ -82,7 +107,7 @@ QtAws::Core::AwsAbstractResponse * DeleteItemRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteItemRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteItemRequestPrivate object.
@@ -97,7 +122,7 @@ DeleteItemRequestPrivate::DeleteItemRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteItemRequestPrivate object, copying another.

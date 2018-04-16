@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  TerminateWorkspacesResponse
+/*!
+ * \class QtAws::WorkSpaces::TerminateWorkspacesResponse
  *
- * @brief  Handles WorkSpaces TerminateWorkspaces responses.
+ * \brief The TerminateWorkspacesResponse class encapsulates WorkSpaces TerminateWorkspaces responses.
  *
- * @see    WorkSpacesClient::terminateWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::terminateWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateWorkspacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const TerminateWorkspacesRequest * TerminateWorkspacesResponse::request() const
     return static_cast<const TerminateWorkspacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces TerminateWorkspaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void TerminateWorkspacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TerminateWorkspacesResponsePrivate
+ * \class TerminateWorkspacesResponsePrivate
  *
- * @brief  Private implementation for TerminateWorkspacesResponse.
+ * \brief Private implementation for TerminateWorkspacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateWorkspacesResponsePrivate object.
@@ -91,7 +97,7 @@ TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces TerminateWorkspacesResponse element.
  *
  * @param  xml  XML stream to parse.

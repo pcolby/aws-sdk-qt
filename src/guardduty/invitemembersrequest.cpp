@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  InviteMembersRequest
+/*!
+ * \class QtAws::GuardDuty::InviteMembersRequest
  *
- * @brief  Implements GuardDuty InviteMembers requests.
+ * \brief The InviteMembersRequest class encapsulates GuardDuty InviteMembers requests.
  *
- * @see    GuardDutyClient::inviteMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::inviteMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new InviteMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ InviteMembersRequest::InviteMembersRequest(const InviteMembersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InviteMembersRequest object.
  */
 InviteMembersRequest::InviteMembersRequest()
@@ -53,13 +56,16 @@ InviteMembersRequest::InviteMembersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InviteMembersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InviteMembersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply 
     return new InviteMembersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InviteMembersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply 
  * @brief  Private implementation for InviteMembersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InviteMembersRequestPrivate object.
@@ -97,7 +103,7 @@ InviteMembersRequestPrivate::InviteMembersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InviteMembersRequestPrivate object, copying another.

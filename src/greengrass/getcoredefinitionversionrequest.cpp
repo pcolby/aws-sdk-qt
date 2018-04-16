@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetCoreDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::GetCoreDefinitionVersionRequest
  *
- * @brief  Implements Greengrass GetCoreDefinitionVersion requests.
+ * \brief The GetCoreDefinitionVersionRequest class encapsulates Greengrass GetCoreDefinitionVersion requests.
  *
- * @see    GreengrassClient::getCoreDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getCoreDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCoreDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetCoreDefinitionVersionRequest::GetCoreDefinitionVersionRequest(const GetCoreDe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCoreDefinitionVersionRequest object.
  */
 GetCoreDefinitionVersionRequest::GetCoreDefinitionVersionRequest()
@@ -53,13 +59,16 @@ GetCoreDefinitionVersionRequest::GetCoreDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCoreDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCoreDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNe
     return new GetCoreDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCoreDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionVersionRequest::response(QNe
  * @brief  Private implementation for GetCoreDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCoreDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCoreDefinitionVersionRequestPrivate object, copying another.

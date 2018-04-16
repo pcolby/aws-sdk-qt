@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  MigrationHubResponse
+/*!
+ * \class QtAws::MigrationHub::MigrationHubResponse
  *
- * @brief  Handles MigrationHub MigrationHub responses.
+ * \brief The MigrationHubResponse class is the base class for all MigrationHub responses.
  *
- * @see    MigrationHubClient::migrationHub
+ * \ingroup MigrationHub
  */
 
-/**
+/*!
  * @brief  Constructs a new MigrationHubResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MigrationHubResponse::MigrationHubResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MigrationHubResponse object.
@@ -63,7 +63,7 @@ MigrationHubResponse::MigrationHubResponse(MigrationHubResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MigrationHubResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MigrationHubResponsePrivate
@@ -92,7 +92,7 @@ void MigrationHubResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MigrationHubResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MigrationHubResponsePrivate object.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  RejectQualificationRequestResponse
+/*!
+ * \class QtAws::MTurk::RejectQualificationRequestResponse
  *
- * @brief  Handles MTurk RejectQualificationRequest responses.
+ * \brief The RejectQualificationRequestResponse class encapsulates MTurk RejectQualificationRequest responses.
  *
- * @see    MTurkClient::rejectQualificationRequest
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::rejectQualificationRequest
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectQualificationRequestResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const RejectQualificationRequestRequest * RejectQualificationRequestResponse::re
     return static_cast<const RejectQualificationRequestRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk RejectQualificationRequest response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void RejectQualificationRequestResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RejectQualificationRequestResponsePrivate
+ * \class RejectQualificationRequestResponsePrivate
  *
- * @brief  Private implementation for RejectQualificationRequestResponse.
+ * \brief Private implementation for RejectQualificationRequestResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectQualificationRequestResponsePrivate object.
@@ -91,7 +94,7 @@ RejectQualificationRequestResponsePrivate::RejectQualificationRequestResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk RejectQualificationRequestResponse element.
  *
  * @param  xml  XML stream to parse.

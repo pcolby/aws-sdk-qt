@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeFpgaImageAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeFpgaImageAttributeRequest
  *
- * @brief  Implements EC2 DescribeFpgaImageAttribute requests.
+ * \brief The DescribeFpgaImageAttributeRequest class encapsulates EC2 DescribeFpgaImageAttribute requests.
  *
- * @see    EC2Client::describeFpgaImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeFpgaImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFpgaImageAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeFpgaImageAttributeRequest::DescribeFpgaImageAttributeRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeFpgaImageAttributeRequest object.
  */
 DescribeFpgaImageAttributeRequest::DescribeFpgaImageAttributeRequest()
@@ -53,13 +60,16 @@ DescribeFpgaImageAttributeRequest::DescribeFpgaImageAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeFpgaImageAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeFpgaImageAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImageAttributeRequest::response(Q
     return new DescribeFpgaImageAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeFpgaImageAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImageAttributeRequest::response(Q
  * @brief  Private implementation for DescribeFpgaImageAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFpgaImageAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeFpgaImageAttributeRequestPrivate::DescribeFpgaImageAttributeRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFpgaImageAttributeRequestPrivate object, copying another.

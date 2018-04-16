@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Cloud9 {
 
-/**
- * @class  Cloud9Response
+/*!
+ * \class QtAws::Cloud9::Cloud9Response
  *
- * @brief  Handles Cloud9 Cloud9 responses.
+ * \brief The Cloud9Response class is the base class for all Cloud9 responses.
  *
- * @see    Cloud9Client::cloud9
+ * \ingroup Cloud9
  */
 
-/**
+/*!
  * @brief  Constructs a new Cloud9Response object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ Cloud9Response::Cloud9Response(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Cloud9Response object.
@@ -63,7 +63,7 @@ Cloud9Response::Cloud9Response(Cloud9ResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void Cloud9Response::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  Cloud9ResponsePrivate
@@ -92,7 +92,7 @@ void Cloud9Response::parseFailure(QIODevice &response)
  * @brief  Private implementation for Cloud9Response.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Cloud9ResponsePrivate object.

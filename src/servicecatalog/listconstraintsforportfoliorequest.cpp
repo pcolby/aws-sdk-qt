@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListConstraintsForPortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioRequest
  *
- * @brief  Implements ServiceCatalog ListConstraintsForPortfolio requests.
+ * \brief The ListConstraintsForPortfolioRequest class encapsulates ServiceCatalog ListConstraintsForPortfolio requests.
  *
- * @see    ServiceCatalogClient::listConstraintsForPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listConstraintsForPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new ListConstraintsForPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest(const Lis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListConstraintsForPortfolioRequest object.
  */
 ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest()
@@ -53,13 +62,16 @@ ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListConstraintsForPortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListConstraintsForPortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(
     return new ListConstraintsForPortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListConstraintsForPortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(
  * @brief  Private implementation for ListConstraintsForPortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConstraintsForPortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConstraintsForPortfolioRequestPrivate object, copying another.

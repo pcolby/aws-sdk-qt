@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  ListNamedQueriesResponse
+/*!
+ * \class QtAws::Athena::ListNamedQueriesResponse
  *
- * @brief  Handles Athena ListNamedQueries responses.
+ * \brief The ListNamedQueriesResponse class encapsulates Athena ListNamedQueries responses.
  *
- * @see    AthenaClient::listNamedQueries
+ * \ingroup Athena
+ *
+ *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
+ *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
+ *  there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
+ *  automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
+ *  information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
+ *  <i>Amazon Athena User
+ * 
+ *  Guide</i>>
+ * 
+ *  For code samples using the AWS SDK for Java, see <a
+ *  href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
+ *  Athena User
+ *
+ * \sa AthenaClient::listNamedQueries
  */
 
-/**
+/*!
  * @brief  Constructs a new ListNamedQueriesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ListNamedQueriesRequest * ListNamedQueriesResponse::request() const
     return static_cast<const ListNamedQueriesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Athena ListNamedQueries response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ListNamedQueriesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListNamedQueriesResponsePrivate
+ * \class ListNamedQueriesResponsePrivate
  *
- * @brief  Private implementation for ListNamedQueriesResponse.
+ * \brief Private implementation for ListNamedQueriesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNamedQueriesResponsePrivate object.
@@ -91,7 +106,7 @@ ListNamedQueriesResponsePrivate::ListNamedQueriesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Athena ListNamedQueriesResponse element.
  *
  * @param  xml  XML stream to parse.

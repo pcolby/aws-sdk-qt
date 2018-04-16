@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeResourceGroupsResponse
+/*!
+ * \class QtAws::Inspector::DescribeResourceGroupsResponse
  *
- * @brief  Handles Inspector DescribeResourceGroups responses.
+ * \brief The DescribeResourceGroupsResponse class encapsulates Inspector DescribeResourceGroups responses.
  *
- * @see    InspectorClient::describeResourceGroups
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeResourceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeResourceGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeResourceGroupsRequest * DescribeResourceGroupsResponse::request() 
     return static_cast<const DescribeResourceGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector DescribeResourceGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeResourceGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeResourceGroupsResponsePrivate
+ * \class DescribeResourceGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribeResourceGroupsResponse.
+ * \brief Private implementation for DescribeResourceGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeResourceGroupsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeResourceGroupsResponsePrivate::DescribeResourceGroupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector DescribeResourceGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

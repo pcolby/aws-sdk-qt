@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListObjectsRequest
+/*!
+ * \class QtAws::S3::ListObjectsRequest
  *
- * @brief  Implements S3 ListObjects requests.
+ * \brief The ListObjectsRequest class encapsulates S3 ListObjects requests.
  *
- * @see    S3Client::listObjects
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listObjects
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListObjectsRequest::ListObjectsRequest(const ListObjectsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListObjectsRequest object.
  */
 ListObjectsRequest::ListObjectsRequest()
@@ -53,13 +56,16 @@ ListObjectsRequest::ListObjectsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListObjectsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListObjectsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * 
     return new ListObjectsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListObjectsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListObjectsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectsRequestPrivate object.
@@ -97,7 +103,7 @@ ListObjectsRequestPrivate::ListObjectsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectsRequestPrivate object, copying another.

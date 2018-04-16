@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  UpdateDomainNameserversRequest
+/*!
+ * \class QtAws::Route53Domains::UpdateDomainNameserversRequest
  *
- * @brief  Implements Route53Domains UpdateDomainNameservers requests.
+ * \brief The UpdateDomainNameserversRequest class encapsulates Route53Domains UpdateDomainNameservers requests.
  *
- * @see    Route53DomainsClient::updateDomainNameservers
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::updateDomainNameservers
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainNameserversRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateDomainNameserversRequest::UpdateDomainNameserversRequest(const UpdateDomai
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainNameserversRequest object.
  */
 UpdateDomainNameserversRequest::UpdateDomainNameserversRequest()
@@ -53,13 +57,16 @@ UpdateDomainNameserversRequest::UpdateDomainNameserversRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDomainNameserversRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDomainNameserversResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNet
     return new UpdateDomainNameserversResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDomainNameserversRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNet
  * @brief  Private implementation for UpdateDomainNameserversRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainNameserversRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainNameserversRequestPrivate object, copying another.

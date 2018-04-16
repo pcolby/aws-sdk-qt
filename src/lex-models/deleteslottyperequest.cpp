@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteSlotTypeRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteSlotTypeRequest
  *
- * @brief  Implements LexModelBuildingService DeleteSlotType requests.
+ * \brief The DeleteSlotTypeRequest class encapsulates LexModelBuildingService DeleteSlotType requests.
  *
- * @see    LexModelBuildingServiceClient::deleteSlotType
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteSlotType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSlotTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSlotTypeRequest::DeleteSlotTypeRequest(const DeleteSlotTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSlotTypeRequest object.
  */
 DeleteSlotTypeRequest::DeleteSlotTypeRequest()
@@ -53,13 +60,16 @@ DeleteSlotTypeRequest::DeleteSlotTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSlotTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSlotTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeRequest::response(QNetworkReply
     return new DeleteSlotTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSlotTypeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteSlotTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSlotTypeRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSlotTypeRequestPrivate object, copying another.

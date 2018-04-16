@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CopyImageRequest
+/*!
+ * \class QtAws::AppStream::CopyImageRequest
  *
- * @brief  Implements AppStream CopyImage requests.
+ * \brief The CopyImageRequest class encapsulates AppStream CopyImage requests.
  *
- * @see    AppStreamClient::copyImage
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::copyImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CopyImageRequest object.
  */
 CopyImageRequest::CopyImageRequest()
@@ -53,13 +59,16 @@ CopyImageRequest::CopyImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CopyImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CopyImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
     return new CopyImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CopyImageRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
  * @brief  Private implementation for CopyImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyImageRequestPrivate object.
@@ -97,7 +106,7 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyImageRequestPrivate object, copying another.

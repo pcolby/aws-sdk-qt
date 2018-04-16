@@ -25,15 +25,51 @@
 namespace QtAws {
 namespace DynamoDBStreams {
 
-/**
- * @class  ListStreamsRequest
+/*!
+ * \class QtAws::DynamoDBStreams::ListStreamsRequest
  *
- * @brief  Implements DynamoDBStreams ListStreams requests.
+ * \brief The ListStreamsRequest class encapsulates DynamoDBStreams ListStreams requests.
  *
- * @see    DynamoDBStreamsClient::listStreams
+ * \ingroup DynamoDBStreams
+ *
+ *  <fullname>Amazon DynamoDB Streams</fullname>
+ * 
+ *  This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams
+ *  and processing stream records. For information about application development with DynamoDB Streams, see the <a
+ *  href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer
+ * 
+ *  Guide</a>>
+ * 
+ *  Note that this document is intended for use with the following DynamoDB
+ * 
+ *  documentation> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  The following are short descriptions of each low-level DynamoDB Streams API action, organized by
+ * 
+ *  function> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li>
+ * 
+ *  <i>GetRecords</i> - Retrieves the stream records from within a
+ * 
+ *  shard> </li> <li>
+ * 
+ *  <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard
+ * 
+ *  ID> </li> <li>
+ * 
+ *  <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and
+ *
+ * \sa DynamoDBStreamsClient::listStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +80,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
@@ -53,13 +89,16 @@ ListStreamsRequest::ListStreamsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStreamsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStreamsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +113,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
     return new ListStreamsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStreamsRequestPrivate
@@ -82,7 +121,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListStreamsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object.
@@ -97,7 +136,7 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.

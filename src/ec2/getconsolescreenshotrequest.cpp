@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetConsoleScreenshotRequest
+/*!
+ * \class QtAws::EC2::GetConsoleScreenshotRequest
  *
- * @brief  Implements EC2 GetConsoleScreenshot requests.
+ * \brief The GetConsoleScreenshotRequest class encapsulates EC2 GetConsoleScreenshot requests.
  *
- * @see    EC2Client::getConsoleScreenshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getConsoleScreenshot
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConsoleScreenshotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetConsoleScreenshotRequest::GetConsoleScreenshotRequest(const GetConsoleScreens
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetConsoleScreenshotRequest object.
  */
 GetConsoleScreenshotRequest::GetConsoleScreenshotRequest()
@@ -53,13 +60,16 @@ GetConsoleScreenshotRequest::GetConsoleScreenshotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetConsoleScreenshotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetConsoleScreenshotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetwor
     return new GetConsoleScreenshotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetConsoleScreenshotRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetwor
  * @brief  Private implementation for GetConsoleScreenshotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConsoleScreenshotRequestPrivate object.
@@ -97,7 +107,7 @@ GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConsoleScreenshotRequestPrivate object, copying another.

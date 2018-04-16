@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteDetectorRequest
+/*!
+ * \class QtAws::GuardDuty::DeleteDetectorRequest
  *
- * @brief  Implements GuardDuty DeleteDetector requests.
+ * \brief The DeleteDetectorRequest class encapsulates GuardDuty DeleteDetector requests.
  *
- * @see    GuardDutyClient::deleteDetector
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteDetector
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDetectorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteDetectorRequest::DeleteDetectorRequest(const DeleteDetectorRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDetectorRequest object.
  */
 DeleteDetectorRequest::DeleteDetectorRequest()
@@ -53,13 +56,16 @@ DeleteDetectorRequest::DeleteDetectorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDetectorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDetectorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply
     return new DeleteDetectorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDetectorRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteDetectorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDetectorRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDetectorRequestPrivate object, copying another.

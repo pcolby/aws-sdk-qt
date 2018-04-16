@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RunInstancesRequest
+/*!
+ * \class QtAws::EC2::RunInstancesRequest
  *
- * @brief  Implements EC2 RunInstances requests.
+ * \brief The RunInstancesRequest class encapsulates EC2 RunInstances requests.
  *
- * @see    EC2Client::runInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::runInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new RunInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RunInstancesRequest::RunInstancesRequest(const RunInstancesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RunInstancesRequest object.
  */
 RunInstancesRequest::RunInstancesRequest()
@@ -53,13 +60,16 @@ RunInstancesRequest::RunInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RunInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RunInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply *
     return new RunInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RunInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply *
  * @brief  Private implementation for RunInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ RunInstancesRequestPrivate::RunInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunInstancesRequestPrivate object, copying another.

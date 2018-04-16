@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListPolicyAttachmentsResponse
+/*!
+ * \class QtAws::CloudDirectory::ListPolicyAttachmentsResponse
  *
- * @brief  Handles CloudDirectory ListPolicyAttachments responses.
+ * \brief The ListPolicyAttachmentsResponse class encapsulates CloudDirectory ListPolicyAttachments responses.
  *
- * @see    CloudDirectoryClient::listPolicyAttachments
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listPolicyAttachments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPolicyAttachmentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListPolicyAttachmentsRequest * ListPolicyAttachmentsResponse::request() co
     return static_cast<const ListPolicyAttachmentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListPolicyAttachments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListPolicyAttachmentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPolicyAttachmentsResponsePrivate
+ * \class ListPolicyAttachmentsResponsePrivate
  *
- * @brief  Private implementation for ListPolicyAttachmentsResponse.
+ * \brief Private implementation for ListPolicyAttachmentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPolicyAttachmentsResponsePrivate object.
@@ -91,7 +101,7 @@ ListPolicyAttachmentsResponsePrivate::ListPolicyAttachmentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListPolicyAttachmentsResponse element.
  *
  * @param  xml  XML stream to parse.

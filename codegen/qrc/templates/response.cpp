@@ -9,15 +9,21 @@
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
-/**
- * @class  {{ClassName}}
+/*!
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * @brief  Handles {{ServiceName}} {{OperationName}} responses.
+ * \brief The {{ClassName}} class encapsulates {{ServiceName}} {{OperationName}} responses.
  *
- * @see    {{ServiceName}}Client::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
+ * \ingroup {{NameSpaceName}}
+ *
+{% for line in ClassDocumentation %}
+ * {% if line %} {{ line }}{% endif %}
+{% endfor %}
+ *
+ * \sa {{ServiceName}}Client::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
  */
 
-/**
+/*!
  * @brief  Constructs a new {{ClassName}} object.
  *
  * @param  request  Original AWS request.
@@ -40,7 +46,7 @@ const {{OperationName}}Request * {{ClassName}}::request() const
     return static_cast<const {{OperationName}}Request *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a {{ServiceName}} {{OperationName}} response.
  *
  * @param  response  Response to parse.
@@ -52,15 +58,15 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  {{ClassName}}Private
+ * \class {{ClassName}}Private
  *
- * @brief  Private implementation for {{ClassName}}.
+ * \brief Private implementation for {{ClassName}}.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new {{ClassName}}Private object.
@@ -73,7 +79,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
 
 }
 
-/**
+/*!
  * @brief  Parse an {{ServiceName}} {{ClassName}} element.
  *
  * @param  xml  XML stream to parse.

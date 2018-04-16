@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateOTAUpdateResponse
+/*!
+ * \class QtAws::IoT::CreateOTAUpdateResponse
  *
- * @brief  Handles IoT CreateOTAUpdate responses.
+ * \brief The CreateOTAUpdateResponse class encapsulates IoT CreateOTAUpdate responses.
  *
- * @see    IoTClient::createOTAUpdate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createOTAUpdate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateOTAUpdateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateOTAUpdateRequest * CreateOTAUpdateResponse::request() const
     return static_cast<const CreateOTAUpdateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreateOTAUpdate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateOTAUpdateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateOTAUpdateResponsePrivate
+ * \class CreateOTAUpdateResponsePrivate
  *
- * @brief  Private implementation for CreateOTAUpdateResponse.
+ * \brief Private implementation for CreateOTAUpdateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOTAUpdateResponsePrivate object.
@@ -91,7 +105,7 @@ CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreateOTAUpdateResponse element.
  *
  * @param  xml  XML stream to parse.

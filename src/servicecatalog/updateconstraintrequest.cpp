@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateConstraintRequest
+/*!
+ * \class QtAws::ServiceCatalog::UpdateConstraintRequest
  *
- * @brief  Implements ServiceCatalog UpdateConstraint requests.
+ * \brief The UpdateConstraintRequest class encapsulates ServiceCatalog UpdateConstraint requests.
  *
- * @see    ServiceCatalogClient::updateConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConstraintRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdateConstraintRequest::UpdateConstraintRequest(const UpdateConstraintRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateConstraintRequest object.
  */
 UpdateConstraintRequest::UpdateConstraintRequest()
@@ -53,13 +62,16 @@ UpdateConstraintRequest::UpdateConstraintRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateConstraintRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateConstraintResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkRep
     return new UpdateConstraintResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateConstraintRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateConstraintRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConstraintRequestPrivate object.
@@ -97,7 +109,7 @@ UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConstraintRequestPrivate object, copying another.

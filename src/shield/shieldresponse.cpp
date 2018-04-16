@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  ShieldResponse
+/*!
+ * \class QtAws::Shield::ShieldResponse
  *
- * @brief  Handles Shield Shield responses.
+ * \brief The ShieldResponse class is the base class for all Shield responses.
  *
- * @see    ShieldClient::shield
+ * \ingroup Shield
  */
 
-/**
+/*!
  * @brief  Constructs a new ShieldResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ShieldResponse::ShieldResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ShieldResponse object.
@@ -63,7 +63,7 @@ ShieldResponse::ShieldResponse(ShieldResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ShieldResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ShieldResponsePrivate
@@ -92,7 +92,7 @@ void ShieldResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ShieldResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ShieldResponsePrivate object.

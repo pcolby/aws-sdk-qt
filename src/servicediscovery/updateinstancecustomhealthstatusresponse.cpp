@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  UpdateInstanceCustomHealthStatusResponse
+/*!
+ * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusResponse
  *
- * @brief  Handles ServiceDiscovery UpdateInstanceCustomHealthStatus responses.
+ * \brief The UpdateInstanceCustomHealthStatusResponse class encapsulates ServiceDiscovery UpdateInstanceCustomHealthStatus responses.
  *
- * @see    ServiceDiscoveryClient::updateInstanceCustomHealthStatus
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::updateInstanceCustomHealthStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateInstanceCustomHealthStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateInstanceCustomHealthStatusRequest * UpdateInstanceCustomHealthStatus
     return static_cast<const UpdateInstanceCustomHealthStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery UpdateInstanceCustomHealthStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateInstanceCustomHealthStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateInstanceCustomHealthStatusResponsePrivate
+ * \class UpdateInstanceCustomHealthStatusResponsePrivate
  *
- * @brief  Private implementation for UpdateInstanceCustomHealthStatusResponse.
+ * \brief Private implementation for UpdateInstanceCustomHealthStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInstanceCustomHealthStatusResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatu
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery UpdateInstanceCustomHealthStatusResponse element.
  *
  * @param  xml  XML stream to parse.

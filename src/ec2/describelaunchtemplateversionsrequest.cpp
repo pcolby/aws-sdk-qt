@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeLaunchTemplateVersionsRequest
+/*!
+ * \class QtAws::EC2::DescribeLaunchTemplateVersionsRequest
  *
- * @brief  Implements EC2 DescribeLaunchTemplateVersions requests.
+ * \brief The DescribeLaunchTemplateVersionsRequest class encapsulates EC2 DescribeLaunchTemplateVersions requests.
  *
- * @see    EC2Client::describeLaunchTemplateVersions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeLaunchTemplateVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchTemplateVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeLaunchTemplateVersionsRequest::DescribeLaunchTemplateVersionsRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchTemplateVersionsRequest object.
  */
 DescribeLaunchTemplateVersionsRequest::DescribeLaunchTemplateVersionsRequest()
@@ -53,13 +60,16 @@ DescribeLaunchTemplateVersionsRequest::DescribeLaunchTemplateVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLaunchTemplateVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLaunchTemplateVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::respon
     return new DescribeLaunchTemplateVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLaunchTemplateVersionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::respon
  * @brief  Private implementation for DescribeLaunchTemplateVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchTemplateVersionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchTemplateVersionsRequestPrivate object, copying another.

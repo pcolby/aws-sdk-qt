@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListTypesRequest
+/*!
+ * \class QtAws::AppSync::ListTypesRequest
  *
- * @brief  Implements AppSync ListTypes requests.
+ * \brief The ListTypesRequest class encapsulates AppSync ListTypes requests.
  *
- * @see    AppSyncClient::listTypes
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListTypesRequest::ListTypesRequest(const ListTypesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTypesRequest object.
  */
 ListTypesRequest::ListTypesRequest()
@@ -53,13 +57,16 @@ ListTypesRequest::ListTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * co
     return new ListTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTypesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTypesRequestPrivate object.
@@ -97,7 +104,7 @@ ListTypesRequestPrivate::ListTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTypesRequestPrivate object, copying another.

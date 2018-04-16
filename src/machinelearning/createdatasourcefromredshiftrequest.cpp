@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateDataSourceFromRedshiftRequest
+/*!
+ * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftRequest
  *
- * @brief  Implements MachineLearning CreateDataSourceFromRedshift requests.
+ * \brief The CreateDataSourceFromRedshiftRequest class encapsulates MachineLearning CreateDataSourceFromRedshift requests.
  *
- * @see    MachineLearningClient::createDataSourceFromRedshift
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createDataSourceFromRedshift
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDataSourceFromRedshiftRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateDataSourceFromRedshiftRequest::CreateDataSourceFromRedshiftRequest(const C
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDataSourceFromRedshiftRequest object.
  */
 CreateDataSourceFromRedshiftRequest::CreateDataSourceFromRedshiftRequest()
@@ -53,13 +56,16 @@ CreateDataSourceFromRedshiftRequest::CreateDataSourceFromRedshiftRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDataSourceFromRedshiftRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDataSourceFromRedshiftResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response
     return new CreateDataSourceFromRedshiftResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDataSourceFromRedshiftRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response
  * @brief  Private implementation for CreateDataSourceFromRedshiftRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDataSourceFromRedshiftRequestPrivate object.
@@ -97,7 +103,7 @@ CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDataSourceFromRedshiftRequestPrivate object, copying another.

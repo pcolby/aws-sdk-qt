@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  ListSkillsRequest
+/*!
+ * \class QtAws::AlexaForBusiness::ListSkillsRequest
  *
- * @brief  Implements AlexaForBusiness ListSkills requests.
+ * \brief The ListSkillsRequest class encapsulates AlexaForBusiness ListSkills requests.
  *
- * @see    AlexaForBusinessClient::listSkills
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::listSkills
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSkillsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListSkillsRequest::ListSkillsRequest(const ListSkillsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSkillsRequest object.
  */
 ListSkillsRequest::ListSkillsRequest()
@@ -53,13 +61,16 @@ ListSkillsRequest::ListSkillsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSkillsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSkillsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * c
     return new ListSkillsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSkillsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListSkillsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSkillsRequestPrivate object.
@@ -97,7 +108,7 @@ ListSkillsRequestPrivate::ListSkillsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSkillsRequestPrivate object, copying another.

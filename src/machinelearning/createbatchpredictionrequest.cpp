@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateBatchPredictionRequest
+/*!
+ * \class QtAws::MachineLearning::CreateBatchPredictionRequest
  *
- * @brief  Implements MachineLearning CreateBatchPrediction requests.
+ * \brief The CreateBatchPredictionRequest class encapsulates MachineLearning CreateBatchPrediction requests.
  *
- * @see    MachineLearningClient::createBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBatchPredictionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateBatchPredictionRequest::CreateBatchPredictionRequest(const CreateBatchPred
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateBatchPredictionRequest object.
  */
 CreateBatchPredictionRequest::CreateBatchPredictionRequest()
@@ -53,13 +56,16 @@ CreateBatchPredictionRequest::CreateBatchPredictionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateBatchPredictionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateBatchPredictionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateBatchPredictionRequest::response(QNetwo
     return new CreateBatchPredictionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateBatchPredictionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateBatchPredictionRequest::response(QNetwo
  * @brief  Private implementation for CreateBatchPredictionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBatchPredictionRequestPrivate object.
@@ -97,7 +103,7 @@ CreateBatchPredictionRequestPrivate::CreateBatchPredictionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBatchPredictionRequestPrivate object, copying another.

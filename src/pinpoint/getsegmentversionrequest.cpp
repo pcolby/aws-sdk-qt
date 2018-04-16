@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSegmentVersionRequest
+/*!
+ * \class QtAws::Pinpoint::GetSegmentVersionRequest
  *
- * @brief  Implements Pinpoint GetSegmentVersion requests.
+ * \brief The GetSegmentVersionRequest class encapsulates Pinpoint GetSegmentVersion requests.
  *
- * @see    PinpointClient::getSegmentVersion
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSegmentVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetSegmentVersionRequest::GetSegmentVersionRequest(const GetSegmentVersionReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentVersionRequest object.
  */
 GetSegmentVersionRequest::GetSegmentVersionRequest()
@@ -53,13 +56,16 @@ GetSegmentVersionRequest::GetSegmentVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSegmentVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSegmentVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetSegmentVersionRequest::response(QNetworkRe
     return new GetSegmentVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSegmentVersionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetSegmentVersionRequest::response(QNetworkRe
  * @brief  Private implementation for GetSegmentVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentVersionRequestPrivate object.
@@ -97,7 +103,7 @@ GetSegmentVersionRequestPrivate::GetSegmentVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentVersionRequestPrivate object, copying another.

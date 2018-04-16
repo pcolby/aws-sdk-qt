@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  DisableDomainAutoRenewRequest
+/*!
+ * \class QtAws::Route53Domains::DisableDomainAutoRenewRequest
  *
- * @brief  Implements Route53Domains DisableDomainAutoRenew requests.
+ * \brief The DisableDomainAutoRenewRequest class encapsulates Route53Domains DisableDomainAutoRenew requests.
  *
- * @see    Route53DomainsClient::disableDomainAutoRenew
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::disableDomainAutoRenew
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableDomainAutoRenewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DisableDomainAutoRenewRequest::DisableDomainAutoRenewRequest(const DisableDomain
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableDomainAutoRenewRequest object.
  */
 DisableDomainAutoRenewRequest::DisableDomainAutoRenewRequest()
@@ -53,13 +57,16 @@ DisableDomainAutoRenewRequest::DisableDomainAutoRenewRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableDomainAutoRenewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableDomainAutoRenewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DisableDomainAutoRenewRequest::response(QNetw
     return new DisableDomainAutoRenewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableDomainAutoRenewRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DisableDomainAutoRenewRequest::response(QNetw
  * @brief  Private implementation for DisableDomainAutoRenewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDomainAutoRenewRequestPrivate object.
@@ -97,7 +104,7 @@ DisableDomainAutoRenewRequestPrivate::DisableDomainAutoRenewRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDomainAutoRenewRequestPrivate object, copying another.

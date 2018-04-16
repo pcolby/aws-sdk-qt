@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateAccountRequest
+/*!
+ * \class QtAws::APIGateway::UpdateAccountRequest
  *
- * @brief  Implements APIGateway UpdateAccount requests.
+ * \brief The UpdateAccountRequest class encapsulates APIGateway UpdateAccount requests.
  *
- * @see    APIGatewayClient::updateAccount
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateAccountRequest::UpdateAccountRequest(const UpdateAccountRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAccountRequest object.
  */
 UpdateAccountRequest::UpdateAccountRequest()
@@ -53,13 +61,16 @@ UpdateAccountRequest::UpdateAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountRequest::response(QNetworkReply 
     return new UpdateAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAccountRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAccountRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAccountRequestPrivate object, copying another.

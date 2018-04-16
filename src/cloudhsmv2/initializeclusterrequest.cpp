@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  InitializeClusterRequest
+/*!
+ * \class QtAws::CloudHSMV2::InitializeClusterRequest
  *
- * @brief  Implements CloudHSMV2 InitializeCluster requests.
+ * \brief The InitializeClusterRequest class encapsulates CloudHSMV2 InitializeCluster requests.
  *
- * @see    CloudHSMV2Client::initializeCluster
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::initializeCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new InitializeClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ InitializeClusterRequest::InitializeClusterRequest(const InitializeClusterReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InitializeClusterRequest object.
  */
 InitializeClusterRequest::InitializeClusterRequest()
@@ -53,13 +58,16 @@ InitializeClusterRequest::InitializeClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InitializeClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InitializeClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * InitializeClusterRequest::response(QNetworkRe
     return new InitializeClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InitializeClusterRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * InitializeClusterRequest::response(QNetworkRe
  * @brief  Private implementation for InitializeClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitializeClusterRequestPrivate object.
@@ -97,7 +105,7 @@ InitializeClusterRequestPrivate::InitializeClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitializeClusterRequestPrivate object, copying another.

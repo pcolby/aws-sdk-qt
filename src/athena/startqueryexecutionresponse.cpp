@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  StartQueryExecutionResponse
+/*!
+ * \class QtAws::Athena::StartQueryExecutionResponse
  *
- * @brief  Handles Athena StartQueryExecution responses.
+ * \brief The StartQueryExecutionResponse class encapsulates Athena StartQueryExecution responses.
  *
- * @see    AthenaClient::startQueryExecution
+ * \ingroup Athena
+ *
+ *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
+ *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
+ *  there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
+ *  automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
+ *  information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
+ *  <i>Amazon Athena User
+ * 
+ *  Guide</i>>
+ * 
+ *  For code samples using the AWS SDK for Java, see <a
+ *  href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
+ *  Athena User
+ *
+ * \sa AthenaClient::startQueryExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new StartQueryExecutionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const StartQueryExecutionRequest * StartQueryExecutionResponse::request() const
     return static_cast<const StartQueryExecutionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Athena StartQueryExecution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void StartQueryExecutionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartQueryExecutionResponsePrivate
+ * \class StartQueryExecutionResponsePrivate
  *
- * @brief  Private implementation for StartQueryExecutionResponse.
+ * \brief Private implementation for StartQueryExecutionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartQueryExecutionResponsePrivate object.
@@ -91,7 +106,7 @@ StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Athena StartQueryExecutionResponse element.
  *
  * @param  xml  XML stream to parse.

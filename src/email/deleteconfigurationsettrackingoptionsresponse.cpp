@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteConfigurationSetTrackingOptionsResponse
+/*!
+ * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsResponse
  *
- * @brief  Handles SES DeleteConfigurationSetTrackingOptions responses.
+ * \brief The DeleteConfigurationSetTrackingOptionsResponse class encapsulates SES DeleteConfigurationSetTrackingOptions responses.
  *
- * @see    SESClient::deleteConfigurationSetTrackingOptions
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteConfigurationSetTrackingOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrack
     return static_cast<const DeleteConfigurationSetTrackingOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES DeleteConfigurationSetTrackingOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteConfigurationSetTrackingOptionsResponsePrivate
+ * \class DeleteConfigurationSetTrackingOptionsResponsePrivate
  *
- * @brief  Private implementation for DeleteConfigurationSetTrackingOptionsResponse.
+ * \brief Private implementation for DeleteConfigurationSetTrackingOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrac
 
 }
 
-/**
+/*!
  * @brief  Parse an SES DeleteConfigurationSetTrackingOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DetachPolicyRequest
+/*!
+ * \class QtAws::IoT::DetachPolicyRequest
  *
- * @brief  Implements IoT DetachPolicy requests.
+ * \brief The DetachPolicyRequest class encapsulates IoT DetachPolicy requests.
  *
- * @see    IoTClient::detachPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::detachPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachPolicyRequest object.
  */
 DetachPolicyRequest::DetachPolicyRequest()
@@ -53,13 +67,16 @@ DetachPolicyRequest::DetachPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
     return new DetachPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for DetachPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPolicyRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  CreateTagsRequest
+/*!
+ * \class QtAws::EFS::CreateTagsRequest
  *
- * @brief  Implements EFS CreateTags requests.
+ * \brief The CreateTagsRequest class encapsulates EFS CreateTags requests.
  *
- * @see    EFSClient::createTags
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::createTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
@@ -53,13 +62,16 @@ CreateTagsRequest::CreateTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
     return new CreateTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTagsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsRequestPrivate object.
@@ -97,7 +109,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.

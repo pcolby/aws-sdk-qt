@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DeleteCacheParameterGroupRequest
+/*!
+ * \class QtAws::ElastiCache::DeleteCacheParameterGroupRequest
  *
- * @brief  Implements ElastiCache DeleteCacheParameterGroup requests.
+ * \brief The DeleteCacheParameterGroupRequest class encapsulates ElastiCache DeleteCacheParameterGroup requests.
  *
- * @see    ElastiCacheClient::deleteCacheParameterGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::deleteCacheParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DeleteCacheParameterGroupRequest::DeleteCacheParameterGroupRequest(const DeleteC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheParameterGroupRequest object.
  */
 DeleteCacheParameterGroupRequest::DeleteCacheParameterGroupRequest()
@@ -53,13 +70,16 @@ DeleteCacheParameterGroupRequest::DeleteCacheParameterGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCacheParameterGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCacheParameterGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QN
     return new DeleteCacheParameterGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCacheParameterGroupRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QN
  * @brief  Private implementation for DeleteCacheParameterGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheParameterGroupRequestPrivate object.
@@ -97,7 +117,7 @@ DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheParameterGroupRequestPrivate object, copying another.

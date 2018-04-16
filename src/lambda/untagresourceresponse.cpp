@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UntagResourceResponse
+/*!
+ * \class QtAws::Lambda::UntagResourceResponse
  *
- * @brief  Handles Lambda UntagResource responses.
+ * \brief The UntagResourceResponse class encapsulates Lambda UntagResource responses.
  *
- * @see    LambdaClient::untagResource
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
     return static_cast<const UntagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda UntagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UntagResourceResponsePrivate
+ * \class UntagResourceResponsePrivate
  *
- * @brief  Private implementation for UntagResourceResponse.
+ * \brief Private implementation for UntagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceResponsePrivate object.
@@ -91,7 +105,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda UntagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

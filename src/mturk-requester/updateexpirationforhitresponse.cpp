@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateExpirationForHITResponse
+/*!
+ * \class QtAws::MTurk::UpdateExpirationForHITResponse
  *
- * @brief  Handles MTurk UpdateExpirationForHIT responses.
+ * \brief The UpdateExpirationForHITResponse class encapsulates MTurk UpdateExpirationForHIT responses.
  *
- * @see    MTurkClient::updateExpirationForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateExpirationForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateExpirationForHITResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateExpirationForHITRequest * UpdateExpirationForHITResponse::request() 
     return static_cast<const UpdateExpirationForHITRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk UpdateExpirationForHIT response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateExpirationForHITResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateExpirationForHITResponsePrivate
+ * \class UpdateExpirationForHITResponsePrivate
  *
- * @brief  Private implementation for UpdateExpirationForHITResponse.
+ * \brief Private implementation for UpdateExpirationForHITResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateExpirationForHITResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk UpdateExpirationForHITResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  AttachToIndexResponse
+/*!
+ * \class QtAws::CloudDirectory::AttachToIndexResponse
  *
- * @brief  Handles CloudDirectory AttachToIndex responses.
+ * \brief The AttachToIndexResponse class encapsulates CloudDirectory AttachToIndex responses.
  *
- * @see    CloudDirectoryClient::attachToIndex
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::attachToIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachToIndexResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const AttachToIndexRequest * AttachToIndexResponse::request() const
     return static_cast<const AttachToIndexRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory AttachToIndex response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void AttachToIndexResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachToIndexResponsePrivate
+ * \class AttachToIndexResponsePrivate
  *
- * @brief  Private implementation for AttachToIndexResponse.
+ * \brief Private implementation for AttachToIndexResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachToIndexResponsePrivate object.
@@ -91,7 +101,7 @@ AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory AttachToIndexResponse element.
  *
  * @param  xml  XML stream to parse.

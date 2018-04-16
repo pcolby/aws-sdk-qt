@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  FlushStageCacheResponse
+/*!
+ * \class QtAws::APIGateway::FlushStageCacheResponse
  *
- * @brief  Handles APIGateway FlushStageCache responses.
+ * \brief The FlushStageCacheResponse class encapsulates APIGateway FlushStageCache responses.
  *
- * @see    APIGatewayClient::flushStageCache
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::flushStageCache
  */
 
-/**
+/*!
  * @brief  Constructs a new FlushStageCacheResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const FlushStageCacheRequest * FlushStageCacheResponse::request() const
     return static_cast<const FlushStageCacheRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway FlushStageCache response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void FlushStageCacheResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  FlushStageCacheResponsePrivate
+ * \class FlushStageCacheResponsePrivate
  *
- * @brief  Private implementation for FlushStageCacheResponse.
+ * \brief Private implementation for FlushStageCacheResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FlushStageCacheResponsePrivate object.
@@ -91,7 +99,7 @@ FlushStageCacheResponsePrivate::FlushStageCacheResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway FlushStageCacheResponse element.
  *
  * @param  xml  XML stream to parse.

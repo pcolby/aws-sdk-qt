@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GuardDutyResponse
+/*!
+ * \class QtAws::GuardDuty::GuardDutyResponse
  *
- * @brief  Handles GuardDuty GuardDuty responses.
+ * \brief The GuardDutyResponse class is the base class for all GuardDuty responses.
  *
- * @see    GuardDutyClient::guardDuty
+ * \ingroup GuardDuty
  */
 
-/**
+/*!
  * @brief  Constructs a new GuardDutyResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ GuardDutyResponse::GuardDutyResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GuardDutyResponse object.
@@ -63,7 +63,7 @@ GuardDutyResponse::GuardDutyResponse(GuardDutyResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void GuardDutyResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GuardDutyResponsePrivate
@@ -92,7 +92,7 @@ void GuardDutyResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for GuardDutyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GuardDutyResponsePrivate object.

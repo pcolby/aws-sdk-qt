@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateRequestValidatorRequest
+/*!
+ * \class QtAws::APIGateway::CreateRequestValidatorRequest
  *
- * @brief  Implements APIGateway CreateRequestValidator requests.
+ * \brief The CreateRequestValidatorRequest class encapsulates APIGateway CreateRequestValidator requests.
  *
- * @see    APIGatewayClient::createRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRequestValidatorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateRequestValidatorRequest::CreateRequestValidatorRequest(const CreateRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRequestValidatorRequest object.
  */
 CreateRequestValidatorRequest::CreateRequestValidatorRequest()
@@ -53,13 +61,16 @@ CreateRequestValidatorRequest::CreateRequestValidatorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRequestValidatorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRequestValidatorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetw
     return new CreateRequestValidatorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRequestValidatorRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetw
  * @brief  Private implementation for CreateRequestValidatorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRequestValidatorRequestPrivate object.
@@ -97,7 +108,7 @@ CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRequestValidatorRequestPrivate object, copying another.

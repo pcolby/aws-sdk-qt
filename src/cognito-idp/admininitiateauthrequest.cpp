@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminInitiateAuthRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminInitiateAuthRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminInitiateAuth requests.
+ * \brief The AdminInitiateAuthRequest class encapsulates CognitoIdentityProvider AdminInitiateAuth requests.
  *
- * @see    CognitoIdentityProviderClient::adminInitiateAuth
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminInitiateAuth
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminInitiateAuthRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminInitiateAuthRequest::AdminInitiateAuthRequest(const AdminInitiateAuthReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminInitiateAuthRequest object.
  */
 AdminInitiateAuthRequest::AdminInitiateAuthRequest()
@@ -53,13 +66,16 @@ AdminInitiateAuthRequest::AdminInitiateAuthRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminInitiateAuthRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminInitiateAuthResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminInitiateAuthRequest::response(QNetworkRe
     return new AdminInitiateAuthResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminInitiateAuthRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminInitiateAuthRequest::response(QNetworkRe
  * @brief  Private implementation for AdminInitiateAuthRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminInitiateAuthRequestPrivate object.
@@ -97,7 +113,7 @@ AdminInitiateAuthRequestPrivate::AdminInitiateAuthRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminInitiateAuthRequestPrivate object, copying another.

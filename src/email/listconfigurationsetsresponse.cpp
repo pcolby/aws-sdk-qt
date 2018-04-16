@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ListConfigurationSetsResponse
+/*!
+ * \class QtAws::SES::ListConfigurationSetsResponse
  *
- * @brief  Handles SES ListConfigurationSets responses.
+ * \brief The ListConfigurationSetsResponse class encapsulates SES ListConfigurationSets responses.
  *
- * @see    SESClient::listConfigurationSets
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::listConfigurationSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListConfigurationSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() co
     return static_cast<const ListConfigurationSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES ListConfigurationSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListConfigurationSetsResponsePrivate
+ * \class ListConfigurationSetsResponsePrivate
  *
- * @brief  Private implementation for ListConfigurationSetsResponse.
+ * \brief Private implementation for ListConfigurationSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConfigurationSetsResponsePrivate object.
@@ -91,7 +105,7 @@ ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES ListConfigurationSetsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  StopTrainingJobResponse
+/*!
+ * \class QtAws::SageMaker::StopTrainingJobResponse
  *
- * @brief  Handles SageMaker StopTrainingJob responses.
+ * \brief The StopTrainingJobResponse class encapsulates SageMaker StopTrainingJob responses.
  *
- * @see    SageMakerClient::stopTrainingJob
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::stopTrainingJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StopTrainingJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StopTrainingJobRequest * StopTrainingJobResponse::request() const
     return static_cast<const StopTrainingJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker StopTrainingJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StopTrainingJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopTrainingJobResponsePrivate
+ * \class StopTrainingJobResponsePrivate
  *
- * @brief  Private implementation for StopTrainingJobResponse.
+ * \brief Private implementation for StopTrainingJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopTrainingJobResponsePrivate object.
@@ -91,7 +94,7 @@ StopTrainingJobResponsePrivate::StopTrainingJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker StopTrainingJobResponse element.
  *
  * @param  xml  XML stream to parse.

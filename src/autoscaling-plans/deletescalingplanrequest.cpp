@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  DeleteScalingPlanRequest
+/*!
+ * \class QtAws::AutoScalingPlans::DeleteScalingPlanRequest
  *
- * @brief  Implements AutoScalingPlans DeleteScalingPlan requests.
+ * \brief The DeleteScalingPlanRequest class encapsulates AutoScalingPlans DeleteScalingPlan requests.
  *
- * @see    AutoScalingPlansClient::deleteScalingPlan
+ * \ingroup AutoScalingPlans
+ *
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
+ *
+ * \sa AutoScalingPlansClient::deleteScalingPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteScalingPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DeleteScalingPlanRequest::DeleteScalingPlanRequest(const DeleteScalingPlanReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteScalingPlanRequest object.
  */
 DeleteScalingPlanRequest::DeleteScalingPlanRequest()
@@ -53,13 +65,16 @@ DeleteScalingPlanRequest::DeleteScalingPlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteScalingPlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteScalingPlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkRe
     return new DeleteScalingPlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteScalingPlanRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteScalingPlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteScalingPlanRequestPrivate object.
@@ -97,7 +112,7 @@ DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteScalingPlanRequestPrivate object, copying another.

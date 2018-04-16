@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdatePartitionRequest
+/*!
+ * \class QtAws::Glue::UpdatePartitionRequest
  *
- * @brief  Implements Glue UpdatePartition requests.
+ * \brief The UpdatePartitionRequest class encapsulates Glue UpdatePartition requests.
  *
- * @see    GlueClient::updatePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updatePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePartitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdatePartitionRequest::UpdatePartitionRequest(const UpdatePartitionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePartitionRequest object.
  */
 UpdatePartitionRequest::UpdatePartitionRequest()
@@ -53,13 +59,16 @@ UpdatePartitionRequest::UpdatePartitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePartitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePartitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkRepl
     return new UpdatePartitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePartitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdatePartitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePartitionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePartitionRequestPrivate object, copying another.

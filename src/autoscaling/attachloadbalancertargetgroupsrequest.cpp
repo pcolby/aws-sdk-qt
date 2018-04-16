@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AttachLoadBalancerTargetGroupsRequest
+/*!
+ * \class QtAws::AutoScaling::AttachLoadBalancerTargetGroupsRequest
  *
- * @brief  Implements AutoScaling AttachLoadBalancerTargetGroups requests.
+ * \brief The AttachLoadBalancerTargetGroupsRequest class encapsulates AutoScaling AttachLoadBalancerTargetGroups requests.
  *
- * @see    AutoScalingClient::attachLoadBalancerTargetGroups
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::attachLoadBalancerTargetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ AttachLoadBalancerTargetGroupsRequest::AttachLoadBalancerTargetGroupsRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequest object.
  */
 AttachLoadBalancerTargetGroupsRequest::AttachLoadBalancerTargetGroupsRequest()
@@ -53,13 +61,16 @@ AttachLoadBalancerTargetGroupsRequest::AttachLoadBalancerTargetGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachLoadBalancerTargetGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachLoadBalancerTargetGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTargetGroupsRequest::respon
     return new AttachLoadBalancerTargetGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachLoadBalancerTargetGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTargetGroupsRequest::respon
  * @brief  Private implementation for AttachLoadBalancerTargetGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ AttachLoadBalancerTargetGroupsRequestPrivate::AttachLoadBalancerTargetGroupsRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancerTargetGroupsRequestPrivate object, copying another.

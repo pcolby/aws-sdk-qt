@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  ReleaseStaticIpRequest
+/*!
+ * \class QtAws::Lightsail::ReleaseStaticIpRequest
  *
- * @brief  Implements Lightsail ReleaseStaticIp requests.
+ * \brief The ReleaseStaticIpRequest class encapsulates Lightsail ReleaseStaticIp requests.
  *
- * @see    LightsailClient::releaseStaticIp
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::releaseStaticIp
  */
 
-/**
+/*!
  * @brief  Constructs a new ReleaseStaticIpRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ ReleaseStaticIpRequest::ReleaseStaticIpRequest(const ReleaseStaticIpRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReleaseStaticIpRequest object.
  */
 ReleaseStaticIpRequest::ReleaseStaticIpRequest()
@@ -53,13 +72,16 @@ ReleaseStaticIpRequest::ReleaseStaticIpRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReleaseStaticIpRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReleaseStaticIpResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkRepl
     return new ReleaseStaticIpResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReleaseStaticIpRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkRepl
  * @brief  Private implementation for ReleaseStaticIpRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseStaticIpRequestPrivate object.
@@ -97,7 +119,7 @@ ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseStaticIpRequestPrivate object, copying another.

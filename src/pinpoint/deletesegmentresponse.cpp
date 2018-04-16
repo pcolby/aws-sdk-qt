@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteSegmentResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteSegmentResponse
  *
- * @brief  Handles Pinpoint DeleteSegment responses.
+ * \brief The DeleteSegmentResponse class encapsulates Pinpoint DeleteSegment responses.
  *
- * @see    PinpointClient::deleteSegment
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteSegment
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSegmentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteSegmentRequest * DeleteSegmentResponse::request() const
     return static_cast<const DeleteSegmentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteSegment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteSegmentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSegmentResponsePrivate
+ * \class DeleteSegmentResponsePrivate
  *
- * @brief  Private implementation for DeleteSegmentResponse.
+ * \brief Private implementation for DeleteSegmentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSegmentResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteSegmentResponsePrivate::DeleteSegmentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteSegmentResponse element.
  *
  * @param  xml  XML stream to parse.

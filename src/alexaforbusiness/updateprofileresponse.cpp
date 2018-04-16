@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateProfileResponse
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateProfileResponse
  *
- * @brief  Handles AlexaForBusiness UpdateProfile responses.
+ * \brief The UpdateProfileResponse class encapsulates AlexaForBusiness UpdateProfile responses.
  *
- * @see    AlexaForBusinessClient::updateProfile
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateProfileRequest * UpdateProfileResponse::request() const
     return static_cast<const UpdateProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness UpdateProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateProfileResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateProfileResponsePrivate
+ * \class UpdateProfileResponsePrivate
  *
- * @brief  Private implementation for UpdateProfileResponse.
+ * \brief Private implementation for UpdateProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProfileResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateProfileResponsePrivate::UpdateProfileResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness UpdateProfileResponse element.
  *
  * @param  xml  XML stream to parse.

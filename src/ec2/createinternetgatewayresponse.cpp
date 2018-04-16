@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateInternetGatewayResponse
+/*!
+ * \class QtAws::EC2::CreateInternetGatewayResponse
  *
- * @brief  Handles EC2 CreateInternetGateway responses.
+ * \brief The CreateInternetGatewayResponse class encapsulates EC2 CreateInternetGateway responses.
  *
- * @see    EC2Client::createInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInternetGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateInternetGatewayRequest * CreateInternetGatewayResponse::request() co
     return static_cast<const CreateInternetGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateInternetGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateInternetGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateInternetGatewayResponsePrivate
+ * \class CreateInternetGatewayResponsePrivate
  *
- * @brief  Private implementation for CreateInternetGatewayResponse.
+ * \brief Private implementation for CreateInternetGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInternetGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ CreateInternetGatewayResponsePrivate::CreateInternetGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateInternetGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

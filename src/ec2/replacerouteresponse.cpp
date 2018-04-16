@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceRouteResponse
+/*!
+ * \class QtAws::EC2::ReplaceRouteResponse
  *
- * @brief  Handles EC2 ReplaceRoute responses.
+ * \brief The ReplaceRouteResponse class encapsulates EC2 ReplaceRoute responses.
  *
- * @see    EC2Client::replaceRoute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceRoute
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceRouteResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ReplaceRouteRequest * ReplaceRouteResponse::request() const
     return static_cast<const ReplaceRouteRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ReplaceRoute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ReplaceRouteResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReplaceRouteResponsePrivate
+ * \class ReplaceRouteResponsePrivate
  *
- * @brief  Private implementation for ReplaceRouteResponse.
+ * \brief Private implementation for ReplaceRouteResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceRouteResponsePrivate object.
@@ -91,7 +98,7 @@ ReplaceRouteResponsePrivate::ReplaceRouteResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ReplaceRouteResponse element.
  *
  * @param  xml  XML stream to parse.

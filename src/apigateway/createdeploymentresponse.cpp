@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateDeploymentResponse
+/*!
+ * \class QtAws::APIGateway::CreateDeploymentResponse
  *
- * @brief  Handles APIGateway CreateDeployment responses.
+ * \brief The CreateDeploymentResponse class encapsulates APIGateway CreateDeployment responses.
  *
- * @see    APIGatewayClient::createDeployment
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeploymentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateDeploymentRequest * CreateDeploymentResponse::request() const
     return static_cast<const CreateDeploymentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateDeployment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateDeploymentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDeploymentResponsePrivate
+ * \class CreateDeploymentResponsePrivate
  *
- * @brief  Private implementation for CreateDeploymentResponse.
+ * \brief Private implementation for CreateDeploymentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeploymentResponsePrivate object.
@@ -91,7 +99,7 @@ CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateDeploymentResponse element.
  *
  * @param  xml  XML stream to parse.

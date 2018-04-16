@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteRealtimeEndpointResponse
+/*!
+ * \class QtAws::MachineLearning::DeleteRealtimeEndpointResponse
  *
- * @brief  Handles MachineLearning DeleteRealtimeEndpoint responses.
+ * \brief The DeleteRealtimeEndpointResponse class encapsulates MachineLearning DeleteRealtimeEndpoint responses.
  *
- * @see    MachineLearningClient::deleteRealtimeEndpoint
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteRealtimeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRealtimeEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteRealtimeEndpointRequest * DeleteRealtimeEndpointResponse::request() 
     return static_cast<const DeleteRealtimeEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DeleteRealtimeEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteRealtimeEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRealtimeEndpointResponsePrivate
+ * \class DeleteRealtimeEndpointResponsePrivate
  *
- * @brief  Private implementation for DeleteRealtimeEndpointResponse.
+ * \brief Private implementation for DeleteRealtimeEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRealtimeEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DeleteRealtimeEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

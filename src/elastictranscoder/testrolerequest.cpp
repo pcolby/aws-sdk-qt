@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  TestRoleRequest
+/*!
+ * \class QtAws::ElasticTranscoder::TestRoleRequest
  *
- * @brief  Implements ElasticTranscoder TestRole requests.
+ * \brief The TestRoleRequest class encapsulates ElasticTranscoder TestRole requests.
  *
- * @see    ElasticTranscoderClient::testRole
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::testRole
  */
 
-/**
+/*!
  * @brief  Constructs a new TestRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ TestRoleRequest::TestRoleRequest(const TestRoleRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestRoleRequest object.
  */
 TestRoleRequest::TestRoleRequest()
@@ -53,13 +59,16 @@ TestRoleRequest::TestRoleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestRoleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestRoleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * con
     return new TestRoleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestRoleRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * con
  * @brief  Private implementation for TestRoleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestRoleRequestPrivate object.
@@ -97,7 +106,7 @@ TestRoleRequestPrivate::TestRoleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestRoleRequestPrivate object, copying another.

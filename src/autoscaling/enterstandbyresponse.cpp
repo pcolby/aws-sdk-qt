@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  EnterStandbyResponse
+/*!
+ * \class QtAws::AutoScaling::EnterStandbyResponse
  *
- * @brief  Handles AutoScaling EnterStandby responses.
+ * \brief The EnterStandbyResponse class encapsulates AutoScaling EnterStandby responses.
  *
- * @see    AutoScalingClient::enterStandby
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::enterStandby
  */
 
-/**
+/*!
  * @brief  Constructs a new EnterStandbyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const EnterStandbyRequest * EnterStandbyResponse::request() const
     return static_cast<const EnterStandbyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling EnterStandby response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void EnterStandbyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnterStandbyResponsePrivate
+ * \class EnterStandbyResponsePrivate
  *
- * @brief  Private implementation for EnterStandbyResponse.
+ * \brief Private implementation for EnterStandbyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnterStandbyResponsePrivate object.
@@ -91,7 +99,7 @@ EnterStandbyResponsePrivate::EnterStandbyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling EnterStandbyResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointsRequest
  *
- * @brief  Implements EC2 DescribeVpcEndpoints requests.
+ * \brief The DescribeVpcEndpointsRequest class encapsulates EC2 DescribeVpcEndpoints requests.
  *
- * @see    EC2Client::describeVpcEndpoints
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcEndpointsRequest::DescribeVpcEndpointsRequest(const DescribeVpcEndpoi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointsRequest object.
  */
 DescribeVpcEndpointsRequest::DescribeVpcEndpointsRequest()
@@ -53,13 +60,16 @@ DescribeVpcEndpointsRequest::DescribeVpcEndpointsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcEndpointsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcEndpointsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointsRequest::response(QNetwor
     return new DescribeVpcEndpointsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcEndpointsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointsRequest::response(QNetwor
  * @brief  Private implementation for DescribeVpcEndpointsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointsRequestPrivate object, copying another.

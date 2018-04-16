@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  CreateProgressUpdateStreamRequest
+/*!
+ * \class QtAws::MigrationHub::CreateProgressUpdateStreamRequest
  *
- * @brief  Implements MigrationHub CreateProgressUpdateStream requests.
+ * \brief The CreateProgressUpdateStreamRequest class encapsulates MigrationHub CreateProgressUpdateStream requests.
  *
- * @see    MigrationHubClient::createProgressUpdateStream
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::createProgressUpdateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProgressUpdateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateProgressUpdateStreamRequest::CreateProgressUpdateStreamRequest(const Creat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateProgressUpdateStreamRequest object.
  */
 CreateProgressUpdateStreamRequest::CreateProgressUpdateStreamRequest()
@@ -53,13 +58,16 @@ CreateProgressUpdateStreamRequest::CreateProgressUpdateStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateProgressUpdateStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateProgressUpdateStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateProgressUpdateStreamRequest::response(Q
     return new CreateProgressUpdateStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateProgressUpdateStreamRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateProgressUpdateStreamRequest::response(Q
  * @brief  Private implementation for CreateProgressUpdateStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProgressUpdateStreamRequestPrivate object.
@@ -97,7 +105,7 @@ CreateProgressUpdateStreamRequestPrivate::CreateProgressUpdateStreamRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProgressUpdateStreamRequestPrivate object, copying another.

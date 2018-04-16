@@ -25,15 +25,35 @@
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
-/**
- * @class  GetEntitlementsRequest
+/*!
+ * \class QtAws::MarketplaceEntitlementService::GetEntitlementsRequest
  *
- * @brief  Implements MarketplaceEntitlementService GetEntitlements requests.
+ * \brief The GetEntitlementsRequest class encapsulates MarketplaceEntitlementService GetEntitlements requests.
  *
- * @see    MarketplaceEntitlementServiceClient::getEntitlements
+ * \ingroup MarketplaceEntitlementService
+ *
+ *  <fullname>AWS Marketplace Entitlement Service</fullname>
+ * 
+ *  This reference provides descriptions of the AWS Marketplace Entitlement Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace Entitlement Service is used to determine the entitlement of a customer to a given product. An
+ *  entitlement represents capacity in a product owned by the customer. For example, a customer might own some number of
+ *  users or seats in an SaaS application or some amount of data capacity in a multi-tenant
+ * 
+ *  database>
+ * 
+ *  <b>Getting Entitlement Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>GetEntitlements</i>- Gets the entitlements for a Marketplace
+ *
+ * \sa MarketplaceEntitlementServiceClient::getEntitlements
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEntitlementsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +64,7 @@ GetEntitlementsRequest::GetEntitlementsRequest(const GetEntitlementsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEntitlementsRequest object.
  */
 GetEntitlementsRequest::GetEntitlementsRequest()
@@ -53,13 +73,16 @@ GetEntitlementsRequest::GetEntitlementsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEntitlementsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEntitlementsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkRepl
     return new GetEntitlementsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEntitlementsRequestPrivate
@@ -82,7 +105,7 @@ QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkRepl
  * @brief  Private implementation for GetEntitlementsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEntitlementsRequestPrivate object.
@@ -97,7 +120,7 @@ GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEntitlementsRequestPrivate object, copying another.

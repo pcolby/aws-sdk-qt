@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetExportJobRequest
+/*!
+ * \class QtAws::Pinpoint::GetExportJobRequest
  *
- * @brief  Implements Pinpoint GetExportJob requests.
+ * \brief The GetExportJobRequest class encapsulates Pinpoint GetExportJob requests.
  *
- * @see    PinpointClient::getExportJob
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getExportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new GetExportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetExportJobRequest::GetExportJobRequest(const GetExportJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetExportJobRequest object.
  */
 GetExportJobRequest::GetExportJobRequest()
@@ -53,13 +56,16 @@ GetExportJobRequest::GetExportJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetExportJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetExportJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetExportJobRequest::response(QNetworkReply *
     return new GetExportJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetExportJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetExportJobRequest::response(QNetworkReply *
  * @brief  Private implementation for GetExportJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExportJobRequestPrivate object.
@@ -97,7 +103,7 @@ GetExportJobRequestPrivate::GetExportJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExportJobRequestPrivate object, copying another.

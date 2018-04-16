@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateCrawlerRequest
+/*!
+ * \class QtAws::Glue::UpdateCrawlerRequest
  *
- * @brief  Implements Glue UpdateCrawler requests.
+ * \brief The UpdateCrawlerRequest class encapsulates Glue UpdateCrawler requests.
  *
- * @see    GlueClient::updateCrawler
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateCrawler
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCrawlerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateCrawlerRequest::UpdateCrawlerRequest(const UpdateCrawlerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCrawlerRequest object.
  */
 UpdateCrawlerRequest::UpdateCrawlerRequest()
@@ -53,13 +59,16 @@ UpdateCrawlerRequest::UpdateCrawlerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCrawlerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCrawlerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerRequest::response(QNetworkReply 
     return new UpdateCrawlerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCrawlerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateCrawlerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCrawlerRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateCrawlerRequestPrivate::UpdateCrawlerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCrawlerRequestPrivate object, copying another.

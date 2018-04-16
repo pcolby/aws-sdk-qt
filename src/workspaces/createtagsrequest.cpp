@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  CreateTagsRequest
+/*!
+ * \class QtAws::WorkSpaces::CreateTagsRequest
  *
- * @brief  Implements WorkSpaces CreateTags requests.
+ * \brief The CreateTagsRequest class encapsulates WorkSpaces CreateTags requests.
  *
- * @see    WorkSpacesClient::createTags
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::createTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
@@ -53,13 +59,16 @@ CreateTagsRequest::CreateTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
     return new CreateTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTagsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsRequestPrivate object.
@@ -97,7 +106,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.

@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  AddTagsToResourceRequest
+/*!
+ * \class QtAws::CloudHSM::AddTagsToResourceRequest
  *
- * @brief  Implements CloudHSM AddTagsToResource requests.
+ * \brief The AddTagsToResourceRequest class encapsulates CloudHSM AddTagsToResource requests.
  *
- * @see    CloudHSMClient::addTagsToResource
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::addTagsToResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
@@ -53,13 +68,16 @@ AddTagsToResourceRequest::AddTagsToResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsToResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsToResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
     return new AddTagsToResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsToResourceRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  * @brief  Private implementation for AddTagsToResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceRequestPrivate object.
@@ -97,7 +115,7 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceRequestPrivate object, copying another.

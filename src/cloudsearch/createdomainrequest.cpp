@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  CreateDomainRequest
+/*!
+ * \class QtAws::CloudSearch::CreateDomainRequest
  *
- * @brief  Implements CloudSearch CreateDomain requests.
+ * \brief The CreateDomainRequest class encapsulates CloudSearch CreateDomain requests.
  *
- * @see    CloudSearchClient::createDomain
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::createDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateDomainRequest::CreateDomainRequest(const CreateDomainRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDomainRequest object.
  */
 CreateDomainRequest::CreateDomainRequest()
@@ -53,13 +67,16 @@ CreateDomainRequest::CreateDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
     return new CreateDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDomainRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDomainRequestPrivate object.
@@ -97,7 +114,7 @@ CreateDomainRequestPrivate::CreateDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDomainRequestPrivate object, copying another.

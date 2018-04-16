@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteApnsChannelRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteApnsChannelRequest
  *
- * @brief  Implements Pinpoint DeleteApnsChannel requests.
+ * \brief The DeleteApnsChannelRequest class encapsulates Pinpoint DeleteApnsChannel requests.
  *
- * @see    PinpointClient::deleteApnsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteApnsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApnsChannelRequest::DeleteApnsChannelRequest(const DeleteApnsChannelReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsChannelRequest object.
  */
 DeleteApnsChannelRequest::DeleteApnsChannelRequest()
@@ -53,13 +56,16 @@ DeleteApnsChannelRequest::DeleteApnsChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApnsChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApnsChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkRe
     return new DeleteApnsChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApnsChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteApnsChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsChannelRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetTriggersResponse
+/*!
+ * \class QtAws::Glue::GetTriggersResponse
  *
- * @brief  Handles Glue GetTriggers responses.
+ * \brief The GetTriggersResponse class encapsulates Glue GetTriggers responses.
  *
- * @see    GlueClient::getTriggers
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getTriggers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTriggersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetTriggersRequest * GetTriggersResponse::request() const
     return static_cast<const GetTriggersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetTriggers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetTriggersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTriggersResponsePrivate
+ * \class GetTriggersResponsePrivate
  *
- * @brief  Private implementation for GetTriggersResponse.
+ * \brief Private implementation for GetTriggersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTriggersResponsePrivate object.
@@ -91,7 +97,7 @@ GetTriggersResponsePrivate::GetTriggersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetTriggersResponse element.
  *
  * @param  xml  XML stream to parse.

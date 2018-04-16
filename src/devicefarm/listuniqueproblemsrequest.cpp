@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListUniqueProblemsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListUniqueProblemsRequest
  *
- * @brief  Implements DeviceFarm ListUniqueProblems requests.
+ * \brief The ListUniqueProblemsRequest class encapsulates DeviceFarm ListUniqueProblems requests.
  *
- * @see    DeviceFarmClient::listUniqueProblems
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listUniqueProblems
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUniqueProblemsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListUniqueProblemsRequest::ListUniqueProblemsRequest(const ListUniqueProblemsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListUniqueProblemsRequest object.
  */
 ListUniqueProblemsRequest::ListUniqueProblemsRequest()
@@ -53,13 +58,16 @@ ListUniqueProblemsRequest::ListUniqueProblemsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListUniqueProblemsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListUniqueProblemsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkR
     return new ListUniqueProblemsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListUniqueProblemsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkR
  * @brief  Private implementation for ListUniqueProblemsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUniqueProblemsRequestPrivate object.
@@ -97,7 +105,7 @@ ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUniqueProblemsRequestPrivate object, copying another.

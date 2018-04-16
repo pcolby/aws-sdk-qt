@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListLoggerDefinitionVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListLoggerDefinitionVersionsRequest
  *
- * @brief  Implements Greengrass ListLoggerDefinitionVersions requests.
+ * \brief The ListLoggerDefinitionVersionsRequest class encapsulates Greengrass ListLoggerDefinitionVersions requests.
  *
- * @see    GreengrassClient::listLoggerDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listLoggerDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListLoggerDefinitionVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest(const L
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListLoggerDefinitionVersionsRequest object.
  */
 ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest()
@@ -53,13 +59,16 @@ ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListLoggerDefinitionVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListLoggerDefinitionVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response
     return new ListLoggerDefinitionVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListLoggerDefinitionVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response
  * @brief  Private implementation for ListLoggerDefinitionVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLoggerDefinitionVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLoggerDefinitionVersionsRequestPrivate object, copying another.

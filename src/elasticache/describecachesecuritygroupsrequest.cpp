@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheSecurityGroupsRequest
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheSecurityGroupsRequest
  *
- * @brief  Implements ElastiCache DescribeCacheSecurityGroups requests.
+ * \brief The DescribeCacheSecurityGroupsRequest class encapsulates ElastiCache DescribeCacheSecurityGroups requests.
  *
- * @see    ElastiCacheClient::describeCacheSecurityGroups
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheSecurityGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeCacheSecurityGroupsRequest::DescribeCacheSecurityGroupsRequest(const Des
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheSecurityGroupsRequest object.
  */
 DescribeCacheSecurityGroupsRequest::DescribeCacheSecurityGroupsRequest()
@@ -53,13 +70,16 @@ DescribeCacheSecurityGroupsRequest::DescribeCacheSecurityGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCacheSecurityGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCacheSecurityGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheSecurityGroupsRequest::response(
     return new DescribeCacheSecurityGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCacheSecurityGroupsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheSecurityGroupsRequest::response(
  * @brief  Private implementation for DescribeCacheSecurityGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheSecurityGroupsRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeCacheSecurityGroupsRequestPrivate::DescribeCacheSecurityGroupsRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheSecurityGroupsRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  CreateResourceGroupRequest
+/*!
+ * \class QtAws::Inspector::CreateResourceGroupRequest
  *
- * @brief  Implements Inspector CreateResourceGroup requests.
+ * \brief The CreateResourceGroupRequest class encapsulates Inspector CreateResourceGroup requests.
  *
- * @see    InspectorClient::createResourceGroup
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::createResourceGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateResourceGroupRequest::CreateResourceGroupRequest(const CreateResourceGroup
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceGroupRequest object.
  */
 CreateResourceGroupRequest::CreateResourceGroupRequest()
@@ -53,13 +61,16 @@ CreateResourceGroupRequest::CreateResourceGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateResourceGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateResourceGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceGroupRequest::response(QNetwork
     return new CreateResourceGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateResourceGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceGroupRequest::response(QNetwork
  * @brief  Private implementation for CreateResourceGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceGroupRequestPrivate object.
@@ -97,7 +108,7 @@ CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceGroupRequestPrivate object, copying another.

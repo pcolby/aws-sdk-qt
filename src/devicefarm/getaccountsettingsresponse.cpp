@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetAccountSettingsResponse
+/*!
+ * \class QtAws::DeviceFarm::GetAccountSettingsResponse
  *
- * @brief  Handles DeviceFarm GetAccountSettings responses.
+ * \brief The GetAccountSettingsResponse class encapsulates DeviceFarm GetAccountSettings responses.
  *
- * @see    DeviceFarmClient::getAccountSettings
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getAccountSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
     return static_cast<const GetAccountSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm GetAccountSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAccountSettingsResponsePrivate
+ * \class GetAccountSettingsResponsePrivate
  *
- * @brief  Private implementation for GetAccountSettingsResponse.
+ * \brief Private implementation for GetAccountSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSettingsResponsePrivate object.
@@ -91,7 +96,7 @@ GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm GetAccountSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

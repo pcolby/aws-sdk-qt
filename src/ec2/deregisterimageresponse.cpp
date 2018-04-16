@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeregisterImageResponse
+/*!
+ * \class QtAws::EC2::DeregisterImageResponse
  *
- * @brief  Handles EC2 DeregisterImage responses.
+ * \brief The DeregisterImageResponse class encapsulates EC2 DeregisterImage responses.
  *
- * @see    EC2Client::deregisterImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deregisterImage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeregisterImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeregisterImageRequest * DeregisterImageResponse::request() const
     return static_cast<const DeregisterImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeregisterImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeregisterImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeregisterImageResponsePrivate
+ * \class DeregisterImageResponsePrivate
  *
- * @brief  Private implementation for DeregisterImageResponse.
+ * \brief Private implementation for DeregisterImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterImageResponsePrivate object.
@@ -91,7 +98,7 @@ DeregisterImageResponsePrivate::DeregisterImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeregisterImageResponse element.
  *
  * @param  xml  XML stream to parse.

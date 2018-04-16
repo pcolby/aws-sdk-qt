@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteJobResponse
+/*!
+ * \class QtAws::Glue::DeleteJobResponse
  *
- * @brief  Handles Glue DeleteJob responses.
+ * \brief The DeleteJobResponse class encapsulates Glue DeleteJob responses.
  *
- * @see    GlueClient::deleteJob
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteJobRequest * DeleteJobResponse::request() const
     return static_cast<const DeleteJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteJobResponsePrivate
+ * \class DeleteJobResponsePrivate
  *
- * @brief  Private implementation for DeleteJobResponse.
+ * \brief Private implementation for DeleteJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteJobResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteJobResponsePrivate::DeleteJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteJobResponse element.
  *
  * @param  xml  XML stream to parse.

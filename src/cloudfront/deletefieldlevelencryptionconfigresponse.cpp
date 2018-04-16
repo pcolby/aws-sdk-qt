@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteFieldLevelEncryptionConfigResponse
+/*!
+ * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigResponse
  *
- * @brief  Handles CloudFront DeleteFieldLevelEncryptionConfig responses.
+ * \brief The DeleteFieldLevelEncryptionConfigResponse class encapsulates CloudFront DeleteFieldLevelEncryptionConfig responses.
  *
- * @see    CloudFrontClient::deleteFieldLevelEncryptionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteFieldLevelEncryptionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFieldLevelEncryptionConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteFieldLevelEncryptionConfigRequest * DeleteFieldLevelEncryptionConfig
     return static_cast<const DeleteFieldLevelEncryptionConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront DeleteFieldLevelEncryptionConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFieldLevelEncryptionConfigResponsePrivate
+ * \class DeleteFieldLevelEncryptionConfigResponsePrivate
  *
- * @brief  Private implementation for DeleteFieldLevelEncryptionConfigResponse.
+ * \brief Private implementation for DeleteFieldLevelEncryptionConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFieldLevelEncryptionConfigResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteFieldLevelEncryptionConfigResponsePrivate::DeleteFieldLevelEncryptionConfi
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront DeleteFieldLevelEncryptionConfigResponse element.
  *
  * @param  xml  XML stream to parse.

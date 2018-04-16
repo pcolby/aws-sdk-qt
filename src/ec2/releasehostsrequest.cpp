@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReleaseHostsRequest
+/*!
+ * \class QtAws::EC2::ReleaseHostsRequest
  *
- * @brief  Implements EC2 ReleaseHosts requests.
+ * \brief The ReleaseHostsRequest class encapsulates EC2 ReleaseHosts requests.
  *
- * @see    EC2Client::releaseHosts
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::releaseHosts
  */
 
-/**
+/*!
  * @brief  Constructs a new ReleaseHostsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReleaseHostsRequest::ReleaseHostsRequest(const ReleaseHostsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReleaseHostsRequest object.
  */
 ReleaseHostsRequest::ReleaseHostsRequest()
@@ -53,13 +60,16 @@ ReleaseHostsRequest::ReleaseHostsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReleaseHostsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReleaseHostsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply *
     return new ReleaseHostsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReleaseHostsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply *
  * @brief  Private implementation for ReleaseHostsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseHostsRequestPrivate object.
@@ -97,7 +107,7 @@ ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseHostsRequestPrivate object, copying another.

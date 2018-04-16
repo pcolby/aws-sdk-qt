@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeCustomerGatewaysRequest
+/*!
+ * \class QtAws::EC2::DescribeCustomerGatewaysRequest
  *
- * @brief  Implements EC2 DescribeCustomerGateways requests.
+ * \brief The DescribeCustomerGatewaysRequest class encapsulates EC2 DescribeCustomerGateways requests.
  *
- * @see    EC2Client::describeCustomerGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeCustomerGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCustomerGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest(const DescribeC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCustomerGatewaysRequest object.
  */
 DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest()
@@ -53,13 +60,16 @@ DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCustomerGatewaysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCustomerGatewaysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNe
     return new DescribeCustomerGatewaysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCustomerGatewaysRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNe
  * @brief  Private implementation for DescribeCustomerGatewaysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCustomerGatewaysRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCustomerGatewaysRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  TagResourceResponse
+/*!
+ * \class QtAws::CloudFront::TagResourceResponse
  *
- * @brief  Handles CloudFront TagResource responses.
+ * \brief The TagResourceResponse class encapsulates CloudFront TagResource responses.
  *
- * @see    CloudFrontClient::tagResource
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const TagResourceRequest * TagResourceResponse::request() const
     return static_cast<const TagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront TagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TagResourceResponsePrivate
+ * \class TagResourceResponsePrivate
  *
- * @brief  Private implementation for TagResourceResponse.
+ * \brief Private implementation for TagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceResponsePrivate object.
@@ -91,7 +99,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront TagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

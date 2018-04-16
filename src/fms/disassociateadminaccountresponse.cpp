@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  DisassociateAdminAccountResponse
+/*!
+ * \class QtAws::FMS::DisassociateAdminAccountResponse
  *
- * @brief  Handles FMS DisassociateAdminAccount responses.
+ * \brief The DisassociateAdminAccountResponse class encapsulates FMS DisassociateAdminAccount responses.
  *
- * @see    FMSClient::disassociateAdminAccount
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::disassociateAdminAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateAdminAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DisassociateAdminAccountRequest * DisassociateAdminAccountResponse::reques
     return static_cast<const DisassociateAdminAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS DisassociateAdminAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateAdminAccountResponsePrivate
+ * \class DisassociateAdminAccountResponsePrivate
  *
- * @brief  Private implementation for DisassociateAdminAccountResponse.
+ * \brief Private implementation for DisassociateAdminAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateAdminAccountResponsePrivate object.
@@ -91,7 +100,7 @@ DisassociateAdminAccountResponsePrivate::DisassociateAdminAccountResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS DisassociateAdminAccountResponse element.
  *
  * @param  xml  XML stream to parse.

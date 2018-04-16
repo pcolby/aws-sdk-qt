@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  DescribeChangeSetRequest
+/*!
+ * \class QtAws::CloudFormation::DescribeChangeSetRequest
  *
- * @brief  Implements CloudFormation DescribeChangeSet requests.
+ * \brief The DescribeChangeSetRequest class encapsulates CloudFormation DescribeChangeSet requests.
  *
- * @see    CloudFormationClient::describeChangeSet
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::describeChangeSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeChangeSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ DescribeChangeSetRequest::DescribeChangeSetRequest(const DescribeChangeSetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeChangeSetRequest object.
  */
 DescribeChangeSetRequest::DescribeChangeSetRequest()
@@ -53,13 +78,16 @@ DescribeChangeSetRequest::DescribeChangeSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeChangeSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeChangeSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkRe
     return new DescribeChangeSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeChangeSetRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkRe
  * @brief  Private implementation for DescribeChangeSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeChangeSetRequestPrivate object.
@@ -97,7 +125,7 @@ DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeChangeSetRequestPrivate object, copying another.

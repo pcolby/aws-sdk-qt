@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DescribeActiveReceiptRuleSetRequest
+/*!
+ * \class QtAws::SES::DescribeActiveReceiptRuleSetRequest
  *
- * @brief  Implements SES DescribeActiveReceiptRuleSet requests.
+ * \brief The DescribeActiveReceiptRuleSetRequest class encapsulates SES DescribeActiveReceiptRuleSet requests.
  *
- * @see    SESClient::describeActiveReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::describeActiveReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeActiveReceiptRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeActiveReceiptRuleSetRequest::DescribeActiveReceiptRuleSetRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeActiveReceiptRuleSetRequest object.
  */
 DescribeActiveReceiptRuleSetRequest::DescribeActiveReceiptRuleSetRequest()
@@ -53,13 +67,16 @@ DescribeActiveReceiptRuleSetRequest::DescribeActiveReceiptRuleSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeActiveReceiptRuleSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeActiveReceiptRuleSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeActiveReceiptRuleSetRequest::response
     return new DescribeActiveReceiptRuleSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeActiveReceiptRuleSetRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeActiveReceiptRuleSetRequest::response
  * @brief  Private implementation for DescribeActiveReceiptRuleSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeActiveReceiptRuleSetRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeActiveReceiptRuleSetRequestPrivate::DescribeActiveReceiptRuleSetRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeActiveReceiptRuleSetRequestPrivate object, copying another.

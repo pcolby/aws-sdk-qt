@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  DescribeScalingPlansRequest
+/*!
+ * \class QtAws::AutoScalingPlans::DescribeScalingPlansRequest
  *
- * @brief  Implements AutoScalingPlans DescribeScalingPlans requests.
+ * \brief The DescribeScalingPlansRequest class encapsulates AutoScalingPlans DescribeScalingPlans requests.
  *
- * @see    AutoScalingPlansClient::describeScalingPlans
+ * \ingroup AutoScalingPlans
+ *
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
+ *
+ * \sa AutoScalingPlansClient::describeScalingPlans
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScalingPlansRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DescribeScalingPlansRequest::DescribeScalingPlansRequest(const DescribeScalingPl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeScalingPlansRequest object.
  */
 DescribeScalingPlansRequest::DescribeScalingPlansRequest()
@@ -53,13 +65,16 @@ DescribeScalingPlansRequest::DescribeScalingPlansRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeScalingPlansRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeScalingPlansResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPlansRequest::response(QNetwor
     return new DescribeScalingPlansResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeScalingPlansRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPlansRequest::response(QNetwor
  * @brief  Private implementation for DescribeScalingPlansRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScalingPlansRequestPrivate object.
@@ -97,7 +112,7 @@ DescribeScalingPlansRequestPrivate::DescribeScalingPlansRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScalingPlansRequestPrivate object, copying another.

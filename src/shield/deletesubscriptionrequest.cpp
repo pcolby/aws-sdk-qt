@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DeleteSubscriptionRequest
+/*!
+ * \class QtAws::Shield::DeleteSubscriptionRequest
  *
- * @brief  Implements Shield DeleteSubscription requests.
+ * \brief The DeleteSubscriptionRequest class encapsulates Shield DeleteSubscription requests.
  *
- * @see    ShieldClient::deleteSubscription
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::deleteSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteSubscriptionRequest::DeleteSubscriptionRequest(const DeleteSubscriptionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriptionRequest object.
  */
 DeleteSubscriptionRequest::DeleteSubscriptionRequest()
@@ -53,13 +62,16 @@ DeleteSubscriptionRequest::DeleteSubscriptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionRequest::response(QNetworkR
     return new DeleteSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSubscriptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionRequest::response(QNetworkR
  * @brief  Private implementation for DeleteSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriptionRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriptionRequestPrivate object, copying another.

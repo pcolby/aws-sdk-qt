@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotChannelAssociationsResponse
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotChannelAssociationsResponse
  *
- * @brief  Handles LexModelBuildingService GetBotChannelAssociations responses.
+ * \brief The GetBotChannelAssociationsResponse class encapsulates LexModelBuildingService GetBotChannelAssociations responses.
  *
- * @see    LexModelBuildingServiceClient::getBotChannelAssociations
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBotChannelAssociations
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotChannelAssociationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetBotChannelAssociationsRequest * GetBotChannelAssociationsResponse::requ
     return static_cast<const GetBotChannelAssociationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService GetBotChannelAssociations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetBotChannelAssociationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBotChannelAssociationsResponsePrivate
+ * \class GetBotChannelAssociationsResponsePrivate
  *
- * @brief  Private implementation for GetBotChannelAssociationsResponse.
+ * \brief Private implementation for GetBotChannelAssociationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotChannelAssociationsResponsePrivate object.
@@ -91,7 +98,7 @@ GetBotChannelAssociationsResponsePrivate::GetBotChannelAssociationsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService GetBotChannelAssociationsResponse element.
  *
  * @param  xml  XML stream to parse.

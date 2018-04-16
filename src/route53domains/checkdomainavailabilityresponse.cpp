@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  CheckDomainAvailabilityResponse
+/*!
+ * \class QtAws::Route53Domains::CheckDomainAvailabilityResponse
  *
- * @brief  Handles Route53Domains CheckDomainAvailability responses.
+ * \brief The CheckDomainAvailabilityResponse class encapsulates Route53Domains CheckDomainAvailability responses.
  *
- * @see    Route53DomainsClient::checkDomainAvailability
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::checkDomainAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new CheckDomainAvailabilityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CheckDomainAvailabilityRequest * CheckDomainAvailabilityResponse::request(
     return static_cast<const CheckDomainAvailabilityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains CheckDomainAvailability response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CheckDomainAvailabilityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CheckDomainAvailabilityResponsePrivate
+ * \class CheckDomainAvailabilityResponsePrivate
  *
- * @brief  Private implementation for CheckDomainAvailabilityResponse.
+ * \brief Private implementation for CheckDomainAvailabilityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDomainAvailabilityResponsePrivate object.
@@ -91,7 +95,7 @@ CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains CheckDomainAvailabilityResponse element.
  *
  * @param  xml  XML stream to parse.

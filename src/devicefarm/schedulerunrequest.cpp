@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ScheduleRunRequest
+/*!
+ * \class QtAws::DeviceFarm::ScheduleRunRequest
  *
- * @brief  Implements DeviceFarm ScheduleRun requests.
+ * \brief The ScheduleRunRequest class encapsulates DeviceFarm ScheduleRun requests.
  *
- * @see    DeviceFarmClient::scheduleRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::scheduleRun
  */
 
-/**
+/*!
  * @brief  Constructs a new ScheduleRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ScheduleRunRequest::ScheduleRunRequest(const ScheduleRunRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ScheduleRunRequest object.
  */
 ScheduleRunRequest::ScheduleRunRequest()
@@ -53,13 +58,16 @@ ScheduleRunRequest::ScheduleRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ScheduleRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ScheduleRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ScheduleRunRequest::response(QNetworkReply * 
     return new ScheduleRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ScheduleRunRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ScheduleRunRequest::response(QNetworkReply * 
  * @brief  Private implementation for ScheduleRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScheduleRunRequestPrivate object.
@@ -97,7 +105,7 @@ ScheduleRunRequestPrivate::ScheduleRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScheduleRunRequestPrivate object, copying another.

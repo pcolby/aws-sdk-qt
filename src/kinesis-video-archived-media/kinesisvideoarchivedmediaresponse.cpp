@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
-/**
- * @class  KinesisVideoArchivedMediaResponse
+/*!
+ * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaResponse
  *
- * @brief  Handles KinesisVideoArchivedMedia KinesisVideoArchivedMedia responses.
+ * \brief The KinesisVideoArchivedMediaResponse class is the base class for all KinesisVideoArchivedMedia responses.
  *
- * @see    KinesisVideoArchivedMediaClient::kinesisVideoArchivedMedia
+ * \ingroup KinesisVideoArchivedMedia
  */
 
-/**
+/*!
  * @brief  Constructs a new KinesisVideoArchivedMediaResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ KinesisVideoArchivedMediaResponse::KinesisVideoArchivedMediaResponse(QObject * c
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisVideoArchivedMediaResponse object.
@@ -63,7 +63,7 @@ KinesisVideoArchivedMediaResponse::KinesisVideoArchivedMediaResponse(KinesisVide
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void KinesisVideoArchivedMediaResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisVideoArchivedMediaResponsePrivate
@@ -92,7 +92,7 @@ void KinesisVideoArchivedMediaResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for KinesisVideoArchivedMediaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisVideoArchivedMediaResponsePrivate object.

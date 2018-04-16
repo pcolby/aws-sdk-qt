@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ConfirmProductInstanceRequest
+/*!
+ * \class QtAws::EC2::ConfirmProductInstanceRequest
  *
- * @brief  Implements EC2 ConfirmProductInstance requests.
+ * \brief The ConfirmProductInstanceRequest class encapsulates EC2 ConfirmProductInstance requests.
  *
- * @see    EC2Client::confirmProductInstance
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::confirmProductInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new ConfirmProductInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ConfirmProductInstanceRequest::ConfirmProductInstanceRequest(const ConfirmProduc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ConfirmProductInstanceRequest object.
  */
 ConfirmProductInstanceRequest::ConfirmProductInstanceRequest()
@@ -53,13 +60,16 @@ ConfirmProductInstanceRequest::ConfirmProductInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ConfirmProductInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ConfirmProductInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetw
     return new ConfirmProductInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConfirmProductInstanceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetw
  * @brief  Private implementation for ConfirmProductInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmProductInstanceRequestPrivate object.
@@ -97,7 +107,7 @@ ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmProductInstanceRequestPrivate object, copying another.

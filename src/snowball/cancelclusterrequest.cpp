@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  CancelClusterRequest
+/*!
+ * \class QtAws::Snowball::CancelClusterRequest
  *
- * @brief  Implements Snowball CancelCluster requests.
+ * \brief The CancelClusterRequest class encapsulates Snowball CancelCluster requests.
  *
- * @see    SnowballClient::cancelCluster
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::cancelCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CancelClusterRequest::CancelClusterRequest(const CancelClusterRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelClusterRequest object.
  */
 CancelClusterRequest::CancelClusterRequest()
@@ -53,13 +62,16 @@ CancelClusterRequest::CancelClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply 
     return new CancelClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelClusterRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply 
  * @brief  Private implementation for CancelClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelClusterRequestPrivate object.
@@ -97,7 +109,7 @@ CancelClusterRequestPrivate::CancelClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelClusterRequestPrivate object, copying another.

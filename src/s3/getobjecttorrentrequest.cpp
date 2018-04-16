@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetObjectTorrentRequest
+/*!
+ * \class QtAws::S3::GetObjectTorrentRequest
  *
- * @brief  Implements S3 GetObjectTorrent requests.
+ * \brief The GetObjectTorrentRequest class encapsulates S3 GetObjectTorrent requests.
  *
- * @see    S3Client::getObjectTorrent
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getObjectTorrent
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectTorrentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetObjectTorrentRequest::GetObjectTorrentRequest(const GetObjectTorrentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetObjectTorrentRequest object.
  */
 GetObjectTorrentRequest::GetObjectTorrentRequest()
@@ -53,13 +56,16 @@ GetObjectTorrentRequest::GetObjectTorrentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetObjectTorrentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetObjectTorrentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectTorrentRequest::response(QNetworkRep
     return new GetObjectTorrentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetObjectTorrentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectTorrentRequest::response(QNetworkRep
  * @brief  Private implementation for GetObjectTorrentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectTorrentRequestPrivate object.
@@ -97,7 +103,7 @@ GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectTorrentRequestPrivate object, copying another.

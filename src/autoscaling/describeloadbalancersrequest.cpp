@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLoadBalancersRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeLoadBalancersRequest
  *
- * @brief  Implements AutoScaling DescribeLoadBalancers requests.
+ * \brief The DescribeLoadBalancersRequest class encapsulates AutoScaling DescribeLoadBalancers requests.
  *
- * @see    AutoScalingClient::describeLoadBalancers
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLoadBalancers
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeLoadBalancersRequest::DescribeLoadBalancersRequest(const DescribeLoadBal
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancersRequest object.
  */
 DescribeLoadBalancersRequest::DescribeLoadBalancersRequest()
@@ -53,13 +61,16 @@ DescribeLoadBalancersRequest::DescribeLoadBalancersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLoadBalancersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLoadBalancersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancersRequest::response(QNetwo
     return new DescribeLoadBalancersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLoadBalancersRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancersRequest::response(QNetwo
  * @brief  Private implementation for DescribeLoadBalancersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancersRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeLoadBalancersRequestPrivate::DescribeLoadBalancersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancersRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateApiKeyResponse
+/*!
+ * \class QtAws::AppSync::UpdateApiKeyResponse
  *
- * @brief  Handles AppSync UpdateApiKey responses.
+ * \brief The UpdateApiKeyResponse class encapsulates AppSync UpdateApiKey responses.
  *
- * @see    AppSyncClient::updateApiKey
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApiKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateApiKeyRequest * UpdateApiKeyResponse::request() const
     return static_cast<const UpdateApiKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync UpdateApiKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateApiKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateApiKeyResponsePrivate
+ * \class UpdateApiKeyResponsePrivate
  *
- * @brief  Private implementation for UpdateApiKeyResponse.
+ * \brief Private implementation for UpdateApiKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApiKeyResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateApiKeyResponsePrivate::UpdateApiKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync UpdateApiKeyResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListResolversRequest
+/*!
+ * \class QtAws::AppSync::ListResolversRequest
  *
- * @brief  Implements AppSync ListResolvers requests.
+ * \brief The ListResolversRequest class encapsulates AppSync ListResolvers requests.
  *
- * @see    AppSyncClient::listResolvers
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listResolvers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResolversRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListResolversRequest::ListResolversRequest(const ListResolversRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResolversRequest object.
  */
 ListResolversRequest::ListResolversRequest()
@@ -53,13 +57,16 @@ ListResolversRequest::ListResolversRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResolversRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResolversResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply 
     return new ListResolversResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResolversRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply 
  * @brief  Private implementation for ListResolversRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResolversRequestPrivate object.
@@ -97,7 +104,7 @@ ListResolversRequestPrivate::ListResolversRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResolversRequestPrivate object, copying another.

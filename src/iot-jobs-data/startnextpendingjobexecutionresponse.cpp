@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
-/**
- * @class  StartNextPendingJobExecutionResponse
+/*!
+ * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionResponse
  *
- * @brief  Handles IoTJobsDataPlane StartNextPendingJobExecution responses.
+ * \brief The StartNextPendingJobExecutionResponse class encapsulates IoTJobsDataPlane StartNextPendingJobExecution responses.
  *
- * @see    IoTJobsDataPlaneClient::startNextPendingJobExecution
+ * \ingroup IoTJobsDataPlane
+ *
+ *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
+ *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
+ *  and install application or firmware updates, reboot, rotate certificates, or perform remote troubleshooting
+ * 
+ *  operations>
+ * 
+ *  To create a job, you make a job document which is a description of the remote operations to be performed, and you
+ *  specify a list of targets that should perform the operations. The targets can be individual things, thing groups or
+ * 
+ *  both>
+ * 
+ *  AWS IoT Jobs sends a message to inform the targets that a job is available. The target starts the execution of the job
+ *  by downloading the job document, performing the operations it specifies, and reporting its progress to AWS IoT. The Jobs
+ *  service provides commands to track the progress of a job on a specific target and for all the targets of the
+ *
+ * \sa IoTJobsDataPlaneClient::startNextPendingJobExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new StartNextPendingJobExecutionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const StartNextPendingJobExecutionRequest * StartNextPendingJobExecutionResponse
     return static_cast<const StartNextPendingJobExecutionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoTJobsDataPlane StartNextPendingJobExecution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void StartNextPendingJobExecutionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartNextPendingJobExecutionResponsePrivate
+ * \class StartNextPendingJobExecutionResponsePrivate
  *
- * @brief  Private implementation for StartNextPendingJobExecutionResponse.
+ * \brief Private implementation for StartNextPendingJobExecutionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartNextPendingJobExecutionResponsePrivate object.
@@ -91,7 +108,7 @@ StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an IoTJobsDataPlane StartNextPendingJobExecutionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateCoreDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateCoreDefinitionVersionResponse
  *
- * @brief  Handles Greengrass CreateCoreDefinitionVersion responses.
+ * \brief The CreateCoreDefinitionVersionResponse class encapsulates Greengrass CreateCoreDefinitionVersion responses.
  *
- * @see    GreengrassClient::createCoreDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createCoreDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCoreDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateCoreDefinitionVersionRequest * CreateCoreDefinitionVersionResponse::
     return static_cast<const CreateCoreDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateCoreDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateCoreDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCoreDefinitionVersionResponsePrivate
+ * \class CreateCoreDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for CreateCoreDefinitionVersionResponse.
+ * \brief Private implementation for CreateCoreDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCoreDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateCoreDefinitionVersionResponsePrivate::CreateCoreDefinitionVersionResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateCoreDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

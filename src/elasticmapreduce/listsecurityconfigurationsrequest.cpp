@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListSecurityConfigurationsRequest
+/*!
+ * \class QtAws::EMR::ListSecurityConfigurationsRequest
  *
- * @brief  Implements EMR ListSecurityConfigurations requests.
+ * \brief The ListSecurityConfigurationsRequest class encapsulates EMR ListSecurityConfigurations requests.
  *
- * @see    EMRClient::listSecurityConfigurations
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listSecurityConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSecurityConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListSecurityConfigurationsRequest::ListSecurityConfigurationsRequest(const ListS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSecurityConfigurationsRequest object.
  */
 ListSecurityConfigurationsRequest::ListSecurityConfigurationsRequest()
@@ -53,13 +59,16 @@ ListSecurityConfigurationsRequest::ListSecurityConfigurationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSecurityConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSecurityConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListSecurityConfigurationsRequest::response(Q
     return new ListSecurityConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSecurityConfigurationsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListSecurityConfigurationsRequest::response(Q
  * @brief  Private implementation for ListSecurityConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSecurityConfigurationsRequestPrivate object.
@@ -97,7 +106,7 @@ ListSecurityConfigurationsRequestPrivate::ListSecurityConfigurationsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSecurityConfigurationsRequestPrivate object, copying another.

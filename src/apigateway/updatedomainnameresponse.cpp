@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateDomainNameResponse
+/*!
+ * \class QtAws::APIGateway::UpdateDomainNameResponse
  *
- * @brief  Handles APIGateway UpdateDomainName responses.
+ * \brief The UpdateDomainNameResponse class encapsulates APIGateway UpdateDomainName responses.
  *
- * @see    APIGatewayClient::updateDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainNameResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
     return static_cast<const UpdateDomainNameRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateDomainName response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDomainNameResponsePrivate
+ * \class UpdateDomainNameResponsePrivate
  *
- * @brief  Private implementation for UpdateDomainNameResponse.
+ * \brief Private implementation for UpdateDomainNameResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainNameResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateDomainNameResponse element.
  *
  * @param  xml  XML stream to parse.

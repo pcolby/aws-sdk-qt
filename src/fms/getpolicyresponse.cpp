@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetPolicyResponse
+/*!
+ * \class QtAws::FMS::GetPolicyResponse
  *
- * @brief  Handles FMS GetPolicy responses.
+ * \brief The GetPolicyResponse class encapsulates FMS GetPolicy responses.
  *
- * @see    FMSClient::getPolicy
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const GetPolicyRequest * GetPolicyResponse::request() const
     return static_cast<const GetPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS GetPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void GetPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPolicyResponsePrivate
+ * \class GetPolicyResponsePrivate
  *
- * @brief  Private implementation for GetPolicyResponse.
+ * \brief Private implementation for GetPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyResponsePrivate object.
@@ -91,7 +100,7 @@ GetPolicyResponsePrivate::GetPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS GetPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

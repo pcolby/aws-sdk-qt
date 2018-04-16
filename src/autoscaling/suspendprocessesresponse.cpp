@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SuspendProcessesResponse
+/*!
+ * \class QtAws::AutoScaling::SuspendProcessesResponse
  *
- * @brief  Handles AutoScaling SuspendProcesses responses.
+ * \brief The SuspendProcessesResponse class encapsulates AutoScaling SuspendProcesses responses.
  *
- * @see    AutoScalingClient::suspendProcesses
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::suspendProcesses
  */
 
-/**
+/*!
  * @brief  Constructs a new SuspendProcessesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SuspendProcessesRequest * SuspendProcessesResponse::request() const
     return static_cast<const SuspendProcessesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling SuspendProcesses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SuspendProcessesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SuspendProcessesResponsePrivate
+ * \class SuspendProcessesResponsePrivate
  *
- * @brief  Private implementation for SuspendProcessesResponse.
+ * \brief Private implementation for SuspendProcessesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SuspendProcessesResponsePrivate object.
@@ -91,7 +99,7 @@ SuspendProcessesResponsePrivate::SuspendProcessesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling SuspendProcessesResponse element.
  *
  * @param  xml  XML stream to parse.

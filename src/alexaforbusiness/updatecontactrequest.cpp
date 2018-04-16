@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateContactRequest
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateContactRequest
  *
- * @brief  Implements AlexaForBusiness UpdateContact requests.
+ * \brief The UpdateContactRequest class encapsulates AlexaForBusiness UpdateContact requests.
  *
- * @see    AlexaForBusinessClient::updateContact
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateContact
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateContactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateContactRequest::UpdateContactRequest(const UpdateContactRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateContactRequest object.
  */
 UpdateContactRequest::UpdateContactRequest()
@@ -53,13 +61,16 @@ UpdateContactRequest::UpdateContactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateContactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateContactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContactRequest::response(QNetworkReply 
     return new UpdateContactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateContactRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContactRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateContactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateContactRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateContactRequestPrivate::UpdateContactRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateContactRequestPrivate object, copying another.

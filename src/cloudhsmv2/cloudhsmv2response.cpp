@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  CloudHSMV2Response
+/*!
+ * \class QtAws::CloudHSMV2::CloudHSMV2Response
  *
- * @brief  Handles CloudHSMV2 CloudHSMV2 responses.
+ * \brief The CloudHSMV2Response class is the base class for all CloudHSMV2 responses.
  *
- * @see    CloudHSMV2Client::cloudHSMV2
+ * \ingroup CloudHSMV2
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudHSMV2Response object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudHSMV2Response object.
@@ -63,7 +63,7 @@ CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudHSMV2ResponsePrivate
@@ -92,7 +92,7 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudHSMV2Response.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudHSMV2ResponsePrivate object.

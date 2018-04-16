@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateCampaignResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateCampaignResponse
  *
- * @brief  Handles Pinpoint UpdateCampaign responses.
+ * \brief The UpdateCampaignResponse class encapsulates Pinpoint UpdateCampaign responses.
  *
- * @see    PinpointClient::updateCampaign
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateCampaign
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCampaignResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateCampaignRequest * UpdateCampaignResponse::request() const
     return static_cast<const UpdateCampaignRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateCampaign response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateCampaignResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateCampaignResponsePrivate
+ * \class UpdateCampaignResponsePrivate
  *
- * @brief  Private implementation for UpdateCampaignResponse.
+ * \brief Private implementation for UpdateCampaignResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCampaignResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateCampaignResponsePrivate::UpdateCampaignResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateCampaignResponse element.
  *
  * @param  xml  XML stream to parse.

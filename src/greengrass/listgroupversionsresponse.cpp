@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListGroupVersionsResponse
+/*!
+ * \class QtAws::Greengrass::ListGroupVersionsResponse
  *
- * @brief  Handles Greengrass ListGroupVersions responses.
+ * \brief The ListGroupVersionsResponse class encapsulates Greengrass ListGroupVersions responses.
  *
- * @see    GreengrassClient::listGroupVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listGroupVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGroupVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListGroupVersionsRequest * ListGroupVersionsResponse::request() const
     return static_cast<const ListGroupVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListGroupVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListGroupVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListGroupVersionsResponsePrivate
+ * \class ListGroupVersionsResponsePrivate
  *
- * @brief  Private implementation for ListGroupVersionsResponse.
+ * \brief Private implementation for ListGroupVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupVersionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListGroupVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

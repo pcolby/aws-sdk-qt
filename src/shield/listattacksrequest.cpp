@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  ListAttacksRequest
+/*!
+ * \class QtAws::Shield::ListAttacksRequest
  *
- * @brief  Implements Shield ListAttacks requests.
+ * \brief The ListAttacksRequest class encapsulates Shield ListAttacks requests.
  *
- * @see    ShieldClient::listAttacks
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::listAttacks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAttacksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListAttacksRequest::ListAttacksRequest(const ListAttacksRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAttacksRequest object.
  */
 ListAttacksRequest::ListAttacksRequest()
@@ -53,13 +62,16 @@ ListAttacksRequest::ListAttacksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAttacksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAttacksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListAttacksRequest::response(QNetworkReply * 
     return new ListAttacksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAttacksRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListAttacksRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListAttacksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttacksRequestPrivate object.
@@ -97,7 +109,7 @@ ListAttacksRequestPrivate::ListAttacksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttacksRequestPrivate object, copying another.

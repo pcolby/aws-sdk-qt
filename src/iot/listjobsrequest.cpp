@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListJobsRequest
+/*!
+ * \class QtAws::IoT::ListJobsRequest
  *
- * @brief  Implements IoT ListJobs requests.
+ * \brief The ListJobsRequest class encapsulates IoT ListJobs requests.
  *
- * @see    IoTClient::listJobs
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
@@ -53,13 +67,16 @@ ListJobsRequest::ListJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
     return new ListJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object.
@@ -97,7 +114,7 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object, copying another.

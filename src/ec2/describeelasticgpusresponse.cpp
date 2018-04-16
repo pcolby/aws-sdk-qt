@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeElasticGpusResponse
+/*!
+ * \class QtAws::EC2::DescribeElasticGpusResponse
  *
- * @brief  Handles EC2 DescribeElasticGpus responses.
+ * \brief The DescribeElasticGpusResponse class encapsulates EC2 DescribeElasticGpus responses.
  *
- * @see    EC2Client::describeElasticGpus
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeElasticGpus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticGpusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeElasticGpusRequest * DescribeElasticGpusResponse::request() const
     return static_cast<const DescribeElasticGpusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeElasticGpus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeElasticGpusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeElasticGpusResponsePrivate
+ * \class DescribeElasticGpusResponsePrivate
  *
- * @brief  Private implementation for DescribeElasticGpusResponse.
+ * \brief Private implementation for DescribeElasticGpusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticGpusResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeElasticGpusResponse element.
  *
  * @param  xml  XML stream to parse.

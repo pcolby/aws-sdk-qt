@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DeleteApplicationInputProcessingConfigurationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationResponse
  *
- * @brief  Handles KinesisAnalytics DeleteApplicationInputProcessingConfiguration responses.
+ * \brief The DeleteApplicationInputProcessingConfigurationResponse class encapsulates KinesisAnalytics DeleteApplicationInputProcessingConfiguration responses.
  *
- * @see    KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteApplicationInputProcessingConfigurationRequest * DeleteApplicationIn
     return static_cast<const DeleteApplicationInputProcessingConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics DeleteApplicationInputProcessingConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevi
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteApplicationInputProcessingConfigurationResponsePrivate
+ * \class DeleteApplicationInputProcessingConfigurationResponsePrivate
  *
- * @brief  Private implementation for DeleteApplicationInputProcessingConfigurationResponse.
+ * \brief Private implementation for DeleteApplicationInputProcessingConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationI
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics DeleteApplicationInputProcessingConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

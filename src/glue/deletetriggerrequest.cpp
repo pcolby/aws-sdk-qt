@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteTriggerRequest
+/*!
+ * \class QtAws::Glue::DeleteTriggerRequest
  *
- * @brief  Implements Glue DeleteTrigger requests.
+ * \brief The DeleteTriggerRequest class encapsulates Glue DeleteTrigger requests.
  *
- * @see    GlueClient::deleteTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteTriggerRequest::DeleteTriggerRequest(const DeleteTriggerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTriggerRequest object.
  */
 DeleteTriggerRequest::DeleteTriggerRequest()
@@ -53,13 +59,16 @@ DeleteTriggerRequest::DeleteTriggerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTriggerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTriggerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply 
     return new DeleteTriggerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTriggerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteTriggerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTriggerRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTriggerRequestPrivate object, copying another.

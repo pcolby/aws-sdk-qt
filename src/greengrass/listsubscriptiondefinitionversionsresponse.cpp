@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListSubscriptionDefinitionVersionsResponse
+/*!
+ * \class QtAws::Greengrass::ListSubscriptionDefinitionVersionsResponse
  *
- * @brief  Handles Greengrass ListSubscriptionDefinitionVersions responses.
+ * \brief The ListSubscriptionDefinitionVersionsResponse class encapsulates Greengrass ListSubscriptionDefinitionVersions responses.
  *
- * @see    GreengrassClient::listSubscriptionDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listSubscriptionDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSubscriptionDefinitionVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListSubscriptionDefinitionVersionsRequest * ListSubscriptionDefinitionVers
     return static_cast<const ListSubscriptionDefinitionVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListSubscriptionDefinitionVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListSubscriptionDefinitionVersionsResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListSubscriptionDefinitionVersionsResponsePrivate
+ * \class ListSubscriptionDefinitionVersionsResponsePrivate
  *
- * @brief  Private implementation for ListSubscriptionDefinitionVersionsResponse.
+ * \brief Private implementation for ListSubscriptionDefinitionVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscriptionDefinitionVersionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListSubscriptionDefinitionVersionsResponsePrivate::ListSubscriptionDefinitionVer
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListSubscriptionDefinitionVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

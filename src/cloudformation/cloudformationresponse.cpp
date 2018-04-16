@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  CloudFormationResponse
+/*!
+ * \class QtAws::CloudFormation::CloudFormationResponse
  *
- * @brief  Handles CloudFormation CloudFormation responses.
+ * \brief The CloudFormationResponse class is the base class for all CloudFormation responses.
  *
- * @see    CloudFormationClient::cloudFormation
+ * \ingroup CloudFormation
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudFormationResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudFormationResponse::CloudFormationResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFormationResponse object.
@@ -63,7 +63,7 @@ CloudFormationResponse::CloudFormationResponse(CloudFormationResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudFormationResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudFormationResponsePrivate
@@ -92,7 +92,7 @@ void CloudFormationResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudFormationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFormationResponsePrivate object.

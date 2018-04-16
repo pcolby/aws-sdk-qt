@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  AppSyncResponse
+/*!
+ * \class QtAws::AppSync::AppSyncResponse
  *
- * @brief  Handles AppSync AppSync responses.
+ * \brief The AppSyncResponse class is the base class for all AppSync responses.
  *
- * @see    AppSyncClient::appSync
+ * \ingroup AppSync
  */
 
-/**
+/*!
  * @brief  Constructs a new AppSyncResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ AppSyncResponse::AppSyncResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppSyncResponse object.
@@ -63,7 +63,7 @@ AppSyncResponse::AppSyncResponse(AppSyncResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void AppSyncResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AppSyncResponsePrivate
@@ -92,7 +92,7 @@ void AppSyncResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for AppSyncResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppSyncResponsePrivate object.

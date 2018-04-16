@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  CreateBrokerResponse
+/*!
+ * \class QtAws::MQ::CreateBrokerResponse
  *
- * @brief  Handles MQ CreateBroker responses.
+ * \brief The CreateBrokerResponse class encapsulates MQ CreateBroker responses.
  *
- * @see    MQClient::createBroker
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::createBroker
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBrokerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateBrokerRequest * CreateBrokerResponse::request() const
     return static_cast<const CreateBrokerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ CreateBroker response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateBrokerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateBrokerResponsePrivate
+ * \class CreateBrokerResponsePrivate
  *
- * @brief  Private implementation for CreateBrokerResponse.
+ * \brief Private implementation for CreateBrokerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBrokerResponsePrivate object.
@@ -91,7 +96,7 @@ CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ CreateBrokerResponse element.
  *
  * @param  xml  XML stream to parse.

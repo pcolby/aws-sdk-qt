@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetFunctionDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::GetFunctionDefinitionVersionRequest
  *
- * @brief  Implements Greengrass GetFunctionDefinitionVersion requests.
+ * \brief The GetFunctionDefinitionVersionRequest class encapsulates Greengrass GetFunctionDefinitionVersion requests.
  *
- * @see    GreengrassClient::getFunctionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getFunctionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest(const G
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionDefinitionVersionRequest object.
  */
 GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest()
@@ -53,13 +59,16 @@ GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFunctionDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFunctionDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response
     return new GetFunctionDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFunctionDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response
  * @brief  Private implementation for GetFunctionDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionDefinitionVersionRequestPrivate object, copying another.

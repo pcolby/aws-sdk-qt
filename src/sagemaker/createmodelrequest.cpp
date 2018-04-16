@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  CreateModelRequest
+/*!
+ * \class QtAws::SageMaker::CreateModelRequest
  *
- * @brief  Implements SageMaker CreateModel requests.
+ * \brief The CreateModelRequest class encapsulates SageMaker CreateModel requests.
  *
- * @see    SageMakerClient::createModel
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::createModel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateModelRequest::CreateModelRequest(const CreateModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateModelRequest object.
  */
 CreateModelRequest::CreateModelRequest()
@@ -53,13 +56,16 @@ CreateModelRequest::CreateModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * 
     return new CreateModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateModelRequestPrivate object.
@@ -97,7 +103,7 @@ CreateModelRequestPrivate::CreateModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateModelRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  UpdateShardCountResponse
+/*!
+ * \class QtAws::Kinesis::UpdateShardCountResponse
  *
- * @brief  Handles Kinesis UpdateShardCount responses.
+ * \brief The UpdateShardCountResponse class encapsulates Kinesis UpdateShardCount responses.
  *
- * @see    KinesisClient::updateShardCount
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::updateShardCount
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateShardCountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateShardCountRequest * UpdateShardCountResponse::request() const
     return static_cast<const UpdateShardCountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis UpdateShardCount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateShardCountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateShardCountResponsePrivate
+ * \class UpdateShardCountResponsePrivate
  *
- * @brief  Private implementation for UpdateShardCountResponse.
+ * \brief Private implementation for UpdateShardCountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateShardCountResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateShardCountResponsePrivate::UpdateShardCountResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis UpdateShardCountResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetInstanceAttributeResponse
+/*!
+ * \class QtAws::EC2::ResetInstanceAttributeResponse
  *
- * @brief  Handles EC2 ResetInstanceAttribute responses.
+ * \brief The ResetInstanceAttributeResponse class encapsulates EC2 ResetInstanceAttribute responses.
  *
- * @see    EC2Client::resetInstanceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetInstanceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetInstanceAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ResetInstanceAttributeRequest * ResetInstanceAttributeResponse::request() 
     return static_cast<const ResetInstanceAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ResetInstanceAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ResetInstanceAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetInstanceAttributeResponsePrivate
+ * \class ResetInstanceAttributeResponsePrivate
  *
- * @brief  Private implementation for ResetInstanceAttributeResponse.
+ * \brief Private implementation for ResetInstanceAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetInstanceAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ResetInstanceAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SetInstanceHealthResponse
+/*!
+ * \class QtAws::AutoScaling::SetInstanceHealthResponse
  *
- * @brief  Handles AutoScaling SetInstanceHealth responses.
+ * \brief The SetInstanceHealthResponse class encapsulates AutoScaling SetInstanceHealth responses.
  *
- * @see    AutoScalingClient::setInstanceHealth
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::setInstanceHealth
  */
 
-/**
+/*!
  * @brief  Constructs a new SetInstanceHealthResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SetInstanceHealthRequest * SetInstanceHealthResponse::request() const
     return static_cast<const SetInstanceHealthRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling SetInstanceHealth response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SetInstanceHealthResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetInstanceHealthResponsePrivate
+ * \class SetInstanceHealthResponsePrivate
  *
- * @brief  Private implementation for SetInstanceHealthResponse.
+ * \brief Private implementation for SetInstanceHealthResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetInstanceHealthResponsePrivate object.
@@ -91,7 +99,7 @@ SetInstanceHealthResponsePrivate::SetInstanceHealthResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling SetInstanceHealthResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationInstancesResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationInstancesResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeReplicationInstances responses.
+ * \brief The DescribeReplicationInstancesResponse class encapsulates DatabaseMigrationService DescribeReplicationInstances responses.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationInstances
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeReplicationInstancesRequest * DescribeReplicationInstancesResponse
     return static_cast<const DescribeReplicationInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeReplicationInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeReplicationInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReplicationInstancesResponsePrivate
+ * \class DescribeReplicationInstancesResponsePrivate
  *
- * @brief  Private implementation for DescribeReplicationInstancesResponse.
+ * \brief Private implementation for DescribeReplicationInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationInstancesResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeReplicationInstancesResponsePrivate::DescribeReplicationInstancesRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeReplicationInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

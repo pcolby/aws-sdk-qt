@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  RenewOfferingResponse
+/*!
+ * \class QtAws::DeviceFarm::RenewOfferingResponse
  *
- * @brief  Handles DeviceFarm RenewOffering responses.
+ * \brief The RenewOfferingResponse class encapsulates DeviceFarm RenewOffering responses.
  *
- * @see    DeviceFarmClient::renewOffering
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::renewOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new RenewOfferingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const RenewOfferingRequest * RenewOfferingResponse::request() const
     return static_cast<const RenewOfferingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm RenewOffering response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void RenewOfferingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RenewOfferingResponsePrivate
+ * \class RenewOfferingResponsePrivate
  *
- * @brief  Private implementation for RenewOfferingResponse.
+ * \brief Private implementation for RenewOfferingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RenewOfferingResponsePrivate object.
@@ -91,7 +96,7 @@ RenewOfferingResponsePrivate::RenewOfferingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm RenewOfferingResponse element.
  *
  * @param  xml  XML stream to parse.

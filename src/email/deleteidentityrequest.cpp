@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteIdentityRequest
+/*!
+ * \class QtAws::SES::DeleteIdentityRequest
  *
- * @brief  Implements SES DeleteIdentity requests.
+ * \brief The DeleteIdentityRequest class encapsulates SES DeleteIdentity requests.
  *
- * @see    SESClient::deleteIdentity
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteIdentityRequest::DeleteIdentityRequest(const DeleteIdentityRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityRequest object.
  */
 DeleteIdentityRequest::DeleteIdentityRequest()
@@ -53,13 +67,16 @@ DeleteIdentityRequest::DeleteIdentityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIdentityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIdentityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityRequest::response(QNetworkReply
     return new DeleteIdentityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIdentityRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteIdentityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityRequestPrivate object, copying another.

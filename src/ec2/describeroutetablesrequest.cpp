@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeRouteTablesRequest
+/*!
+ * \class QtAws::EC2::DescribeRouteTablesRequest
  *
- * @brief  Implements EC2 DescribeRouteTables requests.
+ * \brief The DescribeRouteTablesRequest class encapsulates EC2 DescribeRouteTables requests.
  *
- * @see    EC2Client::describeRouteTables
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeRouteTables
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRouteTablesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeRouteTablesRequest::DescribeRouteTablesRequest(const DescribeRouteTables
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeRouteTablesRequest object.
  */
 DescribeRouteTablesRequest::DescribeRouteTablesRequest()
@@ -53,13 +60,16 @@ DescribeRouteTablesRequest::DescribeRouteTablesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeRouteTablesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeRouteTablesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetwork
     return new DescribeRouteTablesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeRouteTablesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetwork
  * @brief  Private implementation for DescribeRouteTablesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRouteTablesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRouteTablesRequestPrivate object, copying another.

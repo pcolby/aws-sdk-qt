@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetDeviceDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::GetDeviceDefinitionVersionResponse
  *
- * @brief  Handles Greengrass GetDeviceDefinitionVersion responses.
+ * \brief The GetDeviceDefinitionVersionResponse class encapsulates Greengrass GetDeviceDefinitionVersion responses.
  *
- * @see    GreengrassClient::getDeviceDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getDeviceDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetDeviceDefinitionVersionRequest * GetDeviceDefinitionVersionResponse::re
     return static_cast<const GetDeviceDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetDeviceDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetDeviceDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDeviceDefinitionVersionResponsePrivate
+ * \class GetDeviceDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for GetDeviceDefinitionVersionResponse.
+ * \brief Private implementation for GetDeviceDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ GetDeviceDefinitionVersionResponsePrivate::GetDeviceDefinitionVersionResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetDeviceDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

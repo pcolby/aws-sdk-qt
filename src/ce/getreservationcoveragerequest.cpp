@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetReservationCoverageRequest
+/*!
+ * \class QtAws::CostExplorer::GetReservationCoverageRequest
  *
- * @brief  Implements CostExplorer GetReservationCoverage requests.
+ * \brief The GetReservationCoverageRequest class encapsulates CostExplorer GetReservationCoverage requests.
  *
- * @see    CostExplorerClient::getReservationCoverage
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getReservationCoverage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReservationCoverageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ GetReservationCoverageRequest::GetReservationCoverageRequest(const GetReservatio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReservationCoverageRequest object.
  */
 GetReservationCoverageRequest::GetReservationCoverageRequest()
@@ -53,13 +69,16 @@ GetReservationCoverageRequest::GetReservationCoverageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReservationCoverageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReservationCoverageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetw
     return new GetReservationCoverageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReservationCoverageRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetw
  * @brief  Private implementation for GetReservationCoverageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationCoverageRequestPrivate object.
@@ -97,7 +116,7 @@ GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationCoverageRequestPrivate object, copying another.

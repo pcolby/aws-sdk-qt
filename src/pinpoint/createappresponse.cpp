@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  CreateAppResponse
+/*!
+ * \class QtAws::Pinpoint::CreateAppResponse
  *
- * @brief  Handles Pinpoint CreateApp responses.
+ * \brief The CreateAppResponse class encapsulates Pinpoint CreateApp responses.
  *
- * @see    PinpointClient::createApp
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::createApp
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAppResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateAppRequest * CreateAppResponse::request() const
     return static_cast<const CreateAppRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint CreateApp response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateAppResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAppResponsePrivate
+ * \class CreateAppResponsePrivate
  *
- * @brief  Private implementation for CreateAppResponse.
+ * \brief Private implementation for CreateAppResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAppResponsePrivate object.
@@ -91,7 +94,7 @@ CreateAppResponsePrivate::CreateAppResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint CreateAppResponse element.
  *
  * @param  xml  XML stream to parse.

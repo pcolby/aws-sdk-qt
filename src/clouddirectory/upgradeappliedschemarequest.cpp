@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpgradeAppliedSchemaRequest
+/*!
+ * \class QtAws::CloudDirectory::UpgradeAppliedSchemaRequest
  *
- * @brief  Implements CloudDirectory UpgradeAppliedSchema requests.
+ * \brief The UpgradeAppliedSchemaRequest class encapsulates CloudDirectory UpgradeAppliedSchema requests.
  *
- * @see    CloudDirectoryClient::upgradeAppliedSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::upgradeAppliedSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new UpgradeAppliedSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpgradeAppliedSchemaRequest::UpgradeAppliedSchemaRequest(const UpgradeAppliedSch
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpgradeAppliedSchemaRequest object.
  */
 UpgradeAppliedSchemaRequest::UpgradeAppliedSchemaRequest()
@@ -53,13 +63,16 @@ UpgradeAppliedSchemaRequest::UpgradeAppliedSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpgradeAppliedSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpgradeAppliedSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpgradeAppliedSchemaRequest::response(QNetwor
     return new UpgradeAppliedSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpgradeAppliedSchemaRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpgradeAppliedSchemaRequest::response(QNetwor
  * @brief  Private implementation for UpgradeAppliedSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpgradeAppliedSchemaRequestPrivate object.
@@ -97,7 +110,7 @@ UpgradeAppliedSchemaRequestPrivate::UpgradeAppliedSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpgradeAppliedSchemaRequestPrivate object, copying another.

@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListDevelopmentSchemaArnsRequest
+/*!
+ * \class QtAws::CloudDirectory::ListDevelopmentSchemaArnsRequest
  *
- * @brief  Implements CloudDirectory ListDevelopmentSchemaArns requests.
+ * \brief The ListDevelopmentSchemaArnsRequest class encapsulates CloudDirectory ListDevelopmentSchemaArns requests.
  *
- * @see    CloudDirectoryClient::listDevelopmentSchemaArns
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listDevelopmentSchemaArns
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDevelopmentSchemaArnsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest(const ListDev
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDevelopmentSchemaArnsRequest object.
  */
 ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest()
@@ -53,13 +63,16 @@ ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDevelopmentSchemaArnsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDevelopmentSchemaArnsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QN
     return new ListDevelopmentSchemaArnsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDevelopmentSchemaArnsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QN
  * @brief  Private implementation for ListDevelopmentSchemaArnsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDevelopmentSchemaArnsRequestPrivate object.
@@ -97,7 +110,7 @@ ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDevelopmentSchemaArnsRequestPrivate object, copying another.

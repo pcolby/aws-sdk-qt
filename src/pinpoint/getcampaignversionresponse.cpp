@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetCampaignVersionResponse
+/*!
+ * \class QtAws::Pinpoint::GetCampaignVersionResponse
  *
- * @brief  Handles Pinpoint GetCampaignVersion responses.
+ * \brief The GetCampaignVersionResponse class encapsulates Pinpoint GetCampaignVersion responses.
  *
- * @see    PinpointClient::getCampaignVersion
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getCampaignVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCampaignVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetCampaignVersionRequest * GetCampaignVersionResponse::request() const
     return static_cast<const GetCampaignVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetCampaignVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetCampaignVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCampaignVersionResponsePrivate
+ * \class GetCampaignVersionResponsePrivate
  *
- * @brief  Private implementation for GetCampaignVersionResponse.
+ * \brief Private implementation for GetCampaignVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCampaignVersionResponsePrivate object.
@@ -91,7 +94,7 @@ GetCampaignVersionResponsePrivate::GetCampaignVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetCampaignVersionResponse element.
  *
  * @param  xml  XML stream to parse.

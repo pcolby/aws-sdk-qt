@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeletePortfolioResponse
+/*!
+ * \class QtAws::ServiceCatalog::DeletePortfolioResponse
  *
- * @brief  Handles ServiceCatalog DeletePortfolio responses.
+ * \brief The DeletePortfolioResponse class encapsulates ServiceCatalog DeletePortfolio responses.
  *
- * @see    ServiceCatalogClient::deletePortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deletePortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePortfolioResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeletePortfolioRequest * DeletePortfolioResponse::request() const
     return static_cast<const DeletePortfolioRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DeletePortfolio response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeletePortfolioResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePortfolioResponsePrivate
+ * \class DeletePortfolioResponsePrivate
  *
- * @brief  Private implementation for DeletePortfolioResponse.
+ * \brief Private implementation for DeletePortfolioResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePortfolioResponsePrivate object.
@@ -91,7 +100,7 @@ DeletePortfolioResponsePrivate::DeletePortfolioResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DeletePortfolioResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -57,103 +57,111 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CodeBuild
+ * \brief The QtAws::CodeBuild contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CodeBuild {
 
-/**
- * @class  CodeBuildClient
+/*!
+ * \class QtAws::CodeBuild::CodeBuildClient
  *
- * @brief  Client for AWS CodeBuild
+ * \brief The CodeBuildClient class provides access the AWS CodeBuild service.
  *
- * <fullname>AWS CodeBuild</fullname>
+ * \ingroup CodeBuild
  *
- * AWS CodeBuild is a fully managed build service in the cloud. AWS CodeBuild compiles your source code, runs unit tests,
- * and produces artifacts that are ready to deploy. AWS CodeBuild eliminates the need to provision, manage, and scale your
- * own build servers. It provides prepackaged build environments for the most popular programming languages and build
- * tools, such as Apache Maven, Gradle, and more. You can also fully customize build environments in AWS CodeBuild to use
- * your own build tools. AWS CodeBuild scales automatically to meet peak build requests, and you pay only for the build
- * time you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
- *
- * Guide</i>>
- *
- * AWS CodeBuild supports these
- *
- * operations> <ul> <li>
- *
- * <code>BatchDeleteBuilds</code>: Deletes one or more
- *
- * builds> </li> <li>
- *
- * <code>BatchGetProjects</code>: Gets information about one or more build projects. A <i>build project</i> defines how AWS
- * CodeBuild will run a build. This includes information such as where to get the source code to build, the build
- * environment to use, the build commands to run, and where to store the build output. A <i>build environment</i>
- * represents a combination of operating system, programming language runtime, and tools that AWS CodeBuild will use to run
- * a build. Also, you can add tags to build projects to help manage your resources and
- *
- * costs> </li> <li>
- *
- * <code>CreateProject</code>: Creates a build
- *
- * project> </li> <li>
- *
- * <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
- * repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed
- * to the
- *
- * repository> </li> <li>
- *
- * <code>UpdateWebhook</code>: Changes the settings of an existing
- *
- * webhook> </li> <li>
- *
- * <code>DeleteProject</code>: Deletes a build
- *
- * project> </li> <li>
- *
- * <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
- * repository, stops AWS CodeBuild from automatically rebuilding the source code every time a code change is pushed to the
- *
- * repository> </li> <li>
- *
- * <code>ListProjects</code>: Gets a list of build project names, with each build project name representing a single build
- *
- * project> </li> <li>
- *
- * <code>UpdateProject</code>: Changes the settings of an existing build
- *
- * project> </li> <li>
- *
- * <code>BatchGetBuilds</code>: Gets information about one or more
- *
- * builds> </li> <li>
- *
- * <code>ListBuilds</code>: Gets a list of build IDs, with each build ID representing a single
- *
- * build> </li> <li>
- *
- * <code>ListBuildsForProject</code>: Gets a list of build IDs for the specified build project, with each build ID
- * representing a single
- *
- * build> </li> <li>
- *
- * <code>StartBuild</code>: Starts running a
- *
- * build> </li> <li>
- *
- * <code>StopBuild</code>: Attempts to stop running a
- *
- * build> </li> <li>
- *
- * <code>ListCuratedEnvironmentImages</code>: Gets information about Docker images that are managed by AWS
+ *  <fullname>AWS CodeBuild</fullname>
+ * 
+ *  AWS CodeBuild is a fully managed build service in the cloud. AWS CodeBuild compiles your source code, runs unit tests,
+ *  and produces artifacts that are ready to deploy. AWS CodeBuild eliminates the need to provision, manage, and scale your
+ *  own build servers. It provides prepackaged build environments for the most popular programming languages and build
+ *  tools, such as Apache Maven, Gradle, and more. You can also fully customize build environments in AWS CodeBuild to use
+ *  your own build tools. AWS CodeBuild scales automatically to meet peak build requests, and you pay only for the build
+ *  time you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
+ * 
+ *  Guide</i>>
+ * 
+ *  AWS CodeBuild supports these
+ * 
+ *  operations> <ul> <li>
+ * 
+ *  <code>BatchDeleteBuilds</code>: Deletes one or more
+ * 
+ *  builds> </li> <li>
+ * 
+ *  <code>BatchGetProjects</code>: Gets information about one or more build projects. A <i>build project</i> defines how AWS
+ *  CodeBuild will run a build. This includes information such as where to get the source code to build, the build
+ *  environment to use, the build commands to run, and where to store the build output. A <i>build environment</i>
+ *  represents a combination of operating system, programming language runtime, and tools that AWS CodeBuild will use to run
+ *  a build. Also, you can add tags to build projects to help manage your resources and
+ * 
+ *  costs> </li> <li>
+ * 
+ *  <code>CreateProject</code>: Creates a build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
+ *  repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed
+ *  to the
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <code>UpdateWebhook</code>: Changes the settings of an existing
+ * 
+ *  webhook> </li> <li>
+ * 
+ *  <code>DeleteProject</code>: Deletes a build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
+ *  repository, stops AWS CodeBuild from automatically rebuilding the source code every time a code change is pushed to the
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <code>ListProjects</code>: Gets a list of build project names, with each build project name representing a single build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>UpdateProject</code>: Changes the settings of an existing build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>BatchGetBuilds</code>: Gets information about one or more
+ * 
+ *  builds> </li> <li>
+ * 
+ *  <code>ListBuilds</code>: Gets a list of build IDs, with each build ID representing a single
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>ListBuildsForProject</code>: Gets a list of build IDs for the specified build project, with each build ID
+ *  representing a single
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>StartBuild</code>: Starts running a
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>StopBuild</code>: Attempts to stop running a
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>ListCuratedEnvironmentImages</code>: Gets information about Docker images that are managed by AWS
  */
 
-/**
- * @brief  Constructs a new CodeBuildClient object.
+/*!
+ * \brief Constructs a CodeBuildClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CodeBuildClient::CodeBuildClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -172,21 +180,16 @@ CodeBuildClient::CodeBuildClient(
     d->serviceName = QStringLiteral("codebuild");
 }
 
-/**
- * @brief  Constructs a new CodeBuildClient object.
+/*!
+ * \overload CodeBuildClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CodeBuildClient::CodeBuildClient(
     const QUrl &endpoint,
@@ -205,7 +208,7 @@ CodeBuildClient::CodeBuildClient(
     d->serviceName = QStringLiteral("codebuild");
 }
 
-/**
+/*!
  * Deletes one or more
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -219,7 +222,7 @@ BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDelete
     return qobject_cast<BatchDeleteBuildsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -233,7 +236,7 @@ BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsReq
     return qobject_cast<BatchGetBuildsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about build
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -247,7 +250,7 @@ BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProje
     return qobject_cast<BatchGetProjectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a build
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -261,7 +264,7 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
     return qobject_cast<CreateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS
  * CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the
  *
@@ -286,7 +289,7 @@ CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookReques
     return qobject_cast<CreateWebhookResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a build
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -300,7 +303,7 @@ DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectReques
     return qobject_cast<DeleteProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, stops AWS CodeBuild
  * from automatically rebuilding the source code every time a code change is pushed to the
  *
@@ -315,7 +318,7 @@ DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookReques
     return qobject_cast<DeleteWebhookResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets the cache for a
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -329,7 +332,7 @@ InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const I
     return qobject_cast<InvalidateProjectCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of build IDs, with each build ID representing a single
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -343,7 +346,7 @@ ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &reques
     return qobject_cast<ListBuildsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of build IDs for the specified build project, with each build ID representing a single
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -357,7 +360,7 @@ ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListB
     return qobject_cast<ListBuildsForProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about Docker images that are managed by AWS
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -371,7 +374,7 @@ ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentIm
     return qobject_cast<ListCuratedEnvironmentImagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of build project names, with each build project name representing a single build
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -385,7 +388,7 @@ ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &
     return qobject_cast<ListProjectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts running a
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -399,7 +402,7 @@ StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &reques
     return qobject_cast<StartBuildResponse *>(send(request));
 }
 
-/**
+/*!
  * Attempts to stop running a
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -413,7 +416,7 @@ StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
     return qobject_cast<StopBuildResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the settings of a build
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -427,7 +430,7 @@ UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectReques
     return qobject_cast<UpdateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the webhook associated with an AWS CodeBuild build project.
  *
  * @param  request Request to send to AWS CodeBuild.
@@ -441,7 +444,7 @@ UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookReques
     return qobject_cast<UpdateWebhookResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodeBuildClientPrivate
@@ -449,7 +452,7 @@ UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookReques
  * @brief  Private implementation for CodeBuildClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeBuildClientPrivate object.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  AddTagsToStreamResponse
+/*!
+ * \class QtAws::Kinesis::AddTagsToStreamResponse
  *
- * @brief  Handles Kinesis AddTagsToStream responses.
+ * \brief The AddTagsToStreamResponse class encapsulates Kinesis AddTagsToStream responses.
  *
- * @see    KinesisClient::addTagsToStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::addTagsToStream
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const AddTagsToStreamRequest * AddTagsToStreamResponse::request() const
     return static_cast<const AddTagsToStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis AddTagsToStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void AddTagsToStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsToStreamResponsePrivate
+ * \class AddTagsToStreamResponsePrivate
  *
- * @brief  Private implementation for AddTagsToStreamResponse.
+ * \brief Private implementation for AddTagsToStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToStreamResponsePrivate object.
@@ -91,7 +97,7 @@ AddTagsToStreamResponsePrivate::AddTagsToStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis AddTagsToStreamResponse element.
  *
  * @param  xml  XML stream to parse.

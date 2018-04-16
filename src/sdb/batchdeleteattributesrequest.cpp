@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  BatchDeleteAttributesRequest
+/*!
+ * \class QtAws::SimpleDB::BatchDeleteAttributesRequest
  *
- * @brief  Implements SimpleDB BatchDeleteAttributes requests.
+ * \brief The BatchDeleteAttributesRequest class encapsulates SimpleDB BatchDeleteAttributes requests.
  *
- * @see    SimpleDBClient::batchDeleteAttributes
+ * \ingroup SimpleDB
+ *
+ *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
+ *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
+ *  the freedom to focus on application development.
+ * 
+ *  A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often
+ *  requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema,
+ *  automatically indexing your data and providing a simple API for storage and access. This approach eliminates the
+ *  administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this
+ *  functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.
+ * 
+ *  </p
+ * 
+ *  Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information.
+ *
+ * \sa SimpleDBClient::batchDeleteAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ BatchDeleteAttributesRequest::BatchDeleteAttributesRequest(const BatchDeleteAttr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteAttributesRequest object.
  */
 BatchDeleteAttributesRequest::BatchDeleteAttributesRequest()
@@ -53,13 +69,16 @@ BatchDeleteAttributesRequest::BatchDeleteAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDeleteAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDeleteAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetwo
     return new BatchDeleteAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDeleteAttributesRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetwo
  * @brief  Private implementation for BatchDeleteAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteAttributesRequestPrivate object.
@@ -97,7 +116,7 @@ BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteAttributesRequestPrivate object, copying another.

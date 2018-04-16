@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetFunctionConfigurationResponse
+/*!
+ * \class QtAws::Lambda::GetFunctionConfigurationResponse
  *
- * @brief  Handles Lambda GetFunctionConfiguration responses.
+ * \brief The GetFunctionConfigurationResponse class encapsulates Lambda GetFunctionConfiguration responses.
  *
- * @see    LambdaClient::getFunctionConfiguration
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getFunctionConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetFunctionConfigurationRequest * GetFunctionConfigurationResponse::reques
     return static_cast<const GetFunctionConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda GetFunctionConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetFunctionConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFunctionConfigurationResponsePrivate
+ * \class GetFunctionConfigurationResponsePrivate
  *
- * @brief  Private implementation for GetFunctionConfigurationResponse.
+ * \brief Private implementation for GetFunctionConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionConfigurationResponsePrivate object.
@@ -91,7 +105,7 @@ GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda GetFunctionConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

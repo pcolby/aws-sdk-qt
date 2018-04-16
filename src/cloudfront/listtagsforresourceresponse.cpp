@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListTagsForResourceResponse
+/*!
+ * \class QtAws::CloudFront::ListTagsForResourceResponse
  *
- * @brief  Handles CloudFront ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class encapsulates CloudFront ListTagsForResource responses.
  *
- * @see    CloudFrontClient::listTagsForResource
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
     return static_cast<const ListTagsForResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListTagsForResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForResourceResponsePrivate
+ * \class ListTagsForResourceResponsePrivate
  *
- * @brief  Private implementation for ListTagsForResourceResponse.
+ * \brief Private implementation for ListTagsForResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
@@ -91,7 +99,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListTagsForResourceResponse element.
  *
  * @param  xml  XML stream to parse.

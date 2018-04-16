@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetContentModerationResponse
+/*!
+ * \class QtAws::Rekognition::GetContentModerationResponse
  *
- * @brief  Handles Rekognition GetContentModeration responses.
+ * \brief The GetContentModerationResponse class encapsulates Rekognition GetContentModeration responses.
  *
- * @see    RekognitionClient::getContentModeration
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getContentModeration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetContentModerationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetContentModerationRequest * GetContentModerationResponse::request() cons
     return static_cast<const GetContentModerationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition GetContentModeration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetContentModerationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetContentModerationResponsePrivate
+ * \class GetContentModerationResponsePrivate
  *
- * @brief  Private implementation for GetContentModerationResponse.
+ * \brief Private implementation for GetContentModerationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContentModerationResponsePrivate object.
@@ -91,7 +95,7 @@ GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition GetContentModerationResponse element.
  *
  * @param  xml  XML stream to parse.

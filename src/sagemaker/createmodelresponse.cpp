@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  CreateModelResponse
+/*!
+ * \class QtAws::SageMaker::CreateModelResponse
  *
- * @brief  Handles SageMaker CreateModel responses.
+ * \brief The CreateModelResponse class encapsulates SageMaker CreateModel responses.
  *
- * @see    SageMakerClient::createModel
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::createModel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateModelRequest * CreateModelResponse::request() const
     return static_cast<const CreateModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker CreateModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateModelResponsePrivate
+ * \class CreateModelResponsePrivate
  *
- * @brief  Private implementation for CreateModelResponse.
+ * \brief Private implementation for CreateModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateModelResponsePrivate object.
@@ -91,7 +94,7 @@ CreateModelResponsePrivate::CreateModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker CreateModelResponse element.
  *
  * @param  xml  XML stream to parse.

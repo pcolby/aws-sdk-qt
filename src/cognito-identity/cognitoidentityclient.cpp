@@ -61,61 +61,69 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CognitoIdentity
+ * \brief The QtAws::CognitoIdentity contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CognitoIdentity {
 
-/**
- * @class  CognitoIdentityClient
+/*!
+ * \class QtAws::CognitoIdentity::CognitoIdentityClient
  *
- * @brief  Client for Amazon Cognito Identity
+ * \brief The CognitoIdentityClient class provides access the Amazon Cognito Identity service.
  *
- * <fullname>Amazon Cognito</fullname>
+ * \ingroup CognitoIdentity
  *
- * Amazon Cognito is a web service that delivers scoped temporary credentials to mobile devices and other untrusted
- * environments. Amazon Cognito uniquely identifies a device and supplies the user with a consistent identity over the
- * lifetime of an
- *
- * application>
- *
- * Using Amazon Cognito, you can enable authentication with one or more third-party identity providers (Facebook, Google,
- * or Login with Amazon), and you can also choose to support unauthenticated access from your app. Cognito delivers a
- * unique identifier for each user and acts as an OpenID token provider trusted by AWS Security Token Service (STS) to
- * access temporary, limited-privilege AWS
- *
- * credentials>
- *
- * To provide end-user credentials, first make an unsigned call to <a>GetId</a>. If the end user is authenticated with one
- * of the supported identity providers, set the <code>Logins</code> map with the identity provider token.
- * <code>GetId</code> returns a unique identifier for the
- *
- * user>
- *
- * Next, make an unsigned call to <a>GetCredentialsForIdentity</a>. This call expects the same <code>Logins</code> map as
- * the <code>GetId</code> call, as well as the <code>IdentityID</code> originally returned by <code>GetId</code>. Assuming
- * your identity pool has been configured via the <a>SetIdentityPoolRoles</a> operation,
- * <code>GetCredentialsForIdentity</code> will return AWS credentials for your use. If your pool has not been configured
- * with <code>SetIdentityPoolRoles</code>, or if you want to follow legacy flow, make an unsigned call to
- * <a>GetOpenIdToken</a>, which returns the OpenID token necessary to call STS and retrieve AWS credentials. This call
- * expects the same <code>Logins</code> map as the <code>GetId</code> call, as well as the <code>IdentityID</code>
- * originally returned by <code>GetId</code>. The token returned by <code>GetOpenIdToken</code> can be passed to the STS
- * operation <a
- * href="http://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html">AssumeRoleWithWebIdentity</a>
- * to retrieve AWS
- *
- * credentials>
- *
- * If you want to use Amazon Cognito in an Android, iOS, or Unity application, you will probably want to make API calls via
- * the AWS Mobile SDK. To learn more, see the <a href="http://docs.aws.amazon.com/mobile/index.html">AWS Mobile SDK
- * Developer
+ *  <fullname>Amazon Cognito</fullname>
+ * 
+ *  Amazon Cognito is a web service that delivers scoped temporary credentials to mobile devices and other untrusted
+ *  environments. Amazon Cognito uniquely identifies a device and supplies the user with a consistent identity over the
+ *  lifetime of an
+ * 
+ *  application>
+ * 
+ *  Using Amazon Cognito, you can enable authentication with one or more third-party identity providers (Facebook, Google,
+ *  or Login with Amazon), and you can also choose to support unauthenticated access from your app. Cognito delivers a
+ *  unique identifier for each user and acts as an OpenID token provider trusted by AWS Security Token Service (STS) to
+ *  access temporary, limited-privilege AWS
+ * 
+ *  credentials>
+ * 
+ *  To provide end-user credentials, first make an unsigned call to <a>GetId</a>. If the end user is authenticated with one
+ *  of the supported identity providers, set the <code>Logins</code> map with the identity provider token.
+ *  <code>GetId</code> returns a unique identifier for the
+ * 
+ *  user>
+ * 
+ *  Next, make an unsigned call to <a>GetCredentialsForIdentity</a>. This call expects the same <code>Logins</code> map as
+ *  the <code>GetId</code> call, as well as the <code>IdentityID</code> originally returned by <code>GetId</code>. Assuming
+ *  your identity pool has been configured via the <a>SetIdentityPoolRoles</a> operation,
+ *  <code>GetCredentialsForIdentity</code> will return AWS credentials for your use. If your pool has not been configured
+ *  with <code>SetIdentityPoolRoles</code>, or if you want to follow legacy flow, make an unsigned call to
+ *  <a>GetOpenIdToken</a>, which returns the OpenID token necessary to call STS and retrieve AWS credentials. This call
+ *  expects the same <code>Logins</code> map as the <code>GetId</code> call, as well as the <code>IdentityID</code>
+ *  originally returned by <code>GetId</code>. The token returned by <code>GetOpenIdToken</code> can be passed to the STS
+ *  operation <a
+ *  href="http://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html">AssumeRoleWithWebIdentity</a>
+ *  to retrieve AWS
+ * 
+ *  credentials>
+ * 
+ *  If you want to use Amazon Cognito in an Android, iOS, or Unity application, you will probably want to make API calls via
+ *  the AWS Mobile SDK. To learn more, see the <a href="http://docs.aws.amazon.com/mobile/index.html">AWS Mobile SDK
+ *  Developer
  */
 
-/**
- * @brief  Constructs a new CognitoIdentityClient object.
+/*!
+ * \brief Constructs a CognitoIdentityClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CognitoIdentityClient::CognitoIdentityClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -134,21 +142,16 @@ CognitoIdentityClient::CognitoIdentityClient(
     d->serviceName = QStringLiteral("cognito-identity");
 }
 
-/**
- * @brief  Constructs a new CognitoIdentityClient object.
+/*!
+ * \overload CognitoIdentityClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CognitoIdentityClient::CognitoIdentityClient(
     const QUrl &endpoint,
@@ -167,7 +170,7 @@ CognitoIdentityClient::CognitoIdentityClient(
     d->serviceName = QStringLiteral("cognito-identity");
 }
 
-/**
+/*!
  * Creates a new identity pool. The identity pool is a store of user identity information that is specific to your AWS
  * account. The limit on identity pools is 60 per account. The keys for <code>SupportedLoginProviders</code> are as
  *
@@ -206,7 +209,7 @@ CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const Cre
     return qobject_cast<CreateIdentityPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes identities from an identity pool. You can specify a list of 1-60 identities that you want to
  *
  * delete>
@@ -224,7 +227,7 @@ DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteI
     return qobject_cast<DeleteIdentitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a user pool. Once a pool is deleted, users will not be able to authenticate with the
  *
  * pool>
@@ -242,7 +245,7 @@ DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const Del
     return qobject_cast<DeleteIdentityPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns metadata related to the given identity, including when the identity was created and any associated linked
  *
  * logins>
@@ -260,7 +263,7 @@ DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const Describ
     return qobject_cast<DescribeIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets details about a particular identity pool, including the pool name, ID description, creation date, and current
  * number of
  *
@@ -279,7 +282,7 @@ DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const
     return qobject_cast<DescribeIdentityPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns credentials for the provided identity ID. Any provided logins will be validated against supported login
  * providers. If the token is for cognito-identity.amazonaws.com, it will be passed through to AWS Security Token Service
  * with the appropriate role for the
@@ -299,7 +302,7 @@ GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIden
     return qobject_cast<GetCredentialsForIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates (or retrieves) a Cognito ID. Supplying multiple logins will create an implicit linked
  *
  * account>
@@ -317,7 +320,7 @@ GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
     return qobject_cast<GetIdResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the roles for an identity
  *
  * pool>
@@ -335,7 +338,7 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
     return qobject_cast<GetIdentityPoolRolesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets an OpenID token, using a known Cognito ID. This known Cognito ID is returned by <a>GetId</a>. You can optionally
  * add additional logins for the identity. Supplying multiple logins creates an implicit
  *
@@ -358,7 +361,7 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
     return qobject_cast<GetOpenIdTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers (or retrieves) a Cognito <code>IdentityId</code> and an OpenID Connect token for a user authenticated by your
  * backend authentication process. Supplying multiple logins will create an implicit linked account. You can only specify
  * one developer provider as part of the <code>Logins</code> map, which is linked to the identity pool. The developer
@@ -387,7 +390,7 @@ GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTok
     return qobject_cast<GetOpenIdTokenForDeveloperIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the identities in a
  *
  * pool>
@@ -405,7 +408,7 @@ ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentit
     return qobject_cast<ListIdentitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all of the Cognito identity pools registered for your
  *
  * account>
@@ -423,7 +426,7 @@ ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListI
     return qobject_cast<ListIdentityPoolsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the <code>IdentityID</code> associated with a <code>DeveloperUserIdentifier</code> or the list of
  * <code>DeveloperUserIdentifier</code>s associated with an <code>IdentityId</code> for an existing identity. Either
  * <code>IdentityID</code> or <code>DeveloperUserIdentifier</code> must not be null. If you supply only one of these
@@ -447,7 +450,7 @@ LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity
     return qobject_cast<LookupDeveloperIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Merges two users having different <code>IdentityId</code>s, existing in the same identity pool, and identified by the
  * same developer provider. You can use this action to request that discrete users be merged and identified as a single
  * user in the Cognito environment. Cognito associates the given source user (<code>SourceUserIdentifier</code>) with the
@@ -469,7 +472,7 @@ MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentiti
     return qobject_cast<MergeDeveloperIdentitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the roles for an identity pool. These roles are used when making calls to <a>GetCredentialsForIdentity</a>
  *
  * action>
@@ -487,7 +490,7 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
     return qobject_cast<SetIdentityPoolRolesResponse *>(send(request));
 }
 
-/**
+/*!
  * Unlinks a <code>DeveloperUserIdentifier</code> from an existing identity. Unlinked developer users will be considered
  * new identities next time they are seen. If, for a given Cognito identity, you remove all federated identities as well as
  * the developer user identifier, the Cognito identity becomes
@@ -507,7 +510,7 @@ UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity
     return qobject_cast<UnlinkDeveloperIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Unlinks a federated identity from an existing account. Unlinked logins will be considered new identities next time they
  * are seen. Removing the last linked login will make this identity
  *
@@ -526,7 +529,7 @@ UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdent
     return qobject_cast<UnlinkIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a user
  *
  * pool>
@@ -544,7 +547,7 @@ UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const Upd
     return qobject_cast<UpdateIdentityPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CognitoIdentityClientPrivate
@@ -552,7 +555,7 @@ UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const Upd
  * @brief  Private implementation for CognitoIdentityClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CognitoIdentityClientPrivate object.

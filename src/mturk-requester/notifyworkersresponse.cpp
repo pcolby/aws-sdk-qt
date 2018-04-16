@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  NotifyWorkersResponse
+/*!
+ * \class QtAws::MTurk::NotifyWorkersResponse
  *
- * @brief  Handles MTurk NotifyWorkers responses.
+ * \brief The NotifyWorkersResponse class encapsulates MTurk NotifyWorkers responses.
  *
- * @see    MTurkClient::notifyWorkers
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::notifyWorkers
  */
 
-/**
+/*!
  * @brief  Constructs a new NotifyWorkersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const NotifyWorkersRequest * NotifyWorkersResponse::request() const
     return static_cast<const NotifyWorkersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk NotifyWorkers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void NotifyWorkersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  NotifyWorkersResponsePrivate
+ * \class NotifyWorkersResponsePrivate
  *
- * @brief  Private implementation for NotifyWorkersResponse.
+ * \brief Private implementation for NotifyWorkersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyWorkersResponsePrivate object.
@@ -91,7 +94,7 @@ NotifyWorkersResponsePrivate::NotifyWorkersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk NotifyWorkersResponse element.
  *
  * @param  xml  XML stream to parse.

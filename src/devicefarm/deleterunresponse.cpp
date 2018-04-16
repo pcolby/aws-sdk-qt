@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteRunResponse
+/*!
+ * \class QtAws::DeviceFarm::DeleteRunResponse
  *
- * @brief  Handles DeviceFarm DeleteRun responses.
+ * \brief The DeleteRunResponse class encapsulates DeviceFarm DeleteRun responses.
  *
- * @see    DeviceFarmClient::deleteRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteRun
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteRunRequest * DeleteRunResponse::request() const
     return static_cast<const DeleteRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm DeleteRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRunResponsePrivate
+ * \class DeleteRunResponsePrivate
  *
- * @brief  Private implementation for DeleteRunResponse.
+ * \brief Private implementation for DeleteRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRunResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteRunResponsePrivate::DeleteRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm DeleteRunResponse element.
  *
  * @param  xml  XML stream to parse.

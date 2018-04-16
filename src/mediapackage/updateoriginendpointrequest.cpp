@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  UpdateOriginEndpointRequest
+/*!
+ * \class QtAws::MediaPackage::UpdateOriginEndpointRequest
  *
- * @brief  Implements MediaPackage UpdateOriginEndpoint requests.
+ * \brief The UpdateOriginEndpointRequest class encapsulates MediaPackage UpdateOriginEndpoint requests.
  *
- * @see    MediaPackageClient::updateOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::updateOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateOriginEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateOriginEndpointRequest::UpdateOriginEndpointRequest(const UpdateOriginEndpo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateOriginEndpointRequest object.
  */
 UpdateOriginEndpointRequest::UpdateOriginEndpointRequest()
@@ -53,13 +56,16 @@ UpdateOriginEndpointRequest::UpdateOriginEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateOriginEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateOriginEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetwor
     return new UpdateOriginEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateOriginEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetwor
  * @brief  Private implementation for UpdateOriginEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateOriginEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateOriginEndpointRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  StartDeviceSyncRequest
+/*!
+ * \class QtAws::AlexaForBusiness::StartDeviceSyncRequest
  *
- * @brief  Implements AlexaForBusiness StartDeviceSync requests.
+ * \brief The StartDeviceSyncRequest class encapsulates AlexaForBusiness StartDeviceSync requests.
  *
- * @see    AlexaForBusinessClient::startDeviceSync
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::startDeviceSync
  */
 
-/**
+/*!
  * @brief  Constructs a new StartDeviceSyncRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ StartDeviceSyncRequest::StartDeviceSyncRequest(const StartDeviceSyncRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartDeviceSyncRequest object.
  */
 StartDeviceSyncRequest::StartDeviceSyncRequest()
@@ -53,13 +61,16 @@ StartDeviceSyncRequest::StartDeviceSyncRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartDeviceSyncRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartDeviceSyncResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkRepl
     return new StartDeviceSyncResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartDeviceSyncRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkRepl
  * @brief  Private implementation for StartDeviceSyncRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartDeviceSyncRequestPrivate object.
@@ -97,7 +108,7 @@ StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartDeviceSyncRequestPrivate object, copying another.

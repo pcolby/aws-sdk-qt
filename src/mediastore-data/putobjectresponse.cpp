@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  PutObjectResponse
+/*!
+ * \class QtAws::MediaStoreData::PutObjectResponse
  *
- * @brief  Handles MediaStoreData PutObject responses.
+ * \brief The PutObjectResponse class encapsulates MediaStoreData PutObject responses.
  *
- * @see    MediaStoreDataClient::putObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::putObject
  */
 
-/**
+/*!
  * @brief  Constructs a new PutObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const PutObjectRequest * PutObjectResponse::request() const
     return static_cast<const PutObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStoreData PutObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void PutObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutObjectResponsePrivate
+ * \class PutObjectResponsePrivate
  *
- * @brief  Private implementation for PutObjectResponse.
+ * \brief Private implementation for PutObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectResponsePrivate object.
@@ -91,7 +96,7 @@ PutObjectResponsePrivate::PutObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStoreData PutObjectResponse element.
  *
  * @param  xml  XML stream to parse.

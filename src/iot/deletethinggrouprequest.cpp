@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteThingGroupRequest
+/*!
+ * \class QtAws::IoT::DeleteThingGroupRequest
  *
- * @brief  Implements IoT DeleteThingGroup requests.
+ * \brief The DeleteThingGroupRequest class encapsulates IoT DeleteThingGroup requests.
  *
- * @see    IoTClient::deleteThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteThingGroupRequest::DeleteThingGroupRequest(const DeleteThingGroupRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingGroupRequest object.
  */
 DeleteThingGroupRequest::DeleteThingGroupRequest()
@@ -53,13 +67,16 @@ DeleteThingGroupRequest::DeleteThingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteThingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteThingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingGroupRequest::response(QNetworkRep
     return new DeleteThingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteThingGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingGroupRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteThingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingGroupRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteThingGroupRequestPrivate::DeleteThingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingGroupRequestPrivate object, copying another.

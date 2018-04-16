@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationInputProcessingConfigurationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationInputProcessingConfigurationRequest
  *
- * @brief  Implements KinesisAnalytics AddApplicationInputProcessingConfiguration requests.
+ * \brief The AddApplicationInputProcessingConfigurationRequest class encapsulates KinesisAnalytics AddApplicationInputProcessingConfiguration requests.
  *
- * @see    KinesisAnalyticsClient::addApplicationInputProcessingConfiguration
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationInputProcessingConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AddApplicationInputProcessingConfigurationRequest::AddApplicationInputProcessing
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequest object.
  */
 AddApplicationInputProcessingConfigurationRequest::AddApplicationInputProcessingConfigurationRequest()
@@ -53,13 +56,16 @@ AddApplicationInputProcessingConfigurationRequest::AddApplicationInputProcessing
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddApplicationInputProcessingConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddApplicationInputProcessingConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationReq
     return new AddApplicationInputProcessingConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddApplicationInputProcessingConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationReq
  * @brief  Private implementation for AddApplicationInputProcessingConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputPro
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationInputProcessingConfigurationRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  PutRecordsRequest
+/*!
+ * \class QtAws::Kinesis::PutRecordsRequest
  *
- * @brief  Implements Kinesis PutRecords requests.
+ * \brief The PutRecordsRequest class encapsulates Kinesis PutRecords requests.
  *
- * @see    KinesisClient::putRecords
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::putRecords
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ PutRecordsRequest::PutRecordsRequest(const PutRecordsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutRecordsRequest object.
  */
 PutRecordsRequest::PutRecordsRequest()
@@ -53,13 +59,16 @@ PutRecordsRequest::PutRecordsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutRecordsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutRecordsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordsRequest::response(QNetworkReply * c
     return new PutRecordsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutRecordsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordsRequest::response(QNetworkReply * c
  * @brief  Private implementation for PutRecordsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordsRequestPrivate object.
@@ -97,7 +106,7 @@ PutRecordsRequestPrivate::PutRecordsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordsRequestPrivate object, copying another.

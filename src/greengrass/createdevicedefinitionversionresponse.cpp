@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateDeviceDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateDeviceDefinitionVersionResponse
  *
- * @brief  Handles Greengrass CreateDeviceDefinitionVersion responses.
+ * \brief The CreateDeviceDefinitionVersionResponse class encapsulates Greengrass CreateDeviceDefinitionVersion responses.
  *
- * @see    GreengrassClient::createDeviceDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createDeviceDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeviceDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateDeviceDefinitionVersionRequest * CreateDeviceDefinitionVersionRespon
     return static_cast<const CreateDeviceDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateDeviceDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateDeviceDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDeviceDefinitionVersionResponsePrivate
+ * \class CreateDeviceDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for CreateDeviceDefinitionVersionResponse.
+ * \brief Private implementation for CreateDeviceDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeviceDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateDeviceDefinitionVersionResponsePrivate::CreateDeviceDefinitionVersionRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateDeviceDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

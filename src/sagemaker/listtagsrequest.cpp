@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListTagsRequest
+/*!
+ * \class QtAws::SageMaker::ListTagsRequest
  *
- * @brief  Implements SageMaker ListTags requests.
+ * \brief The ListTagsRequest class encapsulates SageMaker ListTags requests.
  *
- * @see    SageMakerClient::listTags
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
@@ -53,13 +56,16 @@ ListTagsRequest::ListTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
     return new ListTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object.
@@ -97,7 +103,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UntagResourceResponse
+/*!
+ * \class QtAws::APIGateway::UntagResourceResponse
  *
- * @brief  Handles APIGateway UntagResource responses.
+ * \brief The UntagResourceResponse class encapsulates APIGateway UntagResource responses.
  *
- * @see    APIGatewayClient::untagResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
     return static_cast<const UntagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UntagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UntagResourceResponsePrivate
+ * \class UntagResourceResponsePrivate
  *
- * @brief  Private implementation for UntagResourceResponse.
+ * \brief Private implementation for UntagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceResponsePrivate object.
@@ -91,7 +99,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UntagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

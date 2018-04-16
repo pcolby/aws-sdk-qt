@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  StartWorkspacesRequest
+/*!
+ * \class QtAws::WorkSpaces::StartWorkspacesRequest
  *
- * @brief  Implements WorkSpaces StartWorkspaces requests.
+ * \brief The StartWorkspacesRequest class encapsulates WorkSpaces StartWorkspaces requests.
  *
- * @see    WorkSpacesClient::startWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::startWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new StartWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartWorkspacesRequest::StartWorkspacesRequest(const StartWorkspacesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartWorkspacesRequest object.
  */
 StartWorkspacesRequest::StartWorkspacesRequest()
@@ -53,13 +59,16 @@ StartWorkspacesRequest::StartWorkspacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartWorkspacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartWorkspacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartWorkspacesRequest::response(QNetworkRepl
     return new StartWorkspacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartWorkspacesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartWorkspacesRequest::response(QNetworkRepl
  * @brief  Private implementation for StartWorkspacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartWorkspacesRequestPrivate object.
@@ -97,7 +106,7 @@ StartWorkspacesRequestPrivate::StartWorkspacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartWorkspacesRequestPrivate object, copying another.

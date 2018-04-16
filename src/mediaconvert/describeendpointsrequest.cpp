@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DescribeEndpointsRequest
+/*!
+ * \class QtAws::MediaConvert::DescribeEndpointsRequest
  *
- * @brief  Implements MediaConvert DescribeEndpoints requests.
+ * \brief The DescribeEndpointsRequest class encapsulates MediaConvert DescribeEndpoints requests.
  *
- * @see    MediaConvertClient::describeEndpoints
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::describeEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeEndpointsRequest::DescribeEndpointsRequest(const DescribeEndpointsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointsRequest object.
  */
 DescribeEndpointsRequest::DescribeEndpointsRequest()
@@ -53,13 +56,16 @@ DescribeEndpointsRequest::DescribeEndpointsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEndpointsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEndpointsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
     return new DescribeEndpointsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEndpointsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
  * @brief  Private implementation for DescribeEndpointsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointsRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointsRequestPrivate object, copying another.

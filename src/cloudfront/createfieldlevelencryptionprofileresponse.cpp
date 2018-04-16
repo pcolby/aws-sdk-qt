@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateFieldLevelEncryptionProfileResponse
+/*!
+ * \class QtAws::CloudFront::CreateFieldLevelEncryptionProfileResponse
  *
- * @brief  Handles CloudFront CreateFieldLevelEncryptionProfile responses.
+ * \brief The CreateFieldLevelEncryptionProfileResponse class encapsulates CloudFront CreateFieldLevelEncryptionProfile responses.
  *
- * @see    CloudFrontClient::createFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFieldLevelEncryptionProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateFieldLevelEncryptionProfileRequest * CreateFieldLevelEncryptionProfi
     return static_cast<const CreateFieldLevelEncryptionProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront CreateFieldLevelEncryptionProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateFieldLevelEncryptionProfileResponsePrivate
+ * \class CreateFieldLevelEncryptionProfileResponsePrivate
  *
- * @brief  Private implementation for CreateFieldLevelEncryptionProfileResponse.
+ * \brief Private implementation for CreateFieldLevelEncryptionProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFieldLevelEncryptionProfileResponsePrivate object.
@@ -91,7 +99,7 @@ CreateFieldLevelEncryptionProfileResponsePrivate::CreateFieldLevelEncryptionProf
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront CreateFieldLevelEncryptionProfileResponse element.
  *
  * @param  xml  XML stream to parse.

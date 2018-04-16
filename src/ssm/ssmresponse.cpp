@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  SSMResponse
+/*!
+ * \class QtAws::SSM::SSMResponse
  *
- * @brief  Handles SSM SSM responses.
+ * \brief The SSMResponse class is the base class for all SSM responses.
  *
- * @see    SSMClient::sSM
+ * \ingroup SSM
  */
 
-/**
+/*!
  * @brief  Constructs a new SSMResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SSMResponse::SSMResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SSMResponse object.
@@ -63,7 +63,7 @@ SSMResponse::SSMResponse(SSMResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SSMResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SSMResponsePrivate
@@ -92,7 +92,7 @@ void SSMResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SSMResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SSMResponsePrivate object.

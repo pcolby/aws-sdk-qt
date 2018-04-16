@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetApnsChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetApnsChannelRequest
  *
- * @brief  Implements Pinpoint GetApnsChannel requests.
+ * \brief The GetApnsChannelRequest class encapsulates Pinpoint GetApnsChannel requests.
  *
- * @see    PinpointClient::getApnsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApnsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetApnsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetApnsChannelRequest::GetApnsChannelRequest(const GetApnsChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetApnsChannelRequest object.
  */
 GetApnsChannelRequest::GetApnsChannelRequest()
@@ -53,13 +56,16 @@ GetApnsChannelRequest::GetApnsChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetApnsChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetApnsChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetApnsChannelRequest::response(QNetworkReply
     return new GetApnsChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetApnsChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetApnsChannelRequest::response(QNetworkReply
  * @brief  Private implementation for GetApnsChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApnsChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApnsChannelRequestPrivate object, copying another.

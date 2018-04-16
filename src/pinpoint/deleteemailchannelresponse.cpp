@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteEmailChannelResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteEmailChannelResponse
  *
- * @brief  Handles Pinpoint DeleteEmailChannel responses.
+ * \brief The DeleteEmailChannelResponse class encapsulates Pinpoint DeleteEmailChannel responses.
  *
- * @see    PinpointClient::deleteEmailChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteEmailChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEmailChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteEmailChannelRequest * DeleteEmailChannelResponse::request() const
     return static_cast<const DeleteEmailChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteEmailChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteEmailChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEmailChannelResponsePrivate
+ * \class DeleteEmailChannelResponsePrivate
  *
- * @brief  Private implementation for DeleteEmailChannelResponse.
+ * \brief Private implementation for DeleteEmailChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEmailChannelResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteEmailChannelResponse element.
  *
  * @param  xml  XML stream to parse.

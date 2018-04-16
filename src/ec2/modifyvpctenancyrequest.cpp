@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcTenancyRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcTenancyRequest
  *
- * @brief  Implements EC2 ModifyVpcTenancy requests.
+ * \brief The ModifyVpcTenancyRequest class encapsulates EC2 ModifyVpcTenancy requests.
  *
- * @see    EC2Client::modifyVpcTenancy
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcTenancy
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcTenancyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcTenancyRequest::ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcTenancyRequest object.
  */
 ModifyVpcTenancyRequest::ModifyVpcTenancyRequest()
@@ -53,13 +60,16 @@ ModifyVpcTenancyRequest::ModifyVpcTenancyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcTenancyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcTenancyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkRep
     return new ModifyVpcTenancyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcTenancyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkRep
  * @brief  Private implementation for ModifyVpcTenancyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcTenancyRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcTenancyRequestPrivate object, copying another.

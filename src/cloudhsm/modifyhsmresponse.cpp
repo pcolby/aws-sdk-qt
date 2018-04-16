@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ModifyHsmResponse
+/*!
+ * \class QtAws::CloudHSM::ModifyHsmResponse
  *
- * @brief  Handles CloudHSM ModifyHsm responses.
+ * \brief The ModifyHsmResponse class encapsulates CloudHSM ModifyHsm responses.
  *
- * @see    CloudHSMClient::modifyHsm
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::modifyHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyHsmResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ModifyHsmRequest * ModifyHsmResponse::request() const
     return static_cast<const ModifyHsmRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM ModifyHsm response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ModifyHsmResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyHsmResponsePrivate
+ * \class ModifyHsmResponsePrivate
  *
- * @brief  Private implementation for ModifyHsmResponse.
+ * \brief Private implementation for ModifyHsmResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHsmResponsePrivate object.
@@ -91,7 +106,7 @@ ModifyHsmResponsePrivate::ModifyHsmResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM ModifyHsmResponse element.
  *
  * @param  xml  XML stream to parse.

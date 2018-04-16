@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  CreateAddressBookRequest
+/*!
+ * \class QtAws::AlexaForBusiness::CreateAddressBookRequest
  *
- * @brief  Implements AlexaForBusiness CreateAddressBook requests.
+ * \brief The CreateAddressBookRequest class encapsulates AlexaForBusiness CreateAddressBook requests.
  *
- * @see    AlexaForBusinessClient::createAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::createAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAddressBookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateAddressBookRequest::CreateAddressBookRequest(const CreateAddressBookReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAddressBookRequest object.
  */
 CreateAddressBookRequest::CreateAddressBookRequest()
@@ -53,13 +61,16 @@ CreateAddressBookRequest::CreateAddressBookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAddressBookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAddressBookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateAddressBookRequest::response(QNetworkRe
     return new CreateAddressBookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAddressBookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateAddressBookRequest::response(QNetworkRe
  * @brief  Private implementation for CreateAddressBookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAddressBookRequestPrivate object.
@@ -97,7 +108,7 @@ CreateAddressBookRequestPrivate::CreateAddressBookRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAddressBookRequestPrivate object, copying another.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace LexRuntimeService {
 
-/**
- * @class  PostTextResponse
+/*!
+ * \class QtAws::LexRuntimeService::PostTextResponse
  *
- * @brief  Handles LexRuntimeService PostText responses.
+ * \brief The PostTextResponse class encapsulates LexRuntimeService PostText responses.
  *
- * @see    LexRuntimeServiceClient::postText
+ * \ingroup LexRuntimeService
+ *
+ *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
+ *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
+ *  user says "I want pizza", your bot sends this input to Amazon Lex using the runtime API. Amazon Lex recognizes that the
+ *  user request is for the OrderPizza intent (one of the intents defined in the bot). Then Amazon Lex engages in user
+ *  conversation on behalf of the bot to elicit required information (slot values, such as pizza size and crust type), and
+ *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
+ *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
+ *
+ * \sa LexRuntimeServiceClient::postText
  */
 
-/**
+/*!
  * @brief  Constructs a new PostTextResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const PostTextRequest * PostTextResponse::request() const
     return static_cast<const PostTextRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexRuntimeService PostText response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void PostTextResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PostTextResponsePrivate
+ * \class PostTextResponsePrivate
  *
- * @brief  Private implementation for PostTextResponse.
+ * \brief Private implementation for PostTextResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PostTextResponsePrivate object.
@@ -91,7 +101,7 @@ PostTextResponsePrivate::PostTextResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexRuntimeService PostTextResponse element.
  *
  * @param  xml  XML stream to parse.

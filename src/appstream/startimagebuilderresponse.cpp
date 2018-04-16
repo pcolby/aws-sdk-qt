@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StartImageBuilderResponse
+/*!
+ * \class QtAws::AppStream::StartImageBuilderResponse
  *
- * @brief  Handles AppStream StartImageBuilder responses.
+ * \brief The StartImageBuilderResponse class encapsulates AppStream StartImageBuilder responses.
  *
- * @see    AppStreamClient::startImageBuilder
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::startImageBuilder
  */
 
-/**
+/*!
  * @brief  Constructs a new StartImageBuilderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartImageBuilderRequest * StartImageBuilderResponse::request() const
     return static_cast<const StartImageBuilderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream StartImageBuilder response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartImageBuilderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartImageBuilderResponsePrivate
+ * \class StartImageBuilderResponsePrivate
  *
- * @brief  Private implementation for StartImageBuilderResponse.
+ * \brief Private implementation for StartImageBuilderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartImageBuilderResponsePrivate object.
@@ -91,7 +97,7 @@ StartImageBuilderResponsePrivate::StartImageBuilderResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream StartImageBuilderResponse element.
  *
  * @param  xml  XML stream to parse.

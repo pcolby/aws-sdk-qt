@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateRestApiRequest
+/*!
+ * \class QtAws::APIGateway::CreateRestApiRequest
  *
- * @brief  Implements APIGateway CreateRestApi requests.
+ * \brief The CreateRestApiRequest class encapsulates APIGateway CreateRestApi requests.
  *
- * @see    APIGatewayClient::createRestApi
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createRestApi
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRestApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateRestApiRequest::CreateRestApiRequest(const CreateRestApiRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRestApiRequest object.
  */
 CreateRestApiRequest::CreateRestApiRequest()
@@ -53,13 +61,16 @@ CreateRestApiRequest::CreateRestApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRestApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRestApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply 
     return new CreateRestApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRestApiRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateRestApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRestApiRequestPrivate object.
@@ -97,7 +108,7 @@ CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRestApiRequestPrivate object, copying another.

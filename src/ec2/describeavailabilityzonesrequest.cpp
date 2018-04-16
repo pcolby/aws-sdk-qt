@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeAvailabilityZonesRequest
+/*!
+ * \class QtAws::EC2::DescribeAvailabilityZonesRequest
  *
- * @brief  Implements EC2 DescribeAvailabilityZones requests.
+ * \brief The DescribeAvailabilityZonesRequest class encapsulates EC2 DescribeAvailabilityZones requests.
  *
- * @see    EC2Client::describeAvailabilityZones
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeAvailabilityZones
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAvailabilityZonesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAvailabilityZonesRequest object.
  */
 DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest()
@@ -53,13 +60,16 @@ DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAvailabilityZonesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAvailabilityZonesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QN
     return new DescribeAvailabilityZonesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAvailabilityZonesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QN
  * @brief  Private implementation for DescribeAvailabilityZonesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAvailabilityZonesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAvailabilityZonesRequestPrivate object, copying another.

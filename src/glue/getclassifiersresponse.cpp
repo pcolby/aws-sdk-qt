@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetClassifiersResponse
+/*!
+ * \class QtAws::Glue::GetClassifiersResponse
  *
- * @brief  Handles Glue GetClassifiers responses.
+ * \brief The GetClassifiersResponse class encapsulates Glue GetClassifiers responses.
  *
- * @see    GlueClient::getClassifiers
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getClassifiers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetClassifiersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetClassifiersRequest * GetClassifiersResponse::request() const
     return static_cast<const GetClassifiersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetClassifiers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetClassifiersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetClassifiersResponsePrivate
+ * \class GetClassifiersResponsePrivate
  *
- * @brief  Private implementation for GetClassifiersResponse.
+ * \brief Private implementation for GetClassifiersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetClassifiersResponsePrivate object.
@@ -91,7 +97,7 @@ GetClassifiersResponsePrivate::GetClassifiersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetClassifiersResponse element.
  *
  * @param  xml  XML stream to parse.

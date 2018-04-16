@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcPeeringConnectionsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcPeeringConnectionsRequest
  *
- * @brief  Implements EC2 DescribeVpcPeeringConnections requests.
+ * \brief The DescribeVpcPeeringConnectionsRequest class encapsulates EC2 DescribeVpcPeeringConnections requests.
  *
- * @see    EC2Client::describeVpcPeeringConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcPeeringConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcPeeringConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcPeeringConnectionsRequest object.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest()
@@ -53,13 +60,16 @@ DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcPeeringConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcPeeringConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
     return new DescribeVpcPeeringConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcPeeringConnectionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
  * @brief  Private implementation for DescribeVpcPeeringConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcPeeringConnectionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcPeeringConnectionsRequestPrivate object, copying another.

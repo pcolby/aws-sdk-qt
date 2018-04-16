@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  GetObjectResponse
+/*!
+ * \class QtAws::MediaStoreData::GetObjectResponse
  *
- * @brief  Handles MediaStoreData GetObject responses.
+ * \brief The GetObjectResponse class encapsulates MediaStoreData GetObject responses.
  *
- * @see    MediaStoreDataClient::getObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::getObject
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetObjectRequest * GetObjectResponse::request() const
     return static_cast<const GetObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStoreData GetObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetObjectResponsePrivate
+ * \class GetObjectResponsePrivate
  *
- * @brief  Private implementation for GetObjectResponse.
+ * \brief Private implementation for GetObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectResponsePrivate object.
@@ -91,7 +96,7 @@ GetObjectResponsePrivate::GetObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStoreData GetObjectResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateTableRequest
+/*!
+ * \class QtAws::Glue::CreateTableRequest
  *
- * @brief  Implements Glue CreateTable requests.
+ * \brief The CreateTableRequest class encapsulates Glue CreateTable requests.
  *
- * @see    GlueClient::createTable
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createTable
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTableRequest object.
  */
 CreateTableRequest::CreateTableRequest()
@@ -53,13 +59,16 @@ CreateTableRequest::CreateTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
     return new CreateTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTableRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTableRequestPrivate object.
@@ -97,7 +106,7 @@ CreateTableRequestPrivate::CreateTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTableRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DeleteTagsRequest
+/*!
+ * \class QtAws::EFS::DeleteTagsRequest
  *
- * @brief  Implements EFS DeleteTags requests.
+ * \brief The DeleteTagsRequest class encapsulates EFS DeleteTags requests.
  *
- * @see    EFSClient::deleteTags
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
@@ -53,13 +62,16 @@ DeleteTagsRequest::DeleteTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
     return new DeleteTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTagsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsRequestPrivate object, copying another.

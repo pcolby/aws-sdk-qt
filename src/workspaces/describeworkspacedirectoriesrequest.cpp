@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeWorkspaceDirectoriesRequest
+/*!
+ * \class QtAws::WorkSpaces::DescribeWorkspaceDirectoriesRequest
  *
- * @brief  Implements WorkSpaces DescribeWorkspaceDirectories requests.
+ * \brief The DescribeWorkspaceDirectoriesRequest class encapsulates WorkSpaces DescribeWorkspaceDirectories requests.
  *
- * @see    WorkSpacesClient::describeWorkspaceDirectories
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeWorkspaceDirectories
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspaceDirectoriesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspaceDirectoriesRequest object.
  */
 DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest()
@@ -53,13 +59,16 @@ DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeWorkspaceDirectoriesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeWorkspaceDirectoriesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response
     return new DescribeWorkspaceDirectoriesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeWorkspaceDirectoriesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response
  * @brief  Private implementation for DescribeWorkspaceDirectoriesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspaceDirectoriesRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspaceDirectoriesRequestPrivate object, copying another.

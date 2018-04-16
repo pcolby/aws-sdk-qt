@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyNetworkInterfaceAttributeResponse
+/*!
+ * \class QtAws::EC2::ModifyNetworkInterfaceAttributeResponse
  *
- * @brief  Handles EC2 ModifyNetworkInterfaceAttribute responses.
+ * \brief The ModifyNetworkInterfaceAttributeResponse class encapsulates EC2 ModifyNetworkInterfaceAttribute responses.
  *
- * @see    EC2Client::modifyNetworkInterfaceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyNetworkInterfaceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyNetworkInterfaceAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyNetworkInterfaceAttributeRequest * ModifyNetworkInterfaceAttributeRe
     return static_cast<const ModifyNetworkInterfaceAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyNetworkInterfaceAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyNetworkInterfaceAttributeResponsePrivate
+ * \class ModifyNetworkInterfaceAttributeResponsePrivate
  *
- * @brief  Private implementation for ModifyNetworkInterfaceAttributeResponse.
+ * \brief Private implementation for ModifyNetworkInterfaceAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyNetworkInterfaceAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyNetworkInterfaceAttributeResponsePrivate::ModifyNetworkInterfaceAttributeR
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyNetworkInterfaceAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

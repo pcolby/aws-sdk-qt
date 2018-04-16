@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetByteMatchSetResponse
+/*!
+ * \class QtAws::WAF::GetByteMatchSetResponse
  *
- * @brief  Handles WAF GetByteMatchSet responses.
+ * \brief The GetByteMatchSetResponse class encapsulates WAF GetByteMatchSet responses.
  *
- * @see    WAFClient::getByteMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getByteMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetByteMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetByteMatchSetRequest * GetByteMatchSetResponse::request() const
     return static_cast<const GetByteMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF GetByteMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetByteMatchSetResponsePrivate
+ * \class GetByteMatchSetResponsePrivate
  *
- * @brief  Private implementation for GetByteMatchSetResponse.
+ * \brief Private implementation for GetByteMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetByteMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF GetByteMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

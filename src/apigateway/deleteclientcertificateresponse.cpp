@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteClientCertificateResponse
+/*!
+ * \class QtAws::APIGateway::DeleteClientCertificateResponse
  *
- * @brief  Handles APIGateway DeleteClientCertificate responses.
+ * \brief The DeleteClientCertificateResponse class encapsulates APIGateway DeleteClientCertificate responses.
  *
- * @see    APIGatewayClient::deleteClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteClientCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteClientCertificateRequest * DeleteClientCertificateResponse::request(
     return static_cast<const DeleteClientCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteClientCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteClientCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteClientCertificateResponsePrivate
+ * \class DeleteClientCertificateResponsePrivate
  *
- * @brief  Private implementation for DeleteClientCertificateResponse.
+ * \brief Private implementation for DeleteClientCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClientCertificateResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteClientCertificateResponsePrivate::DeleteClientCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteClientCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

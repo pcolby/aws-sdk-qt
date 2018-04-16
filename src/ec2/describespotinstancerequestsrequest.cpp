@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotInstanceRequestsRequest
+/*!
+ * \class QtAws::EC2::DescribeSpotInstanceRequestsRequest
  *
- * @brief  Implements EC2 DescribeSpotInstanceRequests requests.
+ * \brief The DescribeSpotInstanceRequestsRequest class encapsulates EC2 DescribeSpotInstanceRequests requests.
  *
- * @see    EC2Client::describeSpotInstanceRequests
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotInstanceRequests
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotInstanceRequestsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSpotInstanceRequestsRequest::DescribeSpotInstanceRequestsRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotInstanceRequestsRequest object.
  */
 DescribeSpotInstanceRequestsRequest::DescribeSpotInstanceRequestsRequest()
@@ -53,13 +60,16 @@ DescribeSpotInstanceRequestsRequest::DescribeSpotInstanceRequestsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSpotInstanceRequestsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSpotInstanceRequestsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotInstanceRequestsRequest::response
     return new DescribeSpotInstanceRequestsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSpotInstanceRequestsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotInstanceRequestsRequest::response
  * @brief  Private implementation for DescribeSpotInstanceRequestsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotInstanceRequestsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSpotInstanceRequestsRequestPrivate::DescribeSpotInstanceRequestsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotInstanceRequestsRequestPrivate object, copying another.

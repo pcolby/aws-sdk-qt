@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  PutContainerPolicyRequest
+/*!
+ * \class QtAws::MediaStore::PutContainerPolicyRequest
  *
- * @brief  Implements MediaStore PutContainerPolicy requests.
+ * \brief The PutContainerPolicyRequest class encapsulates MediaStore PutContainerPolicy requests.
  *
- * @see    MediaStoreClient::putContainerPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::putContainerPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutContainerPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ PutContainerPolicyRequest::PutContainerPolicyRequest(const PutContainerPolicyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutContainerPolicyRequest object.
  */
 PutContainerPolicyRequest::PutContainerPolicyRequest()
@@ -53,13 +58,16 @@ PutContainerPolicyRequest::PutContainerPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutContainerPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutContainerPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkR
     return new PutContainerPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutContainerPolicyRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * PutContainerPolicyRequest::response(QNetworkR
  * @brief  Private implementation for PutContainerPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutContainerPolicyRequestPrivate object.
@@ -97,7 +105,7 @@ PutContainerPolicyRequestPrivate::PutContainerPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutContainerPolicyRequestPrivate object, copying another.

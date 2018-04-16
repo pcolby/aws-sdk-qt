@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListSecurityConfigurationsResponse
+/*!
+ * \class QtAws::EMR::ListSecurityConfigurationsResponse
  *
- * @brief  Handles EMR ListSecurityConfigurations responses.
+ * \brief The ListSecurityConfigurationsResponse class encapsulates EMR ListSecurityConfigurations responses.
  *
- * @see    EMRClient::listSecurityConfigurations
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listSecurityConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSecurityConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListSecurityConfigurationsRequest * ListSecurityConfigurationsResponse::re
     return static_cast<const ListSecurityConfigurationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR ListSecurityConfigurations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListSecurityConfigurationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListSecurityConfigurationsResponsePrivate
+ * \class ListSecurityConfigurationsResponsePrivate
  *
- * @brief  Private implementation for ListSecurityConfigurationsResponse.
+ * \brief Private implementation for ListSecurityConfigurationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSecurityConfigurationsResponsePrivate object.
@@ -91,7 +97,7 @@ ListSecurityConfigurationsResponsePrivate::ListSecurityConfigurationsResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR ListSecurityConfigurationsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  DeleteOriginEndpointRequest
+/*!
+ * \class QtAws::MediaPackage::DeleteOriginEndpointRequest
  *
- * @brief  Implements MediaPackage DeleteOriginEndpoint requests.
+ * \brief The DeleteOriginEndpointRequest class encapsulates MediaPackage DeleteOriginEndpoint requests.
  *
- * @see    MediaPackageClient::deleteOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::deleteOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteOriginEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteOriginEndpointRequest::DeleteOriginEndpointRequest(const DeleteOriginEndpo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteOriginEndpointRequest object.
  */
 DeleteOriginEndpointRequest::DeleteOriginEndpointRequest()
@@ -53,13 +56,16 @@ DeleteOriginEndpointRequest::DeleteOriginEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteOriginEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteOriginEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetwor
     return new DeleteOriginEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteOriginEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetwor
  * @brief  Private implementation for DeleteOriginEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteOriginEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteOriginEndpointRequestPrivate object, copying another.

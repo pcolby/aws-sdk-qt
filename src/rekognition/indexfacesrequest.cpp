@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  IndexFacesRequest
+/*!
+ * \class QtAws::Rekognition::IndexFacesRequest
  *
- * @brief  Implements Rekognition IndexFaces requests.
+ * \brief The IndexFacesRequest class encapsulates Rekognition IndexFaces requests.
  *
- * @see    RekognitionClient::indexFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::indexFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new IndexFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ IndexFacesRequest::IndexFacesRequest(const IndexFacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new IndexFacesRequest object.
  */
 IndexFacesRequest::IndexFacesRequest()
@@ -53,13 +57,16 @@ IndexFacesRequest::IndexFacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool IndexFacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an IndexFacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * c
     return new IndexFacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IndexFacesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * c
  * @brief  Private implementation for IndexFacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IndexFacesRequestPrivate object.
@@ -97,7 +104,7 @@ IndexFacesRequestPrivate::IndexFacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IndexFacesRequestPrivate object, copying another.

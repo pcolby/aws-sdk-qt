@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  PutScalingPolicyResponse
+/*!
+ * \class QtAws::AutoScaling::PutScalingPolicyResponse
  *
- * @brief  Handles AutoScaling PutScalingPolicy responses.
+ * \brief The PutScalingPolicyResponse class encapsulates AutoScaling PutScalingPolicy responses.
  *
- * @see    AutoScalingClient::putScalingPolicy
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::putScalingPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutScalingPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
     return static_cast<const PutScalingPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling PutScalingPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutScalingPolicyResponsePrivate
+ * \class PutScalingPolicyResponsePrivate
  *
- * @brief  Private implementation for PutScalingPolicyResponse.
+ * \brief Private implementation for PutScalingPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutScalingPolicyResponsePrivate object.
@@ -91,7 +99,7 @@ PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling PutScalingPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

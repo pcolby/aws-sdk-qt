@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  IndexDocumentsRequest
+/*!
+ * \class QtAws::CloudSearch::IndexDocumentsRequest
  *
- * @brief  Implements CloudSearch IndexDocuments requests.
+ * \brief The IndexDocumentsRequest class encapsulates CloudSearch IndexDocuments requests.
  *
- * @see    CloudSearchClient::indexDocuments
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::indexDocuments
  */
 
-/**
+/*!
  * @brief  Constructs a new IndexDocumentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ IndexDocumentsRequest::IndexDocumentsRequest(const IndexDocumentsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new IndexDocumentsRequest object.
  */
 IndexDocumentsRequest::IndexDocumentsRequest()
@@ -53,13 +67,16 @@ IndexDocumentsRequest::IndexDocumentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool IndexDocumentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an IndexDocumentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply
     return new IndexDocumentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IndexDocumentsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply
  * @brief  Private implementation for IndexDocumentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IndexDocumentsRequestPrivate object.
@@ -97,7 +114,7 @@ IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IndexDocumentsRequestPrivate object, copying another.

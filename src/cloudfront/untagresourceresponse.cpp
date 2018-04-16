@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UntagResourceResponse
+/*!
+ * \class QtAws::CloudFront::UntagResourceResponse
  *
- * @brief  Handles CloudFront UntagResource responses.
+ * \brief The UntagResourceResponse class encapsulates CloudFront UntagResource responses.
  *
- * @see    CloudFrontClient::untagResource
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
     return static_cast<const UntagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront UntagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UntagResourceResponsePrivate
+ * \class UntagResourceResponsePrivate
  *
- * @brief  Private implementation for UntagResourceResponse.
+ * \brief Private implementation for UntagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceResponsePrivate object.
@@ -91,7 +99,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront UntagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

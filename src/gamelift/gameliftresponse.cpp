@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace GameLift {
 
-/**
- * @class  GameLiftResponse
+/*!
+ * \class QtAws::GameLift::GameLiftResponse
  *
- * @brief  Handles GameLift GameLift responses.
+ * \brief The GameLiftResponse class is the base class for all GameLift responses.
  *
- * @see    GameLiftClient::gameLift
+ * \ingroup GameLift
  */
 
-/**
+/*!
  * @brief  Constructs a new GameLiftResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ GameLiftResponse::GameLiftResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GameLiftResponse object.
@@ -63,7 +63,7 @@ GameLiftResponse::GameLiftResponse(GameLiftResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void GameLiftResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GameLiftResponsePrivate
@@ -92,7 +92,7 @@ void GameLiftResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for GameLiftResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GameLiftResponsePrivate object.

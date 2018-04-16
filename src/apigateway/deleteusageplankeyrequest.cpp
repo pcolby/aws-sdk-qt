@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteUsagePlanKeyRequest
+/*!
+ * \class QtAws::APIGateway::DeleteUsagePlanKeyRequest
  *
- * @brief  Implements APIGateway DeleteUsagePlanKey requests.
+ * \brief The DeleteUsagePlanKeyRequest class encapsulates APIGateway DeleteUsagePlanKey requests.
  *
- * @see    APIGatewayClient::deleteUsagePlanKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteUsagePlanKey
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUsagePlanKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest(const DeleteUsagePlanKeyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUsagePlanKeyRequest object.
  */
 DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest()
@@ -53,13 +61,16 @@ DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUsagePlanKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUsagePlanKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanKeyRequest::response(QNetworkR
     return new DeleteUsagePlanKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUsagePlanKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanKeyRequest::response(QNetworkR
  * @brief  Private implementation for DeleteUsagePlanKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUsagePlanKeyRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUsagePlanKeyRequestPrivate object, copying another.

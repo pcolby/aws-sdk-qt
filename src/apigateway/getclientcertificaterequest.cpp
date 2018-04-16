@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetClientCertificateRequest
+/*!
+ * \class QtAws::APIGateway::GetClientCertificateRequest
  *
- * @brief  Implements APIGateway GetClientCertificate requests.
+ * \brief The GetClientCertificateRequest class encapsulates APIGateway GetClientCertificate requests.
  *
- * @see    APIGatewayClient::getClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetClientCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetClientCertificateRequest::GetClientCertificateRequest(const GetClientCertific
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetClientCertificateRequest object.
  */
 GetClientCertificateRequest::GetClientCertificateRequest()
@@ -53,13 +61,16 @@ GetClientCertificateRequest::GetClientCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetClientCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetClientCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetClientCertificateRequest::response(QNetwor
     return new GetClientCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetClientCertificateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetClientCertificateRequest::response(QNetwor
  * @brief  Private implementation for GetClientCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetClientCertificateRequestPrivate object.
@@ -97,7 +108,7 @@ GetClientCertificateRequestPrivate::GetClientCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetClientCertificateRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSnapshotRequest
+/*!
+ * \class QtAws::EC2::DeleteSnapshotRequest
  *
- * @brief  Implements EC2 DeleteSnapshot requests.
+ * \brief The DeleteSnapshotRequest class encapsulates EC2 DeleteSnapshot requests.
  *
- * @see    EC2Client::deleteSnapshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSnapshotRequest object.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest()
@@ -53,13 +60,16 @@ DeleteSnapshotRequest::DeleteSnapshotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSnapshotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSnapshotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
     return new DeleteSnapshotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSnapshotRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteSnapshotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSnapshotRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSnapshotRequestPrivate object, copying another.

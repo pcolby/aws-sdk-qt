@@ -27,15 +27,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  PutItemResponse
+/*!
+ * \class QtAws::DynamoDB::PutItemResponse
  *
- * @brief  Handles DynamoDB PutItem responses.
+ * \brief The PutItemResponse class encapsulates DynamoDB PutItem responses.
  *
- * @see    DynamoDBClient::putItem
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::putItem
  */
 
-/**
+/*!
  * @brief  Constructs a new PutItemResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +80,7 @@ const PutItemRequest * PutItemResponse::request() const
     return static_cast<const PutItemRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DynamoDB PutItem response.
  *
  * @param  response  Response to parse.
@@ -70,15 +92,15 @@ void PutItemResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutItemResponsePrivate
+ * \class PutItemResponsePrivate
  *
- * @brief  Private implementation for PutItemResponse.
+ * \brief Private implementation for PutItemResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutItemResponsePrivate object.
@@ -91,7 +113,7 @@ PutItemResponsePrivate::PutItemResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DynamoDB PutItemResponse element.
  *
  * @param  xml  XML stream to parse.

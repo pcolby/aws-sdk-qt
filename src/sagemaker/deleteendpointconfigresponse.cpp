@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteEndpointConfigResponse
+/*!
+ * \class QtAws::SageMaker::DeleteEndpointConfigResponse
  *
- * @brief  Handles SageMaker DeleteEndpointConfig responses.
+ * \brief The DeleteEndpointConfigResponse class encapsulates SageMaker DeleteEndpointConfig responses.
  *
- * @see    SageMakerClient::deleteEndpointConfig
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteEndpointConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteEndpointConfigRequest * DeleteEndpointConfigResponse::request() cons
     return static_cast<const DeleteEndpointConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker DeleteEndpointConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteEndpointConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEndpointConfigResponsePrivate
+ * \class DeleteEndpointConfigResponsePrivate
  *
- * @brief  Private implementation for DeleteEndpointConfigResponse.
+ * \brief Private implementation for DeleteEndpointConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointConfigResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker DeleteEndpointConfigResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetRegistrationCodeRequest
+/*!
+ * \class QtAws::IoT::GetRegistrationCodeRequest
  *
- * @brief  Implements IoT GetRegistrationCode requests.
+ * \brief The GetRegistrationCodeRequest class encapsulates IoT GetRegistrationCode requests.
  *
- * @see    IoTClient::getRegistrationCode
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getRegistrationCode
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRegistrationCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetRegistrationCodeRequest::GetRegistrationCodeRequest(const GetRegistrationCode
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRegistrationCodeRequest object.
  */
 GetRegistrationCodeRequest::GetRegistrationCodeRequest()
@@ -53,13 +67,16 @@ GetRegistrationCodeRequest::GetRegistrationCodeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRegistrationCodeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRegistrationCodeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetwork
     return new GetRegistrationCodeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRegistrationCodeRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetwork
  * @brief  Private implementation for GetRegistrationCodeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegistrationCodeRequestPrivate object.
@@ -97,7 +114,7 @@ GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegistrationCodeRequestPrivate object, copying another.

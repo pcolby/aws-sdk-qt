@@ -65,35 +65,43 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudHSM
+ * \brief The QtAws::CloudHSM contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CloudHSMClient
+/*!
+ * \class QtAws::CloudHSM::CloudHSMClient
  *
- * @brief  Client for Amazon CloudHSM
+ * \brief The CloudHSMClient class provides access the Amazon CloudHSM service.
  *
- * <fullname>AWS CloudHSM Service</fullname>
+ * \ingroup CloudHSM
  *
- * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
- * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
- * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
- * href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
- *
- * Reference</a>>
- *
- * <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
- * CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
- * <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  */
 
-/**
- * @brief  Constructs a new CloudHSMClient object.
+/*!
+ * \brief Constructs a CloudHSMClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudHSMClient::CloudHSMClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -112,21 +120,16 @@ CloudHSMClient::CloudHSMClient(
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
-/**
- * @brief  Constructs a new CloudHSMClient object.
+/*!
+ * \overload CloudHSMClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudHSMClient::CloudHSMClient(
     const QUrl &endpoint,
@@ -145,7 +148,7 @@ CloudHSMClient::CloudHSMClient(
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -176,7 +179,7 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -204,7 +207,7 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
     return qobject_cast<CreateHapgResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -243,7 +246,7 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
     return qobject_cast<CreateHsmResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -270,7 +273,7 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
     return qobject_cast<CreateLunaClientResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -297,7 +300,7 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
     return qobject_cast<DeleteHapgResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -324,7 +327,7 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
     return qobject_cast<DeleteHsmResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -351,7 +354,7 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
     return qobject_cast<DeleteLunaClientResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -378,7 +381,7 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
     return qobject_cast<DescribeHapgResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -405,7 +408,7 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
     return qobject_cast<DescribeHsmResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -432,7 +435,7 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
     return qobject_cast<DescribeLunaClientResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -459,7 +462,7 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
     return qobject_cast<GetConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -486,7 +489,7 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
     return qobject_cast<ListAvailableZonesResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -519,7 +522,7 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
     return qobject_cast<ListHapgsResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -552,7 +555,7 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
     return qobject_cast<ListHsmsResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -585,7 +588,7 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
     return qobject_cast<ListLunaClientsResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -612,7 +615,7 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -639,7 +642,7 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
     return qobject_cast<ModifyHapgResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -672,7 +675,7 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
     return qobject_cast<ModifyHsmResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -703,7 +706,7 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
     return qobject_cast<ModifyLunaClientResponse *>(send(request));
 }
 
-/**
+/*!
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -734,7 +737,7 @@ RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const Re
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudHSMClientPrivate
@@ -742,7 +745,7 @@ RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const Re
  * @brief  Private implementation for CloudHSMClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudHSMClientPrivate object.

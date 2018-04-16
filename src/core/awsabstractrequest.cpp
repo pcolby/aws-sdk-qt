@@ -29,10 +29,10 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsAbstractRequest
+/*!
+ * \class QtAws::Core::AwsAbstractRequest
  *
- * @brief  Interface class for providing AWS requests
+ * \brief The AwsAbstractRequest class provides a base class for AWS requests.
  *
  * Typically, a user would pass a derived class (such as SqsCreateQueueRequest)
  * to an AwsAbstractClient-derived class (such as SqsClient) to send a request
@@ -47,7 +47,7 @@ namespace Core {
  * multiple times, and/or in multiple regions.
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsAbstractRequest object.
  */
 AwsAbstractRequest::AwsAbstractRequest()
@@ -56,7 +56,7 @@ AwsAbstractRequest::AwsAbstractRequest()
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AwsAbstractRequest object by copying another.
  */
 AwsAbstractRequest::AwsAbstractRequest(const AwsAbstractRequest &other)
@@ -65,7 +65,7 @@ AwsAbstractRequest::AwsAbstractRequest(const AwsAbstractRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -82,7 +82,7 @@ AwsAbstractRequest &AwsAbstractRequest::operator=(const AwsAbstractRequest &othe
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractRequest object.
@@ -97,7 +97,7 @@ AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d) : d_
 
 }
 
-/**
+/*!
  * @brief AwsAbstractRequest destructor.
  */
 AwsAbstractRequest::~AwsAbstractRequest()
@@ -105,10 +105,10 @@ AwsAbstractRequest::~AwsAbstractRequest()
     delete d_ptr;
 }
 
-/**
- * @fn     bool AwsAbstractRequest::isValid() const
+/*!
+ * \fn bool AwsAbstractRequest::isValid() const;
  *
- * @brief  Is this request valid?
+ * \brief Returns \c true if this request is valid; \c false otherwise.
  *
  * Derived classes must implement this function to provide a level of request
  * validation relevant to the type of request being implemented.
@@ -116,11 +116,9 @@ AwsAbstractRequest::~AwsAbstractRequest()
  * In this context, "valid" means that with valid credentials, the request's
  * networkRequest method should return a request that the caller can reasonably
  * expect AWS to accept (ignoring server side access restrictions and the like).
- *
- * @returns  \c true if this request is considered valid, \c false other.
  */
 
-/**
+/*!
  * @brief  Get the data, if relevant, to be included with PUT and/or POST operations.
  *
  * @return
@@ -131,7 +129,7 @@ QByteArray AwsAbstractRequest::data() const
     return d->data;
 }
 
-/**
+/*!
  * @brief  Construct a QNetworkRequest for this AWS request.
  *
  * This base implementation used the protected unsignedRequest function to fetch
@@ -160,7 +158,7 @@ QNetworkRequest AwsAbstractRequest::networkRequest(
     return request;
 }
 
-/**
+/*!
  * @brief  Get the network operation this request uses.
  *
  * This defaults to QNetworkAccessManager::GetOperation unless overridden or
@@ -176,7 +174,7 @@ QNetworkAccessManager::Operation AwsAbstractRequest::operation() const
     return d->operation;
 }
 
-/**
+/*!
  * @brief  Send this request to a given Amazon endpoint, via the specified
  *         network access manager.
  *
@@ -218,7 +216,7 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
     return NULL;
 }
 
-/**
+/*!
  * @brief  Equality operator.
  *
  * @param  other  Instance to compare \c this to.
@@ -230,7 +228,7 @@ bool AwsAbstractRequest::operator==(const AwsAbstractRequest &other) const
     return ((data() == other.data()) && (operation() == other.operation()));
 }
 
-/**
+/*!
  * @brief  Set the data to be used with POST and/or PUT operations.
  *
  * @param  data  POST/PUT data.
@@ -241,7 +239,7 @@ void AwsAbstractRequest::setData(const QByteArray &data)
     d->data = data;
 }
 
-/**
+/*!
  * @brief  Set the network operation to use when submitting this request.
  *
  * @param  operation  Network operation to use.
@@ -252,7 +250,7 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
     d->operation = operation;
 }
 
-/**
+/*!
  * @fn AwsAbstractResponse * AwsAbstractRequest::response(QNetworkReply * const reply) const
  *
  * @brief  Construct an appropriate AWS response object.
@@ -272,7 +270,7 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
  * @see  AwsAbstractClient::send
  */
 
-/**
+/*!
  * @fn QNetworkRequest AwsAbstractRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Build a network request for the given \a endpoint.
@@ -286,15 +284,15 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
  * @return A network request for the given \a endpoint.
  */
 
-/**
+/*!
  * @internal
  *
- * @class  AwsAbstractRequestPrivate
+ * \class QtAws::Core::AwsAbstractRequestPrivate
  *
  * @brief  Private implementation for AwsAbstractRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractRequestPrivate object.
@@ -307,7 +305,7 @@ AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const 
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractRequestPrivate object from an existing one.
@@ -327,7 +325,7 @@ AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  AwsAbstractRequestPrivate destructor.
@@ -340,7 +338,7 @@ AwsAbstractRequestPrivate::~AwsAbstractRequestPrivate()
 
 }
 
-/**
+/*!
  * @brief  POST the given \a request via the given \a manager.
  *
  * This base implementation simply invokes QNetworkAccessManager::post with the
@@ -369,7 +367,7 @@ QNetworkReply *AwsAbstractRequestPrivate::post(QNetworkAccessManager &manager,
     return manager.post(request, q->data());
 }
 
-/**
+/*!
  * @brief  PUT the given \a request via the given \a manager.
  *
  * This base implementation simply invokes QNetworkAccessManager::put with the

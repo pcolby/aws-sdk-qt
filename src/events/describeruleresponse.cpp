@@ -27,15 +27,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  DescribeRuleResponse
+/*!
+ * \class QtAws::CloudWatchEvents::DescribeRuleResponse
  *
- * @brief  Handles CloudWatchEvents DescribeRule responses.
+ * \brief The DescribeRuleResponse class encapsulates CloudWatchEvents DescribeRule responses.
  *
- * @see    CloudWatchEventsClient::describeRule
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::describeRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +84,7 @@ const DescribeRuleRequest * DescribeRuleResponse::request() const
     return static_cast<const DescribeRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatchEvents DescribeRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +96,15 @@ void DescribeRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeRuleResponsePrivate
+ * \class DescribeRuleResponsePrivate
  *
- * @brief  Private implementation for DescribeRuleResponse.
+ * \brief Private implementation for DescribeRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRuleResponsePrivate object.
@@ -91,7 +117,7 @@ DescribeRuleResponsePrivate::DescribeRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatchEvents DescribeRuleResponse element.
  *
  * @param  xml  XML stream to parse.

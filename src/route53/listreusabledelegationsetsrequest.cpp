@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListReusableDelegationSetsRequest
+/*!
+ * \class QtAws::Route53::ListReusableDelegationSetsRequest
  *
- * @brief  Implements Route53 ListReusableDelegationSets requests.
+ * \brief The ListReusableDelegationSetsRequest class encapsulates Route53 ListReusableDelegationSets requests.
  *
- * @see    Route53Client::listReusableDelegationSets
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listReusableDelegationSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListReusableDelegationSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListReusableDelegationSetsRequest::ListReusableDelegationSetsRequest(const ListR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListReusableDelegationSetsRequest object.
  */
 ListReusableDelegationSetsRequest::ListReusableDelegationSetsRequest()
@@ -53,13 +56,16 @@ ListReusableDelegationSetsRequest::ListReusableDelegationSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListReusableDelegationSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListReusableDelegationSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListReusableDelegationSetsRequest::response(Q
     return new ListReusableDelegationSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListReusableDelegationSetsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListReusableDelegationSetsRequest::response(Q
  * @brief  Private implementation for ListReusableDelegationSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReusableDelegationSetsRequestPrivate object.
@@ -97,7 +103,7 @@ ListReusableDelegationSetsRequestPrivate::ListReusableDelegationSetsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReusableDelegationSetsRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateProjectRequest
+/*!
+ * \class QtAws::DeviceFarm::UpdateProjectRequest
  *
- * @brief  Implements DeviceFarm UpdateProject requests.
+ * \brief The UpdateProjectRequest class encapsulates DeviceFarm UpdateProject requests.
  *
- * @see    DeviceFarmClient::updateProject
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateProject
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ UpdateProjectRequest::UpdateProjectRequest(const UpdateProjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateProjectRequest object.
  */
 UpdateProjectRequest::UpdateProjectRequest()
@@ -53,13 +58,16 @@ UpdateProjectRequest::UpdateProjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateProjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateProjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
     return new UpdateProjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateProjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateProjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProjectRequestPrivate object.
@@ -97,7 +105,7 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProjectRequestPrivate object, copying another.

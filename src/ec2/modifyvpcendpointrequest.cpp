@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointRequest
  *
- * @brief  Implements EC2 ModifyVpcEndpoint requests.
+ * \brief The ModifyVpcEndpointRequest class encapsulates EC2 ModifyVpcEndpoint requests.
  *
- * @see    EC2Client::modifyVpcEndpoint
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcEndpointRequest::ModifyVpcEndpointRequest(const ModifyVpcEndpointReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointRequest object.
  */
 ModifyVpcEndpointRequest::ModifyVpcEndpointRequest()
@@ -53,13 +60,16 @@ ModifyVpcEndpointRequest::ModifyVpcEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointRequest::response(QNetworkRe
     return new ModifyVpcEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcEndpointRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointRequest::response(QNetworkRe
  * @brief  Private implementation for ModifyVpcEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointRequestPrivate object, copying another.

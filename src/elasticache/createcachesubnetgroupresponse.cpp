@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  CreateCacheSubnetGroupResponse
+/*!
+ * \class QtAws::ElastiCache::CreateCacheSubnetGroupResponse
  *
- * @brief  Handles ElastiCache CreateCacheSubnetGroup responses.
+ * \brief The CreateCacheSubnetGroupResponse class encapsulates ElastiCache CreateCacheSubnetGroup responses.
  *
- * @see    ElastiCacheClient::createCacheSubnetGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::createCacheSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCacheSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const CreateCacheSubnetGroupRequest * CreateCacheSubnetGroupResponse::request() 
     return static_cast<const CreateCacheSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache CreateCacheSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void CreateCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCacheSubnetGroupResponsePrivate
+ * \class CreateCacheSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for CreateCacheSubnetGroupResponse.
+ * \brief Private implementation for CreateCacheSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCacheSubnetGroupResponsePrivate object.
@@ -91,7 +108,7 @@ CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache CreateCacheSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

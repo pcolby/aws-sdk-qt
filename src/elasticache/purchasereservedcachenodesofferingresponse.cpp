@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  PurchaseReservedCacheNodesOfferingResponse
+/*!
+ * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingResponse
  *
- * @brief  Handles ElastiCache PurchaseReservedCacheNodesOffering responses.
+ * \brief The PurchaseReservedCacheNodesOfferingResponse class encapsulates ElastiCache PurchaseReservedCacheNodesOffering responses.
  *
- * @see    ElastiCacheClient::purchaseReservedCacheNodesOffering
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::purchaseReservedCacheNodesOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const PurchaseReservedCacheNodesOfferingRequest * PurchaseReservedCacheNodesOffe
     return static_cast<const PurchaseReservedCacheNodesOfferingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache PurchaseReservedCacheNodesOffering response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void PurchaseReservedCacheNodesOfferingResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PurchaseReservedCacheNodesOfferingResponsePrivate
+ * \class PurchaseReservedCacheNodesOfferingResponsePrivate
  *
- * @brief  Private implementation for PurchaseReservedCacheNodesOfferingResponse.
+ * \brief Private implementation for PurchaseReservedCacheNodesOfferingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponsePrivate object.
@@ -91,7 +108,7 @@ PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOff
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache PurchaseReservedCacheNodesOfferingResponse element.
  *
  * @param  xml  XML stream to parse.

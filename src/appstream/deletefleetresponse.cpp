@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteFleetResponse
+/*!
+ * \class QtAws::AppStream::DeleteFleetResponse
  *
- * @brief  Handles AppStream DeleteFleet responses.
+ * \brief The DeleteFleetResponse class encapsulates AppStream DeleteFleet responses.
  *
- * @see    AppStreamClient::deleteFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFleetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteFleetRequest * DeleteFleetResponse::request() const
     return static_cast<const DeleteFleetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DeleteFleet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteFleetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFleetResponsePrivate
+ * \class DeleteFleetResponsePrivate
  *
- * @brief  Private implementation for DeleteFleetResponse.
+ * \brief Private implementation for DeleteFleetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFleetResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DeleteFleetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  ModifyWorkspacePropertiesRequest
+/*!
+ * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesRequest
  *
- * @brief  Implements WorkSpaces ModifyWorkspaceProperties requests.
+ * \brief The ModifyWorkspacePropertiesRequest class encapsulates WorkSpaces ModifyWorkspaceProperties requests.
  *
- * @see    WorkSpacesClient::modifyWorkspaceProperties
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::modifyWorkspaceProperties
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyWorkspacePropertiesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ModifyWorkspacePropertiesRequest::ModifyWorkspacePropertiesRequest(const ModifyW
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyWorkspacePropertiesRequest object.
  */
 ModifyWorkspacePropertiesRequest::ModifyWorkspacePropertiesRequest()
@@ -53,13 +59,16 @@ ModifyWorkspacePropertiesRequest::ModifyWorkspacePropertiesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyWorkspacePropertiesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyWorkspacePropertiesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QN
     return new ModifyWorkspacePropertiesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyWorkspacePropertiesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QN
  * @brief  Private implementation for ModifyWorkspacePropertiesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyWorkspacePropertiesRequestPrivate object.
@@ -97,7 +106,7 @@ ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyWorkspacePropertiesRequestPrivate object, copying another.

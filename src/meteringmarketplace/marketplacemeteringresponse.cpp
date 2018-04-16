@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MarketplaceMetering {
 
-/**
- * @class  MarketplaceMeteringResponse
+/*!
+ * \class QtAws::MarketplaceMetering::MarketplaceMeteringResponse
  *
- * @brief  Handles MarketplaceMetering MarketplaceMetering responses.
+ * \brief The MarketplaceMeteringResponse class is the base class for all MarketplaceMetering responses.
  *
- * @see    MarketplaceMeteringClient::marketplaceMetering
+ * \ingroup MarketplaceMetering
  */
 
-/**
+/*!
  * @brief  Constructs a new MarketplaceMeteringResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceMeteringResponse object.
@@ -63,7 +63,7 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(MarketplaceMeteringResp
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MarketplaceMeteringResponsePrivate
@@ -92,7 +92,7 @@ void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MarketplaceMeteringResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceMeteringResponsePrivate object.

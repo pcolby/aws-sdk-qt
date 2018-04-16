@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListOutgoingCertificatesRequest
+/*!
+ * \class QtAws::IoT::ListOutgoingCertificatesRequest
  *
- * @brief  Implements IoT ListOutgoingCertificates requests.
+ * \brief The ListOutgoingCertificatesRequest class encapsulates IoT ListOutgoingCertificates requests.
  *
- * @see    IoTClient::listOutgoingCertificates
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listOutgoingCertificates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOutgoingCertificatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest(const ListOutgo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOutgoingCertificatesRequest object.
  */
 ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest()
@@ -53,13 +67,16 @@ ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOutgoingCertificatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOutgoingCertificatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNe
     return new ListOutgoingCertificatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOutgoingCertificatesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNe
  * @brief  Private implementation for ListOutgoingCertificatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOutgoingCertificatesRequestPrivate object.
@@ -97,7 +114,7 @@ ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOutgoingCertificatesRequestPrivate object, copying another.

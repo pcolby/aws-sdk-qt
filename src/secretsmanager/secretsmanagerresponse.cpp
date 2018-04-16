@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SecretsManager {
 
-/**
- * @class  SecretsManagerResponse
+/*!
+ * \class QtAws::SecretsManager::SecretsManagerResponse
  *
- * @brief  Handles SecretsManager SecretsManager responses.
+ * \brief The SecretsManagerResponse class is the base class for all SecretsManager responses.
  *
- * @see    SecretsManagerClient::secretsManager
+ * \ingroup SecretsManager
  */
 
-/**
+/*!
  * @brief  Constructs a new SecretsManagerResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SecretsManagerResponse::SecretsManagerResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SecretsManagerResponse object.
@@ -63,7 +63,7 @@ SecretsManagerResponse::SecretsManagerResponse(SecretsManagerResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SecretsManagerResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SecretsManagerResponsePrivate
@@ -92,7 +92,7 @@ void SecretsManagerResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SecretsManagerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SecretsManagerResponsePrivate object.

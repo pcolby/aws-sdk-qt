@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListDevicesResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListDevicesResponse
  *
- * @brief  Handles CognitoIdentityProvider ListDevices responses.
+ * \brief The ListDevicesResponse class encapsulates CognitoIdentityProvider ListDevices responses.
  *
- * @see    CognitoIdentityProviderClient::listDevices
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listDevices
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDevicesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ListDevicesRequest * ListDevicesResponse::request() const
     return static_cast<const ListDevicesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ListDevices response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ListDevicesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDevicesResponsePrivate
+ * \class ListDevicesResponsePrivate
  *
- * @brief  Private implementation for ListDevicesResponse.
+ * \brief Private implementation for ListDevicesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDevicesResponsePrivate object.
@@ -91,7 +104,7 @@ ListDevicesResponsePrivate::ListDevicesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ListDevicesResponse element.
  *
  * @param  xml  XML stream to parse.

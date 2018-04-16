@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListHapgsResponse
+/*!
+ * \class QtAws::CloudHSM::ListHapgsResponse
  *
- * @brief  Handles CloudHSM ListHapgs responses.
+ * \brief The ListHapgsResponse class encapsulates CloudHSM ListHapgs responses.
  *
- * @see    CloudHSMClient::listHapgs
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listHapgs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHapgsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ListHapgsRequest * ListHapgsResponse::request() const
     return static_cast<const ListHapgsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM ListHapgs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ListHapgsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListHapgsResponsePrivate
+ * \class ListHapgsResponsePrivate
  *
- * @brief  Private implementation for ListHapgsResponse.
+ * \brief Private implementation for ListHapgsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHapgsResponsePrivate object.
@@ -91,7 +106,7 @@ ListHapgsResponsePrivate::ListHapgsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM ListHapgsResponse element.
  *
  * @param  xml  XML stream to parse.

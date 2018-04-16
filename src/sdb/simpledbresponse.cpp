@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  SimpleDBResponse
+/*!
+ * \class QtAws::SimpleDB::SimpleDBResponse
  *
- * @brief  Handles SimpleDB SimpleDB responses.
+ * \brief The SimpleDBResponse class is the base class for all SimpleDB responses.
  *
- * @see    SimpleDBClient::simpleDB
+ * \ingroup SimpleDB
  */
 
-/**
+/*!
  * @brief  Constructs a new SimpleDBResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SimpleDBResponse::SimpleDBResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SimpleDBResponse object.
@@ -63,7 +63,7 @@ SimpleDBResponse::SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SimpleDBResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SimpleDBResponsePrivate
@@ -92,7 +92,7 @@ void SimpleDBResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SimpleDBResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SimpleDBResponsePrivate object.

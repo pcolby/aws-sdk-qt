@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteRemoteAccessSessionRequest
+/*!
+ * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionRequest
  *
- * @brief  Implements DeviceFarm DeleteRemoteAccessSession requests.
+ * \brief The DeleteRemoteAccessSessionRequest class encapsulates DeviceFarm DeleteRemoteAccessSession requests.
  *
- * @see    DeviceFarmClient::deleteRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRemoteAccessSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteRemoteAccessSessionRequest::DeleteRemoteAccessSessionRequest(const DeleteR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRemoteAccessSessionRequest object.
  */
 DeleteRemoteAccessSessionRequest::DeleteRemoteAccessSessionRequest()
@@ -53,13 +58,16 @@ DeleteRemoteAccessSessionRequest::DeleteRemoteAccessSessionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRemoteAccessSessionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRemoteAccessSessionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QN
     return new DeleteRemoteAccessSessionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRemoteAccessSessionRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QN
  * @brief  Private implementation for DeleteRemoteAccessSessionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRemoteAccessSessionRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRemoteAccessSessionRequestPrivate object, copying another.

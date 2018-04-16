@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  UpdateRegexMatchSetResponse
+/*!
+ * \class QtAws::WAFRegional::UpdateRegexMatchSetResponse
  *
- * @brief  Handles WAFRegional UpdateRegexMatchSet responses.
+ * \brief The UpdateRegexMatchSetResponse class encapsulates WAFRegional UpdateRegexMatchSet responses.
  *
- * @see    WAFRegionalClient::updateRegexMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::updateRegexMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRegexMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
     return static_cast<const UpdateRegexMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional UpdateRegexMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRegexMatchSetResponsePrivate
+ * \class UpdateRegexMatchSetResponsePrivate
  *
- * @brief  Private implementation for UpdateRegexMatchSetResponse.
+ * \brief Private implementation for UpdateRegexMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRegexMatchSetResponsePrivate object.
@@ -91,7 +101,7 @@ UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional UpdateRegexMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

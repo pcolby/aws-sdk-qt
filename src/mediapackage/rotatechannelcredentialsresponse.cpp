@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  RotateChannelCredentialsResponse
+/*!
+ * \class QtAws::MediaPackage::RotateChannelCredentialsResponse
  *
- * @brief  Handles MediaPackage RotateChannelCredentials responses.
+ * \brief The RotateChannelCredentialsResponse class encapsulates MediaPackage RotateChannelCredentials responses.
  *
- * @see    MediaPackageClient::rotateChannelCredentials
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::rotateChannelCredentials
  */
 
-/**
+/*!
  * @brief  Constructs a new RotateChannelCredentialsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const RotateChannelCredentialsRequest * RotateChannelCredentialsResponse::reques
     return static_cast<const RotateChannelCredentialsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaPackage RotateChannelCredentials response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void RotateChannelCredentialsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RotateChannelCredentialsResponsePrivate
+ * \class RotateChannelCredentialsResponsePrivate
  *
- * @brief  Private implementation for RotateChannelCredentialsResponse.
+ * \brief Private implementation for RotateChannelCredentialsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RotateChannelCredentialsResponsePrivate object.
@@ -91,7 +94,7 @@ RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaPackage RotateChannelCredentialsResponse element.
  *
  * @param  xml  XML stream to parse.

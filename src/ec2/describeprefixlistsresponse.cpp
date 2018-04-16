@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribePrefixListsResponse
+/*!
+ * \class QtAws::EC2::DescribePrefixListsResponse
  *
- * @brief  Handles EC2 DescribePrefixLists responses.
+ * \brief The DescribePrefixListsResponse class encapsulates EC2 DescribePrefixLists responses.
  *
- * @see    EC2Client::describePrefixLists
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describePrefixLists
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePrefixListsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribePrefixListsRequest * DescribePrefixListsResponse::request() const
     return static_cast<const DescribePrefixListsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribePrefixLists response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribePrefixListsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribePrefixListsResponsePrivate
+ * \class DescribePrefixListsResponsePrivate
  *
- * @brief  Private implementation for DescribePrefixListsResponse.
+ * \brief Private implementation for DescribePrefixListsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePrefixListsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribePrefixListsResponsePrivate::DescribePrefixListsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribePrefixListsResponse element.
  *
  * @param  xml  XML stream to parse.

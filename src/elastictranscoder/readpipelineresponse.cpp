@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ReadPipelineResponse
+/*!
+ * \class QtAws::ElasticTranscoder::ReadPipelineResponse
  *
- * @brief  Handles ElasticTranscoder ReadPipeline responses.
+ * \brief The ReadPipelineResponse class encapsulates ElasticTranscoder ReadPipeline responses.
  *
- * @see    ElasticTranscoderClient::readPipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::readPipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new ReadPipelineResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ReadPipelineRequest * ReadPipelineResponse::request() const
     return static_cast<const ReadPipelineRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder ReadPipeline response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ReadPipelineResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReadPipelineResponsePrivate
+ * \class ReadPipelineResponsePrivate
  *
- * @brief  Private implementation for ReadPipelineResponse.
+ * \brief Private implementation for ReadPipelineResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadPipelineResponsePrivate object.
@@ -91,7 +97,7 @@ ReadPipelineResponsePrivate::ReadPipelineResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder ReadPipelineResponse element.
  *
  * @param  xml  XML stream to parse.

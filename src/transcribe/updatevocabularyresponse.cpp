@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  UpdateVocabularyResponse
+/*!
+ * \class QtAws::TranscribeService::UpdateVocabularyResponse
  *
- * @brief  Handles TranscribeService UpdateVocabulary responses.
+ * \brief The UpdateVocabularyResponse class encapsulates TranscribeService UpdateVocabulary responses.
  *
- * @see    TranscribeServiceClient::updateVocabulary
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::updateVocabulary
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateVocabularyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateVocabularyRequest * UpdateVocabularyResponse::request() const
     return static_cast<const UpdateVocabularyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a TranscribeService UpdateVocabulary response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateVocabularyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateVocabularyResponsePrivate
+ * \class UpdateVocabularyResponsePrivate
  *
- * @brief  Private implementation for UpdateVocabularyResponse.
+ * \brief Private implementation for UpdateVocabularyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateVocabularyResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateVocabularyResponsePrivate::UpdateVocabularyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an TranscribeService UpdateVocabularyResponse element.
  *
  * @param  xml  XML stream to parse.

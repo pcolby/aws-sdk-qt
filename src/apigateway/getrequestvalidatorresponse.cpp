@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetRequestValidatorResponse
+/*!
+ * \class QtAws::APIGateway::GetRequestValidatorResponse
  *
- * @brief  Handles APIGateway GetRequestValidator responses.
+ * \brief The GetRequestValidatorResponse class encapsulates APIGateway GetRequestValidator responses.
  *
- * @see    APIGatewayClient::getRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRequestValidatorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetRequestValidatorRequest * GetRequestValidatorResponse::request() const
     return static_cast<const GetRequestValidatorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetRequestValidator response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetRequestValidatorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetRequestValidatorResponsePrivate
+ * \class GetRequestValidatorResponsePrivate
  *
- * @brief  Private implementation for GetRequestValidatorResponse.
+ * \brief Private implementation for GetRequestValidatorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRequestValidatorResponsePrivate object.
@@ -91,7 +99,7 @@ GetRequestValidatorResponsePrivate::GetRequestValidatorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetRequestValidatorResponse element.
  *
  * @param  xml  XML stream to parse.

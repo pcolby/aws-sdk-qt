@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetChangeTokenRequest
+/*!
+ * \class QtAws::WAF::GetChangeTokenRequest
  *
- * @brief  Implements WAF GetChangeToken requests.
+ * \brief The GetChangeTokenRequest class encapsulates WAF GetChangeToken requests.
  *
- * @see    WAFClient::getChangeToken
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getChangeToken
  */
 
-/**
+/*!
  * @brief  Constructs a new GetChangeTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetChangeTokenRequest object.
  */
 GetChangeTokenRequest::GetChangeTokenRequest()
@@ -53,13 +61,16 @@ GetChangeTokenRequest::GetChangeTokenRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetChangeTokenRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetChangeTokenResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
     return new GetChangeTokenResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetChangeTokenRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
  * @brief  Private implementation for GetChangeTokenRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeTokenRequestPrivate object.
@@ -97,7 +108,7 @@ GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeTokenRequestPrivate object, copying another.

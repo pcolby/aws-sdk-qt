@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeUserPoolClientResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeUserPoolClientResponse
  *
- * @brief  Handles CognitoIdentityProvider DescribeUserPoolClient responses.
+ * \brief The DescribeUserPoolClientResponse class encapsulates CognitoIdentityProvider DescribeUserPoolClient responses.
  *
- * @see    CognitoIdentityProviderClient::describeUserPoolClient
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeUserPoolClient
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserPoolClientResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DescribeUserPoolClientRequest * DescribeUserPoolClientResponse::request() 
     return static_cast<const DescribeUserPoolClientRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DescribeUserPoolClient response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DescribeUserPoolClientResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeUserPoolClientResponsePrivate
+ * \class DescribeUserPoolClientResponsePrivate
  *
- * @brief  Private implementation for DescribeUserPoolClientResponse.
+ * \brief Private implementation for DescribeUserPoolClientResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserPoolClientResponsePrivate object.
@@ -91,7 +104,7 @@ DescribeUserPoolClientResponsePrivate::DescribeUserPoolClientResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DescribeUserPoolClientResponse element.
  *
  * @param  xml  XML stream to parse.

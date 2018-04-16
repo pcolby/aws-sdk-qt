@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  CreateProjectResponse
+/*!
+ * \class QtAws::Mobile::CreateProjectResponse
  *
- * @brief  Handles Mobile CreateProject responses.
+ * \brief The CreateProjectResponse class encapsulates Mobile CreateProject responses.
  *
- * @see    MobileClient::createProject
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::createProject
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateProjectRequest * CreateProjectResponse::request() const
     return static_cast<const CreateProjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile CreateProject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateProjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateProjectResponsePrivate
+ * \class CreateProjectResponsePrivate
  *
- * @brief  Private implementation for CreateProjectResponse.
+ * \brief Private implementation for CreateProjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProjectResponsePrivate object.
@@ -91,7 +97,7 @@ CreateProjectResponsePrivate::CreateProjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile CreateProjectResponse element.
  *
  * @param  xml  XML stream to parse.

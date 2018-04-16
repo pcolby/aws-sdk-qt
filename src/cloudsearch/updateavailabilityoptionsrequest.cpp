@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  UpdateAvailabilityOptionsRequest
+/*!
+ * \class QtAws::CloudSearch::UpdateAvailabilityOptionsRequest
  *
- * @brief  Implements CloudSearch UpdateAvailabilityOptions requests.
+ * \brief The UpdateAvailabilityOptionsRequest class encapsulates CloudSearch UpdateAvailabilityOptions requests.
  *
- * @see    CloudSearchClient::updateAvailabilityOptions
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::updateAvailabilityOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAvailabilityOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateAvailabilityOptionsRequest::UpdateAvailabilityOptionsRequest(const UpdateA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAvailabilityOptionsRequest object.
  */
 UpdateAvailabilityOptionsRequest::UpdateAvailabilityOptionsRequest()
@@ -53,13 +67,16 @@ UpdateAvailabilityOptionsRequest::UpdateAvailabilityOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAvailabilityOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAvailabilityOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAvailabilityOptionsRequest::response(QN
     return new UpdateAvailabilityOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAvailabilityOptionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAvailabilityOptionsRequest::response(QN
  * @brief  Private implementation for UpdateAvailabilityOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAvailabilityOptionsRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAvailabilityOptionsRequestPrivate object, copying another.

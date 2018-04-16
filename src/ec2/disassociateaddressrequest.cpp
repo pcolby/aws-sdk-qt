@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateAddressRequest
+/*!
+ * \class QtAws::EC2::DisassociateAddressRequest
  *
- * @brief  Implements EC2 DisassociateAddress requests.
+ * \brief The DisassociateAddressRequest class encapsulates EC2 DisassociateAddress requests.
  *
- * @see    EC2Client::disassociateAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisassociateAddressRequest::DisassociateAddressRequest(const DisassociateAddress
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateAddressRequest object.
  */
 DisassociateAddressRequest::DisassociateAddressRequest()
@@ -53,13 +60,16 @@ DisassociateAddressRequest::DisassociateAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetwork
     return new DisassociateAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateAddressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetwork
  * @brief  Private implementation for DisassociateAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateAddressRequestPrivate object.
@@ -97,7 +107,7 @@ DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateAddressRequestPrivate object, copying another.

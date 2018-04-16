@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetAdmChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetAdmChannelRequest
  *
- * @brief  Implements Pinpoint GetAdmChannel requests.
+ * \brief The GetAdmChannelRequest class encapsulates Pinpoint GetAdmChannel requests.
  *
- * @see    PinpointClient::getAdmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getAdmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAdmChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetAdmChannelRequest::GetAdmChannelRequest(const GetAdmChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAdmChannelRequest object.
  */
 GetAdmChannelRequest::GetAdmChannelRequest()
@@ -53,13 +56,16 @@ GetAdmChannelRequest::GetAdmChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAdmChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAdmChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply 
     return new GetAdmChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAdmChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply 
  * @brief  Private implementation for GetAdmChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAdmChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAdmChannelRequestPrivate object, copying another.

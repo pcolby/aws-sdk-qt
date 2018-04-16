@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  CreateParameterGroupRequest
+/*!
+ * \class QtAws::DAX::CreateParameterGroupRequest
  *
- * @brief  Implements DAX CreateParameterGroup requests.
+ * \brief The CreateParameterGroupRequest class encapsulates DAX CreateParameterGroup requests.
  *
- * @see    DAXClient::createParameterGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::createParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateParameterGroupRequest::CreateParameterGroupRequest(const CreateParameterGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateParameterGroupRequest object.
  */
 CreateParameterGroupRequest::CreateParameterGroupRequest()
@@ -53,13 +60,16 @@ CreateParameterGroupRequest::CreateParameterGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateParameterGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateParameterGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetwor
     return new CreateParameterGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateParameterGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetwor
  * @brief  Private implementation for CreateParameterGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateParameterGroupRequestPrivate object.
@@ -97,7 +107,7 @@ CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateParameterGroupRequestPrivate object, copying another.

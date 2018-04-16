@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  EnableDomainTransferLockResponse
+/*!
+ * \class QtAws::Route53Domains::EnableDomainTransferLockResponse
  *
- * @brief  Handles Route53Domains EnableDomainTransferLock responses.
+ * \brief The EnableDomainTransferLockResponse class encapsulates Route53Domains EnableDomainTransferLock responses.
  *
- * @see    Route53DomainsClient::enableDomainTransferLock
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::enableDomainTransferLock
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableDomainTransferLockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const EnableDomainTransferLockRequest * EnableDomainTransferLockResponse::reques
     return static_cast<const EnableDomainTransferLockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains EnableDomainTransferLock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void EnableDomainTransferLockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableDomainTransferLockResponsePrivate
+ * \class EnableDomainTransferLockResponsePrivate
  *
- * @brief  Private implementation for EnableDomainTransferLockResponse.
+ * \brief Private implementation for EnableDomainTransferLockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableDomainTransferLockResponsePrivate object.
@@ -91,7 +95,7 @@ EnableDomainTransferLockResponsePrivate::EnableDomainTransferLockResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains EnableDomainTransferLockResponse element.
  *
  * @param  xml  XML stream to parse.

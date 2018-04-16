@@ -27,24 +27,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MobileAnalytics
+ * \brief The QtAws::MobileAnalytics contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MobileAnalytics {
 
-/**
- * @class  MobileAnalyticsClient
+/*!
+ * \class QtAws::MobileAnalytics::MobileAnalyticsClient
  *
- * @brief  Client for Amazon Mobile Analytics
+ * \brief The MobileAnalyticsClient class provides access the Amazon Mobile Analytics service.
  *
- * Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
+ * \ingroup MobileAnalytics
+ *
+ *  Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
  */
 
-/**
- * @brief  Constructs a new MobileAnalyticsClient object.
+/*!
+ * \brief Constructs a MobileAnalyticsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MobileAnalyticsClient::MobileAnalyticsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -63,21 +71,16 @@ MobileAnalyticsClient::MobileAnalyticsClient(
     d->serviceName = QStringLiteral("mobileanalytics");
 }
 
-/**
- * @brief  Constructs a new MobileAnalyticsClient object.
+/*!
+ * \overload MobileAnalyticsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MobileAnalyticsClient::MobileAnalyticsClient(
     const QUrl &endpoint,
@@ -96,7 +99,7 @@ MobileAnalyticsClient::MobileAnalyticsClient(
     d->serviceName = QStringLiteral("mobileanalytics");
 }
 
-/**
+/*!
  * The PutEvents operation records one or more events. You can have up to 1,500 unique custom events per app, any
  * combination of up to 40 attributes and metrics per custom event, and any number of attribute or metric
  *
@@ -111,7 +114,7 @@ PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &req
     return qobject_cast<PutEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MobileAnalyticsClientPrivate
@@ -119,7 +122,7 @@ PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &req
  * @brief  Private implementation for MobileAnalyticsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MobileAnalyticsClientPrivate object.

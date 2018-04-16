@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ApproveAssignmentRequest
+/*!
+ * \class QtAws::MTurk::ApproveAssignmentRequest
  *
- * @brief  Implements MTurk ApproveAssignment requests.
+ * \brief The ApproveAssignmentRequest class encapsulates MTurk ApproveAssignment requests.
  *
- * @see    MTurkClient::approveAssignment
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::approveAssignment
  */
 
-/**
+/*!
  * @brief  Constructs a new ApproveAssignmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ApproveAssignmentRequest::ApproveAssignmentRequest(const ApproveAssignmentReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ApproveAssignmentRequest object.
  */
 ApproveAssignmentRequest::ApproveAssignmentRequest()
@@ -53,13 +56,16 @@ ApproveAssignmentRequest::ApproveAssignmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ApproveAssignmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ApproveAssignmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkRe
     return new ApproveAssignmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ApproveAssignmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkRe
  * @brief  Private implementation for ApproveAssignmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApproveAssignmentRequestPrivate object.
@@ -97,7 +103,7 @@ ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApproveAssignmentRequestPrivate object, copying another.

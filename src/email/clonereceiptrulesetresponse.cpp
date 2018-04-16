@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CloneReceiptRuleSetResponse
+/*!
+ * \class QtAws::SES::CloneReceiptRuleSetResponse
  *
- * @brief  Handles SES CloneReceiptRuleSet responses.
+ * \brief The CloneReceiptRuleSetResponse class encapsulates SES CloneReceiptRuleSet responses.
  *
- * @see    SESClient::cloneReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::cloneReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CloneReceiptRuleSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CloneReceiptRuleSetRequest * CloneReceiptRuleSetResponse::request() const
     return static_cast<const CloneReceiptRuleSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES CloneReceiptRuleSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CloneReceiptRuleSetResponsePrivate
+ * \class CloneReceiptRuleSetResponsePrivate
  *
- * @brief  Private implementation for CloneReceiptRuleSetResponse.
+ * \brief Private implementation for CloneReceiptRuleSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloneReceiptRuleSetResponsePrivate object.
@@ -91,7 +105,7 @@ CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES CloneReceiptRuleSetResponse element.
  *
  * @param  xml  XML stream to parse.

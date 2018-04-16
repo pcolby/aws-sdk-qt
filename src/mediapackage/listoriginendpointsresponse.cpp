@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  ListOriginEndpointsResponse
+/*!
+ * \class QtAws::MediaPackage::ListOriginEndpointsResponse
  *
- * @brief  Handles MediaPackage ListOriginEndpoints responses.
+ * \brief The ListOriginEndpointsResponse class encapsulates MediaPackage ListOriginEndpoints responses.
  *
- * @see    MediaPackageClient::listOriginEndpoints
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::listOriginEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOriginEndpointsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListOriginEndpointsRequest * ListOriginEndpointsResponse::request() const
     return static_cast<const ListOriginEndpointsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaPackage ListOriginEndpoints response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListOriginEndpointsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListOriginEndpointsResponsePrivate
+ * \class ListOriginEndpointsResponsePrivate
  *
- * @brief  Private implementation for ListOriginEndpointsResponse.
+ * \brief Private implementation for ListOriginEndpointsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOriginEndpointsResponsePrivate object.
@@ -91,7 +94,7 @@ ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaPackage ListOriginEndpointsResponse element.
  *
  * @param  xml  XML stream to parse.

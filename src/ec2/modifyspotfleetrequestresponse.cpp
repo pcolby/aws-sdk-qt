@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifySpotFleetRequestResponse
+/*!
+ * \class QtAws::EC2::ModifySpotFleetRequestResponse
  *
- * @brief  Handles EC2 ModifySpotFleetRequest responses.
+ * \brief The ModifySpotFleetRequestResponse class encapsulates EC2 ModifySpotFleetRequest responses.
  *
- * @see    EC2Client::modifySpotFleetRequest
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifySpotFleetRequest
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifySpotFleetRequestResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifySpotFleetRequestRequest * ModifySpotFleetRequestResponse::request() 
     return static_cast<const ModifySpotFleetRequestRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifySpotFleetRequest response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifySpotFleetRequestResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifySpotFleetRequestResponsePrivate
+ * \class ModifySpotFleetRequestResponsePrivate
  *
- * @brief  Private implementation for ModifySpotFleetRequestResponse.
+ * \brief Private implementation for ModifySpotFleetRequestResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySpotFleetRequestResponsePrivate object.
@@ -91,7 +98,7 @@ ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifySpotFleetRequestResponse element.
  *
  * @param  xml  XML stream to parse.

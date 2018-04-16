@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UpdateSecurityGroupRuleDescriptionsIngressRequest
+/*!
+ * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsIngressRequest
  *
- * @brief  Implements EC2 UpdateSecurityGroupRuleDescriptionsIngress requests.
+ * \brief The UpdateSecurityGroupRuleDescriptionsIngressRequest class encapsulates EC2 UpdateSecurityGroupRuleDescriptionsIngress requests.
  *
- * @see    EC2Client::updateSecurityGroupRuleDescriptionsIngress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::updateSecurityGroupRuleDescriptionsIngress
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescri
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequest object.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest()
@@ -53,13 +60,16 @@ UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescri
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSecurityGroupRuleDescriptionsIngressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSecurityGroupRuleDescriptionsIngressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressReq
     return new UpdateSecurityGroupRuleDescriptionsIngressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressReq
  * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsIngressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRul
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object, copying another.

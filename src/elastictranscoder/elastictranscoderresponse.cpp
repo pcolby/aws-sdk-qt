@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ElasticTranscoderResponse
+/*!
+ * \class QtAws::ElasticTranscoder::ElasticTranscoderResponse
  *
- * @brief  Handles ElasticTranscoder ElasticTranscoder responses.
+ * \brief The ElasticTranscoderResponse class is the base class for all ElasticTranscoder responses.
  *
- * @see    ElasticTranscoderClient::elasticTranscoder
+ * \ingroup ElasticTranscoder
  */
 
-/**
+/*!
  * @brief  Constructs a new ElasticTranscoderResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticTranscoderResponse object.
@@ -63,7 +63,7 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(ElasticTranscoderResponsePr
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ElasticTranscoderResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticTranscoderResponsePrivate
@@ -92,7 +92,7 @@ void ElasticTranscoderResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ElasticTranscoderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticTranscoderResponsePrivate object.

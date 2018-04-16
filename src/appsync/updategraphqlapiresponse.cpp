@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateGraphqlApiResponse
+/*!
+ * \class QtAws::AppSync::UpdateGraphqlApiResponse
  *
- * @brief  Handles AppSync UpdateGraphqlApi responses.
+ * \brief The UpdateGraphqlApiResponse class encapsulates AppSync UpdateGraphqlApi responses.
  *
- * @see    AppSyncClient::updateGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGraphqlApiResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateGraphqlApiRequest * UpdateGraphqlApiResponse::request() const
     return static_cast<const UpdateGraphqlApiRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync UpdateGraphqlApi response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateGraphqlApiResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateGraphqlApiResponsePrivate
+ * \class UpdateGraphqlApiResponsePrivate
  *
- * @brief  Private implementation for UpdateGraphqlApiResponse.
+ * \brief Private implementation for UpdateGraphqlApiResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGraphqlApiResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync UpdateGraphqlApiResponse element.
  *
  * @param  xml  XML stream to parse.

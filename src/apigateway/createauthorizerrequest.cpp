@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateAuthorizerRequest
+/*!
+ * \class QtAws::APIGateway::CreateAuthorizerRequest
  *
- * @brief  Implements APIGateway CreateAuthorizer requests.
+ * \brief The CreateAuthorizerRequest class encapsulates APIGateway CreateAuthorizer requests.
  *
- * @see    APIGatewayClient::createAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateAuthorizerRequest::CreateAuthorizerRequest(const CreateAuthorizerRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAuthorizerRequest object.
  */
 CreateAuthorizerRequest::CreateAuthorizerRequest()
@@ -53,13 +61,16 @@ CreateAuthorizerRequest::CreateAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
     return new CreateAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAuthorizerRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
  * @brief  Private implementation for CreateAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAuthorizerRequestPrivate object.
@@ -97,7 +108,7 @@ CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAuthorizerRequestPrivate object, copying another.

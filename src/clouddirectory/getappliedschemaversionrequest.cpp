@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  GetAppliedSchemaVersionRequest
+/*!
+ * \class QtAws::CloudDirectory::GetAppliedSchemaVersionRequest
  *
- * @brief  Implements CloudDirectory GetAppliedSchemaVersion requests.
+ * \brief The GetAppliedSchemaVersionRequest class encapsulates CloudDirectory GetAppliedSchemaVersion requests.
  *
- * @see    CloudDirectoryClient::getAppliedSchemaVersion
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::getAppliedSchemaVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAppliedSchemaVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest(const GetAppliedS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAppliedSchemaVersionRequest object.
  */
 GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest()
@@ -53,13 +63,16 @@ GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAppliedSchemaVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAppliedSchemaVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNet
     return new GetAppliedSchemaVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAppliedSchemaVersionRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNet
  * @brief  Private implementation for GetAppliedSchemaVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAppliedSchemaVersionRequestPrivate object.
@@ -97,7 +110,7 @@ GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAppliedSchemaVersionRequestPrivate object, copying another.

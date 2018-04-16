@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  RegisterActivityTypeRequest
+/*!
+ * \class QtAws::SWF::RegisterActivityTypeRequest
  *
- * @brief  Implements SWF RegisterActivityType requests.
+ * \brief The RegisterActivityTypeRequest class encapsulates SWF RegisterActivityType requests.
  *
- * @see    SWFClient::registerActivityType
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::registerActivityType
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterActivityTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ RegisterActivityTypeRequest::RegisterActivityTypeRequest(const RegisterActivityT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterActivityTypeRequest object.
  */
 RegisterActivityTypeRequest::RegisterActivityTypeRequest()
@@ -53,13 +72,16 @@ RegisterActivityTypeRequest::RegisterActivityTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterActivityTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterActivityTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetwor
     return new RegisterActivityTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterActivityTypeRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetwor
  * @brief  Private implementation for RegisterActivityTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterActivityTypeRequestPrivate object.
@@ -97,7 +119,7 @@ RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterActivityTypeRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteWebACLRequest
+/*!
+ * \class QtAws::WAF::DeleteWebACLRequest
  *
- * @brief  Implements WAF DeleteWebACL requests.
+ * \brief The DeleteWebACLRequest class encapsulates WAF DeleteWebACL requests.
  *
- * @see    WAFClient::deleteWebACL
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteWebACLRequest object.
  */
 DeleteWebACLRequest::DeleteWebACLRequest()
@@ -53,13 +61,16 @@ DeleteWebACLRequest::DeleteWebACLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteWebACLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteWebACLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
     return new DeleteWebACLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteWebACLRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteWebACLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWebACLRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWebACLRequestPrivate object, copying another.

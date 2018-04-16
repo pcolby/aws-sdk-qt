@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ImportMigrationTaskRequest
+/*!
+ * \class QtAws::MigrationHub::ImportMigrationTaskRequest
  *
- * @brief  Implements MigrationHub ImportMigrationTask requests.
+ * \brief The ImportMigrationTaskRequest class encapsulates MigrationHub ImportMigrationTask requests.
  *
- * @see    MigrationHubClient::importMigrationTask
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::importMigrationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportMigrationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ImportMigrationTaskRequest::ImportMigrationTaskRequest(const ImportMigrationTask
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportMigrationTaskRequest object.
  */
 ImportMigrationTaskRequest::ImportMigrationTaskRequest()
@@ -53,13 +58,16 @@ ImportMigrationTaskRequest::ImportMigrationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportMigrationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportMigrationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ImportMigrationTaskRequest::response(QNetwork
     return new ImportMigrationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportMigrationTaskRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ImportMigrationTaskRequest::response(QNetwork
  * @brief  Private implementation for ImportMigrationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportMigrationTaskRequestPrivate object.
@@ -97,7 +105,7 @@ ImportMigrationTaskRequestPrivate::ImportMigrationTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportMigrationTaskRequestPrivate object, copying another.

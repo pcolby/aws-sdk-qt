@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationOutputRequest
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationOutputRequest
  *
- * @brief  Implements KinesisAnalytics AddApplicationOutput requests.
+ * \brief The AddApplicationOutputRequest class encapsulates KinesisAnalytics AddApplicationOutput requests.
  *
- * @see    KinesisAnalyticsClient::addApplicationOutput
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationOutput
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationOutputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AddApplicationOutputRequest::AddApplicationOutputRequest(const AddApplicationOut
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationOutputRequest object.
  */
 AddApplicationOutputRequest::AddApplicationOutputRequest()
@@ -53,13 +56,16 @@ AddApplicationOutputRequest::AddApplicationOutputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddApplicationOutputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddApplicationOutputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetwor
     return new AddApplicationOutputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddApplicationOutputRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetwor
  * @brief  Private implementation for AddApplicationOutputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationOutputRequestPrivate object.
@@ -97,7 +103,7 @@ AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationOutputRequestPrivate object, copying another.

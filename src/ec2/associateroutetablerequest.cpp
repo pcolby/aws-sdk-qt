@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateRouteTableRequest
+/*!
+ * \class QtAws::EC2::AssociateRouteTableRequest
  *
- * @brief  Implements EC2 AssociateRouteTable requests.
+ * \brief The AssociateRouteTableRequest class encapsulates EC2 AssociateRouteTable requests.
  *
- * @see    EC2Client::associateRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateRouteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssociateRouteTableRequest::AssociateRouteTableRequest(const AssociateRouteTable
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateRouteTableRequest object.
  */
 AssociateRouteTableRequest::AssociateRouteTableRequest()
@@ -53,13 +60,16 @@ AssociateRouteTableRequest::AssociateRouteTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateRouteTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateRouteTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetwork
     return new AssociateRouteTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateRouteTableRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetwork
  * @brief  Private implementation for AssociateRouteTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateRouteTableRequestPrivate object.
@@ -97,7 +107,7 @@ AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateRouteTableRequestPrivate object, copying another.

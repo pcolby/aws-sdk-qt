@@ -31,53 +31,61 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MarketplaceMetering
+ * \brief The QtAws::MarketplaceMetering contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MarketplaceMetering {
 
-/**
- * @class  MarketplaceMeteringClient
+/*!
+ * \class QtAws::MarketplaceMetering::MarketplaceMeteringClient
  *
- * @brief  Client for AWSMarketplace Metering
+ * \brief The MarketplaceMeteringClient class provides access the AWSMarketplace Metering service.
  *
- * <fullname>AWS Marketplace Metering Service</fullname>
+ * \ingroup MarketplaceMetering
  *
- * This reference provides descriptions of the low-level AWS Marketplace Metering Service
- *
- * API>
- *
- * AWS Marketplace sellers can use this API to submit usage data for custom usage
- *
- * dimensions>
- *
- * <b>Submitting Metering Records</b>
- *
- * </p <ul> <li>
- *
- * <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
- *
- * instance> </li> <li>
- *
- * <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
- * software-as-a-service (SaaS)
- *
- * application> </li> </ul>
- *
- * <b>Accepting New Customers</b>
- *
- * </p <ul> <li>
- *
- * <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
- * during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
- * resolved through this API to obtain a CustomerIdentifier and Product
+ *  <fullname>AWS Marketplace Metering Service</fullname>
+ * 
+ *  This reference provides descriptions of the low-level AWS Marketplace Metering Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace sellers can use this API to submit usage data for custom usage
+ * 
+ *  dimensions>
+ * 
+ *  <b>Submitting Metering Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
+ *  software-as-a-service (SaaS)
+ * 
+ *  application> </li> </ul>
+ * 
+ *  <b>Accepting New Customers</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ *  during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
+ *  resolved through this API to obtain a CustomerIdentifier and Product
  */
 
-/**
- * @brief  Constructs a new MarketplaceMeteringClient object.
+/*!
+ * \brief Constructs a MarketplaceMeteringClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MarketplaceMeteringClient::MarketplaceMeteringClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -96,21 +104,16 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
-/**
- * @brief  Constructs a new MarketplaceMeteringClient object.
+/*!
+ * \overload MarketplaceMeteringClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MarketplaceMeteringClient::MarketplaceMeteringClient(
     const QUrl &endpoint,
@@ -129,7 +132,7 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
-/**
+/*!
  * BatchMeterUsage is called from a SaaS application listed on the AWS Marketplace to post metering records for a set of
  *
  * customers>
@@ -156,7 +159,7 @@ BatchMeterUsageResponse * MarketplaceMeteringClient::batchMeterUsage(const Batch
     return qobject_cast<BatchMeterUsageResponse *>(send(request));
 }
 
-/**
+/*!
  * API to emit metering records. For identical requests, the API is idempotent. It simply returns the metering record
  *
  * ID>
@@ -174,7 +177,7 @@ MeterUsageResponse * MarketplaceMeteringClient::meterUsage(const MeterUsageReque
     return qobject_cast<MeterUsageResponse *>(send(request));
 }
 
-/**
+/*!
  * ResolveCustomer is called by a SaaS application during the registration process. When a buyer visits your website during
  * the registration process, the buyer submits a registration token through their browser. The registration token is
  * resolved through this API to obtain a CustomerIdentifier and product
@@ -190,7 +193,7 @@ ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const Resol
     return qobject_cast<ResolveCustomerResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MarketplaceMeteringClientPrivate
@@ -198,7 +201,7 @@ ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const Resol
  * @brief  Private implementation for MarketplaceMeteringClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceMeteringClientPrivate object.

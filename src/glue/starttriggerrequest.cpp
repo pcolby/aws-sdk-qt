@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StartTriggerRequest
+/*!
+ * \class QtAws::Glue::StartTriggerRequest
  *
- * @brief  Implements Glue StartTrigger requests.
+ * \brief The StartTriggerRequest class encapsulates Glue StartTrigger requests.
  *
- * @see    GlueClient::startTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::startTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new StartTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartTriggerRequest::StartTriggerRequest(const StartTriggerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartTriggerRequest object.
  */
 StartTriggerRequest::StartTriggerRequest()
@@ -53,13 +59,16 @@ StartTriggerRequest::StartTriggerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartTriggerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartTriggerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply *
     return new StartTriggerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartTriggerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply *
  * @brief  Private implementation for StartTriggerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTriggerRequestPrivate object.
@@ -97,7 +106,7 @@ StartTriggerRequestPrivate::StartTriggerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTriggerRequestPrivate object, copying another.

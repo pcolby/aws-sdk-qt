@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateProvisioningArtifactRequest
+/*!
+ * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactRequest
  *
- * @brief  Implements ServiceCatalog UpdateProvisioningArtifact requests.
+ * \brief The UpdateProvisioningArtifactRequest class encapsulates ServiceCatalog UpdateProvisioningArtifact requests.
  *
- * @see    ServiceCatalogClient::updateProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProvisioningArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdateProvisioningArtifactRequest::UpdateProvisioningArtifactRequest(const Updat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateProvisioningArtifactRequest object.
  */
 UpdateProvisioningArtifactRequest::UpdateProvisioningArtifactRequest()
@@ -53,13 +62,16 @@ UpdateProvisioningArtifactRequest::UpdateProvisioningArtifactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateProvisioningArtifactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateProvisioningArtifactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(Q
     return new UpdateProvisioningArtifactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateProvisioningArtifactRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(Q
  * @brief  Private implementation for UpdateProvisioningArtifactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProvisioningArtifactRequestPrivate object.
@@ -97,7 +109,7 @@ UpdateProvisioningArtifactRequestPrivate::UpdateProvisioningArtifactRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProvisioningArtifactRequestPrivate object, copying another.

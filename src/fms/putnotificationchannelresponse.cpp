@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  PutNotificationChannelResponse
+/*!
+ * \class QtAws::FMS::PutNotificationChannelResponse
  *
- * @brief  Handles FMS PutNotificationChannel responses.
+ * \brief The PutNotificationChannelResponse class encapsulates FMS PutNotificationChannel responses.
  *
- * @see    FMSClient::putNotificationChannel
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::putNotificationChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new PutNotificationChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const PutNotificationChannelRequest * PutNotificationChannelResponse::request() 
     return static_cast<const PutNotificationChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS PutNotificationChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void PutNotificationChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutNotificationChannelResponsePrivate
+ * \class PutNotificationChannelResponsePrivate
  *
- * @brief  Private implementation for PutNotificationChannelResponse.
+ * \brief Private implementation for PutNotificationChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutNotificationChannelResponsePrivate object.
@@ -91,7 +100,7 @@ PutNotificationChannelResponsePrivate::PutNotificationChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS PutNotificationChannelResponse element.
  *
  * @param  xml  XML stream to parse.

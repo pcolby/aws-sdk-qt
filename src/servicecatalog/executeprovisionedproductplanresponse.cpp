@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ExecuteProvisionedProductPlanResponse
+/*!
+ * \class QtAws::ServiceCatalog::ExecuteProvisionedProductPlanResponse
  *
- * @brief  Handles ServiceCatalog ExecuteProvisionedProductPlan responses.
+ * \brief The ExecuteProvisionedProductPlanResponse class encapsulates ServiceCatalog ExecuteProvisionedProductPlan responses.
  *
- * @see    ServiceCatalogClient::executeProvisionedProductPlan
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::executeProvisionedProductPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new ExecuteProvisionedProductPlanResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ExecuteProvisionedProductPlanRequest * ExecuteProvisionedProductPlanRespon
     return static_cast<const ExecuteProvisionedProductPlanRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ExecuteProvisionedProductPlan response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ExecuteProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ExecuteProvisionedProductPlanResponsePrivate
+ * \class ExecuteProvisionedProductPlanResponsePrivate
  *
- * @brief  Private implementation for ExecuteProvisionedProductPlanResponse.
+ * \brief Private implementation for ExecuteProvisionedProductPlanResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExecuteProvisionedProductPlanResponsePrivate object.
@@ -91,7 +100,7 @@ ExecuteProvisionedProductPlanResponsePrivate::ExecuteProvisionedProductPlanRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ExecuteProvisionedProductPlanResponse element.
  *
  * @param  xml  XML stream to parse.

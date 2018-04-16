@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteProvisioningArtifactResponse
+/*!
+ * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactResponse
  *
- * @brief  Handles ServiceCatalog DeleteProvisioningArtifact responses.
+ * \brief The DeleteProvisioningArtifactResponse class encapsulates ServiceCatalog DeleteProvisioningArtifact responses.
  *
- * @see    ServiceCatalogClient::deleteProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProvisioningArtifactResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteProvisioningArtifactRequest * DeleteProvisioningArtifactResponse::re
     return static_cast<const DeleteProvisioningArtifactRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DeleteProvisioningArtifact response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteProvisioningArtifactResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteProvisioningArtifactResponsePrivate
+ * \class DeleteProvisioningArtifactResponsePrivate
  *
- * @brief  Private implementation for DeleteProvisioningArtifactResponse.
+ * \brief Private implementation for DeleteProvisioningArtifactResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProvisioningArtifactResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DeleteProvisioningArtifactResponse element.
  *
  * @param  xml  XML stream to parse.

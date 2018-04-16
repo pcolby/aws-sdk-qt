@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVolumeIORequest
+/*!
+ * \class QtAws::EC2::EnableVolumeIORequest
  *
- * @brief  Implements EC2 EnableVolumeIO requests.
+ * \brief The EnableVolumeIORequest class encapsulates EC2 EnableVolumeIO requests.
  *
- * @see    EC2Client::enableVolumeIO
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVolumeIO
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVolumeIORequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ EnableVolumeIORequest::EnableVolumeIORequest(const EnableVolumeIORequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableVolumeIORequest object.
  */
 EnableVolumeIORequest::EnableVolumeIORequest()
@@ -53,13 +60,16 @@ EnableVolumeIORequest::EnableVolumeIORequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableVolumeIORequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableVolumeIOResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply
     return new EnableVolumeIOResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableVolumeIORequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply
  * @brief  Private implementation for EnableVolumeIORequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVolumeIORequestPrivate object.
@@ -97,7 +107,7 @@ EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVolumeIORequestPrivate object, copying another.

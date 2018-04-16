@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListLoggerDefinitionsRequest
+/*!
+ * \class QtAws::Greengrass::ListLoggerDefinitionsRequest
  *
- * @brief  Implements Greengrass ListLoggerDefinitions requests.
+ * \brief The ListLoggerDefinitionsRequest class encapsulates Greengrass ListLoggerDefinitions requests.
  *
- * @see    GreengrassClient::listLoggerDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listLoggerDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListLoggerDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListLoggerDefinitionsRequest::ListLoggerDefinitionsRequest(const ListLoggerDefin
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListLoggerDefinitionsRequest object.
  */
 ListLoggerDefinitionsRequest::ListLoggerDefinitionsRequest()
@@ -53,13 +59,16 @@ ListLoggerDefinitionsRequest::ListLoggerDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListLoggerDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListLoggerDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionsRequest::response(QNetwo
     return new ListLoggerDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListLoggerDefinitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionsRequest::response(QNetwo
  * @brief  Private implementation for ListLoggerDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLoggerDefinitionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListLoggerDefinitionsRequestPrivate::ListLoggerDefinitionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLoggerDefinitionsRequestPrivate object, copying another.

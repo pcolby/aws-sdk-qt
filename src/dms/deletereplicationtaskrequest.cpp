@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteReplicationTaskRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskRequest
  *
- * @brief  Implements DatabaseMigrationService DeleteReplicationTask requests.
+ * \brief The DeleteReplicationTaskRequest class encapsulates DatabaseMigrationService DeleteReplicationTask requests.
  *
- * @see    DatabaseMigrationServiceClient::deleteReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteReplicationTaskRequest::DeleteReplicationTaskRequest(const DeleteReplicati
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationTaskRequest object.
  */
 DeleteReplicationTaskRequest::DeleteReplicationTaskRequest()
@@ -53,13 +67,16 @@ DeleteReplicationTaskRequest::DeleteReplicationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReplicationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReplicationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationTaskRequest::response(QNetwo
     return new DeleteReplicationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReplicationTaskRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationTaskRequest::response(QNetwo
  * @brief  Private implementation for DeleteReplicationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationTaskRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationTaskRequestPrivate object, copying another.

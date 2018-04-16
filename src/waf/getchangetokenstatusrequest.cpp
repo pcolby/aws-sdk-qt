@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetChangeTokenStatusRequest
+/*!
+ * \class QtAws::WAF::GetChangeTokenStatusRequest
  *
- * @brief  Implements WAF GetChangeTokenStatus requests.
+ * \brief The GetChangeTokenStatusRequest class encapsulates WAF GetChangeTokenStatus requests.
  *
- * @see    WAFClient::getChangeTokenStatus
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getChangeTokenStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetChangeTokenStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetChangeTokenStatusRequest::GetChangeTokenStatusRequest(const GetChangeTokenSta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetChangeTokenStatusRequest object.
  */
 GetChangeTokenStatusRequest::GetChangeTokenStatusRequest()
@@ -53,13 +61,16 @@ GetChangeTokenStatusRequest::GetChangeTokenStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetChangeTokenStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetChangeTokenStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetwor
     return new GetChangeTokenStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetChangeTokenStatusRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetwor
  * @brief  Private implementation for GetChangeTokenStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeTokenStatusRequestPrivate object.
@@ -97,7 +108,7 @@ GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeTokenStatusRequestPrivate object, copying another.

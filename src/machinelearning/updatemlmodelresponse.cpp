@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  UpdateMLModelResponse
+/*!
+ * \class QtAws::MachineLearning::UpdateMLModelResponse
  *
- * @brief  Handles MachineLearning UpdateMLModel responses.
+ * \brief The UpdateMLModelResponse class encapsulates MachineLearning UpdateMLModel responses.
  *
- * @see    MachineLearningClient::updateMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::updateMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateMLModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateMLModelRequest * UpdateMLModelResponse::request() const
     return static_cast<const UpdateMLModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning UpdateMLModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateMLModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateMLModelResponsePrivate
+ * \class UpdateMLModelResponsePrivate
  *
- * @brief  Private implementation for UpdateMLModelResponse.
+ * \brief Private implementation for UpdateMLModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMLModelResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateMLModelResponsePrivate::UpdateMLModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning UpdateMLModelResponse element.
  *
  * @param  xml  XML stream to parse.

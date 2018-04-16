@@ -25,15 +25,26 @@
 namespace QtAws {
 namespace DirectConnect {
 
-/**
- * @class  DeleteBGPPeerRequest
+/*!
+ * \class QtAws::DirectConnect::DeleteBGPPeerRequest
  *
- * @brief  Implements DirectConnect DeleteBGPPeer requests.
+ * \brief The DeleteBGPPeerRequest class encapsulates DirectConnect DeleteBGPPeer requests.
  *
- * @see    DirectConnectClient::deleteBGPPeer
+ * \ingroup DirectConnect
+ *
+ *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
+ *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
+ *  With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon
+ *  Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud
+ *  (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access
+ *  to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a
+ *  single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US
+ *  Regions and AWS GovCloud
+ *
+ * \sa DirectConnectClient::deleteBGPPeer
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBGPPeerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +55,7 @@ DeleteBGPPeerRequest::DeleteBGPPeerRequest(const DeleteBGPPeerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBGPPeerRequest object.
  */
 DeleteBGPPeerRequest::DeleteBGPPeerRequest()
@@ -53,13 +64,16 @@ DeleteBGPPeerRequest::DeleteBGPPeerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBGPPeerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBGPPeerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBGPPeerRequest::response(QNetworkReply 
     return new DeleteBGPPeerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBGPPeerRequestPrivate
@@ -82,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBGPPeerRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteBGPPeerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBGPPeerRequestPrivate object.
@@ -97,7 +111,7 @@ DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBGPPeerRequestPrivate object, copying another.

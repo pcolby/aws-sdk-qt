@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeIndexFieldsResponse
+/*!
+ * \class QtAws::CloudSearch::DescribeIndexFieldsResponse
  *
- * @brief  Handles CloudSearch DescribeIndexFields responses.
+ * \brief The DescribeIndexFieldsResponse class encapsulates CloudSearch DescribeIndexFields responses.
  *
- * @see    CloudSearchClient::describeIndexFields
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeIndexFields
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIndexFieldsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeIndexFieldsRequest * DescribeIndexFieldsResponse::request() const
     return static_cast<const DescribeIndexFieldsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DescribeIndexFields response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeIndexFieldsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeIndexFieldsResponsePrivate
+ * \class DescribeIndexFieldsResponsePrivate
  *
- * @brief  Private implementation for DescribeIndexFieldsResponse.
+ * \brief Private implementation for DescribeIndexFieldsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIndexFieldsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DescribeIndexFieldsResponse element.
  *
  * @param  xml  XML stream to parse.

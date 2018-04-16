@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpnConnectionRouteResponse
+/*!
+ * \class QtAws::EC2::DeleteVpnConnectionRouteResponse
  *
- * @brief  Handles EC2 DeleteVpnConnectionRoute responses.
+ * \brief The DeleteVpnConnectionRouteResponse class encapsulates EC2 DeleteVpnConnectionRoute responses.
  *
- * @see    EC2Client::deleteVpnConnectionRoute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpnConnectionRoute
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnConnectionRouteResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteVpnConnectionRouteRequest * DeleteVpnConnectionRouteResponse::reques
     return static_cast<const DeleteVpnConnectionRouteRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteVpnConnectionRoute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteVpnConnectionRouteResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteVpnConnectionRouteResponsePrivate
+ * \class DeleteVpnConnectionRouteResponsePrivate
  *
- * @brief  Private implementation for DeleteVpnConnectionRouteResponse.
+ * \brief Private implementation for DeleteVpnConnectionRouteResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnConnectionRouteResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteVpnConnectionRouteResponsePrivate::DeleteVpnConnectionRouteResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteVpnConnectionRouteResponse element.
  *
  * @param  xml  XML stream to parse.

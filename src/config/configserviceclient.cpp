@@ -104,46 +104,54 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ConfigService
+ * \brief The QtAws::ConfigService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ConfigService {
 
-/**
- * @class  ConfigServiceClient
+/*!
+ * \class QtAws::ConfigService::ConfigServiceClient
  *
- * @brief  Client for AWS Config (Config Service)
+ * \brief The ConfigServiceClient class provides access the AWS Config (Config Service) service.
  *
- * <fullname>AWS Config</fullname>
+ * \ingroup ConfigService
  *
- * AWS Config provides a way to keep track of the configurations of all the AWS resources associated with your AWS account.
- * You can use AWS Config to get the current and historical configurations of each AWS resource and also to get information
- * about the relationship between the resources. An AWS resource can be an Amazon Compute Cloud (Amazon EC2) instance, an
- * Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of
- * resources currently supported by AWS Config, see <a
- * href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported
- * AWS
- *
- * Resources</a>>
- *
- * You can access and manage AWS Config through the AWS Management Console, the AWS Command Line Interface (AWS CLI), the
- * AWS Config API, or the AWS SDKs for AWS Config. This reference guide contains documentation for the AWS Config API and
- * the AWS CLI commands that you can use to manage AWS Config. The AWS Config API uses the Signature Version 4 protocol for
- * signing requests. For more information about how to sign a request with this protocol, see <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.
- * For detailed information about AWS Config features and their associated actions or commands, as well as how to work with
- * AWS Management Console, see <a href="http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
- * AWS Config</a> in the <i>AWS Config Developer
- *
- * Guide</i>> <ul> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li/>
- * <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li> </li> <li/> <li/> <li/> <li/>
+ *  <fullname>AWS Config</fullname>
+ * 
+ *  AWS Config provides a way to keep track of the configurations of all the AWS resources associated with your AWS account.
+ *  You can use AWS Config to get the current and historical configurations of each AWS resource and also to get information
+ *  about the relationship between the resources. An AWS resource can be an Amazon Compute Cloud (Amazon EC2) instance, an
+ *  Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of
+ *  resources currently supported by AWS Config, see <a
+ *  href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported
+ *  AWS
+ * 
+ *  Resources</a>>
+ * 
+ *  You can access and manage AWS Config through the AWS Management Console, the AWS Command Line Interface (AWS CLI), the
+ *  AWS Config API, or the AWS SDKs for AWS Config. This reference guide contains documentation for the AWS Config API and
+ *  the AWS CLI commands that you can use to manage AWS Config. The AWS Config API uses the Signature Version 4 protocol for
+ *  signing requests. For more information about how to sign a request with this protocol, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.
+ *  For detailed information about AWS Config features and their associated actions or commands, as well as how to work with
+ *  AWS Management Console, see <a href="http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
+ *  AWS Config</a> in the <i>AWS Config Developer
+ * 
+ *  Guide</i>> <ul> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li/>
+ *  <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li> </li> <li/> <li/> <li/> <li/>
  */
 
-/**
- * @brief  Constructs a new ConfigServiceClient object.
+/*!
+ * \brief Constructs a ConfigServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ConfigServiceClient::ConfigServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -162,21 +170,16 @@ ConfigServiceClient::ConfigServiceClient(
     d->serviceName = QStringLiteral("config");
 }
 
-/**
- * @brief  Constructs a new ConfigServiceClient object.
+/*!
+ * \overload ConfigServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ConfigServiceClient::ConfigServiceClient(
     const QUrl &endpoint,
@@ -195,7 +198,7 @@ ConfigServiceClient::ConfigServiceClient(
     d->serviceName = QStringLiteral("config");
 }
 
-/**
+/*!
  * Returns the current configuration for one or more requested resources. The operation also returns a list of resources
  * that are not processed in the current request. If there are no unprocessed resources, the operation returns an empty
  * unprocessedResourceKeys list.
@@ -220,7 +223,7 @@ BatchGetResourceConfigResponse * ConfigServiceClient::batchGetResourceConfig(con
     return qobject_cast<BatchGetResourceConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the authorization granted to the specified configuration aggregator account in a specified
  *
  * @param  request Request to send to AWS Config.
@@ -234,7 +237,7 @@ DeleteAggregationAuthorizationResponse * ConfigServiceClient::deleteAggregationA
     return qobject_cast<DeleteAggregationAuthorizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified AWS Config rule and all of its evaluation
  *
  * results>
@@ -258,7 +261,7 @@ DeleteConfigRuleResponse * ConfigServiceClient::deleteConfigRule(const DeleteCon
     return qobject_cast<DeleteConfigRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified configuration aggregator and the aggregated data associated with the
  *
  * @param  request Request to send to AWS Config.
@@ -272,7 +275,7 @@ DeleteConfigurationAggregatorResponse * ConfigServiceClient::deleteConfiguration
     return qobject_cast<DeleteConfigurationAggregatorResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the configuration
  *
  * recorder>
@@ -297,7 +300,7 @@ DeleteConfigurationRecorderResponse * ConfigServiceClient::deleteConfigurationRe
     return qobject_cast<DeleteConfigurationRecorderResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the delivery
  *
  * channel>
@@ -316,7 +319,7 @@ DeleteDeliveryChannelResponse * ConfigServiceClient::deleteDeliveryChannel(const
     return qobject_cast<DeleteDeliveryChannelResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the evaluation results for the specified AWS Config rule. You can specify one AWS Config rule per request. After
  * you delete the evaluation results, you can call the <a>StartConfigRulesEvaluation</a> API to start evaluating your AWS
  * resources against the
@@ -332,7 +335,7 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
     return qobject_cast<DeleteEvaluationResultsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes pending authorization requests for a specified aggregator account in a specified
  *
  * @param  request Request to send to AWS Config.
@@ -346,7 +349,7 @@ DeletePendingAggregationRequestResponse * ConfigServiceClient::deletePendingAggr
     return qobject_cast<DeletePendingAggregationRequestResponse *>(send(request));
 }
 
-/**
+/*!
  * Schedules delivery of a configuration snapshot to the Amazon S3 bucket in the specified delivery channel. After the
  * delivery has started, AWS Config sends the following notifications using an Amazon SNS topic that you have
  *
@@ -373,7 +376,7 @@ DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const
     return qobject_cast<DeliverConfigSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of compliant and noncompliant rules with the number of resources for compliant and noncompliant rules.
  *
  * </p <note>
@@ -391,7 +394,7 @@ DescribeAggregateComplianceByConfigRulesResponse * ConfigServiceClient::describe
     return qobject_cast<DescribeAggregateComplianceByConfigRulesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of authorizations granted to various aggregator accounts and
  *
  * @param  request Request to send to AWS Config.
@@ -405,7 +408,7 @@ DescribeAggregationAuthorizationsResponse * ConfigServiceClient::describeAggrega
     return qobject_cast<DescribeAggregationAuthorizationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Indicates whether the specified AWS Config rules are compliant. If a rule is noncompliant, this action returns the
  * number of AWS resources that do not comply with the
  *
@@ -446,7 +449,7 @@ DescribeComplianceByConfigRuleResponse * ConfigServiceClient::describeCompliance
     return qobject_cast<DescribeComplianceByConfigRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Indicates whether the specified AWS resources are compliant. If a resource is noncompliant, this action returns the
  * number of AWS Config rules that the resource does not comply
  *
@@ -487,7 +490,7 @@ DescribeComplianceByResourceResponse * ConfigServiceClient::describeComplianceBy
     return qobject_cast<DescribeComplianceByResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns status information for each of your AWS managed Config rules. The status includes information such as the last
  * time AWS Config invoked the rule, the last time AWS Config failed to invoke the rule, and the related error for the last
  *
@@ -502,7 +505,7 @@ DescribeConfigRuleEvaluationStatusResponse * ConfigServiceClient::describeConfig
     return qobject_cast<DescribeConfigRuleEvaluationStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns details about your AWS Config
  *
  * @param  request Request to send to AWS Config.
@@ -516,7 +519,7 @@ DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const Des
     return qobject_cast<DescribeConfigRulesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns status information for sources within an aggregator. The status includes information about the last time AWS
  * Config aggregated data from source accounts or AWS Config failed to aggregate data from source accounts with the related
  * error code or message.
@@ -532,7 +535,7 @@ DescribeConfigurationAggregatorSourcesStatusResponse * ConfigServiceClient::desc
     return qobject_cast<DescribeConfigurationAggregatorSourcesStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the details of one or more configuration aggregators. If the configuration aggregator is not specified, this
  * action returns the details for all the configuration aggregators associated with the account.
  *
@@ -547,7 +550,7 @@ DescribeConfigurationAggregatorsResponse * ConfigServiceClient::describeConfigur
     return qobject_cast<DescribeConfigurationAggregatorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the current status of the specified configuration recorder. If a configuration recorder is not specified, this
  * action returns the status of all configuration recorders associated with the
  *
@@ -566,7 +569,7 @@ DescribeConfigurationRecorderStatusResponse * ConfigServiceClient::describeConfi
     return qobject_cast<DescribeConfigurationRecorderStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the details for the specified configuration recorders. If the configuration recorder is not specified, this
  * action returns the details for all configuration recorders associated with the
  *
@@ -585,7 +588,7 @@ DescribeConfigurationRecordersResponse * ConfigServiceClient::describeConfigurat
     return qobject_cast<DescribeConfigurationRecordersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the current status of the specified delivery channel. If a delivery channel is not specified, this action
  * returns the current status of all delivery channels associated with the
  *
@@ -604,7 +607,7 @@ DescribeDeliveryChannelStatusResponse * ConfigServiceClient::describeDeliveryCha
     return qobject_cast<DescribeDeliveryChannelStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns details about the specified delivery channel. If a delivery channel is not specified, this action returns the
  * details of all delivery channels associated with the
  *
@@ -623,7 +626,7 @@ DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels
     return qobject_cast<DescribeDeliveryChannelsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all pending aggregation
  *
  * @param  request Request to send to AWS Config.
@@ -637,7 +640,7 @@ DescribePendingAggregationRequestsResponse * ConfigServiceClient::describePendin
     return qobject_cast<DescribePendingAggregationRequestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the evaluation results for the specified AWS Config rule for a specific resource in a rule. The results indicate
  * which AWS resources were evaluated by the rule, when each resource was last evaluated, and whether each resource
  * complies with the rule.
@@ -657,7 +660,7 @@ GetAggregateComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getAggr
     return qobject_cast<GetAggregateComplianceDetailsByConfigRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the number of compliant and noncompliant rules for one or more accounts and regions in an
  *
  * aggregator> <note>
@@ -675,7 +678,7 @@ GetAggregateConfigRuleComplianceSummaryResponse * ConfigServiceClient::getAggreg
     return qobject_cast<GetAggregateConfigRuleComplianceSummaryResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the evaluation results for the specified AWS Config rule. The results indicate which AWS resources were
  * evaluated by the rule, when each resource was last evaluated, and whether each resource complies with the
  *
@@ -690,7 +693,7 @@ GetComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getComplianceDet
     return qobject_cast<GetComplianceDetailsByConfigRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the evaluation results for the specified AWS resource. The results indicate which AWS Config rules were used to
  * evaluate the resource, when each rule was last used, and whether the resource complies with each
  *
@@ -705,7 +708,7 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
     return qobject_cast<GetComplianceDetailsByResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the number of AWS Config rules that are compliant and noncompliant, up to a maximum of 25 for
  *
  * @param  request Request to send to AWS Config.
@@ -719,7 +722,7 @@ GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSum
     return qobject_cast<GetComplianceSummaryByConfigRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the number of resources that are compliant and the number that are noncompliant. You can specify one or more
  * resource types to get these numbers for each resource type. The maximum number returned is
  *
@@ -734,7 +737,7 @@ GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceS
     return qobject_cast<GetComplianceSummaryByResourceTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the resource types, the number of each resource type, and the total number of resources that AWS Config is
  * recording in this region for your AWS account.
  *
@@ -800,7 +803,7 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
     return qobject_cast<GetDiscoveredResourceCountsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of configuration items for the specified resource. The list contains details about each state of the
  * resource during the specified time
  *
@@ -826,7 +829,7 @@ GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory
     return qobject_cast<GetResourceConfigHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource identifier
  * includes the resource type, ID, and (if available) the custom resource name. The results consist of resources that AWS
  * Config has discovered, including those that AWS Config is not currently recording. You can narrow the results to include
@@ -853,7 +856,7 @@ ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(c
     return qobject_cast<ListDiscoveredResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Authorizes the aggregator account and region to collect data from the source account and region.
  *
  * @param  request Request to send to AWS Config.
@@ -867,7 +870,7 @@ PutAggregationAuthorizationResponse * ConfigServiceClient::putAggregationAuthori
     return qobject_cast<PutAggregationAuthorizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates an AWS Config rule for evaluating whether your AWS resources comply with your desired
  *
  * configurations>
@@ -928,7 +931,7 @@ PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRe
     return qobject_cast<PutConfigRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates and updates the configuration aggregator with the selected source accounts and
  *
  * regions> <note>
@@ -946,7 +949,7 @@ PutConfigurationAggregatorResponse * ConfigServiceClient::putConfigurationAggreg
     return qobject_cast<PutConfigurationAggregatorResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new configuration recorder to record the selected resource
  *
  * configurations>
@@ -974,7 +977,7 @@ PutConfigurationRecorderResponse * ConfigServiceClient::putConfigurationRecorder
     return qobject_cast<PutConfigurationRecorderResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS
  *
  * topic>
@@ -1003,7 +1006,7 @@ PutDeliveryChannelResponse * ConfigServiceClient::putDeliveryChannel(const PutDe
     return qobject_cast<PutDeliveryChannelResponse *>(send(request));
 }
 
-/**
+/*!
  * Used by an AWS Lambda function to deliver evaluation results to AWS Config. This action is required in every AWS Lambda
  * function that is invoked by an AWS Config
  *
@@ -1018,7 +1021,7 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
     return qobject_cast<PutEvaluationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Runs an on-demand evaluation for the specified AWS Config rules against the last known configuration state of the
  * resources. Use <code>StartConfigRulesEvaluation</code> when you want to test that a rule you updated is working as
  * expected. <code>StartConfigRulesEvaluation</code> does not re-record the latest configuration state for your resources.
@@ -1075,7 +1078,7 @@ StartConfigRulesEvaluationResponse * ConfigServiceClient::startConfigRulesEvalua
     return qobject_cast<StartConfigRulesEvaluationResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts recording configurations of the AWS resources you have selected to record in your AWS
  *
  * account>
@@ -1093,7 +1096,7 @@ StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationReco
     return qobject_cast<StartConfigurationRecorderResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops recording configurations of the AWS resources you have selected to record in your AWS
  *
  * @param  request Request to send to AWS Config.
@@ -1107,7 +1110,7 @@ StopConfigurationRecorderResponse * ConfigServiceClient::stopConfigurationRecord
     return qobject_cast<StopConfigurationRecorderResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConfigServiceClientPrivate
@@ -1115,7 +1118,7 @@ StopConfigurationRecorderResponse * ConfigServiceClient::stopConfigurationRecord
  * @brief  Private implementation for ConfigServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfigServiceClientPrivate object.

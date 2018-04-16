@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketAclRequest
+/*!
+ * \class QtAws::S3::GetBucketAclRequest
  *
- * @brief  Implements S3 GetBucketAcl requests.
+ * \brief The GetBucketAclRequest class encapsulates S3 GetBucketAcl requests.
  *
- * @see    S3Client::getBucketAcl
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketAcl
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketAclRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketAclRequest::GetBucketAclRequest(const GetBucketAclRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketAclRequest object.
  */
 GetBucketAclRequest::GetBucketAclRequest()
@@ -53,13 +56,16 @@ GetBucketAclRequest::GetBucketAclRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketAclRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketAclResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketAclRequest::response(QNetworkReply *
     return new GetBucketAclResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketAclRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketAclRequest::response(QNetworkReply *
  * @brief  Private implementation for GetBucketAclRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketAclRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketAclRequestPrivate::GetBucketAclRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketAclRequestPrivate object, copying another.

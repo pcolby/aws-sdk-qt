@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  VerifyEmailIdentityResponse
+/*!
+ * \class QtAws::SES::VerifyEmailIdentityResponse
  *
- * @brief  Handles SES VerifyEmailIdentity responses.
+ * \brief The VerifyEmailIdentityResponse class encapsulates SES VerifyEmailIdentity responses.
  *
- * @see    SESClient::verifyEmailIdentity
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::verifyEmailIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyEmailIdentityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const VerifyEmailIdentityRequest * VerifyEmailIdentityResponse::request() const
     return static_cast<const VerifyEmailIdentityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES VerifyEmailIdentity response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  VerifyEmailIdentityResponsePrivate
+ * \class VerifyEmailIdentityResponsePrivate
  *
- * @brief  Private implementation for VerifyEmailIdentityResponse.
+ * \brief Private implementation for VerifyEmailIdentityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyEmailIdentityResponsePrivate object.
@@ -91,7 +105,7 @@ VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES VerifyEmailIdentityResponse element.
  *
  * @param  xml  XML stream to parse.

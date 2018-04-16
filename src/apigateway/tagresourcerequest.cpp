@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  TagResourceRequest
+/*!
+ * \class QtAws::APIGateway::TagResourceRequest
  *
- * @brief  Implements APIGateway TagResource requests.
+ * \brief The TagResourceRequest class encapsulates APIGateway TagResource requests.
  *
- * @see    APIGatewayClient::tagResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
@@ -53,13 +61,16 @@ TagResourceRequest::TagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
     return new TagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TagResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  * @brief  Private implementation for TagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object.
@@ -97,7 +108,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object, copying another.

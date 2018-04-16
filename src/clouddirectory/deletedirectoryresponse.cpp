@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteDirectoryResponse
+/*!
+ * \class QtAws::CloudDirectory::DeleteDirectoryResponse
  *
- * @brief  Handles CloudDirectory DeleteDirectory responses.
+ * \brief The DeleteDirectoryResponse class encapsulates CloudDirectory DeleteDirectory responses.
  *
- * @see    CloudDirectoryClient::deleteDirectory
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDirectoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DeleteDirectoryRequest * DeleteDirectoryResponse::request() const
     return static_cast<const DeleteDirectoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory DeleteDirectory response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DeleteDirectoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDirectoryResponsePrivate
+ * \class DeleteDirectoryResponsePrivate
  *
- * @brief  Private implementation for DeleteDirectoryResponse.
+ * \brief Private implementation for DeleteDirectoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDirectoryResponsePrivate object.
@@ -91,7 +101,7 @@ DeleteDirectoryResponsePrivate::DeleteDirectoryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory DeleteDirectoryResponse element.
  *
  * @param  xml  XML stream to parse.

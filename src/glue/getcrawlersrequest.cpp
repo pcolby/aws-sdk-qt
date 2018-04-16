@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetCrawlersRequest
+/*!
+ * \class QtAws::Glue::GetCrawlersRequest
  *
- * @brief  Implements Glue GetCrawlers requests.
+ * \brief The GetCrawlersRequest class encapsulates Glue GetCrawlers requests.
  *
- * @see    GlueClient::getCrawlers
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getCrawlers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCrawlersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetCrawlersRequest::GetCrawlersRequest(const GetCrawlersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCrawlersRequest object.
  */
 GetCrawlersRequest::GetCrawlersRequest()
@@ -53,13 +59,16 @@ GetCrawlersRequest::GetCrawlersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCrawlersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCrawlersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetCrawlersRequest::response(QNetworkReply * 
     return new GetCrawlersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCrawlersRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetCrawlersRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetCrawlersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCrawlersRequestPrivate object.
@@ -97,7 +106,7 @@ GetCrawlersRequestPrivate::GetCrawlersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCrawlersRequestPrivate object, copying another.

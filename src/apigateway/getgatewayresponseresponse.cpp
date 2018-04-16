@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetGatewayResponseResponse
+/*!
+ * \class QtAws::APIGateway::GetGatewayResponseResponse
  *
- * @brief  Handles APIGateway GetGatewayResponse responses.
+ * \brief The GetGatewayResponseResponse class encapsulates APIGateway GetGatewayResponse responses.
  *
- * @see    APIGatewayClient::getGatewayResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getGatewayResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGatewayResponseResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetGatewayResponseRequest * GetGatewayResponseResponse::request() const
     return static_cast<const GetGatewayResponseRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetGatewayResponse response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetGatewayResponseResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGatewayResponseResponsePrivate
+ * \class GetGatewayResponseResponsePrivate
  *
- * @brief  Private implementation for GetGatewayResponseResponse.
+ * \brief Private implementation for GetGatewayResponseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGatewayResponseResponsePrivate object.
@@ -91,7 +99,7 @@ GetGatewayResponseResponsePrivate::GetGatewayResponseResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetGatewayResponseResponse element.
  *
  * @param  xml  XML stream to parse.

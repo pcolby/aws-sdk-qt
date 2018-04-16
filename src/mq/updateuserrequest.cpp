@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  UpdateUserRequest
+/*!
+ * \class QtAws::MQ::UpdateUserRequest
  *
- * @brief  Implements MQ UpdateUser requests.
+ * \brief The UpdateUserRequest class encapsulates MQ UpdateUser requests.
  *
- * @see    MQClient::updateUser
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::updateUser
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserRequest object.
  */
 UpdateUserRequest::UpdateUserRequest()
@@ -53,13 +58,16 @@ UpdateUserRequest::UpdateUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
     return new UpdateUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateUserRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
  * @brief  Private implementation for UpdateUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserRequestPrivate object.
@@ -97,7 +105,7 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserRequestPrivate object, copying another.

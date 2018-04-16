@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CreateLunaClientRequest
+/*!
+ * \class QtAws::CloudHSM::CreateLunaClientRequest
  *
- * @brief  Implements CloudHSM CreateLunaClient requests.
+ * \brief The CreateLunaClientRequest class encapsulates CloudHSM CreateLunaClient requests.
  *
- * @see    CloudHSMClient::createLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::createLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLunaClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ CreateLunaClientRequest::CreateLunaClientRequest(const CreateLunaClientRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateLunaClientRequest object.
  */
 CreateLunaClientRequest::CreateLunaClientRequest()
@@ -53,13 +68,16 @@ CreateLunaClientRequest::CreateLunaClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateLunaClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateLunaClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLunaClientRequest::response(QNetworkRep
     return new CreateLunaClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateLunaClientRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * CreateLunaClientRequest::response(QNetworkRep
  * @brief  Private implementation for CreateLunaClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLunaClientRequestPrivate object.
@@ -97,7 +115,7 @@ CreateLunaClientRequestPrivate::CreateLunaClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLunaClientRequestPrivate object, copying another.

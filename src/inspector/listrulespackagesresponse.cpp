@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListRulesPackagesResponse
+/*!
+ * \class QtAws::Inspector::ListRulesPackagesResponse
  *
- * @brief  Handles Inspector ListRulesPackages responses.
+ * \brief The ListRulesPackagesResponse class encapsulates Inspector ListRulesPackages responses.
  *
- * @see    InspectorClient::listRulesPackages
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listRulesPackages
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRulesPackagesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListRulesPackagesRequest * ListRulesPackagesResponse::request() const
     return static_cast<const ListRulesPackagesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector ListRulesPackages response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListRulesPackagesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListRulesPackagesResponsePrivate
+ * \class ListRulesPackagesResponsePrivate
  *
- * @brief  Private implementation for ListRulesPackagesResponse.
+ * \brief Private implementation for ListRulesPackagesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRulesPackagesResponsePrivate object.
@@ -91,7 +99,7 @@ ListRulesPackagesResponsePrivate::ListRulesPackagesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector ListRulesPackagesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RequestSpotInstancesRequest
+/*!
+ * \class QtAws::EC2::RequestSpotInstancesRequest
  *
- * @brief  Implements EC2 RequestSpotInstances requests.
+ * \brief The RequestSpotInstancesRequest class encapsulates EC2 RequestSpotInstances requests.
  *
- * @see    EC2Client::requestSpotInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::requestSpotInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new RequestSpotInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RequestSpotInstancesRequest::RequestSpotInstancesRequest(const RequestSpotInstan
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RequestSpotInstancesRequest object.
  */
 RequestSpotInstancesRequest::RequestSpotInstancesRequest()
@@ -53,13 +60,16 @@ RequestSpotInstancesRequest::RequestSpotInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RequestSpotInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RequestSpotInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetwor
     return new RequestSpotInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RequestSpotInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetwor
  * @brief  Private implementation for RequestSpotInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestSpotInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestSpotInstancesRequestPrivate object, copying another.

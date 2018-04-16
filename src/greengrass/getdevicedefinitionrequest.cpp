@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetDeviceDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::GetDeviceDefinitionRequest
  *
- * @brief  Implements Greengrass GetDeviceDefinition requests.
+ * \brief The GetDeviceDefinitionRequest class encapsulates Greengrass GetDeviceDefinition requests.
  *
- * @see    GreengrassClient::getDeviceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getDeviceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetDeviceDefinitionRequest::GetDeviceDefinitionRequest(const GetDeviceDefinition
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceDefinitionRequest object.
  */
 GetDeviceDefinitionRequest::GetDeviceDefinitionRequest()
@@ -53,13 +59,16 @@ GetDeviceDefinitionRequest::GetDeviceDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDeviceDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDeviceDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetDeviceDefinitionRequest::response(QNetwork
     return new GetDeviceDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDeviceDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetDeviceDefinitionRequest::response(QNetwork
  * @brief  Private implementation for GetDeviceDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ GetDeviceDefinitionRequestPrivate::GetDeviceDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceDefinitionRequestPrivate object, copying another.

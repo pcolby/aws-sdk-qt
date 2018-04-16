@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateFieldLevelEncryptionProfileRequest
+/*!
+ * \class QtAws::CloudFront::CreateFieldLevelEncryptionProfileRequest
  *
- * @brief  Implements CloudFront CreateFieldLevelEncryptionProfile requests.
+ * \brief The CreateFieldLevelEncryptionProfileRequest class encapsulates CloudFront CreateFieldLevelEncryptionProfile requests.
  *
- * @see    CloudFrontClient::createFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFieldLevelEncryptionProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateFieldLevelEncryptionProfileRequest::CreateFieldLevelEncryptionProfileReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFieldLevelEncryptionProfileRequest object.
  */
 CreateFieldLevelEncryptionProfileRequest::CreateFieldLevelEncryptionProfileRequest()
@@ -53,13 +61,16 @@ CreateFieldLevelEncryptionProfileRequest::CreateFieldLevelEncryptionProfileReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFieldLevelEncryptionProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFieldLevelEncryptionProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateFieldLevelEncryptionProfileRequest::res
     return new CreateFieldLevelEncryptionProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFieldLevelEncryptionProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateFieldLevelEncryptionProfileRequest::res
  * @brief  Private implementation for CreateFieldLevelEncryptionProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFieldLevelEncryptionProfileRequestPrivate object.
@@ -97,7 +108,7 @@ CreateFieldLevelEncryptionProfileRequestPrivate::CreateFieldLevelEncryptionProfi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFieldLevelEncryptionProfileRequestPrivate object, copying another.

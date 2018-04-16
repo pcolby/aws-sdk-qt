@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DescribeImagesRequest
+/*!
+ * \class QtAws::ECR::DescribeImagesRequest
  *
- * @brief  Implements ECR DescribeImages requests.
+ * \brief The DescribeImagesRequest class encapsulates ECR DescribeImages requests.
  *
- * @see    ECRClient::describeImages
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::describeImages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
@@ -53,13 +60,16 @@ DescribeImagesRequest::DescribeImagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
     return new DescribeImagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImagesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeImagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesRequestPrivate object, copying another.

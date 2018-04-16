@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  PutResourceAttributesRequest
+/*!
+ * \class QtAws::MigrationHub::PutResourceAttributesRequest
  *
- * @brief  Implements MigrationHub PutResourceAttributes requests.
+ * \brief The PutResourceAttributesRequest class encapsulates MigrationHub PutResourceAttributes requests.
  *
- * @see    MigrationHubClient::putResourceAttributes
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::putResourceAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new PutResourceAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ PutResourceAttributesRequest::PutResourceAttributesRequest(const PutResourceAttr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutResourceAttributesRequest object.
  */
 PutResourceAttributesRequest::PutResourceAttributesRequest()
@@ -53,13 +58,16 @@ PutResourceAttributesRequest::PutResourceAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutResourceAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutResourceAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetwo
     return new PutResourceAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutResourceAttributesRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetwo
  * @brief  Private implementation for PutResourceAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutResourceAttributesRequestPrivate object.
@@ -97,7 +105,7 @@ PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutResourceAttributesRequestPrivate object, copying another.

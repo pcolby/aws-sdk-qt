@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetResourceDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::GetResourceDefinitionVersionResponse
  *
- * @brief  Handles Greengrass GetResourceDefinitionVersion responses.
+ * \brief The GetResourceDefinitionVersionResponse class encapsulates Greengrass GetResourceDefinitionVersion responses.
  *
- * @see    GreengrassClient::getResourceDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getResourceDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetResourceDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetResourceDefinitionVersionRequest * GetResourceDefinitionVersionResponse
     return static_cast<const GetResourceDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetResourceDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetResourceDefinitionVersionResponsePrivate
+ * \class GetResourceDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for GetResourceDefinitionVersionResponse.
+ * \brief Private implementation for GetResourceDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourceDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ GetResourceDefinitionVersionResponsePrivate::GetResourceDefinitionVersionRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetResourceDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

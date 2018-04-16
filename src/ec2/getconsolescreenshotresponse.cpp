@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetConsoleScreenshotResponse
+/*!
+ * \class QtAws::EC2::GetConsoleScreenshotResponse
  *
- * @brief  Handles EC2 GetConsoleScreenshot responses.
+ * \brief The GetConsoleScreenshotResponse class encapsulates EC2 GetConsoleScreenshot responses.
  *
- * @see    EC2Client::getConsoleScreenshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getConsoleScreenshot
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConsoleScreenshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetConsoleScreenshotRequest * GetConsoleScreenshotResponse::request() cons
     return static_cast<const GetConsoleScreenshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 GetConsoleScreenshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetConsoleScreenshotResponsePrivate
+ * \class GetConsoleScreenshotResponsePrivate
  *
- * @brief  Private implementation for GetConsoleScreenshotResponse.
+ * \brief Private implementation for GetConsoleScreenshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConsoleScreenshotResponsePrivate object.
@@ -91,7 +98,7 @@ GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 GetConsoleScreenshotResponse element.
  *
  * @param  xml  XML stream to parse.

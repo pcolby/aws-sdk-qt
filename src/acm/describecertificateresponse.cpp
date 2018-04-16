@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  DescribeCertificateResponse
+/*!
+ * \class QtAws::ACM::DescribeCertificateResponse
  *
- * @brief  Handles ACM DescribeCertificate responses.
+ * \brief The DescribeCertificateResponse class encapsulates ACM DescribeCertificate responses.
  *
- * @see    ACMClient::describeCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::describeCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DescribeCertificateRequest * DescribeCertificateResponse::request() const
     return static_cast<const DescribeCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM DescribeCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DescribeCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCertificateResponsePrivate
+ * \class DescribeCertificateResponsePrivate
  *
- * @brief  Private implementation for DescribeCertificateResponse.
+ * \brief Private implementation for DescribeCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ DescribeCertificateResponsePrivate::DescribeCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM DescribeCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

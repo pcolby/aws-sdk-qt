@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  GetAssessmentReportRequest
+/*!
+ * \class QtAws::Inspector::GetAssessmentReportRequest
  *
- * @brief  Implements Inspector GetAssessmentReport requests.
+ * \brief The GetAssessmentReportRequest class encapsulates Inspector GetAssessmentReport requests.
  *
- * @see    InspectorClient::getAssessmentReport
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::getAssessmentReport
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAssessmentReportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetAssessmentReportRequest::GetAssessmentReportRequest(const GetAssessmentReport
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAssessmentReportRequest object.
  */
 GetAssessmentReportRequest::GetAssessmentReportRequest()
@@ -53,13 +61,16 @@ GetAssessmentReportRequest::GetAssessmentReportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAssessmentReportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAssessmentReportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetwork
     return new GetAssessmentReportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAssessmentReportRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetwork
  * @brief  Private implementation for GetAssessmentReportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssessmentReportRequestPrivate object.
@@ -97,7 +108,7 @@ GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssessmentReportRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SearchContactsRequest
+/*!
+ * \class QtAws::AlexaForBusiness::SearchContactsRequest
  *
- * @brief  Implements AlexaForBusiness SearchContacts requests.
+ * \brief The SearchContactsRequest class encapsulates AlexaForBusiness SearchContacts requests.
  *
- * @see    AlexaForBusinessClient::searchContacts
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::searchContacts
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchContactsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SearchContactsRequest::SearchContactsRequest(const SearchContactsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchContactsRequest object.
  */
 SearchContactsRequest::SearchContactsRequest()
@@ -53,13 +61,16 @@ SearchContactsRequest::SearchContactsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchContactsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchContactsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SearchContactsRequest::response(QNetworkReply
     return new SearchContactsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchContactsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SearchContactsRequest::response(QNetworkReply
  * @brief  Private implementation for SearchContactsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchContactsRequestPrivate object.
@@ -97,7 +108,7 @@ SearchContactsRequestPrivate::SearchContactsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchContactsRequestPrivate object, copying another.

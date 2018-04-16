@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ReadJobResponse
+/*!
+ * \class QtAws::ElasticTranscoder::ReadJobResponse
  *
- * @brief  Handles ElasticTranscoder ReadJob responses.
+ * \brief The ReadJobResponse class encapsulates ElasticTranscoder ReadJob responses.
  *
- * @see    ElasticTranscoderClient::readJob
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::readJob
  */
 
-/**
+/*!
  * @brief  Constructs a new ReadJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ReadJobRequest * ReadJobResponse::request() const
     return static_cast<const ReadJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder ReadJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ReadJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReadJobResponsePrivate
+ * \class ReadJobResponsePrivate
  *
- * @brief  Private implementation for ReadJobResponse.
+ * \brief Private implementation for ReadJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadJobResponsePrivate object.
@@ -91,7 +97,7 @@ ReadJobResponsePrivate::ReadJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder ReadJobResponse element.
  *
  * @param  xml  XML stream to parse.

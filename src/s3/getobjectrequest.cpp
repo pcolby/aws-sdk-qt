@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetObjectRequest
+/*!
+ * \class QtAws::S3::GetObjectRequest
  *
- * @brief  Implements S3 GetObject requests.
+ * \brief The GetObjectRequest class encapsulates S3 GetObject requests.
  *
- * @see    S3Client::getObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getObject
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetObjectRequest::GetObjectRequest(const GetObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetObjectRequest object.
  */
 GetObjectRequest::GetObjectRequest()
@@ -53,13 +56,16 @@ GetObjectRequest::GetObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
     return new GetObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetObjectRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectRequestPrivate object.
@@ -97,7 +103,7 @@ GetObjectRequestPrivate::GetObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectRequestPrivate object, copying another.

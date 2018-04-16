@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  PutRecordBatchResponse
+/*!
+ * \class QtAws::Firehose::PutRecordBatchResponse
  *
- * @brief  Handles Firehose PutRecordBatch responses.
+ * \brief The PutRecordBatchResponse class encapsulates Firehose PutRecordBatch responses.
  *
- * @see    FirehoseClient::putRecordBatch
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::putRecordBatch
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRecordBatchResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const PutRecordBatchRequest * PutRecordBatchResponse::request() const
     return static_cast<const PutRecordBatchRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Firehose PutRecordBatch response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void PutRecordBatchResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutRecordBatchResponsePrivate
+ * \class PutRecordBatchResponsePrivate
  *
- * @brief  Private implementation for PutRecordBatchResponse.
+ * \brief Private implementation for PutRecordBatchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordBatchResponsePrivate object.
@@ -91,7 +98,7 @@ PutRecordBatchResponsePrivate::PutRecordBatchResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Firehose PutRecordBatchResponse element.
  *
  * @param  xml  XML stream to parse.

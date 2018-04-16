@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetDistributionRequest
+/*!
+ * \class QtAws::CloudFront::GetDistributionRequest
  *
- * @brief  Implements CloudFront GetDistribution requests.
+ * \brief The GetDistributionRequest class encapsulates CloudFront GetDistribution requests.
  *
- * @see    CloudFrontClient::getDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetDistributionRequest::GetDistributionRequest(const GetDistributionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDistributionRequest object.
  */
 GetDistributionRequest::GetDistributionRequest()
@@ -53,13 +61,16 @@ GetDistributionRequest::GetDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetDistributionRequest::response(QNetworkRepl
     return new GetDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDistributionRequest::response(QNetworkRepl
  * @brief  Private implementation for GetDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ GetDistributionRequestPrivate::GetDistributionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDistributionRequestPrivate object, copying another.

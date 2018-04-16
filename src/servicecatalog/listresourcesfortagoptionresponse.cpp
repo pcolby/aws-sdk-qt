@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListResourcesForTagOptionResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListResourcesForTagOptionResponse
  *
- * @brief  Handles ServiceCatalog ListResourcesForTagOption responses.
+ * \brief The ListResourcesForTagOptionResponse class encapsulates ServiceCatalog ListResourcesForTagOption responses.
  *
- * @see    ServiceCatalogClient::listResourcesForTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listResourcesForTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourcesForTagOptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListResourcesForTagOptionRequest * ListResourcesForTagOptionResponse::requ
     return static_cast<const ListResourcesForTagOptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListResourcesForTagOption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListResourcesForTagOptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListResourcesForTagOptionResponsePrivate
+ * \class ListResourcesForTagOptionResponsePrivate
  *
- * @brief  Private implementation for ListResourcesForTagOptionResponse.
+ * \brief Private implementation for ListResourcesForTagOptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourcesForTagOptionResponsePrivate object.
@@ -91,7 +100,7 @@ ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListResourcesForTagOptionResponse element.
  *
  * @param  xml  XML stream to parse.

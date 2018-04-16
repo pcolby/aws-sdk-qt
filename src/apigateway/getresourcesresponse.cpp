@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetResourcesResponse
+/*!
+ * \class QtAws::APIGateway::GetResourcesResponse
  *
- * @brief  Handles APIGateway GetResources responses.
+ * \brief The GetResourcesResponse class encapsulates APIGateway GetResources responses.
  *
- * @see    APIGatewayClient::getResources
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getResources
  */
 
-/**
+/*!
  * @brief  Constructs a new GetResourcesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetResourcesRequest * GetResourcesResponse::request() const
     return static_cast<const GetResourcesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetResources response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetResourcesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetResourcesResponsePrivate
+ * \class GetResourcesResponsePrivate
  *
- * @brief  Private implementation for GetResourcesResponse.
+ * \brief Private implementation for GetResourcesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourcesResponsePrivate object.
@@ -91,7 +99,7 @@ GetResourcesResponsePrivate::GetResourcesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetResourcesResponse element.
  *
  * @param  xml  XML stream to parse.

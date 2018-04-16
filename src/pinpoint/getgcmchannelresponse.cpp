@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetGcmChannelResponse
+/*!
+ * \class QtAws::Pinpoint::GetGcmChannelResponse
  *
- * @brief  Handles Pinpoint GetGcmChannel responses.
+ * \brief The GetGcmChannelResponse class encapsulates Pinpoint GetGcmChannel responses.
  *
- * @see    PinpointClient::getGcmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getGcmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGcmChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetGcmChannelRequest * GetGcmChannelResponse::request() const
     return static_cast<const GetGcmChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetGcmChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetGcmChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGcmChannelResponsePrivate
+ * \class GetGcmChannelResponsePrivate
  *
- * @brief  Private implementation for GetGcmChannelResponse.
+ * \brief Private implementation for GetGcmChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGcmChannelResponsePrivate object.
@@ -91,7 +94,7 @@ GetGcmChannelResponsePrivate::GetGcmChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetGcmChannelResponse element.
  *
  * @param  xml  XML stream to parse.

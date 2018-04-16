@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteObjectRequest
+/*!
+ * \class QtAws::CloudDirectory::DeleteObjectRequest
  *
- * @brief  Implements CloudDirectory DeleteObject requests.
+ * \brief The DeleteObjectRequest class encapsulates CloudDirectory DeleteObject requests.
  *
- * @see    CloudDirectoryClient::deleteObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteObjectRequest::DeleteObjectRequest(const DeleteObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectRequest object.
  */
 DeleteObjectRequest::DeleteObjectRequest()
@@ -53,13 +63,16 @@ DeleteObjectRequest::DeleteObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
     return new DeleteObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteObjectRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectRequestPrivate object, copying another.

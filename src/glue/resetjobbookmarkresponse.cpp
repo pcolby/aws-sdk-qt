@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  ResetJobBookmarkResponse
+/*!
+ * \class QtAws::Glue::ResetJobBookmarkResponse
  *
- * @brief  Handles Glue ResetJobBookmark responses.
+ * \brief The ResetJobBookmarkResponse class encapsulates Glue ResetJobBookmark responses.
  *
- * @see    GlueClient::resetJobBookmark
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::resetJobBookmark
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetJobBookmarkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ResetJobBookmarkRequest * ResetJobBookmarkResponse::request() const
     return static_cast<const ResetJobBookmarkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue ResetJobBookmark response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ResetJobBookmarkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetJobBookmarkResponsePrivate
+ * \class ResetJobBookmarkResponsePrivate
  *
- * @brief  Private implementation for ResetJobBookmarkResponse.
+ * \brief Private implementation for ResetJobBookmarkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetJobBookmarkResponsePrivate object.
@@ -91,7 +97,7 @@ ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue ResetJobBookmarkResponse element.
  *
  * @param  xml  XML stream to parse.

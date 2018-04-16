@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  PutRoomSkillParameterResponse
+/*!
+ * \class QtAws::AlexaForBusiness::PutRoomSkillParameterResponse
  *
- * @brief  Handles AlexaForBusiness PutRoomSkillParameter responses.
+ * \brief The PutRoomSkillParameterResponse class encapsulates AlexaForBusiness PutRoomSkillParameter responses.
  *
- * @see    AlexaForBusinessClient::putRoomSkillParameter
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::putRoomSkillParameter
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRoomSkillParameterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const PutRoomSkillParameterRequest * PutRoomSkillParameterResponse::request() co
     return static_cast<const PutRoomSkillParameterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness PutRoomSkillParameter response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void PutRoomSkillParameterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutRoomSkillParameterResponsePrivate
+ * \class PutRoomSkillParameterResponsePrivate
  *
- * @brief  Private implementation for PutRoomSkillParameterResponse.
+ * \brief Private implementation for PutRoomSkillParameterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRoomSkillParameterResponsePrivate object.
@@ -91,7 +99,7 @@ PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness PutRoomSkillParameterResponse element.
  *
  * @param  xml  XML stream to parse.

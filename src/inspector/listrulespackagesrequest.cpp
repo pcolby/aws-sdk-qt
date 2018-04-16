@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListRulesPackagesRequest
+/*!
+ * \class QtAws::Inspector::ListRulesPackagesRequest
  *
- * @brief  Implements Inspector ListRulesPackages requests.
+ * \brief The ListRulesPackagesRequest class encapsulates Inspector ListRulesPackages requests.
  *
- * @see    InspectorClient::listRulesPackages
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listRulesPackages
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRulesPackagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListRulesPackagesRequest::ListRulesPackagesRequest(const ListRulesPackagesReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRulesPackagesRequest object.
  */
 ListRulesPackagesRequest::ListRulesPackagesRequest()
@@ -53,13 +61,16 @@ ListRulesPackagesRequest::ListRulesPackagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRulesPackagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRulesPackagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkRe
     return new ListRulesPackagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRulesPackagesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkRe
  * @brief  Private implementation for ListRulesPackagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRulesPackagesRequestPrivate object.
@@ -97,7 +108,7 @@ ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRulesPackagesRequestPrivate object, copying another.

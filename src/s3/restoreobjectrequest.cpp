@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  RestoreObjectRequest
+/*!
+ * \class QtAws::S3::RestoreObjectRequest
  *
- * @brief  Implements S3 RestoreObject requests.
+ * \brief The RestoreObjectRequest class encapsulates S3 RestoreObject requests.
  *
- * @see    S3Client::restoreObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::restoreObject
  */
 
-/**
+/*!
  * @brief  Constructs a new RestoreObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ RestoreObjectRequest::RestoreObjectRequest(const RestoreObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RestoreObjectRequest object.
  */
 RestoreObjectRequest::RestoreObjectRequest()
@@ -53,13 +56,16 @@ RestoreObjectRequest::RestoreObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RestoreObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RestoreObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply 
     return new RestoreObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RestoreObjectRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply 
  * @brief  Private implementation for RestoreObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RestoreObjectRequestPrivate object.
@@ -97,7 +103,7 @@ RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RestoreObjectRequestPrivate object, copying another.

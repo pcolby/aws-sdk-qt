@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSubnetsResponse
+/*!
+ * \class QtAws::EC2::DescribeSubnetsResponse
  *
- * @brief  Handles EC2 DescribeSubnets responses.
+ * \brief The DescribeSubnetsResponse class encapsulates EC2 DescribeSubnets responses.
  *
- * @see    EC2Client::describeSubnets
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSubnets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubnetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeSubnetsRequest * DescribeSubnetsResponse::request() const
     return static_cast<const DescribeSubnetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeSubnets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSubnetsResponsePrivate
+ * \class DescribeSubnetsResponsePrivate
  *
- * @brief  Private implementation for DescribeSubnetsResponse.
+ * \brief Private implementation for DescribeSubnetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubnetsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeSubnetsResponse element.
  *
  * @param  xml  XML stream to parse.

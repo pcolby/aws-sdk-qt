@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace SageMakerRuntime {
 
-/**
- * @class  InvokeEndpointRequest
+/*!
+ * \class QtAws::SageMakerRuntime::InvokeEndpointRequest
  *
- * @brief  Implements SageMakerRuntime InvokeEndpoint requests.
+ * \brief The InvokeEndpointRequest class encapsulates SageMakerRuntime InvokeEndpoint requests.
  *
- * @see    SageMakerRuntimeClient::invokeEndpoint
+ * \ingroup SageMakerRuntime
+ *
+ *  Amazon SageMaker runtime API.
+ *
+ * \sa SageMakerRuntimeClient::invokeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new InvokeEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ InvokeEndpointRequest::InvokeEndpointRequest(const InvokeEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InvokeEndpointRequest object.
  */
 InvokeEndpointRequest::InvokeEndpointRequest()
@@ -53,13 +57,16 @@ InvokeEndpointRequest::InvokeEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InvokeEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InvokeEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply
     return new InvokeEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InvokeEndpointRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for InvokeEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InvokeEndpointRequestPrivate object.
@@ -97,7 +104,7 @@ InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InvokeEndpointRequestPrivate object, copying another.

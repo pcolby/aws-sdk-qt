@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteApiKeyRequest
+/*!
+ * \class QtAws::APIGateway::DeleteApiKeyRequest
  *
- * @brief  Implements APIGateway DeleteApiKey requests.
+ * \brief The DeleteApiKeyRequest class encapsulates APIGateway DeleteApiKey requests.
  *
- * @see    APIGatewayClient::deleteApiKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApiKeyRequest object.
  */
 DeleteApiKeyRequest::DeleteApiKeyRequest()
@@ -53,13 +61,16 @@ DeleteApiKeyRequest::DeleteApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
     return new DeleteApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApiKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApiKeyRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApiKeyRequestPrivate object, copying another.

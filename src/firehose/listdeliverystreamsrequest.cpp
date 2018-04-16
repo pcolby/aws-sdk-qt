@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  ListDeliveryStreamsRequest
+/*!
+ * \class QtAws::Firehose::ListDeliveryStreamsRequest
  *
- * @brief  Implements Firehose ListDeliveryStreams requests.
+ * \brief The ListDeliveryStreamsRequest class encapsulates Firehose ListDeliveryStreams requests.
  *
- * @see    FirehoseClient::listDeliveryStreams
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::listDeliveryStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDeliveryStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListDeliveryStreamsRequest::ListDeliveryStreamsRequest(const ListDeliveryStreams
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDeliveryStreamsRequest object.
  */
 ListDeliveryStreamsRequest::ListDeliveryStreamsRequest()
@@ -53,13 +60,16 @@ ListDeliveryStreamsRequest::ListDeliveryStreamsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDeliveryStreamsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDeliveryStreamsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetwork
     return new ListDeliveryStreamsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDeliveryStreamsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetwork
  * @brief  Private implementation for ListDeliveryStreamsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeliveryStreamsRequestPrivate object.
@@ -97,7 +107,7 @@ ListDeliveryStreamsRequestPrivate::ListDeliveryStreamsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeliveryStreamsRequestPrivate object, copying another.

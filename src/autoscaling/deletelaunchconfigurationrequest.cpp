@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteLaunchConfigurationRequest
+/*!
+ * \class QtAws::AutoScaling::DeleteLaunchConfigurationRequest
  *
- * @brief  Implements AutoScaling DeleteLaunchConfiguration requests.
+ * \brief The DeleteLaunchConfigurationRequest class encapsulates AutoScaling DeleteLaunchConfiguration requests.
  *
- * @see    AutoScalingClient::deleteLaunchConfiguration
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteLaunchConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLaunchConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteLaunchConfigurationRequest::DeleteLaunchConfigurationRequest(const DeleteL
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLaunchConfigurationRequest object.
  */
 DeleteLaunchConfigurationRequest::DeleteLaunchConfigurationRequest()
@@ -53,13 +61,16 @@ DeleteLaunchConfigurationRequest::DeleteLaunchConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLaunchConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLaunchConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QN
     return new DeleteLaunchConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLaunchConfigurationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QN
  * @brief  Private implementation for DeleteLaunchConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLaunchConfigurationRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLaunchConfigurationRequestPrivate object, copying another.

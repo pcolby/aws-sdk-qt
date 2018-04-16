@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachInternetGatewayRequest
+/*!
+ * \class QtAws::EC2::AttachInternetGatewayRequest
  *
- * @brief  Implements EC2 AttachInternetGateway requests.
+ * \brief The AttachInternetGatewayRequest class encapsulates EC2 AttachInternetGateway requests.
  *
- * @see    EC2Client::attachInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AttachInternetGatewayRequest::AttachInternetGatewayRequest(const AttachInternetG
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachInternetGatewayRequest object.
  */
 AttachInternetGatewayRequest::AttachInternetGatewayRequest()
@@ -53,13 +60,16 @@ AttachInternetGatewayRequest::AttachInternetGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachInternetGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachInternetGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AttachInternetGatewayRequest::response(QNetwo
     return new AttachInternetGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachInternetGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachInternetGatewayRequest::response(QNetwo
  * @brief  Private implementation for AttachInternetGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInternetGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInternetGatewayRequestPrivate object, copying another.

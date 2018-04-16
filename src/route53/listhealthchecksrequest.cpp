@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListHealthChecksRequest
+/*!
+ * \class QtAws::Route53::ListHealthChecksRequest
  *
- * @brief  Implements Route53 ListHealthChecks requests.
+ * \brief The ListHealthChecksRequest class encapsulates Route53 ListHealthChecks requests.
  *
- * @see    Route53Client::listHealthChecks
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listHealthChecks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHealthChecksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListHealthChecksRequest::ListHealthChecksRequest(const ListHealthChecksRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListHealthChecksRequest object.
  */
 ListHealthChecksRequest::ListHealthChecksRequest()
@@ -53,13 +56,16 @@ ListHealthChecksRequest::ListHealthChecksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListHealthChecksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListHealthChecksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListHealthChecksRequest::response(QNetworkRep
     return new ListHealthChecksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListHealthChecksRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListHealthChecksRequest::response(QNetworkRep
  * @brief  Private implementation for ListHealthChecksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHealthChecksRequestPrivate object.
@@ -97,7 +103,7 @@ ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHealthChecksRequestPrivate object, copying another.

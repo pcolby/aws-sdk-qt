@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachClassicLinkVpcRequest
+/*!
+ * \class QtAws::EC2::AttachClassicLinkVpcRequest
  *
- * @brief  Implements EC2 AttachClassicLinkVpc requests.
+ * \brief The AttachClassicLinkVpcRequest class encapsulates EC2 AttachClassicLinkVpc requests.
  *
- * @see    EC2Client::attachClassicLinkVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachClassicLinkVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachClassicLinkVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest(const AttachClassicLink
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachClassicLinkVpcRequest object.
  */
 AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest()
@@ -53,13 +60,16 @@ AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachClassicLinkVpcRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachClassicLinkVpcResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetwor
     return new AttachClassicLinkVpcResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachClassicLinkVpcRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetwor
  * @brief  Private implementation for AttachClassicLinkVpcRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachClassicLinkVpcRequestPrivate object.
@@ -97,7 +107,7 @@ AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachClassicLinkVpcRequestPrivate object, copying another.

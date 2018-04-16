@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SendInvitationRequest
+/*!
+ * \class QtAws::AlexaForBusiness::SendInvitationRequest
  *
- * @brief  Implements AlexaForBusiness SendInvitation requests.
+ * \brief The SendInvitationRequest class encapsulates AlexaForBusiness SendInvitation requests.
  *
- * @see    AlexaForBusinessClient::sendInvitation
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::sendInvitation
  */
 
-/**
+/*!
  * @brief  Constructs a new SendInvitationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SendInvitationRequest::SendInvitationRequest(const SendInvitationRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendInvitationRequest object.
  */
 SendInvitationRequest::SendInvitationRequest()
@@ -53,13 +61,16 @@ SendInvitationRequest::SendInvitationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendInvitationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendInvitationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply
     return new SendInvitationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendInvitationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply
  * @brief  Private implementation for SendInvitationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendInvitationRequestPrivate object.
@@ -97,7 +108,7 @@ SendInvitationRequestPrivate::SendInvitationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendInvitationRequestPrivate object, copying another.

@@ -117,28 +117,36 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudFront
+ * \brief The QtAws::CloudFront contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CloudFrontClient
+/*!
+ * \class QtAws::CloudFront::CloudFrontClient
  *
- * @brief  Client for Amazon CloudFront
+ * \brief The CloudFrontClient class provides access the Amazon CloudFront service.
  *
- * <fullname>Amazon CloudFront</fullname>
+ * \ingroup CloudFront
  *
- * This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
- * CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
- * CloudFront Developer
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
  */
 
-/**
- * @brief  Constructs a new CloudFrontClient object.
+/*!
+ * \brief Constructs a CloudFrontClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudFrontClient::CloudFrontClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -157,21 +165,16 @@ CloudFrontClient::CloudFrontClient(
     d->serviceName = QStringLiteral("cloudfront");
 }
 
-/**
- * @brief  Constructs a new CloudFrontClient object.
+/*!
+ * \overload CloudFrontClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudFrontClient::CloudFrontClient(
     const QUrl &endpoint,
@@ -190,7 +193,7 @@ CloudFrontClient::CloudFrontClient(
     d->serviceName = QStringLiteral("cloudfront");
 }
 
-/**
+/*!
  * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity
  * to require users to access your content using a CloudFront URL instead of the Amazon S3 URL. For more information about
  * how to use origin access identities, see <a
@@ -208,7 +211,7 @@ CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFron
     return qobject_cast<CreateCloudFrontOriginAccessIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new web distribution. Send a <code>POST</code> request to the <code>/<i>CloudFront API
  * version</i>/distribution</code>/<code>distribution ID</code>
  *
@@ -223,7 +226,7 @@ CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDi
     return qobject_cast<CreateDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new distribution with
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -237,7 +240,7 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
     return qobject_cast<CreateDistributionWithTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new field-level encryption
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -251,7 +254,7 @@ CreateFieldLevelEncryptionConfigResponse * CloudFrontClient::createFieldLevelEnc
     return qobject_cast<CreateFieldLevelEncryptionConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a field-level encryption
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -265,7 +268,7 @@ CreateFieldLevelEncryptionProfileResponse * CloudFrontClient::createFieldLevelEn
     return qobject_cast<CreateFieldLevelEncryptionProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new invalidation.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -279,7 +282,7 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
     return qobject_cast<CreateInvalidationResponse *>(send(request));
 }
 
-/**
+/*!
  * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public
  * keys with one AWS
  *
@@ -294,7 +297,7 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
     return qobject_cast<CreatePublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new RMTP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams
  * media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.
  *
@@ -337,7 +340,7 @@ CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribut
     return qobject_cast<CreateStreamingDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new streaming distribution with
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -351,7 +354,7 @@ CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingD
     return qobject_cast<CreateStreamingDistributionWithTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Delete an origin access identity.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -365,7 +368,7 @@ DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFron
     return qobject_cast<DeleteCloudFrontOriginAccessIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Delete a distribution.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -379,7 +382,7 @@ DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDi
     return qobject_cast<DeleteDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove a field-level encryption
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -393,7 +396,7 @@ DeleteFieldLevelEncryptionConfigResponse * CloudFrontClient::deleteFieldLevelEnc
     return qobject_cast<DeleteFieldLevelEncryptionConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove a field-level encryption
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -407,7 +410,7 @@ DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEn
     return qobject_cast<DeleteFieldLevelEncryptionProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove a public key you previously added to
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -421,7 +424,7 @@ DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKe
     return qobject_cast<DeletePublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon CloudFront.
  *
@@ -434,7 +437,7 @@ DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(cons
     return qobject_cast<DeleteServiceLinkedRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following
  *
  * steps>
@@ -500,7 +503,7 @@ DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribut
     return qobject_cast<DeleteStreamingDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the information about an origin access identity.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -514,7 +517,7 @@ GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOrigi
     return qobject_cast<GetCloudFrontOriginAccessIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the configuration information about an origin access identity.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -528,7 +531,7 @@ GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFron
     return qobject_cast<GetCloudFrontOriginAccessIdentityConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the information about a distribution.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -542,7 +545,7 @@ GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributio
     return qobject_cast<GetDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the configuration information about a distribution.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -556,7 +559,7 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
     return qobject_cast<GetDistributionConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the field-level encryption configuration
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -570,7 +573,7 @@ GetFieldLevelEncryptionResponse * CloudFrontClient::getFieldLevelEncryption(cons
     return qobject_cast<GetFieldLevelEncryptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the field-level encryption configuration
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -584,7 +587,7 @@ GetFieldLevelEncryptionConfigResponse * CloudFrontClient::getFieldLevelEncryptio
     return qobject_cast<GetFieldLevelEncryptionConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the field-level encryption profile
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -598,7 +601,7 @@ GetFieldLevelEncryptionProfileResponse * CloudFrontClient::getFieldLevelEncrypti
     return qobject_cast<GetFieldLevelEncryptionProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the field-level encryption profile configuration
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -612,7 +615,7 @@ GetFieldLevelEncryptionProfileConfigResponse * CloudFrontClient::getFieldLevelEn
     return qobject_cast<GetFieldLevelEncryptionProfileConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the information about an invalidation.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -626,7 +629,7 @@ GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidatio
     return qobject_cast<GetInvalidationResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the public key
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -640,7 +643,7 @@ GetPublicKeyResponse * CloudFrontClient::getPublicKey(const GetPublicKeyRequest 
     return qobject_cast<GetPublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Return public key configuration
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -654,7 +657,7 @@ GetPublicKeyConfigResponse * CloudFrontClient::getPublicKeyConfig(const GetPubli
     return qobject_cast<GetPublicKeyConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specified RTMP distribution, including the distribution
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -668,7 +671,7 @@ GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(co
     return qobject_cast<GetStreamingDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the configuration information about a streaming distribution.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -682,7 +685,7 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
     return qobject_cast<GetStreamingDistributionConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists origin access
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -696,7 +699,7 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
     return qobject_cast<ListCloudFrontOriginAccessIdentitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * List distributions.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -710,7 +713,7 @@ ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistri
     return qobject_cast<ListDistributionsResponse *>(send(request));
 }
 
-/**
+/*!
  * List the distributions that are associated with a specified AWS WAF web ACL.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -724,7 +727,7 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
     return qobject_cast<ListDistributionsByWebACLIdResponse *>(send(request));
 }
 
-/**
+/*!
  * List all field-level encryption configurations that have been created in CloudFront for this
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -738,7 +741,7 @@ ListFieldLevelEncryptionConfigsResponse * CloudFrontClient::listFieldLevelEncryp
     return qobject_cast<ListFieldLevelEncryptionConfigsResponse *>(send(request));
 }
 
-/**
+/*!
  * Request a list of field-level encryption profiles that have been created in CloudFront for this
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -752,7 +755,7 @@ ListFieldLevelEncryptionProfilesResponse * CloudFrontClient::listFieldLevelEncry
     return qobject_cast<ListFieldLevelEncryptionProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists invalidation batches.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -766,7 +769,7 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
     return qobject_cast<ListInvalidationsResponse *>(send(request));
 }
 
-/**
+/*!
  * List all public keys that have been added to CloudFront for this
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -780,7 +783,7 @@ ListPublicKeysResponse * CloudFrontClient::listPublicKeys(const ListPublicKeysRe
     return qobject_cast<ListPublicKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * List streaming distributions.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -794,7 +797,7 @@ ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistribution
     return qobject_cast<ListStreamingDistributionsResponse *>(send(request));
 }
 
-/**
+/*!
  * List tags for a CloudFront
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -808,7 +811,7 @@ ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTa
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Add tags to a CloudFront
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -822,7 +825,7 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove tags from a CloudFront
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -836,7 +839,7 @@ UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceReque
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Update an origin access identity.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -850,7 +853,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
     return qobject_cast<UpdateCloudFrontOriginAccessIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the configuration for a web distribution. Perform the following
  *
  * steps>
@@ -928,7 +931,7 @@ UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDi
     return qobject_cast<UpdateDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * Update a field-level encryption configuration.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -942,7 +945,7 @@ UpdateFieldLevelEncryptionConfigResponse * CloudFrontClient::updateFieldLevelEnc
     return qobject_cast<UpdateFieldLevelEncryptionConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Update a field-level encryption profile.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -956,7 +959,7 @@ UpdateFieldLevelEncryptionProfileResponse * CloudFrontClient::updateFieldLevelEn
     return qobject_cast<UpdateFieldLevelEncryptionProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Update public key information. Note that the only value you can change is the
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -970,7 +973,7 @@ UpdatePublicKeyResponse * CloudFrontClient::updatePublicKey(const UpdatePublicKe
     return qobject_cast<UpdatePublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Update a streaming distribution.
  *
  * @param  request Request to send to Amazon CloudFront.
@@ -984,7 +987,7 @@ UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribut
     return qobject_cast<UpdateStreamingDistributionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudFrontClientPrivate
@@ -992,7 +995,7 @@ UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribut
  * @brief  Private implementation for CloudFrontClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFrontClientPrivate object.

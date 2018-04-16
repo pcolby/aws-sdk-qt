@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDocumentationVersionRequest
+/*!
+ * \class QtAws::APIGateway::GetDocumentationVersionRequest
  *
- * @brief  Implements APIGateway GetDocumentationVersion requests.
+ * \brief The GetDocumentationVersionRequest class encapsulates APIGateway GetDocumentationVersion requests.
  *
- * @see    APIGatewayClient::getDocumentationVersion
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDocumentationVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDocumentationVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetDocumentationVersionRequest::GetDocumentationVersionRequest(const GetDocument
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDocumentationVersionRequest object.
  */
 GetDocumentationVersionRequest::GetDocumentationVersionRequest()
@@ -53,13 +61,16 @@ GetDocumentationVersionRequest::GetDocumentationVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDocumentationVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDocumentationVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationVersionRequest::response(QNet
     return new GetDocumentationVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDocumentationVersionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationVersionRequest::response(QNet
  * @brief  Private implementation for GetDocumentationVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDocumentationVersionRequestPrivate object.
@@ -97,7 +108,7 @@ GetDocumentationVersionRequestPrivate::GetDocumentationVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDocumentationVersionRequestPrivate object, copying another.

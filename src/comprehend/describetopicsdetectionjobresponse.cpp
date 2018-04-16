@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DescribeTopicsDetectionJobResponse
+/*!
+ * \class QtAws::Comprehend::DescribeTopicsDetectionJobResponse
  *
- * @brief  Handles Comprehend DescribeTopicsDetectionJob responses.
+ * \brief The DescribeTopicsDetectionJobResponse class encapsulates Comprehend DescribeTopicsDetectionJob responses.
  *
- * @see    ComprehendClient::describeTopicsDetectionJob
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::describeTopicsDetectionJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTopicsDetectionJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeTopicsDetectionJobRequest * DescribeTopicsDetectionJobResponse::re
     return static_cast<const DescribeTopicsDetectionJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Comprehend DescribeTopicsDetectionJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeTopicsDetectionJobResponsePrivate
+ * \class DescribeTopicsDetectionJobResponsePrivate
  *
- * @brief  Private implementation for DescribeTopicsDetectionJobResponse.
+ * \brief Private implementation for DescribeTopicsDetectionJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTopicsDetectionJobResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeTopicsDetectionJobResponsePrivate::DescribeTopicsDetectionJobResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an Comprehend DescribeTopicsDetectionJobResponse element.
  *
  * @param  xml  XML stream to parse.

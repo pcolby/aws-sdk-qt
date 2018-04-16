@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  AbortMultipartUploadRequest
+/*!
+ * \class QtAws::S3::AbortMultipartUploadRequest
  *
- * @brief  Implements S3 AbortMultipartUpload requests.
+ * \brief The AbortMultipartUploadRequest class encapsulates S3 AbortMultipartUpload requests.
  *
- * @see    S3Client::abortMultipartUpload
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::abortMultipartUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new AbortMultipartUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AbortMultipartUploadRequest::AbortMultipartUploadRequest(const AbortMultipartUpl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AbortMultipartUploadRequest object.
  */
 AbortMultipartUploadRequest::AbortMultipartUploadRequest()
@@ -53,13 +56,16 @@ AbortMultipartUploadRequest::AbortMultipartUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AbortMultipartUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AbortMultipartUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
     return new AbortMultipartUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AbortMultipartUploadRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
  * @brief  Private implementation for AbortMultipartUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AbortMultipartUploadRequestPrivate object.
@@ -97,7 +103,7 @@ AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AbortMultipartUploadRequestPrivate object, copying another.

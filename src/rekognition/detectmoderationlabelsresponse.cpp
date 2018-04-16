@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectModerationLabelsResponse
+/*!
+ * \class QtAws::Rekognition::DetectModerationLabelsResponse
  *
- * @brief  Handles Rekognition DetectModerationLabels responses.
+ * \brief The DetectModerationLabelsResponse class encapsulates Rekognition DetectModerationLabels responses.
  *
- * @see    RekognitionClient::detectModerationLabels
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectModerationLabels
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectModerationLabelsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DetectModerationLabelsRequest * DetectModerationLabelsResponse::request() 
     return static_cast<const DetectModerationLabelsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DetectModerationLabels response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DetectModerationLabelsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetectModerationLabelsResponsePrivate
+ * \class DetectModerationLabelsResponsePrivate
  *
- * @brief  Private implementation for DetectModerationLabelsResponse.
+ * \brief Private implementation for DetectModerationLabelsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectModerationLabelsResponsePrivate object.
@@ -91,7 +95,7 @@ DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DetectModerationLabelsResponse element.
  *
  * @param  xml  XML stream to parse.

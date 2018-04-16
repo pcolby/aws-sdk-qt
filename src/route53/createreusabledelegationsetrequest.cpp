@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateReusableDelegationSetRequest
+/*!
+ * \class QtAws::Route53::CreateReusableDelegationSetRequest
  *
- * @brief  Implements Route53 CreateReusableDelegationSet requests.
+ * \brief The CreateReusableDelegationSetRequest class encapsulates Route53 CreateReusableDelegationSet requests.
  *
- * @see    Route53Client::createReusableDelegationSet
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createReusableDelegationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReusableDelegationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateReusableDelegationSetRequest::CreateReusableDelegationSetRequest(const Cre
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReusableDelegationSetRequest object.
  */
 CreateReusableDelegationSetRequest::CreateReusableDelegationSetRequest()
@@ -53,13 +56,16 @@ CreateReusableDelegationSetRequest::CreateReusableDelegationSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReusableDelegationSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReusableDelegationSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateReusableDelegationSetRequest::response(
     return new CreateReusableDelegationSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReusableDelegationSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateReusableDelegationSetRequest::response(
  * @brief  Private implementation for CreateReusableDelegationSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReusableDelegationSetRequestPrivate object.
@@ -97,7 +103,7 @@ CreateReusableDelegationSetRequestPrivate::CreateReusableDelegationSetRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReusableDelegationSetRequestPrivate object, copying another.

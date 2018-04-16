@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  DeleteThingShadowResponse
+/*!
+ * \class QtAws::IoTDataPlane::DeleteThingShadowResponse
  *
- * @brief  Handles IoTDataPlane DeleteThingShadow responses.
+ * \brief The DeleteThingShadowResponse class encapsulates IoTDataPlane DeleteThingShadow responses.
  *
- * @see    IoTDataPlaneClient::deleteThingShadow
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::deleteThingShadow
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingShadowResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteThingShadowRequest * DeleteThingShadowResponse::request() const
     return static_cast<const DeleteThingShadowRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoTDataPlane DeleteThingShadow response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteThingShadowResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteThingShadowResponsePrivate
+ * \class DeleteThingShadowResponsePrivate
  *
- * @brief  Private implementation for DeleteThingShadowResponse.
+ * \brief Private implementation for DeleteThingShadowResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingShadowResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteThingShadowResponsePrivate::DeleteThingShadowResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoTDataPlane DeleteThingShadowResponse element.
  *
  * @param  xml  XML stream to parse.

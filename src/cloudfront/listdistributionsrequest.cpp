@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListDistributionsRequest
+/*!
+ * \class QtAws::CloudFront::ListDistributionsRequest
  *
- * @brief  Implements CloudFront ListDistributions requests.
+ * \brief The ListDistributionsRequest class encapsulates CloudFront ListDistributions requests.
  *
- * @see    CloudFrontClient::listDistributions
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listDistributions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDistributionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListDistributionsRequest::ListDistributionsRequest(const ListDistributionsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDistributionsRequest object.
  */
 ListDistributionsRequest::ListDistributionsRequest()
@@ -53,13 +61,16 @@ ListDistributionsRequest::ListDistributionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDistributionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDistributionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsRequest::response(QNetworkRe
     return new ListDistributionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDistributionsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsRequest::response(QNetworkRe
  * @brief  Private implementation for ListDistributionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDistributionsRequestPrivate object.
@@ -97,7 +108,7 @@ ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDistributionsRequestPrivate object, copying another.

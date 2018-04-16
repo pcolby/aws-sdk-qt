@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  ListClosedWorkflowExecutionsResponse
+/*!
+ * \class QtAws::SWF::ListClosedWorkflowExecutionsResponse
  *
- * @brief  Handles SWF ListClosedWorkflowExecutions responses.
+ * \brief The ListClosedWorkflowExecutionsResponse class encapsulates SWF ListClosedWorkflowExecutions responses.
  *
- * @see    SWFClient::listClosedWorkflowExecutions
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::listClosedWorkflowExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListClosedWorkflowExecutionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const ListClosedWorkflowExecutionsRequest * ListClosedWorkflowExecutionsResponse
     return static_cast<const ListClosedWorkflowExecutionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF ListClosedWorkflowExecutions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void ListClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListClosedWorkflowExecutionsResponsePrivate
+ * \class ListClosedWorkflowExecutionsResponsePrivate
  *
- * @brief  Private implementation for ListClosedWorkflowExecutionsResponse.
+ * \brief Private implementation for ListClosedWorkflowExecutionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClosedWorkflowExecutionsResponsePrivate object.
@@ -91,7 +110,7 @@ ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF ListClosedWorkflowExecutionsResponse element.
  *
  * @param  xml  XML stream to parse.

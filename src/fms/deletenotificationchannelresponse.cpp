@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  DeleteNotificationChannelResponse
+/*!
+ * \class QtAws::FMS::DeleteNotificationChannelResponse
  *
- * @brief  Handles FMS DeleteNotificationChannel responses.
+ * \brief The DeleteNotificationChannelResponse class encapsulates FMS DeleteNotificationChannel responses.
  *
- * @see    FMSClient::deleteNotificationChannel
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::deleteNotificationChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotificationChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteNotificationChannelRequest * DeleteNotificationChannelResponse::requ
     return static_cast<const DeleteNotificationChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS DeleteNotificationChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteNotificationChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNotificationChannelResponsePrivate
+ * \class DeleteNotificationChannelResponsePrivate
  *
- * @brief  Private implementation for DeleteNotificationChannelResponse.
+ * \brief Private implementation for DeleteNotificationChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotificationChannelResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteNotificationChannelResponsePrivate::DeleteNotificationChannelResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS DeleteNotificationChannelResponse element.
  *
  * @param  xml  XML stream to parse.

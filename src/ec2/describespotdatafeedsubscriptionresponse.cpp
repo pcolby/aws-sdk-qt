@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotDatafeedSubscriptionResponse
+/*!
+ * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionResponse
  *
- * @brief  Handles EC2 DescribeSpotDatafeedSubscription responses.
+ * \brief The DescribeSpotDatafeedSubscriptionResponse class encapsulates EC2 DescribeSpotDatafeedSubscription responses.
  *
- * @see    EC2Client::describeSpotDatafeedSubscription
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotDatafeedSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotDatafeedSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeSpotDatafeedSubscriptionRequest * DescribeSpotDatafeedSubscription
     return static_cast<const DescribeSpotDatafeedSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeSpotDatafeedSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSpotDatafeedSubscriptionResponsePrivate
+ * \class DescribeSpotDatafeedSubscriptionResponsePrivate
  *
- * @brief  Private implementation for DescribeSpotDatafeedSubscriptionResponse.
+ * \brief Private implementation for DescribeSpotDatafeedSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotDatafeedSubscriptionResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptio
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeSpotDatafeedSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

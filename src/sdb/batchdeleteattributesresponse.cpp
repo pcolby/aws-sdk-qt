@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  BatchDeleteAttributesResponse
+/*!
+ * \class QtAws::SimpleDB::BatchDeleteAttributesResponse
  *
- * @brief  Handles SimpleDB BatchDeleteAttributes responses.
+ * \brief The BatchDeleteAttributesResponse class encapsulates SimpleDB BatchDeleteAttributes responses.
  *
- * @see    SimpleDBClient::batchDeleteAttributes
+ * \ingroup SimpleDB
+ *
+ *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
+ *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
+ *  the freedom to focus on application development.
+ * 
+ *  A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often
+ *  requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema,
+ *  automatically indexing your data and providing a simple API for storage and access. This approach eliminates the
+ *  administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this
+ *  functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.
+ * 
+ *  </p
+ * 
+ *  Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information.
+ *
+ * \sa SimpleDBClient::batchDeleteAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const BatchDeleteAttributesRequest * BatchDeleteAttributesResponse::request() co
     return static_cast<const BatchDeleteAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SimpleDB BatchDeleteAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void BatchDeleteAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchDeleteAttributesResponsePrivate
+ * \class BatchDeleteAttributesResponsePrivate
  *
- * @brief  Private implementation for BatchDeleteAttributesResponse.
+ * \brief Private implementation for BatchDeleteAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteAttributesResponsePrivate object.
@@ -91,7 +107,7 @@ BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SimpleDB BatchDeleteAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

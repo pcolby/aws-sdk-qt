@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  RecordLifecycleActionHeartbeatResponse
+/*!
+ * \class QtAws::AutoScaling::RecordLifecycleActionHeartbeatResponse
  *
- * @brief  Handles AutoScaling RecordLifecycleActionHeartbeat responses.
+ * \brief The RecordLifecycleActionHeartbeatResponse class encapsulates AutoScaling RecordLifecycleActionHeartbeat responses.
  *
- * @see    AutoScalingClient::recordLifecycleActionHeartbeat
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::recordLifecycleActionHeartbeat
  */
 
-/**
+/*!
  * @brief  Constructs a new RecordLifecycleActionHeartbeatResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const RecordLifecycleActionHeartbeatRequest * RecordLifecycleActionHeartbeatResp
     return static_cast<const RecordLifecycleActionHeartbeatRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling RecordLifecycleActionHeartbeat response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void RecordLifecycleActionHeartbeatResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RecordLifecycleActionHeartbeatResponsePrivate
+ * \class RecordLifecycleActionHeartbeatResponsePrivate
  *
- * @brief  Private implementation for RecordLifecycleActionHeartbeatResponse.
+ * \brief Private implementation for RecordLifecycleActionHeartbeatResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RecordLifecycleActionHeartbeatResponsePrivate object.
@@ -91,7 +99,7 @@ RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatRes
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling RecordLifecycleActionHeartbeatResponse element.
  *
  * @param  xml  XML stream to parse.

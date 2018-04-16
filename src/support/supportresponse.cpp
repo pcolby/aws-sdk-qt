@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Support {
 
-/**
- * @class  SupportResponse
+/*!
+ * \class QtAws::Support::SupportResponse
  *
- * @brief  Handles Support Support responses.
+ * \brief The SupportResponse class is the base class for all Support responses.
  *
- * @see    SupportClient::support
+ * \ingroup Support
  */
 
-/**
+/*!
  * @brief  Constructs a new SupportResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SupportResponse::SupportResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SupportResponse object.
@@ -63,7 +63,7 @@ SupportResponse::SupportResponse(SupportResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SupportResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SupportResponsePrivate
@@ -92,7 +92,7 @@ void SupportResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SupportResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SupportResponsePrivate object.

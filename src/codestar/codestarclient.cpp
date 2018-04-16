@@ -61,111 +61,119 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CodeStar
+ * \brief The QtAws::CodeStar contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CodeStar {
 
-/**
- * @class  CodeStarClient
+/*!
+ * \class QtAws::CodeStar::CodeStarClient
  *
- * @brief  Client for AWS CodeStar
+ * \brief The CodeStarClient class provides access the AWS CodeStar service.
  *
- * <fullname>AWS CodeStar</fullname>
+ * \ingroup CodeStar
  *
- * This is the API reference for AWS CodeStar. This reference provides descriptions of the operations and data types for
- * the AWS CodeStar API along with usage
- *
- * examples>
- *
- * You can use the AWS CodeStar API to work
- *
- * with>
- *
- * Projects and their resources, by calling the
- *
- * following> <ul> <li>
- *
- * <code>DeleteProject</code>, which deletes a
- *
- * project> </li> <li>
- *
- * <code>DescribeProject</code>, which lists the attributes of a
- *
- * project> </li> <li>
- *
- * <code>ListProjects</code>, which lists all projects associated with your AWS
- *
- * account> </li> <li>
- *
- * <code>ListResources</code>, which lists the resources associated with a
- *
- * project> </li> <li>
- *
- * <code>ListTagsForProject</code>, which lists the tags associated with a
- *
- * project> </li> <li>
- *
- * <code>TagProject</code>, which adds tags to a
- *
- * project> </li> <li>
- *
- * <code>UntagProject</code>, which removes tags from a
- *
- * project> </li> <li>
- *
- * <code>UpdateProject</code>, which updates the attributes of a
- *
- * project> </li> </ul>
- *
- * Teams and team members, by calling the
- *
- * following> <ul> <li>
- *
- * <code>AssociateTeamMember</code>, which adds an IAM user to the team for a
- *
- * project> </li> <li>
- *
- * <code>DisassociateTeamMember</code>, which removes an IAM user from the team for a
- *
- * project> </li> <li>
- *
- * <code>ListTeamMembers</code>, which lists all the IAM users in the team for a project, including their roles and
- *
- * attributes> </li> <li>
- *
- * <code>UpdateTeamMember</code>, which updates a team member's attributes in a
- *
- * project> </li> </ul>
- *
- * Users, by calling the
- *
- * following> <ul> <li>
- *
- * <code>CreateUserProfile</code>, which creates a user profile that contains data associated with the user across all
- *
- * projects> </li> <li>
- *
- * <code>DeleteUserProfile</code>, which deletes all user profile information across all
- *
- * projects> </li> <li>
- *
- * <code>DescribeUserProfile</code>, which describes the profile of a
- *
- * user> </li> <li>
- *
- * <code>ListUserProfiles</code>, which lists all user
- *
- * profiles> </li> <li>
- *
- * <code>UpdateUserProfile</code>, which updates the profile for a
+ *  <fullname>AWS CodeStar</fullname>
+ * 
+ *  This is the API reference for AWS CodeStar. This reference provides descriptions of the operations and data types for
+ *  the AWS CodeStar API along with usage
+ * 
+ *  examples>
+ * 
+ *  You can use the AWS CodeStar API to work
+ * 
+ *  with>
+ * 
+ *  Projects and their resources, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <code>DeleteProject</code>, which deletes a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>DescribeProject</code>, which lists the attributes of a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>ListProjects</code>, which lists all projects associated with your AWS
+ * 
+ *  account> </li> <li>
+ * 
+ *  <code>ListResources</code>, which lists the resources associated with a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>ListTagsForProject</code>, which lists the tags associated with a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>TagProject</code>, which adds tags to a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>UntagProject</code>, which removes tags from a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>UpdateProject</code>, which updates the attributes of a
+ * 
+ *  project> </li> </ul>
+ * 
+ *  Teams and team members, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <code>AssociateTeamMember</code>, which adds an IAM user to the team for a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>DisassociateTeamMember</code>, which removes an IAM user from the team for a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>ListTeamMembers</code>, which lists all the IAM users in the team for a project, including their roles and
+ * 
+ *  attributes> </li> <li>
+ * 
+ *  <code>UpdateTeamMember</code>, which updates a team member's attributes in a
+ * 
+ *  project> </li> </ul>
+ * 
+ *  Users, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <code>CreateUserProfile</code>, which creates a user profile that contains data associated with the user across all
+ * 
+ *  projects> </li> <li>
+ * 
+ *  <code>DeleteUserProfile</code>, which deletes all user profile information across all
+ * 
+ *  projects> </li> <li>
+ * 
+ *  <code>DescribeUserProfile</code>, which describes the profile of a
+ * 
+ *  user> </li> <li>
+ * 
+ *  <code>ListUserProfiles</code>, which lists all user
+ * 
+ *  profiles> </li> <li>
+ * 
+ *  <code>UpdateUserProfile</code>, which updates the profile for a
  */
 
-/**
- * @brief  Constructs a new CodeStarClient object.
+/*!
+ * \brief Constructs a CodeStarClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CodeStarClient::CodeStarClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -184,21 +192,16 @@ CodeStarClient::CodeStarClient(
     d->serviceName = QStringLiteral("codestar");
 }
 
-/**
- * @brief  Constructs a new CodeStarClient object.
+/*!
+ * \overload CodeStarClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CodeStarClient::CodeStarClient(
     const QUrl &endpoint,
@@ -217,7 +220,7 @@ CodeStarClient::CodeStarClient(
     d->serviceName = QStringLiteral("codestar");
 }
 
-/**
+/*!
  * Adds an IAM user to the team for an AWS CodeStar
  *
  * @param  request Request to send to AWS CodeStar.
@@ -231,7 +234,7 @@ AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const Associat
     return qobject_cast<AssociateTeamMemberResponse *>(send(request));
 }
 
-/**
+/*!
  * Reserved for future use. To create a project, use the AWS CodeStar
  *
  * @param  request Request to send to AWS CodeStar.
@@ -245,7 +248,7 @@ CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest
     return qobject_cast<CreateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a profile for a user that includes user preferences, such as the display name and email address assocciated with
  * the user, in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed
  * wherever the user's information appears to other users in AWS
@@ -261,7 +264,7 @@ CreateUserProfileResponse * CodeStarClient::createUserProfile(const CreateUserPr
     return qobject_cast<CreateUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a project, including project resources. Does not delete users associated with the project, but does delete the
  * IAM roles that allowed access to the
  *
@@ -276,7 +279,7 @@ DeleteProjectResponse * CodeStarClient::deleteProject(const DeleteProjectRequest
     return qobject_cast<DeleteProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a user profile in AWS CodeStar, including all personal preference data associated with that profile, such as
  * display name and email address. It does not delete the history of that user, for example the history of commits made by
  * that
@@ -292,7 +295,7 @@ DeleteUserProfileResponse * CodeStarClient::deleteUserProfile(const DeleteUserPr
     return qobject_cast<DeleteUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a project and its
  *
  * @param  request Request to send to AWS CodeStar.
@@ -306,7 +309,7 @@ DescribeProjectResponse * CodeStarClient::describeProject(const DescribeProjectR
     return qobject_cast<DescribeProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a user in AWS CodeStar and the user attributes across all
  *
  * @param  request Request to send to AWS CodeStar.
@@ -320,7 +323,7 @@ DescribeUserProfileResponse * CodeStarClient::describeUserProfile(const Describe
     return qobject_cast<DescribeUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed
  * access to the project and its resources. Disassociating a team member does not remove that user's profile from AWS
  * CodeStar. It does not remove the user from
@@ -336,7 +339,7 @@ DisassociateTeamMemberResponse * CodeStarClient::disassociateTeamMember(const Di
     return qobject_cast<DisassociateTeamMemberResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all projects in AWS CodeStar associated with your AWS
  *
  * @param  request Request to send to AWS CodeStar.
@@ -350,7 +353,7 @@ ListProjectsResponse * CodeStarClient::listProjects(const ListProjectsRequest &r
     return qobject_cast<ListProjectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists resources associated with a project in AWS
  *
  * @param  request Request to send to AWS CodeStar.
@@ -364,7 +367,7 @@ ListResourcesResponse * CodeStarClient::listResources(const ListResourcesRequest
     return qobject_cast<ListResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the tags for a
  *
  * @param  request Request to send to AWS CodeStar.
@@ -378,7 +381,7 @@ ListTagsForProjectResponse * CodeStarClient::listTagsForProject(const ListTagsFo
     return qobject_cast<ListTagsForProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all team members associated with a
  *
  * @param  request Request to send to AWS CodeStar.
@@ -392,7 +395,7 @@ ListTeamMembersResponse * CodeStarClient::listTeamMembers(const ListTeamMembersR
     return qobject_cast<ListTeamMembersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the user profiles configured for your AWS account in AWS
  *
  * @param  request Request to send to AWS CodeStar.
@@ -406,7 +409,7 @@ ListUserProfilesResponse * CodeStarClient::listUserProfiles(const ListUserProfil
     return qobject_cast<ListUserProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds tags to a
  *
  * @param  request Request to send to AWS CodeStar.
@@ -420,7 +423,7 @@ TagProjectResponse * CodeStarClient::tagProject(const TagProjectRequest &request
     return qobject_cast<TagProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes tags from a
  *
  * @param  request Request to send to AWS CodeStar.
@@ -434,7 +437,7 @@ UntagProjectResponse * CodeStarClient::untagProject(const UntagProjectRequest &r
     return qobject_cast<UntagProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a project in AWS
  *
  * @param  request Request to send to AWS CodeStar.
@@ -448,7 +451,7 @@ UpdateProjectResponse * CodeStarClient::updateProject(const UpdateProjectRequest
     return qobject_cast<UpdateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a team member's attributes in an AWS CodeStar project. For example, you can change a team member's role in the
  * project, or change whether they have remote access to project
  *
@@ -463,7 +466,7 @@ UpdateTeamMemberResponse * CodeStarClient::updateTeamMember(const UpdateTeamMemb
     return qobject_cast<UpdateTeamMemberResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a user's profile in AWS CodeStar. The user profile is not project-specific. Information in the user profile is
  * displayed wherever the user's information appears to other users in AWS CodeStar.
  *
@@ -478,7 +481,7 @@ UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserPr
     return qobject_cast<UpdateUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodeStarClientPrivate
@@ -486,7 +489,7 @@ UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserPr
  * @brief  Private implementation for CodeStarClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeStarClientPrivate object.

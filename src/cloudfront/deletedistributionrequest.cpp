@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteDistributionRequest
+/*!
+ * \class QtAws::CloudFront::DeleteDistributionRequest
  *
- * @brief  Implements CloudFront DeleteDistribution requests.
+ * \brief The DeleteDistributionRequest class encapsulates CloudFront DeleteDistribution requests.
  *
- * @see    CloudFrontClient::deleteDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteDistributionRequest::DeleteDistributionRequest(const DeleteDistributionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDistributionRequest object.
  */
 DeleteDistributionRequest::DeleteDistributionRequest()
@@ -53,13 +61,16 @@ DeleteDistributionRequest::DeleteDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkR
     return new DeleteDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkR
  * @brief  Private implementation for DeleteDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDistributionRequestPrivate object, copying another.

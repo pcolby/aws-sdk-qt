@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ListAssociatedFleetsResponse
+/*!
+ * \class QtAws::AppStream::ListAssociatedFleetsResponse
  *
- * @brief  Handles AppStream ListAssociatedFleets responses.
+ * \brief The ListAssociatedFleetsResponse class encapsulates AppStream ListAssociatedFleets responses.
  *
- * @see    AppStreamClient::listAssociatedFleets
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::listAssociatedFleets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssociatedFleetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListAssociatedFleetsRequest * ListAssociatedFleetsResponse::request() cons
     return static_cast<const ListAssociatedFleetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream ListAssociatedFleets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListAssociatedFleetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAssociatedFleetsResponsePrivate
+ * \class ListAssociatedFleetsResponsePrivate
  *
- * @brief  Private implementation for ListAssociatedFleetsResponse.
+ * \brief Private implementation for ListAssociatedFleetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssociatedFleetsResponsePrivate object.
@@ -91,7 +97,7 @@ ListAssociatedFleetsResponsePrivate::ListAssociatedFleetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream ListAssociatedFleetsResponse element.
  *
  * @param  xml  XML stream to parse.

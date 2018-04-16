@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  WAFRequest
+/*!
+ * \class QtAws::WAF::WAFRequest
  *
- * @brief  Interface class for providing WAF requests
+ * \brief The WAFRequest class is the base class for all WAF requests.
+ *
+ * \ingroup WAF
  */
 
-
-/**
+/*!
  * @brief  Constructs a new WAFRequest object.
  *
  * @param  action  The WAF action to request.
@@ -41,7 +42,7 @@ WAFRequest::WAFRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new WAFRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ WAFRequest::WAFRequest(const WAFRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ WAFRequest& WAFRequest::operator=(const WAFRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WAFRequest object.
@@ -85,10 +86,8 @@ WAFRequest::WAFRequest(WAFRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 
 }
 
-/**
- * @brief  Get the WAF action to be performed by this request.
- *
- * @return The WAF action to be performed by this request.
+/*!
+ * \brief Returns the WAF action to be performed by this request.
  */
 WAFRequest::Action WAFRequest::action() const
 {
@@ -96,20 +95,16 @@ WAFRequest::Action WAFRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the WAF action to be performed by this request.
- *
- * @return The name of the WAF action to be performed by this request.
+/*!
+ * \brief Returns the name of the WAF action to be performed by this request.
  */
 QString WAFRequest::actionString() const
 {
     return WAFRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the WAF API version implemented by this request.
- *
- * @return The WAF API version implmented by this request.
+/*!
+ * \brief Returns the WAF API version implemented by this request.
  */
 QString WAFRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString WAFRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the WAF action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the WAF action to be performed by this request to \a action.
  */
 void WAFRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void WAFRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the WAF API version to include in this request.
- *
- * @param  version  The WAF API version to include in this request.
+/*!
+ * Set the WAF API version to include in this request to \a version.
  */
 void WAFRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void WAFRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool WAFRequest::operator==(const WAFRequest &other) const
 {
@@ -159,7 +146,7 @@ bool WAFRequest::operator==(const WAFRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid WAF queue name.
  *
  * @par From WAF FAQs:
@@ -178,12 +165,10 @@ bool WAFRequest::operator==(const WAFRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int WAFRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int WAFRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void WAFRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void WAFRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this WAF request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant WAFRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant WAFRequest::parameter(const QString &name, const QVariant &defaultValue
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this WAF request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &WAFRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &WAFRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this WAF request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void WAFRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void WAFRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this WAF request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void WAFRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void WAFRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this WAF request.
+/*!
+ * \brief Returns a network request for this WAF request using the given \a endpoint.
  *
  * This WAF implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this WAF request using the given \a endpoint.
  */
 QNetworkRequest WAFRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest WAFRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  WAFRequestPrivate
+ * \class  WAFRequestPrivate
  *
- * @brief  Private implementation for WAFRequest.
+ * \brief  Private implementation for WAFRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new WAFRequestPrivate object.
- *
- * @param  action  WAF action being performed by the \a q request.
- * @param  q       Pointer to this object's public WAFRequest instance.
+ * \brief Constructs a new WAFRequestPrivate object.
  */
 WAFRequestPrivate::WAFRequestPrivate(const WAFRequest::Action action, WAFRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ WAFRequestPrivate::WAFRequestPrivate(const WAFRequest::Action action, WAFRequest
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new WAFRequestPrivate object from an existing one.
+ * \brief Constructs a new WAFRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the WAFRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public WAFRequest instance.
  */
 WAFRequestPrivate::WAFRequestPrivate(const WAFRequestPrivate &other,
                                      WAFRequest * const q)
@@ -312,14 +275,14 @@ WAFRequestPrivate::WAFRequestPrivate(const WAFRequestPrivate &other,
 
 }
 
-/**
- * @brief  Convert and WAF action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts WAFRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the WAF service's Action
  * query parameters.
- *
- * @param  action  WAF action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

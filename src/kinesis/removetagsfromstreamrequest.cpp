@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  RemoveTagsFromStreamRequest
+/*!
+ * \class QtAws::Kinesis::RemoveTagsFromStreamRequest
  *
- * @brief  Implements Kinesis RemoveTagsFromStream requests.
+ * \brief The RemoveTagsFromStreamRequest class encapsulates Kinesis RemoveTagsFromStream requests.
  *
- * @see    KinesisClient::removeTagsFromStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::removeTagsFromStream
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest(const RemoveTagsFromStr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromStreamRequest object.
  */
 RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest()
@@ -53,13 +59,16 @@ RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveTagsFromStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveTagsFromStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetwor
     return new RemoveTagsFromStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveTagsFromStreamRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetwor
  * @brief  Private implementation for RemoveTagsFromStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromStreamRequestPrivate object.
@@ -97,7 +106,7 @@ RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromStreamRequestPrivate object, copying another.

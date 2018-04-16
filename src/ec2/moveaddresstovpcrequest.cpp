@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  MoveAddressToVpcRequest
+/*!
+ * \class QtAws::EC2::MoveAddressToVpcRequest
  *
- * @brief  Implements EC2 MoveAddressToVpc requests.
+ * \brief The MoveAddressToVpcRequest class encapsulates EC2 MoveAddressToVpc requests.
  *
- * @see    EC2Client::moveAddressToVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::moveAddressToVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new MoveAddressToVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ MoveAddressToVpcRequest::MoveAddressToVpcRequest(const MoveAddressToVpcRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MoveAddressToVpcRequest object.
  */
 MoveAddressToVpcRequest::MoveAddressToVpcRequest()
@@ -53,13 +60,16 @@ MoveAddressToVpcRequest::MoveAddressToVpcRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool MoveAddressToVpcRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an MoveAddressToVpcResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkRep
     return new MoveAddressToVpcResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MoveAddressToVpcRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkRep
  * @brief  Private implementation for MoveAddressToVpcRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MoveAddressToVpcRequestPrivate object.
@@ -97,7 +107,7 @@ MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MoveAddressToVpcRequestPrivate object, copying another.

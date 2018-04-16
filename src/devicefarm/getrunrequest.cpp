@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetRunRequest
+/*!
+ * \class QtAws::DeviceFarm::GetRunRequest
  *
- * @brief  Implements DeviceFarm GetRun requests.
+ * \brief The GetRunRequest class encapsulates DeviceFarm GetRun requests.
  *
- * @see    DeviceFarmClient::getRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getRun
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetRunRequest::GetRunRequest(const GetRunRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRunRequest object.
  */
 GetRunRequest::GetRunRequest()
@@ -53,13 +58,16 @@ GetRunRequest::GetRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const
     return new GetRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRunRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const
  * @brief  Private implementation for GetRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRunRequestPrivate object.
@@ -97,7 +105,7 @@ GetRunRequestPrivate::GetRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRunRequestPrivate object, copying another.

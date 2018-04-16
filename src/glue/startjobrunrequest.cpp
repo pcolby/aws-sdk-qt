@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StartJobRunRequest
+/*!
+ * \class QtAws::Glue::StartJobRunRequest
  *
- * @brief  Implements Glue StartJobRun requests.
+ * \brief The StartJobRunRequest class encapsulates Glue StartJobRun requests.
  *
- * @see    GlueClient::startJobRun
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::startJobRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StartJobRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartJobRunRequest::StartJobRunRequest(const StartJobRunRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartJobRunRequest object.
  */
 StartJobRunRequest::StartJobRunRequest()
@@ -53,13 +59,16 @@ StartJobRunRequest::StartJobRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartJobRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartJobRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * 
     return new StartJobRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartJobRunRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * 
  * @brief  Private implementation for StartJobRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartJobRunRequestPrivate object.
@@ -97,7 +106,7 @@ StartJobRunRequestPrivate::StartJobRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartJobRunRequestPrivate object, copying another.

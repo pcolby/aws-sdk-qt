@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateUserPoolDomainRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateUserPoolDomainRequest
  *
- * @brief  Implements CognitoIdentityProvider CreateUserPoolDomain requests.
+ * \brief The CreateUserPoolDomainRequest class encapsulates CognitoIdentityProvider CreateUserPoolDomain requests.
  *
- * @see    CognitoIdentityProviderClient::createUserPoolDomain
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createUserPoolDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserPoolDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ CreateUserPoolDomainRequest::CreateUserPoolDomainRequest(const CreateUserPoolDom
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUserPoolDomainRequest object.
  */
 CreateUserPoolDomainRequest::CreateUserPoolDomainRequest()
@@ -53,13 +66,16 @@ CreateUserPoolDomainRequest::CreateUserPoolDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUserPoolDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUserPoolDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolDomainRequest::response(QNetwor
     return new CreateUserPoolDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUserPoolDomainRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolDomainRequest::response(QNetwor
  * @brief  Private implementation for CreateUserPoolDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserPoolDomainRequestPrivate object.
@@ -97,7 +113,7 @@ CreateUserPoolDomainRequestPrivate::CreateUserPoolDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserPoolDomainRequestPrivate object, copying another.

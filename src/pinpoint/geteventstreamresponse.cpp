@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetEventStreamResponse
+/*!
+ * \class QtAws::Pinpoint::GetEventStreamResponse
  *
- * @brief  Handles Pinpoint GetEventStream responses.
+ * \brief The GetEventStreamResponse class encapsulates Pinpoint GetEventStream responses.
  *
- * @see    PinpointClient::getEventStream
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getEventStream
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEventStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetEventStreamRequest * GetEventStreamResponse::request() const
     return static_cast<const GetEventStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetEventStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetEventStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetEventStreamResponsePrivate
+ * \class GetEventStreamResponsePrivate
  *
- * @brief  Private implementation for GetEventStreamResponse.
+ * \brief Private implementation for GetEventStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEventStreamResponsePrivate object.
@@ -91,7 +94,7 @@ GetEventStreamResponsePrivate::GetEventStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetEventStreamResponse element.
  *
  * @param  xml  XML stream to parse.

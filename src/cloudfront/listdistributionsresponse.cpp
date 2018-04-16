@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListDistributionsResponse
+/*!
+ * \class QtAws::CloudFront::ListDistributionsResponse
  *
- * @brief  Handles CloudFront ListDistributions responses.
+ * \brief The ListDistributionsResponse class encapsulates CloudFront ListDistributions responses.
  *
- * @see    CloudFrontClient::listDistributions
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listDistributions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDistributionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListDistributionsRequest * ListDistributionsResponse::request() const
     return static_cast<const ListDistributionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListDistributions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListDistributionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDistributionsResponsePrivate
+ * \class ListDistributionsResponsePrivate
  *
- * @brief  Private implementation for ListDistributionsResponse.
+ * \brief Private implementation for ListDistributionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDistributionsResponsePrivate object.
@@ -91,7 +99,7 @@ ListDistributionsResponsePrivate::ListDistributionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListDistributionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeConnectionsRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeConnectionsRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeConnections requests.
+ * \brief The DescribeConnectionsRequest class encapsulates DatabaseMigrationService DescribeConnections requests.
  *
- * @see    DatabaseMigrationServiceClient::describeConnections
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnections
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeConnectionsRequest object.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest()
@@ -53,13 +67,16 @@ DescribeConnectionsRequest::DescribeConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetwork
     return new DescribeConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeConnectionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetwork
  * @brief  Private implementation for DescribeConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConnectionsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConnectionsRequestPrivate object, copying another.

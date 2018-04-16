@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  FlushStageAuthorizersCacheResponse
+/*!
+ * \class QtAws::APIGateway::FlushStageAuthorizersCacheResponse
  *
- * @brief  Handles APIGateway FlushStageAuthorizersCache responses.
+ * \brief The FlushStageAuthorizersCacheResponse class encapsulates APIGateway FlushStageAuthorizersCache responses.
  *
- * @see    APIGatewayClient::flushStageAuthorizersCache
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::flushStageAuthorizersCache
  */
 
-/**
+/*!
  * @brief  Constructs a new FlushStageAuthorizersCacheResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::re
     return static_cast<const FlushStageAuthorizersCacheRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway FlushStageAuthorizersCache response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  FlushStageAuthorizersCacheResponsePrivate
+ * \class FlushStageAuthorizersCacheResponsePrivate
  *
- * @brief  Private implementation for FlushStageAuthorizersCacheResponse.
+ * \brief Private implementation for FlushStageAuthorizersCacheResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FlushStageAuthorizersCacheResponsePrivate object.
@@ -91,7 +99,7 @@ FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway FlushStageAuthorizersCacheResponse element.
  *
  * @param  xml  XML stream to parse.

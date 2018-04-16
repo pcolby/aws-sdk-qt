@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationOutputResponse
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationOutputResponse
  *
- * @brief  Handles KinesisAnalytics AddApplicationOutput responses.
+ * \brief The AddApplicationOutputResponse class encapsulates KinesisAnalytics AddApplicationOutput responses.
  *
- * @see    KinesisAnalyticsClient::addApplicationOutput
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationOutput
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationOutputResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AddApplicationOutputRequest * AddApplicationOutputResponse::request() cons
     return static_cast<const AddApplicationOutputRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics AddApplicationOutput response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AddApplicationOutputResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddApplicationOutputResponsePrivate
+ * \class AddApplicationOutputResponsePrivate
  *
- * @brief  Private implementation for AddApplicationOutputResponse.
+ * \brief Private implementation for AddApplicationOutputResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationOutputResponsePrivate object.
@@ -91,7 +94,7 @@ AddApplicationOutputResponsePrivate::AddApplicationOutputResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics AddApplicationOutputResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpcEndpointServiceConfigurationRequest
+/*!
+ * \class QtAws::EC2::CreateVpcEndpointServiceConfigurationRequest
  *
- * @brief  Implements EC2 CreateVpcEndpointServiceConfiguration requests.
+ * \brief The CreateVpcEndpointServiceConfigurationRequest class encapsulates EC2 CreateVpcEndpointServiceConfiguration requests.
  *
- * @see    EC2Client::createVpcEndpointServiceConfiguration
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpcEndpointServiceConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateVpcEndpointServiceConfigurationRequest::CreateVpcEndpointServiceConfigurat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequest object.
  */
 CreateVpcEndpointServiceConfigurationRequest::CreateVpcEndpointServiceConfigurationRequest()
@@ -53,13 +60,16 @@ CreateVpcEndpointServiceConfigurationRequest::CreateVpcEndpointServiceConfigurat
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVpcEndpointServiceConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVpcEndpointServiceConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointServiceConfigurationRequest:
     return new CreateVpcEndpointServiceConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVpcEndpointServiceConfigurationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointServiceConfigurationRequest:
  * @brief  Private implementation for CreateVpcEndpointServiceConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequestPrivate object.
@@ -97,7 +107,7 @@ CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceCon
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcEndpointServiceConfigurationRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetStreamingDistributionResponse
+/*!
+ * \class QtAws::CloudFront::GetStreamingDistributionResponse
  *
- * @brief  Handles CloudFront GetStreamingDistribution responses.
+ * \brief The GetStreamingDistributionResponse class encapsulates CloudFront GetStreamingDistribution responses.
  *
- * @see    CloudFrontClient::getStreamingDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getStreamingDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStreamingDistributionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetStreamingDistributionRequest * GetStreamingDistributionResponse::reques
     return static_cast<const GetStreamingDistributionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetStreamingDistribution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetStreamingDistributionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetStreamingDistributionResponsePrivate
+ * \class GetStreamingDistributionResponsePrivate
  *
- * @brief  Private implementation for GetStreamingDistributionResponse.
+ * \brief Private implementation for GetStreamingDistributionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStreamingDistributionResponsePrivate object.
@@ -91,7 +99,7 @@ GetStreamingDistributionResponsePrivate::GetStreamingDistributionResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetStreamingDistributionResponse element.
  *
  * @param  xml  XML stream to parse.

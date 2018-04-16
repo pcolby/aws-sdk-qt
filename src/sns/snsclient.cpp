@@ -85,37 +85,45 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SNS
+ * \brief The QtAws::SNS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  SnsClient
+/*!
+ * \class QtAws::SNS::SnsClient
  *
- * @brief  Client for Amazon Simple Notification Service ( SNS)
+ * \brief The SnsClient class provides access the Amazon Simple Notification Service ( SNS) service.
  *
- * <fullname>Amazon Simple Notification Service</fullname>
+ * \ingroup SNS
  *
- * Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
- * applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
- * over multiple delivery protocols. For more information about this product see <a
- * href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
- * their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
- *
- * </p
- *
- * We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
- * functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
- * requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
- * for Amazon Web Services</a>.
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
  */
 
-/**
- * @brief  Constructs a new SnsClient object.
+/*!
+ * \brief Constructs a SnsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SnsClient::SnsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -134,21 +142,16 @@ SnsClient::SnsClient(
     d->serviceName = QStringLiteral("sns");
 }
 
-/**
- * @brief  Constructs a new SnsClient object.
+/*!
+ * \overload SnsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SnsClient::SnsClient(
     const QUrl &endpoint,
@@ -167,7 +170,7 @@ SnsClient::SnsClient(
     d->serviceName = QStringLiteral("sns");
 }
 
-/**
+/*!
  * Adds a statement to a topic's access control policy, granting access for the specified AWS accounts to the specified
  *
  * @param  request Request to send to Amazon Simple Notification Service.
@@ -181,7 +184,7 @@ AddPermissionResponse * SnsClient::addPermission(const AddPermissionRequest &req
     return qobject_cast<AddPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your account.
  * You cannot send SMS messages to a number that is opted
  *
@@ -200,7 +203,7 @@ CheckIfPhoneNumberIsOptedOutResponse * SnsClient::checkIfPhoneNumberIsOptedOut(c
     return qobject_cast<CheckIfPhoneNumberIsOptedOutResponse *>(send(request));
 }
 
-/**
+/*!
  * Verifies an endpoint owner's intent to receive messages by validating the token sent to the endpoint by an earlier
  * <code>Subscribe</code> action. If the token is valid, the action creates a new subscription and returns its Amazon
  * Resource Name (ARN). This call requires an AWS signature only when the <code>AuthenticateOnUnsubscribe</code> flag is
@@ -217,7 +220,7 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
     return qobject_cast<ConfirmSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a platform application object for one of the supported push notification services, such as APNS and GCM, to
  * which devices and mobile apps may register. You must specify PlatformPrincipal and PlatformCredential attributes when
  * using the <code>CreatePlatformApplication</code> action. The PlatformPrincipal is received from the notification
@@ -254,7 +257,7 @@ CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const C
     return qobject_cast<CreatePlatformApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an endpoint for a device and mobile app on one of the supported push notification services, such as GCM and
  * APNS. <code>CreatePlatformEndpoint</code> requires the PlatformApplicationArn that is returned from
  * <code>CreatePlatformApplication</code>. The EndpointArn that is returned when using <code>CreatePlatformEndpoint</code>
@@ -282,7 +285,7 @@ CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreateP
     return qobject_cast<CreatePlatformEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a topic to which notifications can be published. Users can create at most 100,000 topics. For more information,
  * see <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. This action is idempotent, so if the requester
  * already owns a topic with the specified name, that topic's ARN is returned without creating a new
@@ -298,7 +301,7 @@ CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
     return qobject_cast<CreateTopicResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the endpoint for a device and mobile app from Amazon SNS. This action is idempotent. For more information, see
  * <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  *
@@ -317,7 +320,7 @@ DeleteEndpointResponse * SnsClient::deleteEndpoint(const DeleteEndpointRequest &
     return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a platform application object for one of the supported push notification services, such as APNS and GCM. For
  * more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
  * Notifications</a>.
@@ -333,7 +336,7 @@ DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const D
     return qobject_cast<DeletePlatformApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a topic and all its subscriptions. Deleting a topic might prevent some messages previously sent to the topic
  * from being delivered to subscribers. This action is idempotent, so deleting a topic that does not exist does not result
  * in an
@@ -349,7 +352,7 @@ DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
     return qobject_cast<DeleteTopicResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM and APNS.
  * For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
  * Push Notifications</a>.
@@ -365,7 +368,7 @@ GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpoi
     return qobject_cast<GetEndpointAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the attributes of the platform application object for the supported push notification services, such as APNS
  * and GCM. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon
  * SNS Mobile Push Notifications</a>.
@@ -381,7 +384,7 @@ GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttr
     return qobject_cast<GetPlatformApplicationAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the settings for sending SMS messages from your
  *
  * account>
@@ -399,7 +402,7 @@ GetSMSAttributesResponse * SnsClient::getSMSAttributes(const GetSMSAttributesReq
     return qobject_cast<GetSMSAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all of the properties of a
  *
  * @param  request Request to send to Amazon Simple Notification Service.
@@ -413,7 +416,7 @@ GetSubscriptionAttributesResponse * SnsClient::getSubscriptionAttributes(const G
     return qobject_cast<GetSubscriptionAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all of the properties of a topic. Topic properties returned might differ based on the authorization of the
  *
  * @param  request Request to send to Amazon Simple Notification Service.
@@ -427,7 +430,7 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
     return qobject_cast<GetTopicAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the endpoints and endpoint attributes for devices in a supported push notification service, such as GCM and APNS.
  * The results for <code>ListEndpointsByPlatformApplication</code> are paginated and return a limited list of endpoints, up
  * to 100. If additional records are available after the first page results, then a NextToken string will be returned. To
@@ -447,7 +450,7 @@ ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformA
     return qobject_cast<ListEndpointsByPlatformApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of phone numbers that are opted out, meaning you cannot send SMS messages to
  *
  * them>
@@ -469,7 +472,7 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
     return qobject_cast<ListPhoneNumbersOptedOutResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the platform application objects for the supported push notification services, such as APNS and GCM. The results
  * for <code>ListPlatformApplications</code> are paginated and return a limited list of applications, up to 100. If
  * additional records are available after the first page results, then a NextToken string will be returned. To receive the
@@ -488,7 +491,7 @@ ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const Lis
     return qobject_cast<ListPlatformApplicationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the requester's subscriptions. Each call returns a limited list of subscriptions, up to 100. If there
  * are more subscriptions, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in a new
  * <code>ListSubscriptions</code> call to get further
@@ -504,7 +507,7 @@ ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptions
     return qobject_cast<ListSubscriptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the subscriptions to a specific topic. Each call returns a limited list of subscriptions, up to 100.
  * If there are more subscriptions, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in
  * a new <code>ListSubscriptionsByTopic</code> call to get further
@@ -520,7 +523,7 @@ ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const Lis
     return qobject_cast<ListSubscriptionsByTopicResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the requester's topics. Each call returns a limited list of topics, up to 100. If there are more
  * topics, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in a new
  * <code>ListTopics</code> call to get further
@@ -536,7 +539,7 @@ ListTopicsResponse * SnsClient::listTopics(const ListTopicsRequest &request)
     return qobject_cast<ListTopicsResponse *>(send(request));
 }
 
-/**
+/*!
  * Use this request to opt in a phone number that is opted out, which enables you to resume sending SMS messages to the
  *
  * number>
@@ -554,7 +557,7 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
     return qobject_cast<OptInPhoneNumberResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends a message to all of a topic's subscribed endpoints. When a <code>messageId</code> is returned, the message has
  * been saved and Amazon SNS will attempt to deliver it to the topic's subscribers shortly. The format of the outgoing
  * message to each subscribed endpoint depends on the notification
@@ -582,7 +585,7 @@ PublishResponse * SnsClient::publish(const PublishRequest &request)
     return qobject_cast<PublishResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a statement from a topic's access control
  *
  * @param  request Request to send to Amazon Simple Notification Service.
@@ -596,7 +599,7 @@ RemovePermissionResponse * SnsClient::removePermission(const RemovePermissionReq
     return qobject_cast<RemovePermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM and
  * APNS. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
  * Mobile Push Notifications</a>.
@@ -612,7 +615,7 @@ SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpoi
     return qobject_cast<SetEndpointAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the attributes of the platform application object for the supported push notification services, such as APNS and
  * GCM. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
  * Mobile Push Notifications</a>. For information on configuring attributes for message delivery status, see <a
@@ -630,7 +633,7 @@ SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttr
     return qobject_cast<SetPlatformApplicationAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Use this request to set the default settings for sending SMS messages and receiving daily SMS usage
  *
  * reports>
@@ -651,7 +654,7 @@ SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesReq
     return qobject_cast<SetSMSAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows a subscription owner to set an attribute of the topic to a new
  *
  * @param  request Request to send to Amazon Simple Notification Service.
@@ -665,7 +668,7 @@ SetSubscriptionAttributesResponse * SnsClient::setSubscriptionAttributes(const S
     return qobject_cast<SetSubscriptionAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows a topic owner to set an attribute of the topic to a new
  *
  * @param  request Request to send to Amazon Simple Notification Service.
@@ -679,7 +682,7 @@ SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttribu
     return qobject_cast<SetTopicAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Prepares to subscribe an endpoint by sending the endpoint a confirmation message. To actually create a subscription, the
  * endpoint owner must call the <code>ConfirmSubscription</code> action with the token from the confirmation message.
  * Confirmation tokens are valid for three
@@ -695,7 +698,7 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
     return qobject_cast<SubscribeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a subscription. If the subscription requires authentication for deletion, only the owner of the subscription or
  * the topic's owner can unsubscribe, and an AWS signature is required. If the <code>Unsubscribe</code> call does not
  * require authentication and the requester is not the subscription owner, a final cancellation message is delivered to the
@@ -712,7 +715,7 @@ UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
     return qobject_cast<UnsubscribeResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SnsClientPrivate
@@ -720,7 +723,7 @@ UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
  * @brief  Private implementation for SnsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SnsClientPrivate object.

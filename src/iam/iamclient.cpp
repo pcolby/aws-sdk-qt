@@ -266,88 +266,96 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::IAM
+ * \brief The QtAws::IAM contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace IAM {
 
-/**
- * @class  IamClient
+/*!
+ * \class QtAws::IAM::IamClient
  *
- * @brief  Client for AWS Identity and Access Management (IAM)
+ * \brief The IamClient class provides access the AWS Identity and Access Management (IAM) service.
  *
- * <fullname>AWS Identity and Access Management</fullname>
+ * \ingroup IAM
  *
- * AWS Identity and Access Management (IAM) is a web service that you can use to manage users and user permissions under
- * your AWS account. This guide provides descriptions of IAM actions that you can call programmatically. For general
- * information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>. For the
- * user guide for IAM, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/">Using IAM</a>.
- *
- * </p <note>
- *
- * AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
- * .NET, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to IAM and AWS. For example,
- * the SDKs take care of tasks such as cryptographically signing requests (see below), managing errors, and retrying
- * requests automatically. For information about the AWS SDKs, including how to download and install them, see the <a
- * href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a> page.
- *
- * </p </note>
- *
- * We recommend that you use the AWS SDKs to make programmatic API calls to IAM. However, you can also use the IAM Query
- * API to make direct calls to the IAM web service. To learn more about the IAM Query API, see <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>Using
- * IAM</i> guide. IAM supports GET and POST requests for all actions. That is, the API does not require you to use GET for
- * some actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
- * operations that require larger sizes, use a POST request.
- *
- * </p
- *
- * <b>Signing Requests</b>
- *
- * </p
- *
- * Requests must be signed using an access key ID and a secret access key. We strongly recommend that you do not use your
- * AWS account access key ID and secret access key for everyday work with IAM. You can use the access key ID and secret
- * access key for an IAM user or you can use the AWS Security Token Service to generate temporary security credentials and
- * use those to sign
- *
- * requests>
- *
- * To sign requests, we recommend that you use <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an
- * existing application that uses Signature Version 2, you do not have to update it to use Signature Version 4. However,
- * some operations now require Signature Version 4. The documentation for operations that require version 4 indicate this
- * requirement.
- *
- * </p
- *
- * <b>Additional Resources</b>
- *
- * </p
- *
- * For more information, see the
- *
- * following> <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a>. This
- * topic provides general information about the types of credentials used for accessing AWS.
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html">IAM Best Practices</a>. This topic
- * presents a list of suggestions for using the IAM service to help secure your AWS resources.
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html">Signing AWS API Requests</a>. This
- * set of topics walk you through the process of signing a request using an access key ID and secret access key.
+ *  <fullname>AWS Identity and Access Management</fullname>
+ * 
+ *  AWS Identity and Access Management (IAM) is a web service that you can use to manage users and user permissions under
+ *  your AWS account. This guide provides descriptions of IAM actions that you can call programmatically. For general
+ *  information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>. For the
+ *  user guide for IAM, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/">Using IAM</a>.
+ * 
+ *  </p <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .NET, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to IAM and AWS. For example,
+ *  the SDKs take care of tasks such as cryptographically signing requests (see below), managing errors, and retrying
+ *  requests automatically. For information about the AWS SDKs, including how to download and install them, see the <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a> page.
+ * 
+ *  </p </note>
+ * 
+ *  We recommend that you use the AWS SDKs to make programmatic API calls to IAM. However, you can also use the IAM Query
+ *  API to make direct calls to the IAM web service. To learn more about the IAM Query API, see <a
+ *  href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>Using
+ *  IAM</i> guide. IAM supports GET and POST requests for all actions. That is, the API does not require you to use GET for
+ *  some actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
+ *  operations that require larger sizes, use a POST request.
+ * 
+ *  </p
+ * 
+ *  <b>Signing Requests</b>
+ * 
+ *  </p
+ * 
+ *  Requests must be signed using an access key ID and a secret access key. We strongly recommend that you do not use your
+ *  AWS account access key ID and secret access key for everyday work with IAM. You can use the access key ID and secret
+ *  access key for an IAM user or you can use the AWS Security Token Service to generate temporary security credentials and
+ *  use those to sign
+ * 
+ *  requests>
+ * 
+ *  To sign requests, we recommend that you use <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an
+ *  existing application that uses Signature Version 2, you do not have to update it to use Signature Version 4. However,
+ *  some operations now require Signature Version 4. The documentation for operations that require version 4 indicate this
+ *  requirement.
+ * 
+ *  </p
+ * 
+ *  <b>Additional Resources</b>
+ * 
+ *  </p
+ * 
+ *  For more information, see the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a>. This
+ *  topic provides general information about the types of credentials used for accessing AWS.
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html">IAM Best Practices</a>. This topic
+ *  presents a list of suggestions for using the IAM service to help secure your AWS resources.
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html">Signing AWS API Requests</a>. This
+ *  set of topics walk you through the process of signing a request using an access key ID and secret access key.
  */
 
-/**
- * @brief  Constructs a new IamClient object.
+/*!
+ * \brief Constructs a IamClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 IamClient::IamClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -366,21 +374,16 @@ IamClient::IamClient(
     d->serviceName = QStringLiteral("iam");
 }
 
-/**
- * @brief  Constructs a new IamClient object.
+/*!
+ * \overload IamClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 IamClient::IamClient(
     const QUrl &endpoint,
@@ -399,7 +402,7 @@ IamClient::IamClient(
     d->serviceName = QStringLiteral("iam");
 }
 
-/**
+/*!
  * Adds a new client ID (also known as audience) to the list of client IDs already registered for the specified IAM OpenID
  * Connect (OIDC) provider
  *
@@ -418,7 +421,7 @@ AddClientIDToOpenIDConnectProviderResponse * IamClient::addClientIDToOpenIDConne
     return qobject_cast<AddClientIDToOpenIDConnectProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified IAM role to the specified instance profile. An instance profile can contain only one role, and this
  * limit cannot be increased. You can remove the existing role and then add a different role to an instance profile. You
  * must then wait for the change to appear across all of AWS because of <a
@@ -450,7 +453,7 @@ AddRoleToInstanceProfileResponse * IamClient::addRoleToInstanceProfile(const Add
     return qobject_cast<AddRoleToInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified user to the specified
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -464,7 +467,7 @@ AddUserToGroupResponse * IamClient::addUserToGroup(const AddUserToGroupRequest &
     return qobject_cast<AddUserToGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches the specified managed policy to the specified IAM
  *
  * group>
@@ -488,7 +491,7 @@ AttachGroupPolicyResponse * IamClient::attachGroupPolicy(const AttachGroupPolicy
     return qobject_cast<AttachGroupPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches the specified managed policy to the specified IAM role. When you attach a managed policy to a role, the managed
  * policy becomes part of the role's permission (access)
  *
@@ -515,7 +518,7 @@ AttachRolePolicyResponse * IamClient::attachRolePolicy(const AttachRolePolicyReq
     return qobject_cast<AttachRolePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches the specified managed policy to the specified
  *
  * user>
@@ -539,7 +542,7 @@ AttachUserPolicyResponse * IamClient::attachUserPolicy(const AttachUserPolicyReq
     return qobject_cast<AttachUserPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the password of the IAM user who is calling this operation. The AWS account root user password is not affected
  * by this
  *
@@ -560,7 +563,7 @@ ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &
     return qobject_cast<ChangePasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new AWS secret access key and corresponding AWS access key ID for the specified user. The default status for
  * new keys is
  *
@@ -593,7 +596,7 @@ CreateAccessKeyResponse * IamClient::createAccessKey(const CreateAccessKeyReques
     return qobject_cast<CreateAccessKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an alias for your AWS account. For information about using an AWS account alias, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for Your AWS Account ID</a> in
  * the <i>IAM User
@@ -609,7 +612,7 @@ CreateAccountAliasResponse * IamClient::createAccountAlias(const CreateAccountAl
     return qobject_cast<CreateAccountAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new
  *
  * group>
@@ -629,7 +632,7 @@ CreateGroupResponse * IamClient::createGroup(const CreateGroupRequest &request)
     return qobject_cast<CreateGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new instance profile. For information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
  *
@@ -650,7 +653,7 @@ CreateInstanceProfileResponse * IamClient::createInstanceProfile(const CreateIns
     return qobject_cast<CreateInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a password for the specified user, giving the user the ability to access AWS services through the AWS Management
  * Console. For more information about managing passwords, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing Passwords</a> in the <i>IAM
@@ -667,7 +670,7 @@ CreateLoginProfileResponse * IamClient::createLoginProfile(const CreateLoginProf
     return qobject_cast<CreateLoginProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an IAM entity to describe an identity provider (IdP) that supports <a href="http://openid.net/connect/">OpenID
  * Connect
  *
@@ -713,7 +716,7 @@ CreateOpenIDConnectProviderResponse * IamClient::createOpenIDConnectProvider(con
     return qobject_cast<CreateOpenIDConnectProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new managed policy for your AWS
  *
  * account>
@@ -740,7 +743,7 @@ CreatePolicyResponse * IamClient::createPolicy(const CreatePolicyRequest &reques
     return qobject_cast<CreatePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new version of the specified managed policy. To update a managed policy, you create a new policy version. A
  * managed policy can have up to five versions. If the policy has five versions, you must delete an existing version using
  * <a>DeletePolicyVersion</a> before you create a new
@@ -767,7 +770,7 @@ CreatePolicyVersionResponse * IamClient::createPolicyVersion(const CreatePolicyV
     return qobject_cast<CreatePolicyVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new role for your AWS account. For more information about roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">IAM Roles</a>. For information about
  * limitations on role names and the number of roles you can create, go to <a
@@ -785,7 +788,7 @@ CreateRoleResponse * IamClient::createRole(const CreateRoleRequest &request)
     return qobject_cast<CreateRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an IAM resource that describes an identity provider (IdP) that supports SAML
  *
  * 2.0>
@@ -825,7 +828,7 @@ CreateSAMLProviderResponse * IamClient::createSAMLProvider(const CreateSAMLProvi
     return qobject_cast<CreateSAMLProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an IAM role that is linked to a specific AWS service. The service controls the attached policies and when the
  * role can be deleted. This helps ensure that the service is not broken by an unexpectedly changed or deleted role, which
  * could put your AWS resources into an unknown state. Allowing the service to control the role helps improve service
@@ -852,7 +855,7 @@ CreateServiceLinkedRoleResponse * IamClient::createServiceLinkedRole(const Creat
     return qobject_cast<CreateServiceLinkedRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a set of credentials consisting of a user name and password that can be used to access the service specified
  * in the request. These credentials are generated by IAM, and can be used only for the specified service.
  *
@@ -885,7 +888,7 @@ CreateServiceSpecificCredentialResponse * IamClient::createServiceSpecificCreden
     return qobject_cast<CreateServiceSpecificCredentialResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new IAM user for your AWS
  *
  * account>
@@ -905,7 +908,7 @@ CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
     return qobject_cast<CreateUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new virtual MFA device for the AWS account. After creating the virtual MFA, use <a>EnableMFADevice</a> to
  * attach the MFA device to an IAM user. For more information about creating and working with virtual MFA devices, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_VirtualMFA.html">Using a Virtual MFA Device</a> in the
@@ -934,7 +937,7 @@ CreateVirtualMFADeviceResponse * IamClient::createVirtualMFADevice(const CreateV
     return qobject_cast<CreateVirtualMFADeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deactivates the specified MFA device and removes it from association with the user name for which it was originally
  *
  * enabled>
@@ -954,7 +957,7 @@ DeactivateMFADeviceResponse * IamClient::deactivateMFADevice(const DeactivateMFA
     return qobject_cast<DeactivateMFADeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the access key pair associated with the specified IAM
  *
  * user>
@@ -974,7 +977,7 @@ DeleteAccessKeyResponse * IamClient::deleteAccessKey(const DeleteAccessKeyReques
     return qobject_cast<DeleteAccessKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified AWS account alias. For information about using an AWS account alias, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for Your AWS Account ID</a> in
  * the <i>IAM User
@@ -990,7 +993,7 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
     return qobject_cast<DeleteAccountAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the password policy for the AWS account. There are no
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -1004,7 +1007,7 @@ DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
     return qobject_cast<DeleteAccountPasswordPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified IAM group. The group must not contain any users or have any attached
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -1018,7 +1021,7 @@ DeleteGroupResponse * IamClient::deleteGroup(const DeleteGroupRequest &request)
     return qobject_cast<DeleteGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified inline policy that is embedded in the specified IAM
  *
  * group>
@@ -1039,7 +1042,7 @@ DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicy
     return qobject_cast<DeleteGroupPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified instance profile. The instance profile must not have an associated
  *
  * role> <b>
@@ -1064,7 +1067,7 @@ DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteIns
     return qobject_cast<DeleteInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the password for the specified IAM user, which terminates the user's ability to access AWS services through the
  * AWS Management
  *
@@ -1085,7 +1088,7 @@ DeleteLoginProfileResponse * IamClient::deleteLoginProfile(const DeleteLoginProf
     return qobject_cast<DeleteLoginProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an OpenID Connect identity provider (IdP) resource object in
  *
  * IAM>
@@ -1108,7 +1111,7 @@ DeleteOpenIDConnectProviderResponse * IamClient::deleteOpenIDConnectProvider(con
     return qobject_cast<DeleteOpenIDConnectProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified managed
  *
  * policy>
@@ -1150,7 +1153,7 @@ DeletePolicyResponse * IamClient::deletePolicy(const DeletePolicyRequest &reques
     return qobject_cast<DeletePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified version from the specified managed
  *
  * policy>
@@ -1175,7 +1178,7 @@ DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyV
     return qobject_cast<DeletePolicyVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified role. The role must not have any policies attached. For more information about roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with
  *
@@ -1195,7 +1198,7 @@ DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
     return qobject_cast<DeleteRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified inline policy that is embedded in the specified IAM
  *
  * role>
@@ -1216,7 +1219,7 @@ DeleteRolePolicyResponse * IamClient::deleteRolePolicy(const DeleteRolePolicyReq
     return qobject_cast<DeleteRolePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a SAML provider resource in
  *
  * IAM>
@@ -1240,7 +1243,7 @@ DeleteSAMLProviderResponse * IamClient::deleteSAMLProvider(const DeleteSAMLProvi
     return qobject_cast<DeleteSAMLProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified SSH public
  *
  * key>
@@ -1261,7 +1264,7 @@ DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublic
     return qobject_cast<DeleteSSHPublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified server
  *
  * certificate>
@@ -1292,7 +1295,7 @@ DeleteServerCertificateResponse * IamClient::deleteServerCertificate(const Delet
     return qobject_cast<DeleteServerCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Submits a service-linked role deletion request and returns a <code>DeletionTaskId</code>, which you can use to check the
  * status of the deletion. Before you call this operation, confirm that the role has no active sessions and that any
  * resources used by the role in the linked service are deleted. If you call this operation more than once for the same
@@ -1325,7 +1328,7 @@ DeleteServiceLinkedRoleResponse * IamClient::deleteServiceLinkedRole(const Delet
     return qobject_cast<DeleteServiceLinkedRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified service-specific
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -1339,7 +1342,7 @@ DeleteServiceSpecificCredentialResponse * IamClient::deleteServiceSpecificCreden
     return qobject_cast<DeleteServiceSpecificCredentialResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a signing certificate associated with the specified IAM
  *
  * user>
@@ -1359,7 +1362,7 @@ DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const Del
     return qobject_cast<DeleteSigningCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified IAM user. The user must not belong to any groups or have any access keys, signing certificates, or
  * attached
  *
@@ -1374,7 +1377,7 @@ DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
     return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified inline policy that is embedded in the specified IAM
  *
  * user>
@@ -1395,7 +1398,7 @@ DeleteUserPolicyResponse * IamClient::deleteUserPolicy(const DeleteUserPolicyReq
     return qobject_cast<DeleteUserPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a virtual MFA
  *
  * device> <note>
@@ -1414,7 +1417,7 @@ DeleteVirtualMFADeviceResponse * IamClient::deleteVirtualMFADevice(const DeleteV
     return qobject_cast<DeleteVirtualMFADeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified managed policy from the specified IAM
  *
  * group>
@@ -1435,7 +1438,7 @@ DetachGroupPolicyResponse * IamClient::detachGroupPolicy(const DetachGroupPolicy
     return qobject_cast<DetachGroupPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified managed policy from the specified
  *
  * role>
@@ -1456,7 +1459,7 @@ DetachRolePolicyResponse * IamClient::detachRolePolicy(const DetachRolePolicyReq
     return qobject_cast<DetachRolePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified managed policy from the specified
  *
  * user>
@@ -1477,7 +1480,7 @@ DetachUserPolicyResponse * IamClient::detachUserPolicy(const DetachUserPolicyReq
     return qobject_cast<DetachUserPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the specified MFA device and associates it with the specified IAM user. When enabled, the MFA device is required
  * for every subsequent login by the IAM user associated with the
  *
@@ -1492,7 +1495,7 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
     return qobject_cast<EnableMFADeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a credential report for the AWS account. For more information about the credential report, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
  * <i>IAM User
@@ -1508,7 +1511,7 @@ GenerateCredentialReportResponse * IamClient::generateCredentialReport()
     return qobject_cast<GenerateCredentialReportResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about when the specified access key was last used. The information includes the date and time of
  * last use, along with the AWS service and region that were specified in the last request made with that
  *
@@ -1523,7 +1526,7 @@ GetAccessKeyLastUsedResponse * IamClient::getAccessKeyLastUsed(const GetAccessKe
     return qobject_cast<GetAccessKeyLastUsedResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about all IAM users, groups, roles, and policies in your AWS account, including their
  * relationships to one another. Use this API to obtain a snapshot of the configuration of IAM permissions (users, groups,
  * roles, and policies) in your
@@ -1551,7 +1554,7 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
     return qobject_cast<GetAccountAuthorizationDetailsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the password policy for the AWS account. For more information about using a password policy, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingPasswordPolicies.html">Managing an IAM Password
  *
@@ -1566,7 +1569,7 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
     return qobject_cast<GetAccountPasswordPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about IAM entity usage and IAM quotas in the AWS
  *
  * account>
@@ -1586,7 +1589,7 @@ GetAccountSummaryResponse * IamClient::getAccountSummary()
     return qobject_cast<GetAccountSummaryResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of all of the context keys referenced in the input policies. The policies are supplied as a list of one or
  * more strings. To get the context keys from policies associated with an IAM user, group, or role, use
  *
@@ -1609,7 +1612,7 @@ GetContextKeysForCustomPolicyResponse * IamClient::getContextKeysForCustomPolicy
     return qobject_cast<GetContextKeysForCustomPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of all of the context keys referenced in all the IAM policies that are attached to the specified IAM entity.
  * The entity can be an IAM user, group, or role. If you specify a user, then the request also includes all of the policies
  * attached to groups that the user is a member
@@ -1641,7 +1644,7 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
     return qobject_cast<GetContextKeysForPrincipalPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a credential report for the AWS account. For more information about the credential report, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
  * <i>IAM User
@@ -1657,7 +1660,7 @@ GetCredentialReportResponse * IamClient::getCredentialReport()
     return qobject_cast<GetCredentialReportResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of IAM users that are in the specified IAM group. You can paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
  *
@@ -1672,7 +1675,7 @@ GetGroupResponse * IamClient::getGroup(const GetGroupRequest &request)
     return qobject_cast<GetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the specified inline policy document that is embedded in the specified IAM
  *
  * group> <note>
@@ -1705,7 +1708,7 @@ GetGroupPolicyResponse * IamClient::getGroupPolicy(const GetGroupPolicyRequest &
     return qobject_cast<GetGroupPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the specified instance profile, including the instance profile's path, GUID, ARN, and role.
  * For more information about instance profiles, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance Profiles</a> in the
@@ -1722,7 +1725,7 @@ GetInstanceProfileResponse * IamClient::getInstanceProfile(const GetInstanceProf
     return qobject_cast<GetInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the user name and password-creation date for the specified IAM user. If the user has not been assigned a
  * password, the operation returns a 404 (<code>NoSuchEntity</code>)
  *
@@ -1737,7 +1740,7 @@ GetLoginProfileResponse * IamClient::getLoginProfile(const GetLoginProfileReques
     return qobject_cast<GetLoginProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the specified OpenID Connect (OIDC) provider resource object in
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -1751,7 +1754,7 @@ GetOpenIDConnectProviderResponse * IamClient::getOpenIDConnectProvider(const Get
     return qobject_cast<GetOpenIDConnectProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the specified managed policy, including the policy's default version and the total number of
  * IAM users, groups, and roles to which the policy is attached. To retrieve the list of the specific users, groups, and
  * roles that the policy is attached to, use the <a>ListEntitiesForPolicy</a> API. This API returns metadata about the
@@ -1779,7 +1782,7 @@ GetPolicyResponse * IamClient::getPolicy(const GetPolicyRequest &request)
     return qobject_cast<GetPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the specified version of the specified managed policy, including the policy
  *
  * document> <note>
@@ -1821,7 +1824,7 @@ GetPolicyVersionResponse * IamClient::getPolicyVersion(const GetPolicyVersionReq
     return qobject_cast<GetPolicyVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the specified role, including the role's path, GUID, ARN, and the role's trust policy that
  * grants permission to assume the role. For more information about roles, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with
@@ -1844,7 +1847,7 @@ GetRoleResponse * IamClient::getRole(const GetRoleRequest &request)
     return qobject_cast<GetRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the specified inline policy document that is embedded with the specified IAM
  *
  * role> <note>
@@ -1883,7 +1886,7 @@ GetRolePolicyResponse * IamClient::getRolePolicy(const GetRolePolicyRequest &req
     return qobject_cast<GetRolePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the SAML provider metadocument that was uploaded when the IAM SAML provider resource object was created or
  *
  * updated> <note>
@@ -1902,7 +1905,7 @@ GetSAMLProviderResponse * IamClient::getSAMLProvider(const GetSAMLProviderReques
     return qobject_cast<GetSAMLProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the specified SSH public key, including metadata about the
  *
  * key>
@@ -1923,7 +1926,7 @@ GetSSHPublicKeyResponse * IamClient::getSSHPublicKey(const GetSSHPublicKeyReques
     return qobject_cast<GetSSHPublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the specified server certificate stored in
  *
  * IAM>
@@ -1944,7 +1947,7 @@ GetServerCertificateResponse * IamClient::getServerCertificate(const GetServerCe
     return qobject_cast<GetServerCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the status of your service-linked role deletion. After you use the <a>DeleteServiceLinkedRole</a> API
  * operation to submit a service-linked role for deletion, you can use the <code>DeletionTaskId</code> parameter in
  * <code>GetServiceLinkedRoleDeletionStatus</code> to check the status of the deletion. If the deletion fails, this
@@ -1961,7 +1964,7 @@ GetServiceLinkedRoleDeletionStatusResponse * IamClient::getServiceLinkedRoleDele
     return qobject_cast<GetServiceLinkedRoleDeletionStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the specified IAM user, including the user's creation date, path, unique ID, and
  *
  * ARN>
@@ -1980,7 +1983,7 @@ GetUserResponse * IamClient::getUser(const GetUserRequest &request)
     return qobject_cast<GetUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the specified inline policy document that is embedded in the specified IAM
  *
  * user> <note>
@@ -2013,7 +2016,7 @@ GetUserPolicyResponse * IamClient::getUserPolicy(const GetUserPolicyRequest &req
     return qobject_cast<GetUserPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the access key IDs associated with the specified IAM user. If there are none, the operation
  * returns an empty
  *
@@ -2043,7 +2046,7 @@ ListAccessKeysResponse * IamClient::listAccessKeys(const ListAccessKeysRequest &
     return qobject_cast<ListAccessKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the account alias associated with the AWS account (Note: you can have only one). For information about using an
  * AWS account alias, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for
  * Your AWS Account ID</a> in the <i>IAM User
@@ -2059,7 +2062,7 @@ ListAccountAliasesResponse * IamClient::listAccountAliases(const ListAccountAlia
     return qobject_cast<ListAccountAliasesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all managed policies that are attached to the specified IAM
  *
  * group>
@@ -2087,7 +2090,7 @@ ListAttachedGroupPoliciesResponse * IamClient::listAttachedGroupPolicies(const L
     return qobject_cast<ListAttachedGroupPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all managed policies that are attached to the specified IAM
  *
  * role>
@@ -2115,7 +2118,7 @@ ListAttachedRolePoliciesResponse * IamClient::listAttachedRolePolicies(const Lis
     return qobject_cast<ListAttachedRolePoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all managed policies that are attached to the specified IAM
  *
  * user>
@@ -2143,7 +2146,7 @@ ListAttachedUserPoliciesResponse * IamClient::listAttachedUserPolicies(const Lis
     return qobject_cast<ListAttachedUserPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all IAM users, groups, and roles that the specified managed policy is attached
  *
  * to>
@@ -2167,7 +2170,7 @@ ListEntitiesForPolicyResponse * IamClient::listEntitiesForPolicy(const ListEntit
     return qobject_cast<ListEntitiesForPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the names of the inline policies that are embedded in the specified IAM
  *
  * group>
@@ -2193,7 +2196,7 @@ ListGroupPoliciesResponse * IamClient::listGroupPolicies(const ListGroupPolicies
     return qobject_cast<ListGroupPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the IAM groups that have the specified path
  *
  * prefix>
@@ -2211,7 +2214,7 @@ ListGroupsResponse * IamClient::listGroups(const ListGroupsRequest &request)
     return qobject_cast<ListGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the IAM groups that the specified IAM user belongs
  *
  * to>
@@ -2229,7 +2232,7 @@ ListGroupsForUserResponse * IamClient::listGroupsForUser(const ListGroupsForUser
     return qobject_cast<ListGroupsForUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the instance profiles that have the specified path prefix. If there are none, the operation returns an empty list.
  * For more information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
@@ -2249,7 +2252,7 @@ ListInstanceProfilesResponse * IamClient::listInstanceProfiles(const ListInstanc
     return qobject_cast<ListInstanceProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the instance profiles that have the specified associated IAM role. If there are none, the operation returns an
  * empty list. For more information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
@@ -2269,7 +2272,7 @@ ListInstanceProfilesForRoleResponse * IamClient::listInstanceProfilesForRole(con
     return qobject_cast<ListInstanceProfilesForRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the MFA devices for an IAM user. If the request includes a IAM user name, then this operation lists all the MFA
  * devices associated with the specified user. If you do not specify a user name, IAM determines the user name implicitly
  * based on the AWS access key ID signing the request for this
@@ -2289,7 +2292,7 @@ ListMFADevicesResponse * IamClient::listMFADevices(const ListMFADevicesRequest &
     return qobject_cast<ListMFADevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about the IAM OpenID Connect (OIDC) provider resource objects defined in the AWS
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -2303,7 +2306,7 @@ ListOpenIDConnectProvidersResponse * IamClient::listOpenIDConnectProviders(const
     return qobject_cast<ListOpenIDConnectProvidersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the managed policies that are available in your AWS account, including your own customer-defined managed
  * policies and all AWS managed
  *
@@ -2334,7 +2337,7 @@ ListPoliciesResponse * IamClient::listPolicies(const ListPoliciesRequest &reques
     return qobject_cast<ListPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about the versions of the specified managed policy, including the version that is currently set as the
  * policy's default
  *
@@ -2355,7 +2358,7 @@ ListPolicyVersionsResponse * IamClient::listPolicyVersions(const ListPolicyVersi
     return qobject_cast<ListPolicyVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the names of the inline policies that are embedded in the specified IAM
  *
  * role>
@@ -2381,7 +2384,7 @@ ListRolePoliciesResponse * IamClient::listRolePolicies(const ListRolePoliciesReq
     return qobject_cast<ListRolePoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the IAM roles that have the specified path prefix. If there are none, the operation returns an empty list. For
  * more information about roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with
@@ -2401,7 +2404,7 @@ ListRolesResponse * IamClient::listRoles(const ListRolesRequest &request)
     return qobject_cast<ListRolesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the SAML provider resource objects defined in IAM in the
  *
  * account> <note>
@@ -2420,7 +2423,7 @@ ListSAMLProvidersResponse * IamClient::listSAMLProviders(const ListSAMLProviders
     return qobject_cast<ListSAMLProvidersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the SSH public keys associated with the specified IAM user. If there are none, the operation
  * returns an empty
  *
@@ -2447,7 +2450,7 @@ ListSSHPublicKeysResponse * IamClient::listSSHPublicKeys(const ListSSHPublicKeys
     return qobject_cast<ListSSHPublicKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the server certificates stored in IAM that have the specified path prefix. If none exist, the operation returns an
  * empty
  *
@@ -2473,7 +2476,7 @@ ListServerCertificatesResponse * IamClient::listServerCertificates(const ListSer
     return qobject_cast<ListServerCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the service-specific credentials associated with the specified IAM user. If there are none,
  * the operation returns an empty list. The service-specific credentials returned by this operation are used only for
  * authenticating the IAM user to a specific service. For more information about using service-specific credentials to
@@ -2492,7 +2495,7 @@ ListServiceSpecificCredentialsResponse * IamClient::listServiceSpecificCredentia
     return qobject_cast<ListServiceSpecificCredentialsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the signing certificates associated with the specified IAM user. If there are none, the
  * operation returns an empty
  *
@@ -2518,7 +2521,7 @@ ListSigningCertificatesResponse * IamClient::listSigningCertificates(const ListS
     return qobject_cast<ListSigningCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the names of the inline policies embedded in the specified IAM
  *
  * user>
@@ -2544,7 +2547,7 @@ ListUserPoliciesResponse * IamClient::listUserPolicies(const ListUserPoliciesReq
     return qobject_cast<ListUserPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the IAM users that have the specified path prefix. If no path prefix is specified, the operation returns all users
  * in the AWS account. If there are none, the operation returns an empty
  *
@@ -2563,7 +2566,7 @@ ListUsersResponse * IamClient::listUsers(const ListUsersRequest &request)
     return qobject_cast<ListUsersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the virtual MFA devices defined in the AWS account by assignment status. If you do not specify an assignment
  * status, the operation returns a list of all virtual MFA devices. Assignment status can be <code>Assigned</code>,
  * <code>Unassigned</code>, or
@@ -2583,7 +2586,7 @@ ListVirtualMFADevicesResponse * IamClient::listVirtualMFADevices(const ListVirtu
     return qobject_cast<ListVirtualMFADevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates an inline policy document that is embedded in the specified IAM
  *
  * group>
@@ -2617,7 +2620,7 @@ PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &
     return qobject_cast<PutGroupPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates an inline policy document that is embedded in the specified IAM
  *
  * role>
@@ -2659,7 +2662,7 @@ PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &req
     return qobject_cast<PutRolePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates an inline policy document that is embedded in the specified IAM
  *
  * user>
@@ -2693,7 +2696,7 @@ PutUserPolicyResponse * IamClient::putUserPolicy(const PutUserPolicyRequest &req
     return qobject_cast<PutUserPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified client ID (also known as audience) from the list of client IDs registered for the specified IAM
  * OpenID Connect (OIDC) provider resource
  *
@@ -2712,7 +2715,7 @@ RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromO
     return qobject_cast<RemoveClientIDFromOpenIDConnectProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified IAM role from the specified EC2 instance
  *
  * profile> <b>
@@ -2739,7 +2742,7 @@ RemoveRoleFromInstanceProfileResponse * IamClient::removeRoleFromInstanceProfile
     return qobject_cast<RemoveRoleFromInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified user from the specified
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -2753,7 +2756,7 @@ RemoveUserFromGroupResponse * IamClient::removeUserFromGroup(const RemoveUserFro
     return qobject_cast<RemoveUserFromGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets the password for a service-specific credential. The new password is AWS generated and cryptographically strong.
  * It cannot be configured by the user. Resetting the password immediately invalidates the previous password associated
  * with this
@@ -2769,7 +2772,7 @@ ResetServiceSpecificCredentialResponse * IamClient::resetServiceSpecificCredenti
     return qobject_cast<ResetServiceSpecificCredentialResponse *>(send(request));
 }
 
-/**
+/*!
  * Synchronizes the specified MFA device with its IAM resource object on the AWS
  *
  * servers>
@@ -2789,7 +2792,7 @@ ResyncMFADeviceResponse * IamClient::resyncMFADevice(const ResyncMFADeviceReques
     return qobject_cast<ResyncMFADeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the specified version of the specified policy as the policy's default (operative)
  *
  * version>
@@ -2814,7 +2817,7 @@ SetDefaultPolicyVersionResponse * IamClient::setDefaultPolicyVersion(const SetDe
     return qobject_cast<SetDefaultPolicyVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Simulate how a set of IAM policies and optionally a resource-based policy works with a list of API operations and AWS
  * resources to determine the policies' effective permissions. The policies are provided as
  *
@@ -2848,7 +2851,7 @@ SimulateCustomPolicyResponse * IamClient::simulateCustomPolicy(const SimulateCus
     return qobject_cast<SimulateCustomPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Simulate how a set of IAM policies attached to an IAM entity works with a list of API operations and AWS resources to
  * determine the policies' effective permissions. The entity can be an IAM user, group, or role. If you specify a user,
  * then the simulation also includes all of the policies that are attached to groups that the user belongs
@@ -2893,7 +2896,7 @@ SimulatePrincipalPolicyResponse * IamClient::simulatePrincipalPolicy(const Simul
     return qobject_cast<SimulatePrincipalPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the status of the specified access key from Active to Inactive, or vice versa. This operation can be used to
  * disable a user's key as part of a key rotation
  *
@@ -2920,7 +2923,7 @@ UpdateAccessKeyResponse * IamClient::updateAccessKey(const UpdateAccessKeyReques
     return qobject_cast<UpdateAccessKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the password policy settings for the AWS
  *
  * account> <note> <ul> <li>
@@ -2947,7 +2950,7 @@ UpdateAccountPasswordPolicyResponse * IamClient::updateAccountPasswordPolicy(con
     return qobject_cast<UpdateAccountPasswordPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the policy that grants an IAM entity permission to assume a role. This is typically referred to as the "role
  * trust policy". For more information about roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using Roles to Delegate Permissions and
@@ -2964,7 +2967,7 @@ UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateA
     return qobject_cast<UpdateAssumeRolePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the name and/or the path of the specified IAM
  *
  * group> <b>
@@ -2992,7 +2995,7 @@ UpdateGroupResponse * IamClient::updateGroup(const UpdateGroupRequest &request)
     return qobject_cast<UpdateGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the password for the specified IAM
  *
  * user>
@@ -3012,7 +3015,7 @@ UpdateLoginProfileResponse * IamClient::updateLoginProfile(const UpdateLoginProf
     return qobject_cast<UpdateLoginProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Replaces the existing list of server certificate thumbprints associated with an OpenID Connect (OIDC) provider resource
  * object with a new list of
  *
@@ -3042,7 +3045,7 @@ UpdateOpenIDConnectProviderThumbprintResponse * IamClient::updateOpenIDConnectPr
     return qobject_cast<UpdateOpenIDConnectProviderThumbprintResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the description or maximum session duration setting of a
  *
  * @param  request Request to send to AWS Identity and Access Management.
@@ -3056,7 +3059,7 @@ UpdateRoleResponse * IamClient::updateRole(const UpdateRoleRequest &request)
     return qobject_cast<UpdateRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Use
  *
  * instead>
@@ -3075,7 +3078,7 @@ UpdateRoleDescriptionResponse * IamClient::updateRoleDescription(const UpdateRol
     return qobject_cast<UpdateRoleDescriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the metadata document for an existing SAML provider resource
  *
  * object> <note>
@@ -3094,7 +3097,7 @@ UpdateSAMLProviderResponse * IamClient::updateSAMLProvider(const UpdateSAMLProvi
     return qobject_cast<UpdateSAMLProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the status of an IAM user's SSH public key to active or inactive. SSH public keys that are inactive cannot be used
  * for authentication. This operation can be used to disable a user's SSH public key as part of a key rotation work
  *
@@ -3116,7 +3119,7 @@ UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublic
     return qobject_cast<UpdateSSHPublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the name and/or the path of the specified server certificate stored in
  *
  * IAM>
@@ -3152,7 +3155,7 @@ UpdateServerCertificateResponse * IamClient::updateServerCertificate(const Updat
     return qobject_cast<UpdateServerCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the status of a service-specific credential to <code>Active</code> or <code>Inactive</code>. Service-specific
  * credentials that are inactive cannot be used for authentication to the service. This operation can be used to disable a
  * user’s service-specific credential as part of a credential rotation work
@@ -3168,7 +3171,7 @@ UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCreden
     return qobject_cast<UpdateServiceSpecificCredentialResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the status of the specified user signing certificate from active to disabled, or vice versa. This operation can
  * be used to disable an IAM user's signing certificate as part of a certificate rotation work
  *
@@ -3189,7 +3192,7 @@ UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const Upd
     return qobject_cast<UpdateSigningCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the name and/or the path of the specified IAM
  *
  * user> <b>
@@ -3217,7 +3220,7 @@ UpdateUserResponse * IamClient::updateUser(const UpdateUserRequest &request)
     return qobject_cast<UpdateUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads an SSH public key and associates it with the specified IAM
  *
  * user>
@@ -3238,7 +3241,7 @@ UploadSSHPublicKeyResponse * IamClient::uploadSSHPublicKey(const UploadSSHPublic
     return qobject_cast<UploadSSHPublicKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads a server certificate entity for the AWS account. The server certificate entity includes a public key
  * certificate, a private key, and an optional certificate chain, which should all be
  *
@@ -3283,7 +3286,7 @@ UploadServerCertificateResponse * IamClient::uploadServerCertificate(const Uploa
     return qobject_cast<UploadServerCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads an X.509 signing certificate and associates it with the specified IAM user. Some AWS services use X.509 signing
  * certificates to validate requests that are signed with a corresponding private key. When you upload the certificate, its
  * default status is
@@ -3314,7 +3317,7 @@ UploadSigningCertificateResponse * IamClient::uploadSigningCertificate(const Upl
     return qobject_cast<UploadSigningCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IamClientPrivate
@@ -3322,7 +3325,7 @@ UploadSigningCertificateResponse * IamClient::uploadSigningCertificate(const Upl
  * @brief  Private implementation for IamClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IamClientPrivate object.

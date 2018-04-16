@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteReplicationInstanceResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceResponse
  *
- * @brief  Handles DatabaseMigrationService DeleteReplicationInstance responses.
+ * \brief The DeleteReplicationInstanceResponse class encapsulates DatabaseMigrationService DeleteReplicationInstance responses.
  *
- * @see    DatabaseMigrationServiceClient::deleteReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::requ
     return static_cast<const DeleteReplicationInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DeleteReplicationInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReplicationInstanceResponsePrivate
+ * \class DeleteReplicationInstanceResponsePrivate
  *
- * @brief  Private implementation for DeleteReplicationInstanceResponse.
+ * \brief Private implementation for DeleteReplicationInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationInstanceResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DeleteReplicationInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

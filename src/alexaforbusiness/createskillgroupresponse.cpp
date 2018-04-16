@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  CreateSkillGroupResponse
+/*!
+ * \class QtAws::AlexaForBusiness::CreateSkillGroupResponse
  *
- * @brief  Handles AlexaForBusiness CreateSkillGroup responses.
+ * \brief The CreateSkillGroupResponse class encapsulates AlexaForBusiness CreateSkillGroup responses.
  *
- * @see    AlexaForBusinessClient::createSkillGroup
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::createSkillGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSkillGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateSkillGroupRequest * CreateSkillGroupResponse::request() const
     return static_cast<const CreateSkillGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness CreateSkillGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateSkillGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSkillGroupResponsePrivate
+ * \class CreateSkillGroupResponsePrivate
  *
- * @brief  Private implementation for CreateSkillGroupResponse.
+ * \brief Private implementation for CreateSkillGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSkillGroupResponsePrivate object.
@@ -91,7 +99,7 @@ CreateSkillGroupResponsePrivate::CreateSkillGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness CreateSkillGroupResponse element.
  *
  * @param  xml  XML stream to parse.

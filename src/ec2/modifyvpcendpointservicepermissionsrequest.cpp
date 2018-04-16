@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointServicePermissionsRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointServicePermissionsRequest
  *
- * @brief  Implements EC2 ModifyVpcEndpointServicePermissions requests.
+ * \brief The ModifyVpcEndpointServicePermissionsRequest class encapsulates EC2 ModifyVpcEndpointServicePermissions requests.
  *
- * @see    EC2Client::modifyVpcEndpointServicePermissions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpointServicePermissions
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequest object.
  */
 ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest()
@@ -53,13 +60,16 @@ ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsR
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcEndpointServicePermissionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcEndpointServicePermissionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::r
     return new ModifyVpcEndpointServicePermissionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcEndpointServicePermissionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::r
  * @brief  Private implementation for ModifyVpcEndpointServicePermissionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequestPrivate object, copying another.

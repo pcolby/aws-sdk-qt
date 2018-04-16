@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateDocumentationVersionRequest
+/*!
+ * \class QtAws::APIGateway::CreateDocumentationVersionRequest
  *
- * @brief  Implements APIGateway CreateDocumentationVersion requests.
+ * \brief The CreateDocumentationVersionRequest class encapsulates APIGateway CreateDocumentationVersion requests.
  *
- * @see    APIGatewayClient::createDocumentationVersion
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createDocumentationVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDocumentationVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateDocumentationVersionRequest::CreateDocumentationVersionRequest(const Creat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDocumentationVersionRequest object.
  */
 CreateDocumentationVersionRequest::CreateDocumentationVersionRequest()
@@ -53,13 +61,16 @@ CreateDocumentationVersionRequest::CreateDocumentationVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDocumentationVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDocumentationVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationVersionRequest::response(Q
     return new CreateDocumentationVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDocumentationVersionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationVersionRequest::response(Q
  * @brief  Private implementation for CreateDocumentationVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDocumentationVersionRequestPrivate object.
@@ -97,7 +108,7 @@ CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDocumentationVersionRequestPrivate object, copying another.

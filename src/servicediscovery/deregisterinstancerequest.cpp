@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  DeregisterInstanceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::DeregisterInstanceRequest
  *
- * @brief  Implements ServiceDiscovery DeregisterInstance requests.
+ * \brief The DeregisterInstanceRequest class encapsulates ServiceDiscovery DeregisterInstance requests.
  *
- * @see    ServiceDiscoveryClient::deregisterInstance
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::deregisterInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeregisterInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeregisterInstanceRequest::DeregisterInstanceRequest(const DeregisterInstanceReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeregisterInstanceRequest object.
  */
 DeregisterInstanceRequest::DeregisterInstanceRequest()
@@ -53,13 +60,16 @@ DeregisterInstanceRequest::DeregisterInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeregisterInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeregisterInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkR
     return new DeregisterInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeregisterInstanceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkR
  * @brief  Private implementation for DeregisterInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterInstanceRequestPrivate object.
@@ -97,7 +107,7 @@ DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterInstanceRequestPrivate object, copying another.

@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  DescribeBackupsResponse
+/*!
+ * \class QtAws::CloudHSMV2::DescribeBackupsResponse
  *
- * @brief  Handles CloudHSMV2 DescribeBackups responses.
+ * \brief The DescribeBackupsResponse class encapsulates CloudHSMV2 DescribeBackups responses.
  *
- * @see    CloudHSMV2Client::describeBackups
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::describeBackups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBackupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DescribeBackupsRequest * DescribeBackupsResponse::request() const
     return static_cast<const DescribeBackupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSMV2 DescribeBackups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DescribeBackupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeBackupsResponsePrivate
+ * \class DescribeBackupsResponsePrivate
  *
- * @brief  Private implementation for DescribeBackupsResponse.
+ * \brief Private implementation for DescribeBackupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBackupsResponsePrivate object.
@@ -91,7 +96,7 @@ DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSMV2 DescribeBackupsResponse element.
  *
  * @param  xml  XML stream to parse.

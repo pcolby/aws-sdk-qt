@@ -51,32 +51,40 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ElasticsearchService
+ * \brief The QtAws::ElasticsearchService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ElasticsearchServiceClient
+/*!
+ * \class QtAws::ElasticsearchService::ElasticsearchServiceClient
  *
- * @brief  Client for Amazon Elasticsearch Service
+ * \brief The ElasticsearchServiceClient class provides access the Amazon Elasticsearch Service service.
  *
- * <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * \ingroup ElasticsearchService
  *
- * Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
- *
- * domains>
- *
- * The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
- * es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
- * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  */
 
-/**
- * @brief  Constructs a new ElasticsearchServiceClient object.
+/*!
+ * \brief Constructs a ElasticsearchServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ElasticsearchServiceClient::ElasticsearchServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -95,21 +103,16 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     d->serviceName = QStringLiteral("es");
 }
 
-/**
- * @brief  Constructs a new ElasticsearchServiceClient object.
+/*!
+ * \overload ElasticsearchServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ElasticsearchServiceClient::ElasticsearchServiceClient(
     const QUrl &endpoint,
@@ -128,7 +131,7 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     d->serviceName = QStringLiteral("es");
 }
 
-/**
+/*!
  * Attaches tags to an existing Elasticsearch domain. Tags are a set of case-sensitive key value pairs. An Elasticsearch
  * domain may have up to 10 tags. See <a
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-awsresorcetagging"
@@ -145,7 +148,7 @@ AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &requ
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new Elasticsearch domain. For more information, see <a
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains"
  * target="_blank">Creating Elasticsearch Domains</a> in the <i>Amazon Elasticsearch Service Developer
@@ -161,7 +164,7 @@ CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsea
     return qobject_cast<CreateElasticsearchDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes the specified Elasticsearch domain and all of its data. Once a domain is deleted, it cannot be
  *
  * @param  request Request to send to Amazon Elasticsearch Service.
@@ -175,7 +178,7 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
     return qobject_cast<DeleteElasticsearchDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the service-linked role that Elasticsearch Service uses to manage and maintain VPC domains. Role deletion will
  * fail if any existing VPC domains use the role. You must delete any such Elasticsearch domains before deleting the role.
  * See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-enabling-slr"
@@ -192,7 +195,7 @@ DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElast
     return qobject_cast<DeleteElasticsearchServiceRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns domain configuration information about the specified Elasticsearch domain, including the domain ID, domain
  * endpoint, and domain
  *
@@ -207,7 +210,7 @@ DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasti
     return qobject_cast<DescribeElasticsearchDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides cluster configuration information about the specified Elasticsearch domain, such as the state, creation date,
  * update version, and update date for cluster
  *
@@ -222,7 +225,7 @@ DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describe
     return qobject_cast<DescribeElasticsearchDomainConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns domain configuration information about the specified Elasticsearch domains, including the domain ID, domain
  * endpoint, and domain
  *
@@ -237,7 +240,7 @@ DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElast
     return qobject_cast<DescribeElasticsearchDomainsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe Elasticsearch Limits for a given InstanceType and ElasticsearchVersion. When modifying existing Domain, specify
  * the <code> <a>DomainName</a> </code> to know what Limits are supported for modifying.
  *
@@ -252,7 +255,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
     return qobject_cast<DescribeElasticsearchInstanceTypeLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the name of all Elasticsearch domains owned by the current user's account.
  *
  * @param  request Request to send to Amazon Elasticsearch Service.
@@ -266,7 +269,7 @@ ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
     return qobject_cast<ListDomainNamesResponse *>(send(request));
 }
 
-/**
+/*!
  * List all Elasticsearch instance types that are supported for given
  *
  * @param  request Request to send to Amazon Elasticsearch Service.
@@ -280,7 +283,7 @@ ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElastic
     return qobject_cast<ListElasticsearchInstanceTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * List all supported Elasticsearch
  *
  * @param  request Request to send to Amazon Elasticsearch Service.
@@ -294,7 +297,7 @@ ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearc
     return qobject_cast<ListElasticsearchVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all tags for the given Elasticsearch
  *
  * @param  request Request to send to Amazon Elasticsearch Service.
@@ -308,7 +311,7 @@ ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &r
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified set of tags from the specified Elasticsearch
  *
  * @param  request Request to send to Amazon Elasticsearch Service.
@@ -322,7 +325,7 @@ RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequ
     return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the cluster configuration of the specified Elasticsearch domain, setting as setting the instance type and the
  * number of instances.
  *
@@ -337,7 +340,7 @@ UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElas
     return qobject_cast<UpdateElasticsearchDomainConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticsearchServiceClientPrivate
@@ -345,7 +348,7 @@ UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElas
  * @brief  Private implementation for ElasticsearchServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticsearchServiceClientPrivate object.

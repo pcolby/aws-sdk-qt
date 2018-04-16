@@ -95,122 +95,130 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::KMS
+ * \brief The QtAws::KMS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace KMS {
 
-/**
- * @class  KmsClient
+/*!
+ * \class QtAws::KMS::KmsClient
  *
- * @brief  Client for AWS Key Management Service (KMS)
+ * \brief The KmsClient class provides access the AWS Key Management Service (KMS) service.
  *
- * <fullname>AWS Key Management Service</fullname>
+ * \ingroup KMS
  *
- * AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS
- * operations that you can call programmatically. For general information about AWS KMS, see the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/">AWS Key Management Service Developer
- *
- * Guide</a>> <note>
- *
- * AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
- * .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS
- * services. For example, the SDKs take care of tasks such as signing requests (see below), managing errors, and retrying
- * requests automatically. For more information about the AWS SDKs, including how to download and install them, see <a
- * href="http://aws.amazon.com/tools/">Tools for Amazon Web
- *
- * Services</a>> </note>
- *
- * We recommend that you use the AWS SDKs to make programmatic API calls to AWS
- *
- * KMS>
- *
- * Clients must support TLS (Transport Layer Security) 1.0. We recommend TLS 1.2. Clients must also support cipher suites
- * with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral Diffie-Hellman
- * (ECDHE). Most modern systems such as Java 7 and later support these
- *
- * modes>
- *
- * <b>Signing Requests</b>
- *
- * </p
- *
- * Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you <i>do not</i>
- * use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID
- * and secret access key for an IAM user, or you can use the AWS Security Token Service to generate temporary security
- * credentials that you can use to sign
- *
- * requests>
- *
- * All AWS KMS operations require <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
- * Version
- *
- * 4</a>>
- *
- * <b>Logging API Requests</b>
- *
- * </p
- *
- * AWS KMS supports AWS CloudTrail, a service that logs AWS API calls and related events for your AWS account and delivers
- * them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what
- * requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail,
- * including how to turn it on and find your log files, see the <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
- *
- * Guide</a>>
- *
- * <b>Additional Resources</b>
- *
- * </p
- *
- * For more information about credentials and request signing, see the
- *
- * following> <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> - This
- * topic provides general information about the types of credentials used for accessing
- *
- * AWS> </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
- * This section of the <i>IAM User Guide</i> describes how to create and use temporary security
- *
- * credentials> </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>
- * - This set of topics walks you through the process of signing a request using an access key ID and a secret access
- *
- * key> </li> </ul>
- *
- * <b>Commonly Used APIs</b>
- *
- * </p
- *
- * Of the APIs discussed in this guide, the following will prove the most useful for most applications. You will likely
- * perform actions other than these, such as creating keys and assigning policies, by using the
- *
- * console> <ul> <li>
- *
- * <a>Encrypt</a>
- *
- * </p </li> <li>
- *
- * <a>Decrypt</a>
- *
- * </p </li> <li>
- *
- * <a>GenerateDataKey</a>
- *
- * </p </li> <li>
- *
- * <a>GenerateDataKeyWithoutPlaintext</a>
+ *  <fullname>AWS Key Management Service</fullname>
+ * 
+ *  AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS
+ *  operations that you can call programmatically. For general information about AWS KMS, see the <a
+ *  href="http://docs.aws.amazon.com/kms/latest/developerguide/">AWS Key Management Service Developer
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS
+ *  services. For example, the SDKs take care of tasks such as signing requests (see below), managing errors, and retrying
+ *  requests automatically. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>> </note>
+ * 
+ *  We recommend that you use the AWS SDKs to make programmatic API calls to AWS
+ * 
+ *  KMS>
+ * 
+ *  Clients must support TLS (Transport Layer Security) 1.0. We recommend TLS 1.2. Clients must also support cipher suites
+ *  with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral Diffie-Hellman
+ *  (ECDHE). Most modern systems such as Java 7 and later support these
+ * 
+ *  modes>
+ * 
+ *  <b>Signing Requests</b>
+ * 
+ *  </p
+ * 
+ *  Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you <i>do not</i>
+ *  use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID
+ *  and secret access key for an IAM user, or you can use the AWS Security Token Service to generate temporary security
+ *  credentials that you can use to sign
+ * 
+ *  requests>
+ * 
+ *  All AWS KMS operations require <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
+ *  Version
+ * 
+ *  4</a>>
+ * 
+ *  <b>Logging API Requests</b>
+ * 
+ *  </p
+ * 
+ *  AWS KMS supports AWS CloudTrail, a service that logs AWS API calls and related events for your AWS account and delivers
+ *  them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what
+ *  requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail,
+ *  including how to turn it on and find your log files, see the <a
+ *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
+ * 
+ *  Guide</a>>
+ * 
+ *  <b>Additional Resources</b>
+ * 
+ *  </p
+ * 
+ *  For more information about credentials and request signing, see the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> - This
+ *  topic provides general information about the types of credentials used for accessing
+ * 
+ *  AWS> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
+ *  This section of the <i>IAM User Guide</i> describes how to create and use temporary security
+ * 
+ *  credentials> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>
+ *  - This set of topics walks you through the process of signing a request using an access key ID and a secret access
+ * 
+ *  key> </li> </ul>
+ * 
+ *  <b>Commonly Used APIs</b>
+ * 
+ *  </p
+ * 
+ *  Of the APIs discussed in this guide, the following will prove the most useful for most applications. You will likely
+ *  perform actions other than these, such as creating keys and assigning policies, by using the
+ * 
+ *  console> <ul> <li>
+ * 
+ *  <a>Encrypt</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a>Decrypt</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a>GenerateDataKey</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a>GenerateDataKeyWithoutPlaintext</a>
  */
 
-/**
- * @brief  Constructs a new KmsClient object.
+/*!
+ * \brief Constructs a KmsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 KmsClient::KmsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -229,21 +237,16 @@ KmsClient::KmsClient(
     d->serviceName = QStringLiteral("kms");
 }
 
-/**
- * @brief  Constructs a new KmsClient object.
+/*!
+ * \overload KmsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 KmsClient::KmsClient(
     const QUrl &endpoint,
@@ -262,7 +265,7 @@ KmsClient::KmsClient(
     d->serviceName = QStringLiteral("kms");
 }
 
-/**
+/*!
  * Cancels the deletion of a customer master key (CMK). When this operation is successful, the CMK is set to the
  * <code>Disabled</code> state. To enable a CMK, use <a>EnableKey</a>. You cannot perform this operation on a CMK in a
  * different AWS
@@ -284,7 +287,7 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
     return qobject_cast<CancelKeyDeletionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a display name for a customer master key (CMK). You can use an alias to identify a CMK in selected operations,
  * such as <a>Encrypt</a> and <a>GenerateDataKey</a>.
  *
@@ -326,7 +329,7 @@ CreateAliasResponse * KmsClient::createAlias(const CreateAliasRequest &request)
     return qobject_cast<CreateAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a grant to a customer master key (CMK). The grant specifies who can use the CMK and under what conditions. When
  * setting permissions, grants are an alternative to key policies.
  *
@@ -348,7 +351,7 @@ CreateGrantResponse * KmsClient::createGrant(const CreateGrantRequest &request)
     return qobject_cast<CreateGrantResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a customer master key (CMK) in the caller's AWS
  *
  * account>
@@ -381,7 +384,7 @@ CreateKeyResponse * KmsClient::createKey(const CreateKeyRequest &request)
     return qobject_cast<CreateKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Decrypts ciphertext. Ciphertext is plaintext that has been previously encrypted by using any of the following
  *
  * operations> <ul> <li>
@@ -416,7 +419,7 @@ DecryptResponse * KmsClient::decrypt(const DecryptRequest &request)
     return qobject_cast<DecryptResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified alias. You cannot perform this operation on an alias in a different AWS account.
  *
  * </p
@@ -442,7 +445,7 @@ DeleteAliasResponse * KmsClient::deleteAlias(const DeleteAliasRequest &request)
     return qobject_cast<DeleteAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes key material that you previously imported. This operation makes the specified customer master key (CMK)
  * unusable. For more information about importing key material into AWS KMS, see <a
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the <i>AWS
@@ -468,7 +471,7 @@ DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const D
     return qobject_cast<DeleteImportedKeyMaterialResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides detailed information about the specified customer master key
  *
  * (CMK)>
@@ -487,7 +490,7 @@ DescribeKeyResponse * KmsClient::describeKey(const DescribeKeyRequest &request)
     return qobject_cast<DescribeKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the state of a customer master key (CMK) to disabled, thereby preventing its use for cryptographic operations. You
  * cannot perform this operation on a CMK in a different AWS
  *
@@ -508,7 +511,7 @@ DisableKeyResponse * KmsClient::disableKey(const DisableKeyRequest &request)
     return qobject_cast<DisableKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables automatic rotation of the key material for the specified customer master key (CMK). You cannot perform this
  * operation on a CMK in a different AWS
  *
@@ -523,7 +526,7 @@ DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotat
     return qobject_cast<DisableKeyRotationResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the state of a customer master key (CMK) to enabled, thereby permitting its use for cryptographic operations. You
  * cannot perform this operation on a CMK in a different AWS
  *
@@ -538,7 +541,7 @@ EnableKeyResponse * KmsClient::enableKey(const EnableKeyRequest &request)
     return qobject_cast<EnableKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables automatic rotation of the key material for the specified customer master key (CMK). You cannot perform this
  * operation on a CMK in a different AWS
  *
@@ -553,7 +556,7 @@ EnableKeyRotationResponse * KmsClient::enableKeyRotation(const EnableKeyRotation
     return qobject_cast<EnableKeyRotationResponse *>(send(request));
 }
 
-/**
+/*!
  * Encrypts plaintext into ciphertext by using a customer master key (CMK). The <code>Encrypt</code> operation has two
  * primary use
  *
@@ -595,7 +598,7 @@ EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
     return qobject_cast<EncryptResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a data encryption key that you can use in your application to encrypt data locally.
  *
  * </p
@@ -666,7 +669,7 @@ GenerateDataKeyResponse * KmsClient::generateDataKey(const GenerateDataKeyReques
     return qobject_cast<GenerateDataKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a data encryption key encrypted under a customer master key (CMK). This operation is identical to
  * <a>GenerateDataKey</a> but returns only the encrypted copy of the data key.
  *
@@ -697,7 +700,7 @@ GenerateDataKeyWithoutPlaintextResponse * KmsClient::generateDataKeyWithoutPlain
     return qobject_cast<GenerateDataKeyWithoutPlaintextResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a random byte string that is cryptographically
  *
  * secure>
@@ -717,7 +720,7 @@ GenerateRandomResponse * KmsClient::generateRandom(const GenerateRandomRequest &
     return qobject_cast<GenerateRandomResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a key policy attached to the specified customer master key (CMK). You cannot perform this operation on a CMK in a
  * different AWS
  *
@@ -732,7 +735,7 @@ GetKeyPolicyResponse * KmsClient::getKeyPolicy(const GetKeyPolicyRequest &reques
     return qobject_cast<GetKeyPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a Boolean value that indicates whether automatic rotation of the key material is enabled for the specified customer
  * master key
  *
@@ -751,7 +754,7 @@ GetKeyRotationStatusResponse * KmsClient::getKeyRotationStatus(const GetKeyRotat
     return qobject_cast<GetKeyRotationStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the items you need in order to import key material into AWS KMS from your existing key management
  * infrastructure. For more information about importing key material into AWS KMS, see <a
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the <i>AWS
@@ -782,7 +785,7 @@ GetParametersForImportResponse * KmsClient::getParametersForImport(const GetPara
     return qobject_cast<GetParametersForImportResponse *>(send(request));
 }
 
-/**
+/*!
  * Imports key material into an existing AWS KMS customer master key (CMK) that was created without key material. You
  * cannot perform this operation on a CMK in a different AWS account. For more information about creating CMKs with no key
  * material and then importing key material, see <a
@@ -840,7 +843,7 @@ ImportKeyMaterialResponse * KmsClient::importKeyMaterial(const ImportKeyMaterial
     return qobject_cast<ImportKeyMaterialResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of all aliases in the caller's AWS account and region. You cannot list aliases in other accounts. For more
  * information about aliases, see
  *
@@ -862,7 +865,7 @@ ListAliasesResponse * KmsClient::listAliases(const ListAliasesRequest &request)
     return qobject_cast<ListAliasesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of all grants for the specified customer master key
  *
  * (CMK)>
@@ -880,7 +883,7 @@ ListGrantsResponse * KmsClient::listGrants(const ListGrantsRequest &request)
     return qobject_cast<ListGrantsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the names of the key policies that are attached to a customer master key (CMK). This operation is designed to get
  * policy names that you can use in a <a>GetKeyPolicy</a> operation. However, the only valid policy name is
  * <code>default</code>. You cannot perform this operation on a CMK in a different AWS
@@ -896,7 +899,7 @@ ListKeyPoliciesResponse * KmsClient::listKeyPolicies(const ListKeyPoliciesReques
     return qobject_cast<ListKeyPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of all customer master keys (CMKs) in the caller's AWS account and
  *
  * @param  request Request to send to AWS Key Management Service.
@@ -910,7 +913,7 @@ ListKeysResponse * KmsClient::listKeys(const ListKeysRequest &request)
     return qobject_cast<ListKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all tags for the specified customer master key
  *
  * (CMK)>
@@ -928,7 +931,7 @@ ListResourceTagsResponse * KmsClient::listResourceTags(const ListResourceTagsReq
     return qobject_cast<ListResourceTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all grants for which the grant's <code>RetiringPrincipal</code> matches the one
  *
  * specified>
@@ -946,7 +949,7 @@ ListRetirableGrantsResponse * KmsClient::listRetirableGrants(const ListRetirable
     return qobject_cast<ListRetirableGrantsResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a key policy to the specified customer master key (CMK). You cannot perform this operation on a CMK in a
  * different AWS
  *
@@ -967,7 +970,7 @@ PutKeyPolicyResponse * KmsClient::putKeyPolicy(const PutKeyPolicyRequest &reques
     return qobject_cast<PutKeyPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Encrypts data on the server side with a new customer master key (CMK) without exposing the plaintext of the data on the
  * client side. The data is first decrypted and then reencrypted. You can also use this operation to change the encryption
  * context of a ciphertext.
@@ -997,7 +1000,7 @@ ReEncryptResponse * KmsClient::reEncrypt(const ReEncryptRequest &request)
     return qobject_cast<ReEncryptResponse *>(send(request));
 }
 
-/**
+/*!
  * Retires a grant. To clean up, you can retire a grant when you're done using it. You should revoke a grant when you
  * intend to actively deny operations that depend on it. The following are permitted to call this
  *
@@ -1030,7 +1033,7 @@ RetireGrantResponse * KmsClient::retireGrant(const RetireGrantRequest &request)
     return qobject_cast<RetireGrantResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes the specified grant for the specified customer master key (CMK). You can revoke a grant to actively deny
  * operations that depend on
  *
@@ -1049,7 +1052,7 @@ RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
     return qobject_cast<RevokeGrantResponse *>(send(request));
 }
 
-/**
+/*!
  * Schedules the deletion of a customer master key (CMK). You may provide a waiting period, specified in days, before
  * deletion occurs. If you do not provide a waiting period, the default period of 30 days is used. When this operation is
  * successful, the state of the CMK changes to <code>PendingDeletion</code>. Before the waiting period ends, you can use
@@ -1082,7 +1085,7 @@ ScheduleKeyDeletionResponse * KmsClient::scheduleKeyDeletion(const ScheduleKeyDe
     return qobject_cast<ScheduleKeyDeletionResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified customer master key (CMK). You cannot perform this operation on a
  * CMK in a different AWS
  *
@@ -1115,7 +1118,7 @@ TagResourceResponse * KmsClient::tagResource(const TagResourceRequest &request)
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified tag or tags from the specified customer master key (CMK). You cannot perform this operation on a
  * CMK in a different AWS
  *
@@ -1135,7 +1138,7 @@ UntagResourceResponse * KmsClient::untagResource(const UntagResourceRequest &req
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates an existing alias with a different customer master key (CMK). Each CMK can have multiple aliases, but the
  * aliases must be unique within the account and region. You cannot perform this operation on an alias in a different AWS
  *
@@ -1168,7 +1171,7 @@ UpdateAliasResponse * KmsClient::updateAlias(const UpdateAliasRequest &request)
     return qobject_cast<UpdateAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the description of a customer master key (CMK). To see the decription of a CMK, use <a>DescribeKey</a>.
  *
  * </p
@@ -1186,7 +1189,7 @@ UpdateKeyDescriptionResponse * KmsClient::updateKeyDescription(const UpdateKeyDe
     return qobject_cast<UpdateKeyDescriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KmsClientPrivate
@@ -1194,7 +1197,7 @@ UpdateKeyDescriptionResponse * KmsClient::updateKeyDescription(const UpdateKeyDe
  * @brief  Private implementation for KmsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KmsClientPrivate object.

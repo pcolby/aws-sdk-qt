@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ListIdentityPoliciesResponse
+/*!
+ * \class QtAws::SES::ListIdentityPoliciesResponse
  *
- * @brief  Handles SES ListIdentityPolicies responses.
+ * \brief The ListIdentityPoliciesResponse class encapsulates SES ListIdentityPolicies responses.
  *
- * @see    SESClient::listIdentityPolicies
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::listIdentityPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIdentityPoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListIdentityPoliciesRequest * ListIdentityPoliciesResponse::request() cons
     return static_cast<const ListIdentityPoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES ListIdentityPolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListIdentityPoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListIdentityPoliciesResponsePrivate
+ * \class ListIdentityPoliciesResponsePrivate
  *
- * @brief  Private implementation for ListIdentityPoliciesResponse.
+ * \brief Private implementation for ListIdentityPoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIdentityPoliciesResponsePrivate object.
@@ -91,7 +105,7 @@ ListIdentityPoliciesResponsePrivate::ListIdentityPoliciesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES ListIdentityPoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

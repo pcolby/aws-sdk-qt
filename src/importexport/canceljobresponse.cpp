@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  CancelJobResponse
+/*!
+ * \class QtAws::ImportExport::CancelJobResponse
  *
- * @brief  Handles ImportExport CancelJob responses.
+ * \brief The CancelJobResponse class encapsulates ImportExport CancelJob responses.
  *
- * @see    ImportExportClient::cancelJob
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CancelJobRequest * CancelJobResponse::request() const
     return static_cast<const CancelJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ImportExport CancelJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelJobResponsePrivate
+ * \class CancelJobResponsePrivate
  *
- * @brief  Private implementation for CancelJobResponse.
+ * \brief Private implementation for CancelJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobResponsePrivate object.
@@ -91,7 +97,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ImportExport CancelJobResponse element.
  *
  * @param  xml  XML stream to parse.

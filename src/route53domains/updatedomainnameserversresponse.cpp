@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  UpdateDomainNameserversResponse
+/*!
+ * \class QtAws::Route53Domains::UpdateDomainNameserversResponse
  *
- * @brief  Handles Route53Domains UpdateDomainNameservers responses.
+ * \brief The UpdateDomainNameserversResponse class encapsulates Route53Domains UpdateDomainNameservers responses.
  *
- * @see    Route53DomainsClient::updateDomainNameservers
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::updateDomainNameservers
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainNameserversResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateDomainNameserversRequest * UpdateDomainNameserversResponse::request(
     return static_cast<const UpdateDomainNameserversRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains UpdateDomainNameservers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateDomainNameserversResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDomainNameserversResponsePrivate
+ * \class UpdateDomainNameserversResponsePrivate
  *
- * @brief  Private implementation for UpdateDomainNameserversResponse.
+ * \brief Private implementation for UpdateDomainNameserversResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainNameserversResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains UpdateDomainNameserversResponse element.
  *
  * @param  xml  XML stream to parse.

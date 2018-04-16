@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListStreamingDistributionsRequest
+/*!
+ * \class QtAws::CloudFront::ListStreamingDistributionsRequest
  *
- * @brief  Implements CloudFront ListStreamingDistributions requests.
+ * \brief The ListStreamingDistributionsRequest class encapsulates CloudFront ListStreamingDistributions requests.
  *
- * @see    CloudFrontClient::listStreamingDistributions
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listStreamingDistributions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamingDistributionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListStreamingDistributionsRequest::ListStreamingDistributionsRequest(const ListS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStreamingDistributionsRequest object.
  */
 ListStreamingDistributionsRequest::ListStreamingDistributionsRequest()
@@ -53,13 +61,16 @@ ListStreamingDistributionsRequest::ListStreamingDistributionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStreamingDistributionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStreamingDistributionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamingDistributionsRequest::response(Q
     return new ListStreamingDistributionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStreamingDistributionsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamingDistributionsRequest::response(Q
  * @brief  Private implementation for ListStreamingDistributionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamingDistributionsRequestPrivate object.
@@ -97,7 +108,7 @@ ListStreamingDistributionsRequestPrivate::ListStreamingDistributionsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamingDistributionsRequestPrivate object, copying another.

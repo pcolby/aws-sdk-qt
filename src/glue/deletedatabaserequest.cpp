@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteDatabaseRequest
+/*!
+ * \class QtAws::Glue::DeleteDatabaseRequest
  *
- * @brief  Implements Glue DeleteDatabase requests.
+ * \brief The DeleteDatabaseRequest class encapsulates Glue DeleteDatabase requests.
  *
- * @see    GlueClient::deleteDatabase
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteDatabase
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDatabaseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteDatabaseRequest::DeleteDatabaseRequest(const DeleteDatabaseRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDatabaseRequest object.
  */
 DeleteDatabaseRequest::DeleteDatabaseRequest()
@@ -53,13 +59,16 @@ DeleteDatabaseRequest::DeleteDatabaseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDatabaseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDatabaseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDatabaseRequest::response(QNetworkReply
     return new DeleteDatabaseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDatabaseRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDatabaseRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteDatabaseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDatabaseRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteDatabaseRequestPrivate::DeleteDatabaseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDatabaseRequestPrivate object, copying another.

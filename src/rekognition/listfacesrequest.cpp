@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  ListFacesRequest
+/*!
+ * \class QtAws::Rekognition::ListFacesRequest
  *
- * @brief  Implements Rekognition ListFaces requests.
+ * \brief The ListFacesRequest class encapsulates Rekognition ListFaces requests.
  *
- * @see    RekognitionClient::listFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::listFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListFacesRequest::ListFacesRequest(const ListFacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFacesRequest object.
  */
 ListFacesRequest::ListFacesRequest()
@@ -53,13 +57,16 @@ ListFacesRequest::ListFacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListFacesRequest::response(QNetworkReply * co
     return new ListFacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFacesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListFacesRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListFacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFacesRequestPrivate object.
@@ -97,7 +104,7 @@ ListFacesRequestPrivate::ListFacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFacesRequestPrivate object, copying another.

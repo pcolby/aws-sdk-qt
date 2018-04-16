@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  RemoveAttributesFromFindingsResponse
+/*!
+ * \class QtAws::Inspector::RemoveAttributesFromFindingsResponse
  *
- * @brief  Handles Inspector RemoveAttributesFromFindings responses.
+ * \brief The RemoveAttributesFromFindingsResponse class encapsulates Inspector RemoveAttributesFromFindings responses.
  *
- * @see    InspectorClient::removeAttributesFromFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::removeAttributesFromFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveAttributesFromFindingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const RemoveAttributesFromFindingsRequest * RemoveAttributesFromFindingsResponse
     return static_cast<const RemoveAttributesFromFindingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector RemoveAttributesFromFindings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void RemoveAttributesFromFindingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveAttributesFromFindingsResponsePrivate
+ * \class RemoveAttributesFromFindingsResponsePrivate
  *
- * @brief  Private implementation for RemoveAttributesFromFindingsResponse.
+ * \brief Private implementation for RemoveAttributesFromFindingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveAttributesFromFindingsResponsePrivate object.
@@ -91,7 +99,7 @@ RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector RemoveAttributesFromFindingsResponse element.
  *
  * @param  xml  XML stream to parse.

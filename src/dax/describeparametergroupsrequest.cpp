@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeParameterGroupsRequest
+/*!
+ * \class QtAws::DAX::DescribeParameterGroupsRequest
  *
- * @brief  Implements DAX DescribeParameterGroups requests.
+ * \brief The DescribeParameterGroupsRequest class encapsulates DAX DescribeParameterGroups requests.
  *
- * @see    DAXClient::describeParameterGroups
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeParameterGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeParameterGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeParameterGroupsRequest::DescribeParameterGroupsRequest(const DescribePar
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeParameterGroupsRequest object.
  */
 DescribeParameterGroupsRequest::DescribeParameterGroupsRequest()
@@ -53,13 +60,16 @@ DescribeParameterGroupsRequest::DescribeParameterGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeParameterGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeParameterGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeParameterGroupsRequest::response(QNet
     return new DescribeParameterGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeParameterGroupsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeParameterGroupsRequest::response(QNet
  * @brief  Private implementation for DescribeParameterGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeParameterGroupsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeParameterGroupsRequestPrivate::DescribeParameterGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeParameterGroupsRequestPrivate object, copying another.

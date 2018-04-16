@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateSubnetCidrBlockRequest
+/*!
+ * \class QtAws::EC2::DisassociateSubnetCidrBlockRequest
  *
- * @brief  Implements EC2 DisassociateSubnetCidrBlock requests.
+ * \brief The DisassociateSubnetCidrBlockRequest class encapsulates EC2 DisassociateSubnetCidrBlock requests.
  *
- * @see    EC2Client::disassociateSubnetCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateSubnetCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateSubnetCidrBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest(const Dis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateSubnetCidrBlockRequest object.
  */
 DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest()
@@ -53,13 +60,16 @@ DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateSubnetCidrBlockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateSubnetCidrBlockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateSubnetCidrBlockRequest::response(
     return new DisassociateSubnetCidrBlockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateSubnetCidrBlockRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateSubnetCidrBlockRequest::response(
  * @brief  Private implementation for DisassociateSubnetCidrBlockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateSubnetCidrBlockRequestPrivate object.
@@ -97,7 +107,7 @@ DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateSubnetCidrBlockRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  CreateStreamResponse
+/*!
+ * \class QtAws::Kinesis::CreateStreamResponse
  *
- * @brief  Handles Kinesis CreateStream responses.
+ * \brief The CreateStreamResponse class encapsulates Kinesis CreateStream responses.
  *
- * @see    KinesisClient::createStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::createStream
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateStreamRequest * CreateStreamResponse::request() const
     return static_cast<const CreateStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis CreateStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateStreamResponsePrivate
+ * \class CreateStreamResponsePrivate
  *
- * @brief  Private implementation for CreateStreamResponse.
+ * \brief Private implementation for CreateStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamResponsePrivate object.
@@ -91,7 +97,7 @@ CreateStreamResponsePrivate::CreateStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis CreateStreamResponse element.
  *
  * @param  xml  XML stream to parse.

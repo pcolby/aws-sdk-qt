@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteModelRequest
+/*!
+ * \class QtAws::SageMaker::DeleteModelRequest
  *
- * @brief  Implements SageMaker DeleteModel requests.
+ * \brief The DeleteModelRequest class encapsulates SageMaker DeleteModel requests.
  *
- * @see    SageMakerClient::deleteModel
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteModel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteModelRequest::DeleteModelRequest(const DeleteModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteModelRequest object.
  */
 DeleteModelRequest::DeleteModelRequest()
@@ -53,13 +56,16 @@ DeleteModelRequest::DeleteModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
     return new DeleteModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteModelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteModelRequestPrivate::DeleteModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteModelRequestPrivate object, copying another.

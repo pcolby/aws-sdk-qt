@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetReplicationRunsRequest
+/*!
+ * \class QtAws::SMS::GetReplicationRunsRequest
  *
- * @brief  Implements SMS GetReplicationRuns requests.
+ * \brief The GetReplicationRunsRequest class encapsulates SMS GetReplicationRuns requests.
  *
- * @see    SMSClient::getReplicationRuns
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getReplicationRuns
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReplicationRunsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetReplicationRunsRequest::GetReplicationRunsRequest(const GetReplicationRunsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReplicationRunsRequest object.
  */
 GetReplicationRunsRequest::GetReplicationRunsRequest()
@@ -53,13 +56,16 @@ GetReplicationRunsRequest::GetReplicationRunsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReplicationRunsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReplicationRunsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkR
     return new GetReplicationRunsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReplicationRunsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetReplicationRunsRequest::response(QNetworkR
  * @brief  Private implementation for GetReplicationRunsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReplicationRunsRequestPrivate object.
@@ -97,7 +103,7 @@ GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReplicationRunsRequestPrivate object, copying another.

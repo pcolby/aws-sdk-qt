@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionResponse
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionResponse
  *
- * @brief  Handles CloudFront GetFieldLevelEncryption responses.
+ * \brief The GetFieldLevelEncryptionResponse class encapsulates CloudFront GetFieldLevelEncryption responses.
  *
- * @see    CloudFrontClient::getFieldLevelEncryption
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetFieldLevelEncryptionRequest * GetFieldLevelEncryptionResponse::request(
     return static_cast<const GetFieldLevelEncryptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetFieldLevelEncryption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetFieldLevelEncryptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFieldLevelEncryptionResponsePrivate
+ * \class GetFieldLevelEncryptionResponsePrivate
  *
- * @brief  Private implementation for GetFieldLevelEncryptionResponse.
+ * \brief Private implementation for GetFieldLevelEncryptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionResponsePrivate object.
@@ -91,7 +99,7 @@ GetFieldLevelEncryptionResponsePrivate::GetFieldLevelEncryptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetFieldLevelEncryptionResponse element.
  *
  * @param  xml  XML stream to parse.

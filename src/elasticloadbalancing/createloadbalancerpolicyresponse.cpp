@@ -27,15 +27,46 @@
 namespace QtAws {
 namespace ElasticLoadBalancing {
 
-/**
- * @class  CreateLoadBalancerPolicyResponse
+/*!
+ * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerPolicyResponse
  *
- * @brief  Handles ElasticLoadBalancing CreateLoadBalancerPolicy responses.
+ * \brief The CreateLoadBalancerPolicyResponse class encapsulates ElasticLoadBalancing CreateLoadBalancerPolicy responses.
  *
- * @see    ElasticLoadBalancingClient::createLoadBalancerPolicy
+ * \ingroup ElasticLoadBalancing
+ *
+ *  <fullname>Elastic Load Balancing</fullname>
+ * 
+ *  A load balancer can distribute incoming traffic across your EC2 instances. This enables you to increase the availability
+ *  of your application. The load balancer also monitors the health of its registered instances and ensures that it routes
+ *  traffic only to healthy instances. You configure your load balancer to accept incoming traffic by specifying one or more
+ *  listeners, which are configured with a protocol and port number for connections from clients to the load balancer and a
+ *  protocol and port number for connections from the load balancer to the
+ * 
+ *  instances>
+ * 
+ *  Elastic Load Balancing supports three types of load balancers: Application Load Balancers, Network Load Balancers, and
+ *  Classic Load Balancers. You can select a load balancer based on your application needs. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
+ * 
+ *  Guide</a>>
+ * 
+ *  This reference covers the 2012-06-01 API, which supports Classic Load Balancers. The 2015-12-01 API supports Application
+ *  Load Balancers and Network Load
+ * 
+ *  Balancers>
+ * 
+ *  To get started, create a load balancer with one or more listeners using <a>CreateLoadBalancer</a>. Register your
+ *  instances with the load balancer using
+ * 
+ *  <a>RegisterInstancesWithLoadBalancer</a>>
+ * 
+ *  All Elastic Load Balancing operations are <i>idempotent</i>, which means that they complete at most one time. If you
+ *  repeat an operation, it succeeds with a 200 OK response
+ *
+ * \sa ElasticLoadBalancingClient::createLoadBalancerPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLoadBalancerPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +89,7 @@ const CreateLoadBalancerPolicyRequest * CreateLoadBalancerPolicyResponse::reques
     return static_cast<const CreateLoadBalancerPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticLoadBalancing CreateLoadBalancerPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +101,15 @@ void CreateLoadBalancerPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateLoadBalancerPolicyResponsePrivate
+ * \class CreateLoadBalancerPolicyResponsePrivate
  *
- * @brief  Private implementation for CreateLoadBalancerPolicyResponse.
+ * \brief Private implementation for CreateLoadBalancerPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoadBalancerPolicyResponsePrivate object.
@@ -91,7 +122,7 @@ CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticLoadBalancing CreateLoadBalancerPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

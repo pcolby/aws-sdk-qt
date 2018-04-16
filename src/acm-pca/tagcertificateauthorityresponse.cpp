@@ -27,15 +27,48 @@
 namespace QtAws {
 namespace ACMPCA {
 
-/**
- * @class  TagCertificateAuthorityResponse
+/*!
+ * \class QtAws::ACMPCA::TagCertificateAuthorityResponse
  *
- * @brief  Handles ACMPCA TagCertificateAuthority responses.
+ * \brief The TagCertificateAuthorityResponse class encapsulates ACMPCA TagCertificateAuthority responses.
  *
- * @see    ACMPCAClient::tagCertificateAuthority
+ * \ingroup ACMPCA
+ *
+ *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
+ *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
+ *  private CA. Use this ARN as input to the <a>GetCertificateAuthorityCsr</a> function to retrieve the certificate signing
+ *  request (CSR) for your private CA certificate. Sign the CSR using the root or an intermediate CA in your on-premises PKI
+ *  hierarchy, and call the <a>ImportCertificateAuthorityCertificate</a> to import your signed private CA certificate into
+ *  ACM PCA.
+ * 
+ *  </p
+ * 
+ *  Use your private CA to issue and revoke certificates. These are private certificates that identify and secure client
+ *  computers, servers, applications, services, devices, and users over SSLS/TLS connections within your organization. Call
+ *  the <a>IssueCertificate</a> function to issue a certificate. Call the <a>RevokeCertificate</a> function to revoke a
+ *  certificate.
+ * 
+ *  </p <note>
+ * 
+ *  Certificates issued by your private CA can be trusted only within your organization, not
+ * 
+ *  publicly> </note>
+ * 
+ *  Your private CA can optionally create a certificate revocation list (CRL) to track the certificates you revoke. To
+ *  create a CRL, you must specify a <a>RevocationConfiguration</a> object when you call the
+ *  <a>CreateCertificateAuthority</a> function. ACM PCA writes the CRL to an S3 bucket that you specify. You must specify a
+ *  bucket policy that grants ACM PCA write permission.
+ * 
+ *  </p
+ * 
+ *  You can also call the <a>CreateCertificateAuthorityAuditReport</a> to create an optional audit report that lists every
+ *  time the CA private key is used. The private key is used for signing when the <b>IssueCertificate</b> or
+ *  <b>RevokeCertificate</b> function is called.
+ *
+ * \sa ACMPCAClient::tagCertificateAuthority
  */
 
-/**
+/*!
  * @brief  Constructs a new TagCertificateAuthorityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +91,7 @@ const TagCertificateAuthorityRequest * TagCertificateAuthorityResponse::request(
     return static_cast<const TagCertificateAuthorityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACMPCA TagCertificateAuthority response.
  *
  * @param  response  Response to parse.
@@ -70,15 +103,15 @@ void TagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TagCertificateAuthorityResponsePrivate
+ * \class TagCertificateAuthorityResponsePrivate
  *
- * @brief  Private implementation for TagCertificateAuthorityResponse.
+ * \brief Private implementation for TagCertificateAuthorityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagCertificateAuthorityResponsePrivate object.
@@ -91,7 +124,7 @@ TagCertificateAuthorityResponsePrivate::TagCertificateAuthorityResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACMPCA TagCertificateAuthorityResponse element.
  *
  * @param  xml  XML stream to parse.

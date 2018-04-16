@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeDataSourcesResponse
+/*!
+ * \class QtAws::MachineLearning::DescribeDataSourcesResponse
  *
- * @brief  Handles MachineLearning DescribeDataSources responses.
+ * \brief The DescribeDataSourcesResponse class encapsulates MachineLearning DescribeDataSources responses.
  *
- * @see    MachineLearningClient::describeDataSources
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeDataSources
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDataSourcesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeDataSourcesRequest * DescribeDataSourcesResponse::request() const
     return static_cast<const DescribeDataSourcesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DescribeDataSources response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeDataSourcesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeDataSourcesResponsePrivate
+ * \class DescribeDataSourcesResponsePrivate
  *
- * @brief  Private implementation for DescribeDataSourcesResponse.
+ * \brief Private implementation for DescribeDataSourcesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDataSourcesResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeDataSourcesResponsePrivate::DescribeDataSourcesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DescribeDataSourcesResponse element.
  *
  * @param  xml  XML stream to parse.

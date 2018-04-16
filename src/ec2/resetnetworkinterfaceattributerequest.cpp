@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetNetworkInterfaceAttributeRequest
+/*!
+ * \class QtAws::EC2::ResetNetworkInterfaceAttributeRequest
  *
- * @brief  Implements EC2 ResetNetworkInterfaceAttribute requests.
+ * \brief The ResetNetworkInterfaceAttributeRequest class encapsulates EC2 ResetNetworkInterfaceAttribute requests.
  *
- * @see    EC2Client::resetNetworkInterfaceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetNetworkInterfaceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetNetworkInterfaceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetNetworkInterfaceAttributeRequest object.
  */
 ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest()
@@ -53,13 +60,16 @@ ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetNetworkInterfaceAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetNetworkInterfaceAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::respon
     return new ResetNetworkInterfaceAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetNetworkInterfaceAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::respon
  * @brief  Private implementation for ResetNetworkInterfaceAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetNetworkInterfaceAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetNetworkInterfaceAttributeRequestPrivate object, copying another.

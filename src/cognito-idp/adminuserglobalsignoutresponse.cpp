@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUserGlobalSignOutResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminUserGlobalSignOut responses.
+ * \brief The AdminUserGlobalSignOutResponse class encapsulates CognitoIdentityProvider AdminUserGlobalSignOut responses.
  *
- * @see    CognitoIdentityProviderClient::adminUserGlobalSignOut
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUserGlobalSignOut
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUserGlobalSignOutResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminUserGlobalSignOutRequest * AdminUserGlobalSignOutResponse::request() 
     return static_cast<const AdminUserGlobalSignOutRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminUserGlobalSignOut response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminUserGlobalSignOutResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminUserGlobalSignOutResponsePrivate
+ * \class AdminUserGlobalSignOutResponsePrivate
  *
- * @brief  Private implementation for AdminUserGlobalSignOutResponse.
+ * \brief Private implementation for AdminUserGlobalSignOutResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUserGlobalSignOutResponsePrivate object.
@@ -91,7 +104,7 @@ AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminUserGlobalSignOutResponse element.
  *
  * @param  xml  XML stream to parse.

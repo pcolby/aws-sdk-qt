@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  AttachObjectRequest
+/*!
+ * \class QtAws::CloudDirectory::AttachObjectRequest
  *
- * @brief  Implements CloudDirectory AttachObject requests.
+ * \brief The AttachObjectRequest class encapsulates CloudDirectory AttachObject requests.
  *
- * @see    CloudDirectoryClient::attachObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::attachObject
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ AttachObjectRequest::AttachObjectRequest(const AttachObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachObjectRequest object.
  */
 AttachObjectRequest::AttachObjectRequest()
@@ -53,13 +63,16 @@ AttachObjectRequest::AttachObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply *
     return new AttachObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachObjectRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply *
  * @brief  Private implementation for AttachObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachObjectRequestPrivate object.
@@ -97,7 +110,7 @@ AttachObjectRequestPrivate::AttachObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachObjectRequestPrivate object, copying another.

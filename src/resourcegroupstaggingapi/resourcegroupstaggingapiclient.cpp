@@ -35,78 +35,86 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ResourceGroupsTaggingAPI
+ * \brief The QtAws::ResourceGroupsTaggingAPI contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
-/**
- * @class  ResourceGroupsTaggingAPIClient
+/*!
+ * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClient
  *
- * @brief  Client for AWS Resource Groups Tagging API
+ * \brief The ResourceGroupsTaggingAPIClient class provides access the AWS Resource Groups Tagging API service.
  *
- * <fullname>Resource Groups Tagging API</fullname>
+ * \ingroup ResourceGroupsTaggingAPI
  *
- * This guide describes the API operations for the resource groups
- *
- * tagging>
- *
- * A tag is a label that you assign to an AWS resource. A tag consists of a key and a value, both of which you define. For
- * example, if you have two Amazon EC2 instances, you might assign both a tag key of "Stack." But the value of "Stack"
- * might be "Testing" for one and "Production" for the
- *
- * other>
- *
- * Tagging can help you organize your resources and enables you to simplify resource management, access management and cost
- * allocation. For more information about tagging, see <a
- * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html">Working with Tag Editor</a> and <a
- * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/resource-groups.html">Working with Resource Groups</a>.
- * For more information about permissions you need to use the resource groups tagging APIs, see <a
- * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-resource-groups.html">Obtaining
- * Permissions for Resource Groups </a> and <a
- * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
- * Permissions for Tagging
- *
- * </a>>
- *
- * You can use the resource groups tagging APIs to complete the following
- *
- * tasks> <ul> <li>
- *
- * Tag and untag supported resources located in the specified region for the AWS
- *
- * accoun> </li> <li>
- *
- * Use tag-based filters to search for resources located in the specified region for the AWS
- *
- * accoun> </li> <li>
- *
- * List all existing tag keys in the specified region for the AWS
- *
- * accoun> </li> <li>
- *
- * List all existing values for the specified key in the specified region for the AWS
- *
- * accoun> </li> </ul>
- *
- * Not all resources can have tags. For a lists of resources that you can tag, see <a
- * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/supported-resources.html">Supported Resources</a> in the
- * <i>AWS Resource Groups and Tag Editor User
- *
- * Guide</i>>
- *
- * To make full use of the resource groups tagging APIs, you might need additional IAM permissions, including permission to
- * access the resources of individual services as well as permission to view and apply tags to those resources. For more
- * information, see <a
- * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
- * Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
+ *  <fullname>Resource Groups Tagging API</fullname>
+ * 
+ *  This guide describes the API operations for the resource groups
+ * 
+ *  tagging>
+ * 
+ *  A tag is a label that you assign to an AWS resource. A tag consists of a key and a value, both of which you define. For
+ *  example, if you have two Amazon EC2 instances, you might assign both a tag key of "Stack." But the value of "Stack"
+ *  might be "Testing" for one and "Production" for the
+ * 
+ *  other>
+ * 
+ *  Tagging can help you organize your resources and enables you to simplify resource management, access management and cost
+ *  allocation. For more information about tagging, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html">Working with Tag Editor</a> and <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/resource-groups.html">Working with Resource Groups</a>.
+ *  For more information about permissions you need to use the resource groups tagging APIs, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-resource-groups.html">Obtaining
+ *  Permissions for Resource Groups </a> and <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
+ *  Permissions for Tagging
+ * 
+ *  </a>>
+ * 
+ *  You can use the resource groups tagging APIs to complete the following
+ * 
+ *  tasks> <ul> <li>
+ * 
+ *  Tag and untag supported resources located in the specified region for the AWS
+ * 
+ *  accoun> </li> <li>
+ * 
+ *  Use tag-based filters to search for resources located in the specified region for the AWS
+ * 
+ *  accoun> </li> <li>
+ * 
+ *  List all existing tag keys in the specified region for the AWS
+ * 
+ *  accoun> </li> <li>
+ * 
+ *  List all existing values for the specified key in the specified region for the AWS
+ * 
+ *  accoun> </li> </ul>
+ * 
+ *  Not all resources can have tags. For a lists of resources that you can tag, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/supported-resources.html">Supported Resources</a> in the
+ *  <i>AWS Resource Groups and Tag Editor User
+ * 
+ *  Guide</i>>
+ * 
+ *  To make full use of the resource groups tagging APIs, you might need additional IAM permissions, including permission to
+ *  access the resources of individual services as well as permission to view and apply tags to those resources. For more
+ *  information, see <a
+ *  href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
+ *  Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
  */
 
-/**
- * @brief  Constructs a new ResourceGroupsTaggingAPIClient object.
+/*!
+ * \brief Constructs a ResourceGroupsTaggingAPIClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -125,21 +133,16 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     d->serviceName = QStringLiteral("tagging");
 }
 
-/**
- * @brief  Constructs a new ResourceGroupsTaggingAPIClient object.
+/*!
+ * \overload ResourceGroupsTaggingAPIClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     const QUrl &endpoint,
@@ -158,7 +161,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     d->serviceName = QStringLiteral("tagging");
 }
 
-/**
+/*!
  * Returns all the tagged resources that are associated with the specified tags (keys and values) located in the specified
  * region for the AWS account. The tags and the resource types that you specify in the request are known as <i>filters</i>.
  * The response includes all tags that are associated with the requested resources. If no filter is provided, this action
@@ -175,7 +178,7 @@ GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetRes
     return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all tag keys in the specified region for the AWS
  *
  * @param  request Request to send to AWS Resource Groups Tagging API.
@@ -189,7 +192,7 @@ GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeys
     return qobject_cast<GetTagKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all tag values for the specified key in the specified region for the AWS
  *
  * @param  request Request to send to AWS Resource Groups Tagging API.
@@ -203,7 +206,7 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
     return qobject_cast<GetTagValuesResponse *>(send(request));
 }
 
-/**
+/*!
  * Applies one or more tags to the specified resources. Note the
  *
  * following> <ul> <li>
@@ -240,7 +243,7 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
     return qobject_cast<TagResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified tags from the specified resources. When you specify a tag key, the action removes both that key
  * and its associated value. The operation succeeds even if you attempt to remove tags from a resource that were already
  * removed. Note the
@@ -267,7 +270,7 @@ UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const Un
     return qobject_cast<UntagResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResourceGroupsTaggingAPIClientPrivate
@@ -275,7 +278,7 @@ UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const Un
  * @brief  Private implementation for ResourceGroupsTaggingAPIClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResourceGroupsTaggingAPIClientPrivate object.

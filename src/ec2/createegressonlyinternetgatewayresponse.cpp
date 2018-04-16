@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateEgressOnlyInternetGatewayResponse
+/*!
+ * \class QtAws::EC2::CreateEgressOnlyInternetGatewayResponse
  *
- * @brief  Handles EC2 CreateEgressOnlyInternetGateway responses.
+ * \brief The CreateEgressOnlyInternetGatewayResponse class encapsulates EC2 CreateEgressOnlyInternetGateway responses.
  *
- * @see    EC2Client::createEgressOnlyInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createEgressOnlyInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEgressOnlyInternetGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateEgressOnlyInternetGatewayRequest * CreateEgressOnlyInternetGatewayRe
     return static_cast<const CreateEgressOnlyInternetGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateEgressOnlyInternetGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateEgressOnlyInternetGatewayResponsePrivate
+ * \class CreateEgressOnlyInternetGatewayResponsePrivate
  *
- * @brief  Private implementation for CreateEgressOnlyInternetGatewayResponse.
+ * \brief Private implementation for CreateEgressOnlyInternetGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEgressOnlyInternetGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ CreateEgressOnlyInternetGatewayResponsePrivate::CreateEgressOnlyInternetGatewayR
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateEgressOnlyInternetGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeAggregateIdFormatRequest
+/*!
+ * \class QtAws::EC2::DescribeAggregateIdFormatRequest
  *
- * @brief  Implements EC2 DescribeAggregateIdFormat requests.
+ * \brief The DescribeAggregateIdFormatRequest class encapsulates EC2 DescribeAggregateIdFormat requests.
  *
- * @see    EC2Client::describeAggregateIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeAggregateIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAggregateIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAggregateIdFormatRequest object.
  */
 DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest()
@@ -53,13 +60,16 @@ DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAggregateIdFormatRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAggregateIdFormatResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QN
     return new DescribeAggregateIdFormatResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAggregateIdFormatRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QN
  * @brief  Private implementation for DescribeAggregateIdFormatRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAggregateIdFormatRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAggregateIdFormatRequestPrivate object, copying another.

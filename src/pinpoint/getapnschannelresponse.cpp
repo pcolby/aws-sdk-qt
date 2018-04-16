@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetApnsChannelResponse
+/*!
+ * \class QtAws::Pinpoint::GetApnsChannelResponse
  *
- * @brief  Handles Pinpoint GetApnsChannel responses.
+ * \brief The GetApnsChannelResponse class encapsulates Pinpoint GetApnsChannel responses.
  *
- * @see    PinpointClient::getApnsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApnsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetApnsChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetApnsChannelRequest * GetApnsChannelResponse::request() const
     return static_cast<const GetApnsChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetApnsChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetApnsChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetApnsChannelResponsePrivate
+ * \class GetApnsChannelResponsePrivate
  *
- * @brief  Private implementation for GetApnsChannelResponse.
+ * \brief Private implementation for GetApnsChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApnsChannelResponsePrivate object.
@@ -91,7 +94,7 @@ GetApnsChannelResponsePrivate::GetApnsChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetApnsChannelResponse element.
  *
  * @param  xml  XML stream to parse.

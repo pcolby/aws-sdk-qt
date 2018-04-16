@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ListCertificatesRequest
+/*!
+ * \class QtAws::ACM::ListCertificatesRequest
  *
- * @brief  Implements ACM ListCertificates requests.
+ * \brief The ListCertificatesRequest class encapsulates ACM ListCertificates requests.
  *
- * @see    ACMClient::listCertificates
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::listCertificates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCertificatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ListCertificatesRequest::ListCertificatesRequest(const ListCertificatesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListCertificatesRequest object.
  */
 ListCertificatesRequest::ListCertificatesRequest()
@@ -53,13 +65,16 @@ ListCertificatesRequest::ListCertificatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListCertificatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListCertificatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesRequest::response(QNetworkRep
     return new ListCertificatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListCertificatesRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesRequest::response(QNetworkRep
  * @brief  Private implementation for ListCertificatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCertificatesRequestPrivate object.
@@ -97,7 +112,7 @@ ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCertificatesRequestPrivate object, copying another.

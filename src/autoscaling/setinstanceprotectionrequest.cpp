@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SetInstanceProtectionRequest
+/*!
+ * \class QtAws::AutoScaling::SetInstanceProtectionRequest
  *
- * @brief  Implements AutoScaling SetInstanceProtection requests.
+ * \brief The SetInstanceProtectionRequest class encapsulates AutoScaling SetInstanceProtection requests.
  *
- * @see    AutoScalingClient::setInstanceProtection
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::setInstanceProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new SetInstanceProtectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SetInstanceProtectionRequest::SetInstanceProtectionRequest(const SetInstanceProt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetInstanceProtectionRequest object.
  */
 SetInstanceProtectionRequest::SetInstanceProtectionRequest()
@@ -53,13 +61,16 @@ SetInstanceProtectionRequest::SetInstanceProtectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetInstanceProtectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetInstanceProtectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetwo
     return new SetInstanceProtectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetInstanceProtectionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetwo
  * @brief  Private implementation for SetInstanceProtectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetInstanceProtectionRequestPrivate object.
@@ -97,7 +108,7 @@ SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetInstanceProtectionRequestPrivate object, copying another.

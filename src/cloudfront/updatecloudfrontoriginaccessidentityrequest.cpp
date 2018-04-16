@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateCloudFrontOriginAccessIdentityRequest
+/*!
+ * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityRequest
  *
- * @brief  Implements CloudFront UpdateCloudFrontOriginAccessIdentity requests.
+ * \brief The UpdateCloudFrontOriginAccessIdentityRequest class encapsulates CloudFront UpdateCloudFrontOriginAccessIdentity requests.
  *
- * @see    CloudFrontClient::updateCloudFrontOriginAccessIdentity
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateCloudFrontOriginAccessIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object.
  */
 UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentityRequest()
@@ -53,13 +61,16 @@ UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentit
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCloudFrontOriginAccessIdentityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCloudFrontOriginAccessIdentityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCloudFrontOriginAccessIdentityRequest::
     return new UpdateCloudFrontOriginAccessIdentityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCloudFrontOriginAccessIdentityRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCloudFrontOriginAccessIdentityRequest::
  * @brief  Private implementation for UpdateCloudFrontOriginAccessIdentityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccess
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequestPrivate object, copying another.

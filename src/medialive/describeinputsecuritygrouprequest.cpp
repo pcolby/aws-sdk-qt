@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DescribeInputSecurityGroupRequest
+/*!
+ * \class QtAws::MediaLive::DescribeInputSecurityGroupRequest
  *
- * @brief  Implements MediaLive DescribeInputSecurityGroup requests.
+ * \brief The DescribeInputSecurityGroupRequest class encapsulates MediaLive DescribeInputSecurityGroup requests.
  *
- * @see    MediaLiveClient::describeInputSecurityGroup
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::describeInputSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInputSecurityGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeInputSecurityGroupRequest object.
  */
 DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest()
@@ -53,13 +56,16 @@ DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeInputSecurityGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeInputSecurityGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(Q
     return new DescribeInputSecurityGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeInputSecurityGroupRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(Q
  * @brief  Private implementation for DescribeInputSecurityGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInputSecurityGroupRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInputSecurityGroupRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeAssessmentTemplatesRequest
+/*!
+ * \class QtAws::Inspector::DescribeAssessmentTemplatesRequest
  *
- * @brief  Implements Inspector DescribeAssessmentTemplates requests.
+ * \brief The DescribeAssessmentTemplatesRequest class encapsulates Inspector DescribeAssessmentTemplates requests.
  *
- * @see    InspectorClient::describeAssessmentTemplates
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeAssessmentTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentTemplatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeAssessmentTemplatesRequest::DescribeAssessmentTemplatesRequest(const Des
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentTemplatesRequest object.
  */
 DescribeAssessmentTemplatesRequest::DescribeAssessmentTemplatesRequest()
@@ -53,13 +61,16 @@ DescribeAssessmentTemplatesRequest::DescribeAssessmentTemplatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAssessmentTemplatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAssessmentTemplatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTemplatesRequest::response(
     return new DescribeAssessmentTemplatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAssessmentTemplatesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTemplatesRequest::response(
  * @brief  Private implementation for DescribeAssessmentTemplatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentTemplatesRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeAssessmentTemplatesRequestPrivate::DescribeAssessmentTemplatesRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentTemplatesRequestPrivate object, copying another.

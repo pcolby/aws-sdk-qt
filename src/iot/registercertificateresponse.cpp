@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  RegisterCertificateResponse
+/*!
+ * \class QtAws::IoT::RegisterCertificateResponse
  *
- * @brief  Handles IoT RegisterCertificate responses.
+ * \brief The RegisterCertificateResponse class encapsulates IoT RegisterCertificate responses.
  *
- * @see    IoTClient::registerCertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::registerCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const RegisterCertificateRequest * RegisterCertificateResponse::request() const
     return static_cast<const RegisterCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT RegisterCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void RegisterCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterCertificateResponsePrivate
+ * \class RegisterCertificateResponsePrivate
  *
- * @brief  Private implementation for RegisterCertificateResponse.
+ * \brief Private implementation for RegisterCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCertificateResponsePrivate object.
@@ -91,7 +105,7 @@ RegisterCertificateResponsePrivate::RegisterCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT RegisterCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

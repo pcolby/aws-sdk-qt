@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SendEmailRequest
+/*!
+ * \class QtAws::SES::SendEmailRequest
  *
- * @brief  Implements SES SendEmail requests.
+ * \brief The SendEmailRequest class encapsulates SES SendEmail requests.
  *
- * @see    SESClient::sendEmail
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::sendEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new SendEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SendEmailRequest::SendEmailRequest(const SendEmailRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendEmailRequest object.
  */
 SendEmailRequest::SendEmailRequest()
@@ -53,13 +67,16 @@ SendEmailRequest::SendEmailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendEmailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendEmailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * co
     return new SendEmailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendEmailRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * co
  * @brief  Private implementation for SendEmailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendEmailRequestPrivate object.
@@ -97,7 +114,7 @@ SendEmailRequestPrivate::SendEmailRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendEmailRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetAuthorizersRequest
+/*!
+ * \class QtAws::APIGateway::GetAuthorizersRequest
  *
- * @brief  Implements APIGateway GetAuthorizers requests.
+ * \brief The GetAuthorizersRequest class encapsulates APIGateway GetAuthorizers requests.
  *
- * @see    APIGatewayClient::getAuthorizers
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getAuthorizers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetAuthorizersRequest::GetAuthorizersRequest(const GetAuthorizersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizersRequest object.
  */
 GetAuthorizersRequest::GetAuthorizersRequest()
@@ -53,13 +61,16 @@ GetAuthorizersRequest::GetAuthorizersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAuthorizersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAuthorizersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply
     return new GetAuthorizersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAuthorizersRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply
  * @brief  Private implementation for GetAuthorizersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizersRequestPrivate object.
@@ -97,7 +108,7 @@ GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizersRequestPrivate object, copying another.

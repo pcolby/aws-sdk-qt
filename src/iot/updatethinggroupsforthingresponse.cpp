@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateThingGroupsForThingResponse
+/*!
+ * \class QtAws::IoT::UpdateThingGroupsForThingResponse
  *
- * @brief  Handles IoT UpdateThingGroupsForThing responses.
+ * \brief The UpdateThingGroupsForThingResponse class encapsulates IoT UpdateThingGroupsForThing responses.
  *
- * @see    IoTClient::updateThingGroupsForThing
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateThingGroupsForThing
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingGroupsForThingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateThingGroupsForThingRequest * UpdateThingGroupsForThingResponse::requ
     return static_cast<const UpdateThingGroupsForThingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT UpdateThingGroupsForThing response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateThingGroupsForThingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateThingGroupsForThingResponsePrivate
+ * \class UpdateThingGroupsForThingResponsePrivate
  *
- * @brief  Private implementation for UpdateThingGroupsForThingResponse.
+ * \brief Private implementation for UpdateThingGroupsForThingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingGroupsForThingResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateThingGroupsForThingResponsePrivate::UpdateThingGroupsForThingResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT UpdateThingGroupsForThingResponse element.
  *
  * @param  xml  XML stream to parse.

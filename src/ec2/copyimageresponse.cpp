@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CopyImageResponse
+/*!
+ * \class QtAws::EC2::CopyImageResponse
  *
- * @brief  Handles EC2 CopyImage responses.
+ * \brief The CopyImageResponse class encapsulates EC2 CopyImage responses.
  *
- * @see    EC2Client::copyImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::copyImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CopyImageRequest * CopyImageResponse::request() const
     return static_cast<const CopyImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CopyImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CopyImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopyImageResponsePrivate
+ * \class CopyImageResponsePrivate
  *
- * @brief  Private implementation for CopyImageResponse.
+ * \brief Private implementation for CopyImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyImageResponsePrivate object.
@@ -91,7 +98,7 @@ CopyImageResponsePrivate::CopyImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CopyImageResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateHITTypeOfHITRequest
+/*!
+ * \class QtAws::MTurk::UpdateHITTypeOfHITRequest
  *
- * @brief  Implements MTurk UpdateHITTypeOfHIT requests.
+ * \brief The UpdateHITTypeOfHITRequest class encapsulates MTurk UpdateHITTypeOfHIT requests.
  *
- * @see    MTurkClient::updateHITTypeOfHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateHITTypeOfHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateHITTypeOfHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest(const UpdateHITTypeOfHITReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateHITTypeOfHITRequest object.
  */
 UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest()
@@ -53,13 +56,16 @@ UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateHITTypeOfHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateHITTypeOfHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkR
     return new UpdateHITTypeOfHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateHITTypeOfHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkR
  * @brief  Private implementation for UpdateHITTypeOfHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHITTypeOfHITRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHITTypeOfHITRequestPrivate object, copying another.

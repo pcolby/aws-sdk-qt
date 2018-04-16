@@ -139,25 +139,33 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DeviceFarm
+ * \brief The QtAws::DeviceFarm contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeviceFarmClient
+/*!
+ * \class QtAws::DeviceFarm::DeviceFarmClient
  *
- * @brief  Client for AWS Device Farm
+ * \brief The DeviceFarmClient class provides access the AWS Device Farm service.
  *
- * AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
- * phones, tablets, and other devices in the
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
  */
 
-/**
- * @brief  Constructs a new DeviceFarmClient object.
+/*!
+ * \brief Constructs a DeviceFarmClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DeviceFarmClient::DeviceFarmClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -176,21 +184,16 @@ DeviceFarmClient::DeviceFarmClient(
     d->serviceName = QStringLiteral("devicefarm");
 }
 
-/**
- * @brief  Constructs a new DeviceFarmClient object.
+/*!
+ * \overload DeviceFarmClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DeviceFarmClient::DeviceFarmClient(
     const QUrl &endpoint,
@@ -209,7 +212,7 @@ DeviceFarmClient::DeviceFarmClient(
     d->serviceName = QStringLiteral("devicefarm");
 }
 
-/**
+/*!
  * Creates a device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -223,7 +226,7 @@ CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevice
     return qobject_cast<CreateDevicePoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a profile that can be applied to one or more private fleet device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -237,7 +240,7 @@ CreateInstanceProfileResponse * DeviceFarmClient::createInstanceProfile(const Cr
     return qobject_cast<CreateInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a network
  *
  * @param  request Request to send to AWS Device Farm.
@@ -251,7 +254,7 @@ CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const Crea
     return qobject_cast<CreateNetworkProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new
  *
  * @param  request Request to send to AWS Device Farm.
@@ -265,7 +268,7 @@ CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectReque
     return qobject_cast<CreateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Specifies and starts a remote access
  *
  * @param  request Request to send to AWS Device Farm.
@@ -279,7 +282,7 @@ CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(
     return qobject_cast<CreateRemoteAccessSessionResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads an app or test
  *
  * @param  request Request to send to AWS Device Farm.
@@ -293,7 +296,7 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
     return qobject_cast<CreateUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the
  *
  * @param  request Request to send to AWS Device Farm.
@@ -307,7 +310,7 @@ DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevice
     return qobject_cast<DeleteDevicePoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a profile that can be applied to one or more private device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -321,7 +324,7 @@ DeleteInstanceProfileResponse * DeviceFarmClient::deleteInstanceProfile(const De
     return qobject_cast<DeleteInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a network
  *
  * @param  request Request to send to AWS Device Farm.
@@ -335,7 +338,7 @@ DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const Dele
     return qobject_cast<DeleteNetworkProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an AWS Device Farm project, given the project
  *
  * ARN>
@@ -353,7 +356,7 @@ DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectReque
     return qobject_cast<DeleteProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a completed remote access session and its
  *
  * @param  request Request to send to AWS Device Farm.
@@ -367,7 +370,7 @@ DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(
     return qobject_cast<DeleteRemoteAccessSessionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the run, given the run
  *
  * ARN>
@@ -385,7 +388,7 @@ DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
     return qobject_cast<DeleteRunResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an upload given the upload
  *
  * @param  request Request to send to AWS Device Farm.
@@ -399,7 +402,7 @@ DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest 
     return qobject_cast<DeleteUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the
  *
  * @param  request Request to send to AWS Device Farm.
@@ -413,7 +416,7 @@ GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccou
     return qobject_cast<GetAccountSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a unique device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -427,7 +430,7 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
     return qobject_cast<GetDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a device instance belonging to a private device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -441,7 +444,7 @@ GetDeviceInstanceResponse * DeviceFarmClient::getDeviceInstance(const GetDeviceI
     return qobject_cast<GetDeviceInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -455,7 +458,7 @@ GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolReque
     return qobject_cast<GetDevicePoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about compatibility with a device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -469,7 +472,7 @@ GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibilit
     return qobject_cast<GetDevicePoolCompatibilityResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the specified instance
  *
  * @param  request Request to send to AWS Device Farm.
@@ -483,7 +486,7 @@ GetInstanceProfileResponse * DeviceFarmClient::getInstanceProfile(const GetInsta
     return qobject_cast<GetInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to AWS Device Farm.
@@ -497,7 +500,7 @@ GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
     return qobject_cast<GetJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a network
  *
  * @param  request Request to send to AWS Device Farm.
@@ -511,7 +514,7 @@ GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetwork
     return qobject_cast<GetNetworkProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many
  * offerings are currently available and the offerings that will be available in the next period. The API returns a
  * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
@@ -529,7 +532,7 @@ GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferin
     return qobject_cast<GetOfferingStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to AWS Device Farm.
@@ -543,7 +546,7 @@ GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &reque
     return qobject_cast<GetProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a link to a currently running remote access
  *
  * @param  request Request to send to AWS Device Farm.
@@ -557,7 +560,7 @@ GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const 
     return qobject_cast<GetRemoteAccessSessionResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to AWS Device Farm.
@@ -571,7 +574,7 @@ GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
     return qobject_cast<GetRunResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to AWS Device Farm.
@@ -585,7 +588,7 @@ GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
     return qobject_cast<GetSuiteResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to AWS Device Farm.
@@ -599,7 +602,7 @@ GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
     return qobject_cast<GetTestResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about an
  *
  * @param  request Request to send to AWS Device Farm.
@@ -613,7 +616,7 @@ GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
     return qobject_cast<GetUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * Installs an application to the device in a remote access session. For Android applications, the file must be in .apk
  * format. For iOS applications, the file must be in .ipa
  *
@@ -628,7 +631,7 @@ InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSe
     return qobject_cast<InstallToRemoteAccessSessionResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about
  *
  * @param  request Request to send to AWS Device Farm.
@@ -642,7 +645,7 @@ ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsReque
     return qobject_cast<ListArtifactsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the private device instances associated with one or more AWS
  *
  * @param  request Request to send to AWS Device Farm.
@@ -656,7 +659,7 @@ ListDeviceInstancesResponse * DeviceFarmClient::listDeviceInstances(const ListDe
     return qobject_cast<ListDeviceInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -670,7 +673,7 @@ ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePool
     return qobject_cast<ListDevicePoolsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about unique device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -684,7 +687,7 @@ ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &re
     return qobject_cast<ListDevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all the instance profiles in an AWS
  *
  * @param  request Request to send to AWS Device Farm.
@@ -698,7 +701,7 @@ ListInstanceProfilesResponse * DeviceFarmClient::listInstanceProfiles(const List
     return qobject_cast<ListInstanceProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about jobs for a given test
  *
  * @param  request Request to send to AWS Device Farm.
@@ -712,7 +715,7 @@ ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
     return qobject_cast<ListJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the list of available network
  *
  * @param  request Request to send to AWS Device Farm.
@@ -726,7 +729,7 @@ ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNe
     return qobject_cast<ListNetworkProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion.
  * The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
@@ -743,7 +746,7 @@ ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const 
     return qobject_cast<ListOfferingPromotionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is
  * paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a
  * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
@@ -761,7 +764,7 @@ ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(co
     return qobject_cast<ListOfferingTransactionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the
  * recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the
  * user is not permitted to invoke the operation. Please contact <a
@@ -779,7 +782,7 @@ ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsReque
     return qobject_cast<ListOfferingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about
  *
  * @param  request Request to send to AWS Device Farm.
@@ -793,7 +796,7 @@ ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest 
     return qobject_cast<ListProjectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all currently running remote access
  *
  * @param  request Request to send to AWS Device Farm.
@@ -807,7 +810,7 @@ ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(co
     return qobject_cast<ListRemoteAccessSessionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about runs, given an AWS Device Farm project
  *
  * @param  request Request to send to AWS Device Farm.
@@ -821,7 +824,7 @@ ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
     return qobject_cast<ListRunsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about samples, given an AWS Device Farm project
  *
  * @param  request Request to send to AWS Device Farm.
@@ -835,7 +838,7 @@ ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &re
     return qobject_cast<ListSamplesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about test suites for a given
  *
  * @param  request Request to send to AWS Device Farm.
@@ -849,7 +852,7 @@ ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &reque
     return qobject_cast<ListSuitesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about tests in a given test
  *
  * @param  request Request to send to AWS Device Farm.
@@ -863,7 +866,7 @@ ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
     return qobject_cast<ListTestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about unique
  *
  * @param  request Request to send to AWS Device Farm.
@@ -877,7 +880,7 @@ ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniq
     return qobject_cast<ListUniqueProblemsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about uploads, given an AWS Device Farm project
  *
  * @param  request Request to send to AWS Device Farm.
@@ -891,7 +894,7 @@ ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &re
     return qobject_cast<ListUploadsResponse *>(send(request));
 }
 
-/**
+/*!
  * Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an
  * offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not
  * permitted to invoke the operation. Please contact <a
@@ -909,7 +912,7 @@ PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOffe
     return qobject_cast<PurchaseOfferingResponse *>(send(request));
 }
 
-/**
+/*!
  * Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the
  * next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation.
  * Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe
@@ -926,7 +929,7 @@ RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingReque
     return qobject_cast<RenewOfferingResponse *>(send(request));
 }
 
-/**
+/*!
  * Schedules a
  *
  * @param  request Request to send to AWS Device Farm.
@@ -940,7 +943,7 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
     return qobject_cast<ScheduleRunResponse *>(send(request));
 }
 
-/**
+/*!
  * Ends a specified remote access
  *
  * @param  request Request to send to AWS Device Farm.
@@ -954,7 +957,7 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
     return qobject_cast<StopRemoteAccessSessionResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests
  * have not started executing, and you will not be billed for these devices. On devices where tests have started executing,
  * Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be
@@ -971,7 +974,7 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
     return qobject_cast<StopRunResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates information about an existing private device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -985,7 +988,7 @@ UpdateDeviceInstanceResponse * DeviceFarmClient::updateDeviceInstance(const Upda
     return qobject_cast<UpdateDeviceInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are
  * all-or-nothing, meaning they can only be updated as a whole (or not at
  *
@@ -1000,7 +1003,7 @@ UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevice
     return qobject_cast<UpdateDevicePoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates information about an existing private device instance
  *
  * @param  request Request to send to AWS Device Farm.
@@ -1014,7 +1017,7 @@ UpdateInstanceProfileResponse * DeviceFarmClient::updateInstanceProfile(const Up
     return qobject_cast<UpdateInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the network profile with specific
  *
  * @param  request Request to send to AWS Device Farm.
@@ -1028,7 +1031,7 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
     return qobject_cast<UpdateNetworkProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified project name, given the project ARN and a new
  *
  * @param  request Request to send to AWS Device Farm.
@@ -1042,7 +1045,7 @@ UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectReque
     return qobject_cast<UpdateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeviceFarmClientPrivate
@@ -1050,7 +1053,7 @@ UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectReque
  * @brief  Private implementation for DeviceFarmClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeviceFarmClientPrivate object.

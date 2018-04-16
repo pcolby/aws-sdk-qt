@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  ConnectDirectoryResponse
+/*!
+ * \class QtAws::DirectoryService::ConnectDirectoryResponse
  *
- * @brief  Handles DirectoryService ConnectDirectory responses.
+ * \brief The ConnectDirectoryResponse class encapsulates DirectoryService ConnectDirectory responses.
  *
- * @see    DirectoryServiceClient::connectDirectory
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::connectDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new ConnectDirectoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
     return static_cast<const ConnectDirectoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DirectoryService ConnectDirectory response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ConnectDirectoryResponsePrivate
+ * \class ConnectDirectoryResponsePrivate
  *
- * @brief  Private implementation for ConnectDirectoryResponse.
+ * \brief Private implementation for ConnectDirectoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConnectDirectoryResponsePrivate object.
@@ -91,7 +108,7 @@ ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DirectoryService ConnectDirectoryResponse element.
  *
  * @param  xml  XML stream to parse.

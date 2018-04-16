@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DeleteApplicationCloudWatchLoggingOptionRequest
+/*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationCloudWatchLoggingOptionRequest
  *
- * @brief  Implements KinesisAnalytics DeleteApplicationCloudWatchLoggingOption requests.
+ * \brief The DeleteApplicationCloudWatchLoggingOptionRequest class encapsulates KinesisAnalytics DeleteApplicationCloudWatchLoggingOption requests.
  *
- * @see    KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApplicationCloudWatchLoggingOptionRequest::DeleteApplicationCloudWatchLogg
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequest object.
  */
 DeleteApplicationCloudWatchLoggingOptionRequest::DeleteApplicationCloudWatchLoggingOptionRequest()
@@ -53,13 +56,16 @@ DeleteApplicationCloudWatchLoggingOptionRequest::DeleteApplicationCloudWatchLogg
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApplicationCloudWatchLoggingOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApplicationCloudWatchLoggingOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionReque
     return new DeleteApplicationCloudWatchLoggingOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApplicationCloudWatchLoggingOptionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionReque
  * @brief  Private implementation for DeleteApplicationCloudWatchLoggingOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWa
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionRequestPrivate object, copying another.

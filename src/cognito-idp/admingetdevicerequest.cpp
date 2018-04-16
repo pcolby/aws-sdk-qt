@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminGetDeviceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminGetDeviceRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminGetDevice requests.
+ * \brief The AdminGetDeviceRequest class encapsulates CognitoIdentityProvider AdminGetDevice requests.
  *
- * @see    CognitoIdentityProviderClient::adminGetDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminGetDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminGetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminGetDeviceRequest::AdminGetDeviceRequest(const AdminGetDeviceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminGetDeviceRequest object.
  */
 AdminGetDeviceRequest::AdminGetDeviceRequest()
@@ -53,13 +66,16 @@ AdminGetDeviceRequest::AdminGetDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminGetDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminGetDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminGetDeviceRequest::response(QNetworkReply
     return new AdminGetDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminGetDeviceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminGetDeviceRequest::response(QNetworkReply
  * @brief  Private implementation for AdminGetDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminGetDeviceRequestPrivate object.
@@ -97,7 +113,7 @@ AdminGetDeviceRequestPrivate::AdminGetDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminGetDeviceRequestPrivate object, copying another.

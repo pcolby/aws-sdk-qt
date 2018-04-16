@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListPrincipalsForPortfolioResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListPrincipalsForPortfolioResponse
  *
- * @brief  Handles ServiceCatalog ListPrincipalsForPortfolio responses.
+ * \brief The ListPrincipalsForPortfolioResponse class encapsulates ServiceCatalog ListPrincipalsForPortfolio responses.
  *
- * @see    ServiceCatalogClient::listPrincipalsForPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listPrincipalsForPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPrincipalsForPortfolioResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListPrincipalsForPortfolioRequest * ListPrincipalsForPortfolioResponse::re
     return static_cast<const ListPrincipalsForPortfolioRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListPrincipalsForPortfolio response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListPrincipalsForPortfolioResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPrincipalsForPortfolioResponsePrivate
+ * \class ListPrincipalsForPortfolioResponsePrivate
  *
- * @brief  Private implementation for ListPrincipalsForPortfolioResponse.
+ * \brief Private implementation for ListPrincipalsForPortfolioResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPrincipalsForPortfolioResponsePrivate object.
@@ -91,7 +100,7 @@ ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListPrincipalsForPortfolioResponse element.
  *
  * @param  xml  XML stream to parse.

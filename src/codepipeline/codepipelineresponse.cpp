@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CodePipeline {
 
-/**
- * @class  CodePipelineResponse
+/*!
+ * \class QtAws::CodePipeline::CodePipelineResponse
  *
- * @brief  Handles CodePipeline CodePipeline responses.
+ * \brief The CodePipelineResponse class is the base class for all CodePipeline responses.
  *
- * @see    CodePipelineClient::codePipeline
+ * \ingroup CodePipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new CodePipelineResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CodePipelineResponse::CodePipelineResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodePipelineResponse object.
@@ -63,7 +63,7 @@ CodePipelineResponse::CodePipelineResponse(CodePipelineResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CodePipelineResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodePipelineResponsePrivate
@@ -92,7 +92,7 @@ void CodePipelineResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CodePipelineResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodePipelineResponsePrivate object.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace SageMakerRuntime {
 
-/**
- * @class  InvokeEndpointResponse
+/*!
+ * \class QtAws::SageMakerRuntime::InvokeEndpointResponse
  *
- * @brief  Handles SageMakerRuntime InvokeEndpoint responses.
+ * \brief The InvokeEndpointResponse class encapsulates SageMakerRuntime InvokeEndpoint responses.
  *
- * @see    SageMakerRuntimeClient::invokeEndpoint
+ * \ingroup SageMakerRuntime
+ *
+ *  Amazon SageMaker runtime API.
+ *
+ * \sa SageMakerRuntimeClient::invokeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new InvokeEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const InvokeEndpointRequest * InvokeEndpointResponse::request() const
     return static_cast<const InvokeEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMakerRuntime InvokeEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void InvokeEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  InvokeEndpointResponsePrivate
+ * \class InvokeEndpointResponsePrivate
  *
- * @brief  Private implementation for InvokeEndpointResponse.
+ * \brief Private implementation for InvokeEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InvokeEndpointResponsePrivate object.
@@ -91,7 +95,7 @@ InvokeEndpointResponsePrivate::InvokeEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMakerRuntime InvokeEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

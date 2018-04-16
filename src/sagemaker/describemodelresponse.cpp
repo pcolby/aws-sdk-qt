@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DescribeModelResponse
+/*!
+ * \class QtAws::SageMaker::DescribeModelResponse
  *
- * @brief  Handles SageMaker DescribeModel responses.
+ * \brief The DescribeModelResponse class encapsulates SageMaker DescribeModel responses.
  *
- * @see    SageMakerClient::describeModel
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::describeModel
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeModelRequest * DescribeModelResponse::request() const
     return static_cast<const DescribeModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker DescribeModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeModelResponsePrivate
+ * \class DescribeModelResponsePrivate
  *
- * @brief  Private implementation for DescribeModelResponse.
+ * \brief Private implementation for DescribeModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeModelResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeModelResponsePrivate::DescribeModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker DescribeModelResponse element.
  *
  * @param  xml  XML stream to parse.

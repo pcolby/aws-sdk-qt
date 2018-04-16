@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateClassifierRequest
+/*!
+ * \class QtAws::Glue::CreateClassifierRequest
  *
- * @brief  Implements Glue CreateClassifier requests.
+ * \brief The CreateClassifierRequest class encapsulates Glue CreateClassifier requests.
  *
- * @see    GlueClient::createClassifier
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createClassifier
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateClassifierRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateClassifierRequest::CreateClassifierRequest(const CreateClassifierRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateClassifierRequest object.
  */
 CreateClassifierRequest::CreateClassifierRequest()
@@ -53,13 +59,16 @@ CreateClassifierRequest::CreateClassifierRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateClassifierRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateClassifierResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateClassifierRequest::response(QNetworkRep
     return new CreateClassifierResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateClassifierRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateClassifierRequest::response(QNetworkRep
  * @brief  Private implementation for CreateClassifierRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClassifierRequestPrivate object.
@@ -97,7 +106,7 @@ CreateClassifierRequestPrivate::CreateClassifierRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClassifierRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  SendUsersMessagesResponse
+/*!
+ * \class QtAws::Pinpoint::SendUsersMessagesResponse
  *
- * @brief  Handles Pinpoint SendUsersMessages responses.
+ * \brief The SendUsersMessagesResponse class encapsulates Pinpoint SendUsersMessages responses.
  *
- * @see    PinpointClient::sendUsersMessages
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::sendUsersMessages
  */
 
-/**
+/*!
  * @brief  Constructs a new SendUsersMessagesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const SendUsersMessagesRequest * SendUsersMessagesResponse::request() const
     return static_cast<const SendUsersMessagesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint SendUsersMessages response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void SendUsersMessagesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SendUsersMessagesResponsePrivate
+ * \class SendUsersMessagesResponsePrivate
  *
- * @brief  Private implementation for SendUsersMessagesResponse.
+ * \brief Private implementation for SendUsersMessagesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendUsersMessagesResponsePrivate object.
@@ -91,7 +94,7 @@ SendUsersMessagesResponsePrivate::SendUsersMessagesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint SendUsersMessagesResponse element.
  *
  * @param  xml  XML stream to parse.

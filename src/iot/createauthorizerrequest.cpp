@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateAuthorizerRequest
+/*!
+ * \class QtAws::IoT::CreateAuthorizerRequest
  *
- * @brief  Implements IoT CreateAuthorizer requests.
+ * \brief The CreateAuthorizerRequest class encapsulates IoT CreateAuthorizer requests.
  *
- * @see    IoTClient::createAuthorizer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateAuthorizerRequest::CreateAuthorizerRequest(const CreateAuthorizerRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAuthorizerRequest object.
  */
 CreateAuthorizerRequest::CreateAuthorizerRequest()
@@ -53,13 +67,16 @@ CreateAuthorizerRequest::CreateAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
     return new CreateAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAuthorizerRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
  * @brief  Private implementation for CreateAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAuthorizerRequestPrivate object.
@@ -97,7 +114,7 @@ CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAuthorizerRequestPrivate object, copying another.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  VerifyUserAttributeRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeRequest
  *
- * @brief  Implements CognitoIdentityProvider VerifyUserAttribute requests.
+ * \brief The VerifyUserAttributeRequest class encapsulates CognitoIdentityProvider VerifyUserAttribute requests.
  *
- * @see    CognitoIdentityProviderClient::verifyUserAttribute
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::verifyUserAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyUserAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ VerifyUserAttributeRequest::VerifyUserAttributeRequest(const VerifyUserAttribute
 
 }
 
-/**
+/*!
  * @brief  Constructs a new VerifyUserAttributeRequest object.
  */
 VerifyUserAttributeRequest::VerifyUserAttributeRequest()
@@ -53,13 +66,16 @@ VerifyUserAttributeRequest::VerifyUserAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool VerifyUserAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an VerifyUserAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * VerifyUserAttributeRequest::response(QNetwork
     return new VerifyUserAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  VerifyUserAttributeRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * VerifyUserAttributeRequest::response(QNetwork
  * @brief  Private implementation for VerifyUserAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyUserAttributeRequestPrivate object.
@@ -97,7 +113,7 @@ VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyUserAttributeRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteTrafficPolicyRequest
+/*!
+ * \class QtAws::Route53::DeleteTrafficPolicyRequest
  *
- * @brief  Implements Route53 DeleteTrafficPolicy requests.
+ * \brief The DeleteTrafficPolicyRequest class encapsulates Route53 DeleteTrafficPolicy requests.
  *
- * @see    Route53Client::deleteTrafficPolicy
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteTrafficPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTrafficPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest(const DeleteTrafficPolicy
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTrafficPolicyRequest object.
  */
 DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest()
@@ -53,13 +56,16 @@ DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTrafficPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTrafficPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetwork
     return new DeleteTrafficPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTrafficPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetwork
  * @brief  Private implementation for DeleteTrafficPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTrafficPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTrafficPolicyRequestPrivate object, copying another.

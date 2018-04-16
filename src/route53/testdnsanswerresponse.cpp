@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  TestDNSAnswerResponse
+/*!
+ * \class QtAws::Route53::TestDNSAnswerResponse
  *
- * @brief  Handles Route53 TestDNSAnswer responses.
+ * \brief The TestDNSAnswerResponse class encapsulates Route53 TestDNSAnswer responses.
  *
- * @see    Route53Client::testDNSAnswer
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::testDNSAnswer
  */
 
-/**
+/*!
  * @brief  Constructs a new TestDNSAnswerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const TestDNSAnswerRequest * TestDNSAnswerResponse::request() const
     return static_cast<const TestDNSAnswerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 TestDNSAnswer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void TestDNSAnswerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TestDNSAnswerResponsePrivate
+ * \class TestDNSAnswerResponsePrivate
  *
- * @brief  Private implementation for TestDNSAnswerResponse.
+ * \brief Private implementation for TestDNSAnswerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestDNSAnswerResponsePrivate object.
@@ -91,7 +94,7 @@ TestDNSAnswerResponsePrivate::TestDNSAnswerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 TestDNSAnswerResponse element.
  *
  * @param  xml  XML stream to parse.

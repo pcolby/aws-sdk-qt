@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  UpdateCertificateOptionsRequest
+/*!
+ * \class QtAws::ACM::UpdateCertificateOptionsRequest
  *
- * @brief  Implements ACM UpdateCertificateOptions requests.
+ * \brief The UpdateCertificateOptionsRequest class encapsulates ACM UpdateCertificateOptions requests.
  *
- * @see    ACMClient::updateCertificateOptions
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::updateCertificateOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCertificateOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest(const UpdateCer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCertificateOptionsRequest object.
  */
 UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest()
@@ -53,13 +65,16 @@ UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCertificateOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCertificateOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNe
     return new UpdateCertificateOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCertificateOptionsRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNe
  * @brief  Private implementation for UpdateCertificateOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCertificateOptionsRequestPrivate object.
@@ -97,7 +112,7 @@ UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCertificateOptionsRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  ImportCatalogToGlueResponse
+/*!
+ * \class QtAws::Glue::ImportCatalogToGlueResponse
  *
- * @brief  Handles Glue ImportCatalogToGlue responses.
+ * \brief The ImportCatalogToGlueResponse class encapsulates Glue ImportCatalogToGlue responses.
  *
- * @see    GlueClient::importCatalogToGlue
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::importCatalogToGlue
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportCatalogToGlueResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ImportCatalogToGlueRequest * ImportCatalogToGlueResponse::request() const
     return static_cast<const ImportCatalogToGlueRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue ImportCatalogToGlue response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ImportCatalogToGlueResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportCatalogToGlueResponsePrivate
+ * \class ImportCatalogToGlueResponsePrivate
  *
- * @brief  Private implementation for ImportCatalogToGlueResponse.
+ * \brief Private implementation for ImportCatalogToGlueResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportCatalogToGlueResponsePrivate object.
@@ -91,7 +97,7 @@ ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue ImportCatalogToGlueResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketPolicyRequest
+/*!
+ * \class QtAws::S3::PutBucketPolicyRequest
  *
- * @brief  Implements S3 PutBucketPolicy requests.
+ * \brief The PutBucketPolicyRequest class encapsulates S3 PutBucketPolicy requests.
  *
- * @see    S3Client::putBucketPolicy
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketPolicyRequest::PutBucketPolicyRequest(const PutBucketPolicyRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketPolicyRequest object.
  */
 PutBucketPolicyRequest::PutBucketPolicyRequest()
@@ -53,13 +56,16 @@ PutBucketPolicyRequest::PutBucketPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketPolicyRequest::response(QNetworkRepl
     return new PutBucketPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketPolicyRequest::response(QNetworkRepl
  * @brief  Private implementation for PutBucketPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketPolicyRequestPrivate::PutBucketPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketPolicyRequestPrivate object, copying another.

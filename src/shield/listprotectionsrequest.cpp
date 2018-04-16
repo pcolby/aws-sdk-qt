@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  ListProtectionsRequest
+/*!
+ * \class QtAws::Shield::ListProtectionsRequest
  *
- * @brief  Implements Shield ListProtections requests.
+ * \brief The ListProtectionsRequest class encapsulates Shield ListProtections requests.
  *
- * @see    ShieldClient::listProtections
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::listProtections
  */
 
-/**
+/*!
  * @brief  Constructs a new ListProtectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListProtectionsRequest::ListProtectionsRequest(const ListProtectionsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListProtectionsRequest object.
  */
 ListProtectionsRequest::ListProtectionsRequest()
@@ -53,13 +62,16 @@ ListProtectionsRequest::ListProtectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListProtectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListProtectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListProtectionsRequest::response(QNetworkRepl
     return new ListProtectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListProtectionsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListProtectionsRequest::response(QNetworkRepl
  * @brief  Private implementation for ListProtectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProtectionsRequestPrivate object.
@@ -97,7 +109,7 @@ ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProtectionsRequestPrivate object, copying another.

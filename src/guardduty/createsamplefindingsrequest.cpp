@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  CreateSampleFindingsRequest
+/*!
+ * \class QtAws::GuardDuty::CreateSampleFindingsRequest
  *
- * @brief  Implements GuardDuty CreateSampleFindings requests.
+ * \brief The CreateSampleFindingsRequest class encapsulates GuardDuty CreateSampleFindings requests.
  *
- * @see    GuardDutyClient::createSampleFindings
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::createSampleFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSampleFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateSampleFindingsRequest::CreateSampleFindingsRequest(const CreateSampleFindi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSampleFindingsRequest object.
  */
 CreateSampleFindingsRequest::CreateSampleFindingsRequest()
@@ -53,13 +56,16 @@ CreateSampleFindingsRequest::CreateSampleFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSampleFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSampleFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateSampleFindingsRequest::response(QNetwor
     return new CreateSampleFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSampleFindingsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateSampleFindingsRequest::response(QNetwor
  * @brief  Private implementation for CreateSampleFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSampleFindingsRequestPrivate object.
@@ -97,7 +103,7 @@ CreateSampleFindingsRequestPrivate::CreateSampleFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSampleFindingsRequestPrivate object, copying another.

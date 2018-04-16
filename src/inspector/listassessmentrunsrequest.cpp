@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListAssessmentRunsRequest
+/*!
+ * \class QtAws::Inspector::ListAssessmentRunsRequest
  *
- * @brief  Implements Inspector ListAssessmentRuns requests.
+ * \brief The ListAssessmentRunsRequest class encapsulates Inspector ListAssessmentRuns requests.
  *
- * @see    InspectorClient::listAssessmentRuns
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listAssessmentRuns
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentRunsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListAssessmentRunsRequest::ListAssessmentRunsRequest(const ListAssessmentRunsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentRunsRequest object.
  */
 ListAssessmentRunsRequest::ListAssessmentRunsRequest()
@@ -53,13 +61,16 @@ ListAssessmentRunsRequest::ListAssessmentRunsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssessmentRunsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssessmentRunsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunsRequest::response(QNetworkR
     return new ListAssessmentRunsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssessmentRunsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunsRequest::response(QNetworkR
  * @brief  Private implementation for ListAssessmentRunsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentRunsRequestPrivate object.
@@ -97,7 +108,7 @@ ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentRunsRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetAccountSendingEnabledResponse
+/*!
+ * \class QtAws::SES::GetAccountSendingEnabledResponse
  *
- * @brief  Handles SES GetAccountSendingEnabled responses.
+ * \brief The GetAccountSendingEnabledResponse class encapsulates SES GetAccountSendingEnabled responses.
  *
- * @see    SESClient::getAccountSendingEnabled
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getAccountSendingEnabled
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSendingEnabledResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetAccountSendingEnabledRequest * GetAccountSendingEnabledResponse::reques
     return static_cast<const GetAccountSendingEnabledRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES GetAccountSendingEnabled response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAccountSendingEnabledResponsePrivate
+ * \class GetAccountSendingEnabledResponsePrivate
  *
- * @brief  Private implementation for GetAccountSendingEnabledResponse.
+ * \brief Private implementation for GetAccountSendingEnabledResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSendingEnabledResponsePrivate object.
@@ -91,7 +105,7 @@ GetAccountSendingEnabledResponsePrivate::GetAccountSendingEnabledResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an SES GetAccountSendingEnabledResponse element.
  *
  * @param  xml  XML stream to parse.

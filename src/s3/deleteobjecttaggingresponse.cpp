@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteObjectTaggingResponse
+/*!
+ * \class QtAws::S3::DeleteObjectTaggingResponse
  *
- * @brief  Handles S3 DeleteObjectTagging responses.
+ * \brief The DeleteObjectTaggingResponse class encapsulates S3 DeleteObjectTagging responses.
  *
- * @see    S3Client::deleteObjectTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteObjectTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectTaggingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteObjectTaggingRequest * DeleteObjectTaggingResponse::request() const
     return static_cast<const DeleteObjectTaggingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 DeleteObjectTagging response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteObjectTaggingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteObjectTaggingResponsePrivate
+ * \class DeleteObjectTaggingResponsePrivate
  *
- * @brief  Private implementation for DeleteObjectTaggingResponse.
+ * \brief Private implementation for DeleteObjectTaggingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectTaggingResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteObjectTaggingResponsePrivate::DeleteObjectTaggingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 DeleteObjectTaggingResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  ListPresetsRequest
+/*!
+ * \class QtAws::MediaConvert::ListPresetsRequest
  *
- * @brief  Implements MediaConvert ListPresets requests.
+ * \brief The ListPresetsRequest class encapsulates MediaConvert ListPresets requests.
  *
- * @see    MediaConvertClient::listPresets
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::listPresets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPresetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListPresetsRequest::ListPresetsRequest(const ListPresetsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPresetsRequest object.
  */
 ListPresetsRequest::ListPresetsRequest()
@@ -53,13 +56,16 @@ ListPresetsRequest::ListPresetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPresetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPresetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * 
     return new ListPresetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPresetsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListPresetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPresetsRequestPrivate object.
@@ -97,7 +103,7 @@ ListPresetsRequestPrivate::ListPresetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPresetsRequestPrivate object, copying another.

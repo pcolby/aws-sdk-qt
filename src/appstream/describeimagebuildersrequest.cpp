@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeImageBuildersRequest
+/*!
+ * \class QtAws::AppStream::DescribeImageBuildersRequest
  *
- * @brief  Implements AppStream DescribeImageBuilders requests.
+ * \brief The DescribeImageBuildersRequest class encapsulates AppStream DescribeImageBuilders requests.
  *
- * @see    AppStreamClient::describeImageBuilders
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeImageBuilders
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImageBuildersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeImageBuildersRequest::DescribeImageBuildersRequest(const DescribeImageBu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImageBuildersRequest object.
  */
 DescribeImageBuildersRequest::DescribeImageBuildersRequest()
@@ -53,13 +59,16 @@ DescribeImageBuildersRequest::DescribeImageBuildersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImageBuildersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImageBuildersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImageBuildersRequest::response(QNetwo
     return new DescribeImageBuildersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImageBuildersRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImageBuildersRequest::response(QNetwo
  * @brief  Private implementation for DescribeImageBuildersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImageBuildersRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeImageBuildersRequestPrivate::DescribeImageBuildersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImageBuildersRequestPrivate object, copying another.

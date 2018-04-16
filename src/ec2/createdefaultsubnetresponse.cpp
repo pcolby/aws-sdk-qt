@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateDefaultSubnetResponse
+/*!
+ * \class QtAws::EC2::CreateDefaultSubnetResponse
  *
- * @brief  Handles EC2 CreateDefaultSubnet responses.
+ * \brief The CreateDefaultSubnetResponse class encapsulates EC2 CreateDefaultSubnet responses.
  *
- * @see    EC2Client::createDefaultSubnet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createDefaultSubnet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDefaultSubnetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateDefaultSubnetRequest * CreateDefaultSubnetResponse::request() const
     return static_cast<const CreateDefaultSubnetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateDefaultSubnet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateDefaultSubnetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDefaultSubnetResponsePrivate
+ * \class CreateDefaultSubnetResponsePrivate
  *
- * @brief  Private implementation for CreateDefaultSubnetResponse.
+ * \brief Private implementation for CreateDefaultSubnetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDefaultSubnetResponsePrivate object.
@@ -91,7 +98,7 @@ CreateDefaultSubnetResponsePrivate::CreateDefaultSubnetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateDefaultSubnetResponse element.
  *
  * @param  xml  XML stream to parse.

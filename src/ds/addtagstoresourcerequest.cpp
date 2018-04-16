@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  AddTagsToResourceRequest
+/*!
+ * \class QtAws::DirectoryService::AddTagsToResourceRequest
  *
- * @brief  Implements DirectoryService AddTagsToResource requests.
+ * \brief The AddTagsToResourceRequest class encapsulates DirectoryService AddTagsToResource requests.
  *
- * @see    DirectoryServiceClient::addTagsToResource
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::addTagsToResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
@@ -53,13 +70,16 @@ AddTagsToResourceRequest::AddTagsToResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsToResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsToResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
     return new AddTagsToResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsToResourceRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  * @brief  Private implementation for AddTagsToResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceRequestPrivate object.
@@ -97,7 +117,7 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceRequestPrivate object, copying another.

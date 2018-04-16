@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  GetCertificateRequest
+/*!
+ * \class QtAws::ACM::GetCertificateRequest
  *
- * @brief  Implements ACM GetCertificate requests.
+ * \brief The GetCertificateRequest class encapsulates ACM GetCertificate requests.
  *
- * @see    ACMClient::getCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::getCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCertificateRequest object.
  */
 GetCertificateRequest::GetCertificateRequest()
@@ -53,13 +65,16 @@ GetCertificateRequest::GetCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply
     return new GetCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply
  * @brief  Private implementation for GetCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ GetCertificateRequestPrivate::GetCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCertificateRequestPrivate object, copying another.

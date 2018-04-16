@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  CancelSchemaExtensionRequest
+/*!
+ * \class QtAws::DirectoryService::CancelSchemaExtensionRequest
  *
- * @brief  Implements DirectoryService CancelSchemaExtension requests.
+ * \brief The CancelSchemaExtensionRequest class encapsulates DirectoryService CancelSchemaExtension requests.
  *
- * @see    DirectoryServiceClient::cancelSchemaExtension
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::cancelSchemaExtension
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelSchemaExtensionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ CancelSchemaExtensionRequest::CancelSchemaExtensionRequest(const CancelSchemaExt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelSchemaExtensionRequest object.
  */
 CancelSchemaExtensionRequest::CancelSchemaExtensionRequest()
@@ -53,13 +70,16 @@ CancelSchemaExtensionRequest::CancelSchemaExtensionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelSchemaExtensionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelSchemaExtensionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetwo
     return new CancelSchemaExtensionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelSchemaExtensionRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetwo
  * @brief  Private implementation for CancelSchemaExtensionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSchemaExtensionRequestPrivate object.
@@ -97,7 +117,7 @@ CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSchemaExtensionRequestPrivate object, copying another.

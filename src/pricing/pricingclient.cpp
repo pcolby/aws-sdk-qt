@@ -31,49 +31,57 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Pricing
+ * \brief The QtAws::Pricing contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Pricing {
 
-/**
- * @class  PricingClient
+/*!
+ * \class QtAws::Pricing::PricingClient
  *
- * @brief  Client for AWS Price List Service ( Pricing)
+ * \brief The PricingClient class provides access the AWS Price List Service ( Pricing) service.
  *
- * AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
- * Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
- * attributes such as <code>Location</code>, <code>Storage Class</code>, and <code>Operating System</code>, and provides
- * prices at the SKU level. You can use the AWS Price List Service to build cost control and scenario planning tools,
- * reconcile billing data, forecast future spend for budgeting purposes, and provide cost benefit analysis that compare
- * your internal workloads with
+ * \ingroup Pricing
  *
- * AWS>
- *
- * Use <code>GetServices</code> without a service code to retrieve the service codes for all AWS services, then
- * <code>GetServices</code> with a service code to retreive the attribute names for that service. After you have the
- * service code and attribute names, you can use <code>GetAttributeValues</code> to see what values are available for an
- * attribute. With the service code and an attribute name and value, you can use <code>GetProducts</code> to find specific
- * products that you're interested in, such as an <code>AmazonEC2</code> instance, with a <code>Provisioned IOPS</code>
- *
- * <code>volumeType</code>>
- *
- * Service
- *
- * Endpoin>
- *
- * AWS Price List Service API provides the following two
- *
- * endpoints> <ul> <li>
- *
- * https://api.pricing.us-east-1.amazonaws.co> </li> <li>
+ *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
+ *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
+ *  attributes such as <code>Location</code>, <code>Storage Class</code>, and <code>Operating System</code>, and provides
+ *  prices at the SKU level. You can use the AWS Price List Service to build cost control and scenario planning tools,
+ *  reconcile billing data, forecast future spend for budgeting purposes, and provide cost benefit analysis that compare
+ *  your internal workloads with
+ * 
+ *  AWS>
+ * 
+ *  Use <code>GetServices</code> without a service code to retrieve the service codes for all AWS services, then
+ *  <code>GetServices</code> with a service code to retreive the attribute names for that service. After you have the
+ *  service code and attribute names, you can use <code>GetAttributeValues</code> to see what values are available for an
+ *  attribute. With the service code and an attribute name and value, you can use <code>GetProducts</code> to find specific
+ *  products that you're interested in, such as an <code>AmazonEC2</code> instance, with a <code>Provisioned IOPS</code>
+ * 
+ *  <code>volumeType</code>>
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  AWS Price List Service API provides the following two
+ * 
+ *  endpoints> <ul> <li>
+ * 
+ *  https://api.pricing.us-east-1.amazonaws.co> </li> <li>
  */
 
-/**
- * @brief  Constructs a new PricingClient object.
+/*!
+ * \brief Constructs a PricingClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 PricingClient::PricingClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -92,21 +100,16 @@ PricingClient::PricingClient(
     d->serviceName = QStringLiteral("pricing");
 }
 
-/**
- * @brief  Constructs a new PricingClient object.
+/*!
+ * \overload PricingClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 PricingClient::PricingClient(
     const QUrl &endpoint,
@@ -125,7 +128,7 @@ PricingClient::PricingClient(
     d->serviceName = QStringLiteral("pricing");
 }
 
-/**
+/*!
  * Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get
  * the service codes for all services. Use it with a service code, such as <code>AmazonEC2</code>, to get information
  * specific to that service, such as the attribute names available for that service. For example, some of the attribute
@@ -143,7 +146,7 @@ DescribeServicesResponse * PricingClient::describeServices(const DescribeService
     return qobject_cast<DescribeServicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of attribute values. Attibutes are similar to the details in a Price List API offer file. For a list of
  * available attributes, see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/reading-an-offer.html#pps-defs">Offer File
@@ -161,7 +164,7 @@ GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttribut
     return qobject_cast<GetAttributeValuesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all products that match the filter
  *
  * @param  request Request to send to AWS Price List Service.
@@ -175,7 +178,7 @@ GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &reque
     return qobject_cast<GetProductsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PricingClientPrivate
@@ -183,7 +186,7 @@ GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &reque
  * @brief  Private implementation for PricingClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PricingClientPrivate object.

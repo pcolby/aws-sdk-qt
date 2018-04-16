@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  StartDeviceSyncResponse
+/*!
+ * \class QtAws::AlexaForBusiness::StartDeviceSyncResponse
  *
- * @brief  Handles AlexaForBusiness StartDeviceSync responses.
+ * \brief The StartDeviceSyncResponse class encapsulates AlexaForBusiness StartDeviceSync responses.
  *
- * @see    AlexaForBusinessClient::startDeviceSync
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::startDeviceSync
  */
 
-/**
+/*!
  * @brief  Constructs a new StartDeviceSyncResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const StartDeviceSyncRequest * StartDeviceSyncResponse::request() const
     return static_cast<const StartDeviceSyncRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness StartDeviceSync response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void StartDeviceSyncResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartDeviceSyncResponsePrivate
+ * \class StartDeviceSyncResponsePrivate
  *
- * @brief  Private implementation for StartDeviceSyncResponse.
+ * \brief Private implementation for StartDeviceSyncResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartDeviceSyncResponsePrivate object.
@@ -91,7 +99,7 @@ StartDeviceSyncResponsePrivate::StartDeviceSyncResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness StartDeviceSyncResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeImportImageTasksRequest
+/*!
+ * \class QtAws::EC2::DescribeImportImageTasksRequest
  *
- * @brief  Implements EC2 DescribeImportImageTasks requests.
+ * \brief The DescribeImportImageTasksRequest class encapsulates EC2 DescribeImportImageTasks requests.
  *
- * @see    EC2Client::describeImportImageTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeImportImageTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImportImageTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeImportImageTasksRequest::DescribeImportImageTasksRequest(const DescribeI
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImportImageTasksRequest object.
  */
 DescribeImportImageTasksRequest::DescribeImportImageTasksRequest()
@@ -53,13 +60,16 @@ DescribeImportImageTasksRequest::DescribeImportImageTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImportImageTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImportImageTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNe
     return new DescribeImportImageTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImportImageTasksRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNe
  * @brief  Private implementation for DescribeImportImageTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImportImageTasksRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImportImageTasksRequestPrivate object, copying another.

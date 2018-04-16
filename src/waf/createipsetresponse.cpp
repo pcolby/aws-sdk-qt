@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateIPSetResponse
+/*!
+ * \class QtAws::WAF::CreateIPSetResponse
  *
- * @brief  Handles WAF CreateIPSet responses.
+ * \brief The CreateIPSetResponse class encapsulates WAF CreateIPSet responses.
  *
- * @see    WAFClient::createIPSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIPSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
     return static_cast<const CreateIPSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF CreateIPSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateIPSetResponsePrivate
+ * \class CreateIPSetResponsePrivate
  *
- * @brief  Private implementation for CreateIPSetResponse.
+ * \brief Private implementation for CreateIPSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIPSetResponsePrivate object.
@@ -91,7 +99,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF CreateIPSetResponse element.
  *
  * @param  xml  XML stream to parse.

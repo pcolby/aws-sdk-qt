@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReleaseAddressRequest
+/*!
+ * \class QtAws::EC2::ReleaseAddressRequest
  *
- * @brief  Implements EC2 ReleaseAddress requests.
+ * \brief The ReleaseAddressRequest class encapsulates EC2 ReleaseAddress requests.
  *
- * @see    EC2Client::releaseAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::releaseAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new ReleaseAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReleaseAddressRequest::ReleaseAddressRequest(const ReleaseAddressRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReleaseAddressRequest object.
  */
 ReleaseAddressRequest::ReleaseAddressRequest()
@@ -53,13 +60,16 @@ ReleaseAddressRequest::ReleaseAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReleaseAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReleaseAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply
     return new ReleaseAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReleaseAddressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply
  * @brief  Private implementation for ReleaseAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseAddressRequestPrivate object.
@@ -97,7 +107,7 @@ ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseAddressRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateJobResponse
+/*!
+ * \class QtAws::IoT::CreateJobResponse
  *
- * @brief  Handles IoT CreateJob responses.
+ * \brief The CreateJobResponse class encapsulates IoT CreateJob responses.
  *
- * @see    IoTClient::createJob
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateJobRequest * CreateJobResponse::request() const
     return static_cast<const CreateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateJobResponsePrivate
+ * \class CreateJobResponsePrivate
  *
- * @brief  Private implementation for CreateJobResponse.
+ * \brief Private implementation for CreateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobResponsePrivate object.
@@ -91,7 +105,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreateJobResponse element.
  *
  * @param  xml  XML stream to parse.

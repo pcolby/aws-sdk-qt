@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  ListShardsResponse
+/*!
+ * \class QtAws::Kinesis::ListShardsResponse
  *
- * @brief  Handles Kinesis ListShards responses.
+ * \brief The ListShardsResponse class encapsulates Kinesis ListShards responses.
  *
- * @see    KinesisClient::listShards
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::listShards
  */
 
-/**
+/*!
  * @brief  Constructs a new ListShardsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListShardsRequest * ListShardsResponse::request() const
     return static_cast<const ListShardsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis ListShards response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListShardsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListShardsResponsePrivate
+ * \class ListShardsResponsePrivate
  *
- * @brief  Private implementation for ListShardsResponse.
+ * \brief Private implementation for ListShardsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListShardsResponsePrivate object.
@@ -91,7 +97,7 @@ ListShardsResponsePrivate::ListShardsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis ListShardsResponse element.
  *
  * @param  xml  XML stream to parse.

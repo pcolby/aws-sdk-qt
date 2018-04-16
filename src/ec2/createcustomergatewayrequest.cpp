@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateCustomerGatewayRequest
+/*!
+ * \class QtAws::EC2::CreateCustomerGatewayRequest
  *
- * @brief  Implements EC2 CreateCustomerGateway requests.
+ * \brief The CreateCustomerGatewayRequest class encapsulates EC2 CreateCustomerGateway requests.
  *
- * @see    EC2Client::createCustomerGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createCustomerGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCustomerGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateCustomerGatewayRequest::CreateCustomerGatewayRequest(const CreateCustomerG
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateCustomerGatewayRequest object.
  */
 CreateCustomerGatewayRequest::CreateCustomerGatewayRequest()
@@ -53,13 +60,16 @@ CreateCustomerGatewayRequest::CreateCustomerGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateCustomerGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateCustomerGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetwo
     return new CreateCustomerGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateCustomerGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetwo
  * @brief  Private implementation for CreateCustomerGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCustomerGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCustomerGatewayRequestPrivate object, copying another.

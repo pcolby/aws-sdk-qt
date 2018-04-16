@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  ListSkillsResponse
+/*!
+ * \class QtAws::AlexaForBusiness::ListSkillsResponse
  *
- * @brief  Handles AlexaForBusiness ListSkills responses.
+ * \brief The ListSkillsResponse class encapsulates AlexaForBusiness ListSkills responses.
  *
- * @see    AlexaForBusinessClient::listSkills
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::listSkills
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSkillsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListSkillsRequest * ListSkillsResponse::request() const
     return static_cast<const ListSkillsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness ListSkills response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListSkillsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListSkillsResponsePrivate
+ * \class ListSkillsResponsePrivate
  *
- * @brief  Private implementation for ListSkillsResponse.
+ * \brief Private implementation for ListSkillsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSkillsResponsePrivate object.
@@ -91,7 +99,7 @@ ListSkillsResponsePrivate::ListSkillsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness ListSkillsResponse element.
  *
  * @param  xml  XML stream to parse.

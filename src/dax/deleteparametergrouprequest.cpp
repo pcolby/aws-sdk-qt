@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DeleteParameterGroupRequest
+/*!
+ * \class QtAws::DAX::DeleteParameterGroupRequest
  *
- * @brief  Implements DAX DeleteParameterGroup requests.
+ * \brief The DeleteParameterGroupRequest class encapsulates DAX DeleteParameterGroup requests.
  *
- * @see    DAXClient::deleteParameterGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::deleteParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteParameterGroupRequest::DeleteParameterGroupRequest(const DeleteParameterGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteParameterGroupRequest object.
  */
 DeleteParameterGroupRequest::DeleteParameterGroupRequest()
@@ -53,13 +60,16 @@ DeleteParameterGroupRequest::DeleteParameterGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteParameterGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteParameterGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
     return new DeleteParameterGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteParameterGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
  * @brief  Private implementation for DeleteParameterGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteParameterGroupRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteParameterGroupRequestPrivate object, copying another.

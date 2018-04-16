@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DescribeDomainControllersRequest
+/*!
+ * \class QtAws::DirectoryService::DescribeDomainControllersRequest
  *
- * @brief  Implements DirectoryService DescribeDomainControllers requests.
+ * \brief The DescribeDomainControllersRequest class encapsulates DirectoryService DescribeDomainControllers requests.
  *
- * @see    DirectoryServiceClient::describeDomainControllers
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::describeDomainControllers
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDomainControllersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeDomainControllersRequest::DescribeDomainControllersRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDomainControllersRequest object.
  */
 DescribeDomainControllersRequest::DescribeDomainControllersRequest()
@@ -53,13 +70,16 @@ DescribeDomainControllersRequest::DescribeDomainControllersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDomainControllersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDomainControllersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainControllersRequest::response(QN
     return new DescribeDomainControllersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDomainControllersRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainControllersRequest::response(QN
  * @brief  Private implementation for DescribeDomainControllersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDomainControllersRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDomainControllersRequestPrivate object, copying another.

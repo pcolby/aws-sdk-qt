@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUpdateDeviceStatusResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateDeviceStatusResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminUpdateDeviceStatus responses.
+ * \brief The AdminUpdateDeviceStatusResponse class encapsulates CognitoIdentityProvider AdminUpdateDeviceStatus responses.
  *
- * @see    CognitoIdentityProviderClient::adminUpdateDeviceStatus
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUpdateDeviceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateDeviceStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminUpdateDeviceStatusRequest * AdminUpdateDeviceStatusResponse::request(
     return static_cast<const AdminUpdateDeviceStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminUpdateDeviceStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminUpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminUpdateDeviceStatusResponsePrivate
+ * \class AdminUpdateDeviceStatusResponsePrivate
  *
- * @brief  Private implementation for AdminUpdateDeviceStatusResponse.
+ * \brief Private implementation for AdminUpdateDeviceStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateDeviceStatusResponsePrivate object.
@@ -91,7 +104,7 @@ AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminUpdateDeviceStatusResponse element.
  *
  * @param  xml  XML stream to parse.

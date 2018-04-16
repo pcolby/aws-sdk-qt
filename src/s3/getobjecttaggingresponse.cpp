@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetObjectTaggingResponse
+/*!
+ * \class QtAws::S3::GetObjectTaggingResponse
  *
- * @brief  Handles S3 GetObjectTagging responses.
+ * \brief The GetObjectTaggingResponse class encapsulates S3 GetObjectTagging responses.
  *
- * @see    S3Client::getObjectTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getObjectTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectTaggingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetObjectTaggingRequest * GetObjectTaggingResponse::request() const
     return static_cast<const GetObjectTaggingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetObjectTagging response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetObjectTaggingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetObjectTaggingResponsePrivate
+ * \class GetObjectTaggingResponsePrivate
  *
- * @brief  Private implementation for GetObjectTaggingResponse.
+ * \brief Private implementation for GetObjectTaggingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectTaggingResponsePrivate object.
@@ -91,7 +94,7 @@ GetObjectTaggingResponsePrivate::GetObjectTaggingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetObjectTaggingResponse element.
  *
  * @param  xml  XML stream to parse.

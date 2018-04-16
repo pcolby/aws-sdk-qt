@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartContentModerationResponse
+/*!
+ * \class QtAws::Rekognition::StartContentModerationResponse
  *
- * @brief  Handles Rekognition StartContentModeration responses.
+ * \brief The StartContentModerationResponse class encapsulates Rekognition StartContentModeration responses.
  *
- * @see    RekognitionClient::startContentModeration
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startContentModeration
  */
 
-/**
+/*!
  * @brief  Constructs a new StartContentModerationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartContentModerationRequest * StartContentModerationResponse::request() 
     return static_cast<const StartContentModerationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition StartContentModeration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartContentModerationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartContentModerationResponsePrivate
+ * \class StartContentModerationResponsePrivate
  *
- * @brief  Private implementation for StartContentModerationResponse.
+ * \brief Private implementation for StartContentModerationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartContentModerationResponsePrivate object.
@@ -91,7 +95,7 @@ StartContentModerationResponsePrivate::StartContentModerationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition StartContentModerationResponse element.
  *
  * @param  xml  XML stream to parse.

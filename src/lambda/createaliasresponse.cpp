@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  CreateAliasResponse
+/*!
+ * \class QtAws::Lambda::CreateAliasResponse
  *
- * @brief  Handles Lambda CreateAlias responses.
+ * \brief The CreateAliasResponse class encapsulates Lambda CreateAlias responses.
  *
- * @see    LambdaClient::createAlias
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::createAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateAliasRequest * CreateAliasResponse::request() const
     return static_cast<const CreateAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda CreateAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAliasResponsePrivate
+ * \class CreateAliasResponsePrivate
  *
- * @brief  Private implementation for CreateAliasResponse.
+ * \brief Private implementation for CreateAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAliasResponsePrivate object.
@@ -91,7 +105,7 @@ CreateAliasResponsePrivate::CreateAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda CreateAliasResponse element.
  *
  * @param  xml  XML stream to parse.

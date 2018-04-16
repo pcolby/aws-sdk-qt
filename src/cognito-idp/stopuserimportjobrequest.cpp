@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  StopUserImportJobRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::StopUserImportJobRequest
  *
- * @brief  Implements CognitoIdentityProvider StopUserImportJob requests.
+ * \brief The StopUserImportJobRequest class encapsulates CognitoIdentityProvider StopUserImportJob requests.
  *
- * @see    CognitoIdentityProviderClient::stopUserImportJob
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::stopUserImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StopUserImportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ StopUserImportJobRequest::StopUserImportJobRequest(const StopUserImportJobReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopUserImportJobRequest object.
  */
 StopUserImportJobRequest::StopUserImportJobRequest()
@@ -53,13 +66,16 @@ StopUserImportJobRequest::StopUserImportJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopUserImportJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopUserImportJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkRe
     return new StopUserImportJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopUserImportJobRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkRe
  * @brief  Private implementation for StopUserImportJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopUserImportJobRequestPrivate object.
@@ -97,7 +113,7 @@ StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopUserImportJobRequestPrivate object, copying another.

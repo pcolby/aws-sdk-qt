@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateSecurityGroupRequest
+/*!
+ * \class QtAws::EC2::CreateSecurityGroupRequest
  *
- * @brief  Implements EC2 CreateSecurityGroup requests.
+ * \brief The CreateSecurityGroupRequest class encapsulates EC2 CreateSecurityGroup requests.
  *
- * @see    EC2Client::createSecurityGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSecurityGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateSecurityGroupRequest::CreateSecurityGroupRequest(const CreateSecurityGroup
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSecurityGroupRequest object.
  */
 CreateSecurityGroupRequest::CreateSecurityGroupRequest()
@@ -53,13 +60,16 @@ CreateSecurityGroupRequest::CreateSecurityGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSecurityGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSecurityGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetwork
     return new CreateSecurityGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSecurityGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetwork
  * @brief  Private implementation for CreateSecurityGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSecurityGroupRequestPrivate object.
@@ -97,7 +107,7 @@ CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSecurityGroupRequestPrivate object, copying another.

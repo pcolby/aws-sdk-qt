@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDocumentationVersionResponse
+/*!
+ * \class QtAws::APIGateway::DeleteDocumentationVersionResponse
  *
- * @brief  Handles APIGateway DeleteDocumentationVersion responses.
+ * \brief The DeleteDocumentationVersionResponse class encapsulates APIGateway DeleteDocumentationVersion responses.
  *
- * @see    APIGatewayClient::deleteDocumentationVersion
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDocumentationVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDocumentationVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::re
     return static_cast<const DeleteDocumentationVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteDocumentationVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDocumentationVersionResponsePrivate
+ * \class DeleteDocumentationVersionResponsePrivate
  *
- * @brief  Private implementation for DeleteDocumentationVersionResponse.
+ * \brief Private implementation for DeleteDocumentationVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDocumentationVersionResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteDocumentationVersionResponse element.
  *
  * @param  xml  XML stream to parse.

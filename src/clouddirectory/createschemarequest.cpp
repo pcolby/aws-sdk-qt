@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateSchemaRequest
+/*!
+ * \class QtAws::CloudDirectory::CreateSchemaRequest
  *
- * @brief  Implements CloudDirectory CreateSchema requests.
+ * \brief The CreateSchemaRequest class encapsulates CloudDirectory CreateSchema requests.
  *
- * @see    CloudDirectoryClient::createSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateSchemaRequest::CreateSchemaRequest(const CreateSchemaRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSchemaRequest object.
  */
 CreateSchemaRequest::CreateSchemaRequest()
@@ -53,13 +63,16 @@ CreateSchemaRequest::CreateSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply *
     return new CreateSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSchemaRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSchemaRequestPrivate object.
@@ -97,7 +110,7 @@ CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSchemaRequestPrivate object, copying another.

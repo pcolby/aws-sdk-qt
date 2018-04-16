@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  EFSResponse
+/*!
+ * \class QtAws::EFS::EFSResponse
  *
- * @brief  Handles EFS EFS responses.
+ * \brief The EFSResponse class is the base class for all EFS responses.
  *
- * @see    EFSClient::eFS
+ * \ingroup EFS
  */
 
-/**
+/*!
  * @brief  Constructs a new EFSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ EFSResponse::EFSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EFSResponse object.
@@ -63,7 +63,7 @@ EFSResponse::EFSResponse(EFSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void EFSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EFSResponsePrivate
@@ -92,7 +92,7 @@ void EFSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for EFSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EFSResponsePrivate object.

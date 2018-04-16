@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVolumesRequest
+/*!
+ * \class QtAws::EC2::DescribeVolumesRequest
  *
- * @brief  Implements EC2 DescribeVolumes requests.
+ * \brief The DescribeVolumesRequest class encapsulates EC2 DescribeVolumes requests.
  *
- * @see    EC2Client::describeVolumes
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVolumes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVolumesRequest::DescribeVolumesRequest(const DescribeVolumesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumesRequest object.
  */
 DescribeVolumesRequest::DescribeVolumesRequest()
@@ -53,13 +60,16 @@ DescribeVolumesRequest::DescribeVolumesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVolumesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVolumesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkRepl
     return new DescribeVolumesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVolumesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeVolumesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumesRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListHostedZonesByNameResponse
+/*!
+ * \class QtAws::Route53::ListHostedZonesByNameResponse
  *
- * @brief  Handles Route53 ListHostedZonesByName responses.
+ * \brief The ListHostedZonesByNameResponse class encapsulates Route53 ListHostedZonesByName responses.
  *
- * @see    Route53Client::listHostedZonesByName
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listHostedZonesByName
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHostedZonesByNameResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListHostedZonesByNameRequest * ListHostedZonesByNameResponse::request() co
     return static_cast<const ListHostedZonesByNameRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ListHostedZonesByName response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListHostedZonesByNameResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListHostedZonesByNameResponsePrivate
+ * \class ListHostedZonesByNameResponsePrivate
  *
- * @brief  Private implementation for ListHostedZonesByNameResponse.
+ * \brief Private implementation for ListHostedZonesByNameResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHostedZonesByNameResponsePrivate object.
@@ -91,7 +94,7 @@ ListHostedZonesByNameResponsePrivate::ListHostedZonesByNameResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ListHostedZonesByNameResponse element.
  *
  * @param  xml  XML stream to parse.

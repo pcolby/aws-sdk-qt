@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CreateConfigurationSetResponse
+/*!
+ * \class QtAws::SES::CreateConfigurationSetResponse
  *
- * @brief  Handles SES CreateConfigurationSet responses.
+ * \brief The CreateConfigurationSetResponse class encapsulates SES CreateConfigurationSet responses.
  *
- * @see    SESClient::createConfigurationSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::createConfigurationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() 
     return static_cast<const CreateConfigurationSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES CreateConfigurationSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateConfigurationSetResponsePrivate
+ * \class CreateConfigurationSetResponsePrivate
  *
- * @brief  Private implementation for CreateConfigurationSetResponse.
+ * \brief Private implementation for CreateConfigurationSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationSetResponsePrivate object.
@@ -91,7 +105,7 @@ CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES CreateConfigurationSetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  PurchaseScheduledInstancesResponse
+/*!
+ * \class QtAws::EC2::PurchaseScheduledInstancesResponse
  *
- * @brief  Handles EC2 PurchaseScheduledInstances responses.
+ * \brief The PurchaseScheduledInstancesResponse class encapsulates EC2 PurchaseScheduledInstances responses.
  *
- * @see    EC2Client::purchaseScheduledInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::purchaseScheduledInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseScheduledInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const PurchaseScheduledInstancesRequest * PurchaseScheduledInstancesResponse::re
     return static_cast<const PurchaseScheduledInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 PurchaseScheduledInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PurchaseScheduledInstancesResponsePrivate
+ * \class PurchaseScheduledInstancesResponsePrivate
  *
- * @brief  Private implementation for PurchaseScheduledInstancesResponse.
+ * \brief Private implementation for PurchaseScheduledInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseScheduledInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 PurchaseScheduledInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

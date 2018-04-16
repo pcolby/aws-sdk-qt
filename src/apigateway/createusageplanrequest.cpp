@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateUsagePlanRequest
+/*!
+ * \class QtAws::APIGateway::CreateUsagePlanRequest
  *
- * @brief  Implements APIGateway CreateUsagePlan requests.
+ * \brief The CreateUsagePlanRequest class encapsulates APIGateway CreateUsagePlan requests.
  *
- * @see    APIGatewayClient::createUsagePlan
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createUsagePlan
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUsagePlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateUsagePlanRequest::CreateUsagePlanRequest(const CreateUsagePlanRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUsagePlanRequest object.
  */
 CreateUsagePlanRequest::CreateUsagePlanRequest()
@@ -53,13 +61,16 @@ CreateUsagePlanRequest::CreateUsagePlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUsagePlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUsagePlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkRepl
     return new CreateUsagePlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUsagePlanRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateUsagePlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUsagePlanRequestPrivate object.
@@ -97,7 +108,7 @@ CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUsagePlanRequestPrivate object, copying another.

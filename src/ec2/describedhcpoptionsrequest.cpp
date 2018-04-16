@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeDhcpOptionsRequest
+/*!
+ * \class QtAws::EC2::DescribeDhcpOptionsRequest
  *
- * @brief  Implements EC2 DescribeDhcpOptions requests.
+ * \brief The DescribeDhcpOptionsRequest class encapsulates EC2 DescribeDhcpOptions requests.
  *
- * @see    EC2Client::describeDhcpOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeDhcpOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDhcpOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeDhcpOptionsRequest::DescribeDhcpOptionsRequest(const DescribeDhcpOptions
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDhcpOptionsRequest object.
  */
 DescribeDhcpOptionsRequest::DescribeDhcpOptionsRequest()
@@ -53,13 +60,16 @@ DescribeDhcpOptionsRequest::DescribeDhcpOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDhcpOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDhcpOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDhcpOptionsRequest::response(QNetwork
     return new DescribeDhcpOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDhcpOptionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDhcpOptionsRequest::response(QNetwork
  * @brief  Private implementation for DescribeDhcpOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDhcpOptionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeDhcpOptionsRequestPrivate::DescribeDhcpOptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDhcpOptionsRequestPrivate object, copying another.

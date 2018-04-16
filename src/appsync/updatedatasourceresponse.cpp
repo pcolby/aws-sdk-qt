@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateDataSourceResponse
+/*!
+ * \class QtAws::AppSync::UpdateDataSourceResponse
  *
- * @brief  Handles AppSync UpdateDataSource responses.
+ * \brief The UpdateDataSourceResponse class encapsulates AppSync UpdateDataSource responses.
  *
- * @see    AppSyncClient::updateDataSource
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDataSourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
     return static_cast<const UpdateDataSourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync UpdateDataSource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDataSourceResponsePrivate
+ * \class UpdateDataSourceResponsePrivate
  *
- * @brief  Private implementation for UpdateDataSourceResponse.
+ * \brief Private implementation for UpdateDataSourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDataSourceResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync UpdateDataSourceResponse element.
  *
  * @param  xml  XML stream to parse.

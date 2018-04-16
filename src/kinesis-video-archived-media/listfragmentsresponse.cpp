@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
-/**
- * @class  ListFragmentsResponse
+/*!
+ * \class QtAws::KinesisVideoArchivedMedia::ListFragmentsResponse
  *
- * @brief  Handles KinesisVideoArchivedMedia ListFragments responses.
+ * \brief The ListFragmentsResponse class encapsulates KinesisVideoArchivedMedia ListFragments responses.
  *
- * @see    KinesisVideoArchivedMediaClient::listFragments
+ * \ingroup KinesisVideoArchivedMedia
+ *
+ *
+ * \sa KinesisVideoArchivedMediaClient::listFragments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFragmentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListFragmentsRequest * ListFragmentsResponse::request() const
     return static_cast<const ListFragmentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideoArchivedMedia ListFragments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListFragmentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListFragmentsResponsePrivate
+ * \class ListFragmentsResponsePrivate
  *
- * @brief  Private implementation for ListFragmentsResponse.
+ * \brief Private implementation for ListFragmentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFragmentsResponsePrivate object.
@@ -91,7 +94,7 @@ ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideoArchivedMedia ListFragmentsResponse element.
  *
  * @param  xml  XML stream to parse.

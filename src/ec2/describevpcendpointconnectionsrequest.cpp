@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointConnectionsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointConnectionsRequest
  *
- * @brief  Implements EC2 DescribeVpcEndpointConnections requests.
+ * \brief The DescribeVpcEndpointConnectionsRequest class encapsulates EC2 DescribeVpcEndpointConnections requests.
  *
- * @see    EC2Client::describeVpcEndpointConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcEndpointConnectionsRequest::DescribeVpcEndpointConnectionsRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointConnectionsRequest object.
  */
 DescribeVpcEndpointConnectionsRequest::DescribeVpcEndpointConnectionsRequest()
@@ -53,13 +60,16 @@ DescribeVpcEndpointConnectionsRequest::DescribeVpcEndpointConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcEndpointConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcEndpointConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionsRequest::respon
     return new DescribeVpcEndpointConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcEndpointConnectionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionsRequest::respon
  * @brief  Private implementation for DescribeVpcEndpointConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointConnectionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcEndpointConnectionsRequestPrivate::DescribeVpcEndpointConnectionsRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointConnectionsRequestPrivate object, copying another.

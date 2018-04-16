@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  StopApplicationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::StopApplicationResponse
  *
- * @brief  Handles KinesisAnalytics StopApplication responses.
+ * \brief The StopApplicationResponse class encapsulates KinesisAnalytics StopApplication responses.
  *
- * @see    KinesisAnalyticsClient::stopApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::stopApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new StopApplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StopApplicationRequest * StopApplicationResponse::request() const
     return static_cast<const StopApplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics StopApplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StopApplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopApplicationResponsePrivate
+ * \class StopApplicationResponsePrivate
  *
- * @brief  Private implementation for StopApplicationResponse.
+ * \brief Private implementation for StopApplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopApplicationResponsePrivate object.
@@ -91,7 +94,7 @@ StopApplicationResponsePrivate::StopApplicationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics StopApplicationResponse element.
  *
  * @param  xml  XML stream to parse.

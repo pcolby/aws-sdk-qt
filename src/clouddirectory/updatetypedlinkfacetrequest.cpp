@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpdateTypedLinkFacetRequest
+/*!
+ * \class QtAws::CloudDirectory::UpdateTypedLinkFacetRequest
  *
- * @brief  Implements CloudDirectory UpdateTypedLinkFacet requests.
+ * \brief The UpdateTypedLinkFacetRequest class encapsulates CloudDirectory UpdateTypedLinkFacet requests.
  *
- * @see    CloudDirectoryClient::updateTypedLinkFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::updateTypedLinkFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTypedLinkFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest(const UpdateTypedLinkFa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTypedLinkFacetRequest object.
  */
 UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest()
@@ -53,13 +63,16 @@ UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTypedLinkFacetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTypedLinkFacetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetwor
     return new UpdateTypedLinkFacetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTypedLinkFacetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetwor
  * @brief  Private implementation for UpdateTypedLinkFacetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTypedLinkFacetRequestPrivate object.
@@ -97,7 +110,7 @@ UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTypedLinkFacetRequestPrivate object, copying another.

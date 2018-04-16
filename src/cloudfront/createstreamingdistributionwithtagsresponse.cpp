@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateStreamingDistributionWithTagsResponse
+/*!
+ * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsResponse
  *
- * @brief  Handles CloudFront CreateStreamingDistributionWithTags responses.
+ * \brief The CreateStreamingDistributionWithTagsResponse class encapsulates CloudFront CreateStreamingDistributionWithTags responses.
  *
- * @see    CloudFrontClient::createStreamingDistributionWithTags
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createStreamingDistributionWithTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingDistributionWithTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateStreamingDistributionWithTagsRequest * CreateStreamingDistributionWi
     return static_cast<const CreateStreamingDistributionWithTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront CreateStreamingDistributionWithTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateStreamingDistributionWithTagsResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateStreamingDistributionWithTagsResponsePrivate
+ * \class CreateStreamingDistributionWithTagsResponsePrivate
  *
- * @brief  Private implementation for CreateStreamingDistributionWithTagsResponse.
+ * \brief Private implementation for CreateStreamingDistributionWithTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingDistributionWithTagsResponsePrivate object.
@@ -91,7 +99,7 @@ CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionW
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront CreateStreamingDistributionWithTagsResponse element.
  *
  * @param  xml  XML stream to parse.

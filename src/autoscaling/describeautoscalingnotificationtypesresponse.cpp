@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeAutoScalingNotificationTypesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeAutoScalingNotificationTypesResponse
  *
- * @brief  Handles AutoScaling DescribeAutoScalingNotificationTypes responses.
+ * \brief The DescribeAutoScalingNotificationTypesResponse class encapsulates AutoScaling DescribeAutoScalingNotificationTypes responses.
  *
- * @see    AutoScalingClient::describeAutoScalingNotificationTypes
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeAutoScalingNotificationTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAutoScalingNotificationTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeAutoScalingNotificationTypesRequest * DescribeAutoScalingNotificat
     return static_cast<const DescribeAutoScalingNotificationTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeAutoScalingNotificationTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeAutoScalingNotificationTypesResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAutoScalingNotificationTypesResponsePrivate
+ * \class DescribeAutoScalingNotificationTypesResponsePrivate
  *
- * @brief  Private implementation for DescribeAutoScalingNotificationTypesResponse.
+ * \brief Private implementation for DescribeAutoScalingNotificationTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAutoScalingNotificationTypesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNotifica
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeAutoScalingNotificationTypesResponse element.
  *
  * @param  xml  XML stream to parse.

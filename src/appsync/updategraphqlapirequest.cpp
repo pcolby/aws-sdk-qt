@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateGraphqlApiRequest
+/*!
+ * \class QtAws::AppSync::UpdateGraphqlApiRequest
  *
- * @brief  Implements AppSync UpdateGraphqlApi requests.
+ * \brief The UpdateGraphqlApiRequest class encapsulates AppSync UpdateGraphqlApi requests.
  *
- * @see    AppSyncClient::updateGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGraphqlApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateGraphqlApiRequest::UpdateGraphqlApiRequest(const UpdateGraphqlApiRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateGraphqlApiRequest object.
  */
 UpdateGraphqlApiRequest::UpdateGraphqlApiRequest()
@@ -53,13 +57,16 @@ UpdateGraphqlApiRequest::UpdateGraphqlApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateGraphqlApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateGraphqlApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGraphqlApiRequest::response(QNetworkRep
     return new UpdateGraphqlApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateGraphqlApiRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGraphqlApiRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateGraphqlApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGraphqlApiRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateGraphqlApiRequestPrivate::UpdateGraphqlApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGraphqlApiRequestPrivate object, copying another.

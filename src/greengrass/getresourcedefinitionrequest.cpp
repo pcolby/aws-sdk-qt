@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetResourceDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::GetResourceDefinitionRequest
  *
- * @brief  Implements Greengrass GetResourceDefinition requests.
+ * \brief The GetResourceDefinitionRequest class encapsulates Greengrass GetResourceDefinition requests.
  *
- * @see    GreengrassClient::getResourceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getResourceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetResourceDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetResourceDefinitionRequest::GetResourceDefinitionRequest(const GetResourceDefi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetResourceDefinitionRequest object.
  */
 GetResourceDefinitionRequest::GetResourceDefinitionRequest()
@@ -53,13 +59,16 @@ GetResourceDefinitionRequest::GetResourceDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetResourceDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetResourceDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetwo
     return new GetResourceDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetResourceDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetwo
  * @brief  Private implementation for GetResourceDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourceDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourceDefinitionRequestPrivate object, copying another.

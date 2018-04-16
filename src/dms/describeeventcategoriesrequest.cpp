@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEventCategoriesRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEventCategoriesRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeEventCategories requests.
+ * \brief The DescribeEventCategoriesRequest class encapsulates DatabaseMigrationService DescribeEventCategories requests.
  *
- * @see    DatabaseMigrationServiceClient::describeEventCategories
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEventCategories
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventCategoriesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEve
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventCategoriesRequest object.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest()
@@ -53,13 +67,16 @@ DescribeEventCategoriesRequest::DescribeEventCategoriesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventCategoriesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventCategoriesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
     return new DescribeEventCategoriesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventCategoriesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
  * @brief  Private implementation for DescribeEventCategoriesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventCategoriesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventCategoriesRequestPrivate object, copying another.

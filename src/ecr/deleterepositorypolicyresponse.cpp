@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DeleteRepositoryPolicyResponse
+/*!
+ * \class QtAws::ECR::DeleteRepositoryPolicyResponse
  *
- * @brief  Handles ECR DeleteRepositoryPolicy responses.
+ * \brief The DeleteRepositoryPolicyResponse class encapsulates ECR DeleteRepositoryPolicy responses.
  *
- * @see    ECRClient::deleteRepositoryPolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::deleteRepositoryPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRepositoryPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteRepositoryPolicyRequest * DeleteRepositoryPolicyResponse::request() 
     return static_cast<const DeleteRepositoryPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR DeleteRepositoryPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteRepositoryPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRepositoryPolicyResponsePrivate
+ * \class DeleteRepositoryPolicyResponsePrivate
  *
- * @brief  Private implementation for DeleteRepositoryPolicyResponse.
+ * \brief Private implementation for DeleteRepositoryPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRepositoryPolicyResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR DeleteRepositoryPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

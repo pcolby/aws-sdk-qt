@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListHostedZonesRequest
+/*!
+ * \class QtAws::Route53::ListHostedZonesRequest
  *
- * @brief  Implements Route53 ListHostedZones requests.
+ * \brief The ListHostedZonesRequest class encapsulates Route53 ListHostedZones requests.
  *
- * @see    Route53Client::listHostedZones
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listHostedZones
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHostedZonesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListHostedZonesRequest::ListHostedZonesRequest(const ListHostedZonesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListHostedZonesRequest object.
  */
 ListHostedZonesRequest::ListHostedZonesRequest()
@@ -53,13 +56,16 @@ ListHostedZonesRequest::ListHostedZonesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListHostedZonesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListHostedZonesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListHostedZonesRequest::response(QNetworkRepl
     return new ListHostedZonesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListHostedZonesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListHostedZonesRequest::response(QNetworkRepl
  * @brief  Private implementation for ListHostedZonesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHostedZonesRequestPrivate object.
@@ -97,7 +103,7 @@ ListHostedZonesRequestPrivate::ListHostedZonesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHostedZonesRequestPrivate object, copying another.

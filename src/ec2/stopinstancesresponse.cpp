@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  StopInstancesResponse
+/*!
+ * \class QtAws::EC2::StopInstancesResponse
  *
- * @brief  Handles EC2 StopInstances responses.
+ * \brief The StopInstancesResponse class encapsulates EC2 StopInstances responses.
  *
- * @see    EC2Client::stopInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::stopInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new StopInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const StopInstancesRequest * StopInstancesResponse::request() const
     return static_cast<const StopInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 StopInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void StopInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopInstancesResponsePrivate
+ * \class StopInstancesResponsePrivate
  *
- * @brief  Private implementation for StopInstancesResponse.
+ * \brief Private implementation for StopInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ StopInstancesResponsePrivate::StopInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 StopInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

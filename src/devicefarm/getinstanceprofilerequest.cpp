@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetInstanceProfileRequest
+/*!
+ * \class QtAws::DeviceFarm::GetInstanceProfileRequest
  *
- * @brief  Implements DeviceFarm GetInstanceProfile requests.
+ * \brief The GetInstanceProfileRequest class encapsulates DeviceFarm GetInstanceProfile requests.
  *
- * @see    DeviceFarmClient::getInstanceProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetInstanceProfileRequest::GetInstanceProfileRequest(const GetInstanceProfileReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetInstanceProfileRequest object.
  */
 GetInstanceProfileRequest::GetInstanceProfileRequest()
@@ -53,13 +58,16 @@ GetInstanceProfileRequest::GetInstanceProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetInstanceProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetInstanceProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkR
     return new GetInstanceProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetInstanceProfileRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkR
  * @brief  Private implementation for GetInstanceProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstanceProfileRequestPrivate object.
@@ -97,7 +105,7 @@ GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstanceProfileRequestPrivate object, copying another.

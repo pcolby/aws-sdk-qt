@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CloneReceiptRuleSetRequest
+/*!
+ * \class QtAws::SES::CloneReceiptRuleSetRequest
  *
- * @brief  Implements SES CloneReceiptRuleSet requests.
+ * \brief The CloneReceiptRuleSetRequest class encapsulates SES CloneReceiptRuleSet requests.
  *
- * @see    SESClient::cloneReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::cloneReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CloneReceiptRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest(const CloneReceiptRuleSet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CloneReceiptRuleSetRequest object.
  */
 CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest()
@@ -53,13 +67,16 @@ CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CloneReceiptRuleSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CloneReceiptRuleSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetwork
     return new CloneReceiptRuleSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloneReceiptRuleSetRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetwork
  * @brief  Private implementation for CloneReceiptRuleSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloneReceiptRuleSetRequestPrivate object.
@@ -97,7 +114,7 @@ CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloneReceiptRuleSetRequestPrivate object, copying another.

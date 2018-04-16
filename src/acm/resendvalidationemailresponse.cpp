@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ResendValidationEmailResponse
+/*!
+ * \class QtAws::ACM::ResendValidationEmailResponse
  *
- * @brief  Handles ACM ResendValidationEmail responses.
+ * \brief The ResendValidationEmailResponse class encapsulates ACM ResendValidationEmail responses.
  *
- * @see    ACMClient::resendValidationEmail
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::resendValidationEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new ResendValidationEmailResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ResendValidationEmailRequest * ResendValidationEmailResponse::request() co
     return static_cast<const ResendValidationEmailRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM ResendValidationEmail response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResendValidationEmailResponsePrivate
+ * \class ResendValidationEmailResponsePrivate
  *
- * @brief  Private implementation for ResendValidationEmailResponse.
+ * \brief Private implementation for ResendValidationEmailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendValidationEmailResponsePrivate object.
@@ -91,7 +103,7 @@ ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM ResendValidationEmailResponse element.
  *
  * @param  xml  XML stream to parse.

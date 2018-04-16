@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::CreateProductResponse
  *
- * @brief  Handles ServiceCatalog CreateProduct responses.
+ * \brief The CreateProductResponse class encapsulates ServiceCatalog CreateProduct responses.
  *
- * @see    ServiceCatalogClient::createProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateProductRequest * CreateProductResponse::request() const
     return static_cast<const CreateProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog CreateProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateProductResponsePrivate
+ * \class CreateProductResponsePrivate
  *
- * @brief  Private implementation for CreateProductResponse.
+ * \brief Private implementation for CreateProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProductResponsePrivate object.
@@ -91,7 +100,7 @@ CreateProductResponsePrivate::CreateProductResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog CreateProductResponse element.
  *
  * @param  xml  XML stream to parse.

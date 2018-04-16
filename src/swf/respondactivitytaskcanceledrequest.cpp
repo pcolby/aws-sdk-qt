@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  RespondActivityTaskCanceledRequest
+/*!
+ * \class QtAws::SWF::RespondActivityTaskCanceledRequest
  *
- * @brief  Implements SWF RespondActivityTaskCanceled requests.
+ * \brief The RespondActivityTaskCanceledRequest class encapsulates SWF RespondActivityTaskCanceled requests.
  *
- * @see    SWFClient::respondActivityTaskCanceled
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::respondActivityTaskCanceled
  */
 
-/**
+/*!
  * @brief  Constructs a new RespondActivityTaskCanceledRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest(const Res
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RespondActivityTaskCanceledRequest object.
  */
 RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest()
@@ -53,13 +72,16 @@ RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RespondActivityTaskCanceledRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RespondActivityTaskCanceledResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
     return new RespondActivityTaskCanceledResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RespondActivityTaskCanceledRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
  * @brief  Private implementation for RespondActivityTaskCanceledRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RespondActivityTaskCanceledRequestPrivate object.
@@ -97,7 +119,7 @@ RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RespondActivityTaskCanceledRequestPrivate object, copying another.

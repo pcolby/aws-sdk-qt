@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeConnectionsResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeConnectionsResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeConnections responses.
+ * \brief The DescribeConnectionsResponse class encapsulates DatabaseMigrationService DescribeConnections responses.
  *
- * @see    DatabaseMigrationServiceClient::describeConnections
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConnectionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeConnectionsRequest * DescribeConnectionsResponse::request() const
     return static_cast<const DescribeConnectionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeConnections response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeConnectionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeConnectionsResponsePrivate
+ * \class DescribeConnectionsResponsePrivate
  *
- * @brief  Private implementation for DescribeConnectionsResponse.
+ * \brief Private implementation for DescribeConnectionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConnectionsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeConnectionsResponsePrivate::DescribeConnectionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeConnectionsResponse element.
  *
  * @param  xml  XML stream to parse.

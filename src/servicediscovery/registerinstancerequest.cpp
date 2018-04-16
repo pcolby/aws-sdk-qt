@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  RegisterInstanceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::RegisterInstanceRequest
  *
- * @brief  Implements ServiceDiscovery RegisterInstance requests.
+ * \brief The RegisterInstanceRequest class encapsulates ServiceDiscovery RegisterInstance requests.
  *
- * @see    ServiceDiscoveryClient::registerInstance
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::registerInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RegisterInstanceRequest::RegisterInstanceRequest(const RegisterInstanceRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterInstanceRequest object.
  */
 RegisterInstanceRequest::RegisterInstanceRequest()
@@ -53,13 +60,16 @@ RegisterInstanceRequest::RegisterInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkRep
     return new RegisterInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterInstanceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkRep
  * @brief  Private implementation for RegisterInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterInstanceRequestPrivate object.
@@ -97,7 +107,7 @@ RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterInstanceRequestPrivate object, copying another.

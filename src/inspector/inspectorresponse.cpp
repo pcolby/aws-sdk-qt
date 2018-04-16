@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  InspectorResponse
+/*!
+ * \class QtAws::Inspector::InspectorResponse
  *
- * @brief  Handles Inspector Inspector responses.
+ * \brief The InspectorResponse class is the base class for all Inspector responses.
  *
- * @see    InspectorClient::inspector
+ * \ingroup Inspector
  */
 
-/**
+/*!
  * @brief  Constructs a new InspectorResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ InspectorResponse::InspectorResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InspectorResponse object.
@@ -63,7 +63,7 @@ InspectorResponse::InspectorResponse(InspectorResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void InspectorResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InspectorResponsePrivate
@@ -92,7 +92,7 @@ void InspectorResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for InspectorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InspectorResponsePrivate object.

@@ -59,29 +59,37 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Snowball
+ * \brief The QtAws::Snowball contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  SnowballClient
+/*!
+ * \class QtAws::Snowball::SnowballClient
  *
- * @brief  Client for Amazon Import/Export Snowball
+ * \brief The SnowballClient class provides access the Amazon Import/Export Snowball service.
  *
- * AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
- * between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
- * here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
- * you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
- * Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
- * href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
  */
 
-/**
- * @brief  Constructs a new SnowballClient object.
+/*!
+ * \brief Constructs a SnowballClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SnowballClient::SnowballClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -100,21 +108,16 @@ SnowballClient::SnowballClient(
     d->serviceName = QStringLiteral("snowball");
 }
 
-/**
- * @brief  Constructs a new SnowballClient object.
+/*!
+ * \overload SnowballClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SnowballClient::SnowballClient(
     const QUrl &endpoint,
@@ -133,7 +136,7 @@ SnowballClient::SnowballClient(
     d->serviceName = QStringLiteral("snowball");
 }
 
-/**
+/*!
  * Cancels a cluster job. You can only cancel a cluster job while it's in the <code>AwaitingQuorum</code> status. You'll
  * have at least an hour after creating a cluster job to cancel
  *
@@ -148,7 +151,7 @@ CancelClusterResponse * SnowballClient::cancelCluster(const CancelClusterRequest
     return qobject_cast<CancelClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels the specified job. You can only cancel a job before its <code>JobState</code> value changes to
  * <code>PreparingAppliance</code>. Requesting the <code>ListJobs</code> or <code>DescribeJob</code> action will return a
  * job's <code>JobState</code> as part of the response element data
@@ -164,7 +167,7 @@ CancelJobResponse * SnowballClient::cancelJob(const CancelJobRequest &request)
     return qobject_cast<CancelJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an address for a Snowball to be shipped to. In most regions, addresses are validated at the time of creation.
  * The address you provide must be located within the serviceable area of your region. If the address is invalid or
  * unsupported, then an exception is
@@ -180,7 +183,7 @@ CreateAddressResponse * SnowballClient::createAddress(const CreateAddressRequest
     return qobject_cast<CreateAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an empty cluster. Each cluster supports five nodes. You use the <a>CreateJob</a> action separately to create the
  * jobs for each of these nodes. The cluster does not ship until these five node jobs have been
  *
@@ -195,7 +198,7 @@ CreateClusterResponse * SnowballClient::createCluster(const CreateClusterRequest
     return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your AWS account must have
  * the right trust policies and permissions in place to create a job for Snowball. If you're creating a job for a node in a
  * cluster, you only need to provide the <code>clusterId</code> value; the other job attributes are inherited from the
@@ -212,7 +215,7 @@ CreateJobResponse * SnowballClient::createJob(const CreateJobRequest &request)
     return qobject_cast<CreateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Takes an <code>AddressId</code> and returns specific details about that address in the form of an <code>Address</code>
  *
  * @param  request Request to send to Amazon Import/Export Snowball.
@@ -226,7 +229,7 @@ DescribeAddressResponse * SnowballClient::describeAddress(const DescribeAddressR
     return qobject_cast<DescribeAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a specified number of <code>ADDRESS</code> objects. Calling this API in one of the US regions will return
  * addresses from the list of all addresses associated with this account in all US
  *
@@ -241,7 +244,7 @@ DescribeAddressesResponse * SnowballClient::describeAddresses(const DescribeAddr
     return qobject_cast<DescribeAddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific cluster including shipping information, cluster status, and other important
  *
  * @param  request Request to send to Amazon Import/Export Snowball.
@@ -255,7 +258,7 @@ DescribeClusterResponse * SnowballClient::describeCluster(const DescribeClusterR
     return qobject_cast<DescribeClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific job including shipping information, job status, and other important metadata.
  *
  * @param  request Request to send to Amazon Import/Export Snowball.
@@ -269,7 +272,7 @@ DescribeJobResponse * SnowballClient::describeJob(const DescribeJobRequest &requ
     return qobject_cast<DescribeJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified <code>JobId</code>
  * value. You can access the manifest file for up to 60 minutes after this request has been made. To access the manifest
  * file after 60 minutes have passed, you'll have to make another call to the <code>GetJobManifest</code>
@@ -301,7 +304,7 @@ GetJobManifestResponse * SnowballClient::getJobManifest(const GetJobManifestRequ
     return qobject_cast<GetJobManifestResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <code>UnlockCode</code> code value for the specified job. A particular <code>UnlockCode</code> value can be
  * accessed for up to 90 days after the associated job has been
  *
@@ -328,7 +331,7 @@ GetJobUnlockCodeResponse * SnowballClient::getJobUnlockCode(const GetJobUnlockCo
     return qobject_cast<GetJobUnlockCodeResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the Snowball service limit for your account, and also the number of Snowballs your account has
  * in
  *
@@ -348,7 +351,7 @@ GetSnowballUsageResponse * SnowballClient::getSnowballUsage(const GetSnowballUsa
     return qobject_cast<GetSnowballUsageResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <code>JobListEntry</code> objects of the specified length. Each <code>JobListEntry</code> object is
  * for a job in the specified cluster and contains a job's state, a job's ID, and other
  *
@@ -363,7 +366,7 @@ ListClusterJobsResponse * SnowballClient::listClusterJobs(const ListClusterJobsR
     return qobject_cast<ListClusterJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <code>ClusterListEntry</code> objects of the specified length. Each <code>ClusterListEntry</code>
  * object contains a cluster's state, a cluster's ID, and other important status
  *
@@ -378,7 +381,7 @@ ListClustersResponse * SnowballClient::listClusters(const ListClustersRequest &r
     return qobject_cast<ListClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <code>JobListEntry</code> objects of the specified length. Each <code>JobListEntry</code> object
  * contains a job's state, a job's ID, and a value that indicates whether the job is a job part, in the case of export
  * jobs. Calling this API action in one of the US regions will return jobs from the list of all jobs associated with this
@@ -395,7 +398,7 @@ ListJobsResponse * SnowballClient::listJobs(const ListJobsRequest &request)
     return qobject_cast<ListJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * While a cluster's <code>ClusterState</code> value is in the <code>AwaitingQuorum</code> state, you can update some of
  * the information associated with a cluster. Once the cluster changes to a different job state, usually 60 minutes after
  * the cluster being created, this action is no longer
@@ -411,7 +414,7 @@ UpdateClusterResponse * SnowballClient::updateCluster(const UpdateClusterRequest
     return qobject_cast<UpdateClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * While a job's <code>JobState</code> value is <code>New</code>, you can update some of the information associated with a
  * job. Once the job changes to a different job state, usually within 60 minutes of the job being created, this action is
  * no longer
@@ -427,7 +430,7 @@ UpdateJobResponse * SnowballClient::updateJob(const UpdateJobRequest &request)
     return qobject_cast<UpdateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SnowballClientPrivate
@@ -435,7 +438,7 @@ UpdateJobResponse * SnowballClient::updateJob(const UpdateJobRequest &request)
  * @brief  Private implementation for SnowballClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SnowballClientPrivate object.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  CancelJobResponse
+/*!
+ * \class QtAws::MediaConvert::CancelJobResponse
  *
- * @brief  Handles MediaConvert CancelJob responses.
+ * \brief The CancelJobResponse class encapsulates MediaConvert CancelJob responses.
  *
- * @see    MediaConvertClient::cancelJob
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CancelJobRequest * CancelJobResponse::request() const
     return static_cast<const CancelJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert CancelJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelJobResponsePrivate
+ * \class CancelJobResponsePrivate
  *
- * @brief  Private implementation for CancelJobResponse.
+ * \brief Private implementation for CancelJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobResponsePrivate object.
@@ -91,7 +94,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert CancelJobResponse element.
  *
  * @param  xml  XML stream to parse.

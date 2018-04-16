@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  AssociateSkillGroupWithRoomResponse
+/*!
+ * \class QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomResponse
  *
- * @brief  Handles AlexaForBusiness AssociateSkillGroupWithRoom responses.
+ * \brief The AssociateSkillGroupWithRoomResponse class encapsulates AlexaForBusiness AssociateSkillGroupWithRoom responses.
  *
- * @see    AlexaForBusinessClient::associateSkillGroupWithRoom
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::associateSkillGroupWithRoom
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateSkillGroupWithRoomResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const AssociateSkillGroupWithRoomRequest * AssociateSkillGroupWithRoomResponse::
     return static_cast<const AssociateSkillGroupWithRoomRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness AssociateSkillGroupWithRoom response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void AssociateSkillGroupWithRoomResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateSkillGroupWithRoomResponsePrivate
+ * \class AssociateSkillGroupWithRoomResponsePrivate
  *
- * @brief  Private implementation for AssociateSkillGroupWithRoomResponse.
+ * \brief Private implementation for AssociateSkillGroupWithRoomResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateSkillGroupWithRoomResponsePrivate object.
@@ -91,7 +99,7 @@ AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness AssociateSkillGroupWithRoomResponse element.
  *
  * @param  xml  XML stream to parse.

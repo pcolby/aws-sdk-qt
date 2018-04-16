@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DescribeProtectionRequest
+/*!
+ * \class QtAws::Shield::DescribeProtectionRequest
  *
- * @brief  Implements Shield DescribeProtection requests.
+ * \brief The DescribeProtectionRequest class encapsulates Shield DescribeProtection requests.
  *
- * @see    ShieldClient::describeProtection
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::describeProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProtectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProtectionRequest::DescribeProtectionRequest(const DescribeProtectionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProtectionRequest object.
  */
 DescribeProtectionRequest::DescribeProtectionRequest()
@@ -53,13 +62,16 @@ DescribeProtectionRequest::DescribeProtectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProtectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProtectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkR
     return new DescribeProtectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProtectionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkR
  * @brief  Private implementation for DescribeProtectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProtectionRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProtectionRequestPrivate object, copying another.

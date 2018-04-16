@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketVersioningRequest
+/*!
+ * \class QtAws::S3::PutBucketVersioningRequest
  *
- * @brief  Implements S3 PutBucketVersioning requests.
+ * \brief The PutBucketVersioningRequest class encapsulates S3 PutBucketVersioning requests.
  *
- * @see    S3Client::putBucketVersioning
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketVersioning
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketVersioningRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketVersioningRequest::PutBucketVersioningRequest(const PutBucketVersioning
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketVersioningRequest object.
  */
 PutBucketVersioningRequest::PutBucketVersioningRequest()
@@ -53,13 +56,16 @@ PutBucketVersioningRequest::PutBucketVersioningRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketVersioningRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketVersioningResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketVersioningRequest::response(QNetwork
     return new PutBucketVersioningResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketVersioningRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketVersioningRequest::response(QNetwork
  * @brief  Private implementation for PutBucketVersioningRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketVersioningRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketVersioningRequestPrivate object, copying another.

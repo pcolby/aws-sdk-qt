@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetAdmChannelResponse
+/*!
+ * \class QtAws::Pinpoint::GetAdmChannelResponse
  *
- * @brief  Handles Pinpoint GetAdmChannel responses.
+ * \brief The GetAdmChannelResponse class encapsulates Pinpoint GetAdmChannel responses.
  *
- * @see    PinpointClient::getAdmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getAdmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAdmChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetAdmChannelRequest * GetAdmChannelResponse::request() const
     return static_cast<const GetAdmChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetAdmChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetAdmChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAdmChannelResponsePrivate
+ * \class GetAdmChannelResponsePrivate
  *
- * @brief  Private implementation for GetAdmChannelResponse.
+ * \brief Private implementation for GetAdmChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAdmChannelResponsePrivate object.
@@ -91,7 +94,7 @@ GetAdmChannelResponsePrivate::GetAdmChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetAdmChannelResponse element.
  *
  * @param  xml  XML stream to parse.

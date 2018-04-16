@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  StartSchemaCreationResponse
+/*!
+ * \class QtAws::AppSync::StartSchemaCreationResponse
  *
- * @brief  Handles AppSync StartSchemaCreation responses.
+ * \brief The StartSchemaCreationResponse class encapsulates AppSync StartSchemaCreation responses.
  *
- * @see    AppSyncClient::startSchemaCreation
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::startSchemaCreation
  */
 
-/**
+/*!
  * @brief  Constructs a new StartSchemaCreationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartSchemaCreationRequest * StartSchemaCreationResponse::request() const
     return static_cast<const StartSchemaCreationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync StartSchemaCreation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartSchemaCreationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartSchemaCreationResponsePrivate
+ * \class StartSchemaCreationResponsePrivate
  *
- * @brief  Private implementation for StartSchemaCreationResponse.
+ * \brief Private implementation for StartSchemaCreationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSchemaCreationResponsePrivate object.
@@ -91,7 +95,7 @@ StartSchemaCreationResponsePrivate::StartSchemaCreationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync StartSchemaCreationResponse element.
  *
  * @param  xml  XML stream to parse.

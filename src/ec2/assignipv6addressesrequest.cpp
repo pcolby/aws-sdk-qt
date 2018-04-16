@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssignIpv6AddressesRequest
+/*!
+ * \class QtAws::EC2::AssignIpv6AddressesRequest
  *
- * @brief  Implements EC2 AssignIpv6Addresses requests.
+ * \brief The AssignIpv6AddressesRequest class encapsulates EC2 AssignIpv6Addresses requests.
  *
- * @see    EC2Client::assignIpv6Addresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::assignIpv6Addresses
  */
 
-/**
+/*!
  * @brief  Constructs a new AssignIpv6AddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssignIpv6AddressesRequest::AssignIpv6AddressesRequest(const AssignIpv6Addresses
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssignIpv6AddressesRequest object.
  */
 AssignIpv6AddressesRequest::AssignIpv6AddressesRequest()
@@ -53,13 +60,16 @@ AssignIpv6AddressesRequest::AssignIpv6AddressesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssignIpv6AddressesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssignIpv6AddressesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetwork
     return new AssignIpv6AddressesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssignIpv6AddressesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetwork
  * @brief  Private implementation for AssignIpv6AddressesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssignIpv6AddressesRequestPrivate object.
@@ -97,7 +107,7 @@ AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssignIpv6AddressesRequestPrivate object, copying another.

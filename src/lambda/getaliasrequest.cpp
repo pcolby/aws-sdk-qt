@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetAliasRequest
+/*!
+ * \class QtAws::Lambda::GetAliasRequest
  *
- * @brief  Implements Lambda GetAlias requests.
+ * \brief The GetAliasRequest class encapsulates Lambda GetAlias requests.
  *
- * @see    LambdaClient::getAlias
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetAliasRequest::GetAliasRequest(const GetAliasRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAliasRequest object.
  */
 GetAliasRequest::GetAliasRequest()
@@ -53,13 +67,16 @@ GetAliasRequest::GetAliasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAliasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAliasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * con
     return new GetAliasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAliasRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetAliasRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetAliasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAliasRequestPrivate object.
@@ -97,7 +114,7 @@ GetAliasRequestPrivate::GetAliasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAliasRequestPrivate object, copying another.

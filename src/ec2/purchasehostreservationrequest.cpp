@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  PurchaseHostReservationRequest
+/*!
+ * \class QtAws::EC2::PurchaseHostReservationRequest
  *
- * @brief  Implements EC2 PurchaseHostReservation requests.
+ * \brief The PurchaseHostReservationRequest class encapsulates EC2 PurchaseHostReservation requests.
  *
- * @see    EC2Client::purchaseHostReservation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::purchaseHostReservation
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseHostReservationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PurchaseHostReservationRequest::PurchaseHostReservationRequest(const PurchaseHos
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PurchaseHostReservationRequest object.
  */
 PurchaseHostReservationRequest::PurchaseHostReservationRequest()
@@ -53,13 +60,16 @@ PurchaseHostReservationRequest::PurchaseHostReservationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PurchaseHostReservationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PurchaseHostReservationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNet
     return new PurchaseHostReservationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PurchaseHostReservationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNet
  * @brief  Private implementation for PurchaseHostReservationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseHostReservationRequestPrivate object.
@@ -97,7 +107,7 @@ PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseHostReservationRequestPrivate object, copying another.

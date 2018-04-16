@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  StopNotebookInstanceResponse
+/*!
+ * \class QtAws::SageMaker::StopNotebookInstanceResponse
  *
- * @brief  Handles SageMaker StopNotebookInstance responses.
+ * \brief The StopNotebookInstanceResponse class encapsulates SageMaker StopNotebookInstance responses.
  *
- * @see    SageMakerClient::stopNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::stopNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new StopNotebookInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StopNotebookInstanceRequest * StopNotebookInstanceResponse::request() cons
     return static_cast<const StopNotebookInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker StopNotebookInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StopNotebookInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopNotebookInstanceResponsePrivate
+ * \class StopNotebookInstanceResponsePrivate
  *
- * @brief  Private implementation for StopNotebookInstanceResponse.
+ * \brief Private implementation for StopNotebookInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopNotebookInstanceResponsePrivate object.
@@ -91,7 +94,7 @@ StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker StopNotebookInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

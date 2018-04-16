@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace Translate {
 
-/**
- * @class  TranslateRequest
+/*!
+ * \class QtAws::Translate::TranslateRequest
  *
- * @brief  Interface class for providing Translate requests
+ * \brief The TranslateRequest class is the base class for all Translate requests.
+ *
+ * \ingroup Translate
  */
 
-
-/**
+/*!
  * @brief  Constructs a new TranslateRequest object.
  *
  * @param  action  The Translate action to request.
@@ -41,7 +42,7 @@ TranslateRequest::TranslateRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TranslateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ TranslateRequest::TranslateRequest(const TranslateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ TranslateRequest& TranslateRequest::operator=(const TranslateRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateRequest object.
@@ -85,10 +86,8 @@ TranslateRequest::TranslateRequest(TranslateRequestPrivate * const d) : QtAws::C
 
 }
 
-/**
- * @brief  Get the Translate action to be performed by this request.
- *
- * @return The Translate action to be performed by this request.
+/*!
+ * \brief Returns the Translate action to be performed by this request.
  */
 TranslateRequest::Action TranslateRequest::action() const
 {
@@ -96,20 +95,16 @@ TranslateRequest::Action TranslateRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the Translate action to be performed by this request.
- *
- * @return The name of the Translate action to be performed by this request.
+/*!
+ * \brief Returns the name of the Translate action to be performed by this request.
  */
 QString TranslateRequest::actionString() const
 {
     return TranslateRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the Translate API version implemented by this request.
- *
- * @return The Translate API version implmented by this request.
+/*!
+ * \brief Returns the Translate API version implemented by this request.
  */
 QString TranslateRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString TranslateRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the Translate action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the Translate action to be performed by this request to \a action.
  */
 void TranslateRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void TranslateRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the Translate API version to include in this request.
- *
- * @param  version  The Translate API version to include in this request.
+/*!
+ * Set the Translate API version to include in this request to \a version.
  */
 void TranslateRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void TranslateRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool TranslateRequest::operator==(const TranslateRequest &other) const
 {
@@ -159,7 +146,7 @@ bool TranslateRequest::operator==(const TranslateRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid Translate queue name.
  *
  * @par From Translate FAQs:
@@ -178,12 +165,10 @@ bool TranslateRequest::operator==(const TranslateRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int TranslateRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int TranslateRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void TranslateRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void TranslateRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this Translate request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant TranslateRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant TranslateRequest::parameter(const QString &name, const QVariant &defaul
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this Translate request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &TranslateRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &TranslateRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this Translate request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void TranslateRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void TranslateRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this Translate request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void TranslateRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void TranslateRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this Translate request.
+/*!
+ * \brief Returns a network request for this Translate request using the given \a endpoint.
  *
  * This Translate implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this Translate request using the given \a endpoint.
  */
 QNetworkRequest TranslateRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest TranslateRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TranslateRequestPrivate
+ * \class  TranslateRequestPrivate
  *
- * @brief  Private implementation for TranslateRequest.
+ * \brief  Private implementation for TranslateRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new TranslateRequestPrivate object.
- *
- * @param  action  Translate action being performed by the \a q request.
- * @param  q       Pointer to this object's public TranslateRequest instance.
+ * \brief Constructs a new TranslateRequestPrivate object.
  */
 TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequest::Action action, TranslateRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequest::Action 
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new TranslateRequestPrivate object from an existing one.
+ * \brief Constructs a new TranslateRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the TranslateRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public TranslateRequest instance.
  */
 TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequestPrivate &other,
                                      TranslateRequest * const q)
@@ -312,14 +275,14 @@ TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequestPrivate &
 
 }
 
-/**
- * @brief  Convert and Translate action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts TranslateRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Translate service's Action
  * query parameters.
- *
- * @param  action  Translate action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

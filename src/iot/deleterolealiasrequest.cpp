@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteRoleAliasRequest
+/*!
+ * \class QtAws::IoT::DeleteRoleAliasRequest
  *
- * @brief  Implements IoT DeleteRoleAlias requests.
+ * \brief The DeleteRoleAliasRequest class encapsulates IoT DeleteRoleAlias requests.
  *
- * @see    IoTClient::deleteRoleAlias
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteRoleAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoleAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteRoleAliasRequest::DeleteRoleAliasRequest(const DeleteRoleAliasRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoleAliasRequest object.
  */
 DeleteRoleAliasRequest::DeleteRoleAliasRequest()
@@ -53,13 +67,16 @@ DeleteRoleAliasRequest::DeleteRoleAliasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRoleAliasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRoleAliasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkRepl
     return new DeleteRoleAliasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRoleAliasRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteRoleAliasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoleAliasRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoleAliasRequestPrivate object, copying another.

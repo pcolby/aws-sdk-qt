@@ -45,25 +45,33 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MediaStore
+ * \brief The QtAws::MediaStore contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  MediaStoreClient
+/*!
+ * \class QtAws::MediaStore::MediaStoreClient
  *
- * @brief  Client for AWS Elemental MediaStore
+ * \brief The MediaStoreClient class provides access the AWS Elemental MediaStore service.
  *
- * An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
- * create, read, and delete objects.
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
  */
 
-/**
- * @brief  Constructs a new MediaStoreClient object.
+/*!
+ * \brief Constructs a MediaStoreClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MediaStoreClient::MediaStoreClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -82,21 +90,16 @@ MediaStoreClient::MediaStoreClient(
     d->serviceName = QStringLiteral("mediastore");
 }
 
-/**
- * @brief  Constructs a new MediaStoreClient object.
+/*!
+ * \overload MediaStoreClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MediaStoreClient::MediaStoreClient(
     const QUrl &endpoint,
@@ -115,7 +118,7 @@ MediaStoreClient::MediaStoreClient(
     d->serviceName = QStringLiteral("mediastore");
 }
 
-/**
+/*!
  * Creates a storage container to hold objects. A container is similar to a bucket in the Amazon S3
  *
  * @param  request Request to send to AWS Elemental MediaStore.
@@ -129,7 +132,7 @@ CreateContainerResponse * MediaStoreClient::createContainer(const CreateContaine
     return qobject_cast<CreateContainerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified container. Before you make a <code>DeleteContainer</code> request, delete any objects in the
  * container or in any folders in the container. You can delete only empty containers.
  *
@@ -144,7 +147,7 @@ DeleteContainerResponse * MediaStoreClient::deleteContainer(const DeleteContaine
     return qobject_cast<DeleteContainerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the access policy that is associated with the specified
  *
  * @param  request Request to send to AWS Elemental MediaStore.
@@ -158,7 +161,7 @@ DeleteContainerPolicyResponse * MediaStoreClient::deleteContainerPolicy(const De
     return qobject_cast<DeleteContainerPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the cross-origin resource sharing (CORS) configuration information that is set for the
  *
  * container>
@@ -177,7 +180,7 @@ DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPo
     return qobject_cast<DeleteCorsPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the properties of the requested container. This request is commonly used to retrieve the endpoint of a
  * container. An endpoint is a value assigned by the service when a new container is created. A container's endpoint does
  * not change after it has been assigned. The <code>DescribeContainer</code> request returns a single
@@ -195,7 +198,7 @@ DescribeContainerResponse * MediaStoreClient::describeContainer(const DescribeCo
     return qobject_cast<DescribeContainerResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the access policy for the specified container. For information about the data that is included in an access
  * policy, see the <a href="https://aws.amazon.com/documentation/iam/">AWS Identity and Access Management User
  *
@@ -210,7 +213,7 @@ GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetConta
     return qobject_cast<GetContainerPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the cross-origin resource sharing (CORS) configuration information that is set for the
  *
  * container>
@@ -229,7 +232,7 @@ GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyReque
     return qobject_cast<GetCorsPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the properties of all containers in AWS Elemental MediaStore.
  *
  * </p
@@ -254,7 +257,7 @@ ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRe
     return qobject_cast<ListContainersResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an access policy for the specified container to restrict the users and clients that can access it. For
  * information about the data that is included in an access policy, see the <a
  * href="https://aws.amazon.com/documentation/iam/">AWS Identity and Access Management User
@@ -275,7 +278,7 @@ PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutConta
     return qobject_cast<PutContainerPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the cross-origin resource sharing (CORS) configuration on a container so that the container can service
  * cross-origin requests. For example, you might want to enable a request whose origin is http://www.example.com to access
  * your AWS Elemental MediaStore container at my.example.container.com by using the browser's XMLHttpRequest
@@ -298,7 +301,7 @@ PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyReque
     return qobject_cast<PutCorsPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaStoreClientPrivate
@@ -306,7 +309,7 @@ PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyReque
  * @brief  Private implementation for MediaStoreClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaStoreClientPrivate object.

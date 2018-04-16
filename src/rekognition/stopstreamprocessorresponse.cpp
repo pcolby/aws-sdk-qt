@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StopStreamProcessorResponse
+/*!
+ * \class QtAws::Rekognition::StopStreamProcessorResponse
  *
- * @brief  Handles Rekognition StopStreamProcessor responses.
+ * \brief The StopStreamProcessorResponse class encapsulates Rekognition StopStreamProcessor responses.
  *
- * @see    RekognitionClient::stopStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::stopStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new StopStreamProcessorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StopStreamProcessorRequest * StopStreamProcessorResponse::request() const
     return static_cast<const StopStreamProcessorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition StopStreamProcessor response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StopStreamProcessorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopStreamProcessorResponsePrivate
+ * \class StopStreamProcessorResponsePrivate
  *
- * @brief  Private implementation for StopStreamProcessorResponse.
+ * \brief Private implementation for StopStreamProcessorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopStreamProcessorResponsePrivate object.
@@ -91,7 +95,7 @@ StopStreamProcessorResponsePrivate::StopStreamProcessorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition StopStreamProcessorResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateGroup requests.
+ * \brief The UpdateGroupRequest class encapsulates CognitoIdentityProvider UpdateGroup requests.
  *
- * @see    CognitoIdentityProviderClient::updateGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupRequest object.
  */
 UpdateGroupRequest::UpdateGroupRequest()
@@ -53,13 +66,16 @@ UpdateGroupRequest::UpdateGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
     return new UpdateGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupRequestPrivate object, copying another.

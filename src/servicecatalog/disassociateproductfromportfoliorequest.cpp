@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DisassociateProductFromPortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::DisassociateProductFromPortfolioRequest
  *
- * @brief  Implements ServiceCatalog DisassociateProductFromPortfolio requests.
+ * \brief The DisassociateProductFromPortfolioRequest class encapsulates ServiceCatalog DisassociateProductFromPortfolio requests.
  *
- * @see    ServiceCatalogClient::disassociateProductFromPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::disassociateProductFromPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateProductFromPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateProductFromPortfolioRequest object.
  */
 DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest()
@@ -53,13 +62,16 @@ DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateProductFromPortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateProductFromPortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateProductFromPortfolioRequest::resp
     return new DisassociateProductFromPortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateProductFromPortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateProductFromPortfolioRequest::resp
  * @brief  Private implementation for DisassociateProductFromPortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateProductFromPortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolio
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateProductFromPortfolioRequestPrivate object, copying another.

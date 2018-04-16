@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListTrafficPoliciesResponse
+/*!
+ * \class QtAws::Route53::ListTrafficPoliciesResponse
  *
- * @brief  Handles Route53 ListTrafficPolicies responses.
+ * \brief The ListTrafficPoliciesResponse class encapsulates Route53 ListTrafficPolicies responses.
  *
- * @see    Route53Client::listTrafficPolicies
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listTrafficPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListTrafficPoliciesRequest * ListTrafficPoliciesResponse::request() const
     return static_cast<const ListTrafficPoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ListTrafficPolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListTrafficPoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTrafficPoliciesResponsePrivate
+ * \class ListTrafficPoliciesResponsePrivate
  *
- * @brief  Private implementation for ListTrafficPoliciesResponse.
+ * \brief Private implementation for ListTrafficPoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPoliciesResponsePrivate object.
@@ -91,7 +94,7 @@ ListTrafficPoliciesResponsePrivate::ListTrafficPoliciesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ListTrafficPoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

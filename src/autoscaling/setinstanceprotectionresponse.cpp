@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SetInstanceProtectionResponse
+/*!
+ * \class QtAws::AutoScaling::SetInstanceProtectionResponse
  *
- * @brief  Handles AutoScaling SetInstanceProtection responses.
+ * \brief The SetInstanceProtectionResponse class encapsulates AutoScaling SetInstanceProtection responses.
  *
- * @see    AutoScalingClient::setInstanceProtection
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::setInstanceProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new SetInstanceProtectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SetInstanceProtectionRequest * SetInstanceProtectionResponse::request() co
     return static_cast<const SetInstanceProtectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling SetInstanceProtection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SetInstanceProtectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetInstanceProtectionResponsePrivate
+ * \class SetInstanceProtectionResponsePrivate
  *
- * @brief  Private implementation for SetInstanceProtectionResponse.
+ * \brief Private implementation for SetInstanceProtectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetInstanceProtectionResponsePrivate object.
@@ -91,7 +99,7 @@ SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling SetInstanceProtectionResponse element.
  *
  * @param  xml  XML stream to parse.

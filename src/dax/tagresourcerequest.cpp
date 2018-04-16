@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  TagResourceRequest
+/*!
+ * \class QtAws::DAX::TagResourceRequest
  *
- * @brief  Implements DAX TagResource requests.
+ * \brief The TagResourceRequest class encapsulates DAX TagResource requests.
  *
- * @see    DAXClient::tagResource
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
@@ -53,13 +60,16 @@ TagResourceRequest::TagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
     return new TagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TagResourceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  * @brief  Private implementation for TagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object.
@@ -97,7 +107,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object, copying another.

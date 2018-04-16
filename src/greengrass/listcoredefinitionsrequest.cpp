@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListCoreDefinitionsRequest
+/*!
+ * \class QtAws::Greengrass::ListCoreDefinitionsRequest
  *
- * @brief  Implements Greengrass ListCoreDefinitions requests.
+ * \brief The ListCoreDefinitionsRequest class encapsulates Greengrass ListCoreDefinitions requests.
  *
- * @see    GreengrassClient::listCoreDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listCoreDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCoreDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListCoreDefinitionsRequest::ListCoreDefinitionsRequest(const ListCoreDefinitions
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListCoreDefinitionsRequest object.
  */
 ListCoreDefinitionsRequest::ListCoreDefinitionsRequest()
@@ -53,13 +59,16 @@ ListCoreDefinitionsRequest::ListCoreDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListCoreDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListCoreDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListCoreDefinitionsRequest::response(QNetwork
     return new ListCoreDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListCoreDefinitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListCoreDefinitionsRequest::response(QNetwork
  * @brief  Private implementation for ListCoreDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCoreDefinitionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListCoreDefinitionsRequestPrivate::ListCoreDefinitionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCoreDefinitionsRequestPrivate object, copying another.

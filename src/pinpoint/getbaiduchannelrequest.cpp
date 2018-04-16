@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetBaiduChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetBaiduChannelRequest
  *
- * @brief  Implements Pinpoint GetBaiduChannel requests.
+ * \brief The GetBaiduChannelRequest class encapsulates Pinpoint GetBaiduChannel requests.
  *
- * @see    PinpointClient::getBaiduChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getBaiduChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBaiduChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBaiduChannelRequest::GetBaiduChannelRequest(const GetBaiduChannelRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBaiduChannelRequest object.
  */
 GetBaiduChannelRequest::GetBaiduChannelRequest()
@@ -53,13 +56,16 @@ GetBaiduChannelRequest::GetBaiduChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBaiduChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBaiduChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBaiduChannelRequest::response(QNetworkRepl
     return new GetBaiduChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBaiduChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBaiduChannelRequest::response(QNetworkRepl
  * @brief  Private implementation for GetBaiduChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBaiduChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBaiduChannelRequestPrivate object, copying another.

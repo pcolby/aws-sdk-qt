@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  BatchGetQueryExecutionRequest
+/*!
+ * \class QtAws::Athena::BatchGetQueryExecutionRequest
  *
- * @brief  Implements Athena BatchGetQueryExecution requests.
+ * \brief The BatchGetQueryExecutionRequest class encapsulates Athena BatchGetQueryExecution requests.
  *
- * @see    AthenaClient::batchGetQueryExecution
+ * \ingroup Athena
+ *
+ *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
+ *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
+ *  there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
+ *  automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
+ *  information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
+ *  <i>Amazon Athena User
+ * 
+ *  Guide</i>>
+ * 
+ *  For code samples using the AWS SDK for Java, see <a
+ *  href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
+ *  Athena User
+ *
+ * \sa AthenaClient::batchGetQueryExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetQueryExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ BatchGetQueryExecutionRequest::BatchGetQueryExecutionRequest(const BatchGetQuery
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchGetQueryExecutionRequest object.
  */
 BatchGetQueryExecutionRequest::BatchGetQueryExecutionRequest()
@@ -53,13 +68,16 @@ BatchGetQueryExecutionRequest::BatchGetQueryExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchGetQueryExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchGetQueryExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetw
     return new BatchGetQueryExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchGetQueryExecutionRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetQueryExecutionRequest::response(QNetw
  * @brief  Private implementation for BatchGetQueryExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetQueryExecutionRequestPrivate object.
@@ -97,7 +115,7 @@ BatchGetQueryExecutionRequestPrivate::BatchGetQueryExecutionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetQueryExecutionRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetUserMFAPreferenceResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceResponse
  *
- * @brief  Handles CognitoIdentityProvider SetUserMFAPreference responses.
+ * \brief The SetUserMFAPreferenceResponse class encapsulates CognitoIdentityProvider SetUserMFAPreference responses.
  *
- * @see    CognitoIdentityProviderClient::setUserMFAPreference
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setUserMFAPreference
  */
 
-/**
+/*!
  * @brief  Constructs a new SetUserMFAPreferenceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const SetUserMFAPreferenceRequest * SetUserMFAPreferenceResponse::request() cons
     return static_cast<const SetUserMFAPreferenceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider SetUserMFAPreference response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void SetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetUserMFAPreferenceResponsePrivate
+ * \class SetUserMFAPreferenceResponsePrivate
  *
- * @brief  Private implementation for SetUserMFAPreferenceResponse.
+ * \brief Private implementation for SetUserMFAPreferenceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserMFAPreferenceResponsePrivate object.
@@ -91,7 +104,7 @@ SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider SetUserMFAPreferenceResponse element.
  *
  * @param  xml  XML stream to parse.

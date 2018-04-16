@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateConfigurationSetTrackingOptionsRequest
+/*!
+ * \class QtAws::SES::UpdateConfigurationSetTrackingOptionsRequest
  *
- * @brief  Implements SES UpdateConfigurationSetTrackingOptions requests.
+ * \brief The UpdateConfigurationSetTrackingOptionsRequest class encapsulates SES UpdateConfigurationSetTrackingOptions requests.
  *
- * @see    SESClient::updateConfigurationSetTrackingOptions
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateConfigurationSetTrackingOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateConfigurationSetTrackingOptionsRequest::UpdateConfigurationSetTrackingOpti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsRequest object.
  */
 UpdateConfigurationSetTrackingOptionsRequest::UpdateConfigurationSetTrackingOptionsRequest()
@@ -53,13 +67,16 @@ UpdateConfigurationSetTrackingOptionsRequest::UpdateConfigurationSetTrackingOpti
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateConfigurationSetTrackingOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateConfigurationSetTrackingOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetTrackingOptionsRequest:
     return new UpdateConfigurationSetTrackingOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateConfigurationSetTrackingOptionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetTrackingOptionsRequest:
  * @brief  Private implementation for UpdateConfigurationSetTrackingOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateConfigurationSetTrackingOptionsRequestPrivate::UpdateConfigurationSetTrack
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsRequestPrivate object, copying another.

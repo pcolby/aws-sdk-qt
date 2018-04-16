@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  AddTagsToStreamRequest
+/*!
+ * \class QtAws::Kinesis::AddTagsToStreamRequest
  *
- * @brief  Implements Kinesis AddTagsToStream requests.
+ * \brief The AddTagsToStreamRequest class encapsulates Kinesis AddTagsToStream requests.
  *
- * @see    KinesisClient::addTagsToStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::addTagsToStream
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AddTagsToStreamRequest::AddTagsToStreamRequest(const AddTagsToStreamRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToStreamRequest object.
  */
 AddTagsToStreamRequest::AddTagsToStreamRequest()
@@ -53,13 +59,16 @@ AddTagsToStreamRequest::AddTagsToStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsToStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsToStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkRepl
     return new AddTagsToStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsToStreamRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkRepl
  * @brief  Private implementation for AddTagsToStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToStreamRequestPrivate object.
@@ -97,7 +106,7 @@ AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToStreamRequestPrivate object, copying another.

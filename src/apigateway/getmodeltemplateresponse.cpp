@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetModelTemplateResponse
+/*!
+ * \class QtAws::APIGateway::GetModelTemplateResponse
  *
- * @brief  Handles APIGateway GetModelTemplate responses.
+ * \brief The GetModelTemplateResponse class encapsulates APIGateway GetModelTemplate responses.
  *
- * @see    APIGatewayClient::getModelTemplate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getModelTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetModelTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetModelTemplateRequest * GetModelTemplateResponse::request() const
     return static_cast<const GetModelTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetModelTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetModelTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetModelTemplateResponsePrivate
+ * \class GetModelTemplateResponsePrivate
  *
- * @brief  Private implementation for GetModelTemplateResponse.
+ * \brief Private implementation for GetModelTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetModelTemplateResponsePrivate object.
@@ -91,7 +99,7 @@ GetModelTemplateResponsePrivate::GetModelTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetModelTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

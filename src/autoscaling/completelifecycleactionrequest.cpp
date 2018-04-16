@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CompleteLifecycleActionRequest
+/*!
+ * \class QtAws::AutoScaling::CompleteLifecycleActionRequest
  *
- * @brief  Implements AutoScaling CompleteLifecycleAction requests.
+ * \brief The CompleteLifecycleActionRequest class encapsulates AutoScaling CompleteLifecycleAction requests.
  *
- * @see    AutoScalingClient::completeLifecycleAction
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::completeLifecycleAction
  */
 
-/**
+/*!
  * @brief  Constructs a new CompleteLifecycleActionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CompleteLifecycleActionRequest::CompleteLifecycleActionRequest(const CompleteLif
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CompleteLifecycleActionRequest object.
  */
 CompleteLifecycleActionRequest::CompleteLifecycleActionRequest()
@@ -53,13 +61,16 @@ CompleteLifecycleActionRequest::CompleteLifecycleActionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CompleteLifecycleActionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CompleteLifecycleActionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CompleteLifecycleActionRequest::response(QNet
     return new CompleteLifecycleActionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CompleteLifecycleActionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CompleteLifecycleActionRequest::response(QNet
  * @brief  Private implementation for CompleteLifecycleActionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteLifecycleActionRequestPrivate object.
@@ -97,7 +108,7 @@ CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteLifecycleActionRequestPrivate object, copying another.

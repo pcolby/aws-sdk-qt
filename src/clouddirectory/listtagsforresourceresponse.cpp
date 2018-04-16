@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListTagsForResourceResponse
+/*!
+ * \class QtAws::CloudDirectory::ListTagsForResourceResponse
  *
- * @brief  Handles CloudDirectory ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class encapsulates CloudDirectory ListTagsForResource responses.
  *
- * @see    CloudDirectoryClient::listTagsForResource
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
     return static_cast<const ListTagsForResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListTagsForResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForResourceResponsePrivate
+ * \class ListTagsForResourceResponsePrivate
  *
- * @brief  Private implementation for ListTagsForResourceResponse.
+ * \brief Private implementation for ListTagsForResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
@@ -91,7 +101,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListTagsForResourceResponse element.
  *
  * @param  xml  XML stream to parse.

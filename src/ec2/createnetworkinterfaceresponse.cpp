@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateNetworkInterfaceResponse
+/*!
+ * \class QtAws::EC2::CreateNetworkInterfaceResponse
  *
- * @brief  Handles EC2 CreateNetworkInterface responses.
+ * \brief The CreateNetworkInterfaceResponse class encapsulates EC2 CreateNetworkInterface responses.
  *
- * @see    EC2Client::createNetworkInterface
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createNetworkInterface
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkInterfaceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateNetworkInterfaceRequest * CreateNetworkInterfaceResponse::request() 
     return static_cast<const CreateNetworkInterfaceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateNetworkInterface response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateNetworkInterfaceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateNetworkInterfaceResponsePrivate
+ * \class CreateNetworkInterfaceResponsePrivate
  *
- * @brief  Private implementation for CreateNetworkInterfaceResponse.
+ * \brief Private implementation for CreateNetworkInterfaceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkInterfaceResponsePrivate object.
@@ -91,7 +98,7 @@ CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateNetworkInterfaceResponse element.
  *
  * @param  xml  XML stream to parse.

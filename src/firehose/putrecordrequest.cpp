@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  PutRecordRequest
+/*!
+ * \class QtAws::Firehose::PutRecordRequest
  *
- * @brief  Implements Firehose PutRecord requests.
+ * \brief The PutRecordRequest class encapsulates Firehose PutRecord requests.
  *
- * @see    FirehoseClient::putRecord
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::putRecord
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRecordRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PutRecordRequest::PutRecordRequest(const PutRecordRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutRecordRequest object.
  */
 PutRecordRequest::PutRecordRequest()
@@ -53,13 +60,16 @@ PutRecordRequest::PutRecordRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutRecordRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutRecordResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * co
     return new PutRecordResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutRecordRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * co
  * @brief  Private implementation for PutRecordRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordRequestPrivate object.
@@ -97,7 +107,7 @@ PutRecordRequestPrivate::PutRecordRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordRequestPrivate object, copying another.

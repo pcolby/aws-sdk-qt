@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  PutLifecyclePolicyRequest
+/*!
+ * \class QtAws::ECR::PutLifecyclePolicyRequest
  *
- * @brief  Implements ECR PutLifecyclePolicy requests.
+ * \brief The PutLifecyclePolicyRequest class encapsulates ECR PutLifecyclePolicy requests.
  *
- * @see    ECRClient::putLifecyclePolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::putLifecyclePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutLifecyclePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PutLifecyclePolicyRequest::PutLifecyclePolicyRequest(const PutLifecyclePolicyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutLifecyclePolicyRequest object.
  */
 PutLifecyclePolicyRequest::PutLifecyclePolicyRequest()
@@ -53,13 +60,16 @@ PutLifecyclePolicyRequest::PutLifecyclePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutLifecyclePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutLifecyclePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkR
     return new PutLifecyclePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutLifecyclePolicyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkR
  * @brief  Private implementation for PutLifecyclePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutLifecyclePolicyRequestPrivate object.
@@ -97,7 +107,7 @@ PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutLifecyclePolicyRequestPrivate object, copying another.

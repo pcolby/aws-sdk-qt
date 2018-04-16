@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ACMPCA {
 
-/**
- * @class  ACMPCAResponse
+/*!
+ * \class QtAws::ACMPCA::ACMPCAResponse
  *
- * @brief  Handles ACMPCA ACMPCA responses.
+ * \brief The ACMPCAResponse class is the base class for all ACMPCA responses.
  *
- * @see    ACMPCAClient::aCMPCA
+ * \ingroup ACMPCA
  */
 
-/**
+/*!
  * @brief  Constructs a new ACMPCAResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ACMPCAResponse::ACMPCAResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ACMPCAResponse object.
@@ -63,7 +63,7 @@ ACMPCAResponse::ACMPCAResponse(ACMPCAResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ACMPCAResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ACMPCAResponsePrivate
@@ -92,7 +92,7 @@ void ACMPCAResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ACMPCAResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ACMPCAResponsePrivate object.

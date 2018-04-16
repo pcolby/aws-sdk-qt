@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  BatchGetTracesResponse
+/*!
+ * \class QtAws::XRay::BatchGetTracesResponse
  *
- * @brief  Handles XRay BatchGetTraces responses.
+ * \brief The BatchGetTracesResponse class encapsulates XRay BatchGetTraces responses.
  *
- * @see    XRayClient::batchGetTraces
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::batchGetTraces
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetTracesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const BatchGetTracesRequest * BatchGetTracesResponse::request() const
     return static_cast<const BatchGetTracesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a XRay BatchGetTraces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void BatchGetTracesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchGetTracesResponsePrivate
+ * \class BatchGetTracesResponsePrivate
  *
- * @brief  Private implementation for BatchGetTracesResponse.
+ * \brief Private implementation for BatchGetTracesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetTracesResponsePrivate object.
@@ -91,7 +95,7 @@ BatchGetTracesResponsePrivate::BatchGetTracesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an XRay BatchGetTracesResponse element.
  *
  * @param  xml  XML stream to parse.

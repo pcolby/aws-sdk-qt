@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DescribeStreamProcessorRequest
+/*!
+ * \class QtAws::Rekognition::DescribeStreamProcessorRequest
  *
- * @brief  Implements Rekognition DescribeStreamProcessor requests.
+ * \brief The DescribeStreamProcessorRequest class encapsulates Rekognition DescribeStreamProcessor requests.
  *
- * @see    RekognitionClient::describeStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::describeStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamProcessorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DescribeStreamProcessorRequest::DescribeStreamProcessorRequest(const DescribeStr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamProcessorRequest object.
  */
 DescribeStreamProcessorRequest::DescribeStreamProcessorRequest()
@@ -53,13 +57,16 @@ DescribeStreamProcessorRequest::DescribeStreamProcessorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStreamProcessorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStreamProcessorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamProcessorRequest::response(QNet
     return new DescribeStreamProcessorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStreamProcessorRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamProcessorRequest::response(QNet
  * @brief  Private implementation for DescribeStreamProcessorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamProcessorRequestPrivate object.
@@ -97,7 +104,7 @@ DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamProcessorRequestPrivate object, copying another.

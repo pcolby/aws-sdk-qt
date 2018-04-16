@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  CreateFunctionResponse
+/*!
+ * \class QtAws::Lambda::CreateFunctionResponse
  *
- * @brief  Handles Lambda CreateFunction responses.
+ * \brief The CreateFunctionResponse class encapsulates Lambda CreateFunction responses.
  *
- * @see    LambdaClient::createFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::createFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateFunctionRequest * CreateFunctionResponse::request() const
     return static_cast<const CreateFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda CreateFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateFunctionResponsePrivate
+ * \class CreateFunctionResponsePrivate
  *
- * @brief  Private implementation for CreateFunctionResponse.
+ * \brief Private implementation for CreateFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionResponsePrivate object.
@@ -91,7 +105,7 @@ CreateFunctionResponsePrivate::CreateFunctionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda CreateFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

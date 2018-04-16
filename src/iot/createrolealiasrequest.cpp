@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateRoleAliasRequest
+/*!
+ * \class QtAws::IoT::CreateRoleAliasRequest
  *
- * @brief  Implements IoT CreateRoleAlias requests.
+ * \brief The CreateRoleAliasRequest class encapsulates IoT CreateRoleAlias requests.
  *
- * @see    IoTClient::createRoleAlias
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createRoleAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRoleAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateRoleAliasRequest::CreateRoleAliasRequest(const CreateRoleAliasRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRoleAliasRequest object.
  */
 CreateRoleAliasRequest::CreateRoleAliasRequest()
@@ -53,13 +67,16 @@ CreateRoleAliasRequest::CreateRoleAliasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRoleAliasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRoleAliasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkRepl
     return new CreateRoleAliasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRoleAliasRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateRoleAliasRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateRoleAliasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRoleAliasRequestPrivate object.
@@ -97,7 +114,7 @@ CreateRoleAliasRequestPrivate::CreateRoleAliasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRoleAliasRequestPrivate object, copying another.

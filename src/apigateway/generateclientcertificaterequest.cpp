@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GenerateClientCertificateRequest
+/*!
+ * \class QtAws::APIGateway::GenerateClientCertificateRequest
  *
- * @brief  Implements APIGateway GenerateClientCertificate requests.
+ * \brief The GenerateClientCertificateRequest class encapsulates APIGateway GenerateClientCertificate requests.
  *
- * @see    APIGatewayClient::generateClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::generateClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new GenerateClientCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GenerateClientCertificateRequest::GenerateClientCertificateRequest(const Generat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GenerateClientCertificateRequest object.
  */
 GenerateClientCertificateRequest::GenerateClientCertificateRequest()
@@ -53,13 +61,16 @@ GenerateClientCertificateRequest::GenerateClientCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GenerateClientCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GenerateClientCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GenerateClientCertificateRequest::response(QN
     return new GenerateClientCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GenerateClientCertificateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GenerateClientCertificateRequest::response(QN
  * @brief  Private implementation for GenerateClientCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GenerateClientCertificateRequestPrivate object.
@@ -97,7 +108,7 @@ GenerateClientCertificateRequestPrivate::GenerateClientCertificateRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GenerateClientCertificateRequestPrivate object, copying another.

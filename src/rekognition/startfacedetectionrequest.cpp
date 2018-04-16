@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartFaceDetectionRequest
+/*!
+ * \class QtAws::Rekognition::StartFaceDetectionRequest
  *
- * @brief  Implements Rekognition StartFaceDetection requests.
+ * \brief The StartFaceDetectionRequest class encapsulates Rekognition StartFaceDetection requests.
  *
- * @see    RekognitionClient::startFaceDetection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startFaceDetection
  */
 
-/**
+/*!
  * @brief  Constructs a new StartFaceDetectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ StartFaceDetectionRequest::StartFaceDetectionRequest(const StartFaceDetectionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartFaceDetectionRequest object.
  */
 StartFaceDetectionRequest::StartFaceDetectionRequest()
@@ -53,13 +57,16 @@ StartFaceDetectionRequest::StartFaceDetectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartFaceDetectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartFaceDetectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkR
     return new StartFaceDetectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartFaceDetectionRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkR
  * @brief  Private implementation for StartFaceDetectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartFaceDetectionRequestPrivate object.
@@ -97,7 +104,7 @@ StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartFaceDetectionRequestPrivate object, copying another.

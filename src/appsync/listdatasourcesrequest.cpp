@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListDataSourcesRequest
+/*!
+ * \class QtAws::AppSync::ListDataSourcesRequest
  *
- * @brief  Implements AppSync ListDataSources requests.
+ * \brief The ListDataSourcesRequest class encapsulates AppSync ListDataSources requests.
  *
- * @see    AppSyncClient::listDataSources
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listDataSources
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDataSourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListDataSourcesRequest::ListDataSourcesRequest(const ListDataSourcesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDataSourcesRequest object.
  */
 ListDataSourcesRequest::ListDataSourcesRequest()
@@ -53,13 +57,16 @@ ListDataSourcesRequest::ListDataSourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDataSourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDataSourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListDataSourcesRequest::response(QNetworkRepl
     return new ListDataSourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDataSourcesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListDataSourcesRequest::response(QNetworkRepl
  * @brief  Private implementation for ListDataSourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDataSourcesRequestPrivate object.
@@ -97,7 +104,7 @@ ListDataSourcesRequestPrivate::ListDataSourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDataSourcesRequestPrivate object, copying another.

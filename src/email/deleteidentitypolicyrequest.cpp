@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteIdentityPolicyRequest
+/*!
+ * \class QtAws::SES::DeleteIdentityPolicyRequest
  *
- * @brief  Implements SES DeleteIdentityPolicy requests.
+ * \brief The DeleteIdentityPolicyRequest class encapsulates SES DeleteIdentityPolicy requests.
  *
- * @see    SESClient::deleteIdentityPolicy
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteIdentityPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest(const DeleteIdentityPol
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityPolicyRequest object.
  */
 DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest()
@@ -53,13 +67,16 @@ DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIdentityPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIdentityPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
     return new DeleteIdentityPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIdentityPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
  * @brief  Private implementation for DeleteIdentityPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityPolicyRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteBasePathMappingResponse
+/*!
+ * \class QtAws::APIGateway::DeleteBasePathMappingResponse
  *
- * @brief  Handles APIGateway DeleteBasePathMapping responses.
+ * \brief The DeleteBasePathMappingResponse class encapsulates APIGateway DeleteBasePathMapping responses.
  *
- * @see    APIGatewayClient::deleteBasePathMapping
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteBasePathMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBasePathMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteBasePathMappingRequest * DeleteBasePathMappingResponse::request() co
     return static_cast<const DeleteBasePathMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteBasePathMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteBasePathMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBasePathMappingResponsePrivate
+ * \class DeleteBasePathMappingResponsePrivate
  *
- * @brief  Private implementation for DeleteBasePathMappingResponse.
+ * \brief Private implementation for DeleteBasePathMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBasePathMappingResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteBasePathMappingResponse element.
  *
  * @param  xml  XML stream to parse.

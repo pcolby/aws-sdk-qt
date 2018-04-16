@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListPartsRequest
+/*!
+ * \class QtAws::S3::ListPartsRequest
  *
- * @brief  Implements S3 ListParts requests.
+ * \brief The ListPartsRequest class encapsulates S3 ListParts requests.
  *
- * @see    S3Client::listParts
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listParts
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPartsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListPartsRequest::ListPartsRequest(const ListPartsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPartsRequest object.
  */
 ListPartsRequest::ListPartsRequest()
@@ -53,13 +56,16 @@ ListPartsRequest::ListPartsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPartsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPartsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
     return new ListPartsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPartsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListPartsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPartsRequestPrivate object.
@@ -97,7 +103,7 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPartsRequestPrivate object, copying another.

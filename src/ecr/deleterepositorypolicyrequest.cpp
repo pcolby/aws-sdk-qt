@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DeleteRepositoryPolicyRequest
+/*!
+ * \class QtAws::ECR::DeleteRepositoryPolicyRequest
  *
- * @brief  Implements ECR DeleteRepositoryPolicy requests.
+ * \brief The DeleteRepositoryPolicyRequest class encapsulates ECR DeleteRepositoryPolicy requests.
  *
- * @see    ECRClient::deleteRepositoryPolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::deleteRepositoryPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRepositoryPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteReposit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRepositoryPolicyRequest object.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest()
@@ -53,13 +60,16 @@ DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRepositoryPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRepositoryPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetw
     return new DeleteRepositoryPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRepositoryPolicyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetw
  * @brief  Private implementation for DeleteRepositoryPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRepositoryPolicyRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRepositoryPolicyRequestPrivate object, copying another.

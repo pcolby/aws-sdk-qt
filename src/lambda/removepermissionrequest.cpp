@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  RemovePermissionRequest
+/*!
+ * \class QtAws::Lambda::RemovePermissionRequest
  *
- * @brief  Implements Lambda RemovePermission requests.
+ * \brief The RemovePermissionRequest class encapsulates Lambda RemovePermission requests.
  *
- * @see    LambdaClient::removePermission
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::removePermission
  */
 
-/**
+/*!
  * @brief  Constructs a new RemovePermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemovePermissionRequest object.
  */
 RemovePermissionRequest::RemovePermissionRequest()
@@ -53,13 +67,16 @@ RemovePermissionRequest::RemovePermissionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemovePermissionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemovePermissionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
     return new RemovePermissionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemovePermissionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  * @brief  Private implementation for RemovePermissionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemovePermissionRequestPrivate object.
@@ -97,7 +114,7 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemovePermissionRequestPrivate object, copying another.

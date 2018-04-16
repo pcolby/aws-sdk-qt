@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetRiskConfigurationResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationResponse
  *
- * @brief  Handles CognitoIdentityProvider SetRiskConfiguration responses.
+ * \brief The SetRiskConfigurationResponse class encapsulates CognitoIdentityProvider SetRiskConfiguration responses.
  *
- * @see    CognitoIdentityProviderClient::setRiskConfiguration
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setRiskConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new SetRiskConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const SetRiskConfigurationRequest * SetRiskConfigurationResponse::request() cons
     return static_cast<const SetRiskConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider SetRiskConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void SetRiskConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetRiskConfigurationResponsePrivate
+ * \class SetRiskConfigurationResponsePrivate
  *
- * @brief  Private implementation for SetRiskConfigurationResponse.
+ * \brief Private implementation for SetRiskConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetRiskConfigurationResponsePrivate object.
@@ -91,7 +104,7 @@ SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider SetRiskConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

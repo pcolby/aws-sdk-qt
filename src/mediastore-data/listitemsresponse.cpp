@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  ListItemsResponse
+/*!
+ * \class QtAws::MediaStoreData::ListItemsResponse
  *
- * @brief  Handles MediaStoreData ListItems responses.
+ * \brief The ListItemsResponse class encapsulates MediaStoreData ListItems responses.
  *
- * @see    MediaStoreDataClient::listItems
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::listItems
  */
 
-/**
+/*!
  * @brief  Constructs a new ListItemsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListItemsRequest * ListItemsResponse::request() const
     return static_cast<const ListItemsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStoreData ListItems response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListItemsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListItemsResponsePrivate
+ * \class ListItemsResponsePrivate
  *
- * @brief  Private implementation for ListItemsResponse.
+ * \brief Private implementation for ListItemsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListItemsResponsePrivate object.
@@ -91,7 +96,7 @@ ListItemsResponsePrivate::ListItemsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStoreData ListItemsResponse element.
  *
  * @param  xml  XML stream to parse.

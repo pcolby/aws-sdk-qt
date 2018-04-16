@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreatePublicKeyResponse
+/*!
+ * \class QtAws::CloudFront::CreatePublicKeyResponse
  *
- * @brief  Handles CloudFront CreatePublicKey responses.
+ * \brief The CreatePublicKeyResponse class encapsulates CloudFront CreatePublicKey responses.
  *
- * @see    CloudFrontClient::createPublicKey
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createPublicKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePublicKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreatePublicKeyRequest * CreatePublicKeyResponse::request() const
     return static_cast<const CreatePublicKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront CreatePublicKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreatePublicKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePublicKeyResponsePrivate
+ * \class CreatePublicKeyResponsePrivate
  *
- * @brief  Private implementation for CreatePublicKeyResponse.
+ * \brief Private implementation for CreatePublicKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePublicKeyResponsePrivate object.
@@ -91,7 +99,7 @@ CreatePublicKeyResponsePrivate::CreatePublicKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront CreatePublicKeyResponse element.
  *
  * @param  xml  XML stream to parse.

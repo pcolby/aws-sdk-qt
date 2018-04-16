@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateFunctionCodeResponse
+/*!
+ * \class QtAws::Lambda::UpdateFunctionCodeResponse
  *
- * @brief  Handles Lambda UpdateFunctionCode responses.
+ * \brief The UpdateFunctionCodeResponse class encapsulates Lambda UpdateFunctionCode responses.
  *
- * @see    LambdaClient::updateFunctionCode
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateFunctionCode
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFunctionCodeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateFunctionCodeRequest * UpdateFunctionCodeResponse::request() const
     return static_cast<const UpdateFunctionCodeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda UpdateFunctionCode response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateFunctionCodeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateFunctionCodeResponsePrivate
+ * \class UpdateFunctionCodeResponsePrivate
  *
- * @brief  Private implementation for UpdateFunctionCodeResponse.
+ * \brief Private implementation for UpdateFunctionCodeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFunctionCodeResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateFunctionCodeResponsePrivate::UpdateFunctionCodeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda UpdateFunctionCodeResponse element.
  *
  * @param  xml  XML stream to parse.

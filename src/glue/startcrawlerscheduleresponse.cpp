@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StartCrawlerScheduleResponse
+/*!
+ * \class QtAws::Glue::StartCrawlerScheduleResponse
  *
- * @brief  Handles Glue StartCrawlerSchedule responses.
+ * \brief The StartCrawlerScheduleResponse class encapsulates Glue StartCrawlerSchedule responses.
  *
- * @see    GlueClient::startCrawlerSchedule
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::startCrawlerSchedule
  */
 
-/**
+/*!
  * @brief  Constructs a new StartCrawlerScheduleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartCrawlerScheduleRequest * StartCrawlerScheduleResponse::request() cons
     return static_cast<const StartCrawlerScheduleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue StartCrawlerSchedule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartCrawlerScheduleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartCrawlerScheduleResponsePrivate
+ * \class StartCrawlerScheduleResponsePrivate
  *
- * @brief  Private implementation for StartCrawlerScheduleResponse.
+ * \brief Private implementation for StartCrawlerScheduleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartCrawlerScheduleResponsePrivate object.
@@ -91,7 +97,7 @@ StartCrawlerScheduleResponsePrivate::StartCrawlerScheduleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue StartCrawlerScheduleResponse element.
  *
  * @param  xml  XML stream to parse.

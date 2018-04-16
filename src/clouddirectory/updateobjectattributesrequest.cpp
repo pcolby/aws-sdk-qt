@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpdateObjectAttributesRequest
+/*!
+ * \class QtAws::CloudDirectory::UpdateObjectAttributesRequest
  *
- * @brief  Implements CloudDirectory UpdateObjectAttributes requests.
+ * \brief The UpdateObjectAttributesRequest class encapsulates CloudDirectory UpdateObjectAttributes requests.
  *
- * @see    CloudDirectoryClient::updateObjectAttributes
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::updateObjectAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateObjectAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpdateObjectAttributesRequest::UpdateObjectAttributesRequest(const UpdateObjectA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateObjectAttributesRequest object.
  */
 UpdateObjectAttributesRequest::UpdateObjectAttributesRequest()
@@ -53,13 +63,16 @@ UpdateObjectAttributesRequest::UpdateObjectAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateObjectAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateObjectAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpdateObjectAttributesRequest::response(QNetw
     return new UpdateObjectAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateObjectAttributesRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpdateObjectAttributesRequest::response(QNetw
  * @brief  Private implementation for UpdateObjectAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateObjectAttributesRequestPrivate object.
@@ -97,7 +110,7 @@ UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateObjectAttributesRequestPrivate object, copying another.

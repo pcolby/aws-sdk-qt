@@ -163,28 +163,36 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::WAF
+ * \brief The QtAws::WAF contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  WafClient
+/*!
+ * \class QtAws::WAF::WafClient
  *
- * @brief  Client for AWS WAF
+ * \brief The WafClient class provides access the AWS WAF service.
  *
- * This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
- * listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
- * types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
- * AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
- * use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 
-/**
- * @brief  Constructs a new WafClient object.
+/*!
+ * \brief Constructs a WafClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 WafClient::WafClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -203,21 +211,16 @@ WafClient::WafClient(
     d->serviceName = QStringLiteral("waf");
 }
 
-/**
- * @brief  Constructs a new WafClient object.
+/*!
+ * \overload WafClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 WafClient::WafClient(
     const QUrl &endpoint,
@@ -236,7 +239,7 @@ WafClient::WafClient(
     d->serviceName = QStringLiteral("waf");
 }
 
-/**
+/*!
  * Creates a <code>ByteMatchSet</code>. You then use <a>UpdateByteMatchSet</a> to identify the part of a web request that
  * you want AWS WAF to inspect, such as the values of the <code>User-Agent</code> header or the query string. For example,
  * you can create a <code>ByteMatchSet</code> that matches any requests with <code>User-Agent</code> headers that contain
@@ -281,7 +284,7 @@ CreateByteMatchSetResponse * WafClient::createByteMatchSet(const CreateByteMatch
     return qobject_cast<CreateByteMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an <a>GeoMatchSet</a>, which you use to specify which web requests you want to allow or block based on the
  * country that the requests originate from. For example, if you're receiving a lot of requests from one or more countries
  * and you want to block the requests, you can create an <code>GeoMatchSet</code> that contains those countries and then
@@ -325,7 +328,7 @@ CreateGeoMatchSetResponse * WafClient::createGeoMatchSet(const CreateGeoMatchSet
     return qobject_cast<CreateGeoMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an <a>IPSet</a>, which you use to specify which web requests you want to allow or block based on the IP
  * addresses that the requests originate from. For example, if you're receiving a lot of requests from one or more
  * individual IP addresses or one or more ranges of IP addresses and you want to block the requests, you can create an
@@ -369,7 +372,7 @@ CreateIPSetResponse * WafClient::createIPSet(const CreateIPSetRequest &request)
     return qobject_cast<CreateIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>RateBasedRule</a>. The <code>RateBasedRule</code> contains a <code>RateLimit</code>, which specifies the
  * maximum number of requests that AWS WAF allows from a specified IP address in a five-minute period. The
  * <code>RateBasedRule</code> also contains the <code>IPSet</code> objects, <code>ByteMatchSet</code> objects, and other
@@ -475,7 +478,7 @@ CreateRateBasedRuleResponse * WafClient::createRateBasedRule(const CreateRateBas
     return qobject_cast<CreateRateBasedRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>RegexMatchSet</a>. You then use <a>UpdateRegexMatchSet</a> to identify the part of a web request that you
  * want AWS WAF to inspect, such as the values of the <code>User-Agent</code> header or the query string. For example, you
  * can create a <code>RegexMatchSet</code> that contains a <code>RegexMatchTuple</code> that looks for any requests with
@@ -521,7 +524,7 @@ CreateRegexMatchSetResponse * WafClient::createRegexMatchSet(const CreateRegexMa
     return qobject_cast<CreateRegexMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>RegexPatternSet</code>. You then use <a>UpdateRegexPatternSet</a> to specify the regular expression
  * (regex) pattern that you want AWS WAF to search for, such as <code>B[a@]dB[o0]t</code>. You can then configure AWS WAF
  * to reject those
@@ -564,7 +567,7 @@ CreateRegexPatternSetResponse * WafClient::createRegexPatternSet(const CreateReg
     return qobject_cast<CreateRegexPatternSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>Rule</code>, which contains the <code>IPSet</code> objects, <code>ByteMatchSet</code> objects, and other
  * predicates that identify the requests that you want to block. If you add more than one predicate to a <code>Rule</code>,
  * a request must match all of the specifications to be allowed or blocked. For example, suppose you add the following to a
@@ -630,7 +633,7 @@ CreateRuleResponse * WafClient::createRule(const CreateRuleRequest &request)
     return qobject_cast<CreateRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>RuleGroup</code>. A rule group is a collection of predefined rules that you add to a web ACL. You use
  * <a>UpdateRuleGroup</a> to add rules to the rule
  *
@@ -666,7 +669,7 @@ CreateRuleGroupResponse * WafClient::createRuleGroup(const CreateRuleGroupReques
     return qobject_cast<CreateRuleGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>SizeConstraintSet</code>. You then use <a>UpdateSizeConstraintSet</a> to identify the part of a web
  * request that you want AWS WAF to check for length, such as the length of the <code>User-Agent</code> header or the
  * length of the query string. For example, you can create a <code>SizeConstraintSet</code> that matches any requests that
@@ -711,7 +714,7 @@ CreateSizeConstraintSetResponse * WafClient::createSizeConstraintSet(const Creat
     return qobject_cast<CreateSizeConstraintSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>SqlInjectionMatchSet</a>, which you use to allow, block, or count requests that contain snippets of SQL
  * code in a specified part of web requests. AWS WAF searches for character sequences that are likely to be malicious
  *
@@ -754,7 +757,7 @@ CreateSqlInjectionMatchSetResponse * WafClient::createSqlInjectionMatchSet(const
     return qobject_cast<CreateSqlInjectionMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>WebACL</code>, which contains the <code>Rules</code> that identify the CloudFront web requests that you
  * want to allow, block, or count. AWS WAF evaluates <code>Rules</code> in order based on the value of
  * <code>Priority</code> for each
@@ -814,7 +817,7 @@ CreateWebACLResponse * WafClient::createWebACL(const CreateWebACLRequest &reques
     return qobject_cast<CreateWebACLResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an <a>XssMatchSet</a>, which you use to allow, block, or count requests that contain cross-site scripting
  * attacks in the specified part of web requests. AWS WAF searches for character sequences that are likely to be malicious
  *
@@ -857,7 +860,7 @@ CreateXssMatchSetResponse * WafClient::createXssMatchSet(const CreateXssMatchSet
     return qobject_cast<CreateXssMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>ByteMatchSet</a>. You can't delete a <code>ByteMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still includes any <a>ByteMatchTuple</a> objects (any
  *
@@ -893,7 +896,7 @@ DeleteByteMatchSetResponse * WafClient::deleteByteMatchSet(const DeleteByteMatch
     return qobject_cast<DeleteByteMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>GeoMatchSet</a>. You can't delete a <code>GeoMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still includes any
  *
@@ -929,7 +932,7 @@ DeleteGeoMatchSetResponse * WafClient::deleteGeoMatchSet(const DeleteGeoMatchSet
     return qobject_cast<DeleteGeoMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes an <a>IPSet</a>. You can't delete an <code>IPSet</code> if it's still used in any <code>Rules</code>
  * or if it still includes any IP
  *
@@ -965,7 +968,7 @@ DeleteIPSetResponse * WafClient::deleteIPSet(const DeleteIPSetRequest &request)
     return qobject_cast<DeleteIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes an IAM policy from the specified
  *
  * RuleGroup>
@@ -983,7 +986,7 @@ DeletePermissionPolicyResponse * WafClient::deletePermissionPolicy(const DeleteP
     return qobject_cast<DeletePermissionPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>RateBasedRule</a>. You can't delete a rule if it's still used in any <code>WebACL</code>
  * objects or if it still includes any predicates, such as <code>ByteMatchSet</code>
  *
@@ -1019,7 +1022,7 @@ DeleteRateBasedRuleResponse * WafClient::deleteRateBasedRule(const DeleteRateBas
     return qobject_cast<DeleteRateBasedRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>RegexMatchSet</a>. You can't delete a <code>RegexMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still includes any <code>RegexMatchTuples</code> objects (any
  *
@@ -1055,7 +1058,7 @@ DeleteRegexMatchSetResponse * WafClient::deleteRegexMatchSet(const DeleteRegexMa
     return qobject_cast<DeleteRegexMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>RegexPatternSet</a>. You can't delete a <code>RegexPatternSet</code> if it's still used in any
  * <code>RegexMatchSet</code> or if the <code>RegexPatternSet</code> is not empty.
  *
@@ -1070,7 +1073,7 @@ DeleteRegexPatternSetResponse * WafClient::deleteRegexPatternSet(const DeleteReg
     return qobject_cast<DeleteRegexPatternSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>Rule</a>. You can't delete a <code>Rule</code> if it's still used in any <code>WebACL</code>
  * objects or if it still includes any predicates, such as <code>ByteMatchSet</code>
  *
@@ -1106,7 +1109,7 @@ DeleteRuleResponse * WafClient::deleteRule(const DeleteRuleRequest &request)
     return qobject_cast<DeleteRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>RuleGroup</a>. You can't delete a <code>RuleGroup</code> if it's still used in any
  * <code>WebACL</code> objects or if it still includes any
  *
@@ -1142,7 +1145,7 @@ DeleteRuleGroupResponse * WafClient::deleteRuleGroup(const DeleteRuleGroupReques
     return qobject_cast<DeleteRuleGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>SizeConstraintSet</a>. You can't delete a <code>SizeConstraintSet</code> if it's still used in
  * any <code>Rules</code> or if it still includes any <a>SizeConstraint</a> objects (any
  *
@@ -1178,7 +1181,7 @@ DeleteSizeConstraintSetResponse * WafClient::deleteSizeConstraintSet(const Delet
     return qobject_cast<DeleteSizeConstraintSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>SqlInjectionMatchSet</a>. You can't delete a <code>SqlInjectionMatchSet</code> if it's still
  * used in any <code>Rules</code> or if it still contains any <a>SqlInjectionMatchTuple</a>
  *
@@ -1214,7 +1217,7 @@ DeleteSqlInjectionMatchSetResponse * WafClient::deleteSqlInjectionMatchSet(const
     return qobject_cast<DeleteSqlInjectionMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes a <a>WebACL</a>. You can't delete a <code>WebACL</code> if it still contains any
  *
  * <code>Rules</code>>
@@ -1245,7 +1248,7 @@ DeleteWebACLResponse * WafClient::deleteWebACL(const DeleteWebACLRequest &reques
     return qobject_cast<DeleteWebACLResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes an <a>XssMatchSet</a>. You can't delete an <code>XssMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still contains any <a>XssMatchTuple</a>
  *
@@ -1281,7 +1284,7 @@ DeleteXssMatchSetResponse * WafClient::deleteXssMatchSet(const DeleteXssMatchSet
     return qobject_cast<DeleteXssMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>ByteMatchSet</a> specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1295,7 +1298,7 @@ GetByteMatchSetResponse * WafClient::getByteMatchSet(const GetByteMatchSetReques
     return qobject_cast<GetByteMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * When you want to create, update, or delete AWS WAF objects, get a change token and include the change token in the
  * create, update, or delete request. Change tokens ensure that your application doesn't submit conflicting requests to AWS
  *
@@ -1323,7 +1326,7 @@ GetChangeTokenResponse * WafClient::getChangeToken(const GetChangeTokenRequest &
     return qobject_cast<GetChangeTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the status of a <code>ChangeToken</code> that you got by calling <a>GetChangeToken</a>.
  * <code>ChangeTokenStatus</code> is one of the following
  *
@@ -1351,7 +1354,7 @@ GetChangeTokenStatusResponse * WafClient::getChangeTokenStatus(const GetChangeTo
     return qobject_cast<GetChangeTokenStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>GeoMatchSet</a> that is specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1365,7 +1368,7 @@ GetGeoMatchSetResponse * WafClient::getGeoMatchSet(const GetGeoMatchSetRequest &
     return qobject_cast<GetGeoMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>IPSet</a> that is specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1379,7 +1382,7 @@ GetIPSetResponse * WafClient::getIPSet(const GetIPSetRequest &request)
     return qobject_cast<GetIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the IAM policy attached to the
  *
  * @param  request Request to send to AWS WAF.
@@ -1393,7 +1396,7 @@ GetPermissionPolicyResponse * WafClient::getPermissionPolicy(const GetPermission
     return qobject_cast<GetPermissionPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>RateBasedRule</a> that is specified by the <code>RuleId</code> that you included in the
  * <code>GetRateBasedRule</code>
  *
@@ -1408,7 +1411,7 @@ GetRateBasedRuleResponse * WafClient::getRateBasedRule(const GetRateBasedRuleReq
     return qobject_cast<GetRateBasedRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of IP addresses currently being blocked by the <a>RateBasedRule</a> that is specified by the
  * <code>RuleId</code>. The maximum number of managed keys that will be blocked is 10,000. If more than 10,000 addresses
  * exceed the rate limit, the 10,000 addresses with the highest rates will be
@@ -1424,7 +1427,7 @@ GetRateBasedRuleManagedKeysResponse * WafClient::getRateBasedRuleManagedKeys(con
     return qobject_cast<GetRateBasedRuleManagedKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>RegexMatchSet</a> specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1438,7 +1441,7 @@ GetRegexMatchSetResponse * WafClient::getRegexMatchSet(const GetRegexMatchSetReq
     return qobject_cast<GetRegexMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>RegexPatternSet</a> specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1452,7 +1455,7 @@ GetRegexPatternSetResponse * WafClient::getRegexPatternSet(const GetRegexPattern
     return qobject_cast<GetRegexPatternSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>Rule</a> that is specified by the <code>RuleId</code> that you included in the <code>GetRule</code>
  *
  * @param  request Request to send to AWS WAF.
@@ -1466,7 +1469,7 @@ GetRuleResponse * WafClient::getRule(const GetRuleRequest &request)
     return qobject_cast<GetRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>RuleGroup</a> that is specified by the <code>RuleGroupId</code> that you included in the
  * <code>GetRuleGroup</code>
  *
@@ -1485,7 +1488,7 @@ GetRuleGroupResponse * WafClient::getRuleGroup(const GetRuleGroupRequest &reques
     return qobject_cast<GetRuleGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets detailed information about a specified number of requests--a sample--that AWS WAF randomly selects from among the
  * first 5,000 requests that your AWS resource received during a time range that you choose. You can specify a sample size
  * of up to 500 requests, and you can specify any time range in the previous three
@@ -1508,7 +1511,7 @@ GetSampledRequestsResponse * WafClient::getSampledRequests(const GetSampledReque
     return qobject_cast<GetSampledRequestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>SizeConstraintSet</a> specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1522,7 +1525,7 @@ GetSizeConstraintSetResponse * WafClient::getSizeConstraintSet(const GetSizeCons
     return qobject_cast<GetSizeConstraintSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>SqlInjectionMatchSet</a> that is specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1536,7 +1539,7 @@ GetSqlInjectionMatchSetResponse * WafClient::getSqlInjectionMatchSet(const GetSq
     return qobject_cast<GetSqlInjectionMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>WebACL</a> that is specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1550,7 +1553,7 @@ GetWebACLResponse * WafClient::getWebACL(const GetWebACLRequest &request)
     return qobject_cast<GetWebACLResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <a>XssMatchSet</a> that is specified by
  *
  * @param  request Request to send to AWS WAF.
@@ -1564,7 +1567,7 @@ GetXssMatchSetResponse * WafClient::getXssMatchSet(const GetXssMatchSetRequest &
     return qobject_cast<GetXssMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>ActivatedRule</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1578,7 +1581,7 @@ ListActivatedRulesInRuleGroupResponse * WafClient::listActivatedRulesInRuleGroup
     return qobject_cast<ListActivatedRulesInRuleGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>ByteMatchSetSummary</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1592,7 +1595,7 @@ ListByteMatchSetsResponse * WafClient::listByteMatchSets(const ListByteMatchSets
     return qobject_cast<ListByteMatchSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>GeoMatchSetSummary</a> objects in the
  *
  * @param  request Request to send to AWS WAF.
@@ -1606,7 +1609,7 @@ ListGeoMatchSetsResponse * WafClient::listGeoMatchSets(const ListGeoMatchSetsReq
     return qobject_cast<ListGeoMatchSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>IPSetSummary</a> objects in the
  *
  * @param  request Request to send to AWS WAF.
@@ -1620,7 +1623,7 @@ ListIPSetsResponse * WafClient::listIPSets(const ListIPSetsRequest &request)
     return qobject_cast<ListIPSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>RuleSummary</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1634,7 +1637,7 @@ ListRateBasedRulesResponse * WafClient::listRateBasedRules(const ListRateBasedRu
     return qobject_cast<ListRateBasedRulesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>RegexMatchSetSummary</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1648,7 +1651,7 @@ ListRegexMatchSetsResponse * WafClient::listRegexMatchSets(const ListRegexMatchS
     return qobject_cast<ListRegexMatchSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>RegexPatternSetSummary</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1662,7 +1665,7 @@ ListRegexPatternSetsResponse * WafClient::listRegexPatternSets(const ListRegexPa
     return qobject_cast<ListRegexPatternSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>RuleGroup</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1676,7 +1679,7 @@ ListRuleGroupsResponse * WafClient::listRuleGroups(const ListRuleGroupsRequest &
     return qobject_cast<ListRuleGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>RuleSummary</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1690,7 +1693,7 @@ ListRulesResponse * WafClient::listRules(const ListRulesRequest &request)
     return qobject_cast<ListRulesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>SizeConstraintSetSummary</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1704,7 +1707,7 @@ ListSizeConstraintSetsResponse * WafClient::listSizeConstraintSets(const ListSiz
     return qobject_cast<ListSizeConstraintSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>SqlInjectionMatchSet</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1718,7 +1721,7 @@ ListSqlInjectionMatchSetsResponse * WafClient::listSqlInjectionMatchSets(const L
     return qobject_cast<ListSqlInjectionMatchSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>RuleGroup</a> objects that you are subscribed
  *
  * @param  request Request to send to AWS WAF.
@@ -1732,7 +1735,7 @@ ListSubscribedRuleGroupsResponse * WafClient::listSubscribedRuleGroups(const Lis
     return qobject_cast<ListSubscribedRuleGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>WebACLSummary</a> objects in the
  *
  * @param  request Request to send to AWS WAF.
@@ -1746,7 +1749,7 @@ ListWebACLsResponse * WafClient::listWebACLs(const ListWebACLsRequest &request)
     return qobject_cast<ListWebACLsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <a>XssMatchSet</a>
  *
  * @param  request Request to send to AWS WAF.
@@ -1760,7 +1763,7 @@ ListXssMatchSetsResponse * WafClient::listXssMatchSets(const ListXssMatchSetsReq
     return qobject_cast<ListXssMatchSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a IAM policy to the specified resource. The only supported use for this action is to share a RuleGroup across
  *
  * accounts>
@@ -1820,7 +1823,7 @@ PutPermissionPolicyResponse * WafClient::putPermissionPolicy(const PutPermission
     return qobject_cast<PutPermissionPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>ByteMatchTuple</a> objects (filters) in a <a>ByteMatchSet</a>. For each
  * <code>ByteMatchTuple</code> object, you specify the following values:
  *
@@ -1888,7 +1891,7 @@ UpdateByteMatchSetResponse * WafClient::updateByteMatchSet(const UpdateByteMatch
     return qobject_cast<UpdateByteMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>GeoMatchConstraint</a> objects in an <code>GeoMatchSet</code>. For each
  * <code>GeoMatchConstraint</code> object, you specify the following values:
  *
@@ -1944,7 +1947,7 @@ UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSet
     return qobject_cast<UpdateGeoMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>IPSetDescriptor</a> objects in an <code>IPSet</code>. For each <code>IPSetDescriptor</code>
  * object, you specify the following values:
  *
@@ -2026,7 +2029,7 @@ UpdateIPSetResponse * WafClient::updateIPSet(const UpdateIPSetRequest &request)
     return qobject_cast<UpdateIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>Predicate</a> objects in a rule and updates the <code>RateLimit</code> in the rule.
  *
  * </p
@@ -2097,7 +2100,7 @@ UpdateRateBasedRuleResponse * WafClient::updateRateBasedRule(const UpdateRateBas
     return qobject_cast<UpdateRateBasedRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>RegexMatchTuple</a> objects (filters) in a <a>RegexMatchSet</a>. For each
  * <code>RegexMatchSetUpdate</code> object, you specify the following values:
  *
@@ -2161,7 +2164,7 @@ UpdateRegexMatchSetResponse * WafClient::updateRegexMatchSet(const UpdateRegexMa
     return qobject_cast<UpdateRegexMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <code>RegexPatternString</code> objects in a <a>RegexPatternSet</a>. For each
  * <code>RegexPatternString</code> object, you specify the following values:
  *
@@ -2220,7 +2223,7 @@ UpdateRegexPatternSetResponse * WafClient::updateRegexPatternSet(const UpdateReg
     return qobject_cast<UpdateRegexPatternSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>Predicate</a> objects in a <code>Rule</code>. Each <code>Predicate</code> object identifies a
  * predicate, such as a <a>ByteMatchSet</a> or an <a>IPSet</a>, that specifies the web requests that you want to allow,
  * block, or count. If you add more than one predicate to a <code>Rule</code>, a request must match all of the
@@ -2286,7 +2289,7 @@ UpdateRuleResponse * WafClient::updateRule(const UpdateRuleRequest &request)
     return qobject_cast<UpdateRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>ActivatedRule</a> objects in a
  *
  * <code>RuleGroup</code>>
@@ -2338,7 +2341,7 @@ UpdateRuleGroupResponse * WafClient::updateRuleGroup(const UpdateRuleGroupReques
     return qobject_cast<UpdateRuleGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>SizeConstraint</a> objects (filters) in a <a>SizeConstraintSet</a>. For each
  * <code>SizeConstraint</code> object, you specify the following values:
  *
@@ -2407,7 +2410,7 @@ UpdateSizeConstraintSetResponse * WafClient::updateSizeConstraintSet(const Updat
     return qobject_cast<UpdateSizeConstraintSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>SqlInjectionMatchTuple</a> objects (filters) in a <a>SqlInjectionMatchSet</a>. For each
  * <code>SqlInjectionMatchTuple</code> object, you specify the following
  *
@@ -2467,7 +2470,7 @@ UpdateSqlInjectionMatchSetResponse * WafClient::updateSqlInjectionMatchSet(const
     return qobject_cast<UpdateSqlInjectionMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>ActivatedRule</a> objects in a <code>WebACL</code>. Each <code>Rule</code> identifies web requests
  * that you want to allow, block, or count. When you update a <code>WebACL</code>, you specify the following
  *
@@ -2547,7 +2550,7 @@ UpdateWebACLResponse * WafClient::updateWebACL(const UpdateWebACLRequest &reques
     return qobject_cast<UpdateWebACLResponse *>(send(request));
 }
 
-/**
+/*!
  * Inserts or deletes <a>XssMatchTuple</a> objects (filters) in an <a>XssMatchSet</a>. For each <code>XssMatchTuple</code>
  * object, you specify the following
  *
@@ -2607,7 +2610,7 @@ UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSet
     return qobject_cast<UpdateXssMatchSetResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WafClientPrivate
@@ -2615,7 +2618,7 @@ UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSet
  * @brief  Private implementation for WafClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WafClientPrivate object.

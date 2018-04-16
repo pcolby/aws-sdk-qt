@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DescribeNotebookInstanceRequest
+/*!
+ * \class QtAws::SageMaker::DescribeNotebookInstanceRequest
  *
- * @brief  Implements SageMaker DescribeNotebookInstance requests.
+ * \brief The DescribeNotebookInstanceRequest class encapsulates SageMaker DescribeNotebookInstance requests.
  *
- * @see    SageMakerClient::describeNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::describeNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotebookInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest(const DescribeN
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotebookInstanceRequest object.
  */
 DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest()
@@ -53,13 +56,16 @@ DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNotebookInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNotebookInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNe
     return new DescribeNotebookInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNotebookInstanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNe
  * @brief  Private implementation for DescribeNotebookInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotebookInstanceRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotebookInstanceRequestPrivate object, copying another.

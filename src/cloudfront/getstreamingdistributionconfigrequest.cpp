@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetStreamingDistributionConfigRequest
+/*!
+ * \class QtAws::CloudFront::GetStreamingDistributionConfigRequest
  *
- * @brief  Implements CloudFront GetStreamingDistributionConfig requests.
+ * \brief The GetStreamingDistributionConfigRequest class encapsulates CloudFront GetStreamingDistributionConfig requests.
  *
- * @see    CloudFrontClient::getStreamingDistributionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getStreamingDistributionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStreamingDistributionConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetStreamingDistributionConfigRequest::GetStreamingDistributionConfigRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetStreamingDistributionConfigRequest object.
  */
 GetStreamingDistributionConfigRequest::GetStreamingDistributionConfigRequest()
@@ -53,13 +61,16 @@ GetStreamingDistributionConfigRequest::GetStreamingDistributionConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetStreamingDistributionConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetStreamingDistributionConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetStreamingDistributionConfigRequest::respon
     return new GetStreamingDistributionConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetStreamingDistributionConfigRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetStreamingDistributionConfigRequest::respon
  * @brief  Private implementation for GetStreamingDistributionConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStreamingDistributionConfigRequestPrivate object.
@@ -97,7 +108,7 @@ GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStreamingDistributionConfigRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetLabelDetectionRequest
+/*!
+ * \class QtAws::Rekognition::GetLabelDetectionRequest
  *
- * @brief  Implements Rekognition GetLabelDetection requests.
+ * \brief The GetLabelDetectionRequest class encapsulates Rekognition GetLabelDetection requests.
  *
- * @see    RekognitionClient::getLabelDetection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getLabelDetection
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLabelDetectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetLabelDetectionRequest::GetLabelDetectionRequest(const GetLabelDetectionReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLabelDetectionRequest object.
  */
 GetLabelDetectionRequest::GetLabelDetectionRequest()
@@ -53,13 +57,16 @@ GetLabelDetectionRequest::GetLabelDetectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLabelDetectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLabelDetectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetLabelDetectionRequest::response(QNetworkRe
     return new GetLabelDetectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLabelDetectionRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetLabelDetectionRequest::response(QNetworkRe
  * @brief  Private implementation for GetLabelDetectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLabelDetectionRequestPrivate object.
@@ -97,7 +104,7 @@ GetLabelDetectionRequestPrivate::GetLabelDetectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLabelDetectionRequestPrivate object, copying another.

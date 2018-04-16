@@ -35,25 +35,33 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MediaStoreData
+ * \brief The QtAws::MediaStoreData contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  MediaStoreDataClient
+/*!
+ * \class QtAws::MediaStoreData::MediaStoreDataClient
  *
- * @brief  Client for AWS Elemental MediaStore Data Plane
+ * \brief The MediaStoreDataClient class provides access the AWS Elemental MediaStore Data Plane service.
  *
- * An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
- * fundamental entities that are stored in AWS Elemental
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
  */
 
-/**
- * @brief  Constructs a new MediaStoreDataClient object.
+/*!
+ * \brief Constructs a MediaStoreDataClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MediaStoreDataClient::MediaStoreDataClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -72,21 +80,16 @@ MediaStoreDataClient::MediaStoreDataClient(
     d->serviceName = QStringLiteral("mediastore");
 }
 
-/**
- * @brief  Constructs a new MediaStoreDataClient object.
+/*!
+ * \overload MediaStoreDataClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MediaStoreDataClient::MediaStoreDataClient(
     const QUrl &endpoint,
@@ -105,7 +108,7 @@ MediaStoreDataClient::MediaStoreDataClient(
     d->serviceName = QStringLiteral("mediastore");
 }
 
-/**
+/*!
  * Deletes an object at the specified
  *
  * @param  request Request to send to AWS Elemental MediaStore Data Plane.
@@ -119,7 +122,7 @@ DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequ
     return qobject_cast<DeleteObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the headers for an object at the specified
  *
  * @param  request Request to send to AWS Elemental MediaStore Data Plane.
@@ -133,7 +136,7 @@ DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObje
     return qobject_cast<DescribeObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Downloads the object at the specified
  *
  * @param  request Request to send to AWS Elemental MediaStore Data Plane.
@@ -147,7 +150,7 @@ GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &requ
     return qobject_cast<GetObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a list of metadata entries about folders and objects in the specified
  *
  * @param  request Request to send to AWS Elemental MediaStore Data Plane.
@@ -161,7 +164,7 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
     return qobject_cast<ListItemsResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads an object to the specified path. Object sizes are limited to 10
  *
  * @param  request Request to send to AWS Elemental MediaStore Data Plane.
@@ -175,7 +178,7 @@ PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &requ
     return qobject_cast<PutObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaStoreDataClientPrivate
@@ -183,7 +186,7 @@ PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &requ
  * @brief  Private implementation for MediaStoreDataClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaStoreDataClientPrivate object.

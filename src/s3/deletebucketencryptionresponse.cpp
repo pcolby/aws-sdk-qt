@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketEncryptionResponse
+/*!
+ * \class QtAws::S3::DeleteBucketEncryptionResponse
  *
- * @brief  Handles S3 DeleteBucketEncryption responses.
+ * \brief The DeleteBucketEncryptionResponse class encapsulates S3 DeleteBucketEncryption responses.
  *
- * @see    S3Client::deleteBucketEncryption
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketEncryptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteBucketEncryptionRequest * DeleteBucketEncryptionResponse::request() 
     return static_cast<const DeleteBucketEncryptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 DeleteBucketEncryption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteBucketEncryptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBucketEncryptionResponsePrivate
+ * \class DeleteBucketEncryptionResponsePrivate
  *
- * @brief  Private implementation for DeleteBucketEncryptionResponse.
+ * \brief Private implementation for DeleteBucketEncryptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketEncryptionResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 DeleteBucketEncryptionResponse element.
  *
  * @param  xml  XML stream to parse.

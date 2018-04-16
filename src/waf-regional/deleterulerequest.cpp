@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteRuleRequest
+/*!
+ * \class QtAws::WAFRegional::DeleteRuleRequest
  *
- * @brief  Implements WAFRegional DeleteRule requests.
+ * \brief The DeleteRuleRequest class encapsulates WAFRegional DeleteRule requests.
  *
- * @see    WAFRegionalClient::deleteRule
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteRuleRequest::DeleteRuleRequest(const DeleteRuleRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRuleRequest object.
  */
 DeleteRuleRequest::DeleteRuleRequest()
@@ -53,13 +63,16 @@ DeleteRuleRequest::DeleteRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
     return new DeleteRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRuleRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRuleRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRuleRequestPrivate object, copying another.

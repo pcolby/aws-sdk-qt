@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  PutNotificationConfigurationRequest
+/*!
+ * \class QtAws::AutoScaling::PutNotificationConfigurationRequest
  *
- * @brief  Implements AutoScaling PutNotificationConfiguration requests.
+ * \brief The PutNotificationConfigurationRequest class encapsulates AutoScaling PutNotificationConfiguration requests.
  *
- * @see    AutoScalingClient::putNotificationConfiguration
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::putNotificationConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutNotificationConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutNotificationConfigurationRequest::PutNotificationConfigurationRequest(const P
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutNotificationConfigurationRequest object.
  */
 PutNotificationConfigurationRequest::PutNotificationConfigurationRequest()
@@ -53,13 +61,16 @@ PutNotificationConfigurationRequest::PutNotificationConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutNotificationConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutNotificationConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutNotificationConfigurationRequest::response
     return new PutNotificationConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutNotificationConfigurationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutNotificationConfigurationRequest::response
  * @brief  Private implementation for PutNotificationConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutNotificationConfigurationRequestPrivate object.
@@ -97,7 +108,7 @@ PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutNotificationConfigurationRequestPrivate object, copying another.

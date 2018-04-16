@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateKeyPairResponse
+/*!
+ * \class QtAws::EC2::CreateKeyPairResponse
  *
- * @brief  Handles EC2 CreateKeyPair responses.
+ * \brief The CreateKeyPairResponse class encapsulates EC2 CreateKeyPair responses.
  *
- * @see    EC2Client::createKeyPair
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createKeyPair
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateKeyPairResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateKeyPairRequest * CreateKeyPairResponse::request() const
     return static_cast<const CreateKeyPairRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateKeyPair response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateKeyPairResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateKeyPairResponsePrivate
+ * \class CreateKeyPairResponsePrivate
  *
- * @brief  Private implementation for CreateKeyPairResponse.
+ * \brief Private implementation for CreateKeyPairResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateKeyPairResponsePrivate object.
@@ -91,7 +98,7 @@ CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateKeyPairResponse element.
  *
  * @param  xml  XML stream to parse.

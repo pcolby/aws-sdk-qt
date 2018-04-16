@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ModifyEndpointResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::ModifyEndpointResponse
  *
- * @brief  Handles DatabaseMigrationService ModifyEndpoint responses.
+ * \brief The ModifyEndpointResponse class encapsulates DatabaseMigrationService ModifyEndpoint responses.
  *
- * @see    DatabaseMigrationServiceClient::modifyEndpoint
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::modifyEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ModifyEndpointRequest * ModifyEndpointResponse::request() const
     return static_cast<const ModifyEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService ModifyEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ModifyEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyEndpointResponsePrivate
+ * \class ModifyEndpointResponsePrivate
  *
- * @brief  Private implementation for ModifyEndpointResponse.
+ * \brief Private implementation for ModifyEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyEndpointResponsePrivate object.
@@ -91,7 +105,7 @@ ModifyEndpointResponsePrivate::ModifyEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService ModifyEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  ImportDocumentationPartsRequest
+/*!
+ * \class QtAws::APIGateway::ImportDocumentationPartsRequest
  *
- * @brief  Implements APIGateway ImportDocumentationParts requests.
+ * \brief The ImportDocumentationPartsRequest class encapsulates APIGateway ImportDocumentationParts requests.
  *
- * @see    APIGatewayClient::importDocumentationParts
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::importDocumentationParts
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportDocumentationPartsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ImportDocumentationPartsRequest::ImportDocumentationPartsRequest(const ImportDoc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportDocumentationPartsRequest object.
  */
 ImportDocumentationPartsRequest::ImportDocumentationPartsRequest()
@@ -53,13 +61,16 @@ ImportDocumentationPartsRequest::ImportDocumentationPartsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportDocumentationPartsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportDocumentationPartsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNe
     return new ImportDocumentationPartsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportDocumentationPartsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNe
  * @brief  Private implementation for ImportDocumentationPartsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportDocumentationPartsRequestPrivate object.
@@ -97,7 +108,7 @@ ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportDocumentationPartsRequestPrivate object, copying another.

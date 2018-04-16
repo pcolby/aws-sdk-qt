@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  AuthorizeCacheSecurityGroupIngressRequest
+/*!
+ * \class QtAws::ElastiCache::AuthorizeCacheSecurityGroupIngressRequest
  *
- * @brief  Implements ElastiCache AuthorizeCacheSecurityGroupIngress requests.
+ * \brief The AuthorizeCacheSecurityGroupIngressRequest class encapsulates ElastiCache AuthorizeCacheSecurityGroupIngress requests.
  *
- * @see    ElastiCacheClient::authorizeCacheSecurityGroupIngress
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::authorizeCacheSecurityGroupIngress
  */
 
-/**
+/*!
  * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequest object.
  */
 AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressRequest()
@@ -53,13 +70,16 @@ AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool AuthorizeCacheSecurityGroupIngressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AuthorizeCacheSecurityGroupIngressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::re
     return new AuthorizeCacheSecurityGroupIngressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AuthorizeCacheSecurityGroupIngressRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::re
  * @brief  Private implementation for AuthorizeCacheSecurityGroupIngressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequestPrivate object.
@@ -97,7 +117,7 @@ AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIng
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequestPrivate object, copying another.

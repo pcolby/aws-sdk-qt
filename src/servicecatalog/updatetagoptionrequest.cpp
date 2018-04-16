@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateTagOptionRequest
+/*!
+ * \class QtAws::ServiceCatalog::UpdateTagOptionRequest
  *
- * @brief  Implements ServiceCatalog UpdateTagOption requests.
+ * \brief The UpdateTagOptionRequest class encapsulates ServiceCatalog UpdateTagOption requests.
  *
- * @see    ServiceCatalogClient::updateTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdateTagOptionRequest::UpdateTagOptionRequest(const UpdateTagOptionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTagOptionRequest object.
  */
 UpdateTagOptionRequest::UpdateTagOptionRequest()
@@ -53,13 +62,16 @@ UpdateTagOptionRequest::UpdateTagOptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTagOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTagOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkRepl
     return new UpdateTagOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTagOptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdateTagOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTagOptionRequestPrivate object.
@@ -97,7 +109,7 @@ UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTagOptionRequestPrivate object, copying another.

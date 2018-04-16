@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DescribeHapgRequest
+/*!
+ * \class QtAws::CloudHSM::DescribeHapgRequest
  *
- * @brief  Implements CloudHSM DescribeHapg requests.
+ * \brief The DescribeHapgRequest class encapsulates CloudHSM DescribeHapg requests.
  *
- * @see    CloudHSMClient::describeHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::describeHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeHapgRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ DescribeHapgRequest::DescribeHapgRequest(const DescribeHapgRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeHapgRequest object.
  */
 DescribeHapgRequest::DescribeHapgRequest()
@@ -53,13 +68,16 @@ DescribeHapgRequest::DescribeHapgRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeHapgRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeHapgResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply *
     return new DescribeHapgResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeHapgRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeHapgRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHapgRequestPrivate object.
@@ -97,7 +115,7 @@ DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHapgRequestPrivate object, copying another.

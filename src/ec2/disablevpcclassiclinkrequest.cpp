@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisableVpcClassicLinkRequest
+/*!
+ * \class QtAws::EC2::DisableVpcClassicLinkRequest
  *
- * @brief  Implements EC2 DisableVpcClassicLink requests.
+ * \brief The DisableVpcClassicLinkRequest class encapsulates EC2 DisableVpcClassicLink requests.
  *
- * @see    EC2Client::disableVpcClassicLink
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disableVpcClassicLink
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableVpcClassicLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest(const DisableVpcClass
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableVpcClassicLinkRequest object.
  */
 DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest()
@@ -53,13 +60,16 @@ DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableVpcClassicLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableVpcClassicLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetwo
     return new DisableVpcClassicLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableVpcClassicLinkRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetwo
  * @brief  Private implementation for DisableVpcClassicLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableVpcClassicLinkRequestPrivate object.
@@ -97,7 +107,7 @@ DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableVpcClassicLinkRequestPrivate object, copying another.

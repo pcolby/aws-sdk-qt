@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetNetworkInterfaceAttributeResponse
+/*!
+ * \class QtAws::EC2::ResetNetworkInterfaceAttributeResponse
  *
- * @brief  Handles EC2 ResetNetworkInterfaceAttribute responses.
+ * \brief The ResetNetworkInterfaceAttributeResponse class encapsulates EC2 ResetNetworkInterfaceAttribute responses.
  *
- * @see    EC2Client::resetNetworkInterfaceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetNetworkInterfaceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetNetworkInterfaceAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ResetNetworkInterfaceAttributeRequest * ResetNetworkInterfaceAttributeResp
     return static_cast<const ResetNetworkInterfaceAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ResetNetworkInterfaceAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetNetworkInterfaceAttributeResponsePrivate
+ * \class ResetNetworkInterfaceAttributeResponsePrivate
  *
- * @brief  Private implementation for ResetNetworkInterfaceAttributeResponse.
+ * \brief Private implementation for ResetNetworkInterfaceAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetNetworkInterfaceAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ResetNetworkInterfaceAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

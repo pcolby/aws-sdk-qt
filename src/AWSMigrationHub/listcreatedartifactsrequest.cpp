@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ListCreatedArtifactsRequest
+/*!
+ * \class QtAws::MigrationHub::ListCreatedArtifactsRequest
  *
- * @brief  Implements MigrationHub ListCreatedArtifacts requests.
+ * \brief The ListCreatedArtifactsRequest class encapsulates MigrationHub ListCreatedArtifacts requests.
  *
- * @see    MigrationHubClient::listCreatedArtifacts
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::listCreatedArtifacts
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCreatedArtifactsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListCreatedArtifactsRequest::ListCreatedArtifactsRequest(const ListCreatedArtifa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListCreatedArtifactsRequest object.
  */
 ListCreatedArtifactsRequest::ListCreatedArtifactsRequest()
@@ -53,13 +58,16 @@ ListCreatedArtifactsRequest::ListCreatedArtifactsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListCreatedArtifactsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListCreatedArtifactsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetwor
     return new ListCreatedArtifactsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListCreatedArtifactsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetwor
  * @brief  Private implementation for ListCreatedArtifactsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCreatedArtifactsRequestPrivate object.
@@ -97,7 +105,7 @@ ListCreatedArtifactsRequestPrivate::ListCreatedArtifactsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCreatedArtifactsRequestPrivate object, copying another.

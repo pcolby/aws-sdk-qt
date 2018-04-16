@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DeleteSecurityConfigurationResponse
+/*!
+ * \class QtAws::EMR::DeleteSecurityConfigurationResponse
  *
- * @brief  Handles EMR DeleteSecurityConfiguration responses.
+ * \brief The DeleteSecurityConfigurationResponse class encapsulates EMR DeleteSecurityConfiguration responses.
  *
- * @see    EMRClient::deleteSecurityConfiguration
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::deleteSecurityConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSecurityConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::
     return static_cast<const DeleteSecurityConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR DeleteSecurityConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSecurityConfigurationResponsePrivate
+ * \class DeleteSecurityConfigurationResponsePrivate
  *
- * @brief  Private implementation for DeleteSecurityConfigurationResponse.
+ * \brief Private implementation for DeleteSecurityConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSecurityConfigurationResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR DeleteSecurityConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

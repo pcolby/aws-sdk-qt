@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDocumentationVersionRequest
+/*!
+ * \class QtAws::APIGateway::DeleteDocumentationVersionRequest
  *
- * @brief  Implements APIGateway DeleteDocumentationVersion requests.
+ * \brief The DeleteDocumentationVersionRequest class encapsulates APIGateway DeleteDocumentationVersion requests.
  *
- * @see    APIGatewayClient::deleteDocumentationVersion
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDocumentationVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDocumentationVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest(const Delet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDocumentationVersionRequest object.
  */
 DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest()
@@ -53,13 +61,16 @@ DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDocumentationVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDocumentationVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(Q
     return new DeleteDocumentationVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDocumentationVersionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(Q
  * @brief  Private implementation for DeleteDocumentationVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDocumentationVersionRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDocumentationVersionRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteAutoScalingGroupRequest
+/*!
+ * \class QtAws::AutoScaling::DeleteAutoScalingGroupRequest
  *
- * @brief  Implements AutoScaling DeleteAutoScalingGroup requests.
+ * \brief The DeleteAutoScalingGroupRequest class encapsulates AutoScaling DeleteAutoScalingGroup requests.
  *
- * @see    AutoScalingClient::deleteAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAutoScalingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteAutoScalingGroupRequest::DeleteAutoScalingGroupRequest(const DeleteAutoSca
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAutoScalingGroupRequest object.
  */
 DeleteAutoScalingGroupRequest::DeleteAutoScalingGroupRequest()
@@ -53,13 +61,16 @@ DeleteAutoScalingGroupRequest::DeleteAutoScalingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAutoScalingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAutoScalingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetw
     return new DeleteAutoScalingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAutoScalingGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetw
  * @brief  Private implementation for DeleteAutoScalingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAutoScalingGroupRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAutoScalingGroupRequestPrivate object, copying another.

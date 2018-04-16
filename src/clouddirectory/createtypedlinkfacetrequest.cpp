@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateTypedLinkFacetRequest
+/*!
+ * \class QtAws::CloudDirectory::CreateTypedLinkFacetRequest
  *
- * @brief  Implements CloudDirectory CreateTypedLinkFacet requests.
+ * \brief The CreateTypedLinkFacetRequest class encapsulates CloudDirectory CreateTypedLinkFacet requests.
  *
- * @see    CloudDirectoryClient::createTypedLinkFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createTypedLinkFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTypedLinkFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateTypedLinkFacetRequest::CreateTypedLinkFacetRequest(const CreateTypedLinkFa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTypedLinkFacetRequest object.
  */
 CreateTypedLinkFacetRequest::CreateTypedLinkFacetRequest()
@@ -53,13 +63,16 @@ CreateTypedLinkFacetRequest::CreateTypedLinkFacetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTypedLinkFacetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTypedLinkFacetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateTypedLinkFacetRequest::response(QNetwor
     return new CreateTypedLinkFacetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTypedLinkFacetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateTypedLinkFacetRequest::response(QNetwor
  * @brief  Private implementation for CreateTypedLinkFacetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTypedLinkFacetRequestPrivate object.
@@ -97,7 +110,7 @@ CreateTypedLinkFacetRequestPrivate::CreateTypedLinkFacetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTypedLinkFacetRequestPrivate object, copying another.

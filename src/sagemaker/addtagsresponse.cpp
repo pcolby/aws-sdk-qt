@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  AddTagsResponse
+/*!
+ * \class QtAws::SageMaker::AddTagsResponse
  *
- * @brief  Handles SageMaker AddTags responses.
+ * \brief The AddTagsResponse class encapsulates SageMaker AddTags responses.
  *
- * @see    SageMakerClient::addTags
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::addTags
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AddTagsRequest * AddTagsResponse::request() const
     return static_cast<const AddTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker AddTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsResponsePrivate
+ * \class AddTagsResponsePrivate
  *
- * @brief  Private implementation for AddTagsResponse.
+ * \brief Private implementation for AddTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsResponsePrivate object.
@@ -91,7 +94,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker AddTagsResponse element.
  *
  * @param  xml  XML stream to parse.

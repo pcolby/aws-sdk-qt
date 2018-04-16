@@ -215,33 +215,41 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CognitoIdentityProvider
+ * \brief The QtAws::CognitoIdentityProvider contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CognitoIdentityProviderClient
+/*!
+ * \class QtAws::CognitoIdentityProvider::CognitoIdentityProviderClient
  *
- * @brief  Client for Amazon Cognito Identity Provider
+ * \brief The CognitoIdentityProviderClient class provides access the Amazon Cognito Identity Provider service.
  *
- * Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
- * authenticate a user to obtain tokens related to user identity and access
+ * \ingroup CognitoIdentityProvider
  *
- * policies>
- *
- * This API reference provides information about user pools in Amazon Cognito User
- *
- * Pools>
- *
- * For more information, see the Amazon Cognito
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
  */
 
-/**
- * @brief  Constructs a new CognitoIdentityProviderClient object.
+/*!
+ * \brief Constructs a CognitoIdentityProviderClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -260,21 +268,16 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     d->serviceName = QStringLiteral("cognito-idp");
 }
 
-/**
- * @brief  Constructs a new CognitoIdentityProviderClient object.
+/*!
+ * \overload CognitoIdentityProviderClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     const QUrl &endpoint,
@@ -293,7 +296,7 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     d->serviceName = QStringLiteral("cognito-idp");
 }
 
-/**
+/*!
  * Adds additional user attributes to the user pool
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -307,7 +310,7 @@ AddCustomAttributesResponse * CognitoIdentityProviderClient::addCustomAttributes
     return qobject_cast<AddCustomAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified user to the specified
  *
  * group>
@@ -325,7 +328,7 @@ AdminAddUserToGroupResponse * CognitoIdentityProviderClient::adminAddUserToGroup
     return qobject_cast<AdminAddUserToGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Confirms user registration as an admin without using a confirmation code. Works on any
  *
  * user>
@@ -343,7 +346,7 @@ AdminConfirmSignUpResponse * CognitoIdentityProviderClient::adminConfirmSignUp(c
     return qobject_cast<AdminConfirmSignUpResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new user in the specified user
  *
  * pool>
@@ -379,7 +382,7 @@ AdminCreateUserResponse * CognitoIdentityProviderClient::adminCreateUser(const A
     return qobject_cast<AdminCreateUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a user as an administrator. Works on any
  *
  * user>
@@ -397,7 +400,7 @@ AdminDeleteUserResponse * CognitoIdentityProviderClient::adminDeleteUser(const A
     return qobject_cast<AdminDeleteUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the user attributes in a user pool as an administrator. Works on any
  *
  * user>
@@ -415,7 +418,7 @@ AdminDeleteUserAttributesResponse * CognitoIdentityProviderClient::adminDeleteUs
     return qobject_cast<AdminDeleteUserAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables the user from signing in with the specified external (SAML or social) identity provider. If the user to disable
  * is a Cognito User Pools native username + password user, they are not permitted to use their password to sign-in. If the
  * user to disable is a linked external IdP user, any link between that user and an existing user is removed. The next time
@@ -462,7 +465,7 @@ AdminDisableProviderForUserResponse * CognitoIdentityProviderClient::adminDisabl
     return qobject_cast<AdminDisableProviderForUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables the specified user as an administrator. Works on any
  *
  * user>
@@ -480,7 +483,7 @@ AdminDisableUserResponse * CognitoIdentityProviderClient::adminDisableUser(const
     return qobject_cast<AdminDisableUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the specified user as an administrator. Works on any
  *
  * user>
@@ -498,7 +501,7 @@ AdminEnableUserResponse * CognitoIdentityProviderClient::adminEnableUser(const A
     return qobject_cast<AdminEnableUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Forgets the device, as an
  *
  * administrator>
@@ -516,7 +519,7 @@ AdminForgetDeviceResponse * CognitoIdentityProviderClient::adminForgetDevice(con
     return qobject_cast<AdminForgetDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the device, as an
  *
  * administrator>
@@ -534,7 +537,7 @@ AdminGetDeviceResponse * CognitoIdentityProviderClient::adminGetDevice(const Adm
     return qobject_cast<AdminGetDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the specified user by user name in a user pool as an administrator. Works on any
  *
  * user>
@@ -552,7 +555,7 @@ AdminGetUserResponse * CognitoIdentityProviderClient::adminGetUser(const AdminGe
     return qobject_cast<AdminGetUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates the authentication flow, as an
  *
  * administrator>
@@ -570,7 +573,7 @@ AdminInitiateAuthResponse * CognitoIdentityProviderClient::adminInitiateAuth(con
     return qobject_cast<AdminInitiateAuthResponse *>(send(request));
 }
 
-/**
+/*!
  * Links an existing user account in a user pool (<code>DestinationUser</code>) to an identity from an external identity
  * provider (<code>SourceUser</code>) based on a specified attribute name and value from the external identity provider.
  * This allows you to create a link from the existing user account to an external federated user identity that has not yet
@@ -606,7 +609,7 @@ AdminLinkProviderForUserResponse * CognitoIdentityProviderClient::adminLinkProvi
     return qobject_cast<AdminLinkProviderForUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists devices, as an
  *
  * administrator>
@@ -624,7 +627,7 @@ AdminListDevicesResponse * CognitoIdentityProviderClient::adminListDevices(const
     return qobject_cast<AdminListDevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the groups that the user belongs
  *
  * to>
@@ -642,7 +645,7 @@ AdminListGroupsForUserResponse * CognitoIdentityProviderClient::adminListGroupsF
     return qobject_cast<AdminListGroupsForUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists a history of user activity and any risks detected as part of Amazon Cognito advanced
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -656,7 +659,7 @@ AdminListUserAuthEventsResponse * CognitoIdentityProviderClient::adminListUserAu
     return qobject_cast<AdminListUserAuthEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified user from the specified
  *
  * group>
@@ -674,7 +677,7 @@ AdminRemoveUserFromGroupResponse * CognitoIdentityProviderClient::adminRemoveUse
     return qobject_cast<AdminRemoveUserFromGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets the specified user's password in a user pool as an administrator. Works on any
  *
  * user>
@@ -701,7 +704,7 @@ AdminResetUserPasswordResponse * CognitoIdentityProviderClient::adminResetUserPa
     return qobject_cast<AdminResetUserPasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Responds to an authentication challenge, as an
  *
  * administrator>
@@ -719,7 +722,7 @@ AdminRespondToAuthChallengeResponse * CognitoIdentityProviderClient::adminRespon
     return qobject_cast<AdminRespondToAuthChallengeResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the user's multi-factor authentication (MFA)
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -733,7 +736,7 @@ AdminSetUserMFAPreferenceResponse * CognitoIdentityProviderClient::adminSetUserM
     return qobject_cast<AdminSetUserMFAPreferenceResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets all the user settings for a specified user name. Works on any
  *
  * user>
@@ -751,7 +754,7 @@ AdminSetUserSettingsResponse * CognitoIdentityProviderClient::adminSetUserSettin
     return qobject_cast<AdminSetUserSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides feedback for an authentication event as to whether it was from a valid user. This feedback is used for
  * improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced
  *
@@ -766,7 +769,7 @@ AdminUpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::adminUpdat
     return qobject_cast<AdminUpdateAuthEventFeedbackResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the device status as an
  *
  * administrator>
@@ -784,7 +787,7 @@ AdminUpdateDeviceStatusResponse * CognitoIdentityProviderClient::adminUpdateDevi
     return qobject_cast<AdminUpdateDeviceStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified user's attributes, including developer attributes, as an administrator. Works on any
  *
  * user>
@@ -810,7 +813,7 @@ AdminUpdateUserAttributesResponse * CognitoIdentityProviderClient::adminUpdateUs
     return qobject_cast<AdminUpdateUserAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Signs out users from all devices, as an
  *
  * administrator>
@@ -828,7 +831,7 @@ AdminUserGlobalSignOutResponse * CognitoIdentityProviderClient::adminUserGlobalS
     return qobject_cast<AdminUserGlobalSignOutResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a unique generated shared secret key code for the user account. The request takes an access token or a session
  * string, but not
  *
@@ -843,7 +846,7 @@ AssociateSoftwareTokenResponse * CognitoIdentityProviderClient::associateSoftwar
     return qobject_cast<AssociateSoftwareTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the password for a specified user in a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -857,7 +860,7 @@ ChangePasswordResponse * CognitoIdentityProviderClient::changePassword(const Cha
     return qobject_cast<ChangePasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Confirms tracking of the device. This API call is the call that begins device
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -871,7 +874,7 @@ ConfirmDeviceResponse * CognitoIdentityProviderClient::confirmDevice(const Confi
     return qobject_cast<ConfirmDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows a user to enter a confirmation code to reset a forgotten
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -885,7 +888,7 @@ ConfirmForgotPasswordResponse * CognitoIdentityProviderClient::confirmForgotPass
     return qobject_cast<ConfirmForgotPasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Confirms registration of a user and handles the existing alias from a previous
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -899,7 +902,7 @@ ConfirmSignUpResponse * CognitoIdentityProviderClient::confirmSignUp(const Confi
     return qobject_cast<ConfirmSignUpResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new group in the specified user
  *
  * pool>
@@ -917,7 +920,7 @@ CreateGroupResponse * CognitoIdentityProviderClient::createGroup(const CreateGro
     return qobject_cast<CreateGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an identity provider for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -931,7 +934,7 @@ CreateIdentityProviderResponse * CognitoIdentityProviderClient::createIdentityPr
     return qobject_cast<CreateIdentityProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new OAuth2.0 resource server and defines custom scopes in
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -945,7 +948,7 @@ CreateResourceServerResponse * CognitoIdentityProviderClient::createResourceServ
     return qobject_cast<CreateResourceServerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates the user import
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -959,7 +962,7 @@ CreateUserImportJobResponse * CognitoIdentityProviderClient::createUserImportJob
     return qobject_cast<CreateUserImportJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new Amazon Cognito user pool and sets the password policy for the
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -973,7 +976,7 @@ CreateUserPoolResponse * CognitoIdentityProviderClient::createUserPool(const Cre
     return qobject_cast<CreateUserPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates the user pool
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -987,7 +990,7 @@ CreateUserPoolClientResponse * CognitoIdentityProviderClient::createUserPoolClie
     return qobject_cast<CreateUserPoolClientResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new domain for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1001,7 +1004,7 @@ CreateUserPoolDomainResponse * CognitoIdentityProviderClient::createUserPoolDoma
     return qobject_cast<CreateUserPoolDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a group. Currently only groups with no members can be
  *
  * deleted>
@@ -1019,7 +1022,7 @@ DeleteGroupResponse * CognitoIdentityProviderClient::deleteGroup(const DeleteGro
     return qobject_cast<DeleteGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an identity provider for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1033,7 +1036,7 @@ DeleteIdentityProviderResponse * CognitoIdentityProviderClient::deleteIdentityPr
     return qobject_cast<DeleteIdentityProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a resource
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1047,7 +1050,7 @@ DeleteResourceServerResponse * CognitoIdentityProviderClient::deleteResourceServ
     return qobject_cast<DeleteResourceServerResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows a user to delete himself or
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1061,7 +1064,7 @@ DeleteUserResponse * CognitoIdentityProviderClient::deleteUser(const DeleteUserR
     return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the attributes for a
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1075,7 +1078,7 @@ DeleteUserAttributesResponse * CognitoIdentityProviderClient::deleteUserAttribut
     return qobject_cast<DeleteUserAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Amazon Cognito user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1089,7 +1092,7 @@ DeleteUserPoolResponse * CognitoIdentityProviderClient::deleteUserPool(const Del
     return qobject_cast<DeleteUserPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows the developer to delete the user pool
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1103,7 +1106,7 @@ DeleteUserPoolClientResponse * CognitoIdentityProviderClient::deleteUserPoolClie
     return qobject_cast<DeleteUserPoolClientResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a domain for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1117,7 +1120,7 @@ DeleteUserPoolDomainResponse * CognitoIdentityProviderClient::deleteUserPoolDoma
     return qobject_cast<DeleteUserPoolDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specific identity
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1131,7 +1134,7 @@ DescribeIdentityProviderResponse * CognitoIdentityProviderClient::describeIdenti
     return qobject_cast<DescribeIdentityProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a resource
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1145,7 +1148,7 @@ DescribeResourceServerResponse * CognitoIdentityProviderClient::describeResource
     return qobject_cast<DescribeResourceServerResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the risk
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1159,7 +1162,7 @@ DescribeRiskConfigurationResponse * CognitoIdentityProviderClient::describeRiskC
     return qobject_cast<DescribeRiskConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the user import
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1173,7 +1176,7 @@ DescribeUserImportJobResponse * CognitoIdentityProviderClient::describeUserImpor
     return qobject_cast<DescribeUserImportJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the configuration information and metadata of the specified user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1187,7 +1190,7 @@ DescribeUserPoolResponse * CognitoIdentityProviderClient::describeUserPool(const
     return qobject_cast<DescribeUserPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Client method for returning the configuration information and metadata of the specified user pool
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1201,7 +1204,7 @@ DescribeUserPoolClientResponse * CognitoIdentityProviderClient::describeUserPool
     return qobject_cast<DescribeUserPoolClientResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1215,7 +1218,7 @@ DescribeUserPoolDomainResponse * CognitoIdentityProviderClient::describeUserPool
     return qobject_cast<DescribeUserPoolDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Forgets the specified
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1229,7 +1232,7 @@ ForgetDeviceResponse * CognitoIdentityProviderClient::forgetDevice(const ForgetD
     return qobject_cast<ForgetDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Calling this API causes a message to be sent to the end user with a confirmation code that is required to change the
  * user's password. For the <code>Username</code> parameter, you can use the username or user alias. If a verified phone
  * number exists for the user, the confirmation code is sent to the phone number. Otherwise, if a verified email exists,
@@ -1247,7 +1250,7 @@ ForgotPasswordResponse * CognitoIdentityProviderClient::forgotPassword(const For
     return qobject_cast<ForgotPasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the header information for the .csv file to be used as input for the user import
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1261,7 +1264,7 @@ GetCSVHeaderResponse * CognitoIdentityProviderClient::getCSVHeader(const GetCSVH
     return qobject_cast<GetCSVHeaderResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1275,7 +1278,7 @@ GetDeviceResponse * CognitoIdentityProviderClient::getDevice(const GetDeviceRequ
     return qobject_cast<GetDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a
  *
  * group>
@@ -1293,7 +1296,7 @@ GetGroupResponse * CognitoIdentityProviderClient::getGroup(const GetGroupRequest
     return qobject_cast<GetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the specified identity
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1307,7 +1310,7 @@ GetIdentityProviderByIdentifierResponse * CognitoIdentityProviderClient::getIden
     return qobject_cast<GetIdentityProviderByIdentifierResponse *>(send(request));
 }
 
-/**
+/*!
  * This method takes a user pool ID, and returns the signing
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1321,7 +1324,7 @@ GetSigningCertificateResponse * CognitoIdentityProviderClient::getSigningCertifi
     return qobject_cast<GetSigningCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the UI Customization information for a particular app client's app UI, if there is something set. If nothing is set
  * for the particular client, but there is an existing pool level customization (app <code>clientId</code> will be
  * <code>ALL</code>), then that is returned. If nothing is present, then an empty shape is
@@ -1337,7 +1340,7 @@ GetUICustomizationResponse * CognitoIdentityProviderClient::getUICustomization(c
     return qobject_cast<GetUICustomizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the user attributes and metadata for a
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1351,7 +1354,7 @@ GetUserResponse * CognitoIdentityProviderClient::getUser(const GetUserRequest &r
     return qobject_cast<GetUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the user attribute verification code for the specified attribute
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1365,7 +1368,7 @@ GetUserAttributeVerificationCodeResponse * CognitoIdentityProviderClient::getUse
     return qobject_cast<GetUserAttributeVerificationCodeResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the user pool multi-factor authentication (MFA)
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1379,7 +1382,7 @@ GetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::getUserPoolMfaConf
     return qobject_cast<GetUserPoolMfaConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Signs out users from all
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1393,7 +1396,7 @@ GlobalSignOutResponse * CognitoIdentityProviderClient::globalSignOut(const Globa
     return qobject_cast<GlobalSignOutResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates the authentication
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1407,7 +1410,7 @@ InitiateAuthResponse * CognitoIdentityProviderClient::initiateAuth(const Initiat
     return qobject_cast<InitiateAuthResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1421,7 +1424,7 @@ ListDevicesResponse * CognitoIdentityProviderClient::listDevices(const ListDevic
     return qobject_cast<ListDevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the groups associated with a user
  *
  * pool>
@@ -1439,7 +1442,7 @@ ListGroupsResponse * CognitoIdentityProviderClient::listGroups(const ListGroupsR
     return qobject_cast<ListGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about all identity providers for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1453,7 +1456,7 @@ ListIdentityProvidersResponse * CognitoIdentityProviderClient::listIdentityProvi
     return qobject_cast<ListIdentityProvidersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the resource servers for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1467,7 +1470,7 @@ ListResourceServersResponse * CognitoIdentityProviderClient::listResourceServers
     return qobject_cast<ListResourceServersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the user import
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1481,7 +1484,7 @@ ListUserImportJobsResponse * CognitoIdentityProviderClient::listUserImportJobs(c
     return qobject_cast<ListUserImportJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the clients that have been created for the specified user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1495,7 +1498,7 @@ ListUserPoolClientsResponse * CognitoIdentityProviderClient::listUserPoolClients
     return qobject_cast<ListUserPoolClientsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the user pools associated with an AWS
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1509,7 +1512,7 @@ ListUserPoolsResponse * CognitoIdentityProviderClient::listUserPools(const ListU
     return qobject_cast<ListUserPoolsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the users in the Amazon Cognito user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1523,7 +1526,7 @@ ListUsersResponse * CognitoIdentityProviderClient::listUsers(const ListUsersRequ
     return qobject_cast<ListUsersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the users in the specified
  *
  * group>
@@ -1541,7 +1544,7 @@ ListUsersInGroupResponse * CognitoIdentityProviderClient::listUsersInGroup(const
     return qobject_cast<ListUsersInGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Resends the confirmation (for confirmation of registration) to a specific user in the user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1555,7 +1558,7 @@ ResendConfirmationCodeResponse * CognitoIdentityProviderClient::resendConfirmati
     return qobject_cast<ResendConfirmationCodeResponse *>(send(request));
 }
 
-/**
+/*!
  * Responds to the authentication
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1569,7 +1572,7 @@ RespondToAuthChallengeResponse * CognitoIdentityProviderClient::respondToAuthCha
     return qobject_cast<RespondToAuthChallengeResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures actions on detected risks. To delete the risk configuration for <code>UserPoolId</code> or
  * <code>ClientId</code>, pass null values for all four configuration
  *
@@ -1592,7 +1595,7 @@ SetRiskConfigurationResponse * CognitoIdentityProviderClient::setRiskConfigurati
     return qobject_cast<SetRiskConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the UI customization information for a user pool's built-in app
  *
  * UI>
@@ -1618,7 +1621,7 @@ SetUICustomizationResponse * CognitoIdentityProviderClient::setUICustomization(c
     return qobject_cast<SetUICustomizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Set the user's multi-factor authentication (MFA) method
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1632,7 +1635,7 @@ SetUserMFAPreferenceResponse * CognitoIdentityProviderClient::setUserMFAPreferen
     return qobject_cast<SetUserMFAPreferenceResponse *>(send(request));
 }
 
-/**
+/*!
  * Set the user pool MFA
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1646,7 +1649,7 @@ SetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::setUserPoolMfaConf
     return qobject_cast<SetUserPoolMfaConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the user settings like multi-factor authentication (MFA). If MFA is to be removed for a particular attribute pass
  * the attribute with code delivery as null. If null list is passed, all MFA options are
  *
@@ -1661,7 +1664,7 @@ SetUserSettingsResponse * CognitoIdentityProviderClient::setUserSettings(const S
     return qobject_cast<SetUserSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers the user in the specified user pool and creates a user name, password, and user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1675,7 +1678,7 @@ SignUpResponse * CognitoIdentityProviderClient::signUp(const SignUpRequest &requ
     return qobject_cast<SignUpResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1689,7 +1692,7 @@ StartUserImportJobResponse * CognitoIdentityProviderClient::startUserImportJob(c
     return qobject_cast<StartUserImportJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the user import
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1703,7 +1706,7 @@ StopUserImportJobResponse * CognitoIdentityProviderClient::stopUserImportJob(con
     return qobject_cast<StopUserImportJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides the feedback for an authentication event whether it was from a valid user or not. This feedback is used for
  * improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced
  *
@@ -1718,7 +1721,7 @@ UpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::updateAuthEvent
     return qobject_cast<UpdateAuthEventFeedbackResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the device
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1732,7 +1735,7 @@ UpdateDeviceStatusResponse * CognitoIdentityProviderClient::updateDeviceStatus(c
     return qobject_cast<UpdateDeviceStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified group with the specified
  *
  * attributes>
@@ -1750,7 +1753,7 @@ UpdateGroupResponse * CognitoIdentityProviderClient::updateGroup(const UpdateGro
     return qobject_cast<UpdateGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates identity provider information for a user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1764,7 +1767,7 @@ UpdateIdentityProviderResponse * CognitoIdentityProviderClient::updateIdentityPr
     return qobject_cast<UpdateIdentityProviderResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the name and scopes of resource server. All other fields are
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1778,7 +1781,7 @@ UpdateResourceServerResponse * CognitoIdentityProviderClient::updateResourceServ
     return qobject_cast<UpdateResourceServerResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows a user to update a specific attribute (one at a
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1792,7 +1795,7 @@ UpdateUserAttributesResponse * CognitoIdentityProviderClient::updateUserAttribut
     return qobject_cast<UpdateUserAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified user pool with the specified
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1806,7 +1809,7 @@ UpdateUserPoolResponse * CognitoIdentityProviderClient::updateUserPool(const Upd
     return qobject_cast<UpdateUserPoolResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows the developer to update the specified user pool client and password
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1820,7 +1823,7 @@ UpdateUserPoolClientResponse * CognitoIdentityProviderClient::updateUserPoolClie
     return qobject_cast<UpdateUserPoolClientResponse *>(send(request));
 }
 
-/**
+/*!
  * Use this API to register a user's entered TOTP code and mark the user's software token MFA status as "verified" if
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1834,7 +1837,7 @@ VerifySoftwareTokenResponse * CognitoIdentityProviderClient::verifySoftwareToken
     return qobject_cast<VerifySoftwareTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * Verifies the specified user attributes in the user
  *
  * @param  request Request to send to Amazon Cognito Identity Provider.
@@ -1848,7 +1851,7 @@ VerifyUserAttributeResponse * CognitoIdentityProviderClient::verifyUserAttribute
     return qobject_cast<VerifyUserAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CognitoIdentityProviderClientPrivate
@@ -1856,7 +1859,7 @@ VerifyUserAttributeResponse * CognitoIdentityProviderClient::verifyUserAttribute
  * @brief  Private implementation for CognitoIdentityProviderClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CognitoIdentityProviderClientPrivate object.

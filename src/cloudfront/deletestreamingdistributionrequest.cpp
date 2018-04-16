@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteStreamingDistributionRequest
+/*!
+ * \class QtAws::CloudFront::DeleteStreamingDistributionRequest
  *
- * @brief  Implements CloudFront DeleteStreamingDistribution requests.
+ * \brief The DeleteStreamingDistributionRequest class encapsulates CloudFront DeleteStreamingDistribution requests.
  *
- * @see    CloudFrontClient::deleteStreamingDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteStreamingDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamingDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteStreamingDistributionRequest::DeleteStreamingDistributionRequest(const Del
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamingDistributionRequest object.
  */
 DeleteStreamingDistributionRequest::DeleteStreamingDistributionRequest()
@@ -53,13 +61,16 @@ DeleteStreamingDistributionRequest::DeleteStreamingDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteStreamingDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteStreamingDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(
     return new DeleteStreamingDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteStreamingDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(
  * @brief  Private implementation for DeleteStreamingDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamingDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamingDistributionRequestPrivate object, copying another.

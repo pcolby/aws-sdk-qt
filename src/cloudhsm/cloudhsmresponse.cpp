@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CloudHSMResponse
+/*!
+ * \class QtAws::CloudHSM::CloudHSMResponse
  *
- * @brief  Handles CloudHSM CloudHSM responses.
+ * \brief The CloudHSMResponse class is the base class for all CloudHSM responses.
  *
- * @see    CloudHSMClient::cloudHSM
+ * \ingroup CloudHSM
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudHSMResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudHSMResponse::CloudHSMResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudHSMResponse object.
@@ -63,7 +63,7 @@ CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudHSMResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudHSMResponsePrivate
@@ -92,7 +92,7 @@ void CloudHSMResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudHSMResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudHSMResponsePrivate object.

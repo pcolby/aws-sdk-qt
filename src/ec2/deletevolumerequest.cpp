@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVolumeRequest
+/*!
+ * \class QtAws::EC2::DeleteVolumeRequest
  *
- * @brief  Implements EC2 DeleteVolume requests.
+ * \brief The DeleteVolumeRequest class encapsulates EC2 DeleteVolume requests.
  *
- * @see    EC2Client::deleteVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVolumeRequest object.
  */
 DeleteVolumeRequest::DeleteVolumeRequest()
@@ -53,13 +60,16 @@ DeleteVolumeRequest::DeleteVolumeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVolumeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVolumeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
     return new DeleteVolumeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVolumeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteVolumeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVolumeRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVolumeRequestPrivate object, copying another.

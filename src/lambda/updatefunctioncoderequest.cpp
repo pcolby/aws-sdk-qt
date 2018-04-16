@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateFunctionCodeRequest
+/*!
+ * \class QtAws::Lambda::UpdateFunctionCodeRequest
  *
- * @brief  Implements Lambda UpdateFunctionCode requests.
+ * \brief The UpdateFunctionCodeRequest class encapsulates Lambda UpdateFunctionCode requests.
  *
- * @see    LambdaClient::updateFunctionCode
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateFunctionCode
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFunctionCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateFunctionCodeRequest::UpdateFunctionCodeRequest(const UpdateFunctionCodeReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateFunctionCodeRequest object.
  */
 UpdateFunctionCodeRequest::UpdateFunctionCodeRequest()
@@ -53,13 +67,16 @@ UpdateFunctionCodeRequest::UpdateFunctionCodeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateFunctionCodeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateFunctionCodeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkR
     return new UpdateFunctionCodeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateFunctionCodeRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkR
  * @brief  Private implementation for UpdateFunctionCodeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFunctionCodeRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFunctionCodeRequestPrivate object, copying another.

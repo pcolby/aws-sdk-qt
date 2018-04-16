@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DeleteParameterGroupResponse
+/*!
+ * \class QtAws::DAX::DeleteParameterGroupResponse
  *
- * @brief  Handles DAX DeleteParameterGroup responses.
+ * \brief The DeleteParameterGroupResponse class encapsulates DAX DeleteParameterGroup responses.
  *
- * @see    DAXClient::deleteParameterGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::deleteParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteParameterGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteParameterGroupRequest * DeleteParameterGroupResponse::request() cons
     return static_cast<const DeleteParameterGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DeleteParameterGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteParameterGroupResponsePrivate
+ * \class DeleteParameterGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteParameterGroupResponse.
+ * \brief Private implementation for DeleteParameterGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteParameterGroupResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DeleteParameterGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteHealthCheckRequest
+/*!
+ * \class QtAws::Route53::DeleteHealthCheckRequest
  *
- * @brief  Implements Route53 DeleteHealthCheck requests.
+ * \brief The DeleteHealthCheckRequest class encapsulates Route53 DeleteHealthCheck requests.
  *
- * @see    Route53Client::deleteHealthCheck
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteHealthCheck
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHealthCheckRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteHealthCheckRequest::DeleteHealthCheckRequest(const DeleteHealthCheckReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteHealthCheckRequest object.
  */
 DeleteHealthCheckRequest::DeleteHealthCheckRequest()
@@ -53,13 +56,16 @@ DeleteHealthCheckRequest::DeleteHealthCheckRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteHealthCheckRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteHealthCheckResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkRe
     return new DeleteHealthCheckResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteHealthCheckRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteHealthCheckRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHealthCheckRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHealthCheckRequestPrivate object, copying another.

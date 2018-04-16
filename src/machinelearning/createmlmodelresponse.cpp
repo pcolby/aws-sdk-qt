@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateMLModelResponse
+/*!
+ * \class QtAws::MachineLearning::CreateMLModelResponse
  *
- * @brief  Handles MachineLearning CreateMLModel responses.
+ * \brief The CreateMLModelResponse class encapsulates MachineLearning CreateMLModel responses.
  *
- * @see    MachineLearningClient::createMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateMLModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateMLModelRequest * CreateMLModelResponse::request() const
     return static_cast<const CreateMLModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning CreateMLModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateMLModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateMLModelResponsePrivate
+ * \class CreateMLModelResponsePrivate
  *
- * @brief  Private implementation for CreateMLModelResponse.
+ * \brief Private implementation for CreateMLModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMLModelResponsePrivate object.
@@ -91,7 +94,7 @@ CreateMLModelResponsePrivate::CreateMLModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning CreateMLModelResponse element.
  *
  * @param  xml  XML stream to parse.

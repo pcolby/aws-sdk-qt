@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  GetShardIteratorResponse
+/*!
+ * \class QtAws::Kinesis::GetShardIteratorResponse
  *
- * @brief  Handles Kinesis GetShardIterator responses.
+ * \brief The GetShardIteratorResponse class encapsulates Kinesis GetShardIterator responses.
  *
- * @see    KinesisClient::getShardIterator
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::getShardIterator
  */
 
-/**
+/*!
  * @brief  Constructs a new GetShardIteratorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetShardIteratorRequest * GetShardIteratorResponse::request() const
     return static_cast<const GetShardIteratorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis GetShardIterator response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetShardIteratorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetShardIteratorResponsePrivate
+ * \class GetShardIteratorResponsePrivate
  *
- * @brief  Private implementation for GetShardIteratorResponse.
+ * \brief Private implementation for GetShardIteratorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetShardIteratorResponsePrivate object.
@@ -91,7 +97,7 @@ GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis GetShardIteratorResponse element.
  *
  * @param  xml  XML stream to parse.

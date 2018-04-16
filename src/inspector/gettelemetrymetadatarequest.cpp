@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  GetTelemetryMetadataRequest
+/*!
+ * \class QtAws::Inspector::GetTelemetryMetadataRequest
  *
- * @brief  Implements Inspector GetTelemetryMetadata requests.
+ * \brief The GetTelemetryMetadataRequest class encapsulates Inspector GetTelemetryMetadata requests.
  *
- * @see    InspectorClient::getTelemetryMetadata
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::getTelemetryMetadata
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTelemetryMetadataRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetTelemetryMetadataRequest::GetTelemetryMetadataRequest(const GetTelemetryMetad
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTelemetryMetadataRequest object.
  */
 GetTelemetryMetadataRequest::GetTelemetryMetadataRequest()
@@ -53,13 +61,16 @@ GetTelemetryMetadataRequest::GetTelemetryMetadataRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTelemetryMetadataRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTelemetryMetadataResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetTelemetryMetadataRequest::response(QNetwor
     return new GetTelemetryMetadataResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTelemetryMetadataRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetTelemetryMetadataRequest::response(QNetwor
  * @brief  Private implementation for GetTelemetryMetadataRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTelemetryMetadataRequestPrivate object.
@@ -97,7 +108,7 @@ GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTelemetryMetadataRequestPrivate object, copying another.

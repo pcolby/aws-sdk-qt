@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateConnectionRequest
+/*!
+ * \class QtAws::Glue::UpdateConnectionRequest
  *
- * @brief  Implements Glue UpdateConnection requests.
+ * \brief The UpdateConnectionRequest class encapsulates Glue UpdateConnection requests.
  *
- * @see    GlueClient::updateConnection
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateConnectionRequest::UpdateConnectionRequest(const UpdateConnectionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateConnectionRequest object.
  */
 UpdateConnectionRequest::UpdateConnectionRequest()
@@ -53,13 +59,16 @@ UpdateConnectionRequest::UpdateConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectionRequest::response(QNetworkRep
     return new UpdateConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateConnectionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectionRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConnectionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConnectionRequestPrivate object, copying another.

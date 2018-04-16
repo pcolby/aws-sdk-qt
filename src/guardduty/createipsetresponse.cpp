@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  CreateIPSetResponse
+/*!
+ * \class QtAws::GuardDuty::CreateIPSetResponse
  *
- * @brief  Handles GuardDuty CreateIPSet responses.
+ * \brief The CreateIPSetResponse class encapsulates GuardDuty CreateIPSet responses.
  *
- * @see    GuardDutyClient::createIPSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::createIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIPSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
     return static_cast<const CreateIPSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty CreateIPSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateIPSetResponsePrivate
+ * \class CreateIPSetResponsePrivate
  *
- * @brief  Private implementation for CreateIPSetResponse.
+ * \brief Private implementation for CreateIPSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIPSetResponsePrivate object.
@@ -91,7 +94,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty CreateIPSetResponse element.
  *
  * @param  xml  XML stream to parse.

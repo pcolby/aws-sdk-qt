@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateSubscriptionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::UpdateSubscriptionDefinitionRequest
  *
- * @brief  Implements Greengrass UpdateSubscriptionDefinition requests.
+ * \brief The UpdateSubscriptionDefinitionRequest class encapsulates Greengrass UpdateSubscriptionDefinition requests.
  *
- * @see    GreengrassClient::updateSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSubscriptionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateSubscriptionDefinitionRequest::UpdateSubscriptionDefinitionRequest(const U
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSubscriptionDefinitionRequest object.
  */
 UpdateSubscriptionDefinitionRequest::UpdateSubscriptionDefinitionRequest()
@@ -53,13 +59,16 @@ UpdateSubscriptionDefinitionRequest::UpdateSubscriptionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSubscriptionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSubscriptionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriptionDefinitionRequest::response
     return new UpdateSubscriptionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSubscriptionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriptionDefinitionRequest::response
  * @brief  Private implementation for UpdateSubscriptionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSubscriptionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateSubscriptionDefinitionRequestPrivate::UpdateSubscriptionDefinitionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSubscriptionDefinitionRequestPrivate object, copying another.

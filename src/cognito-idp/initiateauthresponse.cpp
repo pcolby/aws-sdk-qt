@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  InitiateAuthResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::InitiateAuthResponse
  *
- * @brief  Handles CognitoIdentityProvider InitiateAuth responses.
+ * \brief The InitiateAuthResponse class encapsulates CognitoIdentityProvider InitiateAuth responses.
  *
- * @see    CognitoIdentityProviderClient::initiateAuth
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::initiateAuth
  */
 
-/**
+/*!
  * @brief  Constructs a new InitiateAuthResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const InitiateAuthRequest * InitiateAuthResponse::request() const
     return static_cast<const InitiateAuthRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider InitiateAuth response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void InitiateAuthResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  InitiateAuthResponsePrivate
+ * \class InitiateAuthResponsePrivate
  *
- * @brief  Private implementation for InitiateAuthResponse.
+ * \brief Private implementation for InitiateAuthResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitiateAuthResponsePrivate object.
@@ -91,7 +104,7 @@ InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider InitiateAuthResponse element.
  *
  * @param  xml  XML stream to parse.

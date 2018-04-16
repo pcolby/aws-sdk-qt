@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  GetThingShadowResponse
+/*!
+ * \class QtAws::IoTDataPlane::GetThingShadowResponse
  *
- * @brief  Handles IoTDataPlane GetThingShadow responses.
+ * \brief The GetThingShadowResponse class encapsulates IoTDataPlane GetThingShadow responses.
  *
- * @see    IoTDataPlaneClient::getThingShadow
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::getThingShadow
  */
 
-/**
+/*!
  * @brief  Constructs a new GetThingShadowResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const GetThingShadowRequest * GetThingShadowResponse::request() const
     return static_cast<const GetThingShadowRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoTDataPlane GetThingShadow response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void GetThingShadowResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetThingShadowResponsePrivate
+ * \class GetThingShadowResponsePrivate
  *
- * @brief  Private implementation for GetThingShadowResponse.
+ * \brief Private implementation for GetThingShadowResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetThingShadowResponsePrivate object.
@@ -91,7 +100,7 @@ GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoTDataPlane GetThingShadowResponse element.
  *
  * @param  xml  XML stream to parse.

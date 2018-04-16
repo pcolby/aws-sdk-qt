@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ExpireSessionRequest
+/*!
+ * \class QtAws::AppStream::ExpireSessionRequest
  *
- * @brief  Implements AppStream ExpireSession requests.
+ * \brief The ExpireSessionRequest class encapsulates AppStream ExpireSession requests.
  *
- * @see    AppStreamClient::expireSession
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::expireSession
  */
 
-/**
+/*!
  * @brief  Constructs a new ExpireSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ExpireSessionRequest::ExpireSessionRequest(const ExpireSessionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ExpireSessionRequest object.
  */
 ExpireSessionRequest::ExpireSessionRequest()
@@ -53,13 +59,16 @@ ExpireSessionRequest::ExpireSessionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ExpireSessionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ExpireSessionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ExpireSessionRequest::response(QNetworkReply 
     return new ExpireSessionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ExpireSessionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ExpireSessionRequest::response(QNetworkReply 
  * @brief  Private implementation for ExpireSessionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExpireSessionRequestPrivate object.
@@ -97,7 +106,7 @@ ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExpireSessionRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteConnectionResponse
+/*!
+ * \class QtAws::Glue::DeleteConnectionResponse
  *
- * @brief  Handles Glue DeleteConnection responses.
+ * \brief The DeleteConnectionResponse class encapsulates Glue DeleteConnection responses.
  *
- * @see    GlueClient::deleteConnection
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConnectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteConnectionRequest * DeleteConnectionResponse::request() const
     return static_cast<const DeleteConnectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteConnection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteConnectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteConnectionResponsePrivate
+ * \class DeleteConnectionResponsePrivate
  *
- * @brief  Private implementation for DeleteConnectionResponse.
+ * \brief Private implementation for DeleteConnectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConnectionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteConnectionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ModifyHsmRequest
+/*!
+ * \class QtAws::CloudHSM::ModifyHsmRequest
  *
- * @brief  Implements CloudHSM ModifyHsm requests.
+ * \brief The ModifyHsmRequest class encapsulates CloudHSM ModifyHsm requests.
  *
- * @see    CloudHSMClient::modifyHsm
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::modifyHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ModifyHsmRequest::ModifyHsmRequest(const ModifyHsmRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyHsmRequest object.
  */
 ModifyHsmRequest::ModifyHsmRequest()
@@ -53,13 +68,16 @@ ModifyHsmRequest::ModifyHsmRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyHsmRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyHsmResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * co
     return new ModifyHsmResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyHsmRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * co
  * @brief  Private implementation for ModifyHsmRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHsmRequestPrivate object.
@@ -97,7 +115,7 @@ ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHsmRequestPrivate object, copying another.

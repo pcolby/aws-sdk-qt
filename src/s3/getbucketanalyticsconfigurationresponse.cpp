@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketAnalyticsConfigurationResponse
+/*!
+ * \class QtAws::S3::GetBucketAnalyticsConfigurationResponse
  *
- * @brief  Handles S3 GetBucketAnalyticsConfiguration responses.
+ * \brief The GetBucketAnalyticsConfigurationResponse class encapsulates S3 GetBucketAnalyticsConfiguration responses.
  *
- * @see    S3Client::getBucketAnalyticsConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketAnalyticsConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketAnalyticsConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketAnalyticsConfigurationRequest * GetBucketAnalyticsConfigurationRe
     return static_cast<const GetBucketAnalyticsConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketAnalyticsConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketAnalyticsConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketAnalyticsConfigurationResponsePrivate
+ * \class GetBucketAnalyticsConfigurationResponsePrivate
  *
- * @brief  Private implementation for GetBucketAnalyticsConfigurationResponse.
+ * \brief Private implementation for GetBucketAnalyticsConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketAnalyticsConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketAnalyticsConfigurationResponsePrivate::GetBucketAnalyticsConfigurationR
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketAnalyticsConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CreateReceiptRuleRequest
+/*!
+ * \class QtAws::SES::CreateReceiptRuleRequest
  *
- * @brief  Implements SES CreateReceiptRule requests.
+ * \brief The CreateReceiptRuleRequest class encapsulates SES CreateReceiptRule requests.
  *
- * @see    SESClient::createReceiptRule
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::createReceiptRule
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReceiptRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateReceiptRuleRequest::CreateReceiptRuleRequest(const CreateReceiptRuleReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReceiptRuleRequest object.
  */
 CreateReceiptRuleRequest::CreateReceiptRuleRequest()
@@ -53,13 +67,16 @@ CreateReceiptRuleRequest::CreateReceiptRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReceiptRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReceiptRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptRuleRequest::response(QNetworkRe
     return new CreateReceiptRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReceiptRuleRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptRuleRequest::response(QNetworkRe
  * @brief  Private implementation for CreateReceiptRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReceiptRuleRequestPrivate object.
@@ -97,7 +114,7 @@ CreateReceiptRuleRequestPrivate::CreateReceiptRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReceiptRuleRequestPrivate object, copying another.

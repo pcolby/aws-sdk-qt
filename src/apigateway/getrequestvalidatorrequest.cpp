@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetRequestValidatorRequest
+/*!
+ * \class QtAws::APIGateway::GetRequestValidatorRequest
  *
- * @brief  Implements APIGateway GetRequestValidator requests.
+ * \brief The GetRequestValidatorRequest class encapsulates APIGateway GetRequestValidator requests.
  *
- * @see    APIGatewayClient::getRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRequestValidatorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetRequestValidatorRequest::GetRequestValidatorRequest(const GetRequestValidator
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRequestValidatorRequest object.
  */
 GetRequestValidatorRequest::GetRequestValidatorRequest()
@@ -53,13 +61,16 @@ GetRequestValidatorRequest::GetRequestValidatorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRequestValidatorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRequestValidatorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetRequestValidatorRequest::response(QNetwork
     return new GetRequestValidatorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRequestValidatorRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetRequestValidatorRequest::response(QNetwork
  * @brief  Private implementation for GetRequestValidatorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRequestValidatorRequestPrivate object.
@@ -97,7 +108,7 @@ GetRequestValidatorRequestPrivate::GetRequestValidatorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRequestValidatorRequestPrivate object, copying another.

@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace Cloud9 {
 
-/**
- * @class  Cloud9Request
+/*!
+ * \class QtAws::Cloud9::Cloud9Request
  *
- * @brief  Interface class for providing Cloud9 requests
+ * \brief The Cloud9Request class is the base class for all Cloud9 requests.
+ *
+ * \ingroup Cloud9
  */
 
-
-/**
+/*!
  * @brief  Constructs a new Cloud9Request object.
  *
  * @param  action  The Cloud9 action to request.
@@ -41,7 +42,7 @@ Cloud9Request::Cloud9Request(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new Cloud9Request object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ Cloud9Request::Cloud9Request(const Cloud9Request &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ Cloud9Request& Cloud9Request::operator=(const Cloud9Request &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Cloud9Request object.
@@ -85,10 +86,8 @@ Cloud9Request::Cloud9Request(Cloud9RequestPrivate * const d) : QtAws::Core::AwsA
 
 }
 
-/**
- * @brief  Get the Cloud9 action to be performed by this request.
- *
- * @return The Cloud9 action to be performed by this request.
+/*!
+ * \brief Returns the Cloud9 action to be performed by this request.
  */
 Cloud9Request::Action Cloud9Request::action() const
 {
@@ -96,20 +95,16 @@ Cloud9Request::Action Cloud9Request::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the Cloud9 action to be performed by this request.
- *
- * @return The name of the Cloud9 action to be performed by this request.
+/*!
+ * \brief Returns the name of the Cloud9 action to be performed by this request.
  */
 QString Cloud9Request::actionString() const
 {
     return Cloud9RequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the Cloud9 API version implemented by this request.
- *
- * @return The Cloud9 API version implmented by this request.
+/*!
+ * \brief Returns the Cloud9 API version implemented by this request.
  */
 QString Cloud9Request::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString Cloud9Request::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the Cloud9 action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the Cloud9 action to be performed by this request to \a action.
  */
 void Cloud9Request::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void Cloud9Request::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the Cloud9 API version to include in this request.
- *
- * @param  version  The Cloud9 API version to include in this request.
+/*!
+ * Set the Cloud9 API version to include in this request to \a version.
  */
 void Cloud9Request::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void Cloud9Request::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool Cloud9Request::operator==(const Cloud9Request &other) const
 {
@@ -159,7 +146,7 @@ bool Cloud9Request::operator==(const Cloud9Request &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid Cloud9 queue name.
  *
  * @par From Cloud9 FAQs:
@@ -178,12 +165,10 @@ bool Cloud9Request::operator==(const Cloud9Request &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int Cloud9Request::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int Cloud9Request::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void Cloud9Request::clearParameters()
 {
@@ -200,13 +185,8 @@ void Cloud9Request::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this Cloud9 request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant Cloud9Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant Cloud9Request::parameter(const QString &name, const QVariant &defaultVa
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this Cloud9 request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &Cloud9Request::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &Cloud9Request::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this Cloud9 request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void Cloud9Request::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void Cloud9Request::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this Cloud9 request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void Cloud9Request::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void Cloud9Request::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this Cloud9 request.
+/*!
+ * \brief Returns a network request for this Cloud9 request using the given \a endpoint.
  *
  * This Cloud9 implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this Cloud9 request using the given \a endpoint.
  */
 QNetworkRequest Cloud9Request::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest Cloud9Request::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  Cloud9RequestPrivate
+ * \class  Cloud9RequestPrivate
  *
- * @brief  Private implementation for Cloud9Request.
+ * \brief  Private implementation for Cloud9Request.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new Cloud9RequestPrivate object.
- *
- * @param  action  Cloud9 action being performed by the \a q request.
- * @param  q       Pointer to this object's public Cloud9Request instance.
+ * \brief Constructs a new Cloud9RequestPrivate object.
  */
 Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9Request::Action action, Cloud9Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9Request::Action action, C
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new Cloud9RequestPrivate object from an existing one.
+ * \brief Constructs a new Cloud9RequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the Cloud9Request class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public Cloud9Request instance.
  */
 Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9RequestPrivate &other,
                                      Cloud9Request * const q)
@@ -312,14 +275,14 @@ Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9RequestPrivate &other,
 
 }
 
-/**
- * @brief  Convert and Cloud9 action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts Cloud9Request::Action enumerator values to their respective
  * string representations, appropriate for use with the Cloud9 service's Action
  * query parameters.
- *
- * @param  action  Cloud9 action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  GetObjectAttributesResponse
+/*!
+ * \class QtAws::CloudDirectory::GetObjectAttributesResponse
  *
- * @brief  Handles CloudDirectory GetObjectAttributes responses.
+ * \brief The GetObjectAttributesResponse class encapsulates CloudDirectory GetObjectAttributes responses.
  *
- * @see    CloudDirectoryClient::getObjectAttributes
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::getObjectAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetObjectAttributesRequest * GetObjectAttributesResponse::request() const
     return static_cast<const GetObjectAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory GetObjectAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetObjectAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetObjectAttributesResponsePrivate
+ * \class GetObjectAttributesResponsePrivate
  *
- * @brief  Private implementation for GetObjectAttributesResponse.
+ * \brief Private implementation for GetObjectAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectAttributesResponsePrivate object.
@@ -91,7 +101,7 @@ GetObjectAttributesResponsePrivate::GetObjectAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory GetObjectAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

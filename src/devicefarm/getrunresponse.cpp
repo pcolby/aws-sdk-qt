@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetRunResponse
+/*!
+ * \class QtAws::DeviceFarm::GetRunResponse
  *
- * @brief  Handles DeviceFarm GetRun responses.
+ * \brief The GetRunResponse class encapsulates DeviceFarm GetRun responses.
  *
- * @see    DeviceFarmClient::getRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getRun
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetRunRequest * GetRunResponse::request() const
     return static_cast<const GetRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm GetRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetRunResponsePrivate
+ * \class GetRunResponsePrivate
  *
- * @brief  Private implementation for GetRunResponse.
+ * \brief Private implementation for GetRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRunResponsePrivate object.
@@ -91,7 +96,7 @@ GetRunResponsePrivate::GetRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm GetRunResponse element.
  *
  * @param  xml  XML stream to parse.

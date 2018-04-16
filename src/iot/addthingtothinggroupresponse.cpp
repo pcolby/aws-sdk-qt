@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  AddThingToThingGroupResponse
+/*!
+ * \class QtAws::IoT::AddThingToThingGroupResponse
  *
- * @brief  Handles IoT AddThingToThingGroup responses.
+ * \brief The AddThingToThingGroupResponse class encapsulates IoT AddThingToThingGroup responses.
  *
- * @see    IoTClient::addThingToThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::addThingToThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new AddThingToThingGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const AddThingToThingGroupRequest * AddThingToThingGroupResponse::request() cons
     return static_cast<const AddThingToThingGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT AddThingToThingGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void AddThingToThingGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddThingToThingGroupResponsePrivate
+ * \class AddThingToThingGroupResponsePrivate
  *
- * @brief  Private implementation for AddThingToThingGroupResponse.
+ * \brief Private implementation for AddThingToThingGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddThingToThingGroupResponsePrivate object.
@@ -91,7 +105,7 @@ AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT AddThingToThingGroupResponse element.
  *
  * @param  xml  XML stream to parse.

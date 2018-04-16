@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeKeyPairsRequest
+/*!
+ * \class QtAws::EC2::DescribeKeyPairsRequest
  *
- * @brief  Implements EC2 DescribeKeyPairs requests.
+ * \brief The DescribeKeyPairsRequest class encapsulates EC2 DescribeKeyPairs requests.
  *
- * @see    EC2Client::describeKeyPairs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeKeyPairs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeKeyPairsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeKeyPairsRequest::DescribeKeyPairsRequest(const DescribeKeyPairsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeKeyPairsRequest object.
  */
 DescribeKeyPairsRequest::DescribeKeyPairsRequest()
@@ -53,13 +60,16 @@ DescribeKeyPairsRequest::DescribeKeyPairsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeKeyPairsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeKeyPairsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkRep
     return new DescribeKeyPairsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeKeyPairsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeKeyPairsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeKeyPairsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeKeyPairsRequestPrivate object, copying another.

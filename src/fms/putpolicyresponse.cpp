@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  PutPolicyResponse
+/*!
+ * \class QtAws::FMS::PutPolicyResponse
  *
- * @brief  Handles FMS PutPolicy responses.
+ * \brief The PutPolicyResponse class encapsulates FMS PutPolicy responses.
  *
- * @see    FMSClient::putPolicy
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::putPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const PutPolicyRequest * PutPolicyResponse::request() const
     return static_cast<const PutPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS PutPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void PutPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutPolicyResponsePrivate
+ * \class PutPolicyResponsePrivate
  *
- * @brief  Private implementation for PutPolicyResponse.
+ * \brief Private implementation for PutPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutPolicyResponsePrivate object.
@@ -91,7 +100,7 @@ PutPolicyResponsePrivate::PutPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS PutPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

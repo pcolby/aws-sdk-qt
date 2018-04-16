@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  GetAddressBookResponse
+/*!
+ * \class QtAws::AlexaForBusiness::GetAddressBookResponse
  *
- * @brief  Handles AlexaForBusiness GetAddressBook responses.
+ * \brief The GetAddressBookResponse class encapsulates AlexaForBusiness GetAddressBook responses.
  *
- * @see    AlexaForBusinessClient::getAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::getAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAddressBookResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetAddressBookRequest * GetAddressBookResponse::request() const
     return static_cast<const GetAddressBookRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness GetAddressBook response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetAddressBookResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAddressBookResponsePrivate
+ * \class GetAddressBookResponsePrivate
  *
- * @brief  Private implementation for GetAddressBookResponse.
+ * \brief Private implementation for GetAddressBookResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAddressBookResponsePrivate object.
@@ -91,7 +99,7 @@ GetAddressBookResponsePrivate::GetAddressBookResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness GetAddressBookResponse element.
  *
  * @param  xml  XML stream to parse.

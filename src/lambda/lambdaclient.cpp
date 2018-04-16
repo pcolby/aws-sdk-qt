@@ -85,34 +85,42 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Lambda
+ * \brief The QtAws::Lambda contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  LambdaClient
+/*!
+ * \class QtAws::Lambda::LambdaClient
  *
- * @brief  Client for AWS Lambda
+ * \brief The LambdaClient class provides access the AWS Lambda service.
  *
- * <fullname>AWS Lambda</fullname>
+ * \ingroup Lambda
  *
- * <b>Overview</b>
- *
- * </p
- *
- * This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
- * service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
- * information about how the service works, see <a
- * href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
- * Lambda Developer
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
  */
 
-/**
- * @brief  Constructs a new LambdaClient object.
+/*!
+ * \brief Constructs a LambdaClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 LambdaClient::LambdaClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -131,21 +139,16 @@ LambdaClient::LambdaClient(
     d->serviceName = QStringLiteral("lambda");
 }
 
-/**
- * @brief  Constructs a new LambdaClient object.
+/*!
+ * \overload LambdaClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 LambdaClient::LambdaClient(
     const QUrl &endpoint,
@@ -164,7 +167,7 @@ LambdaClient::LambdaClient(
     d->serviceName = QStringLiteral("lambda");
 }
 
-/**
+/*!
  * Adds a permission to the resource policy associated with the specified AWS Lambda function. You use resource policies to
  * grant permissions to event sources that use <i>push</i> model. In a <i>push</i> model, event sources (such as Amazon S3
  * and custom applications) invoke your Lambda function. Each permission you add to the resource policy allows an event
@@ -197,7 +200,7 @@ AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &
     return qobject_cast<AddPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an alias that points to the specified Lambda function version. For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
  *
@@ -216,7 +219,7 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
     return qobject_cast<CreateAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Identifies a stream as an event source for a Lambda function. It can be either an Amazon Kinesis stream or an Amazon
  * DynamoDB stream. AWS Lambda invokes the specified function when records are posted to the
  *
@@ -256,7 +259,7 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
     return qobject_cast<CreateEventSourceMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new Lambda function. The function metadata is created from the request parameters, and the code for the
  * function is provided by a .zip file in the request body. If the function name already exists, the operation will fail.
  * Note that the function name is
@@ -283,7 +286,7 @@ CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionReques
     return qobject_cast<CreateFunctionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Lambda function alias. For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
  *
@@ -302,7 +305,7 @@ DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &reques
     return qobject_cast<DeleteAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes an event source mapping. This means AWS Lambda will no longer invoke the function for events in the associated
  *
  * source>
@@ -320,7 +323,7 @@ DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const 
     return qobject_cast<DeleteEventSourceMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Lambda function code and
  *
  * configuration>
@@ -352,7 +355,7 @@ DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionReques
     return qobject_cast<DeleteFunctionResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes concurrent execution limits from this function. For more information, see
  *
  * @param  request Request to send to AWS Lambda.
@@ -366,7 +369,7 @@ DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(cons
     return qobject_cast<DeleteFunctionConcurrencyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a customer's account
  *
  * settings>
@@ -386,7 +389,7 @@ GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSe
     return qobject_cast<GetAccountSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the specified alias information such as the alias ARN, description, and function version it is pointing to. For
  * more information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS
  * Lambda
@@ -406,7 +409,7 @@ GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
     return qobject_cast<GetAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns configuration information for the specified event source mapping (see
  *
  * <a>CreateEventSourceMapping</a>)>
@@ -424,7 +427,7 @@ GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEve
     return qobject_cast<GetEventSourceMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the configuration information of the Lambda function and a presigned URL link to the .zip file you uploaded with
  * <a>CreateFunction</a> so you can download the .zip file. Note that the URL is valid for up to 10 minutes. The
  * configuration information is the same information you provided as parameters when uploading the
@@ -451,7 +454,7 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
     return qobject_cast<GetFunctionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the configuration information of the Lambda function. This the same information you provided as parameters when
  * uploading the function by using
  *
@@ -478,7 +481,7 @@ GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const 
     return qobject_cast<GetFunctionConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the resource policy associated with the specified Lambda
  *
  * function>
@@ -503,7 +506,7 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
     return qobject_cast<GetPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Invokes a specific Lambda function. For an example, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/with-dynamodb-create-function.html#with-dbb-invoke-manually">Create
  * the Lambda Function and Test It Manually</a>.
@@ -540,7 +543,7 @@ InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
     return qobject_cast<InvokeResponse *>(send(request));
 }
 
-/**
+/*!
  * <b>
  *
  * This API is deprecated. We recommend you use <code>Invoke</code> API (see
@@ -565,7 +568,7 @@ InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &reques
     return qobject_cast<InvokeAsyncResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns list of aliases created for a Lambda function. For each alias, the response includes information such as the
  * alias ARN, description, alias name, and the function version to which it points. For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
@@ -585,7 +588,7 @@ ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &reques
     return qobject_cast<ListAliasesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of event source mappings you created using the <code>CreateEventSourceMapping</code> (see
  * <a>CreateEventSourceMapping</a>).
  *
@@ -616,7 +619,7 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
     return qobject_cast<ListEventSourceMappingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of your Lambda functions. For each function, the response includes the function configuration
  * information. You must use <a>GetFunction</a> to retrieve the code for your
  *
@@ -642,7 +645,7 @@ ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &
     return qobject_cast<ListFunctionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of tags assigned to a function when supplied the function ARN (Amazon Resource Name). For more
  * information on Tagging, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/tagging.html">Tagging Lambda
  * Functions</a> in the <b>AWS Lambda Developer
@@ -658,7 +661,7 @@ ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * List all versions of a function. For information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
@@ -674,7 +677,7 @@ ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const List
     return qobject_cast<ListVersionsByFunctionResponse *>(send(request));
 }
 
-/**
+/*!
  * Publishes a version of your function from the current snapshot of $LATEST. That is, AWS Lambda takes a snapshot of the
  * function code and configuration information from $LATEST and publishes a new version. The code and configuration cannot
  * be modified after publication. For information about the versioning feature, see <a
@@ -692,7 +695,7 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
     return qobject_cast<PublishVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets a limit on the number of concurrent executions available to this function. It is a subset of your account's total
  * concurrent execution limit per region. Note that Lambda automatically reserves a buffer of 100 concurrent executions for
  * functions without any reserved concurrency limit. This means if your account limit is 1000, you have a total of 900
@@ -709,7 +712,7 @@ PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutF
     return qobject_cast<PutFunctionConcurrencyResponse *>(send(request));
 }
 
-/**
+/*!
  * You can remove individual permissions from an resource policy associated with a Lambda function by providing a statement
  * ID that you provided when you added the
  *
@@ -739,7 +742,7 @@ RemovePermissionResponse * LambdaClient::removePermission(const RemovePermission
     return qobject_cast<RemovePermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a list of tags (key-value pairs) on the Lambda function. Requires the Lambda function ARN (Amazon Resource
  * Name). If a key is specified without a value, Lambda creates a tag with the specified key and a value of null. For more
  * information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/tagging.html">Tagging Lambda Functions</a> in the
@@ -756,7 +759,7 @@ TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &reques
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes tags from a Lambda function. Requires the function ARN (Amazon Resource Name). For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/tagging.html">Tagging Lambda Functions</a> in the <b>AWS Lambda
  * Developer Guide</b>.
@@ -772,7 +775,7 @@ UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Using this API you can update the function version to which the alias points and the alias description. For more
  * information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
  *
@@ -791,7 +794,7 @@ UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &reques
     return qobject_cast<UpdateAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * You can update an event source mapping. This is useful if you want to change the parameters of the existing mapping
  * without losing your position in the stream. You can change which function will receive the stream records, but to change
  * the stream itself, you must create a new
@@ -824,7 +827,7 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
     return qobject_cast<UpdateEventSourceMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the code for the specified Lambda function. This operation must only be used on an existing Lambda function and
  * cannot be used to update the function
  *
@@ -850,7 +853,7 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
     return qobject_cast<UpdateFunctionCodeResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the configuration parameters for the specified Lambda function by using the values provided in the request. You
  * provide only the parameters you want to change. This operation must only be used on an existing Lambda function and
  * cannot be used to update the function's
@@ -877,7 +880,7 @@ UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(
     return qobject_cast<UpdateFunctionConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LambdaClientPrivate
@@ -885,7 +888,7 @@ UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(
  * @brief  Private implementation for LambdaClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LambdaClientPrivate object.

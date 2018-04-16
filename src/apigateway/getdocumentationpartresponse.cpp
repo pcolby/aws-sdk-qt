@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDocumentationPartResponse
+/*!
+ * \class QtAws::APIGateway::GetDocumentationPartResponse
  *
- * @brief  Handles APIGateway GetDocumentationPart responses.
+ * \brief The GetDocumentationPartResponse class encapsulates APIGateway GetDocumentationPart responses.
  *
- * @see    APIGatewayClient::getDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDocumentationPartResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetDocumentationPartRequest * GetDocumentationPartResponse::request() cons
     return static_cast<const GetDocumentationPartRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetDocumentationPart response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetDocumentationPartResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDocumentationPartResponsePrivate
+ * \class GetDocumentationPartResponsePrivate
  *
- * @brief  Private implementation for GetDocumentationPartResponse.
+ * \brief Private implementation for GetDocumentationPartResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDocumentationPartResponsePrivate object.
@@ -91,7 +99,7 @@ GetDocumentationPartResponsePrivate::GetDocumentationPartResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetDocumentationPartResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteUserRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteUserRequest
  *
- * @brief  Implements AlexaForBusiness DeleteUser requests.
+ * \brief The DeleteUserRequest class encapsulates AlexaForBusiness DeleteUser requests.
  *
- * @see    AlexaForBusinessClient::deleteUser
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteUser
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
@@ -53,13 +61,16 @@ DeleteUserRequest::DeleteUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
     return new DeleteUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserRequestPrivate object, copying another.

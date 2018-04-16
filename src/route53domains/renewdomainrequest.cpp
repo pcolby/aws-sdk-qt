@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  RenewDomainRequest
+/*!
+ * \class QtAws::Route53Domains::RenewDomainRequest
  *
- * @brief  Implements Route53Domains RenewDomain requests.
+ * \brief The RenewDomainRequest class encapsulates Route53Domains RenewDomain requests.
  *
- * @see    Route53DomainsClient::renewDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::renewDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new RenewDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ RenewDomainRequest::RenewDomainRequest(const RenewDomainRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RenewDomainRequest object.
  */
 RenewDomainRequest::RenewDomainRequest()
@@ -53,13 +57,16 @@ RenewDomainRequest::RenewDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RenewDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RenewDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * RenewDomainRequest::response(QNetworkReply * 
     return new RenewDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RenewDomainRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * RenewDomainRequest::response(QNetworkReply * 
  * @brief  Private implementation for RenewDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RenewDomainRequestPrivate object.
@@ -97,7 +104,7 @@ RenewDomainRequestPrivate::RenewDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RenewDomainRequestPrivate object, copying another.

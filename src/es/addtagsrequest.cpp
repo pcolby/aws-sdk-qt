@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  AddTagsRequest
+/*!
+ * \class QtAws::ElasticsearchService::AddTagsRequest
  *
- * @brief  Implements ElasticsearchService AddTags requests.
+ * \brief The AddTagsRequest class encapsulates ElasticsearchService AddTags requests.
  *
- * @see    ElasticsearchServiceClient::addTags
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::addTags
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
@@ -53,13 +65,16 @@ AddTagsRequest::AddTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
     return new AddTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for AddTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsRequestPrivate object.
@@ -97,7 +112,7 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  PreviewAgentsRequest
+/*!
+ * \class QtAws::Inspector::PreviewAgentsRequest
  *
- * @brief  Implements Inspector PreviewAgents requests.
+ * \brief The PreviewAgentsRequest class encapsulates Inspector PreviewAgents requests.
  *
- * @see    InspectorClient::previewAgents
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::previewAgents
  */
 
-/**
+/*!
  * @brief  Constructs a new PreviewAgentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PreviewAgentsRequest::PreviewAgentsRequest(const PreviewAgentsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PreviewAgentsRequest object.
  */
 PreviewAgentsRequest::PreviewAgentsRequest()
@@ -53,13 +61,16 @@ PreviewAgentsRequest::PreviewAgentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PreviewAgentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PreviewAgentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply 
     return new PreviewAgentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PreviewAgentsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply 
  * @brief  Private implementation for PreviewAgentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PreviewAgentsRequestPrivate object.
@@ -97,7 +108,7 @@ PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PreviewAgentsRequestPrivate object, copying another.

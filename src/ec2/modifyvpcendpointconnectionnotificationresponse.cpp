@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointConnectionNotificationResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationResponse
  *
- * @brief  Handles EC2 ModifyVpcEndpointConnectionNotification responses.
+ * \brief The ModifyVpcEndpointConnectionNotificationResponse class encapsulates EC2 ModifyVpcEndpointConnectionNotification responses.
  *
- * @see    EC2Client::modifyVpcEndpointConnectionNotification
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpointConnectionNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcEndpointConnectionNotificationRequest * ModifyVpcEndpointConnecti
     return static_cast<const ModifyVpcEndpointConnectionNotificationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcEndpointConnectionNotification response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &re
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcEndpointConnectionNotificationResponsePrivate
+ * \class ModifyVpcEndpointConnectionNotificationResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcEndpointConnectionNotificationResponse.
+ * \brief Private implementation for ModifyVpcEndpointConnectionNotificationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcEndpointConnectionNotificationResponsePrivate::ModifyVpcEndpointConnect
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcEndpointConnectionNotificationResponse element.
  *
  * @param  xml  XML stream to parse.

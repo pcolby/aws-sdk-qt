@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DisassociateRoleFromGroupResponse
+/*!
+ * \class QtAws::Greengrass::DisassociateRoleFromGroupResponse
  *
- * @brief  Handles Greengrass DisassociateRoleFromGroup responses.
+ * \brief The DisassociateRoleFromGroupResponse class encapsulates Greengrass DisassociateRoleFromGroup responses.
  *
- * @see    GreengrassClient::disassociateRoleFromGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::disassociateRoleFromGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateRoleFromGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DisassociateRoleFromGroupRequest * DisassociateRoleFromGroupResponse::requ
     return static_cast<const DisassociateRoleFromGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DisassociateRoleFromGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DisassociateRoleFromGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateRoleFromGroupResponsePrivate
+ * \class DisassociateRoleFromGroupResponsePrivate
  *
- * @brief  Private implementation for DisassociateRoleFromGroupResponse.
+ * \brief Private implementation for DisassociateRoleFromGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateRoleFromGroupResponsePrivate object.
@@ -91,7 +97,7 @@ DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DisassociateRoleFromGroupResponse element.
  *
  * @param  xml  XML stream to parse.

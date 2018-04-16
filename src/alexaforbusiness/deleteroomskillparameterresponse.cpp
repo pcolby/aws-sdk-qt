@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteRoomSkillParameterResponse
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterResponse
  *
- * @brief  Handles AlexaForBusiness DeleteRoomSkillParameter responses.
+ * \brief The DeleteRoomSkillParameterResponse class encapsulates AlexaForBusiness DeleteRoomSkillParameter responses.
  *
- * @see    AlexaForBusinessClient::deleteRoomSkillParameter
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteRoomSkillParameter
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoomSkillParameterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteRoomSkillParameterRequest * DeleteRoomSkillParameterResponse::reques
     return static_cast<const DeleteRoomSkillParameterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness DeleteRoomSkillParameter response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteRoomSkillParameterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRoomSkillParameterResponsePrivate
+ * \class DeleteRoomSkillParameterResponsePrivate
  *
- * @brief  Private implementation for DeleteRoomSkillParameterResponse.
+ * \brief Private implementation for DeleteRoomSkillParameterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoomSkillParameterResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness DeleteRoomSkillParameterResponse element.
  *
  * @param  xml  XML stream to parse.

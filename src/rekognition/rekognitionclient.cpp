@@ -91,24 +91,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Rekognition
+ * \brief The QtAws::Rekognition contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  RekognitionClient
+/*!
+ * \class QtAws::Rekognition::RekognitionClient
  *
- * @brief  Client for Amazon Rekognition
+ * \brief The RekognitionClient class provides access the Amazon Rekognition service.
  *
- * This is the Amazon Rekognition API
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
  */
 
-/**
- * @brief  Constructs a new RekognitionClient object.
+/*!
+ * \brief Constructs a RekognitionClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 RekognitionClient::RekognitionClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -127,21 +135,16 @@ RekognitionClient::RekognitionClient(
     d->serviceName = QStringLiteral("rekognition");
 }
 
-/**
- * @brief  Constructs a new RekognitionClient object.
+/*!
+ * \overload RekognitionClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 RekognitionClient::RekognitionClient(
     const QUrl &endpoint,
@@ -160,7 +163,7 @@ RekognitionClient::RekognitionClient(
     d->serviceName = QStringLiteral("rekognition");
 }
 
-/**
+/*!
  * Compares a face in the <i>source</i> input image with each of the 100 largest faces detected in the <i>target</i> input
  * image.
  *
@@ -226,7 +229,7 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
     return qobject_cast<CompareFacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a collection in an AWS Region. You can add faces to the collection using the operation.
  *
  * </p
@@ -254,7 +257,7 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
     return qobject_cast<CreateCollectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces in a streaming
  *
  * video>
@@ -286,7 +289,7 @@ CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const C
     return qobject_cast<CreateStreamProcessorResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified collection. Note that this operation removes all faces in the collection. For an example, see
  *
  * <a>delete-collection-procedure</a>>
@@ -304,7 +307,7 @@ DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteColle
     return qobject_cast<DeleteCollectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes faces from a collection. You specify a collection ID and an array of face IDs to remove from the
  *
  * collection>
@@ -322,7 +325,7 @@ DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &r
     return qobject_cast<DeleteFacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the stream processor identified by <code>Name</code>. You assign the value for <code>Name</code> when you create
  * the stream processor with . You might not be able to use the same name for a stream processor for a few seconds after
  * calling
@@ -338,7 +341,7 @@ DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const D
     return qobject_cast<DeleteStreamProcessorResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides information about a stream processor created by . You can get information about the input and output streams,
  * the input parameters for the face recognition being performed, and the current status of the stream
  *
@@ -353,7 +356,7 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
     return qobject_cast<DescribeStreamProcessorResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects faces within an image that is provided as
  *
  * input>
@@ -397,7 +400,7 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
     return qobject_cast<DetectFacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects instances of real-world entities within an image (JPEG or PNG) provided as input. This includes objects like
  * flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and
  * nature. For an example, see
@@ -483,7 +486,7 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
     return qobject_cast<DetectLabelsResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects explicit or suggestive adult content in a specified JPEG or PNG format image. Use
  * <code>DetectModerationLabels</code> to moderate images depending on your requirements. For example, you might want to
  * filter images that contain nudity, but not images containing suggestive
@@ -510,7 +513,7 @@ DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const
     return qobject_cast<DetectModerationLabelsResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects text in the input image and converts it into machine-readable
  *
  * text>
@@ -562,7 +565,7 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
     return qobject_cast<DetectTextResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the name and additional information about a celebrity based on his or her Rekognition ID. The additional
  * information is returned as an array of URLs. If there is no additional information about the celebrity, this list is
  * empty. For more information, see
@@ -582,7 +585,7 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
     return qobject_cast<GetCelebrityInfoResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the celebrity recognition results for a Rekognition Video analysis started by
  *
  * >
@@ -633,7 +636,7 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
     return qobject_cast<GetCelebrityRecognitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the content moderation analysis results for a Rekognition Video analysis started by
  *
  * >
@@ -678,7 +681,7 @@ GetContentModerationResponse * RekognitionClient::getContentModeration(const Get
     return qobject_cast<GetContentModerationResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets face detection results for a Rekognition Video analysis started by
  *
  * >
@@ -713,7 +716,7 @@ GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDete
     return qobject_cast<GetFaceDetectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the face search results for Rekognition Video face search started by . The search returns faces in a collection
  * that match the faces of persons detected in a video. It also includes the time(s) that faces are matched in the
  *
@@ -748,7 +751,7 @@ GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequ
     return qobject_cast<GetFaceSearchResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the label detection results of a Rekognition Video analysis started by .
  *
  * </p
@@ -787,7 +790,7 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
     return qobject_cast<GetLabelDetectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the person tracking results of a Rekognition Video analysis started by
  *
  * >
@@ -830,7 +833,7 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
     return qobject_cast<GetPersonTrackingResponse *>(send(request));
 }
 
-/**
+/*!
  * Detects faces in the input image and adds them to the specified collection.
  *
  * </p
@@ -885,7 +888,7 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
     return qobject_cast<IndexFacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns list of collection IDs in your account. If the result is truncated, the response also provides a
  * <code>NextToken</code> that you can use in the subsequent request to fetch the next set of collection
  *
@@ -908,7 +911,7 @@ ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectio
     return qobject_cast<ListCollectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns metadata for faces in the specified collection. This metadata includes information such as the bounding box
  * coordinates, the confidence (that the bounding box contains a face), and face ID. For an example, see
  * <a>list-faces-in-collection-procedure</a>.
@@ -928,7 +931,7 @@ ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request
     return qobject_cast<ListFacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of stream processors that you have created with .
  *
  * @param  request Request to send to Amazon Rekognition.
@@ -942,7 +945,7 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
     return qobject_cast<ListStreamProcessorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of celebrities recognized in the input image. For more information, see <a>celebrities</a>.
  *
  * </p
@@ -989,7 +992,7 @@ RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const Rec
     return qobject_cast<RecognizeCelebritiesResponse *>(send(request));
 }
 
-/**
+/*!
  * For a given input face ID, searches for matching faces in the collection the face belongs to. You get a face ID when you
  * add a face to the collection using the <a>IndexFaces</a> operation. The operation compares the features of the input
  * face with faces in the specified collection.
@@ -1024,7 +1027,7 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
     return qobject_cast<SearchFacesResponse *>(send(request));
 }
 
-/**
+/*!
  * For a given input image, first detects the largest face in the image, and then searches the specified collection for
  * matching faces. The operation compares the features of the input face with faces in the specified collection.
  *
@@ -1071,7 +1074,7 @@ SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchF
     return qobject_cast<SearchFacesByImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts asynchronous recognition of celebrities in a stored
  *
  * video>
@@ -1095,7 +1098,7 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
     return qobject_cast<StartCelebrityRecognitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts asynchronous detection of explicit or suggestive adult content in a stored
  *
  * video>
@@ -1122,7 +1125,7 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
     return qobject_cast<StartContentModerationResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts asynchronous detection of faces in a stored
  *
  * video>
@@ -1146,7 +1149,7 @@ StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFa
     return qobject_cast<StartFaceDetectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the asynchronous search for faces in a collection that match the faces of persons detected in a stored
  *
  * video>
@@ -1170,7 +1173,7 @@ StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSear
     return qobject_cast<StartFaceSearchResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts asynchronous detection of labels in a stored
  *
  * video>
@@ -1202,7 +1205,7 @@ StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const Start
     return qobject_cast<StartLabelDetectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the asynchronous tracking of persons in a stored
  *
  * video>
@@ -1228,7 +1231,7 @@ StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const Start
     return qobject_cast<StartPersonTrackingResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts processing a stream processor. You create a stream processor by calling . To tell
  * <code>StartStreamProcessor</code> which stream processor to start, use the value of the <code>Name</code> field
  * specified in the call to
@@ -1244,7 +1247,7 @@ StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const Sta
     return qobject_cast<StartStreamProcessorResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a running stream processor that was created by
  *
  * @param  request Request to send to Amazon Rekognition.
@@ -1258,7 +1261,7 @@ StopStreamProcessorResponse * RekognitionClient::stopStreamProcessor(const StopS
     return qobject_cast<StopStreamProcessorResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RekognitionClientPrivate
@@ -1266,7 +1269,7 @@ StopStreamProcessorResponse * RekognitionClient::stopStreamProcessor(const StopS
  * @brief  Private implementation for RekognitionClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RekognitionClientPrivate object.

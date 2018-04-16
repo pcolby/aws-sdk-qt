@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBuiltinSlotTypesRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesRequest
  *
- * @brief  Implements LexModelBuildingService GetBuiltinSlotTypes requests.
+ * \brief The GetBuiltinSlotTypesRequest class encapsulates LexModelBuildingService GetBuiltinSlotTypes requests.
  *
- * @see    LexModelBuildingServiceClient::getBuiltinSlotTypes
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBuiltinSlotTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinSlotTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypes
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinSlotTypesRequest object.
  */
 GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest()
@@ -53,13 +60,16 @@ GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBuiltinSlotTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBuiltinSlotTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetwork
     return new GetBuiltinSlotTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBuiltinSlotTypesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetwork
  * @brief  Private implementation for GetBuiltinSlotTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinSlotTypesRequestPrivate object.
@@ -97,7 +107,7 @@ GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinSlotTypesRequestPrivate object, copying another.

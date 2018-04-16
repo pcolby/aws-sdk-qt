@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateInstanceProfileResponse
+/*!
+ * \class QtAws::DeviceFarm::UpdateInstanceProfileResponse
  *
- * @brief  Handles DeviceFarm UpdateInstanceProfile responses.
+ * \brief The UpdateInstanceProfileResponse class encapsulates DeviceFarm UpdateInstanceProfile responses.
  *
- * @see    DeviceFarmClient::updateInstanceProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateInstanceProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const UpdateInstanceProfileRequest * UpdateInstanceProfileResponse::request() co
     return static_cast<const UpdateInstanceProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm UpdateInstanceProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void UpdateInstanceProfileResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateInstanceProfileResponsePrivate
+ * \class UpdateInstanceProfileResponsePrivate
  *
- * @brief  Private implementation for UpdateInstanceProfileResponse.
+ * \brief Private implementation for UpdateInstanceProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInstanceProfileResponsePrivate object.
@@ -91,7 +96,7 @@ UpdateInstanceProfileResponsePrivate::UpdateInstanceProfileResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm UpdateInstanceProfileResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteLoggerDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::DeleteLoggerDefinitionResponse
  *
- * @brief  Handles Greengrass DeleteLoggerDefinition responses.
+ * \brief The DeleteLoggerDefinitionResponse class encapsulates Greengrass DeleteLoggerDefinition responses.
  *
- * @see    GreengrassClient::deleteLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLoggerDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteLoggerDefinitionRequest * DeleteLoggerDefinitionResponse::request() 
     return static_cast<const DeleteLoggerDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DeleteLoggerDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteLoggerDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLoggerDefinitionResponsePrivate
+ * \class DeleteLoggerDefinitionResponsePrivate
  *
- * @brief  Private implementation for DeleteLoggerDefinitionResponse.
+ * \brief Private implementation for DeleteLoggerDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLoggerDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DeleteLoggerDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

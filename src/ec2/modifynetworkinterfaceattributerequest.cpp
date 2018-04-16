@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyNetworkInterfaceAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifyNetworkInterfaceAttributeRequest
  *
- * @brief  Implements EC2 ModifyNetworkInterfaceAttribute requests.
+ * \brief The ModifyNetworkInterfaceAttributeRequest class encapsulates EC2 ModifyNetworkInterfaceAttribute requests.
  *
- * @see    EC2Client::modifyNetworkInterfaceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyNetworkInterfaceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequest object.
  */
 ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest()
@@ -53,13 +60,16 @@ ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyNetworkInterfaceAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyNetworkInterfaceAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::respo
     return new ModifyNetworkInterfaceAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyNetworkInterfaceAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::respo
  * @brief  Private implementation for ModifyNetworkInterfaceAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetIndexingConfigurationRequest
+/*!
+ * \class QtAws::IoT::GetIndexingConfigurationRequest
  *
- * @brief  Implements IoT GetIndexingConfiguration requests.
+ * \brief The GetIndexingConfigurationRequest class encapsulates IoT GetIndexingConfiguration requests.
  *
- * @see    IoTClient::getIndexingConfiguration
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getIndexingConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIndexingConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetIndexingConfigurationRequest::GetIndexingConfigurationRequest(const GetIndexi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIndexingConfigurationRequest object.
  */
 GetIndexingConfigurationRequest::GetIndexingConfigurationRequest()
@@ -53,13 +67,16 @@ GetIndexingConfigurationRequest::GetIndexingConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIndexingConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIndexingConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetIndexingConfigurationRequest::response(QNe
     return new GetIndexingConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIndexingConfigurationRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetIndexingConfigurationRequest::response(QNe
  * @brief  Private implementation for GetIndexingConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIndexingConfigurationRequestPrivate object.
@@ -97,7 +114,7 @@ GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIndexingConfigurationRequestPrivate object, copying another.

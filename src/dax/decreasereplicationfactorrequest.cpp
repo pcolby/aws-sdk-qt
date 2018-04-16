@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DecreaseReplicationFactorRequest
+/*!
+ * \class QtAws::DAX::DecreaseReplicationFactorRequest
  *
- * @brief  Implements DAX DecreaseReplicationFactor requests.
+ * \brief The DecreaseReplicationFactorRequest class encapsulates DAX DecreaseReplicationFactor requests.
  *
- * @see    DAXClient::decreaseReplicationFactor
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::decreaseReplicationFactor
  */
 
-/**
+/*!
  * @brief  Constructs a new DecreaseReplicationFactorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest(const Decreas
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DecreaseReplicationFactorRequest object.
  */
 DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest()
@@ -53,13 +60,16 @@ DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DecreaseReplicationFactorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DecreaseReplicationFactorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QN
     return new DecreaseReplicationFactorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DecreaseReplicationFactorRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QN
  * @brief  Private implementation for DecreaseReplicationFactorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DecreaseReplicationFactorRequestPrivate object.
@@ -97,7 +107,7 @@ DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DecreaseReplicationFactorRequestPrivate object, copying another.

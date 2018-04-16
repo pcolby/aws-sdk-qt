@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  CreateInputResponse
+/*!
+ * \class QtAws::MediaLive::CreateInputResponse
  *
- * @brief  Handles MediaLive CreateInput responses.
+ * \brief The CreateInputResponse class encapsulates MediaLive CreateInput responses.
  *
- * @see    MediaLiveClient::createInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::createInput
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInputResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateInputRequest * CreateInputResponse::request() const
     return static_cast<const CreateInputRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive CreateInput response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateInputResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateInputResponsePrivate
+ * \class CreateInputResponsePrivate
  *
- * @brief  Private implementation for CreateInputResponse.
+ * \brief Private implementation for CreateInputResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInputResponsePrivate object.
@@ -91,7 +94,7 @@ CreateInputResponsePrivate::CreateInputResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive CreateInputResponse element.
  *
  * @param  xml  XML stream to parse.

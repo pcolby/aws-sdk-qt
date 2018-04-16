@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeJobExecutionResponse
+/*!
+ * \class QtAws::IoT::DescribeJobExecutionResponse
  *
- * @brief  Handles IoT DescribeJobExecution responses.
+ * \brief The DescribeJobExecutionResponse class encapsulates IoT DescribeJobExecution responses.
  *
- * @see    IoTClient::describeJobExecution
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeJobExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobExecutionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeJobExecutionRequest * DescribeJobExecutionResponse::request() cons
     return static_cast<const DescribeJobExecutionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DescribeJobExecution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeJobExecutionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeJobExecutionResponsePrivate
+ * \class DescribeJobExecutionResponsePrivate
  *
- * @brief  Private implementation for DescribeJobExecutionResponse.
+ * \brief Private implementation for DescribeJobExecutionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobExecutionResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DescribeJobExecutionResponse element.
  *
  * @param  xml  XML stream to parse.

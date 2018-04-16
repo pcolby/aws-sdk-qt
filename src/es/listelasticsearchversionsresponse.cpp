@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListElasticsearchVersionsResponse
+/*!
+ * \class QtAws::ElasticsearchService::ListElasticsearchVersionsResponse
  *
- * @brief  Handles ElasticsearchService ListElasticsearchVersions responses.
+ * \brief The ListElasticsearchVersionsResponse class encapsulates ElasticsearchService ListElasticsearchVersions responses.
  *
- * @see    ElasticsearchServiceClient::listElasticsearchVersions
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listElasticsearchVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListElasticsearchVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::requ
     return static_cast<const ListElasticsearchVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService ListElasticsearchVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListElasticsearchVersionsResponsePrivate
+ * \class ListElasticsearchVersionsResponsePrivate
  *
- * @brief  Private implementation for ListElasticsearchVersionsResponse.
+ * \brief Private implementation for ListElasticsearchVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListElasticsearchVersionsResponsePrivate object.
@@ -91,7 +103,7 @@ ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService ListElasticsearchVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketRequestPaymentRequest
+/*!
+ * \class QtAws::S3::GetBucketRequestPaymentRequest
  *
- * @brief  Implements S3 GetBucketRequestPayment requests.
+ * \brief The GetBucketRequestPaymentRequest class encapsulates S3 GetBucketRequestPayment requests.
  *
- * @see    S3Client::getBucketRequestPayment
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketRequestPayment
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketRequestPaymentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketRequestPaymentRequest::GetBucketRequestPaymentRequest(const GetBucketRe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketRequestPaymentRequest object.
  */
 GetBucketRequestPaymentRequest::GetBucketRequestPaymentRequest()
@@ -53,13 +56,16 @@ GetBucketRequestPaymentRequest::GetBucketRequestPaymentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketRequestPaymentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketRequestPaymentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketRequestPaymentRequest::response(QNet
     return new GetBucketRequestPaymentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketRequestPaymentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketRequestPaymentRequest::response(QNet
  * @brief  Private implementation for GetBucketRequestPaymentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketRequestPaymentRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketRequestPaymentRequestPrivate::GetBucketRequestPaymentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketRequestPaymentRequestPrivate object, copying another.

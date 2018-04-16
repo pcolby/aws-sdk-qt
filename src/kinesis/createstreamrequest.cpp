@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  CreateStreamRequest
+/*!
+ * \class QtAws::Kinesis::CreateStreamRequest
  *
- * @brief  Implements Kinesis CreateStream requests.
+ * \brief The CreateStreamRequest class encapsulates Kinesis CreateStream requests.
  *
- * @see    KinesisClient::createStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::createStream
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateStreamRequest::CreateStreamRequest(const CreateStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamRequest object.
  */
 CreateStreamRequest::CreateStreamRequest()
@@ -53,13 +59,16 @@ CreateStreamRequest::CreateStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply *
     return new CreateStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStreamRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamRequestPrivate object.
@@ -97,7 +106,7 @@ CreateStreamRequestPrivate::CreateStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamRequestPrivate object, copying another.

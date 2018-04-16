@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetServiceRoleForAccountResponse
+/*!
+ * \class QtAws::Greengrass::GetServiceRoleForAccountResponse
  *
- * @brief  Handles Greengrass GetServiceRoleForAccount responses.
+ * \brief The GetServiceRoleForAccountResponse class encapsulates Greengrass GetServiceRoleForAccount responses.
  *
- * @see    GreengrassClient::getServiceRoleForAccount
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getServiceRoleForAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServiceRoleForAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetServiceRoleForAccountRequest * GetServiceRoleForAccountResponse::reques
     return static_cast<const GetServiceRoleForAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetServiceRoleForAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetServiceRoleForAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetServiceRoleForAccountResponsePrivate
+ * \class GetServiceRoleForAccountResponsePrivate
  *
- * @brief  Private implementation for GetServiceRoleForAccountResponse.
+ * \brief Private implementation for GetServiceRoleForAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceRoleForAccountResponsePrivate object.
@@ -91,7 +97,7 @@ GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetServiceRoleForAccountResponse element.
  *
  * @param  xml  XML stream to parse.

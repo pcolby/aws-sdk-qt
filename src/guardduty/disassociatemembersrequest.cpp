@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DisassociateMembersRequest
+/*!
+ * \class QtAws::GuardDuty::DisassociateMembersRequest
  *
- * @brief  Implements GuardDuty DisassociateMembers requests.
+ * \brief The DisassociateMembersRequest class encapsulates GuardDuty DisassociateMembers requests.
  *
- * @see    GuardDutyClient::disassociateMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::disassociateMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DisassociateMembersRequest::DisassociateMembersRequest(const DisassociateMembers
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateMembersRequest object.
  */
 DisassociateMembersRequest::DisassociateMembersRequest()
@@ -53,13 +56,16 @@ DisassociateMembersRequest::DisassociateMembersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateMembersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateMembersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateMembersRequest::response(QNetwork
     return new DisassociateMembersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateMembersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateMembersRequest::response(QNetwork
  * @brief  Private implementation for DisassociateMembersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateMembersRequestPrivate object.
@@ -97,7 +103,7 @@ DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateMembersRequestPrivate object, copying another.

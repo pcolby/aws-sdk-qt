@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpdateFacetRequest
+/*!
+ * \class QtAws::CloudDirectory::UpdateFacetRequest
  *
- * @brief  Implements CloudDirectory UpdateFacet requests.
+ * \brief The UpdateFacetRequest class encapsulates CloudDirectory UpdateFacet requests.
  *
- * @see    CloudDirectoryClient::updateFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::updateFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpdateFacetRequest::UpdateFacetRequest(const UpdateFacetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateFacetRequest object.
  */
 UpdateFacetRequest::UpdateFacetRequest()
@@ -53,13 +63,16 @@ UpdateFacetRequest::UpdateFacetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateFacetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateFacetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * 
     return new UpdateFacetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateFacetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateFacetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFacetRequestPrivate object.
@@ -97,7 +110,7 @@ UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFacetRequestPrivate object, copying another.

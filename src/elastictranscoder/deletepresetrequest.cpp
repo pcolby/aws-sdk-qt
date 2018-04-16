@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  DeletePresetRequest
+/*!
+ * \class QtAws::ElasticTranscoder::DeletePresetRequest
  *
- * @brief  Implements ElasticTranscoder DeletePreset requests.
+ * \brief The DeletePresetRequest class encapsulates ElasticTranscoder DeletePreset requests.
  *
- * @see    ElasticTranscoderClient::deletePreset
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::deletePreset
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePresetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeletePresetRequest::DeletePresetRequest(const DeletePresetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePresetRequest object.
  */
 DeletePresetRequest::DeletePresetRequest()
@@ -53,13 +59,16 @@ DeletePresetRequest::DeletePresetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePresetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePresetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
     return new DeletePresetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePresetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
  * @brief  Private implementation for DeletePresetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePresetRequestPrivate object.
@@ -97,7 +106,7 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePresetRequestPrivate object, copying another.

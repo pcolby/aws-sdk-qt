@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetLabelDetectionResponse
+/*!
+ * \class QtAws::Rekognition::GetLabelDetectionResponse
  *
- * @brief  Handles Rekognition GetLabelDetection responses.
+ * \brief The GetLabelDetectionResponse class encapsulates Rekognition GetLabelDetection responses.
  *
- * @see    RekognitionClient::getLabelDetection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getLabelDetection
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLabelDetectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetLabelDetectionRequest * GetLabelDetectionResponse::request() const
     return static_cast<const GetLabelDetectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition GetLabelDetection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetLabelDetectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetLabelDetectionResponsePrivate
+ * \class GetLabelDetectionResponsePrivate
  *
- * @brief  Private implementation for GetLabelDetectionResponse.
+ * \brief Private implementation for GetLabelDetectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLabelDetectionResponsePrivate object.
@@ -91,7 +95,7 @@ GetLabelDetectionResponsePrivate::GetLabelDetectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition GetLabelDetectionResponse element.
  *
  * @param  xml  XML stream to parse.

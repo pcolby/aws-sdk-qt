@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  ListConfigurationRevisionsRequest
+/*!
+ * \class QtAws::MQ::ListConfigurationRevisionsRequest
  *
- * @brief  Implements MQ ListConfigurationRevisions requests.
+ * \brief The ListConfigurationRevisionsRequest class encapsulates MQ ListConfigurationRevisions requests.
  *
- * @see    MQClient::listConfigurationRevisions
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::listConfigurationRevisions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListConfigurationRevisionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest(const ListC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListConfigurationRevisionsRequest object.
  */
 ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest()
@@ -53,13 +58,16 @@ ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListConfigurationRevisionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListConfigurationRevisionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
     return new ListConfigurationRevisionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListConfigurationRevisionsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
  * @brief  Private implementation for ListConfigurationRevisionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConfigurationRevisionsRequestPrivate object.
@@ -97,7 +105,7 @@ ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConfigurationRevisionsRequestPrivate object, copying another.

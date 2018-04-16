@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateQualificationTypeResponse
+/*!
+ * \class QtAws::MTurk::CreateQualificationTypeResponse
  *
- * @brief  Handles MTurk CreateQualificationType responses.
+ * \brief The CreateQualificationTypeResponse class encapsulates MTurk CreateQualificationType responses.
  *
- * @see    MTurkClient::createQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateQualificationTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateQualificationTypeRequest * CreateQualificationTypeResponse::request(
     return static_cast<const CreateQualificationTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk CreateQualificationType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateQualificationTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateQualificationTypeResponsePrivate
+ * \class CreateQualificationTypeResponsePrivate
  *
- * @brief  Private implementation for CreateQualificationTypeResponse.
+ * \brief Private implementation for CreateQualificationTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQualificationTypeResponsePrivate object.
@@ -91,7 +94,7 @@ CreateQualificationTypeResponsePrivate::CreateQualificationTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk CreateQualificationTypeResponse element.
  *
  * @param  xml  XML stream to parse.

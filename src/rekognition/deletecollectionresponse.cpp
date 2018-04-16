@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DeleteCollectionResponse
+/*!
+ * \class QtAws::Rekognition::DeleteCollectionResponse
  *
- * @brief  Handles Rekognition DeleteCollection responses.
+ * \brief The DeleteCollectionResponse class encapsulates Rekognition DeleteCollection responses.
  *
- * @see    RekognitionClient::deleteCollection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::deleteCollection
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCollectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteCollectionRequest * DeleteCollectionResponse::request() const
     return static_cast<const DeleteCollectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DeleteCollection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteCollectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCollectionResponsePrivate
+ * \class DeleteCollectionResponsePrivate
  *
- * @brief  Private implementation for DeleteCollectionResponse.
+ * \brief Private implementation for DeleteCollectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCollectionResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteCollectionResponsePrivate::DeleteCollectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DeleteCollectionResponse element.
  *
  * @param  xml  XML stream to parse.

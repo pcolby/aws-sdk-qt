@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DescribeHsmResponse
+/*!
+ * \class QtAws::CloudHSM::DescribeHsmResponse
  *
- * @brief  Handles CloudHSM DescribeHsm responses.
+ * \brief The DescribeHsmResponse class encapsulates CloudHSM DescribeHsm responses.
  *
- * @see    CloudHSMClient::describeHsm
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::describeHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeHsmResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const DescribeHsmRequest * DescribeHsmResponse::request() const
     return static_cast<const DescribeHsmRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM DescribeHsm response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void DescribeHsmResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeHsmResponsePrivate
+ * \class DescribeHsmResponsePrivate
  *
- * @brief  Private implementation for DescribeHsmResponse.
+ * \brief Private implementation for DescribeHsmResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHsmResponsePrivate object.
@@ -91,7 +106,7 @@ DescribeHsmResponsePrivate::DescribeHsmResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM DescribeHsmResponse element.
  *
  * @param  xml  XML stream to parse.

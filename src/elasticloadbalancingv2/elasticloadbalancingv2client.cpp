@@ -93,91 +93,99 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ElasticLoadBalancingv2
+ * \brief The QtAws::ElasticLoadBalancingv2 contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
-/**
- * @class  ElasticLoadBalancingv2Client
+/*!
+ * \class QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Client
  *
- * @brief  Client for Elastic Load Balancing (Elastic Load Balancing v2)
+ * \brief The ElasticLoadBalancingv2Client class provides access the Elastic Load Balancing (Elastic Load Balancing v2) service.
  *
- * <fullname>Elastic Load Balancing</fullname>
+ * \ingroup ElasticLoadBalancingv2
  *
- * A load balancer distributes incoming traffic across targets, such as your EC2 instances. This enables you to increase
- * the availability of your application. The load balancer also monitors the health of its registered targets and ensures
- * that it routes traffic only to healthy targets. You configure your load balancer to accept incoming traffic by
- * specifying one or more listeners, which are configured with a protocol and port number for connections from clients to
- * the load balancer. You configure a target group with a protocol and port number for connections from the load balancer
- * to the targets, and with health check settings to be used when checking the health status of the
- *
- * targets>
- *
- * Elastic Load Balancing supports the following types of load balancers: Application Load Balancers, Network Load
- * Balancers, and Classic Load
- *
- * Balancers>
- *
- * An Application Load Balancer makes routing and load balancing decisions at the application layer (HTTP/HTTPS). A Network
- * Load Balancer makes routing and load balancing decisions at the transport layer (TCP). Both Application Load Balancers
- * and Network Load Balancers can route requests to one or more ports on each EC2 instance or container instance in your
- * virtual private cloud
- *
- * (VPC)>
- *
- * A Classic Load Balancer makes routing and load balancing decisions either at the transport layer (TCP/SSL) or the
- * application layer (HTTP/HTTPS), and supports either EC2-Classic or a VPC. For more information, see the <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
- *
- * Guide</a>>
- *
- * This reference covers the 2015-12-01 API, which supports Application Load Balancers and Network Load Balancers. The
- * 2012-06-01 API supports Classic Load
- *
- * Balancers>
- *
- * To get started, complete the following
- *
- * tasks> <ol> <li>
- *
- * Create a load balancer using
- *
- * <a>CreateLoadBalancer</a>> </li> <li>
- *
- * Create a target group using
- *
- * <a>CreateTargetGroup</a>> </li> <li>
- *
- * Register targets for the target group using
- *
- * <a>RegisterTargets</a>> </li> <li>
- *
- * Create one or more listeners for your load balancer using
- *
- * <a>CreateListener</a>> </li> </ol>
- *
- * To delete a load balancer and its related resources, complete the following
- *
- * tasks> <ol> <li>
- *
- * Delete the load balancer using
- *
- * <a>DeleteLoadBalancer</a>> </li> <li>
- *
- * Delete the target group using
- *
- * <a>DeleteTargetGroup</a>> </li> </ol>
- *
- * All Elastic Load Balancing operations are idempotent, which means that they complete at most one time. If you repeat an
- * operation, it
+ *  <fullname>Elastic Load Balancing</fullname>
+ * 
+ *  A load balancer distributes incoming traffic across targets, such as your EC2 instances. This enables you to increase
+ *  the availability of your application. The load balancer also monitors the health of its registered targets and ensures
+ *  that it routes traffic only to healthy targets. You configure your load balancer to accept incoming traffic by
+ *  specifying one or more listeners, which are configured with a protocol and port number for connections from clients to
+ *  the load balancer. You configure a target group with a protocol and port number for connections from the load balancer
+ *  to the targets, and with health check settings to be used when checking the health status of the
+ * 
+ *  targets>
+ * 
+ *  Elastic Load Balancing supports the following types of load balancers: Application Load Balancers, Network Load
+ *  Balancers, and Classic Load
+ * 
+ *  Balancers>
+ * 
+ *  An Application Load Balancer makes routing and load balancing decisions at the application layer (HTTP/HTTPS). A Network
+ *  Load Balancer makes routing and load balancing decisions at the transport layer (TCP). Both Application Load Balancers
+ *  and Network Load Balancers can route requests to one or more ports on each EC2 instance or container instance in your
+ *  virtual private cloud
+ * 
+ *  (VPC)>
+ * 
+ *  A Classic Load Balancer makes routing and load balancing decisions either at the transport layer (TCP/SSL) or the
+ *  application layer (HTTP/HTTPS), and supports either EC2-Classic or a VPC. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
+ * 
+ *  Guide</a>>
+ * 
+ *  This reference covers the 2015-12-01 API, which supports Application Load Balancers and Network Load Balancers. The
+ *  2012-06-01 API supports Classic Load
+ * 
+ *  Balancers>
+ * 
+ *  To get started, complete the following
+ * 
+ *  tasks> <ol> <li>
+ * 
+ *  Create a load balancer using
+ * 
+ *  <a>CreateLoadBalancer</a>> </li> <li>
+ * 
+ *  Create a target group using
+ * 
+ *  <a>CreateTargetGroup</a>> </li> <li>
+ * 
+ *  Register targets for the target group using
+ * 
+ *  <a>RegisterTargets</a>> </li> <li>
+ * 
+ *  Create one or more listeners for your load balancer using
+ * 
+ *  <a>CreateListener</a>> </li> </ol>
+ * 
+ *  To delete a load balancer and its related resources, complete the following
+ * 
+ *  tasks> <ol> <li>
+ * 
+ *  Delete the load balancer using
+ * 
+ *  <a>DeleteLoadBalancer</a>> </li> <li>
+ * 
+ *  Delete the target group using
+ * 
+ *  <a>DeleteTargetGroup</a>> </li> </ol>
+ * 
+ *  All Elastic Load Balancing operations are idempotent, which means that they complete at most one time. If you repeat an
+ *  operation, it
  */
 
-/**
- * @brief  Constructs a new ElasticLoadBalancingv2Client object.
+/*!
+ * \brief Constructs a ElasticLoadBalancingv2Client object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     const QtAws::Core::AwsRegion::Region region,
@@ -196,21 +204,16 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
-/**
- * @brief  Constructs a new ElasticLoadBalancingv2Client object.
+/*!
+ * \overload ElasticLoadBalancingv2Client()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     const QUrl &endpoint,
@@ -229,7 +232,7 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
-/**
+/*!
  * Adds the specified certificate to the specified secure
  *
  * listener>
@@ -252,7 +255,7 @@ AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCerti
     return qobject_cast<AddListenerCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified tags to the specified Elastic Load Balancing resource. You can tag your Application Load Balancers,
  * Network Load Balancers, and your target
  *
@@ -276,7 +279,7 @@ AddTagsResponse * ElasticLoadBalancingv2Client::addTags(const AddTagsRequest &re
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a listener for the specified Application Load Balancer or Network Load
  *
  * Balancer>
@@ -308,7 +311,7 @@ CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const Crea
     return qobject_cast<CreateListenerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Application Load Balancer or a Network Load
  *
  * Balancer>
@@ -353,7 +356,7 @@ CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(co
     return qobject_cast<CreateLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a rule for the specified listener. The listener must be associated with an Application Load
  *
  * Balancer>
@@ -380,7 +383,7 @@ CreateRuleResponse * ElasticLoadBalancingv2Client::createRule(const CreateRuleRe
     return qobject_cast<CreateRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a target
  *
  * group>
@@ -420,7 +423,7 @@ CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(cons
     return qobject_cast<CreateTargetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * listener>
@@ -438,7 +441,7 @@ DeleteListenerResponse * ElasticLoadBalancingv2Client::deleteListener(const Dele
     return qobject_cast<DeleteListenerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Application Load Balancer or Network Load Balancer and its attached
  *
  * listeners>
@@ -462,7 +465,7 @@ DeleteLoadBalancerResponse * ElasticLoadBalancingv2Client::deleteLoadBalancer(co
     return qobject_cast<DeleteLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -476,7 +479,7 @@ DeleteRuleResponse * ElasticLoadBalancingv2Client::deleteRule(const DeleteRuleRe
     return qobject_cast<DeleteRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified target
  *
  * group>
@@ -495,7 +498,7 @@ DeleteTargetGroupResponse * ElasticLoadBalancingv2Client::deleteTargetGroup(cons
     return qobject_cast<DeleteTargetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters the specified targets from the specified target group. After the targets are deregistered, they no longer
  * receive traffic from the load
  *
@@ -510,7 +513,7 @@ DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(cons
     return qobject_cast<DeregisterTargetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the current Elastic Load Balancing resource limits for your AWS
  *
  * account>
@@ -532,7 +535,7 @@ DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLim
     return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the certificates for the specified secure
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -546,7 +549,7 @@ DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeLis
     return qobject_cast<DescribeListenerCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified listeners or the listeners for the specified Application Load Balancer or Network Load Balancer.
  * You must specify either a load balancer or one or more
  *
@@ -561,7 +564,7 @@ DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(cons
     return qobject_cast<DescribeListenersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the attributes for the specified Application Load Balancer or Network Load
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -575,7 +578,7 @@ DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeL
     return qobject_cast<DescribeLoadBalancerAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified load balancers or all of your load
  *
  * balancers>
@@ -594,7 +597,7 @@ DescribeLoadBalancersResponse * ElasticLoadBalancingv2Client::describeLoadBalanc
     return qobject_cast<DescribeLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified rules or the rules for the specified listener. You must specify either a listener or one or more
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -608,7 +611,7 @@ DescribeRulesResponse * ElasticLoadBalancingv2Client::describeRules(const Descri
     return qobject_cast<DescribeRulesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified policies or all policies used for SSL
  *
  * negotiation>
@@ -628,7 +631,7 @@ DescribeSSLPoliciesResponse * ElasticLoadBalancingv2Client::describeSSLPolicies(
     return qobject_cast<DescribeSSLPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the tags for the specified resources. You can describe the tags for one or more Application Load Balancers,
  * Network Load Balancers, and target
  *
@@ -643,7 +646,7 @@ DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const Describe
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the attributes for the specified target
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -657,7 +660,7 @@ DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTa
     return qobject_cast<DescribeTargetGroupAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified target groups or all of your target groups. By default, all target groups are described.
  * Alternatively, you can specify one of the following to filter the results: the ARN of the load balancer, the names of
  * one or more target groups, or the ARNs of one or more target
@@ -678,7 +681,7 @@ DescribeTargetGroupsResponse * ElasticLoadBalancingv2Client::describeTargetGroup
     return qobject_cast<DescribeTargetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the health of the specified targets or all of your
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -692,7 +695,7 @@ DescribeTargetHealthResponse * ElasticLoadBalancingv2Client::describeTargetHealt
     return qobject_cast<DescribeTargetHealthResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified properties of the specified
  *
  * listener>
@@ -712,7 +715,7 @@ ModifyListenerResponse * ElasticLoadBalancingv2Client::modifyListener(const Modi
     return qobject_cast<ModifyListenerResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified attributes of the specified Application Load Balancer or Network Load
  *
  * Balancer>
@@ -731,7 +734,7 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::modifyLoadB
     return qobject_cast<ModifyLoadBalancerAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified
  *
  * rule>
@@ -753,7 +756,7 @@ ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRe
     return qobject_cast<ModifyRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the health checks used when evaluating the health state of the targets in the specified target
  *
  * group>
@@ -771,7 +774,7 @@ ModifyTargetGroupResponse * ElasticLoadBalancingv2Client::modifyTargetGroup(cons
     return qobject_cast<ModifyTargetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified attributes of the specified target
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -785,7 +788,7 @@ ModifyTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::modifyTarget
     return qobject_cast<ModifyTargetGroupAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers the specified targets with the specified target
  *
  * group>
@@ -819,7 +822,7 @@ RegisterTargetsResponse * ElasticLoadBalancingv2Client::registerTargets(const Re
     return qobject_cast<RegisterTargetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified certificate from the specified secure
  *
  * listener>
@@ -841,7 +844,7 @@ RemoveListenerCertificatesResponse * ElasticLoadBalancingv2Client::removeListene
     return qobject_cast<RemoveListenerCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified tags from the specified Elastic Load Balancing
  *
  * resource>
@@ -859,7 +862,7 @@ RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRe
     return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the type of IP addresses used by the subnets of the specified Application Load Balancer or Network Load
  *
  * Balancer>
@@ -877,7 +880,7 @@ SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const 
     return qobject_cast<SetIpAddressTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the priorities of the specified
  *
  * rules>
@@ -896,7 +899,7 @@ SetRulePrioritiesResponse * ElasticLoadBalancingv2Client::setRulePriorities(cons
     return qobject_cast<SetRulePrioritiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates the specified security groups with the specified Application Load Balancer. The specified security groups
  * override the previously associated security
  *
@@ -915,7 +918,7 @@ SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(cons
     return qobject_cast<SetSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the Availability Zone for the specified public subnets for the specified Application Load Balancer. The
  * specified subnets replace the previously enabled
  *
@@ -934,7 +937,7 @@ SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRe
     return qobject_cast<SetSubnetsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticLoadBalancingv2ClientPrivate
@@ -942,7 +945,7 @@ SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRe
  * @brief  Private implementation for ElasticLoadBalancingv2Client.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticLoadBalancingv2ClientPrivate object.

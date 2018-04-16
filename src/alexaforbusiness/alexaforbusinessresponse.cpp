@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  AlexaForBusinessResponse
+/*!
+ * \class QtAws::AlexaForBusiness::AlexaForBusinessResponse
  *
- * @brief  Handles AlexaForBusiness AlexaForBusiness responses.
+ * \brief The AlexaForBusinessResponse class is the base class for all AlexaForBusiness responses.
  *
- * @see    AlexaForBusinessClient::alexaForBusiness
+ * \ingroup AlexaForBusiness
  */
 
-/**
+/*!
  * @brief  Constructs a new AlexaForBusinessResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AlexaForBusinessResponse object.
@@ -63,7 +63,7 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(AlexaForBusinessResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void AlexaForBusinessResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AlexaForBusinessResponsePrivate
@@ -92,7 +92,7 @@ void AlexaForBusinessResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for AlexaForBusinessResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AlexaForBusinessResponsePrivate object.

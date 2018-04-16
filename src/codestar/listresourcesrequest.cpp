@@ -25,15 +25,106 @@
 namespace QtAws {
 namespace CodeStar {
 
-/**
- * @class  ListResourcesRequest
+/*!
+ * \class QtAws::CodeStar::ListResourcesRequest
  *
- * @brief  Implements CodeStar ListResources requests.
+ * \brief The ListResourcesRequest class encapsulates CodeStar ListResources requests.
  *
- * @see    CodeStarClient::listResources
+ * \ingroup CodeStar
+ *
+ *  <fullname>AWS CodeStar</fullname>
+ * 
+ *  This is the API reference for AWS CodeStar. This reference provides descriptions of the operations and data types for
+ *  the AWS CodeStar API along with usage
+ * 
+ *  examples>
+ * 
+ *  You can use the AWS CodeStar API to work
+ * 
+ *  with>
+ * 
+ *  Projects and their resources, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <code>DeleteProject</code>, which deletes a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>DescribeProject</code>, which lists the attributes of a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>ListProjects</code>, which lists all projects associated with your AWS
+ * 
+ *  account> </li> <li>
+ * 
+ *  <code>ListResources</code>, which lists the resources associated with a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>ListTagsForProject</code>, which lists the tags associated with a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>TagProject</code>, which adds tags to a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>UntagProject</code>, which removes tags from a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>UpdateProject</code>, which updates the attributes of a
+ * 
+ *  project> </li> </ul>
+ * 
+ *  Teams and team members, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <code>AssociateTeamMember</code>, which adds an IAM user to the team for a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>DisassociateTeamMember</code>, which removes an IAM user from the team for a
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>ListTeamMembers</code>, which lists all the IAM users in the team for a project, including their roles and
+ * 
+ *  attributes> </li> <li>
+ * 
+ *  <code>UpdateTeamMember</code>, which updates a team member's attributes in a
+ * 
+ *  project> </li> </ul>
+ * 
+ *  Users, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <code>CreateUserProfile</code>, which creates a user profile that contains data associated with the user across all
+ * 
+ *  projects> </li> <li>
+ * 
+ *  <code>DeleteUserProfile</code>, which deletes all user profile information across all
+ * 
+ *  projects> </li> <li>
+ * 
+ *  <code>DescribeUserProfile</code>, which describes the profile of a
+ * 
+ *  user> </li> <li>
+ * 
+ *  <code>ListUserProfiles</code>, which lists all user
+ * 
+ *  profiles> </li> <li>
+ * 
+ *  <code>UpdateUserProfile</code>, which updates the profile for a
+ *
+ * \sa CodeStarClient::listResources
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +135,7 @@ ListResourcesRequest::ListResourcesRequest(const ListResourcesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResourcesRequest object.
  */
 ListResourcesRequest::ListResourcesRequest()
@@ -53,13 +144,16 @@ ListResourcesRequest::ListResourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +168,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply 
     return new ListResourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResourcesRequestPrivate
@@ -82,7 +176,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply 
  * @brief  Private implementation for ListResourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourcesRequestPrivate object.
@@ -97,7 +191,7 @@ ListResourcesRequestPrivate::ListResourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourcesRequestPrivate object, copying another.

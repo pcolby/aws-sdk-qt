@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  UpdatePipelineNotificationsRequest
+/*!
+ * \class QtAws::ElasticTranscoder::UpdatePipelineNotificationsRequest
  *
- * @brief  Implements ElasticTranscoder UpdatePipelineNotifications requests.
+ * \brief The UpdatePipelineNotificationsRequest class encapsulates ElasticTranscoder UpdatePipelineNotifications requests.
  *
- * @see    ElasticTranscoderClient::updatePipelineNotifications
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::updatePipelineNotifications
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineNotificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest(const Upd
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineNotificationsRequest object.
  */
 UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest()
@@ -53,13 +59,16 @@ UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePipelineNotificationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePipelineNotificationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(
     return new UpdatePipelineNotificationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePipelineNotificationsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(
  * @brief  Private implementation for UpdatePipelineNotificationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineNotificationsRequestPrivate object.
@@ -97,7 +106,7 @@ UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineNotificationsRequestPrivate object, copying another.

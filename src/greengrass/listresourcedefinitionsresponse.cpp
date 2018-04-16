@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListResourceDefinitionsResponse
+/*!
+ * \class QtAws::Greengrass::ListResourceDefinitionsResponse
  *
- * @brief  Handles Greengrass ListResourceDefinitions responses.
+ * \brief The ListResourceDefinitionsResponse class encapsulates Greengrass ListResourceDefinitions responses.
  *
- * @see    GreengrassClient::listResourceDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listResourceDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceDefinitionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListResourceDefinitionsRequest * ListResourceDefinitionsResponse::request(
     return static_cast<const ListResourceDefinitionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListResourceDefinitions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListResourceDefinitionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListResourceDefinitionsResponsePrivate
+ * \class ListResourceDefinitionsResponsePrivate
  *
- * @brief  Private implementation for ListResourceDefinitionsResponse.
+ * \brief Private implementation for ListResourceDefinitionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceDefinitionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListResourceDefinitionsResponsePrivate::ListResourceDefinitionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListResourceDefinitionsResponse element.
  *
  * @param  xml  XML stream to parse.

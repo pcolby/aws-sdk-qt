@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  CreateProgressUpdateStreamResponse
+/*!
+ * \class QtAws::MigrationHub::CreateProgressUpdateStreamResponse
  *
- * @brief  Handles MigrationHub CreateProgressUpdateStream responses.
+ * \brief The CreateProgressUpdateStreamResponse class encapsulates MigrationHub CreateProgressUpdateStream responses.
  *
- * @see    MigrationHubClient::createProgressUpdateStream
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::createProgressUpdateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProgressUpdateStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateProgressUpdateStreamRequest * CreateProgressUpdateStreamResponse::re
     return static_cast<const CreateProgressUpdateStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub CreateProgressUpdateStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateProgressUpdateStreamResponsePrivate
+ * \class CreateProgressUpdateStreamResponsePrivate
  *
- * @brief  Private implementation for CreateProgressUpdateStreamResponse.
+ * \brief Private implementation for CreateProgressUpdateStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProgressUpdateStreamResponsePrivate object.
@@ -91,7 +96,7 @@ CreateProgressUpdateStreamResponsePrivate::CreateProgressUpdateStreamResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub CreateProgressUpdateStreamResponse element.
  *
  * @param  xml  XML stream to parse.

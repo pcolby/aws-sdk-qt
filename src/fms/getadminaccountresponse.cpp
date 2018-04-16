@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetAdminAccountResponse
+/*!
+ * \class QtAws::FMS::GetAdminAccountResponse
  *
- * @brief  Handles FMS GetAdminAccount responses.
+ * \brief The GetAdminAccountResponse class encapsulates FMS GetAdminAccount responses.
  *
- * @see    FMSClient::getAdminAccount
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getAdminAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAdminAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const GetAdminAccountRequest * GetAdminAccountResponse::request() const
     return static_cast<const GetAdminAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS GetAdminAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void GetAdminAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAdminAccountResponsePrivate
+ * \class GetAdminAccountResponsePrivate
  *
- * @brief  Private implementation for GetAdminAccountResponse.
+ * \brief Private implementation for GetAdminAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAdminAccountResponsePrivate object.
@@ -91,7 +100,7 @@ GetAdminAccountResponsePrivate::GetAdminAccountResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS GetAdminAccountResponse element.
  *
  * @param  xml  XML stream to parse.

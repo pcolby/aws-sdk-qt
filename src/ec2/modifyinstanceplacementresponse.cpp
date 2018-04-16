@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyInstancePlacementResponse
+/*!
+ * \class QtAws::EC2::ModifyInstancePlacementResponse
  *
- * @brief  Handles EC2 ModifyInstancePlacement responses.
+ * \brief The ModifyInstancePlacementResponse class encapsulates EC2 ModifyInstancePlacement responses.
  *
- * @see    EC2Client::modifyInstancePlacement
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyInstancePlacement
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstancePlacementResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyInstancePlacementRequest * ModifyInstancePlacementResponse::request(
     return static_cast<const ModifyInstancePlacementRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyInstancePlacement response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyInstancePlacementResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyInstancePlacementResponsePrivate
+ * \class ModifyInstancePlacementResponsePrivate
  *
- * @brief  Private implementation for ModifyInstancePlacementResponse.
+ * \brief Private implementation for ModifyInstancePlacementResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstancePlacementResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyInstancePlacementResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ListJobsByStatusRequest
+/*!
+ * \class QtAws::ElasticTranscoder::ListJobsByStatusRequest
  *
- * @brief  Implements ElasticTranscoder ListJobsByStatus requests.
+ * \brief The ListJobsByStatusRequest class encapsulates ElasticTranscoder ListJobsByStatus requests.
  *
- * @see    ElasticTranscoderClient::listJobsByStatus
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::listJobsByStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsByStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListJobsByStatusRequest::ListJobsByStatusRequest(const ListJobsByStatusRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsByStatusRequest object.
  */
 ListJobsByStatusRequest::ListJobsByStatusRequest()
@@ -53,13 +59,16 @@ ListJobsByStatusRequest::ListJobsByStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsByStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsByStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsByStatusRequest::response(QNetworkRep
     return new ListJobsByStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsByStatusRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsByStatusRequest::response(QNetworkRep
  * @brief  Private implementation for ListJobsByStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsByStatusRequestPrivate object.
@@ -97,7 +106,7 @@ ListJobsByStatusRequestPrivate::ListJobsByStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsByStatusRequestPrivate object, copying another.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  ListPoliciesResponse
+/*!
+ * \class QtAws::FMS::ListPoliciesResponse
  *
- * @brief  Handles FMS ListPolicies responses.
+ * \brief The ListPoliciesResponse class encapsulates FMS ListPolicies responses.
  *
- * @see    FMSClient::listPolicies
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::listPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListPoliciesRequest * ListPoliciesResponse::request() const
     return static_cast<const ListPoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS ListPolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListPoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPoliciesResponsePrivate
+ * \class ListPoliciesResponsePrivate
  *
- * @brief  Private implementation for ListPoliciesResponse.
+ * \brief Private implementation for ListPoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPoliciesResponsePrivate object.
@@ -91,7 +100,7 @@ ListPoliciesResponsePrivate::ListPoliciesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS ListPoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  KinesisResponse
+/*!
+ * \class QtAws::Kinesis::KinesisResponse
  *
- * @brief  Handles Kinesis Kinesis responses.
+ * \brief The KinesisResponse class is the base class for all Kinesis responses.
  *
- * @see    KinesisClient::kinesis
+ * \ingroup Kinesis
  */
 
-/**
+/*!
  * @brief  Constructs a new KinesisResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ KinesisResponse::KinesisResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisResponse object.
@@ -63,7 +63,7 @@ KinesisResponse::KinesisResponse(KinesisResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void KinesisResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisResponsePrivate
@@ -92,7 +92,7 @@ void KinesisResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for KinesisResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisResponsePrivate object.

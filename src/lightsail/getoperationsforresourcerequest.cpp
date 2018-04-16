@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  GetOperationsForResourceRequest
+/*!
+ * \class QtAws::Lightsail::GetOperationsForResourceRequest
  *
- * @brief  Implements Lightsail GetOperationsForResource requests.
+ * \brief The GetOperationsForResourceRequest class encapsulates Lightsail GetOperationsForResource requests.
  *
- * @see    LightsailClient::getOperationsForResource
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::getOperationsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOperationsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ GetOperationsForResourceRequest::GetOperationsForResourceRequest(const GetOperat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetOperationsForResourceRequest object.
  */
 GetOperationsForResourceRequest::GetOperationsForResourceRequest()
@@ -53,13 +72,16 @@ GetOperationsForResourceRequest::GetOperationsForResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetOperationsForResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetOperationsForResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationsForResourceRequest::response(QNe
     return new GetOperationsForResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetOperationsForResourceRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationsForResourceRequest::response(QNe
  * @brief  Private implementation for GetOperationsForResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationsForResourceRequestPrivate object.
@@ -97,7 +119,7 @@ GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationsForResourceRequestPrivate object, copying another.

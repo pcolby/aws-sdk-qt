@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AttachLoadBalancersResponse
+/*!
+ * \class QtAws::AutoScaling::AttachLoadBalancersResponse
  *
- * @brief  Handles AutoScaling AttachLoadBalancers responses.
+ * \brief The AttachLoadBalancersResponse class encapsulates AutoScaling AttachLoadBalancers responses.
  *
- * @see    AutoScalingClient::attachLoadBalancers
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::attachLoadBalancers
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const AttachLoadBalancersRequest * AttachLoadBalancersResponse::request() const
     return static_cast<const AttachLoadBalancersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling AttachLoadBalancers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void AttachLoadBalancersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachLoadBalancersResponsePrivate
+ * \class AttachLoadBalancersResponsePrivate
  *
- * @brief  Private implementation for AttachLoadBalancersResponse.
+ * \brief Private implementation for AttachLoadBalancersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancersResponsePrivate object.
@@ -91,7 +99,7 @@ AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling AttachLoadBalancersResponse element.
  *
  * @param  xml  XML stream to parse.

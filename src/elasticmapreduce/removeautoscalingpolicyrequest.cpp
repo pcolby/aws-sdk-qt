@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  RemoveAutoScalingPolicyRequest
+/*!
+ * \class QtAws::EMR::RemoveAutoScalingPolicyRequest
  *
- * @brief  Implements EMR RemoveAutoScalingPolicy requests.
+ * \brief The RemoveAutoScalingPolicyRequest class encapsulates EMR RemoveAutoScalingPolicy requests.
  *
- * @see    EMRClient::removeAutoScalingPolicy
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::removeAutoScalingPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveAutoScalingPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest(const RemoveAutoS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveAutoScalingPolicyRequest object.
  */
 RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest()
@@ -53,13 +59,16 @@ RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveAutoScalingPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveAutoScalingPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNet
     return new RemoveAutoScalingPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveAutoScalingPolicyRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNet
  * @brief  Private implementation for RemoveAutoScalingPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveAutoScalingPolicyRequestPrivate object.
@@ -97,7 +106,7 @@ RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveAutoScalingPolicyRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteTemplateRequest
+/*!
+ * \class QtAws::SES::DeleteTemplateRequest
  *
- * @brief  Implements SES DeleteTemplate requests.
+ * \brief The DeleteTemplateRequest class encapsulates SES DeleteTemplate requests.
  *
- * @see    SESClient::deleteTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteTemplateRequest::DeleteTemplateRequest(const DeleteTemplateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTemplateRequest object.
  */
 DeleteTemplateRequest::DeleteTemplateRequest()
@@ -53,13 +67,16 @@ DeleteTemplateRequest::DeleteTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply
     return new DeleteTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTemplateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTemplateRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTemplateRequestPrivate object, copying another.

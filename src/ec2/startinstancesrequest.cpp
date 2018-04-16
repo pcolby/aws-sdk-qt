@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  StartInstancesRequest
+/*!
+ * \class QtAws::EC2::StartInstancesRequest
  *
- * @brief  Implements EC2 StartInstances requests.
+ * \brief The StartInstancesRequest class encapsulates EC2 StartInstances requests.
  *
- * @see    EC2Client::startInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::startInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new StartInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ StartInstancesRequest::StartInstancesRequest(const StartInstancesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartInstancesRequest object.
  */
 StartInstancesRequest::StartInstancesRequest()
@@ -53,13 +60,16 @@ StartInstancesRequest::StartInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * StartInstancesRequest::response(QNetworkReply
     return new StartInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartInstancesRequest::response(QNetworkReply
  * @brief  Private implementation for StartInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ StartInstancesRequestPrivate::StartInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartInstancesRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  GetShippingLabelResponse
+/*!
+ * \class QtAws::ImportExport::GetShippingLabelResponse
  *
- * @brief  Handles ImportExport GetShippingLabel responses.
+ * \brief The GetShippingLabelResponse class encapsulates ImportExport GetShippingLabel responses.
  *
- * @see    ImportExportClient::getShippingLabel
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::getShippingLabel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetShippingLabelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetShippingLabelRequest * GetShippingLabelResponse::request() const
     return static_cast<const GetShippingLabelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ImportExport GetShippingLabel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetShippingLabelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetShippingLabelResponsePrivate
+ * \class GetShippingLabelResponsePrivate
  *
- * @brief  Private implementation for GetShippingLabelResponse.
+ * \brief Private implementation for GetShippingLabelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetShippingLabelResponsePrivate object.
@@ -91,7 +97,7 @@ GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ImportExport GetShippingLabelResponse element.
  *
  * @param  xml  XML stream to parse.

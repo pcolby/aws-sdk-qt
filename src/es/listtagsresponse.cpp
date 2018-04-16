@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListTagsResponse
+/*!
+ * \class QtAws::ElasticsearchService::ListTagsResponse
  *
- * @brief  Handles ElasticsearchService ListTags responses.
+ * \brief The ListTagsResponse class encapsulates ElasticsearchService ListTags responses.
  *
- * @see    ElasticsearchServiceClient::listTags
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ListTagsRequest * ListTagsResponse::request() const
     return static_cast<const ListTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService ListTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsResponsePrivate
+ * \class ListTagsResponsePrivate
  *
- * @brief  Private implementation for ListTagsResponse.
+ * \brief Private implementation for ListTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsResponsePrivate object.
@@ -91,7 +103,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService ListTagsResponse element.
  *
  * @param  xml  XML stream to parse.

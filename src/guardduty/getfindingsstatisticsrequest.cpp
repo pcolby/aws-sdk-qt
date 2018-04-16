@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetFindingsStatisticsRequest
+/*!
+ * \class QtAws::GuardDuty::GetFindingsStatisticsRequest
  *
- * @brief  Implements GuardDuty GetFindingsStatistics requests.
+ * \brief The GetFindingsStatisticsRequest class encapsulates GuardDuty GetFindingsStatistics requests.
  *
- * @see    GuardDutyClient::getFindingsStatistics
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getFindingsStatistics
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFindingsStatisticsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetFindingsStatisticsRequest::GetFindingsStatisticsRequest(const GetFindingsStat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFindingsStatisticsRequest object.
  */
 GetFindingsStatisticsRequest::GetFindingsStatisticsRequest()
@@ -53,13 +56,16 @@ GetFindingsStatisticsRequest::GetFindingsStatisticsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFindingsStatisticsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFindingsStatisticsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetFindingsStatisticsRequest::response(QNetwo
     return new GetFindingsStatisticsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFindingsStatisticsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetFindingsStatisticsRequest::response(QNetwo
  * @brief  Private implementation for GetFindingsStatisticsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFindingsStatisticsRequestPrivate object.
@@ -97,7 +103,7 @@ GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFindingsStatisticsRequestPrivate object, copying another.

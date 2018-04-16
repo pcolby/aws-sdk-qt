@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateScriptRequest
+/*!
+ * \class QtAws::Glue::CreateScriptRequest
  *
- * @brief  Implements Glue CreateScript requests.
+ * \brief The CreateScriptRequest class encapsulates Glue CreateScript requests.
  *
- * @see    GlueClient::createScript
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createScript
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateScriptRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateScriptRequest::CreateScriptRequest(const CreateScriptRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateScriptRequest object.
  */
 CreateScriptRequest::CreateScriptRequest()
@@ -53,13 +59,16 @@ CreateScriptRequest::CreateScriptRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateScriptRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateScriptResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply *
     return new CreateScriptResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateScriptRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateScriptRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateScriptRequestPrivate object.
@@ -97,7 +106,7 @@ CreateScriptRequestPrivate::CreateScriptRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateScriptRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreatePartitionResponse
+/*!
+ * \class QtAws::Glue::CreatePartitionResponse
  *
- * @brief  Handles Glue CreatePartition responses.
+ * \brief The CreatePartitionResponse class encapsulates Glue CreatePartition responses.
  *
- * @see    GlueClient::createPartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createPartition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePartitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreatePartitionRequest * CreatePartitionResponse::request() const
     return static_cast<const CreatePartitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue CreatePartition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreatePartitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePartitionResponsePrivate
+ * \class CreatePartitionResponsePrivate
  *
- * @brief  Private implementation for CreatePartitionResponse.
+ * \brief Private implementation for CreatePartitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePartitionResponsePrivate object.
@@ -91,7 +97,7 @@ CreatePartitionResponsePrivate::CreatePartitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue CreatePartitionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateNotebookInstanceRequest
+/*!
+ * \class QtAws::SageMaker::UpdateNotebookInstanceRequest
  *
- * @brief  Implements SageMaker UpdateNotebookInstance requests.
+ * \brief The UpdateNotebookInstanceRequest class encapsulates SageMaker UpdateNotebookInstance requests.
  *
- * @see    SageMakerClient::updateNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotebookInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateNotebookInstanceRequest::UpdateNotebookInstanceRequest(const UpdateNoteboo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotebookInstanceRequest object.
  */
 UpdateNotebookInstanceRequest::UpdateNotebookInstanceRequest()
@@ -53,13 +56,16 @@ UpdateNotebookInstanceRequest::UpdateNotebookInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateNotebookInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateNotebookInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetw
     return new UpdateNotebookInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateNotebookInstanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetw
  * @brief  Private implementation for UpdateNotebookInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotebookInstanceRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotebookInstanceRequestPrivate object, copying another.

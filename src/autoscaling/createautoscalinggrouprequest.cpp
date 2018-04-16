@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CreateAutoScalingGroupRequest
+/*!
+ * \class QtAws::AutoScaling::CreateAutoScalingGroupRequest
  *
- * @brief  Implements AutoScaling CreateAutoScalingGroup requests.
+ * \brief The CreateAutoScalingGroupRequest class encapsulates AutoScaling CreateAutoScalingGroup requests.
  *
- * @see    AutoScalingClient::createAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::createAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAutoScalingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest(const CreateAutoSca
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAutoScalingGroupRequest object.
  */
 CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest()
@@ -53,13 +61,16 @@ CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAutoScalingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAutoScalingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateAutoScalingGroupRequest::response(QNetw
     return new CreateAutoScalingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAutoScalingGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateAutoScalingGroupRequest::response(QNetw
  * @brief  Private implementation for CreateAutoScalingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAutoScalingGroupRequestPrivate object.
@@ -97,7 +108,7 @@ CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAutoScalingGroupRequestPrivate object, copying another.

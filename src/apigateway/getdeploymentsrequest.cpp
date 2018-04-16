@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDeploymentsRequest
+/*!
+ * \class QtAws::APIGateway::GetDeploymentsRequest
  *
- * @brief  Implements APIGateway GetDeployments requests.
+ * \brief The GetDeploymentsRequest class encapsulates APIGateway GetDeployments requests.
  *
- * @see    APIGatewayClient::getDeployments
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDeployments
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeploymentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetDeploymentsRequest::GetDeploymentsRequest(const GetDeploymentsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDeploymentsRequest object.
  */
 GetDeploymentsRequest::GetDeploymentsRequest()
@@ -53,13 +61,16 @@ GetDeploymentsRequest::GetDeploymentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDeploymentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDeploymentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentsRequest::response(QNetworkReply
     return new GetDeploymentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDeploymentsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentsRequest::response(QNetworkReply
  * @brief  Private implementation for GetDeploymentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeploymentsRequestPrivate object.
@@ -97,7 +108,7 @@ GetDeploymentsRequestPrivate::GetDeploymentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeploymentsRequestPrivate object, copying another.

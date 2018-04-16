@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateResourceRequest
+/*!
+ * \class QtAws::APIGateway::UpdateResourceRequest
  *
- * @brief  Implements APIGateway UpdateResource requests.
+ * \brief The UpdateResourceRequest class encapsulates APIGateway UpdateResource requests.
  *
- * @see    APIGatewayClient::updateResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateResourceRequest::UpdateResourceRequest(const UpdateResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateResourceRequest object.
  */
 UpdateResourceRequest::UpdateResourceRequest()
@@ -53,13 +61,16 @@ UpdateResourceRequest::UpdateResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply
     return new UpdateResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResourceRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResourceRequestPrivate object, copying another.

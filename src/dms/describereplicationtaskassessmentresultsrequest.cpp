@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationTaskAssessmentResultsRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
+ * \brief The DescribeReplicationTaskAssessmentResultsRequest class encapsulates DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessme
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequest object.
  */
 DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest()
@@ -53,13 +67,16 @@ DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessme
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReplicationTaskAssessmentResultsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReplicationTaskAssessmentResultsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsReque
     return new DescribeReplicationTaskAssessmentResultsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReplicationTaskAssessmentResultsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsReque
  * @brief  Private implementation for DescribeReplicationTaskAssessmentResultsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskA
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequestPrivate object, copying another.

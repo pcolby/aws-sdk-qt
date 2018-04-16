@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateProvisionedProductPlanRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreateProvisionedProductPlanRequest
  *
- * @brief  Implements ServiceCatalog CreateProvisionedProductPlan requests.
+ * \brief The CreateProvisionedProductPlanRequest class encapsulates ServiceCatalog CreateProvisionedProductPlan requests.
  *
- * @see    ServiceCatalogClient::createProvisionedProductPlan
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createProvisionedProductPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProvisionedProductPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateProvisionedProductPlanRequest::CreateProvisionedProductPlanRequest(const C
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateProvisionedProductPlanRequest object.
  */
 CreateProvisionedProductPlanRequest::CreateProvisionedProductPlanRequest()
@@ -53,13 +62,16 @@ CreateProvisionedProductPlanRequest::CreateProvisionedProductPlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateProvisionedProductPlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateProvisionedProductPlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateProvisionedProductPlanRequest::response
     return new CreateProvisionedProductPlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateProvisionedProductPlanRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateProvisionedProductPlanRequest::response
  * @brief  Private implementation for CreateProvisionedProductPlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProvisionedProductPlanRequestPrivate object.
@@ -97,7 +109,7 @@ CreateProvisionedProductPlanRequestPrivate::CreateProvisionedProductPlanRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProvisionedProductPlanRequestPrivate object, copying another.

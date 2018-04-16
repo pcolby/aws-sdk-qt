@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotPriceHistoryRequest
+/*!
+ * \class QtAws::EC2::DescribeSpotPriceHistoryRequest
  *
- * @brief  Implements EC2 DescribeSpotPriceHistory requests.
+ * \brief The DescribeSpotPriceHistoryRequest class encapsulates EC2 DescribeSpotPriceHistory requests.
  *
- * @see    EC2Client::describeSpotPriceHistory
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotPriceHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotPriceHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest(const DescribeS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotPriceHistoryRequest object.
  */
 DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest()
@@ -53,13 +60,16 @@ DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSpotPriceHistoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSpotPriceHistoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNe
     return new DescribeSpotPriceHistoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSpotPriceHistoryRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNe
  * @brief  Private implementation for DescribeSpotPriceHistoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotPriceHistoryRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotPriceHistoryRequestPrivate object, copying another.

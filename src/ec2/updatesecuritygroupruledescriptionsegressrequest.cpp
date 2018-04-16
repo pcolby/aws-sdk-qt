@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UpdateSecurityGroupRuleDescriptionsEgressRequest
+/*!
+ * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressRequest
  *
- * @brief  Implements EC2 UpdateSecurityGroupRuleDescriptionsEgress requests.
+ * \brief The UpdateSecurityGroupRuleDescriptionsEgressRequest class encapsulates EC2 UpdateSecurityGroupRuleDescriptionsEgress requests.
  *
- * @see    EC2Client::updateSecurityGroupRuleDescriptionsEgress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::updateSecurityGroupRuleDescriptionsEgress
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateSecurityGroupRuleDescriptionsEgressRequest::UpdateSecurityGroupRuleDescrip
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequest object.
  */
 UpdateSecurityGroupRuleDescriptionsEgressRequest::UpdateSecurityGroupRuleDescriptionsEgressRequest()
@@ -53,13 +60,16 @@ UpdateSecurityGroupRuleDescriptionsEgressRequest::UpdateSecurityGroupRuleDescrip
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSecurityGroupRuleDescriptionsEgressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSecurityGroupRuleDescriptionsEgressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsEgressRequ
     return new UpdateSecurityGroupRuleDescriptionsEgressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsEgressRequ
  * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsEgressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate::UpdateSecurityGroupRule
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object, copying another.

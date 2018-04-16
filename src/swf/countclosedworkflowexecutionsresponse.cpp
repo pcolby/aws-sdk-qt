@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  CountClosedWorkflowExecutionsResponse
+/*!
+ * \class QtAws::SWF::CountClosedWorkflowExecutionsResponse
  *
- * @brief  Handles SWF CountClosedWorkflowExecutions responses.
+ * \brief The CountClosedWorkflowExecutionsResponse class encapsulates SWF CountClosedWorkflowExecutions responses.
  *
- * @see    SWFClient::countClosedWorkflowExecutions
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::countClosedWorkflowExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new CountClosedWorkflowExecutionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const CountClosedWorkflowExecutionsRequest * CountClosedWorkflowExecutionsRespon
     return static_cast<const CountClosedWorkflowExecutionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF CountClosedWorkflowExecutions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void CountClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CountClosedWorkflowExecutionsResponsePrivate
+ * \class CountClosedWorkflowExecutionsResponsePrivate
  *
- * @brief  Private implementation for CountClosedWorkflowExecutionsResponse.
+ * \brief Private implementation for CountClosedWorkflowExecutionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountClosedWorkflowExecutionsResponsePrivate object.
@@ -91,7 +110,7 @@ CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF CountClosedWorkflowExecutionsResponse element.
  *
  * @param  xml  XML stream to parse.

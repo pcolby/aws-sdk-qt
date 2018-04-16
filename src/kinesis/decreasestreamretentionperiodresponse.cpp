@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DecreaseStreamRetentionPeriodResponse
+/*!
+ * \class QtAws::Kinesis::DecreaseStreamRetentionPeriodResponse
  *
- * @brief  Handles Kinesis DecreaseStreamRetentionPeriod responses.
+ * \brief The DecreaseStreamRetentionPeriodResponse class encapsulates Kinesis DecreaseStreamRetentionPeriod responses.
  *
- * @see    KinesisClient::decreaseStreamRetentionPeriod
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::decreaseStreamRetentionPeriod
  */
 
-/**
+/*!
  * @brief  Constructs a new DecreaseStreamRetentionPeriodResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DecreaseStreamRetentionPeriodRequest * DecreaseStreamRetentionPeriodRespon
     return static_cast<const DecreaseStreamRetentionPeriodRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis DecreaseStreamRetentionPeriod response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DecreaseStreamRetentionPeriodResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DecreaseStreamRetentionPeriodResponsePrivate
+ * \class DecreaseStreamRetentionPeriodResponsePrivate
  *
- * @brief  Private implementation for DecreaseStreamRetentionPeriodResponse.
+ * \brief Private implementation for DecreaseStreamRetentionPeriodResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DecreaseStreamRetentionPeriodResponsePrivate object.
@@ -91,7 +97,7 @@ DecreaseStreamRetentionPeriodResponsePrivate::DecreaseStreamRetentionPeriodRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis DecreaseStreamRetentionPeriodResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  PinpointResponse
+/*!
+ * \class QtAws::Pinpoint::PinpointResponse
  *
- * @brief  Handles Pinpoint Pinpoint responses.
+ * \brief The PinpointResponse class is the base class for all Pinpoint responses.
  *
- * @see    PinpointClient::pinpoint
+ * \ingroup Pinpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new PinpointResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ PinpointResponse::PinpointResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PinpointResponse object.
@@ -63,7 +63,7 @@ PinpointResponse::PinpointResponse(PinpointResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void PinpointResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PinpointResponsePrivate
@@ -92,7 +92,7 @@ void PinpointResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for PinpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PinpointResponsePrivate object.

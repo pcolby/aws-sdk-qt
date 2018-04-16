@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateCustomerGatewayResponse
+/*!
+ * \class QtAws::EC2::CreateCustomerGatewayResponse
  *
- * @brief  Handles EC2 CreateCustomerGateway responses.
+ * \brief The CreateCustomerGatewayResponse class encapsulates EC2 CreateCustomerGateway responses.
  *
- * @see    EC2Client::createCustomerGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createCustomerGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCustomerGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateCustomerGatewayRequest * CreateCustomerGatewayResponse::request() co
     return static_cast<const CreateCustomerGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateCustomerGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCustomerGatewayResponsePrivate
+ * \class CreateCustomerGatewayResponsePrivate
  *
- * @brief  Private implementation for CreateCustomerGatewayResponse.
+ * \brief Private implementation for CreateCustomerGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCustomerGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateCustomerGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

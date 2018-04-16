@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  CreateAssessmentTargetRequest
+/*!
+ * \class QtAws::Inspector::CreateAssessmentTargetRequest
  *
- * @brief  Implements Inspector CreateAssessmentTarget requests.
+ * \brief The CreateAssessmentTargetRequest class encapsulates Inspector CreateAssessmentTarget requests.
  *
- * @see    InspectorClient::createAssessmentTarget
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::createAssessmentTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAssessmentTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateAssessmentTargetRequest::CreateAssessmentTargetRequest(const CreateAssessm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAssessmentTargetRequest object.
  */
 CreateAssessmentTargetRequest::CreateAssessmentTargetRequest()
@@ -53,13 +61,16 @@ CreateAssessmentTargetRequest::CreateAssessmentTargetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAssessmentTargetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAssessmentTargetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTargetRequest::response(QNetw
     return new CreateAssessmentTargetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAssessmentTargetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTargetRequest::response(QNetw
  * @brief  Private implementation for CreateAssessmentTargetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAssessmentTargetRequestPrivate object.
@@ -97,7 +108,7 @@ CreateAssessmentTargetRequestPrivate::CreateAssessmentTargetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAssessmentTargetRequestPrivate object, copying another.

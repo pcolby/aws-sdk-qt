@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  DeleteInstanceSnapshotResponse
+/*!
+ * \class QtAws::Lightsail::DeleteInstanceSnapshotResponse
  *
- * @brief  Handles Lightsail DeleteInstanceSnapshot responses.
+ * \brief The DeleteInstanceSnapshotResponse class encapsulates Lightsail DeleteInstanceSnapshot responses.
  *
- * @see    LightsailClient::deleteInstanceSnapshot
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::deleteInstanceSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInstanceSnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const DeleteInstanceSnapshotRequest * DeleteInstanceSnapshotResponse::request() 
     return static_cast<const DeleteInstanceSnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lightsail DeleteInstanceSnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void DeleteInstanceSnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteInstanceSnapshotResponsePrivate
+ * \class DeleteInstanceSnapshotResponsePrivate
  *
- * @brief  Private implementation for DeleteInstanceSnapshotResponse.
+ * \brief Private implementation for DeleteInstanceSnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInstanceSnapshotResponsePrivate object.
@@ -91,7 +110,7 @@ DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lightsail DeleteInstanceSnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

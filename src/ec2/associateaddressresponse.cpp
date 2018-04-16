@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateAddressResponse
+/*!
+ * \class QtAws::EC2::AssociateAddressResponse
  *
- * @brief  Handles EC2 AssociateAddress responses.
+ * \brief The AssociateAddressResponse class encapsulates EC2 AssociateAddress responses.
  *
- * @see    EC2Client::associateAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateAddressResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssociateAddressRequest * AssociateAddressResponse::request() const
     return static_cast<const AssociateAddressRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssociateAddress response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssociateAddressResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateAddressResponsePrivate
+ * \class AssociateAddressResponsePrivate
  *
- * @brief  Private implementation for AssociateAddressResponse.
+ * \brief Private implementation for AssociateAddressResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateAddressResponsePrivate object.
@@ -91,7 +98,7 @@ AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssociateAddressResponse element.
  *
  * @param  xml  XML stream to parse.

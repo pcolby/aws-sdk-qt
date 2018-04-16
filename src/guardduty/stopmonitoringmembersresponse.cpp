@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  StopMonitoringMembersResponse
+/*!
+ * \class QtAws::GuardDuty::StopMonitoringMembersResponse
  *
- * @brief  Handles GuardDuty StopMonitoringMembers responses.
+ * \brief The StopMonitoringMembersResponse class encapsulates GuardDuty StopMonitoringMembers responses.
  *
- * @see    GuardDutyClient::stopMonitoringMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::stopMonitoringMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new StopMonitoringMembersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StopMonitoringMembersRequest * StopMonitoringMembersResponse::request() co
     return static_cast<const StopMonitoringMembersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty StopMonitoringMembers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StopMonitoringMembersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopMonitoringMembersResponsePrivate
+ * \class StopMonitoringMembersResponsePrivate
  *
- * @brief  Private implementation for StopMonitoringMembersResponse.
+ * \brief Private implementation for StopMonitoringMembersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopMonitoringMembersResponsePrivate object.
@@ -91,7 +94,7 @@ StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty StopMonitoringMembersResponse element.
  *
  * @param  xml  XML stream to parse.

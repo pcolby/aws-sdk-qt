@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Budgets {
 
-/**
- * @class  BudgetsResponse
+/*!
+ * \class QtAws::Budgets::BudgetsResponse
  *
- * @brief  Handles Budgets Budgets responses.
+ * \brief The BudgetsResponse class is the base class for all Budgets responses.
  *
- * @see    BudgetsClient::budgets
+ * \ingroup Budgets
  */
 
-/**
+/*!
  * @brief  Constructs a new BudgetsResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ BudgetsResponse::BudgetsResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BudgetsResponse object.
@@ -63,7 +63,7 @@ BudgetsResponse::BudgetsResponse(BudgetsResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void BudgetsResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BudgetsResponsePrivate
@@ -92,7 +92,7 @@ void BudgetsResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for BudgetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BudgetsResponsePrivate object.

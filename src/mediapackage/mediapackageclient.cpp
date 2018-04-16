@@ -47,23 +47,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MediaPackage
+ * \brief The QtAws::MediaPackage contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  MediaPackageClient
+/*!
+ * \class QtAws::MediaPackage::MediaPackageClient
  *
- * @brief  Client for AWS Elemental MediaPackage
+ * \brief The MediaPackageClient class provides access the AWS Elemental MediaPackage service.
+ *
+ * \ingroup MediaPackage
  *
  */
 
-/**
- * @brief  Constructs a new MediaPackageClient object.
+/*!
+ * \brief Constructs a MediaPackageClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MediaPackageClient::MediaPackageClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -82,21 +90,16 @@ MediaPackageClient::MediaPackageClient(
     d->serviceName = QStringLiteral("mediapackage");
 }
 
-/**
- * @brief  Constructs a new MediaPackageClient object.
+/*!
+ * \overload MediaPackageClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MediaPackageClient::MediaPackageClient(
     const QUrl &endpoint,
@@ -115,7 +118,7 @@ MediaPackageClient::MediaPackageClient(
     d->serviceName = QStringLiteral("mediapackage");
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -128,7 +131,7 @@ CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelReq
     return qobject_cast<CreateChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -141,7 +144,7 @@ CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const Cr
     return qobject_cast<CreateOriginEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -154,7 +157,7 @@ DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelReq
     return qobject_cast<DeleteChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -167,7 +170,7 @@ DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const De
     return qobject_cast<DeleteOriginEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -180,7 +183,7 @@ DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChan
     return qobject_cast<DescribeChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -193,7 +196,7 @@ DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(cons
     return qobject_cast<DescribeOriginEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -206,7 +209,7 @@ ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsReques
     return qobject_cast<ListChannelsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -219,7 +222,7 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
     return qobject_cast<ListOriginEndpointsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -232,7 +235,7 @@ RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(
     return qobject_cast<RotateChannelCredentialsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -245,7 +248,7 @@ UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelReq
     return qobject_cast<UpdateChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaPackage.
  *
@@ -258,7 +261,7 @@ UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const Up
     return qobject_cast<UpdateOriginEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaPackageClientPrivate
@@ -266,7 +269,7 @@ UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const Up
  * @brief  Private implementation for MediaPackageClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaPackageClientPrivate object.

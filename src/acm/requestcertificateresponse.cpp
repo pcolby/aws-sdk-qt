@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  RequestCertificateResponse
+/*!
+ * \class QtAws::ACM::RequestCertificateResponse
  *
- * @brief  Handles ACM RequestCertificate responses.
+ * \brief The RequestCertificateResponse class encapsulates ACM RequestCertificate responses.
  *
- * @see    ACMClient::requestCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::requestCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RequestCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const RequestCertificateRequest * RequestCertificateResponse::request() const
     return static_cast<const RequestCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM RequestCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void RequestCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RequestCertificateResponsePrivate
+ * \class RequestCertificateResponsePrivate
  *
- * @brief  Private implementation for RequestCertificateResponse.
+ * \brief Private implementation for RequestCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ RequestCertificateResponsePrivate::RequestCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM RequestCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

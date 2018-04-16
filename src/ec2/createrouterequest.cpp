@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateRouteRequest
+/*!
+ * \class QtAws::EC2::CreateRouteRequest
  *
- * @brief  Implements EC2 CreateRoute requests.
+ * \brief The CreateRouteRequest class encapsulates EC2 CreateRoute requests.
  *
- * @see    EC2Client::createRoute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createRoute
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRouteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateRouteRequest::CreateRouteRequest(const CreateRouteRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRouteRequest object.
  */
 CreateRouteRequest::CreateRouteRequest()
@@ -53,13 +60,16 @@ CreateRouteRequest::CreateRouteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRouteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRouteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateRouteRequest::response(QNetworkReply * 
     return new CreateRouteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRouteRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRouteRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateRouteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRouteRequestPrivate object.
@@ -97,7 +107,7 @@ CreateRouteRequestPrivate::CreateRouteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRouteRequestPrivate object, copying another.

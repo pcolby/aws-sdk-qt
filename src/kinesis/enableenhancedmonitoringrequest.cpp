@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  EnableEnhancedMonitoringRequest
+/*!
+ * \class QtAws::Kinesis::EnableEnhancedMonitoringRequest
  *
- * @brief  Implements Kinesis EnableEnhancedMonitoring requests.
+ * \brief The EnableEnhancedMonitoringRequest class encapsulates Kinesis EnableEnhancedMonitoring requests.
  *
- * @see    KinesisClient::enableEnhancedMonitoring
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::enableEnhancedMonitoring
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableEnhancedMonitoringRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest(const EnableEnh
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableEnhancedMonitoringRequest object.
  */
 EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest()
@@ -53,13 +59,16 @@ EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableEnhancedMonitoringRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableEnhancedMonitoringResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * EnableEnhancedMonitoringRequest::response(QNe
     return new EnableEnhancedMonitoringResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableEnhancedMonitoringRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * EnableEnhancedMonitoringRequest::response(QNe
  * @brief  Private implementation for EnableEnhancedMonitoringRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableEnhancedMonitoringRequestPrivate object.
@@ -97,7 +106,7 @@ EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableEnhancedMonitoringRequestPrivate object, copying another.

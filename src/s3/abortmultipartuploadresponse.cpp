@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  AbortMultipartUploadResponse
+/*!
+ * \class QtAws::S3::AbortMultipartUploadResponse
  *
- * @brief  Handles S3 AbortMultipartUpload responses.
+ * \brief The AbortMultipartUploadResponse class encapsulates S3 AbortMultipartUpload responses.
  *
- * @see    S3Client::abortMultipartUpload
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::abortMultipartUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new AbortMultipartUploadResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() cons
     return static_cast<const AbortMultipartUploadRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 AbortMultipartUpload response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AbortMultipartUploadResponsePrivate
+ * \class AbortMultipartUploadResponsePrivate
  *
- * @brief  Private implementation for AbortMultipartUploadResponse.
+ * \brief Private implementation for AbortMultipartUploadResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AbortMultipartUploadResponsePrivate object.
@@ -91,7 +94,7 @@ AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 AbortMultipartUploadResponse element.
  *
  * @param  xml  XML stream to parse.

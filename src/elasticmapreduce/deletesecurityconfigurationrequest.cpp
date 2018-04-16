@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DeleteSecurityConfigurationRequest
+/*!
+ * \class QtAws::EMR::DeleteSecurityConfigurationRequest
  *
- * @brief  Implements EMR DeleteSecurityConfiguration requests.
+ * \brief The DeleteSecurityConfigurationRequest class encapsulates EMR DeleteSecurityConfiguration requests.
  *
- * @see    EMRClient::deleteSecurityConfiguration
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::deleteSecurityConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSecurityConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest(const Del
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSecurityConfigurationRequest object.
  */
 DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest()
@@ -53,13 +59,16 @@ DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSecurityConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSecurityConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(
     return new DeleteSecurityConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSecurityConfigurationRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(
  * @brief  Private implementation for DeleteSecurityConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSecurityConfigurationRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSecurityConfigurationRequestPrivate object, copying another.

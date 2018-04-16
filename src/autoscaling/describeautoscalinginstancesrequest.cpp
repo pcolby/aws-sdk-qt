@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeAutoScalingInstancesRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeAutoScalingInstancesRequest
  *
- * @brief  Implements AutoScaling DescribeAutoScalingInstances requests.
+ * \brief The DescribeAutoScalingInstancesRequest class encapsulates AutoScaling DescribeAutoScalingInstances requests.
  *
- * @see    AutoScalingClient::describeAutoScalingInstances
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeAutoScalingInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAutoScalingInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeAutoScalingInstancesRequest::DescribeAutoScalingInstancesRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAutoScalingInstancesRequest object.
  */
 DescribeAutoScalingInstancesRequest::DescribeAutoScalingInstancesRequest()
@@ -53,13 +61,16 @@ DescribeAutoScalingInstancesRequest::DescribeAutoScalingInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAutoScalingInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAutoScalingInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response
     return new DescribeAutoScalingInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAutoScalingInstancesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response
  * @brief  Private implementation for DescribeAutoScalingInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAutoScalingInstancesRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeAutoScalingInstancesRequestPrivate::DescribeAutoScalingInstancesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAutoScalingInstancesRequestPrivate object, copying another.

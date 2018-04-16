@@ -87,42 +87,50 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DynamoDB
+ * \brief The QtAws::DynamoDB contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  DynamoDBClient
+/*!
+ * \class QtAws::DynamoDB::DynamoDBClient
  *
- * @brief  Client for Amazon DynamoDB
+ * \brief The DynamoDBClient class provides access the Amazon DynamoDB service.
  *
- * <fullname>Amazon DynamoDB</fullname>
+ * \ingroup DynamoDB
  *
- * Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
- * scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
- * that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
- * cluster
- *
- * scaling>
- *
- * With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
- * request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- * degradation, and use the AWS Management Console to monitor resource utilization and performance
- *
- * metrics>
- *
- * DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
- * throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- * solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- * built-in high availability and data durability.
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
  */
 
-/**
- * @brief  Constructs a new DynamoDBClient object.
+/*!
+ * \brief Constructs a DynamoDBClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DynamoDBClient::DynamoDBClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -141,21 +149,16 @@ DynamoDBClient::DynamoDBClient(
     d->serviceName = QStringLiteral("dynamodb");
 }
 
-/**
- * @brief  Constructs a new DynamoDBClient object.
+/*!
+ * \overload DynamoDBClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DynamoDBClient::DynamoDBClient(
     const QUrl &endpoint,
@@ -174,7 +177,7 @@ DynamoDBClient::DynamoDBClient(
     d->serviceName = QStringLiteral("dynamodb");
 }
 
-/**
+/*!
  * The <code>BatchGetItem</code> operation returns the attributes of one or more items from one or more tables. You
  * identify requested items by primary
  *
@@ -250,7 +253,7 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
     return qobject_cast<BatchGetItemResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>BatchWriteItem</code> operation puts or deletes multiple items in one or more tables. A single call to
  * <code>BatchWriteItem</code> can write up to 16 MB of data, which can comprise as many as 25 put or delete requests.
  * Individual items to be written can be as large as 400
@@ -352,7 +355,7 @@ BatchWriteItemResponse * DynamoDBClient::batchWriteItem(const BatchWriteItemRequ
     return qobject_cast<BatchWriteItemResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a backup for an existing
  *
  * table>
@@ -409,7 +412,7 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
     return qobject_cast<CreateBackupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a global table from an existing table. A global table creates a replication relationship between two or more
  * DynamoDB tables with the same table name in the provided regions.
  *
@@ -444,7 +447,7 @@ CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobal
     return qobject_cast<CreateGlobalTableResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>CreateTable</code> operation adds a new table to your account. In an AWS account, table names must be unique
  * within each region. That is, you can have two tables with same name if you create the tables in different
  *
@@ -476,7 +479,7 @@ CreateTableResponse * DynamoDBClient::createTable(const CreateTableRequest &requ
     return qobject_cast<CreateTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing backup of a
  *
  * table>
@@ -494,7 +497,7 @@ DeleteBackupResponse * DynamoDBClient::deleteBackup(const DeleteBackupRequest &r
     return qobject_cast<DeleteBackupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a single item in a table by primary key. You can perform a conditional delete operation that deletes the item if
  * it exists, or if it has an expected attribute
  *
@@ -524,7 +527,7 @@ DeleteItemResponse * DynamoDBClient::deleteItem(const DeleteItemRequest &request
     return qobject_cast<DeleteItemResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>DeleteTable</code> operation deletes a table and all of its items. After a <code>DeleteTable</code> request,
  * the specified table is in the <code>DELETING</code> state until DynamoDB completes the deletion. If the table is in the
  * <code>ACTIVE</code> state, you can delete it. If a table is in <code>CREATING</code> or <code>UPDATING</code> states,
@@ -560,7 +563,7 @@ DeleteTableResponse * DynamoDBClient::deleteTable(const DeleteTableRequest &requ
     return qobject_cast<DeleteTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes an existing backup of a
  *
  * table>
@@ -578,7 +581,7 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
     return qobject_cast<DescribeBackupResponse *>(send(request));
 }
 
-/**
+/*!
  * Checks the status of continuous backups and point in time recovery on the specified table. Continuous backups are
  * <code>ENABLED</code> on all tables at table creation. If point in time recovery is enabled,
  * <code>PointInTimeRecoveryStatus</code> will be set to
@@ -608,7 +611,7 @@ DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(co
     return qobject_cast<DescribeContinuousBackupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the specified global
  *
  * @param  request Request to send to Amazon DynamoDB.
@@ -622,7 +625,7 @@ DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const Describe
     return qobject_cast<DescribeGlobalTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the current provisioned-capacity limits for your AWS account in a region, both for the region as a whole and for
  * any one DynamoDB table that you create
  *
@@ -716,7 +719,7 @@ DescribeLimitsResponse * DynamoDBClient::describeLimits(const DescribeLimitsRequ
     return qobject_cast<DescribeLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the table, including the current status of the table, when it was created, the primary key
  * schema, and any indexes on the
  *
@@ -738,7 +741,7 @@ DescribeTableResponse * DynamoDBClient::describeTable(const DescribeTableRequest
     return qobject_cast<DescribeTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Gives a description of the Time to Live (TTL) status on the specified table.
  *
  * @param  request Request to send to Amazon DynamoDB.
@@ -752,7 +755,7 @@ DescribeTimeToLiveResponse * DynamoDBClient::describeTimeToLive(const DescribeTi
     return qobject_cast<DescribeTimeToLiveResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>GetItem</code> operation returns a set of attributes for the item with the given primary key. If there is no
  * matching item, <code>GetItem</code> does not return any data and there will be no <code>Item</code> element in the
  *
@@ -773,7 +776,7 @@ GetItemResponse * DynamoDBClient::getItem(const GetItemRequest &request)
     return qobject_cast<GetItemResponse *>(send(request));
 }
 
-/**
+/*!
  * List backups associated with an AWS account. To list backups for a given table, specify <code>TableName</code>.
  * <code>ListBackups</code> returns a paginated list of results with at most 1MB worth of items in a page. You can also
  * specify a limit for the maximum number of entries to be returned in a page.
@@ -798,7 +801,7 @@ ListBackupsResponse * DynamoDBClient::listBackups(const ListBackupsRequest &requ
     return qobject_cast<ListBackupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all global tables that have a replica in the specified
  *
  * @param  request Request to send to Amazon DynamoDB.
@@ -812,7 +815,7 @@ ListGlobalTablesResponse * DynamoDBClient::listGlobalTables(const ListGlobalTabl
     return qobject_cast<ListGlobalTablesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of table names associated with the current account and endpoint. The output from
  * <code>ListTables</code> is paginated, with each page returning a maximum of 100 table
  *
@@ -827,7 +830,7 @@ ListTablesResponse * DynamoDBClient::listTables(const ListTablesRequest &request
     return qobject_cast<ListTablesResponse *>(send(request));
 }
 
-/**
+/*!
  * List all tags on an Amazon DynamoDB resource. You can call ListTagsOfResource up to 10 times per second, per
  *
  * account>
@@ -847,7 +850,7 @@ ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOf
     return qobject_cast<ListTagsOfResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new item, or replaces an old item with a new item. If an item that has the same primary key as the new item
  * already exists in the specified table, the new item completely replaces the existing item. You can perform a conditional
  * put operation (add a new item if one with the specified primary key doesn't exist), or replace an existing item if it
@@ -932,7 +935,7 @@ PutItemResponse * DynamoDBClient::putItem(const PutItemRequest &request)
     return qobject_cast<PutItemResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>Query</code> operation finds items based on primary key values. You can query any table or secondary index
  * that has a composite primary key (a partition key and a sort key).
  *
@@ -1002,7 +1005,7 @@ QueryResponse * DynamoDBClient::query(const QueryRequest &request)
     return qobject_cast<QueryResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new table from an existing backup. Any number of users can execute up to 4 concurrent restores (any type of
  * restore) in a given account.
  *
@@ -1047,7 +1050,7 @@ RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const Re
     return qobject_cast<RestoreTableFromBackupResponse *>(send(request));
 }
 
-/**
+/*!
  * Restores the specified table to the specified point in time within <code>EarliestRestorableDateTime</code> and
  * <code>LatestRestorableDateTime</code>. You can restore your table to any point in time during the last 35 days with a
  * 1-minute granularity. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given
@@ -1094,7 +1097,7 @@ RestoreTableToPointInTimeResponse * DynamoDBClient::restoreTableToPointInTime(co
     return qobject_cast<RestoreTableToPointInTimeResponse *>(send(request));
 }
 
-/**
+/*!
  * The <code>Scan</code> operation returns one or more items and item attributes by accessing every item in a table or a
  * secondary index. To have DynamoDB return fewer items, you can provide a <code>FilterExpression</code>
  *
@@ -1139,7 +1142,7 @@ ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
     return qobject_cast<ScanResponse *>(send(request));
 }
 
-/**
+/*!
  * Associate a set of tags with an Amazon DynamoDB resource. You can then activate these user-defined tags so that they
  * appear on the Billing and Cost Management console for cost allocation tracking. You can call TagResource up to 5 times
  * per second, per account.
@@ -1161,7 +1164,7 @@ TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &requ
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the association of tags from an Amazon DynamoDB resource. You can call UntagResource up to 5 times per second,
  * per account.
  *
@@ -1182,7 +1185,7 @@ UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * <code>UpdateContinuousBackups</code> enables or disables point in time recovery for the specified table. A successful
  * <code>UpdateContinuousBackups</code> call returns the current <code>ContinuousBackupsDescription</code>. Continuous
  * backups are <code>ENABLED</code> on all tables at table creation. If point in time recovery is enabled,
@@ -1209,7 +1212,7 @@ UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const 
     return qobject_cast<UpdateContinuousBackupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or removes replicas in the specified global table. The global table must already exist to be able to use this
  * operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key
  * schema, and must have DynamoDB Streams
@@ -1230,7 +1233,7 @@ UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobal
     return qobject_cast<UpdateGlobalTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Edits an existing item's attributes, or adds a new item to the table if it does not already exist. You can put, delete,
  * or add attribute values. You can also perform a conditional update on an existing item (insert a new attribute
  * name-value pair if it doesn't exist, or replace an existing name-value pair if it has certain expected attribute
@@ -1251,7 +1254,7 @@ UpdateItemResponse * DynamoDBClient::updateItem(const UpdateItemRequest &request
     return qobject_cast<UpdateItemResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given
  *
  * table>
@@ -1293,7 +1296,7 @@ UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &requ
     return qobject_cast<UpdateTableResponse *>(send(request));
 }
 
-/**
+/*!
  * The UpdateTimeToLive method will enable or disable TTL for the specified table. A successful
  * <code>UpdateTimeToLive</code> call returns the current <code>TimeToLiveSpecification</code>; it may take up to one hour
  * for the change to fully process. Any additional <code>UpdateTimeToLive</code> calls for the same table during this one
@@ -1339,7 +1342,7 @@ UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLi
     return qobject_cast<UpdateTimeToLiveResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DynamoDBClientPrivate
@@ -1347,7 +1350,7 @@ UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLi
  * @brief  Private implementation for DynamoDBClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DynamoDBClientPrivate object.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  CreateSampleFindingsResponse
+/*!
+ * \class QtAws::GuardDuty::CreateSampleFindingsResponse
  *
- * @brief  Handles GuardDuty CreateSampleFindings responses.
+ * \brief The CreateSampleFindingsResponse class encapsulates GuardDuty CreateSampleFindings responses.
  *
- * @see    GuardDutyClient::createSampleFindings
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::createSampleFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSampleFindingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() cons
     return static_cast<const CreateSampleFindingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty CreateSampleFindings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateSampleFindingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSampleFindingsResponsePrivate
+ * \class CreateSampleFindingsResponsePrivate
  *
- * @brief  Private implementation for CreateSampleFindingsResponse.
+ * \brief Private implementation for CreateSampleFindingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSampleFindingsResponsePrivate object.
@@ -91,7 +94,7 @@ CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty CreateSampleFindingsResponse element.
  *
  * @param  xml  XML stream to parse.

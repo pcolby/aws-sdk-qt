@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  CreateApplicationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::CreateApplicationRequest
  *
- * @brief  Implements KinesisAnalytics CreateApplication requests.
+ * \brief The CreateApplicationRequest class encapsulates KinesisAnalytics CreateApplication requests.
  *
- * @see    KinesisAnalyticsClient::createApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::createApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateApplicationRequest object.
  */
 CreateApplicationRequest::CreateApplicationRequest()
@@ -53,13 +56,16 @@ CreateApplicationRequest::CreateApplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateApplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateApplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
     return new CreateApplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateApplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
  * @brief  Private implementation for CreateApplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApplicationRequestPrivate object.
@@ -97,7 +103,7 @@ CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApplicationRequestPrivate object, copying another.

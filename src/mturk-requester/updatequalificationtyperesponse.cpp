@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateQualificationTypeResponse
+/*!
+ * \class QtAws::MTurk::UpdateQualificationTypeResponse
  *
- * @brief  Handles MTurk UpdateQualificationType responses.
+ * \brief The UpdateQualificationTypeResponse class encapsulates MTurk UpdateQualificationType responses.
  *
- * @see    MTurkClient::updateQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateQualificationTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateQualificationTypeRequest * UpdateQualificationTypeResponse::request(
     return static_cast<const UpdateQualificationTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk UpdateQualificationType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateQualificationTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateQualificationTypeResponsePrivate
+ * \class UpdateQualificationTypeResponsePrivate
  *
- * @brief  Private implementation for UpdateQualificationTypeResponse.
+ * \brief Private implementation for UpdateQualificationTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateQualificationTypeResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk UpdateQualificationTypeResponse element.
  *
  * @param  xml  XML stream to parse.

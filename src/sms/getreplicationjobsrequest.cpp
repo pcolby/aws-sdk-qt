@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetReplicationJobsRequest
+/*!
+ * \class QtAws::SMS::GetReplicationJobsRequest
  *
- * @brief  Implements SMS GetReplicationJobs requests.
+ * \brief The GetReplicationJobsRequest class encapsulates SMS GetReplicationJobs requests.
  *
- * @see    SMSClient::getReplicationJobs
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getReplicationJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReplicationJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetReplicationJobsRequest::GetReplicationJobsRequest(const GetReplicationJobsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReplicationJobsRequest object.
  */
 GetReplicationJobsRequest::GetReplicationJobsRequest()
@@ -53,13 +56,16 @@ GetReplicationJobsRequest::GetReplicationJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReplicationJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReplicationJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetReplicationJobsRequest::response(QNetworkR
     return new GetReplicationJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReplicationJobsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetReplicationJobsRequest::response(QNetworkR
  * @brief  Private implementation for GetReplicationJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReplicationJobsRequestPrivate object.
@@ -97,7 +103,7 @@ GetReplicationJobsRequestPrivate::GetReplicationJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReplicationJobsRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateReceiptRuleRequest
+/*!
+ * \class QtAws::SES::UpdateReceiptRuleRequest
  *
- * @brief  Implements SES UpdateReceiptRule requests.
+ * \brief The UpdateReceiptRuleRequest class encapsulates SES UpdateReceiptRule requests.
  *
- * @see    SESClient::updateReceiptRule
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateReceiptRule
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateReceiptRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateReceiptRuleRequest::UpdateReceiptRuleRequest(const UpdateReceiptRuleReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateReceiptRuleRequest object.
  */
 UpdateReceiptRuleRequest::UpdateReceiptRuleRequest()
@@ -53,13 +67,16 @@ UpdateReceiptRuleRequest::UpdateReceiptRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateReceiptRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateReceiptRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateReceiptRuleRequest::response(QNetworkRe
     return new UpdateReceiptRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateReceiptRuleRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateReceiptRuleRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateReceiptRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateReceiptRuleRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateReceiptRuleRequestPrivate object, copying another.

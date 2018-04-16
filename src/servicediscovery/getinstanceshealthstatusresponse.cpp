@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetInstancesHealthStatusResponse
+/*!
+ * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusResponse
  *
- * @brief  Handles ServiceDiscovery GetInstancesHealthStatus responses.
+ * \brief The GetInstancesHealthStatusResponse class encapsulates ServiceDiscovery GetInstancesHealthStatus responses.
  *
- * @see    ServiceDiscoveryClient::getInstancesHealthStatus
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getInstancesHealthStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInstancesHealthStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetInstancesHealthStatusRequest * GetInstancesHealthStatusResponse::reques
     return static_cast<const GetInstancesHealthStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery GetInstancesHealthStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetInstancesHealthStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetInstancesHealthStatusResponsePrivate
+ * \class GetInstancesHealthStatusResponsePrivate
  *
- * @brief  Private implementation for GetInstancesHealthStatusResponse.
+ * \brief Private implementation for GetInstancesHealthStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstancesHealthStatusResponsePrivate object.
@@ -91,7 +98,7 @@ GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery GetInstancesHealthStatusResponse element.
  *
  * @param  xml  XML stream to parse.

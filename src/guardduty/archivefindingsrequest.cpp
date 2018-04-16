@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ArchiveFindingsRequest
+/*!
+ * \class QtAws::GuardDuty::ArchiveFindingsRequest
  *
- * @brief  Implements GuardDuty ArchiveFindings requests.
+ * \brief The ArchiveFindingsRequest class encapsulates GuardDuty ArchiveFindings requests.
  *
- * @see    GuardDutyClient::archiveFindings
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::archiveFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new ArchiveFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ArchiveFindingsRequest::ArchiveFindingsRequest(const ArchiveFindingsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ArchiveFindingsRequest object.
  */
 ArchiveFindingsRequest::ArchiveFindingsRequest()
@@ -53,13 +56,16 @@ ArchiveFindingsRequest::ArchiveFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ArchiveFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ArchiveFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkRepl
     return new ArchiveFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ArchiveFindingsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkRepl
  * @brief  Private implementation for ArchiveFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ArchiveFindingsRequestPrivate object.
@@ -97,7 +103,7 @@ ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ArchiveFindingsRequestPrivate object, copying another.

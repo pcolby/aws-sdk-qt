@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  TestRoleResponse
+/*!
+ * \class QtAws::ElasticTranscoder::TestRoleResponse
  *
- * @brief  Handles ElasticTranscoder TestRole responses.
+ * \brief The TestRoleResponse class encapsulates ElasticTranscoder TestRole responses.
  *
- * @see    ElasticTranscoderClient::testRole
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::testRole
  */
 
-/**
+/*!
  * @brief  Constructs a new TestRoleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const TestRoleRequest * TestRoleResponse::request() const
     return static_cast<const TestRoleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder TestRole response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void TestRoleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TestRoleResponsePrivate
+ * \class TestRoleResponsePrivate
  *
- * @brief  Private implementation for TestRoleResponse.
+ * \brief Private implementation for TestRoleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestRoleResponsePrivate object.
@@ -91,7 +97,7 @@ TestRoleResponsePrivate::TestRoleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder TestRoleResponse element.
  *
  * @param  xml  XML stream to parse.

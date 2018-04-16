@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteUserResponse
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteUserResponse
  *
- * @brief  Handles AlexaForBusiness DeleteUser responses.
+ * \brief The DeleteUserResponse class encapsulates AlexaForBusiness DeleteUser responses.
  *
- * @see    AlexaForBusinessClient::deleteUser
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteUser
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteUserRequest * DeleteUserResponse::request() const
     return static_cast<const DeleteUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness DeleteUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteUserResponsePrivate
+ * \class DeleteUserResponsePrivate
  *
- * @brief  Private implementation for DeleteUserResponse.
+ * \brief Private implementation for DeleteUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteUserResponsePrivate::DeleteUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness DeleteUserResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateDeploymentResponse
+/*!
+ * \class QtAws::Greengrass::CreateDeploymentResponse
  *
- * @brief  Handles Greengrass CreateDeployment responses.
+ * \brief The CreateDeploymentResponse class encapsulates Greengrass CreateDeployment responses.
  *
- * @see    GreengrassClient::createDeployment
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeploymentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateDeploymentRequest * CreateDeploymentResponse::request() const
     return static_cast<const CreateDeploymentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateDeployment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateDeploymentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDeploymentResponsePrivate
+ * \class CreateDeploymentResponsePrivate
  *
- * @brief  Private implementation for CreateDeploymentResponse.
+ * \brief Private implementation for CreateDeploymentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeploymentResponsePrivate object.
@@ -91,7 +97,7 @@ CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateDeploymentResponse element.
  *
  * @param  xml  XML stream to parse.

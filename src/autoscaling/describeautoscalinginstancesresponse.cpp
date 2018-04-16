@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeAutoScalingInstancesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeAutoScalingInstancesResponse
  *
- * @brief  Handles AutoScaling DescribeAutoScalingInstances responses.
+ * \brief The DescribeAutoScalingInstancesResponse class encapsulates AutoScaling DescribeAutoScalingInstances responses.
  *
- * @see    AutoScalingClient::describeAutoScalingInstances
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeAutoScalingInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAutoScalingInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeAutoScalingInstancesRequest * DescribeAutoScalingInstancesResponse
     return static_cast<const DescribeAutoScalingInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeAutoScalingInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeAutoScalingInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAutoScalingInstancesResponsePrivate
+ * \class DescribeAutoScalingInstancesResponsePrivate
  *
- * @brief  Private implementation for DescribeAutoScalingInstancesResponse.
+ * \brief Private implementation for DescribeAutoScalingInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAutoScalingInstancesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeAutoScalingInstancesResponsePrivate::DescribeAutoScalingInstancesRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeAutoScalingInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

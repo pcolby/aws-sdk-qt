@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  ListInputSecurityGroupsRequest
+/*!
+ * \class QtAws::MediaLive::ListInputSecurityGroupsRequest
  *
- * @brief  Implements MediaLive ListInputSecurityGroups requests.
+ * \brief The ListInputSecurityGroupsRequest class encapsulates MediaLive ListInputSecurityGroups requests.
  *
- * @see    MediaLiveClient::listInputSecurityGroups
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::listInputSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInputSecurityGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListInputSecurityGroupsRequest::ListInputSecurityGroupsRequest(const ListInputSe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInputSecurityGroupsRequest object.
  */
 ListInputSecurityGroupsRequest::ListInputSecurityGroupsRequest()
@@ -53,13 +56,16 @@ ListInputSecurityGroupsRequest::ListInputSecurityGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInputSecurityGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInputSecurityGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListInputSecurityGroupsRequest::response(QNet
     return new ListInputSecurityGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInputSecurityGroupsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListInputSecurityGroupsRequest::response(QNet
  * @brief  Private implementation for ListInputSecurityGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInputSecurityGroupsRequestPrivate object.
@@ -97,7 +103,7 @@ ListInputSecurityGroupsRequestPrivate::ListInputSecurityGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInputSecurityGroupsRequestPrivate object, copying another.

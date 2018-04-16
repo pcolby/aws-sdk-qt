@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListGroupCertificateAuthoritiesRequest
+/*!
+ * \class QtAws::Greengrass::ListGroupCertificateAuthoritiesRequest
  *
- * @brief  Implements Greengrass ListGroupCertificateAuthorities requests.
+ * \brief The ListGroupCertificateAuthoritiesRequest class encapsulates Greengrass ListGroupCertificateAuthorities requests.
  *
- * @see    GreengrassClient::listGroupCertificateAuthorities
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listGroupCertificateAuthorities
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGroupCertificateAuthoritiesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListGroupCertificateAuthoritiesRequest::ListGroupCertificateAuthoritiesRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGroupCertificateAuthoritiesRequest object.
  */
 ListGroupCertificateAuthoritiesRequest::ListGroupCertificateAuthoritiesRequest()
@@ -53,13 +59,16 @@ ListGroupCertificateAuthoritiesRequest::ListGroupCertificateAuthoritiesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGroupCertificateAuthoritiesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGroupCertificateAuthoritiesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::respo
     return new ListGroupCertificateAuthoritiesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGroupCertificateAuthoritiesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::respo
  * @brief  Private implementation for ListGroupCertificateAuthoritiesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupCertificateAuthoritiesRequestPrivate object.
@@ -97,7 +106,7 @@ ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupCertificateAuthoritiesRequestPrivate object, copying another.

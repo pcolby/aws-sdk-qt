@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  UpdatePipelineStatusResponse
+/*!
+ * \class QtAws::ElasticTranscoder::UpdatePipelineStatusResponse
  *
- * @brief  Handles ElasticTranscoder UpdatePipelineStatus responses.
+ * \brief The UpdatePipelineStatusResponse class encapsulates ElasticTranscoder UpdatePipelineStatus responses.
  *
- * @see    ElasticTranscoderClient::updatePipelineStatus
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::updatePipelineStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdatePipelineStatusRequest * UpdatePipelineStatusResponse::request() cons
     return static_cast<const UpdatePipelineStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder UpdatePipelineStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdatePipelineStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdatePipelineStatusResponsePrivate
+ * \class UpdatePipelineStatusResponsePrivate
  *
- * @brief  Private implementation for UpdatePipelineStatusResponse.
+ * \brief Private implementation for UpdatePipelineStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineStatusResponsePrivate object.
@@ -91,7 +97,7 @@ UpdatePipelineStatusResponsePrivate::UpdatePipelineStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder UpdatePipelineStatusResponse element.
  *
  * @param  xml  XML stream to parse.

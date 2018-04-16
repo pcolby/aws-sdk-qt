@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ListJobsByStatusResponse
+/*!
+ * \class QtAws::ElasticTranscoder::ListJobsByStatusResponse
  *
- * @brief  Handles ElasticTranscoder ListJobsByStatus responses.
+ * \brief The ListJobsByStatusResponse class encapsulates ElasticTranscoder ListJobsByStatus responses.
  *
- * @see    ElasticTranscoderClient::listJobsByStatus
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::listJobsByStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsByStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListJobsByStatusRequest * ListJobsByStatusResponse::request() const
     return static_cast<const ListJobsByStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder ListJobsByStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListJobsByStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListJobsByStatusResponsePrivate
+ * \class ListJobsByStatusResponsePrivate
  *
- * @brief  Private implementation for ListJobsByStatusResponse.
+ * \brief Private implementation for ListJobsByStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsByStatusResponsePrivate object.
@@ -91,7 +97,7 @@ ListJobsByStatusResponsePrivate::ListJobsByStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder ListJobsByStatusResponse element.
  *
  * @param  xml  XML stream to parse.

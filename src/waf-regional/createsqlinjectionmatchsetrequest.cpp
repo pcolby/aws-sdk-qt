@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  CreateSqlInjectionMatchSetRequest
+/*!
+ * \class QtAws::WAFRegional::CreateSqlInjectionMatchSetRequest
  *
- * @brief  Implements WAFRegional CreateSqlInjectionMatchSet requests.
+ * \brief The CreateSqlInjectionMatchSetRequest class encapsulates WAFRegional CreateSqlInjectionMatchSet requests.
  *
- * @see    WAFRegionalClient::createSqlInjectionMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::createSqlInjectionMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSqlInjectionMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateSqlInjectionMatchSetRequest::CreateSqlInjectionMatchSetRequest(const Creat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSqlInjectionMatchSetRequest object.
  */
 CreateSqlInjectionMatchSetRequest::CreateSqlInjectionMatchSetRequest()
@@ -53,13 +63,16 @@ CreateSqlInjectionMatchSetRequest::CreateSqlInjectionMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSqlInjectionMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSqlInjectionMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateSqlInjectionMatchSetRequest::response(Q
     return new CreateSqlInjectionMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSqlInjectionMatchSetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateSqlInjectionMatchSetRequest::response(Q
  * @brief  Private implementation for CreateSqlInjectionMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSqlInjectionMatchSetRequestPrivate object.
@@ -97,7 +110,7 @@ CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSqlInjectionMatchSetRequestPrivate object, copying another.

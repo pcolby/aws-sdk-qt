@@ -207,87 +207,95 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::RDS
+ * \brief The QtAws::RDS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace RDS {
 
-/**
- * @class  RdsClient
+/*!
+ * \class QtAws::RDS::RdsClient
  *
- * @brief  Client for Amazon Relational Database Service ( RDS)
+ * \brief The RdsClient class provides access the Amazon Relational Database Service ( RDS) service.
  *
- * <fullname>Amazon Relational Database Service</fullname>
+ * \ingroup RDS
  *
- *
- * </p
- *
- * Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a
- * relational database in the cloud. It provides cost-efficient, resizable capacity for an industry-standard relational
- * database and manages common database administration tasks, freeing up developers to focus on what makes their
- * applications and businesses
- *
- * unique>
- *
- * Amazon RDS gives you access to the capabilities of a MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle, or Amazon
- * Aurora database server. These capabilities mean that the code, applications, and tools you already use today with your
- * existing databases work with Amazon RDS without modification. Amazon RDS automatically backs up your database and
- * maintains the database software that powers your DB instance. Amazon RDS is flexible: you can scale your DB instance's
- * compute resources and storage capacity to meet your application's demand. As with all Amazon Web Services, there are no
- * up-front investments, and you pay only for the resources you
- *
- * use>
- *
- * This interface reference for Amazon RDS contains documentation for a programming or command line interface you can use
- * to manage Amazon RDS. Note that Amazon RDS is asynchronous, which means that some interfaces might require techniques
- * such as polling or callback functions to determine when a command has been applied. In this reference, the parameter
- * descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the maintenance
- * window. The reference structure is as follows, and we list following some related topics from the user
- *
- * guide>
- *
- * <b>Amazon RDS API Reference</b>
- *
- * </p <ul> <li>
- *
- * For the alphabetical list of API actions, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
- *
- * Actions</a>> </li> <li>
- *
- * For the alphabetical list of data types, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
- *
- * Types</a>> </li> <li>
- *
- * For a list of common query parameters, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
- *
- * Parameters</a>> </li> <li>
- *
- * For descriptions of the error codes, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
- *
- * Errors</a>> </li> </ul>
- *
- * <b>Amazon RDS User Guide</b>
- *
- * </p <ul> <li>
- *
- * For a summary of the Amazon RDS interfaces, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
- *
- * Interfaces</a>> </li> <li>
- *
- * For more information about how to use the Query API, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
+ *  <fullname>Amazon Relational Database Service</fullname>
+ * 
+ * 
+ *  </p
+ * 
+ *  Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a
+ *  relational database in the cloud. It provides cost-efficient, resizable capacity for an industry-standard relational
+ *  database and manages common database administration tasks, freeing up developers to focus on what makes their
+ *  applications and businesses
+ * 
+ *  unique>
+ * 
+ *  Amazon RDS gives you access to the capabilities of a MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle, or Amazon
+ *  Aurora database server. These capabilities mean that the code, applications, and tools you already use today with your
+ *  existing databases work with Amazon RDS without modification. Amazon RDS automatically backs up your database and
+ *  maintains the database software that powers your DB instance. Amazon RDS is flexible: you can scale your DB instance's
+ *  compute resources and storage capacity to meet your application's demand. As with all Amazon Web Services, there are no
+ *  up-front investments, and you pay only for the resources you
+ * 
+ *  use>
+ * 
+ *  This interface reference for Amazon RDS contains documentation for a programming or command line interface you can use
+ *  to manage Amazon RDS. Note that Amazon RDS is asynchronous, which means that some interfaces might require techniques
+ *  such as polling or callback functions to determine when a command has been applied. In this reference, the parameter
+ *  descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the maintenance
+ *  window. The reference structure is as follows, and we list following some related topics from the user
+ * 
+ *  guide>
+ * 
+ *  <b>Amazon RDS API Reference</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  For the alphabetical list of API actions, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
+ * 
+ *  Actions</a>> </li> <li>
+ * 
+ *  For the alphabetical list of data types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
+ * 
+ *  Types</a>> </li> <li>
+ * 
+ *  For a list of common query parameters, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
+ * 
+ *  Parameters</a>> </li> <li>
+ * 
+ *  For descriptions of the error codes, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
+ * 
+ *  Errors</a>> </li> </ul>
+ * 
+ *  <b>Amazon RDS User Guide</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  For a summary of the Amazon RDS interfaces, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
+ * 
+ *  Interfaces</a>> </li> <li>
+ * 
+ *  For more information about how to use the Query API, see <a
+ *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
  */
 
-/**
- * @brief  Constructs a new RdsClient object.
+/*!
+ * \brief Constructs a RdsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 RdsClient::RdsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -306,21 +314,16 @@ RdsClient::RdsClient(
     d->serviceName = QStringLiteral("rds");
 }
 
-/**
- * @brief  Constructs a new RdsClient object.
+/*!
+ * \overload RdsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 RdsClient::RdsClient(
     const QUrl &endpoint,
@@ -339,7 +342,7 @@ RdsClient::RdsClient(
     d->serviceName = QStringLiteral("rds");
 }
 
-/**
+/*!
  * Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon
  * Aurora to Access Other AWS Services On Your
@@ -355,7 +358,7 @@ AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClus
     return qobject_cast<AddRoleToDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a source identifier to an existing RDS event notification
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -369,7 +372,7 @@ AddSourceIdentifierToSubscriptionResponse * RdsClient::addSourceIdentifierToSubs
     return qobject_cast<AddSourceIdentifierToSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds metadata tags to an Amazon RDS resource. These tags can also be used with cost allocation reporting to track cost
  * associated with Amazon RDS resources, or used in a Condition statement in an IAM policy for Amazon
  *
@@ -389,7 +392,7 @@ AddTagsToResourceResponse * RdsClient::addTagsToResource(const AddTagsToResource
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Applies a pending maintenance action to a resource (for example, to a DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -403,7 +406,7 @@ ApplyPendingMaintenanceActionResponse * RdsClient::applyPendingMaintenanceAction
     return qobject_cast<ApplyPendingMaintenanceActionResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables ingress to a DBSecurityGroup using one of two forms of authorization. First, EC2 or VPC security groups can be
  * added to the DBSecurityGroup if the application using the database is running on EC2 or VPC instances. Second, IP ranges
  * are available if the application accessing your database is running on the Internet. Required parameters for this API
@@ -431,7 +434,7 @@ AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIng
     return qobject_cast<AuthorizeDBSecurityGroupIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the specified DB cluster parameter
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -445,7 +448,7 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
     return qobject_cast<CopyDBClusterParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies a snapshot of a DB
  *
  * cluster>
@@ -539,7 +542,7 @@ CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClu
     return qobject_cast<CopyDBClusterSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the specified DB parameter
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -553,7 +556,7 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
     return qobject_cast<CopyDBParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the specified DB snapshot. The source DB snapshot must be in the "available"
  *
  * state>
@@ -578,7 +581,7 @@ CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &
     return qobject_cast<CopyDBSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the specified option
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -592,7 +595,7 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
     return qobject_cast<CopyOptionGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new Amazon Aurora DB
  *
  * cluster>
@@ -618,7 +621,7 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
     return qobject_cast<CreateDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB cluster parameter
  *
  * group>
@@ -661,7 +664,7 @@ CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup
     return qobject_cast<CreateDBClusterParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a snapshot of a DB cluster. For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
@@ -677,7 +680,7 @@ CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const Creat
     return qobject_cast<CreateDBClusterSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -691,7 +694,7 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
     return qobject_cast<CreateDBInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB instance that acts as a Read Replica for an existing source DB instance. You can create a Read Replica
  * for a DB instance running MySQL, MariaDB, or PostgreSQL. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with PostgreSQL, MySQL, and
@@ -722,7 +725,7 @@ CreateDBInstanceReadReplicaResponse * RdsClient::createDBInstanceReadReplica(con
     return qobject_cast<CreateDBInstanceReadReplicaResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB parameter
  *
  * group>
@@ -754,7 +757,7 @@ CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateD
     return qobject_cast<CreateDBParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB security group. DB security groups control access to a DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -768,7 +771,7 @@ CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBS
     return qobject_cast<CreateDBSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a DBSnapshot. The source DBInstance must be in "available"
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -782,7 +785,7 @@ CreateDBSnapshotResponse * RdsClient::createDBSnapshot(const CreateDBSnapshotReq
     return qobject_cast<CreateDBSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -796,7 +799,7 @@ CreateDBSubnetGroupResponse * RdsClient::createDBSubnetGroup(const CreateDBSubne
     return qobject_cast<CreateDBSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an RDS event notification subscription. This action requires a topic ARN (Amazon Resource Name) created by
  * either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a topic in Amazon
  * SNS and subscribe to the topic. The ARN is displayed in the SNS
@@ -827,7 +830,7 @@ CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const Creat
     return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new option group. You can create up to 20 option
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -841,7 +844,7 @@ CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroup
     return qobject_cast<CreateOptionGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * The DeleteDBCluster action deletes a previously provisioned DB cluster. When you delete a DB cluster, all automated
  * backups for that DB cluster are deleted and can't be recovered. Manual DB cluster snapshots of the specified DB cluster
  * are not
@@ -863,7 +866,7 @@ DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterReques
     return qobject_cast<DeleteDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified DB cluster parameter group. The DB cluster parameter group to be deleted can't be associated with
  * any DB
  *
@@ -884,7 +887,7 @@ DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup
     return qobject_cast<DeleteDBClusterParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a DB cluster snapshot. If the snapshot is being copied, the copy operation is
  *
  * terminated> <note>
@@ -908,7 +911,7 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
     return qobject_cast<DeleteDBClusterSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * The DeleteDBInstance action deletes a previously provisioned DB instance. When you delete a DB instance, all automated
  * backups for that instance are deleted and can't be recovered. Manual DB snapshots of the DB instance to be deleted by
  * <code>DeleteDBInstance</code> are not
@@ -955,7 +958,7 @@ DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceReq
     return qobject_cast<DeleteDBInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified DBParameterGroup. The DBParameterGroup to be deleted can't be associated with any DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -969,7 +972,7 @@ DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteD
     return qobject_cast<DeleteDBParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a DB security
  *
  * group> <note>
@@ -987,7 +990,7 @@ DeleteDBSecurityGroupResponse * RdsClient::deleteDBSecurityGroup(const DeleteDBS
     return qobject_cast<DeleteDBSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a DBSnapshot. If the snapshot is being copied, the copy operation is
  *
  * terminated> <note>
@@ -1005,7 +1008,7 @@ DeleteDBSnapshotResponse * RdsClient::deleteDBSnapshot(const DeleteDBSnapshotReq
     return qobject_cast<DeleteDBSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a DB subnet
  *
  * group> <note>
@@ -1023,7 +1026,7 @@ DeleteDBSubnetGroupResponse * RdsClient::deleteDBSubnetGroup(const DeleteDBSubne
     return qobject_cast<DeleteDBSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an RDS event notification
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1037,7 +1040,7 @@ DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const Delet
     return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing option
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1051,7 +1054,7 @@ DeleteOptionGroupResponse * RdsClient::deleteOptionGroup(const DeleteOptionGroup
     return qobject_cast<DeleteOptionGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all of the attributes for a customer account. The attributes include Amazon RDS quotas for the account, such as
  * the number of DB instances allowed. The description for a quota includes the quota name, current usage toward that
  * quota, and the quota's maximum
@@ -1071,7 +1074,7 @@ DescribeAccountAttributesResponse * RdsClient::describeAccountAttributes(const D
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the set of CA certificates provided by Amazon RDS for this AWS
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1085,7 +1088,7 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
     return qobject_cast<DescribeCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>DBClusterParameterGroup</code> descriptions. If a <code>DBClusterParameterGroupName</code>
  * parameter is specified, the list will contain only the description of the specified DB cluster parameter group.
  *
@@ -1106,7 +1109,7 @@ DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameter
     return qobject_cast<DescribeDBClusterParameterGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the detailed parameter list for a particular DB cluster parameter
  *
  * group>
@@ -1126,7 +1129,7 @@ DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(con
     return qobject_cast<DescribeDBClusterParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster
  *
  * snapshot>
@@ -1152,7 +1155,7 @@ DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapsh
     return qobject_cast<DescribeDBClusterSnapshotAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about DB cluster snapshots. This API action supports
  *
  * pagination>
@@ -1172,7 +1175,7 @@ DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const
     return qobject_cast<DescribeDBClusterSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about provisioned Aurora DB clusters. This API supports
  *
  * pagination>
@@ -1192,7 +1195,7 @@ DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClust
     return qobject_cast<DescribeDBClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the available DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1206,7 +1209,7 @@ DescribeDBEngineVersionsResponse * RdsClient::describeDBEngineVersions(const Des
     return qobject_cast<DescribeDBEngineVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about provisioned RDS instances. This API supports
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1220,7 +1223,7 @@ DescribeDBInstancesResponse * RdsClient::describeDBInstances(const DescribeDBIns
     return qobject_cast<DescribeDBInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of DB log files for the DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1234,7 +1237,7 @@ DescribeDBLogFilesResponse * RdsClient::describeDBLogFiles(const DescribeDBLogFi
     return qobject_cast<DescribeDBLogFilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>DBParameterGroup</code> descriptions. If a <code>DBParameterGroupName</code> is specified, the
  * list will contain only the description of the specified DB parameter group.
  *
@@ -1249,7 +1252,7 @@ DescribeDBParameterGroupsResponse * RdsClient::describeDBParameterGroups(const D
     return qobject_cast<DescribeDBParameterGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the detailed parameter list for a particular DB parameter
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1263,7 +1266,7 @@ DescribeDBParametersResponse * RdsClient::describeDBParameters(const DescribeDBP
     return qobject_cast<DescribeDBParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>DBSecurityGroup</code> descriptions. If a <code>DBSecurityGroupName</code> is specified, the
  * list will contain only the descriptions of the specified DB security group.
  *
@@ -1278,7 +1281,7 @@ DescribeDBSecurityGroupsResponse * RdsClient::describeDBSecurityGroups(const Des
     return qobject_cast<DescribeDBSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of DB snapshot attribute names and values for a manual DB
  *
  * snapshot>
@@ -1304,7 +1307,7 @@ DescribeDBSnapshotAttributesResponse * RdsClient::describeDBSnapshotAttributes(c
     return qobject_cast<DescribeDBSnapshotAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about DB snapshots. This API action supports
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1318,7 +1321,7 @@ DescribeDBSnapshotsResponse * RdsClient::describeDBSnapshots(const DescribeDBSna
     return qobject_cast<DescribeDBSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of DBSubnetGroup descriptions. If a DBSubnetGroupName is specified, the list will contain only the
  * descriptions of the specified
  *
@@ -1338,7 +1341,7 @@ DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const Describ
     return qobject_cast<DescribeDBSubnetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the default engine and system parameter information for the cluster database
  *
  * engine>
@@ -1358,7 +1361,7 @@ DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaul
     return qobject_cast<DescribeEngineDefaultClusterParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the default engine and system parameter information for the specified database
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1372,7 +1375,7 @@ DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParame
     return qobject_cast<DescribeEngineDefaultParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays a list of categories for all event source types, or, if specified, for a specified source type. You can see a
  * list of the event categories and source types in the <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html"> Events</a> topic in the <i>Amazon RDS
@@ -1389,7 +1392,7 @@ DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const Descr
     return qobject_cast<DescribeEventCategoriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the subscription descriptions for a customer account. The description for a subscription includes
  * SubscriptionName, SNSTopicARN, CustomerID, SourceType, SourceID, CreationTime, and
  *
@@ -1408,7 +1411,7 @@ DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const
     return qobject_cast<DescribeEventSubscriptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days.
  * Events specific to a particular DB instance, DB security group, database snapshot, or DB parameter group can be obtained
  * by providing the name as a parameter. By default, the past hour of events are
@@ -1424,7 +1427,7 @@ DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes all available
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1438,7 +1441,7 @@ DescribeOptionGroupOptionsResponse * RdsClient::describeOptionGroupOptions(const
     return qobject_cast<DescribeOptionGroupOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the available option
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1452,7 +1455,7 @@ DescribeOptionGroupsResponse * RdsClient::describeOptionGroups(const DescribeOpt
     return qobject_cast<DescribeOptionGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of orderable DB instance options for the specified
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1466,7 +1469,7 @@ DescribeOrderableDBInstanceOptionsResponse * RdsClient::describeOrderableDBInsta
     return qobject_cast<DescribeOrderableDBInstanceOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of resources (for example, DB instances) that have at least one pending maintenance
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1480,7 +1483,7 @@ DescribePendingMaintenanceActionsResponse * RdsClient::describePendingMaintenanc
     return qobject_cast<DescribePendingMaintenanceActionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about reserved DB instances for this account, or about a specified reserved DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1494,7 +1497,7 @@ DescribeReservedDBInstancesResponse * RdsClient::describeReservedDBInstances(con
     return qobject_cast<DescribeReservedDBInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists available reserved DB instance
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1508,7 +1511,7 @@ DescribeReservedDBInstancesOfferingsResponse * RdsClient::describeReservedDBInst
     return qobject_cast<DescribeReservedDBInstancesOfferingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot
  * from. This API action supports
  *
@@ -1523,7 +1526,7 @@ DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeS
     return qobject_cast<DescribeSourceRegionsResponse *>(send(request));
 }
 
-/**
+/*!
  * You can call <a>DescribeValidDBInstanceModifications</a> to learn what modifications you can make to your DB instance.
  * You can use this information when you call <a>ModifyDBInstance</a>.
  *
@@ -1538,7 +1541,7 @@ DescribeValidDBInstanceModificationsResponse * RdsClient::describeValidDBInstanc
     return qobject_cast<DescribeValidDBInstanceModificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Downloads all or a portion of the specified log file, up to 1 MB in
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1552,7 +1555,7 @@ DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const Dow
     return qobject_cast<DownloadDBLogFilePortionResponse *>(send(request));
 }
 
-/**
+/*!
  * Forces a failover for a DB
  *
  * cluster>
@@ -1584,7 +1587,7 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
     return qobject_cast<FailoverDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all tags on an Amazon RDS
  *
  * resource>
@@ -1603,7 +1606,7 @@ ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForRe
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modify a setting for an Amazon Aurora DB cluster. You can change one or more database configuration parameters by
  * specifying these parameters and the new values in the request. For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
@@ -1620,7 +1623,7 @@ ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterReques
     return qobject_cast<ModifyDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a DB cluster parameter group. To modify more than one parameter, submit a list of the
  * following: <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20
  * parameters can be modified in a single request.
@@ -1657,7 +1660,7 @@ ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup
     return qobject_cast<ModifyDBClusterParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster
  *
  * snapshot>
@@ -1687,7 +1690,7 @@ ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAtt
     return qobject_cast<ModifyDBClusterSnapshotAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these
  * parameters and the new values in the request. To learn what modifications you can make to your DB instance, call
  * <a>DescribeValidDBInstanceModifications</a> before you call <a>ModifyDBInstance</a>.
@@ -1703,7 +1706,7 @@ ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceReq
     return qobject_cast<ModifyDBInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a DB parameter group. To modify more than one parameter, submit a list of the following:
  * <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20 parameters can be
  * modified in a single request.
@@ -1734,7 +1737,7 @@ ModifyDBParameterGroupResponse * RdsClient::modifyDBParameterGroup(const ModifyD
     return qobject_cast<ModifyDBParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version.
  *
  * </p
@@ -1752,7 +1755,7 @@ ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotReq
     return qobject_cast<ModifyDBSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds an attribute and values to, or removes an attribute and values from, a manual DB
  *
  * snapshot>
@@ -1781,7 +1784,7 @@ ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const M
     return qobject_cast<ModifyDBSnapshotAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1795,7 +1798,7 @@ ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubne
     return qobject_cast<ModifyDBSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing RDS event notification subscription. Note that you can't modify the source identifiers using this
  * call; to change source identifiers for a subscription, use the <a>AddSourceIdentifierToSubscription</a> and
  * <a>RemoveSourceIdentifierFromSubscription</a>
@@ -1817,7 +1820,7 @@ ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const Modif
     return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing option
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1831,7 +1834,7 @@ ModifyOptionGroupResponse * RdsClient::modifyOptionGroup(const ModifyOptionGroup
     return qobject_cast<ModifyOptionGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Promotes a Read Replica DB instance to a standalone DB
  *
  * instance> <note> <ul> <li>
@@ -1857,7 +1860,7 @@ PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadRepl
     return qobject_cast<PromoteReadReplicaResponse *>(send(request));
 }
 
-/**
+/*!
  * Promotes a Read Replica DB cluster to a standalone DB
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1871,7 +1874,7 @@ PromoteReadReplicaDBClusterResponse * RdsClient::promoteReadReplicaDBCluster(con
     return qobject_cast<PromoteReadReplicaDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Purchases a reserved DB instance
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1885,7 +1888,7 @@ PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInsta
     return qobject_cast<PurchaseReservedDBInstancesOfferingResponse *>(send(request));
 }
 
-/**
+/*!
  * You might need to reboot your DB instance, usually for maintenance reasons. For example, if you make certain
  * modifications, or if you change the DB parameter group associated with the DB instance, you must reboot the instance for
  * the changes to take effect.
@@ -1911,7 +1914,7 @@ RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceReq
     return qobject_cast<RebootDBInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon
  * Aurora to Access Other AWS Services On Your
@@ -1927,7 +1930,7 @@ RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const Remov
     return qobject_cast<RemoveRoleFromDBClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a source identifier from an existing RDS event notification
  *
  * @param  request Request to send to Amazon Relational Database Service.
@@ -1941,7 +1944,7 @@ RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifi
     return qobject_cast<RemoveSourceIdentifierFromSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes metadata tags from an Amazon RDS
  *
  * resource>
@@ -1960,7 +1963,7 @@ RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveT
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a DB cluster parameter group to the default value. To reset specific parameters submit a list
  * of the following: <code>ParameterName</code> and <code>ApplyMethod</code>. To reset the entire DB cluster parameter
  * group, specify the <code>DBClusterParameterGroupName</code> and <code>ResetAllParameters</code> parameters.
@@ -1989,7 +1992,7 @@ ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(c
     return qobject_cast<ResetDBClusterParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a DB parameter group to the engine/system default value. To reset specific parameters,
  * provide a list of the following: <code>ParameterName</code> and <code>ApplyMethod</code>. To reset the entire DB
  * parameter group, specify the <code>DBParameterGroup</code> name and <code>ResetAllParameters</code> parameters. When
@@ -2007,7 +2010,7 @@ ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBPa
     return qobject_cast<ResetDBParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket. Amazon RDS must be authorized to access the
  * Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Migrate.MySQL.html#Aurora.Migrate.MySQL.S3">Migrating
@@ -2024,7 +2027,7 @@ RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const Restore
     return qobject_cast<RestoreDBClusterFromS3Response *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB cluster from a DB snapshot or DB cluster
  *
  * snapshot>
@@ -2055,7 +2058,7 @@ RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(c
     return qobject_cast<RestoreDBClusterFromSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Restores a DB cluster to an arbitrary point in time. Users can restore to any point in time before
  * <code>LatestRestorableTime</code> for up to <code>BackupRetentionPeriod</code> days. The target DB cluster is created
  * from the source DB cluster with the same configuration as the original DB cluster, except that the new DB cluster is
@@ -2085,7 +2088,7 @@ RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime
     return qobject_cast<RestoreDBClusterToPointInTimeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new DB instance from a DB snapshot. The target database is created from the source database restore point with
  * the most of original configuration with the default security group and the default DB parameter group. By default, the
  * new DB instance is created as a single-AZ deployment except when the instance is a SQL Server instance that has an
@@ -2120,7 +2123,7 @@ RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnap
     return qobject_cast<RestoreDBInstanceFromDBSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Amazon Relational Database Service (Amazon RDS) supports importing MySQL databases by using backup files. You can create
  * a backup of your on-premises database, store it on Amazon Simple Storage Service (Amazon S3), and then restore the
  * backup file onto a new Amazon RDS DB instance running MySQL. For more information, see <a
@@ -2138,7 +2141,7 @@ RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const Resto
     return qobject_cast<RestoreDBInstanceFromS3Response *>(send(request));
 }
 
-/**
+/*!
  * Restores a DB instance to an arbitrary point in time. You can restore to any point in time before the time identified by
  * the LatestRestorableTime property. You can restore to a point up to the number of days specified by the
  * BackupRetentionPeriod
@@ -2165,7 +2168,7 @@ RestoreDBInstanceToPointInTimeResponse * RdsClient::restoreDBInstanceToPointInTi
     return qobject_cast<RestoreDBInstanceToPointInTimeResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups. Required
  * parameters for this API are one of CIDRIP, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and either
  * EC2SecurityGroupName or
@@ -2181,7 +2184,7 @@ RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(c
     return qobject_cast<RevokeDBSecurityGroupIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a DB instance that was stopped using the AWS console, the stop-db-instance AWS CLI command, or the StopDBInstance
  * action. For more information, see Stopping and Starting a DB instance in the AWS RDS user guide.
  *
@@ -2200,7 +2203,7 @@ StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceReques
     return qobject_cast<StartDBInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a DB instance. When you stop a DB instance, Amazon RDS retains the DB instance's metadata, including its endpoint,
  * DB parameter group, and option group membership. Amazon RDS also retains the transaction logs so you can do a
  * point-in-time restore if necessary. For more information, see Stopping and Starting a DB instance in the AWS RDS user
@@ -2221,7 +2224,7 @@ StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &
     return qobject_cast<StopDBInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RdsClientPrivate
@@ -2229,7 +2232,7 @@ StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &
  * @brief  Private implementation for RdsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RdsClientPrivate object.

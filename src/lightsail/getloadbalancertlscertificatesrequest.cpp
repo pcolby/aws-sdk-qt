@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  GetLoadBalancerTlsCertificatesRequest
+/*!
+ * \class QtAws::Lightsail::GetLoadBalancerTlsCertificatesRequest
  *
- * @brief  Implements Lightsail GetLoadBalancerTlsCertificates requests.
+ * \brief The GetLoadBalancerTlsCertificatesRequest class encapsulates Lightsail GetLoadBalancerTlsCertificates requests.
  *
- * @see    LightsailClient::getLoadBalancerTlsCertificates
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::getLoadBalancerTlsCertificates
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLoadBalancerTlsCertificatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ GetLoadBalancerTlsCertificatesRequest::GetLoadBalancerTlsCertificatesRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLoadBalancerTlsCertificatesRequest object.
  */
 GetLoadBalancerTlsCertificatesRequest::GetLoadBalancerTlsCertificatesRequest()
@@ -53,13 +72,16 @@ GetLoadBalancerTlsCertificatesRequest::GetLoadBalancerTlsCertificatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLoadBalancerTlsCertificatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLoadBalancerTlsCertificatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerTlsCertificatesRequest::respon
     return new GetLoadBalancerTlsCertificatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLoadBalancerTlsCertificatesRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerTlsCertificatesRequest::respon
  * @brief  Private implementation for GetLoadBalancerTlsCertificatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLoadBalancerTlsCertificatesRequestPrivate object.
@@ -97,7 +119,7 @@ GetLoadBalancerTlsCertificatesRequestPrivate::GetLoadBalancerTlsCertificatesRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLoadBalancerTlsCertificatesRequestPrivate object, copying another.

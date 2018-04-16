@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteServiceLinkedRoleRequest
+/*!
+ * \class QtAws::CloudFront::DeleteServiceLinkedRoleRequest
  *
- * @brief  Implements CloudFront DeleteServiceLinkedRole requests.
+ * \brief The DeleteServiceLinkedRoleRequest class encapsulates CloudFront DeleteServiceLinkedRole requests.
  *
- * @see    CloudFrontClient::deleteServiceLinkedRole
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteServiceLinkedRole
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteServiceLinkedRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest(const DeleteServi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteServiceLinkedRoleRequest object.
  */
 DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest()
@@ -53,13 +61,16 @@ DeleteServiceLinkedRoleRequest::DeleteServiceLinkedRoleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteServiceLinkedRoleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteServiceLinkedRoleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNet
     return new DeleteServiceLinkedRoleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteServiceLinkedRoleRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNet
  * @brief  Private implementation for DeleteServiceLinkedRoleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServiceLinkedRoleRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServiceLinkedRoleRequestPrivate object, copying another.

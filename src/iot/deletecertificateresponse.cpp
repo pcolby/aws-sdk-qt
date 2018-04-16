@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteCertificateResponse
+/*!
+ * \class QtAws::IoT::DeleteCertificateResponse
  *
- * @brief  Handles IoT DeleteCertificate responses.
+ * \brief The DeleteCertificateResponse class encapsulates IoT DeleteCertificate responses.
  *
- * @see    IoTClient::deleteCertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
     return static_cast<const DeleteCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeleteCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCertificateResponsePrivate
+ * \class DeleteCertificateResponsePrivate
  *
- * @brief  Private implementation for DeleteCertificateResponse.
+ * \brief Private implementation for DeleteCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeleteCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  InitiateLayerUploadResponse
+/*!
+ * \class QtAws::ECR::InitiateLayerUploadResponse
  *
- * @brief  Handles ECR InitiateLayerUpload responses.
+ * \brief The InitiateLayerUploadResponse class encapsulates ECR InitiateLayerUpload responses.
  *
- * @see    ECRClient::initiateLayerUpload
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::initiateLayerUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new InitiateLayerUploadResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const InitiateLayerUploadRequest * InitiateLayerUploadResponse::request() const
     return static_cast<const InitiateLayerUploadRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR InitiateLayerUpload response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  InitiateLayerUploadResponsePrivate
+ * \class InitiateLayerUploadResponsePrivate
  *
- * @brief  Private implementation for InitiateLayerUploadResponse.
+ * \brief Private implementation for InitiateLayerUploadResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitiateLayerUploadResponsePrivate object.
@@ -91,7 +98,7 @@ InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR InitiateLayerUploadResponse element.
  *
  * @param  xml  XML stream to parse.

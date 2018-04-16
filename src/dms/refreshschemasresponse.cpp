@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  RefreshSchemasResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::RefreshSchemasResponse
  *
- * @brief  Handles DatabaseMigrationService RefreshSchemas responses.
+ * \brief The RefreshSchemasResponse class encapsulates DatabaseMigrationService RefreshSchemas responses.
  *
- * @see    DatabaseMigrationServiceClient::refreshSchemas
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::refreshSchemas
  */
 
-/**
+/*!
  * @brief  Constructs a new RefreshSchemasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const RefreshSchemasRequest * RefreshSchemasResponse::request() const
     return static_cast<const RefreshSchemasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService RefreshSchemas response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void RefreshSchemasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RefreshSchemasResponsePrivate
+ * \class RefreshSchemasResponsePrivate
  *
- * @brief  Private implementation for RefreshSchemasResponse.
+ * \brief Private implementation for RefreshSchemasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RefreshSchemasResponsePrivate object.
@@ -91,7 +105,7 @@ RefreshSchemasResponsePrivate::RefreshSchemasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService RefreshSchemasResponse element.
  *
  * @param  xml  XML stream to parse.

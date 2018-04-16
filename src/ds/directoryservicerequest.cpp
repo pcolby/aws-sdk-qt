@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DirectoryServiceRequest
+/*!
+ * \class QtAws::DirectoryService::DirectoryServiceRequest
  *
- * @brief  Interface class for providing DirectoryService requests
+ * \brief The DirectoryServiceRequest class is the base class for all DirectoryService requests.
+ *
+ * \ingroup DirectoryService
  */
 
-
-/**
+/*!
  * @brief  Constructs a new DirectoryServiceRequest object.
  *
  * @param  action  The DirectoryService action to request.
@@ -41,7 +42,7 @@ DirectoryServiceRequest::DirectoryServiceRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DirectoryServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ DirectoryServiceRequest::DirectoryServiceRequest(const DirectoryServiceRequest &
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ DirectoryServiceRequest& DirectoryServiceRequest::operator=(const DirectoryServi
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectoryServiceRequest object.
@@ -85,10 +86,8 @@ DirectoryServiceRequest::DirectoryServiceRequest(DirectoryServiceRequestPrivate 
 
 }
 
-/**
- * @brief  Get the DirectoryService action to be performed by this request.
- *
- * @return The DirectoryService action to be performed by this request.
+/*!
+ * \brief Returns the DirectoryService action to be performed by this request.
  */
 DirectoryServiceRequest::Action DirectoryServiceRequest::action() const
 {
@@ -96,20 +95,16 @@ DirectoryServiceRequest::Action DirectoryServiceRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the DirectoryService action to be performed by this request.
- *
- * @return The name of the DirectoryService action to be performed by this request.
+/*!
+ * \brief Returns the name of the DirectoryService action to be performed by this request.
  */
 QString DirectoryServiceRequest::actionString() const
 {
     return DirectoryServiceRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the DirectoryService API version implemented by this request.
- *
- * @return The DirectoryService API version implmented by this request.
+/*!
+ * \brief Returns the DirectoryService API version implemented by this request.
  */
 QString DirectoryServiceRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString DirectoryServiceRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the DirectoryService action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the DirectoryService action to be performed by this request to \a action.
  */
 void DirectoryServiceRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void DirectoryServiceRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the DirectoryService API version to include in this request.
- *
- * @param  version  The DirectoryService API version to include in this request.
+/*!
+ * Set the DirectoryService API version to include in this request to \a version.
  */
 void DirectoryServiceRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void DirectoryServiceRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool DirectoryServiceRequest::operator==(const DirectoryServiceRequest &other) const
 {
@@ -159,7 +146,7 @@ bool DirectoryServiceRequest::operator==(const DirectoryServiceRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid DirectoryService queue name.
  *
  * @par From DirectoryService FAQs:
@@ -178,12 +165,10 @@ bool DirectoryServiceRequest::operator==(const DirectoryServiceRequest &other) c
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int DirectoryServiceRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int DirectoryServiceRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void DirectoryServiceRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void DirectoryServiceRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this DirectoryService request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant DirectoryServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant DirectoryServiceRequest::parameter(const QString &name, const QVariant 
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this DirectoryService request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &DirectoryServiceRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &DirectoryServiceRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this DirectoryService request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void DirectoryServiceRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void DirectoryServiceRequest::setParameter(const QString &name, const QVariant &
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this DirectoryService request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void DirectoryServiceRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void DirectoryServiceRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this DirectoryService request.
+/*!
+ * \brief Returns a network request for this DirectoryService request using the given \a endpoint.
  *
  * This DirectoryService implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this DirectoryService request using the given \a endpoint.
  */
 QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) c
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DirectoryServiceRequestPrivate
+ * \class  DirectoryServiceRequestPrivate
  *
- * @brief  Private implementation for DirectoryServiceRequest.
+ * \brief  Private implementation for DirectoryServiceRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new DirectoryServiceRequestPrivate object.
- *
- * @param  action  DirectoryService action being performed by the \a q request.
- * @param  q       Pointer to this object's public DirectoryServiceRequest instance.
+ * \brief Constructs a new DirectoryServiceRequestPrivate object.
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequest::Action action, DirectoryServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectorySe
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new DirectoryServiceRequestPrivate object from an existing one.
+ * \brief Constructs a new DirectoryServiceRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the DirectoryServiceRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DirectoryServiceRequest instance.
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequestPrivate &other,
                                      DirectoryServiceRequest * const q)
@@ -312,14 +275,14 @@ DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectorySe
 
 }
 
-/**
- * @brief  Convert and DirectoryService action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts DirectoryServiceRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DirectoryService service's Action
  * query parameters.
- *
- * @param  action  DirectoryService action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetQualificationScoreResponse
+/*!
+ * \class QtAws::MTurk::GetQualificationScoreResponse
  *
- * @brief  Handles MTurk GetQualificationScore responses.
+ * \brief The GetQualificationScoreResponse class encapsulates MTurk GetQualificationScore responses.
  *
- * @see    MTurkClient::getQualificationScore
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getQualificationScore
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQualificationScoreResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetQualificationScoreRequest * GetQualificationScoreResponse::request() co
     return static_cast<const GetQualificationScoreRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk GetQualificationScore response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetQualificationScoreResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetQualificationScoreResponsePrivate
+ * \class GetQualificationScoreResponsePrivate
  *
- * @brief  Private implementation for GetQualificationScoreResponse.
+ * \brief Private implementation for GetQualificationScoreResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQualificationScoreResponsePrivate object.
@@ -91,7 +94,7 @@ GetQualificationScoreResponsePrivate::GetQualificationScoreResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk GetQualificationScoreResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectModerationLabelsRequest
+/*!
+ * \class QtAws::Rekognition::DetectModerationLabelsRequest
  *
- * @brief  Implements Rekognition DetectModerationLabels requests.
+ * \brief The DetectModerationLabelsRequest class encapsulates Rekognition DetectModerationLabels requests.
  *
- * @see    RekognitionClient::detectModerationLabels
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectModerationLabels
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectModerationLabelsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DetectModerationLabelsRequest::DetectModerationLabelsRequest(const DetectModerat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectModerationLabelsRequest object.
  */
 DetectModerationLabelsRequest::DetectModerationLabelsRequest()
@@ -53,13 +57,16 @@ DetectModerationLabelsRequest::DetectModerationLabelsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectModerationLabelsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectModerationLabelsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DetectModerationLabelsRequest::response(QNetw
     return new DetectModerationLabelsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectModerationLabelsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DetectModerationLabelsRequest::response(QNetw
  * @brief  Private implementation for DetectModerationLabelsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectModerationLabelsRequestPrivate object.
@@ -97,7 +104,7 @@ DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectModerationLabelsRequestPrivate object, copying another.

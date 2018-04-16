@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  CreateConfigurationRequest
+/*!
+ * \class QtAws::MQ::CreateConfigurationRequest
  *
- * @brief  Implements MQ CreateConfiguration requests.
+ * \brief The CreateConfigurationRequest class encapsulates MQ CreateConfiguration requests.
  *
- * @see    MQClient::createConfiguration
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::createConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateConfigurationRequest::CreateConfigurationRequest(const CreateConfiguration
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationRequest object.
  */
 CreateConfigurationRequest::CreateConfigurationRequest()
@@ -53,13 +58,16 @@ CreateConfigurationRequest::CreateConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationRequest::response(QNetwork
     return new CreateConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateConfigurationRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationRequest::response(QNetwork
  * @brief  Private implementation for CreateConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationRequestPrivate object.
@@ -97,7 +105,7 @@ CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationRequestPrivate object, copying another.

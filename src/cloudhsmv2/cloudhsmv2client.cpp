@@ -45,25 +45,33 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudHSMV2
+ * \brief The QtAws::CloudHSMV2 contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  CloudHSMV2Client
+/*!
+ * \class QtAws::CloudHSMV2::CloudHSMV2Client
  *
- * @brief  Client for AWS CloudHSM V2
+ * \brief The CloudHSMV2Client class provides access the AWS CloudHSM V2 service.
  *
- * For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  */
 
-/**
- * @brief  Constructs a new CloudHSMV2Client object.
+/*!
+ * \brief Constructs a CloudHSMV2Client object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudHSMV2Client::CloudHSMV2Client(
     const QtAws::Core::AwsRegion::Region region,
@@ -82,21 +90,16 @@ CloudHSMV2Client::CloudHSMV2Client(
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
-/**
- * @brief  Constructs a new CloudHSMV2Client object.
+/*!
+ * \overload CloudHSMV2Client()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudHSMV2Client::CloudHSMV2Client(
     const QUrl &endpoint,
@@ -115,7 +118,7 @@ CloudHSMV2Client::CloudHSMV2Client(
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
-/**
+/*!
  * Creates a new AWS CloudHSM
  *
  * @param  request Request to send to AWS CloudHSM V2.
@@ -129,7 +132,7 @@ CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterReque
     return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new hardware security module (HSM) in the specified AWS CloudHSM
  *
  * @param  request Request to send to AWS CloudHSM V2.
@@ -143,7 +146,7 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
     return qobject_cast<CreateHsmResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To
  * see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use
  *
@@ -158,7 +161,7 @@ DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterReque
     return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified HSM. To specify an HSM, you can use its identifier (ID), the IP address of the HSM's elastic
  * network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values,
  * use
@@ -174,7 +177,7 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
     return qobject_cast<DeleteHsmResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about backups of AWS CloudHSM
  *
  * clusters>
@@ -195,7 +198,7 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
     return qobject_cast<DescribeBackupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about AWS CloudHSM
  *
  * clusters>
@@ -216,7 +219,7 @@ DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClus
     return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Claims an AWS CloudHSM cluster by submitting the cluster certificate issued by your issuing certificate authority (CA)
  * and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request
  * (CSR) with your issuing CA. To get the cluster's CSR, use
@@ -232,7 +235,7 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
     return qobject_cast<InitializeClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of tags for the specified AWS CloudHSM
  *
  * cluster>
@@ -253,7 +256,7 @@ ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified AWS CloudHSM
  *
  * @param  request Request to send to AWS CloudHSM V2.
@@ -267,7 +270,7 @@ TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &re
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified tag or tags from the specified AWS CloudHSM
  *
  * @param  request Request to send to AWS CloudHSM V2.
@@ -281,7 +284,7 @@ UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceReque
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudHSMV2ClientPrivate
@@ -289,7 +292,7 @@ UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceReque
  * @brief  Private implementation for CloudHSMV2Client.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudHSMV2ClientPrivate object.

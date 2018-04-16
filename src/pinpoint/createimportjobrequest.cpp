@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  CreateImportJobRequest
+/*!
+ * \class QtAws::Pinpoint::CreateImportJobRequest
  *
- * @brief  Implements Pinpoint CreateImportJob requests.
+ * \brief The CreateImportJobRequest class encapsulates Pinpoint CreateImportJob requests.
  *
- * @see    PinpointClient::createImportJob
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::createImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateImportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateImportJobRequest::CreateImportJobRequest(const CreateImportJobRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateImportJobRequest object.
  */
 CreateImportJobRequest::CreateImportJobRequest()
@@ -53,13 +56,16 @@ CreateImportJobRequest::CreateImportJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateImportJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateImportJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateImportJobRequest::response(QNetworkRepl
     return new CreateImportJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateImportJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateImportJobRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateImportJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImportJobRequestPrivate object.
@@ -97,7 +103,7 @@ CreateImportJobRequestPrivate::CreateImportJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImportJobRequestPrivate object, copying another.

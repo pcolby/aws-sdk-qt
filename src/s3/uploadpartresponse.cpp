@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  UploadPartResponse
+/*!
+ * \class QtAws::S3::UploadPartResponse
  *
- * @brief  Handles S3 UploadPart responses.
+ * \brief The UploadPartResponse class encapsulates S3 UploadPart responses.
  *
- * @see    S3Client::uploadPart
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::uploadPart
  */
 
-/**
+/*!
  * @brief  Constructs a new UploadPartResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UploadPartRequest * UploadPartResponse::request() const
     return static_cast<const UploadPartRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 UploadPart response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UploadPartResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UploadPartResponsePrivate
+ * \class UploadPartResponsePrivate
  *
- * @brief  Private implementation for UploadPartResponse.
+ * \brief Private implementation for UploadPartResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadPartResponsePrivate object.
@@ -91,7 +94,7 @@ UploadPartResponsePrivate::UploadPartResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 UploadPartResponse element.
  *
  * @param  xml  XML stream to parse.

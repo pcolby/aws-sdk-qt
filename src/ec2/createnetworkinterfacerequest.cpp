@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateNetworkInterfaceRequest
+/*!
+ * \class QtAws::EC2::CreateNetworkInterfaceRequest
  *
- * @brief  Implements EC2 CreateNetworkInterface requests.
+ * \brief The CreateNetworkInterfaceRequest class encapsulates EC2 CreateNetworkInterface requests.
  *
- * @see    EC2Client::createNetworkInterface
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createNetworkInterface
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkInterfaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest(const CreateNetwork
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkInterfaceRequest object.
  */
 CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest()
@@ -53,13 +60,16 @@ CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateNetworkInterfaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateNetworkInterfaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetw
     return new CreateNetworkInterfaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateNetworkInterfaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetw
  * @brief  Private implementation for CreateNetworkInterfaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkInterfaceRequestPrivate object.
@@ -97,7 +107,7 @@ CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkInterfaceRequestPrivate object, copying another.

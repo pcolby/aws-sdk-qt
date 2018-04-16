@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachVolumeRequest
+/*!
+ * \class QtAws::EC2::DetachVolumeRequest
  *
- * @brief  Implements EC2 DetachVolume requests.
+ * \brief The DetachVolumeRequest class encapsulates EC2 DetachVolume requests.
  *
- * @see    EC2Client::detachVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DetachVolumeRequest::DetachVolumeRequest(const DetachVolumeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachVolumeRequest object.
  */
 DetachVolumeRequest::DetachVolumeRequest()
@@ -53,13 +60,16 @@ DetachVolumeRequest::DetachVolumeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachVolumeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachVolumeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply *
     return new DetachVolumeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachVolumeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply *
  * @brief  Private implementation for DetachVolumeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachVolumeRequestPrivate object.
@@ -97,7 +107,7 @@ DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachVolumeRequestPrivate object, copying another.

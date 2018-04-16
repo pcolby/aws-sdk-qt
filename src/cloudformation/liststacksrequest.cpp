@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  ListStacksRequest
+/*!
+ * \class QtAws::CloudFormation::ListStacksRequest
  *
- * @brief  Implements CloudFormation ListStacks requests.
+ * \brief The ListStacksRequest class encapsulates CloudFormation ListStacks requests.
  *
- * @see    CloudFormationClient::listStacks
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::listStacks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStacksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ ListStacksRequest::ListStacksRequest(const ListStacksRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStacksRequest object.
  */
 ListStacksRequest::ListStacksRequest()
@@ -53,13 +78,16 @@ ListStacksRequest::ListStacksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStacksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStacksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * c
     return new ListStacksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStacksRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListStacksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStacksRequestPrivate object.
@@ -97,7 +125,7 @@ ListStacksRequestPrivate::ListStacksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStacksRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  PutReportDefinitionResponse
+/*!
+ * \class QtAws::CostandUsageReportService::PutReportDefinitionResponse
  *
- * @brief  Handles CostandUsageReportService PutReportDefinition responses.
+ * \brief The PutReportDefinitionResponse class encapsulates CostandUsageReportService PutReportDefinition responses.
  *
- * @see    CostandUsageReportServiceClient::putReportDefinition
+ * \ingroup CostandUsageReportService
+ *
+ *
+ * \sa CostandUsageReportServiceClient::putReportDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new PutReportDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
     return static_cast<const PutReportDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostandUsageReportService PutReportDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutReportDefinitionResponsePrivate
+ * \class PutReportDefinitionResponsePrivate
  *
- * @brief  Private implementation for PutReportDefinitionResponse.
+ * \brief Private implementation for PutReportDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutReportDefinitionResponsePrivate object.
@@ -91,7 +94,7 @@ PutReportDefinitionResponsePrivate::PutReportDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CostandUsageReportService PutReportDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

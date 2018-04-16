@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  DescribeConfigurationRevisionRequest
+/*!
+ * \class QtAws::MQ::DescribeConfigurationRevisionRequest
  *
- * @brief  Implements MQ DescribeConfigurationRevision requests.
+ * \brief The DescribeConfigurationRevisionRequest class encapsulates MQ DescribeConfigurationRevision requests.
  *
- * @see    MQClient::describeConfigurationRevision
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::describeConfigurationRevision
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConfigurationRevisionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeConfigurationRevisionRequest object.
  */
 DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest()
@@ -53,13 +58,16 @@ DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeConfigurationRevisionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeConfigurationRevisionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::respons
     return new DescribeConfigurationRevisionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeConfigurationRevisionRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::respons
  * @brief  Private implementation for DescribeConfigurationRevisionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConfigurationRevisionRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConfigurationRevisionRequestPrivate object, copying another.

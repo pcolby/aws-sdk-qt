@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DecreaseReplicationFactorResponse
+/*!
+ * \class QtAws::DAX::DecreaseReplicationFactorResponse
  *
- * @brief  Handles DAX DecreaseReplicationFactor responses.
+ * \brief The DecreaseReplicationFactorResponse class encapsulates DAX DecreaseReplicationFactor responses.
  *
- * @see    DAXClient::decreaseReplicationFactor
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::decreaseReplicationFactor
  */
 
-/**
+/*!
  * @brief  Constructs a new DecreaseReplicationFactorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DecreaseReplicationFactorRequest * DecreaseReplicationFactorResponse::requ
     return static_cast<const DecreaseReplicationFactorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DecreaseReplicationFactor response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DecreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DecreaseReplicationFactorResponsePrivate
+ * \class DecreaseReplicationFactorResponsePrivate
  *
- * @brief  Private implementation for DecreaseReplicationFactorResponse.
+ * \brief Private implementation for DecreaseReplicationFactorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DecreaseReplicationFactorResponsePrivate object.
@@ -91,7 +98,7 @@ DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DecreaseReplicationFactorResponse element.
  *
  * @param  xml  XML stream to parse.

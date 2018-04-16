@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  CreateAssessmentTemplateRequest
+/*!
+ * \class QtAws::Inspector::CreateAssessmentTemplateRequest
  *
- * @brief  Implements Inspector CreateAssessmentTemplate requests.
+ * \brief The CreateAssessmentTemplateRequest class encapsulates Inspector CreateAssessmentTemplate requests.
  *
- * @see    InspectorClient::createAssessmentTemplate
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::createAssessmentTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAssessmentTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateAssessmentTemplateRequest::CreateAssessmentTemplateRequest(const CreateAss
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAssessmentTemplateRequest object.
  */
 CreateAssessmentTemplateRequest::CreateAssessmentTemplateRequest()
@@ -53,13 +61,16 @@ CreateAssessmentTemplateRequest::CreateAssessmentTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAssessmentTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAssessmentTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTemplateRequest::response(QNe
     return new CreateAssessmentTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAssessmentTemplateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTemplateRequest::response(QNe
  * @brief  Private implementation for CreateAssessmentTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAssessmentTemplateRequestPrivate object.
@@ -97,7 +108,7 @@ CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAssessmentTemplateRequestPrivate object, copying another.

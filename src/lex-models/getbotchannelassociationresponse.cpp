@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotChannelAssociationResponse
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotChannelAssociationResponse
  *
- * @brief  Handles LexModelBuildingService GetBotChannelAssociation responses.
+ * \brief The GetBotChannelAssociationResponse class encapsulates LexModelBuildingService GetBotChannelAssociation responses.
  *
- * @see    LexModelBuildingServiceClient::getBotChannelAssociation
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBotChannelAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotChannelAssociationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetBotChannelAssociationRequest * GetBotChannelAssociationResponse::reques
     return static_cast<const GetBotChannelAssociationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService GetBotChannelAssociation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetBotChannelAssociationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBotChannelAssociationResponsePrivate
+ * \class GetBotChannelAssociationResponsePrivate
  *
- * @brief  Private implementation for GetBotChannelAssociationResponse.
+ * \brief Private implementation for GetBotChannelAssociationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotChannelAssociationResponsePrivate object.
@@ -91,7 +98,7 @@ GetBotChannelAssociationResponsePrivate::GetBotChannelAssociationResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService GetBotChannelAssociationResponse element.
  *
  * @param  xml  XML stream to parse.

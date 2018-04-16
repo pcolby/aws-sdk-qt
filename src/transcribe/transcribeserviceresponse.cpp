@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  TranscribeServiceResponse
+/*!
+ * \class QtAws::TranscribeService::TranscribeServiceResponse
  *
- * @brief  Handles TranscribeService TranscribeService responses.
+ * \brief The TranscribeServiceResponse class is the base class for all TranscribeService responses.
  *
- * @see    TranscribeServiceClient::transcribeService
+ * \ingroup TranscribeService
  */
 
-/**
+/*!
  * @brief  Constructs a new TranscribeServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ TranscribeServiceResponse::TranscribeServiceResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranscribeServiceResponse object.
@@ -63,7 +63,7 @@ TranscribeServiceResponse::TranscribeServiceResponse(TranscribeServiceResponsePr
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void TranscribeServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TranscribeServiceResponsePrivate
@@ -92,7 +92,7 @@ void TranscribeServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for TranscribeServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranscribeServiceResponsePrivate object.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudTrail {
 
-/**
- * @class  CloudTrailResponse
+/*!
+ * \class QtAws::CloudTrail::CloudTrailResponse
  *
- * @brief  Handles CloudTrail CloudTrail responses.
+ * \brief The CloudTrailResponse class is the base class for all CloudTrail responses.
  *
- * @see    CloudTrailClient::cloudTrail
+ * \ingroup CloudTrail
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudTrailResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudTrailResponse::CloudTrailResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudTrailResponse object.
@@ -63,7 +63,7 @@ CloudTrailResponse::CloudTrailResponse(CloudTrailResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudTrailResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudTrailResponsePrivate
@@ -92,7 +92,7 @@ void CloudTrailResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudTrailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudTrailResponsePrivate object.

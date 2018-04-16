@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateReplicationInstanceResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceResponse
  *
- * @brief  Handles DatabaseMigrationService CreateReplicationInstance responses.
+ * \brief The CreateReplicationInstanceResponse class encapsulates DatabaseMigrationService CreateReplicationInstance responses.
  *
- * @see    DatabaseMigrationServiceClient::createReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateReplicationInstanceRequest * CreateReplicationInstanceResponse::requ
     return static_cast<const CreateReplicationInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService CreateReplicationInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateReplicationInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateReplicationInstanceResponsePrivate
+ * \class CreateReplicationInstanceResponsePrivate
  *
- * @brief  Private implementation for CreateReplicationInstanceResponse.
+ * \brief Private implementation for CreateReplicationInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationInstanceResponsePrivate object.
@@ -91,7 +105,7 @@ CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService CreateReplicationInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

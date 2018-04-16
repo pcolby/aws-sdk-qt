@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  TerminateWorkflowExecutionRequest
+/*!
+ * \class QtAws::SWF::TerminateWorkflowExecutionRequest
  *
- * @brief  Implements SWF TerminateWorkflowExecution requests.
+ * \brief The TerminateWorkflowExecutionRequest class encapsulates SWF TerminateWorkflowExecution requests.
  *
- * @see    SWFClient::terminateWorkflowExecution
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::terminateWorkflowExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateWorkflowExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest(const Termi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TerminateWorkflowExecutionRequest object.
  */
 TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest()
@@ -53,13 +72,16 @@ TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TerminateWorkflowExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TerminateWorkflowExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
     return new TerminateWorkflowExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TerminateWorkflowExecutionRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
  * @brief  Private implementation for TerminateWorkflowExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateWorkflowExecutionRequestPrivate object.
@@ -97,7 +119,7 @@ TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateWorkflowExecutionRequestPrivate object, copying another.

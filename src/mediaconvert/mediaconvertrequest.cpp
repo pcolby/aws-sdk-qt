@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  MediaConvertRequest
+/*!
+ * \class QtAws::MediaConvert::MediaConvertRequest
  *
- * @brief  Interface class for providing MediaConvert requests
+ * \brief The MediaConvertRequest class is the base class for all MediaConvert requests.
+ *
+ * \ingroup MediaConvert
  */
 
-
-/**
+/*!
  * @brief  Constructs a new MediaConvertRequest object.
  *
  * @param  action  The MediaConvert action to request.
@@ -41,7 +42,7 @@ MediaConvertRequest::MediaConvertRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MediaConvertRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ MediaConvertRequest::MediaConvertRequest(const MediaConvertRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ MediaConvertRequest& MediaConvertRequest::operator=(const MediaConvertRequest &o
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaConvertRequest object.
@@ -85,10 +86,8 @@ MediaConvertRequest::MediaConvertRequest(MediaConvertRequestPrivate * const d) :
 
 }
 
-/**
- * @brief  Get the MediaConvert action to be performed by this request.
- *
- * @return The MediaConvert action to be performed by this request.
+/*!
+ * \brief Returns the MediaConvert action to be performed by this request.
  */
 MediaConvertRequest::Action MediaConvertRequest::action() const
 {
@@ -96,20 +95,16 @@ MediaConvertRequest::Action MediaConvertRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the MediaConvert action to be performed by this request.
- *
- * @return The name of the MediaConvert action to be performed by this request.
+/*!
+ * \brief Returns the name of the MediaConvert action to be performed by this request.
  */
 QString MediaConvertRequest::actionString() const
 {
     return MediaConvertRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the MediaConvert API version implemented by this request.
- *
- * @return The MediaConvert API version implmented by this request.
+/*!
+ * \brief Returns the MediaConvert API version implemented by this request.
  */
 QString MediaConvertRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString MediaConvertRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the MediaConvert action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the MediaConvert action to be performed by this request to \a action.
  */
 void MediaConvertRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void MediaConvertRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the MediaConvert API version to include in this request.
- *
- * @param  version  The MediaConvert API version to include in this request.
+/*!
+ * Set the MediaConvert API version to include in this request to \a version.
  */
 void MediaConvertRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void MediaConvertRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool MediaConvertRequest::operator==(const MediaConvertRequest &other) const
 {
@@ -159,7 +146,7 @@ bool MediaConvertRequest::operator==(const MediaConvertRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid MediaConvert queue name.
  *
  * @par From MediaConvert FAQs:
@@ -178,12 +165,10 @@ bool MediaConvertRequest::operator==(const MediaConvertRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int MediaConvertRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int MediaConvertRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void MediaConvertRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void MediaConvertRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this MediaConvert request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant MediaConvertRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant MediaConvertRequest::parameter(const QString &name, const QVariant &def
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this MediaConvert request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &MediaConvertRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &MediaConvertRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this MediaConvert request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void MediaConvertRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void MediaConvertRequest::setParameter(const QString &name, const QVariant &valu
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this MediaConvert request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void MediaConvertRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void MediaConvertRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this MediaConvert request.
+/*!
+ * \brief Returns a network request for this MediaConvert request using the given \a endpoint.
  *
  * This MediaConvert implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this MediaConvert request using the given \a endpoint.
  */
 QNetworkRequest MediaConvertRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest MediaConvertRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  MediaConvertRequestPrivate
+ * \class  MediaConvertRequestPrivate
  *
- * @brief  Private implementation for MediaConvertRequest.
+ * \brief  Private implementation for MediaConvertRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new MediaConvertRequestPrivate object.
- *
- * @param  action  MediaConvert action being performed by the \a q request.
- * @param  q       Pointer to this object's public MediaConvertRequest instance.
+ * \brief Constructs a new MediaConvertRequestPrivate object.
  */
 MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest::Action action, MediaConvertRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new MediaConvertRequestPrivate object from an existing one.
+ * \brief Constructs a new MediaConvertRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the MediaConvertRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MediaConvertRequest instance.
  */
 MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequestPrivate &other,
                                      MediaConvertRequest * const q)
@@ -312,14 +275,14 @@ MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest
 
 }
 
-/**
- * @brief  Convert and MediaConvert action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts MediaConvertRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MediaConvert service's Action
  * query parameters.
- *
- * @param  action  MediaConvert action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

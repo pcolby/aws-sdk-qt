@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateClientCertificateRequest
+/*!
+ * \class QtAws::APIGateway::UpdateClientCertificateRequest
  *
- * @brief  Implements APIGateway UpdateClientCertificate requests.
+ * \brief The UpdateClientCertificateRequest class encapsulates APIGateway UpdateClientCertificate requests.
  *
- * @see    APIGatewayClient::updateClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateClientCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateClientCertificateRequest::UpdateClientCertificateRequest(const UpdateClien
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateClientCertificateRequest object.
  */
 UpdateClientCertificateRequest::UpdateClientCertificateRequest()
@@ -53,13 +61,16 @@ UpdateClientCertificateRequest::UpdateClientCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateClientCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateClientCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClientCertificateRequest::response(QNet
     return new UpdateClientCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateClientCertificateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClientCertificateRequest::response(QNet
  * @brief  Private implementation for UpdateClientCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClientCertificateRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClientCertificateRequestPrivate object, copying another.

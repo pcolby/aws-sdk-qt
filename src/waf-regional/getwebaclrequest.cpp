@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetWebACLRequest
+/*!
+ * \class QtAws::WAFRegional::GetWebACLRequest
  *
- * @brief  Implements WAFRegional GetWebACL requests.
+ * \brief The GetWebACLRequest class encapsulates WAFRegional GetWebACL requests.
  *
- * @see    WAFRegionalClient::getWebACL
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new GetWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ GetWebACLRequest::GetWebACLRequest(const GetWebACLRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetWebACLRequest object.
  */
 GetWebACLRequest::GetWebACLRequest()
@@ -53,13 +63,16 @@ GetWebACLRequest::GetWebACLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetWebACLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetWebACLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
     return new GetWebACLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetWebACLRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetWebACLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetWebACLRequestPrivate object.
@@ -97,7 +110,7 @@ GetWebACLRequestPrivate::GetWebACLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetWebACLRequestPrivate object, copying another.

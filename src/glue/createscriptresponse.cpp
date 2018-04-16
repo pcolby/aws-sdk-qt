@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateScriptResponse
+/*!
+ * \class QtAws::Glue::CreateScriptResponse
  *
- * @brief  Handles Glue CreateScript responses.
+ * \brief The CreateScriptResponse class encapsulates Glue CreateScript responses.
  *
- * @see    GlueClient::createScript
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createScript
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateScriptResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateScriptRequest * CreateScriptResponse::request() const
     return static_cast<const CreateScriptRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue CreateScript response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateScriptResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateScriptResponsePrivate
+ * \class CreateScriptResponsePrivate
  *
- * @brief  Private implementation for CreateScriptResponse.
+ * \brief Private implementation for CreateScriptResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateScriptResponsePrivate object.
@@ -91,7 +97,7 @@ CreateScriptResponsePrivate::CreateScriptResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue CreateScriptResponse element.
  *
  * @param  xml  XML stream to parse.

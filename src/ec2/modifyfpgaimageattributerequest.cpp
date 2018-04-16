@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyFpgaImageAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifyFpgaImageAttributeRequest
  *
- * @brief  Implements EC2 ModifyFpgaImageAttribute requests.
+ * \brief The ModifyFpgaImageAttributeRequest class encapsulates EC2 ModifyFpgaImageAttribute requests.
  *
- * @see    EC2Client::modifyFpgaImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyFpgaImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyFpgaImageAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest(const ModifyFpg
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyFpgaImageAttributeRequest object.
  */
 ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest()
@@ -53,13 +60,16 @@ ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyFpgaImageAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyFpgaImageAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNe
     return new ModifyFpgaImageAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyFpgaImageAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNe
  * @brief  Private implementation for ModifyFpgaImageAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyFpgaImageAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyFpgaImageAttributeRequestPrivate object, copying another.

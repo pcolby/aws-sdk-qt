@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DetachObjectRequest
+/*!
+ * \class QtAws::CloudDirectory::DetachObjectRequest
  *
- * @brief  Implements CloudDirectory DetachObject requests.
+ * \brief The DetachObjectRequest class encapsulates CloudDirectory DetachObject requests.
  *
- * @see    CloudDirectoryClient::detachObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::detachObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DetachObjectRequest::DetachObjectRequest(const DetachObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachObjectRequest object.
  */
 DetachObjectRequest::DetachObjectRequest()
@@ -53,13 +63,16 @@ DetachObjectRequest::DetachObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply *
     return new DetachObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachObjectRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply *
  * @brief  Private implementation for DetachObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachObjectRequestPrivate object.
@@ -97,7 +110,7 @@ DetachObjectRequestPrivate::DetachObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachObjectRequestPrivate object, copying another.

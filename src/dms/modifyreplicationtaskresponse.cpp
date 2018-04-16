@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ModifyReplicationTaskResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationTaskResponse
  *
- * @brief  Handles DatabaseMigrationService ModifyReplicationTask responses.
+ * \brief The ModifyReplicationTaskResponse class encapsulates DatabaseMigrationService ModifyReplicationTask responses.
  *
- * @see    DatabaseMigrationServiceClient::modifyReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::modifyReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ModifyReplicationTaskRequest * ModifyReplicationTaskResponse::request() co
     return static_cast<const ModifyReplicationTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService ModifyReplicationTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ModifyReplicationTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyReplicationTaskResponsePrivate
+ * \class ModifyReplicationTaskResponsePrivate
  *
- * @brief  Private implementation for ModifyReplicationTaskResponse.
+ * \brief Private implementation for ModifyReplicationTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationTaskResponsePrivate object.
@@ -91,7 +105,7 @@ ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService ModifyReplicationTaskResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetDevicePoolCompatibilityRequest
+/*!
+ * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityRequest
  *
- * @brief  Implements DeviceFarm GetDevicePoolCompatibility requests.
+ * \brief The GetDevicePoolCompatibilityRequest class encapsulates DeviceFarm GetDevicePoolCompatibility requests.
  *
- * @see    DeviceFarmClient::getDevicePoolCompatibility
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getDevicePoolCompatibility
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDevicePoolCompatibilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest(const GetDe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDevicePoolCompatibilityRequest object.
  */
 GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest()
@@ -53,13 +58,16 @@ GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDevicePoolCompatibilityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDevicePoolCompatibilityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(Q
     return new GetDevicePoolCompatibilityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDevicePoolCompatibilityRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(Q
  * @brief  Private implementation for GetDevicePoolCompatibilityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDevicePoolCompatibilityRequestPrivate object.
@@ -97,7 +105,7 @@ GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDevicePoolCompatibilityRequestPrivate object, copying another.

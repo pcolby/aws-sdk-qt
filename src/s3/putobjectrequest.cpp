@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutObjectRequest
+/*!
+ * \class QtAws::S3::PutObjectRequest
  *
- * @brief  Implements S3 PutObject requests.
+ * \brief The PutObjectRequest class encapsulates S3 PutObject requests.
  *
- * @see    S3Client::putObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putObject
  */
 
-/**
+/*!
  * @brief  Constructs a new PutObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutObjectRequest::PutObjectRequest(const PutObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutObjectRequest object.
  */
 PutObjectRequest::PutObjectRequest()
@@ -53,13 +56,16 @@ PutObjectRequest::PutObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
     return new PutObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutObjectRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
  * @brief  Private implementation for PutObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectRequestPrivate object.
@@ -97,7 +103,7 @@ PutObjectRequestPrivate::PutObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectRequestPrivate object, copying another.

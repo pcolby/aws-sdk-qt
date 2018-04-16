@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  MachineLearningRequest
+/*!
+ * \class QtAws::MachineLearning::MachineLearningRequest
  *
- * @brief  Interface class for providing MachineLearning requests
+ * \brief The MachineLearningRequest class is the base class for all MachineLearning requests.
+ *
+ * \ingroup MachineLearning
  */
 
-
-/**
+/*!
  * @brief  Constructs a new MachineLearningRequest object.
  *
  * @param  action  The MachineLearning action to request.
@@ -41,7 +42,7 @@ MachineLearningRequest::MachineLearningRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MachineLearningRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ MachineLearningRequest::MachineLearningRequest(const MachineLearningRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ MachineLearningRequest& MachineLearningRequest::operator=(const MachineLearningR
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MachineLearningRequest object.
@@ -85,10 +86,8 @@ MachineLearningRequest::MachineLearningRequest(MachineLearningRequestPrivate * c
 
 }
 
-/**
- * @brief  Get the MachineLearning action to be performed by this request.
- *
- * @return The MachineLearning action to be performed by this request.
+/*!
+ * \brief Returns the MachineLearning action to be performed by this request.
  */
 MachineLearningRequest::Action MachineLearningRequest::action() const
 {
@@ -96,20 +95,16 @@ MachineLearningRequest::Action MachineLearningRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the MachineLearning action to be performed by this request.
- *
- * @return The name of the MachineLearning action to be performed by this request.
+/*!
+ * \brief Returns the name of the MachineLearning action to be performed by this request.
  */
 QString MachineLearningRequest::actionString() const
 {
     return MachineLearningRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the MachineLearning API version implemented by this request.
- *
- * @return The MachineLearning API version implmented by this request.
+/*!
+ * \brief Returns the MachineLearning API version implemented by this request.
  */
 QString MachineLearningRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString MachineLearningRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the MachineLearning action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the MachineLearning action to be performed by this request to \a action.
  */
 void MachineLearningRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void MachineLearningRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the MachineLearning API version to include in this request.
- *
- * @param  version  The MachineLearning API version to include in this request.
+/*!
+ * Set the MachineLearning API version to include in this request to \a version.
  */
 void MachineLearningRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void MachineLearningRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool MachineLearningRequest::operator==(const MachineLearningRequest &other) const
 {
@@ -159,7 +146,7 @@ bool MachineLearningRequest::operator==(const MachineLearningRequest &other) con
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid MachineLearning queue name.
  *
  * @par From MachineLearning FAQs:
@@ -178,12 +165,10 @@ bool MachineLearningRequest::operator==(const MachineLearningRequest &other) con
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int MachineLearningRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int MachineLearningRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void MachineLearningRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void MachineLearningRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this MachineLearning request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant MachineLearningRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant MachineLearningRequest::parameter(const QString &name, const QVariant &
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this MachineLearning request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &MachineLearningRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &MachineLearningRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this MachineLearning request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void MachineLearningRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void MachineLearningRequest::setParameter(const QString &name, const QVariant &v
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this MachineLearning request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void MachineLearningRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void MachineLearningRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this MachineLearning request.
+/*!
+ * \brief Returns a network request for this MachineLearning request using the given \a endpoint.
  *
  * This MachineLearning implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this MachineLearning request using the given \a endpoint.
  */
 QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) co
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  MachineLearningRequestPrivate
+ * \class  MachineLearningRequestPrivate
  *
- * @brief  Private implementation for MachineLearningRequest.
+ * \brief  Private implementation for MachineLearningRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new MachineLearningRequestPrivate object.
- *
- * @param  action  MachineLearning action being performed by the \a q request.
- * @param  q       Pointer to this object's public MachineLearningRequest instance.
+ * \brief Constructs a new MachineLearningRequestPrivate object.
  */
 MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearningRequest::Action action, MachineLearningRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearni
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new MachineLearningRequestPrivate object from an existing one.
+ * \brief Constructs a new MachineLearningRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the MachineLearningRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MachineLearningRequest instance.
  */
 MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearningRequestPrivate &other,
                                      MachineLearningRequest * const q)
@@ -312,14 +275,14 @@ MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearni
 
 }
 
-/**
- * @brief  Convert and MachineLearning action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts MachineLearningRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MachineLearning service's Action
  * query parameters.
- *
- * @param  action  MachineLearning action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

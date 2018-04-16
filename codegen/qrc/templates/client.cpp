@@ -13,26 +13,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::{{NameSpaceName}}
+ * \brief The QtAws::{{NameSpaceName}} contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
-/**
- * @class  {{ClassName}}
+/*!
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * @brief  Client for {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %}
+ * \brief The {{ClassName}} class provides access the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service.
+ *
+ * \ingroup {{NameSpaceName}}
  *
 {% for line in ClassDocumentation %}
- *{% if line %} {{ line }}{% endif %}
+ * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  */
 
-/**
- * @brief  Constructs a new {{ClassName}} object.
+/*!
+ * \brief Constructs a {{ClassName}} object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 {{ClassName}}::{{ClassName}}(
     const QtAws::Core::AwsRegion::Region region,
@@ -53,21 +61,16 @@ namespace {{NameSpaceName}} {
     d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
 }
 
-/**
- * @brief  Constructs a new {{ClassName}} object.
+/*!
+ * \overload {{ClassName}}()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 {{ClassName}}::{{ClassName}}(
     const QUrl &endpoint,
@@ -89,7 +92,7 @@ namespace {{NameSpaceName}} {
 }
 
 {% for name,op in operations.items %}
-/**
+/*!
 {% for line in op.documentationFormatted %}
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
@@ -106,7 +109,7 @@ namespace {{NameSpaceName}} {
 }
 
 {% endfor %}
-/**
+/*!
  * @internal
  *
  * @class  {{ClassName}}Private
@@ -114,7 +117,7 @@ namespace {{NameSpaceName}} {
  * @brief  Private implementation for {{ClassName}}.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new {{ClassName}}Private object.

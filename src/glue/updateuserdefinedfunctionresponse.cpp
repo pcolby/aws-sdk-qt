@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateUserDefinedFunctionResponse
+/*!
+ * \class QtAws::Glue::UpdateUserDefinedFunctionResponse
  *
- * @brief  Handles Glue UpdateUserDefinedFunction responses.
+ * \brief The UpdateUserDefinedFunctionResponse class encapsulates Glue UpdateUserDefinedFunction responses.
  *
- * @see    GlueClient::updateUserDefinedFunction
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateUserDefinedFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserDefinedFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateUserDefinedFunctionRequest * UpdateUserDefinedFunctionResponse::requ
     return static_cast<const UpdateUserDefinedFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateUserDefinedFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateUserDefinedFunctionResponsePrivate
+ * \class UpdateUserDefinedFunctionResponsePrivate
  *
- * @brief  Private implementation for UpdateUserDefinedFunctionResponse.
+ * \brief Private implementation for UpdateUserDefinedFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserDefinedFunctionResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateUserDefinedFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

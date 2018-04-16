@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  UpdatePipelineRequest
+/*!
+ * \class QtAws::ElasticTranscoder::UpdatePipelineRequest
  *
- * @brief  Implements ElasticTranscoder UpdatePipeline requests.
+ * \brief The UpdatePipelineRequest class encapsulates ElasticTranscoder UpdatePipeline requests.
  *
- * @see    ElasticTranscoderClient::updatePipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::updatePipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdatePipelineRequest::UpdatePipelineRequest(const UpdatePipelineRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineRequest object.
  */
 UpdatePipelineRequest::UpdatePipelineRequest()
@@ -53,13 +59,16 @@ UpdatePipelineRequest::UpdatePipelineRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePipelineRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePipelineResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply
     return new UpdatePipelineResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePipelineRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply
  * @brief  Private implementation for UpdatePipelineRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineRequestPrivate object.
@@ -97,7 +106,7 @@ UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelSpotInstanceRequestsResponse
+/*!
+ * \class QtAws::EC2::CancelSpotInstanceRequestsResponse
  *
- * @brief  Handles EC2 CancelSpotInstanceRequests responses.
+ * \brief The CancelSpotInstanceRequestsResponse class encapsulates EC2 CancelSpotInstanceRequests responses.
  *
- * @see    EC2Client::cancelSpotInstanceRequests
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelSpotInstanceRequests
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelSpotInstanceRequestsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CancelSpotInstanceRequestsRequest * CancelSpotInstanceRequestsResponse::re
     return static_cast<const CancelSpotInstanceRequestsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CancelSpotInstanceRequests response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CancelSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelSpotInstanceRequestsResponsePrivate
+ * \class CancelSpotInstanceRequestsResponsePrivate
  *
- * @brief  Private implementation for CancelSpotInstanceRequestsResponse.
+ * \brief Private implementation for CancelSpotInstanceRequestsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSpotInstanceRequestsResponsePrivate object.
@@ -91,7 +98,7 @@ CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CancelSpotInstanceRequestsResponse element.
  *
  * @param  xml  XML stream to parse.

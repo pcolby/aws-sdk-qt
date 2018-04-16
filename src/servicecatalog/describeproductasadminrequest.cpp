@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProductAsAdminRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProductAsAdminRequest
  *
- * @brief  Implements ServiceCatalog DescribeProductAsAdmin requests.
+ * \brief The DescribeProductAsAdminRequest class encapsulates ServiceCatalog DescribeProductAsAdmin requests.
  *
- * @see    ServiceCatalogClient::describeProductAsAdmin
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProductAsAdmin
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductAsAdminRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProductAsAdminRequest::DescribeProductAsAdminRequest(const DescribeProdu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductAsAdminRequest object.
  */
 DescribeProductAsAdminRequest::DescribeProductAsAdminRequest()
@@ -53,13 +62,16 @@ DescribeProductAsAdminRequest::DescribeProductAsAdminRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProductAsAdminRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProductAsAdminResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductAsAdminRequest::response(QNetw
     return new DescribeProductAsAdminResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProductAsAdminRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductAsAdminRequest::response(QNetw
  * @brief  Private implementation for DescribeProductAsAdminRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductAsAdminRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProductAsAdminRequestPrivate::DescribeProductAsAdminRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductAsAdminRequestPrivate object, copying another.

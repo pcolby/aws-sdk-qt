@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetMethodResponseRequest
+/*!
+ * \class QtAws::APIGateway::GetMethodResponseRequest
  *
- * @brief  Implements APIGateway GetMethodResponse requests.
+ * \brief The GetMethodResponseRequest class encapsulates APIGateway GetMethodResponse requests.
  *
- * @see    APIGatewayClient::getMethodResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getMethodResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMethodResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetMethodResponseRequest::GetMethodResponseRequest(const GetMethodResponseReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMethodResponseRequest object.
  */
 GetMethodResponseRequest::GetMethodResponseRequest()
@@ -53,13 +61,16 @@ GetMethodResponseRequest::GetMethodResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMethodResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMethodResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetMethodResponseRequest::response(QNetworkRe
     return new GetMethodResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMethodResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetMethodResponseRequest::response(QNetworkRe
  * @brief  Private implementation for GetMethodResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMethodResponseRequestPrivate object.
@@ -97,7 +108,7 @@ GetMethodResponseRequestPrivate::GetMethodResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMethodResponseRequestPrivate object, copying another.

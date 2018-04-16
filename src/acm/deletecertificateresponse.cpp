@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  DeleteCertificateResponse
+/*!
+ * \class QtAws::ACM::DeleteCertificateResponse
  *
- * @brief  Handles ACM DeleteCertificate responses.
+ * \brief The DeleteCertificateResponse class encapsulates ACM DeleteCertificate responses.
  *
- * @see    ACMClient::deleteCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::deleteCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
     return static_cast<const DeleteCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM DeleteCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCertificateResponsePrivate
+ * \class DeleteCertificateResponsePrivate
  *
- * @brief  Private implementation for DeleteCertificateResponse.
+ * \brief Private implementation for DeleteCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM DeleteCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  StartTranscriptionJobRequest
+/*!
+ * \class QtAws::TranscribeService::StartTranscriptionJobRequest
  *
- * @brief  Implements TranscribeService StartTranscriptionJob requests.
+ * \brief The StartTranscriptionJobRequest class encapsulates TranscribeService StartTranscriptionJob requests.
  *
- * @see    TranscribeServiceClient::startTranscriptionJob
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::startTranscriptionJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StartTranscriptionJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ StartTranscriptionJobRequest::StartTranscriptionJobRequest(const StartTranscript
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartTranscriptionJobRequest object.
  */
 StartTranscriptionJobRequest::StartTranscriptionJobRequest()
@@ -53,13 +57,16 @@ StartTranscriptionJobRequest::StartTranscriptionJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartTranscriptionJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartTranscriptionJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * StartTranscriptionJobRequest::response(QNetwo
     return new StartTranscriptionJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartTranscriptionJobRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * StartTranscriptionJobRequest::response(QNetwo
  * @brief  Private implementation for StartTranscriptionJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTranscriptionJobRequestPrivate object.
@@ -97,7 +104,7 @@ StartTranscriptionJobRequestPrivate::StartTranscriptionJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTranscriptionJobRequestPrivate object, copying another.

@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  CreatePlatformApplicationResponse
+/*!
+ * \class QtAws::SNS::CreatePlatformApplicationResponse
  *
- * @brief  Handles SNS CreatePlatformApplication responses.
+ * \brief The CreatePlatformApplicationResponse class encapsulates SNS CreatePlatformApplication responses.
  *
- * @see    SNSClient::createPlatformApplication
+ * \ingroup SNS
+ *
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
+ *
+ * \sa SNSClient::createPlatformApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePlatformApplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::requ
     return static_cast<const CreatePlatformApplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SNS CreatePlatformApplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePlatformApplicationResponsePrivate
+ * \class CreatePlatformApplicationResponsePrivate
  *
- * @brief  Private implementation for CreatePlatformApplicationResponse.
+ * \brief Private implementation for CreatePlatformApplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePlatformApplicationResponsePrivate object.
@@ -91,7 +108,7 @@ CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an SNS CreatePlatformApplicationResponse element.
  *
  * @param  xml  XML stream to parse.

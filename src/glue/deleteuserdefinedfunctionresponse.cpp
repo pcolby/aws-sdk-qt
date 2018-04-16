@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteUserDefinedFunctionResponse
+/*!
+ * \class QtAws::Glue::DeleteUserDefinedFunctionResponse
  *
- * @brief  Handles Glue DeleteUserDefinedFunction responses.
+ * \brief The DeleteUserDefinedFunctionResponse class encapsulates Glue DeleteUserDefinedFunction responses.
  *
- * @see    GlueClient::deleteUserDefinedFunction
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteUserDefinedFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserDefinedFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteUserDefinedFunctionRequest * DeleteUserDefinedFunctionResponse::requ
     return static_cast<const DeleteUserDefinedFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteUserDefinedFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteUserDefinedFunctionResponsePrivate
+ * \class DeleteUserDefinedFunctionResponsePrivate
  *
- * @brief  Private implementation for DeleteUserDefinedFunctionResponse.
+ * \brief Private implementation for DeleteUserDefinedFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserDefinedFunctionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteUserDefinedFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DescribeChannelRequest
+/*!
+ * \class QtAws::MediaLive::DescribeChannelRequest
  *
- * @brief  Implements MediaLive DescribeChannel requests.
+ * \brief The DescribeChannelRequest class encapsulates MediaLive DescribeChannel requests.
  *
- * @see    MediaLiveClient::describeChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::describeChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeChannelRequest::DescribeChannelRequest(const DescribeChannelRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeChannelRequest object.
  */
 DescribeChannelRequest::DescribeChannelRequest()
@@ -53,13 +56,16 @@ DescribeChannelRequest::DescribeChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkRepl
     return new DescribeChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeChannelRequestPrivate object, copying another.

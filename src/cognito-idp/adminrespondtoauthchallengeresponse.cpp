@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminRespondToAuthChallengeResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminRespondToAuthChallenge responses.
+ * \brief The AdminRespondToAuthChallengeResponse class encapsulates CognitoIdentityProvider AdminRespondToAuthChallenge responses.
  *
- * @see    CognitoIdentityProviderClient::adminRespondToAuthChallenge
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminRespondToAuthChallenge
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminRespondToAuthChallengeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminRespondToAuthChallengeRequest * AdminRespondToAuthChallengeResponse::
     return static_cast<const AdminRespondToAuthChallengeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminRespondToAuthChallenge response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminRespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminRespondToAuthChallengeResponsePrivate
+ * \class AdminRespondToAuthChallengeResponsePrivate
  *
- * @brief  Private implementation for AdminRespondToAuthChallengeResponse.
+ * \brief Private implementation for AdminRespondToAuthChallengeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminRespondToAuthChallengeResponsePrivate object.
@@ -91,7 +104,7 @@ AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminRespondToAuthChallengeResponse element.
  *
  * @param  xml  XML stream to parse.

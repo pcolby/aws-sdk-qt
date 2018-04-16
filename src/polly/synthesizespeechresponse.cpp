@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  SynthesizeSpeechResponse
+/*!
+ * \class QtAws::Polly::SynthesizeSpeechResponse
  *
- * @brief  Handles Polly SynthesizeSpeech responses.
+ * \brief The SynthesizeSpeechResponse class encapsulates Polly SynthesizeSpeech responses.
  *
- * @see    PollyClient::synthesizeSpeech
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::synthesizeSpeech
  */
 
-/**
+/*!
  * @brief  Constructs a new SynthesizeSpeechResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const SynthesizeSpeechRequest * SynthesizeSpeechResponse::request() const
     return static_cast<const SynthesizeSpeechRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Polly SynthesizeSpeech response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void SynthesizeSpeechResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SynthesizeSpeechResponsePrivate
+ * \class SynthesizeSpeechResponsePrivate
  *
- * @brief  Private implementation for SynthesizeSpeechResponse.
+ * \brief Private implementation for SynthesizeSpeechResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SynthesizeSpeechResponsePrivate object.
@@ -91,7 +101,7 @@ SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Polly SynthesizeSpeechResponse element.
  *
  * @param  xml  XML stream to parse.

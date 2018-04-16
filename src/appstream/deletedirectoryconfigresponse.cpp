@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteDirectoryConfigResponse
+/*!
+ * \class QtAws::AppStream::DeleteDirectoryConfigResponse
  *
- * @brief  Handles AppStream DeleteDirectoryConfig responses.
+ * \brief The DeleteDirectoryConfigResponse class encapsulates AppStream DeleteDirectoryConfig responses.
  *
- * @see    AppStreamClient::deleteDirectoryConfig
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteDirectoryConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDirectoryConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteDirectoryConfigRequest * DeleteDirectoryConfigResponse::request() co
     return static_cast<const DeleteDirectoryConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DeleteDirectoryConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteDirectoryConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDirectoryConfigResponsePrivate
+ * \class DeleteDirectoryConfigResponsePrivate
  *
- * @brief  Private implementation for DeleteDirectoryConfigResponse.
+ * \brief Private implementation for DeleteDirectoryConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDirectoryConfigResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DeleteDirectoryConfigResponse element.
  *
  * @param  xml  XML stream to parse.

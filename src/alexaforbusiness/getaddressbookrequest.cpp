@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  GetAddressBookRequest
+/*!
+ * \class QtAws::AlexaForBusiness::GetAddressBookRequest
  *
- * @brief  Implements AlexaForBusiness GetAddressBook requests.
+ * \brief The GetAddressBookRequest class encapsulates AlexaForBusiness GetAddressBook requests.
  *
- * @see    AlexaForBusinessClient::getAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::getAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAddressBookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetAddressBookRequest::GetAddressBookRequest(const GetAddressBookRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAddressBookRequest object.
  */
 GetAddressBookRequest::GetAddressBookRequest()
@@ -53,13 +61,16 @@ GetAddressBookRequest::GetAddressBookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAddressBookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAddressBookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetAddressBookRequest::response(QNetworkReply
     return new GetAddressBookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAddressBookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetAddressBookRequest::response(QNetworkReply
  * @brief  Private implementation for GetAddressBookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAddressBookRequestPrivate object.
@@ -97,7 +108,7 @@ GetAddressBookRequestPrivate::GetAddressBookRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAddressBookRequestPrivate object, copying another.

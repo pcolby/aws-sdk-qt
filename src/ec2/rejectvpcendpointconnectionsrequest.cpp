@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RejectVpcEndpointConnectionsRequest
+/*!
+ * \class QtAws::EC2::RejectVpcEndpointConnectionsRequest
  *
- * @brief  Implements EC2 RejectVpcEndpointConnections requests.
+ * \brief The RejectVpcEndpointConnectionsRequest class encapsulates EC2 RejectVpcEndpointConnections requests.
  *
- * @see    EC2Client::rejectVpcEndpointConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::rejectVpcEndpointConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest(const R
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object.
  */
 RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest()
@@ -53,13 +60,16 @@ RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RejectVpcEndpointConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RejectVpcEndpointConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
     return new RejectVpcEndpointConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RejectVpcEndpointConnectionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
  * @brief  Private implementation for RejectVpcEndpointConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectVpcEndpointConnectionsRequestPrivate object.
@@ -97,7 +107,7 @@ RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectVpcEndpointConnectionsRequestPrivate object, copying another.

@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace Redshift {
 
-/**
- * @class  RedshiftRequest
+/*!
+ * \class QtAws::Redshift::RedshiftRequest
  *
- * @brief  Interface class for providing Redshift requests
+ * \brief The RedshiftRequest class is the base class for all Redshift requests.
+ *
+ * \ingroup Redshift
  */
 
-
-/**
+/*!
  * @brief  Constructs a new RedshiftRequest object.
  *
  * @param  action  The Redshift action to request.
@@ -41,7 +42,7 @@ RedshiftRequest::RedshiftRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RedshiftRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ RedshiftRequest::RedshiftRequest(const RedshiftRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ RedshiftRequest& RedshiftRequest::operator=(const RedshiftRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RedshiftRequest object.
@@ -85,10 +86,8 @@ RedshiftRequest::RedshiftRequest(RedshiftRequestPrivate * const d) : QtAws::Core
 
 }
 
-/**
- * @brief  Get the Redshift action to be performed by this request.
- *
- * @return The Redshift action to be performed by this request.
+/*!
+ * \brief Returns the Redshift action to be performed by this request.
  */
 RedshiftRequest::Action RedshiftRequest::action() const
 {
@@ -96,20 +95,16 @@ RedshiftRequest::Action RedshiftRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the Redshift action to be performed by this request.
- *
- * @return The name of the Redshift action to be performed by this request.
+/*!
+ * \brief Returns the name of the Redshift action to be performed by this request.
  */
 QString RedshiftRequest::actionString() const
 {
     return RedshiftRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the Redshift API version implemented by this request.
- *
- * @return The Redshift API version implmented by this request.
+/*!
+ * \brief Returns the Redshift API version implemented by this request.
  */
 QString RedshiftRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString RedshiftRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the Redshift action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the Redshift action to be performed by this request to \a action.
  */
 void RedshiftRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void RedshiftRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the Redshift API version to include in this request.
- *
- * @param  version  The Redshift API version to include in this request.
+/*!
+ * Set the Redshift API version to include in this request to \a version.
  */
 void RedshiftRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void RedshiftRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool RedshiftRequest::operator==(const RedshiftRequest &other) const
 {
@@ -159,7 +146,7 @@ bool RedshiftRequest::operator==(const RedshiftRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid Redshift queue name.
  *
  * @par From Redshift FAQs:
@@ -178,12 +165,10 @@ bool RedshiftRequest::operator==(const RedshiftRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int RedshiftRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int RedshiftRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void RedshiftRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void RedshiftRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this Redshift request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant RedshiftRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant RedshiftRequest::parameter(const QString &name, const QVariant &default
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this Redshift request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &RedshiftRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &RedshiftRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this Redshift request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void RedshiftRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void RedshiftRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this Redshift request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void RedshiftRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void RedshiftRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this Redshift request.
+/*!
+ * \brief Returns a network request for this Redshift request using the given \a endpoint.
  *
  * This Redshift implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this Redshift request using the given \a endpoint.
  */
 QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RedshiftRequestPrivate
+ * \class  RedshiftRequestPrivate
  *
- * @brief  Private implementation for RedshiftRequest.
+ * \brief  Private implementation for RedshiftRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new RedshiftRequestPrivate object.
- *
- * @param  action  Redshift action being performed by the \a q request.
- * @param  q       Pointer to this object's public RedshiftRequest instance.
+ * \brief Constructs a new RedshiftRequestPrivate object.
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action action, RedshiftRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action act
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new RedshiftRequestPrivate object from an existing one.
+ * \brief Constructs a new RedshiftRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the RedshiftRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public RedshiftRequest instance.
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequestPrivate &other,
                                      RedshiftRequest * const q)
@@ -312,14 +275,14 @@ RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequestPrivate &oth
 
 }
 
-/**
- * @brief  Convert and Redshift action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts RedshiftRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Redshift service's Action
  * query parameters.
- *
- * @param  action  Redshift action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

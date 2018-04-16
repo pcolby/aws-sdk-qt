@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetVpcLinkResponse
+/*!
+ * \class QtAws::APIGateway::GetVpcLinkResponse
  *
- * @brief  Handles APIGateway GetVpcLink responses.
+ * \brief The GetVpcLinkResponse class encapsulates APIGateway GetVpcLink responses.
  *
- * @see    APIGatewayClient::getVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new GetVpcLinkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetVpcLinkRequest * GetVpcLinkResponse::request() const
     return static_cast<const GetVpcLinkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetVpcLink response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetVpcLinkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetVpcLinkResponsePrivate
+ * \class GetVpcLinkResponsePrivate
  *
- * @brief  Private implementation for GetVpcLinkResponse.
+ * \brief Private implementation for GetVpcLinkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetVpcLinkResponsePrivate object.
@@ -91,7 +99,7 @@ GetVpcLinkResponsePrivate::GetVpcLinkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetVpcLinkResponse element.
  *
  * @param  xml  XML stream to parse.

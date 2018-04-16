@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  RespondDecisionTaskCompletedResponse
+/*!
+ * \class QtAws::SWF::RespondDecisionTaskCompletedResponse
  *
- * @brief  Handles SWF RespondDecisionTaskCompleted responses.
+ * \brief The RespondDecisionTaskCompletedResponse class encapsulates SWF RespondDecisionTaskCompleted responses.
  *
- * @see    SWFClient::respondDecisionTaskCompleted
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::respondDecisionTaskCompleted
  */
 
-/**
+/*!
  * @brief  Constructs a new RespondDecisionTaskCompletedResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const RespondDecisionTaskCompletedRequest * RespondDecisionTaskCompletedResponse
     return static_cast<const RespondDecisionTaskCompletedRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF RespondDecisionTaskCompleted response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void RespondDecisionTaskCompletedResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RespondDecisionTaskCompletedResponsePrivate
+ * \class RespondDecisionTaskCompletedResponsePrivate
  *
- * @brief  Private implementation for RespondDecisionTaskCompletedResponse.
+ * \brief Private implementation for RespondDecisionTaskCompletedResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RespondDecisionTaskCompletedResponsePrivate object.
@@ -91,7 +110,7 @@ RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF RespondDecisionTaskCompletedResponse element.
  *
  * @param  xml  XML stream to parse.

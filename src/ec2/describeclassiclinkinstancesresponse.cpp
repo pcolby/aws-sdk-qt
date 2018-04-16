@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeClassicLinkInstancesResponse
+/*!
+ * \class QtAws::EC2::DescribeClassicLinkInstancesResponse
  *
- * @brief  Handles EC2 DescribeClassicLinkInstances responses.
+ * \brief The DescribeClassicLinkInstancesResponse class encapsulates EC2 DescribeClassicLinkInstances responses.
  *
- * @see    EC2Client::describeClassicLinkInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeClassicLinkInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClassicLinkInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse
     return static_cast<const DescribeClassicLinkInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeClassicLinkInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeClassicLinkInstancesResponsePrivate
+ * \class DescribeClassicLinkInstancesResponsePrivate
  *
- * @brief  Private implementation for DescribeClassicLinkInstancesResponse.
+ * \brief Private implementation for DescribeClassicLinkInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClassicLinkInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeClassicLinkInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

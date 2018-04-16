@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeResourceGroupsRequest
+/*!
+ * \class QtAws::Inspector::DescribeResourceGroupsRequest
  *
- * @brief  Implements Inspector DescribeResourceGroups requests.
+ * \brief The DescribeResourceGroupsRequest class encapsulates Inspector DescribeResourceGroups requests.
  *
- * @see    InspectorClient::describeResourceGroups
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeResourceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeResourceGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeResourceGroupsRequest::DescribeResourceGroupsRequest(const DescribeResou
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeResourceGroupsRequest object.
  */
 DescribeResourceGroupsRequest::DescribeResourceGroupsRequest()
@@ -53,13 +61,16 @@ DescribeResourceGroupsRequest::DescribeResourceGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeResourceGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeResourceGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetw
     return new DescribeResourceGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeResourceGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetw
  * @brief  Private implementation for DescribeResourceGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeResourceGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeResourceGroupsRequestPrivate object, copying another.

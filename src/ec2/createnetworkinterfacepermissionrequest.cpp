@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateNetworkInterfacePermissionRequest
+/*!
+ * \class QtAws::EC2::CreateNetworkInterfacePermissionRequest
  *
- * @brief  Implements EC2 CreateNetworkInterfacePermission requests.
+ * \brief The CreateNetworkInterfacePermissionRequest class encapsulates EC2 CreateNetworkInterfacePermission requests.
  *
- * @see    EC2Client::createNetworkInterfacePermission
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createNetworkInterfacePermission
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkInterfacePermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkInterfacePermissionRequest object.
  */
 CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest()
@@ -53,13 +60,16 @@ CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateNetworkInterfacePermissionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateNetworkInterfacePermissionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfacePermissionRequest::resp
     return new CreateNetworkInterfacePermissionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateNetworkInterfacePermissionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfacePermissionRequest::resp
  * @brief  Private implementation for CreateNetworkInterfacePermissionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkInterfacePermissionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermission
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkInterfacePermissionRequestPrivate object, copying another.

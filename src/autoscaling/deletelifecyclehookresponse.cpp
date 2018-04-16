@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteLifecycleHookResponse
+/*!
+ * \class QtAws::AutoScaling::DeleteLifecycleHookResponse
  *
- * @brief  Handles AutoScaling DeleteLifecycleHook responses.
+ * \brief The DeleteLifecycleHookResponse class encapsulates AutoScaling DeleteLifecycleHook responses.
  *
- * @see    AutoScalingClient::deleteLifecycleHook
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteLifecycleHook
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLifecycleHookResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteLifecycleHookRequest * DeleteLifecycleHookResponse::request() const
     return static_cast<const DeleteLifecycleHookRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeleteLifecycleHook response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteLifecycleHookResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLifecycleHookResponsePrivate
+ * \class DeleteLifecycleHookResponsePrivate
  *
- * @brief  Private implementation for DeleteLifecycleHookResponse.
+ * \brief Private implementation for DeleteLifecycleHookResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLifecycleHookResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeleteLifecycleHookResponse element.
  *
  * @param  xml  XML stream to parse.

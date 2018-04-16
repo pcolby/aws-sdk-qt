@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetChangeTokenStatusResponse
+/*!
+ * \class QtAws::WAF::GetChangeTokenStatusResponse
  *
- * @brief  Handles WAF GetChangeTokenStatus responses.
+ * \brief The GetChangeTokenStatusResponse class encapsulates WAF GetChangeTokenStatus responses.
  *
- * @see    WAFClient::getChangeTokenStatus
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getChangeTokenStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetChangeTokenStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetChangeTokenStatusRequest * GetChangeTokenStatusResponse::request() cons
     return static_cast<const GetChangeTokenStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF GetChangeTokenStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetChangeTokenStatusResponsePrivate
+ * \class GetChangeTokenStatusResponsePrivate
  *
- * @brief  Private implementation for GetChangeTokenStatusResponse.
+ * \brief Private implementation for GetChangeTokenStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeTokenStatusResponsePrivate object.
@@ -91,7 +99,7 @@ GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF GetChangeTokenStatusResponse element.
  *
  * @param  xml  XML stream to parse.

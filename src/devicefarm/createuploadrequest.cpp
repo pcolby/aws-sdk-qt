@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateUploadRequest
+/*!
+ * \class QtAws::DeviceFarm::CreateUploadRequest
  *
- * @brief  Implements DeviceFarm CreateUpload requests.
+ * \brief The CreateUploadRequest class encapsulates DeviceFarm CreateUpload requests.
  *
- * @see    DeviceFarmClient::createUpload
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateUploadRequest::CreateUploadRequest(const CreateUploadRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUploadRequest object.
  */
 CreateUploadRequest::CreateUploadRequest()
@@ -53,13 +58,16 @@ CreateUploadRequest::CreateUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateUploadRequest::response(QNetworkReply *
     return new CreateUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUploadRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateUploadRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUploadRequestPrivate object.
@@ -97,7 +105,7 @@ CreateUploadRequestPrivate::CreateUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUploadRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeEvaluationsRequest
+/*!
+ * \class QtAws::MachineLearning::DescribeEvaluationsRequest
  *
- * @brief  Implements MachineLearning DescribeEvaluations requests.
+ * \brief The DescribeEvaluationsRequest class encapsulates MachineLearning DescribeEvaluations requests.
  *
- * @see    MachineLearningClient::describeEvaluations
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeEvaluations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEvaluationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeEvaluationsRequest::DescribeEvaluationsRequest(const DescribeEvaluations
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEvaluationsRequest object.
  */
 DescribeEvaluationsRequest::DescribeEvaluationsRequest()
@@ -53,13 +56,16 @@ DescribeEvaluationsRequest::DescribeEvaluationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEvaluationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEvaluationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetwork
     return new DescribeEvaluationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEvaluationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEvaluationsRequest::response(QNetwork
  * @brief  Private implementation for DescribeEvaluationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEvaluationsRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEvaluationsRequestPrivate object, copying another.

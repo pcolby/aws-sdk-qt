@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetIdentityPoliciesResponse
+/*!
+ * \class QtAws::SES::GetIdentityPoliciesResponse
  *
- * @brief  Handles SES GetIdentityPolicies responses.
+ * \brief The GetIdentityPoliciesResponse class encapsulates SES GetIdentityPolicies responses.
  *
- * @see    SESClient::getIdentityPolicies
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getIdentityPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityPoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetIdentityPoliciesRequest * GetIdentityPoliciesResponse::request() const
     return static_cast<const GetIdentityPoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES GetIdentityPolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetIdentityPoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIdentityPoliciesResponsePrivate
+ * \class GetIdentityPoliciesResponsePrivate
  *
- * @brief  Private implementation for GetIdentityPoliciesResponse.
+ * \brief Private implementation for GetIdentityPoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityPoliciesResponsePrivate object.
@@ -91,7 +105,7 @@ GetIdentityPoliciesResponsePrivate::GetIdentityPoliciesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES GetIdentityPoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

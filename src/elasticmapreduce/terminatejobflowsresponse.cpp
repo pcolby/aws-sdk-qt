@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  TerminateJobFlowsResponse
+/*!
+ * \class QtAws::EMR::TerminateJobFlowsResponse
  *
- * @brief  Handles EMR TerminateJobFlows responses.
+ * \brief The TerminateJobFlowsResponse class encapsulates EMR TerminateJobFlows responses.
  *
- * @see    EMRClient::terminateJobFlows
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::terminateJobFlows
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateJobFlowsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const TerminateJobFlowsRequest * TerminateJobFlowsResponse::request() const
     return static_cast<const TerminateJobFlowsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR TerminateJobFlows response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TerminateJobFlowsResponsePrivate
+ * \class TerminateJobFlowsResponsePrivate
  *
- * @brief  Private implementation for TerminateJobFlowsResponse.
+ * \brief Private implementation for TerminateJobFlowsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateJobFlowsResponsePrivate object.
@@ -91,7 +97,7 @@ TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR TerminateJobFlowsResponse element.
  *
  * @param  xml  XML stream to parse.

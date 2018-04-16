@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CloudSearchDomain {
 
-/**
- * @class  SearchResponse
+/*!
+ * \class QtAws::CloudSearchDomain::SearchResponse
  *
- * @brief  Handles CloudSearchDomain Search responses.
+ * \brief The SearchResponse class encapsulates CloudSearchDomain Search responses.
  *
- * @see    CloudSearchDomainClient::search
+ * \ingroup CloudSearchDomain
+ *
+ *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
+ * 
+ *  </p
+ * 
+ *  The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are
+ *  domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service
+ *  <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon
+ *  CloudSearch console. You submit suggest requests to the search endpoint.
+ * 
+ *  </p
+ * 
+ *  For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch
+ *  Developer
+ *
+ * \sa CloudSearchDomainClient::search
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const SearchRequest * SearchResponse::request() const
     return static_cast<const SearchRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearchDomain Search response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void SearchResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchResponsePrivate
+ * \class SearchResponsePrivate
  *
- * @brief  Private implementation for SearchResponse.
+ * \brief Private implementation for SearchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchResponsePrivate object.
@@ -91,7 +107,7 @@ SearchResponsePrivate::SearchResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearchDomain SearchResponse element.
  *
  * @param  xml  XML stream to parse.

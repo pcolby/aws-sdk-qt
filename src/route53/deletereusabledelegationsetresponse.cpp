@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteReusableDelegationSetResponse
+/*!
+ * \class QtAws::Route53::DeleteReusableDelegationSetResponse
  *
- * @brief  Handles Route53 DeleteReusableDelegationSet responses.
+ * \brief The DeleteReusableDelegationSetResponse class encapsulates Route53 DeleteReusableDelegationSet responses.
  *
- * @see    Route53Client::deleteReusableDelegationSet
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteReusableDelegationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReusableDelegationSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteReusableDelegationSetRequest * DeleteReusableDelegationSetResponse::
     return static_cast<const DeleteReusableDelegationSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 DeleteReusableDelegationSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteReusableDelegationSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReusableDelegationSetResponsePrivate
+ * \class DeleteReusableDelegationSetResponsePrivate
  *
- * @brief  Private implementation for DeleteReusableDelegationSetResponse.
+ * \brief Private implementation for DeleteReusableDelegationSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReusableDelegationSetResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 DeleteReusableDelegationSetResponse element.
  *
  * @param  xml  XML stream to parse.

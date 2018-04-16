@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListPrincipalThingsRequest
+/*!
+ * \class QtAws::IoT::ListPrincipalThingsRequest
  *
- * @brief  Implements IoT ListPrincipalThings requests.
+ * \brief The ListPrincipalThingsRequest class encapsulates IoT ListPrincipalThings requests.
  *
- * @see    IoTClient::listPrincipalThings
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listPrincipalThings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPrincipalThingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListPrincipalThingsRequest::ListPrincipalThingsRequest(const ListPrincipalThings
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPrincipalThingsRequest object.
  */
 ListPrincipalThingsRequest::ListPrincipalThingsRequest()
@@ -53,13 +67,16 @@ ListPrincipalThingsRequest::ListPrincipalThingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPrincipalThingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPrincipalThingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListPrincipalThingsRequest::response(QNetwork
     return new ListPrincipalThingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPrincipalThingsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListPrincipalThingsRequest::response(QNetwork
  * @brief  Private implementation for ListPrincipalThingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPrincipalThingsRequestPrivate object.
@@ -97,7 +114,7 @@ ListPrincipalThingsRequestPrivate::ListPrincipalThingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPrincipalThingsRequestPrivate object, copying another.

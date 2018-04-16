@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  CreateCollectionRequest
+/*!
+ * \class QtAws::Rekognition::CreateCollectionRequest
  *
- * @brief  Implements Rekognition CreateCollection requests.
+ * \brief The CreateCollectionRequest class encapsulates Rekognition CreateCollection requests.
  *
- * @see    RekognitionClient::createCollection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::createCollection
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCollectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateCollectionRequest::CreateCollectionRequest(const CreateCollectionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateCollectionRequest object.
  */
 CreateCollectionRequest::CreateCollectionRequest()
@@ -53,13 +57,16 @@ CreateCollectionRequest::CreateCollectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateCollectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateCollectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkRep
     return new CreateCollectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateCollectionRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkRep
  * @brief  Private implementation for CreateCollectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCollectionRequestPrivate object.
@@ -97,7 +104,7 @@ CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCollectionRequestPrivate object, copying another.

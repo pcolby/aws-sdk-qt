@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListSubscribedRuleGroupsRequest
+/*!
+ * \class QtAws::WAF::ListSubscribedRuleGroupsRequest
  *
- * @brief  Implements WAF ListSubscribedRuleGroups requests.
+ * \brief The ListSubscribedRuleGroupsRequest class encapsulates WAF ListSubscribedRuleGroups requests.
  *
- * @see    WAFClient::listSubscribedRuleGroups
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listSubscribedRuleGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSubscribedRuleGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubsc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSubscribedRuleGroupsRequest object.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest()
@@ -53,13 +61,16 @@ ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSubscribedRuleGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSubscribedRuleGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
     return new ListSubscribedRuleGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSubscribedRuleGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
  * @brief  Private implementation for ListSubscribedRuleGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscribedRuleGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscribedRuleGroupsRequestPrivate object, copying another.

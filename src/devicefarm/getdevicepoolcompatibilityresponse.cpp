@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetDevicePoolCompatibilityResponse
+/*!
+ * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityResponse
  *
- * @brief  Handles DeviceFarm GetDevicePoolCompatibility responses.
+ * \brief The GetDevicePoolCompatibilityResponse class encapsulates DeviceFarm GetDevicePoolCompatibility responses.
  *
- * @see    DeviceFarmClient::getDevicePoolCompatibility
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getDevicePoolCompatibility
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDevicePoolCompatibilityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetDevicePoolCompatibilityRequest * GetDevicePoolCompatibilityResponse::re
     return static_cast<const GetDevicePoolCompatibilityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm GetDevicePoolCompatibility response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetDevicePoolCompatibilityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDevicePoolCompatibilityResponsePrivate
+ * \class GetDevicePoolCompatibilityResponsePrivate
  *
- * @brief  Private implementation for GetDevicePoolCompatibilityResponse.
+ * \brief Private implementation for GetDevicePoolCompatibilityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDevicePoolCompatibilityResponsePrivate object.
@@ -91,7 +96,7 @@ GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm GetDevicePoolCompatibilityResponse element.
  *
  * @param  xml  XML stream to parse.

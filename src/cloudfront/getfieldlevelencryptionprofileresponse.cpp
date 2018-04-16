@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionProfileResponse
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileResponse
  *
- * @brief  Handles CloudFront GetFieldLevelEncryptionProfile responses.
+ * \brief The GetFieldLevelEncryptionProfileResponse class encapsulates CloudFront GetFieldLevelEncryptionProfile responses.
  *
- * @see    CloudFrontClient::getFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetFieldLevelEncryptionProfileRequest * GetFieldLevelEncryptionProfileResp
     return static_cast<const GetFieldLevelEncryptionProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetFieldLevelEncryptionProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFieldLevelEncryptionProfileResponsePrivate
+ * \class GetFieldLevelEncryptionProfileResponsePrivate
  *
- * @brief  Private implementation for GetFieldLevelEncryptionProfileResponse.
+ * \brief Private implementation for GetFieldLevelEncryptionProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionProfileResponsePrivate object.
@@ -91,7 +99,7 @@ GetFieldLevelEncryptionProfileResponsePrivate::GetFieldLevelEncryptionProfileRes
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetFieldLevelEncryptionProfileResponse element.
  *
  * @param  xml  XML stream to parse.

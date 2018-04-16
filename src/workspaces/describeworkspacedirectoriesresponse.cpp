@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeWorkspaceDirectoriesResponse
+/*!
+ * \class QtAws::WorkSpaces::DescribeWorkspaceDirectoriesResponse
  *
- * @brief  Handles WorkSpaces DescribeWorkspaceDirectories responses.
+ * \brief The DescribeWorkspaceDirectoriesResponse class encapsulates WorkSpaces DescribeWorkspaceDirectories responses.
  *
- * @see    WorkSpacesClient::describeWorkspaceDirectories
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeWorkspaceDirectories
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspaceDirectoriesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeWorkspaceDirectoriesRequest * DescribeWorkspaceDirectoriesResponse
     return static_cast<const DescribeWorkspaceDirectoriesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces DescribeWorkspaceDirectories response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeWorkspaceDirectoriesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeWorkspaceDirectoriesResponsePrivate
+ * \class DescribeWorkspaceDirectoriesResponsePrivate
  *
- * @brief  Private implementation for DescribeWorkspaceDirectoriesResponse.
+ * \brief Private implementation for DescribeWorkspaceDirectoriesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspaceDirectoriesResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces DescribeWorkspaceDirectoriesResponse element.
  *
  * @param  xml  XML stream to parse.

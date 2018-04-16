@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListProvisioningArtifactsResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListProvisioningArtifactsResponse
  *
- * @brief  Handles ServiceCatalog ListProvisioningArtifacts responses.
+ * \brief The ListProvisioningArtifactsResponse class encapsulates ServiceCatalog ListProvisioningArtifacts responses.
  *
- * @see    ServiceCatalogClient::listProvisioningArtifacts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listProvisioningArtifacts
  */
 
-/**
+/*!
  * @brief  Constructs a new ListProvisioningArtifactsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListProvisioningArtifactsRequest * ListProvisioningArtifactsResponse::requ
     return static_cast<const ListProvisioningArtifactsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListProvisioningArtifacts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListProvisioningArtifactsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListProvisioningArtifactsResponsePrivate
+ * \class ListProvisioningArtifactsResponsePrivate
  *
- * @brief  Private implementation for ListProvisioningArtifactsResponse.
+ * \brief Private implementation for ListProvisioningArtifactsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProvisioningArtifactsResponsePrivate object.
@@ -91,7 +100,7 @@ ListProvisioningArtifactsResponsePrivate::ListProvisioningArtifactsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListProvisioningArtifactsResponse element.
  *
  * @param  xml  XML stream to parse.

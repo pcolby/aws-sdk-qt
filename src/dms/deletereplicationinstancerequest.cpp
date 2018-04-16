@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteReplicationInstanceRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceRequest
  *
- * @brief  Implements DatabaseMigrationService DeleteReplicationInstance requests.
+ * \brief The DeleteReplicationInstanceRequest class encapsulates DatabaseMigrationService DeleteReplicationInstance requests.
  *
- * @see    DatabaseMigrationServiceClient::deleteReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest(const DeleteR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationInstanceRequest object.
  */
 DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest()
@@ -53,13 +67,16 @@ DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReplicationInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReplicationInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QN
     return new DeleteReplicationInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReplicationInstanceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QN
  * @brief  Private implementation for DeleteReplicationInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationInstanceRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationInstanceRequestPrivate object, copying another.

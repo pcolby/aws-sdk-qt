@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  UpdateAssessmentTargetResponse
+/*!
+ * \class QtAws::Inspector::UpdateAssessmentTargetResponse
  *
- * @brief  Handles Inspector UpdateAssessmentTarget responses.
+ * \brief The UpdateAssessmentTargetResponse class encapsulates Inspector UpdateAssessmentTarget responses.
  *
- * @see    InspectorClient::updateAssessmentTarget
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::updateAssessmentTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAssessmentTargetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateAssessmentTargetRequest * UpdateAssessmentTargetResponse::request() 
     return static_cast<const UpdateAssessmentTargetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector UpdateAssessmentTarget response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateAssessmentTargetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateAssessmentTargetResponsePrivate
+ * \class UpdateAssessmentTargetResponsePrivate
  *
- * @brief  Private implementation for UpdateAssessmentTargetResponse.
+ * \brief Private implementation for UpdateAssessmentTargetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAssessmentTargetResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateAssessmentTargetResponsePrivate::UpdateAssessmentTargetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector UpdateAssessmentTargetResponse element.
  *
  * @param  xml  XML stream to parse.

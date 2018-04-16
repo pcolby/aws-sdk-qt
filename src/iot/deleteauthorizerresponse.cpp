@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteAuthorizerResponse
+/*!
+ * \class QtAws::IoT::DeleteAuthorizerResponse
  *
- * @brief  Handles IoT DeleteAuthorizer responses.
+ * \brief The DeleteAuthorizerResponse class encapsulates IoT DeleteAuthorizer responses.
  *
- * @see    IoTClient::deleteAuthorizer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAuthorizerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
     return static_cast<const DeleteAuthorizerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeleteAuthorizer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteAuthorizerResponsePrivate
+ * \class DeleteAuthorizerResponsePrivate
  *
- * @brief  Private implementation for DeleteAuthorizerResponse.
+ * \brief Private implementation for DeleteAuthorizerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAuthorizerResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeleteAuthorizerResponse element.
  *
  * @param  xml  XML stream to parse.

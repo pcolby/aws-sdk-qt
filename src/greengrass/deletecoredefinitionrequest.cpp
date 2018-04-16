@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteCoreDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::DeleteCoreDefinitionRequest
  *
- * @brief  Implements Greengrass DeleteCoreDefinition requests.
+ * \brief The DeleteCoreDefinitionRequest class encapsulates Greengrass DeleteCoreDefinition requests.
  *
- * @see    GreengrassClient::deleteCoreDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteCoreDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCoreDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteCoreDefinitionRequest::DeleteCoreDefinitionRequest(const DeleteCoreDefinit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCoreDefinitionRequest object.
  */
 DeleteCoreDefinitionRequest::DeleteCoreDefinitionRequest()
@@ -53,13 +59,16 @@ DeleteCoreDefinitionRequest::DeleteCoreDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCoreDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCoreDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetwor
     return new DeleteCoreDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCoreDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetwor
  * @brief  Private implementation for DeleteCoreDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCoreDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCoreDefinitionRequestPrivate object, copying another.

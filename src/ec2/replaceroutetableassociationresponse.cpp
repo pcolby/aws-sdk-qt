@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceRouteTableAssociationResponse
+/*!
+ * \class QtAws::EC2::ReplaceRouteTableAssociationResponse
  *
- * @brief  Handles EC2 ReplaceRouteTableAssociation responses.
+ * \brief The ReplaceRouteTableAssociationResponse class encapsulates EC2 ReplaceRouteTableAssociation responses.
  *
- * @see    EC2Client::replaceRouteTableAssociation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceRouteTableAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceRouteTableAssociationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ReplaceRouteTableAssociationRequest * ReplaceRouteTableAssociationResponse
     return static_cast<const ReplaceRouteTableAssociationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ReplaceRouteTableAssociation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ReplaceRouteTableAssociationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReplaceRouteTableAssociationResponsePrivate
+ * \class ReplaceRouteTableAssociationResponsePrivate
  *
- * @brief  Private implementation for ReplaceRouteTableAssociationResponse.
+ * \brief Private implementation for ReplaceRouteTableAssociationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceRouteTableAssociationResponsePrivate object.
@@ -91,7 +98,7 @@ ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ReplaceRouteTableAssociationResponse element.
  *
  * @param  xml  XML stream to parse.

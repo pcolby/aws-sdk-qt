@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  SetVisibleToAllUsersResponse
+/*!
+ * \class QtAws::EMR::SetVisibleToAllUsersResponse
  *
- * @brief  Handles EMR SetVisibleToAllUsers responses.
+ * \brief The SetVisibleToAllUsersResponse class encapsulates EMR SetVisibleToAllUsers responses.
  *
- * @see    EMRClient::setVisibleToAllUsers
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::setVisibleToAllUsers
  */
 
-/**
+/*!
  * @brief  Constructs a new SetVisibleToAllUsersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const SetVisibleToAllUsersRequest * SetVisibleToAllUsersResponse::request() cons
     return static_cast<const SetVisibleToAllUsersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR SetVisibleToAllUsers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetVisibleToAllUsersResponsePrivate
+ * \class SetVisibleToAllUsersResponsePrivate
  *
- * @brief  Private implementation for SetVisibleToAllUsersResponse.
+ * \brief Private implementation for SetVisibleToAllUsersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetVisibleToAllUsersResponsePrivate object.
@@ -91,7 +97,7 @@ SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR SetVisibleToAllUsersResponse element.
  *
  * @param  xml  XML stream to parse.

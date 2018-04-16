@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CreateHsmResponse
+/*!
+ * \class QtAws::CloudHSM::CreateHsmResponse
  *
- * @brief  Handles CloudHSM CreateHsm responses.
+ * \brief The CreateHsmResponse class encapsulates CloudHSM CreateHsm responses.
  *
- * @see    CloudHSMClient::createHsm
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::createHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHsmResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const CreateHsmRequest * CreateHsmResponse::request() const
     return static_cast<const CreateHsmRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM CreateHsm response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void CreateHsmResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateHsmResponsePrivate
+ * \class CreateHsmResponsePrivate
  *
- * @brief  Private implementation for CreateHsmResponse.
+ * \brief Private implementation for CreateHsmResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHsmResponsePrivate object.
@@ -91,7 +106,7 @@ CreateHsmResponsePrivate::CreateHsmResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM CreateHsmResponse element.
  *
  * @param  xml  XML stream to parse.

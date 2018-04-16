@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StopTriggerResponse
+/*!
+ * \class QtAws::Glue::StopTriggerResponse
  *
- * @brief  Handles Glue StopTrigger responses.
+ * \brief The StopTriggerResponse class encapsulates Glue StopTrigger responses.
  *
- * @see    GlueClient::stopTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::stopTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new StopTriggerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopTriggerRequest * StopTriggerResponse::request() const
     return static_cast<const StopTriggerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue StopTrigger response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopTriggerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopTriggerResponsePrivate
+ * \class StopTriggerResponsePrivate
  *
- * @brief  Private implementation for StopTriggerResponse.
+ * \brief Private implementation for StopTriggerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopTriggerResponsePrivate object.
@@ -91,7 +97,7 @@ StopTriggerResponsePrivate::StopTriggerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue StopTriggerResponse element.
  *
  * @param  xml  XML stream to parse.

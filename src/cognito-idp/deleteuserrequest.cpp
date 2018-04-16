@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteUser requests.
+ * \brief The DeleteUserRequest class encapsulates CognitoIdentityProvider DeleteUser requests.
  *
- * @see    CognitoIdentityProviderClient::deleteUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUser
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
@@ -53,13 +66,16 @@ DeleteUserRequest::DeleteUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
     return new DeleteUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserRequestPrivate object, copying another.

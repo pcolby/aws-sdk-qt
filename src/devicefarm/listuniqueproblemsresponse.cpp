@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListUniqueProblemsResponse
+/*!
+ * \class QtAws::DeviceFarm::ListUniqueProblemsResponse
  *
- * @brief  Handles DeviceFarm ListUniqueProblems responses.
+ * \brief The ListUniqueProblemsResponse class encapsulates DeviceFarm ListUniqueProblems responses.
  *
- * @see    DeviceFarmClient::listUniqueProblems
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listUniqueProblems
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUniqueProblemsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListUniqueProblemsRequest * ListUniqueProblemsResponse::request() const
     return static_cast<const ListUniqueProblemsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm ListUniqueProblems response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListUniqueProblemsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListUniqueProblemsResponsePrivate
+ * \class ListUniqueProblemsResponsePrivate
  *
- * @brief  Private implementation for ListUniqueProblemsResponse.
+ * \brief Private implementation for ListUniqueProblemsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUniqueProblemsResponsePrivate object.
@@ -91,7 +96,7 @@ ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm ListUniqueProblemsResponse element.
  *
  * @param  xml  XML stream to parse.

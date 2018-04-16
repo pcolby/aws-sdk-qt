@@ -81,23 +81,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MachineLearning
+ * \brief The QtAws::MachineLearning contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  MachineLearningClient
+/*!
+ * \class QtAws::MachineLearning::MachineLearningClient
  *
- * @brief  Client for Amazon Machine Learning
+ * \brief The MachineLearningClient class provides access the Amazon Machine Learning service.
+ *
+ * \ingroup MachineLearning
  *
  */
 
-/**
- * @brief  Constructs a new MachineLearningClient object.
+/*!
+ * \brief Constructs a MachineLearningClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MachineLearningClient::MachineLearningClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -116,21 +124,16 @@ MachineLearningClient::MachineLearningClient(
     d->serviceName = QStringLiteral("machinelearning");
 }
 
-/**
- * @brief  Constructs a new MachineLearningClient object.
+/*!
+ * \overload MachineLearningClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MachineLearningClient::MachineLearningClient(
     const QUrl &endpoint,
@@ -149,7 +152,7 @@ MachineLearningClient::MachineLearningClient(
     d->serviceName = QStringLiteral("machinelearning");
 }
 
-/**
+/*!
  * Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value. If you add a
  * tag using a key that is already associated with the ML object, <code>AddTags</code> updates the tag's
  *
@@ -164,7 +167,7 @@ AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates predictions for a group of observations. The observations to process exist in one or more data files
  * referenced by a <code>DataSource</code>. This operation creates a new <code>BatchPrediction</code>, and uses an
  * <code>MLModel</code> and the data files referenced by the <code>DataSource</code> as information sources.
@@ -193,7 +196,7 @@ CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(con
     return qobject_cast<CreateBatchPredictionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>DataSource</code> object from an <a href="http://aws.amazon.com/rds/"> Amazon Relational Database
  * Service</a> (Amazon RDS). A <code>DataSource</code> references data that can be used to perform
  * <code>CreateMLModel</code>, <code>CreateEvaluation</code>, or <code>CreateBatchPrediction</code>
@@ -223,7 +226,7 @@ CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS
     return qobject_cast<CreateDataSourceFromRDSResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>DataSource</code> from a database hosted on an Amazon Redshift cluster. A <code>DataSource</code>
  * references data that can be used to perform either <code>CreateMLModel</code>, <code>CreateEvaluation</code>, or
  * <code>CreateBatchPrediction</code>
@@ -273,7 +276,7 @@ CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFr
     return qobject_cast<CreateDataSourceFromRedshiftResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <code>DataSource</code> object. A <code>DataSource</code> references data that can be used to perform
  * <code>CreateMLModel</code>, <code>CreateEvaluation</code>, or <code>CreateBatchPrediction</code>
  *
@@ -317,7 +320,7 @@ CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(c
     return qobject_cast<CreateDataSourceFromS3Response *>(send(request));
 }
 
-/**
+/*!
  * Creates a new <code>Evaluation</code> of an <code>MLModel</code>. An <code>MLModel</code> is evaluated on a set of
  * observations associated to a <code>DataSource</code>. Like a <code>DataSource</code> for an <code>MLModel</code>, the
  * <code>DataSource</code> for an <code>Evaluation</code> contains values for the <code>Target Variable</code>. The
@@ -347,7 +350,7 @@ CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateE
     return qobject_cast<CreateEvaluationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new <code>MLModel</code> using the <code>DataSource</code> and the recipe as information sources.
  *
  * </p
@@ -382,7 +385,7 @@ CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModel
     return qobject_cast<CreateMLModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a real-time endpoint for the <code>MLModel</code>. The endpoint contains the URI of the <code>MLModel</code>;
  * that is, the location to send real-time prediction requests for the specified
  *
@@ -397,7 +400,7 @@ CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(c
     return qobject_cast<CreateRealtimeEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns the DELETED status to a <code>BatchPrediction</code>, rendering it
  *
  * unusable>
@@ -420,7 +423,7 @@ DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(con
     return qobject_cast<DeleteBatchPredictionResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns the DELETED status to a <code>DataSource</code>, rendering it
  *
  * unusable>
@@ -443,7 +446,7 @@ DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteD
     return qobject_cast<DeleteDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns the <code>DELETED</code> status to an <code>Evaluation</code>, rendering it
  *
  * unusable>
@@ -464,7 +467,7 @@ DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteE
     return qobject_cast<DeleteEvaluationResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns the <code>DELETED</code> status to an <code>MLModel</code>, rendering it
  *
  * unusable>
@@ -487,7 +490,7 @@ DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModel
     return qobject_cast<DeleteMLModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a real time endpoint of an
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -501,7 +504,7 @@ DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(c
     return qobject_cast<DeleteRealtimeEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified tags associated with an ML object. After this operation is complete, you can't recover deleted
  *
  * tags>
@@ -519,7 +522,7 @@ DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>BatchPrediction</code> operations that match the search criteria in the
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -533,7 +536,7 @@ DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictio
     return qobject_cast<DescribeBatchPredictionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>DataSource</code> that match the search criteria in the
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -547,7 +550,7 @@ DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const D
     return qobject_cast<DescribeDataSourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>DescribeEvaluations</code> that match the search criteria in the
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -561,7 +564,7 @@ DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const D
     return qobject_cast<DescribeEvaluationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <code>MLModel</code> that match the search criteria in the
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -575,7 +578,7 @@ DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const Describ
     return qobject_cast<DescribeMLModelsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the tags for your Amazon ML
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -589,7 +592,7 @@ DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsReq
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a <code>BatchPrediction</code> that includes detailed metadata, status, and data file information for a
  * <code>Batch Prediction</code>
  *
@@ -604,7 +607,7 @@ GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const Get
     return qobject_cast<GetBatchPredictionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a <code>DataSource</code> that includes metadata and data file information, as well as the current status of the
  *
  * <code>DataSource</code>>
@@ -623,7 +626,7 @@ GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSource
     return qobject_cast<GetDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an <code>Evaluation</code> that includes metadata as well as the current status of the
  *
  * @param  request Request to send to Amazon Machine Learning.
@@ -637,7 +640,7 @@ GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluation
     return qobject_cast<GetEvaluationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an <code>MLModel</code> that includes detailed metadata, data source information, and the current status of the
  *
  * <code>MLModel</code>>
@@ -655,7 +658,7 @@ GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &
     return qobject_cast<GetMLModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a prediction for the observation using the specified <code>ML
  *
  * Model</code>> <note><title>Note</title>
@@ -673,7 +676,7 @@ PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
     return qobject_cast<PredictResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the <code>BatchPredictionName</code> of a
  *
  * <code>BatchPrediction</code>>
@@ -691,7 +694,7 @@ UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(con
     return qobject_cast<UpdateBatchPredictionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the <code>DataSourceName</code> of a
  *
  * <code>DataSource</code>>
@@ -709,7 +712,7 @@ UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateD
     return qobject_cast<UpdateDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the <code>EvaluationName</code> of an
  *
  * <code>Evaluation</code>>
@@ -727,7 +730,7 @@ UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateE
     return qobject_cast<UpdateEvaluationResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the <code>MLModelName</code> and the <code>ScoreThreshold</code> of an
  *
  * <code>MLModel</code>>
@@ -745,7 +748,7 @@ UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModel
     return qobject_cast<UpdateMLModelResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MachineLearningClientPrivate
@@ -753,7 +756,7 @@ UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModel
  * @brief  Private implementation for MachineLearningClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MachineLearningClientPrivate object.

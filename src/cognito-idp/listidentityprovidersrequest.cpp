@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListIdentityProvidersRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListIdentityProvidersRequest
  *
- * @brief  Implements CognitoIdentityProvider ListIdentityProviders requests.
+ * \brief The ListIdentityProvidersRequest class encapsulates CognitoIdentityProvider ListIdentityProviders requests.
  *
- * @see    CognitoIdentityProviderClient::listIdentityProviders
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listIdentityProviders
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIdentityProvidersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListIdentityProvidersRequest::ListIdentityProvidersRequest(const ListIdentityPro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListIdentityProvidersRequest object.
  */
 ListIdentityProvidersRequest::ListIdentityProvidersRequest()
@@ -53,13 +66,16 @@ ListIdentityProvidersRequest::ListIdentityProvidersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListIdentityProvidersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListIdentityProvidersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListIdentityProvidersRequest::response(QNetwo
     return new ListIdentityProvidersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListIdentityProvidersRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListIdentityProvidersRequest::response(QNetwo
  * @brief  Private implementation for ListIdentityProvidersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIdentityProvidersRequestPrivate object.
@@ -97,7 +113,7 @@ ListIdentityProvidersRequestPrivate::ListIdentityProvidersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIdentityProvidersRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetProjectRequest
+/*!
+ * \class QtAws::DeviceFarm::GetProjectRequest
  *
- * @brief  Implements DeviceFarm GetProject requests.
+ * \brief The GetProjectRequest class encapsulates DeviceFarm GetProject requests.
  *
- * @see    DeviceFarmClient::getProject
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getProject
  */
 
-/**
+/*!
  * @brief  Constructs a new GetProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetProjectRequest::GetProjectRequest(const GetProjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetProjectRequest object.
  */
 GetProjectRequest::GetProjectRequest()
@@ -53,13 +58,16 @@ GetProjectRequest::GetProjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetProjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetProjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetProjectRequest::response(QNetworkReply * c
     return new GetProjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetProjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetProjectRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetProjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetProjectRequestPrivate object.
@@ -97,7 +105,7 @@ GetProjectRequestPrivate::GetProjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetProjectRequestPrivate object, copying another.

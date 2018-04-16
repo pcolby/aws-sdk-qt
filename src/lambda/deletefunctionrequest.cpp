@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  DeleteFunctionRequest
+/*!
+ * \class QtAws::Lambda::DeleteFunctionRequest
  *
- * @brief  Implements Lambda DeleteFunction requests.
+ * \brief The DeleteFunctionRequest class encapsulates Lambda DeleteFunction requests.
  *
- * @see    LambdaClient::deleteFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::deleteFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteFunctionRequest::DeleteFunctionRequest(const DeleteFunctionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionRequest object.
  */
 DeleteFunctionRequest::DeleteFunctionRequest()
@@ -53,13 +67,16 @@ DeleteFunctionRequest::DeleteFunctionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFunctionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFunctionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply
     return new DeleteFunctionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFunctionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteFunctionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionRequestPrivate object, copying another.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetByteMatchSetResponse
+/*!
+ * \class QtAws::WAFRegional::GetByteMatchSetResponse
  *
- * @brief  Handles WAFRegional GetByteMatchSet responses.
+ * \brief The GetByteMatchSetResponse class encapsulates WAFRegional GetByteMatchSet responses.
  *
- * @see    WAFRegionalClient::getByteMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getByteMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetByteMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetByteMatchSetRequest * GetByteMatchSetResponse::request() const
     return static_cast<const GetByteMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional GetByteMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetByteMatchSetResponsePrivate
+ * \class GetByteMatchSetResponsePrivate
  *
- * @brief  Private implementation for GetByteMatchSetResponse.
+ * \brief Private implementation for GetByteMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetByteMatchSetResponsePrivate object.
@@ -91,7 +101,7 @@ GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional GetByteMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ReplaceTopicRuleRequest
+/*!
+ * \class QtAws::IoT::ReplaceTopicRuleRequest
  *
- * @brief  Implements IoT ReplaceTopicRule requests.
+ * \brief The ReplaceTopicRuleRequest class encapsulates IoT ReplaceTopicRule requests.
  *
- * @see    IoTClient::replaceTopicRule
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::replaceTopicRule
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceTopicRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ReplaceTopicRuleRequest::ReplaceTopicRuleRequest(const ReplaceTopicRuleRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReplaceTopicRuleRequest object.
  */
 ReplaceTopicRuleRequest::ReplaceTopicRuleRequest()
@@ -53,13 +67,16 @@ ReplaceTopicRuleRequest::ReplaceTopicRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReplaceTopicRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReplaceTopicRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceTopicRuleRequest::response(QNetworkRep
     return new ReplaceTopicRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReplaceTopicRuleRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceTopicRuleRequest::response(QNetworkRep
  * @brief  Private implementation for ReplaceTopicRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceTopicRuleRequestPrivate object.
@@ -97,7 +114,7 @@ ReplaceTopicRuleRequestPrivate::ReplaceTopicRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceTopicRuleRequestPrivate object, copying another.

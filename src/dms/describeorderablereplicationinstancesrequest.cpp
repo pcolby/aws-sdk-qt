@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeOrderableReplicationInstancesRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeOrderableReplicationInstances requests.
+ * \brief The DescribeOrderableReplicationInstancesRequest class encapsulates DatabaseMigrationService DescribeOrderableReplicationInstances requests.
  *
- * @see    DatabaseMigrationServiceClient::describeOrderableReplicationInstances
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeOrderableReplicationInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstan
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object.
  */
 DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstancesRequest()
@@ -53,13 +67,16 @@ DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstan
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeOrderableReplicationInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeOrderableReplicationInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest:
     return new DescribeOrderableReplicationInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeOrderableReplicationInstancesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest:
  * @brief  Private implementation for DescribeOrderableReplicationInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeOrderableReplicationInstancesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicatio
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeOrderableReplicationInstancesRequestPrivate object, copying another.

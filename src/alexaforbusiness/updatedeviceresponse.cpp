@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateDeviceResponse
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateDeviceResponse
  *
- * @brief  Handles AlexaForBusiness UpdateDevice responses.
+ * \brief The UpdateDeviceResponse class encapsulates AlexaForBusiness UpdateDevice responses.
  *
- * @see    AlexaForBusinessClient::updateDevice
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeviceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateDeviceRequest * UpdateDeviceResponse::request() const
     return static_cast<const UpdateDeviceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness UpdateDevice response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateDeviceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDeviceResponsePrivate
+ * \class UpdateDeviceResponsePrivate
  *
- * @brief  Private implementation for UpdateDeviceResponse.
+ * \brief Private implementation for UpdateDeviceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeviceResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateDeviceResponsePrivate::UpdateDeviceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness UpdateDeviceResponse element.
  *
  * @param  xml  XML stream to parse.

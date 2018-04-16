@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteConfigurationSetEventDestinationResponse
+/*!
+ * \class QtAws::SES::DeleteConfigurationSetEventDestinationResponse
  *
- * @brief  Handles SES DeleteConfigurationSetEventDestination responses.
+ * \brief The DeleteConfigurationSetEventDestinationResponse class encapsulates SES DeleteConfigurationSetEventDestination responses.
  *
- * @see    SESClient::deleteConfigurationSetEventDestination
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteConfigurationSetEventDestination
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetEventDestinationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEven
     return static_cast<const DeleteConfigurationSetEventDestinationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES DeleteConfigurationSetEventDestination response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteConfigurationSetEventDestinationResponsePrivate
+ * \class DeleteConfigurationSetEventDestinationResponsePrivate
  *
- * @brief  Private implementation for DeleteConfigurationSetEventDestinationResponse.
+ * \brief Private implementation for DeleteConfigurationSetEventDestinationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetEventDestinationResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEve
 
 }
 
-/**
+/*!
  * @brief  Parse an SES DeleteConfigurationSetEventDestinationResponse element.
  *
  * @param  xml  XML stream to parse.

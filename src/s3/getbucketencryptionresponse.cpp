@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketEncryptionResponse
+/*!
+ * \class QtAws::S3::GetBucketEncryptionResponse
  *
- * @brief  Handles S3 GetBucketEncryption responses.
+ * \brief The GetBucketEncryptionResponse class encapsulates S3 GetBucketEncryption responses.
  *
- * @see    S3Client::getBucketEncryption
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketEncryptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketEncryptionRequest * GetBucketEncryptionResponse::request() const
     return static_cast<const GetBucketEncryptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketEncryption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketEncryptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketEncryptionResponsePrivate
+ * \class GetBucketEncryptionResponsePrivate
  *
- * @brief  Private implementation for GetBucketEncryptionResponse.
+ * \brief Private implementation for GetBucketEncryptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketEncryptionResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketEncryptionResponsePrivate::GetBucketEncryptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketEncryptionResponse element.
  *
  * @param  xml  XML stream to parse.

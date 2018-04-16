@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DisassociateContactFromAddressBookRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookRequest
  *
- * @brief  Implements AlexaForBusiness DisassociateContactFromAddressBook requests.
+ * \brief The DisassociateContactFromAddressBookRequest class encapsulates AlexaForBusiness DisassociateContactFromAddressBook requests.
  *
- * @see    AlexaForBusinessClient::disassociateContactFromAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::disassociateContactFromAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateContactFromAddressBookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DisassociateContactFromAddressBookRequest::DisassociateContactFromAddressBookReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateContactFromAddressBookRequest object.
  */
 DisassociateContactFromAddressBookRequest::DisassociateContactFromAddressBookRequest()
@@ -53,13 +61,16 @@ DisassociateContactFromAddressBookRequest::DisassociateContactFromAddressBookReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateContactFromAddressBookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateContactFromAddressBookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateContactFromAddressBookRequest::re
     return new DisassociateContactFromAddressBookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateContactFromAddressBookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateContactFromAddressBookRequest::re
  * @brief  Private implementation for DisassociateContactFromAddressBookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateContactFromAddressBookRequestPrivate object.
@@ -97,7 +108,7 @@ DisassociateContactFromAddressBookRequestPrivate::DisassociateContactFromAddress
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateContactFromAddressBookRequestPrivate object, copying another.

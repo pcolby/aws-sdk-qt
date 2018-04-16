@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ScheduleRunResponse
+/*!
+ * \class QtAws::DeviceFarm::ScheduleRunResponse
  *
- * @brief  Handles DeviceFarm ScheduleRun responses.
+ * \brief The ScheduleRunResponse class encapsulates DeviceFarm ScheduleRun responses.
  *
- * @see    DeviceFarmClient::scheduleRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::scheduleRun
  */
 
-/**
+/*!
  * @brief  Constructs a new ScheduleRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ScheduleRunRequest * ScheduleRunResponse::request() const
     return static_cast<const ScheduleRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm ScheduleRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ScheduleRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ScheduleRunResponsePrivate
+ * \class ScheduleRunResponsePrivate
  *
- * @brief  Private implementation for ScheduleRunResponse.
+ * \brief Private implementation for ScheduleRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScheduleRunResponsePrivate object.
@@ -91,7 +96,7 @@ ScheduleRunResponsePrivate::ScheduleRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm ScheduleRunResponse element.
  *
  * @param  xml  XML stream to parse.

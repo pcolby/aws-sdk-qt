@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetCostAndUsageResponse
+/*!
+ * \class QtAws::CostExplorer::GetCostAndUsageResponse
  *
- * @brief  Handles CostExplorer GetCostAndUsage responses.
+ * \brief The GetCostAndUsageResponse class encapsulates CostExplorer GetCostAndUsage responses.
  *
- * @see    CostExplorerClient::getCostAndUsage
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getCostAndUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCostAndUsageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const GetCostAndUsageRequest * GetCostAndUsageResponse::request() const
     return static_cast<const GetCostAndUsageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostExplorer GetCostAndUsage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void GetCostAndUsageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCostAndUsageResponsePrivate
+ * \class GetCostAndUsageResponsePrivate
  *
- * @brief  Private implementation for GetCostAndUsageResponse.
+ * \brief Private implementation for GetCostAndUsageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCostAndUsageResponsePrivate object.
@@ -91,7 +107,7 @@ GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CostExplorer GetCostAndUsageResponse element.
  *
  * @param  xml  XML stream to parse.

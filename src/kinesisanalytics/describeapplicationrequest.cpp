@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DescribeApplicationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::DescribeApplicationRequest
  *
- * @brief  Implements KinesisAnalytics DescribeApplication requests.
+ * \brief The DescribeApplicationRequest class encapsulates KinesisAnalytics DescribeApplication requests.
  *
- * @see    KinesisAnalyticsClient::describeApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::describeApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeApplicationRequest::DescribeApplicationRequest(const DescribeApplication
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeApplicationRequest object.
  */
 DescribeApplicationRequest::DescribeApplicationRequest()
@@ -53,13 +56,16 @@ DescribeApplicationRequest::DescribeApplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeApplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeApplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetwork
     return new DescribeApplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeApplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetwork
  * @brief  Private implementation for DescribeApplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeApplicationRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeApplicationRequestPrivate object, copying another.

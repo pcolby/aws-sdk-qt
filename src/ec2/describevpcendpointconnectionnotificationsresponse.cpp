@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointConnectionNotificationsResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointConnectionNotificationsResponse
  *
- * @brief  Handles EC2 DescribeVpcEndpointConnectionNotifications responses.
+ * \brief The DescribeVpcEndpointConnectionNotificationsResponse class encapsulates EC2 DescribeVpcEndpointConnectionNotifications responses.
  *
- * @see    EC2Client::describeVpcEndpointConnectionNotifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointConnectionNotifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcEndpointConnectionNotificationsRequest * DescribeVpcEndpointCon
     return static_cast<const DescribeVpcEndpointConnectionNotificationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcEndpointConnectionNotifications response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice 
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcEndpointConnectionNotificationsResponsePrivate
+ * \class DescribeVpcEndpointConnectionNotificationsResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcEndpointConnectionNotificationsResponse.
+ * \brief Private implementation for DescribeVpcEndpointConnectionNotificationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcEndpointConnectionNotificationsResponsePrivate::DescribeVpcEndpointCo
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcEndpointConnectionNotificationsResponse element.
  *
  * @param  xml  XML stream to parse.

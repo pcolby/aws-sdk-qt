@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateDeviceStatusRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateDeviceStatusRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateDeviceStatus requests.
+ * \brief The UpdateDeviceStatusRequest class encapsulates CognitoIdentityProvider UpdateDeviceStatus requests.
  *
- * @see    CognitoIdentityProviderClient::updateDeviceStatus
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateDeviceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeviceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateDeviceStatusRequest::UpdateDeviceStatusRequest(const UpdateDeviceStatusReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeviceStatusRequest object.
  */
 UpdateDeviceStatusRequest::UpdateDeviceStatusRequest()
@@ -53,13 +66,16 @@ UpdateDeviceStatusRequest::UpdateDeviceStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDeviceStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDeviceStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceStatusRequest::response(QNetworkR
     return new UpdateDeviceStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDeviceStatusRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceStatusRequest::response(QNetworkR
  * @brief  Private implementation for UpdateDeviceStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeviceStatusRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeviceStatusRequestPrivate object, copying another.

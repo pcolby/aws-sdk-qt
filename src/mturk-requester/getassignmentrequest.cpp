@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetAssignmentRequest
+/*!
+ * \class QtAws::MTurk::GetAssignmentRequest
  *
- * @brief  Implements MTurk GetAssignment requests.
+ * \brief The GetAssignmentRequest class encapsulates MTurk GetAssignment requests.
  *
- * @see    MTurkClient::getAssignment
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getAssignment
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAssignmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetAssignmentRequest::GetAssignmentRequest(const GetAssignmentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAssignmentRequest object.
  */
 GetAssignmentRequest::GetAssignmentRequest()
@@ -53,13 +56,16 @@ GetAssignmentRequest::GetAssignmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAssignmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAssignmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply 
     return new GetAssignmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAssignmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply 
  * @brief  Private implementation for GetAssignmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssignmentRequestPrivate object.
@@ -97,7 +103,7 @@ GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssignmentRequestPrivate object, copying another.

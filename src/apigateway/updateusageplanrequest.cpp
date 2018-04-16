@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateUsagePlanRequest
+/*!
+ * \class QtAws::APIGateway::UpdateUsagePlanRequest
  *
- * @brief  Implements APIGateway UpdateUsagePlan requests.
+ * \brief The UpdateUsagePlanRequest class encapsulates APIGateway UpdateUsagePlan requests.
  *
- * @see    APIGatewayClient::updateUsagePlan
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateUsagePlan
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUsagePlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateUsagePlanRequest::UpdateUsagePlanRequest(const UpdateUsagePlanRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateUsagePlanRequest object.
  */
 UpdateUsagePlanRequest::UpdateUsagePlanRequest()
@@ -53,13 +61,16 @@ UpdateUsagePlanRequest::UpdateUsagePlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateUsagePlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateUsagePlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkRepl
     return new UpdateUsagePlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateUsagePlanRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdateUsagePlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUsagePlanRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUsagePlanRequestPrivate object, copying another.

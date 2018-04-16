@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcPeeringConnectionOptionsRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsRequest
  *
- * @brief  Implements EC2 ModifyVpcPeeringConnectionOptions requests.
+ * \brief The ModifyVpcPeeringConnectionOptionsRequest class encapsulates EC2 ModifyVpcPeeringConnectionOptions requests.
  *
- * @see    EC2Client::modifyVpcPeeringConnectionOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcPeeringConnectionOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequest object.
  */
 ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest()
@@ -53,13 +60,16 @@ ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcPeeringConnectionOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcPeeringConnectionOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::res
     return new ModifyVpcPeeringConnectionOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcPeeringConnectionOptionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::res
  * @brief  Private implementation for ModifyVpcPeeringConnectionOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptio
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequestPrivate object, copying another.

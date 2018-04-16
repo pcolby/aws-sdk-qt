@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  NotifyMigrationTaskStateRequest
+/*!
+ * \class QtAws::MigrationHub::NotifyMigrationTaskStateRequest
  *
- * @brief  Implements MigrationHub NotifyMigrationTaskState requests.
+ * \brief The NotifyMigrationTaskStateRequest class encapsulates MigrationHub NotifyMigrationTaskState requests.
  *
- * @see    MigrationHubClient::notifyMigrationTaskState
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::notifyMigrationTaskState
  */
 
-/**
+/*!
  * @brief  Constructs a new NotifyMigrationTaskStateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ NotifyMigrationTaskStateRequest::NotifyMigrationTaskStateRequest(const NotifyMig
 
 }
 
-/**
+/*!
  * @brief  Constructs a new NotifyMigrationTaskStateRequest object.
  */
 NotifyMigrationTaskStateRequest::NotifyMigrationTaskStateRequest()
@@ -53,13 +58,16 @@ NotifyMigrationTaskStateRequest::NotifyMigrationTaskStateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool NotifyMigrationTaskStateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an NotifyMigrationTaskStateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * NotifyMigrationTaskStateRequest::response(QNe
     return new NotifyMigrationTaskStateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  NotifyMigrationTaskStateRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * NotifyMigrationTaskStateRequest::response(QNe
  * @brief  Private implementation for NotifyMigrationTaskStateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyMigrationTaskStateRequestPrivate object.
@@ -97,7 +105,7 @@ NotifyMigrationTaskStateRequestPrivate::NotifyMigrationTaskStateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyMigrationTaskStateRequestPrivate object, copying another.

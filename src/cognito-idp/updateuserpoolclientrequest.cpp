@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateUserPoolClientRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateUserPoolClientRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateUserPoolClient requests.
+ * \brief The UpdateUserPoolClientRequest class encapsulates CognitoIdentityProvider UpdateUserPoolClient requests.
  *
- * @see    CognitoIdentityProviderClient::updateUserPoolClient
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateUserPoolClient
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserPoolClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateUserPoolClientRequest::UpdateUserPoolClientRequest(const UpdateUserPoolCli
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserPoolClientRequest object.
  */
 UpdateUserPoolClientRequest::UpdateUserPoolClientRequest()
@@ -53,13 +66,16 @@ UpdateUserPoolClientRequest::UpdateUserPoolClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateUserPoolClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateUserPoolClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetwor
     return new UpdateUserPoolClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateUserPoolClientRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetwor
  * @brief  Private implementation for UpdateUserPoolClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserPoolClientRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserPoolClientRequestPrivate object, copying another.

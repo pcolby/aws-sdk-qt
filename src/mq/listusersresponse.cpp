@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  ListUsersResponse
+/*!
+ * \class QtAws::MQ::ListUsersResponse
  *
- * @brief  Handles MQ ListUsers responses.
+ * \brief The ListUsersResponse class encapsulates MQ ListUsers responses.
  *
- * @see    MQClient::listUsers
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::listUsers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUsersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListUsersRequest * ListUsersResponse::request() const
     return static_cast<const ListUsersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ ListUsers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListUsersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListUsersResponsePrivate
+ * \class ListUsersResponsePrivate
  *
- * @brief  Private implementation for ListUsersResponse.
+ * \brief Private implementation for ListUsersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersResponsePrivate object.
@@ -91,7 +96,7 @@ ListUsersResponsePrivate::ListUsersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ ListUsersResponse element.
  *
  * @param  xml  XML stream to parse.

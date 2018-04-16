@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  CreateClusterRequest
+/*!
+ * \class QtAws::CloudHSMV2::CreateClusterRequest
  *
- * @brief  Implements CloudHSMV2 CreateCluster requests.
+ * \brief The CreateClusterRequest class encapsulates CloudHSMV2 CreateCluster requests.
  *
- * @see    CloudHSMV2Client::createCluster
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::createCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
@@ -53,13 +58,16 @@ CreateClusterRequest::CreateClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
     return new CreateClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateClusterRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterRequestPrivate object.
@@ -97,7 +105,7 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.

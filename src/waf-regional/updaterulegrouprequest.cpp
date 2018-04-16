@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  UpdateRuleGroupRequest
+/*!
+ * \class QtAws::WAFRegional::UpdateRuleGroupRequest
  *
- * @brief  Implements WAFRegional UpdateRuleGroup requests.
+ * \brief The UpdateRuleGroupRequest class encapsulates WAFRegional UpdateRuleGroup requests.
  *
- * @see    WAFRegionalClient::updateRuleGroup
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::updateRuleGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRuleGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateRuleGroupRequest object.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest()
@@ -53,13 +63,16 @@ UpdateRuleGroupRequest::UpdateRuleGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateRuleGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateRuleGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
     return new UpdateRuleGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateRuleGroupRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdateRuleGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRuleGroupRequestPrivate object.
@@ -97,7 +110,7 @@ UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRuleGroupRequestPrivate object, copying another.

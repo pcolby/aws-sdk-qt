@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  RemoveFacetFromObjectResponse
+/*!
+ * \class QtAws::CloudDirectory::RemoveFacetFromObjectResponse
  *
- * @brief  Handles CloudDirectory RemoveFacetFromObject responses.
+ * \brief The RemoveFacetFromObjectResponse class encapsulates CloudDirectory RemoveFacetFromObject responses.
  *
- * @see    CloudDirectoryClient::removeFacetFromObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::removeFacetFromObject
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveFacetFromObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const RemoveFacetFromObjectRequest * RemoveFacetFromObjectResponse::request() co
     return static_cast<const RemoveFacetFromObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory RemoveFacetFromObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void RemoveFacetFromObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveFacetFromObjectResponsePrivate
+ * \class RemoveFacetFromObjectResponsePrivate
  *
- * @brief  Private implementation for RemoveFacetFromObjectResponse.
+ * \brief Private implementation for RemoveFacetFromObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveFacetFromObjectResponsePrivate object.
@@ -91,7 +101,7 @@ RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory RemoveFacetFromObjectResponse element.
  *
  * @param  xml  XML stream to parse.

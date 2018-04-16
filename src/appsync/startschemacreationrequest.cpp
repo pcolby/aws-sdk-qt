@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  StartSchemaCreationRequest
+/*!
+ * \class QtAws::AppSync::StartSchemaCreationRequest
  *
- * @brief  Implements AppSync StartSchemaCreation requests.
+ * \brief The StartSchemaCreationRequest class encapsulates AppSync StartSchemaCreation requests.
  *
- * @see    AppSyncClient::startSchemaCreation
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::startSchemaCreation
  */
 
-/**
+/*!
  * @brief  Constructs a new StartSchemaCreationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ StartSchemaCreationRequest::StartSchemaCreationRequest(const StartSchemaCreation
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartSchemaCreationRequest object.
  */
 StartSchemaCreationRequest::StartSchemaCreationRequest()
@@ -53,13 +57,16 @@ StartSchemaCreationRequest::StartSchemaCreationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartSchemaCreationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartSchemaCreationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * StartSchemaCreationRequest::response(QNetwork
     return new StartSchemaCreationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartSchemaCreationRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * StartSchemaCreationRequest::response(QNetwork
  * @brief  Private implementation for StartSchemaCreationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSchemaCreationRequestPrivate object.
@@ -97,7 +104,7 @@ StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSchemaCreationRequestPrivate object, copying another.

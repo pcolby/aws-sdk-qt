@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetPublicKeyConfigRequest
+/*!
+ * \class QtAws::CloudFront::GetPublicKeyConfigRequest
  *
- * @brief  Implements CloudFront GetPublicKeyConfig requests.
+ * \brief The GetPublicKeyConfigRequest class encapsulates CloudFront GetPublicKeyConfig requests.
  *
- * @see    CloudFrontClient::getPublicKeyConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getPublicKeyConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPublicKeyConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetPublicKeyConfigRequest::GetPublicKeyConfigRequest(const GetPublicKeyConfigReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPublicKeyConfigRequest object.
  */
 GetPublicKeyConfigRequest::GetPublicKeyConfigRequest()
@@ -53,13 +61,16 @@ GetPublicKeyConfigRequest::GetPublicKeyConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPublicKeyConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPublicKeyConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetPublicKeyConfigRequest::response(QNetworkR
     return new GetPublicKeyConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPublicKeyConfigRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetPublicKeyConfigRequest::response(QNetworkR
  * @brief  Private implementation for GetPublicKeyConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPublicKeyConfigRequestPrivate object.
@@ -97,7 +108,7 @@ GetPublicKeyConfigRequestPrivate::GetPublicKeyConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPublicKeyConfigRequestPrivate object, copying another.

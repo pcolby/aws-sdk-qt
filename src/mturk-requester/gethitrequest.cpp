@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetHITRequest
+/*!
+ * \class QtAws::MTurk::GetHITRequest
  *
- * @brief  Implements MTurk GetHIT requests.
+ * \brief The GetHITRequest class encapsulates MTurk GetHIT requests.
  *
- * @see    MTurkClient::getHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetHITRequest::GetHITRequest(const GetHITRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetHITRequest object.
  */
 GetHITRequest::GetHITRequest()
@@ -53,13 +56,16 @@ GetHITRequest::GetHITRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetHITRequest::response(QNetworkReply * const
     return new GetHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetHITRequest::response(QNetworkReply * const
  * @brief  Private implementation for GetHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHITRequestPrivate object.
@@ -97,7 +103,7 @@ GetHITRequestPrivate::GetHITRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHITRequestPrivate object, copying another.

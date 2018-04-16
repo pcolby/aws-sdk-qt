@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachClassicLinkVpcResponse
+/*!
+ * \class QtAws::EC2::AttachClassicLinkVpcResponse
  *
- * @brief  Handles EC2 AttachClassicLinkVpc responses.
+ * \brief The AttachClassicLinkVpcResponse class encapsulates EC2 AttachClassicLinkVpc responses.
  *
- * @see    EC2Client::attachClassicLinkVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachClassicLinkVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachClassicLinkVpcResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AttachClassicLinkVpcRequest * AttachClassicLinkVpcResponse::request() cons
     return static_cast<const AttachClassicLinkVpcRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AttachClassicLinkVpc response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AttachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachClassicLinkVpcResponsePrivate
+ * \class AttachClassicLinkVpcResponsePrivate
  *
- * @brief  Private implementation for AttachClassicLinkVpcResponse.
+ * \brief Private implementation for AttachClassicLinkVpcResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachClassicLinkVpcResponsePrivate object.
@@ -91,7 +98,7 @@ AttachClassicLinkVpcResponsePrivate::AttachClassicLinkVpcResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AttachClassicLinkVpcResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteSmsChannelRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteSmsChannelRequest
  *
- * @brief  Implements Pinpoint DeleteSmsChannel requests.
+ * \brief The DeleteSmsChannelRequest class encapsulates Pinpoint DeleteSmsChannel requests.
  *
- * @see    PinpointClient::deleteSmsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteSmsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSmsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteSmsChannelRequest::DeleteSmsChannelRequest(const DeleteSmsChannelRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSmsChannelRequest object.
  */
 DeleteSmsChannelRequest::DeleteSmsChannelRequest()
@@ -53,13 +56,16 @@ DeleteSmsChannelRequest::DeleteSmsChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSmsChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSmsChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSmsChannelRequest::response(QNetworkRep
     return new DeleteSmsChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSmsChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSmsChannelRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteSmsChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSmsChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteSmsChannelRequestPrivate::DeleteSmsChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSmsChannelRequestPrivate object, copying another.

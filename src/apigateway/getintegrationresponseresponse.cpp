@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetIntegrationResponseResponse
+/*!
+ * \class QtAws::APIGateway::GetIntegrationResponseResponse
  *
- * @brief  Handles APIGateway GetIntegrationResponse responses.
+ * \brief The GetIntegrationResponseResponse class encapsulates APIGateway GetIntegrationResponse responses.
  *
- * @see    APIGatewayClient::getIntegrationResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getIntegrationResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntegrationResponseResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetIntegrationResponseRequest * GetIntegrationResponseResponse::request() 
     return static_cast<const GetIntegrationResponseRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetIntegrationResponse response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetIntegrationResponseResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIntegrationResponseResponsePrivate
+ * \class GetIntegrationResponseResponsePrivate
  *
- * @brief  Private implementation for GetIntegrationResponseResponse.
+ * \brief Private implementation for GetIntegrationResponseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntegrationResponseResponsePrivate object.
@@ -91,7 +99,7 @@ GetIntegrationResponseResponsePrivate::GetIntegrationResponseResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetIntegrationResponseResponse element.
  *
  * @param  xml  XML stream to parse.

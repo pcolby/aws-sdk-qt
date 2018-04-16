@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  TerminateInstancesResponse
+/*!
+ * \class QtAws::EC2::TerminateInstancesResponse
  *
- * @brief  Handles EC2 TerminateInstances responses.
+ * \brief The TerminateInstancesResponse class encapsulates EC2 TerminateInstances responses.
  *
- * @see    EC2Client::terminateInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::terminateInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const TerminateInstancesRequest * TerminateInstancesResponse::request() const
     return static_cast<const TerminateInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 TerminateInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void TerminateInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TerminateInstancesResponsePrivate
+ * \class TerminateInstancesResponsePrivate
  *
- * @brief  Private implementation for TerminateInstancesResponse.
+ * \brief Private implementation for TerminateInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ TerminateInstancesResponsePrivate::TerminateInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 TerminateInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

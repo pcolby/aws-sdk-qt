@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListIndexResponse
+/*!
+ * \class QtAws::CloudDirectory::ListIndexResponse
  *
- * @brief  Handles CloudDirectory ListIndex responses.
+ * \brief The ListIndexResponse class encapsulates CloudDirectory ListIndex responses.
  *
- * @see    CloudDirectoryClient::listIndex
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIndexResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListIndexRequest * ListIndexResponse::request() const
     return static_cast<const ListIndexRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListIndex response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListIndexResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListIndexResponsePrivate
+ * \class ListIndexResponsePrivate
  *
- * @brief  Private implementation for ListIndexResponse.
+ * \brief Private implementation for ListIndexResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIndexResponsePrivate object.
@@ -91,7 +101,7 @@ ListIndexResponsePrivate::ListIndexResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListIndexResponse element.
  *
  * @param  xml  XML stream to parse.

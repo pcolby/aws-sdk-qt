@@ -25,15 +25,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  QueryRequest
+/*!
+ * \class QtAws::DynamoDB::QueryRequest
  *
- * @brief  Implements DynamoDB Query requests.
+ * \brief The QueryRequest class encapsulates DynamoDB Query requests.
  *
- * @see    DynamoDBClient::query
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::query
  */
 
-/**
+/*!
  * @brief  Constructs a new QueryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +66,7 @@ QueryRequest::QueryRequest(const QueryRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new QueryRequest object.
  */
 QueryRequest::QueryRequest()
@@ -53,13 +75,16 @@ QueryRequest::QueryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool QueryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an QueryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
     return new QueryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  QueryRequestPrivate
@@ -82,7 +107,7 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
  * @brief  Private implementation for QueryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new QueryRequestPrivate object.
@@ -97,7 +122,7 @@ QueryRequestPrivate::QueryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new QueryRequestPrivate object, copying another.

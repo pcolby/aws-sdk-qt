@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetPublicKeyRequest
+/*!
+ * \class QtAws::CloudFront::GetPublicKeyRequest
  *
- * @brief  Implements CloudFront GetPublicKey requests.
+ * \brief The GetPublicKeyRequest class encapsulates CloudFront GetPublicKey requests.
  *
- * @see    CloudFrontClient::getPublicKey
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getPublicKey
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPublicKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetPublicKeyRequest::GetPublicKeyRequest(const GetPublicKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPublicKeyRequest object.
  */
 GetPublicKeyRequest::GetPublicKeyRequest()
@@ -53,13 +61,16 @@ GetPublicKeyRequest::GetPublicKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPublicKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPublicKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetPublicKeyRequest::response(QNetworkReply *
     return new GetPublicKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPublicKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetPublicKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for GetPublicKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPublicKeyRequestPrivate object.
@@ -97,7 +108,7 @@ GetPublicKeyRequestPrivate::GetPublicKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPublicKeyRequestPrivate object, copying another.

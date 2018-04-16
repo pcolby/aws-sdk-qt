@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetJobsRequest
+/*!
+ * \class QtAws::Glue::GetJobsRequest
  *
- * @brief  Implements Glue GetJobs requests.
+ * \brief The GetJobsRequest class encapsulates Glue GetJobs requests.
  *
- * @see    GlueClient::getJobs
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetJobsRequest::GetJobsRequest(const GetJobsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetJobsRequest object.
  */
 GetJobsRequest::GetJobsRequest()
@@ -53,13 +59,16 @@ GetJobsRequest::GetJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetJobsRequest::response(QNetworkReply * cons
     return new GetJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetJobsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetJobsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobsRequestPrivate object.
@@ -97,7 +106,7 @@ GetJobsRequestPrivate::GetJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobsRequestPrivate object, copying another.

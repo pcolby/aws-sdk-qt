@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetSlotTypeVersionsRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetSlotTypeVersionsRequest
  *
- * @brief  Implements LexModelBuildingService GetSlotTypeVersions requests.
+ * \brief The GetSlotTypeVersionsRequest class encapsulates LexModelBuildingService GetSlotTypeVersions requests.
  *
- * @see    LexModelBuildingServiceClient::getSlotTypeVersions
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getSlotTypeVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSlotTypeVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetSlotTypeVersionsRequest::GetSlotTypeVersionsRequest(const GetSlotTypeVersions
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSlotTypeVersionsRequest object.
  */
 GetSlotTypeVersionsRequest::GetSlotTypeVersionsRequest()
@@ -53,13 +60,16 @@ GetSlotTypeVersionsRequest::GetSlotTypeVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSlotTypeVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSlotTypeVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypeVersionsRequest::response(QNetwork
     return new GetSlotTypeVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSlotTypeVersionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypeVersionsRequest::response(QNetwork
  * @brief  Private implementation for GetSlotTypeVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSlotTypeVersionsRequestPrivate object.
@@ -97,7 +107,7 @@ GetSlotTypeVersionsRequestPrivate::GetSlotTypeVersionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSlotTypeVersionsRequestPrivate object, copying another.

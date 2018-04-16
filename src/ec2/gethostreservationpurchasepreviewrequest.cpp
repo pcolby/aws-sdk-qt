@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetHostReservationPurchasePreviewRequest
+/*!
+ * \class QtAws::EC2::GetHostReservationPurchasePreviewRequest
  *
- * @brief  Implements EC2 GetHostReservationPurchasePreview requests.
+ * \brief The GetHostReservationPurchasePreviewRequest class encapsulates EC2 GetHostReservationPurchasePreview requests.
  *
- * @see    EC2Client::getHostReservationPurchasePreview
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getHostReservationPurchasePreview
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHostReservationPurchasePreviewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetHostReservationPurchasePreviewRequest object.
  */
 GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewRequest()
@@ -53,13 +60,16 @@ GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetHostReservationPurchasePreviewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetHostReservationPurchasePreviewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::res
     return new GetHostReservationPurchasePreviewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetHostReservationPurchasePreviewRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::res
  * @brief  Private implementation for GetHostReservationPurchasePreviewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostReservationPurchasePreviewRequestPrivate object.
@@ -97,7 +107,7 @@ GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePrevi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostReservationPurchasePreviewRequestPrivate object, copying another.

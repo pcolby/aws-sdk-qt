@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateFpgaImageRequest
+/*!
+ * \class QtAws::EC2::CreateFpgaImageRequest
  *
- * @brief  Implements EC2 CreateFpgaImage requests.
+ * \brief The CreateFpgaImageRequest class encapsulates EC2 CreateFpgaImage requests.
  *
- * @see    EC2Client::createFpgaImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createFpgaImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFpgaImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateFpgaImageRequest::CreateFpgaImageRequest(const CreateFpgaImageRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFpgaImageRequest object.
  */
 CreateFpgaImageRequest::CreateFpgaImageRequest()
@@ -53,13 +60,16 @@ CreateFpgaImageRequest::CreateFpgaImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFpgaImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFpgaImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateFpgaImageRequest::response(QNetworkRepl
     return new CreateFpgaImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFpgaImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateFpgaImageRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateFpgaImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFpgaImageRequestPrivate object.
@@ -97,7 +107,7 @@ CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFpgaImageRequestPrivate object, copying another.

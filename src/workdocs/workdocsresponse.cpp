@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace WorkDocs {
 
-/**
- * @class  WorkDocsResponse
+/*!
+ * \class QtAws::WorkDocs::WorkDocsResponse
  *
- * @brief  Handles WorkDocs WorkDocs responses.
+ * \brief The WorkDocsResponse class is the base class for all WorkDocs responses.
  *
- * @see    WorkDocsClient::workDocs
+ * \ingroup WorkDocs
  */
 
-/**
+/*!
  * @brief  Constructs a new WorkDocsResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ WorkDocsResponse::WorkDocsResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkDocsResponse object.
@@ -63,7 +63,7 @@ WorkDocsResponse::WorkDocsResponse(WorkDocsResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void WorkDocsResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WorkDocsResponsePrivate
@@ -92,7 +92,7 @@ void WorkDocsResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for WorkDocsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkDocsResponsePrivate object.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ReadJobRequest
+/*!
+ * \class QtAws::ElasticTranscoder::ReadJobRequest
  *
- * @brief  Implements ElasticTranscoder ReadJob requests.
+ * \brief The ReadJobRequest class encapsulates ElasticTranscoder ReadJob requests.
  *
- * @see    ElasticTranscoderClient::readJob
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::readJob
  */
 
-/**
+/*!
  * @brief  Constructs a new ReadJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ReadJobRequest::ReadJobRequest(const ReadJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReadJobRequest object.
  */
 ReadJobRequest::ReadJobRequest()
@@ -53,13 +59,16 @@ ReadJobRequest::ReadJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReadJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReadJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * cons
     return new ReadJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReadJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * cons
  * @brief  Private implementation for ReadJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadJobRequestPrivate object.
@@ -97,7 +106,7 @@ ReadJobRequestPrivate::ReadJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadJobRequestPrivate object, copying another.

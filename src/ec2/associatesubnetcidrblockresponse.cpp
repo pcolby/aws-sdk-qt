@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateSubnetCidrBlockResponse
+/*!
+ * \class QtAws::EC2::AssociateSubnetCidrBlockResponse
  *
- * @brief  Handles EC2 AssociateSubnetCidrBlock responses.
+ * \brief The AssociateSubnetCidrBlockResponse class encapsulates EC2 AssociateSubnetCidrBlock responses.
  *
- * @see    EC2Client::associateSubnetCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateSubnetCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateSubnetCidrBlockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssociateSubnetCidrBlockRequest * AssociateSubnetCidrBlockResponse::reques
     return static_cast<const AssociateSubnetCidrBlockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssociateSubnetCidrBlock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateSubnetCidrBlockResponsePrivate
+ * \class AssociateSubnetCidrBlockResponsePrivate
  *
- * @brief  Private implementation for AssociateSubnetCidrBlockResponse.
+ * \brief Private implementation for AssociateSubnetCidrBlockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateSubnetCidrBlockResponsePrivate object.
@@ -91,7 +98,7 @@ AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssociateSubnetCidrBlockResponse element.
  *
  * @param  xml  XML stream to parse.

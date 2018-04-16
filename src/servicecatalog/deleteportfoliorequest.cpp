@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeletePortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::DeletePortfolioRequest
  *
- * @brief  Implements ServiceCatalog DeletePortfolio requests.
+ * \brief The DeletePortfolioRequest class encapsulates ServiceCatalog DeletePortfolio requests.
  *
- * @see    ServiceCatalogClient::deletePortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deletePortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeletePortfolioRequest::DeletePortfolioRequest(const DeletePortfolioRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePortfolioRequest object.
  */
 DeletePortfolioRequest::DeletePortfolioRequest()
@@ -53,13 +62,16 @@ DeletePortfolioRequest::DeletePortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioRequest::response(QNetworkRepl
     return new DeletePortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioRequest::response(QNetworkRepl
  * @brief  Private implementation for DeletePortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePortfolioRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DescribeInputSecurityGroupResponse
+/*!
+ * \class QtAws::MediaLive::DescribeInputSecurityGroupResponse
  *
- * @brief  Handles MediaLive DescribeInputSecurityGroup responses.
+ * \brief The DescribeInputSecurityGroupResponse class encapsulates MediaLive DescribeInputSecurityGroup responses.
  *
- * @see    MediaLiveClient::describeInputSecurityGroup
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::describeInputSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInputSecurityGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeInputSecurityGroupRequest * DescribeInputSecurityGroupResponse::re
     return static_cast<const DescribeInputSecurityGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive DescribeInputSecurityGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeInputSecurityGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeInputSecurityGroupResponsePrivate
+ * \class DescribeInputSecurityGroupResponsePrivate
  *
- * @brief  Private implementation for DescribeInputSecurityGroupResponse.
+ * \brief Private implementation for DescribeInputSecurityGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInputSecurityGroupResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive DescribeInputSecurityGroupResponse element.
  *
  * @param  xml  XML stream to parse.

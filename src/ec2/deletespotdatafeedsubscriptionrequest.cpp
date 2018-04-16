@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSpotDatafeedSubscriptionRequest
+/*!
+ * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionRequest
  *
- * @brief  Implements EC2 DeleteSpotDatafeedSubscription requests.
+ * \brief The DeleteSpotDatafeedSubscriptionRequest class encapsulates EC2 DeleteSpotDatafeedSubscription requests.
  *
- * @see    EC2Client::deleteSpotDatafeedSubscription
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSpotDatafeedSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequest object.
  */
 DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest()
@@ -53,13 +60,16 @@ DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSpotDatafeedSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSpotDatafeedSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::respon
     return new DeleteSpotDatafeedSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSpotDatafeedSubscriptionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::respon
  * @brief  Private implementation for DeleteSpotDatafeedSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequestPrivate object, copying another.

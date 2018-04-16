@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  PutSchemaFromJsonResponse
+/*!
+ * \class QtAws::CloudDirectory::PutSchemaFromJsonResponse
  *
- * @brief  Handles CloudDirectory PutSchemaFromJson responses.
+ * \brief The PutSchemaFromJsonResponse class encapsulates CloudDirectory PutSchemaFromJson responses.
  *
- * @see    CloudDirectoryClient::putSchemaFromJson
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::putSchemaFromJson
  */
 
-/**
+/*!
  * @brief  Constructs a new PutSchemaFromJsonResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const PutSchemaFromJsonRequest * PutSchemaFromJsonResponse::request() const
     return static_cast<const PutSchemaFromJsonRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory PutSchemaFromJson response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void PutSchemaFromJsonResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutSchemaFromJsonResponsePrivate
+ * \class PutSchemaFromJsonResponsePrivate
  *
- * @brief  Private implementation for PutSchemaFromJsonResponse.
+ * \brief Private implementation for PutSchemaFromJsonResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutSchemaFromJsonResponsePrivate object.
@@ -91,7 +101,7 @@ PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory PutSchemaFromJsonResponse element.
  *
  * @param  xml  XML stream to parse.

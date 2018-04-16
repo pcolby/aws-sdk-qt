@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  DescribeClusterResponse
+/*!
+ * \class QtAws::Snowball::DescribeClusterResponse
  *
- * @brief  Handles Snowball DescribeCluster responses.
+ * \brief The DescribeClusterResponse class encapsulates Snowball DescribeCluster responses.
  *
- * @see    SnowballClient::describeCluster
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::describeCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeClusterRequest * DescribeClusterResponse::request() const
     return static_cast<const DescribeClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball DescribeCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeClusterResponsePrivate
+ * \class DescribeClusterResponsePrivate
  *
- * @brief  Private implementation for DescribeClusterResponse.
+ * \brief Private implementation for DescribeClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClusterResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball DescribeClusterResponse element.
  *
  * @param  xml  XML stream to parse.

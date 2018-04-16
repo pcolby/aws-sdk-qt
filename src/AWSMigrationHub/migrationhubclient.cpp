@@ -57,25 +57,33 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MigrationHub
+ * \brief The QtAws::MigrationHub contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  MigrationHubClient
+/*!
+ * \class QtAws::MigrationHub::MigrationHubClient
  *
- * @brief  Client for AWS Migration Hub
+ * \brief The MigrationHubClient class provides access the AWS Migration Hub service.
  *
- * The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
- * resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
  */
 
-/**
- * @brief  Constructs a new MigrationHubClient object.
+/*!
+ * \brief Constructs a MigrationHubClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MigrationHubClient::MigrationHubClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -94,21 +102,16 @@ MigrationHubClient::MigrationHubClient(
     d->serviceName = QStringLiteral("mgh");
 }
 
-/**
- * @brief  Constructs a new MigrationHubClient object.
+/*!
+ * \overload MigrationHubClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MigrationHubClient::MigrationHubClient(
     const QUrl &endpoint,
@@ -127,7 +130,7 @@ MigrationHubClient::MigrationHubClient(
     d->serviceName = QStringLiteral("mgh");
 }
 
-/**
+/*!
  * Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task
  * performed by a migration tool. This API has the following
  *
@@ -156,7 +159,7 @@ AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(
     return qobject_cast<AssociateCreatedArtifactResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a discovered resource ID from Application Discovery Service (ADS) with a migration
  *
  * @param  request Request to send to AWS Migration Hub.
@@ -170,7 +173,7 @@ AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredRes
     return qobject_cast<AssociateDiscoveredResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a progress update stream which is an AWS resource used for access control as well as a namespace for migration
  * task names that is implicitly linked to your AWS account. It must uniquely identify the migration tool as it is used for
  * all updates made by the tool; however, it does not need to be unique for each AWS account because it is scoped to the
@@ -187,7 +190,7 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
     return qobject_cast<CreateProgressUpdateStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for
  * access control. This API has the following
  *
@@ -228,7 +231,7 @@ DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStr
     return qobject_cast<DeleteProgressUpdateStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the migration status of an
  *
  * @param  request Request to send to AWS Migration Hub.
@@ -242,7 +245,7 @@ DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(
     return qobject_cast<DescribeApplicationStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of all attributes associated with a specific migration
  *
  * @param  request Request to send to AWS Migration Hub.
@@ -256,7 +259,7 @@ DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const 
     return qobject_cast<DescribeMigrationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was
  * previously associated. This API has the following
  *
@@ -285,7 +288,7 @@ DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArt
     return qobject_cast<DisassociateCreatedArtifactResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociate an Application Discovery Service (ADS) discovered resource from a migration
  *
  * @param  request Request to send to AWS Migration Hub.
@@ -299,7 +302,7 @@ DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscove
     return qobject_cast<DisassociateDiscoveredResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers a new migration task which represents a server, database, etc., being migrated to AWS by a migration
  *
  * tool>
@@ -318,7 +321,7 @@ ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const Impo
     return qobject_cast<ImportMigrationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the created artifacts attached to a given migration task in an update stream. This API has the following
  *
  * traits> <ul> <li>
@@ -344,7 +347,7 @@ ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const Li
     return qobject_cast<ListCreatedArtifactsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists discovered resources associated with the given
  *
  * @param  request Request to send to AWS Migration Hub.
@@ -358,7 +361,7 @@ ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(co
     return qobject_cast<ListDiscoveredResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all, or filtered by resource name, migration tasks associated with the user account making this call. This API has
  * the following
  *
@@ -385,7 +388,7 @@ ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMi
     return qobject_cast<ListMigrationTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists progress update streams associated with the user account making this
  *
  * @param  request Request to send to AWS Migration Hub.
@@ -399,7 +402,7 @@ ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStream
     return qobject_cast<ListProgressUpdateStreamsResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the migration state of an application. For a given application identified by the value passed to
  * <code>ApplicationId</code>, its status is set or updated by passing one of three values to <code>Status</code>:
  * <code>NOT_STARTED | IN_PROGRESS |
@@ -415,7 +418,7 @@ NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(cons
     return qobject_cast<NotifyApplicationStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Notifies Migration Hub of the current status, progress, or other detail regarding a migration task. This API has the
  * following
  *
@@ -442,7 +445,7 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
     return qobject_cast<NotifyMigrationTaskStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery
  * Service (ADS)'s repository. This association occurs asynchronously after <code>PutResourceAttributes</code>
  *
@@ -473,7 +476,7 @@ PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const 
     return qobject_cast<PutResourceAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MigrationHubClientPrivate
@@ -481,7 +484,7 @@ PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const 
  * @brief  Private implementation for MigrationHubClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MigrationHubClientPrivate object.

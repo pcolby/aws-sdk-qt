@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DeleteAssessmentTargetRequest
+/*!
+ * \class QtAws::Inspector::DeleteAssessmentTargetRequest
  *
- * @brief  Implements Inspector DeleteAssessmentTarget requests.
+ * \brief The DeleteAssessmentTargetRequest class encapsulates Inspector DeleteAssessmentTarget requests.
  *
- * @see    InspectorClient::deleteAssessmentTarget
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::deleteAssessmentTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest(const DeleteAssessm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentTargetRequest object.
  */
 DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest()
@@ -53,13 +61,16 @@ DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAssessmentTargetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAssessmentTargetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetw
     return new DeleteAssessmentTargetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAssessmentTargetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetw
  * @brief  Private implementation for DeleteAssessmentTargetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentTargetRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentTargetRequestPrivate object, copying another.

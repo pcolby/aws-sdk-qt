@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEndpointTypesResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEndpointTypesResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeEndpointTypes responses.
+ * \brief The DescribeEndpointTypesResponse class encapsulates DatabaseMigrationService DescribeEndpointTypes responses.
  *
- * @see    DatabaseMigrationServiceClient::describeEndpointTypes
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEndpointTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeEndpointTypesRequest * DescribeEndpointTypesResponse::request() co
     return static_cast<const DescribeEndpointTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeEndpointTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeEndpointTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEndpointTypesResponsePrivate
+ * \class DescribeEndpointTypesResponsePrivate
  *
- * @brief  Private implementation for DescribeEndpointTypesResponse.
+ * \brief Private implementation for DescribeEndpointTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointTypesResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeEndpointTypesResponsePrivate::DescribeEndpointTypesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeEndpointTypesResponse element.
  *
  * @param  xml  XML stream to parse.

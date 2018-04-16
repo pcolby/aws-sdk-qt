@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetUserSettingsRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetUserSettingsRequest
  *
- * @brief  Implements CognitoIdentityProvider SetUserSettings requests.
+ * \brief The SetUserSettingsRequest class encapsulates CognitoIdentityProvider SetUserSettings requests.
  *
- * @see    CognitoIdentityProviderClient::setUserSettings
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setUserSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new SetUserSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ SetUserSettingsRequest::SetUserSettingsRequest(const SetUserSettingsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetUserSettingsRequest object.
  */
 SetUserSettingsRequest::SetUserSettingsRequest()
@@ -53,13 +66,16 @@ SetUserSettingsRequest::SetUserSettingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetUserSettingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetUserSettingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkRepl
     return new SetUserSettingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetUserSettingsRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkRepl
  * @brief  Private implementation for SetUserSettingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserSettingsRequestPrivate object.
@@ -97,7 +113,7 @@ SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserSettingsRequestPrivate object, copying another.

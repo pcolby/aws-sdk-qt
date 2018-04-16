@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  SearchProvisionedProductsRequest
+/*!
+ * \class QtAws::ServiceCatalog::SearchProvisionedProductsRequest
  *
- * @brief  Implements ServiceCatalog SearchProvisionedProducts requests.
+ * \brief The SearchProvisionedProductsRequest class encapsulates ServiceCatalog SearchProvisionedProducts requests.
  *
- * @see    ServiceCatalogClient::searchProvisionedProducts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::searchProvisionedProducts
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProvisionedProductsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ SearchProvisionedProductsRequest::SearchProvisionedProductsRequest(const SearchP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchProvisionedProductsRequest object.
  */
 SearchProvisionedProductsRequest::SearchProvisionedProductsRequest()
@@ -53,13 +62,16 @@ SearchProvisionedProductsRequest::SearchProvisionedProductsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchProvisionedProductsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchProvisionedProductsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * SearchProvisionedProductsRequest::response(QN
     return new SearchProvisionedProductsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchProvisionedProductsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * SearchProvisionedProductsRequest::response(QN
  * @brief  Private implementation for SearchProvisionedProductsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProvisionedProductsRequestPrivate object.
@@ -97,7 +109,7 @@ SearchProvisionedProductsRequestPrivate::SearchProvisionedProductsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProvisionedProductsRequestPrivate object, copying another.

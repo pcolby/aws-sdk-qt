@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UnassignPrivateIpAddressesRequest
+/*!
+ * \class QtAws::EC2::UnassignPrivateIpAddressesRequest
  *
- * @brief  Implements EC2 UnassignPrivateIpAddresses requests.
+ * \brief The UnassignPrivateIpAddressesRequest class encapsulates EC2 UnassignPrivateIpAddresses requests.
  *
- * @see    EC2Client::unassignPrivateIpAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::unassignPrivateIpAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new UnassignPrivateIpAddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest(const Unass
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UnassignPrivateIpAddressesRequest object.
  */
 UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest()
@@ -53,13 +60,16 @@ UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UnassignPrivateIpAddressesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UnassignPrivateIpAddressesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(Q
     return new UnassignPrivateIpAddressesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UnassignPrivateIpAddressesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(Q
  * @brief  Private implementation for UnassignPrivateIpAddressesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnassignPrivateIpAddressesRequestPrivate object.
@@ -97,7 +107,7 @@ UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnassignPrivateIpAddressesRequestPrivate object, copying another.

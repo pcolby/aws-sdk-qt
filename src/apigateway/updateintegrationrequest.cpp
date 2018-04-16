@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateIntegrationRequest
+/*!
+ * \class QtAws::APIGateway::UpdateIntegrationRequest
  *
- * @brief  Implements APIGateway UpdateIntegration requests.
+ * \brief The UpdateIntegrationRequest class encapsulates APIGateway UpdateIntegration requests.
  *
- * @see    APIGatewayClient::updateIntegration
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateIntegration
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIntegrationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateIntegrationRequest::UpdateIntegrationRequest(const UpdateIntegrationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateIntegrationRequest object.
  */
 UpdateIntegrationRequest::UpdateIntegrationRequest()
@@ -53,13 +61,16 @@ UpdateIntegrationRequest::UpdateIntegrationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateIntegrationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateIntegrationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIntegrationRequest::response(QNetworkRe
     return new UpdateIntegrationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateIntegrationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIntegrationRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateIntegrationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIntegrationRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateIntegrationRequestPrivate::UpdateIntegrationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIntegrationRequestPrivate object, copying another.

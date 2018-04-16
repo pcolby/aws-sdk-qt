@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  RegisterWorkflowTypeRequest
+/*!
+ * \class QtAws::SWF::RegisterWorkflowTypeRequest
  *
- * @brief  Implements SWF RegisterWorkflowType requests.
+ * \brief The RegisterWorkflowTypeRequest class encapsulates SWF RegisterWorkflowType requests.
  *
- * @see    SWFClient::registerWorkflowType
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::registerWorkflowType
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterWorkflowTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest(const RegisterWorkflowT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterWorkflowTypeRequest object.
  */
 RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest()
@@ -53,13 +72,16 @@ RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterWorkflowTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterWorkflowTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetwor
     return new RegisterWorkflowTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterWorkflowTypeRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetwor
  * @brief  Private implementation for RegisterWorkflowTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterWorkflowTypeRequestPrivate object.
@@ -97,7 +119,7 @@ RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterWorkflowTypeRequestPrivate object, copying another.

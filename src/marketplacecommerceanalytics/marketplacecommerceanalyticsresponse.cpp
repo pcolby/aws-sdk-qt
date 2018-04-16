@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-/**
- * @class  MarketplaceCommerceAnalyticsResponse
+/*!
+ * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsResponse
  *
- * @brief  Handles MarketplaceCommerceAnalytics MarketplaceCommerceAnalytics responses.
+ * \brief The MarketplaceCommerceAnalyticsResponse class is the base class for all MarketplaceCommerceAnalytics responses.
  *
- * @see    MarketplaceCommerceAnalyticsClient::marketplaceCommerceAnalytics
+ * \ingroup MarketplaceCommerceAnalytics
  */
 
-/**
+/*!
  * @brief  Constructs a new MarketplaceCommerceAnalyticsResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(QObje
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceCommerceAnalyticsResponse object.
@@ -63,7 +63,7 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(Marke
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MarketplaceCommerceAnalyticsResponsePrivate
@@ -92,7 +92,7 @@ void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MarketplaceCommerceAnalyticsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceCommerceAnalyticsResponsePrivate object.

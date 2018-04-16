@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeSuggestersRequest
+/*!
+ * \class QtAws::CloudSearch::DescribeSuggestersRequest
  *
- * @brief  Implements CloudSearch DescribeSuggesters requests.
+ * \brief The DescribeSuggestersRequest class encapsulates CloudSearch DescribeSuggesters requests.
  *
- * @see    CloudSearchClient::describeSuggesters
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeSuggesters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSuggestersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeSuggestersRequest::DescribeSuggestersRequest(const DescribeSuggestersReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSuggestersRequest object.
  */
 DescribeSuggestersRequest::DescribeSuggestersRequest()
@@ -53,13 +67,16 @@ DescribeSuggestersRequest::DescribeSuggestersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSuggestersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSuggestersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSuggestersRequest::response(QNetworkR
     return new DescribeSuggestersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSuggestersRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSuggestersRequest::response(QNetworkR
  * @brief  Private implementation for DescribeSuggestersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSuggestersRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeSuggestersRequestPrivate::DescribeSuggestersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSuggestersRequestPrivate object, copying another.

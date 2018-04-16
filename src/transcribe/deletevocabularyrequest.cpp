@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  DeleteVocabularyRequest
+/*!
+ * \class QtAws::TranscribeService::DeleteVocabularyRequest
  *
- * @brief  Implements TranscribeService DeleteVocabulary requests.
+ * \brief The DeleteVocabularyRequest class encapsulates TranscribeService DeleteVocabulary requests.
  *
- * @see    TranscribeServiceClient::deleteVocabulary
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::deleteVocabulary
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVocabularyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteVocabularyRequest::DeleteVocabularyRequest(const DeleteVocabularyRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVocabularyRequest object.
  */
 DeleteVocabularyRequest::DeleteVocabularyRequest()
@@ -53,13 +57,16 @@ DeleteVocabularyRequest::DeleteVocabularyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVocabularyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVocabularyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVocabularyRequest::response(QNetworkRep
     return new DeleteVocabularyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVocabularyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVocabularyRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteVocabularyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVocabularyRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteVocabularyRequestPrivate::DeleteVocabularyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVocabularyRequestPrivate object, copying another.

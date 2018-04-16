@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  ListBundlesRequest
+/*!
+ * \class QtAws::Mobile::ListBundlesRequest
  *
- * @brief  Implements Mobile ListBundles requests.
+ * \brief The ListBundlesRequest class encapsulates Mobile ListBundles requests.
  *
- * @see    MobileClient::listBundles
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::listBundles
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBundlesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListBundlesRequest::ListBundlesRequest(const ListBundlesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBundlesRequest object.
  */
 ListBundlesRequest::ListBundlesRequest()
@@ -53,13 +59,16 @@ ListBundlesRequest::ListBundlesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBundlesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBundlesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * 
     return new ListBundlesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBundlesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListBundlesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBundlesRequestPrivate object.
@@ -97,7 +106,7 @@ ListBundlesRequestPrivate::ListBundlesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBundlesRequestPrivate object, copying another.

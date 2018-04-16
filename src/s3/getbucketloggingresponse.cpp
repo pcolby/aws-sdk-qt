@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketLoggingResponse
+/*!
+ * \class QtAws::S3::GetBucketLoggingResponse
  *
- * @brief  Handles S3 GetBucketLogging responses.
+ * \brief The GetBucketLoggingResponse class encapsulates S3 GetBucketLogging responses.
  *
- * @see    S3Client::getBucketLogging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketLogging
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLoggingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketLoggingRequest * GetBucketLoggingResponse::request() const
     return static_cast<const GetBucketLoggingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketLogging response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketLoggingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketLoggingResponsePrivate
+ * \class GetBucketLoggingResponsePrivate
  *
- * @brief  Private implementation for GetBucketLoggingResponse.
+ * \brief Private implementation for GetBucketLoggingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLoggingResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketLoggingResponsePrivate::GetBucketLoggingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketLoggingResponse element.
  *
  * @param  xml  XML stream to parse.

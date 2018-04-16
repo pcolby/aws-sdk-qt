@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  StopNotebookInstanceRequest
+/*!
+ * \class QtAws::SageMaker::StopNotebookInstanceRequest
  *
- * @brief  Implements SageMaker StopNotebookInstance requests.
+ * \brief The StopNotebookInstanceRequest class encapsulates SageMaker StopNotebookInstance requests.
  *
- * @see    SageMakerClient::stopNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::stopNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new StopNotebookInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StopNotebookInstanceRequest::StopNotebookInstanceRequest(const StopNotebookInsta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopNotebookInstanceRequest object.
  */
 StopNotebookInstanceRequest::StopNotebookInstanceRequest()
@@ -53,13 +56,16 @@ StopNotebookInstanceRequest::StopNotebookInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopNotebookInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopNotebookInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StopNotebookInstanceRequest::response(QNetwor
     return new StopNotebookInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopNotebookInstanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StopNotebookInstanceRequest::response(QNetwor
  * @brief  Private implementation for StopNotebookInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopNotebookInstanceRequestPrivate object.
@@ -97,7 +103,7 @@ StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopNotebookInstanceRequestPrivate object, copying another.

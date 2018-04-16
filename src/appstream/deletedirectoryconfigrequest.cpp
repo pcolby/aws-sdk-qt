@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteDirectoryConfigRequest
+/*!
+ * \class QtAws::AppStream::DeleteDirectoryConfigRequest
  *
- * @brief  Implements AppStream DeleteDirectoryConfig requests.
+ * \brief The DeleteDirectoryConfigRequest class encapsulates AppStream DeleteDirectoryConfig requests.
  *
- * @see    AppStreamClient::deleteDirectoryConfig
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteDirectoryConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDirectoryConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest(const DeleteDirectory
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDirectoryConfigRequest object.
  */
 DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest()
@@ -53,13 +59,16 @@ DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDirectoryConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDirectoryConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetwo
     return new DeleteDirectoryConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDirectoryConfigRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetwo
  * @brief  Private implementation for DeleteDirectoryConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDirectoryConfigRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDirectoryConfigRequestPrivate object, copying another.

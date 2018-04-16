@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeReservedInstancesRequest
+/*!
+ * \class QtAws::EC2::DescribeReservedInstancesRequest
  *
- * @brief  Implements EC2 DescribeReservedInstances requests.
+ * \brief The DescribeReservedInstancesRequest class encapsulates EC2 DescribeReservedInstances requests.
  *
- * @see    EC2Client::describeReservedInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeReservedInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeReservedInstancesRequest::DescribeReservedInstancesRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesRequest object.
  */
 DescribeReservedInstancesRequest::DescribeReservedInstancesRequest()
@@ -53,13 +60,16 @@ DescribeReservedInstancesRequest::DescribeReservedInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReservedInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReservedInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesRequest::response(QN
     return new DescribeReservedInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReservedInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesRequest::response(QN
  * @brief  Private implementation for DescribeReservedInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesRequestPrivate object, copying another.

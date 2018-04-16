@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  RebuildWorkspacesResponse
+/*!
+ * \class QtAws::WorkSpaces::RebuildWorkspacesResponse
  *
- * @brief  Handles WorkSpaces RebuildWorkspaces responses.
+ * \brief The RebuildWorkspacesResponse class encapsulates WorkSpaces RebuildWorkspaces responses.
  *
- * @see    WorkSpacesClient::rebuildWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::rebuildWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new RebuildWorkspacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const RebuildWorkspacesRequest * RebuildWorkspacesResponse::request() const
     return static_cast<const RebuildWorkspacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces RebuildWorkspaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void RebuildWorkspacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RebuildWorkspacesResponsePrivate
+ * \class RebuildWorkspacesResponsePrivate
  *
- * @brief  Private implementation for RebuildWorkspacesResponse.
+ * \brief Private implementation for RebuildWorkspacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebuildWorkspacesResponsePrivate object.
@@ -91,7 +97,7 @@ RebuildWorkspacesResponsePrivate::RebuildWorkspacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces RebuildWorkspacesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteBaiduChannelRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteBaiduChannelRequest
  *
- * @brief  Implements Pinpoint DeleteBaiduChannel requests.
+ * \brief The DeleteBaiduChannelRequest class encapsulates Pinpoint DeleteBaiduChannel requests.
  *
- * @see    PinpointClient::deleteBaiduChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteBaiduChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBaiduChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBaiduChannelRequest::DeleteBaiduChannelRequest(const DeleteBaiduChannelReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBaiduChannelRequest object.
  */
 DeleteBaiduChannelRequest::DeleteBaiduChannelRequest()
@@ -53,13 +56,16 @@ DeleteBaiduChannelRequest::DeleteBaiduChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBaiduChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBaiduChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkR
     return new DeleteBaiduChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBaiduChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkR
  * @brief  Private implementation for DeleteBaiduChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBaiduChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBaiduChannelRequestPrivate object, copying another.

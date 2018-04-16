@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetChangeRequest
+/*!
+ * \class QtAws::Route53::GetChangeRequest
  *
- * @brief  Implements Route53 GetChange requests.
+ * \brief The GetChangeRequest class encapsulates Route53 GetChange requests.
  *
- * @see    Route53Client::getChange
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getChange
  */
 
-/**
+/*!
  * @brief  Constructs a new GetChangeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetChangeRequest::GetChangeRequest(const GetChangeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetChangeRequest object.
  */
 GetChangeRequest::GetChangeRequest()
@@ -53,13 +56,16 @@ GetChangeRequest::GetChangeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetChangeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetChangeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * co
     return new GetChangeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetChangeRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetChangeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeRequestPrivate object.
@@ -97,7 +103,7 @@ GetChangeRequestPrivate::GetChangeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeRequestPrivate object, copying another.

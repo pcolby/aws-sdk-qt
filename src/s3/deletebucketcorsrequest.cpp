@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketCorsRequest
+/*!
+ * \class QtAws::S3::DeleteBucketCorsRequest
  *
- * @brief  Implements S3 DeleteBucketCors requests.
+ * \brief The DeleteBucketCorsRequest class encapsulates S3 DeleteBucketCors requests.
  *
- * @see    S3Client::deleteBucketCors
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketCors
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketCorsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketCorsRequest::DeleteBucketCorsRequest(const DeleteBucketCorsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketCorsRequest object.
  */
 DeleteBucketCorsRequest::DeleteBucketCorsRequest()
@@ -53,13 +56,16 @@ DeleteBucketCorsRequest::DeleteBucketCorsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketCorsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketCorsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkRep
     return new DeleteBucketCorsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketCorsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteBucketCorsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketCorsRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketCorsRequestPrivate object, copying another.

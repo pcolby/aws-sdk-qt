@@ -79,26 +79,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::EMR
+ * \brief The QtAws::EMR contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  EmrClient
+/*!
+ * \class QtAws::EMR::EmrClient
  *
- * @brief  Client for Amazon Elastic MapReduce ( EMR)
+ * \brief The EmrClient class provides access the Amazon Elastic MapReduce ( EMR) service.
  *
- * Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
- * processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
- * learning, scientific simulation, and data
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
  */
 
-/**
- * @brief  Constructs a new EmrClient object.
+/*!
+ * \brief Constructs a EmrClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 EmrClient::EmrClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -117,21 +125,16 @@ EmrClient::EmrClient(
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
-/**
- * @brief  Constructs a new EmrClient object.
+/*!
+ * \overload EmrClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 EmrClient::EmrClient(
     const QUrl &endpoint,
@@ -150,7 +153,7 @@ EmrClient::EmrClient(
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
-/**
+/*!
  * Adds an instance fleet to a running
  *
  * cluster> <note>
@@ -168,7 +171,7 @@ AddInstanceFleetResponse * EmrClient::addInstanceFleet(const AddInstanceFleetReq
     return qobject_cast<AddInstanceFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more instance groups to a running
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -182,7 +185,7 @@ AddInstanceGroupsResponse * EmrClient::addInstanceGroups(const AddInstanceGroups
     return qobject_cast<AddInstanceGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * AddJobFlowSteps adds new steps to a running cluster. A maximum of 256 steps are allowed in each job
  *
  * flow>
@@ -220,7 +223,7 @@ AddJobFlowStepsResponse * EmrClient::addJobFlowSteps(const AddJobFlowStepsReques
     return qobject_cast<AddJobFlowStepsResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds tags to an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping
  * clusters to track your Amazon EMR resource allocation costs. For more information, see <a
  * href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
@@ -236,7 +239,7 @@ AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels a pending step or steps in a running cluster. Available only in Amazon EMR versions 4.8.0 and later, excluding
  * version 5.0.0. A maximum of 256 steps are allowed in each CancelSteps request. CancelSteps is idempotent but
  * asynchronous; it does not guarantee a step will be canceled, even if the request is successfully submitted. You can only
@@ -253,7 +256,7 @@ CancelStepsResponse * EmrClient::cancelSteps(const CancelStepsRequest &request)
     return qobject_cast<CancelStepsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a security configuration, which is stored in the service and can be specified when a cluster is
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -267,7 +270,7 @@ CreateSecurityConfigurationResponse * EmrClient::createSecurityConfiguration(con
     return qobject_cast<CreateSecurityConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a security
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -281,7 +284,7 @@ DeleteSecurityConfigurationResponse * EmrClient::deleteSecurityConfiguration(con
     return qobject_cast<DeleteSecurityConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides cluster-level details including status, hardware and software configuration, VPC settings, and so on. For
  * information about the cluster steps, see
  *
@@ -296,7 +299,7 @@ DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterReques
     return qobject_cast<DescribeClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * This API is deprecated and will eventually be removed. We recommend you use <a>ListClusters</a>, <a>DescribeCluster</a>,
  * <a>ListSteps</a>, <a>ListInstanceGroups</a> and <a>ListBootstrapActions</a>
  *
@@ -337,7 +340,7 @@ DescribeJobFlowsResponse * EmrClient::describeJobFlows(const DescribeJobFlowsReq
     return qobject_cast<DescribeJobFlowsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides the details of a security configuration by returning the configuration
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -351,7 +354,7 @@ DescribeSecurityConfigurationResponse * EmrClient::describeSecurityConfiguration
     return qobject_cast<DescribeSecurityConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides more detail about the cluster
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -365,7 +368,7 @@ DescribeStepResponse * EmrClient::describeStep(const DescribeStepRequest &reques
     return qobject_cast<DescribeStepResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides information about the bootstrap actions associated with a
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -379,7 +382,7 @@ ListBootstrapActionsResponse * EmrClient::listBootstrapActions(const ListBootstr
     return qobject_cast<ListBootstrapActionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides the status of all clusters visible to this AWS account. Allows you to filter the list of clusters based on
  * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a maximum of
  * 50 clusters per call, but returns a marker to track the paging of the cluster list across multiple ListClusters
@@ -395,7 +398,7 @@ ListClustersResponse * EmrClient::listClusters(const ListClustersRequest &reques
     return qobject_cast<ListClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all available details about the instance fleets in a
  *
  * cluster> <note>
@@ -413,7 +416,7 @@ ListInstanceFleetsResponse * EmrClient::listInstanceFleets(const ListInstanceFle
     return qobject_cast<ListInstanceFleetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides all available details about the instance groups in a
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -427,7 +430,7 @@ ListInstanceGroupsResponse * EmrClient::listInstanceGroups(const ListInstanceGro
     return qobject_cast<ListInstanceGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides information for all active EC2 instances and EC2 instances terminated in the last 30 days, up to a maximum of
  * 2,000. EC2 instances in any of the following states are considered active: AWAITING_FULFILLMENT, PROVISIONING,
  * BOOTSTRAPPING,
@@ -443,7 +446,7 @@ ListInstancesResponse * EmrClient::listInstances(const ListInstancesRequest &req
     return qobject_cast<ListInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the security configurations visible to this account, providing their creation dates and times, and their
  * names. This call returns a maximum of 50 clusters per call, but returns a marker to track the paging of the cluster list
  * across multiple ListSecurityConfigurations
@@ -459,7 +462,7 @@ ListSecurityConfigurationsResponse * EmrClient::listSecurityConfigurations(const
     return qobject_cast<ListSecurityConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a list of steps for the cluster in reverse order unless you specify stepIds with the
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -473,7 +476,7 @@ ListStepsResponse * EmrClient::listSteps(const ListStepsRequest &request)
     return qobject_cast<ListStepsResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the target On-Demand and target Spot capacities for the instance fleet with the specified InstanceFleetID
  * within the cluster specified using ClusterID. The call either succeeds or fails
  *
@@ -492,7 +495,7 @@ ModifyInstanceFleetResponse * EmrClient::modifyInstanceFleet(const ModifyInstanc
     return qobject_cast<ModifyInstanceFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * ModifyInstanceGroups modifies the number of nodes and configuration settings of an instance group. The input parameters
  * include the new target instance count for the group and the instance group ID. The call will either succeed or fail
  *
@@ -507,7 +510,7 @@ ModifyInstanceGroupsResponse * EmrClient::modifyInstanceGroups(const ModifyInsta
     return qobject_cast<ModifyInstanceGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates an automatic scaling policy for a core instance group or task instance group in an Amazon EMR
  * cluster. The automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in
  * response to the value of a CloudWatch
@@ -523,7 +526,7 @@ PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScal
     return qobject_cast<PutAutoScalingPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes an automatic scaling policy from a specified instance group within an EMR
  *
  * @param  request Request to send to Amazon Elastic MapReduce.
@@ -537,7 +540,7 @@ RemoveAutoScalingPolicyResponse * EmrClient::removeAutoScalingPolicy(const Remov
     return qobject_cast<RemoveAutoScalingPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes tags from an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping
  * clusters to track your Amazon EMR resource allocation costs. For more information, see <a
  * href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
@@ -557,7 +560,7 @@ RemoveTagsResponse * EmrClient::removeTags(const RemoveTagsRequest &request)
     return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * RunJobFlow creates and starts running a new cluster (job flow). The cluster runs the steps specified. After the steps
  * complete, the cluster stops and the HDFS partition is lost. To prevent loss of data, configure the last step of the job
  * flow to store results in Amazon S3. If the <a>JobFlowInstancesConfig</a> <code>KeepJobFlowAliveWhenNoSteps</code>
@@ -603,7 +606,7 @@ RunJobFlowResponse * EmrClient::runJobFlow(const RunJobFlowRequest &request)
     return qobject_cast<RunJobFlowResponse *>(send(request));
 }
 
-/**
+/*!
  * SetTerminationProtection locks a cluster (job flow) so the EC2 instances in the cluster cannot be terminated by user
  * intervention, an API call, or in the event of a job-flow error. The cluster still terminates upon successful completion
  * of the job flow. Calling <code>SetTerminationProtection</code> on a cluster is similar to calling the Amazon EC2
@@ -637,7 +640,7 @@ SetTerminationProtectionResponse * EmrClient::setTerminationProtection(const Set
     return qobject_cast<SetTerminationProtectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets whether all AWS Identity and Access Management (IAM) users under your account can access the specified clusters
  * (job flows). This action works on running clusters. You can also set the visibility of a cluster when you launch it
  * using the <code>VisibleToAllUsers</code> parameter of <a>RunJobFlow</a>. The SetVisibleToAllUsers action can be called
@@ -654,7 +657,7 @@ SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleT
     return qobject_cast<SetVisibleToAllUsersResponse *>(send(request));
 }
 
-/**
+/*!
  * TerminateJobFlows shuts a list of clusters (job flows) down. When a job flow is shut down, any step not yet completed is
  * canceled and the EC2 instances on which the cluster is running are stopped. Any log files not already saved are uploaded
  * to Amazon S3 if a LogUri was specified when the cluster was
@@ -676,7 +679,7 @@ TerminateJobFlowsResponse * EmrClient::terminateJobFlows(const TerminateJobFlows
     return qobject_cast<TerminateJobFlowsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EmrClientPrivate
@@ -684,7 +687,7 @@ TerminateJobFlowsResponse * EmrClient::terminateJobFlows(const TerminateJobFlows
  * @brief  Private implementation for EmrClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EmrClientPrivate object.

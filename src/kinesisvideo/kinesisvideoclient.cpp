@@ -45,23 +45,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::KinesisVideo
+ * \brief The QtAws::KinesisVideo contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  KinesisVideoClient
+/*!
+ * \class QtAws::KinesisVideo::KinesisVideoClient
  *
- * @brief  Client for Amazon Kinesis Video Streams
+ * \brief The KinesisVideoClient class provides access the Amazon Kinesis Video Streams service.
+ *
+ * \ingroup KinesisVideo
  *
  */
 
-/**
- * @brief  Constructs a new KinesisVideoClient object.
+/*!
+ * \brief Constructs a KinesisVideoClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 KinesisVideoClient::KinesisVideoClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -80,21 +88,16 @@ KinesisVideoClient::KinesisVideoClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/**
- * @brief  Constructs a new KinesisVideoClient object.
+/*!
+ * \overload KinesisVideoClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 KinesisVideoClient::KinesisVideoClient(
     const QUrl &endpoint,
@@ -113,7 +116,7 @@ KinesisVideoClient::KinesisVideoClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/**
+/*!
  * Creates a new Kinesis video stream.
  *
  * </p
@@ -145,7 +148,7 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
     return qobject_cast<CreateStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a Kinesis video stream and the data contained in the stream.
  *
  * </p
@@ -176,7 +179,7 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
     return qobject_cast<DeleteStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the most current information about the specified stream. You must specify either the <code>StreamName</code> or
  * the <code>StreamARN</code>.
  *
@@ -191,7 +194,7 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
     return qobject_cast<DescribeStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets an endpoint for a specified stream for either reading or writing. Use this endpoint in your application to read
  * from the specified stream (using the <code>GetMedia</code> or <code>GetMediaForFragmentList</code> operations) or write
  * to it (using the <code>PutMedia</code> operation).
@@ -215,7 +218,7 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
     return qobject_cast<GetDataEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <code>StreamInfo</code> objects. Each object describes a stream. To retrieve only streams that
  * satisfy a specific condition, you can specify a <code>StreamNameCondition</code>.
  *
@@ -230,7 +233,7 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
     return qobject_cast<ListStreamsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of tags associated with the specified
  *
  * stream>
@@ -248,7 +251,7 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
     return qobject_cast<ListTagsForStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more tags to a stream. A <i>tag</i> is a key-value pair (the value is optional) that you can define and
  * assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you
  * specify in the request. For more information, see <a
@@ -278,7 +281,7 @@ TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &reques
     return qobject_cast<TagStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more tags from a stream. In the request, specify only a tag key or keys; don't specify the value. If you
  * specify a tag key that does not exist, it's
  *
@@ -297,7 +300,7 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
     return qobject_cast<UntagStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Increases or decreases the stream's data retention period by the value that you specify. To indicate whether you want to
  * increase or decrease the data retention period, specify the <code>Operation</code> parameter in the request body. In the
  * request, you must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
@@ -336,7 +339,7 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
     return qobject_cast<UpdateDataRetentionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates stream metadata, such as the device name and media
  *
  * type>
@@ -364,7 +367,7 @@ UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamReques
     return qobject_cast<UpdateStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisVideoClientPrivate
@@ -372,7 +375,7 @@ UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamReques
  * @brief  Private implementation for KinesisVideoClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisVideoClientPrivate object.

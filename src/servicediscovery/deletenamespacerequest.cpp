@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  DeleteNamespaceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::DeleteNamespaceRequest
  *
- * @brief  Implements ServiceDiscovery DeleteNamespace requests.
+ * \brief The DeleteNamespaceRequest class encapsulates ServiceDiscovery DeleteNamespace requests.
  *
- * @see    ServiceDiscoveryClient::deleteNamespace
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::deleteNamespace
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNamespaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteNamespaceRequest::DeleteNamespaceRequest(const DeleteNamespaceRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNamespaceRequest object.
  */
 DeleteNamespaceRequest::DeleteNamespaceRequest()
@@ -53,13 +60,16 @@ DeleteNamespaceRequest::DeleteNamespaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNamespaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNamespaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkRepl
     return new DeleteNamespaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNamespaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteNamespaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNamespaceRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNamespaceRequestPrivate object, copying another.

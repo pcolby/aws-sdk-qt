@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetInvitationsCountResponse
+/*!
+ * \class QtAws::GuardDuty::GetInvitationsCountResponse
  *
- * @brief  Handles GuardDuty GetInvitationsCount responses.
+ * \brief The GetInvitationsCountResponse class encapsulates GuardDuty GetInvitationsCount responses.
  *
- * @see    GuardDutyClient::getInvitationsCount
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getInvitationsCount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInvitationsCountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
     return static_cast<const GetInvitationsCountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty GetInvitationsCount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetInvitationsCountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetInvitationsCountResponsePrivate
+ * \class GetInvitationsCountResponsePrivate
  *
- * @brief  Private implementation for GetInvitationsCountResponse.
+ * \brief Private implementation for GetInvitationsCountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInvitationsCountResponsePrivate object.
@@ -91,7 +94,7 @@ GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty GetInvitationsCountResponse element.
  *
  * @param  xml  XML stream to parse.

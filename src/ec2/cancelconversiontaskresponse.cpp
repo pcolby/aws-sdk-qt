@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelConversionTaskResponse
+/*!
+ * \class QtAws::EC2::CancelConversionTaskResponse
  *
- * @brief  Handles EC2 CancelConversionTask responses.
+ * \brief The CancelConversionTaskResponse class encapsulates EC2 CancelConversionTask responses.
  *
- * @see    EC2Client::cancelConversionTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelConversionTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelConversionTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CancelConversionTaskRequest * CancelConversionTaskResponse::request() cons
     return static_cast<const CancelConversionTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CancelConversionTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CancelConversionTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelConversionTaskResponsePrivate
+ * \class CancelConversionTaskResponsePrivate
  *
- * @brief  Private implementation for CancelConversionTaskResponse.
+ * \brief Private implementation for CancelConversionTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelConversionTaskResponsePrivate object.
@@ -91,7 +98,7 @@ CancelConversionTaskResponsePrivate::CancelConversionTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CancelConversionTaskResponse element.
  *
  * @param  xml  XML stream to parse.

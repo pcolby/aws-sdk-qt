@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketReplicationRequest
+/*!
+ * \class QtAws::S3::PutBucketReplicationRequest
  *
- * @brief  Implements S3 PutBucketReplication requests.
+ * \brief The PutBucketReplicationRequest class encapsulates S3 PutBucketReplication requests.
  *
- * @see    S3Client::putBucketReplication
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketReplication
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketReplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketReplicationRequest::PutBucketReplicationRequest(const PutBucketReplicat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketReplicationRequest object.
  */
 PutBucketReplicationRequest::PutBucketReplicationRequest()
@@ -53,13 +56,16 @@ PutBucketReplicationRequest::PutBucketReplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketReplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketReplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketReplicationRequest::response(QNetwor
     return new PutBucketReplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketReplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketReplicationRequest::response(QNetwor
  * @brief  Private implementation for PutBucketReplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketReplicationRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketReplicationRequestPrivate object, copying another.

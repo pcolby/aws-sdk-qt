@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DetachTypedLinkResponse
+/*!
+ * \class QtAws::CloudDirectory::DetachTypedLinkResponse
  *
- * @brief  Handles CloudDirectory DetachTypedLink responses.
+ * \brief The DetachTypedLinkResponse class encapsulates CloudDirectory DetachTypedLink responses.
  *
- * @see    CloudDirectoryClient::detachTypedLink
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::detachTypedLink
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachTypedLinkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DetachTypedLinkRequest * DetachTypedLinkResponse::request() const
     return static_cast<const DetachTypedLinkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory DetachTypedLink response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DetachTypedLinkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachTypedLinkResponsePrivate
+ * \class DetachTypedLinkResponsePrivate
  *
- * @brief  Private implementation for DetachTypedLinkResponse.
+ * \brief Private implementation for DetachTypedLinkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachTypedLinkResponsePrivate object.
@@ -91,7 +101,7 @@ DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory DetachTypedLinkResponse element.
  *
  * @param  xml  XML stream to parse.

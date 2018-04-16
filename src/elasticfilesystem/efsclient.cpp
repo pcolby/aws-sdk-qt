@@ -47,29 +47,37 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::EFS
+ * \brief The QtAws::EFS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  EfsClient
+/*!
+ * \class QtAws::EFS::EfsClient
  *
- * @brief  Client for Amazon Elastic File System (EFS)
+ * \brief The EfsClient class provides access the Amazon Elastic File System (EFS) service.
  *
- * <fullname>Amazon Elastic File System</fullname>
+ * \ingroup EFS
  *
- * Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- * AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- * files, so your applications have the storage they need, when they need it. For more information, see the <a
- * href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
  */
 
-/**
- * @brief  Constructs a new EfsClient object.
+/*!
+ * \brief Constructs a EfsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 EfsClient::EfsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -88,21 +96,16 @@ EfsClient::EfsClient(
     d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
-/**
- * @brief  Constructs a new EfsClient object.
+/*!
+ * \overload EfsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 EfsClient::EfsClient(
     const QUrl &endpoint,
@@ -121,7 +124,7 @@ EfsClient::EfsClient(
     d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
-/**
+/*!
  * Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure
  * idempotent creation (calling the operation with same creation token has no effect). If a file system does not currently
  * exist that is owned by the caller's AWS account with the specified creation token, this operation does the
@@ -188,7 +191,7 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
     return qobject_cast<CreateFileSystemResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount
  *
  * target>
@@ -333,7 +336,7 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
     return qobject_cast<CreateMountTargetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or overwrites tags associated with a file system. Each tag is a key-value pair. If a tag key specified in the
  * request already exists on the file system, this operation overwrites its value with the value provided in the request.
  * If you add the <code>Name</code> tag to your file system, Amazon EFS returns it in the response to the
@@ -354,7 +357,7 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
     return qobject_cast<CreateTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and
  * you can't access any contents of the deleted file
  *
@@ -385,7 +388,7 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
     return qobject_cast<DeleteFileSystemResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified mount
  *
  * target>
@@ -429,7 +432,7 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
     return qobject_cast<DeleteMountTargetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that does not
  * exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related restrictions, see
  * <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the
@@ -450,7 +453,7 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description of a specific Amazon EFS file system if either the file system <code>CreationToken</code> or the
  * <code>FileSystemId</code> is provided. Otherwise, it returns descriptions of all file systems owned by the caller's AWS
  * account in the AWS Region of the endpoint that you're
@@ -494,7 +497,7 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
     return qobject_cast<DescribeFileSystemsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the security groups currently in effect for a mount target. This operation requires that the network interface
  * of the mount target has been created and the lifecycle state of the mount target is not
  *
@@ -521,7 +524,7 @@ DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecuri
     return qobject_cast<DescribeMountTargetSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the descriptions of all the current mount targets, or a specific mount target, for a file system. When
  * requesting all of the current mount targets, the order of mount targets returned in the response is
  *
@@ -542,7 +545,7 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
     return qobject_cast<DescribeMountTargetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the tags associated with a file system. The order of tags returned in the response of one
  * <code>DescribeTags</code> call and the order of tags returned across the responses of a multi-call iteration (when using
  * pagination) is unspecified.
@@ -562,7 +565,7 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the set of security groups in effect for a mount
  *
  * target>
@@ -596,7 +599,7 @@ ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGr
     return qobject_cast<ModifyMountTargetSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EfsClientPrivate
@@ -604,7 +607,7 @@ ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGr
  * @brief  Private implementation for EfsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EfsClientPrivate object.

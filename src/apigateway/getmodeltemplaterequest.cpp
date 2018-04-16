@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetModelTemplateRequest
+/*!
+ * \class QtAws::APIGateway::GetModelTemplateRequest
  *
- * @brief  Implements APIGateway GetModelTemplate requests.
+ * \brief The GetModelTemplateRequest class encapsulates APIGateway GetModelTemplate requests.
  *
- * @see    APIGatewayClient::getModelTemplate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getModelTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetModelTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetModelTemplateRequest::GetModelTemplateRequest(const GetModelTemplateRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetModelTemplateRequest object.
  */
 GetModelTemplateRequest::GetModelTemplateRequest()
@@ -53,13 +61,16 @@ GetModelTemplateRequest::GetModelTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetModelTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetModelTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetModelTemplateRequest::response(QNetworkRep
     return new GetModelTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetModelTemplateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetModelTemplateRequest::response(QNetworkRep
  * @brief  Private implementation for GetModelTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetModelTemplateRequestPrivate object.
@@ -97,7 +108,7 @@ GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetModelTemplateRequestPrivate object, copying another.

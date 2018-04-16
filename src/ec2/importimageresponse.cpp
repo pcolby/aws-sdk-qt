@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportImageResponse
+/*!
+ * \class QtAws::EC2::ImportImageResponse
  *
- * @brief  Handles EC2 ImportImage responses.
+ * \brief The ImportImageResponse class encapsulates EC2 ImportImage responses.
  *
- * @see    EC2Client::importImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importImage
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ImportImageRequest * ImportImageResponse::request() const
     return static_cast<const ImportImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ImportImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ImportImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportImageResponsePrivate
+ * \class ImportImageResponsePrivate
  *
- * @brief  Private implementation for ImportImageResponse.
+ * \brief Private implementation for ImportImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportImageResponsePrivate object.
@@ -91,7 +98,7 @@ ImportImageResponsePrivate::ImportImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ImportImageResponse element.
  *
  * @param  xml  XML stream to parse.

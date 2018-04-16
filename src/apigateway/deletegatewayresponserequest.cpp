@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteGatewayResponseRequest
+/*!
+ * \class QtAws::APIGateway::DeleteGatewayResponseRequest
  *
- * @brief  Implements APIGateway DeleteGatewayResponse requests.
+ * \brief The DeleteGatewayResponseRequest class encapsulates APIGateway DeleteGatewayResponse requests.
  *
- * @see    APIGatewayClient::deleteGatewayResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteGatewayResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGatewayResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteGatewayResponseRequest::DeleteGatewayResponseRequest(const DeleteGatewayRe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteGatewayResponseRequest object.
  */
 DeleteGatewayResponseRequest::DeleteGatewayResponseRequest()
@@ -53,13 +61,16 @@ DeleteGatewayResponseRequest::DeleteGatewayResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteGatewayResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteGatewayResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGatewayResponseRequest::response(QNetwo
     return new DeleteGatewayResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteGatewayResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGatewayResponseRequest::response(QNetwo
  * @brief  Private implementation for DeleteGatewayResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGatewayResponseRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGatewayResponseRequestPrivate object, copying another.

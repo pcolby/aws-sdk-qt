@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeletePolicyResponse
+/*!
+ * \class QtAws::AutoScaling::DeletePolicyResponse
  *
- * @brief  Handles AutoScaling DeletePolicy responses.
+ * \brief The DeletePolicyResponse class encapsulates AutoScaling DeletePolicy responses.
  *
- * @see    AutoScalingClient::deletePolicy
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deletePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeletePolicyRequest * DeletePolicyResponse::request() const
     return static_cast<const DeletePolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeletePolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeletePolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePolicyResponsePrivate
+ * \class DeletePolicyResponsePrivate
  *
- * @brief  Private implementation for DeletePolicyResponse.
+ * \brief Private implementation for DeletePolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyResponsePrivate object.
@@ -91,7 +99,7 @@ DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeletePolicyResponse element.
  *
  * @param  xml  XML stream to parse.

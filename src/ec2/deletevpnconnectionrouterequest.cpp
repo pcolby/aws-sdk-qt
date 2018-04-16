@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpnConnectionRouteRequest
+/*!
+ * \class QtAws::EC2::DeleteVpnConnectionRouteRequest
  *
- * @brief  Implements EC2 DeleteVpnConnectionRoute requests.
+ * \brief The DeleteVpnConnectionRouteRequest class encapsulates EC2 DeleteVpnConnectionRoute requests.
  *
- * @see    EC2Client::deleteVpnConnectionRoute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpnConnectionRoute
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnConnectionRouteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpnConnectionRouteRequest::DeleteVpnConnectionRouteRequest(const DeleteVpn
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnConnectionRouteRequest object.
  */
 DeleteVpnConnectionRouteRequest::DeleteVpnConnectionRouteRequest()
@@ -53,13 +60,16 @@ DeleteVpnConnectionRouteRequest::DeleteVpnConnectionRouteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpnConnectionRouteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpnConnectionRouteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRouteRequest::response(QNe
     return new DeleteVpnConnectionRouteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpnConnectionRouteRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRouteRequest::response(QNe
  * @brief  Private implementation for DeleteVpnConnectionRouteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnConnectionRouteRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpnConnectionRouteRequestPrivate::DeleteVpnConnectionRouteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnConnectionRouteRequestPrivate object, copying another.

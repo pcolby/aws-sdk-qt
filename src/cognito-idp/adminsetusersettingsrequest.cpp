@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminSetUserSettingsRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminSetUserSettings requests.
+ * \brief The AdminSetUserSettingsRequest class encapsulates CognitoIdentityProvider AdminSetUserSettings requests.
  *
- * @see    CognitoIdentityProviderClient::adminSetUserSettings
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminSetUserSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminSetUserSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminSetUserSettingsRequest::AdminSetUserSettingsRequest(const AdminSetUserSetti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminSetUserSettingsRequest object.
  */
 AdminSetUserSettingsRequest::AdminSetUserSettingsRequest()
@@ -53,13 +66,16 @@ AdminSetUserSettingsRequest::AdminSetUserSettingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminSetUserSettingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminSetUserSettingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetwor
     return new AdminSetUserSettingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminSetUserSettingsRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetwor
  * @brief  Private implementation for AdminSetUserSettingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminSetUserSettingsRequestPrivate object.
@@ -97,7 +113,7 @@ AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminSetUserSettingsRequestPrivate object, copying another.

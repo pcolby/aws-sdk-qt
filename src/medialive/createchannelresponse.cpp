@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  CreateChannelResponse
+/*!
+ * \class QtAws::MediaLive::CreateChannelResponse
  *
- * @brief  Handles MediaLive CreateChannel responses.
+ * \brief The CreateChannelResponse class encapsulates MediaLive CreateChannel responses.
  *
- * @see    MediaLiveClient::createChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::createChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateChannelRequest * CreateChannelResponse::request() const
     return static_cast<const CreateChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive CreateChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateChannelResponsePrivate
+ * \class CreateChannelResponsePrivate
  *
- * @brief  Private implementation for CreateChannelResponse.
+ * \brief Private implementation for CreateChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateChannelResponsePrivate object.
@@ -91,7 +94,7 @@ CreateChannelResponsePrivate::CreateChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive CreateChannelResponse element.
  *
  * @param  xml  XML stream to parse.

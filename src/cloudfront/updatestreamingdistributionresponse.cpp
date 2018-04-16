@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateStreamingDistributionResponse
+/*!
+ * \class QtAws::CloudFront::UpdateStreamingDistributionResponse
  *
- * @brief  Handles CloudFront UpdateStreamingDistribution responses.
+ * \brief The UpdateStreamingDistributionResponse class encapsulates CloudFront UpdateStreamingDistribution responses.
  *
- * @see    CloudFrontClient::updateStreamingDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateStreamingDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamingDistributionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateStreamingDistributionRequest * UpdateStreamingDistributionResponse::
     return static_cast<const UpdateStreamingDistributionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront UpdateStreamingDistribution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateStreamingDistributionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateStreamingDistributionResponsePrivate
+ * \class UpdateStreamingDistributionResponsePrivate
  *
- * @brief  Private implementation for UpdateStreamingDistributionResponse.
+ * \brief Private implementation for UpdateStreamingDistributionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamingDistributionResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront UpdateStreamingDistributionResponse element.
  *
  * @param  xml  XML stream to parse.

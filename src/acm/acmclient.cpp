@@ -49,32 +49,40 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ACM
+ * \brief The QtAws::ACM contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  AcmClient
+/*!
+ * \class QtAws::ACM::AcmClient
  *
- * @brief  Client for AWS Certificate Manager (ACM)
+ * \brief The AcmClient class provides access the AWS Certificate Manager (ACM) service.
  *
- * <fullname>AWS Certificate Manager</fullname>
+ * \ingroup ACM
  *
- * Welcome to the AWS Certificate Manager (ACM) API
- *
- * documentation>
- *
- * You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
- * about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
- * Certificate Manager User Guide</i>
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
  */
 
-/**
- * @brief  Constructs a new AcmClient object.
+/*!
+ * \brief Constructs a AcmClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AcmClient::AcmClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -93,21 +101,16 @@ AcmClient::AcmClient(
     d->serviceName = QStringLiteral("acm");
 }
 
-/**
- * @brief  Constructs a new AcmClient object.
+/*!
+ * \overload AcmClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AcmClient::AcmClient(
     const QUrl &endpoint,
@@ -126,7 +129,7 @@ AcmClient::AcmClient(
     d->serviceName = QStringLiteral("acm");
 }
 
-/**
+/*!
  * Adds one or more tags to an ACM certificate. Tags are labels that you can use to identify and organize your AWS
  * resources. Each tag consists of a <code>key</code> and an optional <code>value</code>. You specify the certificate on
  * input by its Amazon Resource Name (ARN). You specify the tag by using a key-value pair.
@@ -156,7 +159,7 @@ AddTagsToCertificateResponse * AcmClient::addTagsToCertificate(const AddTagsToCe
     return qobject_cast<AddTagsToCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a certificate and its associated private key. If this action succeeds, the certificate no longer appears in the
  * list that can be displayed by calling the <a>ListCertificates</a> action or be retrieved by calling the
  * <a>GetCertificate</a> action. The certificate will not be available for use by AWS services integrated with ACM.
@@ -177,7 +180,7 @@ DeleteCertificateResponse * AcmClient::deleteCertificate(const DeleteCertificate
     return qobject_cast<DeleteCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns detailed metadata about the specified ACM
  *
  * @param  request Request to send to AWS Certificate Manager.
@@ -191,7 +194,7 @@ DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCerti
     return qobject_cast<DescribeCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Exports a certificate for use anywhere. You can export the certificate, the certificate chain, and the encrypted private
  * key associated with the public key embedded in the certificate. You must store the private key securely. The private key
  * is a 2048 bit RSA key. You must provide a passphrase for the private key when exporting it. You can use the following
@@ -212,7 +215,7 @@ ExportCertificateResponse * AcmClient::exportCertificate(const ExportCertificate
     return qobject_cast<ExportCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates
  * that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that
  * order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the
@@ -229,7 +232,7 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
     return qobject_cast<GetCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that <a
  * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-services.html">integrated
  * services</a> allow only certificate types and keys they support to be associated with their resources. Further, their
@@ -308,7 +311,7 @@ ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificate
     return qobject_cast<ImportCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific
  * status be listed. You can also filter by specific attributes of the certificate.
  *
@@ -323,7 +326,7 @@ ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesReq
     return qobject_cast<ListCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags that have been applied to the ACM certificate. Use the certificate's Amazon Resource Name (ARN) to
  * specify the certificate. To add a tag to an ACM certificate, use the <a>AddTagsToCertificate</a> action. To delete a
  * tag, use the <a>RemoveTagsFromCertificate</a> action.
@@ -339,7 +342,7 @@ ListTagsForCertificateResponse * AcmClient::listTagsForCertificate(const ListTag
     return qobject_cast<ListTagsForCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove one or more tags from an ACM certificate. A tag consists of a key-value pair. If you do not specify the value
  * portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the
  * tag is removed only if it is associated with the specified value.
@@ -360,7 +363,7 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
     return qobject_cast<RemoveTagsFromCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests an ACM certificate for use with other AWS services. To request an ACM certificate, you must specify the fully
  * qualified domain name (FQDN) for your site in the <code>DomainName</code> parameter. You can also specify additional
  * FQDNs in the <code>SubjectAlternativeNames</code> parameter.
@@ -397,7 +400,7 @@ RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertific
     return qobject_cast<RequestCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Resends the email that requests domain ownership validation. The domain owner or an authorized representative must
  * approve the ACM certificate before it can be issued. The certificate can be approved by clicking a link in the mail to
  * navigate to the Amazon certificate approval website and then clicking <b>I Approve</b>. However, the validation email
@@ -419,7 +422,7 @@ ResendValidationEmailResponse * AcmClient::resendValidationEmail(const ResendVal
     return qobject_cast<ResendValidationEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a certificate. Currently, you can use this function to specify whether to opt in to or out of recording your
  * certificate in a certificate transparency log. For more information, see <a
  * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-bestpractices.html#best-practices-transparency">
@@ -436,7 +439,7 @@ UpdateCertificateOptionsResponse * AcmClient::updateCertificateOptions(const Upd
     return qobject_cast<UpdateCertificateOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AcmClientPrivate
@@ -444,7 +447,7 @@ UpdateCertificateOptionsResponse * AcmClient::updateCertificateOptions(const Upd
  * @brief  Private implementation for AcmClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcmClientPrivate object.

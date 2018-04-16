@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ListDomainsResponse
+/*!
+ * \class QtAws::Route53Domains::ListDomainsResponse
  *
- * @brief  Handles Route53Domains ListDomains responses.
+ * \brief The ListDomainsResponse class encapsulates Route53Domains ListDomains responses.
  *
- * @see    Route53DomainsClient::listDomains
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::listDomains
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDomainsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListDomainsRequest * ListDomainsResponse::request() const
     return static_cast<const ListDomainsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains ListDomains response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDomainsResponsePrivate
+ * \class ListDomainsResponsePrivate
  *
- * @brief  Private implementation for ListDomainsResponse.
+ * \brief Private implementation for ListDomainsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDomainsResponsePrivate object.
@@ -91,7 +95,7 @@ ListDomainsResponsePrivate::ListDomainsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains ListDomainsResponse element.
  *
  * @param  xml  XML stream to parse.

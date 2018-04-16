@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListQueryLoggingConfigsRequest
+/*!
+ * \class QtAws::Route53::ListQueryLoggingConfigsRequest
  *
- * @brief  Implements Route53 ListQueryLoggingConfigs requests.
+ * \brief The ListQueryLoggingConfigsRequest class encapsulates Route53 ListQueryLoggingConfigs requests.
  *
- * @see    Route53Client::listQueryLoggingConfigs
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listQueryLoggingConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListQueryLoggingConfigsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest(const ListQueryLo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListQueryLoggingConfigsRequest object.
  */
 ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest()
@@ -53,13 +56,16 @@ ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListQueryLoggingConfigsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListQueryLoggingConfigsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNet
     return new ListQueryLoggingConfigsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListQueryLoggingConfigsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNet
  * @brief  Private implementation for ListQueryLoggingConfigsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQueryLoggingConfigsRequestPrivate object.
@@ -97,7 +103,7 @@ ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQueryLoggingConfigsRequestPrivate object, copying another.

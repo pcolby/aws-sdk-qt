@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeImportSnapshotTasksRequest
+/*!
+ * \class QtAws::EC2::DescribeImportSnapshotTasksRequest
  *
- * @brief  Implements EC2 DescribeImportSnapshotTasks requests.
+ * \brief The DescribeImportSnapshotTasksRequest class encapsulates EC2 DescribeImportSnapshotTasks requests.
  *
- * @see    EC2Client::describeImportSnapshotTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeImportSnapshotTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImportSnapshotTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest(const Des
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImportSnapshotTasksRequest object.
  */
 DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest()
@@ -53,13 +60,16 @@ DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImportSnapshotTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImportSnapshotTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(
     return new DescribeImportSnapshotTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImportSnapshotTasksRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(
  * @brief  Private implementation for DescribeImportSnapshotTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImportSnapshotTasksRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImportSnapshotTasksRequestPrivate object, copying another.

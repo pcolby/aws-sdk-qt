@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DeleteExpressionRequest
+/*!
+ * \class QtAws::CloudSearch::DeleteExpressionRequest
  *
- * @brief  Implements CloudSearch DeleteExpression requests.
+ * \brief The DeleteExpressionRequest class encapsulates CloudSearch DeleteExpression requests.
  *
- * @see    CloudSearchClient::deleteExpression
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::deleteExpression
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteExpressionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteExpressionRequest::DeleteExpressionRequest(const DeleteExpressionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteExpressionRequest object.
  */
 DeleteExpressionRequest::DeleteExpressionRequest()
@@ -53,13 +67,16 @@ DeleteExpressionRequest::DeleteExpressionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteExpressionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteExpressionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkRep
     return new DeleteExpressionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteExpressionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteExpressionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteExpressionRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteExpressionRequestPrivate object, copying another.

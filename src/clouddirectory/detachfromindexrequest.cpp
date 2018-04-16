@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DetachFromIndexRequest
+/*!
+ * \class QtAws::CloudDirectory::DetachFromIndexRequest
  *
- * @brief  Implements CloudDirectory DetachFromIndex requests.
+ * \brief The DetachFromIndexRequest class encapsulates CloudDirectory DetachFromIndex requests.
  *
- * @see    CloudDirectoryClient::detachFromIndex
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::detachFromIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachFromIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DetachFromIndexRequest::DetachFromIndexRequest(const DetachFromIndexRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachFromIndexRequest object.
  */
 DetachFromIndexRequest::DetachFromIndexRequest()
@@ -53,13 +63,16 @@ DetachFromIndexRequest::DetachFromIndexRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachFromIndexRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachFromIndexResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkRepl
     return new DetachFromIndexResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachFromIndexRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkRepl
  * @brief  Private implementation for DetachFromIndexRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachFromIndexRequestPrivate object.
@@ -97,7 +110,7 @@ DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachFromIndexRequestPrivate object, copying another.

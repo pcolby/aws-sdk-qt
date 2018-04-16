@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  UploadPartCopyResponse
+/*!
+ * \class QtAws::S3::UploadPartCopyResponse
  *
- * @brief  Handles S3 UploadPartCopy responses.
+ * \brief The UploadPartCopyResponse class encapsulates S3 UploadPartCopy responses.
  *
- * @see    S3Client::uploadPartCopy
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::uploadPartCopy
  */
 
-/**
+/*!
  * @brief  Constructs a new UploadPartCopyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UploadPartCopyRequest * UploadPartCopyResponse::request() const
     return static_cast<const UploadPartCopyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 UploadPartCopy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UploadPartCopyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UploadPartCopyResponsePrivate
+ * \class UploadPartCopyResponsePrivate
  *
- * @brief  Private implementation for UploadPartCopyResponse.
+ * \brief Private implementation for UploadPartCopyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadPartCopyResponsePrivate object.
@@ -91,7 +94,7 @@ UploadPartCopyResponsePrivate::UploadPartCopyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 UploadPartCopyResponse element.
  *
  * @param  xml  XML stream to parse.

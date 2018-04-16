@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SetDesiredCapacityRequest
+/*!
+ * \class QtAws::AutoScaling::SetDesiredCapacityRequest
  *
- * @brief  Implements AutoScaling SetDesiredCapacity requests.
+ * \brief The SetDesiredCapacityRequest class encapsulates AutoScaling SetDesiredCapacity requests.
  *
- * @see    AutoScalingClient::setDesiredCapacity
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::setDesiredCapacity
  */
 
-/**
+/*!
  * @brief  Constructs a new SetDesiredCapacityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SetDesiredCapacityRequest::SetDesiredCapacityRequest(const SetDesiredCapacityReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetDesiredCapacityRequest object.
  */
 SetDesiredCapacityRequest::SetDesiredCapacityRequest()
@@ -53,13 +61,16 @@ SetDesiredCapacityRequest::SetDesiredCapacityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetDesiredCapacityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetDesiredCapacityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkR
     return new SetDesiredCapacityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetDesiredCapacityRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkR
  * @brief  Private implementation for SetDesiredCapacityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetDesiredCapacityRequestPrivate object.
@@ -97,7 +108,7 @@ SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetDesiredCapacityRequestPrivate object, copying another.

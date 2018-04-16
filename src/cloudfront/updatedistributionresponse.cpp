@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateDistributionResponse
+/*!
+ * \class QtAws::CloudFront::UpdateDistributionResponse
  *
- * @brief  Handles CloudFront UpdateDistribution responses.
+ * \brief The UpdateDistributionResponse class encapsulates CloudFront UpdateDistribution responses.
  *
- * @see    CloudFrontClient::updateDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDistributionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateDistributionRequest * UpdateDistributionResponse::request() const
     return static_cast<const UpdateDistributionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront UpdateDistribution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateDistributionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDistributionResponsePrivate
+ * \class UpdateDistributionResponsePrivate
  *
- * @brief  Private implementation for UpdateDistributionResponse.
+ * \brief Private implementation for UpdateDistributionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDistributionResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateDistributionResponsePrivate::UpdateDistributionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront UpdateDistributionResponse element.
  *
  * @param  xml  XML stream to parse.

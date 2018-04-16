@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  ListTagsForStreamRequest
+/*!
+ * \class QtAws::Kinesis::ListTagsForStreamRequest
  *
- * @brief  Implements Kinesis ListTagsForStream requests.
+ * \brief The ListTagsForStreamRequest class encapsulates Kinesis ListTagsForStream requests.
  *
- * @see    KinesisClient::listTagsForStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::listTagsForStream
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListTagsForStreamRequest::ListTagsForStreamRequest(const ListTagsForStreamReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForStreamRequest object.
  */
 ListTagsForStreamRequest::ListTagsForStreamRequest()
@@ -53,13 +59,16 @@ ListTagsForStreamRequest::ListTagsForStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkRe
     return new ListTagsForStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForStreamRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkRe
  * @brief  Private implementation for ListTagsForStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForStreamRequestPrivate object.
@@ -97,7 +106,7 @@ ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForStreamRequestPrivate object, copying another.

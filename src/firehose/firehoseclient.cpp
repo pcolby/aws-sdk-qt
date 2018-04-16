@@ -39,27 +39,35 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Firehose
+ * \brief The QtAws::Firehose contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  FirehoseClient
+/*!
+ * \class QtAws::Firehose::FirehoseClient
  *
- * @brief  Client for Amazon Kinesis Firehose
+ * \brief The FirehoseClient class provides access the Amazon Kinesis Firehose service.
  *
- * <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * \ingroup Firehose
  *
- * Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
- * Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
  */
 
-/**
- * @brief  Constructs a new FirehoseClient object.
+/*!
+ * \brief Constructs a FirehoseClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 FirehoseClient::FirehoseClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -78,21 +86,16 @@ FirehoseClient::FirehoseClient(
     d->serviceName = QStringLiteral("firehose");
 }
 
-/**
- * @brief  Constructs a new FirehoseClient object.
+/*!
+ * \overload FirehoseClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 FirehoseClient::FirehoseClient(
     const QUrl &endpoint,
@@ -111,7 +114,7 @@ FirehoseClient::FirehoseClient(
     d->serviceName = QStringLiteral("firehose");
 }
 
-/**
+/*!
  * Creates a delivery
  *
  * stream>
@@ -188,7 +191,7 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
     return qobject_cast<CreateDeliveryStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a delivery stream and its
  *
  * data>
@@ -218,7 +221,7 @@ DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const Delete
     return qobject_cast<DeleteDeliveryStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified delivery stream and gets the status. For example, after your delivery stream is created, call
  * <a>DescribeDeliveryStream</a> to see if the delivery stream is <code>ACTIVE</code> and therefore ready for data to be
  * sent to
@@ -234,7 +237,7 @@ DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const De
     return qobject_cast<DescribeDeliveryStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists your delivery
  *
  * streams>
@@ -256,7 +259,7 @@ ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeli
     return qobject_cast<ListDeliveryStreamsResponse *>(send(request));
 }
 
-/**
+/*!
  * Writes a single data record into an Amazon Kinesis Firehose delivery stream. To write multiple data records into a
  * delivery stream, use <a>PutRecordBatch</a>. Applications using these operations are referred to as
  *
@@ -307,7 +310,7 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
     return qobject_cast<PutRecordResponse *>(send(request));
 }
 
-/**
+/*!
  * Writes multiple data records into a delivery stream in a single call, which can achieve higher throughput per producer
  * than when writing single records. To write single data records into a delivery stream, use <a>PutRecord</a>.
  * Applications using these operations are referred to as
@@ -382,7 +385,7 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
     return qobject_cast<PutRecordBatchResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified destination of the specified delivery
  *
  * stream>
@@ -428,7 +431,7 @@ UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestin
     return qobject_cast<UpdateDestinationResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  FirehoseClientPrivate
@@ -436,7 +439,7 @@ UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestin
  * @brief  Private implementation for FirehoseClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FirehoseClientPrivate object.

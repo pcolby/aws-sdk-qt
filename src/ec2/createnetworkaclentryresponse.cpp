@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateNetworkAclEntryResponse
+/*!
+ * \class QtAws::EC2::CreateNetworkAclEntryResponse
  *
- * @brief  Handles EC2 CreateNetworkAclEntry responses.
+ * \brief The CreateNetworkAclEntryResponse class encapsulates EC2 CreateNetworkAclEntry responses.
  *
- * @see    EC2Client::createNetworkAclEntry
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createNetworkAclEntry
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkAclEntryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateNetworkAclEntryRequest * CreateNetworkAclEntryResponse::request() co
     return static_cast<const CreateNetworkAclEntryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateNetworkAclEntry response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateNetworkAclEntryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateNetworkAclEntryResponsePrivate
+ * \class CreateNetworkAclEntryResponsePrivate
  *
- * @brief  Private implementation for CreateNetworkAclEntryResponse.
+ * \brief Private implementation for CreateNetworkAclEntryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkAclEntryResponsePrivate object.
@@ -91,7 +98,7 @@ CreateNetworkAclEntryResponsePrivate::CreateNetworkAclEntryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateNetworkAclEntryResponse element.
  *
  * @param  xml  XML stream to parse.

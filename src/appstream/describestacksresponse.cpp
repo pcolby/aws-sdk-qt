@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeStacksResponse
+/*!
+ * \class QtAws::AppStream::DescribeStacksResponse
  *
- * @brief  Handles AppStream DescribeStacks responses.
+ * \brief The DescribeStacksResponse class encapsulates AppStream DescribeStacks responses.
  *
- * @see    AppStreamClient::describeStacks
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeStacks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStacksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeStacksRequest * DescribeStacksResponse::request() const
     return static_cast<const DescribeStacksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DescribeStacks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeStacksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeStacksResponsePrivate
+ * \class DescribeStacksResponsePrivate
  *
- * @brief  Private implementation for DescribeStacksResponse.
+ * \brief Private implementation for DescribeStacksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStacksResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeStacksResponsePrivate::DescribeStacksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DescribeStacksResponse element.
  *
  * @param  xml  XML stream to parse.

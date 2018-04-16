@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  ListStreamsRequest
+/*!
+ * \class QtAws::KinesisVideo::ListStreamsRequest
  *
- * @brief  Implements KinesisVideo ListStreams requests.
+ * \brief The ListStreamsRequest class encapsulates KinesisVideo ListStreams requests.
  *
- * @see    KinesisVideoClient::listStreams
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::listStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
@@ -53,13 +56,16 @@ ListStreamsRequest::ListStreamsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStreamsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStreamsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
     return new ListStreamsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStreamsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListStreamsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object.
@@ -97,7 +103,7 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.

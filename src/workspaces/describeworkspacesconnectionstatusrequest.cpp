@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeWorkspacesConnectionStatusRequest
+/*!
+ * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusRequest
  *
- * @brief  Implements WorkSpaces DescribeWorkspacesConnectionStatus requests.
+ * \brief The DescribeWorkspacesConnectionStatusRequest class encapsulates WorkSpaces DescribeWorkspacesConnectionStatus requests.
  *
- * @see    WorkSpacesClient::describeWorkspacesConnectionStatus
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeWorkspacesConnectionStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeWorkspacesConnectionStatusRequest::DescribeWorkspacesConnectionStatusReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequest object.
  */
 DescribeWorkspacesConnectionStatusRequest::DescribeWorkspacesConnectionStatusRequest()
@@ -53,13 +59,16 @@ DescribeWorkspacesConnectionStatusRequest::DescribeWorkspacesConnectionStatusReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeWorkspacesConnectionStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeWorkspacesConnectionStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::re
     return new DescribeWorkspacesConnectionStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeWorkspacesConnectionStatusRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::re
  * @brief  Private implementation for DescribeWorkspacesConnectionStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionSt
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspacesConnectionStatusRequestPrivate object, copying another.

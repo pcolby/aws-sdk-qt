@@ -561,27 +561,35 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::EC2
+ * \brief The QtAws::EC2 contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  Ec2Client
+/*!
+ * \class QtAws::EC2::Ec2Client
  *
- * @brief  Client for Amazon Elastic Compute Cloud ( EC2)
+ * \brief The Ec2Client class provides access the Amazon Elastic Compute Cloud ( EC2) service.
  *
- * <fullname>Amazon Elastic Compute Cloud</fullname>
+ * \ingroup EC2
  *
- * Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
- * eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
  */
 
-/**
- * @brief  Constructs a new Ec2Client object.
+/*!
+ * \brief Constructs a Ec2Client object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 Ec2Client::Ec2Client(
     const QtAws::Core::AwsRegion::Region region,
@@ -600,21 +608,16 @@ Ec2Client::Ec2Client(
     d->serviceName = QStringLiteral("ec2");
 }
 
-/**
- * @brief  Constructs a new Ec2Client object.
+/*!
+ * \overload Ec2Client()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 Ec2Client::Ec2Client(
     const QUrl &endpoint,
@@ -633,7 +636,7 @@ Ec2Client::Ec2Client(
     d->serviceName = QStringLiteral("ec2");
 }
 
-/**
+/*!
  * Accepts the Convertible Reserved Instance exchange quote described in the <a>GetReservedInstancesExchangeQuote</a>
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -647,7 +650,7 @@ AcceptReservedInstancesExchangeQuoteResponse * Ec2Client::acceptReservedInstance
     return qobject_cast<AcceptReservedInstancesExchangeQuoteResponse *>(send(request));
 }
 
-/**
+/*!
  * Accepts one or more interface VPC endpoint connection requests to your VPC endpoint
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -661,7 +664,7 @@ AcceptVpcEndpointConnectionsResponse * Ec2Client::acceptVpcEndpointConnections(c
     return qobject_cast<AcceptVpcEndpointConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Accept a VPC peering connection request. To accept a request, the VPC peering connection must be in the
  * <code>pending-acceptance</code> state, and you must be the owner of the peer VPC. Use
  * <a>DescribeVpcPeeringConnections</a> to view your outstanding VPC peering connection
@@ -682,7 +685,7 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
     return qobject_cast<AcceptVpcPeeringConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Allocates an Elastic IP
  *
  * address>
@@ -713,7 +716,7 @@ AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressReques
     return qobject_cast<AllocateAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Allocates a Dedicated Host to your account. At minimum you need to specify the instance size type, Availability Zone,
  * and quantity of hosts you want to
  *
@@ -728,7 +731,7 @@ AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &req
     return qobject_cast<AllocateHostsResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns one or more IPv6 addresses to the specified network interface. You can specify one or more specific IPv6
  * addresses, or you can specify the number of IPv6 addresses to be automatically assigned from within the subnet's IPv6
  * CIDR block range. You can assign as many IPv6 addresses to a network interface as you can assign private IPv4 addresses,
@@ -747,7 +750,7 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
     return qobject_cast<AssignIpv6AddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns one or more secondary private IP addresses to the specified network interface. You can specify one or more
  * specific secondary IP addresses, or you can specify the number of secondary IP addresses to be automatically assigned
  * within the subnet's CIDR block range. The number of secondary IP addresses that you can assign to an instance varies by
@@ -772,7 +775,7 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
     return qobject_cast<AssignPrivateIpAddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates an Elastic IP address with an instance or a network
  *
  * interface>
@@ -812,7 +815,7 @@ AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressReq
     return qobject_cast<AssociateAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a set of DHCP options (that you've previously created) with the specified VPC, or associates no DHCP options
  * with the
  *
@@ -839,7 +842,7 @@ AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDh
     return qobject_cast<AssociateDhcpOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates an IAM instance profile with a running or stopped instance. You cannot associate more than one IAM instance
  * profile with an
  *
@@ -854,7 +857,7 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
     return qobject_cast<AssociateIamInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a subnet with a route table. The subnet and route table must be in the same VPC. This association causes
  * traffic originating from the subnet to be routed according to the routes in the route table. The action returns an
  * association ID, which you need in order to disassociate the route table from the subnet later. A route table can be
@@ -877,7 +880,7 @@ AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRout
     return qobject_cast<AssociateRouteTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet. An IPv6 CIDR
  * block must have a prefix length of
  *
@@ -892,7 +895,7 @@ AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const Ass
     return qobject_cast<AssociateSubnetCidrBlockResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a CIDR block with your VPC. You can associate a secondary IPv4 CIDR block, or you can associate an
  * Amazon-provided IPv6 CIDR block. The IPv6 CIDR block size is fixed at
  *
@@ -913,7 +916,7 @@ AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const Associate
     return qobject_cast<AssociateVpcCidrBlockResponse *>(send(request));
 }
 
-/**
+/*!
  * Links an EC2-Classic instance to a ClassicLink-enabled VPC through one or more of the VPC's security groups. You cannot
  * link an EC2-Classic instance to more than one VPC at a time. You can only link an instance that's in the
  * <code>running</code> state. An instance is automatically unlinked from a VPC when it's stopped - you can link it to the
@@ -939,7 +942,7 @@ AttachClassicLinkVpcResponse * Ec2Client::attachClassicLinkVpc(const AttachClass
     return qobject_cast<AttachClassicLinkVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches an Internet gateway to a VPC, enabling connectivity between the Internet and the VPC. For more information
  * about your VPC and Internet gateway, see the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/">Amazon
  * Virtual Private Cloud User
@@ -955,7 +958,7 @@ AttachInternetGatewayResponse * Ec2Client::attachInternetGateway(const AttachInt
     return qobject_cast<AttachInternetGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a network interface to an
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -969,7 +972,7 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
     return qobject_cast<AttachNetworkInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device
  *
  * name>
@@ -1028,7 +1031,7 @@ AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &reques
     return qobject_cast<AttachVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a virtual private gateway to a VPC. You can attach one virtual private gateway to one VPC at a
  *
  * time>
@@ -1047,7 +1050,7 @@ AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayReq
     return qobject_cast<AttachVpnGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * [EC2-VPC only] Adds one or more egress rules to a security group for use with a VPC. Specifically, this action permits
  * instances to send traffic to one or more destination IPv4 or IPv6 CIDR address ranges, or to one or more destination
  * security groups for the same VPC. This action doesn't apply to security groups for use in EC2-Classic. For more
@@ -1077,7 +1080,7 @@ AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(c
     return qobject_cast<AuthorizeSecurityGroupEgressResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more ingress rules to a security
  *
  * group>
@@ -1113,7 +1116,7 @@ AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress
     return qobject_cast<AuthorizeSecurityGroupIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * Bundles an Amazon instance store-backed Windows
  *
  * instance>
@@ -1141,7 +1144,7 @@ BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &
     return qobject_cast<BundleInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels a bundling operation for an instance store-backed Windows
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -1155,7 +1158,7 @@ CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskReq
     return qobject_cast<CancelBundleTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels an active conversion task. The task can be the import of an instance or volume. The action removes all artifacts
  * of the conversion, including a partially uploaded volume or instance. If the conversion is complete or is in the process
  * of transferring the final disk image, the command fails and returns an
@@ -1177,7 +1180,7 @@ CancelConversionTaskResponse * Ec2Client::cancelConversionTask(const CancelConve
     return qobject_cast<CancelConversionTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels an active export task. The request removes all artifacts of the export, including any partially-created Amazon
  * S3 objects. If the export task is complete or is in the process of transferring the final disk image, the command fails
  * and returns an
@@ -1193,7 +1196,7 @@ CancelExportTaskResponse * Ec2Client::cancelExportTask(const CancelExportTaskReq
     return qobject_cast<CancelExportTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels an in-process import virtual machine or import snapshot
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -1207,7 +1210,7 @@ CancelImportTaskResponse * Ec2Client::cancelImportTask(const CancelImportTaskReq
     return qobject_cast<CancelImportTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels the specified Reserved Instance listing in the Reserved Instance
  *
  * Marketplace>
@@ -1226,7 +1229,7 @@ CancelReservedInstancesListingResponse * Ec2Client::cancelReservedInstancesListi
     return qobject_cast<CancelReservedInstancesListingResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels the specified Spot Fleet
  *
  * requests>
@@ -1247,7 +1250,7 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
     return qobject_cast<CancelSpotFleetRequestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels one or more Spot Instance requests. Spot Instances are instances that Amazon EC2 starts on your behalf when the
  * maximum price that you specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
@@ -1268,7 +1271,7 @@ CancelSpotInstanceRequestsResponse * Ec2Client::cancelSpotInstanceRequests(const
     return qobject_cast<CancelSpotInstanceRequestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Determines whether a product code is associated with an instance. This action can only be used by the owner of the
  * product code. It is useful when a product code owner must verify whether another user's instance is eligible for
  *
@@ -1283,7 +1286,7 @@ ConfirmProductInstanceResponse * Ec2Client::confirmProductInstance(const Confirm
     return qobject_cast<ConfirmProductInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the specified Amazon FPGA Image (AFI) to the current
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -1297,7 +1300,7 @@ CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &req
     return qobject_cast<CopyFpgaImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates the copy of an AMI from the specified source region to the current region. You specify the destination region
  * by using its endpoint when making the
  *
@@ -1318,7 +1321,7 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
     return qobject_cast<CopyImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies a point-in-time snapshot of an EBS volume and stores it in Amazon S3. You can copy the snapshot within the same
  * region or from one region to another. You can use the snapshot to create EBS volumes or Amazon Machine Images (AMIs).
  * The snapshot is copied to the regional endpoint that you send the HTTP request
@@ -1355,7 +1358,7 @@ CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &reques
     return qobject_cast<CopySnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of
  * the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide
  * the Internet-routable IP address of the customer gateway's external interface. The IP address must be static and may be
@@ -1395,7 +1398,7 @@ CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCus
     return qobject_cast<CreateCustomerGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a default subnet with a size <code>/20</code> IPv4 CIDR block in the specified Availability Zone in your default
  * VPC. You can have only one default subnet per Availability Zone. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#create-default-subnet">Creating a Default
@@ -1412,7 +1415,7 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
     return qobject_cast<CreateDefaultSubnetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a default VPC with a size <code>/16</code> IPv4 CIDR block and a default subnet in each Availability Zone. For
  * more information about the components of a default VPC, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html">Default VPC and Default Subnets</a> in the
@@ -1440,7 +1443,7 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
     return qobject_cast<CreateDefaultVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a set of DHCP options for your VPC. After creating the set, you must associate it with the VPC, causing all
  * existing and new instances that you launch in the VPC to use this set of DHCP options. The following are the individual
  * DHCP options you can specify. For more information about the options, see <a
@@ -1497,7 +1500,7 @@ CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptions
     return qobject_cast<CreateDhcpOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * [IPv6 only] Creates an egress-only Internet gateway for your VPC. An egress-only Internet gateway is used to enable
  * outbound communication over IPv6 from instances in your VPC to the Internet, and prevents hosts outside of your VPC from
  * initiating an IPv6 connection with your
@@ -1513,7 +1516,7 @@ CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGat
     return qobject_cast<CreateEgressOnlyInternetGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one or more flow logs to capture IP traffic for a specific network interface, subnet, or VPC. Flow logs are
  * delivered to a specified log group in Amazon CloudWatch Logs. If you specify a VPC or subnet in the request, a log
  * stream is created in CloudWatch Logs for each network interface in the subnet or VPC. Log streams can include
@@ -1540,7 +1543,7 @@ CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &
     return qobject_cast<CreateFlowLogsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon FPGA Image (AFI) from the specified design checkpoint
  *
  * (DCP)>
@@ -1564,7 +1567,7 @@ CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageReques
     return qobject_cast<CreateFpgaImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or
  *
  * stopped>
@@ -1589,7 +1592,7 @@ CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
     return qobject_cast<CreateImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Exports a running or stopped instance to an S3
  *
  * bucket>
@@ -1609,7 +1612,7 @@ CreateInstanceExportTaskResponse * Ec2Client::createInstanceExportTask(const Cre
     return qobject_cast<CreateInstanceExportTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Internet gateway for use with a VPC. After creating the Internet gateway, you attach it to a VPC using
  *
  * <a>AttachInternetGateway</a>>
@@ -1628,7 +1631,7 @@ CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInt
     return qobject_cast<CreateInternetGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and displays the private key
  * for you to save to a file. The private key is returned as an unencrypted PEM encoded PKCS#1 private key. If a key with
  * the specified name already exists, Amazon EC2 returns an
@@ -1658,7 +1661,7 @@ CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &req
     return qobject_cast<CreateKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance
  * using <a>RunInstances</a>, you can specify a launch template instead of providing the launch parameters in the
  *
@@ -1673,7 +1676,7 @@ CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunc
     return qobject_cast<CreateLaunchTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new version for a launch template. You can specify an existing version of launch template from which to base
  * the new
  *
@@ -1693,7 +1696,7 @@ CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(con
     return qobject_cast<CreateLaunchTemplateVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a NAT gateway in the specified subnet. A NAT gateway can be used to enable instances in a private subnet to
  * connect to the Internet. This action creates a network interface in the specified subnet with a private IP address from
  * the IP address range of the subnet. For more information, see <a
@@ -1711,7 +1714,7 @@ CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayReq
     return qobject_cast<CreateNatGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a network ACL in a VPC. Network ACLs provide an optional layer of security (in addition to security groups) for
  * the instances in your
  *
@@ -1732,7 +1735,7 @@ CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclReq
     return qobject_cast<CreateNetworkAclResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an entry (a rule) in a network ACL with the specified rule number. Each network ACL has a set of numbered
  * ingress rules and a separate set of numbered egress rules. When determining whether a packet should be allowed in or out
  * of a subnet associated with the ACL, we process the entries in the ACL according to the rule numbers, in ascending
@@ -1765,7 +1768,7 @@ CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNet
     return qobject_cast<CreateNetworkAclEntryResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a network interface in the specified
  *
  * subnet>
@@ -1785,7 +1788,7 @@ CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateN
     return qobject_cast<CreateNetworkInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Grants an AWS authorized partner account permission to attach the specified network interface to an instance in their
  *
  * account>
@@ -1803,7 +1806,7 @@ CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePerm
     return qobject_cast<CreateNetworkInterfacePermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a placement group in which to launch instances. The strategy of the placement group determines how the instances
  * are organized within the group.
  *
@@ -1828,7 +1831,7 @@ CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlace
     return qobject_cast<CreatePlacementGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a listing for Amazon EC2 Standard Reserved Instances to be sold in the Reserved Instance Marketplace. You can
  * submit one Standard Reserved Instance listing at a time. To get a list of your Standard Reserved Instances, you can use
  * the <a>DescribeReservedInstances</a>
@@ -1868,7 +1871,7 @@ CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListi
     return qobject_cast<CreateReservedInstancesListingResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a route in a route table within a
  *
  * VPC>
@@ -1911,7 +1914,7 @@ CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
     return qobject_cast<CreateRouteResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a route table for the specified VPC. After you create a route table, you can add routes and associate the table
  * with a
  *
@@ -1932,7 +1935,7 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
     return qobject_cast<CreateRouteTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a security
  *
  * group>
@@ -1979,7 +1982,7 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
     return qobject_cast<CreateSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a snapshot of an EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of EBS
  * volumes, and to save data before shutting down an
  *
@@ -2028,7 +2031,7 @@ CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &
     return qobject_cast<CreateSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a data feed for Spot Instances, enabling you to view Spot Instance usage logs. You can create one data feed per
  * AWS account. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance Data Feed</a> in the
@@ -2045,7 +2048,7 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
     return qobject_cast<CreateSpotDatafeedSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a subnet in an existing
  *
  * VPC>
@@ -2092,7 +2095,7 @@ CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &reques
     return qobject_cast<CreateSubnetResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified Amazon EC2 resource or resources. Each resource can have a maximum
  * of 50 tags. Each tag consists of a key and optional value. Tag keys must be unique per
  *
@@ -2116,7 +2119,7 @@ CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
     return qobject_cast<CreateTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an EBS volume that can be attached to an instance in the same Availability Zone. The volume is created in the
  * regional endpoint that you send the HTTP request to. For more information see <a
  * href="http://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and
@@ -2155,7 +2158,7 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
     return qobject_cast<CreateVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a VPC with the specified IPv4 CIDR block. The smallest VPC you can create uses a /28 netmask (16 IPv4
  * addresses), and the largest uses a /16 netmask (65,536 IPv4 addresses). To help you decide how big to make your VPC, see
  * <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a> in the
@@ -2191,7 +2194,7 @@ CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
     return qobject_cast<CreateVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC
  * and the service. The service may be provided by AWS, an AWS Marketplace partner, or another AWS account. For more
  * information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html">VPC Endpoints</a> in
@@ -2224,7 +2227,7 @@ CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpoint
     return qobject_cast<CreateVpcEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a connection notification for a specified VPC endpoint or VPC endpoint service. A connection notification
  * notifies you of specific endpoint events. You must create an SNS topic to receive notifications. For more information,
  * see <a href="http://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Create a Topic</a> in the <i>Amazon Simple
@@ -2245,7 +2248,7 @@ CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointCo
     return qobject_cast<CreateVpcEndpointConnectionNotificationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can
  * connect. Service consumers can create an interface VPC endpoint to connect to your
  *
@@ -2266,7 +2269,7 @@ CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServ
     return qobject_cast<CreateVpcEndpointServiceConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a VPC peering connection between two VPCs: a requester VPC that you own and an accepter VPC with which to
  * create the connection. The accepter VPC can belong to another AWS account and can be in a different region to the
  * requester VPC. The requester VPC and accepter VPC cannot have overlapping CIDR
@@ -2298,7 +2301,7 @@ CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const
     return qobject_cast<CreateVpcPeeringConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a VPN connection between an existing virtual private gateway and a VPN customer gateway. The only supported
  * connection type is
  *
@@ -2336,7 +2339,7 @@ CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConn
     return qobject_cast<CreateVpnConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a static route associated with a VPN connection between an existing virtual private gateway and a VPN customer
  * gateway. The static route allows traffic to be routed from the virtual private gateway to the VPN customer
  *
@@ -2357,7 +2360,7 @@ CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const Cre
     return qobject_cast<CreateVpnConnectionRouteResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a virtual private gateway. A virtual private gateway is the endpoint on the VPC side of your VPN connection. You
  * can create a virtual private gateway before creating the VPC
  *
@@ -2378,7 +2381,7 @@ CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayReq
     return qobject_cast<CreateVpnGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified customer gateway. You must delete the VPN connection before you can delete the customer
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2392,7 +2395,7 @@ DeleteCustomerGatewayResponse * Ec2Client::deleteCustomerGateway(const DeleteCus
     return qobject_cast<DeleteCustomerGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified set of DHCP options. You must disassociate the set of DHCP options before you can delete it. You
  * can disassociate the set of DHCP options by associating either a new set of options or the default set of options with
  * the
@@ -2408,7 +2411,7 @@ DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptions
     return qobject_cast<DeleteDhcpOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an egress-only Internet
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2422,7 +2425,7 @@ DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGat
     return qobject_cast<DeleteEgressOnlyInternetGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more flow
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2436,7 +2439,7 @@ DeleteFlowLogsResponse * Ec2Client::deleteFlowLogs(const DeleteFlowLogsRequest &
     return qobject_cast<DeleteFlowLogsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Amazon FPGA Image
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2450,7 +2453,7 @@ DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageReques
     return qobject_cast<DeleteFpgaImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified Internet gateway. You must detach the Internet gateway from the VPC before you can delete
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2464,7 +2467,7 @@ DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInt
     return qobject_cast<DeleteInternetGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified key pair, by removing the public key from Amazon
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2478,7 +2481,7 @@ DeleteKeyPairResponse * Ec2Client::deleteKeyPair(const DeleteKeyPairRequest &req
     return qobject_cast<DeleteKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a launch template. Deleting a launch template deletes all of its
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2492,7 +2495,7 @@ DeleteLaunchTemplateResponse * Ec2Client::deleteLaunchTemplate(const DeleteLaunc
     return qobject_cast<DeleteLaunchTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more versions of a launch template. You cannot delete the default version of a launch template; you must
  * first assign a different version as the default. If the default version is the only version for the launch template, you
  * must delete the entire launch template using
@@ -2508,7 +2511,7 @@ DeleteLaunchTemplateVersionsResponse * Ec2Client::deleteLaunchTemplateVersions(c
     return qobject_cast<DeleteLaunchTemplateVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified NAT gateway. Deleting a NAT gateway disassociates its Elastic IP address, but does not release the
  * address from your account. Deleting a NAT gateway does not delete any NAT gateway routes in your route
  *
@@ -2523,7 +2526,7 @@ DeleteNatGatewayResponse * Ec2Client::deleteNatGateway(const DeleteNatGatewayReq
     return qobject_cast<DeleteNatGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified network ACL. You can't delete the ACL if it's associated with any subnets. You can't delete the
  * default network
  *
@@ -2538,7 +2541,7 @@ DeleteNetworkAclResponse * Ec2Client::deleteNetworkAcl(const DeleteNetworkAclReq
     return qobject_cast<DeleteNetworkAclResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified ingress or egress entry (rule) from the specified network
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2552,7 +2555,7 @@ DeleteNetworkAclEntryResponse * Ec2Client::deleteNetworkAclEntry(const DeleteNet
     return qobject_cast<DeleteNetworkAclEntryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified network interface. You must detach the network interface before you can delete
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2566,7 +2569,7 @@ DeleteNetworkInterfaceResponse * Ec2Client::deleteNetworkInterface(const DeleteN
     return qobject_cast<DeleteNetworkInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a permission for a network interface. By default, you cannot delete the permission if the account for which
  * you're removing the permission has attached the network interface to an instance. However, you can force delete the
  * permission, regardless of any
@@ -2582,7 +2585,7 @@ DeleteNetworkInterfacePermissionResponse * Ec2Client::deleteNetworkInterfacePerm
     return qobject_cast<DeleteNetworkInterfacePermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified placement group. You must terminate all instances in the placement group before you can delete the
  * placement group. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the <i>Amazon
@@ -2599,7 +2602,7 @@ DeletePlacementGroupResponse * Ec2Client::deletePlacementGroup(const DeletePlace
     return qobject_cast<DeletePlacementGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified route from the specified route
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2613,7 +2616,7 @@ DeleteRouteResponse * Ec2Client::deleteRoute(const DeleteRouteRequest &request)
     return qobject_cast<DeleteRouteResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified route table. You must disassociate the route table from any subnets before you can delete it. You
  * can't delete the main route
  *
@@ -2628,7 +2631,7 @@ DeleteRouteTableResponse * Ec2Client::deleteRouteTable(const DeleteRouteTableReq
     return qobject_cast<DeleteRouteTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a security
  *
  * group>
@@ -2647,7 +2650,7 @@ DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurit
     return qobject_cast<DeleteSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * snapshot>
@@ -2679,7 +2682,7 @@ DeleteSnapshotResponse * Ec2Client::deleteSnapshot(const DeleteSnapshotRequest &
     return qobject_cast<DeleteSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the data feed for Spot
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2693,7 +2696,7 @@ DeleteSpotDatafeedSubscriptionResponse * Ec2Client::deleteSpotDatafeedSubscripti
     return qobject_cast<DeleteSpotDatafeedSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified subnet. You must terminate all running instances in the subnet before you can delete the
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2707,7 +2710,7 @@ DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &reques
     return qobject_cast<DeleteSubnetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified set of tags from the specified set of
  *
  * resources>
@@ -2727,7 +2730,7 @@ DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified EBS volume. The volume must be in the <code>available</code> state (not attached to an
  *
  * instance)> <note>
@@ -2750,7 +2753,7 @@ DeleteVolumeResponse * Ec2Client::deleteVolume(const DeleteVolumeRequest &reques
     return qobject_cast<DeleteVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified VPC. You must detach or delete all gateways and resources that are associated with the VPC before
  * you can delete it. For example, you must terminate all instances running in the VPC, delete all security groups
  * associated with the VPC (except the default one), delete all route tables associated with the VPC (except the default
@@ -2767,7 +2770,7 @@ DeleteVpcResponse * Ec2Client::deleteVpc(const DeleteVpcRequest &request)
     return qobject_cast<DeleteVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more VPC endpoint connection
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -2781,7 +2784,7 @@ DeleteVpcEndpointConnectionNotificationsResponse * Ec2Client::deleteVpcEndpointC
     return qobject_cast<DeleteVpcEndpointConnectionNotificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more VPC endpoint service configurations in your account. Before you delete the endpoint service
  * configuration, you must reject any <code>Available</code> or <code>PendingAcceptance</code> interface endpoint
  * connections that are attached to the
@@ -2797,7 +2800,7 @@ DeleteVpcEndpointServiceConfigurationsResponse * Ec2Client::deleteVpcEndpointSer
     return qobject_cast<DeleteVpcEndpointServiceConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more specified VPC endpoints. Deleting a gateway endpoint also deletes the endpoint routes in the route
  * tables that were associated with the endpoint. Deleting an interface endpoint deletes the endpoint network
  *
@@ -2812,7 +2815,7 @@ DeleteVpcEndpointsResponse * Ec2Client::deleteVpcEndpoints(const DeleteVpcEndpoi
     return qobject_cast<DeleteVpcEndpointsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a VPC peering connection. Either the owner of the requester VPC or the owner of the accepter VPC can delete the
  * VPC peering connection if it's in the <code>active</code> state. The owner of the requester VPC can delete a VPC peering
  * connection in the <code>pending-acceptance</code> state. You cannot delete a VPC peering connection that's in the
@@ -2829,7 +2832,7 @@ DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const
     return qobject_cast<DeleteVpcPeeringConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified VPN
  *
  * connection>
@@ -2851,7 +2854,7 @@ DeleteVpnConnectionResponse * Ec2Client::deleteVpnConnection(const DeleteVpnConn
     return qobject_cast<DeleteVpnConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified static route associated with a VPN connection between an existing virtual private gateway and a
  * VPN customer gateway. The static route allows traffic to be routed from the virtual private gateway to the VPN customer
  *
@@ -2866,7 +2869,7 @@ DeleteVpnConnectionRouteResponse * Ec2Client::deleteVpnConnectionRoute(const Del
     return qobject_cast<DeleteVpnConnectionRouteResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified virtual private gateway. We recommend that before you delete a virtual private gateway, you detach
  * it from the VPC and delete the VPN connection. Note that you don't need to delete the virtual private gateway if you
  * plan to delete and recreate the VPN connection between your VPC and your
@@ -2882,7 +2885,7 @@ DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayReq
     return qobject_cast<DeleteVpnGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
  * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for those
  * instances until you terminate
@@ -2904,7 +2907,7 @@ DeregisterImageResponse * Ec2Client::deregisterImage(const DeregisterImageReques
     return qobject_cast<DeregisterImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes attributes of your AWS account. The following are the supported account
  *
  * attributes> <ul> <li>
@@ -2944,7 +2947,7 @@ DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const D
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your Elastic IP
  *
  * addresses>
@@ -2964,7 +2967,7 @@ DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddresses
     return qobject_cast<DescribeAddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the longer ID format settings for all resource types in a specific region. This request is useful for
  * performing a quick audit to determine whether a specific region is fully opted in for longer IDs (17-character
  *
@@ -2995,7 +2998,7 @@ DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const D
     return qobject_cast<DescribeAggregateIdFormatResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the Availability Zones that are available to you. The results include zones only for the region
  * you're currently using. If there is an event impacting an Availability Zone, you can use this request to view the state
  * and any provided message for that Availability
@@ -3017,7 +3020,7 @@ DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const D
     return qobject_cast<DescribeAvailabilityZonesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your bundling
  *
  * tasks> <note>
@@ -3037,7 +3040,7 @@ DescribeBundleTasksResponse * Ec2Client::describeBundleTasks(const DescribeBundl
     return qobject_cast<DescribeBundleTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your linked EC2-Classic instances. This request only returns information about EC2-Classic
  * instances linked to a VPC through ClassicLink; you cannot use this request to return information about other
  *
@@ -3052,7 +3055,7 @@ DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(c
     return qobject_cast<DescribeClassicLinkInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your conversion tasks. For more information, see the <a
  * href="http://docs.aws.amazon.com/vm-import/latest/userguide/">VM Import/Export User
  *
@@ -3072,7 +3075,7 @@ DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const Descr
     return qobject_cast<DescribeConversionTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your VPN customer
  *
  * gateways>
@@ -3092,7 +3095,7 @@ DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const Des
     return qobject_cast<DescribeCustomerGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your DHCP options
  *
  * sets>
@@ -3112,7 +3115,7 @@ DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpO
     return qobject_cast<DescribeDhcpOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your egress-only Internet
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3126,7 +3129,7 @@ DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyIntern
     return qobject_cast<DescribeEgressOnlyInternetGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the Elastic GPUs associated with your instances. For more information about Elastic GPUs, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html">Amazon EC2 Elastic
  *
@@ -3141,7 +3144,7 @@ DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElast
     return qobject_cast<DescribeElasticGpusResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your export
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3155,7 +3158,7 @@ DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExpor
     return qobject_cast<DescribeExportTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more flow logs. To view the information in your flow logs (the log streams for the network interfaces),
  * you must use the CloudWatch Logs console or the CloudWatch Logs
  *
@@ -3170,7 +3173,7 @@ DescribeFlowLogsResponse * Ec2Client::describeFlowLogs(const DescribeFlowLogsReq
     return qobject_cast<DescribeFlowLogsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified attribute of the specified Amazon FPGA Image
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3184,7 +3187,7 @@ DescribeFpgaImageAttributeResponse * Ec2Client::describeFpgaImageAttribute(const
     return qobject_cast<DescribeFpgaImageAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more available Amazon FPGA Images (AFIs). These include public AFIs, private AFIs that you own, and
  * AFIs owned by other AWS accounts for which you have load
  *
@@ -3199,7 +3202,7 @@ DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaIma
     return qobject_cast<DescribeFpgaImagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the Dedicated Host Reservations that are available to
  *
  * purchase>
@@ -3221,7 +3224,7 @@ DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOff
     return qobject_cast<DescribeHostReservationOfferingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes Dedicated Host Reservations which are associated with Dedicated Hosts in your
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3235,7 +3238,7 @@ DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const Des
     return qobject_cast<DescribeHostReservationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your Dedicated
  *
  * Hosts>
@@ -3254,7 +3257,7 @@ DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &req
     return qobject_cast<DescribeHostsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes your IAM instance profile
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3268,7 +3271,7 @@ DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceP
     return qobject_cast<DescribeIamInstanceProfileAssociationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the ID format settings for your resources on a per-region basis, for example, to view which resource types are
  * enabled for longer IDs. This request only returns information about resource types whose ID formats can be modified; it
  * does not return information about other resource
@@ -3303,7 +3306,7 @@ DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatReq
     return qobject_cast<DescribeIdFormatResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the ID format settings for resources for the specified IAM user, IAM role, or root user. For example, you can
  * view the resource types that are enabled for longer IDs. This request only returns information about resource types
  * whose ID formats can be modified; it does not return information about other resource types. For more information, see
@@ -3337,7 +3340,7 @@ DescribeIdentityIdFormatResponse * Ec2Client::describeIdentityIdFormat(const Des
     return qobject_cast<DescribeIdentityIdFormatResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified attribute of the specified AMI. You can specify only one attribute at a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3351,7 +3354,7 @@ DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const Describ
     return qobject_cast<DescribeImageAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the images (AMIs, AKIs, and ARIs) available to you. Images available to you include public
  * images, private images that you own, and private images owned by other AWS accounts but for which you have explicit
  * launch
@@ -3371,7 +3374,7 @@ DescribeImagesResponse * Ec2Client::describeImages(const DescribeImagesRequest &
     return qobject_cast<DescribeImagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays details about an import virtual machine or import snapshot tasks that are already
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3385,7 +3388,7 @@ DescribeImportImageTasksResponse * Ec2Client::describeImportImageTasks(const Des
     return qobject_cast<DescribeImportImageTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes your import snapshot
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3399,7 +3402,7 @@ DescribeImportSnapshotTasksResponse * Ec2Client::describeImportSnapshotTasks(con
     return qobject_cast<DescribeImportSnapshotTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified attribute of the specified instance. You can specify only one attribute at a time. Valid
  * attribute values are: <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> | <code>userData</code> |
  * <code>disableApiTermination</code> | <code>instanceInitiatedShutdownBehavior</code> | <code>rootDeviceName</code> |
@@ -3417,7 +3420,7 @@ DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const D
     return qobject_cast<DescribeInstanceAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the credit option for CPU usage of one or more of your T2 instances. The credit options are
  * <code>standard</code> and
  *
@@ -3454,7 +3457,7 @@ DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCredit
     return qobject_cast<DescribeInstanceCreditSpecificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the status of one or more instances. By default, only running instances are described, unless you specifically
  * indicate to return the status of all
  *
@@ -3495,7 +3498,7 @@ DescribeInstanceStatusResponse * Ec2Client::describeInstanceStatus(const Describ
     return qobject_cast<DescribeInstanceStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your
  *
  * instances>
@@ -3525,7 +3528,7 @@ DescribeInstancesResponse * Ec2Client::describeInstances(const DescribeInstances
     return qobject_cast<DescribeInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your Internet
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3539,7 +3542,7 @@ DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const Des
     return qobject_cast<DescribeInternetGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your key
  *
  * pairs>
@@ -3559,7 +3562,7 @@ DescribeKeyPairsResponse * Ec2Client::describeKeyPairs(const DescribeKeyPairsReq
     return qobject_cast<DescribeKeyPairsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more versions of a specified launch template. You can describe all versions, individual versions, or a
  * range of
  *
@@ -3574,7 +3577,7 @@ DescribeLaunchTemplateVersionsResponse * Ec2Client::describeLaunchTemplateVersio
     return qobject_cast<DescribeLaunchTemplateVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more launch
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3588,7 +3591,7 @@ DescribeLaunchTemplatesResponse * Ec2Client::describeLaunchTemplates(const Descr
     return qobject_cast<DescribeLaunchTemplatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes your Elastic IP addresses that are being moved to the EC2-VPC platform, or that are being restored to the
  * EC2-Classic platform. This request does not return information about any other Elastic IP addresses in your
  *
@@ -3603,7 +3606,7 @@ DescribeMovingAddressesResponse * Ec2Client::describeMovingAddresses(const Descr
     return qobject_cast<DescribeMovingAddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the your NAT
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3617,7 +3620,7 @@ DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGa
     return qobject_cast<DescribeNatGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your network
  *
  * ACLs>
@@ -3637,7 +3640,7 @@ DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetwo
     return qobject_cast<DescribeNetworkAclsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a network interface attribute. You can specify only one attribute at a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3651,7 +3654,7 @@ DescribeNetworkInterfaceAttributeResponse * Ec2Client::describeNetworkInterfaceA
     return qobject_cast<DescribeNetworkInterfaceAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the permissions for your network interfaces.
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3665,7 +3668,7 @@ DescribeNetworkInterfacePermissionsResponse * Ec2Client::describeNetworkInterfac
     return qobject_cast<DescribeNetworkInterfacePermissionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your network
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3679,7 +3682,7 @@ DescribeNetworkInterfacesResponse * Ec2Client::describeNetworkInterfaces(const D
     return qobject_cast<DescribeNetworkInterfacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your placement groups. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the <i>Amazon
  * Elastic Compute Cloud User
@@ -3695,7 +3698,7 @@ DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const Descr
     return qobject_cast<DescribePlacementGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes available AWS services in a prefix list format, which includes the prefix list name and prefix list ID of the
  * service and the IP address range for the service. A prefix list ID is required for creating an outbound security group
  * rule that allows traffic from a VPC to access an AWS service through a gateway VPC
@@ -3711,7 +3714,7 @@ DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefi
     return qobject_cast<DescribePrefixListsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the ID format settings for the root user and all IAM roles and IAM users that have explicitly specified a
  * longer ID (17-character ID) preference.
  *
@@ -3744,7 +3747,7 @@ DescribePrincipalIdFormatResponse * Ec2Client::describePrincipalIdFormat(const D
     return qobject_cast<DescribePrincipalIdFormatResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more regions that are currently available to
  *
  * you>
@@ -3763,7 +3766,7 @@ DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsReques
     return qobject_cast<DescribeRegionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the Reserved Instances that you
  *
  * purchased>
@@ -3783,7 +3786,7 @@ DescribeReservedInstancesResponse * Ec2Client::describeReservedInstances(const D
     return qobject_cast<DescribeReservedInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes your account's Reserved Instance listings in the Reserved Instance
  *
  * Marketplace>
@@ -3820,7 +3823,7 @@ DescribeReservedInstancesListingsResponse * Ec2Client::describeReservedInstances
     return qobject_cast<DescribeReservedInstancesListingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the modifications made to your Reserved Instances. If no parameter is specified, information about all your
  * Reserved Instances modification requests is returned. If a modification ID is specified, only information about the
  * specific modification is
@@ -3841,7 +3844,7 @@ DescribeReservedInstancesModificationsResponse * Ec2Client::describeReservedInst
     return qobject_cast<DescribeReservedInstancesModificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes Reserved Instance offerings that are available for purchase. With Reserved Instances, you purchase the right
  * to launch instances for a period of time. During that time period, you do not receive insufficient capacity errors, and
  * you pay a lower usage rate than the rate charged for On-Demand instances for the actual time
@@ -3867,7 +3870,7 @@ DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstance
     return qobject_cast<DescribeReservedInstancesOfferingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your route
  *
  * tables>
@@ -3892,7 +3895,7 @@ DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRoute
     return qobject_cast<DescribeRouteTablesResponse *>(send(request));
 }
 
-/**
+/*!
  * Finds available schedules that meet the specified
  *
  * criteria>
@@ -3917,7 +3920,7 @@ DescribeScheduledInstanceAvailabilityResponse * Ec2Client::describeScheduledInst
     return qobject_cast<DescribeScheduledInstanceAvailabilityResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your Scheduled
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -3931,7 +3934,7 @@ DescribeScheduledInstancesResponse * Ec2Client::describeScheduledInstances(const
     return qobject_cast<DescribeScheduledInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * [EC2-VPC only] Describes the VPCs on the other side of a VPC peering connection that are referencing the security groups
  * you've specified in this
  *
@@ -3946,7 +3949,7 @@ DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupRefere
     return qobject_cast<DescribeSecurityGroupReferencesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your security
  *
  * groups>
@@ -3968,7 +3971,7 @@ DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const Describ
     return qobject_cast<DescribeSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified attribute of the specified snapshot. You can specify only one attribute at a
  *
  * time>
@@ -3988,7 +3991,7 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
     return qobject_cast<DescribeSnapshotAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the EBS snapshots available to you. Available snapshots include public snapshots available for
  * any AWS account to launch, private snapshots that you own, and private snapshots owned by another AWS account but for
  * which you've been given explicit create volume
@@ -4057,7 +4060,7 @@ DescribeSnapshotsResponse * Ec2Client::describeSnapshots(const DescribeSnapshots
     return qobject_cast<DescribeSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the data feed for Spot Instances. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance Data Feed</a> in the
  * <i>Amazon Elastic Compute Cloud User
@@ -4073,7 +4076,7 @@ DescribeSpotDatafeedSubscriptionResponse * Ec2Client::describeSpotDatafeedSubscr
     return qobject_cast<DescribeSpotDatafeedSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the running instances for the specified Spot
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4087,7 +4090,7 @@ DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const
     return qobject_cast<DescribeSpotFleetInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the events for the specified Spot Fleet request during the specified
  *
  * time>
@@ -4106,7 +4109,7 @@ DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHis
     return qobject_cast<DescribeSpotFleetRequestHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes your Spot Fleet
  *
  * requests>
@@ -4124,7 +4127,7 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
     return qobject_cast<DescribeSpotFleetRequestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the Spot Instance requests that belong to your account. Spot Instances are instances that Amazon EC2 launches
  * when the Spot price that you specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
@@ -4152,7 +4155,7 @@ DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(c
     return qobject_cast<DescribeSpotInstanceRequestsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the Spot price history. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html">Spot Instance Pricing
  * History</a> in the <i>Amazon Elastic Compute Cloud User
@@ -4174,7 +4177,7 @@ DescribeSpotPriceHistoryResponse * Ec2Client::describeSpotPriceHistory(const Des
     return qobject_cast<DescribeSpotPriceHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * [EC2-VPC only] Describes the stale security group rules for security groups in a specified VPC. Rules are stale when
  * they reference a deleted security group in a peer VPC, or a security group in a peer VPC for which the VPC peering
  * connection has been
@@ -4190,7 +4193,7 @@ DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(con
     return qobject_cast<DescribeStaleSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your
  *
  * subnets>
@@ -4210,7 +4213,7 @@ DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsReques
     return qobject_cast<DescribeSubnetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of the tags for your EC2
  *
  * resources>
@@ -4230,7 +4233,7 @@ DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &reques
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified attribute of the specified volume. You can specify only one attribute at a
  *
  * time>
@@ -4250,7 +4253,7 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
     return qobject_cast<DescribeVolumeAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the status of the specified volumes. Volume status provides the result of the checks performed on your volumes
  * to determine events that can impair the performance of your volumes. The performance of a volume can be affected if an
  * issue occurs on the volume's underlying host. If the volume's underlying host experiences a power outage or system
@@ -4300,7 +4303,7 @@ DescribeVolumeStatusResponse * Ec2Client::describeVolumeStatus(const DescribeVol
     return qobject_cast<DescribeVolumeStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified EBS
  *
  * volumes>
@@ -4327,7 +4330,7 @@ DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesReques
     return qobject_cast<DescribeVolumesResponse *>(send(request));
 }
 
-/**
+/*!
  * Reports the current modification status of EBS
  *
  * volumes>
@@ -4357,7 +4360,7 @@ DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(c
     return qobject_cast<DescribeVolumesModificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified attribute of the specified VPC. You can specify only one attribute at a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4371,7 +4374,7 @@ DescribeVpcAttributeResponse * Ec2Client::describeVpcAttribute(const DescribeVpc
     return qobject_cast<DescribeVpcAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the ClassicLink status of one or more
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4385,7 +4388,7 @@ DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const Describ
     return qobject_cast<DescribeVpcClassicLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the ClassicLink DNS support status of one or more VPCs. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
  * the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic
@@ -4404,7 +4407,7 @@ DescribeVpcClassicLinkDnsSupportResponse * Ec2Client::describeVpcClassicLinkDnsS
     return qobject_cast<DescribeVpcClassicLinkDnsSupportResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the connection notifications for VPC endpoints and VPC endpoint
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4418,7 +4421,7 @@ DescribeVpcEndpointConnectionNotificationsResponse * Ec2Client::describeVpcEndpo
     return qobject_cast<DescribeVpcEndpointConnectionNotificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the VPC endpoint connections to your VPC endpoint services, including any endpoints that are pending your
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4432,7 +4435,7 @@ DescribeVpcEndpointConnectionsResponse * Ec2Client::describeVpcEndpointConnectio
     return qobject_cast<DescribeVpcEndpointConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the VPC endpoint service configurations in your account (your
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4446,7 +4449,7 @@ DescribeVpcEndpointServiceConfigurationsResponse * Ec2Client::describeVpcEndpoin
     return qobject_cast<DescribeVpcEndpointServiceConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the principals (service consumers) that are permitted to discover your VPC endpoint
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4460,7 +4463,7 @@ DescribeVpcEndpointServicePermissionsResponse * Ec2Client::describeVpcEndpointSe
     return qobject_cast<DescribeVpcEndpointServicePermissionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes available services to which you can create a VPC
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4474,7 +4477,7 @@ DescribeVpcEndpointServicesResponse * Ec2Client::describeVpcEndpointServices(con
     return qobject_cast<DescribeVpcEndpointServicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your VPC
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4488,7 +4491,7 @@ DescribeVpcEndpointsResponse * Ec2Client::describeVpcEndpoints(const DescribeVpc
     return qobject_cast<DescribeVpcEndpointsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your VPC peering
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4502,7 +4505,7 @@ DescribeVpcPeeringConnectionsResponse * Ec2Client::describeVpcPeeringConnections
     return qobject_cast<DescribeVpcPeeringConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4516,7 +4519,7 @@ DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &reques
     return qobject_cast<DescribeVpcsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your VPN
  *
  * connections>
@@ -4536,7 +4539,7 @@ DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const Describ
     return qobject_cast<DescribeVpnConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your virtual private
  *
  * gateways>
@@ -4556,7 +4559,7 @@ DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGa
     return qobject_cast<DescribeVpnGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Unlinks (detaches) a linked EC2-Classic instance from a VPC. After the instance has been unlinked, the VPC security
  * groups are no longer associated with it. An instance is automatically unlinked from a VPC when it's
  *
@@ -4571,7 +4574,7 @@ DetachClassicLinkVpcResponse * Ec2Client::detachClassicLinkVpc(const DetachClass
     return qobject_cast<DetachClassicLinkVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches an Internet gateway from a VPC, disabling connectivity between the Internet and the VPC. The VPC must not
  * contain any running instances with Elastic IP addresses or public IPv4
  *
@@ -4586,7 +4589,7 @@ DetachInternetGatewayResponse * Ec2Client::detachInternetGateway(const DetachInt
     return qobject_cast<DetachInternetGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a network interface from an
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4600,7 +4603,7 @@ DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachN
     return qobject_cast<DetachNetworkInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches an EBS volume from an instance. Make sure to unmount any file systems on the device within your operating
  * system before detaching the volume. Failure to do so can result in the volume becoming stuck in the <code>busy</code>
  * state while detaching. If this happens, detachment can be delayed indefinitely until you unmount the volume, force
@@ -4629,7 +4632,7 @@ DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &reques
     return qobject_cast<DetachVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a virtual private gateway from a VPC. You do this if you're planning to turn off the VPC and not use it
  * anymore. You can confirm a virtual private gateway has been completely detached from a VPC by describing the virtual
  * private gateway (any attachments to the virtual private gateway are also
@@ -4650,7 +4653,7 @@ DetachVpnGatewayResponse * Ec2Client::detachVpnGateway(const DetachVpnGatewayReq
     return qobject_cast<DetachVpnGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables a virtual private gateway (VGW) from propagating routes to a specified route table of a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4664,7 +4667,7 @@ DisableVgwRoutePropagationResponse * Ec2Client::disableVgwRoutePropagation(const
     return qobject_cast<DisableVgwRoutePropagationResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables ClassicLink for a VPC. You cannot disable ClassicLink for a VPC that has EC2-Classic instances linked to
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4678,7 +4681,7 @@ DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVp
     return qobject_cast<DisableVpcClassicLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed
  * between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information about
  * ClassicLink, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
@@ -4695,7 +4698,7 @@ DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSup
     return qobject_cast<DisableVpcClassicLinkDnsSupportResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates an Elastic IP address from the instance or network interface it's associated
  *
  * with>
@@ -4719,7 +4722,7 @@ DisassociateAddressResponse * Ec2Client::disassociateAddress(const DisassociateA
     return qobject_cast<DisassociateAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates an IAM instance profile from a running or stopped
  *
  * instance>
@@ -4737,7 +4740,7 @@ DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfi
     return qobject_cast<DisassociateIamInstanceProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a subnet from a route
  *
  * table>
@@ -4758,7 +4761,7 @@ DisassociateRouteTableResponse * Ec2Client::disassociateRouteTable(const Disasso
     return qobject_cast<DisassociateRouteTableResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a CIDR block from a subnet. Currently, you can disassociate an IPv6 CIDR block only. You must detach or
  * delete all gateways and resources that are associated with the CIDR block before you can disassociate it.
  *
@@ -4773,7 +4776,7 @@ DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(con
     return qobject_cast<DisassociateSubnetCidrBlockResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a CIDR block from a VPC. To disassociate the CIDR block, you must specify its association ID. You can get
  * the association ID by using <a>DescribeVpcs</a>. You must detach or delete all gateways and resources that are
  * associated with the CIDR block before you can disassociate it.
@@ -4793,7 +4796,7 @@ DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const Dis
     return qobject_cast<DisassociateVpcCidrBlockResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables a virtual private gateway (VGW) to propagate routes to the specified route table of a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4807,7 +4810,7 @@ EnableVgwRoutePropagationResponse * Ec2Client::enableVgwRoutePropagation(const E
     return qobject_cast<EnableVgwRoutePropagationResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables I/O operations for a volume that had I/O operations disabled because the data on the volume was potentially
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4821,7 +4824,7 @@ EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &
     return qobject_cast<EnableVolumeIOResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables a VPC for ClassicLink. You can then link EC2-Classic instances to your ClassicLink-enabled VPC to allow
  * communication over private IP addresses. You cannot enable your VPC for ClassicLink if any of your VPC's route tables
  * have existing routes for address ranges within the <code>10.0.0.0/8</code> IP address range, excluding local routes for
@@ -4840,7 +4843,7 @@ EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcCl
     return qobject_cast<EnableVpcClassicLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
  * the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic
@@ -4859,7 +4862,7 @@ EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSuppo
     return qobject_cast<EnableVpcClassicLinkDnsSupportResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the console output for the specified
  *
  * instance>
@@ -4894,7 +4897,7 @@ GetConsoleOutputResponse * Ec2Client::getConsoleOutput(const GetConsoleOutputReq
     return qobject_cast<GetConsoleOutputResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a JPG-format screenshot of a running instance to help with
  *
  * troubleshooting>
@@ -4912,7 +4915,7 @@ GetConsoleScreenshotResponse * Ec2Client::getConsoleScreenshot(const GetConsoleS
     return qobject_cast<GetConsoleScreenshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Preview a reservation purchase with configurations that match those of your Dedicated Host. You must have active
  * Dedicated Hosts in your account before you purchase a
  *
@@ -4931,7 +4934,7 @@ GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchas
     return qobject_cast<GetHostReservationPurchasePreviewResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the configuration data of the specified instance. You can use this data to create a launch
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -4945,7 +4948,7 @@ GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunch
     return qobject_cast<GetLaunchTemplateDataResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the encrypted administrator password for a running Windows
  *
  * instance>
@@ -4983,7 +4986,7 @@ GetPasswordDataResponse * Ec2Client::getPasswordData(const GetPasswordDataReques
     return qobject_cast<GetPasswordDataResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a quote and exchange information for exchanging one or more specified Convertible Reserved Instances for a new
  * Convertible Reserved Instance. If the exchange cannot be performed, the reason is returned in the response. Use
  * <a>AcceptReservedInstancesExchangeQuote</a> to perform the
@@ -4999,7 +5002,7 @@ GetReservedInstancesExchangeQuoteResponse * Ec2Client::getReservedInstancesExcha
     return qobject_cast<GetReservedInstancesExchangeQuoteResponse *>(send(request));
 }
 
-/**
+/*!
  * Import single or multi-volume disk images or EBS snapshots into an Amazon Machine Image (AMI). For more information, see
  * <a href="http://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html">Importing a VM as an Image
  * Using VM Import/Export</a> in the <i>VM Import/Export User
@@ -5015,7 +5018,7 @@ ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
     return qobject_cast<ImportImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an import instance task using metadata from the specified disk image. <code>ImportInstance</code> only supports
  * single-volume VMs. To import multi-volume VMs, use <a>ImportImage</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ec2-cli-vmimport-export.html">Importing a Virtual
@@ -5037,7 +5040,7 @@ ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &
     return qobject_cast<ImportInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Imports the public key from an RSA key pair that you created with a third-party tool. Compare this with
  * <a>CreateKeyPair</a>, in which AWS creates the key pair and gives the keys to you (AWS keeps a copy of the public key).
  * With ImportKeyPair, you create the key pair and give AWS just the public key. The private key is never transferred
@@ -5060,7 +5063,7 @@ ImportKeyPairResponse * Ec2Client::importKeyPair(const ImportKeyPairRequest &req
     return qobject_cast<ImportKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Imports a disk into an EBS
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -5074,7 +5077,7 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
     return qobject_cast<ImportSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an import volume task using metadata from the specified disk image.For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/importing-your-volumes-into-amazon-ebs.html">Importing
  * Disks to Amazon
@@ -5095,7 +5098,7 @@ ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &reques
     return qobject_cast<ImportVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified attribute of the specified Amazon FPGA Image
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -5109,7 +5112,7 @@ ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const Mod
     return qobject_cast<ModifyFpgaImageAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modify the auto-placement setting of a Dedicated Host. When auto-placement is enabled, AWS will place instances that you
  * launch with a tenancy of <code>host</code>, but without targeting a specific host ID, onto any available Dedicated Host
  * in your account which has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID if you
@@ -5127,7 +5130,7 @@ ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
     return qobject_cast<ModifyHostsResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the ID format for the specified resource on a per-region basis. You can specify that resources should receive
  * longer IDs (17-character IDs) when they are
  *
@@ -5168,7 +5171,7 @@ ModifyIdFormatResponse * Ec2Client::modifyIdFormat(const ModifyIdFormatRequest &
     return qobject_cast<ModifyIdFormatResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the ID format of a resource for a specified IAM user, IAM role, or the root user for an account; or all IAM
  * users, IAM roles, and the root user for an account. You can specify that resources should receive longer IDs
  * (17-character IDs) when they are created.
@@ -5212,7 +5215,7 @@ ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyI
     return qobject_cast<ModifyIdentityIdFormatResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified attribute of the specified AMI. You can specify only one attribute at a time. You can use the
  * <code>Attribute</code> parameter to specify the attribute or one of the following parameters: <code>Description</code>,
  * <code>LaunchPermission</code>, or
@@ -5237,7 +5240,7 @@ ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImage
     return qobject_cast<ModifyImageAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified attribute of the specified instance. You can specify only one attribute at a
  *
  * time>
@@ -5257,7 +5260,7 @@ ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const Modif
     return qobject_cast<ModifyInstanceAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the credit option for CPU usage on a running or stopped T2 instance. The credit options are
  * <code>standard</code> and
  *
@@ -5277,7 +5280,7 @@ ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpeci
     return qobject_cast<ModifyInstanceCreditSpecificationResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the placement attributes for a specified instance. You can do the
  *
  * following> <ul> <li>
@@ -5322,7 +5325,7 @@ ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const Modif
     return qobject_cast<ModifyInstancePlacementResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies a launch template. You can specify which version of the launch template to set as the default version. When
  * launching an instance, the default version applies when a launch template version is not
  *
@@ -5337,7 +5340,7 @@ ModifyLaunchTemplateResponse * Ec2Client::modifyLaunchTemplate(const ModifyLaunc
     return qobject_cast<ModifyLaunchTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified network interface attribute. You can specify only one attribute at a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -5351,7 +5354,7 @@ ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttri
     return qobject_cast<ModifyNetworkInterfaceAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the Availability Zone, instance count, instance type, or network platform (EC2-Classic or EC2-VPC) of your
  * Reserved Instances. The Reserved Instances to be modified must be identical, except for Availability Zone, network
  * platform, and instance
@@ -5372,7 +5375,7 @@ ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const Modif
     return qobject_cast<ModifyReservedInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a
  * snapshot's list of create volume permissions, but you cannot do both in a single API call. If you need to both add and
  * remove account IDs for a snapshot, you must use multiple API
@@ -5399,7 +5402,7 @@ ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const Modif
     return qobject_cast<ModifySnapshotAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified Spot Fleet
  *
  * request>
@@ -5437,7 +5440,7 @@ ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifyS
     return qobject_cast<ModifySpotFleetRequestResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies a subnet attribute. You can only modify one attribute at a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -5451,7 +5454,7 @@ ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySub
     return qobject_cast<ModifySubnetAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If
  * your EBS volume is attached to a current-generation EC2 instance type, you may be able to apply these changes without
  * stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux,
@@ -5503,7 +5506,7 @@ ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &reques
     return qobject_cast<ModifyVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies a volume
  *
  * attribute>
@@ -5528,7 +5531,7 @@ ModifyVolumeAttributeResponse * Ec2Client::modifyVolumeAttribute(const ModifyVol
     return qobject_cast<ModifyVolumeAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified attribute of the specified
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -5542,7 +5545,7 @@ ModifyVpcAttributeResponse * Ec2Client::modifyVpcAttribute(const ModifyVpcAttrib
     return qobject_cast<ModifyVpcAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint
  * (interface or gateway). For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html">VPC Endpoints</a> in the <i>Amazon
@@ -5559,7 +5562,7 @@ ModifyVpcEndpointResponse * Ec2Client::modifyVpcEndpoint(const ModifyVpcEndpoint
     return qobject_cast<ModifyVpcEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies a connection notification for VPC endpoint or VPC endpoint service. You can change the SNS topic for the
  * notification, or the events for which to be notified.
  *
@@ -5574,7 +5577,7 @@ ModifyVpcEndpointConnectionNotificationResponse * Ec2Client::modifyVpcEndpointCo
     return qobject_cast<ModifyVpcEndpointConnectionNotificationResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers for your
  * service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an
  * interface VPC
@@ -5590,7 +5593,7 @@ ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServ
     return qobject_cast<ModifyVpcEndpointServiceConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the permissions for your <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html">VPC endpoint service</a>. You can add
  * or remove permissions for service consumers (IAM users, IAM roles, and AWS accounts) to connect to your endpoint
@@ -5606,7 +5609,7 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
     return qobject_cast<ModifyVpcEndpointServicePermissionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the VPC peering connection options on one side of a VPC peering connection. You can do the
  *
  * following> <ul> <li>
@@ -5642,7 +5645,7 @@ ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectio
     return qobject_cast<ModifyVpcPeeringConnectionOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the instance tenancy attribute of the specified VPC. You can change the instance tenancy attribute of a VPC to
  * <code>default</code> only. You cannot change the instance tenancy attribute to
  *
@@ -5669,7 +5672,7 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
     return qobject_cast<ModifyVpcTenancyResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables detailed monitoring for a running instance. Otherwise, basic monitoring is enabled. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring Your Instances and
  * Volumes</a> in the <i>Amazon Elastic Compute Cloud User
@@ -5689,7 +5692,7 @@ MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesReq
     return qobject_cast<MonitorInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Moves an Elastic IP address from the EC2-Classic platform to the EC2-VPC platform. The Elastic IP address must be
  * allocated to your account for more than 24 hours, and it must not be associated with an instance. After the Elastic IP
  * address is moved, it is no longer available for use in the EC2-Classic platform, unless you move it back using the
@@ -5707,7 +5710,7 @@ MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcReq
     return qobject_cast<MoveAddressToVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Purchase a reservation with configurations that match those of your Dedicated Host. You must have active Dedicated Hosts
  * in your account before you purchase a reservation. This action results in the specified reservation being purchased and
  * charged to your
@@ -5723,7 +5726,7 @@ PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const Purch
     return qobject_cast<PurchaseHostReservationResponse *>(send(request));
 }
 
-/**
+/*!
  * Purchases a Reserved Instance for use with your account. With Reserved Instances, you pay a lower hourly rate compared
  * to On-Demand instance
  *
@@ -5750,7 +5753,7 @@ PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstances
     return qobject_cast<PurchaseReservedInstancesOfferingResponse *>(send(request));
 }
 
-/**
+/*!
  * Purchases one or more Scheduled Instances with the specified
  *
  * schedule>
@@ -5775,7 +5778,7 @@ PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const
     return qobject_cast<PurchaseScheduledInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a reboot of one or more instances. This operation is asynchronous; it only queues a request to reboot the
  * specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated
  * instances are
@@ -5801,7 +5804,7 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
     return qobject_cast<RebootInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers an AMI. When you're creating an AMI, this is the final step you must complete before you can launch an
  * instance from the AMI. For more information about creating AMIs, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html">Creating Your Own AMIs</a> in the
@@ -5846,7 +5849,7 @@ RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &req
     return qobject_cast<RegisterImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Rejects one or more VPC endpoint connection requests to your VPC endpoint
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -5860,7 +5863,7 @@ RejectVpcEndpointConnectionsResponse * Ec2Client::rejectVpcEndpointConnections(c
     return qobject_cast<RejectVpcEndpointConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Rejects a VPC peering connection request. The VPC peering connection must be in the <code>pending-acceptance</code>
  * state. Use the <a>DescribeVpcPeeringConnections</a> request to view your outstanding VPC peering connection requests. To
  * delete an active VPC peering connection, or to delete a VPC peering connection request that you initiated, use
@@ -5876,7 +5879,7 @@ RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const
     return qobject_cast<RejectVpcPeeringConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Releases the specified Elastic IP
  *
  * address>
@@ -5911,7 +5914,7 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
     return qobject_cast<ReleaseAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * When you no longer want to use an On-Demand Dedicated Host it can be released. On-Demand billing is stopped and the host
  * goes into <code>released</code> state. The host ID of Dedicated Hosts that have been released can no longer be specified
  * in another request, e.g., ModifyHosts. You must stop or terminate all instances on a host before it can be
@@ -5936,7 +5939,7 @@ ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &reques
     return qobject_cast<ReleaseHostsResponse *>(send(request));
 }
 
-/**
+/*!
  * Replaces an IAM instance profile for the specified running instance. You can use this action to change the IAM instance
  * profile that's associated with an instance without having to disassociate the existing IAM instance profile
  *
@@ -5955,7 +5958,7 @@ ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProf
     return qobject_cast<ReplaceIamInstanceProfileAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes which network ACL a subnet is associated with. By default when you create a subnet, it's automatically
  * associated with the default network ACL. For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
@@ -5976,7 +5979,7 @@ ReplaceNetworkAclAssociationResponse * Ec2Client::replaceNetworkAclAssociation(c
     return qobject_cast<ReplaceNetworkAclAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Replaces an entry (rule) in a network ACL. For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
@@ -5992,7 +5995,7 @@ ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const Replace
     return qobject_cast<ReplaceNetworkAclEntryResponse *>(send(request));
 }
 
-/**
+/*!
  * Replaces an existing route within a route table in a VPC. You must provide only one of the following: Internet gateway
  * or virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface, or egress-only
  * Internet
@@ -6014,7 +6017,7 @@ ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &reques
     return qobject_cast<ReplaceRouteResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the route table associated with a given subnet in a VPC. After the operation completes, the subnet uses the
  * routes in the new route table it's associated with. For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
@@ -6036,7 +6039,7 @@ ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(c
     return qobject_cast<ReplaceRouteTableAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Submits feedback about the status of an instance. The instance must be in the <code>running</code> state. If your
  * experience with the instance differs from the instance status returned by <a>DescribeInstanceStatus</a>, use
  * <a>ReportInstanceStatus</a> to report your experience with the instance. Amazon EC2 collects this information to improve
@@ -6057,7 +6060,7 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
     return qobject_cast<ReportInstanceStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Spot Fleet
  *
  * request>
@@ -6097,7 +6100,7 @@ RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetReq
     return qobject_cast<RequestSpotFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Spot Instance request. Spot Instances are instances that Amazon EC2 launches when the maximum price that you
  * specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
@@ -6114,7 +6117,7 @@ RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpot
     return qobject_cast<RequestSpotInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets the specified attribute of the specified Amazon FPGA Image (AFI) to its default value. You can only reset the
  * load permission
  *
@@ -6129,7 +6132,7 @@ ResetFpgaImageAttributeResponse * Ec2Client::resetFpgaImageAttribute(const Reset
     return qobject_cast<ResetFpgaImageAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets an attribute of an AMI to its default
  *
  * value> <note>
@@ -6147,7 +6150,7 @@ ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAtt
     return qobject_cast<ResetImageAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets an attribute of an instance to its default value. To reset the <code>kernel</code> or <code>ramdisk</code>, the
  * instance must be in a stopped state. To reset the <code>sourceDestCheck</code>, the instance can be either running or
  *
@@ -6169,7 +6172,7 @@ ResetInstanceAttributeResponse * Ec2Client::resetInstanceAttribute(const ResetIn
     return qobject_cast<ResetInstanceAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets a network interface attribute. You can specify only one attribute at a
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -6183,7 +6186,7 @@ ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribu
     return qobject_cast<ResetNetworkInterfaceAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets permission settings for the specified
  *
  * snapshot>
@@ -6203,7 +6206,7 @@ ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSn
     return qobject_cast<ResetSnapshotAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * Restores an Elastic IP address that was previously moved to the EC2-VPC platform back to the EC2-Classic platform. You
  * cannot move an Elastic IP address that was originally allocated for use in EC2-VPC. The Elastic IP address must not be
  * associated with an instance or network
@@ -6219,7 +6222,7 @@ RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const Resto
     return qobject_cast<RestoreAddressToClassicResponse *>(send(request));
 }
 
-/**
+/*!
  * [EC2-VPC only] Removes one or more egress rules from a security group for EC2-VPC. This action doesn't apply to security
  * groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the
  * existing rule's values
@@ -6246,7 +6249,7 @@ RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const R
     return qobject_cast<RevokeSecurityGroupEgressResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more ingress rules from a security group. To remove a rule, the values that you specify (for example,
  * ports) must match the existing rule's values
  *
@@ -6276,7 +6279,7 @@ RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const
     return qobject_cast<RevokeSecurityGroupIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * Launches the specified number of instances using an AMI for which you have permissions.
  *
  * </p
@@ -6362,7 +6365,7 @@ RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &reques
     return qobject_cast<RunInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Launches the specified Scheduled
  *
  * Instances>
@@ -6388,7 +6391,7 @@ RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunSchedu
     return qobject_cast<RunScheduledInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts an Amazon EBS-backed instance that you've previously
  *
  * stopped>
@@ -6427,7 +6430,7 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
     return qobject_cast<StartInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops an Amazon EBS-backed
  *
  * instance>
@@ -6476,7 +6479,7 @@ StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &req
     return qobject_cast<StopInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Shuts down one or more instances. This operation is idempotent; if you terminate an instance more than once, each call
  * succeeds.
  *
@@ -6521,7 +6524,7 @@ TerminateInstancesResponse * Ec2Client::terminateInstances(const TerminateInstan
     return qobject_cast<TerminateInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Unassigns one or more IPv6 addresses from a network
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -6535,7 +6538,7 @@ UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignI
     return qobject_cast<UnassignIpv6AddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Unassigns one or more secondary private IP addresses from a network
  *
  * @param  request Request to send to Amazon Elastic Compute Cloud.
@@ -6549,7 +6552,7 @@ UnassignPrivateIpAddressesResponse * Ec2Client::unassignPrivateIpAddresses(const
     return qobject_cast<UnassignPrivateIpAddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables detailed monitoring for a running instance. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring Your Instances and
  * Volumes</a> in the <i>Amazon Elastic Compute Cloud User
@@ -6565,7 +6568,7 @@ UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstan
     return qobject_cast<UnmonitorInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * [EC2-VPC only] Updates the description of an egress (outbound) security group rule. You can replace an existing
  * description, or add a description to a rule that did not have one
  *
@@ -6585,7 +6588,7 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGro
     return qobject_cast<UpdateSecurityGroupRuleDescriptionsEgressResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the description of an ingress (inbound) security group rule. You can replace an existing description, or add a
  * description to a rule that did not have one
  *
@@ -6605,7 +6608,7 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGr
     return qobject_cast<UpdateSecurityGroupRuleDescriptionsIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  Ec2ClientPrivate
@@ -6613,7 +6616,7 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGr
  * @brief  Private implementation for Ec2Client.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Ec2ClientPrivate object.

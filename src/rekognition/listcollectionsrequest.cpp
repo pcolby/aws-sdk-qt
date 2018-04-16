@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  ListCollectionsRequest
+/*!
+ * \class QtAws::Rekognition::ListCollectionsRequest
  *
- * @brief  Implements Rekognition ListCollections requests.
+ * \brief The ListCollectionsRequest class encapsulates Rekognition ListCollections requests.
  *
- * @see    RekognitionClient::listCollections
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::listCollections
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCollectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListCollectionsRequest::ListCollectionsRequest(const ListCollectionsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListCollectionsRequest object.
  */
 ListCollectionsRequest::ListCollectionsRequest()
@@ -53,13 +57,16 @@ ListCollectionsRequest::ListCollectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListCollectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListCollectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListCollectionsRequest::response(QNetworkRepl
     return new ListCollectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListCollectionsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListCollectionsRequest::response(QNetworkRepl
  * @brief  Private implementation for ListCollectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCollectionsRequestPrivate object.
@@ -97,7 +104,7 @@ ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCollectionsRequestPrivate object, copying another.

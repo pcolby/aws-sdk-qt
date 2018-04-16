@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ProvisionProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::ProvisionProductResponse
  *
- * @brief  Handles ServiceCatalog ProvisionProduct responses.
+ * \brief The ProvisionProductResponse class encapsulates ServiceCatalog ProvisionProduct responses.
  *
- * @see    ServiceCatalogClient::provisionProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::provisionProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new ProvisionProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ProvisionProductRequest * ProvisionProductResponse::request() const
     return static_cast<const ProvisionProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ProvisionProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ProvisionProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ProvisionProductResponsePrivate
+ * \class ProvisionProductResponsePrivate
  *
- * @brief  Private implementation for ProvisionProductResponse.
+ * \brief Private implementation for ProvisionProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ProvisionProductResponsePrivate object.
@@ -91,7 +100,7 @@ ProvisionProductResponsePrivate::ProvisionProductResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ProvisionProductResponse element.
  *
  * @param  xml  XML stream to parse.

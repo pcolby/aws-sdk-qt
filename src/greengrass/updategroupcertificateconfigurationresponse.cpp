@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateGroupCertificateConfigurationResponse
+/*!
+ * \class QtAws::Greengrass::UpdateGroupCertificateConfigurationResponse
  *
- * @brief  Handles Greengrass UpdateGroupCertificateConfiguration responses.
+ * \brief The UpdateGroupCertificateConfigurationResponse class encapsulates Greengrass UpdateGroupCertificateConfiguration responses.
  *
- * @see    GreengrassClient::updateGroupCertificateConfiguration
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateGroupCertificateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupCertificateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateGroupCertificateConfigurationRequest * UpdateGroupCertificateConfigu
     return static_cast<const UpdateGroupCertificateConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass UpdateGroupCertificateConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateGroupCertificateConfigurationResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateGroupCertificateConfigurationResponsePrivate
+ * \class UpdateGroupCertificateConfigurationResponsePrivate
  *
- * @brief  Private implementation for UpdateGroupCertificateConfigurationResponse.
+ * \brief Private implementation for UpdateGroupCertificateConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupCertificateConfigurationResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfig
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass UpdateGroupCertificateConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ListTagsForCertificateRequest
+/*!
+ * \class QtAws::ACM::ListTagsForCertificateRequest
  *
- * @brief  Implements ACM ListTagsForCertificate requests.
+ * \brief The ListTagsForCertificateRequest class encapsulates ACM ListTagsForCertificate requests.
  *
- * @see    ACMClient::listTagsForCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::listTagsForCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ListTagsForCertificateRequest::ListTagsForCertificateRequest(const ListTagsForCe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForCertificateRequest object.
  */
 ListTagsForCertificateRequest::ListTagsForCertificateRequest()
@@ -53,13 +65,16 @@ ListTagsForCertificateRequest::ListTagsForCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetw
     return new ListTagsForCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetw
  * @brief  Private implementation for ListTagsForCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForCertificateRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  DeleteReportDefinitionRequest
+/*!
+ * \class QtAws::CostandUsageReportService::DeleteReportDefinitionRequest
  *
- * @brief  Implements CostandUsageReportService DeleteReportDefinition requests.
+ * \brief The DeleteReportDefinitionRequest class encapsulates CostandUsageReportService DeleteReportDefinition requests.
  *
- * @see    CostandUsageReportServiceClient::deleteReportDefinition
+ * \ingroup CostandUsageReportService
+ *
+ *
+ * \sa CostandUsageReportServiceClient::deleteReportDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReportDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteReportDefinitionRequest::DeleteReportDefinitionRequest(const DeleteReportD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReportDefinitionRequest object.
  */
 DeleteReportDefinitionRequest::DeleteReportDefinitionRequest()
@@ -53,13 +56,16 @@ DeleteReportDefinitionRequest::DeleteReportDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReportDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReportDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetw
     return new DeleteReportDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReportDefinitionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetw
  * @brief  Private implementation for DeleteReportDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReportDefinitionRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReportDefinitionRequestPrivate object, copying another.

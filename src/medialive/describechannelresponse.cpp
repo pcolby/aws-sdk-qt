@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DescribeChannelResponse
+/*!
+ * \class QtAws::MediaLive::DescribeChannelResponse
  *
- * @brief  Handles MediaLive DescribeChannel responses.
+ * \brief The DescribeChannelResponse class encapsulates MediaLive DescribeChannel responses.
  *
- * @see    MediaLiveClient::describeChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::describeChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeChannelRequest * DescribeChannelResponse::request() const
     return static_cast<const DescribeChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive DescribeChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeChannelResponsePrivate
+ * \class DescribeChannelResponsePrivate
  *
- * @brief  Private implementation for DescribeChannelResponse.
+ * \brief Private implementation for DescribeChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeChannelResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeChannelResponsePrivate::DescribeChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive DescribeChannelResponse element.
  *
  * @param  xml  XML stream to parse.

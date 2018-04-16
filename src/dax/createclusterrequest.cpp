@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  CreateClusterRequest
+/*!
+ * \class QtAws::DAX::CreateClusterRequest
  *
- * @brief  Implements DAX CreateCluster requests.
+ * \brief The CreateClusterRequest class encapsulates DAX CreateCluster requests.
  *
- * @see    DAXClient::createCluster
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::createCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
@@ -53,13 +60,16 @@ CreateClusterRequest::CreateClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
     return new CreateClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateClusterRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterRequestPrivate object.
@@ -97,7 +107,7 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListResourcesForTagOptionRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListResourcesForTagOptionRequest
  *
- * @brief  Implements ServiceCatalog ListResourcesForTagOption requests.
+ * \brief The ListResourcesForTagOptionRequest class encapsulates ServiceCatalog ListResourcesForTagOption requests.
  *
- * @see    ServiceCatalogClient::listResourcesForTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listResourcesForTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourcesForTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest(const ListRes
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResourcesForTagOptionRequest object.
  */
 ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest()
@@ -53,13 +62,16 @@ ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResourcesForTagOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResourcesForTagOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QN
     return new ListResourcesForTagOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResourcesForTagOptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QN
  * @brief  Private implementation for ListResourcesForTagOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourcesForTagOptionRequestPrivate object.
@@ -97,7 +109,7 @@ ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourcesForTagOptionRequestPrivate object, copying another.

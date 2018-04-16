@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateAdditionalAssignmentsForHITResponse
+/*!
+ * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITResponse
  *
- * @brief  Handles MTurk CreateAdditionalAssignmentsForHIT responses.
+ * \brief The CreateAdditionalAssignmentsForHITResponse class encapsulates MTurk CreateAdditionalAssignmentsForHIT responses.
  *
- * @see    MTurkClient::createAdditionalAssignmentsForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createAdditionalAssignmentsForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAdditionalAssignmentsForHITResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateAdditionalAssignmentsForHITRequest * CreateAdditionalAssignmentsForH
     return static_cast<const CreateAdditionalAssignmentsForHITRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk CreateAdditionalAssignmentsForHIT response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateAdditionalAssignmentsForHITResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAdditionalAssignmentsForHITResponsePrivate
+ * \class CreateAdditionalAssignmentsForHITResponsePrivate
  *
- * @brief  Private implementation for CreateAdditionalAssignmentsForHITResponse.
+ * \brief Private implementation for CreateAdditionalAssignmentsForHITResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAdditionalAssignmentsForHITResponsePrivate object.
@@ -91,7 +94,7 @@ CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsFor
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk CreateAdditionalAssignmentsForHITResponse element.
  *
  * @param  xml  XML stream to parse.

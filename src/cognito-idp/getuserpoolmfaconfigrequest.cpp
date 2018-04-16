@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetUserPoolMfaConfigRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetUserPoolMfaConfigRequest
  *
- * @brief  Implements CognitoIdentityProvider GetUserPoolMfaConfig requests.
+ * \brief The GetUserPoolMfaConfigRequest class encapsulates CognitoIdentityProvider GetUserPoolMfaConfig requests.
  *
- * @see    CognitoIdentityProviderClient::getUserPoolMfaConfig
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getUserPoolMfaConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUserPoolMfaConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetUserPoolMfaConfigRequest::GetUserPoolMfaConfigRequest(const GetUserPoolMfaCon
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUserPoolMfaConfigRequest object.
  */
 GetUserPoolMfaConfigRequest::GetUserPoolMfaConfigRequest()
@@ -53,13 +66,16 @@ GetUserPoolMfaConfigRequest::GetUserPoolMfaConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUserPoolMfaConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUserPoolMfaConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetUserPoolMfaConfigRequest::response(QNetwor
     return new GetUserPoolMfaConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUserPoolMfaConfigRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetUserPoolMfaConfigRequest::response(QNetwor
  * @brief  Private implementation for GetUserPoolMfaConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserPoolMfaConfigRequestPrivate object.
@@ -97,7 +113,7 @@ GetUserPoolMfaConfigRequestPrivate::GetUserPoolMfaConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserPoolMfaConfigRequestPrivate object, copying another.

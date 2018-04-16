@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDomainNameResponse
+/*!
+ * \class QtAws::APIGateway::GetDomainNameResponse
  *
- * @brief  Handles APIGateway GetDomainName responses.
+ * \brief The GetDomainNameResponse class encapsulates APIGateway GetDomainName responses.
  *
- * @see    APIGatewayClient::getDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDomainNameResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetDomainNameRequest * GetDomainNameResponse::request() const
     return static_cast<const GetDomainNameRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetDomainName response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetDomainNameResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDomainNameResponsePrivate
+ * \class GetDomainNameResponsePrivate
  *
- * @brief  Private implementation for GetDomainNameResponse.
+ * \brief Private implementation for GetDomainNameResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainNameResponsePrivate object.
@@ -91,7 +99,7 @@ GetDomainNameResponsePrivate::GetDomainNameResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetDomainNameResponse element.
  *
  * @param  xml  XML stream to parse.

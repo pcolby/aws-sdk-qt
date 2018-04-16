@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ElasticLoadBalancing {
 
-/**
- * @class  ElasticLoadBalancingResponse
+/*!
+ * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingResponse
  *
- * @brief  Handles ElasticLoadBalancing ElasticLoadBalancing responses.
+ * \brief The ElasticLoadBalancingResponse class is the base class for all ElasticLoadBalancing responses.
  *
- * @see    ElasticLoadBalancingClient::elasticLoadBalancing
+ * \ingroup ElasticLoadBalancing
  */
 
-/**
+/*!
  * @brief  Constructs a new ElasticLoadBalancingResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ElasticLoadBalancingResponse::ElasticLoadBalancingResponse(QObject * const paren
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticLoadBalancingResponse object.
@@ -63,7 +63,7 @@ ElasticLoadBalancingResponse::ElasticLoadBalancingResponse(ElasticLoadBalancingR
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ElasticLoadBalancingResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticLoadBalancingResponsePrivate
@@ -92,7 +92,7 @@ void ElasticLoadBalancingResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ElasticLoadBalancingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticLoadBalancingResponsePrivate object.

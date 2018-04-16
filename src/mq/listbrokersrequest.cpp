@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  ListBrokersRequest
+/*!
+ * \class QtAws::MQ::ListBrokersRequest
  *
- * @brief  Implements MQ ListBrokers requests.
+ * \brief The ListBrokersRequest class encapsulates MQ ListBrokers requests.
  *
- * @see    MQClient::listBrokers
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::listBrokers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBrokersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListBrokersRequest::ListBrokersRequest(const ListBrokersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBrokersRequest object.
  */
 ListBrokersRequest::ListBrokersRequest()
@@ -53,13 +58,16 @@ ListBrokersRequest::ListBrokersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBrokersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBrokersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * 
     return new ListBrokersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBrokersRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListBrokersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBrokersRequestPrivate object.
@@ -97,7 +105,7 @@ ListBrokersRequestPrivate::ListBrokersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBrokersRequestPrivate object, copying another.

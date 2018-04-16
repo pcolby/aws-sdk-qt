@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  PurchaseReservedInstancesOfferingRequest
+/*!
+ * \class QtAws::EC2::PurchaseReservedInstancesOfferingRequest
  *
- * @brief  Implements EC2 PurchaseReservedInstancesOffering requests.
+ * \brief The PurchaseReservedInstancesOfferingRequest class encapsulates EC2 PurchaseReservedInstancesOffering requests.
  *
- * @see    EC2Client::purchaseReservedInstancesOffering
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::purchaseReservedInstancesOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseReservedInstancesOfferingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PurchaseReservedInstancesOfferingRequest object.
  */
 PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest()
@@ -53,13 +60,16 @@ PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool PurchaseReservedInstancesOfferingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PurchaseReservedInstancesOfferingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::res
     return new PurchaseReservedInstancesOfferingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PurchaseReservedInstancesOfferingRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::res
  * @brief  Private implementation for PurchaseReservedInstancesOfferingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseReservedInstancesOfferingRequestPrivate object.
@@ -97,7 +107,7 @@ PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseReservedInstancesOfferingRequestPrivate object, copying another.

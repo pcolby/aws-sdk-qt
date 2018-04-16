@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  DisableDomainTransferLockRequest
+/*!
+ * \class QtAws::Route53Domains::DisableDomainTransferLockRequest
  *
- * @brief  Implements Route53Domains DisableDomainTransferLock requests.
+ * \brief The DisableDomainTransferLockRequest class encapsulates Route53Domains DisableDomainTransferLock requests.
  *
- * @see    Route53DomainsClient::disableDomainTransferLock
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::disableDomainTransferLock
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableDomainTransferLockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DisableDomainTransferLockRequest::DisableDomainTransferLockRequest(const Disable
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableDomainTransferLockRequest object.
  */
 DisableDomainTransferLockRequest::DisableDomainTransferLockRequest()
@@ -53,13 +57,16 @@ DisableDomainTransferLockRequest::DisableDomainTransferLockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableDomainTransferLockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableDomainTransferLockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DisableDomainTransferLockRequest::response(QN
     return new DisableDomainTransferLockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableDomainTransferLockRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DisableDomainTransferLockRequest::response(QN
  * @brief  Private implementation for DisableDomainTransferLockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDomainTransferLockRequestPrivate object.
@@ -97,7 +104,7 @@ DisableDomainTransferLockRequestPrivate::DisableDomainTransferLockRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDomainTransferLockRequestPrivate object, copying another.

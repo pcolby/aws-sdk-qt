@@ -161,34 +161,42 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SES
+ * \brief The QtAws::SES contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SesClient
+/*!
+ * \class QtAws::SES::SesClient
  *
- * @brief  Client for Amazon Simple Email Service ( SES)
+ * \brief The SesClient class provides access the Amazon Simple Email Service ( SES) service.
  *
- * <fullname>Amazon Simple Email Service</fullname>
+ * \ingroup SES
  *
- * This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
- * documentation is intended to be used in conjunction with the <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
- *
- * </p <note>
- *
- * For a list of Amazon SES endpoints to use in service requests, see <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
  */
 
-/**
- * @brief  Constructs a new SesClient object.
+/*!
+ * \brief Constructs a SesClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SesClient::SesClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -207,21 +215,16 @@ SesClient::SesClient(
     d->serviceName = QStringLiteral("ses");
 }
 
-/**
- * @brief  Constructs a new SesClient object.
+/*!
+ * \overload SesClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SesClient::SesClient(
     const QUrl &endpoint,
@@ -240,7 +243,7 @@ SesClient::SesClient(
     d->serviceName = QStringLiteral("ses");
 }
 
-/**
+/*!
  * Creates a receipt rule set by cloning an existing one. All receipt rules and configurations are copied to the new
  * receipt rule set and are completely independent of the source rule
  *
@@ -264,7 +267,7 @@ CloneReceiptRuleSetResponse * SesClient::cloneReceiptRuleSet(const CloneReceiptR
     return qobject_cast<CloneReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a configuration
  *
  * set>
@@ -287,7 +290,7 @@ CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateC
     return qobject_cast<CreateConfigurationSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a configuration set event
  *
  * destination> <note>
@@ -316,7 +319,7 @@ CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationS
     return qobject_cast<CreateConfigurationSetEventDestinationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an association between a configuration set and a custom domain for open and click event tracking.
  *
  * </p
@@ -338,7 +341,7 @@ CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSe
     return qobject_cast<CreateConfigurationSetTrackingOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new custom verification email
  *
  * template>
@@ -362,7 +365,7 @@ CreateCustomVerificationEmailTemplateResponse * SesClient::createCustomVerificat
     return qobject_cast<CreateCustomVerificationEmailTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new IP address
  *
  * filter>
@@ -385,7 +388,7 @@ CreateReceiptFilterResponse * SesClient::createReceiptFilter(const CreateReceipt
     return qobject_cast<CreateReceiptFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a receipt
  *
  * rule>
@@ -408,7 +411,7 @@ CreateReceiptRuleResponse * SesClient::createReceiptRule(const CreateReceiptRule
     return qobject_cast<CreateReceiptRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an empty receipt rule
  *
  * set>
@@ -431,7 +434,7 @@ CreateReceiptRuleSetResponse * SesClient::createReceiptRuleSet(const CreateRecei
     return qobject_cast<CreateReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an email template. Email templates enable you to send personalized email to one or more destinations in a single
  * API operation. For more information, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html">Amazon SES Developer
@@ -451,7 +454,7 @@ CreateTemplateResponse * SesClient::createTemplate(const CreateTemplateRequest &
     return qobject_cast<CreateTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a configuration set. Configuration sets enable you to publish email sending events. For information about using
  * configuration sets, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer
@@ -471,7 +474,7 @@ DeleteConfigurationSetResponse * SesClient::deleteConfigurationSet(const DeleteC
     return qobject_cast<DeleteConfigurationSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a configuration set event destination. Configuration set event destinations are associated with configuration
  * sets, which enable you to publish email sending events. For information about using configuration sets, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer
@@ -491,7 +494,7 @@ DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationS
     return qobject_cast<DeleteConfigurationSetEventDestinationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an association between a configuration set and a custom domain for open and click event
  *
  * tracking>
@@ -518,7 +521,7 @@ DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSe
     return qobject_cast<DeleteConfigurationSetTrackingOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing custom verification email template.
  *
  * </p
@@ -542,7 +545,7 @@ DeleteCustomVerificationEmailTemplateResponse * SesClient::deleteCustomVerificat
     return qobject_cast<DeleteCustomVerificationEmailTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified identity (an email address or a domain) from the list of verified
  *
  * identities>
@@ -560,7 +563,7 @@ DeleteIdentityResponse * SesClient::deleteIdentity(const DeleteIdentityRequest &
     return qobject_cast<DeleteIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified sending authorization policy for the given identity (an email address or a domain). This API
  * returns successfully even if a policy with the specified name does not
  *
@@ -589,7 +592,7 @@ DeleteIdentityPolicyResponse * SesClient::deleteIdentityPolicy(const DeleteIdent
     return qobject_cast<DeleteIdentityPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified IP address
  *
  * filter>
@@ -613,7 +616,7 @@ DeleteReceiptFilterResponse * SesClient::deleteReceiptFilter(const DeleteReceipt
     return qobject_cast<DeleteReceiptFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified receipt
  *
  * rule>
@@ -637,7 +640,7 @@ DeleteReceiptRuleResponse * SesClient::deleteReceiptRule(const DeleteReceiptRule
     return qobject_cast<DeleteReceiptRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified receipt rule set and all of the receipt rules it
  *
  * contains> <note>
@@ -665,7 +668,7 @@ DeleteReceiptRuleSetResponse * SesClient::deleteReceiptRuleSet(const DeleteRecei
     return qobject_cast<DeleteReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an email
  *
  * template>
@@ -683,7 +686,7 @@ DeleteTemplateResponse * SesClient::deleteTemplate(const DeleteTemplateRequest &
     return qobject_cast<DeleteTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated. Use the <code>DeleteIdentity</code> operation to delete email addresses and
  *
  * @param  request Request to send to Amazon Simple Email Service.
@@ -697,7 +700,7 @@ DeleteVerifiedEmailAddressResponse * SesClient::deleteVerifiedEmailAddress(const
     return qobject_cast<DeleteVerifiedEmailAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the metadata and receipt rules for the receipt rule set that is currently
  *
  * active>
@@ -720,7 +723,7 @@ DescribeActiveReceiptRuleSetResponse * SesClient::describeActiveReceiptRuleSet(c
     return qobject_cast<DescribeActiveReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the details of the specified configuration set. For information about using configuration sets, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer
  *
@@ -739,7 +742,7 @@ DescribeConfigurationSetResponse * SesClient::describeConfigurationSet(const Des
     return qobject_cast<DescribeConfigurationSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the details of the specified receipt
  *
  * rule>
@@ -762,7 +765,7 @@ DescribeReceiptRuleResponse * SesClient::describeReceiptRule(const DescribeRecei
     return qobject_cast<DescribeReceiptRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the details of the specified receipt rule
  *
  * set>
@@ -786,7 +789,7 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
     return qobject_cast<DescribeReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the email sending status of the Amazon SES
  *
  * account>
@@ -804,7 +807,7 @@ GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
     return qobject_cast<GetAccountSendingEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the custom email verification template for the template name you
  *
  * specify>
@@ -828,7 +831,7 @@ GetCustomVerificationEmailTemplateResponse * SesClient::getCustomVerificationEma
     return qobject_cast<GetCustomVerificationEmailTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the current status of Easy DKIM signing for an entity. For domain name identities, this operation also returns
  * the DKIM tokens that are required for Easy DKIM signing, and whether Amazon SES has successfully verified that these
  * tokens have been
@@ -871,7 +874,7 @@ GetIdentityDkimAttributesResponse * SesClient::getIdentityDkimAttributes(const G
     return qobject_cast<GetIdentityDkimAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the custom MAIL FROM attributes for a list of identities (email addresses :
  *
  * domains)>
@@ -890,7 +893,7 @@ GetIdentityMailFromDomainAttributesResponse * SesClient::getIdentityMailFromDoma
     return qobject_cast<GetIdentityMailFromDomainAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Given a list of verified identities (email addresses and/or domains), returns a structure describing identity
  * notification
  *
@@ -915,7 +918,7 @@ GetIdentityNotificationAttributesResponse * SesClient::getIdentityNotificationAt
     return qobject_cast<GetIdentityNotificationAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the requested sending authorization policies for the given identity (an email address or a domain). The policies
  * are returned as a map of policy names to policy contents. You can retrieve a maximum of 20 policies at a
  *
@@ -944,7 +947,7 @@ GetIdentityPoliciesResponse * SesClient::getIdentityPolicies(const GetIdentityPo
     return qobject_cast<GetIdentityPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Given a list of identities (email addresses and/or domains), returns the verification status and (for domain identities)
  * the verification token for each
  *
@@ -979,7 +982,7 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
     return qobject_cast<GetIdentityVerificationAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides the sending limits for the Amazon SES account.
  *
  * </p
@@ -997,7 +1000,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
     return qobject_cast<GetSendQuotaResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides sending statistics for the Amazon SES account. The result is a list of data points, representing the last two
  * weeks of sending activity. Each data point in the list contains statistics for a 15-minute period of
  *
@@ -1016,7 +1019,7 @@ GetSendStatisticsResponse * SesClient::getSendStatistics()
     return qobject_cast<GetSendStatisticsResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays the template object (which includes the Subject line, HTML part and text part) for the template you
  *
  * specify>
@@ -1034,7 +1037,7 @@ GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
     return qobject_cast<GetTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a list of the configuration sets associated with your Amazon SES account. For information about using
  * configuration sets, see <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Monitoring Your Amazon SES
@@ -1058,7 +1061,7 @@ ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfi
     return qobject_cast<ListConfigurationSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the existing custom verification email templates for your
  *
  * account>
@@ -1082,7 +1085,7 @@ ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerification
     return qobject_cast<ListCustomVerificationEmailTemplatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list containing all of the identities (email addresses and domains) for your AWS account, regardless of
  * verification
  *
@@ -1101,7 +1104,7 @@ ListIdentitiesResponse * SesClient::listIdentities(const ListIdentitiesRequest &
     return qobject_cast<ListIdentitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of sending authorization policies that are attached to the given identity (an email address or a domain).
  * This API returns only a list. If you want the actual policy content, you can use
  *
@@ -1130,7 +1133,7 @@ ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentit
     return qobject_cast<ListIdentityPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the IP address filters associated with your AWS
  *
  * account>
@@ -1154,7 +1157,7 @@ ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFilt
     return qobject_cast<ListReceiptFiltersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the receipt rule sets that exist under your AWS account. If there are additional receipt rule sets to be
  * retrieved, you will receive a <code>NextToken</code> that you can provide to the next call to
  * <code>ListReceiptRuleSets</code> to retrieve the additional
@@ -1180,7 +1183,7 @@ ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRu
     return qobject_cast<ListReceiptRuleSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the email templates present in your Amazon SES
  *
  * account>
@@ -1198,7 +1201,7 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
     return qobject_cast<ListTemplatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated. Use the <code>ListIdentities</code> operation to list the email addresses and domains associated with your
  *
  * @param  request Request to send to Amazon Simple Email Service.
@@ -1212,7 +1215,7 @@ ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
     return qobject_cast<ListVerifiedEmailAddressesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates a sending authorization policy for the specified identity (an email address or a
  *
  * domain)> <note>
@@ -1240,7 +1243,7 @@ PutIdentityPolicyResponse * SesClient::putIdentityPolicy(const PutIdentityPolicy
     return qobject_cast<PutIdentityPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Reorders the receipt rules within a receipt rule
  *
  * set> <note>
@@ -1269,7 +1272,7 @@ ReorderReceiptRuleSetResponse * SesClient::reorderReceiptRuleSet(const ReorderRe
     return qobject_cast<ReorderReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates and sends a bounce message to the sender of an email you received through Amazon SES. You can only use this
  * API on an email up to 24 hours after you receive
  *
@@ -1297,7 +1300,7 @@ SendBounceResponse * SesClient::sendBounce(const SendBounceRequest &request)
     return qobject_cast<SendBounceResponse *>(send(request));
 }
 
-/**
+/*!
  * Composes an email message to multiple destinations. The message body is created using an email
  *
  * template>
@@ -1342,7 +1345,7 @@ SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBul
     return qobject_cast<SendBulkTemplatedEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds an email address to the list of identities for your Amazon SES account and attempts to verify it. As a result of
  * executing this operation, a customized verification email is sent to the specified
  *
@@ -1368,7 +1371,7 @@ SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(con
     return qobject_cast<SendCustomVerificationEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * Composes an email message and immediately queues it for sending. In order to send email using the <code>SendEmail</code>
  * operation, your message must meet the following
  *
@@ -1420,7 +1423,7 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
     return qobject_cast<SendEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * Composes an email message and immediately queues it for sending. When calling this operation, you may specify the
  * message headers as well as the content. The <code>SendRawEmail</code> operation is particularly useful for sending
  * multipart MIME emails (such as those that contain both a plain-text and an HTML version).
@@ -1519,7 +1522,7 @@ SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &reques
     return qobject_cast<SendRawEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * Composes an email message using an email template and immediately queues it for
  *
  * sending>
@@ -1569,7 +1572,7 @@ SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEm
     return qobject_cast<SendTemplatedEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the specified receipt rule set as the active receipt rule
  *
  * set> <note>
@@ -1597,7 +1600,7 @@ SetActiveReceiptRuleSetResponse * SesClient::setActiveReceiptRuleSet(const SetAc
     return qobject_cast<SetActiveReceiptRuleSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables or disables Easy DKIM signing of email sent from an
  *
  * identity> <ul> <li>
@@ -1635,7 +1638,7 @@ SetIdentityDkimEnabledResponse * SesClient::setIdentityDkimEnabled(const SetIden
     return qobject_cast<SetIdentityDkimEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Given an identity (an email address or a domain), enables or disables whether Amazon SES forwards bounce and complaint
  * notifications as email. Feedback forwarding can only be disabled when Amazon Simple Notification Service (Amazon SNS)
  * topics are specified for both bounces and
@@ -1664,7 +1667,7 @@ SetIdentityFeedbackForwardingEnabledResponse * SesClient::setIdentityFeedbackFor
     return qobject_cast<SetIdentityFeedbackForwardingEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Given an identity (an email address or a domain), sets whether Amazon SES includes the original email headers in the
  * Amazon Simple Notification Service (Amazon SNS) notifications of a specified
  *
@@ -1688,7 +1691,7 @@ SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeaders
     return qobject_cast<SetIdentityHeadersInNotificationsEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables or disables the custom MAIL FROM domain setup for a verified identity (an email address or a
  *
  * domain)> <b>
@@ -1713,7 +1716,7 @@ SetIdentityMailFromDomainResponse * SesClient::setIdentityMailFromDomain(const S
     return qobject_cast<SetIdentityMailFromDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Given an identity (an email address or a domain), sets the Amazon Simple Notification Service (Amazon SNS) topic to
  * which Amazon SES will publish bounce, complaint, and/or delivery notifications for emails sent with that identity as the
  *
@@ -1742,7 +1745,7 @@ SetIdentityNotificationTopicResponse * SesClient::setIdentityNotificationTopic(c
     return qobject_cast<SetIdentityNotificationTopicResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the position of the specified receipt rule in the receipt rule
  *
  * set>
@@ -1766,7 +1769,7 @@ SetReceiptRulePositionResponse * SesClient::setReceiptRulePosition(const SetRece
     return qobject_cast<SetReceiptRulePositionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a preview of the MIME content of an email when provided with a template and a set of replacement
  *
  * data>
@@ -1784,7 +1787,7 @@ TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTempl
     return qobject_cast<TestRenderTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables or disables email sending across your entire Amazon SES account. You can use this operation in conjunction with
  * Amazon CloudWatch alarms to temporarily pause email sending across your Amazon SES account when reputation metrics (such
  * as your bounce on complaint rate) reach certain
@@ -1804,7 +1807,7 @@ UpdateAccountSendingEnabledResponse * SesClient::updateAccountSendingEnabled(con
     return qobject_cast<UpdateAccountSendingEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the event destination of a configuration set. Event destinations are associated with configuration sets, which
  * enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification
  * Service (Amazon SNS). For information about using configuration sets, see <a
@@ -1831,7 +1834,7 @@ UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationS
     return qobject_cast<UpdateConfigurationSetEventDestinationResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables or disables the publishing of reputation metrics for emails sent using a specific configuration set. Reputation
  * metrics include bounce and complaint rates. These metrics are published to Amazon CloudWatch. By using Amazon
  * CloudWatch, you can create alarms when bounce or complaint rates exceed a certain
@@ -1851,7 +1854,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfig
     return qobject_cast<UpdateConfigurationSetReputationMetricsEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables or disables email sending for messages sent using a specific configuration set. You can use this operation in
  * conjunction with Amazon CloudWatch alarms to temporarily pause email sending for a configuration set when the reputation
  * metrics for that configuration set (such as your bounce on complaint rate) reach certain
@@ -1871,7 +1874,7 @@ UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSet
     return qobject_cast<UpdateConfigurationSetSendingEnabledResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an association between a configuration set and a custom domain for open and click event tracking.
  *
  * </p
@@ -1893,7 +1896,7 @@ UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSe
     return qobject_cast<UpdateConfigurationSetTrackingOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing custom verification email
  *
  * template>
@@ -1917,7 +1920,7 @@ UpdateCustomVerificationEmailTemplateResponse * SesClient::updateCustomVerificat
     return qobject_cast<UpdateCustomVerificationEmailTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a receipt
  *
  * rule>
@@ -1941,7 +1944,7 @@ UpdateReceiptRuleResponse * SesClient::updateReceiptRule(const UpdateReceiptRule
     return qobject_cast<UpdateReceiptRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an email template. Email templates enable you to send personalized email to one or more destinations in a single
  * API operation. For more information, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html">Amazon SES Developer
@@ -1961,7 +1964,7 @@ UpdateTemplateResponse * SesClient::updateTemplate(const UpdateTemplateRequest &
     return qobject_cast<UpdateTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a set of DKIM tokens for a domain. DKIM <i>tokens</i> are character strings that represent your domain's
  * identity. Using these tokens, you will need to create DNS CNAME records that point to DKIM public keys hosted by Amazon
  * SES. Amazon Web Services will eventually detect that you have updated your DNS records; this detection process may take
@@ -1991,7 +1994,7 @@ VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimReq
     return qobject_cast<VerifyDomainDkimResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a domain to the list of identities for your Amazon SES account and attempts to verify it. For more information
  * about verifying domains, see <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html">Verifying Email Addresses
@@ -2012,7 +2015,7 @@ VerifyDomainIdentityResponse * SesClient::verifyDomainIdentity(const VerifyDomai
     return qobject_cast<VerifyDomainIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated. Use the <code>VerifyEmailIdentity</code> operation to verify a new email
  *
  * @param  request Request to send to Amazon Simple Email Service.
@@ -2026,7 +2029,7 @@ VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddr
     return qobject_cast<VerifyEmailAddressResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds an email address to the list of identities for your Amazon SES account and attempts to verify it. As a result of
  * executing this operation, a verification email is sent to the specified
  *
@@ -2045,7 +2048,7 @@ VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailId
     return qobject_cast<VerifyEmailIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SesClientPrivate
@@ -2053,7 +2056,7 @@ VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailId
  * @brief  Private implementation for SesClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SesClientPrivate object.

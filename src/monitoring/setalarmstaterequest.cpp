@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace CloudWatch {
 
-/**
- * @class  SetAlarmStateRequest
+/*!
+ * \class QtAws::CloudWatch::SetAlarmStateRequest
  *
- * @brief  Implements CloudWatch SetAlarmState requests.
+ * \brief The SetAlarmStateRequest class encapsulates CloudWatch SetAlarmState requests.
  *
- * @see    CloudWatchClient::setAlarmState
+ * \ingroup CloudWatch
+ *
+ *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+ *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ * 
+ *  applications>
+ * 
+ *  CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you
+ *  define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use
+ *  this data to determine whether you should launch additional instances to handle increased load. You can also use this
+ *  data to stop under-used instances to save
+ * 
+ *  money>
+ * 
+ *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
+ *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *
+ * \sa CloudWatchClient::setAlarmState
  */
 
-/**
+/*!
  * @brief  Constructs a new SetAlarmStateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ SetAlarmStateRequest::SetAlarmStateRequest(const SetAlarmStateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetAlarmStateRequest object.
  */
 SetAlarmStateRequest::SetAlarmStateRequest()
@@ -53,13 +70,16 @@ SetAlarmStateRequest::SetAlarmStateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetAlarmStateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetAlarmStateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply 
     return new SetAlarmStateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetAlarmStateRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply 
  * @brief  Private implementation for SetAlarmStateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetAlarmStateRequestPrivate object.
@@ -97,7 +117,7 @@ SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetAlarmStateRequestPrivate object, copying another.

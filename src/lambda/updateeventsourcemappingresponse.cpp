@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateEventSourceMappingResponse
+/*!
+ * \class QtAws::Lambda::UpdateEventSourceMappingResponse
  *
- * @brief  Handles Lambda UpdateEventSourceMapping responses.
+ * \brief The UpdateEventSourceMappingResponse class encapsulates Lambda UpdateEventSourceMapping responses.
  *
- * @see    LambdaClient::updateEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEventSourceMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateEventSourceMappingRequest * UpdateEventSourceMappingResponse::reques
     return static_cast<const UpdateEventSourceMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda UpdateEventSourceMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateEventSourceMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateEventSourceMappingResponsePrivate
+ * \class UpdateEventSourceMappingResponsePrivate
  *
- * @brief  Private implementation for UpdateEventSourceMappingResponse.
+ * \brief Private implementation for UpdateEventSourceMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEventSourceMappingResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda UpdateEventSourceMappingResponse element.
  *
  * @param  xml  XML stream to parse.

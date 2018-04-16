@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ReorderReceiptRuleSetResponse
+/*!
+ * \class QtAws::SES::ReorderReceiptRuleSetResponse
  *
- * @brief  Handles SES ReorderReceiptRuleSet responses.
+ * \brief The ReorderReceiptRuleSetResponse class encapsulates SES ReorderReceiptRuleSet responses.
  *
- * @see    SESClient::reorderReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::reorderReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new ReorderReceiptRuleSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() co
     return static_cast<const ReorderReceiptRuleSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES ReorderReceiptRuleSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReorderReceiptRuleSetResponsePrivate
+ * \class ReorderReceiptRuleSetResponsePrivate
  *
- * @brief  Private implementation for ReorderReceiptRuleSetResponse.
+ * \brief Private implementation for ReorderReceiptRuleSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReorderReceiptRuleSetResponsePrivate object.
@@ -91,7 +105,7 @@ ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES ReorderReceiptRuleSetResponse element.
  *
  * @param  xml  XML stream to parse.

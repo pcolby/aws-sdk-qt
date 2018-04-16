@@ -45,44 +45,52 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ServerlessApplicationRepository
+ * \brief The QtAws::ServerlessApplicationRepository contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ServerlessApplicationRepository {
 
-/**
- * @class  ServerlessApplicationRepositoryClient
+/*!
+ * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryClient
  *
- * @brief  Client for AWSServerlessApplicationRepository
+ * \brief The ServerlessApplicationRepositoryClient class provides access the AWSServerlessApplicationRepository service.
  *
- * The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
- * serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
- * and Applications on the AWS website.</p><p>The AWS Serverless Application Repository is deeply integrated with the AWS
- * Lambda console, so that developers of all levels can get started with serverless computing without needing to learn
- * anything new. You can use category keywords to browse for applications such as web and mobile backends, data processing
- * applications, or chatbots. You can also search for applications by name, publisher, or event source. To use an
- * application, you simply choose it, configure any required fields, and deploy it with a few clicks. </p><p>You can also
- * easily publish applications, sharing them publicly with the community at large, or privately within your team or across
- * your organization. To publish a serverless application (or app), you can use the AWS Management Console, AWS Command
- * Line Interface (AWS CLI), or AWS SDKs to upload the code. Along with the code, you upload a simple manifest file, also
- * known as the AWS Serverless Application Model (AWS SAM) template. For more information about AWS SAM, see AWS Serverless
- * Application Model (AWS SAM) on the AWS Labs GitHub repository.</p><p>The AWS Serverless Application Repository Developer
- * Guide contains more information about the two developer experiences available:</p><ul> <li>
+ * \ingroup ServerlessApplicationRepository
  *
- * Consuming Applications – Browse for applications and view information about them, including source code and readme
- * files. Also install, configure, and deploy applications of your choosing.
- *
- * </p
- *
- * Publishing Applications – Configure and upload applications to make them available to other developers, and publish new
- * versions of applications.
+ *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
+ *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
+ *  and Applications on the AWS website.</p><p>The AWS Serverless Application Repository is deeply integrated with the AWS
+ *  Lambda console, so that developers of all levels can get started with serverless computing without needing to learn
+ *  anything new. You can use category keywords to browse for applications such as web and mobile backends, data processing
+ *  applications, or chatbots. You can also search for applications by name, publisher, or event source. To use an
+ *  application, you simply choose it, configure any required fields, and deploy it with a few clicks. </p><p>You can also
+ *  easily publish applications, sharing them publicly with the community at large, or privately within your team or across
+ *  your organization. To publish a serverless application (or app), you can use the AWS Management Console, AWS Command
+ *  Line Interface (AWS CLI), or AWS SDKs to upload the code. Along with the code, you upload a simple manifest file, also
+ *  known as the AWS Serverless Application Model (AWS SAM) template. For more information about AWS SAM, see AWS Serverless
+ *  Application Model (AWS SAM) on the AWS Labs GitHub repository.</p><p>The AWS Serverless Application Repository Developer
+ *  Guide contains more information about the two developer experiences available:</p><ul> <li>
+ * 
+ *  Consuming Applications – Browse for applications and view information about them, including source code and readme
+ *  files. Also install, configure, and deploy applications of your choosing.
+ * 
+ *  </p
+ * 
+ *  Publishing Applications – Configure and upload applications to make them available to other developers, and publish new
+ *  versions of applications.
  */
 
-/**
- * @brief  Constructs a new ServerlessApplicationRepositoryClient object.
+/*!
+ * \brief Constructs a ServerlessApplicationRepositoryClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -101,21 +109,16 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     d->serviceName = QStringLiteral("serverlessrepo");
 }
 
-/**
- * @brief  Constructs a new ServerlessApplicationRepositoryClient object.
+/*!
+ * \overload ServerlessApplicationRepositoryClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     const QUrl &endpoint,
@@ -134,7 +137,7 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     d->serviceName = QStringLiteral("serverlessrepo");
 }
 
-/**
+/*!
  * Creates an application, optionally including an AWS SAM file to create the first application version in the same
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -148,7 +151,7 @@ CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplica
     return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an application
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -162,7 +165,7 @@ CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::create
     return qobject_cast<CreateApplicationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS CloudFormation ChangeSet for the given
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -176,7 +179,7 @@ CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::c
     return qobject_cast<CreateCloudFormationChangeSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -190,7 +193,7 @@ DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplica
     return qobject_cast<DeleteApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the specified
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -204,7 +207,7 @@ GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(c
     return qobject_cast<GetApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the policy for the specified
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -218,7 +221,7 @@ GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplica
     return qobject_cast<GetApplicationPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists versions for the specified
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -232,7 +235,7 @@ ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApp
     return qobject_cast<ListApplicationVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists applications owned by the
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -246,7 +249,7 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
     return qobject_cast<ListApplicationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Puts the policy for the specified
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -260,7 +263,7 @@ PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplica
     return qobject_cast<PutApplicationPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * @param  request Request to send to AWSServerlessApplicationRepository.
@@ -274,7 +277,7 @@ UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplica
     return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ServerlessApplicationRepositoryClientPrivate
@@ -282,7 +285,7 @@ UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplica
  * @brief  Private implementation for ServerlessApplicationRepositoryClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServerlessApplicationRepositoryClientPrivate object.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateHITReviewStatusRequest
+/*!
+ * \class QtAws::MTurk::UpdateHITReviewStatusRequest
  *
- * @brief  Implements MTurk UpdateHITReviewStatus requests.
+ * \brief The UpdateHITReviewStatusRequest class encapsulates MTurk UpdateHITReviewStatus requests.
  *
- * @see    MTurkClient::updateHITReviewStatus
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateHITReviewStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateHITReviewStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest(const UpdateHITReview
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateHITReviewStatusRequest object.
  */
 UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest()
@@ -53,13 +56,16 @@ UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateHITReviewStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateHITReviewStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetwo
     return new UpdateHITReviewStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateHITReviewStatusRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetwo
  * @brief  Private implementation for UpdateHITReviewStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHITReviewStatusRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHITReviewStatusRequestPrivate object, copying another.

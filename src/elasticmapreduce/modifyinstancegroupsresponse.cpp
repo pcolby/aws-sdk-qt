@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ModifyInstanceGroupsResponse
+/*!
+ * \class QtAws::EMR::ModifyInstanceGroupsResponse
  *
- * @brief  Handles EMR ModifyInstanceGroups responses.
+ * \brief The ModifyInstanceGroupsResponse class encapsulates EMR ModifyInstanceGroups responses.
  *
- * @see    EMRClient::modifyInstanceGroups
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::modifyInstanceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ModifyInstanceGroupsRequest * ModifyInstanceGroupsResponse::request() cons
     return static_cast<const ModifyInstanceGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR ModifyInstanceGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyInstanceGroupsResponsePrivate
+ * \class ModifyInstanceGroupsResponsePrivate
  *
- * @brief  Private implementation for ModifyInstanceGroupsResponse.
+ * \brief Private implementation for ModifyInstanceGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceGroupsResponsePrivate object.
@@ -91,7 +97,7 @@ ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR ModifyInstanceGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

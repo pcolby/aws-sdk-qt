@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListPartsResponse
+/*!
+ * \class QtAws::S3::ListPartsResponse
  *
- * @brief  Handles S3 ListParts responses.
+ * \brief The ListPartsResponse class encapsulates S3 ListParts responses.
  *
- * @see    S3Client::listParts
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listParts
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPartsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListPartsRequest * ListPartsResponse::request() const
     return static_cast<const ListPartsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 ListParts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListPartsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPartsResponsePrivate
+ * \class ListPartsResponsePrivate
  *
- * @brief  Private implementation for ListPartsResponse.
+ * \brief Private implementation for ListPartsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPartsResponsePrivate object.
@@ -91,7 +94,7 @@ ListPartsResponsePrivate::ListPartsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 ListPartsResponse element.
  *
  * @param  xml  XML stream to parse.

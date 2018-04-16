@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateAddressResponse
+/*!
+ * \class QtAws::EC2::DisassociateAddressResponse
  *
- * @brief  Handles EC2 DisassociateAddress responses.
+ * \brief The DisassociateAddressResponse class encapsulates EC2 DisassociateAddress responses.
  *
- * @see    EC2Client::disassociateAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateAddressResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DisassociateAddressRequest * DisassociateAddressResponse::request() const
     return static_cast<const DisassociateAddressRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DisassociateAddress response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DisassociateAddressResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateAddressResponsePrivate
+ * \class DisassociateAddressResponsePrivate
  *
- * @brief  Private implementation for DisassociateAddressResponse.
+ * \brief Private implementation for DisassociateAddressResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateAddressResponsePrivate object.
@@ -91,7 +98,7 @@ DisassociateAddressResponsePrivate::DisassociateAddressResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DisassociateAddressResponse element.
  *
  * @param  xml  XML stream to parse.

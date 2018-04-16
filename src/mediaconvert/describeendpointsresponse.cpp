@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DescribeEndpointsResponse
+/*!
+ * \class QtAws::MediaConvert::DescribeEndpointsResponse
  *
- * @brief  Handles MediaConvert DescribeEndpoints responses.
+ * \brief The DescribeEndpointsResponse class encapsulates MediaConvert DescribeEndpoints responses.
  *
- * @see    MediaConvertClient::describeEndpoints
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::describeEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
     return static_cast<const DescribeEndpointsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert DescribeEndpoints response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeEndpointsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEndpointsResponsePrivate
+ * \class DescribeEndpointsResponsePrivate
  *
- * @brief  Private implementation for DescribeEndpointsResponse.
+ * \brief Private implementation for DescribeEndpointsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointsResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeEndpointsResponsePrivate::DescribeEndpointsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert DescribeEndpointsResponse element.
  *
  * @param  xml  XML stream to parse.

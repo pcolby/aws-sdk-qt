@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeParametersResponse
+/*!
+ * \class QtAws::DAX::DescribeParametersResponse
  *
- * @brief  Handles DAX DescribeParameters responses.
+ * \brief The DescribeParametersResponse class encapsulates DAX DescribeParameters responses.
  *
- * @see    DAXClient::describeParameters
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeParametersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeParametersRequest * DescribeParametersResponse::request() const
     return static_cast<const DescribeParametersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DescribeParameters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeParametersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeParametersResponsePrivate
+ * \class DescribeParametersResponsePrivate
  *
- * @brief  Private implementation for DescribeParametersResponse.
+ * \brief Private implementation for DescribeParametersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeParametersResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DescribeParametersResponse element.
  *
  * @param  xml  XML stream to parse.

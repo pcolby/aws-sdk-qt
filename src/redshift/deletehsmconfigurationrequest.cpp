@@ -25,15 +25,48 @@
 namespace QtAws {
 namespace Redshift {
 
-/**
- * @class  DeleteHsmConfigurationRequest
+/*!
+ * \class QtAws::Redshift::DeleteHsmConfigurationRequest
  *
- * @brief  Implements Redshift DeleteHsmConfiguration requests.
+ * \brief The DeleteHsmConfigurationRequest class encapsulates Redshift DeleteHsmConfiguration requests.
  *
- * @see    RedshiftClient::deleteHsmConfiguration
+ * \ingroup Redshift
+ *
+ *  <fullname>Amazon Redshift</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is an interface reference for Amazon Redshift. It contains documentation for one of the programming or command line
+ *  interfaces you can use to manage Amazon Redshift clusters. Note that Amazon Redshift is asynchronous, which means that
+ *  some interfaces may require techniques, such as polling or asynchronous callback handlers, to determine when a command
+ *  has been applied. In this reference, the parameter descriptions indicate whether a change is applied immediately, on the
+ *  next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster management
+ *  interfaces, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html">Using the Amazon Redshift
+ *  Management
+ * 
+ *  Interfaces</a>>
+ * 
+ *  Amazon Redshift manages all the work of setting up, operating, and scaling a data warehouse: provisioning capacity,
+ *  monitoring and backing up the cluster, and applying patches and upgrades to the Amazon Redshift engine. You can focus on
+ *  using your data to acquire new insights for your business and
+ * 
+ *  customers>
+ * 
+ *  If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the <a
+ *  href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html">Amazon Redshift Getting Started
+ * 
+ *  Guide</a>>
+ * 
+ *  If you are a database developer, the <a href="http://docs.aws.amazon.com/redshift/latest/dg/welcome.html">Amazon
+ *  Redshift Database Developer Guide</a> explains how to design, build, query, and maintain the databases that make up your
+ *  data warehouse.
+ *
+ * \sa RedshiftClient::deleteHsmConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHsmConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +77,7 @@ DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest(const DeleteHsmConf
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteHsmConfigurationRequest object.
  */
 DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest()
@@ -53,13 +86,16 @@ DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteHsmConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteHsmConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetw
     return new DeleteHsmConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteHsmConfigurationRequestPrivate
@@ -82,7 +118,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetw
  * @brief  Private implementation for DeleteHsmConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHsmConfigurationRequestPrivate object.
@@ -97,7 +133,7 @@ DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHsmConfigurationRequestPrivate object, copying another.

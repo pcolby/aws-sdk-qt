@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateEgressOnlyInternetGatewayRequest
+/*!
+ * \class QtAws::EC2::CreateEgressOnlyInternetGatewayRequest
  *
- * @brief  Implements EC2 CreateEgressOnlyInternetGateway requests.
+ * \brief The CreateEgressOnlyInternetGatewayRequest class encapsulates EC2 CreateEgressOnlyInternetGateway requests.
  *
- * @see    EC2Client::createEgressOnlyInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createEgressOnlyInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequest object.
  */
 CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest()
@@ -53,13 +60,16 @@ CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEgressOnlyInternetGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEgressOnlyInternetGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::respo
     return new CreateEgressOnlyInternetGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEgressOnlyInternetGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::respo
  * @brief  Private implementation for CreateEgressOnlyInternetGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequestPrivate object, copying another.

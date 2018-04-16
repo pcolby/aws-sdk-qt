@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  TagResourceResponse
+/*!
+ * \class QtAws::AlexaForBusiness::TagResourceResponse
  *
- * @brief  Handles AlexaForBusiness TagResource responses.
+ * \brief The TagResourceResponse class encapsulates AlexaForBusiness TagResource responses.
  *
- * @see    AlexaForBusinessClient::tagResource
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const TagResourceRequest * TagResourceResponse::request() const
     return static_cast<const TagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness TagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TagResourceResponsePrivate
+ * \class TagResourceResponsePrivate
  *
- * @brief  Private implementation for TagResourceResponse.
+ * \brief Private implementation for TagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceResponsePrivate object.
@@ -91,7 +99,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness TagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVpcClassicLinkDnsSupportResponse
+/*!
+ * \class QtAws::EC2::EnableVpcClassicLinkDnsSupportResponse
  *
- * @brief  Handles EC2 EnableVpcClassicLinkDnsSupport responses.
+ * \brief The EnableVpcClassicLinkDnsSupportResponse class encapsulates EC2 EnableVpcClassicLinkDnsSupport responses.
  *
- * @see    EC2Client::enableVpcClassicLinkDnsSupport
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVpcClassicLinkDnsSupport
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVpcClassicLinkDnsSupportResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const EnableVpcClassicLinkDnsSupportRequest * EnableVpcClassicLinkDnsSupportResp
     return static_cast<const EnableVpcClassicLinkDnsSupportRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 EnableVpcClassicLinkDnsSupport response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void EnableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableVpcClassicLinkDnsSupportResponsePrivate
+ * \class EnableVpcClassicLinkDnsSupportResponsePrivate
  *
- * @brief  Private implementation for EnableVpcClassicLinkDnsSupportResponse.
+ * \brief Private implementation for EnableVpcClassicLinkDnsSupportResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVpcClassicLinkDnsSupportResponsePrivate object.
@@ -91,7 +98,7 @@ EnableVpcClassicLinkDnsSupportResponsePrivate::EnableVpcClassicLinkDnsSupportRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 EnableVpcClassicLinkDnsSupportResponse element.
  *
  * @param  xml  XML stream to parse.

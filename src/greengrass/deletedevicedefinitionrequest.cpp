@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteDeviceDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::DeleteDeviceDefinitionRequest
  *
- * @brief  Implements Greengrass DeleteDeviceDefinition requests.
+ * \brief The DeleteDeviceDefinitionRequest class encapsulates Greengrass DeleteDeviceDefinition requests.
  *
- * @see    GreengrassClient::deleteDeviceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteDeviceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeviceDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteDeviceDefinitionRequest::DeleteDeviceDefinitionRequest(const DeleteDeviceD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeviceDefinitionRequest object.
  */
 DeleteDeviceDefinitionRequest::DeleteDeviceDefinitionRequest()
@@ -53,13 +59,16 @@ DeleteDeviceDefinitionRequest::DeleteDeviceDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDeviceDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDeviceDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetw
     return new DeleteDeviceDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDeviceDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetw
  * @brief  Private implementation for DeleteDeviceDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeviceDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeviceDefinitionRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  UpdateStreamRequest
+/*!
+ * \class QtAws::KinesisVideo::UpdateStreamRequest
  *
- * @brief  Implements KinesisVideo UpdateStream requests.
+ * \brief The UpdateStreamRequest class encapsulates KinesisVideo UpdateStream requests.
  *
- * @see    KinesisVideoClient::updateStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::updateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateStreamRequest::UpdateStreamRequest(const UpdateStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamRequest object.
  */
 UpdateStreamRequest::UpdateStreamRequest()
@@ -53,13 +56,16 @@ UpdateStreamRequest::UpdateStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
     return new UpdateStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamRequestPrivate object, copying another.

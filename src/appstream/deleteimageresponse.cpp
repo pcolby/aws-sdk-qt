@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteImageResponse
+/*!
+ * \class QtAws::AppStream::DeleteImageResponse
  *
- * @brief  Handles AppStream DeleteImage responses.
+ * \brief The DeleteImageResponse class encapsulates AppStream DeleteImage responses.
  *
- * @see    AppStreamClient::deleteImage
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteImage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteImageRequest * DeleteImageResponse::request() const
     return static_cast<const DeleteImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DeleteImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteImageResponsePrivate
+ * \class DeleteImageResponsePrivate
  *
- * @brief  Private implementation for DeleteImageResponse.
+ * \brief Private implementation for DeleteImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteImageResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteImageResponsePrivate::DeleteImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DeleteImageResponse element.
  *
  * @param  xml  XML stream to parse.

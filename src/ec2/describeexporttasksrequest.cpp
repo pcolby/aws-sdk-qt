@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeExportTasksRequest
+/*!
+ * \class QtAws::EC2::DescribeExportTasksRequest
  *
- * @brief  Implements EC2 DescribeExportTasks requests.
+ * \brief The DescribeExportTasksRequest class encapsulates EC2 DescribeExportTasks requests.
  *
- * @see    EC2Client::describeExportTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeExportTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeExportTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasks
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeExportTasksRequest object.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest()
@@ -53,13 +60,16 @@ DescribeExportTasksRequest::DescribeExportTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeExportTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeExportTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
     return new DescribeExportTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeExportTasksRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
  * @brief  Private implementation for DescribeExportTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeExportTasksRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeExportTasksRequestPrivate object, copying another.

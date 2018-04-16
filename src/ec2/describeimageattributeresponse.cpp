@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeImageAttributeResponse
+/*!
+ * \class QtAws::EC2::DescribeImageAttributeResponse
  *
- * @brief  Handles EC2 DescribeImageAttribute responses.
+ * \brief The DescribeImageAttributeResponse class encapsulates EC2 DescribeImageAttribute responses.
  *
- * @see    EC2Client::describeImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImageAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeImageAttributeRequest * DescribeImageAttributeResponse::request() 
     return static_cast<const DescribeImageAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeImageAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeImageAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeImageAttributeResponsePrivate
+ * \class DescribeImageAttributeResponsePrivate
  *
- * @brief  Private implementation for DescribeImageAttributeResponse.
+ * \brief Private implementation for DescribeImageAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImageAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeImageAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

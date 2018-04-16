@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetTagsResponse
+/*!
+ * \class QtAws::APIGateway::GetTagsResponse
  *
- * @brief  Handles APIGateway GetTags responses.
+ * \brief The GetTagsResponse class encapsulates APIGateway GetTags responses.
  *
- * @see    APIGatewayClient::getTags
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getTags
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetTagsRequest * GetTagsResponse::request() const
     return static_cast<const GetTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTagsResponsePrivate
+ * \class GetTagsResponsePrivate
  *
- * @brief  Private implementation for GetTagsResponse.
+ * \brief Private implementation for GetTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTagsResponsePrivate object.
@@ -91,7 +99,7 @@ GetTagsResponsePrivate::GetTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetTagsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Connect {
 
-/**
- * @class  StopContactRequest
+/*!
+ * \class QtAws::Connect::StopContactRequest
  *
- * @brief  Implements Connect StopContact requests.
+ * \brief The StopContactRequest class encapsulates Connect StopContact requests.
  *
- * @see    ConnectClient::stopContact
+ * \ingroup Connect
+ *
+ *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
+ *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
+ *  to set up and manage a customer contact center and provide reliable customer engagement at any
+ *
+ * \sa ConnectClient::stopContact
  */
 
-/**
+/*!
  * @brief  Constructs a new StopContactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopContactRequest::StopContactRequest(const StopContactRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopContactRequest object.
  */
 StopContactRequest::StopContactRequest()
@@ -53,13 +59,16 @@ StopContactRequest::StopContactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopContactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopContactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopContactRequest::response(QNetworkReply * 
     return new StopContactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopContactRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopContactRequest::response(QNetworkReply * 
  * @brief  Private implementation for StopContactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopContactRequestPrivate object.
@@ -97,7 +106,7 @@ StopContactRequestPrivate::StopContactRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopContactRequestPrivate object, copying another.

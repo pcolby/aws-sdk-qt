@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeImageAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeImageAttributeRequest
  *
- * @brief  Implements EC2 DescribeImageAttribute requests.
+ * \brief The DescribeImageAttributeRequest class encapsulates EC2 DescribeImageAttribute requests.
  *
- * @see    EC2Client::describeImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImageAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeImageAttributeRequest::DescribeImageAttributeRequest(const DescribeImage
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImageAttributeRequest object.
  */
 DescribeImageAttributeRequest::DescribeImageAttributeRequest()
@@ -53,13 +60,16 @@ DescribeImageAttributeRequest::DescribeImageAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImageAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImageAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImageAttributeRequest::response(QNetw
     return new DescribeImageAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImageAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImageAttributeRequest::response(QNetw
  * @brief  Private implementation for DescribeImageAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImageAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImageAttributeRequestPrivate object, copying another.

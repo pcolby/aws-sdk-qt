@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateApplicationSettingsResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateApplicationSettingsResponse
  *
- * @brief  Handles Pinpoint UpdateApplicationSettings responses.
+ * \brief The UpdateApplicationSettingsResponse class encapsulates Pinpoint UpdateApplicationSettings responses.
  *
- * @see    PinpointClient::updateApplicationSettings
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateApplicationSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateApplicationSettingsRequest * UpdateApplicationSettingsResponse::requ
     return static_cast<const UpdateApplicationSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateApplicationSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateApplicationSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateApplicationSettingsResponsePrivate
+ * \class UpdateApplicationSettingsResponsePrivate
  *
- * @brief  Private implementation for UpdateApplicationSettingsResponse.
+ * \brief Private implementation for UpdateApplicationSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationSettingsResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateApplicationSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

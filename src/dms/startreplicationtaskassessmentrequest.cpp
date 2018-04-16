@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  StartReplicationTaskAssessmentRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRequest
  *
- * @brief  Implements DatabaseMigrationService StartReplicationTaskAssessment requests.
+ * \brief The StartReplicationTaskAssessmentRequest class encapsulates DatabaseMigrationService StartReplicationTaskAssessment requests.
  *
- * @see    DatabaseMigrationServiceClient::startReplicationTaskAssessment
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::startReplicationTaskAssessment
  */
 
-/**
+/*!
  * @brief  Constructs a new StartReplicationTaskAssessmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartReplicationTaskAssessmentRequest object.
  */
 StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest()
@@ -53,13 +67,16 @@ StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartReplicationTaskAssessmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartReplicationTaskAssessmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::respon
     return new StartReplicationTaskAssessmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartReplicationTaskAssessmentRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::respon
  * @brief  Private implementation for StartReplicationTaskAssessmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartReplicationTaskAssessmentRequestPrivate object.
@@ -97,7 +114,7 @@ StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartReplicationTaskAssessmentRequestPrivate object, copying another.

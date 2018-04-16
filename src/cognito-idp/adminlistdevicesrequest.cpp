@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminListDevicesRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminListDevicesRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminListDevices requests.
+ * \brief The AdminListDevicesRequest class encapsulates CognitoIdentityProvider AdminListDevices requests.
  *
- * @see    CognitoIdentityProviderClient::adminListDevices
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminListDevices
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminListDevicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminListDevicesRequest::AdminListDevicesRequest(const AdminListDevicesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminListDevicesRequest object.
  */
 AdminListDevicesRequest::AdminListDevicesRequest()
@@ -53,13 +66,16 @@ AdminListDevicesRequest::AdminListDevicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminListDevicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminListDevicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkRep
     return new AdminListDevicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminListDevicesRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkRep
  * @brief  Private implementation for AdminListDevicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListDevicesRequestPrivate object.
@@ -97,7 +113,7 @@ AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListDevicesRequestPrivate object, copying another.

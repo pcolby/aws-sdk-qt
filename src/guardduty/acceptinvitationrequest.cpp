@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  AcceptInvitationRequest
+/*!
+ * \class QtAws::GuardDuty::AcceptInvitationRequest
  *
- * @brief  Implements GuardDuty AcceptInvitation requests.
+ * \brief The AcceptInvitationRequest class encapsulates GuardDuty AcceptInvitation requests.
  *
- * @see    GuardDutyClient::acceptInvitation
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::acceptInvitation
  */
 
-/**
+/*!
  * @brief  Constructs a new AcceptInvitationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AcceptInvitationRequest::AcceptInvitationRequest(const AcceptInvitationRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AcceptInvitationRequest object.
  */
 AcceptInvitationRequest::AcceptInvitationRequest()
@@ -53,13 +56,16 @@ AcceptInvitationRequest::AcceptInvitationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AcceptInvitationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AcceptInvitationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AcceptInvitationRequest::response(QNetworkRep
     return new AcceptInvitationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AcceptInvitationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AcceptInvitationRequest::response(QNetworkRep
  * @brief  Private implementation for AcceptInvitationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptInvitationRequestPrivate object.
@@ -97,7 +103,7 @@ AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptInvitationRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetSdkTypeRequest
+/*!
+ * \class QtAws::APIGateway::GetSdkTypeRequest
  *
- * @brief  Implements APIGateway GetSdkType requests.
+ * \brief The GetSdkTypeRequest class encapsulates APIGateway GetSdkType requests.
  *
- * @see    APIGatewayClient::getSdkType
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getSdkType
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSdkTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetSdkTypeRequest::GetSdkTypeRequest(const GetSdkTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSdkTypeRequest object.
  */
 GetSdkTypeRequest::GetSdkTypeRequest()
@@ -53,13 +61,16 @@ GetSdkTypeRequest::GetSdkTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSdkTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSdkTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * c
     return new GetSdkTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSdkTypeRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetSdkTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSdkTypeRequestPrivate object.
@@ -97,7 +108,7 @@ GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSdkTypeRequestPrivate object, copying another.

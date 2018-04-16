@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeReservedInstancesListingsResponse
+/*!
+ * \class QtAws::EC2::DescribeReservedInstancesListingsResponse
  *
- * @brief  Handles EC2 DescribeReservedInstancesListings responses.
+ * \brief The DescribeReservedInstancesListingsResponse class encapsulates EC2 DescribeReservedInstancesListings responses.
  *
- * @see    EC2Client::describeReservedInstancesListings
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeReservedInstancesListings
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesListingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeReservedInstancesListingsRequest * DescribeReservedInstancesListin
     return static_cast<const DescribeReservedInstancesListingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeReservedInstancesListings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeReservedInstancesListingsResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReservedInstancesListingsResponsePrivate
+ * \class DescribeReservedInstancesListingsResponsePrivate
  *
- * @brief  Private implementation for DescribeReservedInstancesListingsResponse.
+ * \brief Private implementation for DescribeReservedInstancesListingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesListingsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeReservedInstancesListingsResponsePrivate::DescribeReservedInstancesListi
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeReservedInstancesListingsResponse element.
  *
  * @param  xml  XML stream to parse.

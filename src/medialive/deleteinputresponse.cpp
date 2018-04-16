@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DeleteInputResponse
+/*!
+ * \class QtAws::MediaLive::DeleteInputResponse
  *
- * @brief  Handles MediaLive DeleteInput responses.
+ * \brief The DeleteInputResponse class encapsulates MediaLive DeleteInput responses.
  *
- * @see    MediaLiveClient::deleteInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::deleteInput
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInputResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteInputRequest * DeleteInputResponse::request() const
     return static_cast<const DeleteInputRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive DeleteInput response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteInputResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteInputResponsePrivate
+ * \class DeleteInputResponsePrivate
  *
- * @brief  Private implementation for DeleteInputResponse.
+ * \brief Private implementation for DeleteInputResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInputResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteInputResponsePrivate::DeleteInputResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive DeleteInputResponse element.
  *
  * @param  xml  XML stream to parse.

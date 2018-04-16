@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  AttachLoadBalancerTlsCertificateRequest
+/*!
+ * \class QtAws::Lightsail::AttachLoadBalancerTlsCertificateRequest
  *
- * @brief  Implements Lightsail AttachLoadBalancerTlsCertificate requests.
+ * \brief The AttachLoadBalancerTlsCertificateRequest class encapsulates Lightsail AttachLoadBalancerTlsCertificate requests.
  *
- * @see    LightsailClient::attachLoadBalancerTlsCertificate
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::attachLoadBalancerTlsCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ AttachLoadBalancerTlsCertificateRequest::AttachLoadBalancerTlsCertificateRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequest object.
  */
 AttachLoadBalancerTlsCertificateRequest::AttachLoadBalancerTlsCertificateRequest()
@@ -53,13 +72,16 @@ AttachLoadBalancerTlsCertificateRequest::AttachLoadBalancerTlsCertificateRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachLoadBalancerTlsCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachLoadBalancerTlsCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::resp
     return new AttachLoadBalancerTlsCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachLoadBalancerTlsCertificateRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::resp
  * @brief  Private implementation for AttachLoadBalancerTlsCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequestPrivate object.
@@ -97,7 +119,7 @@ AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequestPrivate object, copying another.

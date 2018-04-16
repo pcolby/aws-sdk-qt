@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListFindingsRequest
+/*!
+ * \class QtAws::Inspector::ListFindingsRequest
  *
- * @brief  Implements Inspector ListFindings requests.
+ * \brief The ListFindingsRequest class encapsulates Inspector ListFindings requests.
  *
- * @see    InspectorClient::listFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListFindingsRequest::ListFindingsRequest(const ListFindingsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFindingsRequest object.
  */
 ListFindingsRequest::ListFindingsRequest()
@@ -53,13 +61,16 @@ ListFindingsRequest::ListFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply *
     return new ListFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFindingsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply *
  * @brief  Private implementation for ListFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFindingsRequestPrivate object.
@@ -97,7 +108,7 @@ ListFindingsRequestPrivate::ListFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFindingsRequestPrivate object, copying another.

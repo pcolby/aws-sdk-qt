@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  UpdateReplicationJobResponse
+/*!
+ * \class QtAws::SMS::UpdateReplicationJobResponse
  *
- * @brief  Handles SMS UpdateReplicationJob responses.
+ * \brief The UpdateReplicationJobResponse class encapsulates SMS UpdateReplicationJob responses.
  *
- * @see    SMSClient::updateReplicationJob
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::updateReplicationJob
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateReplicationJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateReplicationJobRequest * UpdateReplicationJobResponse::request() cons
     return static_cast<const UpdateReplicationJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS UpdateReplicationJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateReplicationJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateReplicationJobResponsePrivate
+ * \class UpdateReplicationJobResponsePrivate
  *
- * @brief  Private implementation for UpdateReplicationJobResponse.
+ * \brief Private implementation for UpdateReplicationJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateReplicationJobResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS UpdateReplicationJobResponse element.
  *
  * @param  xml  XML stream to parse.

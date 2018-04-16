@@ -45,29 +45,37 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Shield
+ * \brief The QtAws::Shield contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  ShieldClient
+/*!
+ * \class QtAws::Shield::ShieldClient
  *
- * @brief  Client for AWS Shield
+ * \brief The ShieldClient class provides access the AWS Shield service.
  *
- * <fullname>AWS Shield Advanced</fullname>
+ * \ingroup Shield
  *
- * This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
- * the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
- * Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
  */
 
-/**
- * @brief  Constructs a new ShieldClient object.
+/*!
+ * \brief Constructs a ShieldClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ShieldClient::ShieldClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -86,21 +94,16 @@ ShieldClient::ShieldClient(
     d->serviceName = QStringLiteral("shield");
 }
 
-/**
- * @brief  Constructs a new ShieldClient object.
+/*!
+ * \overload ShieldClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ShieldClient::ShieldClient(
     const QUrl &endpoint,
@@ -119,7 +122,7 @@ ShieldClient::ShieldClient(
     d->serviceName = QStringLiteral("shield");
 }
 
-/**
+/*!
  * Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic
  * Load Balancing load balancer, Elastic IP Address, or an Amazon Route 53 hosted
  *
@@ -134,7 +137,7 @@ CreateProtectionResponse * ShieldClient::createProtection(const CreateProtection
     return qobject_cast<CreateProtectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Activates AWS Shield Advanced for an
  *
  * @param  request Request to send to AWS Shield.
@@ -148,7 +151,7 @@ CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscr
     return qobject_cast<CreateSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an AWS Shield Advanced
  *
  * @param  request Request to send to AWS Shield.
@@ -162,7 +165,7 @@ DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtection
     return qobject_cast<DeleteProtectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot
  * delete a subscription prior to the completion of that commitment.
  *
@@ -177,7 +180,7 @@ DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscr
     return qobject_cast<DeleteSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the details of a DDoS attack.
  *
  * @param  request Request to send to AWS Shield.
@@ -191,7 +194,7 @@ DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackReques
     return qobject_cast<DescribeAttackResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the details of a <a>Protection</a>
  *
  * @param  request Request to send to AWS Shield.
@@ -205,7 +208,7 @@ DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProt
     return qobject_cast<DescribeProtectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides details about the AWS Shield Advanced subscription for an
  *
  * @param  request Request to send to AWS Shield.
@@ -219,7 +222,7 @@ DescribeSubscriptionResponse * ShieldClient::describeSubscription(const Describe
     return qobject_cast<DescribeSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the <code>SubscriptionState</code>, either <code>Active</code> or
  *
  * @param  request Request to send to AWS Shield.
@@ -233,7 +236,7 @@ GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubsc
     return qobject_cast<GetSubscriptionStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all ongoing DDoS attacks or all DDoS attacks during a specified time
  *
  * @param  request Request to send to AWS Shield.
@@ -247,7 +250,7 @@ ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &reques
     return qobject_cast<ListAttacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all <a>Protection</a> objects for the
  *
  * @param  request Request to send to AWS Shield.
@@ -261,7 +264,7 @@ ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsReq
     return qobject_cast<ListProtectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ShieldClientPrivate
@@ -269,7 +272,7 @@ ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsReq
  * @brief  Private implementation for ShieldClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ShieldClientPrivate object.

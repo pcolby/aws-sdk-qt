@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetComplianceDetailRequest
+/*!
+ * \class QtAws::FMS::GetComplianceDetailRequest
  *
- * @brief  Implements FMS GetComplianceDetail requests.
+ * \brief The GetComplianceDetailRequest class encapsulates FMS GetComplianceDetail requests.
  *
- * @see    FMSClient::getComplianceDetail
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getComplianceDetail
  */
 
-/**
+/*!
  * @brief  Constructs a new GetComplianceDetailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetComplianceDetailRequest::GetComplianceDetailRequest(const GetComplianceDetail
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetComplianceDetailRequest object.
  */
 GetComplianceDetailRequest::GetComplianceDetailRequest()
@@ -53,13 +62,16 @@ GetComplianceDetailRequest::GetComplianceDetailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetComplianceDetailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetComplianceDetailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailRequest::response(QNetwork
     return new GetComplianceDetailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetComplianceDetailRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailRequest::response(QNetwork
  * @brief  Private implementation for GetComplianceDetailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetComplianceDetailRequestPrivate object.
@@ -97,7 +109,7 @@ GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetComplianceDetailRequestPrivate object, copying another.

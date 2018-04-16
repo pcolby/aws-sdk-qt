@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateAuthorizerRequest
+/*!
+ * \class QtAws::APIGateway::UpdateAuthorizerRequest
  *
- * @brief  Implements APIGateway UpdateAuthorizer requests.
+ * \brief The UpdateAuthorizerRequest class encapsulates APIGateway UpdateAuthorizer requests.
  *
- * @see    APIGatewayClient::updateAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateAuthorizerRequest::UpdateAuthorizerRequest(const UpdateAuthorizerRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAuthorizerRequest object.
  */
 UpdateAuthorizerRequest::UpdateAuthorizerRequest()
@@ -53,13 +61,16 @@ UpdateAuthorizerRequest::UpdateAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthorizerRequest::response(QNetworkRep
     return new UpdateAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAuthorizerRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthorizerRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAuthorizerRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAuthorizerRequestPrivate object, copying another.

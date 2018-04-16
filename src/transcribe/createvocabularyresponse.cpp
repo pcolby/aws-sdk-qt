@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  CreateVocabularyResponse
+/*!
+ * \class QtAws::TranscribeService::CreateVocabularyResponse
  *
- * @brief  Handles TranscribeService CreateVocabulary responses.
+ * \brief The CreateVocabularyResponse class encapsulates TranscribeService CreateVocabulary responses.
  *
- * @see    TranscribeServiceClient::createVocabulary
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::createVocabulary
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVocabularyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateVocabularyRequest * CreateVocabularyResponse::request() const
     return static_cast<const CreateVocabularyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a TranscribeService CreateVocabulary response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateVocabularyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateVocabularyResponsePrivate
+ * \class CreateVocabularyResponsePrivate
  *
- * @brief  Private implementation for CreateVocabularyResponse.
+ * \brief Private implementation for CreateVocabularyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVocabularyResponsePrivate object.
@@ -91,7 +95,7 @@ CreateVocabularyResponsePrivate::CreateVocabularyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an TranscribeService CreateVocabularyResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  GetContainerPolicyResponse
+/*!
+ * \class QtAws::MediaStore::GetContainerPolicyResponse
  *
- * @brief  Handles MediaStore GetContainerPolicy responses.
+ * \brief The GetContainerPolicyResponse class encapsulates MediaStore GetContainerPolicy responses.
  *
- * @see    MediaStoreClient::getContainerPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::getContainerPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetContainerPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetContainerPolicyRequest * GetContainerPolicyResponse::request() const
     return static_cast<const GetContainerPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore GetContainerPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetContainerPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetContainerPolicyResponsePrivate
+ * \class GetContainerPolicyResponsePrivate
  *
- * @brief  Private implementation for GetContainerPolicyResponse.
+ * \brief Private implementation for GetContainerPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContainerPolicyResponsePrivate object.
@@ -91,7 +96,7 @@ GetContainerPolicyResponsePrivate::GetContainerPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore GetContainerPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

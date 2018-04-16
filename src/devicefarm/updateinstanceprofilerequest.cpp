@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateInstanceProfileRequest
+/*!
+ * \class QtAws::DeviceFarm::UpdateInstanceProfileRequest
  *
- * @brief  Implements DeviceFarm UpdateInstanceProfile requests.
+ * \brief The UpdateInstanceProfileRequest class encapsulates DeviceFarm UpdateInstanceProfile requests.
  *
- * @see    DeviceFarmClient::updateInstanceProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ UpdateInstanceProfileRequest::UpdateInstanceProfileRequest(const UpdateInstanceP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateInstanceProfileRequest object.
  */
 UpdateInstanceProfileRequest::UpdateInstanceProfileRequest()
@@ -53,13 +58,16 @@ UpdateInstanceProfileRequest::UpdateInstanceProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateInstanceProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateInstanceProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceProfileRequest::response(QNetwo
     return new UpdateInstanceProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateInstanceProfileRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceProfileRequest::response(QNetwo
  * @brief  Private implementation for UpdateInstanceProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInstanceProfileRequestPrivate object.
@@ -97,7 +105,7 @@ UpdateInstanceProfileRequestPrivate::UpdateInstanceProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInstanceProfileRequestPrivate object, copying another.

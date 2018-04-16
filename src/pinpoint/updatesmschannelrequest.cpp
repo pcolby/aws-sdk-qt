@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateSmsChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateSmsChannelRequest
  *
- * @brief  Implements Pinpoint UpdateSmsChannel requests.
+ * \brief The UpdateSmsChannelRequest class encapsulates Pinpoint UpdateSmsChannel requests.
  *
- * @see    PinpointClient::updateSmsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateSmsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSmsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateSmsChannelRequest::UpdateSmsChannelRequest(const UpdateSmsChannelRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSmsChannelRequest object.
  */
 UpdateSmsChannelRequest::UpdateSmsChannelRequest()
@@ -53,13 +56,16 @@ UpdateSmsChannelRequest::UpdateSmsChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSmsChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSmsChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkRep
     return new UpdateSmsChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSmsChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateSmsChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSmsChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSmsChannelRequestPrivate object, copying another.

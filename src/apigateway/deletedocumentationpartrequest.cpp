@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDocumentationPartRequest
+/*!
+ * \class QtAws::APIGateway::DeleteDocumentationPartRequest
  *
- * @brief  Implements APIGateway DeleteDocumentationPart requests.
+ * \brief The DeleteDocumentationPartRequest class encapsulates APIGateway DeleteDocumentationPart requests.
  *
- * @see    APIGatewayClient::deleteDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDocumentationPartRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteDocumentationPartRequest::DeleteDocumentationPartRequest(const DeleteDocum
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDocumentationPartRequest object.
  */
 DeleteDocumentationPartRequest::DeleteDocumentationPartRequest()
@@ -53,13 +61,16 @@ DeleteDocumentationPartRequest::DeleteDocumentationPartRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDocumentationPartRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDocumentationPartResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNet
     return new DeleteDocumentationPartResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDocumentationPartRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNet
  * @brief  Private implementation for DeleteDocumentationPartRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDocumentationPartRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDocumentationPartRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  UpdateDomainContactPrivacyRequest
+/*!
+ * \class QtAws::Route53Domains::UpdateDomainContactPrivacyRequest
  *
- * @brief  Implements Route53Domains UpdateDomainContactPrivacy requests.
+ * \brief The UpdateDomainContactPrivacyRequest class encapsulates Route53Domains UpdateDomainContactPrivacy requests.
  *
- * @see    Route53DomainsClient::updateDomainContactPrivacy
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::updateDomainContactPrivacy
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainContactPrivacyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateDomainContactPrivacyRequest::UpdateDomainContactPrivacyRequest(const Updat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainContactPrivacyRequest object.
  */
 UpdateDomainContactPrivacyRequest::UpdateDomainContactPrivacyRequest()
@@ -53,13 +57,16 @@ UpdateDomainContactPrivacyRequest::UpdateDomainContactPrivacyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDomainContactPrivacyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDomainContactPrivacyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainContactPrivacyRequest::response(Q
     return new UpdateDomainContactPrivacyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDomainContactPrivacyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainContactPrivacyRequest::response(Q
  * @brief  Private implementation for UpdateDomainContactPrivacyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainContactPrivacyRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateDomainContactPrivacyRequestPrivate::UpdateDomainContactPrivacyRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainContactPrivacyRequestPrivate object, copying another.

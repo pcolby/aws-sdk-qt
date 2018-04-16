@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  AssociateVPCWithHostedZoneRequest
+/*!
+ * \class QtAws::Route53::AssociateVPCWithHostedZoneRequest
  *
- * @brief  Implements Route53 AssociateVPCWithHostedZone requests.
+ * \brief The AssociateVPCWithHostedZoneRequest class encapsulates Route53 AssociateVPCWithHostedZone requests.
  *
- * @see    Route53Client::associateVPCWithHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::associateVPCWithHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateVPCWithHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AssociateVPCWithHostedZoneRequest::AssociateVPCWithHostedZoneRequest(const Assoc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateVPCWithHostedZoneRequest object.
  */
 AssociateVPCWithHostedZoneRequest::AssociateVPCWithHostedZoneRequest()
@@ -53,13 +56,16 @@ AssociateVPCWithHostedZoneRequest::AssociateVPCWithHostedZoneRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateVPCWithHostedZoneRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateVPCWithHostedZoneResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(Q
     return new AssociateVPCWithHostedZoneResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateVPCWithHostedZoneRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(Q
  * @brief  Private implementation for AssociateVPCWithHostedZoneRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateVPCWithHostedZoneRequestPrivate object.
@@ -97,7 +103,7 @@ AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateVPCWithHostedZoneRequestPrivate object, copying another.

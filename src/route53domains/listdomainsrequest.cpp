@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ListDomainsRequest
+/*!
+ * \class QtAws::Route53Domains::ListDomainsRequest
  *
- * @brief  Implements Route53Domains ListDomains requests.
+ * \brief The ListDomainsRequest class encapsulates Route53Domains ListDomains requests.
  *
- * @see    Route53DomainsClient::listDomains
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::listDomains
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDomainsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDomainsRequest object.
  */
 ListDomainsRequest::ListDomainsRequest()
@@ -53,13 +57,16 @@ ListDomainsRequest::ListDomainsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDomainsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDomainsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
     return new ListDomainsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDomainsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListDomainsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDomainsRequestPrivate object.
@@ -97,7 +104,7 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDomainsRequestPrivate object, copying another.

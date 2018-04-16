@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetPolicyRequest
+/*!
+ * \class QtAws::IoT::GetPolicyRequest
  *
- * @brief  Implements IoT GetPolicy requests.
+ * \brief The GetPolicyRequest class encapsulates IoT GetPolicy requests.
  *
- * @see    IoTClient::getPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
@@ -53,13 +67,16 @@ GetPolicyRequest::GetPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
     return new GetPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyRequestPrivate object, copying another.

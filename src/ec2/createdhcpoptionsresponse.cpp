@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateDhcpOptionsResponse
+/*!
+ * \class QtAws::EC2::CreateDhcpOptionsResponse
  *
- * @brief  Handles EC2 CreateDhcpOptions responses.
+ * \brief The CreateDhcpOptionsResponse class encapsulates EC2 CreateDhcpOptions responses.
  *
- * @see    EC2Client::createDhcpOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createDhcpOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDhcpOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateDhcpOptionsRequest * CreateDhcpOptionsResponse::request() const
     return static_cast<const CreateDhcpOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateDhcpOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateDhcpOptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDhcpOptionsResponsePrivate
+ * \class CreateDhcpOptionsResponsePrivate
  *
- * @brief  Private implementation for CreateDhcpOptionsResponse.
+ * \brief Private implementation for CreateDhcpOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDhcpOptionsResponsePrivate object.
@@ -91,7 +98,7 @@ CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateDhcpOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

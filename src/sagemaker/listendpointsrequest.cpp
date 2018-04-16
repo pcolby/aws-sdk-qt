@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListEndpointsRequest
+/*!
+ * \class QtAws::SageMaker::ListEndpointsRequest
  *
- * @brief  Implements SageMaker ListEndpoints requests.
+ * \brief The ListEndpointsRequest class encapsulates SageMaker ListEndpoints requests.
  *
- * @see    SageMakerClient::listEndpoints
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new ListEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListEndpointsRequest::ListEndpointsRequest(const ListEndpointsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListEndpointsRequest object.
  */
 ListEndpointsRequest::ListEndpointsRequest()
@@ -53,13 +56,16 @@ ListEndpointsRequest::ListEndpointsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListEndpointsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListEndpointsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsRequest::response(QNetworkReply 
     return new ListEndpointsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListEndpointsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsRequest::response(QNetworkReply 
  * @brief  Private implementation for ListEndpointsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEndpointsRequestPrivate object.
@@ -97,7 +103,7 @@ ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEndpointsRequestPrivate object, copying another.

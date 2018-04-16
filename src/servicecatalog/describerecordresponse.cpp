@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeRecordResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeRecordResponse
  *
- * @brief  Handles ServiceCatalog DescribeRecord responses.
+ * \brief The DescribeRecordResponse class encapsulates ServiceCatalog DescribeRecord responses.
  *
- * @see    ServiceCatalogClient::describeRecord
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeRecord
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRecordResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeRecordRequest * DescribeRecordResponse::request() const
     return static_cast<const DescribeRecordRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeRecord response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeRecordResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeRecordResponsePrivate
+ * \class DescribeRecordResponsePrivate
  *
- * @brief  Private implementation for DescribeRecordResponse.
+ * \brief Private implementation for DescribeRecordResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRecordResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeRecordResponsePrivate::DescribeRecordResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeRecordResponse element.
  *
  * @param  xml  XML stream to parse.

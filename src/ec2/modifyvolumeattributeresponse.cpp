@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVolumeAttributeResponse
+/*!
+ * \class QtAws::EC2::ModifyVolumeAttributeResponse
  *
- * @brief  Handles EC2 ModifyVolumeAttribute responses.
+ * \brief The ModifyVolumeAttributeResponse class encapsulates EC2 ModifyVolumeAttribute responses.
  *
- * @see    EC2Client::modifyVolumeAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVolumeAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVolumeAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVolumeAttributeRequest * ModifyVolumeAttributeResponse::request() co
     return static_cast<const ModifyVolumeAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVolumeAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVolumeAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVolumeAttributeResponsePrivate
+ * \class ModifyVolumeAttributeResponsePrivate
  *
- * @brief  Private implementation for ModifyVolumeAttributeResponse.
+ * \brief Private implementation for ModifyVolumeAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVolumeAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVolumeAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

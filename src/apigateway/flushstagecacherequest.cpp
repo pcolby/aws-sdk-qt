@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  FlushStageCacheRequest
+/*!
+ * \class QtAws::APIGateway::FlushStageCacheRequest
  *
- * @brief  Implements APIGateway FlushStageCache requests.
+ * \brief The FlushStageCacheRequest class encapsulates APIGateway FlushStageCache requests.
  *
- * @see    APIGatewayClient::flushStageCache
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::flushStageCache
  */
 
-/**
+/*!
  * @brief  Constructs a new FlushStageCacheRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ FlushStageCacheRequest::FlushStageCacheRequest(const FlushStageCacheRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new FlushStageCacheRequest object.
  */
 FlushStageCacheRequest::FlushStageCacheRequest()
@@ -53,13 +61,16 @@ FlushStageCacheRequest::FlushStageCacheRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool FlushStageCacheRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an FlushStageCacheResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkRepl
     return new FlushStageCacheResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  FlushStageCacheRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkRepl
  * @brief  Private implementation for FlushStageCacheRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FlushStageCacheRequestPrivate object.
@@ -97,7 +108,7 @@ FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FlushStageCacheRequestPrivate object, copying another.

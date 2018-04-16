@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeInstanceStatusRequest
+/*!
+ * \class QtAws::EC2::DescribeInstanceStatusRequest
  *
- * @brief  Implements EC2 DescribeInstanceStatus requests.
+ * \brief The DescribeInstanceStatusRequest class encapsulates EC2 DescribeInstanceStatus requests.
  *
- * @see    EC2Client::describeInstanceStatus
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeInstanceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeInstanceStatusRequest::DescribeInstanceStatusRequest(const DescribeInsta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceStatusRequest object.
  */
 DescribeInstanceStatusRequest::DescribeInstanceStatusRequest()
@@ -53,13 +60,16 @@ DescribeInstanceStatusRequest::DescribeInstanceStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeInstanceStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeInstanceStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetw
     return new DescribeInstanceStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeInstanceStatusRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetw
  * @brief  Private implementation for DescribeInstanceStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceStatusRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceStatusRequestPrivate object, copying another.

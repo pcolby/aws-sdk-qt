@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListTypesResponse
+/*!
+ * \class QtAws::AppSync::ListTypesResponse
  *
- * @brief  Handles AppSync ListTypes responses.
+ * \brief The ListTypesResponse class encapsulates AppSync ListTypes responses.
  *
- * @see    AppSyncClient::listTypes
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListTypesRequest * ListTypesResponse::request() const
     return static_cast<const ListTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync ListTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTypesResponsePrivate
+ * \class ListTypesResponsePrivate
  *
- * @brief  Private implementation for ListTypesResponse.
+ * \brief Private implementation for ListTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTypesResponsePrivate object.
@@ -91,7 +95,7 @@ ListTypesResponsePrivate::ListTypesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync ListTypesResponse element.
  *
  * @param  xml  XML stream to parse.

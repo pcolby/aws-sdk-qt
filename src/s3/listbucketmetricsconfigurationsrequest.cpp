@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListBucketMetricsConfigurationsRequest
+/*!
+ * \class QtAws::S3::ListBucketMetricsConfigurationsRequest
  *
- * @brief  Implements S3 ListBucketMetricsConfigurations requests.
+ * \brief The ListBucketMetricsConfigurationsRequest class encapsulates S3 ListBucketMetricsConfigurations requests.
  *
- * @see    S3Client::listBucketMetricsConfigurations
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listBucketMetricsConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBucketMetricsConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListBucketMetricsConfigurationsRequest::ListBucketMetricsConfigurationsRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBucketMetricsConfigurationsRequest object.
  */
 ListBucketMetricsConfigurationsRequest::ListBucketMetricsConfigurationsRequest()
@@ -53,13 +56,16 @@ ListBucketMetricsConfigurationsRequest::ListBucketMetricsConfigurationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBucketMetricsConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBucketMetricsConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketMetricsConfigurationsRequest::respo
     return new ListBucketMetricsConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBucketMetricsConfigurationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketMetricsConfigurationsRequest::respo
  * @brief  Private implementation for ListBucketMetricsConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketMetricsConfigurationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListBucketMetricsConfigurationsRequestPrivate::ListBucketMetricsConfigurationsRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketMetricsConfigurationsRequestPrivate object, copying another.

@@ -49,29 +49,37 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::FMS
+ * \brief The QtAws::FMS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  FmsClient
+/*!
+ * \class QtAws::FMS::FmsClient
  *
- * @brief  Client for Firewall Management Service (FMS)
+ * \brief The FmsClient class provides access the Firewall Management Service (FMS) service.
  *
- * <fullname>AWS Firewall Manager</fullname>
+ * \ingroup FMS
  *
- * This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- * the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- * features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- * Developer
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
  */
 
-/**
- * @brief  Constructs a new FmsClient object.
+/*!
+ * \brief Constructs a FmsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 FmsClient::FmsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -90,21 +98,16 @@ FmsClient::FmsClient(
     d->serviceName = QStringLiteral("fms");
 }
 
-/**
- * @brief  Constructs a new FmsClient object.
+/*!
+ * \overload FmsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 FmsClient::FmsClient(
     const QUrl &endpoint,
@@ -123,7 +126,7 @@ FmsClient::FmsClient(
     d->serviceName = QStringLiteral("fms");
 }
 
-/**
+/*!
  * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with a master account in
  * AWS Organizations or associated with a member account that has the appropriate permissions. If the account ID that you
  * submit is not an AWS Organizations master account, AWS Firewall Manager will set the appropriate permissions for the
@@ -144,7 +147,7 @@ AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const Associate
     return qobject_cast<AssociateAdminAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an AWS Firewall Manager association with the IAM role and the Amazon Simple Notification Service (SNS) topic
  * that is used to record AWS Firewall Manager SNS
  *
@@ -159,7 +162,7 @@ DeleteNotificationChannelResponse * FmsClient::deleteNotificationChannel(const D
     return qobject_cast<DeleteNotificationChannelResponse *>(send(request));
 }
 
-/**
+/*!
  * Permanently deletes an AWS Firewall Manager policy.
  *
  * @param  request Request to send to Firewall Management Service.
@@ -173,7 +176,7 @@ DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &reques
     return qobject_cast<DeletePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the account that has been set as the AWS Firewall Manager administrator account. You will need to submit
  * an <code>AssociateAdminAccount</code> request to set a new account as the AWS Firewall
  *
@@ -188,7 +191,7 @@ DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const Dis
     return qobject_cast<DisassociateAdminAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the AWS Organizations master account that is associated with AWS Firewall Manager as the AWS Firewall Manager
  *
  * @param  request Request to send to Firewall Management Service.
@@ -202,7 +205,7 @@ GetAdminAccountResponse * FmsClient::getAdminAccount(const GetAdminAccountReques
     return qobject_cast<GetAdminAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns detailed compliance information about the specified member account. Details include resources that are in and
  * out of compliance with the specified policy. Resources are considered non-compliant if the specified policy has not been
  * applied to
@@ -218,7 +221,7 @@ GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetCompliance
     return qobject_cast<GetComplianceDetailResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the Amazon Simple Notification Service (SNS) topic that is used to record AWS Firewall Manager
  * SNS
  *
@@ -233,7 +236,7 @@ GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNoti
     return qobject_cast<GetNotificationChannelResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the specified AWS Firewall Manager
  *
  * @param  request Request to send to Firewall Management Service.
@@ -247,7 +250,7 @@ GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
     return qobject_cast<GetPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <code>PolicyComplianceStatus</code> objects in the response. Use <code>PolicyComplianceStatus</code>
  * to get a summary of which member accounts are protected by the specified policy.
  *
@@ -262,7 +265,7 @@ ListComplianceStatusResponse * FmsClient::listComplianceStatus(const ListComplia
     return qobject_cast<ListComplianceStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of <code>PolicySummary</code> objects in the
  *
  * @param  request Request to send to Firewall Management Service.
@@ -276,7 +279,7 @@ ListPoliciesResponse * FmsClient::listPolicies(const ListPoliciesRequest &reques
     return qobject_cast<ListPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS
  *
  * @param  request Request to send to Firewall Management Service.
@@ -290,7 +293,7 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
     return qobject_cast<PutNotificationChannelResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS Firewall Manager
  *
  * @param  request Request to send to Firewall Management Service.
@@ -304,7 +307,7 @@ PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
     return qobject_cast<PutPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  FmsClientPrivate
@@ -312,7 +315,7 @@ PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
  * @brief  Private implementation for FmsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FmsClientPrivate object.

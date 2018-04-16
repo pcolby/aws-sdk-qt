@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateFunctionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::CreateFunctionDefinitionRequest
  *
- * @brief  Implements Greengrass CreateFunctionDefinition requests.
+ * \brief The CreateFunctionDefinitionRequest class encapsulates Greengrass CreateFunctionDefinition requests.
  *
- * @see    GreengrassClient::createFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateFunctionDefinitionRequest::CreateFunctionDefinitionRequest(const CreateFun
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionDefinitionRequest object.
  */
 CreateFunctionDefinitionRequest::CreateFunctionDefinitionRequest()
@@ -53,13 +59,16 @@ CreateFunctionDefinitionRequest::CreateFunctionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFunctionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFunctionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNe
     return new CreateFunctionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFunctionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNe
  * @brief  Private implementation for CreateFunctionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateFunctionDefinitionRequestPrivate::CreateFunctionDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionDefinitionRequestPrivate object, copying another.

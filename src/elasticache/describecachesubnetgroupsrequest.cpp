@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheSubnetGroupsRequest
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheSubnetGroupsRequest
  *
- * @brief  Implements ElastiCache DescribeCacheSubnetGroups requests.
+ * \brief The DescribeCacheSubnetGroupsRequest class encapsulates ElastiCache DescribeCacheSubnetGroups requests.
  *
- * @see    ElastiCacheClient::describeCacheSubnetGroups
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheSubnetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheSubnetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeCacheSubnetGroupsRequest::DescribeCacheSubnetGroupsRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheSubnetGroupsRequest object.
  */
 DescribeCacheSubnetGroupsRequest::DescribeCacheSubnetGroupsRequest()
@@ -53,13 +70,16 @@ DescribeCacheSubnetGroupsRequest::DescribeCacheSubnetGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCacheSubnetGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCacheSubnetGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheSubnetGroupsRequest::response(QN
     return new DescribeCacheSubnetGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCacheSubnetGroupsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheSubnetGroupsRequest::response(QN
  * @brief  Private implementation for DescribeCacheSubnetGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheSubnetGroupsRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeCacheSubnetGroupsRequestPrivate::DescribeCacheSubnetGroupsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheSubnetGroupsRequestPrivate object, copying another.

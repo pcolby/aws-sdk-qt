@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListObjectChildrenResponse
+/*!
+ * \class QtAws::CloudDirectory::ListObjectChildrenResponse
  *
- * @brief  Handles CloudDirectory ListObjectChildren responses.
+ * \brief The ListObjectChildrenResponse class encapsulates CloudDirectory ListObjectChildren responses.
  *
- * @see    CloudDirectoryClient::listObjectChildren
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listObjectChildren
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectChildrenResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListObjectChildrenRequest * ListObjectChildrenResponse::request() const
     return static_cast<const ListObjectChildrenRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListObjectChildren response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListObjectChildrenResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListObjectChildrenResponsePrivate
+ * \class ListObjectChildrenResponsePrivate
  *
- * @brief  Private implementation for ListObjectChildrenResponse.
+ * \brief Private implementation for ListObjectChildrenResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectChildrenResponsePrivate object.
@@ -91,7 +101,7 @@ ListObjectChildrenResponsePrivate::ListObjectChildrenResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListObjectChildrenResponse element.
  *
  * @param  xml  XML stream to parse.

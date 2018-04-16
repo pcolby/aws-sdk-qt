@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetDimensionValuesResponse
+/*!
+ * \class QtAws::CostExplorer::GetDimensionValuesResponse
  *
- * @brief  Handles CostExplorer GetDimensionValues responses.
+ * \brief The GetDimensionValuesResponse class encapsulates CostExplorer GetDimensionValues responses.
  *
- * @see    CostExplorerClient::getDimensionValues
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getDimensionValues
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDimensionValuesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const GetDimensionValuesRequest * GetDimensionValuesResponse::request() const
     return static_cast<const GetDimensionValuesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostExplorer GetDimensionValues response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void GetDimensionValuesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDimensionValuesResponsePrivate
+ * \class GetDimensionValuesResponsePrivate
  *
- * @brief  Private implementation for GetDimensionValuesResponse.
+ * \brief Private implementation for GetDimensionValuesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDimensionValuesResponsePrivate object.
@@ -91,7 +107,7 @@ GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CostExplorer GetDimensionValuesResponse element.
  *
  * @param  xml  XML stream to parse.

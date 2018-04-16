@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  ListTagsForStreamRequest
+/*!
+ * \class QtAws::KinesisVideo::ListTagsForStreamRequest
  *
- * @brief  Implements KinesisVideo ListTagsForStream requests.
+ * \brief The ListTagsForStreamRequest class encapsulates KinesisVideo ListTagsForStream requests.
  *
- * @see    KinesisVideoClient::listTagsForStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::listTagsForStream
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListTagsForStreamRequest::ListTagsForStreamRequest(const ListTagsForStreamReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForStreamRequest object.
  */
 ListTagsForStreamRequest::ListTagsForStreamRequest()
@@ -53,13 +56,16 @@ ListTagsForStreamRequest::ListTagsForStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkRe
     return new ListTagsForStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkRe
  * @brief  Private implementation for ListTagsForStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForStreamRequestPrivate object.
@@ -97,7 +103,7 @@ ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForStreamRequestPrivate object, copying another.

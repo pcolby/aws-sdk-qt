@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListOutgoingTypedLinksResponse
+/*!
+ * \class QtAws::CloudDirectory::ListOutgoingTypedLinksResponse
  *
- * @brief  Handles CloudDirectory ListOutgoingTypedLinks responses.
+ * \brief The ListOutgoingTypedLinksResponse class encapsulates CloudDirectory ListOutgoingTypedLinks responses.
  *
- * @see    CloudDirectoryClient::listOutgoingTypedLinks
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listOutgoingTypedLinks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOutgoingTypedLinksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListOutgoingTypedLinksRequest * ListOutgoingTypedLinksResponse::request() 
     return static_cast<const ListOutgoingTypedLinksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListOutgoingTypedLinks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListOutgoingTypedLinksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListOutgoingTypedLinksResponsePrivate
+ * \class ListOutgoingTypedLinksResponsePrivate
  *
- * @brief  Private implementation for ListOutgoingTypedLinksResponse.
+ * \brief Private implementation for ListOutgoingTypedLinksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOutgoingTypedLinksResponsePrivate object.
@@ -91,7 +101,7 @@ ListOutgoingTypedLinksResponsePrivate::ListOutgoingTypedLinksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListOutgoingTypedLinksResponse element.
  *
  * @param  xml  XML stream to parse.

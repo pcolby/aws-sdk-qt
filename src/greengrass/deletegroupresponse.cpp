@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteGroupResponse
+/*!
+ * \class QtAws::Greengrass::DeleteGroupResponse
  *
- * @brief  Handles Greengrass DeleteGroup responses.
+ * \brief The DeleteGroupResponse class encapsulates Greengrass DeleteGroup responses.
  *
- * @see    GreengrassClient::deleteGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteGroupRequest * DeleteGroupResponse::request() const
     return static_cast<const DeleteGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DeleteGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteGroupResponsePrivate
+ * \class DeleteGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteGroupResponse.
+ * \brief Private implementation for DeleteGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGroupResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DeleteGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  TestRenderTemplateResponse
+/*!
+ * \class QtAws::SES::TestRenderTemplateResponse
  *
- * @brief  Handles SES TestRenderTemplate responses.
+ * \brief The TestRenderTemplateResponse class encapsulates SES TestRenderTemplate responses.
  *
- * @see    SESClient::testRenderTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::testRenderTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new TestRenderTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
     return static_cast<const TestRenderTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES TestRenderTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TestRenderTemplateResponsePrivate
+ * \class TestRenderTemplateResponsePrivate
  *
- * @brief  Private implementation for TestRenderTemplateResponse.
+ * \brief Private implementation for TestRenderTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestRenderTemplateResponsePrivate object.
@@ -91,7 +105,7 @@ TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES TestRenderTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

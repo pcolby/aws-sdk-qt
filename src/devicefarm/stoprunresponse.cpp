@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  StopRunResponse
+/*!
+ * \class QtAws::DeviceFarm::StopRunResponse
  *
- * @brief  Handles DeviceFarm StopRun responses.
+ * \brief The StopRunResponse class encapsulates DeviceFarm StopRun responses.
  *
- * @see    DeviceFarmClient::stopRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::stopRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StopRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const StopRunRequest * StopRunResponse::request() const
     return static_cast<const StopRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm StopRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void StopRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopRunResponsePrivate
+ * \class StopRunResponsePrivate
  *
- * @brief  Private implementation for StopRunResponse.
+ * \brief Private implementation for StopRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopRunResponsePrivate object.
@@ -91,7 +96,7 @@ StopRunResponsePrivate::StopRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm StopRunResponse element.
  *
  * @param  xml  XML stream to parse.

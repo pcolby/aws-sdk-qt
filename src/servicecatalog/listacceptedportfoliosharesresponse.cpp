@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListAcceptedPortfolioSharesResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListAcceptedPortfolioSharesResponse
  *
- * @brief  Handles ServiceCatalog ListAcceptedPortfolioShares responses.
+ * \brief The ListAcceptedPortfolioSharesResponse class encapsulates ServiceCatalog ListAcceptedPortfolioShares responses.
  *
- * @see    ServiceCatalogClient::listAcceptedPortfolioShares
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listAcceptedPortfolioShares
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAcceptedPortfolioSharesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListAcceptedPortfolioSharesRequest * ListAcceptedPortfolioSharesResponse::
     return static_cast<const ListAcceptedPortfolioSharesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListAcceptedPortfolioShares response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListAcceptedPortfolioSharesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAcceptedPortfolioSharesResponsePrivate
+ * \class ListAcceptedPortfolioSharesResponsePrivate
  *
- * @brief  Private implementation for ListAcceptedPortfolioSharesResponse.
+ * \brief Private implementation for ListAcceptedPortfolioSharesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAcceptedPortfolioSharesResponsePrivate object.
@@ -91,7 +100,7 @@ ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListAcceptedPortfolioSharesResponse element.
  *
  * @param  xml  XML stream to parse.

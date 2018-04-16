@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  SetV2LoggingLevelResponse
+/*!
+ * \class QtAws::IoT::SetV2LoggingLevelResponse
  *
- * @brief  Handles IoT SetV2LoggingLevel responses.
+ * \brief The SetV2LoggingLevelResponse class encapsulates IoT SetV2LoggingLevel responses.
  *
- * @see    IoTClient::setV2LoggingLevel
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::setV2LoggingLevel
  */
 
-/**
+/*!
  * @brief  Constructs a new SetV2LoggingLevelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetV2LoggingLevelRequest * SetV2LoggingLevelResponse::request() const
     return static_cast<const SetV2LoggingLevelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT SetV2LoggingLevel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetV2LoggingLevelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetV2LoggingLevelResponsePrivate
+ * \class SetV2LoggingLevelResponsePrivate
  *
- * @brief  Private implementation for SetV2LoggingLevelResponse.
+ * \brief Private implementation for SetV2LoggingLevelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetV2LoggingLevelResponsePrivate object.
@@ -91,7 +105,7 @@ SetV2LoggingLevelResponsePrivate::SetV2LoggingLevelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT SetV2LoggingLevelResponse element.
  *
  * @param  xml  XML stream to parse.

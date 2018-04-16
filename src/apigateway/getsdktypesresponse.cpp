@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetSdkTypesResponse
+/*!
+ * \class QtAws::APIGateway::GetSdkTypesResponse
  *
- * @brief  Handles APIGateway GetSdkTypes responses.
+ * \brief The GetSdkTypesResponse class encapsulates APIGateway GetSdkTypes responses.
  *
- * @see    APIGatewayClient::getSdkTypes
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getSdkTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSdkTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetSdkTypesRequest * GetSdkTypesResponse::request() const
     return static_cast<const GetSdkTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetSdkTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetSdkTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSdkTypesResponsePrivate
+ * \class GetSdkTypesResponsePrivate
  *
- * @brief  Private implementation for GetSdkTypesResponse.
+ * \brief Private implementation for GetSdkTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSdkTypesResponsePrivate object.
@@ -91,7 +99,7 @@ GetSdkTypesResponsePrivate::GetSdkTypesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetSdkTypesResponse element.
  *
  * @param  xml  XML stream to parse.

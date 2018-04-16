@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeThingRegistrationTaskRequest
+/*!
+ * \class QtAws::IoT::DescribeThingRegistrationTaskRequest
  *
- * @brief  Implements IoT DescribeThingRegistrationTask requests.
+ * \brief The DescribeThingRegistrationTaskRequest class encapsulates IoT DescribeThingRegistrationTask requests.
  *
- * @see    IoTClient::describeThingRegistrationTask
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeThingRegistrationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingRegistrationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeThingRegistrationTaskRequest::DescribeThingRegistrationTaskRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingRegistrationTaskRequest object.
  */
 DescribeThingRegistrationTaskRequest::DescribeThingRegistrationTaskRequest()
@@ -53,13 +67,16 @@ DescribeThingRegistrationTaskRequest::DescribeThingRegistrationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeThingRegistrationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeThingRegistrationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRegistrationTaskRequest::respons
     return new DescribeThingRegistrationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeThingRegistrationTaskRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRegistrationTaskRequest::respons
  * @brief  Private implementation for DescribeThingRegistrationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingRegistrationTaskRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeThingRegistrationTaskRequestPrivate::DescribeThingRegistrationTaskReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingRegistrationTaskRequestPrivate object, copying another.

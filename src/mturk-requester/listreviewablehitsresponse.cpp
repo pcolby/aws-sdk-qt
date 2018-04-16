@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListReviewableHITsResponse
+/*!
+ * \class QtAws::MTurk::ListReviewableHITsResponse
  *
- * @brief  Handles MTurk ListReviewableHITs responses.
+ * \brief The ListReviewableHITsResponse class encapsulates MTurk ListReviewableHITs responses.
  *
- * @see    MTurkClient::listReviewableHITs
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listReviewableHITs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListReviewableHITsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListReviewableHITsRequest * ListReviewableHITsResponse::request() const
     return static_cast<const ListReviewableHITsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListReviewableHITs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListReviewableHITsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListReviewableHITsResponsePrivate
+ * \class ListReviewableHITsResponsePrivate
  *
- * @brief  Private implementation for ListReviewableHITsResponse.
+ * \brief Private implementation for ListReviewableHITsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReviewableHITsResponsePrivate object.
@@ -91,7 +94,7 @@ ListReviewableHITsResponsePrivate::ListReviewableHITsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListReviewableHITsResponse element.
  *
  * @param  xml  XML stream to parse.

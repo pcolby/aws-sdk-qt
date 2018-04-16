@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DescribeStreamProcessorResponse
+/*!
+ * \class QtAws::Rekognition::DescribeStreamProcessorResponse
  *
- * @brief  Handles Rekognition DescribeStreamProcessor responses.
+ * \brief The DescribeStreamProcessorResponse class encapsulates Rekognition DescribeStreamProcessor responses.
  *
- * @see    RekognitionClient::describeStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::describeStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamProcessorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DescribeStreamProcessorRequest * DescribeStreamProcessorResponse::request(
     return static_cast<const DescribeStreamProcessorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DescribeStreamProcessor response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DescribeStreamProcessorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeStreamProcessorResponsePrivate
+ * \class DescribeStreamProcessorResponsePrivate
  *
- * @brief  Private implementation for DescribeStreamProcessorResponse.
+ * \brief Private implementation for DescribeStreamProcessorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamProcessorResponsePrivate object.
@@ -91,7 +95,7 @@ DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DescribeStreamProcessorResponse element.
  *
  * @param  xml  XML stream to parse.

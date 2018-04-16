@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteMembersRequest
+/*!
+ * \class QtAws::GuardDuty::DeleteMembersRequest
  *
- * @brief  Implements GuardDuty DeleteMembers requests.
+ * \brief The DeleteMembersRequest class encapsulates GuardDuty DeleteMembers requests.
  *
- * @see    GuardDutyClient::deleteMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteMembersRequest::DeleteMembersRequest(const DeleteMembersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteMembersRequest object.
  */
 DeleteMembersRequest::DeleteMembersRequest()
@@ -53,13 +56,16 @@ DeleteMembersRequest::DeleteMembersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteMembersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteMembersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply 
     return new DeleteMembersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteMembersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteMembersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMembersRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMembersRequestPrivate object, copying another.

@@ -25,15 +25,79 @@
 namespace QtAws {
 namespace Health {
 
-/**
- * @class  DescribeEventTypesRequest
+/*!
+ * \class QtAws::Health::DescribeEventTypesRequest
  *
- * @brief  Implements Health DescribeEventTypes requests.
+ * \brief The DescribeEventTypesRequest class encapsulates Health DescribeEventTypes requests.
  *
- * @see    HealthClient::describeEventTypes
+ * \ingroup Health
+ *
+ *  <fullname>AWS Health</fullname>
+ * 
+ *  The AWS Health API provides programmatic access to the AWS Health information that is presented in the <a
+ *  href="https://phd.aws.amazon.com/phd/home#/">AWS Personal Health Dashboard</a>. You can get information about events
+ *  that affect your AWS
+ * 
+ *  resources> <ul> <li>
+ * 
+ *  <a>DescribeEvents</a>: Summary information about
+ * 
+ *  events> </li> <li>
+ * 
+ *  <a>DescribeEventDetails</a>: Detailed information about one or more
+ * 
+ *  events> </li> <li>
+ * 
+ *  <a>DescribeAffectedEntities</a>: Information about AWS resources that are affected by one or more
+ * 
+ *  events> </li> </ul>
+ * 
+ *  In addition, these operations provide information about event types and summary counts of events or affected
+ * 
+ *  entities> <ul> <li>
+ * 
+ *  <a>DescribeEventTypes</a>: Information about the kinds of events that AWS Health
+ * 
+ *  tracks> </li> <li>
+ * 
+ *  <a>DescribeEventAggregates</a>: A count of the number of events that meet specified
+ * 
+ *  criteria> </li> <li>
+ * 
+ *  <a>DescribeEntityAggregates</a>: A count of the number of affected entities that meet specified
+ * 
+ *  criteria> </li> </ul>
+ * 
+ *  The Health API requires a Business or Enterprise support plan from <a href="http://aws.amazon.com/premiumsupport/">AWS
+ *  Support</a>. Calling the Health API from an account that does not have a Business or Enterprise support plan causes a
+ *  <code>SubscriptionRequiredException</code>.
+ * 
+ *  </p
+ * 
+ *  For authentication of requests, AWS Health uses the <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing
+ * 
+ *  Process</a>>
+ * 
+ *  See the <a href="http://docs.aws.amazon.com/health/latest/ug/what-is-aws-health.html">AWS Health User Guide</a> for
+ *  information about how to use the
+ * 
+ *  API>
+ * 
+ *  <b>Service Endpoint</b>
+ * 
+ *  </p
+ * 
+ *  The HTTP endpoint for the AWS Health API
+ * 
+ *  is> <ul> <li>
+ * 
+ *  https://health.us-east-1.amazonaws.com
+ *
+ * \sa HealthClient::describeEventTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +108,7 @@ DescribeEventTypesRequest::DescribeEventTypesRequest(const DescribeEventTypesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventTypesRequest object.
  */
 DescribeEventTypesRequest::DescribeEventTypesRequest()
@@ -53,13 +117,16 @@ DescribeEventTypesRequest::DescribeEventTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +141,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventTypesRequest::response(QNetworkR
     return new DescribeEventTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventTypesRequestPrivate
@@ -82,7 +149,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventTypesRequest::response(QNetworkR
  * @brief  Private implementation for DescribeEventTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventTypesRequestPrivate object.
@@ -97,7 +164,7 @@ DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventTypesRequestPrivate object, copying another.

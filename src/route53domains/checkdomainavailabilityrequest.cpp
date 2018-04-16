@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  CheckDomainAvailabilityRequest
+/*!
+ * \class QtAws::Route53Domains::CheckDomainAvailabilityRequest
  *
- * @brief  Implements Route53Domains CheckDomainAvailability requests.
+ * \brief The CheckDomainAvailabilityRequest class encapsulates Route53Domains CheckDomainAvailability requests.
  *
- * @see    Route53DomainsClient::checkDomainAvailability
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::checkDomainAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new CheckDomainAvailabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CheckDomainAvailabilityRequest::CheckDomainAvailabilityRequest(const CheckDomain
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CheckDomainAvailabilityRequest object.
  */
 CheckDomainAvailabilityRequest::CheckDomainAvailabilityRequest()
@@ -53,13 +57,16 @@ CheckDomainAvailabilityRequest::CheckDomainAvailabilityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CheckDomainAvailabilityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CheckDomainAvailabilityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNet
     return new CheckDomainAvailabilityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CheckDomainAvailabilityRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNet
  * @brief  Private implementation for CheckDomainAvailabilityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDomainAvailabilityRequestPrivate object.
@@ -97,7 +104,7 @@ CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDomainAvailabilityRequestPrivate object, copying another.

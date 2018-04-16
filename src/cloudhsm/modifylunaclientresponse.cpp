@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ModifyLunaClientResponse
+/*!
+ * \class QtAws::CloudHSM::ModifyLunaClientResponse
  *
- * @brief  Handles CloudHSM ModifyLunaClient responses.
+ * \brief The ModifyLunaClientResponse class encapsulates CloudHSM ModifyLunaClient responses.
  *
- * @see    CloudHSMClient::modifyLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::modifyLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyLunaClientResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ModifyLunaClientRequest * ModifyLunaClientResponse::request() const
     return static_cast<const ModifyLunaClientRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM ModifyLunaClient response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ModifyLunaClientResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyLunaClientResponsePrivate
+ * \class ModifyLunaClientResponsePrivate
  *
- * @brief  Private implementation for ModifyLunaClientResponse.
+ * \brief Private implementation for ModifyLunaClientResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyLunaClientResponsePrivate object.
@@ -91,7 +106,7 @@ ModifyLunaClientResponsePrivate::ModifyLunaClientResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM ModifyLunaClientResponse element.
  *
  * @param  xml  XML stream to parse.

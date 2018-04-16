@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UntagResourceResponse
+/*!
+ * \class QtAws::CloudDirectory::UntagResourceResponse
  *
- * @brief  Handles CloudDirectory UntagResource responses.
+ * \brief The UntagResourceResponse class encapsulates CloudDirectory UntagResource responses.
  *
- * @see    CloudDirectoryClient::untagResource
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
     return static_cast<const UntagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory UntagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UntagResourceResponsePrivate
+ * \class UntagResourceResponsePrivate
  *
- * @brief  Private implementation for UntagResourceResponse.
+ * \brief Private implementation for UntagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceResponsePrivate object.
@@ -91,7 +101,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory UntagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

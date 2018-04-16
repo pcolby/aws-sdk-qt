@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  CreatePipelineRequest
+/*!
+ * \class QtAws::ElasticTranscoder::CreatePipelineRequest
  *
- * @brief  Implements ElasticTranscoder CreatePipeline requests.
+ * \brief The CreatePipelineRequest class encapsulates ElasticTranscoder CreatePipeline requests.
  *
- * @see    ElasticTranscoderClient::createPipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::createPipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreatePipelineRequest::CreatePipelineRequest(const CreatePipelineRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePipelineRequest object.
  */
 CreatePipelineRequest::CreatePipelineRequest()
@@ -53,13 +59,16 @@ CreatePipelineRequest::CreatePipelineRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePipelineRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePipelineResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply
     return new CreatePipelineResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePipelineRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply
  * @brief  Private implementation for CreatePipelineRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePipelineRequestPrivate object.
@@ -97,7 +106,7 @@ CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePipelineRequestPrivate object, copying another.

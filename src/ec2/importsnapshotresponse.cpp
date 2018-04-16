@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportSnapshotResponse
+/*!
+ * \class QtAws::EC2::ImportSnapshotResponse
  *
- * @brief  Handles EC2 ImportSnapshot responses.
+ * \brief The ImportSnapshotResponse class encapsulates EC2 ImportSnapshot responses.
  *
- * @see    EC2Client::importSnapshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportSnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ImportSnapshotRequest * ImportSnapshotResponse::request() const
     return static_cast<const ImportSnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ImportSnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ImportSnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportSnapshotResponsePrivate
+ * \class ImportSnapshotResponsePrivate
  *
- * @brief  Private implementation for ImportSnapshotResponse.
+ * \brief Private implementation for ImportSnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportSnapshotResponsePrivate object.
@@ -91,7 +98,7 @@ ImportSnapshotResponsePrivate::ImportSnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ImportSnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CreateLaunchConfigurationRequest
+/*!
+ * \class QtAws::AutoScaling::CreateLaunchConfigurationRequest
  *
- * @brief  Implements AutoScaling CreateLaunchConfiguration requests.
+ * \brief The CreateLaunchConfigurationRequest class encapsulates AutoScaling CreateLaunchConfiguration requests.
  *
- * @see    AutoScalingClient::createLaunchConfiguration
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::createLaunchConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLaunchConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest(const CreateL
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateLaunchConfigurationRequest object.
  */
 CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest()
@@ -53,13 +61,16 @@ CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateLaunchConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateLaunchConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QN
     return new CreateLaunchConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateLaunchConfigurationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QN
  * @brief  Private implementation for CreateLaunchConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLaunchConfigurationRequestPrivate object.
@@ -97,7 +108,7 @@ CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLaunchConfigurationRequestPrivate object, copying another.

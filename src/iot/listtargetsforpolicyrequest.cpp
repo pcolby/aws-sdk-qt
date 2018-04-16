@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListTargetsForPolicyRequest
+/*!
+ * \class QtAws::IoT::ListTargetsForPolicyRequest
  *
- * @brief  Implements IoT ListTargetsForPolicy requests.
+ * \brief The ListTargetsForPolicyRequest class encapsulates IoT ListTargetsForPolicy requests.
  *
- * @see    IoTClient::listTargetsForPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listTargetsForPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTargetsForPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListTargetsForPolicyRequest::ListTargetsForPolicyRequest(const ListTargetsForPol
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTargetsForPolicyRequest object.
  */
 ListTargetsForPolicyRequest::ListTargetsForPolicyRequest()
@@ -53,13 +67,16 @@ ListTargetsForPolicyRequest::ListTargetsForPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTargetsForPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTargetsForPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListTargetsForPolicyRequest::response(QNetwor
     return new ListTargetsForPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTargetsForPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListTargetsForPolicyRequest::response(QNetwor
  * @brief  Private implementation for ListTargetsForPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTargetsForPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ ListTargetsForPolicyRequestPrivate::ListTargetsForPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTargetsForPolicyRequestPrivate object, copying another.

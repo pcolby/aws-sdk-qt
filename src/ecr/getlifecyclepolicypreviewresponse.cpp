@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetLifecyclePolicyPreviewResponse
+/*!
+ * \class QtAws::ECR::GetLifecyclePolicyPreviewResponse
  *
- * @brief  Handles ECR GetLifecyclePolicyPreview responses.
+ * \brief The GetLifecyclePolicyPreviewResponse class encapsulates ECR GetLifecyclePolicyPreview responses.
  *
- * @see    ECRClient::getLifecyclePolicyPreview
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getLifecyclePolicyPreview
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLifecyclePolicyPreviewResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::requ
     return static_cast<const GetLifecyclePolicyPreviewRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR GetLifecyclePolicyPreview response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetLifecyclePolicyPreviewResponsePrivate
+ * \class GetLifecyclePolicyPreviewResponsePrivate
  *
- * @brief  Private implementation for GetLifecyclePolicyPreviewResponse.
+ * \brief Private implementation for GetLifecyclePolicyPreviewResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLifecyclePolicyPreviewResponsePrivate object.
@@ -91,7 +98,7 @@ GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR GetLifecyclePolicyPreviewResponse element.
  *
  * @param  xml  XML stream to parse.

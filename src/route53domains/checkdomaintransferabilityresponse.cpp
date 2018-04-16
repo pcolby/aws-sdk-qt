@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  CheckDomainTransferabilityResponse
+/*!
+ * \class QtAws::Route53Domains::CheckDomainTransferabilityResponse
  *
- * @brief  Handles Route53Domains CheckDomainTransferability responses.
+ * \brief The CheckDomainTransferabilityResponse class encapsulates Route53Domains CheckDomainTransferability responses.
  *
- * @see    Route53DomainsClient::checkDomainTransferability
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::checkDomainTransferability
  */
 
-/**
+/*!
  * @brief  Constructs a new CheckDomainTransferabilityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CheckDomainTransferabilityRequest * CheckDomainTransferabilityResponse::re
     return static_cast<const CheckDomainTransferabilityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains CheckDomainTransferability response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CheckDomainTransferabilityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CheckDomainTransferabilityResponsePrivate
+ * \class CheckDomainTransferabilityResponsePrivate
  *
- * @brief  Private implementation for CheckDomainTransferabilityResponse.
+ * \brief Private implementation for CheckDomainTransferabilityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDomainTransferabilityResponsePrivate object.
@@ -91,7 +95,7 @@ CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains CheckDomainTransferabilityResponse element.
  *
  * @param  xml  XML stream to parse.

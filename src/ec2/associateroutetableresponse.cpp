@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateRouteTableResponse
+/*!
+ * \class QtAws::EC2::AssociateRouteTableResponse
  *
- * @brief  Handles EC2 AssociateRouteTable responses.
+ * \brief The AssociateRouteTableResponse class encapsulates EC2 AssociateRouteTable responses.
  *
- * @see    EC2Client::associateRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateRouteTableResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssociateRouteTableRequest * AssociateRouteTableResponse::request() const
     return static_cast<const AssociateRouteTableRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssociateRouteTable response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssociateRouteTableResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateRouteTableResponsePrivate
+ * \class AssociateRouteTableResponsePrivate
  *
- * @brief  Private implementation for AssociateRouteTableResponse.
+ * \brief Private implementation for AssociateRouteTableResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateRouteTableResponsePrivate object.
@@ -91,7 +98,7 @@ AssociateRouteTableResponsePrivate::AssociateRouteTableResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssociateRouteTableResponse element.
  *
  * @param  xml  XML stream to parse.

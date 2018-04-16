@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ListAssociatedStacksResponse
+/*!
+ * \class QtAws::AppStream::ListAssociatedStacksResponse
  *
- * @brief  Handles AppStream ListAssociatedStacks responses.
+ * \brief The ListAssociatedStacksResponse class encapsulates AppStream ListAssociatedStacks responses.
  *
- * @see    AppStreamClient::listAssociatedStacks
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::listAssociatedStacks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssociatedStacksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListAssociatedStacksRequest * ListAssociatedStacksResponse::request() cons
     return static_cast<const ListAssociatedStacksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream ListAssociatedStacks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListAssociatedStacksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAssociatedStacksResponsePrivate
+ * \class ListAssociatedStacksResponsePrivate
  *
- * @brief  Private implementation for ListAssociatedStacksResponse.
+ * \brief Private implementation for ListAssociatedStacksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssociatedStacksResponsePrivate object.
@@ -91,7 +97,7 @@ ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream ListAssociatedStacksResponse element.
  *
  * @param  xml  XML stream to parse.

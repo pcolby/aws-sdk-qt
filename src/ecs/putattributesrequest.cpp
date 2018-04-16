@@ -25,15 +25,35 @@
 namespace QtAws {
 namespace ECS {
 
-/**
- * @class  PutAttributesRequest
+/*!
+ * \class QtAws::ECS::PutAttributesRequest
  *
- * @brief  Implements ECS PutAttributes requests.
+ * \brief The PutAttributesRequest class encapsulates ECS PutAttributes requests.
  *
- * @see    ECSClient::putAttributes
+ * \ingroup ECS
+ *
+ *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
+ *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
+ *  that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
+ *  can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
+ *  launch type. For more information about launch types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ * 
+ *  Types</a>>
+ * 
+ *  Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
+ *  your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ * 
+ *  features>
+ * 
+ *  You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
+ *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
+ *  management and configuration management systems or worry about scaling your management
+ *
+ * \sa ECSClient::putAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new PutAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +64,7 @@ PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutAttributesRequest object.
  */
 PutAttributesRequest::PutAttributesRequest()
@@ -53,13 +73,16 @@ PutAttributesRequest::PutAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
     return new PutAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutAttributesRequestPrivate
@@ -82,7 +105,7 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
  * @brief  Private implementation for PutAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutAttributesRequestPrivate object.
@@ -97,7 +120,7 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutAttributesRequestPrivate object, copying another.

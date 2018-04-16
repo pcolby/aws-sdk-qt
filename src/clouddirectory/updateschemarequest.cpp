@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpdateSchemaRequest
+/*!
+ * \class QtAws::CloudDirectory::UpdateSchemaRequest
  *
- * @brief  Implements CloudDirectory UpdateSchema requests.
+ * \brief The UpdateSchemaRequest class encapsulates CloudDirectory UpdateSchema requests.
  *
- * @see    CloudDirectoryClient::updateSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::updateSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpdateSchemaRequest::UpdateSchemaRequest(const UpdateSchemaRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSchemaRequest object.
  */
 UpdateSchemaRequest::UpdateSchemaRequest()
@@ -53,13 +63,16 @@ UpdateSchemaRequest::UpdateSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply *
     return new UpdateSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSchemaRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSchemaRequestPrivate object.
@@ -97,7 +110,7 @@ UpdateSchemaRequestPrivate::UpdateSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSchemaRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribePrefixListsRequest
+/*!
+ * \class QtAws::EC2::DescribePrefixListsRequest
  *
- * @brief  Implements EC2 DescribePrefixLists requests.
+ * \brief The DescribePrefixListsRequest class encapsulates EC2 DescribePrefixLists requests.
  *
- * @see    EC2Client::describePrefixLists
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describePrefixLists
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePrefixListsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribePrefixListsRequest::DescribePrefixListsRequest(const DescribePrefixLists
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribePrefixListsRequest object.
  */
 DescribePrefixListsRequest::DescribePrefixListsRequest()
@@ -53,13 +60,16 @@ DescribePrefixListsRequest::DescribePrefixListsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribePrefixListsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribePrefixListsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetwork
     return new DescribePrefixListsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribePrefixListsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetwork
  * @brief  Private implementation for DescribePrefixListsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePrefixListsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePrefixListsRequestPrivate object, copying another.

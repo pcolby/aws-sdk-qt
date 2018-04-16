@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisableVpcClassicLinkResponse
+/*!
+ * \class QtAws::EC2::DisableVpcClassicLinkResponse
  *
- * @brief  Handles EC2 DisableVpcClassicLink responses.
+ * \brief The DisableVpcClassicLinkResponse class encapsulates EC2 DisableVpcClassicLink responses.
  *
- * @see    EC2Client::disableVpcClassicLink
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disableVpcClassicLink
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableVpcClassicLinkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DisableVpcClassicLinkRequest * DisableVpcClassicLinkResponse::request() co
     return static_cast<const DisableVpcClassicLinkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DisableVpcClassicLink response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DisableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableVpcClassicLinkResponsePrivate
+ * \class DisableVpcClassicLinkResponsePrivate
  *
- * @brief  Private implementation for DisableVpcClassicLinkResponse.
+ * \brief Private implementation for DisableVpcClassicLinkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableVpcClassicLinkResponsePrivate object.
@@ -91,7 +98,7 @@ DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DisableVpcClassicLinkResponse element.
  *
  * @param  xml  XML stream to parse.

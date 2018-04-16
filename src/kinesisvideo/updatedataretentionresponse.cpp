@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  UpdateDataRetentionResponse
+/*!
+ * \class QtAws::KinesisVideo::UpdateDataRetentionResponse
  *
- * @brief  Handles KinesisVideo UpdateDataRetention responses.
+ * \brief The UpdateDataRetentionResponse class encapsulates KinesisVideo UpdateDataRetention responses.
  *
- * @see    KinesisVideoClient::updateDataRetention
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::updateDataRetention
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDataRetentionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateDataRetentionRequest * UpdateDataRetentionResponse::request() const
     return static_cast<const UpdateDataRetentionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideo UpdateDataRetention response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateDataRetentionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDataRetentionResponsePrivate
+ * \class UpdateDataRetentionResponsePrivate
  *
- * @brief  Private implementation for UpdateDataRetentionResponse.
+ * \brief Private implementation for UpdateDataRetentionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDataRetentionResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideo UpdateDataRetentionResponse element.
  *
  * @param  xml  XML stream to parse.

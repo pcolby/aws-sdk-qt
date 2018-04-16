@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RequestSpotFleetRequest
+/*!
+ * \class QtAws::EC2::RequestSpotFleetRequest
  *
- * @brief  Implements EC2 RequestSpotFleet requests.
+ * \brief The RequestSpotFleetRequest class encapsulates EC2 RequestSpotFleet requests.
  *
- * @see    EC2Client::requestSpotFleet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::requestSpotFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new RequestSpotFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RequestSpotFleetRequest::RequestSpotFleetRequest(const RequestSpotFleetRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RequestSpotFleetRequest object.
  */
 RequestSpotFleetRequest::RequestSpotFleetRequest()
@@ -53,13 +60,16 @@ RequestSpotFleetRequest::RequestSpotFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RequestSpotFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RequestSpotFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkRep
     return new RequestSpotFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RequestSpotFleetRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkRep
  * @brief  Private implementation for RequestSpotFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestSpotFleetRequestPrivate object.
@@ -97,7 +107,7 @@ RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestSpotFleetRequestPrivate object, copying another.

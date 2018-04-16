@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteVPCAssociationAuthorizationRequest
+/*!
+ * \class QtAws::Route53::DeleteVPCAssociationAuthorizationRequest
  *
- * @brief  Implements Route53 DeleteVPCAssociationAuthorization requests.
+ * \brief The DeleteVPCAssociationAuthorizationRequest class encapsulates Route53 DeleteVPCAssociationAuthorization requests.
  *
- * @see    Route53Client::deleteVPCAssociationAuthorization
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteVPCAssociationAuthorization
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteVPCAssociationAuthorizationRequest::DeleteVPCAssociationAuthorizationReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequest object.
  */
 DeleteVPCAssociationAuthorizationRequest::DeleteVPCAssociationAuthorizationRequest()
@@ -53,13 +56,16 @@ DeleteVPCAssociationAuthorizationRequest::DeleteVPCAssociationAuthorizationReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVPCAssociationAuthorizationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVPCAssociationAuthorizationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::res
     return new DeleteVPCAssociationAuthorizationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVPCAssociationAuthorizationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::res
  * @brief  Private implementation for DeleteVPCAssociationAuthorizationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteVPCAssociationAuthorizationRequestPrivate::DeleteVPCAssociationAuthorizati
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVPCAssociationAuthorizationRequestPrivate object, copying another.

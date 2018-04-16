@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  BatchDeleteImageResponse
+/*!
+ * \class QtAws::ECR::BatchDeleteImageResponse
  *
- * @brief  Handles ECR BatchDeleteImage responses.
+ * \brief The BatchDeleteImageResponse class encapsulates ECR BatchDeleteImage responses.
  *
- * @see    ECRClient::batchDeleteImage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::batchDeleteImage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const BatchDeleteImageRequest * BatchDeleteImageResponse::request() const
     return static_cast<const BatchDeleteImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR BatchDeleteImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchDeleteImageResponsePrivate
+ * \class BatchDeleteImageResponsePrivate
  *
- * @brief  Private implementation for BatchDeleteImageResponse.
+ * \brief Private implementation for BatchDeleteImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteImageResponsePrivate object.
@@ -91,7 +98,7 @@ BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR BatchDeleteImageResponse element.
  *
  * @param  xml  XML stream to parse.

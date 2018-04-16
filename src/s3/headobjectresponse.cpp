@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  HeadObjectResponse
+/*!
+ * \class QtAws::S3::HeadObjectResponse
  *
- * @brief  Handles S3 HeadObject responses.
+ * \brief The HeadObjectResponse class encapsulates S3 HeadObject responses.
  *
- * @see    S3Client::headObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::headObject
  */
 
-/**
+/*!
  * @brief  Constructs a new HeadObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const HeadObjectRequest * HeadObjectResponse::request() const
     return static_cast<const HeadObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 HeadObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void HeadObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  HeadObjectResponsePrivate
+ * \class HeadObjectResponsePrivate
  *
- * @brief  Private implementation for HeadObjectResponse.
+ * \brief Private implementation for HeadObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new HeadObjectResponsePrivate object.
@@ -91,7 +94,7 @@ HeadObjectResponsePrivate::HeadObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 HeadObjectResponse element.
  *
  * @param  xml  XML stream to parse.

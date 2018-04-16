@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetGroupCertificateConfigurationRequest
+/*!
+ * \class QtAws::Greengrass::GetGroupCertificateConfigurationRequest
  *
- * @brief  Implements Greengrass GetGroupCertificateConfiguration requests.
+ * \brief The GetGroupCertificateConfigurationRequest class encapsulates Greengrass GetGroupCertificateConfiguration requests.
  *
- * @see    GreengrassClient::getGroupCertificateConfiguration
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getGroupCertificateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupCertificateConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetGroupCertificateConfigurationRequest::GetGroupCertificateConfigurationRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGroupCertificateConfigurationRequest object.
  */
 GetGroupCertificateConfigurationRequest::GetGroupCertificateConfigurationRequest()
@@ -53,13 +59,16 @@ GetGroupCertificateConfigurationRequest::GetGroupCertificateConfigurationRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGroupCertificateConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGroupCertificateConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupCertificateConfigurationRequest::resp
     return new GetGroupCertificateConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGroupCertificateConfigurationRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupCertificateConfigurationRequest::resp
  * @brief  Private implementation for GetGroupCertificateConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupCertificateConfigurationRequestPrivate object.
@@ -97,7 +106,7 @@ GetGroupCertificateConfigurationRequestPrivate::GetGroupCertificateConfiguration
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupCertificateConfigurationRequestPrivate object, copying another.

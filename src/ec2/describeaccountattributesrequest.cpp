@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeAccountAttributesRequest
+/*!
+ * \class QtAws::EC2::DescribeAccountAttributesRequest
  *
- * @brief  Implements EC2 DescribeAccountAttributes requests.
+ * \brief The DescribeAccountAttributesRequest class encapsulates EC2 DescribeAccountAttributes requests.
  *
- * @see    EC2Client::describeAccountAttributes
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeAccountAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
@@ -53,13 +60,16 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAccountAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAccountAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
     return new DescribeAccountAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAccountAttributesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  * @brief  Private implementation for DescribeAccountAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object, copying another.

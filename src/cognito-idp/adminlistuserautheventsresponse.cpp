@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminListUserAuthEventsResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminListUserAuthEvents responses.
+ * \brief The AdminListUserAuthEventsResponse class encapsulates CognitoIdentityProvider AdminListUserAuthEvents responses.
  *
- * @see    CognitoIdentityProviderClient::adminListUserAuthEvents
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminListUserAuthEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminListUserAuthEventsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminListUserAuthEventsRequest * AdminListUserAuthEventsResponse::request(
     return static_cast<const AdminListUserAuthEventsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminListUserAuthEvents response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminListUserAuthEventsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminListUserAuthEventsResponsePrivate
+ * \class AdminListUserAuthEventsResponsePrivate
  *
- * @brief  Private implementation for AdminListUserAuthEventsResponse.
+ * \brief Private implementation for AdminListUserAuthEventsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListUserAuthEventsResponsePrivate object.
@@ -91,7 +104,7 @@ AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminListUserAuthEventsResponse element.
  *
  * @param  xml  XML stream to parse.

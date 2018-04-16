@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartCelebrityRecognitionRequest
+/*!
+ * \class QtAws::Rekognition::StartCelebrityRecognitionRequest
  *
- * @brief  Implements Rekognition StartCelebrityRecognition requests.
+ * \brief The StartCelebrityRecognitionRequest class encapsulates Rekognition StartCelebrityRecognition requests.
  *
- * @see    RekognitionClient::startCelebrityRecognition
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startCelebrityRecognition
  */
 
-/**
+/*!
  * @brief  Constructs a new StartCelebrityRecognitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ StartCelebrityRecognitionRequest::StartCelebrityRecognitionRequest(const StartCe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartCelebrityRecognitionRequest object.
  */
 StartCelebrityRecognitionRequest::StartCelebrityRecognitionRequest()
@@ -53,13 +57,16 @@ StartCelebrityRecognitionRequest::StartCelebrityRecognitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartCelebrityRecognitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartCelebrityRecognitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QN
     return new StartCelebrityRecognitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartCelebrityRecognitionRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QN
  * @brief  Private implementation for StartCelebrityRecognitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartCelebrityRecognitionRequestPrivate object.
@@ -97,7 +104,7 @@ StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartCelebrityRecognitionRequestPrivate object, copying another.

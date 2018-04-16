@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDeploymentResponse
+/*!
+ * \class QtAws::APIGateway::GetDeploymentResponse
  *
- * @brief  Handles APIGateway GetDeployment responses.
+ * \brief The GetDeploymentResponse class encapsulates APIGateway GetDeployment responses.
  *
- * @see    APIGatewayClient::getDeployment
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeploymentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetDeploymentRequest * GetDeploymentResponse::request() const
     return static_cast<const GetDeploymentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetDeployment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetDeploymentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDeploymentResponsePrivate
+ * \class GetDeploymentResponsePrivate
  *
- * @brief  Private implementation for GetDeploymentResponse.
+ * \brief Private implementation for GetDeploymentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeploymentResponsePrivate object.
@@ -91,7 +99,7 @@ GetDeploymentResponsePrivate::GetDeploymentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetDeploymentResponse element.
  *
  * @param  xml  XML stream to parse.

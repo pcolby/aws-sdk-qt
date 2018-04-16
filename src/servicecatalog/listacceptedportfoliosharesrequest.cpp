@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListAcceptedPortfolioSharesRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListAcceptedPortfolioSharesRequest
  *
- * @brief  Implements ServiceCatalog ListAcceptedPortfolioShares requests.
+ * \brief The ListAcceptedPortfolioSharesRequest class encapsulates ServiceCatalog ListAcceptedPortfolioShares requests.
  *
- * @see    ServiceCatalogClient::listAcceptedPortfolioShares
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listAcceptedPortfolioShares
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAcceptedPortfolioSharesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListAcceptedPortfolioSharesRequest::ListAcceptedPortfolioSharesRequest(const Lis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAcceptedPortfolioSharesRequest object.
  */
 ListAcceptedPortfolioSharesRequest::ListAcceptedPortfolioSharesRequest()
@@ -53,13 +62,16 @@ ListAcceptedPortfolioSharesRequest::ListAcceptedPortfolioSharesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAcceptedPortfolioSharesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAcceptedPortfolioSharesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListAcceptedPortfolioSharesRequest::response(
     return new ListAcceptedPortfolioSharesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAcceptedPortfolioSharesRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListAcceptedPortfolioSharesRequest::response(
  * @brief  Private implementation for ListAcceptedPortfolioSharesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAcceptedPortfolioSharesRequestPrivate object.
@@ -97,7 +109,7 @@ ListAcceptedPortfolioSharesRequestPrivate::ListAcceptedPortfolioSharesRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAcceptedPortfolioSharesRequestPrivate object, copying another.

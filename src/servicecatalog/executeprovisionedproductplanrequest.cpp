@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ExecuteProvisionedProductPlanRequest
+/*!
+ * \class QtAws::ServiceCatalog::ExecuteProvisionedProductPlanRequest
  *
- * @brief  Implements ServiceCatalog ExecuteProvisionedProductPlan requests.
+ * \brief The ExecuteProvisionedProductPlanRequest class encapsulates ServiceCatalog ExecuteProvisionedProductPlan requests.
  *
- * @see    ServiceCatalogClient::executeProvisionedProductPlan
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::executeProvisionedProductPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new ExecuteProvisionedProductPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ExecuteProvisionedProductPlanRequest object.
  */
 ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest()
@@ -53,13 +62,16 @@ ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ExecuteProvisionedProductPlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ExecuteProvisionedProductPlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::respons
     return new ExecuteProvisionedProductPlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ExecuteProvisionedProductPlanRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::respons
  * @brief  Private implementation for ExecuteProvisionedProductPlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExecuteProvisionedProductPlanRequestPrivate object.
@@ -97,7 +109,7 @@ ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExecuteProvisionedProductPlanRequestPrivate object, copying another.

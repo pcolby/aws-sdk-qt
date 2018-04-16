@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcsRequest
  *
- * @brief  Implements EC2 DescribeVpcs requests.
+ * \brief The DescribeVpcsRequest class encapsulates EC2 DescribeVpcs requests.
  *
- * @see    EC2Client::describeVpcs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcsRequest::DescribeVpcsRequest(const DescribeVpcsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcsRequest object.
  */
 DescribeVpcsRequest::DescribeVpcsRequest()
@@ -53,13 +60,16 @@ DescribeVpcsRequest::DescribeVpcsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcsRequest::response(QNetworkReply *
     return new DescribeVpcsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcsRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeVpcsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcsRequestPrivate::DescribeVpcsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcsRequestPrivate object, copying another.

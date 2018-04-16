@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetSigningCertificateRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetSigningCertificateRequest
  *
- * @brief  Implements CognitoIdentityProvider GetSigningCertificate requests.
+ * \brief The GetSigningCertificateRequest class encapsulates CognitoIdentityProvider GetSigningCertificate requests.
  *
- * @see    CognitoIdentityProviderClient::getSigningCertificate
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getSigningCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSigningCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetSigningCertificateRequest::GetSigningCertificateRequest(const GetSigningCerti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSigningCertificateRequest object.
  */
 GetSigningCertificateRequest::GetSigningCertificateRequest()
@@ -53,13 +66,16 @@ GetSigningCertificateRequest::GetSigningCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSigningCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSigningCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetwo
     return new GetSigningCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSigningCertificateRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetwo
  * @brief  Private implementation for GetSigningCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSigningCertificateRequestPrivate object.
@@ -97,7 +113,7 @@ GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSigningCertificateRequestPrivate object, copying another.

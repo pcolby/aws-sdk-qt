@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeUserImportJobResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeUserImportJobResponse
  *
- * @brief  Handles CognitoIdentityProvider DescribeUserImportJob responses.
+ * \brief The DescribeUserImportJobResponse class encapsulates CognitoIdentityProvider DescribeUserImportJob responses.
  *
- * @see    CognitoIdentityProviderClient::describeUserImportJob
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeUserImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserImportJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DescribeUserImportJobRequest * DescribeUserImportJobResponse::request() co
     return static_cast<const DescribeUserImportJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DescribeUserImportJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DescribeUserImportJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeUserImportJobResponsePrivate
+ * \class DescribeUserImportJobResponsePrivate
  *
- * @brief  Private implementation for DescribeUserImportJobResponse.
+ * \brief Private implementation for DescribeUserImportJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserImportJobResponsePrivate object.
@@ -91,7 +104,7 @@ DescribeUserImportJobResponsePrivate::DescribeUserImportJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DescribeUserImportJobResponse element.
  *
  * @param  xml  XML stream to parse.

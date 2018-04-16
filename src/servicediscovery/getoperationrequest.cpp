@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetOperationRequest
+/*!
+ * \class QtAws::ServiceDiscovery::GetOperationRequest
  *
- * @brief  Implements ServiceDiscovery GetOperation requests.
+ * \brief The GetOperationRequest class encapsulates ServiceDiscovery GetOperation requests.
  *
- * @see    ServiceDiscoveryClient::getOperation
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getOperation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOperationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetOperationRequest::GetOperationRequest(const GetOperationRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetOperationRequest object.
  */
 GetOperationRequest::GetOperationRequest()
@@ -53,13 +60,16 @@ GetOperationRequest::GetOperationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetOperationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetOperationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationRequest::response(QNetworkReply *
     return new GetOperationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetOperationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetOperationRequest::response(QNetworkReply *
  * @brief  Private implementation for GetOperationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationRequestPrivate object.
@@ -97,7 +107,7 @@ GetOperationRequestPrivate::GetOperationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationRequestPrivate object, copying another.

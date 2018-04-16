@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddTagsRequest
+/*!
+ * \class QtAws::EMR::AddTagsRequest
  *
- * @brief  Implements EMR AddTags requests.
+ * \brief The AddTagsRequest class encapsulates EMR AddTags requests.
  *
- * @see    EMRClient::addTags
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addTags
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
@@ -53,13 +59,16 @@ AddTagsRequest::AddTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
     return new AddTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for AddTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsRequestPrivate object.
@@ -97,7 +106,7 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsRequestPrivate object, copying another.

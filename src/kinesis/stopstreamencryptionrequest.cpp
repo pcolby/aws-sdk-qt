@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  StopStreamEncryptionRequest
+/*!
+ * \class QtAws::Kinesis::StopStreamEncryptionRequest
  *
- * @brief  Implements Kinesis StopStreamEncryption requests.
+ * \brief The StopStreamEncryptionRequest class encapsulates Kinesis StopStreamEncryption requests.
  *
- * @see    KinesisClient::stopStreamEncryption
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::stopStreamEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new StopStreamEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopStreamEncryptionRequest::StopStreamEncryptionRequest(const StopStreamEncrypt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopStreamEncryptionRequest object.
  */
 StopStreamEncryptionRequest::StopStreamEncryptionRequest()
@@ -53,13 +59,16 @@ StopStreamEncryptionRequest::StopStreamEncryptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopStreamEncryptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopStreamEncryptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetwor
     return new StopStreamEncryptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopStreamEncryptionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetwor
  * @brief  Private implementation for StopStreamEncryptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopStreamEncryptionRequestPrivate object.
@@ -97,7 +106,7 @@ StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopStreamEncryptionRequestPrivate object, copying another.

@@ -53,26 +53,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::WorkSpaces
+ * \brief The QtAws::WorkSpaces contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  WorkSpacesClient
+/*!
+ * \class QtAws::WorkSpaces::WorkSpacesClient
  *
- * @brief  Client for Amazon WorkSpaces
+ * \brief The WorkSpacesClient class provides access the Amazon WorkSpaces service.
  *
- * <fullname>Amazon WorkSpaces Service</fullname>
+ * \ingroup WorkSpaces
  *
- * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
  */
 
-/**
- * @brief  Constructs a new WorkSpacesClient object.
+/*!
+ * \brief Constructs a WorkSpacesClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 WorkSpacesClient::WorkSpacesClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -91,21 +99,16 @@ WorkSpacesClient::WorkSpacesClient(
     d->serviceName = QStringLiteral("workspaces");
 }
 
-/**
- * @brief  Constructs a new WorkSpacesClient object.
+/*!
+ * \overload WorkSpacesClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 WorkSpacesClient::WorkSpacesClient(
     const QUrl &endpoint,
@@ -124,7 +127,7 @@ WorkSpacesClient::WorkSpacesClient(
     d->serviceName = QStringLiteral("workspaces");
 }
 
-/**
+/*!
  * Creates tags for the specified
  *
  * @param  request Request to send to Amazon WorkSpaces.
@@ -138,7 +141,7 @@ CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &reque
     return qobject_cast<CreateTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one or more
  *
  * WorkSpaces>
@@ -156,7 +159,7 @@ CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorksp
     return qobject_cast<CreateWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified tags from a
  *
  * @param  request Request to send to Amazon WorkSpaces.
@@ -170,7 +173,7 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the tags for the specified
  *
  * @param  request Request to send to Amazon WorkSpaces.
@@ -184,7 +187,7 @@ DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest 
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the available WorkSpace
  *
  * bundles>
@@ -202,7 +205,7 @@ DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(co
     return qobject_cast<DescribeWorkspaceBundlesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the available AWS Directory Service directories that are registered with Amazon
  *
  * @param  request Request to send to Amazon WorkSpaces.
@@ -216,7 +219,7 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
     return qobject_cast<DescribeWorkspaceDirectoriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified
  *
  * WorkSpaces>
@@ -234,7 +237,7 @@ DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const Describe
     return qobject_cast<DescribeWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the connection status of the specified
  *
  * @param  request Request to send to Amazon WorkSpaces.
@@ -248,7 +251,7 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
     return qobject_cast<DescribeWorkspacesConnectionStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified WorkSpace
  *
  * @param  request Request to send to Amazon WorkSpaces.
@@ -262,7 +265,7 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
     return qobject_cast<ModifyWorkspacePropertiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Reboots the specified
  *
  * WorkSpaces>
@@ -284,7 +287,7 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
     return qobject_cast<RebootWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Rebuilds the specified
  *
  * WorkSpaces>
@@ -311,7 +314,7 @@ RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWor
     return qobject_cast<RebuildWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the specified
  *
  * WorkSpaces>
@@ -329,7 +332,7 @@ StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspace
     return qobject_cast<StartWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the specified
  *
  * WorkSpaces>
@@ -348,7 +351,7 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
     return qobject_cast<StopWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Terminates the specified
  *
  * WorkSpaces>
@@ -375,7 +378,7 @@ TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const Termin
     return qobject_cast<TerminateWorkspacesResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WorkSpacesClientPrivate
@@ -383,7 +386,7 @@ TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const Termin
  * @brief  Private implementation for WorkSpacesClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkSpacesClientPrivate object.

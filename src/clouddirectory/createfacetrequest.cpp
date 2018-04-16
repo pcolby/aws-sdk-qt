@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateFacetRequest
+/*!
+ * \class QtAws::CloudDirectory::CreateFacetRequest
  *
- * @brief  Implements CloudDirectory CreateFacet requests.
+ * \brief The CreateFacetRequest class encapsulates CloudDirectory CreateFacet requests.
  *
- * @see    CloudDirectoryClient::createFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateFacetRequest::CreateFacetRequest(const CreateFacetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFacetRequest object.
  */
 CreateFacetRequest::CreateFacetRequest()
@@ -53,13 +63,16 @@ CreateFacetRequest::CreateFacetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFacetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFacetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateFacetRequest::response(QNetworkReply * 
     return new CreateFacetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFacetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateFacetRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateFacetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFacetRequestPrivate object.
@@ -97,7 +110,7 @@ CreateFacetRequestPrivate::CreateFacetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFacetRequestPrivate object, copying another.

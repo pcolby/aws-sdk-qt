@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateDirectoryConfigResponse
+/*!
+ * \class QtAws::AppStream::CreateDirectoryConfigResponse
  *
- * @brief  Handles AppStream CreateDirectoryConfig responses.
+ * \brief The CreateDirectoryConfigResponse class encapsulates AppStream CreateDirectoryConfig responses.
  *
- * @see    AppStreamClient::createDirectoryConfig
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createDirectoryConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDirectoryConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateDirectoryConfigRequest * CreateDirectoryConfigResponse::request() co
     return static_cast<const CreateDirectoryConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream CreateDirectoryConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateDirectoryConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDirectoryConfigResponsePrivate
+ * \class CreateDirectoryConfigResponsePrivate
  *
- * @brief  Private implementation for CreateDirectoryConfigResponse.
+ * \brief Private implementation for CreateDirectoryConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDirectoryConfigResponsePrivate object.
@@ -91,7 +97,7 @@ CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream CreateDirectoryConfigResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetReusableDelegationSetRequest
+/*!
+ * \class QtAws::Route53::GetReusableDelegationSetRequest
  *
- * @brief  Implements Route53 GetReusableDelegationSet requests.
+ * \brief The GetReusableDelegationSetRequest class encapsulates Route53 GetReusableDelegationSet requests.
  *
- * @see    Route53Client::getReusableDelegationSet
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getReusableDelegationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReusableDelegationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetReusableDelegationSetRequest::GetReusableDelegationSetRequest(const GetReusab
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReusableDelegationSetRequest object.
  */
 GetReusableDelegationSetRequest::GetReusableDelegationSetRequest()
@@ -53,13 +56,16 @@ GetReusableDelegationSetRequest::GetReusableDelegationSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReusableDelegationSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReusableDelegationSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetRequest::response(QNe
     return new GetReusableDelegationSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReusableDelegationSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetRequest::response(QNe
  * @brief  Private implementation for GetReusableDelegationSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReusableDelegationSetRequestPrivate object.
@@ -97,7 +103,7 @@ GetReusableDelegationSetRequestPrivate::GetReusableDelegationSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReusableDelegationSetRequestPrivate object, copying another.

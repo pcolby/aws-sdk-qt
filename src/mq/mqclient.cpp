@@ -59,25 +59,33 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MQ
+ * \brief The QtAws::MQ contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  MqClient
+/*!
+ * \class QtAws::MQ::MqClient
  *
- * @brief  Client for AmazonMQ
+ * \brief The MqClient class provides access the AmazonMQ service.
  *
- * Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
- * brokers in the cloud. A message broker allows software applications and components to communicate using various
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
  */
 
-/**
- * @brief  Constructs a new MqClient object.
+/*!
+ * \brief Constructs a MqClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MqClient::MqClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -96,21 +104,16 @@ MqClient::MqClient(
     d->serviceName = QStringLiteral("mq");
 }
 
-/**
- * @brief  Constructs a new MqClient object.
+/*!
+ * \overload MqClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MqClient::MqClient(
     const QUrl &endpoint,
@@ -129,7 +132,7 @@ MqClient::MqClient(
     d->serviceName = QStringLiteral("mq");
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -142,7 +145,7 @@ CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request
     return qobject_cast<CreateBrokerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine
  *
  * @param  request Request to send to AmazonMQ.
@@ -156,7 +159,7 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
     return qobject_cast<CreateConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -169,7 +172,7 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
     return qobject_cast<CreateUserResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -182,7 +185,7 @@ DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request
     return qobject_cast<DeleteBrokerResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -195,7 +198,7 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
     return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -208,7 +211,7 @@ DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &r
     return qobject_cast<DescribeBrokerResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -221,7 +224,7 @@ DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeCo
     return qobject_cast<DescribeConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -234,7 +237,7 @@ DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(
     return qobject_cast<DescribeConfigurationRevisionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -247,7 +250,7 @@ DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request
     return qobject_cast<DescribeUserResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -260,7 +263,7 @@ ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
     return qobject_cast<ListBrokersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -273,7 +276,7 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
     return qobject_cast<ListConfigurationRevisionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -286,7 +289,7 @@ ListConfigurationsResponse * MqClient::listConfigurations(const ListConfiguratio
     return qobject_cast<ListConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -299,7 +302,7 @@ ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
     return qobject_cast<ListUsersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -312,7 +315,7 @@ RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request
     return qobject_cast<RebootBrokerResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -325,7 +328,7 @@ UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request
     return qobject_cast<UpdateBrokerResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -338,7 +341,7 @@ UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigur
     return qobject_cast<UpdateConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AmazonMQ.
  *
@@ -351,7 +354,7 @@ UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
     return qobject_cast<UpdateUserResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MqClientPrivate
@@ -359,7 +362,7 @@ UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
  * @brief  Private implementation for MqClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MqClientPrivate object.

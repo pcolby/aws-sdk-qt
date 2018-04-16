@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListNotebookInstanceLifecycleConfigsRequest
+/*!
+ * \class QtAws::SageMaker::ListNotebookInstanceLifecycleConfigsRequest
  *
- * @brief  Implements SageMaker ListNotebookInstanceLifecycleConfigs requests.
+ * \brief The ListNotebookInstanceLifecycleConfigsRequest class encapsulates SageMaker ListNotebookInstanceLifecycleConfigs requests.
  *
- * @see    SageMakerClient::listNotebookInstanceLifecycleConfigs
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listNotebookInstanceLifecycleConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListNotebookInstanceLifecycleConfigsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListNotebookInstanceLifecycleConfigsRequest::ListNotebookInstanceLifecycleConfig
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListNotebookInstanceLifecycleConfigsRequest object.
  */
 ListNotebookInstanceLifecycleConfigsRequest::ListNotebookInstanceLifecycleConfigsRequest()
@@ -53,13 +56,16 @@ ListNotebookInstanceLifecycleConfigsRequest::ListNotebookInstanceLifecycleConfig
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListNotebookInstanceLifecycleConfigsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListNotebookInstanceLifecycleConfigsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListNotebookInstanceLifecycleConfigsRequest::
     return new ListNotebookInstanceLifecycleConfigsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListNotebookInstanceLifecycleConfigsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListNotebookInstanceLifecycleConfigsRequest::
  * @brief  Private implementation for ListNotebookInstanceLifecycleConfigsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNotebookInstanceLifecycleConfigsRequestPrivate object.
@@ -97,7 +103,7 @@ ListNotebookInstanceLifecycleConfigsRequestPrivate::ListNotebookInstanceLifecycl
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNotebookInstanceLifecycleConfigsRequestPrivate object, copying another.

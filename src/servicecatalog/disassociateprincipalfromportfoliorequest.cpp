@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DisassociatePrincipalFromPortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::DisassociatePrincipalFromPortfolioRequest
  *
- * @brief  Implements ServiceCatalog DisassociatePrincipalFromPortfolio requests.
+ * \brief The DisassociatePrincipalFromPortfolioRequest class encapsulates ServiceCatalog DisassociatePrincipalFromPortfolio requests.
  *
- * @see    ServiceCatalogClient::disassociatePrincipalFromPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::disassociatePrincipalFromPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequest object.
  */
 DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioRequest()
@@ -53,13 +62,16 @@ DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociatePrincipalFromPortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociatePrincipalFromPortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DisassociatePrincipalFromPortfolioRequest::re
     return new DisassociatePrincipalFromPortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociatePrincipalFromPortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DisassociatePrincipalFromPortfolioRequest::re
  * @brief  Private implementation for DisassociatePrincipalFromPortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortf
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequestPrivate object, copying another.

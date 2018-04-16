@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CopyObjectRequest
+/*!
+ * \class QtAws::S3::CopyObjectRequest
  *
- * @brief  Implements S3 CopyObject requests.
+ * \brief The CopyObjectRequest class encapsulates S3 CopyObject requests.
  *
- * @see    S3Client::copyObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::copyObject
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CopyObjectRequest::CopyObjectRequest(const CopyObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CopyObjectRequest object.
  */
 CopyObjectRequest::CopyObjectRequest()
@@ -53,13 +56,16 @@ CopyObjectRequest::CopyObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CopyObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CopyObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * c
     return new CopyObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CopyObjectRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * c
  * @brief  Private implementation for CopyObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyObjectRequestPrivate object.
@@ -97,7 +103,7 @@ CopyObjectRequestPrivate::CopyObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyObjectRequestPrivate object, copying another.

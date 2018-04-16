@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  UploadPartRequest
+/*!
+ * \class QtAws::S3::UploadPartRequest
  *
- * @brief  Implements S3 UploadPart requests.
+ * \brief The UploadPartRequest class encapsulates S3 UploadPart requests.
  *
- * @see    S3Client::uploadPart
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::uploadPart
  */
 
-/**
+/*!
  * @brief  Constructs a new UploadPartRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UploadPartRequest::UploadPartRequest(const UploadPartRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UploadPartRequest object.
  */
 UploadPartRequest::UploadPartRequest()
@@ -53,13 +56,16 @@ UploadPartRequest::UploadPartRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UploadPartRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UploadPartResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UploadPartRequest::response(QNetworkReply * c
     return new UploadPartResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UploadPartRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UploadPartRequest::response(QNetworkReply * c
  * @brief  Private implementation for UploadPartRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadPartRequestPrivate object.
@@ -97,7 +103,7 @@ UploadPartRequestPrivate::UploadPartRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadPartRequestPrivate object, copying another.

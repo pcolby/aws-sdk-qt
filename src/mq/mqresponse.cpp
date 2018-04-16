@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  MQResponse
+/*!
+ * \class QtAws::MQ::MQResponse
  *
- * @brief  Handles MQ MQ responses.
+ * \brief The MQResponse class is the base class for all MQ responses.
  *
- * @see    MQClient::mQ
+ * \ingroup MQ
  */
 
-/**
+/*!
  * @brief  Constructs a new MQResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MQResponse::MQResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MQResponse object.
@@ -63,7 +63,7 @@ MQResponse::MQResponse(MQResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MQResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MQResponsePrivate
@@ -92,7 +92,7 @@ void MQResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MQResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MQResponsePrivate object.

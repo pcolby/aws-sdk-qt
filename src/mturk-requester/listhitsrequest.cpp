@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListHITsRequest
+/*!
+ * \class QtAws::MTurk::ListHITsRequest
  *
- * @brief  Implements MTurk ListHITs requests.
+ * \brief The ListHITsRequest class encapsulates MTurk ListHITs requests.
  *
- * @see    MTurkClient::listHITs
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listHITs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHITsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListHITsRequest::ListHITsRequest(const ListHITsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListHITsRequest object.
  */
 ListHITsRequest::ListHITsRequest()
@@ -53,13 +56,16 @@ ListHITsRequest::ListHITsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListHITsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListHITsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * con
     return new ListHITsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListHITsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListHITsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHITsRequestPrivate object.
@@ -97,7 +103,7 @@ ListHITsRequestPrivate::ListHITsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHITsRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetXssMatchSetResponse
+/*!
+ * \class QtAws::WAF::GetXssMatchSetResponse
  *
- * @brief  Handles WAF GetXssMatchSet responses.
+ * \brief The GetXssMatchSetResponse class encapsulates WAF GetXssMatchSet responses.
  *
- * @see    WAFClient::getXssMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getXssMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetXssMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
     return static_cast<const GetXssMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF GetXssMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetXssMatchSetResponsePrivate
+ * \class GetXssMatchSetResponsePrivate
  *
- * @brief  Private implementation for GetXssMatchSetResponse.
+ * \brief Private implementation for GetXssMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetXssMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ GetXssMatchSetResponsePrivate::GetXssMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF GetXssMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

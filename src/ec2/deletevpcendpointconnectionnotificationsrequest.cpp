@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcEndpointConnectionNotificationsRequest
+/*!
+ * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsRequest
  *
- * @brief  Implements EC2 DeleteVpcEndpointConnectionNotifications requests.
+ * \brief The DeleteVpcEndpointConnectionNotificationsRequest class encapsulates EC2 DeleteVpcEndpointConnectionNotifications requests.
  *
- * @see    EC2Client::deleteVpcEndpointConnectionNotifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpcEndpointConnectionNotifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNoti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequest object.
  */
 DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest()
@@ -53,13 +60,16 @@ DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNoti
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpcEndpointConnectionNotificationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpcEndpointConnectionNotificationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsReque
     return new DeleteVpcEndpointConnectionNotificationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpcEndpointConnectionNotificationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsReque
  * @brief  Private implementation for DeleteVpcEndpointConnectionNotificationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnect
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequestPrivate object, copying another.

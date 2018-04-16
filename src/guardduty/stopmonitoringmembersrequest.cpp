@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  StopMonitoringMembersRequest
+/*!
+ * \class QtAws::GuardDuty::StopMonitoringMembersRequest
  *
- * @brief  Implements GuardDuty StopMonitoringMembers requests.
+ * \brief The StopMonitoringMembersRequest class encapsulates GuardDuty StopMonitoringMembers requests.
  *
- * @see    GuardDutyClient::stopMonitoringMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::stopMonitoringMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new StopMonitoringMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StopMonitoringMembersRequest::StopMonitoringMembersRequest(const StopMonitoringM
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopMonitoringMembersRequest object.
  */
 StopMonitoringMembersRequest::StopMonitoringMembersRequest()
@@ -53,13 +56,16 @@ StopMonitoringMembersRequest::StopMonitoringMembersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopMonitoringMembersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopMonitoringMembersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetwo
     return new StopMonitoringMembersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopMonitoringMembersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetwo
  * @brief  Private implementation for StopMonitoringMembersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopMonitoringMembersRequestPrivate object.
@@ -97,7 +103,7 @@ StopMonitoringMembersRequestPrivate::StopMonitoringMembersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopMonitoringMembersRequestPrivate object, copying another.

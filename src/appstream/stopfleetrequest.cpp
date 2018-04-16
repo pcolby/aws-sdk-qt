@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StopFleetRequest
+/*!
+ * \class QtAws::AppStream::StopFleetRequest
  *
- * @brief  Implements AppStream StopFleet requests.
+ * \brief The StopFleetRequest class encapsulates AppStream StopFleet requests.
  *
- * @see    AppStreamClient::stopFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::stopFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new StopFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopFleetRequest::StopFleetRequest(const StopFleetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopFleetRequest object.
  */
 StopFleetRequest::StopFleetRequest()
@@ -53,13 +59,16 @@ StopFleetRequest::StopFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * co
     return new StopFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * co
  * @brief  Private implementation for StopFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopFleetRequestPrivate object.
@@ -97,7 +106,7 @@ StopFleetRequestPrivate::StopFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopFleetRequestPrivate object, copying another.

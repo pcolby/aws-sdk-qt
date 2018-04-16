@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  ListTopicsDetectionJobsRequest
+/*!
+ * \class QtAws::Comprehend::ListTopicsDetectionJobsRequest
  *
- * @brief  Implements Comprehend ListTopicsDetectionJobs requests.
+ * \brief The ListTopicsDetectionJobsRequest class encapsulates Comprehend ListTopicsDetectionJobs requests.
  *
- * @see    ComprehendClient::listTopicsDetectionJobs
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::listTopicsDetectionJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTopicsDetectionJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListTopicsDetectionJobsRequest::ListTopicsDetectionJobsRequest(const ListTopicsD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTopicsDetectionJobsRequest object.
  */
 ListTopicsDetectionJobsRequest::ListTopicsDetectionJobsRequest()
@@ -53,13 +59,16 @@ ListTopicsDetectionJobsRequest::ListTopicsDetectionJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTopicsDetectionJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTopicsDetectionJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListTopicsDetectionJobsRequest::response(QNet
     return new ListTopicsDetectionJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTopicsDetectionJobsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListTopicsDetectionJobsRequest::response(QNet
  * @brief  Private implementation for ListTopicsDetectionJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTopicsDetectionJobsRequestPrivate object.
@@ -97,7 +106,7 @@ ListTopicsDetectionJobsRequestPrivate::ListTopicsDetectionJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTopicsDetectionJobsRequestPrivate object, copying another.

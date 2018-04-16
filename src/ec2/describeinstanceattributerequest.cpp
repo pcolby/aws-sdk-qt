@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeInstanceAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeInstanceAttributeRequest
  *
- * @brief  Implements EC2 DescribeInstanceAttribute requests.
+ * \brief The DescribeInstanceAttributeRequest class encapsulates EC2 DescribeInstanceAttribute requests.
  *
- * @see    EC2Client::describeInstanceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeInstanceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceAttributeRequest object.
  */
 DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest()
@@ -53,13 +60,16 @@ DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeInstanceAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeInstanceAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QN
     return new DescribeInstanceAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeInstanceAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QN
  * @brief  Private implementation for DescribeInstanceAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceAttributeRequestPrivate object, copying another.

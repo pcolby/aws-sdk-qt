@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetPersonTrackingRequest
+/*!
+ * \class QtAws::Rekognition::GetPersonTrackingRequest
  *
- * @brief  Implements Rekognition GetPersonTracking requests.
+ * \brief The GetPersonTrackingRequest class encapsulates Rekognition GetPersonTracking requests.
  *
- * @see    RekognitionClient::getPersonTracking
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getPersonTracking
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPersonTrackingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetPersonTrackingRequest::GetPersonTrackingRequest(const GetPersonTrackingReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPersonTrackingRequest object.
  */
 GetPersonTrackingRequest::GetPersonTrackingRequest()
@@ -53,13 +57,16 @@ GetPersonTrackingRequest::GetPersonTrackingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPersonTrackingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPersonTrackingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetPersonTrackingRequest::response(QNetworkRe
     return new GetPersonTrackingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPersonTrackingRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetPersonTrackingRequest::response(QNetworkRe
  * @brief  Private implementation for GetPersonTrackingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPersonTrackingRequestPrivate object.
@@ -97,7 +104,7 @@ GetPersonTrackingRequestPrivate::GetPersonTrackingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPersonTrackingRequestPrivate object, copying another.

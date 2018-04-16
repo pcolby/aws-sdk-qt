@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DeleteElasticsearchDomainRequest
+/*!
+ * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainRequest
  *
- * @brief  Implements ElasticsearchService DeleteElasticsearchDomain requests.
+ * \brief The DeleteElasticsearchDomainRequest class encapsulates ElasticsearchService DeleteElasticsearchDomain requests.
  *
- * @see    ElasticsearchServiceClient::deleteElasticsearchDomain
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::deleteElasticsearchDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteElasticsearchDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest(const DeleteE
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteElasticsearchDomainRequest object.
  */
 DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest()
@@ -53,13 +65,16 @@ DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteElasticsearchDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteElasticsearchDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QN
     return new DeleteElasticsearchDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteElasticsearchDomainRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QN
  * @brief  Private implementation for DeleteElasticsearchDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteElasticsearchDomainRequestPrivate object.
@@ -97,7 +112,7 @@ DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteElasticsearchDomainRequestPrivate object, copying another.

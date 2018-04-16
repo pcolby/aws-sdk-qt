@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  TransferDomainRequest
+/*!
+ * \class QtAws::Route53Domains::TransferDomainRequest
  *
- * @brief  Implements Route53Domains TransferDomain requests.
+ * \brief The TransferDomainRequest class encapsulates Route53Domains TransferDomain requests.
  *
- * @see    Route53DomainsClient::transferDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::transferDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new TransferDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ TransferDomainRequest::TransferDomainRequest(const TransferDomainRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TransferDomainRequest object.
  */
 TransferDomainRequest::TransferDomainRequest()
@@ -53,13 +57,16 @@ TransferDomainRequest::TransferDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TransferDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TransferDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply
     return new TransferDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TransferDomainRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply
  * @brief  Private implementation for TransferDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TransferDomainRequestPrivate object.
@@ -97,7 +104,7 @@ TransferDomainRequestPrivate::TransferDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TransferDomainRequestPrivate object, copying another.

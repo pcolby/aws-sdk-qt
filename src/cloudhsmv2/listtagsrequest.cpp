@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  ListTagsRequest
+/*!
+ * \class QtAws::CloudHSMV2::ListTagsRequest
  *
- * @brief  Implements CloudHSMV2 ListTags requests.
+ * \brief The ListTagsRequest class encapsulates CloudHSMV2 ListTags requests.
  *
- * @see    CloudHSMV2Client::listTags
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
@@ -53,13 +58,16 @@ ListTagsRequest::ListTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
     return new ListTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object.
@@ -97,7 +105,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object, copying another.

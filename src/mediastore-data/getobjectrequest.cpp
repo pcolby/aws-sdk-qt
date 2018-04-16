@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  GetObjectRequest
+/*!
+ * \class QtAws::MediaStoreData::GetObjectRequest
  *
- * @brief  Implements MediaStoreData GetObject requests.
+ * \brief The GetObjectRequest class encapsulates MediaStoreData GetObject requests.
  *
- * @see    MediaStoreDataClient::getObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::getObject
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetObjectRequest::GetObjectRequest(const GetObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetObjectRequest object.
  */
 GetObjectRequest::GetObjectRequest()
@@ -53,13 +58,16 @@ GetObjectRequest::GetObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
     return new GetObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetObjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectRequestPrivate object.
@@ -97,7 +105,7 @@ GetObjectRequestPrivate::GetObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectRequestPrivate object, copying another.

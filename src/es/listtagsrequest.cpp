@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListTagsRequest
+/*!
+ * \class QtAws::ElasticsearchService::ListTagsRequest
  *
- * @brief  Implements ElasticsearchService ListTags requests.
+ * \brief The ListTagsRequest class encapsulates ElasticsearchService ListTags requests.
  *
- * @see    ElasticsearchServiceClient::listTags
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
@@ -53,13 +65,16 @@ ListTagsRequest::ListTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
     return new ListTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object.
@@ -97,7 +112,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  DescribeObjectRequest
+/*!
+ * \class QtAws::MediaStoreData::DescribeObjectRequest
  *
- * @brief  Implements MediaStoreData DescribeObject requests.
+ * \brief The DescribeObjectRequest class encapsulates MediaStoreData DescribeObject requests.
  *
- * @see    MediaStoreDataClient::describeObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::describeObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeObjectRequest::DescribeObjectRequest(const DescribeObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeObjectRequest object.
  */
 DescribeObjectRequest::DescribeObjectRequest()
@@ -53,13 +58,16 @@ DescribeObjectRequest::DescribeObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectRequest::response(QNetworkReply
     return new DescribeObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeObjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeObjectRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeObjectRequestPrivate object, copying another.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDisableProviderForUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDisableProviderForUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminDisableProviderForUser requests.
+ * \brief The AdminDisableProviderForUserRequest class encapsulates CognitoIdentityProvider AdminDisableProviderForUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminDisableProviderForUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDisableProviderForUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDisableProviderForUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminDisableProviderForUserRequest::AdminDisableProviderForUserRequest(const Adm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminDisableProviderForUserRequest object.
  */
 AdminDisableProviderForUserRequest::AdminDisableProviderForUserRequest()
@@ -53,13 +66,16 @@ AdminDisableProviderForUserRequest::AdminDisableProviderForUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminDisableProviderForUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminDisableProviderForUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminDisableProviderForUserRequest::response(
     return new AdminDisableProviderForUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminDisableProviderForUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminDisableProviderForUserRequest::response(
  * @brief  Private implementation for AdminDisableProviderForUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDisableProviderForUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminDisableProviderForUserRequestPrivate::AdminDisableProviderForUserRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDisableProviderForUserRequestPrivate object, copying another.

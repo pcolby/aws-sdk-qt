@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteTypedLinkFacetRequest
+/*!
+ * \class QtAws::CloudDirectory::DeleteTypedLinkFacetRequest
  *
- * @brief  Implements CloudDirectory DeleteTypedLinkFacet requests.
+ * \brief The DeleteTypedLinkFacetRequest class encapsulates CloudDirectory DeleteTypedLinkFacet requests.
  *
- * @see    CloudDirectoryClient::deleteTypedLinkFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteTypedLinkFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTypedLinkFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteTypedLinkFacetRequest::DeleteTypedLinkFacetRequest(const DeleteTypedLinkFa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTypedLinkFacetRequest object.
  */
 DeleteTypedLinkFacetRequest::DeleteTypedLinkFacetRequest()
@@ -53,13 +63,16 @@ DeleteTypedLinkFacetRequest::DeleteTypedLinkFacetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTypedLinkFacetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTypedLinkFacetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTypedLinkFacetRequest::response(QNetwor
     return new DeleteTypedLinkFacetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTypedLinkFacetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTypedLinkFacetRequest::response(QNetwor
  * @brief  Private implementation for DeleteTypedLinkFacetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTypedLinkFacetRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteTypedLinkFacetRequestPrivate::DeleteTypedLinkFacetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTypedLinkFacetRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  DeleteChannelResponse
+/*!
+ * \class QtAws::MediaPackage::DeleteChannelResponse
  *
- * @brief  Handles MediaPackage DeleteChannel responses.
+ * \brief The DeleteChannelResponse class encapsulates MediaPackage DeleteChannel responses.
  *
- * @see    MediaPackageClient::deleteChannel
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::deleteChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteChannelRequest * DeleteChannelResponse::request() const
     return static_cast<const DeleteChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaPackage DeleteChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteChannelResponsePrivate
+ * \class DeleteChannelResponsePrivate
  *
- * @brief  Private implementation for DeleteChannelResponse.
+ * \brief Private implementation for DeleteChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteChannelResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaPackage DeleteChannelResponse element.
  *
  * @param  xml  XML stream to parse.

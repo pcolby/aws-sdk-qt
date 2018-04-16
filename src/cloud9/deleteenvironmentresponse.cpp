@@ -27,15 +27,72 @@
 namespace QtAws {
 namespace Cloud9 {
 
-/**
- * @class  DeleteEnvironmentResponse
+/*!
+ * \class QtAws::Cloud9::DeleteEnvironmentResponse
  *
- * @brief  Handles Cloud9 DeleteEnvironment responses.
+ * \brief The DeleteEnvironmentResponse class encapsulates Cloud9 DeleteEnvironment responses.
  *
- * @see    Cloud9Client::deleteEnvironment
+ * \ingroup Cloud9
+ *
+ *  <fullname>AWS Cloud9</fullname>
+ * 
+ *  AWS Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
+ * 
+ *  cloud>
+ * 
+ *  For more information about AWS Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">AWS Cloud9
+ *  User
+ * 
+ *  Guide</a>>
+ * 
+ *  AWS Cloud9 supports these
+ * 
+ *  operations> <ul> <li>
+ * 
+ *  <code>CreateEnvironmentEC2</code>: Creates an AWS Cloud9 development environment, launches an Amazon EC2 instance, and
+ *  then connects from the instance to the
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>CreateEnvironmentMembership</code>: Adds an environment member to an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DeleteEnvironment</code>: Deletes an environment. If an Amazon EC2 instance is connected to the environment, also
+ *  terminates the
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <code>DeleteEnvironmentMembership</code>: Deletes an environment member from an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DescribeEnvironmentMemberships</code>: Gets information about environment members for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DescribeEnvironments</code>: Gets information about
+ * 
+ *  environments> </li> <li>
+ * 
+ *  <code>DescribeEnvironmentStatus</code>: Gets status information for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>ListEnvironments</code>: Gets a list of environment
+ * 
+ *  identifiers> </li> <li>
+ * 
+ *  <code>UpdateEnvironment</code>: Changes the settings of an existing
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>UpdateEnvironmentMembership</code>: Changes the settings of an existing environment member for an
+ *
+ * \sa Cloud9Client::deleteEnvironment
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEnvironmentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +115,7 @@ const DeleteEnvironmentRequest * DeleteEnvironmentResponse::request() const
     return static_cast<const DeleteEnvironmentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Cloud9 DeleteEnvironment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +127,15 @@ void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEnvironmentResponsePrivate
+ * \class DeleteEnvironmentResponsePrivate
  *
- * @brief  Private implementation for DeleteEnvironmentResponse.
+ * \brief Private implementation for DeleteEnvironmentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEnvironmentResponsePrivate object.
@@ -91,7 +148,7 @@ DeleteEnvironmentResponsePrivate::DeleteEnvironmentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Cloud9 DeleteEnvironmentResponse element.
  *
  * @param  xml  XML stream to parse.

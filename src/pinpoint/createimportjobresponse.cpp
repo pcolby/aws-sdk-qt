@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  CreateImportJobResponse
+/*!
+ * \class QtAws::Pinpoint::CreateImportJobResponse
  *
- * @brief  Handles Pinpoint CreateImportJob responses.
+ * \brief The CreateImportJobResponse class encapsulates Pinpoint CreateImportJob responses.
  *
- * @see    PinpointClient::createImportJob
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::createImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateImportJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateImportJobRequest * CreateImportJobResponse::request() const
     return static_cast<const CreateImportJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint CreateImportJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateImportJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateImportJobResponsePrivate
+ * \class CreateImportJobResponsePrivate
  *
- * @brief  Private implementation for CreateImportJobResponse.
+ * \brief Private implementation for CreateImportJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImportJobResponsePrivate object.
@@ -91,7 +94,7 @@ CreateImportJobResponsePrivate::CreateImportJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint CreateImportJobResponse element.
  *
  * @param  xml  XML stream to parse.

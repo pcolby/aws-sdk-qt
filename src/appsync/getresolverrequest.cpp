@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetResolverRequest
+/*!
+ * \class QtAws::AppSync::GetResolverRequest
  *
- * @brief  Implements AppSync GetResolver requests.
+ * \brief The GetResolverRequest class encapsulates AppSync GetResolver requests.
  *
- * @see    AppSyncClient::getResolver
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getResolver
  */
 
-/**
+/*!
  * @brief  Constructs a new GetResolverRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetResolverRequest::GetResolverRequest(const GetResolverRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetResolverRequest object.
  */
 GetResolverRequest::GetResolverRequest()
@@ -53,13 +57,16 @@ GetResolverRequest::GetResolverRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetResolverRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetResolverResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetResolverRequest::response(QNetworkReply * 
     return new GetResolverResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetResolverRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetResolverRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetResolverRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResolverRequestPrivate object.
@@ -97,7 +104,7 @@ GetResolverRequestPrivate::GetResolverRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResolverRequestPrivate object, copying another.

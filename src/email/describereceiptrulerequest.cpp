@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DescribeReceiptRuleRequest
+/*!
+ * \class QtAws::SES::DescribeReceiptRuleRequest
  *
- * @brief  Implements SES DescribeReceiptRule requests.
+ * \brief The DescribeReceiptRuleRequest class encapsulates SES DescribeReceiptRule requests.
  *
- * @see    SESClient::describeReceiptRule
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::describeReceiptRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReceiptRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeReceiptRuleRequest::DescribeReceiptRuleRequest(const DescribeReceiptRule
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReceiptRuleRequest object.
  */
 DescribeReceiptRuleRequest::DescribeReceiptRuleRequest()
@@ -53,13 +67,16 @@ DescribeReceiptRuleRequest::DescribeReceiptRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReceiptRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReceiptRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReceiptRuleRequest::response(QNetwork
     return new DescribeReceiptRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReceiptRuleRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReceiptRuleRequest::response(QNetwork
  * @brief  Private implementation for DescribeReceiptRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReceiptRuleRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeReceiptRuleRequestPrivate::DescribeReceiptRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReceiptRuleRequestPrivate object, copying another.

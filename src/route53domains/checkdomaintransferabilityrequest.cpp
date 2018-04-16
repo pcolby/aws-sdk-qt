@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  CheckDomainTransferabilityRequest
+/*!
+ * \class QtAws::Route53Domains::CheckDomainTransferabilityRequest
  *
- * @brief  Implements Route53Domains CheckDomainTransferability requests.
+ * \brief The CheckDomainTransferabilityRequest class encapsulates Route53Domains CheckDomainTransferability requests.
  *
- * @see    Route53DomainsClient::checkDomainTransferability
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::checkDomainTransferability
  */
 
-/**
+/*!
  * @brief  Constructs a new CheckDomainTransferabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CheckDomainTransferabilityRequest::CheckDomainTransferabilityRequest(const Check
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CheckDomainTransferabilityRequest object.
  */
 CheckDomainTransferabilityRequest::CheckDomainTransferabilityRequest()
@@ -53,13 +57,16 @@ CheckDomainTransferabilityRequest::CheckDomainTransferabilityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CheckDomainTransferabilityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CheckDomainTransferabilityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(Q
     return new CheckDomainTransferabilityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CheckDomainTransferabilityRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(Q
  * @brief  Private implementation for CheckDomainTransferabilityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDomainTransferabilityRequestPrivate object.
@@ -97,7 +104,7 @@ CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDomainTransferabilityRequestPrivate object, copying another.

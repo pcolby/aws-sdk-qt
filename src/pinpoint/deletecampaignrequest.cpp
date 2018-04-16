@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteCampaignRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteCampaignRequest
  *
- * @brief  Implements Pinpoint DeleteCampaign requests.
+ * \brief The DeleteCampaignRequest class encapsulates Pinpoint DeleteCampaign requests.
  *
- * @see    PinpointClient::deleteCampaign
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteCampaign
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCampaignRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteCampaignRequest::DeleteCampaignRequest(const DeleteCampaignRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCampaignRequest object.
  */
 DeleteCampaignRequest::DeleteCampaignRequest()
@@ -53,13 +56,16 @@ DeleteCampaignRequest::DeleteCampaignRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCampaignRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCampaignResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply
     return new DeleteCampaignResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCampaignRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteCampaignRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCampaignRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCampaignRequestPrivate object, copying another.

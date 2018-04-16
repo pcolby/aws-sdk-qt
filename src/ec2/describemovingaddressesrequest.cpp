@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeMovingAddressesRequest
+/*!
+ * \class QtAws::EC2::DescribeMovingAddressesRequest
  *
- * @brief  Implements EC2 DescribeMovingAddresses requests.
+ * \brief The DescribeMovingAddressesRequest class encapsulates EC2 DescribeMovingAddresses requests.
  *
- * @see    EC2Client::describeMovingAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeMovingAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMovingAddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeMovingAddressesRequest::DescribeMovingAddressesRequest(const DescribeMov
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeMovingAddressesRequest object.
  */
 DescribeMovingAddressesRequest::DescribeMovingAddressesRequest()
@@ -53,13 +60,16 @@ DescribeMovingAddressesRequest::DescribeMovingAddressesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeMovingAddressesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeMovingAddressesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNet
     return new DescribeMovingAddressesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeMovingAddressesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNet
  * @brief  Private implementation for DescribeMovingAddressesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMovingAddressesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMovingAddressesRequestPrivate object, copying another.

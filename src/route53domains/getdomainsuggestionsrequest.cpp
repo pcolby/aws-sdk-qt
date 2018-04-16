@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  GetDomainSuggestionsRequest
+/*!
+ * \class QtAws::Route53Domains::GetDomainSuggestionsRequest
  *
- * @brief  Implements Route53Domains GetDomainSuggestions requests.
+ * \brief The GetDomainSuggestionsRequest class encapsulates Route53Domains GetDomainSuggestions requests.
  *
- * @see    Route53DomainsClient::getDomainSuggestions
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::getDomainSuggestions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDomainSuggestionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetDomainSuggestionsRequest::GetDomainSuggestionsRequest(const GetDomainSuggesti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDomainSuggestionsRequest object.
  */
 GetDomainSuggestionsRequest::GetDomainSuggestionsRequest()
@@ -53,13 +57,16 @@ GetDomainSuggestionsRequest::GetDomainSuggestionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDomainSuggestionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDomainSuggestionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetwor
     return new GetDomainSuggestionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDomainSuggestionsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetwor
  * @brief  Private implementation for GetDomainSuggestionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainSuggestionsRequestPrivate object.
@@ -97,7 +104,7 @@ GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainSuggestionsRequestPrivate object, copying another.

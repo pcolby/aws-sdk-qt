@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  CreateVocabularyRequest
+/*!
+ * \class QtAws::TranscribeService::CreateVocabularyRequest
  *
- * @brief  Implements TranscribeService CreateVocabulary requests.
+ * \brief The CreateVocabularyRequest class encapsulates TranscribeService CreateVocabulary requests.
  *
- * @see    TranscribeServiceClient::createVocabulary
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::createVocabulary
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVocabularyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateVocabularyRequest::CreateVocabularyRequest(const CreateVocabularyRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVocabularyRequest object.
  */
 CreateVocabularyRequest::CreateVocabularyRequest()
@@ -53,13 +57,16 @@ CreateVocabularyRequest::CreateVocabularyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVocabularyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVocabularyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateVocabularyRequest::response(QNetworkRep
     return new CreateVocabularyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVocabularyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateVocabularyRequest::response(QNetworkRep
  * @brief  Private implementation for CreateVocabularyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVocabularyRequestPrivate object.
@@ -97,7 +104,7 @@ CreateVocabularyRequestPrivate::CreateVocabularyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVocabularyRequestPrivate object, copying another.

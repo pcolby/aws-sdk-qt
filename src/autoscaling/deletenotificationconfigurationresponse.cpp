@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteNotificationConfigurationResponse
+/*!
+ * \class QtAws::AutoScaling::DeleteNotificationConfigurationResponse
  *
- * @brief  Handles AutoScaling DeleteNotificationConfiguration responses.
+ * \brief The DeleteNotificationConfigurationResponse class encapsulates AutoScaling DeleteNotificationConfiguration responses.
  *
- * @see    AutoScalingClient::deleteNotificationConfiguration
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteNotificationConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotificationConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteNotificationConfigurationRequest * DeleteNotificationConfigurationRe
     return static_cast<const DeleteNotificationConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeleteNotificationConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteNotificationConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNotificationConfigurationResponsePrivate
+ * \class DeleteNotificationConfigurationResponsePrivate
  *
- * @brief  Private implementation for DeleteNotificationConfigurationResponse.
+ * \brief Private implementation for DeleteNotificationConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotificationConfigurationResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationR
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeleteNotificationConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

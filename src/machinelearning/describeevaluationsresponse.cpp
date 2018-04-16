@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeEvaluationsResponse
+/*!
+ * \class QtAws::MachineLearning::DescribeEvaluationsResponse
  *
- * @brief  Handles MachineLearning DescribeEvaluations responses.
+ * \brief The DescribeEvaluationsResponse class encapsulates MachineLearning DescribeEvaluations responses.
  *
- * @see    MachineLearningClient::describeEvaluations
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeEvaluations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEvaluationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeEvaluationsRequest * DescribeEvaluationsResponse::request() const
     return static_cast<const DescribeEvaluationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DescribeEvaluations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeEvaluationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEvaluationsResponsePrivate
+ * \class DescribeEvaluationsResponsePrivate
  *
- * @brief  Private implementation for DescribeEvaluationsResponse.
+ * \brief Private implementation for DescribeEvaluationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEvaluationsResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeEvaluationsResponsePrivate::DescribeEvaluationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DescribeEvaluationsResponse element.
  *
  * @param  xml  XML stream to parse.

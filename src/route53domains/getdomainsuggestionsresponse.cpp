@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  GetDomainSuggestionsResponse
+/*!
+ * \class QtAws::Route53Domains::GetDomainSuggestionsResponse
  *
- * @brief  Handles Route53Domains GetDomainSuggestions responses.
+ * \brief The GetDomainSuggestionsResponse class encapsulates Route53Domains GetDomainSuggestions responses.
  *
- * @see    Route53DomainsClient::getDomainSuggestions
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::getDomainSuggestions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDomainSuggestionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetDomainSuggestionsRequest * GetDomainSuggestionsResponse::request() cons
     return static_cast<const GetDomainSuggestionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains GetDomainSuggestions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetDomainSuggestionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDomainSuggestionsResponsePrivate
+ * \class GetDomainSuggestionsResponsePrivate
  *
- * @brief  Private implementation for GetDomainSuggestionsResponse.
+ * \brief Private implementation for GetDomainSuggestionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainSuggestionsResponsePrivate object.
@@ -91,7 +95,7 @@ GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains GetDomainSuggestionsResponse element.
  *
  * @param  xml  XML stream to parse.

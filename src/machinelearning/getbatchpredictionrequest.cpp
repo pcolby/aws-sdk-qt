@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetBatchPredictionRequest
+/*!
+ * \class QtAws::MachineLearning::GetBatchPredictionRequest
  *
- * @brief  Implements MachineLearning GetBatchPrediction requests.
+ * \brief The GetBatchPredictionRequest class encapsulates MachineLearning GetBatchPrediction requests.
  *
- * @see    MachineLearningClient::getBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBatchPredictionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBatchPredictionRequest::GetBatchPredictionRequest(const GetBatchPredictionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBatchPredictionRequest object.
  */
 GetBatchPredictionRequest::GetBatchPredictionRequest()
@@ -53,13 +56,16 @@ GetBatchPredictionRequest::GetBatchPredictionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBatchPredictionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBatchPredictionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBatchPredictionRequest::response(QNetworkR
     return new GetBatchPredictionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBatchPredictionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBatchPredictionRequest::response(QNetworkR
  * @brief  Private implementation for GetBatchPredictionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBatchPredictionRequestPrivate object.
@@ -97,7 +103,7 @@ GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBatchPredictionRequestPrivate object, copying another.

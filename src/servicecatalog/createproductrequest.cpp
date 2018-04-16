@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreateProductRequest
  *
- * @brief  Implements ServiceCatalog CreateProduct requests.
+ * \brief The CreateProductRequest class encapsulates ServiceCatalog CreateProduct requests.
  *
- * @see    ServiceCatalogClient::createProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateProductRequest::CreateProductRequest(const CreateProductRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateProductRequest object.
  */
 CreateProductRequest::CreateProductRequest()
@@ -53,13 +62,16 @@ CreateProductRequest::CreateProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateProductRequest::response(QNetworkReply 
     return new CreateProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateProductRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProductRequestPrivate object.
@@ -97,7 +109,7 @@ CreateProductRequestPrivate::CreateProductRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProductRequestPrivate object, copying another.

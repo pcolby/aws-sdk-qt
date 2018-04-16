@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminAddUserToGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminAddUserToGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminAddUserToGroup requests.
+ * \brief The AdminAddUserToGroupRequest class encapsulates CognitoIdentityProvider AdminAddUserToGroup requests.
  *
- * @see    CognitoIdentityProviderClient::adminAddUserToGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminAddUserToGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminAddUserToGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminAddUserToGroupRequest::AdminAddUserToGroupRequest(const AdminAddUserToGroup
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminAddUserToGroupRequest object.
  */
 AdminAddUserToGroupRequest::AdminAddUserToGroupRequest()
@@ -53,13 +66,16 @@ AdminAddUserToGroupRequest::AdminAddUserToGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminAddUserToGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminAddUserToGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetwork
     return new AdminAddUserToGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminAddUserToGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetwork
  * @brief  Private implementation for AdminAddUserToGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminAddUserToGroupRequestPrivate object.
@@ -97,7 +113,7 @@ AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminAddUserToGroupRequestPrivate object, copying another.

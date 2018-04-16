@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  MTurkResponse
+/*!
+ * \class QtAws::MTurk::MTurkResponse
  *
- * @brief  Handles MTurk MTurk responses.
+ * \brief The MTurkResponse class is the base class for all MTurk responses.
  *
- * @see    MTurkClient::mTurk
+ * \ingroup MTurk
  */
 
-/**
+/*!
  * @brief  Constructs a new MTurkResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MTurkResponse::MTurkResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MTurkResponse object.
@@ -63,7 +63,7 @@ MTurkResponse::MTurkResponse(MTurkResponsePrivate * const d, QObject * const par
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MTurkResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MTurkResponsePrivate
@@ -92,7 +92,7 @@ void MTurkResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MTurkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MTurkResponsePrivate object.

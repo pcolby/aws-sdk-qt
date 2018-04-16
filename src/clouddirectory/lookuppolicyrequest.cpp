@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  LookupPolicyRequest
+/*!
+ * \class QtAws::CloudDirectory::LookupPolicyRequest
  *
- * @brief  Implements CloudDirectory LookupPolicy requests.
+ * \brief The LookupPolicyRequest class encapsulates CloudDirectory LookupPolicy requests.
  *
- * @see    CloudDirectoryClient::lookupPolicy
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::lookupPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new LookupPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ LookupPolicyRequest::LookupPolicyRequest(const LookupPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new LookupPolicyRequest object.
  */
 LookupPolicyRequest::LookupPolicyRequest()
@@ -53,13 +63,16 @@ LookupPolicyRequest::LookupPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool LookupPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an LookupPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply *
     return new LookupPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LookupPolicyRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for LookupPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LookupPolicyRequestPrivate object.
@@ -97,7 +110,7 @@ LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LookupPolicyRequestPrivate object, copying another.

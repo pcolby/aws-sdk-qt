@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  DescribeScalingPlansResponse
+/*!
+ * \class QtAws::AutoScalingPlans::DescribeScalingPlansResponse
  *
- * @brief  Handles AutoScalingPlans DescribeScalingPlans responses.
+ * \brief The DescribeScalingPlansResponse class encapsulates AutoScalingPlans DescribeScalingPlans responses.
  *
- * @see    AutoScalingPlansClient::describeScalingPlans
+ * \ingroup AutoScalingPlans
+ *
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
+ *
+ * \sa AutoScalingPlansClient::describeScalingPlans
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScalingPlansResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DescribeScalingPlansRequest * DescribeScalingPlansResponse::request() cons
     return static_cast<const DescribeScalingPlansRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScalingPlans DescribeScalingPlans response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DescribeScalingPlansResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeScalingPlansResponsePrivate
+ * \class DescribeScalingPlansResponsePrivate
  *
- * @brief  Private implementation for DescribeScalingPlansResponse.
+ * \brief Private implementation for DescribeScalingPlansResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScalingPlansResponsePrivate object.
@@ -91,7 +103,7 @@ DescribeScalingPlansResponsePrivate::DescribeScalingPlansResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScalingPlans DescribeScalingPlansResponse element.
  *
  * @param  xml  XML stream to parse.

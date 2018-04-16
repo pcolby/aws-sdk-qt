@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVolumeAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeVolumeAttributeRequest
  *
- * @brief  Implements EC2 DescribeVolumeAttribute requests.
+ * \brief The DescribeVolumeAttributeRequest class encapsulates EC2 DescribeVolumeAttribute requests.
  *
- * @see    EC2Client::describeVolumeAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVolumeAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumeAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest(const DescribeVol
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumeAttributeRequest object.
  */
 DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest()
@@ -53,13 +60,16 @@ DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVolumeAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVolumeAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNet
     return new DescribeVolumeAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVolumeAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNet
  * @brief  Private implementation for DescribeVolumeAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumeAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumeAttributeRequestPrivate object, copying another.

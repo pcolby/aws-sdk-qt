@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  PutIntentResponse
+/*!
+ * \class QtAws::LexModelBuildingService::PutIntentResponse
  *
- * @brief  Handles LexModelBuildingService PutIntent responses.
+ * \brief The PutIntentResponse class encapsulates LexModelBuildingService PutIntent responses.
  *
- * @see    LexModelBuildingServiceClient::putIntent
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::putIntent
  */
 
-/**
+/*!
  * @brief  Constructs a new PutIntentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const PutIntentRequest * PutIntentResponse::request() const
     return static_cast<const PutIntentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService PutIntent response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void PutIntentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutIntentResponsePrivate
+ * \class PutIntentResponsePrivate
  *
- * @brief  Private implementation for PutIntentResponse.
+ * \brief Private implementation for PutIntentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIntentResponsePrivate object.
@@ -91,7 +98,7 @@ PutIntentResponsePrivate::PutIntentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService PutIntentResponse element.
  *
  * @param  xml  XML stream to parse.

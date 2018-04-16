@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotDatafeedSubscriptionRequest
+/*!
+ * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionRequest
  *
- * @brief  Implements EC2 DescribeSpotDatafeedSubscription requests.
+ * \brief The DescribeSpotDatafeedSubscriptionRequest class encapsulates EC2 DescribeSpotDatafeedSubscription requests.
  *
- * @see    EC2Client::describeSpotDatafeedSubscription
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotDatafeedSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSpotDatafeedSubscriptionRequest::DescribeSpotDatafeedSubscriptionRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequest object.
  */
 DescribeSpotDatafeedSubscriptionRequest::DescribeSpotDatafeedSubscriptionRequest()
@@ -53,13 +60,16 @@ DescribeSpotDatafeedSubscriptionRequest::DescribeSpotDatafeedSubscriptionRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSpotDatafeedSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSpotDatafeedSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::resp
     return new DescribeSpotDatafeedSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSpotDatafeedSubscriptionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::resp
  * @brief  Private implementation for DescribeSpotDatafeedSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscription
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotDatafeedSubscriptionRequestPrivate object, copying another.

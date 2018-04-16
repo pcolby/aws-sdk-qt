@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetImageAttributeResponse
+/*!
+ * \class QtAws::EC2::ResetImageAttributeResponse
  *
- * @brief  Handles EC2 ResetImageAttribute responses.
+ * \brief The ResetImageAttributeResponse class encapsulates EC2 ResetImageAttribute responses.
  *
- * @see    EC2Client::resetImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetImageAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ResetImageAttributeRequest * ResetImageAttributeResponse::request() const
     return static_cast<const ResetImageAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ResetImageAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ResetImageAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetImageAttributeResponsePrivate
+ * \class ResetImageAttributeResponsePrivate
  *
- * @brief  Private implementation for ResetImageAttributeResponse.
+ * \brief Private implementation for ResetImageAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetImageAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ResetImageAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

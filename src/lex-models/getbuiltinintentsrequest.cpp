@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBuiltinIntentsRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinIntentsRequest
  *
- * @brief  Implements LexModelBuildingService GetBuiltinIntents requests.
+ * \brief The GetBuiltinIntentsRequest class encapsulates LexModelBuildingService GetBuiltinIntents requests.
  *
- * @see    LexModelBuildingServiceClient::getBuiltinIntents
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBuiltinIntents
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinIntentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBuiltinIntentsRequest::GetBuiltinIntentsRequest(const GetBuiltinIntentsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinIntentsRequest object.
  */
 GetBuiltinIntentsRequest::GetBuiltinIntentsRequest()
@@ -53,13 +60,16 @@ GetBuiltinIntentsRequest::GetBuiltinIntentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBuiltinIntentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBuiltinIntentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinIntentsRequest::response(QNetworkRe
     return new GetBuiltinIntentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBuiltinIntentsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinIntentsRequest::response(QNetworkRe
  * @brief  Private implementation for GetBuiltinIntentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinIntentsRequestPrivate object.
@@ -97,7 +107,7 @@ GetBuiltinIntentsRequestPrivate::GetBuiltinIntentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinIntentsRequestPrivate object, copying another.

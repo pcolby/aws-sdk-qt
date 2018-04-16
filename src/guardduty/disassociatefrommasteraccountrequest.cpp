@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DisassociateFromMasterAccountRequest
+/*!
+ * \class QtAws::GuardDuty::DisassociateFromMasterAccountRequest
  *
- * @brief  Implements GuardDuty DisassociateFromMasterAccount requests.
+ * \brief The DisassociateFromMasterAccountRequest class encapsulates GuardDuty DisassociateFromMasterAccount requests.
  *
- * @see    GuardDutyClient::disassociateFromMasterAccount
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::disassociateFromMasterAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateFromMasterAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DisassociateFromMasterAccountRequest::DisassociateFromMasterAccountRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateFromMasterAccountRequest object.
  */
 DisassociateFromMasterAccountRequest::DisassociateFromMasterAccountRequest()
@@ -53,13 +56,16 @@ DisassociateFromMasterAccountRequest::DisassociateFromMasterAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateFromMasterAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateFromMasterAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::respons
     return new DisassociateFromMasterAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateFromMasterAccountRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::respons
  * @brief  Private implementation for DisassociateFromMasterAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateFromMasterAccountRequestPrivate object.
@@ -97,7 +103,7 @@ DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateFromMasterAccountRequestPrivate object, copying another.

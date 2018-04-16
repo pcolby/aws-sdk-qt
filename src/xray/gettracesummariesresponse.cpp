@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  GetTraceSummariesResponse
+/*!
+ * \class QtAws::XRay::GetTraceSummariesResponse
  *
- * @brief  Handles XRay GetTraceSummaries responses.
+ * \brief The GetTraceSummariesResponse class encapsulates XRay GetTraceSummaries responses.
  *
- * @see    XRayClient::getTraceSummaries
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::getTraceSummaries
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTraceSummariesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetTraceSummariesRequest * GetTraceSummariesResponse::request() const
     return static_cast<const GetTraceSummariesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a XRay GetTraceSummaries response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetTraceSummariesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTraceSummariesResponsePrivate
+ * \class GetTraceSummariesResponsePrivate
  *
- * @brief  Private implementation for GetTraceSummariesResponse.
+ * \brief Private implementation for GetTraceSummariesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTraceSummariesResponsePrivate object.
@@ -91,7 +95,7 @@ GetTraceSummariesResponsePrivate::GetTraceSummariesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an XRay GetTraceSummariesResponse element.
  *
  * @param  xml  XML stream to parse.

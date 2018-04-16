@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcAttributeRequest
  *
- * @brief  Implements EC2 ModifyVpcAttribute requests.
+ * \brief The ModifyVpcAttributeRequest class encapsulates EC2 ModifyVpcAttribute requests.
  *
- * @see    EC2Client::modifyVpcAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcAttributeRequest::ModifyVpcAttributeRequest(const ModifyVpcAttributeReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcAttributeRequest object.
  */
 ModifyVpcAttributeRequest::ModifyVpcAttributeRequest()
@@ -53,13 +60,16 @@ ModifyVpcAttributeRequest::ModifyVpcAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkR
     return new ModifyVpcAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkR
  * @brief  Private implementation for ModifyVpcAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcAttributeRequestPrivate object, copying another.

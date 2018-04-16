@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteRoomRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteRoomRequest
  *
- * @brief  Implements AlexaForBusiness DeleteRoom requests.
+ * \brief The DeleteRoomRequest class encapsulates AlexaForBusiness DeleteRoom requests.
  *
- * @see    AlexaForBusinessClient::deleteRoom
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteRoom
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoomRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteRoomRequest::DeleteRoomRequest(const DeleteRoomRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoomRequest object.
  */
 DeleteRoomRequest::DeleteRoomRequest()
@@ -53,13 +61,16 @@ DeleteRoomRequest::DeleteRoomRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRoomRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRoomResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomRequest::response(QNetworkReply * c
     return new DeleteRoomResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRoomRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteRoomRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoomRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoomRequestPrivate object, copying another.

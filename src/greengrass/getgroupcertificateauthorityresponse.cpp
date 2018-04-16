@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetGroupCertificateAuthorityResponse
+/*!
+ * \class QtAws::Greengrass::GetGroupCertificateAuthorityResponse
  *
- * @brief  Handles Greengrass GetGroupCertificateAuthority responses.
+ * \brief The GetGroupCertificateAuthorityResponse class encapsulates Greengrass GetGroupCertificateAuthority responses.
  *
- * @see    GreengrassClient::getGroupCertificateAuthority
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getGroupCertificateAuthority
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupCertificateAuthorityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetGroupCertificateAuthorityRequest * GetGroupCertificateAuthorityResponse
     return static_cast<const GetGroupCertificateAuthorityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetGroupCertificateAuthority response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetGroupCertificateAuthorityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGroupCertificateAuthorityResponsePrivate
+ * \class GetGroupCertificateAuthorityResponsePrivate
  *
- * @brief  Private implementation for GetGroupCertificateAuthorityResponse.
+ * \brief Private implementation for GetGroupCertificateAuthorityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupCertificateAuthorityResponsePrivate object.
@@ -91,7 +97,7 @@ GetGroupCertificateAuthorityResponsePrivate::GetGroupCertificateAuthorityRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetGroupCertificateAuthorityResponse element.
  *
  * @param  xml  XML stream to parse.

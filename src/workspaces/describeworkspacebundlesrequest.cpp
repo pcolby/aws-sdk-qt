@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeWorkspaceBundlesRequest
+/*!
+ * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesRequest
  *
- * @brief  Implements WorkSpaces DescribeWorkspaceBundles requests.
+ * \brief The DescribeWorkspaceBundlesRequest class encapsulates WorkSpaces DescribeWorkspaceBundles requests.
  *
- * @see    WorkSpacesClient::describeWorkspaceBundles
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeWorkspaceBundles
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspaceBundlesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeWorkspaceBundlesRequest::DescribeWorkspaceBundlesRequest(const DescribeW
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspaceBundlesRequest object.
  */
 DescribeWorkspaceBundlesRequest::DescribeWorkspaceBundlesRequest()
@@ -53,13 +59,16 @@ DescribeWorkspaceBundlesRequest::DescribeWorkspaceBundlesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeWorkspaceBundlesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeWorkspaceBundlesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNe
     return new DescribeWorkspaceBundlesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeWorkspaceBundlesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNe
  * @brief  Private implementation for DescribeWorkspaceBundlesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspaceBundlesRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspaceBundlesRequestPrivate object, copying another.

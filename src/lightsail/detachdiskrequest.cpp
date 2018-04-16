@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  DetachDiskRequest
+/*!
+ * \class QtAws::Lightsail::DetachDiskRequest
  *
- * @brief  Implements Lightsail DetachDisk requests.
+ * \brief The DetachDiskRequest class encapsulates Lightsail DetachDisk requests.
  *
- * @see    LightsailClient::detachDisk
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::detachDisk
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachDiskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ DetachDiskRequest::DetachDiskRequest(const DetachDiskRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachDiskRequest object.
  */
 DetachDiskRequest::DetachDiskRequest()
@@ -53,13 +72,16 @@ DetachDiskRequest::DetachDiskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachDiskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachDiskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * c
     return new DetachDiskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachDiskRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * c
  * @brief  Private implementation for DetachDiskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachDiskRequestPrivate object.
@@ -97,7 +119,7 @@ DetachDiskRequestPrivate::DetachDiskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachDiskRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListInvitationsRequest
+/*!
+ * \class QtAws::GuardDuty::ListInvitationsRequest
  *
- * @brief  Implements GuardDuty ListInvitations requests.
+ * \brief The ListInvitationsRequest class encapsulates GuardDuty ListInvitations requests.
  *
- * @see    GuardDutyClient::listInvitations
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listInvitations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInvitationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListInvitationsRequest::ListInvitationsRequest(const ListInvitationsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInvitationsRequest object.
  */
 ListInvitationsRequest::ListInvitationsRequest()
@@ -53,13 +56,16 @@ ListInvitationsRequest::ListInvitationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInvitationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInvitationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkRepl
     return new ListInvitationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInvitationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkRepl
  * @brief  Private implementation for ListInvitationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInvitationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInvitationsRequestPrivate object, copying another.

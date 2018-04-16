@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteSchemaRequest
+/*!
+ * \class QtAws::CloudDirectory::DeleteSchemaRequest
  *
- * @brief  Implements CloudDirectory DeleteSchema requests.
+ * \brief The DeleteSchemaRequest class encapsulates CloudDirectory DeleteSchema requests.
  *
- * @see    CloudDirectoryClient::deleteSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteSchemaRequest::DeleteSchemaRequest(const DeleteSchemaRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSchemaRequest object.
  */
 DeleteSchemaRequest::DeleteSchemaRequest()
@@ -53,13 +63,16 @@ DeleteSchemaRequest::DeleteSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSchemaRequest::response(QNetworkReply *
     return new DeleteSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSchemaRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSchemaRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSchemaRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSchemaRequestPrivate object, copying another.

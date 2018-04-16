@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListObjectVersionsResponse
+/*!
+ * \class QtAws::S3::ListObjectVersionsResponse
  *
- * @brief  Handles S3 ListObjectVersions responses.
+ * \brief The ListObjectVersionsResponse class encapsulates S3 ListObjectVersions responses.
  *
- * @see    S3Client::listObjectVersions
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listObjectVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListObjectVersionsRequest * ListObjectVersionsResponse::request() const
     return static_cast<const ListObjectVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 ListObjectVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListObjectVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListObjectVersionsResponsePrivate
+ * \class ListObjectVersionsResponsePrivate
  *
- * @brief  Private implementation for ListObjectVersionsResponse.
+ * \brief Private implementation for ListObjectVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectVersionsResponsePrivate object.
@@ -91,7 +94,7 @@ ListObjectVersionsResponsePrivate::ListObjectVersionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 ListObjectVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

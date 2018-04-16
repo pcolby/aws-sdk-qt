@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RejectVpcPeeringConnectionResponse
+/*!
+ * \class QtAws::EC2::RejectVpcPeeringConnectionResponse
  *
- * @brief  Handles EC2 RejectVpcPeeringConnection responses.
+ * \brief The RejectVpcPeeringConnectionResponse class encapsulates EC2 RejectVpcPeeringConnection responses.
  *
- * @see    EC2Client::rejectVpcPeeringConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::rejectVpcPeeringConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectVpcPeeringConnectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RejectVpcPeeringConnectionRequest * RejectVpcPeeringConnectionResponse::re
     return static_cast<const RejectVpcPeeringConnectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RejectVpcPeeringConnection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RejectVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RejectVpcPeeringConnectionResponsePrivate
+ * \class RejectVpcPeeringConnectionResponsePrivate
  *
- * @brief  Private implementation for RejectVpcPeeringConnectionResponse.
+ * \brief Private implementation for RejectVpcPeeringConnectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectVpcPeeringConnectionResponsePrivate object.
@@ -91,7 +98,7 @@ RejectVpcPeeringConnectionResponsePrivate::RejectVpcPeeringConnectionResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RejectVpcPeeringConnectionResponse element.
  *
  * @param  xml  XML stream to parse.

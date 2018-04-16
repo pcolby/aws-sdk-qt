@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace Batch {
 
-/**
- * @class  DeleteComputeEnvironmentRequest
+/*!
+ * \class QtAws::Batch::DeleteComputeEnvironmentRequest
  *
- * @brief  Implements Batch DeleteComputeEnvironment requests.
+ * \brief The DeleteComputeEnvironmentRequest class encapsulates Batch DeleteComputeEnvironment requests.
  *
- * @see    BatchClient::deleteComputeEnvironment
+ * \ingroup Batch
+ *
+ *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
+ *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
+ *  lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
+ *  batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
+ *  eliminate capacity constraints, reduce compute costs, and deliver results
+ * 
+ *  quickly>
+ * 
+ *  As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
+ *  any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
+ *  quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
+ *  which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
+ *  time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
+ *  AWS
+ *
+ * \sa BatchClient::deleteComputeEnvironment
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteComputeEnvironmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DeleteComputeEnvironmentRequest::DeleteComputeEnvironmentRequest(const DeleteCom
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteComputeEnvironmentRequest object.
  */
 DeleteComputeEnvironmentRequest::DeleteComputeEnvironmentRequest()
@@ -53,13 +70,16 @@ DeleteComputeEnvironmentRequest::DeleteComputeEnvironmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteComputeEnvironmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteComputeEnvironmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNe
     return new DeleteComputeEnvironmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteComputeEnvironmentRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNe
  * @brief  Private implementation for DeleteComputeEnvironmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteComputeEnvironmentRequestPrivate object.
@@ -97,7 +117,7 @@ DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteComputeEnvironmentRequestPrivate object, copying another.

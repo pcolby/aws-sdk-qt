@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace LexRuntimeService {
 
-/**
- * @class  LexRuntimeServiceResponse
+/*!
+ * \class QtAws::LexRuntimeService::LexRuntimeServiceResponse
  *
- * @brief  Handles LexRuntimeService LexRuntimeService responses.
+ * \brief The LexRuntimeServiceResponse class is the base class for all LexRuntimeService responses.
  *
- * @see    LexRuntimeServiceClient::lexRuntimeService
+ * \ingroup LexRuntimeService
  */
 
-/**
+/*!
  * @brief  Constructs a new LexRuntimeServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexRuntimeServiceResponse object.
@@ -63,7 +63,7 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePr
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LexRuntimeServiceResponsePrivate
@@ -92,7 +92,7 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for LexRuntimeServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexRuntimeServiceResponsePrivate object.

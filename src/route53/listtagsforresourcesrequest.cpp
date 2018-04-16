@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListTagsForResourcesRequest
+/*!
+ * \class QtAws::Route53::ListTagsForResourcesRequest
  *
- * @brief  Implements Route53 ListTagsForResources requests.
+ * \brief The ListTagsForResourcesRequest class encapsulates Route53 ListTagsForResources requests.
  *
- * @see    Route53Client::listTagsForResources
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listTagsForResources
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListTagsForResourcesRequest::ListTagsForResourcesRequest(const ListTagsForResour
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourcesRequest object.
  */
 ListTagsForResourcesRequest::ListTagsForResourcesRequest()
@@ -53,13 +56,16 @@ ListTagsForResourcesRequest::ListTagsForResourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForResourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForResourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourcesRequest::response(QNetwor
     return new ListTagsForResourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForResourcesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourcesRequest::response(QNetwor
  * @brief  Private implementation for ListTagsForResourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourcesRequestPrivate object.
@@ -97,7 +103,7 @@ ListTagsForResourcesRequestPrivate::ListTagsForResourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourcesRequestPrivate object, copying another.

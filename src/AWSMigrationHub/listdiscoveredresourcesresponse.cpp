@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ListDiscoveredResourcesResponse
+/*!
+ * \class QtAws::MigrationHub::ListDiscoveredResourcesResponse
  *
- * @brief  Handles MigrationHub ListDiscoveredResources responses.
+ * \brief The ListDiscoveredResourcesResponse class encapsulates MigrationHub ListDiscoveredResources responses.
  *
- * @see    MigrationHubClient::listDiscoveredResources
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::listDiscoveredResources
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDiscoveredResourcesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListDiscoveredResourcesRequest * ListDiscoveredResourcesResponse::request(
     return static_cast<const ListDiscoveredResourcesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub ListDiscoveredResources response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListDiscoveredResourcesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDiscoveredResourcesResponsePrivate
+ * \class ListDiscoveredResourcesResponsePrivate
  *
- * @brief  Private implementation for ListDiscoveredResourcesResponse.
+ * \brief Private implementation for ListDiscoveredResourcesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDiscoveredResourcesResponsePrivate object.
@@ -91,7 +96,7 @@ ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub ListDiscoveredResourcesResponse element.
  *
  * @param  xml  XML stream to parse.

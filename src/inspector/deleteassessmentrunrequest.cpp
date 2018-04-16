@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DeleteAssessmentRunRequest
+/*!
+ * \class QtAws::Inspector::DeleteAssessmentRunRequest
  *
- * @brief  Implements Inspector DeleteAssessmentRun requests.
+ * \brief The DeleteAssessmentRunRequest class encapsulates Inspector DeleteAssessmentRun requests.
  *
- * @see    InspectorClient::deleteAssessmentRun
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::deleteAssessmentRun
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteAssessmentRunRequest::DeleteAssessmentRunRequest(const DeleteAssessmentRun
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentRunRequest object.
  */
 DeleteAssessmentRunRequest::DeleteAssessmentRunRequest()
@@ -53,13 +61,16 @@ DeleteAssessmentRunRequest::DeleteAssessmentRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAssessmentRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAssessmentRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentRunRequest::response(QNetwork
     return new DeleteAssessmentRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAssessmentRunRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentRunRequest::response(QNetwork
  * @brief  Private implementation for DeleteAssessmentRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentRunRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteAssessmentRunRequestPrivate::DeleteAssessmentRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentRunRequestPrivate object, copying another.

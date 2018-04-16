@@ -57,53 +57,61 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ACMPCA
+ * \brief The QtAws::ACMPCA contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ACMPCA {
 
-/**
- * @class  AcmpcaClient
+/*!
+ * \class QtAws::ACMPCA::AcmpcaClient
  *
- * @brief  Client for AWS Certificate Manager Private Certificate Authority (ACM-PCA)
+ * \brief The AcmpcaClient class provides access the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service.
  *
- * You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
- * <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
- * private CA. Use this ARN as input to the <a>GetCertificateAuthorityCsr</a> function to retrieve the certificate signing
- * request (CSR) for your private CA certificate. Sign the CSR using the root or an intermediate CA in your on-premises PKI
- * hierarchy, and call the <a>ImportCertificateAuthorityCertificate</a> to import your signed private CA certificate into
- * ACM PCA.
+ * \ingroup ACMPCA
  *
- * </p
- *
- * Use your private CA to issue and revoke certificates. These are private certificates that identify and secure client
- * computers, servers, applications, services, devices, and users over SSLS/TLS connections within your organization. Call
- * the <a>IssueCertificate</a> function to issue a certificate. Call the <a>RevokeCertificate</a> function to revoke a
- * certificate.
- *
- * </p <note>
- *
- * Certificates issued by your private CA can be trusted only within your organization, not
- *
- * publicly> </note>
- *
- * Your private CA can optionally create a certificate revocation list (CRL) to track the certificates you revoke. To
- * create a CRL, you must specify a <a>RevocationConfiguration</a> object when you call the
- * <a>CreateCertificateAuthority</a> function. ACM PCA writes the CRL to an S3 bucket that you specify. You must specify a
- * bucket policy that grants ACM PCA write permission.
- *
- * </p
- *
- * You can also call the <a>CreateCertificateAuthorityAuditReport</a> to create an optional audit report that lists every
- * time the CA private key is used. The private key is used for signing when the <b>IssueCertificate</b> or
- * <b>RevokeCertificate</b> function is called.
+ *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
+ *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
+ *  private CA. Use this ARN as input to the <a>GetCertificateAuthorityCsr</a> function to retrieve the certificate signing
+ *  request (CSR) for your private CA certificate. Sign the CSR using the root or an intermediate CA in your on-premises PKI
+ *  hierarchy, and call the <a>ImportCertificateAuthorityCertificate</a> to import your signed private CA certificate into
+ *  ACM PCA.
+ * 
+ *  </p
+ * 
+ *  Use your private CA to issue and revoke certificates. These are private certificates that identify and secure client
+ *  computers, servers, applications, services, devices, and users over SSLS/TLS connections within your organization. Call
+ *  the <a>IssueCertificate</a> function to issue a certificate. Call the <a>RevokeCertificate</a> function to revoke a
+ *  certificate.
+ * 
+ *  </p <note>
+ * 
+ *  Certificates issued by your private CA can be trusted only within your organization, not
+ * 
+ *  publicly> </note>
+ * 
+ *  Your private CA can optionally create a certificate revocation list (CRL) to track the certificates you revoke. To
+ *  create a CRL, you must specify a <a>RevocationConfiguration</a> object when you call the
+ *  <a>CreateCertificateAuthority</a> function. ACM PCA writes the CRL to an S3 bucket that you specify. You must specify a
+ *  bucket policy that grants ACM PCA write permission.
+ * 
+ *  </p
+ * 
+ *  You can also call the <a>CreateCertificateAuthorityAuditReport</a> to create an optional audit report that lists every
+ *  time the CA private key is used. The private key is used for signing when the <b>IssueCertificate</b> or
+ *  <b>RevokeCertificate</b> function is called.
  */
 
-/**
- * @brief  Constructs a new AcmpcaClient object.
+/*!
+ * \brief Constructs a AcmpcaClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AcmpcaClient::AcmpcaClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -122,21 +130,16 @@ AcmpcaClient::AcmpcaClient(
     d->serviceName = QStringLiteral("acm-pca");
 }
 
-/**
- * @brief  Constructs a new AcmpcaClient object.
+/*!
+ * \overload AcmpcaClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AcmpcaClient::AcmpcaClient(
     const QUrl &endpoint,
@@ -155,7 +158,7 @@ AcmpcaClient::AcmpcaClient(
     d->serviceName = QStringLiteral("acm-pca");
 }
 
-/**
+/*!
  * Creates a private subordinate certificate authority (CA). You must specify the CA configuration, the revocation
  * configuration, the CA type, and an optional idempotency token. The CA configuration specifies the name of the algorithm
  * and key size to be used to create the CA private key, the type of signing algorithm that the CA uses to sign, and X.500
@@ -175,7 +178,7 @@ CreateCertificateAuthorityResponse * AcmpcaClient::createCertificateAuthority(co
     return qobject_cast<CreateCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an audit report that lists every time that the your CA private key is used. The report is saved in the Amazon S3
  * bucket that you specify on input. The <a>IssueCertificate</a> and <a>RevokeCertificate</a> functions use the private
  * key. You can generate a new report every 30
@@ -191,7 +194,7 @@ CreateCertificateAuthorityAuditReportResponse * AcmpcaClient::createCertificateA
     return qobject_cast<CreateCertificateAuthorityAuditReportResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the private certificate authority (CA) that you created or started to create by calling the
  * <a>CreateCertificateAuthority</a> function. This action requires that you enter an ARN (Amazon Resource Name) for the
  * private CA that you want to delete. You can find the ARN by calling the <a>ListCertificateAuthorities</a> function. You
@@ -213,7 +216,7 @@ DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(co
     return qobject_cast<DeleteCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about your private certificate authority (CA). You specify the private CA on input by its ARN (Amazon
  * Resource Name). The output contains the status of your CA. This can be any of the following:
  *
@@ -254,7 +257,7 @@ DescribeCertificateAuthorityResponse * AcmpcaClient::describeCertificateAuthorit
     return qobject_cast<DescribeCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about a specific audit report created by calling the <a>CreateCertificateAuthorityAuditReport</a>
  * function. Audit information is created every time the certificate authority (CA) private key is used. The private key is
  * used when you call the <a>IssueCertificate</a> function or the <a>RevokeCertificate</a> function.
@@ -270,7 +273,7 @@ DescribeCertificateAuthorityAuditReportResponse * AcmpcaClient::describeCertific
     return qobject_cast<DescribeCertificateAuthorityAuditReportResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a certificate from your private CA. The ARN of the certificate is returned when you call the
  * <a>IssueCertificate</a> function. You must specify both the ARN of your private CA and the ARN of the issued certificate
  * when calling the <b>GetCertificate</b> function. You can retrieve the certificate if it is in the <b>ISSUED</b> state.
@@ -288,7 +291,7 @@ GetCertificateResponse * AcmpcaClient::getCertificate(const GetCertificateReques
     return qobject_cast<GetCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the certificate and certificate chain for your private certificate authority (CA). Both the certificate and
  * the chain are base64 PEM-encoded. The chain does not include the CA certificate. Each certificate in the chain signs the
  * one before it.
@@ -304,7 +307,7 @@ GetCertificateAuthorityCertificateResponse * AcmpcaClient::getCertificateAuthori
     return qobject_cast<GetCertificateAuthorityCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the certificate signing request (CSR) for your private certificate authority (CA). The CSR is created when you
  * call the <a>CreateCertificateAuthority</a> function. Take the CSR to your on-premises X.509 infrastructure and sign it
  * by using your root or a subordinate CA. Then import the signed certificate back into ACM PCA by calling the
@@ -321,7 +324,7 @@ GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(co
     return qobject_cast<GetCertificateAuthorityCsrResponse *>(send(request));
 }
 
-/**
+/*!
  * Imports your signed private CA certificate into ACM PCA. Before you can call this function, you must create the private
  * certificate authority by calling the <a>CreateCertificateAuthority</a> function. You must then generate a certificate
  * signing request (CSR) by calling the <a>GetCertificateAuthorityCsr</a> function. Take the CSR to your on-premises CA and
@@ -353,7 +356,7 @@ ImportCertificateAuthorityCertificateResponse * AcmpcaClient::importCertificateA
     return qobject_cast<ImportCertificateAuthorityCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Uses your private certificate authority (CA) to issue a client certificate. This function returns the Amazon Resource
  * Name (ARN) of the certificate. You can retrieve the certificate by calling the <a>GetCertificate</a> function and
  * specifying the ARN.
@@ -374,7 +377,7 @@ IssueCertificateResponse * AcmpcaClient::issueCertificate(const IssueCertificate
     return qobject_cast<IssueCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the private certificate authorities that you created by using the <a>CreateCertificateAuthority</a>
  *
  * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
@@ -388,7 +391,7 @@ ListCertificateAuthoritiesResponse * AcmpcaClient::listCertificateAuthorities(co
     return qobject_cast<ListCertificateAuthoritiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags, if any, that are associated with your private CA. Tags are labels that you can use to identify and
  * organize your CAs. Each tag consists of a key and an optional value. Call the <a>TagCertificateAuthority</a> function to
  * add one or more tags to your CA. Call the <a>UntagCertificateAuthority</a> function to remove tags.
@@ -404,7 +407,7 @@ ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes a certificate that you issued by calling the <a>IssueCertificate</a> function. If you enable a certificate
  * revocation list (CRL) when you create or update your private CA, information about the revoked certificates will be
  * included in the CRL. ACM PCA writes the CRL to an S3 bucket that you specify. For more information about revocation, see
@@ -422,7 +425,7 @@ RevokeCertificateResponse * AcmpcaClient::revokeCertificate(const RevokeCertific
     return qobject_cast<RevokeCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more tags to your private CA. Tags are labels that you can use to identify and organize your AWS resources.
  * Each tag consists of a key and an optional value. You specify the private CA on input by its Amazon Resource Name (ARN).
  * You specify the tag by using a key-value pair. You can apply a tag to just one private CA if you want to identify a
@@ -441,7 +444,7 @@ TagCertificateAuthorityResponse * AcmpcaClient::tagCertificateAuthority(const Ta
     return qobject_cast<TagCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove one or more tags from your private CA. A tag consists of a key-value pair. If you do not specify the value
  * portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the
  * tag is removed only if it is associated with the specified value. To add tags to a private CA, use the
@@ -458,7 +461,7 @@ UntagCertificateAuthorityResponse * AcmpcaClient::untagCertificateAuthority(cons
     return qobject_cast<UntagCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the status or configuration of a private certificate authority (CA). Your private CA must be in the <b>
  * <code>ACTIVE</code> </b> or <b> <code>DISABLED</code> </b> state before you can update it. You can disable a private CA
  * that is in the <b> <code>ACTIVE</code> </b> state or make a CA that is in the <b> <code>DISABLED</code> </b> state
@@ -475,7 +478,7 @@ UpdateCertificateAuthorityResponse * AcmpcaClient::updateCertificateAuthority(co
     return qobject_cast<UpdateCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AcmpcaClientPrivate
@@ -483,7 +486,7 @@ UpdateCertificateAuthorityResponse * AcmpcaClient::updateCertificateAuthority(co
  * @brief  Private implementation for AcmpcaClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcmpcaClientPrivate object.

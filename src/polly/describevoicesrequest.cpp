@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  DescribeVoicesRequest
+/*!
+ * \class QtAws::Polly::DescribeVoicesRequest
  *
- * @brief  Implements Polly DescribeVoices requests.
+ * \brief The DescribeVoicesRequest class encapsulates Polly DescribeVoices requests.
  *
- * @see    PollyClient::describeVoices
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::describeVoices
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVoicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DescribeVoicesRequest::DescribeVoicesRequest(const DescribeVoicesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVoicesRequest object.
  */
 DescribeVoicesRequest::DescribeVoicesRequest()
@@ -53,13 +63,16 @@ DescribeVoicesRequest::DescribeVoicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVoicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVoicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply
     return new DescribeVoicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVoicesRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeVoicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVoicesRequestPrivate object.
@@ -97,7 +110,7 @@ DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVoicesRequestPrivate object, copying another.

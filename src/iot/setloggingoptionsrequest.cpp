@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  SetLoggingOptionsRequest
+/*!
+ * \class QtAws::IoT::SetLoggingOptionsRequest
  *
- * @brief  Implements IoT SetLoggingOptions requests.
+ * \brief The SetLoggingOptionsRequest class encapsulates IoT SetLoggingOptions requests.
  *
- * @see    IoTClient::setLoggingOptions
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::setLoggingOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new SetLoggingOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SetLoggingOptionsRequest::SetLoggingOptionsRequest(const SetLoggingOptionsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetLoggingOptionsRequest object.
  */
 SetLoggingOptionsRequest::SetLoggingOptionsRequest()
@@ -53,13 +67,16 @@ SetLoggingOptionsRequest::SetLoggingOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetLoggingOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetLoggingOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkRe
     return new SetLoggingOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetLoggingOptionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkRe
  * @brief  Private implementation for SetLoggingOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetLoggingOptionsRequestPrivate object.
@@ -97,7 +114,7 @@ SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetLoggingOptionsRequestPrivate object, copying another.

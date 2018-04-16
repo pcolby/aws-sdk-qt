@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  AcceptCertificateTransferResponse
+/*!
+ * \class QtAws::IoT::AcceptCertificateTransferResponse
  *
- * @brief  Handles IoT AcceptCertificateTransfer responses.
+ * \brief The AcceptCertificateTransferResponse class encapsulates IoT AcceptCertificateTransfer responses.
  *
- * @see    IoTClient::acceptCertificateTransfer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::acceptCertificateTransfer
  */
 
-/**
+/*!
  * @brief  Constructs a new AcceptCertificateTransferResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const AcceptCertificateTransferRequest * AcceptCertificateTransferResponse::requ
     return static_cast<const AcceptCertificateTransferRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT AcceptCertificateTransfer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void AcceptCertificateTransferResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AcceptCertificateTransferResponsePrivate
+ * \class AcceptCertificateTransferResponsePrivate
  *
- * @brief  Private implementation for AcceptCertificateTransferResponse.
+ * \brief Private implementation for AcceptCertificateTransferResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptCertificateTransferResponsePrivate object.
@@ -91,7 +105,7 @@ AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT AcceptCertificateTransferResponse element.
  *
  * @param  xml  XML stream to parse.

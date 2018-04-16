@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetTriggersRequest
+/*!
+ * \class QtAws::Glue::GetTriggersRequest
  *
- * @brief  Implements Glue GetTriggers requests.
+ * \brief The GetTriggersRequest class encapsulates Glue GetTriggers requests.
  *
- * @see    GlueClient::getTriggers
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getTriggers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTriggersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetTriggersRequest::GetTriggersRequest(const GetTriggersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTriggersRequest object.
  */
 GetTriggersRequest::GetTriggersRequest()
@@ -53,13 +59,16 @@ GetTriggersRequest::GetTriggersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTriggersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTriggersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetTriggersRequest::response(QNetworkReply * 
     return new GetTriggersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTriggersRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetTriggersRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetTriggersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTriggersRequestPrivate object.
@@ -97,7 +106,7 @@ GetTriggersRequestPrivate::GetTriggersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTriggersRequestPrivate object, copying another.

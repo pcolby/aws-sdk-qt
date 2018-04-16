@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  ModifyReplicationGroupShardConfigurationRequest
+/*!
+ * \class QtAws::ElastiCache::ModifyReplicationGroupShardConfigurationRequest
  *
- * @brief  Implements ElastiCache ModifyReplicationGroupShardConfiguration requests.
+ * \brief The ModifyReplicationGroupShardConfigurationRequest class encapsulates ElastiCache ModifyReplicationGroupShardConfiguration requests.
  *
- * @see    ElastiCacheClient::modifyReplicationGroupShardConfiguration
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::modifyReplicationGroupShardConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConf
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequest object.
  */
 ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConfigurationRequest()
@@ -53,13 +70,16 @@ ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConf
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyReplicationGroupShardConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyReplicationGroupShardConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupShardConfigurationReque
     return new ModifyReplicationGroupShardConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyReplicationGroupShardConfigurationRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupShardConfigurationReque
  * @brief  Private implementation for ModifyReplicationGroupShardConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequestPrivate object.
@@ -97,7 +117,7 @@ ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupSh
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequestPrivate object, copying another.

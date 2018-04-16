@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  CreateInstanceSnapshotResponse
+/*!
+ * \class QtAws::Lightsail::CreateInstanceSnapshotResponse
  *
- * @brief  Handles Lightsail CreateInstanceSnapshot responses.
+ * \brief The CreateInstanceSnapshotResponse class encapsulates Lightsail CreateInstanceSnapshot responses.
  *
- * @see    LightsailClient::createInstanceSnapshot
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::createInstanceSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInstanceSnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const CreateInstanceSnapshotRequest * CreateInstanceSnapshotResponse::request() 
     return static_cast<const CreateInstanceSnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lightsail CreateInstanceSnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void CreateInstanceSnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateInstanceSnapshotResponsePrivate
+ * \class CreateInstanceSnapshotResponsePrivate
  *
- * @brief  Private implementation for CreateInstanceSnapshotResponse.
+ * \brief Private implementation for CreateInstanceSnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInstanceSnapshotResponsePrivate object.
@@ -91,7 +110,7 @@ CreateInstanceSnapshotResponsePrivate::CreateInstanceSnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lightsail CreateInstanceSnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

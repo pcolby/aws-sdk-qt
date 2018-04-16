@@ -37,30 +37,38 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Polly
+ * \brief The QtAws::Polly contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  PollyClient
+/*!
+ * \class QtAws::Polly::PollyClient
  *
- * @brief  Client for Amazon Polly
+ * \brief The PollyClient class provides access the Amazon Polly service.
  *
- * Amazon Polly is a web service that makes it easy to synthesize speech from
+ * \ingroup Polly
  *
- * text>
- *
- * The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
- * Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
- * for your application
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
  */
 
-/**
- * @brief  Constructs a new PollyClient object.
+/*!
+ * \brief Constructs a PollyClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 PollyClient::PollyClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -79,21 +87,16 @@ PollyClient::PollyClient(
     d->serviceName = QStringLiteral("polly");
 }
 
-/**
- * @brief  Constructs a new PollyClient object.
+/*!
+ * \overload PollyClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 PollyClient::PollyClient(
     const QUrl &endpoint,
@@ -112,7 +115,7 @@ PollyClient::PollyClient(
     d->serviceName = QStringLiteral("polly");
 }
 
-/**
+/*!
  * Deletes the specified pronunciation lexicon stored in an AWS Region. A lexicon which has been deleted is not available
  * for speech synthesis, nor is it possible to retrieve it using either the <code>GetLexicon</code> or
  * <code>ListLexicon</code>
@@ -132,7 +135,7 @@ DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &r
     return qobject_cast<DeleteLexiconResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the list of voices that are available for use when requesting speech synthesis. Each voice speaks a specified
  * language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.
  *
@@ -167,7 +170,7 @@ DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest
     return qobject_cast<DescribeVoicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
  *
@@ -182,7 +185,7 @@ GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
     return qobject_cast<GetLexiconResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
  *
@@ -197,7 +200,7 @@ ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &requ
     return qobject_cast<ListLexiconsResponse *>(send(request));
 }
 
-/**
+/*!
  * Stores a pronunciation lexicon in an AWS Region. If a lexicon with the same name already exists in the region, it is
  * overwritten by the new lexicon. Lexicon operations have eventual consistency, therefore, it might take some time before
  * the lexicon is available to the SynthesizeSpeech
@@ -217,7 +220,7 @@ PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
     return qobject_cast<PutLexiconResponse *>(send(request));
 }
 
-/**
+/*!
  * Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes. SSML input must be valid, well-formed SSML. Some
  * alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices)
  * unless phoneme mapping is used. For more information, see <a
@@ -234,7 +237,7 @@ SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechR
     return qobject_cast<SynthesizeSpeechResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PollyClientPrivate
@@ -242,7 +245,7 @@ SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechR
  * @brief  Private implementation for PollyClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PollyClientPrivate object.

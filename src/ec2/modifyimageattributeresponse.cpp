@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyImageAttributeResponse
+/*!
+ * \class QtAws::EC2::ModifyImageAttributeResponse
  *
- * @brief  Handles EC2 ModifyImageAttribute responses.
+ * \brief The ModifyImageAttributeResponse class encapsulates EC2 ModifyImageAttribute responses.
  *
- * @see    EC2Client::modifyImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyImageAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyImageAttributeRequest * ModifyImageAttributeResponse::request() cons
     return static_cast<const ModifyImageAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyImageAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyImageAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyImageAttributeResponsePrivate
+ * \class ModifyImageAttributeResponsePrivate
  *
- * @brief  Private implementation for ModifyImageAttributeResponse.
+ * \brief Private implementation for ModifyImageAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyImageAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyImageAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

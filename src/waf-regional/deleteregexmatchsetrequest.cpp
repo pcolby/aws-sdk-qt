@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteRegexMatchSetRequest
+/*!
+ * \class QtAws::WAFRegional::DeleteRegexMatchSetRequest
  *
- * @brief  Implements WAFRegional DeleteRegexMatchSet requests.
+ * \brief The DeleteRegexMatchSetRequest class encapsulates WAFRegional DeleteRegexMatchSet requests.
  *
- * @see    WAFRegionalClient::deleteRegexMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteRegexMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRegexMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest(const DeleteRegexMatchSet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRegexMatchSetRequest object.
  */
 DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest()
@@ -53,13 +63,16 @@ DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRegexMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRegexMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
     return new DeleteRegexMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRegexMatchSetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
  * @brief  Private implementation for DeleteRegexMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRegexMatchSetRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRegexMatchSetRequestPrivate object, copying another.

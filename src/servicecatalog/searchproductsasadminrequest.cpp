@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  SearchProductsAsAdminRequest
+/*!
+ * \class QtAws::ServiceCatalog::SearchProductsAsAdminRequest
  *
- * @brief  Implements ServiceCatalog SearchProductsAsAdmin requests.
+ * \brief The SearchProductsAsAdminRequest class encapsulates ServiceCatalog SearchProductsAsAdmin requests.
  *
- * @see    ServiceCatalogClient::searchProductsAsAdmin
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::searchProductsAsAdmin
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProductsAsAdminRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ SearchProductsAsAdminRequest::SearchProductsAsAdminRequest(const SearchProductsA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchProductsAsAdminRequest object.
  */
 SearchProductsAsAdminRequest::SearchProductsAsAdminRequest()
@@ -53,13 +62,16 @@ SearchProductsAsAdminRequest::SearchProductsAsAdminRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchProductsAsAdminRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchProductsAsAdminResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * SearchProductsAsAdminRequest::response(QNetwo
     return new SearchProductsAsAdminResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchProductsAsAdminRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * SearchProductsAsAdminRequest::response(QNetwo
  * @brief  Private implementation for SearchProductsAsAdminRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProductsAsAdminRequestPrivate object.
@@ -97,7 +109,7 @@ SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProductsAsAdminRequestPrivate object, copying another.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GlobalSignOutRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GlobalSignOutRequest
  *
- * @brief  Implements CognitoIdentityProvider GlobalSignOut requests.
+ * \brief The GlobalSignOutRequest class encapsulates CognitoIdentityProvider GlobalSignOut requests.
  *
- * @see    CognitoIdentityProviderClient::globalSignOut
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::globalSignOut
  */
 
-/**
+/*!
  * @brief  Constructs a new GlobalSignOutRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GlobalSignOutRequest::GlobalSignOutRequest(const GlobalSignOutRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GlobalSignOutRequest object.
  */
 GlobalSignOutRequest::GlobalSignOutRequest()
@@ -53,13 +66,16 @@ GlobalSignOutRequest::GlobalSignOutRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GlobalSignOutRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GlobalSignOutResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply 
     return new GlobalSignOutResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GlobalSignOutRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply 
  * @brief  Private implementation for GlobalSignOutRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlobalSignOutRequestPrivate object.
@@ -97,7 +113,7 @@ GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlobalSignOutRequestPrivate object, copying another.

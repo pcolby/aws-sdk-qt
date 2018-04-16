@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DescribeHapgResponse
+/*!
+ * \class QtAws::CloudHSM::DescribeHapgResponse
  *
- * @brief  Handles CloudHSM DescribeHapg responses.
+ * \brief The DescribeHapgResponse class encapsulates CloudHSM DescribeHapg responses.
  *
- * @see    CloudHSMClient::describeHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::describeHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeHapgResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const DescribeHapgRequest * DescribeHapgResponse::request() const
     return static_cast<const DescribeHapgRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM DescribeHapg response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void DescribeHapgResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeHapgResponsePrivate
+ * \class DescribeHapgResponsePrivate
  *
- * @brief  Private implementation for DescribeHapgResponse.
+ * \brief Private implementation for DescribeHapgResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHapgResponsePrivate object.
@@ -91,7 +106,7 @@ DescribeHapgResponsePrivate::DescribeHapgResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM DescribeHapgResponse element.
  *
  * @param  xml  XML stream to parse.

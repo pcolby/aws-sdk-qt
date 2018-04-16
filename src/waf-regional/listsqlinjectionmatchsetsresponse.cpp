@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  ListSqlInjectionMatchSetsResponse
+/*!
+ * \class QtAws::WAFRegional::ListSqlInjectionMatchSetsResponse
  *
- * @brief  Handles WAFRegional ListSqlInjectionMatchSets responses.
+ * \brief The ListSqlInjectionMatchSetsResponse class encapsulates WAFRegional ListSqlInjectionMatchSets responses.
  *
- * @see    WAFRegionalClient::listSqlInjectionMatchSets
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::listSqlInjectionMatchSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSqlInjectionMatchSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListSqlInjectionMatchSetsRequest * ListSqlInjectionMatchSetsResponse::requ
     return static_cast<const ListSqlInjectionMatchSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional ListSqlInjectionMatchSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListSqlInjectionMatchSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListSqlInjectionMatchSetsResponsePrivate
+ * \class ListSqlInjectionMatchSetsResponsePrivate
  *
- * @brief  Private implementation for ListSqlInjectionMatchSetsResponse.
+ * \brief Private implementation for ListSqlInjectionMatchSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSqlInjectionMatchSetsResponsePrivate object.
@@ -91,7 +101,7 @@ ListSqlInjectionMatchSetsResponsePrivate::ListSqlInjectionMatchSetsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional ListSqlInjectionMatchSetsResponse element.
  *
  * @param  xml  XML stream to parse.

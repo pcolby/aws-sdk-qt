@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListTagsForResourceRequest
+/*!
+ * \class QtAws::CloudHSM::ListTagsForResourceRequest
  *
- * @brief  Implements CloudHSM ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class encapsulates CloudHSM ListTagsForResource requests.
  *
- * @see    CloudHSMClient::listTagsForResource
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
@@ -53,13 +68,16 @@ ListTagsForResourceRequest::ListTagsForResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
     return new ListTagsForResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForResourceRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  * @brief  Private implementation for ListTagsForResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
@@ -97,7 +115,7 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.

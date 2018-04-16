@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateModelResponse
+/*!
+ * \class QtAws::APIGateway::CreateModelResponse
  *
- * @brief  Handles APIGateway CreateModel responses.
+ * \brief The CreateModelResponse class encapsulates APIGateway CreateModel responses.
  *
- * @see    APIGatewayClient::createModel
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createModel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateModelRequest * CreateModelResponse::request() const
     return static_cast<const CreateModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateModelResponsePrivate
+ * \class CreateModelResponsePrivate
  *
- * @brief  Private implementation for CreateModelResponse.
+ * \brief Private implementation for CreateModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateModelResponsePrivate object.
@@ -91,7 +99,7 @@ CreateModelResponsePrivate::CreateModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateModelResponse element.
  *
  * @param  xml  XML stream to parse.

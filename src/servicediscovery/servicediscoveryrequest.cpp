@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ServiceDiscoveryRequest
+/*!
+ * \class QtAws::ServiceDiscovery::ServiceDiscoveryRequest
  *
- * @brief  Interface class for providing ServiceDiscovery requests
+ * \brief The ServiceDiscoveryRequest class is the base class for all ServiceDiscovery requests.
+ *
+ * \ingroup ServiceDiscovery
  */
 
-
-/**
+/*!
  * @brief  Constructs a new ServiceDiscoveryRequest object.
  *
  * @param  action  The ServiceDiscovery action to request.
@@ -41,7 +42,7 @@ ServiceDiscoveryRequest::ServiceDiscoveryRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ServiceDiscoveryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ ServiceDiscoveryRequest::ServiceDiscoveryRequest(const ServiceDiscoveryRequest &
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ ServiceDiscoveryRequest& ServiceDiscoveryRequest::operator=(const ServiceDiscove
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceDiscoveryRequest object.
@@ -85,10 +86,8 @@ ServiceDiscoveryRequest::ServiceDiscoveryRequest(ServiceDiscoveryRequestPrivate 
 
 }
 
-/**
- * @brief  Get the ServiceDiscovery action to be performed by this request.
- *
- * @return The ServiceDiscovery action to be performed by this request.
+/*!
+ * \brief Returns the ServiceDiscovery action to be performed by this request.
  */
 ServiceDiscoveryRequest::Action ServiceDiscoveryRequest::action() const
 {
@@ -96,20 +95,16 @@ ServiceDiscoveryRequest::Action ServiceDiscoveryRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the ServiceDiscovery action to be performed by this request.
- *
- * @return The name of the ServiceDiscovery action to be performed by this request.
+/*!
+ * \brief Returns the name of the ServiceDiscovery action to be performed by this request.
  */
 QString ServiceDiscoveryRequest::actionString() const
 {
     return ServiceDiscoveryRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the ServiceDiscovery API version implemented by this request.
- *
- * @return The ServiceDiscovery API version implmented by this request.
+/*!
+ * \brief Returns the ServiceDiscovery API version implemented by this request.
  */
 QString ServiceDiscoveryRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString ServiceDiscoveryRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the ServiceDiscovery action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the ServiceDiscovery action to be performed by this request to \a action.
  */
 void ServiceDiscoveryRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void ServiceDiscoveryRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the ServiceDiscovery API version to include in this request.
- *
- * @param  version  The ServiceDiscovery API version to include in this request.
+/*!
+ * Set the ServiceDiscovery API version to include in this request to \a version.
  */
 void ServiceDiscoveryRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void ServiceDiscoveryRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool ServiceDiscoveryRequest::operator==(const ServiceDiscoveryRequest &other) const
 {
@@ -159,7 +146,7 @@ bool ServiceDiscoveryRequest::operator==(const ServiceDiscoveryRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid ServiceDiscovery queue name.
  *
  * @par From ServiceDiscovery FAQs:
@@ -178,12 +165,10 @@ bool ServiceDiscoveryRequest::operator==(const ServiceDiscoveryRequest &other) c
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int ServiceDiscoveryRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int ServiceDiscoveryRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void ServiceDiscoveryRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void ServiceDiscoveryRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this ServiceDiscovery request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant ServiceDiscoveryRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant ServiceDiscoveryRequest::parameter(const QString &name, const QVariant 
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this ServiceDiscovery request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &ServiceDiscoveryRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &ServiceDiscoveryRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this ServiceDiscovery request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void ServiceDiscoveryRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void ServiceDiscoveryRequest::setParameter(const QString &name, const QVariant &
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this ServiceDiscovery request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void ServiceDiscoveryRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void ServiceDiscoveryRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this ServiceDiscovery request.
+/*!
+ * \brief Returns a network request for this ServiceDiscovery request using the given \a endpoint.
  *
  * This ServiceDiscovery implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this ServiceDiscovery request using the given \a endpoint.
  */
 QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) c
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ServiceDiscoveryRequestPrivate
+ * \class  ServiceDiscoveryRequestPrivate
  *
- * @brief  Private implementation for ServiceDiscoveryRequest.
+ * \brief  Private implementation for ServiceDiscoveryRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ServiceDiscoveryRequestPrivate object.
- *
- * @param  action  ServiceDiscovery action being performed by the \a q request.
- * @param  q       Pointer to this object's public ServiceDiscoveryRequest instance.
+ * \brief Constructs a new ServiceDiscoveryRequestPrivate object.
  */
 ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDiscoveryRequest::Action action, ServiceDiscoveryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDisc
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ServiceDiscoveryRequestPrivate object from an existing one.
+ * \brief Constructs a new ServiceDiscoveryRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the ServiceDiscoveryRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ServiceDiscoveryRequest instance.
  */
 ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDiscoveryRequestPrivate &other,
                                      ServiceDiscoveryRequest * const q)
@@ -312,14 +275,14 @@ ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDisc
 
 }
 
-/**
- * @brief  Convert and ServiceDiscovery action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts ServiceDiscoveryRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ServiceDiscovery service's Action
  * query parameters.
- *
- * @param  action  ServiceDiscovery action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

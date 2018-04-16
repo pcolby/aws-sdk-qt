@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DeleteFileSystemRequest
+/*!
+ * \class QtAws::EFS::DeleteFileSystemRequest
  *
- * @brief  Implements EFS DeleteFileSystem requests.
+ * \brief The DeleteFileSystemRequest class encapsulates EFS DeleteFileSystem requests.
  *
- * @see    EFSClient::deleteFileSystem
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::deleteFileSystem
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFileSystemRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteFileSystemRequest::DeleteFileSystemRequest(const DeleteFileSystemRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFileSystemRequest object.
  */
 DeleteFileSystemRequest::DeleteFileSystemRequest()
@@ -53,13 +62,16 @@ DeleteFileSystemRequest::DeleteFileSystemRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFileSystemRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFileSystemResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkRep
     return new DeleteFileSystemResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFileSystemRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteFileSystemRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFileSystemRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFileSystemRequestPrivate object, copying another.

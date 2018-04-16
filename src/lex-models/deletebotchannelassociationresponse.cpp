@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteBotChannelAssociationResponse
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationResponse
  *
- * @brief  Handles LexModelBuildingService DeleteBotChannelAssociation responses.
+ * \brief The DeleteBotChannelAssociationResponse class encapsulates LexModelBuildingService DeleteBotChannelAssociation responses.
  *
- * @see    LexModelBuildingServiceClient::deleteBotChannelAssociation
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteBotChannelAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotChannelAssociationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteBotChannelAssociationRequest * DeleteBotChannelAssociationResponse::
     return static_cast<const DeleteBotChannelAssociationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService DeleteBotChannelAssociation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteBotChannelAssociationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBotChannelAssociationResponsePrivate
+ * \class DeleteBotChannelAssociationResponsePrivate
  *
- * @brief  Private implementation for DeleteBotChannelAssociationResponse.
+ * \brief Private implementation for DeleteBotChannelAssociationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotChannelAssociationResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService DeleteBotChannelAssociationResponse element.
  *
  * @param  xml  XML stream to parse.

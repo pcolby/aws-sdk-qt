@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  CreateOriginEndpointResponse
+/*!
+ * \class QtAws::MediaPackage::CreateOriginEndpointResponse
  *
- * @brief  Handles MediaPackage CreateOriginEndpoint responses.
+ * \brief The CreateOriginEndpointResponse class encapsulates MediaPackage CreateOriginEndpoint responses.
  *
- * @see    MediaPackageClient::createOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::createOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateOriginEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateOriginEndpointRequest * CreateOriginEndpointResponse::request() cons
     return static_cast<const CreateOriginEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaPackage CreateOriginEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateOriginEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateOriginEndpointResponsePrivate
+ * \class CreateOriginEndpointResponsePrivate
  *
- * @brief  Private implementation for CreateOriginEndpointResponse.
+ * \brief Private implementation for CreateOriginEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOriginEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ CreateOriginEndpointResponsePrivate::CreateOriginEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaPackage CreateOriginEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

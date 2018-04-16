@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  TagResourceResponse
+/*!
+ * \class QtAws::AppStream::TagResourceResponse
  *
- * @brief  Handles AppStream TagResource responses.
+ * \brief The TagResourceResponse class encapsulates AppStream TagResource responses.
  *
- * @see    AppStreamClient::tagResource
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const TagResourceRequest * TagResourceResponse::request() const
     return static_cast<const TagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream TagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TagResourceResponsePrivate
+ * \class TagResourceResponsePrivate
  *
- * @brief  Private implementation for TagResourceResponse.
+ * \brief Private implementation for TagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceResponsePrivate object.
@@ -91,7 +97,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream TagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

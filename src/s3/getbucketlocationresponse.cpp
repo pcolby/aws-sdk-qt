@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketLocationResponse
+/*!
+ * \class QtAws::S3::GetBucketLocationResponse
  *
- * @brief  Handles S3 GetBucketLocation responses.
+ * \brief The GetBucketLocationResponse class encapsulates S3 GetBucketLocation responses.
  *
- * @see    S3Client::getBucketLocation
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketLocation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLocationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketLocationRequest * GetBucketLocationResponse::request() const
     return static_cast<const GetBucketLocationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketLocation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketLocationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketLocationResponsePrivate
+ * \class GetBucketLocationResponsePrivate
  *
- * @brief  Private implementation for GetBucketLocationResponse.
+ * \brief Private implementation for GetBucketLocationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLocationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketLocationResponsePrivate::GetBucketLocationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketLocationResponse element.
  *
  * @param  xml  XML stream to parse.

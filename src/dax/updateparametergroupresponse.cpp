@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UpdateParameterGroupResponse
+/*!
+ * \class QtAws::DAX::UpdateParameterGroupResponse
  *
- * @brief  Handles DAX UpdateParameterGroup responses.
+ * \brief The UpdateParameterGroupResponse class encapsulates DAX UpdateParameterGroup responses.
  *
- * @see    DAXClient::updateParameterGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::updateParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateParameterGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateParameterGroupRequest * UpdateParameterGroupResponse::request() cons
     return static_cast<const UpdateParameterGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX UpdateParameterGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateParameterGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateParameterGroupResponsePrivate
+ * \class UpdateParameterGroupResponsePrivate
  *
- * @brief  Private implementation for UpdateParameterGroupResponse.
+ * \brief Private implementation for UpdateParameterGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateParameterGroupResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX UpdateParameterGroupResponse element.
  *
  * @param  xml  XML stream to parse.

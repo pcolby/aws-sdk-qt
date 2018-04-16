@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudWatch {
 
-/**
- * @class  CloudWatchResponse
+/*!
+ * \class QtAws::CloudWatch::CloudWatchResponse
  *
- * @brief  Handles CloudWatch CloudWatch responses.
+ * \brief The CloudWatchResponse class is the base class for all CloudWatch responses.
  *
- * @see    CloudWatchClient::cloudWatch
+ * \ingroup CloudWatch
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudWatchResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudWatchResponse::CloudWatchResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudWatchResponse object.
@@ -63,7 +63,7 @@ CloudWatchResponse::CloudWatchResponse(CloudWatchResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudWatchResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudWatchResponsePrivate
@@ -92,7 +92,7 @@ void CloudWatchResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudWatchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudWatchResponsePrivate object.

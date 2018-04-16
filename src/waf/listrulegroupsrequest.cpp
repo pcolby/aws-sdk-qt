@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListRuleGroupsRequest
+/*!
+ * \class QtAws::WAF::ListRuleGroupsRequest
  *
- * @brief  Implements WAF ListRuleGroups requests.
+ * \brief The ListRuleGroupsRequest class encapsulates WAF ListRuleGroups requests.
  *
- * @see    WAFClient::listRuleGroups
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listRuleGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRuleGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListRuleGroupsRequest::ListRuleGroupsRequest(const ListRuleGroupsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRuleGroupsRequest object.
  */
 ListRuleGroupsRequest::ListRuleGroupsRequest()
@@ -53,13 +61,16 @@ ListRuleGroupsRequest::ListRuleGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRuleGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRuleGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListRuleGroupsRequest::response(QNetworkReply
     return new ListRuleGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRuleGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListRuleGroupsRequest::response(QNetworkReply
  * @brief  Private implementation for ListRuleGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRuleGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ ListRuleGroupsRequestPrivate::ListRuleGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRuleGroupsRequestPrivate object, copying another.

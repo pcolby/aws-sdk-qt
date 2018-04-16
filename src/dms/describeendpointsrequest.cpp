@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEndpointsRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEndpointsRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeEndpoints requests.
+ * \brief The DescribeEndpointsRequest class encapsulates DatabaseMigrationService DescribeEndpoints requests.
  *
- * @see    DatabaseMigrationServiceClient::describeEndpoints
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEndpointsRequest::DescribeEndpointsRequest(const DescribeEndpointsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointsRequest object.
  */
 DescribeEndpointsRequest::DescribeEndpointsRequest()
@@ -53,13 +67,16 @@ DescribeEndpointsRequest::DescribeEndpointsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEndpointsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEndpointsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
     return new DescribeEndpointsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEndpointsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
  * @brief  Private implementation for DescribeEndpointsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointsRequestPrivate object, copying another.

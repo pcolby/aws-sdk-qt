@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteDhcpOptionsResponse
+/*!
+ * \class QtAws::EC2::DeleteDhcpOptionsResponse
  *
- * @brief  Handles EC2 DeleteDhcpOptions responses.
+ * \brief The DeleteDhcpOptionsResponse class encapsulates EC2 DeleteDhcpOptions responses.
  *
- * @see    EC2Client::deleteDhcpOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteDhcpOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDhcpOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteDhcpOptionsRequest * DeleteDhcpOptionsResponse::request() const
     return static_cast<const DeleteDhcpOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteDhcpOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDhcpOptionsResponsePrivate
+ * \class DeleteDhcpOptionsResponsePrivate
  *
- * @brief  Private implementation for DeleteDhcpOptionsResponse.
+ * \brief Private implementation for DeleteDhcpOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDhcpOptionsResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteDhcpOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

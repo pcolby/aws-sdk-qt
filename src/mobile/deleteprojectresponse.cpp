@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  DeleteProjectResponse
+/*!
+ * \class QtAws::Mobile::DeleteProjectResponse
  *
- * @brief  Handles Mobile DeleteProject responses.
+ * \brief The DeleteProjectResponse class encapsulates Mobile DeleteProject responses.
  *
- * @see    MobileClient::deleteProject
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::deleteProject
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteProjectRequest * DeleteProjectResponse::request() const
     return static_cast<const DeleteProjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile DeleteProject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteProjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteProjectResponsePrivate
+ * \class DeleteProjectResponsePrivate
  *
- * @brief  Private implementation for DeleteProjectResponse.
+ * \brief Private implementation for DeleteProjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProjectResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile DeleteProjectResponse element.
  *
  * @param  xml  XML stream to parse.

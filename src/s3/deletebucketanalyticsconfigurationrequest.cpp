@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketAnalyticsConfigurationRequest
+/*!
+ * \class QtAws::S3::DeleteBucketAnalyticsConfigurationRequest
  *
- * @brief  Implements S3 DeleteBucketAnalyticsConfiguration requests.
+ * \brief The DeleteBucketAnalyticsConfigurationRequest class encapsulates S3 DeleteBucketAnalyticsConfiguration requests.
  *
- * @see    S3Client::deleteBucketAnalyticsConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketAnalyticsConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketAnalyticsConfigurationRequest::DeleteBucketAnalyticsConfigurationReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequest object.
  */
 DeleteBucketAnalyticsConfigurationRequest::DeleteBucketAnalyticsConfigurationRequest()
@@ -53,13 +56,16 @@ DeleteBucketAnalyticsConfigurationRequest::DeleteBucketAnalyticsConfigurationReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketAnalyticsConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketAnalyticsConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketAnalyticsConfigurationRequest::re
     return new DeleteBucketAnalyticsConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketAnalyticsConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketAnalyticsConfigurationRequest::re
  * @brief  Private implementation for DeleteBucketAnalyticsConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigura
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketAnalyticsConfigurationRequestPrivate object, copying another.

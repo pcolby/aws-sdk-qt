@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  CancelStepsRequest
+/*!
+ * \class QtAws::EMR::CancelStepsRequest
  *
- * @brief  Implements EMR CancelSteps requests.
+ * \brief The CancelStepsRequest class encapsulates EMR CancelSteps requests.
  *
- * @see    EMRClient::cancelSteps
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::cancelSteps
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelStepsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CancelStepsRequest::CancelStepsRequest(const CancelStepsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelStepsRequest object.
  */
 CancelStepsRequest::CancelStepsRequest()
@@ -53,13 +59,16 @@ CancelStepsRequest::CancelStepsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelStepsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelStepsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
     return new CancelStepsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelStepsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
  * @brief  Private implementation for CancelStepsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelStepsRequestPrivate object.
@@ -97,7 +106,7 @@ CancelStepsRequestPrivate::CancelStepsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelStepsRequestPrivate object, copying another.

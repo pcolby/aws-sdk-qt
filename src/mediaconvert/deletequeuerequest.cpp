@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DeleteQueueRequest
+/*!
+ * \class QtAws::MediaConvert::DeleteQueueRequest
  *
- * @brief  Implements MediaConvert DeleteQueue requests.
+ * \brief The DeleteQueueRequest class encapsulates MediaConvert DeleteQueue requests.
  *
- * @see    MediaConvertClient::deleteQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::deleteQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteQueueRequest::DeleteQueueRequest(const DeleteQueueRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteQueueRequest object.
  */
 DeleteQueueRequest::DeleteQueueRequest()
@@ -53,13 +56,16 @@ DeleteQueueRequest::DeleteQueueRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteQueueRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteQueueResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
     return new DeleteQueueResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteQueueRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteQueueRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQueueRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQueueRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StartCrawlerRequest
+/*!
+ * \class QtAws::Glue::StartCrawlerRequest
  *
- * @brief  Implements Glue StartCrawler requests.
+ * \brief The StartCrawlerRequest class encapsulates Glue StartCrawler requests.
  *
- * @see    GlueClient::startCrawler
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::startCrawler
  */
 
-/**
+/*!
  * @brief  Constructs a new StartCrawlerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartCrawlerRequest::StartCrawlerRequest(const StartCrawlerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartCrawlerRequest object.
  */
 StartCrawlerRequest::StartCrawlerRequest()
@@ -53,13 +59,16 @@ StartCrawlerRequest::StartCrawlerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartCrawlerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartCrawlerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartCrawlerRequest::response(QNetworkReply *
     return new StartCrawlerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartCrawlerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartCrawlerRequest::response(QNetworkReply *
  * @brief  Private implementation for StartCrawlerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartCrawlerRequestPrivate object.
@@ -97,7 +106,7 @@ StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartCrawlerRequestPrivate object, copying another.

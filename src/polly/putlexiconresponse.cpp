@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  PutLexiconResponse
+/*!
+ * \class QtAws::Polly::PutLexiconResponse
  *
- * @brief  Handles Polly PutLexicon responses.
+ * \brief The PutLexiconResponse class encapsulates Polly PutLexicon responses.
  *
- * @see    PollyClient::putLexicon
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::putLexicon
  */
 
-/**
+/*!
  * @brief  Constructs a new PutLexiconResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const PutLexiconRequest * PutLexiconResponse::request() const
     return static_cast<const PutLexiconRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Polly PutLexicon response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void PutLexiconResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutLexiconResponsePrivate
+ * \class PutLexiconResponsePrivate
  *
- * @brief  Private implementation for PutLexiconResponse.
+ * \brief Private implementation for PutLexiconResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutLexiconResponsePrivate object.
@@ -91,7 +101,7 @@ PutLexiconResponsePrivate::PutLexiconResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Polly PutLexiconResponse element.
  *
  * @param  xml  XML stream to parse.

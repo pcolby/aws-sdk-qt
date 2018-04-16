@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingGroupsResponse
+/*!
+ * \class QtAws::IoT::ListThingGroupsResponse
  *
- * @brief  Handles IoT ListThingGroups responses.
+ * \brief The ListThingGroupsResponse class encapsulates IoT ListThingGroups responses.
  *
- * @see    IoTClient::listThingGroups
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThingGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListThingGroupsRequest * ListThingGroupsResponse::request() const
     return static_cast<const ListThingGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListThingGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListThingGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListThingGroupsResponsePrivate
+ * \class ListThingGroupsResponsePrivate
  *
- * @brief  Private implementation for ListThingGroupsResponse.
+ * \brief Private implementation for ListThingGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingGroupsResponsePrivate object.
@@ -91,7 +105,7 @@ ListThingGroupsResponsePrivate::ListThingGroupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListThingGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListThreatIntelSetsRequest
+/*!
+ * \class QtAws::GuardDuty::ListThreatIntelSetsRequest
  *
- * @brief  Implements GuardDuty ListThreatIntelSets requests.
+ * \brief The ListThreatIntelSetsRequest class encapsulates GuardDuty ListThreatIntelSets requests.
  *
- * @see    GuardDutyClient::listThreatIntelSets
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listThreatIntelSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThreatIntelSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListThreatIntelSetsRequest::ListThreatIntelSetsRequest(const ListThreatIntelSets
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListThreatIntelSetsRequest object.
  */
 ListThreatIntelSetsRequest::ListThreatIntelSetsRequest()
@@ -53,13 +56,16 @@ ListThreatIntelSetsRequest::ListThreatIntelSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListThreatIntelSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListThreatIntelSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListThreatIntelSetsRequest::response(QNetwork
     return new ListThreatIntelSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListThreatIntelSetsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListThreatIntelSetsRequest::response(QNetwork
  * @brief  Private implementation for ListThreatIntelSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThreatIntelSetsRequestPrivate object.
@@ -97,7 +103,7 @@ ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThreatIntelSetsRequestPrivate object, copying another.

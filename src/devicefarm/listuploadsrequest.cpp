@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListUploadsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListUploadsRequest
  *
- * @brief  Implements DeviceFarm ListUploads requests.
+ * \brief The ListUploadsRequest class encapsulates DeviceFarm ListUploads requests.
  *
- * @see    DeviceFarmClient::listUploads
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listUploads
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUploadsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListUploadsRequest::ListUploadsRequest(const ListUploadsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListUploadsRequest object.
  */
 ListUploadsRequest::ListUploadsRequest()
@@ -53,13 +58,16 @@ ListUploadsRequest::ListUploadsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListUploadsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListUploadsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListUploadsRequest::response(QNetworkReply * 
     return new ListUploadsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListUploadsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListUploadsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListUploadsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUploadsRequestPrivate object.
@@ -97,7 +105,7 @@ ListUploadsRequestPrivate::ListUploadsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUploadsRequestPrivate object, copying another.

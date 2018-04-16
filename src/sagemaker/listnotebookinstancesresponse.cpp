@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListNotebookInstancesResponse
+/*!
+ * \class QtAws::SageMaker::ListNotebookInstancesResponse
  *
- * @brief  Handles SageMaker ListNotebookInstances responses.
+ * \brief The ListNotebookInstancesResponse class encapsulates SageMaker ListNotebookInstances responses.
  *
- * @see    SageMakerClient::listNotebookInstances
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listNotebookInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ListNotebookInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListNotebookInstancesRequest * ListNotebookInstancesResponse::request() co
     return static_cast<const ListNotebookInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker ListNotebookInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListNotebookInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListNotebookInstancesResponsePrivate
+ * \class ListNotebookInstancesResponsePrivate
  *
- * @brief  Private implementation for ListNotebookInstancesResponse.
+ * \brief Private implementation for ListNotebookInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNotebookInstancesResponsePrivate object.
@@ -91,7 +94,7 @@ ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker ListNotebookInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

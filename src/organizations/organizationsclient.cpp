@@ -106,165 +106,173 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Organizations
+ * \brief The QtAws::Organizations contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Organizations {
 
-/**
- * @class  OrganizationsClient
+/*!
+ * \class QtAws::Organizations::OrganizationsClient
  *
- * @brief  Client for AWS Organizations
+ * \brief The OrganizationsClient class provides access the AWS Organizations service.
  *
- * <fullname>AWS Organizations API Reference</fullname>
+ * \ingroup Organizations
  *
- * AWS Organizations is a web service that enables you to consolidate your multiple AWS accounts into an
- * <i>organization</i> and centrally manage your accounts and their
- *
- * resources>
- *
- * This guide provides descriptions of the Organizations API. For more information about using this service, see the <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">AWS Organizations User
- *
- * Guide</a>>
- *
- * <b>API Version</b>
- *
- * </p
- *
- * This version of the Organizations API Reference documents the Organizations API version
- *
- * 2016-11-28> <note>
- *
- * As an alternative to using the API directly, you can use one of the AWS SDKs, which consist of libraries and sample code
- * for various programming languages and platforms (Java, Ruby, .NET, iOS, Android, and more). The SDKs provide a
- * convenient way to create programmatic access to AWS Organizations. For example, the SDKs take care of cryptographically
- * signing requests, managing errors, and retrying requests automatically. For more information about the AWS SDKs,
- * including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
- *
- * Services</a>> </note>
- *
- * We recommend that you use the AWS SDKs to make programmatic API calls to Organizations. However, you also can use the
- * Organizations Query API to make direct calls to the Organizations web service. To learn more about the Organizations
- * Query API, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_query-requests.html">Making Query
- * Requests</a> in the <i>AWS Organizations User Guide</i>. Organizations supports GET and POST requests for all actions.
- * That is, the API does not require you to use GET for some actions and POST for others. However, GET requests are subject
- * to the limitation size of a URL. Therefore, for operations that require larger sizes, use a POST
- *
- * request>
- *
- * <b>Signing Requests</b>
- *
- * </p
- *
- * When you send HTTP requests to AWS, you must sign the requests so that AWS can identify who sent them. You sign requests
- * with your AWS access key, which consists of an access key ID and a secret access key. We strongly recommend that you do
- * not create an access key for your root account. Anyone who has the access key for your root account has unrestricted
- * access to all the resources in your account. Instead, create an access key for an IAM user account that has
- * administrative privileges. As another option, use AWS Security Token Service to generate temporary security credentials,
- * and use those credentials to sign requests.
- *
- * </p
- *
- * To sign requests, we recommend that you use <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an
- * existing application that uses Signature Version 2, you do not have to update it to use Signature Version 4. However,
- * some operations now require Signature Version 4. The documentation for operations that require version 4 indicate this
- * requirement.
- *
- * </p
- *
- * When you use the AWS Command Line Interface (AWS CLI) or one of the AWS SDKs to make requests to AWS, these tools
- * automatically sign the requests for you with the access key that you specify when you configure the
- *
- * tools>
- *
- * In this release, each organization can have only one root. In a future release, a single organization will support
- * multiple
- *
- * roots>
- *
- * <b>Support and Feedback for AWS Organizations</b>
- *
- * </p
- *
- * We welcome your feedback. Send your comments to <a
- * href="mailto:feedback-awsorganizations@amazon.com">feedback-awsorganizations@amazon.com</a> or post your feedback and
- * questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=219">AWS Organizations support forum</a>. For
- * more information about the AWS support forums, see <a href="http://forums.aws.amazon.com/help.jspa">Forums
- *
- * Help</a>>
- *
- * <b>Endpoint to Call When Using the CLI or the AWS API</b>
- *
- * </p
- *
- * For the current release of Organizations, you must specify the <code>us-east-1</code> region for all AWS API and CLI
- * calls. You can do this in the CLI by using these parameters and
- *
- * commands> <ul> <li>
- *
- * Use the following parameter with each command to specify both the endpoint and its
- *
- * region>
- *
- * <code>--endpoint-url https://organizations.us-east-1.amazonaws.com</code>
- *
- * </p </li> <li>
- *
- * Use the default endpoint, but configure your default region with this
- *
- * command>
- *
- * <code>aws configure set default.region us-east-1</code>
- *
- * </p </li> <li>
- *
- * Use the following parameter with each command to specify the
- *
- * endpoint>
- *
- * <code>--region us-east-1</code>
- *
- * </p </li> </ul>
- *
- * For the various SDKs used to call the APIs, see the documentation for the SDK of interest to learn how to direct the
- * requests to a specific endpoint. For more information, see <a
- * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sts_region">Regions and Endpoints</a> in the <i>AWS
- * General Reference</i>.
- *
- * </p
- *
- * <b>How examples are presented</b>
- *
- * </p
- *
- * The JSON returned by the AWS Organizations service as response to your requests is returned as a single long string
- * without line breaks or formatting whitespace. Both line breaks and whitespace are included in the examples in this guide
- * to improve readability. When example input parameters also would result in long strings that would extend beyond the
- * screen, we insert line breaks to enhance readability. You should always submit the input as a single JSON text
- *
- * string>
- *
- * <b>Recording API Requests</b>
- *
- * </p
- *
- * AWS Organizations supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
- * files to an Amazon S3 bucket. By using information collected by AWS CloudTrail, you can determine which requests were
- * successfully made to Organizations, who made the request, when it was made, and so on. For more about AWS Organizations
- * and its support for AWS CloudTrail, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_cloudtrail-integration.html">Logging AWS
- * Organizations Events with AWS CloudTrail</a> in the <i>AWS Organizations User Guide</i>. To learn more about CloudTrail,
- * including how to turn it on and find your log files, see the <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
+ *  <fullname>AWS Organizations API Reference</fullname>
+ * 
+ *  AWS Organizations is a web service that enables you to consolidate your multiple AWS accounts into an
+ *  <i>organization</i> and centrally manage your accounts and their
+ * 
+ *  resources>
+ * 
+ *  This guide provides descriptions of the Organizations API. For more information about using this service, see the <a
+ *  href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">AWS Organizations User
+ * 
+ *  Guide</a>>
+ * 
+ *  <b>API Version</b>
+ * 
+ *  </p
+ * 
+ *  This version of the Organizations API Reference documents the Organizations API version
+ * 
+ *  2016-11-28> <note>
+ * 
+ *  As an alternative to using the API directly, you can use one of the AWS SDKs, which consist of libraries and sample code
+ *  for various programming languages and platforms (Java, Ruby, .NET, iOS, Android, and more). The SDKs provide a
+ *  convenient way to create programmatic access to AWS Organizations. For example, the SDKs take care of cryptographically
+ *  signing requests, managing errors, and retrying requests automatically. For more information about the AWS SDKs,
+ *  including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>> </note>
+ * 
+ *  We recommend that you use the AWS SDKs to make programmatic API calls to Organizations. However, you also can use the
+ *  Organizations Query API to make direct calls to the Organizations web service. To learn more about the Organizations
+ *  Query API, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_query-requests.html">Making Query
+ *  Requests</a> in the <i>AWS Organizations User Guide</i>. Organizations supports GET and POST requests for all actions.
+ *  That is, the API does not require you to use GET for some actions and POST for others. However, GET requests are subject
+ *  to the limitation size of a URL. Therefore, for operations that require larger sizes, use a POST
+ * 
+ *  request>
+ * 
+ *  <b>Signing Requests</b>
+ * 
+ *  </p
+ * 
+ *  When you send HTTP requests to AWS, you must sign the requests so that AWS can identify who sent them. You sign requests
+ *  with your AWS access key, which consists of an access key ID and a secret access key. We strongly recommend that you do
+ *  not create an access key for your root account. Anyone who has the access key for your root account has unrestricted
+ *  access to all the resources in your account. Instead, create an access key for an IAM user account that has
+ *  administrative privileges. As another option, use AWS Security Token Service to generate temporary security credentials,
+ *  and use those credentials to sign requests.
+ * 
+ *  </p
+ * 
+ *  To sign requests, we recommend that you use <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an
+ *  existing application that uses Signature Version 2, you do not have to update it to use Signature Version 4. However,
+ *  some operations now require Signature Version 4. The documentation for operations that require version 4 indicate this
+ *  requirement.
+ * 
+ *  </p
+ * 
+ *  When you use the AWS Command Line Interface (AWS CLI) or one of the AWS SDKs to make requests to AWS, these tools
+ *  automatically sign the requests for you with the access key that you specify when you configure the
+ * 
+ *  tools>
+ * 
+ *  In this release, each organization can have only one root. In a future release, a single organization will support
+ *  multiple
+ * 
+ *  roots>
+ * 
+ *  <b>Support and Feedback for AWS Organizations</b>
+ * 
+ *  </p
+ * 
+ *  We welcome your feedback. Send your comments to <a
+ *  href="mailto:feedback-awsorganizations@amazon.com">feedback-awsorganizations@amazon.com</a> or post your feedback and
+ *  questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=219">AWS Organizations support forum</a>. For
+ *  more information about the AWS support forums, see <a href="http://forums.aws.amazon.com/help.jspa">Forums
+ * 
+ *  Help</a>>
+ * 
+ *  <b>Endpoint to Call When Using the CLI or the AWS API</b>
+ * 
+ *  </p
+ * 
+ *  For the current release of Organizations, you must specify the <code>us-east-1</code> region for all AWS API and CLI
+ *  calls. You can do this in the CLI by using these parameters and
+ * 
+ *  commands> <ul> <li>
+ * 
+ *  Use the following parameter with each command to specify both the endpoint and its
+ * 
+ *  region>
+ * 
+ *  <code>--endpoint-url https://organizations.us-east-1.amazonaws.com</code>
+ * 
+ *  </p </li> <li>
+ * 
+ *  Use the default endpoint, but configure your default region with this
+ * 
+ *  command>
+ * 
+ *  <code>aws configure set default.region us-east-1</code>
+ * 
+ *  </p </li> <li>
+ * 
+ *  Use the following parameter with each command to specify the
+ * 
+ *  endpoint>
+ * 
+ *  <code>--region us-east-1</code>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  For the various SDKs used to call the APIs, see the documentation for the SDK of interest to learn how to direct the
+ *  requests to a specific endpoint. For more information, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sts_region">Regions and Endpoints</a> in the <i>AWS
+ *  General Reference</i>.
+ * 
+ *  </p
+ * 
+ *  <b>How examples are presented</b>
+ * 
+ *  </p
+ * 
+ *  The JSON returned by the AWS Organizations service as response to your requests is returned as a single long string
+ *  without line breaks or formatting whitespace. Both line breaks and whitespace are included in the examples in this guide
+ *  to improve readability. When example input parameters also would result in long strings that would extend beyond the
+ *  screen, we insert line breaks to enhance readability. You should always submit the input as a single JSON text
+ * 
+ *  string>
+ * 
+ *  <b>Recording API Requests</b>
+ * 
+ *  </p
+ * 
+ *  AWS Organizations supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
+ *  files to an Amazon S3 bucket. By using information collected by AWS CloudTrail, you can determine which requests were
+ *  successfully made to Organizations, who made the request, when it was made, and so on. For more about AWS Organizations
+ *  and its support for AWS CloudTrail, see <a
+ *  href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_cloudtrail-integration.html">Logging AWS
+ *  Organizations Events with AWS CloudTrail</a> in the <i>AWS Organizations User Guide</i>. To learn more about CloudTrail,
+ *  including how to turn it on and find your log files, see the <a
+ *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  */
 
-/**
- * @brief  Constructs a new OrganizationsClient object.
+/*!
+ * \brief Constructs a OrganizationsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 OrganizationsClient::OrganizationsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -283,21 +291,16 @@ OrganizationsClient::OrganizationsClient(
     d->serviceName = QStringLiteral("organizations");
 }
 
-/**
- * @brief  Constructs a new OrganizationsClient object.
+/*!
+ * \overload OrganizationsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 OrganizationsClient::OrganizationsClient(
     const QUrl &endpoint,
@@ -316,7 +319,7 @@ OrganizationsClient::OrganizationsClient(
     d->serviceName = QStringLiteral("organizations");
 }
 
-/**
+/*!
  * Sends a response to the originator of a handshake agreeing to the action proposed by the handshake request.
  *
  * </p
@@ -364,7 +367,7 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
     return qobject_cast<AcceptHandshakeResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a policy to a root, an organizational unit, or an individual account. How the policy affects accounts depends
  * on the type of
  *
@@ -424,7 +427,7 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
     return qobject_cast<AttachPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels a handshake. Canceling a handshake sets the handshake state to <code>CANCELED</code>.
  *
  * </p
@@ -448,7 +451,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
     return qobject_cast<CancelHandshakeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS account that is automatically a member of the organization whose credentials made the request. This is an
  * asynchronous request that AWS performs in the background. If you want to check the status of the request later, you need
  * the <code>OperationId</code> response element from this operation to provide as a parameter to the
@@ -521,7 +524,7 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
     return qobject_cast<CreateAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS organization. The account whose user is calling the CreateOrganization operation automatically becomes
  * the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/orgs_getting-started_concepts.html#account">master
  * account</a> of the new
@@ -550,7 +553,7 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
     return qobject_cast<CreateOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an organizational unit (OU) within a root or parent OU. An OU is a container for accounts that enables you to
  * organize your accounts to apply policies according to your business requirements. The number of levels deep that you can
  * nest OUs is dependent upon the policy types enabled for that root. For service control policies, the limit is five.
@@ -576,7 +579,7 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
     return qobject_cast<CreateOrganizationalUnitResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a policy of a specified type that you can attach to a root, an organizational unit (OU), or an individual AWS
  *
  * account>
@@ -599,7 +602,7 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
     return qobject_cast<CreatePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Declines a handshake request. This sets the handshake state to <code>DECLINED</code> and effectively deactivates the
  *
  * request>
@@ -623,7 +626,7 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
     return qobject_cast<DeclineHandshakeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the organization. You can delete an organization only by using credentials from the master account. The
  * organization must be empty of member accounts, OUs, and
  *
@@ -638,7 +641,7 @@ DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
     return qobject_cast<DeleteOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an organizational unit from a root or another OU. You must first remove all accounts and child OUs from the OU
  * that you want to
  *
@@ -657,7 +660,7 @@ DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit
     return qobject_cast<DeleteOrganizationalUnitResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified policy from your organization. Before you perform this operation, you must first detach the policy
  * from all OUs, roots, and
  *
@@ -676,7 +679,7 @@ DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyReque
     return qobject_cast<DeletePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves Organizations-related information about the specified
  *
  * account>
@@ -694,7 +697,7 @@ DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAcc
     return qobject_cast<DescribeAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the current status of an asynchronous request to create an
  *
  * account>
@@ -712,7 +715,7 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
     return qobject_cast<DescribeCreateAccountStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about a previously requested handshake. The handshake ID comes from the response to the original
  * <a>InviteAccountToOrganization</a> operation that generated the
  *
@@ -736,7 +739,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
     return qobject_cast<DescribeHandshakeResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the organization that the user's account belongs
  *
  * to>
@@ -759,7 +762,7 @@ DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
     return qobject_cast<DescribeOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about an organizational unit
  *
  * (OU)>
@@ -777,7 +780,7 @@ DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizational
     return qobject_cast<DescribeOrganizationalUnitResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about a
  *
  * policy>
@@ -795,7 +798,7 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
     return qobject_cast<DescribePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a policy from a target root, organizational unit, or account. If the policy being detached is a service control
  * policy (SCP), the changes to permissions for IAM users and roles in affected accounts are
  *
@@ -825,7 +828,7 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
     return qobject_cast<DetachPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with AWS
  * Organizations. When you disable integration, the specified service no longer can create a <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in
@@ -868,7 +871,7 @@ DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(c
     return qobject_cast<DisableAWSServiceAccessResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables an organizational control policy type in a root. A policy of a certain type can be attached to entities in a
  * root only if that type is enabled in the root. After you perform this operation, you no longer can attach policies of
  * the specified type to that root or to any OU or account in that root. You can undo this by using the
@@ -895,7 +898,7 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
     return qobject_cast<DisablePolicyTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with AWS
  * Organizations. When you enable integration, you allow the specified service to create a <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in all
@@ -931,7 +934,7 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
     return qobject_cast<EnableAWSServiceAccessResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables all features in an organization. This enables the use of organization policies that can restrict the services
  * and actions that can be called in each account. Until you enable all features, you have access only to consolidated
  * billing, and you can't use any of the advanced account administration features that AWS Organizations supports. For more
@@ -979,7 +982,7 @@ EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableA
     return qobject_cast<EnableAllFeaturesResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables a policy type in a root. After you enable a policy type in a root, you can attach policies of that type to the
  * root, any OU, or account in that root. You can undo this by using the <a>DisablePolicyType</a>
  *
@@ -1007,7 +1010,7 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
     return qobject_cast<EnablePolicyTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends an invitation to another account to join your organization as a member account. Organizations sends email on your
  * behalf to the email address that is associated with the other account's owner. The invitation is implemented as a
  * <a>Handshake</a> whose details are in the
@@ -1042,7 +1045,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
     return qobject_cast<InviteAccountToOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a member account from its parent organization. This version of the operation is performed by the account that
  * wants to leave. To remove a member account as a user in the master account, use <a>RemoveAccountFromOrganization</a>
  *
@@ -1087,7 +1090,7 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
     return qobject_cast<LeaveOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the AWS services that you enabled to integrate with your organization. After a service on this list
  * creates the resources that it requires for the integration, it can perform operations on your organization and its
  *
@@ -1113,7 +1116,7 @@ ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServic
     return qobject_cast<ListAWSServiceAccessForOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the accounts in the organization. To request only the accounts in a specified root or OU, use the
  * <a>ListAccountsForParent</a> operation
  *
@@ -1139,7 +1142,7 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
     return qobject_cast<ListAccountsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the accounts in an organization that are contained by the specified target root or organizational unit (OU). If
  * you specify the root, you get a list of all the accounts that are not in any OU. If you specify an OU, you get a list of
  * all the accounts in only that OU, and not in any child OUs. To get a list of all accounts in the organization, use the
@@ -1167,7 +1170,7 @@ ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const
     return qobject_cast<ListAccountsForParentResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all of the OUs or accounts that are contained in the specified parent OU or root. This operation, along with
  * <a>ListParents</a> enables you to traverse the tree structure that makes up this
  *
@@ -1193,7 +1196,7 @@ ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenReque
     return qobject_cast<ListChildrenResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the account creation requests that match the specified status that is currently being tracked for the
  *
  * organization> <note>
@@ -1218,7 +1221,7 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
     return qobject_cast<ListCreateAccountStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the current handshakes that are associated with the account of the requesting
  *
  * user>
@@ -1248,7 +1251,7 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
     return qobject_cast<ListHandshakesForAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the handshakes that are associated with the organization that the requesting user is part of. The
  * <code>ListHandshakesForOrganization</code> operation returns a list of handshake structures. Each structure contains
  * details and status about a
@@ -1280,7 +1283,7 @@ ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOr
     return qobject_cast<ListHandshakesForOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the organizational units (OUs) in a parent organizational unit or
  *
  * root> <note>
@@ -1305,7 +1308,7 @@ ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganization
     return qobject_cast<ListOrganizationalUnitsForParentResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the root or organizational units (OUs) that serve as the immediate parent of the specified child OU or account.
  * This operation, along with <a>ListChildren</a> enables you to traverse the tree structure that makes up this
  *
@@ -1335,7 +1338,7 @@ ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest 
     return qobject_cast<ListParentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the list of all policies in an organization of a specified
  *
  * type> <note>
@@ -1360,7 +1363,7 @@ ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesReque
     return qobject_cast<ListPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the policies that are directly attached to the specified target root, organizational unit (OU), or account. You
  * must specify the policy type that you want included in the returned
  *
@@ -1386,7 +1389,7 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
     return qobject_cast<ListPoliciesForTargetResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the roots that are defined in the current
  *
  * organization> <note>
@@ -1417,7 +1420,7 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
     return qobject_cast<ListRootsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the roots, OUs, and accounts to which the specified policy is
  *
  * attached> <note>
@@ -1442,7 +1445,7 @@ ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const L
     return qobject_cast<ListTargetsForPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Moves an account from its current source parent root or OU to the specified destination parent root or
  *
  * OU>
@@ -1460,7 +1463,7 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
     return qobject_cast<MoveAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified account from the
  *
  * organization>
@@ -1506,7 +1509,7 @@ RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOr
     return qobject_cast<RemoveAccountFromOrganizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Renames the specified organizational unit (OU). The ID and ARN do not change. The child OUs and accounts remain in
  * place, and any attached policies of the OU remain attached.
  *
@@ -1525,7 +1528,7 @@ UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit
     return qobject_cast<UpdateOrganizationalUnitResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing policy with a new name, description, or content. If any parameter is not supplied, that value
  * remains unchanged. Note that you cannot change a policy's
  *
@@ -1544,7 +1547,7 @@ UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyReque
     return qobject_cast<UpdatePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  OrganizationsClientPrivate
@@ -1552,7 +1555,7 @@ UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyReque
  * @brief  Private implementation for OrganizationsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new OrganizationsClientPrivate object.

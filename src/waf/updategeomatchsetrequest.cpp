@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateGeoMatchSetRequest
+/*!
+ * \class QtAws::WAF::UpdateGeoMatchSetRequest
  *
- * @brief  Implements WAF UpdateGeoMatchSet requests.
+ * \brief The UpdateGeoMatchSetRequest class encapsulates WAF UpdateGeoMatchSet requests.
  *
- * @see    WAFClient::updateGeoMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateGeoMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGeoMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest(const UpdateGeoMatchSetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateGeoMatchSetRequest object.
  */
 UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest()
@@ -53,13 +61,16 @@ UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateGeoMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateGeoMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGeoMatchSetRequest::response(QNetworkRe
     return new UpdateGeoMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateGeoMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGeoMatchSetRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateGeoMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGeoMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGeoMatchSetRequestPrivate object, copying another.

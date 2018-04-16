@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteRegexMatchSetRequest
+/*!
+ * \class QtAws::WAF::DeleteRegexMatchSetRequest
  *
- * @brief  Implements WAF DeleteRegexMatchSet requests.
+ * \brief The DeleteRegexMatchSetRequest class encapsulates WAF DeleteRegexMatchSet requests.
  *
- * @see    WAFClient::deleteRegexMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteRegexMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRegexMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest(const DeleteRegexMatchSet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRegexMatchSetRequest object.
  */
 DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest()
@@ -53,13 +61,16 @@ DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRegexMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRegexMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
     return new DeleteRegexMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRegexMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
  * @brief  Private implementation for DeleteRegexMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRegexMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRegexMatchSetRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  GetPresetRequest
+/*!
+ * \class QtAws::MediaConvert::GetPresetRequest
  *
- * @brief  Implements MediaConvert GetPreset requests.
+ * \brief The GetPresetRequest class encapsulates MediaConvert GetPreset requests.
  *
- * @see    MediaConvertClient::getPreset
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::getPreset
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPresetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetPresetRequest::GetPresetRequest(const GetPresetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPresetRequest object.
  */
 GetPresetRequest::GetPresetRequest()
@@ -53,13 +56,16 @@ GetPresetRequest::GetPresetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPresetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPresetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetPresetRequest::response(QNetworkReply * co
     return new GetPresetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPresetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetPresetRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetPresetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPresetRequestPrivate object.
@@ -97,7 +103,7 @@ GetPresetRequestPrivate::GetPresetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPresetRequestPrivate object, copying another.

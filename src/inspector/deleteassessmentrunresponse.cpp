@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DeleteAssessmentRunResponse
+/*!
+ * \class QtAws::Inspector::DeleteAssessmentRunResponse
  *
- * @brief  Handles Inspector DeleteAssessmentRun responses.
+ * \brief The DeleteAssessmentRunResponse class encapsulates Inspector DeleteAssessmentRun responses.
  *
- * @see    InspectorClient::deleteAssessmentRun
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::deleteAssessmentRun
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteAssessmentRunRequest * DeleteAssessmentRunResponse::request() const
     return static_cast<const DeleteAssessmentRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector DeleteAssessmentRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteAssessmentRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteAssessmentRunResponsePrivate
+ * \class DeleteAssessmentRunResponsePrivate
  *
- * @brief  Private implementation for DeleteAssessmentRunResponse.
+ * \brief Private implementation for DeleteAssessmentRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentRunResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteAssessmentRunResponsePrivate::DeleteAssessmentRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector DeleteAssessmentRunResponse element.
  *
  * @param  xml  XML stream to parse.

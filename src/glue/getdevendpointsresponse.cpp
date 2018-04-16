@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetDevEndpointsResponse
+/*!
+ * \class QtAws::Glue::GetDevEndpointsResponse
  *
- * @brief  Handles Glue GetDevEndpoints responses.
+ * \brief The GetDevEndpointsResponse class encapsulates Glue GetDevEndpoints responses.
  *
- * @see    GlueClient::getDevEndpoints
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getDevEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDevEndpointsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetDevEndpointsRequest * GetDevEndpointsResponse::request() const
     return static_cast<const GetDevEndpointsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetDevEndpoints response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetDevEndpointsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDevEndpointsResponsePrivate
+ * \class GetDevEndpointsResponsePrivate
  *
- * @brief  Private implementation for GetDevEndpointsResponse.
+ * \brief Private implementation for GetDevEndpointsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDevEndpointsResponsePrivate object.
@@ -91,7 +97,7 @@ GetDevEndpointsResponsePrivate::GetDevEndpointsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetDevEndpointsResponse element.
  *
  * @param  xml  XML stream to parse.

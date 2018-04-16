@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  AssociateFleetRequest
+/*!
+ * \class QtAws::AppStream::AssociateFleetRequest
  *
- * @brief  Implements AppStream AssociateFleet requests.
+ * \brief The AssociateFleetRequest class encapsulates AppStream AssociateFleet requests.
  *
- * @see    AppStreamClient::associateFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::associateFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AssociateFleetRequest::AssociateFleetRequest(const AssociateFleetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateFleetRequest object.
  */
 AssociateFleetRequest::AssociateFleetRequest()
@@ -53,13 +59,16 @@ AssociateFleetRequest::AssociateFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AssociateFleetRequest::response(QNetworkReply
     return new AssociateFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AssociateFleetRequest::response(QNetworkReply
  * @brief  Private implementation for AssociateFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateFleetRequestPrivate object.
@@ -97,7 +106,7 @@ AssociateFleetRequestPrivate::AssociateFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateFleetRequestPrivate object, copying another.

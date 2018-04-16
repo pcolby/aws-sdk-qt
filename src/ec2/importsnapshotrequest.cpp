@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportSnapshotRequest
+/*!
+ * \class QtAws::EC2::ImportSnapshotRequest
  *
- * @brief  Implements EC2 ImportSnapshot requests.
+ * \brief The ImportSnapshotRequest class encapsulates EC2 ImportSnapshot requests.
  *
- * @see    EC2Client::importSnapshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ImportSnapshotRequest::ImportSnapshotRequest(const ImportSnapshotRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportSnapshotRequest object.
  */
 ImportSnapshotRequest::ImportSnapshotRequest()
@@ -53,13 +60,16 @@ ImportSnapshotRequest::ImportSnapshotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportSnapshotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportSnapshotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply
     return new ImportSnapshotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportSnapshotRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply
  * @brief  Private implementation for ImportSnapshotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportSnapshotRequestPrivate object.
@@ -97,7 +107,7 @@ ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportSnapshotRequestPrivate object, copying another.

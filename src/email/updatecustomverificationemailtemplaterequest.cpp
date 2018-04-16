@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateCustomVerificationEmailTemplateRequest
+/*!
+ * \class QtAws::SES::UpdateCustomVerificationEmailTemplateRequest
  *
- * @brief  Implements SES UpdateCustomVerificationEmailTemplate requests.
+ * \brief The UpdateCustomVerificationEmailTemplateRequest class encapsulates SES UpdateCustomVerificationEmailTemplate requests.
  *
- * @see    SESClient::updateCustomVerificationEmailTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateCustomVerificationEmailTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTempl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequest object.
  */
 UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTemplateRequest()
@@ -53,13 +67,16 @@ UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTempl
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCustomVerificationEmailTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCustomVerificationEmailTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest:
     return new UpdateCustomVerificationEmailTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCustomVerificationEmailTemplateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest:
  * @brief  Private implementation for UpdateCustomVerificationEmailTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEma
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequestPrivate object, copying another.

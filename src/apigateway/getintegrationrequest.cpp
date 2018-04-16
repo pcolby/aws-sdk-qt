@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetIntegrationRequest
+/*!
+ * \class QtAws::APIGateway::GetIntegrationRequest
  *
- * @brief  Implements APIGateway GetIntegration requests.
+ * \brief The GetIntegrationRequest class encapsulates APIGateway GetIntegration requests.
  *
- * @see    APIGatewayClient::getIntegration
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getIntegration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntegrationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetIntegrationRequest::GetIntegrationRequest(const GetIntegrationRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIntegrationRequest object.
  */
 GetIntegrationRequest::GetIntegrationRequest()
@@ -53,13 +61,16 @@ GetIntegrationRequest::GetIntegrationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIntegrationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIntegrationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetIntegrationRequest::response(QNetworkReply
     return new GetIntegrationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIntegrationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetIntegrationRequest::response(QNetworkReply
  * @brief  Private implementation for GetIntegrationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntegrationRequestPrivate object.
@@ -97,7 +108,7 @@ GetIntegrationRequestPrivate::GetIntegrationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntegrationRequestPrivate object, copying another.

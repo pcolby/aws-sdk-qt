@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DetectSentimentResponse
+/*!
+ * \class QtAws::Comprehend::DetectSentimentResponse
  *
- * @brief  Handles Comprehend DetectSentiment responses.
+ * \brief The DetectSentimentResponse class encapsulates Comprehend DetectSentiment responses.
  *
- * @see    ComprehendClient::detectSentiment
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::detectSentiment
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectSentimentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DetectSentimentRequest * DetectSentimentResponse::request() const
     return static_cast<const DetectSentimentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Comprehend DetectSentiment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DetectSentimentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetectSentimentResponsePrivate
+ * \class DetectSentimentResponsePrivate
  *
- * @brief  Private implementation for DetectSentimentResponse.
+ * \brief Private implementation for DetectSentimentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectSentimentResponsePrivate object.
@@ -91,7 +97,7 @@ DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Comprehend DetectSentimentResponse element.
  *
  * @param  xml  XML stream to parse.

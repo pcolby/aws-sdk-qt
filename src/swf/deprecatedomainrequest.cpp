@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  DeprecateDomainRequest
+/*!
+ * \class QtAws::SWF::DeprecateDomainRequest
  *
- * @brief  Implements SWF DeprecateDomain requests.
+ * \brief The DeprecateDomainRequest class encapsulates SWF DeprecateDomain requests.
  *
- * @see    SWFClient::deprecateDomain
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::deprecateDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeprecateDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ DeprecateDomainRequest::DeprecateDomainRequest(const DeprecateDomainRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeprecateDomainRequest object.
  */
 DeprecateDomainRequest::DeprecateDomainRequest()
@@ -53,13 +72,16 @@ DeprecateDomainRequest::DeprecateDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeprecateDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeprecateDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkRepl
     return new DeprecateDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeprecateDomainRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkRepl
  * @brief  Private implementation for DeprecateDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeprecateDomainRequestPrivate object.
@@ -97,7 +119,7 @@ DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeprecateDomainRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateProjectRequest
+/*!
+ * \class QtAws::DeviceFarm::CreateProjectRequest
  *
- * @brief  Implements DeviceFarm CreateProject requests.
+ * \brief The CreateProjectRequest class encapsulates DeviceFarm CreateProject requests.
  *
- * @see    DeviceFarmClient::createProject
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createProject
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateProjectRequest::CreateProjectRequest(const CreateProjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateProjectRequest object.
  */
 CreateProjectRequest::CreateProjectRequest()
@@ -53,13 +58,16 @@ CreateProjectRequest::CreateProjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateProjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateProjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply 
     return new CreateProjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateProjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateProjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProjectRequestPrivate object.
@@ -97,7 +105,7 @@ CreateProjectRequestPrivate::CreateProjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProjectRequestPrivate object, copying another.

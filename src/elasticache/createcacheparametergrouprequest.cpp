@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  CreateCacheParameterGroupRequest
+/*!
+ * \class QtAws::ElastiCache::CreateCacheParameterGroupRequest
  *
- * @brief  Implements ElastiCache CreateCacheParameterGroup requests.
+ * \brief The CreateCacheParameterGroupRequest class encapsulates ElastiCache CreateCacheParameterGroup requests.
  *
- * @see    ElastiCacheClient::createCacheParameterGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::createCacheParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCacheParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ CreateCacheParameterGroupRequest::CreateCacheParameterGroupRequest(const CreateC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateCacheParameterGroupRequest object.
  */
 CreateCacheParameterGroupRequest::CreateCacheParameterGroupRequest()
@@ -53,13 +70,16 @@ CreateCacheParameterGroupRequest::CreateCacheParameterGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateCacheParameterGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateCacheParameterGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateCacheParameterGroupRequest::response(QN
     return new CreateCacheParameterGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateCacheParameterGroupRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * CreateCacheParameterGroupRequest::response(QN
  * @brief  Private implementation for CreateCacheParameterGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCacheParameterGroupRequestPrivate object.
@@ -97,7 +117,7 @@ CreateCacheParameterGroupRequestPrivate::CreateCacheParameterGroupRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCacheParameterGroupRequestPrivate object, copying another.

@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CloudSearchDomain {
 
-/**
- * @class  SearchRequest
+/*!
+ * \class QtAws::CloudSearchDomain::SearchRequest
  *
- * @brief  Implements CloudSearchDomain Search requests.
+ * \brief The SearchRequest class encapsulates CloudSearchDomain Search requests.
  *
- * @see    CloudSearchDomainClient::search
+ * \ingroup CloudSearchDomain
+ *
+ *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
+ * 
+ *  </p
+ * 
+ *  The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are
+ *  domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service
+ *  <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon
+ *  CloudSearch console. You submit suggest requests to the search endpoint.
+ * 
+ *  </p
+ * 
+ *  For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch
+ *  Developer
+ *
+ * \sa CloudSearchDomainClient::search
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ SearchRequest::SearchRequest(const SearchRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchRequest object.
  */
 SearchRequest::SearchRequest()
@@ -53,13 +69,16 @@ SearchRequest::SearchRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const
     return new SearchResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const
  * @brief  Private implementation for SearchRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchRequestPrivate object.
@@ -97,7 +116,7 @@ SearchRequestPrivate::SearchRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchRequestPrivate object, copying another.

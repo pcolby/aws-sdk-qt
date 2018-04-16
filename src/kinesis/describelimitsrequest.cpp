@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DescribeLimitsRequest
+/*!
+ * \class QtAws::Kinesis::DescribeLimitsRequest
  *
- * @brief  Implements Kinesis DescribeLimits requests.
+ * \brief The DescribeLimitsRequest class encapsulates Kinesis DescribeLimits requests.
  *
- * @see    KinesisClient::describeLimits
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::describeLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLimitsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLimitsRequest object.
  */
 DescribeLimitsRequest::DescribeLimitsRequest()
@@ -53,13 +59,16 @@ DescribeLimitsRequest::DescribeLimitsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLimitsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLimitsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
     return new DescribeLimitsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLimitsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeLimitsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLimitsRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLimitsRequestPrivate object, copying another.

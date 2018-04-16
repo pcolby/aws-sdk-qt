@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  DeleteConfigurationTemplateResponse
+/*!
+ * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateResponse
  *
- * @brief  Handles ElasticBeanstalk DeleteConfigurationTemplate responses.
+ * \brief The DeleteConfigurationTemplateResponse class encapsulates ElasticBeanstalk DeleteConfigurationTemplate responses.
  *
- * @see    ElasticBeanstalkClient::deleteConfigurationTemplate
+ * \ingroup ElasticBeanstalk
+ *
+ *  <fullname>AWS Elastic Beanstalk</fullname>
+ * 
+ *  AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
+ *  on the Amazon Web Services
+ * 
+ *  cloud>
+ * 
+ *  For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
+ *  Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
+ *  href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
+ *  To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
+ *  tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services
+ *
+ * \sa ElasticBeanstalkClient::deleteConfigurationTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const DeleteConfigurationTemplateRequest * DeleteConfigurationTemplateResponse::
     return static_cast<const DeleteConfigurationTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticBeanstalk DeleteConfigurationTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void DeleteConfigurationTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteConfigurationTemplateResponsePrivate
+ * \class DeleteConfigurationTemplateResponsePrivate
  *
- * @brief  Private implementation for DeleteConfigurationTemplateResponse.
+ * \brief Private implementation for DeleteConfigurationTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationTemplateResponsePrivate object.
@@ -91,7 +116,7 @@ DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticBeanstalk DeleteConfigurationTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

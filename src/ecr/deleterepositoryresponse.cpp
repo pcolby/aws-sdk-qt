@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DeleteRepositoryResponse
+/*!
+ * \class QtAws::ECR::DeleteRepositoryResponse
  *
- * @brief  Handles ECR DeleteRepository responses.
+ * \brief The DeleteRepositoryResponse class encapsulates ECR DeleteRepository responses.
  *
- * @see    ECRClient::deleteRepository
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::deleteRepository
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRepositoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
     return static_cast<const DeleteRepositoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR DeleteRepository response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRepositoryResponsePrivate
+ * \class DeleteRepositoryResponsePrivate
  *
- * @brief  Private implementation for DeleteRepositoryResponse.
+ * \brief Private implementation for DeleteRepositoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRepositoryResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR DeleteRepositoryResponse element.
  *
  * @param  xml  XML stream to parse.

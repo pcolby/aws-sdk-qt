@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  StartImportRequest
+/*!
+ * \class QtAws::LexModelBuildingService::StartImportRequest
  *
- * @brief  Implements LexModelBuildingService StartImport requests.
+ * \brief The StartImportRequest class encapsulates LexModelBuildingService StartImport requests.
  *
- * @see    LexModelBuildingServiceClient::startImport
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::startImport
  */
 
-/**
+/*!
  * @brief  Constructs a new StartImportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ StartImportRequest::StartImportRequest(const StartImportRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartImportRequest object.
  */
 StartImportRequest::StartImportRequest()
@@ -53,13 +60,16 @@ StartImportRequest::StartImportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartImportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartImportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * StartImportRequest::response(QNetworkReply * 
     return new StartImportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartImportRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartImportRequest::response(QNetworkReply * 
  * @brief  Private implementation for StartImportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartImportRequestPrivate object.
@@ -97,7 +107,7 @@ StartImportRequestPrivate::StartImportRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartImportRequestPrivate object, copying another.

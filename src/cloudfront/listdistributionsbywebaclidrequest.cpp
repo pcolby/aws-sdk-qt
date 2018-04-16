@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListDistributionsByWebACLIdRequest
+/*!
+ * \class QtAws::CloudFront::ListDistributionsByWebACLIdRequest
  *
- * @brief  Implements CloudFront ListDistributionsByWebACLId requests.
+ * \brief The ListDistributionsByWebACLIdRequest class encapsulates CloudFront ListDistributionsByWebACLId requests.
  *
- * @see    CloudFrontClient::listDistributionsByWebACLId
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listDistributionsByWebACLId
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDistributionsByWebACLIdRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListDistributionsByWebACLIdRequest::ListDistributionsByWebACLIdRequest(const Lis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDistributionsByWebACLIdRequest object.
  */
 ListDistributionsByWebACLIdRequest::ListDistributionsByWebACLIdRequest()
@@ -53,13 +61,16 @@ ListDistributionsByWebACLIdRequest::ListDistributionsByWebACLIdRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDistributionsByWebACLIdRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDistributionsByWebACLIdResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(
     return new ListDistributionsByWebACLIdResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDistributionsByWebACLIdRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(
  * @brief  Private implementation for ListDistributionsByWebACLIdRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDistributionsByWebACLIdRequestPrivate object.
@@ -97,7 +108,7 @@ ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDistributionsByWebACLIdRequestPrivate object, copying another.

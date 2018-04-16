@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListInstanceProfilesRequest
+/*!
+ * \class QtAws::DeviceFarm::ListInstanceProfilesRequest
  *
- * @brief  Implements DeviceFarm ListInstanceProfiles requests.
+ * \brief The ListInstanceProfilesRequest class encapsulates DeviceFarm ListInstanceProfiles requests.
  *
- * @see    DeviceFarmClient::listInstanceProfiles
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listInstanceProfiles
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceProfilesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListInstanceProfilesRequest::ListInstanceProfilesRequest(const ListInstanceProfi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceProfilesRequest object.
  */
 ListInstanceProfilesRequest::ListInstanceProfilesRequest()
@@ -53,13 +58,16 @@ ListInstanceProfilesRequest::ListInstanceProfilesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInstanceProfilesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInstanceProfilesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesRequest::response(QNetwor
     return new ListInstanceProfilesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInstanceProfilesRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesRequest::response(QNetwor
  * @brief  Private implementation for ListInstanceProfilesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceProfilesRequestPrivate object.
@@ -97,7 +105,7 @@ ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceProfilesRequestPrivate object, copying another.

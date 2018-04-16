@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ClearDefaultAuthorizerRequest
+/*!
+ * \class QtAws::IoT::ClearDefaultAuthorizerRequest
  *
- * @brief  Implements IoT ClearDefaultAuthorizer requests.
+ * \brief The ClearDefaultAuthorizerRequest class encapsulates IoT ClearDefaultAuthorizer requests.
  *
- * @see    IoTClient::clearDefaultAuthorizer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::clearDefaultAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new ClearDefaultAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ClearDefaultAuthorizerRequest::ClearDefaultAuthorizerRequest(const ClearDefaultA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ClearDefaultAuthorizerRequest object.
  */
 ClearDefaultAuthorizerRequest::ClearDefaultAuthorizerRequest()
@@ -53,13 +67,16 @@ ClearDefaultAuthorizerRequest::ClearDefaultAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ClearDefaultAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ClearDefaultAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ClearDefaultAuthorizerRequest::response(QNetw
     return new ClearDefaultAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ClearDefaultAuthorizerRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ClearDefaultAuthorizerRequest::response(QNetw
  * @brief  Private implementation for ClearDefaultAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ClearDefaultAuthorizerRequestPrivate object.
@@ -97,7 +114,7 @@ ClearDefaultAuthorizerRequestPrivate::ClearDefaultAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ClearDefaultAuthorizerRequestPrivate object, copying another.

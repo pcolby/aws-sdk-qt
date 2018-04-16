@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateIamInstanceProfileRequest
+/*!
+ * \class QtAws::EC2::DisassociateIamInstanceProfileRequest
  *
- * @brief  Implements EC2 DisassociateIamInstanceProfile requests.
+ * \brief The DisassociateIamInstanceProfileRequest class encapsulates EC2 DisassociateIamInstanceProfile requests.
  *
- * @see    EC2Client::disassociateIamInstanceProfile
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateIamInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateIamInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateIamInstanceProfileRequest object.
  */
 DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest()
@@ -53,13 +60,16 @@ DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateIamInstanceProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateIamInstanceProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateIamInstanceProfileRequest::respon
     return new DisassociateIamInstanceProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateIamInstanceProfileRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateIamInstanceProfileRequest::respon
  * @brief  Private implementation for DisassociateIamInstanceProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateIamInstanceProfileRequestPrivate object.
@@ -97,7 +107,7 @@ DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateIamInstanceProfileRequestPrivate object, copying another.

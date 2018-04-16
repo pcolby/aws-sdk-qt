@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteClientCertificateRequest
+/*!
+ * \class QtAws::APIGateway::DeleteClientCertificateRequest
  *
- * @brief  Implements APIGateway DeleteClientCertificate requests.
+ * \brief The DeleteClientCertificateRequest class encapsulates APIGateway DeleteClientCertificate requests.
  *
- * @see    APIGatewayClient::deleteClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteClientCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteClientCertificateRequest::DeleteClientCertificateRequest(const DeleteClien
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteClientCertificateRequest object.
  */
 DeleteClientCertificateRequest::DeleteClientCertificateRequest()
@@ -53,13 +61,16 @@ DeleteClientCertificateRequest::DeleteClientCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteClientCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteClientCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNet
     return new DeleteClientCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteClientCertificateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNet
  * @brief  Private implementation for DeleteClientCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClientCertificateRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClientCertificateRequestPrivate object, copying another.

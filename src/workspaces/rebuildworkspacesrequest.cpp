@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  RebuildWorkspacesRequest
+/*!
+ * \class QtAws::WorkSpaces::RebuildWorkspacesRequest
  *
- * @brief  Implements WorkSpaces RebuildWorkspaces requests.
+ * \brief The RebuildWorkspacesRequest class encapsulates WorkSpaces RebuildWorkspaces requests.
  *
- * @see    WorkSpacesClient::rebuildWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::rebuildWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new RebuildWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ RebuildWorkspacesRequest::RebuildWorkspacesRequest(const RebuildWorkspacesReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RebuildWorkspacesRequest object.
  */
 RebuildWorkspacesRequest::RebuildWorkspacesRequest()
@@ -53,13 +59,16 @@ RebuildWorkspacesRequest::RebuildWorkspacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RebuildWorkspacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RebuildWorkspacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkRe
     return new RebuildWorkspacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RebuildWorkspacesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkRe
  * @brief  Private implementation for RebuildWorkspacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebuildWorkspacesRequestPrivate object.
@@ -97,7 +106,7 @@ RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebuildWorkspacesRequestPrivate object, copying another.

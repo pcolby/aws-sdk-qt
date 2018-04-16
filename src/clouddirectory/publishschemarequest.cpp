@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  PublishSchemaRequest
+/*!
+ * \class QtAws::CloudDirectory::PublishSchemaRequest
  *
- * @brief  Implements CloudDirectory PublishSchema requests.
+ * \brief The PublishSchemaRequest class encapsulates CloudDirectory PublishSchema requests.
  *
- * @see    CloudDirectoryClient::publishSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::publishSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new PublishSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ PublishSchemaRequest::PublishSchemaRequest(const PublishSchemaRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PublishSchemaRequest object.
  */
 PublishSchemaRequest::PublishSchemaRequest()
@@ -53,13 +63,16 @@ PublishSchemaRequest::PublishSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PublishSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PublishSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply 
     return new PublishSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PublishSchemaRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply 
  * @brief  Private implementation for PublishSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishSchemaRequestPrivate object.
@@ -97,7 +110,7 @@ PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishSchemaRequestPrivate object, copying another.

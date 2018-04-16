@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteHostedZoneRequest
+/*!
+ * \class QtAws::Route53::DeleteHostedZoneRequest
  *
- * @brief  Implements Route53 DeleteHostedZone requests.
+ * \brief The DeleteHostedZoneRequest class encapsulates Route53 DeleteHostedZone requests.
  *
- * @see    Route53Client::deleteHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteHostedZoneRequest::DeleteHostedZoneRequest(const DeleteHostedZoneRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteHostedZoneRequest object.
  */
 DeleteHostedZoneRequest::DeleteHostedZoneRequest()
@@ -53,13 +56,16 @@ DeleteHostedZoneRequest::DeleteHostedZoneRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteHostedZoneRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteHostedZoneResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkRep
     return new DeleteHostedZoneResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteHostedZoneRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteHostedZoneRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHostedZoneRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHostedZoneRequestPrivate object, copying another.

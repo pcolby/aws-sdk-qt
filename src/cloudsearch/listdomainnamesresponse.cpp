@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  ListDomainNamesResponse
+/*!
+ * \class QtAws::CloudSearch::ListDomainNamesResponse
  *
- * @brief  Handles CloudSearch ListDomainNames responses.
+ * \brief The ListDomainNamesResponse class encapsulates CloudSearch ListDomainNames responses.
  *
- * @see    CloudSearchClient::listDomainNames
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::listDomainNames
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDomainNamesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListDomainNamesRequest * ListDomainNamesResponse::request() const
     return static_cast<const ListDomainNamesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch ListDomainNames response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListDomainNamesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListDomainNamesResponsePrivate
+ * \class ListDomainNamesResponsePrivate
  *
- * @brief  Private implementation for ListDomainNamesResponse.
+ * \brief Private implementation for ListDomainNamesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDomainNamesResponsePrivate object.
@@ -91,7 +105,7 @@ ListDomainNamesResponsePrivate::ListDomainNamesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch ListDomainNamesResponse element.
  *
  * @param  xml  XML stream to parse.

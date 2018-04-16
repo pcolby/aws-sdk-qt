@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  IncreaseStreamRetentionPeriodRequest
+/*!
+ * \class QtAws::Kinesis::IncreaseStreamRetentionPeriodRequest
  *
- * @brief  Implements Kinesis IncreaseStreamRetentionPeriod requests.
+ * \brief The IncreaseStreamRetentionPeriodRequest class encapsulates Kinesis IncreaseStreamRetentionPeriod requests.
  *
- * @see    KinesisClient::increaseStreamRetentionPeriod
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::increaseStreamRetentionPeriod
  */
 
-/**
+/*!
  * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object.
  */
 IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest()
@@ -53,13 +59,16 @@ IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool IncreaseStreamRetentionPeriodRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an IncreaseStreamRetentionPeriodResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::respons
     return new IncreaseStreamRetentionPeriodResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IncreaseStreamRetentionPeriodRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::respons
  * @brief  Private implementation for IncreaseStreamRetentionPeriodRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IncreaseStreamRetentionPeriodRequestPrivate object.
@@ -97,7 +106,7 @@ IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IncreaseStreamRetentionPeriodRequestPrivate object, copying another.

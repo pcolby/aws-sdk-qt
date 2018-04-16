@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  StartInstancesResponse
+/*!
+ * \class QtAws::EC2::StartInstancesResponse
  *
- * @brief  Handles EC2 StartInstances responses.
+ * \brief The StartInstancesResponse class encapsulates EC2 StartInstances responses.
  *
- * @see    EC2Client::startInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::startInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new StartInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const StartInstancesRequest * StartInstancesResponse::request() const
     return static_cast<const StartInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 StartInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void StartInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartInstancesResponsePrivate
+ * \class StartInstancesResponsePrivate
  *
- * @brief  Private implementation for StartInstancesResponse.
+ * \brief Private implementation for StartInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ StartInstancesResponsePrivate::StartInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 StartInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

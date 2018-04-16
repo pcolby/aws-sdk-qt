@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  DescribeContainerResponse
+/*!
+ * \class QtAws::MediaStore::DescribeContainerResponse
  *
- * @brief  Handles MediaStore DescribeContainer responses.
+ * \brief The DescribeContainerResponse class encapsulates MediaStore DescribeContainer responses.
  *
- * @see    MediaStoreClient::describeContainer
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::describeContainer
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeContainerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DescribeContainerRequest * DescribeContainerResponse::request() const
     return static_cast<const DescribeContainerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore DescribeContainer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DescribeContainerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeContainerResponsePrivate
+ * \class DescribeContainerResponsePrivate
  *
- * @brief  Private implementation for DescribeContainerResponse.
+ * \brief Private implementation for DescribeContainerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeContainerResponsePrivate object.
@@ -91,7 +96,7 @@ DescribeContainerResponsePrivate::DescribeContainerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore DescribeContainerResponse element.
  *
  * @param  xml  XML stream to parse.

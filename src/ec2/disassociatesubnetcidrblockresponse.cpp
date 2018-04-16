@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateSubnetCidrBlockResponse
+/*!
+ * \class QtAws::EC2::DisassociateSubnetCidrBlockResponse
  *
- * @brief  Handles EC2 DisassociateSubnetCidrBlock responses.
+ * \brief The DisassociateSubnetCidrBlockResponse class encapsulates EC2 DisassociateSubnetCidrBlock responses.
  *
- * @see    EC2Client::disassociateSubnetCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateSubnetCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateSubnetCidrBlockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DisassociateSubnetCidrBlockRequest * DisassociateSubnetCidrBlockResponse::
     return static_cast<const DisassociateSubnetCidrBlockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DisassociateSubnetCidrBlock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DisassociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateSubnetCidrBlockResponsePrivate
+ * \class DisassociateSubnetCidrBlockResponsePrivate
  *
- * @brief  Private implementation for DisassociateSubnetCidrBlockResponse.
+ * \brief Private implementation for DisassociateSubnetCidrBlockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateSubnetCidrBlockResponsePrivate object.
@@ -91,7 +98,7 @@ DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DisassociateSubnetCidrBlockResponse element.
  *
  * @param  xml  XML stream to parse.

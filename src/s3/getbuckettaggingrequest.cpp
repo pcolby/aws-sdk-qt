@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketTaggingRequest
+/*!
+ * \class QtAws::S3::GetBucketTaggingRequest
  *
- * @brief  Implements S3 GetBucketTagging requests.
+ * \brief The GetBucketTaggingRequest class encapsulates S3 GetBucketTagging requests.
  *
- * @see    S3Client::getBucketTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketTaggingRequest::GetBucketTaggingRequest(const GetBucketTaggingRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketTaggingRequest object.
  */
 GetBucketTaggingRequest::GetBucketTaggingRequest()
@@ -53,13 +56,16 @@ GetBucketTaggingRequest::GetBucketTaggingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketTaggingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketTaggingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketTaggingRequest::response(QNetworkRep
     return new GetBucketTaggingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketTaggingRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketTaggingRequest::response(QNetworkRep
  * @brief  Private implementation for GetBucketTaggingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketTaggingRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketTaggingRequestPrivate::GetBucketTaggingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketTaggingRequestPrivate object, copying another.

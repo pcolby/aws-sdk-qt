@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  CreateApplicationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::CreateApplicationResponse
  *
- * @brief  Handles KinesisAnalytics CreateApplication responses.
+ * \brief The CreateApplicationResponse class encapsulates KinesisAnalytics CreateApplication responses.
  *
- * @see    KinesisAnalyticsClient::createApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::createApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateApplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateApplicationRequest * CreateApplicationResponse::request() const
     return static_cast<const CreateApplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics CreateApplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateApplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateApplicationResponsePrivate
+ * \class CreateApplicationResponsePrivate
  *
- * @brief  Private implementation for CreateApplicationResponse.
+ * \brief Private implementation for CreateApplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApplicationResponsePrivate object.
@@ -91,7 +94,7 @@ CreateApplicationResponsePrivate::CreateApplicationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics CreateApplicationResponse element.
  *
  * @param  xml  XML stream to parse.

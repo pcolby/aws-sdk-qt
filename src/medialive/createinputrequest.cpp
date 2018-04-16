@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  CreateInputRequest
+/*!
+ * \class QtAws::MediaLive::CreateInputRequest
  *
- * @brief  Implements MediaLive CreateInput requests.
+ * \brief The CreateInputRequest class encapsulates MediaLive CreateInput requests.
  *
- * @see    MediaLiveClient::createInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::createInput
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateInputRequest::CreateInputRequest(const CreateInputRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateInputRequest object.
  */
 CreateInputRequest::CreateInputRequest()
@@ -53,13 +56,16 @@ CreateInputRequest::CreateInputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateInputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateInputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * 
     return new CreateInputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateInputRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateInputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInputRequestPrivate object.
@@ -97,7 +103,7 @@ CreateInputRequestPrivate::CreateInputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInputRequestPrivate object, copying another.

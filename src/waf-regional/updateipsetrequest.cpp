@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  UpdateIPSetRequest
+/*!
+ * \class QtAws::WAFRegional::UpdateIPSetRequest
  *
- * @brief  Implements WAFRegional UpdateIPSet requests.
+ * \brief The UpdateIPSetRequest class encapsulates WAFRegional UpdateIPSet requests.
  *
- * @see    WAFRegionalClient::updateIPSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::updateIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
@@ -53,13 +63,16 @@ UpdateIPSetRequest::UpdateIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
     return new UpdateIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateIPSetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIPSetRequestPrivate object.
@@ -97,7 +110,7 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIPSetRequestPrivate object, copying another.

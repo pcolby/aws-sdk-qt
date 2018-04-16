@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  DeleteContainerPolicyResponse
+/*!
+ * \class QtAws::MediaStore::DeleteContainerPolicyResponse
  *
- * @brief  Handles MediaStore DeleteContainerPolicy responses.
+ * \brief The DeleteContainerPolicyResponse class encapsulates MediaStore DeleteContainerPolicy responses.
  *
- * @see    MediaStoreClient::deleteContainerPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::deleteContainerPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteContainerPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteContainerPolicyRequest * DeleteContainerPolicyResponse::request() co
     return static_cast<const DeleteContainerPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore DeleteContainerPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteContainerPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteContainerPolicyResponsePrivate
+ * \class DeleteContainerPolicyResponsePrivate
  *
- * @brief  Private implementation for DeleteContainerPolicyResponse.
+ * \brief Private implementation for DeleteContainerPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteContainerPolicyResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteContainerPolicyResponsePrivate::DeleteContainerPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore DeleteContainerPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

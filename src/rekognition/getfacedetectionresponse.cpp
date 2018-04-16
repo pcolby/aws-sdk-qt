@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetFaceDetectionResponse
+/*!
+ * \class QtAws::Rekognition::GetFaceDetectionResponse
  *
- * @brief  Handles Rekognition GetFaceDetection responses.
+ * \brief The GetFaceDetectionResponse class encapsulates Rekognition GetFaceDetection responses.
  *
- * @see    RekognitionClient::getFaceDetection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getFaceDetection
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFaceDetectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetFaceDetectionRequest * GetFaceDetectionResponse::request() const
     return static_cast<const GetFaceDetectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition GetFaceDetection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetFaceDetectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFaceDetectionResponsePrivate
+ * \class GetFaceDetectionResponsePrivate
  *
- * @brief  Private implementation for GetFaceDetectionResponse.
+ * \brief Private implementation for GetFaceDetectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFaceDetectionResponsePrivate object.
@@ -91,7 +95,7 @@ GetFaceDetectionResponsePrivate::GetFaceDetectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition GetFaceDetectionResponse element.
  *
  * @param  xml  XML stream to parse.

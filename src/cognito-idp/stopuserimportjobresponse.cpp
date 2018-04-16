@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  StopUserImportJobResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::StopUserImportJobResponse
  *
- * @brief  Handles CognitoIdentityProvider StopUserImportJob responses.
+ * \brief The StopUserImportJobResponse class encapsulates CognitoIdentityProvider StopUserImportJob responses.
  *
- * @see    CognitoIdentityProviderClient::stopUserImportJob
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::stopUserImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StopUserImportJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const StopUserImportJobRequest * StopUserImportJobResponse::request() const
     return static_cast<const StopUserImportJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider StopUserImportJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void StopUserImportJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopUserImportJobResponsePrivate
+ * \class StopUserImportJobResponsePrivate
  *
- * @brief  Private implementation for StopUserImportJobResponse.
+ * \brief Private implementation for StopUserImportJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopUserImportJobResponsePrivate object.
@@ -91,7 +104,7 @@ StopUserImportJobResponsePrivate::StopUserImportJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider StopUserImportJobResponse element.
  *
  * @param  xml  XML stream to parse.

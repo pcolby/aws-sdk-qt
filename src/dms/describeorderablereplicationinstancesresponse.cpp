@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeOrderableReplicationInstancesResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeOrderableReplicationInstances responses.
+ * \brief The DescribeOrderableReplicationInstancesResponse class encapsulates DatabaseMigrationService DescribeOrderableReplicationInstances responses.
  *
- * @see    DatabaseMigrationServiceClient::describeOrderableReplicationInstances
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeOrderableReplicationInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeOrderableReplicationInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeOrderableReplicationInstancesRequest * DescribeOrderableReplicatio
     return static_cast<const DescribeOrderableReplicationInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeOrderableReplicationInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeOrderableReplicationInstancesResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeOrderableReplicationInstancesResponsePrivate
+ * \class DescribeOrderableReplicationInstancesResponsePrivate
  *
- * @brief  Private implementation for DescribeOrderableReplicationInstancesResponse.
+ * \brief Private implementation for DescribeOrderableReplicationInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeOrderableReplicationInstancesResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicati
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeOrderableReplicationInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

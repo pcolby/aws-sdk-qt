@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StopTriggerRequest
+/*!
+ * \class QtAws::Glue::StopTriggerRequest
  *
- * @brief  Implements Glue StopTrigger requests.
+ * \brief The StopTriggerRequest class encapsulates Glue StopTrigger requests.
  *
- * @see    GlueClient::stopTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::stopTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new StopTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopTriggerRequest::StopTriggerRequest(const StopTriggerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopTriggerRequest object.
  */
 StopTriggerRequest::StopTriggerRequest()
@@ -53,13 +59,16 @@ StopTriggerRequest::StopTriggerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopTriggerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopTriggerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * 
     return new StopTriggerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopTriggerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * 
  * @brief  Private implementation for StopTriggerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopTriggerRequestPrivate object.
@@ -97,7 +106,7 @@ StopTriggerRequestPrivate::StopTriggerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopTriggerRequestPrivate object, copying another.

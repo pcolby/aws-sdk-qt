@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetCSVHeaderRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetCSVHeaderRequest
  *
- * @brief  Implements CognitoIdentityProvider GetCSVHeader requests.
+ * \brief The GetCSVHeaderRequest class encapsulates CognitoIdentityProvider GetCSVHeader requests.
  *
- * @see    CognitoIdentityProviderClient::getCSVHeader
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getCSVHeader
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCSVHeaderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetCSVHeaderRequest::GetCSVHeaderRequest(const GetCSVHeaderRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCSVHeaderRequest object.
  */
 GetCSVHeaderRequest::GetCSVHeaderRequest()
@@ -53,13 +66,16 @@ GetCSVHeaderRequest::GetCSVHeaderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCSVHeaderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCSVHeaderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetCSVHeaderRequest::response(QNetworkReply *
     return new GetCSVHeaderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCSVHeaderRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetCSVHeaderRequest::response(QNetworkReply *
  * @brief  Private implementation for GetCSVHeaderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCSVHeaderRequestPrivate object.
@@ -97,7 +113,7 @@ GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCSVHeaderRequestPrivate object, copying another.

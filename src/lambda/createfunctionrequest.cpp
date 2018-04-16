@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  CreateFunctionRequest
+/*!
+ * \class QtAws::Lambda::CreateFunctionRequest
  *
- * @brief  Implements Lambda CreateFunction requests.
+ * \brief The CreateFunctionRequest class encapsulates Lambda CreateFunction requests.
  *
- * @see    LambdaClient::createFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::createFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateFunctionRequest::CreateFunctionRequest(const CreateFunctionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionRequest object.
  */
 CreateFunctionRequest::CreateFunctionRequest()
@@ -53,13 +67,16 @@ CreateFunctionRequest::CreateFunctionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFunctionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFunctionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply
     return new CreateFunctionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFunctionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply
  * @brief  Private implementation for CreateFunctionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionRequestPrivate object.
@@ -97,7 +114,7 @@ CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionRequestPrivate object, copying another.

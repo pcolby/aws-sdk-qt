@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetAccountLimitRequest
+/*!
+ * \class QtAws::Route53::GetAccountLimitRequest
  *
- * @brief  Implements Route53 GetAccountLimit requests.
+ * \brief The GetAccountLimitRequest class encapsulates Route53 GetAccountLimit requests.
  *
- * @see    Route53Client::getAccountLimit
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getAccountLimit
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountLimitRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetAccountLimitRequest::GetAccountLimitRequest(const GetAccountLimitRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAccountLimitRequest object.
  */
 GetAccountLimitRequest::GetAccountLimitRequest()
@@ -53,13 +56,16 @@ GetAccountLimitRequest::GetAccountLimitRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAccountLimitRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAccountLimitResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkRepl
     return new GetAccountLimitResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAccountLimitRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkRepl
  * @brief  Private implementation for GetAccountLimitRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountLimitRequestPrivate object.
@@ -97,7 +103,7 @@ GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountLimitRequestPrivate object, copying another.

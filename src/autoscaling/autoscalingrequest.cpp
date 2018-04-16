@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AutoScalingRequest
+/*!
+ * \class QtAws::AutoScaling::AutoScalingRequest
  *
- * @brief  Interface class for providing AutoScaling requests
+ * \brief The AutoScalingRequest class is the base class for all AutoScaling requests.
+ *
+ * \ingroup AutoScaling
  */
 
-
-/**
+/*!
  * @brief  Constructs a new AutoScalingRequest object.
  *
  * @param  action  The AutoScaling action to request.
@@ -41,7 +42,7 @@ AutoScalingRequest::AutoScalingRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AutoScalingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ AutoScalingRequest::AutoScalingRequest(const AutoScalingRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ AutoScalingRequest& AutoScalingRequest::operator=(const AutoScalingRequest &othe
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AutoScalingRequest object.
@@ -85,10 +86,8 @@ AutoScalingRequest::AutoScalingRequest(AutoScalingRequestPrivate * const d) : Qt
 
 }
 
-/**
- * @brief  Get the AutoScaling action to be performed by this request.
- *
- * @return The AutoScaling action to be performed by this request.
+/*!
+ * \brief Returns the AutoScaling action to be performed by this request.
  */
 AutoScalingRequest::Action AutoScalingRequest::action() const
 {
@@ -96,20 +95,16 @@ AutoScalingRequest::Action AutoScalingRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the AutoScaling action to be performed by this request.
- *
- * @return The name of the AutoScaling action to be performed by this request.
+/*!
+ * \brief Returns the name of the AutoScaling action to be performed by this request.
  */
 QString AutoScalingRequest::actionString() const
 {
     return AutoScalingRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the AutoScaling API version implemented by this request.
- *
- * @return The AutoScaling API version implmented by this request.
+/*!
+ * \brief Returns the AutoScaling API version implemented by this request.
  */
 QString AutoScalingRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString AutoScalingRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the AutoScaling action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the AutoScaling action to be performed by this request to \a action.
  */
 void AutoScalingRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void AutoScalingRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the AutoScaling API version to include in this request.
- *
- * @param  version  The AutoScaling API version to include in this request.
+/*!
+ * Set the AutoScaling API version to include in this request to \a version.
  */
 void AutoScalingRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void AutoScalingRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool AutoScalingRequest::operator==(const AutoScalingRequest &other) const
 {
@@ -159,7 +146,7 @@ bool AutoScalingRequest::operator==(const AutoScalingRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid AutoScaling queue name.
  *
  * @par From AutoScaling FAQs:
@@ -178,12 +165,10 @@ bool AutoScalingRequest::operator==(const AutoScalingRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int AutoScalingRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int AutoScalingRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void AutoScalingRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void AutoScalingRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this AutoScaling request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant AutoScalingRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant AutoScalingRequest::parameter(const QString &name, const QVariant &defa
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this AutoScaling request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &AutoScalingRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &AutoScalingRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this AutoScaling request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void AutoScalingRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void AutoScalingRequest::setParameter(const QString &name, const QVariant &value
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this AutoScaling request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void AutoScalingRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void AutoScalingRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this AutoScaling request.
+/*!
+ * \brief Returns a network request for this AutoScaling request using the given \a endpoint.
  *
  * This AutoScaling implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this AutoScaling request using the given \a endpoint.
  */
 QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AutoScalingRequestPrivate
+ * \class  AutoScalingRequestPrivate
  *
- * @brief  Private implementation for AutoScalingRequest.
+ * \brief  Private implementation for AutoScalingRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new AutoScalingRequestPrivate object.
- *
- * @param  action  AutoScaling action being performed by the \a q request.
- * @param  q       Pointer to this object's public AutoScalingRequest instance.
+ * \brief Constructs a new AutoScalingRequestPrivate object.
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::Action action, AutoScalingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::A
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new AutoScalingRequestPrivate object from an existing one.
+ * \brief Constructs a new AutoScalingRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the AutoScalingRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AutoScalingRequest instance.
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequestPrivate &other,
                                      AutoScalingRequest * const q)
@@ -312,14 +275,14 @@ AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequestPri
 
 }
 
-/**
- * @brief  Convert and AutoScaling action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts AutoScalingRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the AutoScaling service's Action
  * query parameters.
- *
- * @param  action  AutoScaling action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

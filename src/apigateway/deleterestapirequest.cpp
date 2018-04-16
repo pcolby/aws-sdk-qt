@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteRestApiRequest
+/*!
+ * \class QtAws::APIGateway::DeleteRestApiRequest
  *
- * @brief  Implements APIGateway DeleteRestApi requests.
+ * \brief The DeleteRestApiRequest class encapsulates APIGateway DeleteRestApi requests.
  *
- * @see    APIGatewayClient::deleteRestApi
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteRestApi
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRestApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteRestApiRequest::DeleteRestApiRequest(const DeleteRestApiRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRestApiRequest object.
  */
 DeleteRestApiRequest::DeleteRestApiRequest()
@@ -53,13 +61,16 @@ DeleteRestApiRequest::DeleteRestApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRestApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRestApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRestApiRequest::response(QNetworkReply 
     return new DeleteRestApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRestApiRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRestApiRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteRestApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRestApiRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteRestApiRequestPrivate::DeleteRestApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRestApiRequestPrivate object, copying another.

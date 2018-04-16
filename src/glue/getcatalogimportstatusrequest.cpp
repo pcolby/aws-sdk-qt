@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetCatalogImportStatusRequest
+/*!
+ * \class QtAws::Glue::GetCatalogImportStatusRequest
  *
- * @brief  Implements Glue GetCatalogImportStatus requests.
+ * \brief The GetCatalogImportStatusRequest class encapsulates Glue GetCatalogImportStatus requests.
  *
- * @see    GlueClient::getCatalogImportStatus
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getCatalogImportStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCatalogImportStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetCatalogImportStatusRequest::GetCatalogImportStatusRequest(const GetCatalogImp
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCatalogImportStatusRequest object.
  */
 GetCatalogImportStatusRequest::GetCatalogImportStatusRequest()
@@ -53,13 +59,16 @@ GetCatalogImportStatusRequest::GetCatalogImportStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCatalogImportStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCatalogImportStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetw
     return new GetCatalogImportStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCatalogImportStatusRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetw
  * @brief  Private implementation for GetCatalogImportStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCatalogImportStatusRequestPrivate object.
@@ -97,7 +106,7 @@ GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCatalogImportStatusRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeAccountLimitsResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeAccountLimitsResponse
  *
- * @brief  Handles AutoScaling DescribeAccountLimits responses.
+ * \brief The DescribeAccountLimitsResponse class encapsulates AutoScaling DescribeAccountLimits responses.
  *
- * @see    AutoScalingClient::describeAccountLimits
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeAccountLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAccountLimitsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() co
     return static_cast<const DescribeAccountLimitsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeAccountLimits response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAccountLimitsResponsePrivate
+ * \class DescribeAccountLimitsResponsePrivate
  *
- * @brief  Private implementation for DescribeAccountLimitsResponse.
+ * \brief Private implementation for DescribeAccountLimitsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAccountLimitsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeAccountLimitsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListElasticsearchInstanceTypesResponse
+/*!
+ * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesResponse
  *
- * @brief  Handles ElasticsearchService ListElasticsearchInstanceTypes responses.
+ * \brief The ListElasticsearchInstanceTypesResponse class encapsulates ElasticsearchService ListElasticsearchInstanceTypes responses.
  *
- * @see    ElasticsearchServiceClient::listElasticsearchInstanceTypes
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listElasticsearchInstanceTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListElasticsearchInstanceTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ListElasticsearchInstanceTypesRequest * ListElasticsearchInstanceTypesResp
     return static_cast<const ListElasticsearchInstanceTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService ListElasticsearchInstanceTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ListElasticsearchInstanceTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListElasticsearchInstanceTypesResponsePrivate
+ * \class ListElasticsearchInstanceTypesResponsePrivate
  *
- * @brief  Private implementation for ListElasticsearchInstanceTypesResponse.
+ * \brief Private implementation for ListElasticsearchInstanceTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListElasticsearchInstanceTypesResponsePrivate object.
@@ -91,7 +103,7 @@ ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesRes
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService ListElasticsearchInstanceTypesResponse element.
  *
  * @param  xml  XML stream to parse.

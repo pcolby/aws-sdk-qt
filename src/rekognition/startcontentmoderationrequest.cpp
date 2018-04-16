@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartContentModerationRequest
+/*!
+ * \class QtAws::Rekognition::StartContentModerationRequest
  *
- * @brief  Implements Rekognition StartContentModeration requests.
+ * \brief The StartContentModerationRequest class encapsulates Rekognition StartContentModeration requests.
  *
- * @see    RekognitionClient::startContentModeration
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startContentModeration
  */
 
-/**
+/*!
  * @brief  Constructs a new StartContentModerationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ StartContentModerationRequest::StartContentModerationRequest(const StartContentM
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartContentModerationRequest object.
  */
 StartContentModerationRequest::StartContentModerationRequest()
@@ -53,13 +57,16 @@ StartContentModerationRequest::StartContentModerationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartContentModerationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartContentModerationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * StartContentModerationRequest::response(QNetw
     return new StartContentModerationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartContentModerationRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * StartContentModerationRequest::response(QNetw
  * @brief  Private implementation for StartContentModerationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartContentModerationRequestPrivate object.
@@ -97,7 +104,7 @@ StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartContentModerationRequestPrivate object, copying another.

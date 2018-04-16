@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateApiKeyResponse
+/*!
+ * \class QtAws::AppSync::CreateApiKeyResponse
  *
- * @brief  Handles AppSync CreateApiKey responses.
+ * \brief The CreateApiKeyResponse class encapsulates AppSync CreateApiKey responses.
  *
- * @see    AppSyncClient::createApiKey
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateApiKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateApiKeyRequest * CreateApiKeyResponse::request() const
     return static_cast<const CreateApiKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync CreateApiKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateApiKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateApiKeyResponsePrivate
+ * \class CreateApiKeyResponsePrivate
  *
- * @brief  Private implementation for CreateApiKeyResponse.
+ * \brief Private implementation for CreateApiKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApiKeyResponsePrivate object.
@@ -91,7 +95,7 @@ CreateApiKeyResponsePrivate::CreateApiKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync CreateApiKeyResponse element.
  *
  * @param  xml  XML stream to parse.

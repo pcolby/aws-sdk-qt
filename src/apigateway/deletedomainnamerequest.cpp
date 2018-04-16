@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDomainNameRequest
+/*!
+ * \class QtAws::APIGateway::DeleteDomainNameRequest
  *
- * @brief  Implements APIGateway DeleteDomainName requests.
+ * \brief The DeleteDomainNameRequest class encapsulates APIGateway DeleteDomainName requests.
  *
- * @see    APIGatewayClient::deleteDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDomainNameRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteDomainNameRequest::DeleteDomainNameRequest(const DeleteDomainNameRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDomainNameRequest object.
  */
 DeleteDomainNameRequest::DeleteDomainNameRequest()
@@ -53,13 +61,16 @@ DeleteDomainNameRequest::DeleteDomainNameRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDomainNameRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDomainNameResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkRep
     return new DeleteDomainNameResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDomainNameRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteDomainNameRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDomainNameRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDomainNameRequestPrivate object, copying another.

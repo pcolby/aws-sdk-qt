@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetServiceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::GetServiceRequest
  *
- * @brief  Implements ServiceDiscovery GetService requests.
+ * \brief The GetServiceRequest class encapsulates ServiceDiscovery GetService requests.
  *
- * @see    ServiceDiscoveryClient::getService
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getService
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetServiceRequest::GetServiceRequest(const GetServiceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetServiceRequest object.
  */
 GetServiceRequest::GetServiceRequest()
@@ -53,13 +60,16 @@ GetServiceRequest::GetServiceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetServiceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetServiceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * c
     return new GetServiceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetServiceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetServiceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceRequestPrivate object.
@@ -97,7 +107,7 @@ GetServiceRequestPrivate::GetServiceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceRequestPrivate object, copying another.

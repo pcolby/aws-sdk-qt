@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateResourceServerRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateResourceServerRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateResourceServer requests.
+ * \brief The UpdateResourceServerRequest class encapsulates CognitoIdentityProvider UpdateResourceServer requests.
  *
- * @see    CognitoIdentityProviderClient::updateResourceServer
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateResourceServer
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateResourceServerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateResourceServerRequest::UpdateResourceServerRequest(const UpdateResourceSer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateResourceServerRequest object.
  */
 UpdateResourceServerRequest::UpdateResourceServerRequest()
@@ -53,13 +66,16 @@ UpdateResourceServerRequest::UpdateResourceServerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateResourceServerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateResourceServerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetwor
     return new UpdateResourceServerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateResourceServerRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetwor
  * @brief  Private implementation for UpdateResourceServerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResourceServerRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResourceServerRequestPrivate object, copying another.

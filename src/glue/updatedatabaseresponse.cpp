@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateDatabaseResponse
+/*!
+ * \class QtAws::Glue::UpdateDatabaseResponse
  *
- * @brief  Handles Glue UpdateDatabase responses.
+ * \brief The UpdateDatabaseResponse class encapsulates Glue UpdateDatabase responses.
  *
- * @see    GlueClient::updateDatabase
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateDatabase
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDatabaseResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateDatabaseRequest * UpdateDatabaseResponse::request() const
     return static_cast<const UpdateDatabaseRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateDatabase response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateDatabaseResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDatabaseResponsePrivate
+ * \class UpdateDatabaseResponsePrivate
  *
- * @brief  Private implementation for UpdateDatabaseResponse.
+ * \brief Private implementation for UpdateDatabaseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDatabaseResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateDatabaseResponsePrivate::UpdateDatabaseResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateDatabaseResponse element.
  *
  * @param  xml  XML stream to parse.

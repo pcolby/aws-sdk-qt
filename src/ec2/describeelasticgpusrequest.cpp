@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeElasticGpusRequest
+/*!
+ * \class QtAws::EC2::DescribeElasticGpusRequest
  *
- * @brief  Implements EC2 DescribeElasticGpus requests.
+ * \brief The DescribeElasticGpusRequest class encapsulates EC2 DescribeElasticGpus requests.
  *
- * @see    EC2Client::describeElasticGpus
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeElasticGpus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticGpusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeElasticGpusRequest::DescribeElasticGpusRequest(const DescribeElasticGpus
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticGpusRequest object.
  */
 DescribeElasticGpusRequest::DescribeElasticGpusRequest()
@@ -53,13 +60,16 @@ DescribeElasticGpusRequest::DescribeElasticGpusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeElasticGpusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeElasticGpusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetwork
     return new DescribeElasticGpusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeElasticGpusRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetwork
  * @brief  Private implementation for DescribeElasticGpusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticGpusRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticGpusRequestPrivate object, copying another.

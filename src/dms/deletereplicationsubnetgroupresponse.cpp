@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteReplicationSubnetGroupResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupResponse
  *
- * @brief  Handles DatabaseMigrationService DeleteReplicationSubnetGroup responses.
+ * \brief The DeleteReplicationSubnetGroupResponse class encapsulates DatabaseMigrationService DeleteReplicationSubnetGroup responses.
  *
- * @see    DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteReplicationSubnetGroupRequest * DeleteReplicationSubnetGroupResponse
     return static_cast<const DeleteReplicationSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DeleteReplicationSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReplicationSubnetGroupResponsePrivate
+ * \class DeleteReplicationSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteReplicationSubnetGroupResponse.
+ * \brief Private implementation for DeleteReplicationSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationSubnetGroupResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DeleteReplicationSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

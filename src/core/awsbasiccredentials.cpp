@@ -23,13 +23,13 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsBasicCredentials
+/*!
+ * \class QtAws::Core::AwsBasicCredentials
  *
  * @brief  Basic non-refreshable implementation of AwsAbstractCredentials.
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsBasicCredentials object.
  *
  * Constructs a new AwsBasicCredentials object, with the specified AWS access
@@ -53,7 +53,7 @@ AwsBasicCredentials::AwsBasicCredentials(
     d->token = token;
 }
 
-/**
+/*!
  * @brief  Constructs a new AwsBasicCredentials object.
  *
  * Constructs a new AwsBasicCredentials object, with the specified AWS access key and AWS secret
@@ -92,7 +92,7 @@ QString AwsBasicCredentials::token() const
     return d->token;
 }
 
-/**
+/*!
  * @brief Set the AWS access key ID for this credentials object.
  *
  * @param accessKeyId  The AWS access key ID to set for this credentials object.
@@ -104,7 +104,7 @@ void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId)
     emit changed();
 }
 
-/**
+/*!
  * @brief Set the AWS secret access key for this credentials object.
  *
  * @param secretKey  The AWS secret access key to set for this credentials object.
@@ -116,7 +116,7 @@ void AwsBasicCredentials::setSecretKey(const QString &secretKey)
     emit changed();
 }
 
-/**
+/*!
  * @brief Set the AWS security token for this credentials object.
  *
  * @param token  The AWS security token to set for this credentials object.
@@ -128,17 +128,17 @@ void AwsBasicCredentials::setToken(const QString &token)
     emit changed();
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsBasicCredentialsPrivate
+ * \class QtAws::Core::AwsBasicCredentialsPrivate
  *
  * @brief  Private implementation for AwsBasicCredentials.
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsBasicCredentialsPrivate object.

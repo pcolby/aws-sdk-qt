@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  DeleteWorkerBlockResponse
+/*!
+ * \class QtAws::MTurk::DeleteWorkerBlockResponse
  *
- * @brief  Handles MTurk DeleteWorkerBlock responses.
+ * \brief The DeleteWorkerBlockResponse class encapsulates MTurk DeleteWorkerBlock responses.
  *
- * @see    MTurkClient::deleteWorkerBlock
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::deleteWorkerBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteWorkerBlockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteWorkerBlockRequest * DeleteWorkerBlockResponse::request() const
     return static_cast<const DeleteWorkerBlockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk DeleteWorkerBlock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteWorkerBlockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteWorkerBlockResponsePrivate
+ * \class DeleteWorkerBlockResponsePrivate
  *
- * @brief  Private implementation for DeleteWorkerBlockResponse.
+ * \brief Private implementation for DeleteWorkerBlockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWorkerBlockResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk DeleteWorkerBlockResponse element.
  *
  * @param  xml  XML stream to parse.

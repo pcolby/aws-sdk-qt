@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListClustersResponse
+/*!
+ * \class QtAws::EMR::ListClustersResponse
  *
- * @brief  Handles EMR ListClusters responses.
+ * \brief The ListClustersResponse class encapsulates EMR ListClusters responses.
  *
- * @see    EMRClient::listClusters
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listClusters
  */
 
-/**
+/*!
  * @brief  Constructs a new ListClustersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListClustersRequest * ListClustersResponse::request() const
     return static_cast<const ListClustersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR ListClusters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListClustersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListClustersResponsePrivate
+ * \class ListClustersResponsePrivate
  *
- * @brief  Private implementation for ListClustersResponse.
+ * \brief Private implementation for ListClustersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClustersResponsePrivate object.
@@ -91,7 +97,7 @@ ListClustersResponsePrivate::ListClustersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR ListClustersResponse element.
  *
  * @param  xml  XML stream to parse.

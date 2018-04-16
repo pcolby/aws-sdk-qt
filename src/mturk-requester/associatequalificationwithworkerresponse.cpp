@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  AssociateQualificationWithWorkerResponse
+/*!
+ * \class QtAws::MTurk::AssociateQualificationWithWorkerResponse
  *
- * @brief  Handles MTurk AssociateQualificationWithWorker responses.
+ * \brief The AssociateQualificationWithWorkerResponse class encapsulates MTurk AssociateQualificationWithWorker responses.
  *
- * @see    MTurkClient::associateQualificationWithWorker
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::associateQualificationWithWorker
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateQualificationWithWorkerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AssociateQualificationWithWorkerRequest * AssociateQualificationWithWorker
     return static_cast<const AssociateQualificationWithWorkerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk AssociateQualificationWithWorker response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AssociateQualificationWithWorkerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateQualificationWithWorkerResponsePrivate
+ * \class AssociateQualificationWithWorkerResponsePrivate
  *
- * @brief  Private implementation for AssociateQualificationWithWorkerResponse.
+ * \brief Private implementation for AssociateQualificationWithWorkerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateQualificationWithWorkerResponsePrivate object.
@@ -91,7 +94,7 @@ AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorke
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk AssociateQualificationWithWorkerResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateCACertificateRequest
+/*!
+ * \class QtAws::IoT::UpdateCACertificateRequest
  *
- * @brief  Implements IoT UpdateCACertificate requests.
+ * \brief The UpdateCACertificateRequest class encapsulates IoT UpdateCACertificate requests.
  *
- * @see    IoTClient::updateCACertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateCACertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCACertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateCACertificateRequest::UpdateCACertificateRequest(const UpdateCACertificate
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCACertificateRequest object.
  */
 UpdateCACertificateRequest::UpdateCACertificateRequest()
@@ -53,13 +67,16 @@ UpdateCACertificateRequest::UpdateCACertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCACertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCACertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCACertificateRequest::response(QNetwork
     return new UpdateCACertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCACertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCACertificateRequest::response(QNetwork
  * @brief  Private implementation for UpdateCACertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCACertificateRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateCACertificateRequestPrivate::UpdateCACertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCACertificateRequestPrivate object, copying another.

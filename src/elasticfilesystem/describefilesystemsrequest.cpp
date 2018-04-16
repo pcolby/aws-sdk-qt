@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeFileSystemsRequest
+/*!
+ * \class QtAws::EFS::DescribeFileSystemsRequest
  *
- * @brief  Implements EFS DescribeFileSystems requests.
+ * \brief The DescribeFileSystemsRequest class encapsulates EFS DescribeFileSystems requests.
  *
- * @see    EFSClient::describeFileSystems
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeFileSystems
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFileSystemsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeFileSystemsRequest::DescribeFileSystemsRequest(const DescribeFileSystems
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeFileSystemsRequest object.
  */
 DescribeFileSystemsRequest::DescribeFileSystemsRequest()
@@ -53,13 +62,16 @@ DescribeFileSystemsRequest::DescribeFileSystemsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeFileSystemsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeFileSystemsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetwork
     return new DescribeFileSystemsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeFileSystemsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetwork
  * @brief  Private implementation for DescribeFileSystemsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFileSystemsRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFileSystemsRequestPrivate object, copying another.

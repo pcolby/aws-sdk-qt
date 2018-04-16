@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminEnableUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminEnableUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminEnableUser requests.
+ * \brief The AdminEnableUserRequest class encapsulates CognitoIdentityProvider AdminEnableUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminEnableUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminEnableUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminEnableUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminEnableUserRequest::AdminEnableUserRequest(const AdminEnableUserRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminEnableUserRequest object.
  */
 AdminEnableUserRequest::AdminEnableUserRequest()
@@ -53,13 +66,16 @@ AdminEnableUserRequest::AdminEnableUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminEnableUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminEnableUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkRepl
     return new AdminEnableUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminEnableUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkRepl
  * @brief  Private implementation for AdminEnableUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminEnableUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminEnableUserRequestPrivate object, copying another.

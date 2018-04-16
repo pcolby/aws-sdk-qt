@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  DescribeBundleRequest
+/*!
+ * \class QtAws::Mobile::DescribeBundleRequest
  *
- * @brief  Implements Mobile DescribeBundle requests.
+ * \brief The DescribeBundleRequest class encapsulates Mobile DescribeBundle requests.
  *
- * @see    MobileClient::describeBundle
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::describeBundle
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBundleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeBundleRequest::DescribeBundleRequest(const DescribeBundleRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeBundleRequest object.
  */
 DescribeBundleRequest::DescribeBundleRequest()
@@ -53,13 +59,16 @@ DescribeBundleRequest::DescribeBundleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeBundleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeBundleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleRequest::response(QNetworkReply
     return new DescribeBundleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeBundleRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeBundleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBundleRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeBundleRequestPrivate::DescribeBundleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBundleRequestPrivate object, copying another.

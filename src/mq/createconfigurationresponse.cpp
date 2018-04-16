@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  CreateConfigurationResponse
+/*!
+ * \class QtAws::MQ::CreateConfigurationResponse
  *
- * @brief  Handles MQ CreateConfiguration responses.
+ * \brief The CreateConfigurationResponse class encapsulates MQ CreateConfiguration responses.
  *
- * @see    MQClient::createConfiguration
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::createConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateConfigurationRequest * CreateConfigurationResponse::request() const
     return static_cast<const CreateConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ CreateConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateConfigurationResponsePrivate
+ * \class CreateConfigurationResponsePrivate
  *
- * @brief  Private implementation for CreateConfigurationResponse.
+ * \brief Private implementation for CreateConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationResponsePrivate object.
@@ -91,7 +96,7 @@ CreateConfigurationResponsePrivate::CreateConfigurationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ CreateConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

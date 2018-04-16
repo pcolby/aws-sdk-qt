@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProvisioningParametersResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProvisioningParametersResponse
  *
- * @brief  Handles ServiceCatalog DescribeProvisioningParameters responses.
+ * \brief The DescribeProvisioningParametersResponse class encapsulates ServiceCatalog DescribeProvisioningParameters responses.
  *
- * @see    ServiceCatalogClient::describeProvisioningParameters
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProvisioningParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisioningParametersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeProvisioningParametersRequest * DescribeProvisioningParametersResp
     return static_cast<const DescribeProvisioningParametersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeProvisioningParameters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeProvisioningParametersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeProvisioningParametersResponsePrivate
+ * \class DescribeProvisioningParametersResponsePrivate
  *
- * @brief  Private implementation for DescribeProvisioningParametersResponse.
+ * \brief Private implementation for DescribeProvisioningParametersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisioningParametersResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeProvisioningParametersResponsePrivate::DescribeProvisioningParametersRes
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeProvisioningParametersResponse element.
  *
  * @param  xml  XML stream to parse.

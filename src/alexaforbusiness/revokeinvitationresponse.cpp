@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  RevokeInvitationResponse
+/*!
+ * \class QtAws::AlexaForBusiness::RevokeInvitationResponse
  *
- * @brief  Handles AlexaForBusiness RevokeInvitation responses.
+ * \brief The RevokeInvitationResponse class encapsulates AlexaForBusiness RevokeInvitation responses.
  *
- * @see    AlexaForBusinessClient::revokeInvitation
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::revokeInvitation
  */
 
-/**
+/*!
  * @brief  Constructs a new RevokeInvitationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const RevokeInvitationRequest * RevokeInvitationResponse::request() const
     return static_cast<const RevokeInvitationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness RevokeInvitation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void RevokeInvitationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RevokeInvitationResponsePrivate
+ * \class RevokeInvitationResponsePrivate
  *
- * @brief  Private implementation for RevokeInvitationResponse.
+ * \brief Private implementation for RevokeInvitationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeInvitationResponsePrivate object.
@@ -91,7 +99,7 @@ RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness RevokeInvitationResponse element.
  *
  * @param  xml  XML stream to parse.

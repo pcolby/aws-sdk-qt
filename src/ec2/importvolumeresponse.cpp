@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportVolumeResponse
+/*!
+ * \class QtAws::EC2::ImportVolumeResponse
  *
- * @brief  Handles EC2 ImportVolume responses.
+ * \brief The ImportVolumeResponse class encapsulates EC2 ImportVolume responses.
  *
- * @see    EC2Client::importVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportVolumeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ImportVolumeRequest * ImportVolumeResponse::request() const
     return static_cast<const ImportVolumeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ImportVolume response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ImportVolumeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportVolumeResponsePrivate
+ * \class ImportVolumeResponsePrivate
  *
- * @brief  Private implementation for ImportVolumeResponse.
+ * \brief Private implementation for ImportVolumeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportVolumeResponsePrivate object.
@@ -91,7 +98,7 @@ ImportVolumeResponsePrivate::ImportVolumeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ImportVolumeResponse element.
  *
  * @param  xml  XML stream to parse.

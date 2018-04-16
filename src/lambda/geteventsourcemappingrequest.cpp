@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetEventSourceMappingRequest
+/*!
+ * \class QtAws::Lambda::GetEventSourceMappingRequest
  *
- * @brief  Implements Lambda GetEventSourceMapping requests.
+ * \brief The GetEventSourceMappingRequest class encapsulates Lambda GetEventSourceMapping requests.
  *
- * @see    LambdaClient::getEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEventSourceMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetEventSourceMappingRequest::GetEventSourceMappingRequest(const GetEventSourceM
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEventSourceMappingRequest object.
  */
 GetEventSourceMappingRequest::GetEventSourceMappingRequest()
@@ -53,13 +67,16 @@ GetEventSourceMappingRequest::GetEventSourceMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEventSourceMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEventSourceMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetEventSourceMappingRequest::response(QNetwo
     return new GetEventSourceMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEventSourceMappingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetEventSourceMappingRequest::response(QNetwo
  * @brief  Private implementation for GetEventSourceMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEventSourceMappingRequestPrivate object.
@@ -97,7 +114,7 @@ GetEventSourceMappingRequestPrivate::GetEventSourceMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEventSourceMappingRequestPrivate object, copying another.

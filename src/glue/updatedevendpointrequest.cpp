@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateDevEndpointRequest
+/*!
+ * \class QtAws::Glue::UpdateDevEndpointRequest
  *
- * @brief  Implements Glue UpdateDevEndpoint requests.
+ * \brief The UpdateDevEndpointRequest class encapsulates Glue UpdateDevEndpoint requests.
  *
- * @see    GlueClient::updateDevEndpoint
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateDevEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDevEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateDevEndpointRequest::UpdateDevEndpointRequest(const UpdateDevEndpointReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDevEndpointRequest object.
  */
 UpdateDevEndpointRequest::UpdateDevEndpointRequest()
@@ -53,13 +59,16 @@ UpdateDevEndpointRequest::UpdateDevEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDevEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDevEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkRe
     return new UpdateDevEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDevEndpointRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateDevEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDevEndpointRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDevEndpointRequestPrivate object, copying another.

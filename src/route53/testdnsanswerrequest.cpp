@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  TestDNSAnswerRequest
+/*!
+ * \class QtAws::Route53::TestDNSAnswerRequest
  *
- * @brief  Implements Route53 TestDNSAnswer requests.
+ * \brief The TestDNSAnswerRequest class encapsulates Route53 TestDNSAnswer requests.
  *
- * @see    Route53Client::testDNSAnswer
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::testDNSAnswer
  */
 
-/**
+/*!
  * @brief  Constructs a new TestDNSAnswerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ TestDNSAnswerRequest::TestDNSAnswerRequest(const TestDNSAnswerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestDNSAnswerRequest object.
  */
 TestDNSAnswerRequest::TestDNSAnswerRequest()
@@ -53,13 +56,16 @@ TestDNSAnswerRequest::TestDNSAnswerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestDNSAnswerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestDNSAnswerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply 
     return new TestDNSAnswerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestDNSAnswerRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply 
  * @brief  Private implementation for TestDNSAnswerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestDNSAnswerRequestPrivate object.
@@ -97,7 +103,7 @@ TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestDNSAnswerRequestPrivate object, copying another.

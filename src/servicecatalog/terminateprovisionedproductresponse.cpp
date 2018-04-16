@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  TerminateProvisionedProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::TerminateProvisionedProductResponse
  *
- * @brief  Handles ServiceCatalog TerminateProvisionedProduct responses.
+ * \brief The TerminateProvisionedProductResponse class encapsulates ServiceCatalog TerminateProvisionedProduct responses.
  *
- * @see    ServiceCatalogClient::terminateProvisionedProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::terminateProvisionedProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateProvisionedProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const TerminateProvisionedProductRequest * TerminateProvisionedProductResponse::
     return static_cast<const TerminateProvisionedProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog TerminateProvisionedProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void TerminateProvisionedProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TerminateProvisionedProductResponsePrivate
+ * \class TerminateProvisionedProductResponsePrivate
  *
- * @brief  Private implementation for TerminateProvisionedProductResponse.
+ * \brief Private implementation for TerminateProvisionedProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateProvisionedProductResponsePrivate object.
@@ -91,7 +100,7 @@ TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog TerminateProvisionedProductResponse element.
  *
  * @param  xml  XML stream to parse.

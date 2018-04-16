@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointServiceConfigurationsResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsResponse
  *
- * @brief  Handles EC2 DescribeVpcEndpointServiceConfigurations responses.
+ * \brief The DescribeVpcEndpointServiceConfigurationsResponse class encapsulates EC2 DescribeVpcEndpointServiceConfigurations responses.
  *
- * @see    EC2Client::describeVpcEndpointServiceConfigurations
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointServiceConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcEndpointServiceConfigurationsRequest * DescribeVpcEndpointServi
     return static_cast<const DescribeVpcEndpointServiceConfigurationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcEndpointServiceConfigurations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcEndpointServiceConfigurationsResponse::parseSuccess(QIODevice &r
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcEndpointServiceConfigurationsResponsePrivate
+ * \class DescribeVpcEndpointServiceConfigurationsResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcEndpointServiceConfigurationsResponse.
+ * \brief Private implementation for DescribeVpcEndpointServiceConfigurationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcEndpointServiceConfigurationsResponsePrivate::DescribeVpcEndpointServ
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcEndpointServiceConfigurationsResponse element.
  *
  * @param  xml  XML stream to parse.

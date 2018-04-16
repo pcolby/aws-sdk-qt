@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  RetrieveDomainAuthCodeRequest
+/*!
+ * \class QtAws::Route53Domains::RetrieveDomainAuthCodeRequest
  *
- * @brief  Implements Route53Domains RetrieveDomainAuthCode requests.
+ * \brief The RetrieveDomainAuthCodeRequest class encapsulates Route53Domains RetrieveDomainAuthCode requests.
  *
- * @see    Route53DomainsClient::retrieveDomainAuthCode
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::retrieveDomainAuthCode
  */
 
-/**
+/*!
  * @brief  Constructs a new RetrieveDomainAuthCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ RetrieveDomainAuthCodeRequest::RetrieveDomainAuthCodeRequest(const RetrieveDomai
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RetrieveDomainAuthCodeRequest object.
  */
 RetrieveDomainAuthCodeRequest::RetrieveDomainAuthCodeRequest()
@@ -53,13 +57,16 @@ RetrieveDomainAuthCodeRequest::RetrieveDomainAuthCodeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RetrieveDomainAuthCodeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RetrieveDomainAuthCodeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetw
     return new RetrieveDomainAuthCodeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RetrieveDomainAuthCodeRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetw
  * @brief  Private implementation for RetrieveDomainAuthCodeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RetrieveDomainAuthCodeRequestPrivate object.
@@ -97,7 +104,7 @@ RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RetrieveDomainAuthCodeRequestPrivate object, copying another.

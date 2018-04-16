@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetLifecyclePolicyPreviewRequest
+/*!
+ * \class QtAws::ECR::GetLifecyclePolicyPreviewRequest
  *
- * @brief  Implements ECR GetLifecyclePolicyPreview requests.
+ * \brief The GetLifecyclePolicyPreviewRequest class encapsulates ECR GetLifecyclePolicyPreview requests.
  *
- * @see    ECRClient::getLifecyclePolicyPreview
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getLifecyclePolicyPreview
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLifecyclePolicyPreviewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetLifecyclePolicyPreviewRequest::GetLifecyclePolicyPreviewRequest(const GetLife
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLifecyclePolicyPreviewRequest object.
  */
 GetLifecyclePolicyPreviewRequest::GetLifecyclePolicyPreviewRequest()
@@ -53,13 +60,16 @@ GetLifecyclePolicyPreviewRequest::GetLifecyclePolicyPreviewRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLifecyclePolicyPreviewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLifecyclePolicyPreviewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyPreviewRequest::response(QN
     return new GetLifecyclePolicyPreviewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLifecyclePolicyPreviewRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyPreviewRequest::response(QN
  * @brief  Private implementation for GetLifecyclePolicyPreviewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLifecyclePolicyPreviewRequestPrivate object.
@@ -97,7 +107,7 @@ GetLifecyclePolicyPreviewRequestPrivate::GetLifecyclePolicyPreviewRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLifecyclePolicyPreviewRequestPrivate object, copying another.

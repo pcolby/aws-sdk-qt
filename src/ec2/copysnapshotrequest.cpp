@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CopySnapshotRequest
+/*!
+ * \class QtAws::EC2::CopySnapshotRequest
  *
- * @brief  Implements EC2 CopySnapshot requests.
+ * \brief The CopySnapshotRequest class encapsulates EC2 CopySnapshot requests.
  *
- * @see    EC2Client::copySnapshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::copySnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new CopySnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CopySnapshotRequest::CopySnapshotRequest(const CopySnapshotRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CopySnapshotRequest object.
  */
 CopySnapshotRequest::CopySnapshotRequest()
@@ -53,13 +60,16 @@ CopySnapshotRequest::CopySnapshotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CopySnapshotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CopySnapshotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
     return new CopySnapshotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CopySnapshotRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
  * @brief  Private implementation for CopySnapshotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopySnapshotRequestPrivate object.
@@ -97,7 +107,7 @@ CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopySnapshotRequestPrivate object, copying another.

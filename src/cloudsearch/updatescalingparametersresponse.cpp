@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  UpdateScalingParametersResponse
+/*!
+ * \class QtAws::CloudSearch::UpdateScalingParametersResponse
  *
- * @brief  Handles CloudSearch UpdateScalingParameters responses.
+ * \brief The UpdateScalingParametersResponse class encapsulates CloudSearch UpdateScalingParameters responses.
  *
- * @see    CloudSearchClient::updateScalingParameters
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::updateScalingParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateScalingParametersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateScalingParametersRequest * UpdateScalingParametersResponse::request(
     return static_cast<const UpdateScalingParametersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch UpdateScalingParameters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateScalingParametersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateScalingParametersResponsePrivate
+ * \class UpdateScalingParametersResponsePrivate
  *
- * @brief  Private implementation for UpdateScalingParametersResponse.
+ * \brief Private implementation for UpdateScalingParametersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateScalingParametersResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateScalingParametersResponsePrivate::UpdateScalingParametersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch UpdateScalingParametersResponse element.
  *
  * @param  xml  XML stream to parse.

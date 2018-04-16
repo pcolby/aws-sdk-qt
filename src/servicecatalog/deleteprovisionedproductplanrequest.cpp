@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteProvisionedProductPlanRequest
+/*!
+ * \class QtAws::ServiceCatalog::DeleteProvisionedProductPlanRequest
  *
- * @brief  Implements ServiceCatalog DeleteProvisionedProductPlan requests.
+ * \brief The DeleteProvisionedProductPlanRequest class encapsulates ServiceCatalog DeleteProvisionedProductPlan requests.
  *
- * @see    ServiceCatalogClient::deleteProvisionedProductPlan
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteProvisionedProductPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProvisionedProductPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteProvisionedProductPlanRequest::DeleteProvisionedProductPlanRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteProvisionedProductPlanRequest object.
  */
 DeleteProvisionedProductPlanRequest::DeleteProvisionedProductPlanRequest()
@@ -53,13 +62,16 @@ DeleteProvisionedProductPlanRequest::DeleteProvisionedProductPlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteProvisionedProductPlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteProvisionedProductPlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisionedProductPlanRequest::response
     return new DeleteProvisionedProductPlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteProvisionedProductPlanRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisionedProductPlanRequest::response
  * @brief  Private implementation for DeleteProvisionedProductPlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProvisionedProductPlanRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProvisionedProductPlanRequestPrivate object, copying another.

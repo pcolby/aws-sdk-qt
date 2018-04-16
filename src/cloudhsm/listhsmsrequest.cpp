@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListHsmsRequest
+/*!
+ * \class QtAws::CloudHSM::ListHsmsRequest
  *
- * @brief  Implements CloudHSM ListHsms requests.
+ * \brief The ListHsmsRequest class encapsulates CloudHSM ListHsms requests.
  *
- * @see    CloudHSMClient::listHsms
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listHsms
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHsmsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ListHsmsRequest::ListHsmsRequest(const ListHsmsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListHsmsRequest object.
  */
 ListHsmsRequest::ListHsmsRequest()
@@ -53,13 +68,16 @@ ListHsmsRequest::ListHsmsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListHsmsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListHsmsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * con
     return new ListHsmsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListHsmsRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListHsmsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHsmsRequestPrivate object.
@@ -97,7 +115,7 @@ ListHsmsRequestPrivate::ListHsmsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHsmsRequestPrivate object, copying another.

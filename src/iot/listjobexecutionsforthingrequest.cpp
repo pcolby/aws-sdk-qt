@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListJobExecutionsForThingRequest
+/*!
+ * \class QtAws::IoT::ListJobExecutionsForThingRequest
  *
- * @brief  Implements IoT ListJobExecutionsForThing requests.
+ * \brief The ListJobExecutionsForThingRequest class encapsulates IoT ListJobExecutionsForThing requests.
  *
- * @see    IoTClient::listJobExecutionsForThing
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listJobExecutionsForThing
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobExecutionsForThingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListJobExecutionsForThingRequest::ListJobExecutionsForThingRequest(const ListJob
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobExecutionsForThingRequest object.
  */
 ListJobExecutionsForThingRequest::ListJobExecutionsForThingRequest()
@@ -53,13 +67,16 @@ ListJobExecutionsForThingRequest::ListJobExecutionsForThingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobExecutionsForThingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobExecutionsForThingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QN
     return new ListJobExecutionsForThingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobExecutionsForThingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListJobExecutionsForThingRequest::response(QN
  * @brief  Private implementation for ListJobExecutionsForThingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobExecutionsForThingRequestPrivate object.
@@ -97,7 +114,7 @@ ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobExecutionsForThingRequestPrivate object, copying another.

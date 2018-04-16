@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateDeploymentRequest
+/*!
+ * \class QtAws::APIGateway::CreateDeploymentRequest
  *
- * @brief  Implements APIGateway CreateDeployment requests.
+ * \brief The CreateDeploymentRequest class encapsulates APIGateway CreateDeployment requests.
  *
- * @see    APIGatewayClient::createDeployment
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeploymentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDeploymentRequest object.
  */
 CreateDeploymentRequest::CreateDeploymentRequest()
@@ -53,13 +61,16 @@ CreateDeploymentRequest::CreateDeploymentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDeploymentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDeploymentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
     return new CreateDeploymentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDeploymentRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
  * @brief  Private implementation for CreateDeploymentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeploymentRequestPrivate object.
@@ -97,7 +108,7 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeploymentRequestPrivate object, copying another.

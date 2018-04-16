@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityFeedbackForwardingEnabledRequest
+/*!
+ * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledRequest
  *
- * @brief  Implements SES SetIdentityFeedbackForwardingEnabled requests.
+ * \brief The SetIdentityFeedbackForwardingEnabledRequest class encapsulates SES SetIdentityFeedbackForwardingEnabled requests.
  *
- * @see    SESClient::setIdentityFeedbackForwardingEnabled
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityFeedbackForwardingEnabled
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnable
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object.
  */
 SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnabledRequest()
@@ -53,13 +67,16 @@ SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnable
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetIdentityFeedbackForwardingEnabledRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetIdentityFeedbackForwardingEnabledResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::
     return new SetIdentityFeedbackForwardingEnabledResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetIdentityFeedbackForwardingEnabledRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::
  * @brief  Private implementation for SetIdentityFeedbackForwardingEnabledRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequestPrivate object.
@@ -97,7 +114,7 @@ SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardin
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequestPrivate object, copying another.

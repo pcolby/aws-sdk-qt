@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  UpdateDirectoryConfigRequest
+/*!
+ * \class QtAws::AppStream::UpdateDirectoryConfigRequest
  *
- * @brief  Implements AppStream UpdateDirectoryConfig requests.
+ * \brief The UpdateDirectoryConfigRequest class encapsulates AppStream UpdateDirectoryConfig requests.
  *
- * @see    AppStreamClient::updateDirectoryConfig
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::updateDirectoryConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDirectoryConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateDirectoryConfigRequest::UpdateDirectoryConfigRequest(const UpdateDirectory
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDirectoryConfigRequest object.
  */
 UpdateDirectoryConfigRequest::UpdateDirectoryConfigRequest()
@@ -53,13 +59,16 @@ UpdateDirectoryConfigRequest::UpdateDirectoryConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDirectoryConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDirectoryConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDirectoryConfigRequest::response(QNetwo
     return new UpdateDirectoryConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDirectoryConfigRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDirectoryConfigRequest::response(QNetwo
  * @brief  Private implementation for UpdateDirectoryConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDirectoryConfigRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateDirectoryConfigRequestPrivate::UpdateDirectoryConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDirectoryConfigRequestPrivate object, copying another.

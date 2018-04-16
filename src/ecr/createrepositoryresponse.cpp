@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  CreateRepositoryResponse
+/*!
+ * \class QtAws::ECR::CreateRepositoryResponse
  *
- * @brief  Handles ECR CreateRepository responses.
+ * \brief The CreateRepositoryResponse class encapsulates ECR CreateRepository responses.
  *
- * @see    ECRClient::createRepository
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::createRepository
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRepositoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateRepositoryRequest * CreateRepositoryResponse::request() const
     return static_cast<const CreateRepositoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR CreateRepository response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateRepositoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateRepositoryResponsePrivate
+ * \class CreateRepositoryResponsePrivate
  *
- * @brief  Private implementation for CreateRepositoryResponse.
+ * \brief Private implementation for CreateRepositoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRepositoryResponsePrivate object.
@@ -91,7 +98,7 @@ CreateRepositoryResponsePrivate::CreateRepositoryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR CreateRepositoryResponse element.
  *
  * @param  xml  XML stream to parse.

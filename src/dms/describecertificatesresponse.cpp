@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeCertificatesResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeCertificatesResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeCertificates responses.
+ * \brief The DescribeCertificatesResponse class encapsulates DatabaseMigrationService DescribeCertificates responses.
  *
- * @see    DatabaseMigrationServiceClient::describeCertificates
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeCertificates
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCertificatesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
     return static_cast<const DescribeCertificatesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeCertificates response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCertificatesResponsePrivate
+ * \class DescribeCertificatesResponsePrivate
  *
- * @brief  Private implementation for DescribeCertificatesResponse.
+ * \brief Private implementation for DescribeCertificatesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCertificatesResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeCertificatesResponse element.
  *
  * @param  xml  XML stream to parse.

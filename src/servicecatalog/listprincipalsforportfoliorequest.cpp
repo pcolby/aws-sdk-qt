@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListPrincipalsForPortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListPrincipalsForPortfolioRequest
  *
- * @brief  Implements ServiceCatalog ListPrincipalsForPortfolio requests.
+ * \brief The ListPrincipalsForPortfolioRequest class encapsulates ServiceCatalog ListPrincipalsForPortfolio requests.
  *
- * @see    ServiceCatalogClient::listPrincipalsForPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listPrincipalsForPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPrincipalsForPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListPrincipalsForPortfolioRequest::ListPrincipalsForPortfolioRequest(const ListP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPrincipalsForPortfolioRequest object.
  */
 ListPrincipalsForPortfolioRequest::ListPrincipalsForPortfolioRequest()
@@ -53,13 +62,16 @@ ListPrincipalsForPortfolioRequest::ListPrincipalsForPortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPrincipalsForPortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPrincipalsForPortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListPrincipalsForPortfolioRequest::response(Q
     return new ListPrincipalsForPortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPrincipalsForPortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListPrincipalsForPortfolioRequest::response(Q
  * @brief  Private implementation for ListPrincipalsForPortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPrincipalsForPortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ ListPrincipalsForPortfolioRequestPrivate::ListPrincipalsForPortfolioRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPrincipalsForPortfolioRequestPrivate object, copying another.

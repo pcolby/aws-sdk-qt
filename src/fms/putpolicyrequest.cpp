@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  PutPolicyRequest
+/*!
+ * \class QtAws::FMS::PutPolicyRequest
  *
- * @brief  Implements FMS PutPolicy requests.
+ * \brief The PutPolicyRequest class encapsulates FMS PutPolicy requests.
  *
- * @see    FMSClient::putPolicy
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::putPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ PutPolicyRequest::PutPolicyRequest(const PutPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutPolicyRequest object.
  */
 PutPolicyRequest::PutPolicyRequest()
@@ -53,13 +62,16 @@ PutPolicyRequest::PutPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * PutPolicyRequest::response(QNetworkReply * co
     return new PutPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutPolicyRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * PutPolicyRequest::response(QNetworkReply * co
  * @brief  Private implementation for PutPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutPolicyRequestPrivate object.
@@ -97,7 +109,7 @@ PutPolicyRequestPrivate::PutPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutPolicyRequestPrivate object, copying another.

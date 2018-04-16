@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeFlowLogsResponse
+/*!
+ * \class QtAws::EC2::DescribeFlowLogsResponse
  *
- * @brief  Handles EC2 DescribeFlowLogs responses.
+ * \brief The DescribeFlowLogsResponse class encapsulates EC2 DescribeFlowLogs responses.
  *
- * @see    EC2Client::describeFlowLogs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeFlowLogs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFlowLogsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeFlowLogsRequest * DescribeFlowLogsResponse::request() const
     return static_cast<const DescribeFlowLogsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeFlowLogs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeFlowLogsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeFlowLogsResponsePrivate
+ * \class DescribeFlowLogsResponsePrivate
  *
- * @brief  Private implementation for DescribeFlowLogsResponse.
+ * \brief Private implementation for DescribeFlowLogsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFlowLogsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeFlowLogsResponse element.
  *
  * @param  xml  XML stream to parse.

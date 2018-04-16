@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  PutRecordBatchRequest
+/*!
+ * \class QtAws::Firehose::PutRecordBatchRequest
  *
- * @brief  Implements Firehose PutRecordBatch requests.
+ * \brief The PutRecordBatchRequest class encapsulates Firehose PutRecordBatch requests.
  *
- * @see    FirehoseClient::putRecordBatch
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::putRecordBatch
  */
 
-/**
+/*!
  * @brief  Constructs a new PutRecordBatchRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PutRecordBatchRequest::PutRecordBatchRequest(const PutRecordBatchRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutRecordBatchRequest object.
  */
 PutRecordBatchRequest::PutRecordBatchRequest()
@@ -53,13 +60,16 @@ PutRecordBatchRequest::PutRecordBatchRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutRecordBatchRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutRecordBatchResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply
     return new PutRecordBatchResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutRecordBatchRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply
  * @brief  Private implementation for PutRecordBatchRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordBatchRequestPrivate object.
@@ -97,7 +107,7 @@ PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutRecordBatchRequestPrivate object, copying another.

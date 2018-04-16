@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  ExportBundleResponse
+/*!
+ * \class QtAws::Mobile::ExportBundleResponse
  *
- * @brief  Handles Mobile ExportBundle responses.
+ * \brief The ExportBundleResponse class encapsulates Mobile ExportBundle responses.
  *
- * @see    MobileClient::exportBundle
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::exportBundle
  */
 
-/**
+/*!
  * @brief  Constructs a new ExportBundleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ExportBundleRequest * ExportBundleResponse::request() const
     return static_cast<const ExportBundleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile ExportBundle response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ExportBundleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ExportBundleResponsePrivate
+ * \class ExportBundleResponsePrivate
  *
- * @brief  Private implementation for ExportBundleResponse.
+ * \brief Private implementation for ExportBundleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExportBundleResponsePrivate object.
@@ -91,7 +97,7 @@ ExportBundleResponsePrivate::ExportBundleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile ExportBundleResponse element.
  *
  * @param  xml  XML stream to parse.

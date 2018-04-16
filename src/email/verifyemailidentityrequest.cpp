@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  VerifyEmailIdentityRequest
+/*!
+ * \class QtAws::SES::VerifyEmailIdentityRequest
  *
- * @brief  Implements SES VerifyEmailIdentity requests.
+ * \brief The VerifyEmailIdentityRequest class encapsulates SES VerifyEmailIdentity requests.
  *
- * @see    SESClient::verifyEmailIdentity
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::verifyEmailIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyEmailIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ VerifyEmailIdentityRequest::VerifyEmailIdentityRequest(const VerifyEmailIdentity
 
 }
 
-/**
+/*!
  * @brief  Constructs a new VerifyEmailIdentityRequest object.
  */
 VerifyEmailIdentityRequest::VerifyEmailIdentityRequest()
@@ -53,13 +67,16 @@ VerifyEmailIdentityRequest::VerifyEmailIdentityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool VerifyEmailIdentityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an VerifyEmailIdentityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetwork
     return new VerifyEmailIdentityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  VerifyEmailIdentityRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetwork
  * @brief  Private implementation for VerifyEmailIdentityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyEmailIdentityRequestPrivate object.
@@ -97,7 +114,7 @@ VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyEmailIdentityRequestPrivate object, copying another.

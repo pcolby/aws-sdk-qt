@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  AttachInstancesToLoadBalancerRequest
+/*!
+ * \class QtAws::Lightsail::AttachInstancesToLoadBalancerRequest
  *
- * @brief  Implements Lightsail AttachInstancesToLoadBalancer requests.
+ * \brief The AttachInstancesToLoadBalancerRequest class encapsulates Lightsail AttachInstancesToLoadBalancer requests.
  *
- * @see    LightsailClient::attachInstancesToLoadBalancer
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::attachInstancesToLoadBalancer
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachInstancesToLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ AttachInstancesToLoadBalancerRequest::AttachInstancesToLoadBalancerRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachInstancesToLoadBalancerRequest object.
  */
 AttachInstancesToLoadBalancerRequest::AttachInstancesToLoadBalancerRequest()
@@ -53,13 +72,16 @@ AttachInstancesToLoadBalancerRequest::AttachInstancesToLoadBalancerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachInstancesToLoadBalancerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachInstancesToLoadBalancerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::respons
     return new AttachInstancesToLoadBalancerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachInstancesToLoadBalancerRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::respons
  * @brief  Private implementation for AttachInstancesToLoadBalancerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInstancesToLoadBalancerRequestPrivate object.
@@ -97,7 +119,7 @@ AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInstancesToLoadBalancerRequestPrivate object, copying another.

@@ -27,15 +27,42 @@
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  GetParametersResponse
+/*!
+ * \class QtAws::SSM::GetParametersResponse
  *
- * @brief  Handles SSM GetParameters responses.
+ * \brief The GetParametersResponse class encapsulates SSM GetParameters responses.
  *
- * @see    SSMClient::getParameters
+ * \ingroup SSM
+ *
+ *  <fullname>AWS Systems Manager</fullname>
+ * 
+ *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
+ *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
+ *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
+ *  configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
+ *  your hybrid environment that has been configured for Systems
+ * 
+ *  Manager>
+ * 
+ *  This reference is intended to be used with the <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  To get started, verify prerequisites and configure managed instances. For more information, see <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ * 
+ *  Prerequisites</a>>
+ * 
+ *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
+ *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
+ *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
+ *  Requests</a>.
+ *
+ * \sa SSMClient::getParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new GetParametersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +85,7 @@ const GetParametersRequest * GetParametersResponse::request() const
     return static_cast<const GetParametersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SSM GetParameters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +97,15 @@ void GetParametersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetParametersResponsePrivate
+ * \class GetParametersResponsePrivate
  *
- * @brief  Private implementation for GetParametersResponse.
+ * \brief Private implementation for GetParametersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetParametersResponsePrivate object.
@@ -91,7 +118,7 @@ GetParametersResponsePrivate::GetParametersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SSM GetParametersResponse element.
  *
  * @param  xml  XML stream to parse.

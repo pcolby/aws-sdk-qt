@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DisassociateServiceRoleFromAccountRequest
+/*!
+ * \class QtAws::Greengrass::DisassociateServiceRoleFromAccountRequest
  *
- * @brief  Implements Greengrass DisassociateServiceRoleFromAccount requests.
+ * \brief The DisassociateServiceRoleFromAccountRequest class encapsulates Greengrass DisassociateServiceRoleFromAccount requests.
  *
- * @see    GreengrassClient::disassociateServiceRoleFromAccount
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::disassociateServiceRoleFromAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateServiceRoleFromAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DisassociateServiceRoleFromAccountRequest::DisassociateServiceRoleFromAccountReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateServiceRoleFromAccountRequest object.
  */
 DisassociateServiceRoleFromAccountRequest::DisassociateServiceRoleFromAccountRequest()
@@ -53,13 +59,16 @@ DisassociateServiceRoleFromAccountRequest::DisassociateServiceRoleFromAccountReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateServiceRoleFromAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateServiceRoleFromAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::re
     return new DisassociateServiceRoleFromAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateServiceRoleFromAccountRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::re
  * @brief  Private implementation for DisassociateServiceRoleFromAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateServiceRoleFromAccountRequestPrivate object.
@@ -97,7 +106,7 @@ DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAcc
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateServiceRoleFromAccountRequestPrivate object, copying another.

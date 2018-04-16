@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeJobRequest
+/*!
+ * \class QtAws::IoT::DescribeJobRequest
  *
- * @brief  Implements IoT DescribeJob requests.
+ * \brief The DescribeJobRequest class encapsulates IoT DescribeJob requests.
  *
- * @see    IoTClient::describeJob
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobRequest object.
  */
 DescribeJobRequest::DescribeJobRequest()
@@ -53,13 +67,16 @@ DescribeJobRequest::DescribeJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
     return new DescribeJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeJobRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
  * @brief  Private implementation for DescribeJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobRequestPrivate object, copying another.

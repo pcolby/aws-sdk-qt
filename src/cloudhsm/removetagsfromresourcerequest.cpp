@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  RemoveTagsFromResourceRequest
+/*!
+ * \class QtAws::CloudHSM::RemoveTagsFromResourceRequest
  *
- * @brief  Implements CloudHSM RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class encapsulates CloudHSM RemoveTagsFromResource requests.
  *
- * @see    CloudHSMClient::removeTagsFromResource
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::removeTagsFromResource
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
@@ -53,13 +68,16 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveTagsFromResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveTagsFromResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
     return new RemoveTagsFromResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveTagsFromResourceRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  * @brief  Private implementation for RemoveTagsFromResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object.
@@ -97,7 +115,7 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object, copying another.

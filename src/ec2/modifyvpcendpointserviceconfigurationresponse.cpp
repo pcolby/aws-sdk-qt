@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointServiceConfigurationResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointServiceConfigurationResponse
  *
- * @brief  Handles EC2 ModifyVpcEndpointServiceConfiguration responses.
+ * \brief The ModifyVpcEndpointServiceConfigurationResponse class encapsulates EC2 ModifyVpcEndpointServiceConfiguration responses.
  *
- * @see    EC2Client::modifyVpcEndpointServiceConfiguration
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpointServiceConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcEndpointServiceConfigurationRequest * ModifyVpcEndpointServiceCon
     return static_cast<const ModifyVpcEndpointServiceConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcEndpointServiceConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcEndpointServiceConfigurationResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcEndpointServiceConfigurationResponsePrivate
+ * \class ModifyVpcEndpointServiceConfigurationResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcEndpointServiceConfigurationResponse.
+ * \brief Private implementation for ModifyVpcEndpointServiceConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceCo
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcEndpointServiceConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

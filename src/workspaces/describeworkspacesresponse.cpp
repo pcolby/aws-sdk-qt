@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeWorkspacesResponse
+/*!
+ * \class QtAws::WorkSpaces::DescribeWorkspacesResponse
  *
- * @brief  Handles WorkSpaces DescribeWorkspaces responses.
+ * \brief The DescribeWorkspacesResponse class encapsulates WorkSpaces DescribeWorkspaces responses.
  *
- * @see    WorkSpacesClient::describeWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeWorkspacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeWorkspacesRequest * DescribeWorkspacesResponse::request() const
     return static_cast<const DescribeWorkspacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces DescribeWorkspaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeWorkspacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeWorkspacesResponsePrivate
+ * \class DescribeWorkspacesResponsePrivate
  *
- * @brief  Private implementation for DescribeWorkspacesResponse.
+ * \brief Private implementation for DescribeWorkspacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeWorkspacesResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces DescribeWorkspacesResponse element.
  *
  * @param  xml  XML stream to parse.

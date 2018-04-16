@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  ConnectDirectoryRequest
+/*!
+ * \class QtAws::DirectoryService::ConnectDirectoryRequest
  *
- * @brief  Implements DirectoryService ConnectDirectory requests.
+ * \brief The ConnectDirectoryRequest class encapsulates DirectoryService ConnectDirectory requests.
  *
- * @see    DirectoryServiceClient::connectDirectory
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::connectDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new ConnectDirectoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ ConnectDirectoryRequest::ConnectDirectoryRequest(const ConnectDirectoryRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ConnectDirectoryRequest object.
  */
 ConnectDirectoryRequest::ConnectDirectoryRequest()
@@ -53,13 +70,16 @@ ConnectDirectoryRequest::ConnectDirectoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ConnectDirectoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ConnectDirectoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ConnectDirectoryRequest::response(QNetworkRep
     return new ConnectDirectoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConnectDirectoryRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * ConnectDirectoryRequest::response(QNetworkRep
  * @brief  Private implementation for ConnectDirectoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConnectDirectoryRequestPrivate object.
@@ -97,7 +117,7 @@ ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConnectDirectoryRequestPrivate object, copying another.

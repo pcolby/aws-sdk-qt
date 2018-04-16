@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  ECRResponse
+/*!
+ * \class QtAws::ECR::ECRResponse
  *
- * @brief  Handles ECR ECR responses.
+ * \brief The ECRResponse class is the base class for all ECR responses.
  *
- * @see    ECRClient::eCR
+ * \ingroup ECR
  */
 
-/**
+/*!
  * @brief  Constructs a new ECRResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ECRResponse::ECRResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ECRResponse object.
@@ -63,7 +63,7 @@ ECRResponse::ECRResponse(ECRResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ECRResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ECRResponsePrivate
@@ -92,7 +92,7 @@ void ECRResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ECRResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ECRResponsePrivate object.

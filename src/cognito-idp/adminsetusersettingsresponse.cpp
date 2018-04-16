@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminSetUserSettingsResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminSetUserSettings responses.
+ * \brief The AdminSetUserSettingsResponse class encapsulates CognitoIdentityProvider AdminSetUserSettings responses.
  *
- * @see    CognitoIdentityProviderClient::adminSetUserSettings
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminSetUserSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminSetUserSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminSetUserSettingsRequest * AdminSetUserSettingsResponse::request() cons
     return static_cast<const AdminSetUserSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminSetUserSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminSetUserSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminSetUserSettingsResponsePrivate
+ * \class AdminSetUserSettingsResponsePrivate
  *
- * @brief  Private implementation for AdminSetUserSettingsResponse.
+ * \brief Private implementation for AdminSetUserSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminSetUserSettingsResponsePrivate object.
@@ -91,7 +104,7 @@ AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminSetUserSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

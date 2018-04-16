@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  ListCollectionsResponse
+/*!
+ * \class QtAws::Rekognition::ListCollectionsResponse
  *
- * @brief  Handles Rekognition ListCollections responses.
+ * \brief The ListCollectionsResponse class encapsulates Rekognition ListCollections responses.
  *
- * @see    RekognitionClient::listCollections
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::listCollections
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCollectionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListCollectionsRequest * ListCollectionsResponse::request() const
     return static_cast<const ListCollectionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition ListCollections response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListCollectionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListCollectionsResponsePrivate
+ * \class ListCollectionsResponsePrivate
  *
- * @brief  Private implementation for ListCollectionsResponse.
+ * \brief Private implementation for ListCollectionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCollectionsResponsePrivate object.
@@ -91,7 +95,7 @@ ListCollectionsResponsePrivate::ListCollectionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition ListCollectionsResponse element.
  *
  * @param  xml  XML stream to parse.

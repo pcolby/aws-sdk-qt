@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ListTagsForDomainResponse
+/*!
+ * \class QtAws::Route53Domains::ListTagsForDomainResponse
  *
- * @brief  Handles Route53Domains ListTagsForDomain responses.
+ * \brief The ListTagsForDomainResponse class encapsulates Route53Domains ListTagsForDomain responses.
  *
- * @see    Route53DomainsClient::listTagsForDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::listTagsForDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListTagsForDomainRequest * ListTagsForDomainResponse::request() const
     return static_cast<const ListTagsForDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains ListTagsForDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListTagsForDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForDomainResponsePrivate
+ * \class ListTagsForDomainResponsePrivate
  *
- * @brief  Private implementation for ListTagsForDomainResponse.
+ * \brief Private implementation for ListTagsForDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForDomainResponsePrivate object.
@@ -91,7 +95,7 @@ ListTagsForDomainResponsePrivate::ListTagsForDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains ListTagsForDomainResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CreateOrUpdateTagsRequest
+/*!
+ * \class QtAws::AutoScaling::CreateOrUpdateTagsRequest
  *
- * @brief  Implements AutoScaling CreateOrUpdateTags requests.
+ * \brief The CreateOrUpdateTagsRequest class encapsulates AutoScaling CreateOrUpdateTags requests.
  *
- * @see    AutoScalingClient::createOrUpdateTags
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::createOrUpdateTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateOrUpdateTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateOrUpdateTagsRequest::CreateOrUpdateTagsRequest(const CreateOrUpdateTagsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateOrUpdateTagsRequest object.
  */
 CreateOrUpdateTagsRequest::CreateOrUpdateTagsRequest()
@@ -53,13 +61,16 @@ CreateOrUpdateTagsRequest::CreateOrUpdateTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateOrUpdateTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateOrUpdateTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateOrUpdateTagsRequest::response(QNetworkR
     return new CreateOrUpdateTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateOrUpdateTagsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateOrUpdateTagsRequest::response(QNetworkR
  * @brief  Private implementation for CreateOrUpdateTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOrUpdateTagsRequestPrivate object.
@@ -97,7 +108,7 @@ CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOrUpdateTagsRequestPrivate object, copying another.

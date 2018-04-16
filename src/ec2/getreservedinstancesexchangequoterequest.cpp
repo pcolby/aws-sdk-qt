@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetReservedInstancesExchangeQuoteRequest
+/*!
+ * \class QtAws::EC2::GetReservedInstancesExchangeQuoteRequest
  *
- * @brief  Implements EC2 GetReservedInstancesExchangeQuote requests.
+ * \brief The GetReservedInstancesExchangeQuoteRequest class encapsulates EC2 GetReservedInstancesExchangeQuote requests.
  *
- * @see    EC2Client::getReservedInstancesExchangeQuote
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getReservedInstancesExchangeQuote
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReservedInstancesExchangeQuoteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetReservedInstancesExchangeQuoteRequest::GetReservedInstancesExchangeQuoteReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReservedInstancesExchangeQuoteRequest object.
  */
 GetReservedInstancesExchangeQuoteRequest::GetReservedInstancesExchangeQuoteRequest()
@@ -53,13 +60,16 @@ GetReservedInstancesExchangeQuoteRequest::GetReservedInstancesExchangeQuoteReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReservedInstancesExchangeQuoteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReservedInstancesExchangeQuoteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetReservedInstancesExchangeQuoteRequest::res
     return new GetReservedInstancesExchangeQuoteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReservedInstancesExchangeQuoteRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetReservedInstancesExchangeQuoteRequest::res
  * @brief  Private implementation for GetReservedInstancesExchangeQuoteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservedInstancesExchangeQuoteRequestPrivate object.
@@ -97,7 +107,7 @@ GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuo
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservedInstancesExchangeQuoteRequestPrivate object, copying another.

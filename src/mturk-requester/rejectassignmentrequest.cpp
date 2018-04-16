@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  RejectAssignmentRequest
+/*!
+ * \class QtAws::MTurk::RejectAssignmentRequest
  *
- * @brief  Implements MTurk RejectAssignment requests.
+ * \brief The RejectAssignmentRequest class encapsulates MTurk RejectAssignment requests.
  *
- * @see    MTurkClient::rejectAssignment
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::rejectAssignment
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectAssignmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ RejectAssignmentRequest::RejectAssignmentRequest(const RejectAssignmentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RejectAssignmentRequest object.
  */
 RejectAssignmentRequest::RejectAssignmentRequest()
@@ -53,13 +56,16 @@ RejectAssignmentRequest::RejectAssignmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RejectAssignmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RejectAssignmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkRep
     return new RejectAssignmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RejectAssignmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * RejectAssignmentRequest::response(QNetworkRep
  * @brief  Private implementation for RejectAssignmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectAssignmentRequestPrivate object.
@@ -97,7 +103,7 @@ RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectAssignmentRequestPrivate object, copying another.

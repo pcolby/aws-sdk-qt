@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetGraphqlApiResponse
+/*!
+ * \class QtAws::AppSync::GetGraphqlApiResponse
  *
- * @brief  Handles AppSync GetGraphqlApi responses.
+ * \brief The GetGraphqlApiResponse class encapsulates AppSync GetGraphqlApi responses.
  *
- * @see    AppSyncClient::getGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGraphqlApiResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetGraphqlApiRequest * GetGraphqlApiResponse::request() const
     return static_cast<const GetGraphqlApiRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync GetGraphqlApi response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetGraphqlApiResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGraphqlApiResponsePrivate
+ * \class GetGraphqlApiResponsePrivate
  *
- * @brief  Private implementation for GetGraphqlApiResponse.
+ * \brief Private implementation for GetGraphqlApiResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGraphqlApiResponsePrivate object.
@@ -91,7 +95,7 @@ GetGraphqlApiResponsePrivate::GetGraphqlApiResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync GetGraphqlApiResponse element.
  *
  * @param  xml  XML stream to parse.

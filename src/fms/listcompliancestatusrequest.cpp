@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  ListComplianceStatusRequest
+/*!
+ * \class QtAws::FMS::ListComplianceStatusRequest
  *
- * @brief  Implements FMS ListComplianceStatus requests.
+ * \brief The ListComplianceStatusRequest class encapsulates FMS ListComplianceStatus requests.
  *
- * @see    FMSClient::listComplianceStatus
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::listComplianceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new ListComplianceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListComplianceStatusRequest::ListComplianceStatusRequest(const ListComplianceSta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListComplianceStatusRequest object.
  */
 ListComplianceStatusRequest::ListComplianceStatusRequest()
@@ -53,13 +62,16 @@ ListComplianceStatusRequest::ListComplianceStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListComplianceStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListComplianceStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListComplianceStatusRequest::response(QNetwor
     return new ListComplianceStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListComplianceStatusRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListComplianceStatusRequest::response(QNetwor
  * @brief  Private implementation for ListComplianceStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListComplianceStatusRequestPrivate object.
@@ -97,7 +109,7 @@ ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListComplianceStatusRequestPrivate object, copying another.

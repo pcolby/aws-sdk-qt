@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DeleteAssessmentTemplateRequest
+/*!
+ * \class QtAws::Inspector::DeleteAssessmentTemplateRequest
  *
- * @brief  Implements Inspector DeleteAssessmentTemplate requests.
+ * \brief The DeleteAssessmentTemplateRequest class encapsulates Inspector DeleteAssessmentTemplate requests.
  *
- * @see    InspectorClient::deleteAssessmentTemplate
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::deleteAssessmentTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteAssessmentTemplateRequest::DeleteAssessmentTemplateRequest(const DeleteAss
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAssessmentTemplateRequest object.
  */
 DeleteAssessmentTemplateRequest::DeleteAssessmentTemplateRequest()
@@ -53,13 +61,16 @@ DeleteAssessmentTemplateRequest::DeleteAssessmentTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAssessmentTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAssessmentTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTemplateRequest::response(QNe
     return new DeleteAssessmentTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAssessmentTemplateRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTemplateRequest::response(QNe
  * @brief  Private implementation for DeleteAssessmentTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentTemplateRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteAssessmentTemplateRequestPrivate::DeleteAssessmentTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAssessmentTemplateRequestPrivate object, copying another.

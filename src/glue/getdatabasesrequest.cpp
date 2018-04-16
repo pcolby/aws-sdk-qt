@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetDatabasesRequest
+/*!
+ * \class QtAws::Glue::GetDatabasesRequest
  *
- * @brief  Implements Glue GetDatabases requests.
+ * \brief The GetDatabasesRequest class encapsulates Glue GetDatabases requests.
  *
- * @see    GlueClient::getDatabases
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getDatabases
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDatabasesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetDatabasesRequest::GetDatabasesRequest(const GetDatabasesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDatabasesRequest object.
  */
 GetDatabasesRequest::GetDatabasesRequest()
@@ -53,13 +59,16 @@ GetDatabasesRequest::GetDatabasesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDatabasesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDatabasesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetDatabasesRequest::response(QNetworkReply *
     return new GetDatabasesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDatabasesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetDatabasesRequest::response(QNetworkReply *
  * @brief  Private implementation for GetDatabasesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDatabasesRequestPrivate object.
@@ -97,7 +106,7 @@ GetDatabasesRequestPrivate::GetDatabasesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDatabasesRequestPrivate object, copying another.

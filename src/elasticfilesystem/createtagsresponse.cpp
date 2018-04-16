@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  CreateTagsResponse
+/*!
+ * \class QtAws::EFS::CreateTagsResponse
  *
- * @brief  Handles EFS CreateTags responses.
+ * \brief The CreateTagsResponse class encapsulates EFS CreateTags responses.
  *
- * @see    EFSClient::createTags
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::createTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateTagsRequest * CreateTagsResponse::request() const
     return static_cast<const CreateTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS CreateTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTagsResponsePrivate
+ * \class CreateTagsResponsePrivate
  *
- * @brief  Private implementation for CreateTagsResponse.
+ * \brief Private implementation for CreateTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsResponsePrivate object.
@@ -91,7 +100,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS CreateTagsResponse element.
  *
  * @param  xml  XML stream to parse.

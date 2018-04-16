@@ -26,13 +26,13 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsAbstractSignature
+/*!
+ * \class QtAws::Core::AwsAbstractSignature
  *
  * @brief  Interface class for providing AWS signatures.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Initialises an AwsAbstractSignature object.
@@ -45,7 +45,7 @@ AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Initialises an AwsAbstractSignature object.
@@ -60,14 +60,14 @@ AwsAbstractSignature::AwsAbstractSignature(AwsAbstractSignaturePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  AwsAbstractSignature destructor.
  */
 AwsAbstractSignature::~AwsAbstractSignature() {
     delete d_ptr;
 }
 
-/**
+/*!
  * @fn     void AwsAbstractSignature::sign() const
  *
  * @brief  Sign an AWS request.
@@ -83,10 +83,10 @@ AwsAbstractSignature::~AwsAbstractSignature() {
  * @param  data          Optional POST / PUT data to sign \a request for.
  */
 
-/**
+/*!
  * @internal
  *
- * @class  AwsAbstractSignaturePrivate
+ * \class QtAws::Core::AwsAbstractSignaturePrivate
  *
  * @brief  Private implementation for AwsAbstractSignature.
  *
@@ -94,7 +94,7 @@ AwsAbstractSignature::~AwsAbstractSignature() {
  *           code should **not** depend directly on anything contained within this class.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractSignaturePrivate object.
@@ -106,7 +106,7 @@ AwsAbstractSignaturePrivate::AwsAbstractSignaturePrivate(AwsAbstractSignature * 
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  AwsAbstractSignaturePrivate destructor.
@@ -119,7 +119,7 @@ AwsAbstractSignaturePrivate::~AwsAbstractSignaturePrivate()
 
 }
 
-/**
+/*!
  * @brief  Create an AWS Signature canonical path.
  *
  * This function simply returns the fully-URL-encoded path.  However, if the path
@@ -160,7 +160,7 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
     return path;
 }
 
-/**
+/*!
  * @brief  Create an AWS Signature canonical query.
  *
  * This function returns an HTTP query string in Amazon's canonical form.  That is,
@@ -193,7 +193,7 @@ QByteArray AwsAbstractSignaturePrivate::canonicalQuery(const QUrlQuery &query) c
     return result.toUtf8();
 }
 
-/**
+/*!
  * @brief  Create an AWS Signature request method string.
  *
  * This function simply converts QNetworkAccessManager operations (enum values)
@@ -220,7 +220,7 @@ QString AwsAbstractSignaturePrivate::httpMethod(const QNetworkAccessManager::Ope
     return QString(); // Operation was invalid / unsupported.
 }
 
-/**
+/*!
  * @brief   Set a query item, checking for existing values first.
  *
  * This function is a light wrapper around QUrlQuery::addQueryItem() that first
@@ -261,7 +261,7 @@ bool AwsAbstractSignaturePrivate::setQueryItem(QUrlQuery &query, const QString &
     return true;
 }
 
-/**
+/*!
  * @fn     int AwsAbstractSignature::version() const
  *
  * @brief  AWS Signature version implemented by this class.

@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetReservationUtilizationRequest
+/*!
+ * \class QtAws::CostExplorer::GetReservationUtilizationRequest
  *
- * @brief  Implements CostExplorer GetReservationUtilization requests.
+ * \brief The GetReservationUtilizationRequest class encapsulates CostExplorer GetReservationUtilization requests.
  *
- * @see    CostExplorerClient::getReservationUtilization
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getReservationUtilization
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReservationUtilizationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ GetReservationUtilizationRequest::GetReservationUtilizationRequest(const GetRese
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReservationUtilizationRequest object.
  */
 GetReservationUtilizationRequest::GetReservationUtilizationRequest()
@@ -53,13 +69,16 @@ GetReservationUtilizationRequest::GetReservationUtilizationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReservationUtilizationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReservationUtilizationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QN
     return new GetReservationUtilizationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReservationUtilizationRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QN
  * @brief  Private implementation for GetReservationUtilizationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationUtilizationRequestPrivate object.
@@ -97,7 +116,7 @@ GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationUtilizationRequestPrivate object, copying another.

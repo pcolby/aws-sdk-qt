@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateTagsResponse
+/*!
+ * \class QtAws::EC2::CreateTagsResponse
  *
- * @brief  Handles EC2 CreateTags responses.
+ * \brief The CreateTagsResponse class encapsulates EC2 CreateTags responses.
  *
- * @see    EC2Client::createTags
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateTagsRequest * CreateTagsResponse::request() const
     return static_cast<const CreateTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTagsResponsePrivate
+ * \class CreateTagsResponsePrivate
  *
- * @brief  Private implementation for CreateTagsResponse.
+ * \brief Private implementation for CreateTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsResponsePrivate object.
@@ -91,7 +98,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateTagsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketMetricsConfigurationResponse
+/*!
+ * \class QtAws::S3::GetBucketMetricsConfigurationResponse
  *
- * @brief  Handles S3 GetBucketMetricsConfiguration responses.
+ * \brief The GetBucketMetricsConfigurationResponse class encapsulates S3 GetBucketMetricsConfiguration responses.
  *
- * @see    S3Client::getBucketMetricsConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketMetricsConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketMetricsConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketMetricsConfigurationRequest * GetBucketMetricsConfigurationRespon
     return static_cast<const GetBucketMetricsConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketMetricsConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketMetricsConfigurationResponsePrivate
+ * \class GetBucketMetricsConfigurationResponsePrivate
  *
- * @brief  Private implementation for GetBucketMetricsConfigurationResponse.
+ * \brief Private implementation for GetBucketMetricsConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketMetricsConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketMetricsConfigurationResponsePrivate::GetBucketMetricsConfigurationRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketMetricsConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

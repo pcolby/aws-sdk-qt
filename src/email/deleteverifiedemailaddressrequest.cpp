@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteVerifiedEmailAddressRequest
+/*!
+ * \class QtAws::SES::DeleteVerifiedEmailAddressRequest
  *
- * @brief  Implements SES DeleteVerifiedEmailAddress requests.
+ * \brief The DeleteVerifiedEmailAddressRequest class encapsulates SES DeleteVerifiedEmailAddress requests.
  *
- * @see    SESClient::deleteVerifiedEmailAddress
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteVerifiedEmailAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVerifiedEmailAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteVerifiedEmailAddressRequest::DeleteVerifiedEmailAddressRequest(const Delet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVerifiedEmailAddressRequest object.
  */
 DeleteVerifiedEmailAddressRequest::DeleteVerifiedEmailAddressRequest()
@@ -53,13 +67,16 @@ DeleteVerifiedEmailAddressRequest::DeleteVerifiedEmailAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVerifiedEmailAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVerifiedEmailAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVerifiedEmailAddressRequest::response(Q
     return new DeleteVerifiedEmailAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVerifiedEmailAddressRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVerifiedEmailAddressRequest::response(Q
  * @brief  Private implementation for DeleteVerifiedEmailAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVerifiedEmailAddressRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVerifiedEmailAddressRequestPrivate object, copying another.

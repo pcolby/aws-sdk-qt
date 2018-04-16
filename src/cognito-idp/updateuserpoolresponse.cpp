@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateUserPoolResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateUserPoolResponse
  *
- * @brief  Handles CognitoIdentityProvider UpdateUserPool responses.
+ * \brief The UpdateUserPoolResponse class encapsulates CognitoIdentityProvider UpdateUserPool responses.
  *
- * @see    CognitoIdentityProviderClient::updateUserPool
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateUserPool
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserPoolResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const UpdateUserPoolRequest * UpdateUserPoolResponse::request() const
     return static_cast<const UpdateUserPoolRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider UpdateUserPool response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void UpdateUserPoolResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateUserPoolResponsePrivate
+ * \class UpdateUserPoolResponsePrivate
  *
- * @brief  Private implementation for UpdateUserPoolResponse.
+ * \brief Private implementation for UpdateUserPoolResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserPoolResponsePrivate object.
@@ -91,7 +104,7 @@ UpdateUserPoolResponsePrivate::UpdateUserPoolResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider UpdateUserPoolResponse element.
  *
  * @param  xml  XML stream to parse.

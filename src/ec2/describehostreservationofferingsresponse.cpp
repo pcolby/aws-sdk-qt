@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeHostReservationOfferingsResponse
+/*!
+ * \class QtAws::EC2::DescribeHostReservationOfferingsResponse
  *
- * @brief  Handles EC2 DescribeHostReservationOfferings responses.
+ * \brief The DescribeHostReservationOfferingsResponse class encapsulates EC2 DescribeHostReservationOfferings responses.
  *
- * @see    EC2Client::describeHostReservationOfferings
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeHostReservationOfferings
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeHostReservationOfferingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeHostReservationOfferingsRequest * DescribeHostReservationOfferings
     return static_cast<const DescribeHostReservationOfferingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeHostReservationOfferings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeHostReservationOfferingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeHostReservationOfferingsResponsePrivate
+ * \class DescribeHostReservationOfferingsResponsePrivate
  *
- * @brief  Private implementation for DescribeHostReservationOfferingsResponse.
+ * \brief Private implementation for DescribeHostReservationOfferingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHostReservationOfferingsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeHostReservationOfferingsResponsePrivate::DescribeHostReservationOffering
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeHostReservationOfferingsResponse element.
  *
  * @param  xml  XML stream to parse.

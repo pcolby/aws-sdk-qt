@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetCampaignVersionRequest
+/*!
+ * \class QtAws::Pinpoint::GetCampaignVersionRequest
  *
- * @brief  Implements Pinpoint GetCampaignVersion requests.
+ * \brief The GetCampaignVersionRequest class encapsulates Pinpoint GetCampaignVersion requests.
  *
- * @see    PinpointClient::getCampaignVersion
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getCampaignVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCampaignVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetCampaignVersionRequest::GetCampaignVersionRequest(const GetCampaignVersionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCampaignVersionRequest object.
  */
 GetCampaignVersionRequest::GetCampaignVersionRequest()
@@ -53,13 +56,16 @@ GetCampaignVersionRequest::GetCampaignVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCampaignVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCampaignVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetCampaignVersionRequest::response(QNetworkR
     return new GetCampaignVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCampaignVersionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetCampaignVersionRequest::response(QNetworkR
  * @brief  Private implementation for GetCampaignVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCampaignVersionRequestPrivate object.
@@ -97,7 +103,7 @@ GetCampaignVersionRequestPrivate::GetCampaignVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCampaignVersionRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcClassicLinkDnsSupportResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportResponse
  *
- * @brief  Handles EC2 DescribeVpcClassicLinkDnsSupport responses.
+ * \brief The DescribeVpcClassicLinkDnsSupportResponse class encapsulates EC2 DescribeVpcClassicLinkDnsSupport responses.
  *
- * @see    EC2Client::describeVpcClassicLinkDnsSupport
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcClassicLinkDnsSupport
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcClassicLinkDnsSupportRequest * DescribeVpcClassicLinkDnsSupport
     return static_cast<const DescribeVpcClassicLinkDnsSupportRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcClassicLinkDnsSupport response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcClassicLinkDnsSupportResponsePrivate
+ * \class DescribeVpcClassicLinkDnsSupportResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcClassicLinkDnsSupportResponse.
+ * \brief Private implementation for DescribeVpcClassicLinkDnsSupportResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcClassicLinkDnsSupportResponsePrivate::DescribeVpcClassicLinkDnsSuppor
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcClassicLinkDnsSupportResponse element.
  *
  * @param  xml  XML stream to parse.

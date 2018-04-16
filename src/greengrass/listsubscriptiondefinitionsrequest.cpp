@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListSubscriptionDefinitionsRequest
+/*!
+ * \class QtAws::Greengrass::ListSubscriptionDefinitionsRequest
  *
- * @brief  Implements Greengrass ListSubscriptionDefinitions requests.
+ * \brief The ListSubscriptionDefinitionsRequest class encapsulates Greengrass ListSubscriptionDefinitions requests.
  *
- * @see    GreengrassClient::listSubscriptionDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listSubscriptionDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSubscriptionDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest(const Lis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSubscriptionDefinitionsRequest object.
  */
 ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest()
@@ -53,13 +59,16 @@ ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSubscriptionDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSubscriptionDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionsRequest::response(
     return new ListSubscriptionDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSubscriptionDefinitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionsRequest::response(
  * @brief  Private implementation for ListSubscriptionDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscriptionDefinitionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListSubscriptionDefinitionsRequestPrivate::ListSubscriptionDefinitionsRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscriptionDefinitionsRequestPrivate object, copying another.

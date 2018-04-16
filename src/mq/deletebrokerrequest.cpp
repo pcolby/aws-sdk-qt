@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  DeleteBrokerRequest
+/*!
+ * \class QtAws::MQ::DeleteBrokerRequest
  *
- * @brief  Implements MQ DeleteBroker requests.
+ * \brief The DeleteBrokerRequest class encapsulates MQ DeleteBroker requests.
  *
- * @see    MQClient::deleteBroker
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::deleteBroker
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteBrokerRequest::DeleteBrokerRequest(const DeleteBrokerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBrokerRequest object.
  */
 DeleteBrokerRequest::DeleteBrokerRequest()
@@ -53,13 +58,16 @@ DeleteBrokerRequest::DeleteBrokerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBrokerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBrokerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBrokerRequest::response(QNetworkReply *
     return new DeleteBrokerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBrokerRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBrokerRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteBrokerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBrokerRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBrokerRequestPrivate object, copying another.

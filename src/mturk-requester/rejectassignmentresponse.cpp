@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  RejectAssignmentResponse
+/*!
+ * \class QtAws::MTurk::RejectAssignmentResponse
  *
- * @brief  Handles MTurk RejectAssignment responses.
+ * \brief The RejectAssignmentResponse class encapsulates MTurk RejectAssignment responses.
  *
- * @see    MTurkClient::rejectAssignment
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::rejectAssignment
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectAssignmentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const RejectAssignmentRequest * RejectAssignmentResponse::request() const
     return static_cast<const RejectAssignmentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk RejectAssignment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void RejectAssignmentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RejectAssignmentResponsePrivate
+ * \class RejectAssignmentResponsePrivate
  *
- * @brief  Private implementation for RejectAssignmentResponse.
+ * \brief Private implementation for RejectAssignmentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectAssignmentResponsePrivate object.
@@ -91,7 +94,7 @@ RejectAssignmentResponsePrivate::RejectAssignmentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk RejectAssignmentResponse element.
  *
  * @param  xml  XML stream to parse.

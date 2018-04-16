@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeletePartitionRequest
+/*!
+ * \class QtAws::Glue::DeletePartitionRequest
  *
- * @brief  Implements Glue DeletePartition requests.
+ * \brief The DeletePartitionRequest class encapsulates Glue DeletePartition requests.
  *
- * @see    GlueClient::deletePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deletePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePartitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeletePartitionRequest::DeletePartitionRequest(const DeletePartitionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePartitionRequest object.
  */
 DeletePartitionRequest::DeletePartitionRequest()
@@ -53,13 +59,16 @@ DeletePartitionRequest::DeletePartitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePartitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePartitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeletePartitionRequest::response(QNetworkRepl
     return new DeletePartitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePartitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeletePartitionRequest::response(QNetworkRepl
  * @brief  Private implementation for DeletePartitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePartitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePartitionRequestPrivate object, copying another.

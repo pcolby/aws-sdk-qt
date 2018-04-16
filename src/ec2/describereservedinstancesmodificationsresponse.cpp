@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeReservedInstancesModificationsResponse
+/*!
+ * \class QtAws::EC2::DescribeReservedInstancesModificationsResponse
  *
- * @brief  Handles EC2 DescribeReservedInstancesModifications responses.
+ * \brief The DescribeReservedInstancesModificationsResponse class encapsulates EC2 DescribeReservedInstancesModifications responses.
  *
- * @see    EC2Client::describeReservedInstancesModifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeReservedInstancesModifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesModificationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeReservedInstancesModificationsRequest * DescribeReservedInstancesM
     return static_cast<const DescribeReservedInstancesModificationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeReservedInstancesModifications response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeReservedInstancesModificationsResponse::parseSuccess(QIODevice &res
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReservedInstancesModificationsResponsePrivate
+ * \class DescribeReservedInstancesModificationsResponsePrivate
  *
- * @brief  Private implementation for DescribeReservedInstancesModificationsResponse.
+ * \brief Private implementation for DescribeReservedInstancesModificationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesModificationsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeReservedInstancesModificationsResponsePrivate::DescribeReservedInstances
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeReservedInstancesModificationsResponse element.
  *
  * @param  xml  XML stream to parse.

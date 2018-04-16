@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserAttributesRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserAttributesRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteUserAttributes requests.
+ * \brief The DeleteUserAttributesRequest class encapsulates CognitoIdentityProvider DeleteUserAttributes requests.
  *
- * @see    CognitoIdentityProviderClient::deleteUserAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUserAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteUserAttributesRequest::DeleteUserAttributesRequest(const DeleteUserAttribu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserAttributesRequest object.
  */
 DeleteUserAttributesRequest::DeleteUserAttributesRequest()
@@ -53,13 +66,16 @@ DeleteUserAttributesRequest::DeleteUserAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserAttributesRequest::response(QNetwor
     return new DeleteUserAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserAttributesRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserAttributesRequest::response(QNetwor
  * @brief  Private implementation for DeleteUserAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserAttributesRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserAttributesRequestPrivate object, copying another.

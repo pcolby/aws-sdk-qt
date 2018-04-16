@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateEventConfigurationsRequest
+/*!
+ * \class QtAws::IoT::UpdateEventConfigurationsRequest
  *
- * @brief  Implements IoT UpdateEventConfigurations requests.
+ * \brief The UpdateEventConfigurationsRequest class encapsulates IoT UpdateEventConfigurations requests.
  *
- * @see    IoTClient::updateEventConfigurations
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateEventConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEventConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest(const UpdateE
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateEventConfigurationsRequest object.
  */
 UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest()
@@ -53,13 +67,16 @@ UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateEventConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateEventConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QN
     return new UpdateEventConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateEventConfigurationsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QN
  * @brief  Private implementation for UpdateEventConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEventConfigurationsRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEventConfigurationsRequestPrivate object, copying another.

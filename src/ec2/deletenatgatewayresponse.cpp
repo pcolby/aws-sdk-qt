@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNatGatewayResponse
+/*!
+ * \class QtAws::EC2::DeleteNatGatewayResponse
  *
- * @brief  Handles EC2 DeleteNatGateway responses.
+ * \brief The DeleteNatGatewayResponse class encapsulates EC2 DeleteNatGateway responses.
  *
- * @see    EC2Client::deleteNatGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNatGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNatGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteNatGatewayRequest * DeleteNatGatewayResponse::request() const
     return static_cast<const DeleteNatGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteNatGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNatGatewayResponsePrivate
+ * \class DeleteNatGatewayResponsePrivate
  *
- * @brief  Private implementation for DeleteNatGatewayResponse.
+ * \brief Private implementation for DeleteNatGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNatGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteNatGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

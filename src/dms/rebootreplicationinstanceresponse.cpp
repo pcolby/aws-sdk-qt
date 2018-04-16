@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  RebootReplicationInstanceResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceResponse
  *
- * @brief  Handles DatabaseMigrationService RebootReplicationInstance responses.
+ * \brief The RebootReplicationInstanceResponse class encapsulates DatabaseMigrationService RebootReplicationInstance responses.
  *
- * @see    DatabaseMigrationServiceClient::rebootReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::rebootReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootReplicationInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const RebootReplicationInstanceRequest * RebootReplicationInstanceResponse::requ
     return static_cast<const RebootReplicationInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService RebootReplicationInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RebootReplicationInstanceResponsePrivate
+ * \class RebootReplicationInstanceResponsePrivate
  *
- * @brief  Private implementation for RebootReplicationInstanceResponse.
+ * \brief Private implementation for RebootReplicationInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootReplicationInstanceResponsePrivate object.
@@ -91,7 +105,7 @@ RebootReplicationInstanceResponsePrivate::RebootReplicationInstanceResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService RebootReplicationInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBuiltinIntentRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinIntentRequest
  *
- * @brief  Implements LexModelBuildingService GetBuiltinIntent requests.
+ * \brief The GetBuiltinIntentRequest class encapsulates LexModelBuildingService GetBuiltinIntent requests.
  *
- * @see    LexModelBuildingServiceClient::getBuiltinIntent
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBuiltinIntent
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinIntentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBuiltinIntentRequest::GetBuiltinIntentRequest(const GetBuiltinIntentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinIntentRequest object.
  */
 GetBuiltinIntentRequest::GetBuiltinIntentRequest()
@@ -53,13 +60,16 @@ GetBuiltinIntentRequest::GetBuiltinIntentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBuiltinIntentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBuiltinIntentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinIntentRequest::response(QNetworkRep
     return new GetBuiltinIntentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBuiltinIntentRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinIntentRequest::response(QNetworkRep
  * @brief  Private implementation for GetBuiltinIntentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinIntentRequestPrivate object.
@@ -97,7 +107,7 @@ GetBuiltinIntentRequestPrivate::GetBuiltinIntentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinIntentRequestPrivate object, copying another.

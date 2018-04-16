@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideoMedia {
 
-/**
- * @class  GetMediaRequest
+/*!
+ * \class QtAws::KinesisVideoMedia::GetMediaRequest
  *
- * @brief  Implements KinesisVideoMedia GetMedia requests.
+ * \brief The GetMediaRequest class encapsulates KinesisVideoMedia GetMedia requests.
  *
- * @see    KinesisVideoMediaClient::getMedia
+ * \ingroup KinesisVideoMedia
+ *
+ *
+ * \sa KinesisVideoMediaClient::getMedia
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMediaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetMediaRequest::GetMediaRequest(const GetMediaRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMediaRequest object.
  */
 GetMediaRequest::GetMediaRequest()
@@ -53,13 +56,16 @@ GetMediaRequest::GetMediaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMediaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMediaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * con
     return new GetMediaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMediaRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetMediaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMediaRequestPrivate object.
@@ -97,7 +103,7 @@ GetMediaRequestPrivate::GetMediaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMediaRequestPrivate object, copying another.

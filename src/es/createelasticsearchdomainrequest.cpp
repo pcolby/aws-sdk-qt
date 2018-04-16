@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  CreateElasticsearchDomainRequest
+/*!
+ * \class QtAws::ElasticsearchService::CreateElasticsearchDomainRequest
  *
- * @brief  Implements ElasticsearchService CreateElasticsearchDomain requests.
+ * \brief The CreateElasticsearchDomainRequest class encapsulates ElasticsearchService CreateElasticsearchDomain requests.
  *
- * @see    ElasticsearchServiceClient::createElasticsearchDomain
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::createElasticsearchDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateElasticsearchDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ CreateElasticsearchDomainRequest::CreateElasticsearchDomainRequest(const CreateE
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateElasticsearchDomainRequest object.
  */
 CreateElasticsearchDomainRequest::CreateElasticsearchDomainRequest()
@@ -53,13 +65,16 @@ CreateElasticsearchDomainRequest::CreateElasticsearchDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateElasticsearchDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateElasticsearchDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QN
     return new CreateElasticsearchDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateElasticsearchDomainRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QN
  * @brief  Private implementation for CreateElasticsearchDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateElasticsearchDomainRequestPrivate object.
@@ -97,7 +112,7 @@ CreateElasticsearchDomainRequestPrivate::CreateElasticsearchDomainRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateElasticsearchDomainRequestPrivate object, copying another.

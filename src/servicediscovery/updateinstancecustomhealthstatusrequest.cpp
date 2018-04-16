@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  UpdateInstanceCustomHealthStatusRequest
+/*!
+ * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusRequest
  *
- * @brief  Implements ServiceDiscovery UpdateInstanceCustomHealthStatus requests.
+ * \brief The UpdateInstanceCustomHealthStatusRequest class encapsulates ServiceDiscovery UpdateInstanceCustomHealthStatus requests.
  *
- * @see    ServiceDiscoveryClient::updateInstanceCustomHealthStatus
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::updateInstanceCustomHealthStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequest object.
  */
 UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest()
@@ -53,13 +60,16 @@ UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateInstanceCustomHealthStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateInstanceCustomHealthStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::resp
     return new UpdateInstanceCustomHealthStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateInstanceCustomHealthStatusRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::resp
  * @brief  Private implementation for UpdateInstanceCustomHealthStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatus
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequestPrivate object, copying another.

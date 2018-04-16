@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLaunchConfigurationsRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeLaunchConfigurationsRequest
  *
- * @brief  Implements AutoScaling DescribeLaunchConfigurations requests.
+ * \brief The DescribeLaunchConfigurationsRequest class encapsulates AutoScaling DescribeLaunchConfigurations requests.
  *
- * @see    AutoScalingClient::describeLaunchConfigurations
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLaunchConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchConfigurationsRequest object.
  */
 DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest()
@@ -53,13 +61,16 @@ DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLaunchConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLaunchConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response
     return new DescribeLaunchConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLaunchConfigurationsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response
  * @brief  Private implementation for DescribeLaunchConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchConfigurationsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchConfigurationsRequestPrivate object, copying another.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpdateSchemaResponse
+/*!
+ * \class QtAws::CloudDirectory::UpdateSchemaResponse
  *
- * @brief  Handles CloudDirectory UpdateSchema responses.
+ * \brief The UpdateSchemaResponse class encapsulates CloudDirectory UpdateSchema responses.
  *
- * @see    CloudDirectoryClient::updateSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::updateSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSchemaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const UpdateSchemaRequest * UpdateSchemaResponse::request() const
     return static_cast<const UpdateSchemaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory UpdateSchema response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void UpdateSchemaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateSchemaResponsePrivate
+ * \class UpdateSchemaResponsePrivate
  *
- * @brief  Private implementation for UpdateSchemaResponse.
+ * \brief Private implementation for UpdateSchemaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSchemaResponsePrivate object.
@@ -91,7 +101,7 @@ UpdateSchemaResponsePrivate::UpdateSchemaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory UpdateSchemaResponse element.
  *
  * @param  xml  XML stream to parse.

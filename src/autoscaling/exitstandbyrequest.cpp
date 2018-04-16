@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  ExitStandbyRequest
+/*!
+ * \class QtAws::AutoScaling::ExitStandbyRequest
  *
- * @brief  Implements AutoScaling ExitStandby requests.
+ * \brief The ExitStandbyRequest class encapsulates AutoScaling ExitStandby requests.
  *
- * @see    AutoScalingClient::exitStandby
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::exitStandby
  */
 
-/**
+/*!
  * @brief  Constructs a new ExitStandbyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ExitStandbyRequest::ExitStandbyRequest(const ExitStandbyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ExitStandbyRequest object.
  */
 ExitStandbyRequest::ExitStandbyRequest()
@@ -53,13 +61,16 @@ ExitStandbyRequest::ExitStandbyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ExitStandbyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ExitStandbyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * 
     return new ExitStandbyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ExitStandbyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * 
  * @brief  Private implementation for ExitStandbyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExitStandbyRequestPrivate object.
@@ -97,7 +108,7 @@ ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExitStandbyRequestPrivate object, copying another.

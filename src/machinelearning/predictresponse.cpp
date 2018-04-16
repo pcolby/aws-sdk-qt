@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  PredictResponse
+/*!
+ * \class QtAws::MachineLearning::PredictResponse
  *
- * @brief  Handles MachineLearning Predict responses.
+ * \brief The PredictResponse class encapsulates MachineLearning Predict responses.
  *
- * @see    MachineLearningClient::predict
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::predict
  */
 
-/**
+/*!
  * @brief  Constructs a new PredictResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PredictRequest * PredictResponse::request() const
     return static_cast<const PredictRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning Predict response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PredictResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PredictResponsePrivate
+ * \class PredictResponsePrivate
  *
- * @brief  Private implementation for PredictResponse.
+ * \brief Private implementation for PredictResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PredictResponsePrivate object.
@@ -91,7 +94,7 @@ PredictResponsePrivate::PredictResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning PredictResponse element.
  *
  * @param  xml  XML stream to parse.

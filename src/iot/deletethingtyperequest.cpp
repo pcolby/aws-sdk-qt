@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteThingTypeRequest
+/*!
+ * \class QtAws::IoT::DeleteThingTypeRequest
  *
- * @brief  Implements IoT DeleteThingType requests.
+ * \brief The DeleteThingTypeRequest class encapsulates IoT DeleteThingType requests.
  *
- * @see    IoTClient::deleteThingType
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteThingType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteThingTypeRequest::DeleteThingTypeRequest(const DeleteThingTypeRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingTypeRequest object.
  */
 DeleteThingTypeRequest::DeleteThingTypeRequest()
@@ -53,13 +67,16 @@ DeleteThingTypeRequest::DeleteThingTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteThingTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteThingTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingTypeRequest::response(QNetworkRepl
     return new DeleteThingTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteThingTypeRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingTypeRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteThingTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingTypeRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteThingTypeRequestPrivate::DeleteThingTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingTypeRequestPrivate object, copying another.

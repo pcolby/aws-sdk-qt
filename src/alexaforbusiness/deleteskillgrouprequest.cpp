@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteSkillGroupRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteSkillGroupRequest
  *
- * @brief  Implements AlexaForBusiness DeleteSkillGroup requests.
+ * \brief The DeleteSkillGroupRequest class encapsulates AlexaForBusiness DeleteSkillGroup requests.
  *
- * @see    AlexaForBusinessClient::deleteSkillGroup
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteSkillGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSkillGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteSkillGroupRequest::DeleteSkillGroupRequest(const DeleteSkillGroupRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSkillGroupRequest object.
  */
 DeleteSkillGroupRequest::DeleteSkillGroupRequest()
@@ -53,13 +61,16 @@ DeleteSkillGroupRequest::DeleteSkillGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSkillGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSkillGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSkillGroupRequest::response(QNetworkRep
     return new DeleteSkillGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSkillGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSkillGroupRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteSkillGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSkillGroupRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSkillGroupRequestPrivate object, copying another.

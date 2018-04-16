@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  SearchProvisionedProductsResponse
+/*!
+ * \class QtAws::ServiceCatalog::SearchProvisionedProductsResponse
  *
- * @brief  Handles ServiceCatalog SearchProvisionedProducts responses.
+ * \brief The SearchProvisionedProductsResponse class encapsulates ServiceCatalog SearchProvisionedProducts responses.
  *
- * @see    ServiceCatalogClient::searchProvisionedProducts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::searchProvisionedProducts
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProvisionedProductsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const SearchProvisionedProductsRequest * SearchProvisionedProductsResponse::requ
     return static_cast<const SearchProvisionedProductsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog SearchProvisionedProducts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void SearchProvisionedProductsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchProvisionedProductsResponsePrivate
+ * \class SearchProvisionedProductsResponsePrivate
  *
- * @brief  Private implementation for SearchProvisionedProductsResponse.
+ * \brief Private implementation for SearchProvisionedProductsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProvisionedProductsResponsePrivate object.
@@ -91,7 +100,7 @@ SearchProvisionedProductsResponsePrivate::SearchProvisionedProductsResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog SearchProvisionedProductsResponse element.
  *
  * @param  xml  XML stream to parse.

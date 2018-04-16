@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeletePortfolioShareRequest
+/*!
+ * \class QtAws::ServiceCatalog::DeletePortfolioShareRequest
  *
- * @brief  Implements ServiceCatalog DeletePortfolioShare requests.
+ * \brief The DeletePortfolioShareRequest class encapsulates ServiceCatalog DeletePortfolioShare requests.
  *
- * @see    ServiceCatalogClient::deletePortfolioShare
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deletePortfolioShare
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePortfolioShareRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeletePortfolioShareRequest::DeletePortfolioShareRequest(const DeletePortfolioSh
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePortfolioShareRequest object.
  */
 DeletePortfolioShareRequest::DeletePortfolioShareRequest()
@@ -53,13 +62,16 @@ DeletePortfolioShareRequest::DeletePortfolioShareRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePortfolioShareRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePortfolioShareResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioShareRequest::response(QNetwor
     return new DeletePortfolioShareResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePortfolioShareRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioShareRequest::response(QNetwor
  * @brief  Private implementation for DeletePortfolioShareRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePortfolioShareRequestPrivate object.
@@ -97,7 +109,7 @@ DeletePortfolioShareRequestPrivate::DeletePortfolioShareRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePortfolioShareRequestPrivate object, copying another.

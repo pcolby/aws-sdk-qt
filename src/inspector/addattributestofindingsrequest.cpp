@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  AddAttributesToFindingsRequest
+/*!
+ * \class QtAws::Inspector::AddAttributesToFindingsRequest
  *
- * @brief  Implements Inspector AddAttributesToFindings requests.
+ * \brief The AddAttributesToFindingsRequest class encapsulates Inspector AddAttributesToFindings requests.
  *
- * @see    InspectorClient::addAttributesToFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::addAttributesToFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new AddAttributesToFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ AddAttributesToFindingsRequest::AddAttributesToFindingsRequest(const AddAttribut
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddAttributesToFindingsRequest object.
  */
 AddAttributesToFindingsRequest::AddAttributesToFindingsRequest()
@@ -53,13 +61,16 @@ AddAttributesToFindingsRequest::AddAttributesToFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddAttributesToFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddAttributesToFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNet
     return new AddAttributesToFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddAttributesToFindingsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNet
  * @brief  Private implementation for AddAttributesToFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddAttributesToFindingsRequestPrivate object.
@@ -97,7 +108,7 @@ AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddAttributesToFindingsRequestPrivate object, copying another.

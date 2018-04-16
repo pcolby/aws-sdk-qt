@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  IndexFacesResponse
+/*!
+ * \class QtAws::Rekognition::IndexFacesResponse
  *
- * @brief  Handles Rekognition IndexFaces responses.
+ * \brief The IndexFacesResponse class encapsulates Rekognition IndexFaces responses.
  *
- * @see    RekognitionClient::indexFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::indexFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new IndexFacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const IndexFacesRequest * IndexFacesResponse::request() const
     return static_cast<const IndexFacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition IndexFaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void IndexFacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  IndexFacesResponsePrivate
+ * \class IndexFacesResponsePrivate
  *
- * @brief  Private implementation for IndexFacesResponse.
+ * \brief Private implementation for IndexFacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IndexFacesResponsePrivate object.
@@ -91,7 +95,7 @@ IndexFacesResponsePrivate::IndexFacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition IndexFacesResponse element.
  *
  * @param  xml  XML stream to parse.

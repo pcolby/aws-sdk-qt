@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  BatchDetectDominantLanguageRequest
+/*!
+ * \class QtAws::Comprehend::BatchDetectDominantLanguageRequest
  *
- * @brief  Implements Comprehend BatchDetectDominantLanguage requests.
+ * \brief The BatchDetectDominantLanguageRequest class encapsulates Comprehend BatchDetectDominantLanguage requests.
  *
- * @see    ComprehendClient::batchDetectDominantLanguage
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::batchDetectDominantLanguage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectDominantLanguageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchDetectDominantLanguageRequest::BatchDetectDominantLanguageRequest(const Bat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectDominantLanguageRequest object.
  */
 BatchDetectDominantLanguageRequest::BatchDetectDominantLanguageRequest()
@@ -53,13 +59,16 @@ BatchDetectDominantLanguageRequest::BatchDetectDominantLanguageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDetectDominantLanguageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDetectDominantLanguageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectDominantLanguageRequest::response(
     return new BatchDetectDominantLanguageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDetectDominantLanguageRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectDominantLanguageRequest::response(
  * @brief  Private implementation for BatchDetectDominantLanguageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectDominantLanguageRequestPrivate object.
@@ -97,7 +106,7 @@ BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectDominantLanguageRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateSpotDatafeedSubscriptionResponse
+/*!
+ * \class QtAws::EC2::CreateSpotDatafeedSubscriptionResponse
  *
- * @brief  Handles EC2 CreateSpotDatafeedSubscription responses.
+ * \brief The CreateSpotDatafeedSubscriptionResponse class encapsulates EC2 CreateSpotDatafeedSubscription responses.
  *
- * @see    EC2Client::createSpotDatafeedSubscription
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createSpotDatafeedSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSpotDatafeedSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateSpotDatafeedSubscriptionRequest * CreateSpotDatafeedSubscriptionResp
     return static_cast<const CreateSpotDatafeedSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateSpotDatafeedSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSpotDatafeedSubscriptionResponsePrivate
+ * \class CreateSpotDatafeedSubscriptionResponsePrivate
  *
- * @brief  Private implementation for CreateSpotDatafeedSubscriptionResponse.
+ * \brief Private implementation for CreateSpotDatafeedSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSpotDatafeedSubscriptionResponsePrivate object.
@@ -91,7 +98,7 @@ CreateSpotDatafeedSubscriptionResponsePrivate::CreateSpotDatafeedSubscriptionRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateSpotDatafeedSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

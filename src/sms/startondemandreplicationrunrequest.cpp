@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  StartOnDemandReplicationRunRequest
+/*!
+ * \class QtAws::SMS::StartOnDemandReplicationRunRequest
  *
- * @brief  Implements SMS StartOnDemandReplicationRun requests.
+ * \brief The StartOnDemandReplicationRunRequest class encapsulates SMS StartOnDemandReplicationRun requests.
  *
- * @see    SMSClient::startOnDemandReplicationRun
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::startOnDemandReplicationRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StartOnDemandReplicationRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StartOnDemandReplicationRunRequest::StartOnDemandReplicationRunRequest(const Sta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartOnDemandReplicationRunRequest object.
  */
 StartOnDemandReplicationRunRequest::StartOnDemandReplicationRunRequest()
@@ -53,13 +56,16 @@ StartOnDemandReplicationRunRequest::StartOnDemandReplicationRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartOnDemandReplicationRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartOnDemandReplicationRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StartOnDemandReplicationRunRequest::response(
     return new StartOnDemandReplicationRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartOnDemandReplicationRunRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StartOnDemandReplicationRunRequest::response(
  * @brief  Private implementation for StartOnDemandReplicationRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartOnDemandReplicationRunRequestPrivate object.
@@ -97,7 +103,7 @@ StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartOnDemandReplicationRunRequestPrivate object, copying another.

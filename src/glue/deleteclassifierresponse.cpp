@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteClassifierResponse
+/*!
+ * \class QtAws::Glue::DeleteClassifierResponse
  *
- * @brief  Handles Glue DeleteClassifier responses.
+ * \brief The DeleteClassifierResponse class encapsulates Glue DeleteClassifier responses.
  *
- * @see    GlueClient::deleteClassifier
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteClassifier
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteClassifierResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteClassifierRequest * DeleteClassifierResponse::request() const
     return static_cast<const DeleteClassifierRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteClassifier response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteClassifierResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteClassifierResponsePrivate
+ * \class DeleteClassifierResponsePrivate
  *
- * @brief  Private implementation for DeleteClassifierResponse.
+ * \brief Private implementation for DeleteClassifierResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClassifierResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteClassifierResponse element.
  *
  * @param  xml  XML stream to parse.

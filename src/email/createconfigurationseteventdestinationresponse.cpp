@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CreateConfigurationSetEventDestinationResponse
+/*!
+ * \class QtAws::SES::CreateConfigurationSetEventDestinationResponse
  *
- * @brief  Handles SES CreateConfigurationSetEventDestination responses.
+ * \brief The CreateConfigurationSetEventDestinationResponse class encapsulates SES CreateConfigurationSetEventDestination responses.
  *
- * @see    SESClient::createConfigurationSetEventDestination
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::createConfigurationSetEventDestination
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationSetEventDestinationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateConfigurationSetEventDestinationRequest * CreateConfigurationSetEven
     return static_cast<const CreateConfigurationSetEventDestinationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES CreateConfigurationSetEventDestination response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateConfigurationSetEventDestinationResponsePrivate
+ * \class CreateConfigurationSetEventDestinationResponsePrivate
  *
- * @brief  Private implementation for CreateConfigurationSetEventDestinationResponse.
+ * \brief Private implementation for CreateConfigurationSetEventDestinationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationSetEventDestinationResponsePrivate object.
@@ -91,7 +105,7 @@ CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationSetEve
 
 }
 
-/**
+/*!
  * @brief  Parse an SES CreateConfigurationSetEventDestinationResponse element.
  *
  * @param  xml  XML stream to parse.

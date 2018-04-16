@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteInstanceProfileRequest
+/*!
+ * \class QtAws::DeviceFarm::DeleteInstanceProfileRequest
  *
- * @brief  Implements DeviceFarm DeleteInstanceProfile requests.
+ * \brief The DeleteInstanceProfileRequest class encapsulates DeviceFarm DeleteInstanceProfile requests.
  *
- * @see    DeviceFarmClient::deleteInstanceProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteInstanceProfileRequest::DeleteInstanceProfileRequest(const DeleteInstanceP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteInstanceProfileRequest object.
  */
 DeleteInstanceProfileRequest::DeleteInstanceProfileRequest()
@@ -53,13 +58,16 @@ DeleteInstanceProfileRequest::DeleteInstanceProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteInstanceProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteInstanceProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
     return new DeleteInstanceProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteInstanceProfileRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
  * @brief  Private implementation for DeleteInstanceProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInstanceProfileRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInstanceProfileRequestPrivate object, copying another.

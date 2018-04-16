@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListOfferingTransactionsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListOfferingTransactionsRequest
  *
- * @brief  Implements DeviceFarm ListOfferingTransactions requests.
+ * \brief The ListOfferingTransactionsRequest class encapsulates DeviceFarm ListOfferingTransactions requests.
  *
- * @see    DeviceFarmClient::listOfferingTransactions
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listOfferingTransactions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOfferingTransactionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListOfferingTransactionsRequest::ListOfferingTransactionsRequest(const ListOffer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOfferingTransactionsRequest object.
  */
 ListOfferingTransactionsRequest::ListOfferingTransactionsRequest()
@@ -53,13 +58,16 @@ ListOfferingTransactionsRequest::ListOfferingTransactionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOfferingTransactionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOfferingTransactionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListOfferingTransactionsRequest::response(QNe
     return new ListOfferingTransactionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOfferingTransactionsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListOfferingTransactionsRequest::response(QNe
  * @brief  Private implementation for ListOfferingTransactionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOfferingTransactionsRequestPrivate object.
@@ -97,7 +105,7 @@ ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOfferingTransactionsRequestPrivate object, copying another.

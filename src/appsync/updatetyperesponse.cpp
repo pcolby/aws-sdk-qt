@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateTypeResponse
+/*!
+ * \class QtAws::AppSync::UpdateTypeResponse
  *
- * @brief  Handles AppSync UpdateType responses.
+ * \brief The UpdateTypeResponse class encapsulates AppSync UpdateType responses.
  *
- * @see    AppSyncClient::updateType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateType
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateTypeRequest * UpdateTypeResponse::request() const
     return static_cast<const UpdateTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync UpdateType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTypeResponsePrivate
+ * \class UpdateTypeResponsePrivate
  *
- * @brief  Private implementation for UpdateTypeResponse.
+ * \brief Private implementation for UpdateTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTypeResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateTypeResponsePrivate::UpdateTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync UpdateTypeResponse element.
  *
  * @param  xml  XML stream to parse.

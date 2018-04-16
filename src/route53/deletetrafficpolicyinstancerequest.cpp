@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteTrafficPolicyInstanceRequest
+/*!
+ * \class QtAws::Route53::DeleteTrafficPolicyInstanceRequest
  *
- * @brief  Implements Route53 DeleteTrafficPolicyInstance requests.
+ * \brief The DeleteTrafficPolicyInstanceRequest class encapsulates Route53 DeleteTrafficPolicyInstance requests.
  *
- * @see    Route53Client::deleteTrafficPolicyInstance
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteTrafficPolicyInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTrafficPolicyInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteTrafficPolicyInstanceRequest::DeleteTrafficPolicyInstanceRequest(const Del
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTrafficPolicyInstanceRequest object.
  */
 DeleteTrafficPolicyInstanceRequest::DeleteTrafficPolicyInstanceRequest()
@@ -53,13 +56,16 @@ DeleteTrafficPolicyInstanceRequest::DeleteTrafficPolicyInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTrafficPolicyInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTrafficPolicyInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyInstanceRequest::response(
     return new DeleteTrafficPolicyInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTrafficPolicyInstanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyInstanceRequest::response(
  * @brief  Private implementation for DeleteTrafficPolicyInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTrafficPolicyInstanceRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteTrafficPolicyInstanceRequestPrivate::DeleteTrafficPolicyInstanceRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTrafficPolicyInstanceRequestPrivate object, copying another.

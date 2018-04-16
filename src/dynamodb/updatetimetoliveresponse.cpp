@@ -27,15 +27,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  UpdateTimeToLiveResponse
+/*!
+ * \class QtAws::DynamoDB::UpdateTimeToLiveResponse
  *
- * @brief  Handles DynamoDB UpdateTimeToLive responses.
+ * \brief The UpdateTimeToLiveResponse class encapsulates DynamoDB UpdateTimeToLive responses.
  *
- * @see    DynamoDBClient::updateTimeToLive
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::updateTimeToLive
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTimeToLiveResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +80,7 @@ const UpdateTimeToLiveRequest * UpdateTimeToLiveResponse::request() const
     return static_cast<const UpdateTimeToLiveRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DynamoDB UpdateTimeToLive response.
  *
  * @param  response  Response to parse.
@@ -70,15 +92,15 @@ void UpdateTimeToLiveResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTimeToLiveResponsePrivate
+ * \class UpdateTimeToLiveResponsePrivate
  *
- * @brief  Private implementation for UpdateTimeToLiveResponse.
+ * \brief Private implementation for UpdateTimeToLiveResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTimeToLiveResponsePrivate object.
@@ -91,7 +113,7 @@ UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DynamoDB UpdateTimeToLiveResponse element.
  *
  * @param  xml  XML stream to parse.

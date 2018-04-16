@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  DeleteAliasResponse
+/*!
+ * \class QtAws::Lambda::DeleteAliasResponse
  *
- * @brief  Handles Lambda DeleteAlias responses.
+ * \brief The DeleteAliasResponse class encapsulates Lambda DeleteAlias responses.
  *
- * @see    LambdaClient::deleteAlias
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::deleteAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteAliasRequest * DeleteAliasResponse::request() const
     return static_cast<const DeleteAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda DeleteAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteAliasResponsePrivate
+ * \class DeleteAliasResponsePrivate
  *
- * @brief  Private implementation for DeleteAliasResponse.
+ * \brief Private implementation for DeleteAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAliasResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda DeleteAliasResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListPublicKeysResponse
+/*!
+ * \class QtAws::CloudFront::ListPublicKeysResponse
  *
- * @brief  Handles CloudFront ListPublicKeys responses.
+ * \brief The ListPublicKeysResponse class encapsulates CloudFront ListPublicKeys responses.
  *
- * @see    CloudFrontClient::listPublicKeys
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listPublicKeys
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPublicKeysResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListPublicKeysRequest * ListPublicKeysResponse::request() const
     return static_cast<const ListPublicKeysRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListPublicKeys response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListPublicKeysResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPublicKeysResponsePrivate
+ * \class ListPublicKeysResponsePrivate
  *
- * @brief  Private implementation for ListPublicKeysResponse.
+ * \brief Private implementation for ListPublicKeysResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPublicKeysResponsePrivate object.
@@ -91,7 +99,7 @@ ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListPublicKeysResponse element.
  *
  * @param  xml  XML stream to parse.

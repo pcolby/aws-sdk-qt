@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  UpdateAutoScalingGroupRequest
+/*!
+ * \class QtAws::AutoScaling::UpdateAutoScalingGroupRequest
  *
- * @brief  Implements AutoScaling UpdateAutoScalingGroup requests.
+ * \brief The UpdateAutoScalingGroupRequest class encapsulates AutoScaling UpdateAutoScalingGroup requests.
  *
- * @see    AutoScalingClient::updateAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::updateAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAutoScalingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateAutoScalingGroupRequest::UpdateAutoScalingGroupRequest(const UpdateAutoSca
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAutoScalingGroupRequest object.
  */
 UpdateAutoScalingGroupRequest::UpdateAutoScalingGroupRequest()
@@ -53,13 +61,16 @@ UpdateAutoScalingGroupRequest::UpdateAutoScalingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAutoScalingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAutoScalingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAutoScalingGroupRequest::response(QNetw
     return new UpdateAutoScalingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAutoScalingGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAutoScalingGroupRequest::response(QNetw
  * @brief  Private implementation for UpdateAutoScalingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAutoScalingGroupRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateAutoScalingGroupRequestPrivate::UpdateAutoScalingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAutoScalingGroupRequestPrivate object, copying another.

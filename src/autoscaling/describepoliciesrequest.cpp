@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribePoliciesRequest
+/*!
+ * \class QtAws::AutoScaling::DescribePoliciesRequest
  *
- * @brief  Implements AutoScaling DescribePolicies requests.
+ * \brief The DescribePoliciesRequest class encapsulates AutoScaling DescribePolicies requests.
  *
- * @see    AutoScalingClient::describePolicies
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describePolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribePoliciesRequest::DescribePoliciesRequest(const DescribePoliciesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribePoliciesRequest object.
  */
 DescribePoliciesRequest::DescribePoliciesRequest()
@@ -53,13 +61,16 @@ DescribePoliciesRequest::DescribePoliciesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribePoliciesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribePoliciesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribePoliciesRequest::response(QNetworkRep
     return new DescribePoliciesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribePoliciesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribePoliciesRequest::response(QNetworkRep
  * @brief  Private implementation for DescribePoliciesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePoliciesRequestPrivate object.
@@ -97,7 +108,7 @@ DescribePoliciesRequestPrivate::DescribePoliciesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePoliciesRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UpdateSecurityGroupRuleDescriptionsEgressResponse
+/*!
+ * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressResponse
  *
- * @brief  Handles EC2 UpdateSecurityGroupRuleDescriptionsEgress responses.
+ * \brief The UpdateSecurityGroupRuleDescriptionsEgressResponse class encapsulates EC2 UpdateSecurityGroupRuleDescriptionsEgress responses.
  *
- * @see    EC2Client::updateSecurityGroupRuleDescriptionsEgress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::updateSecurityGroupRuleDescriptionsEgress
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateSecurityGroupRuleDescriptionsEgressRequest * UpdateSecurityGroupRule
     return static_cast<const UpdateSecurityGroupRuleDescriptionsEgressRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 UpdateSecurityGroupRuleDescriptionsEgress response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateSecurityGroupRuleDescriptionsEgressResponse::parseSuccess(QIODevice &
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate
+ * \class UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate
  *
- * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsEgressResponse.
+ * \brief Private implementation for UpdateSecurityGroupRuleDescriptionsEgressResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::UpdateSecurityGroupRul
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 UpdateSecurityGroupRuleDescriptionsEgressResponse element.
  *
  * @param  xml  XML stream to parse.

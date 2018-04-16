@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateRemoteAccessSessionRequest
+/*!
+ * \class QtAws::DeviceFarm::CreateRemoteAccessSessionRequest
  *
- * @brief  Implements DeviceFarm CreateRemoteAccessSession requests.
+ * \brief The CreateRemoteAccessSessionRequest class encapsulates DeviceFarm CreateRemoteAccessSession requests.
  *
- * @see    DeviceFarmClient::createRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRemoteAccessSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest(const CreateR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRemoteAccessSessionRequest object.
  */
 CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest()
@@ -53,13 +58,16 @@ CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRemoteAccessSessionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRemoteAccessSessionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateRemoteAccessSessionRequest::response(QN
     return new CreateRemoteAccessSessionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRemoteAccessSessionRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateRemoteAccessSessionRequest::response(QN
  * @brief  Private implementation for CreateRemoteAccessSessionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRemoteAccessSessionRequestPrivate object.
@@ -97,7 +105,7 @@ CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRemoteAccessSessionRequestPrivate object, copying another.

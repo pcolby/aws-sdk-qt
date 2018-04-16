@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace MobileAnalytics {
 
-/**
- * @class  PutEventsRequest
+/*!
+ * \class QtAws::MobileAnalytics::PutEventsRequest
  *
- * @brief  Implements MobileAnalytics PutEvents requests.
+ * \brief The PutEventsRequest class encapsulates MobileAnalytics PutEvents requests.
  *
- * @see    MobileAnalyticsClient::putEvents
+ * \ingroup MobileAnalytics
+ *
+ *  Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
+ *
+ * \sa MobileAnalyticsClient::putEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new PutEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ PutEventsRequest::PutEventsRequest(const PutEventsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutEventsRequest object.
  */
 PutEventsRequest::PutEventsRequest()
@@ -53,13 +57,16 @@ PutEventsRequest::PutEventsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutEventsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutEventsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * PutEventsRequest::response(QNetworkReply * co
     return new PutEventsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutEventsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * PutEventsRequest::response(QNetworkReply * co
  * @brief  Private implementation for PutEventsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutEventsRequestPrivate object.
@@ -97,7 +104,7 @@ PutEventsRequestPrivate::PutEventsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutEventsRequestPrivate object, copying another.

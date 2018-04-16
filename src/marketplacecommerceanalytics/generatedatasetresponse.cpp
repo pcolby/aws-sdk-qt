@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-/**
- * @class  GenerateDataSetResponse
+/*!
+ * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetResponse
  *
- * @brief  Handles MarketplaceCommerceAnalytics GenerateDataSet responses.
+ * \brief The GenerateDataSetResponse class encapsulates MarketplaceCommerceAnalytics GenerateDataSet responses.
  *
- * @see    MarketplaceCommerceAnalyticsClient::generateDataSet
+ * \ingroup MarketplaceCommerceAnalytics
+ *
+ *
+ * \sa MarketplaceCommerceAnalyticsClient::generateDataSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GenerateDataSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GenerateDataSetRequest * GenerateDataSetResponse::request() const
     return static_cast<const GenerateDataSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MarketplaceCommerceAnalytics GenerateDataSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GenerateDataSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GenerateDataSetResponsePrivate
+ * \class GenerateDataSetResponsePrivate
  *
- * @brief  Private implementation for GenerateDataSetResponse.
+ * \brief Private implementation for GenerateDataSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GenerateDataSetResponsePrivate object.
@@ -91,7 +94,7 @@ GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MarketplaceCommerceAnalytics GenerateDataSetResponse element.
  *
  * @param  xml  XML stream to parse.

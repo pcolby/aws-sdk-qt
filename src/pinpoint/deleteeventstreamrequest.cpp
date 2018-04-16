@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteEventStreamRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteEventStreamRequest
  *
- * @brief  Implements Pinpoint DeleteEventStream requests.
+ * \brief The DeleteEventStreamRequest class encapsulates Pinpoint DeleteEventStream requests.
  *
- * @see    PinpointClient::deleteEventStream
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteEventStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEventStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteEventStreamRequest::DeleteEventStreamRequest(const DeleteEventStreamReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteEventStreamRequest object.
  */
 DeleteEventStreamRequest::DeleteEventStreamRequest()
@@ -53,13 +56,16 @@ DeleteEventStreamRequest::DeleteEventStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteEventStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteEventStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEventStreamRequest::response(QNetworkRe
     return new DeleteEventStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteEventStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEventStreamRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteEventStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEventStreamRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteEventStreamRequestPrivate::DeleteEventStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEventStreamRequestPrivate object, copying another.

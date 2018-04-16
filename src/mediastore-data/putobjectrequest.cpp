@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  PutObjectRequest
+/*!
+ * \class QtAws::MediaStoreData::PutObjectRequest
  *
- * @brief  Implements MediaStoreData PutObject requests.
+ * \brief The PutObjectRequest class encapsulates MediaStoreData PutObject requests.
  *
- * @see    MediaStoreDataClient::putObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::putObject
  */
 
-/**
+/*!
  * @brief  Constructs a new PutObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ PutObjectRequest::PutObjectRequest(const PutObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutObjectRequest object.
  */
 PutObjectRequest::PutObjectRequest()
@@ -53,13 +58,16 @@ PutObjectRequest::PutObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
     return new PutObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutObjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
  * @brief  Private implementation for PutObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectRequestPrivate object.
@@ -97,7 +105,7 @@ PutObjectRequestPrivate::PutObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectRequestPrivate object, copying another.

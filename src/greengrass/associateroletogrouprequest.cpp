@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  AssociateRoleToGroupRequest
+/*!
+ * \class QtAws::Greengrass::AssociateRoleToGroupRequest
  *
- * @brief  Implements Greengrass AssociateRoleToGroup requests.
+ * \brief The AssociateRoleToGroupRequest class encapsulates Greengrass AssociateRoleToGroup requests.
  *
- * @see    GreengrassClient::associateRoleToGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::associateRoleToGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateRoleToGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AssociateRoleToGroupRequest::AssociateRoleToGroupRequest(const AssociateRoleToGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateRoleToGroupRequest object.
  */
 AssociateRoleToGroupRequest::AssociateRoleToGroupRequest()
@@ -53,13 +59,16 @@ AssociateRoleToGroupRequest::AssociateRoleToGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateRoleToGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateRoleToGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AssociateRoleToGroupRequest::response(QNetwor
     return new AssociateRoleToGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateRoleToGroupRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AssociateRoleToGroupRequest::response(QNetwor
  * @brief  Private implementation for AssociateRoleToGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateRoleToGroupRequestPrivate object.
@@ -97,7 +106,7 @@ AssociateRoleToGroupRequestPrivate::AssociateRoleToGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateRoleToGroupRequestPrivate object, copying another.

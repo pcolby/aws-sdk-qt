@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  ListAllowedNodeTypeModificationsResponse
+/*!
+ * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsResponse
  *
- * @brief  Handles ElastiCache ListAllowedNodeTypeModifications responses.
+ * \brief The ListAllowedNodeTypeModificationsResponse class encapsulates ElastiCache ListAllowedNodeTypeModifications responses.
  *
- * @see    ElastiCacheClient::listAllowedNodeTypeModifications
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::listAllowedNodeTypeModifications
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAllowedNodeTypeModificationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const ListAllowedNodeTypeModificationsRequest * ListAllowedNodeTypeModifications
     return static_cast<const ListAllowedNodeTypeModificationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache ListAllowedNodeTypeModifications response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void ListAllowedNodeTypeModificationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAllowedNodeTypeModificationsResponsePrivate
+ * \class ListAllowedNodeTypeModificationsResponsePrivate
  *
- * @brief  Private implementation for ListAllowedNodeTypeModificationsResponse.
+ * \brief Private implementation for ListAllowedNodeTypeModificationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAllowedNodeTypeModificationsResponsePrivate object.
@@ -91,7 +108,7 @@ ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModification
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache ListAllowedNodeTypeModificationsResponse element.
  *
  * @param  xml  XML stream to parse.

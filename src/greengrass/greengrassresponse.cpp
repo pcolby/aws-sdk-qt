@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GreengrassResponse
+/*!
+ * \class QtAws::Greengrass::GreengrassResponse
  *
- * @brief  Handles Greengrass Greengrass responses.
+ * \brief The GreengrassResponse class is the base class for all Greengrass responses.
  *
- * @see    GreengrassClient::greengrass
+ * \ingroup Greengrass
  */
 
-/**
+/*!
  * @brief  Constructs a new GreengrassResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ GreengrassResponse::GreengrassResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GreengrassResponse object.
@@ -63,7 +63,7 @@ GreengrassResponse::GreengrassResponse(GreengrassResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void GreengrassResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GreengrassResponsePrivate
@@ -92,7 +92,7 @@ void GreengrassResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for GreengrassResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GreengrassResponsePrivate object.

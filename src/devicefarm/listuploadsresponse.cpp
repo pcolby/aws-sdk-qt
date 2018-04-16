@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListUploadsResponse
+/*!
+ * \class QtAws::DeviceFarm::ListUploadsResponse
  *
- * @brief  Handles DeviceFarm ListUploads responses.
+ * \brief The ListUploadsResponse class encapsulates DeviceFarm ListUploads responses.
  *
- * @see    DeviceFarmClient::listUploads
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listUploads
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUploadsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListUploadsRequest * ListUploadsResponse::request() const
     return static_cast<const ListUploadsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm ListUploads response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListUploadsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListUploadsResponsePrivate
+ * \class ListUploadsResponsePrivate
  *
- * @brief  Private implementation for ListUploadsResponse.
+ * \brief Private implementation for ListUploadsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUploadsResponsePrivate object.
@@ -91,7 +96,7 @@ ListUploadsResponsePrivate::ListUploadsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm ListUploadsResponse element.
  *
  * @param  xml  XML stream to parse.

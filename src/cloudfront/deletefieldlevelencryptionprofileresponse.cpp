@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteFieldLevelEncryptionProfileResponse
+/*!
+ * \class QtAws::CloudFront::DeleteFieldLevelEncryptionProfileResponse
  *
- * @brief  Handles CloudFront DeleteFieldLevelEncryptionProfile responses.
+ * \brief The DeleteFieldLevelEncryptionProfileResponse class encapsulates CloudFront DeleteFieldLevelEncryptionProfile responses.
  *
- * @see    CloudFrontClient::deleteFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFieldLevelEncryptionProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteFieldLevelEncryptionProfileRequest * DeleteFieldLevelEncryptionProfi
     return static_cast<const DeleteFieldLevelEncryptionProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront DeleteFieldLevelEncryptionProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFieldLevelEncryptionProfileResponsePrivate
+ * \class DeleteFieldLevelEncryptionProfileResponsePrivate
  *
- * @brief  Private implementation for DeleteFieldLevelEncryptionProfileResponse.
+ * \brief Private implementation for DeleteFieldLevelEncryptionProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFieldLevelEncryptionProfileResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteFieldLevelEncryptionProfileResponsePrivate::DeleteFieldLevelEncryptionProf
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront DeleteFieldLevelEncryptionProfileResponse element.
  *
  * @param  xml  XML stream to parse.

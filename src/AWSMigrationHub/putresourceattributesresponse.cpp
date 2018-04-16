@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  PutResourceAttributesResponse
+/*!
+ * \class QtAws::MigrationHub::PutResourceAttributesResponse
  *
- * @brief  Handles MigrationHub PutResourceAttributes responses.
+ * \brief The PutResourceAttributesResponse class encapsulates MigrationHub PutResourceAttributes responses.
  *
- * @see    MigrationHubClient::putResourceAttributes
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::putResourceAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new PutResourceAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const PutResourceAttributesRequest * PutResourceAttributesResponse::request() co
     return static_cast<const PutResourceAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub PutResourceAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void PutResourceAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutResourceAttributesResponsePrivate
+ * \class PutResourceAttributesResponsePrivate
  *
- * @brief  Private implementation for PutResourceAttributesResponse.
+ * \brief Private implementation for PutResourceAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutResourceAttributesResponsePrivate object.
@@ -91,7 +96,7 @@ PutResourceAttributesResponsePrivate::PutResourceAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub PutResourceAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

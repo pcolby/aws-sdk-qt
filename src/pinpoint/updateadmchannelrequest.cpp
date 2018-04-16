@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateAdmChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateAdmChannelRequest
  *
- * @brief  Implements Pinpoint UpdateAdmChannel requests.
+ * \brief The UpdateAdmChannelRequest class encapsulates Pinpoint UpdateAdmChannel requests.
  *
- * @see    PinpointClient::updateAdmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateAdmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAdmChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateAdmChannelRequest::UpdateAdmChannelRequest(const UpdateAdmChannelRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAdmChannelRequest object.
  */
 UpdateAdmChannelRequest::UpdateAdmChannelRequest()
@@ -53,13 +56,16 @@ UpdateAdmChannelRequest::UpdateAdmChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAdmChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAdmChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkRep
     return new UpdateAdmChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAdmChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateAdmChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAdmChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAdmChannelRequestPrivate object, copying another.

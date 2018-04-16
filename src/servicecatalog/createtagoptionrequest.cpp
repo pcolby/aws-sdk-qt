@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateTagOptionRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreateTagOptionRequest
  *
- * @brief  Implements ServiceCatalog CreateTagOption requests.
+ * \brief The CreateTagOptionRequest class encapsulates ServiceCatalog CreateTagOption requests.
  *
- * @see    ServiceCatalogClient::createTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateTagOptionRequest::CreateTagOptionRequest(const CreateTagOptionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTagOptionRequest object.
  */
 CreateTagOptionRequest::CreateTagOptionRequest()
@@ -53,13 +62,16 @@ CreateTagOptionRequest::CreateTagOptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTagOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTagOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagOptionRequest::response(QNetworkRepl
     return new CreateTagOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTagOptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagOptionRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateTagOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagOptionRequestPrivate object.
@@ -97,7 +109,7 @@ CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagOptionRequestPrivate object, copying another.

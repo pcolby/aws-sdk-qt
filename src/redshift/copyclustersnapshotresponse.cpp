@@ -27,15 +27,48 @@
 namespace QtAws {
 namespace Redshift {
 
-/**
- * @class  CopyClusterSnapshotResponse
+/*!
+ * \class QtAws::Redshift::CopyClusterSnapshotResponse
  *
- * @brief  Handles Redshift CopyClusterSnapshot responses.
+ * \brief The CopyClusterSnapshotResponse class encapsulates Redshift CopyClusterSnapshot responses.
  *
- * @see    RedshiftClient::copyClusterSnapshot
+ * \ingroup Redshift
+ *
+ *  <fullname>Amazon Redshift</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is an interface reference for Amazon Redshift. It contains documentation for one of the programming or command line
+ *  interfaces you can use to manage Amazon Redshift clusters. Note that Amazon Redshift is asynchronous, which means that
+ *  some interfaces may require techniques, such as polling or asynchronous callback handlers, to determine when a command
+ *  has been applied. In this reference, the parameter descriptions indicate whether a change is applied immediately, on the
+ *  next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster management
+ *  interfaces, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html">Using the Amazon Redshift
+ *  Management
+ * 
+ *  Interfaces</a>>
+ * 
+ *  Amazon Redshift manages all the work of setting up, operating, and scaling a data warehouse: provisioning capacity,
+ *  monitoring and backing up the cluster, and applying patches and upgrades to the Amazon Redshift engine. You can focus on
+ *  using your data to acquire new insights for your business and
+ * 
+ *  customers>
+ * 
+ *  If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the <a
+ *  href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html">Amazon Redshift Getting Started
+ * 
+ *  Guide</a>>
+ * 
+ *  If you are a database developer, the <a href="http://docs.aws.amazon.com/redshift/latest/dg/welcome.html">Amazon
+ *  Redshift Database Developer Guide</a> explains how to design, build, query, and maintain the databases that make up your
+ *  data warehouse.
+ *
+ * \sa RedshiftClient::copyClusterSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyClusterSnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +91,7 @@ const CopyClusterSnapshotRequest * CopyClusterSnapshotResponse::request() const
     return static_cast<const CopyClusterSnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Redshift CopyClusterSnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +103,15 @@ void CopyClusterSnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopyClusterSnapshotResponsePrivate
+ * \class CopyClusterSnapshotResponsePrivate
  *
- * @brief  Private implementation for CopyClusterSnapshotResponse.
+ * \brief Private implementation for CopyClusterSnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyClusterSnapshotResponsePrivate object.
@@ -91,7 +124,7 @@ CopyClusterSnapshotResponsePrivate::CopyClusterSnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Redshift CopyClusterSnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

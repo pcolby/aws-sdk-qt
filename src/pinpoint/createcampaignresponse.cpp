@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  CreateCampaignResponse
+/*!
+ * \class QtAws::Pinpoint::CreateCampaignResponse
  *
- * @brief  Handles Pinpoint CreateCampaign responses.
+ * \brief The CreateCampaignResponse class encapsulates Pinpoint CreateCampaign responses.
  *
- * @see    PinpointClient::createCampaign
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::createCampaign
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCampaignResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateCampaignRequest * CreateCampaignResponse::request() const
     return static_cast<const CreateCampaignRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint CreateCampaign response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateCampaignResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCampaignResponsePrivate
+ * \class CreateCampaignResponsePrivate
  *
- * @brief  Private implementation for CreateCampaignResponse.
+ * \brief Private implementation for CreateCampaignResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCampaignResponsePrivate object.
@@ -91,7 +94,7 @@ CreateCampaignResponsePrivate::CreateCampaignResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint CreateCampaignResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateClientCertificateResponse
+/*!
+ * \class QtAws::APIGateway::UpdateClientCertificateResponse
  *
- * @brief  Handles APIGateway UpdateClientCertificate responses.
+ * \brief The UpdateClientCertificateResponse class encapsulates APIGateway UpdateClientCertificate responses.
  *
- * @see    APIGatewayClient::updateClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateClientCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateClientCertificateRequest * UpdateClientCertificateResponse::request(
     return static_cast<const UpdateClientCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateClientCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateClientCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateClientCertificateResponsePrivate
+ * \class UpdateClientCertificateResponsePrivate
  *
- * @brief  Private implementation for UpdateClientCertificateResponse.
+ * \brief Private implementation for UpdateClientCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClientCertificateResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateClientCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

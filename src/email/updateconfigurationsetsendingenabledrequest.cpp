@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateConfigurationSetSendingEnabledRequest
+/*!
+ * \class QtAws::SES::UpdateConfigurationSetSendingEnabledRequest
  *
- * @brief  Implements SES UpdateConfigurationSetSendingEnabled requests.
+ * \brief The UpdateConfigurationSetSendingEnabledRequest class encapsulates SES UpdateConfigurationSetSendingEnabled requests.
  *
- * @see    SESClient::updateConfigurationSetSendingEnabled
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateConfigurationSetSendingEnabled
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnable
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequest object.
  */
 UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnabledRequest()
@@ -53,13 +67,16 @@ UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnable
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateConfigurationSetSendingEnabledRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateConfigurationSetSendingEnabledResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
     return new UpdateConfigurationSetSendingEnabledResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateConfigurationSetSendingEnabledRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
  * @brief  Private implementation for UpdateConfigurationSetSendingEnabledRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendin
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequestPrivate object, copying another.

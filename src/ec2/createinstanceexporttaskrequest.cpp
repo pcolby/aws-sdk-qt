@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateInstanceExportTaskRequest
+/*!
+ * \class QtAws::EC2::CreateInstanceExportTaskRequest
  *
- * @brief  Implements EC2 CreateInstanceExportTask requests.
+ * \brief The CreateInstanceExportTaskRequest class encapsulates EC2 CreateInstanceExportTask requests.
  *
- * @see    EC2Client::createInstanceExportTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createInstanceExportTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInstanceExportTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest(const CreateIns
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateInstanceExportTaskRequest object.
  */
 CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest()
@@ -53,13 +60,16 @@ CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateInstanceExportTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateInstanceExportTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNe
     return new CreateInstanceExportTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateInstanceExportTaskRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNe
  * @brief  Private implementation for CreateInstanceExportTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInstanceExportTaskRequestPrivate object.
@@ -97,7 +107,7 @@ CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInstanceExportTaskRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateTriggerRequest
+/*!
+ * \class QtAws::Glue::UpdateTriggerRequest
  *
- * @brief  Implements Glue UpdateTrigger requests.
+ * \brief The UpdateTriggerRequest class encapsulates Glue UpdateTrigger requests.
  *
- * @see    GlueClient::updateTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateTriggerRequest::UpdateTriggerRequest(const UpdateTriggerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTriggerRequest object.
  */
 UpdateTriggerRequest::UpdateTriggerRequest()
@@ -53,13 +59,16 @@ UpdateTriggerRequest::UpdateTriggerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTriggerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTriggerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply 
     return new UpdateTriggerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTriggerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateTriggerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTriggerRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTriggerRequestPrivate object, copying another.

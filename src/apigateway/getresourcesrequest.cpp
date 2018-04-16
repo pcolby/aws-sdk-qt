@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetResourcesRequest
+/*!
+ * \class QtAws::APIGateway::GetResourcesRequest
  *
- * @brief  Implements APIGateway GetResources requests.
+ * \brief The GetResourcesRequest class encapsulates APIGateway GetResources requests.
  *
- * @see    APIGatewayClient::getResources
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getResources
  */
 
-/**
+/*!
  * @brief  Constructs a new GetResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetResourcesRequest::GetResourcesRequest(const GetResourcesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetResourcesRequest object.
  */
 GetResourcesRequest::GetResourcesRequest()
@@ -53,13 +61,16 @@ GetResourcesRequest::GetResourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetResourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetResourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetResourcesRequest::response(QNetworkReply *
     return new GetResourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetResourcesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetResourcesRequest::response(QNetworkReply *
  * @brief  Private implementation for GetResourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourcesRequestPrivate object.
@@ -97,7 +108,7 @@ GetResourcesRequestPrivate::GetResourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourcesRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListAssessmentTemplatesRequest
+/*!
+ * \class QtAws::Inspector::ListAssessmentTemplatesRequest
  *
- * @brief  Implements Inspector ListAssessmentTemplates requests.
+ * \brief The ListAssessmentTemplatesRequest class encapsulates Inspector ListAssessmentTemplates requests.
  *
- * @see    InspectorClient::listAssessmentTemplates
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listAssessmentTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentTemplatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListAssessmentTemplatesRequest::ListAssessmentTemplatesRequest(const ListAssessm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentTemplatesRequest object.
  */
 ListAssessmentTemplatesRequest::ListAssessmentTemplatesRequest()
@@ -53,13 +61,16 @@ ListAssessmentTemplatesRequest::ListAssessmentTemplatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssessmentTemplatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssessmentTemplatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentTemplatesRequest::response(QNet
     return new ListAssessmentTemplatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssessmentTemplatesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentTemplatesRequest::response(QNet
  * @brief  Private implementation for ListAssessmentTemplatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentTemplatesRequestPrivate object.
@@ -97,7 +108,7 @@ ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentTemplatesRequestPrivate object, copying another.

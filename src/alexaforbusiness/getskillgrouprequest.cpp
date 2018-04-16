@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  GetSkillGroupRequest
+/*!
+ * \class QtAws::AlexaForBusiness::GetSkillGroupRequest
  *
- * @brief  Implements AlexaForBusiness GetSkillGroup requests.
+ * \brief The GetSkillGroupRequest class encapsulates AlexaForBusiness GetSkillGroup requests.
  *
- * @see    AlexaForBusinessClient::getSkillGroup
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::getSkillGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSkillGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetSkillGroupRequest::GetSkillGroupRequest(const GetSkillGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSkillGroupRequest object.
  */
 GetSkillGroupRequest::GetSkillGroupRequest()
@@ -53,13 +61,16 @@ GetSkillGroupRequest::GetSkillGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSkillGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSkillGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetSkillGroupRequest::response(QNetworkReply 
     return new GetSkillGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSkillGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetSkillGroupRequest::response(QNetworkReply 
  * @brief  Private implementation for GetSkillGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSkillGroupRequestPrivate object.
@@ -97,7 +108,7 @@ GetSkillGroupRequestPrivate::GetSkillGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSkillGroupRequestPrivate object, copying another.

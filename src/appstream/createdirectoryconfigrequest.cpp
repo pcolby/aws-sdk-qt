@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateDirectoryConfigRequest
+/*!
+ * \class QtAws::AppStream::CreateDirectoryConfigRequest
  *
- * @brief  Implements AppStream CreateDirectoryConfig requests.
+ * \brief The CreateDirectoryConfigRequest class encapsulates AppStream CreateDirectoryConfig requests.
  *
- * @see    AppStreamClient::createDirectoryConfig
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createDirectoryConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDirectoryConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateDirectoryConfigRequest::CreateDirectoryConfigRequest(const CreateDirectory
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDirectoryConfigRequest object.
  */
 CreateDirectoryConfigRequest::CreateDirectoryConfigRequest()
@@ -53,13 +59,16 @@ CreateDirectoryConfigRequest::CreateDirectoryConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDirectoryConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDirectoryConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetwo
     return new CreateDirectoryConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDirectoryConfigRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetwo
  * @brief  Private implementation for CreateDirectoryConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDirectoryConfigRequestPrivate object.
@@ -97,7 +106,7 @@ CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDirectoryConfigRequestPrivate object, copying another.

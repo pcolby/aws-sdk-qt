@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CancelCertificateTransferRequest
+/*!
+ * \class QtAws::IoT::CancelCertificateTransferRequest
  *
- * @brief  Implements IoT CancelCertificateTransfer requests.
+ * \brief The CancelCertificateTransferRequest class encapsulates IoT CancelCertificateTransfer requests.
  *
- * @see    IoTClient::cancelCertificateTransfer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::cancelCertificateTransfer
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelCertificateTransferRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CancelCertificateTransferRequest::CancelCertificateTransferRequest(const CancelC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelCertificateTransferRequest object.
  */
 CancelCertificateTransferRequest::CancelCertificateTransferRequest()
@@ -53,13 +67,16 @@ CancelCertificateTransferRequest::CancelCertificateTransferRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelCertificateTransferRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelCertificateTransferResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CancelCertificateTransferRequest::response(QN
     return new CancelCertificateTransferResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelCertificateTransferRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CancelCertificateTransferRequest::response(QN
  * @brief  Private implementation for CancelCertificateTransferRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelCertificateTransferRequestPrivate object.
@@ -97,7 +114,7 @@ CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelCertificateTransferRequestPrivate object, copying another.

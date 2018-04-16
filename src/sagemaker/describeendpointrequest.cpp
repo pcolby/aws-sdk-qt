@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DescribeEndpointRequest
+/*!
+ * \class QtAws::SageMaker::DescribeEndpointRequest
  *
- * @brief  Implements SageMaker DescribeEndpoint requests.
+ * \brief The DescribeEndpointRequest class encapsulates SageMaker DescribeEndpoint requests.
  *
- * @see    SageMakerClient::describeEndpoint
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::describeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeEndpointRequest::DescribeEndpointRequest(const DescribeEndpointRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointRequest object.
  */
 DescribeEndpointRequest::DescribeEndpointRequest()
@@ -53,13 +56,16 @@ DescribeEndpointRequest::DescribeEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
     return new DescribeEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointRequestPrivate object, copying another.

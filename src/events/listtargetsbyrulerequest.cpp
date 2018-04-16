@@ -25,15 +25,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  ListTargetsByRuleRequest
+/*!
+ * \class QtAws::CloudWatchEvents::ListTargetsByRuleRequest
  *
- * @brief  Implements CloudWatchEvents ListTargetsByRule requests.
+ * \brief The ListTargetsByRuleRequest class encapsulates CloudWatchEvents ListTargetsByRule requests.
  *
- * @see    CloudWatchEventsClient::listTargetsByRule
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::listTargetsByRule
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTargetsByRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +70,7 @@ ListTargetsByRuleRequest::ListTargetsByRuleRequest(const ListTargetsByRuleReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTargetsByRuleRequest object.
  */
 ListTargetsByRuleRequest::ListTargetsByRuleRequest()
@@ -53,13 +79,16 @@ ListTargetsByRuleRequest::ListTargetsByRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTargetsByRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTargetsByRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +103,7 @@ QtAws::Core::AwsAbstractResponse * ListTargetsByRuleRequest::response(QNetworkRe
     return new ListTargetsByRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTargetsByRuleRequestPrivate
@@ -82,7 +111,7 @@ QtAws::Core::AwsAbstractResponse * ListTargetsByRuleRequest::response(QNetworkRe
  * @brief  Private implementation for ListTargetsByRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTargetsByRuleRequestPrivate object.
@@ -97,7 +126,7 @@ ListTargetsByRuleRequestPrivate::ListTargetsByRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTargetsByRuleRequestPrivate object, copying another.

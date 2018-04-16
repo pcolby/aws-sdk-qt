@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketNotificationConfigurationRequest
+/*!
+ * \class QtAws::S3::GetBucketNotificationConfigurationRequest
  *
- * @brief  Implements S3 GetBucketNotificationConfiguration requests.
+ * \brief The GetBucketNotificationConfigurationRequest class encapsulates S3 GetBucketNotificationConfiguration requests.
  *
- * @see    S3Client::getBucketNotificationConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketNotificationConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketNotificationConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketNotificationConfigurationRequest::GetBucketNotificationConfigurationReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketNotificationConfigurationRequest object.
  */
 GetBucketNotificationConfigurationRequest::GetBucketNotificationConfigurationRequest()
@@ -53,13 +56,16 @@ GetBucketNotificationConfigurationRequest::GetBucketNotificationConfigurationReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketNotificationConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketNotificationConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationConfigurationRequest::re
     return new GetBucketNotificationConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketNotificationConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationConfigurationRequest::re
  * @brief  Private implementation for GetBucketNotificationConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketNotificationConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketNotificationConfigurationRequestPrivate::GetBucketNotificationConfigura
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketNotificationConfigurationRequestPrivate object, copying another.

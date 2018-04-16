@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ListAssociatedFleetsRequest
+/*!
+ * \class QtAws::AppStream::ListAssociatedFleetsRequest
  *
- * @brief  Implements AppStream ListAssociatedFleets requests.
+ * \brief The ListAssociatedFleetsRequest class encapsulates AppStream ListAssociatedFleets requests.
  *
- * @see    AppStreamClient::listAssociatedFleets
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::listAssociatedFleets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssociatedFleetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListAssociatedFleetsRequest::ListAssociatedFleetsRequest(const ListAssociatedFle
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssociatedFleetsRequest object.
  */
 ListAssociatedFleetsRequest::ListAssociatedFleetsRequest()
@@ -53,13 +59,16 @@ ListAssociatedFleetsRequest::ListAssociatedFleetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssociatedFleetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssociatedFleetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedFleetsRequest::response(QNetwor
     return new ListAssociatedFleetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssociatedFleetsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedFleetsRequest::response(QNetwor
  * @brief  Private implementation for ListAssociatedFleetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssociatedFleetsRequestPrivate object.
@@ -97,7 +106,7 @@ ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssociatedFleetsRequestPrivate object, copying another.

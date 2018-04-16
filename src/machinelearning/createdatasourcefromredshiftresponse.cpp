@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateDataSourceFromRedshiftResponse
+/*!
+ * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftResponse
  *
- * @brief  Handles MachineLearning CreateDataSourceFromRedshift responses.
+ * \brief The CreateDataSourceFromRedshiftResponse class encapsulates MachineLearning CreateDataSourceFromRedshift responses.
  *
- * @see    MachineLearningClient::createDataSourceFromRedshift
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createDataSourceFromRedshift
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDataSourceFromRedshiftResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateDataSourceFromRedshiftRequest * CreateDataSourceFromRedshiftResponse
     return static_cast<const CreateDataSourceFromRedshiftRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning CreateDataSourceFromRedshift response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateDataSourceFromRedshiftResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDataSourceFromRedshiftResponsePrivate
+ * \class CreateDataSourceFromRedshiftResponsePrivate
  *
- * @brief  Private implementation for CreateDataSourceFromRedshiftResponse.
+ * \brief Private implementation for CreateDataSourceFromRedshiftResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDataSourceFromRedshiftResponsePrivate object.
@@ -91,7 +94,7 @@ CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning CreateDataSourceFromRedshiftResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DeleteMountTargetRequest
+/*!
+ * \class QtAws::EFS::DeleteMountTargetRequest
  *
- * @brief  Implements EFS DeleteMountTarget requests.
+ * \brief The DeleteMountTargetRequest class encapsulates EFS DeleteMountTarget requests.
  *
- * @see    EFSClient::deleteMountTarget
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::deleteMountTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMountTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteMountTargetRequest::DeleteMountTargetRequest(const DeleteMountTargetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteMountTargetRequest object.
  */
 DeleteMountTargetRequest::DeleteMountTargetRequest()
@@ -53,13 +62,16 @@ DeleteMountTargetRequest::DeleteMountTargetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteMountTargetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteMountTargetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkRe
     return new DeleteMountTargetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteMountTargetRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteMountTargetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMountTargetRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMountTargetRequestPrivate object, copying another.

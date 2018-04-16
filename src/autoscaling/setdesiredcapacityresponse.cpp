@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SetDesiredCapacityResponse
+/*!
+ * \class QtAws::AutoScaling::SetDesiredCapacityResponse
  *
- * @brief  Handles AutoScaling SetDesiredCapacity responses.
+ * \brief The SetDesiredCapacityResponse class encapsulates AutoScaling SetDesiredCapacity responses.
  *
- * @see    AutoScalingClient::setDesiredCapacity
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::setDesiredCapacity
  */
 
-/**
+/*!
  * @brief  Constructs a new SetDesiredCapacityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SetDesiredCapacityRequest * SetDesiredCapacityResponse::request() const
     return static_cast<const SetDesiredCapacityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling SetDesiredCapacity response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SetDesiredCapacityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetDesiredCapacityResponsePrivate
+ * \class SetDesiredCapacityResponsePrivate
  *
- * @brief  Private implementation for SetDesiredCapacityResponse.
+ * \brief Private implementation for SetDesiredCapacityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetDesiredCapacityResponsePrivate object.
@@ -91,7 +99,7 @@ SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling SetDesiredCapacityResponse element.
  *
  * @param  xml  XML stream to parse.

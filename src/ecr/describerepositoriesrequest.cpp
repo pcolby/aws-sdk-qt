@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DescribeRepositoriesRequest
+/*!
+ * \class QtAws::ECR::DescribeRepositoriesRequest
  *
- * @brief  Implements ECR DescribeRepositories requests.
+ * \brief The DescribeRepositoriesRequest class encapsulates ECR DescribeRepositories requests.
  *
- * @see    ECRClient::describeRepositories
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::describeRepositories
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRepositoriesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositor
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeRepositoriesRequest object.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest()
@@ -53,13 +60,16 @@ DescribeRepositoriesRequest::DescribeRepositoriesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeRepositoriesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeRepositoriesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
     return new DescribeRepositoriesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeRepositoriesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
  * @brief  Private implementation for DescribeRepositoriesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRepositoriesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRepositoriesRequestPrivate object, copying another.

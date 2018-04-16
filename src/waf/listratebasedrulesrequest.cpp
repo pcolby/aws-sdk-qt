@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListRateBasedRulesRequest
+/*!
+ * \class QtAws::WAF::ListRateBasedRulesRequest
  *
- * @brief  Implements WAF ListRateBasedRules requests.
+ * \brief The ListRateBasedRulesRequest class encapsulates WAF ListRateBasedRules requests.
  *
- * @see    WAFClient::listRateBasedRules
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listRateBasedRules
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRateBasedRulesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListRateBasedRulesRequest::ListRateBasedRulesRequest(const ListRateBasedRulesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRateBasedRulesRequest object.
  */
 ListRateBasedRulesRequest::ListRateBasedRulesRequest()
@@ -53,13 +61,16 @@ ListRateBasedRulesRequest::ListRateBasedRulesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRateBasedRulesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRateBasedRulesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkR
     return new ListRateBasedRulesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRateBasedRulesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkR
  * @brief  Private implementation for ListRateBasedRulesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRateBasedRulesRequestPrivate object.
@@ -97,7 +108,7 @@ ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRateBasedRulesRequestPrivate object, copying another.

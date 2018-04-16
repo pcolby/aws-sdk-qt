@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssignPrivateIpAddressesResponse
+/*!
+ * \class QtAws::EC2::AssignPrivateIpAddressesResponse
  *
- * @brief  Handles EC2 AssignPrivateIpAddresses responses.
+ * \brief The AssignPrivateIpAddressesResponse class encapsulates EC2 AssignPrivateIpAddresses responses.
  *
- * @see    EC2Client::assignPrivateIpAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::assignPrivateIpAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new AssignPrivateIpAddressesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssignPrivateIpAddressesRequest * AssignPrivateIpAddressesResponse::reques
     return static_cast<const AssignPrivateIpAddressesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssignPrivateIpAddresses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssignPrivateIpAddressesResponsePrivate
+ * \class AssignPrivateIpAddressesResponsePrivate
  *
- * @brief  Private implementation for AssignPrivateIpAddressesResponse.
+ * \brief Private implementation for AssignPrivateIpAddressesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssignPrivateIpAddressesResponsePrivate object.
@@ -91,7 +98,7 @@ AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssignPrivateIpAddressesResponse element.
  *
  * @param  xml  XML stream to parse.

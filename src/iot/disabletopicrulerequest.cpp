@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DisableTopicRuleRequest
+/*!
+ * \class QtAws::IoT::DisableTopicRuleRequest
  *
- * @brief  Implements IoT DisableTopicRule requests.
+ * \brief The DisableTopicRuleRequest class encapsulates IoT DisableTopicRule requests.
  *
- * @see    IoTClient::disableTopicRule
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::disableTopicRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableTopicRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DisableTopicRuleRequest::DisableTopicRuleRequest(const DisableTopicRuleRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableTopicRuleRequest object.
  */
 DisableTopicRuleRequest::DisableTopicRuleRequest()
@@ -53,13 +67,16 @@ DisableTopicRuleRequest::DisableTopicRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableTopicRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableTopicRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DisableTopicRuleRequest::response(QNetworkRep
     return new DisableTopicRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableTopicRuleRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DisableTopicRuleRequest::response(QNetworkRep
  * @brief  Private implementation for DisableTopicRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableTopicRuleRequestPrivate object.
@@ -97,7 +114,7 @@ DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableTopicRuleRequestPrivate object, copying another.

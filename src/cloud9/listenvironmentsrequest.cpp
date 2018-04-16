@@ -25,15 +25,72 @@
 namespace QtAws {
 namespace Cloud9 {
 
-/**
- * @class  ListEnvironmentsRequest
+/*!
+ * \class QtAws::Cloud9::ListEnvironmentsRequest
  *
- * @brief  Implements Cloud9 ListEnvironments requests.
+ * \brief The ListEnvironmentsRequest class encapsulates Cloud9 ListEnvironments requests.
  *
- * @see    Cloud9Client::listEnvironments
+ * \ingroup Cloud9
+ *
+ *  <fullname>AWS Cloud9</fullname>
+ * 
+ *  AWS Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
+ * 
+ *  cloud>
+ * 
+ *  For more information about AWS Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">AWS Cloud9
+ *  User
+ * 
+ *  Guide</a>>
+ * 
+ *  AWS Cloud9 supports these
+ * 
+ *  operations> <ul> <li>
+ * 
+ *  <code>CreateEnvironmentEC2</code>: Creates an AWS Cloud9 development environment, launches an Amazon EC2 instance, and
+ *  then connects from the instance to the
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>CreateEnvironmentMembership</code>: Adds an environment member to an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DeleteEnvironment</code>: Deletes an environment. If an Amazon EC2 instance is connected to the environment, also
+ *  terminates the
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <code>DeleteEnvironmentMembership</code>: Deletes an environment member from an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DescribeEnvironmentMemberships</code>: Gets information about environment members for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DescribeEnvironments</code>: Gets information about
+ * 
+ *  environments> </li> <li>
+ * 
+ *  <code>DescribeEnvironmentStatus</code>: Gets status information for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>ListEnvironments</code>: Gets a list of environment
+ * 
+ *  identifiers> </li> <li>
+ * 
+ *  <code>UpdateEnvironment</code>: Changes the settings of an existing
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>UpdateEnvironmentMembership</code>: Changes the settings of an existing environment member for an
+ *
+ * \sa Cloud9Client::listEnvironments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListEnvironmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +101,7 @@ ListEnvironmentsRequest::ListEnvironmentsRequest(const ListEnvironmentsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListEnvironmentsRequest object.
  */
 ListEnvironmentsRequest::ListEnvironmentsRequest()
@@ -53,13 +110,16 @@ ListEnvironmentsRequest::ListEnvironmentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListEnvironmentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListEnvironmentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +134,7 @@ QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkRep
     return new ListEnvironmentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListEnvironmentsRequestPrivate
@@ -82,7 +142,7 @@ QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkRep
  * @brief  Private implementation for ListEnvironmentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEnvironmentsRequestPrivate object.
@@ -97,7 +157,7 @@ ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEnvironmentsRequestPrivate object, copying another.

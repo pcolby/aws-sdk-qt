@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UpdateSubnetGroupRequest
+/*!
+ * \class QtAws::DAX::UpdateSubnetGroupRequest
  *
- * @brief  Implements DAX UpdateSubnetGroup requests.
+ * \brief The UpdateSubnetGroupRequest class encapsulates DAX UpdateSubnetGroup requests.
  *
- * @see    DAXClient::updateSubnetGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::updateSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateSubnetGroupRequest::UpdateSubnetGroupRequest(const UpdateSubnetGroupReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSubnetGroupRequest object.
  */
 UpdateSubnetGroupRequest::UpdateSubnetGroupRequest()
@@ -53,13 +60,16 @@ UpdateSubnetGroupRequest::UpdateSubnetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSubnetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSubnetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkRe
     return new UpdateSubnetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSubnetGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateSubnetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSubnetGroupRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSubnetGroupRequestPrivate object, copying another.

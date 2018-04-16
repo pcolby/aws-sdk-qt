@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UntagResourceResponse
+/*!
+ * \class QtAws::AlexaForBusiness::UntagResourceResponse
  *
- * @brief  Handles AlexaForBusiness UntagResource responses.
+ * \brief The UntagResourceResponse class encapsulates AlexaForBusiness UntagResource responses.
  *
- * @see    AlexaForBusinessClient::untagResource
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
     return static_cast<const UntagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness UntagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UntagResourceResponsePrivate
+ * \class UntagResourceResponsePrivate
  *
- * @brief  Private implementation for UntagResourceResponse.
+ * \brief Private implementation for UntagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceResponsePrivate object.
@@ -91,7 +99,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness UntagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Redshift {
 
-/**
- * @class  RedshiftResponse
+/*!
+ * \class QtAws::Redshift::RedshiftResponse
  *
- * @brief  Handles Redshift Redshift responses.
+ * \brief The RedshiftResponse class is the base class for all Redshift responses.
  *
- * @see    RedshiftClient::redshift
+ * \ingroup Redshift
  */
 
-/**
+/*!
  * @brief  Constructs a new RedshiftResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ RedshiftResponse::RedshiftResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RedshiftResponse object.
@@ -63,7 +63,7 @@ RedshiftResponse::RedshiftResponse(RedshiftResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void RedshiftResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RedshiftResponsePrivate
@@ -92,7 +92,7 @@ void RedshiftResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for RedshiftResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RedshiftResponsePrivate object.

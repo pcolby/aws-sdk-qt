@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetMLModelResponse
+/*!
+ * \class QtAws::MachineLearning::GetMLModelResponse
  *
- * @brief  Handles MachineLearning GetMLModel responses.
+ * \brief The GetMLModelResponse class encapsulates MachineLearning GetMLModel responses.
  *
- * @see    MachineLearningClient::getMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMLModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetMLModelRequest * GetMLModelResponse::request() const
     return static_cast<const GetMLModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning GetMLModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetMLModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetMLModelResponsePrivate
+ * \class GetMLModelResponsePrivate
  *
- * @brief  Private implementation for GetMLModelResponse.
+ * \brief Private implementation for GetMLModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMLModelResponsePrivate object.
@@ -91,7 +94,7 @@ GetMLModelResponsePrivate::GetMLModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning GetMLModelResponse element.
  *
  * @param  xml  XML stream to parse.

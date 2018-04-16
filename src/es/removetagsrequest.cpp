@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  RemoveTagsRequest
+/*!
+ * \class QtAws::ElasticsearchService::RemoveTagsRequest
  *
- * @brief  Implements ElasticsearchService RemoveTags requests.
+ * \brief The RemoveTagsRequest class encapsulates ElasticsearchService RemoveTags requests.
  *
- * @see    ElasticsearchServiceClient::removeTags
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::removeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
@@ -53,13 +65,16 @@ RemoveTagsRequest::RemoveTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
     return new RemoveTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveTagsRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for RemoveTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsRequestPrivate object.
@@ -97,7 +112,7 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsRequestPrivate object, copying another.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeCopyProductStatusResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeCopyProductStatusResponse
  *
- * @brief  Handles ServiceCatalog DescribeCopyProductStatus responses.
+ * \brief The DescribeCopyProductStatusResponse class encapsulates ServiceCatalog DescribeCopyProductStatus responses.
  *
- * @see    ServiceCatalogClient::describeCopyProductStatus
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeCopyProductStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCopyProductStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeCopyProductStatusRequest * DescribeCopyProductStatusResponse::requ
     return static_cast<const DescribeCopyProductStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeCopyProductStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeCopyProductStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCopyProductStatusResponsePrivate
+ * \class DescribeCopyProductStatusResponsePrivate
  *
- * @brief  Private implementation for DescribeCopyProductStatusResponse.
+ * \brief Private implementation for DescribeCopyProductStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCopyProductStatusResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeCopyProductStatusResponse element.
  *
  * @param  xml  XML stream to parse.

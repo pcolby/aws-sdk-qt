@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListEventSourceMappingsRequest
+/*!
+ * \class QtAws::Lambda::ListEventSourceMappingsRequest
  *
- * @brief  Implements Lambda ListEventSourceMappings requests.
+ * \brief The ListEventSourceMappingsRequest class encapsulates Lambda ListEventSourceMappings requests.
  *
- * @see    LambdaClient::listEventSourceMappings
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listEventSourceMappings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListEventSourceMappingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListEventSourceMappingsRequest::ListEventSourceMappingsRequest(const ListEventSo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListEventSourceMappingsRequest object.
  */
 ListEventSourceMappingsRequest::ListEventSourceMappingsRequest()
@@ -53,13 +67,16 @@ ListEventSourceMappingsRequest::ListEventSourceMappingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListEventSourceMappingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListEventSourceMappingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNet
     return new ListEventSourceMappingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListEventSourceMappingsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNet
  * @brief  Private implementation for ListEventSourceMappingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEventSourceMappingsRequestPrivate object.
@@ -97,7 +114,7 @@ ListEventSourceMappingsRequestPrivate::ListEventSourceMappingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEventSourceMappingsRequestPrivate object, copying another.

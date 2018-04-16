@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteBotVersionRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteBotVersionRequest
  *
- * @brief  Implements LexModelBuildingService DeleteBotVersion requests.
+ * \brief The DeleteBotVersionRequest class encapsulates LexModelBuildingService DeleteBotVersion requests.
  *
- * @see    LexModelBuildingServiceClient::deleteBotVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteBotVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteBotVersionRequest::DeleteBotVersionRequest(const DeleteBotVersionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotVersionRequest object.
  */
 DeleteBotVersionRequest::DeleteBotVersionRequest()
@@ -53,13 +60,16 @@ DeleteBotVersionRequest::DeleteBotVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBotVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBotVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkRep
     return new DeleteBotVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBotVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteBotVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotVersionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotVersionRequestPrivate object, copying another.

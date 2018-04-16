@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ImportCertificateResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::ImportCertificateResponse
  *
- * @brief  Handles DatabaseMigrationService ImportCertificate responses.
+ * \brief The ImportCertificateResponse class encapsulates DatabaseMigrationService ImportCertificate responses.
  *
- * @see    DatabaseMigrationServiceClient::importCertificate
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::importCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ImportCertificateRequest * ImportCertificateResponse::request() const
     return static_cast<const ImportCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService ImportCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportCertificateResponsePrivate
+ * \class ImportCertificateResponsePrivate
  *
- * @brief  Private implementation for ImportCertificateResponse.
+ * \brief Private implementation for ImportCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportCertificateResponsePrivate object.
@@ -91,7 +105,7 @@ ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService ImportCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

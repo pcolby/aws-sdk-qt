@@ -105,37 +105,45 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DirectoryService
+ * \brief The QtAws::DirectoryService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DirectoryServiceClient
+/*!
+ * \class QtAws::DirectoryService::DirectoryServiceClient
  *
- * @brief  Client for AWS Directory Service
+ * \brief The DirectoryServiceClient class provides access the AWS Directory Service service.
  *
- * <fullname>AWS Directory Service</fullname>
+ * \ingroup DirectoryService
  *
- * AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
- * connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
- * information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
- * Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
- *
- * Guide</a>> <note>
- *
- * AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
- * .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
- * other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
- * href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  */
 
-/**
- * @brief  Constructs a new DirectoryServiceClient object.
+/*!
+ * \brief Constructs a DirectoryServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DirectoryServiceClient::DirectoryServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -154,21 +162,16 @@ DirectoryServiceClient::DirectoryServiceClient(
     d->serviceName = QStringLiteral("ds");
 }
 
-/**
- * @brief  Constructs a new DirectoryServiceClient object.
+/*!
+ * \overload DirectoryServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DirectoryServiceClient::DirectoryServiceClient(
     const QUrl &endpoint,
@@ -187,7 +190,7 @@ DirectoryServiceClient::DirectoryServiceClient(
     d->serviceName = QStringLiteral("ds");
 }
 
-/**
+/*!
  * If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address block
  * to correctly route traffic to and from your Microsoft AD on Amazon Web Services. <i>AddIpRoutes</i> adds this address
  * block. You can also use <i>AddIpRoutes</i> to facilitate routing traffic that uses public IP ranges from your Microsoft
@@ -211,7 +214,7 @@ AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesReque
     return qobject_cast<AddIpRoutesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified directory. Each directory can have a maximum of 50 tags. Each tag
  * consists of a key and optional value. Tag keys must be unique to each
  *
@@ -226,7 +229,7 @@ AddTagsToResourceResponse * DirectoryServiceClient::addTagsToResource(const AddT
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels an in-progress schema extension to a Microsoft AD directory. Once a schema extension has started replicating to
  * all domain controllers, the task can no longer be canceled. A schema extension can be canceled during any of the
  * following states; <code>Initializing</code>, <code>CreatingSnapshot</code>, and
@@ -242,7 +245,7 @@ CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(co
     return qobject_cast<CancelSchemaExtensionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AD Connector to connect to an on-premises
  *
  * directory>
@@ -263,7 +266,7 @@ ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const Connec
     return qobject_cast<ConnectDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an alias for a directory and assigns the alias to the directory. The alias is used to construct the access URL
  * for the directory, such as
  *
@@ -282,7 +285,7 @@ CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasReque
     return qobject_cast<CreateAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a computer account in the specified directory, and joins the computer to the
  *
  * @param  request Request to send to AWS Directory Service.
@@ -296,7 +299,7 @@ CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComp
     return qobject_cast<CreateComputerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a conditional forwarder associated with your AWS directory. Conditional forwarders are required in order to set
  * up a trust relationship with another domain. The conditional forwarder points to the trusted
  *
@@ -311,7 +314,7 @@ CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalFo
     return qobject_cast<CreateConditionalForwarderResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Simple AD
  *
  * directory>
@@ -332,7 +335,7 @@ CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDi
     return qobject_cast<CreateDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Microsoft AD in the AWS
  *
  * cloud>
@@ -353,7 +356,7 @@ CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const Crea
     return qobject_cast<CreateMicrosoftADResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a snapshot of a Simple AD or Microsoft AD directory in the AWS
  *
  * cloud> <note>
@@ -371,7 +374,7 @@ CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnap
     return qobject_cast<CreateSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can
  * establish a trust between your Microsoft AD in the AWS cloud, and your existing on-premises Microsoft Active Directory.
  * This would allow you to provide users and groups access to resources in either domain, with a single set of
@@ -392,7 +395,7 @@ CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustReque
     return qobject_cast<CreateTrustResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a conditional forwarder that has been set up for your AWS
  *
  * @param  request Request to send to AWS Directory Service.
@@ -406,7 +409,7 @@ DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalFo
     return qobject_cast<DeleteConditionalForwarderResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an AWS Directory Service
  *
  * directory>
@@ -427,7 +430,7 @@ DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDi
     return qobject_cast<DeleteDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a directory
  *
  * @param  request Request to send to AWS Directory Service.
@@ -441,7 +444,7 @@ DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnap
     return qobject_cast<DeleteSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing trust relationship between your Microsoft AD in the AWS cloud and an external
  *
  * @param  request Request to send to AWS Directory Service.
@@ -455,7 +458,7 @@ DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustReque
     return qobject_cast<DeleteTrustResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified directory as a publisher to the specified SNS
  *
  * @param  request Request to send to AWS Directory Service.
@@ -469,7 +472,7 @@ DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(cons
     return qobject_cast<DeregisterEventTopicResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains information about the conditional forwarders for this
  *
  * account>
@@ -488,7 +491,7 @@ DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditio
     return qobject_cast<DescribeConditionalForwardersResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains information about the directories that belong to this
  *
  * account>
@@ -517,7 +520,7 @@ DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const 
     return qobject_cast<DescribeDirectoriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides information about any domain controllers in your
  *
  * @param  request Request to send to AWS Directory Service.
@@ -531,7 +534,7 @@ DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainContro
     return qobject_cast<DescribeDomainControllersResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains information about which SNS topics receive status messages from the specified
  *
  * directory>
@@ -550,7 +553,7 @@ DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const 
     return qobject_cast<DescribeEventTopicsResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains information about the directory snapshots that belong to this
  *
  * account>
@@ -574,7 +577,7 @@ DescribeSnapshotsResponse * DirectoryServiceClient::describeSnapshots(const Desc
     return qobject_cast<DescribeSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains information about the trust relationships for this
  *
  * account>
@@ -593,7 +596,7 @@ DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTr
     return qobject_cast<DescribeTrustsResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
  * Connector
  *
@@ -608,7 +611,7 @@ DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiu
     return qobject_cast<DisableRadiusResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables single-sign on for a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -622,7 +625,7 @@ DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest 
     return qobject_cast<DisableSsoResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
  * Connector
  *
@@ -637,7 +640,7 @@ EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRe
     return qobject_cast<EnableRadiusResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables single sign-on for a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -651,7 +654,7 @@ EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &re
     return qobject_cast<EnableSsoResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains directory limit information for the current
  *
  * @param  request Request to send to AWS Directory Service.
@@ -665,7 +668,7 @@ GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const Ge
     return qobject_cast<GetDirectoryLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Obtains the manual snapshot limits for a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -679,7 +682,7 @@ GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetS
     return qobject_cast<GetSnapshotLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the address blocks that you have added to a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -693,7 +696,7 @@ ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRe
     return qobject_cast<ListIpRoutesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all schema extensions applied to a Microsoft AD
  *
  * @param  request Request to send to AWS Directory Service.
@@ -707,7 +710,7 @@ ListSchemaExtensionsResponse * DirectoryServiceClient::listSchemaExtensions(cons
     return qobject_cast<ListSchemaExtensionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all tags on a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -721,7 +724,7 @@ ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const 
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a directory with an SNS topic. This establishes the directory as a publisher to the specified SNS topic. You
  * can then receive email or text (SMS) messages when the status of your directory changes. You get notified if your
  * directory goes from an Active status to an Impaired or Inoperable status. You also receive a notification when the
@@ -738,7 +741,7 @@ RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const Re
     return qobject_cast<RegisterEventTopicResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes IP address blocks from a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -752,7 +755,7 @@ RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRo
     return qobject_cast<RemoveIpRoutesResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes tags from a
  *
  * @param  request Request to send to AWS Directory Service.
@@ -766,7 +769,7 @@ RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Restores a directory using an existing directory
  *
  * snapshot>
@@ -790,7 +793,7 @@ RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const 
     return qobject_cast<RestoreFromSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Applies a schema extension to a Microsoft AD
  *
  * @param  request Request to send to AWS Directory Service.
@@ -804,7 +807,7 @@ StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(cons
     return qobject_cast<StartSchemaExtensionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a conditional forwarder that has been set up for your AWS
  *
  * @param  request Request to send to AWS Directory Service.
@@ -818,7 +821,7 @@ UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalFo
     return qobject_cast<UpdateConditionalForwarderResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or removes domain controllers to or from the directory. Based on the difference between current value and new value
  * (provided through this API call), domain controllers will be added or removed. It may take up to 45 minutes for any new
  * domain controllers to become fully active once the requested number of domain controllers is updated. During this time,
@@ -835,7 +838,7 @@ UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOf
     return qobject_cast<UpdateNumberOfDomainControllersResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector
  *
  * @param  request Request to send to AWS Directory Service.
@@ -849,7 +852,7 @@ UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRe
     return qobject_cast<UpdateRadiusResponse *>(send(request));
 }
 
-/**
+/*!
  * AWS Directory Service for Microsoft Active Directory allows you to configure and verify trust
  *
  * relationships>
@@ -867,7 +870,7 @@ VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustReque
     return qobject_cast<VerifyTrustResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DirectoryServiceClientPrivate
@@ -875,7 +878,7 @@ VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustReque
  * @brief  Private implementation for DirectoryServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectoryServiceClientPrivate object.

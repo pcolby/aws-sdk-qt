@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  ListClosedWorkflowExecutionsRequest
+/*!
+ * \class QtAws::SWF::ListClosedWorkflowExecutionsRequest
  *
- * @brief  Implements SWF ListClosedWorkflowExecutions requests.
+ * \brief The ListClosedWorkflowExecutionsRequest class encapsulates SWF ListClosedWorkflowExecutions requests.
  *
- * @see    SWFClient::listClosedWorkflowExecutions
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::listClosedWorkflowExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest(const L
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object.
  */
 ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest()
@@ -53,13 +72,16 @@ ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListClosedWorkflowExecutionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListClosedWorkflowExecutionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response
     return new ListClosedWorkflowExecutionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListClosedWorkflowExecutionsRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response
  * @brief  Private implementation for ListClosedWorkflowExecutionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClosedWorkflowExecutionsRequestPrivate object.
@@ -97,7 +119,7 @@ ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClosedWorkflowExecutionsRequestPrivate object, copying another.

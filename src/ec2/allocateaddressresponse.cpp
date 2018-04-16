@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AllocateAddressResponse
+/*!
+ * \class QtAws::EC2::AllocateAddressResponse
  *
- * @brief  Handles EC2 AllocateAddress responses.
+ * \brief The AllocateAddressResponse class encapsulates EC2 AllocateAddress responses.
  *
- * @see    EC2Client::allocateAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::allocateAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new AllocateAddressResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AllocateAddressRequest * AllocateAddressResponse::request() const
     return static_cast<const AllocateAddressRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AllocateAddress response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AllocateAddressResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AllocateAddressResponsePrivate
+ * \class AllocateAddressResponsePrivate
  *
- * @brief  Private implementation for AllocateAddressResponse.
+ * \brief Private implementation for AllocateAddressResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AllocateAddressResponsePrivate object.
@@ -91,7 +98,7 @@ AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AllocateAddressResponse element.
  *
  * @param  xml  XML stream to parse.

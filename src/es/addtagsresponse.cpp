@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  AddTagsResponse
+/*!
+ * \class QtAws::ElasticsearchService::AddTagsResponse
  *
- * @brief  Handles ElasticsearchService AddTags responses.
+ * \brief The AddTagsResponse class encapsulates ElasticsearchService AddTags responses.
  *
- * @see    ElasticsearchServiceClient::addTags
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::addTags
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const AddTagsRequest * AddTagsResponse::request() const
     return static_cast<const AddTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService AddTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsResponsePrivate
+ * \class AddTagsResponsePrivate
  *
- * @brief  Private implementation for AddTagsResponse.
+ * \brief Private implementation for AddTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsResponsePrivate object.
@@ -91,7 +103,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService AddTagsResponse element.
  *
  * @param  xml  XML stream to parse.

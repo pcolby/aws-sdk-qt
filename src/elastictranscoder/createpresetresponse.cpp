@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  CreatePresetResponse
+/*!
+ * \class QtAws::ElasticTranscoder::CreatePresetResponse
  *
- * @brief  Handles ElasticTranscoder CreatePreset responses.
+ * \brief The CreatePresetResponse class encapsulates ElasticTranscoder CreatePreset responses.
  *
- * @see    ElasticTranscoderClient::createPreset
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::createPreset
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePresetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreatePresetRequest * CreatePresetResponse::request() const
     return static_cast<const CreatePresetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder CreatePreset response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreatePresetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePresetResponsePrivate
+ * \class CreatePresetResponsePrivate
  *
- * @brief  Private implementation for CreatePresetResponse.
+ * \brief Private implementation for CreatePresetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePresetResponsePrivate object.
@@ -91,7 +97,7 @@ CreatePresetResponsePrivate::CreatePresetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder CreatePresetResponse element.
  *
  * @param  xml  XML stream to parse.

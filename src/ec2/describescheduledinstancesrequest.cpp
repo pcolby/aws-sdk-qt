@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeScheduledInstancesRequest
+/*!
+ * \class QtAws::EC2::DescribeScheduledInstancesRequest
  *
- * @brief  Implements EC2 DescribeScheduledInstances requests.
+ * \brief The DescribeScheduledInstancesRequest class encapsulates EC2 DescribeScheduledInstances requests.
  *
- * @see    EC2Client::describeScheduledInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeScheduledInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeScheduledInstancesRequest::DescribeScheduledInstancesRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledInstancesRequest object.
  */
 DescribeScheduledInstancesRequest::DescribeScheduledInstancesRequest()
@@ -53,13 +60,16 @@ DescribeScheduledInstancesRequest::DescribeScheduledInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeScheduledInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeScheduledInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstancesRequest::response(Q
     return new DescribeScheduledInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeScheduledInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstancesRequest::response(Q
  * @brief  Private implementation for DescribeScheduledInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeScheduledInstancesRequestPrivate::DescribeScheduledInstancesRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledInstancesRequestPrivate object, copying another.

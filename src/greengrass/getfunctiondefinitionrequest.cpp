@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetFunctionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::GetFunctionDefinitionRequest
  *
- * @brief  Implements Greengrass GetFunctionDefinition requests.
+ * \brief The GetFunctionDefinitionRequest class encapsulates Greengrass GetFunctionDefinition requests.
  *
- * @see    GreengrassClient::getFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetFunctionDefinitionRequest::GetFunctionDefinitionRequest(const GetFunctionDefi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionDefinitionRequest object.
  */
 GetFunctionDefinitionRequest::GetFunctionDefinitionRequest()
@@ -53,13 +59,16 @@ GetFunctionDefinitionRequest::GetFunctionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFunctionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFunctionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionRequest::response(QNetwo
     return new GetFunctionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFunctionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionDefinitionRequest::response(QNetwo
  * @brief  Private implementation for GetFunctionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ GetFunctionDefinitionRequestPrivate::GetFunctionDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionDefinitionRequestPrivate object, copying another.

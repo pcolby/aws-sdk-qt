@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  MQRequest
+/*!
+ * \class QtAws::MQ::MQRequest
  *
- * @brief  Interface class for providing MQ requests
+ * \brief The MQRequest class is the base class for all MQ requests.
+ *
+ * \ingroup MQ
  */
 
-
-/**
+/*!
  * @brief  Constructs a new MQRequest object.
  *
  * @param  action  The MQ action to request.
@@ -41,7 +42,7 @@ MQRequest::MQRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MQRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ MQRequest::MQRequest(const MQRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ MQRequest& MQRequest::operator=(const MQRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MQRequest object.
@@ -85,10 +86,8 @@ MQRequest::MQRequest(MQRequestPrivate * const d) : QtAws::Core::AwsAbstractReque
 
 }
 
-/**
- * @brief  Get the MQ action to be performed by this request.
- *
- * @return The MQ action to be performed by this request.
+/*!
+ * \brief Returns the MQ action to be performed by this request.
  */
 MQRequest::Action MQRequest::action() const
 {
@@ -96,20 +95,16 @@ MQRequest::Action MQRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the MQ action to be performed by this request.
- *
- * @return The name of the MQ action to be performed by this request.
+/*!
+ * \brief Returns the name of the MQ action to be performed by this request.
  */
 QString MQRequest::actionString() const
 {
     return MQRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the MQ API version implemented by this request.
- *
- * @return The MQ API version implmented by this request.
+/*!
+ * \brief Returns the MQ API version implemented by this request.
  */
 QString MQRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString MQRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the MQ action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the MQ action to be performed by this request to \a action.
  */
 void MQRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void MQRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the MQ API version to include in this request.
- *
- * @param  version  The MQ API version to include in this request.
+/*!
+ * Set the MQ API version to include in this request to \a version.
  */
 void MQRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void MQRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool MQRequest::operator==(const MQRequest &other) const
 {
@@ -159,7 +146,7 @@ bool MQRequest::operator==(const MQRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid MQ queue name.
  *
  * @par From MQ FAQs:
@@ -178,12 +165,10 @@ bool MQRequest::operator==(const MQRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int MQRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int MQRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void MQRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void MQRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this MQ request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant MQRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant MQRequest::parameter(const QString &name, const QVariant &defaultValue)
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this MQ request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &MQRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &MQRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this MQ request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void MQRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void MQRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this MQ request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void MQRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void MQRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this MQ request.
+/*!
+ * \brief Returns a network request for this MQ request using the given \a endpoint.
  *
  * This MQ implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this MQ request using the given \a endpoint.
  */
 QNetworkRequest MQRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest MQRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  MQRequestPrivate
+ * \class  MQRequestPrivate
  *
- * @brief  Private implementation for MQRequest.
+ * \brief  Private implementation for MQRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new MQRequestPrivate object.
- *
- * @param  action  MQ action being performed by the \a q request.
- * @param  q       Pointer to this object's public MQRequest instance.
+ * \brief Constructs a new MQRequestPrivate object.
  */
 MQRequestPrivate::MQRequestPrivate(const MQRequest::Action action, MQRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ MQRequestPrivate::MQRequestPrivate(const MQRequest::Action action, MQRequest * c
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new MQRequestPrivate object from an existing one.
+ * \brief Constructs a new MQRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the MQRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public MQRequest instance.
  */
 MQRequestPrivate::MQRequestPrivate(const MQRequestPrivate &other,
                                      MQRequest * const q)
@@ -312,14 +275,14 @@ MQRequestPrivate::MQRequestPrivate(const MQRequestPrivate &other,
 
 }
 
-/**
- * @brief  Convert and MQ action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts MQRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MQ service's Action
  * query parameters.
- *
- * @param  action  MQ action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

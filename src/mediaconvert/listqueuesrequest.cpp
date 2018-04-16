@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  ListQueuesRequest
+/*!
+ * \class QtAws::MediaConvert::ListQueuesRequest
  *
- * @brief  Implements MediaConvert ListQueues requests.
+ * \brief The ListQueuesRequest class encapsulates MediaConvert ListQueues requests.
  *
- * @see    MediaConvertClient::listQueues
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::listQueues
  */
 
-/**
+/*!
  * @brief  Constructs a new ListQueuesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListQueuesRequest object.
  */
 ListQueuesRequest::ListQueuesRequest()
@@ -53,13 +56,16 @@ ListQueuesRequest::ListQueuesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListQueuesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListQueuesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * c
     return new ListQueuesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListQueuesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListQueuesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQueuesRequestPrivate object.
@@ -97,7 +103,7 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQueuesRequestPrivate object, copying another.

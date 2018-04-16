@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationTasksRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationTasksRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeReplicationTasks requests.
+ * \brief The DescribeReplicationTasksRequest class encapsulates DatabaseMigrationService DescribeReplicationTasks requests.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationTasks
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeReplicationTasksRequest::DescribeReplicationTasksRequest(const DescribeR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationTasksRequest object.
  */
 DescribeReplicationTasksRequest::DescribeReplicationTasksRequest()
@@ -53,13 +67,16 @@ DescribeReplicationTasksRequest::DescribeReplicationTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReplicationTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReplicationTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTasksRequest::response(QNe
     return new DescribeReplicationTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReplicationTasksRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTasksRequest::response(QNe
  * @brief  Private implementation for DescribeReplicationTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationTasksRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeReplicationTasksRequestPrivate::DescribeReplicationTasksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationTasksRequestPrivate object, copying another.

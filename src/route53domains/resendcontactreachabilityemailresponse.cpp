@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ResendContactReachabilityEmailResponse
+/*!
+ * \class QtAws::Route53Domains::ResendContactReachabilityEmailResponse
  *
- * @brief  Handles Route53Domains ResendContactReachabilityEmail responses.
+ * \brief The ResendContactReachabilityEmailResponse class encapsulates Route53Domains ResendContactReachabilityEmail responses.
  *
- * @see    Route53DomainsClient::resendContactReachabilityEmail
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::resendContactReachabilityEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new ResendContactReachabilityEmailResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ResendContactReachabilityEmailRequest * ResendContactReachabilityEmailResp
     return static_cast<const ResendContactReachabilityEmailRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains ResendContactReachabilityEmail response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ResendContactReachabilityEmailResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResendContactReachabilityEmailResponsePrivate
+ * \class ResendContactReachabilityEmailResponsePrivate
  *
- * @brief  Private implementation for ResendContactReachabilityEmailResponse.
+ * \brief Private implementation for ResendContactReachabilityEmailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendContactReachabilityEmailResponsePrivate object.
@@ -91,7 +95,7 @@ ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailRes
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains ResendContactReachabilityEmailResponse element.
  *
  * @param  xml  XML stream to parse.

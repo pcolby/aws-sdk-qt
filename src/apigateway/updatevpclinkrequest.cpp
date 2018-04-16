@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateVpcLinkRequest
+/*!
+ * \class QtAws::APIGateway::UpdateVpcLinkRequest
  *
- * @brief  Implements APIGateway UpdateVpcLink requests.
+ * \brief The UpdateVpcLinkRequest class encapsulates APIGateway UpdateVpcLink requests.
  *
- * @see    APIGatewayClient::updateVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateVpcLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateVpcLinkRequest::UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateVpcLinkRequest object.
  */
 UpdateVpcLinkRequest::UpdateVpcLinkRequest()
@@ -53,13 +61,16 @@ UpdateVpcLinkRequest::UpdateVpcLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateVpcLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateVpcLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply 
     return new UpdateVpcLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateVpcLinkRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateVpcLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateVpcLinkRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateVpcLinkRequestPrivate object, copying another.

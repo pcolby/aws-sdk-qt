@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeTagsRequest
+/*!
+ * \class QtAws::MachineLearning::DescribeTagsRequest
  *
- * @brief  Implements MachineLearning DescribeTags requests.
+ * \brief The DescribeTagsRequest class encapsulates MachineLearning DescribeTags requests.
  *
- * @see    MachineLearningClient::describeTags
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
@@ -53,13 +56,16 @@ DescribeTagsRequest::DescribeTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
     return new DescribeTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTagsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.

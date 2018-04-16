@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetDataSourceResponse
+/*!
+ * \class QtAws::AppSync::GetDataSourceResponse
  *
- * @brief  Handles AppSync GetDataSource responses.
+ * \brief The GetDataSourceResponse class encapsulates AppSync GetDataSource responses.
  *
- * @see    AppSyncClient::getDataSource
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataSourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetDataSourceRequest * GetDataSourceResponse::request() const
     return static_cast<const GetDataSourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync GetDataSource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetDataSourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDataSourceResponsePrivate
+ * \class GetDataSourceResponsePrivate
  *
- * @brief  Private implementation for GetDataSourceResponse.
+ * \brief Private implementation for GetDataSourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataSourceResponsePrivate object.
@@ -91,7 +95,7 @@ GetDataSourceResponsePrivate::GetDataSourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync GetDataSourceResponse element.
  *
  * @param  xml  XML stream to parse.

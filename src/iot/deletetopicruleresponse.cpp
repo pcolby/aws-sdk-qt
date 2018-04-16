@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteTopicRuleResponse
+/*!
+ * \class QtAws::IoT::DeleteTopicRuleResponse
  *
- * @brief  Handles IoT DeleteTopicRule responses.
+ * \brief The DeleteTopicRuleResponse class encapsulates IoT DeleteTopicRule responses.
  *
- * @see    IoTClient::deleteTopicRule
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteTopicRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTopicRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteTopicRuleRequest * DeleteTopicRuleResponse::request() const
     return static_cast<const DeleteTopicRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeleteTopicRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteTopicRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTopicRuleResponsePrivate
+ * \class DeleteTopicRuleResponsePrivate
  *
- * @brief  Private implementation for DeleteTopicRuleResponse.
+ * \brief Private implementation for DeleteTopicRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTopicRuleResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeleteTopicRuleResponse element.
  *
  * @param  xml  XML stream to parse.

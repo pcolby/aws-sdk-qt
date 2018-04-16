@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  DeleteFunctionConcurrencyRequest
+/*!
+ * \class QtAws::Lambda::DeleteFunctionConcurrencyRequest
  *
- * @brief  Implements Lambda DeleteFunctionConcurrency requests.
+ * \brief The DeleteFunctionConcurrencyRequest class encapsulates Lambda DeleteFunctionConcurrency requests.
  *
- * @see    LambdaClient::deleteFunctionConcurrency
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::deleteFunctionConcurrency
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionConcurrencyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest(const DeleteF
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionConcurrencyRequest object.
  */
 DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest()
@@ -53,13 +67,16 @@ DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFunctionConcurrencyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFunctionConcurrencyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QN
     return new DeleteFunctionConcurrencyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFunctionConcurrencyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QN
  * @brief  Private implementation for DeleteFunctionConcurrencyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionConcurrencyRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionConcurrencyRequestPrivate object, copying another.

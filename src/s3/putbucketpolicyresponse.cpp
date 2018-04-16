@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketPolicyResponse
+/*!
+ * \class QtAws::S3::PutBucketPolicyResponse
  *
- * @brief  Handles S3 PutBucketPolicy responses.
+ * \brief The PutBucketPolicyResponse class encapsulates S3 PutBucketPolicy responses.
  *
- * @see    S3Client::putBucketPolicy
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketPolicyRequest * PutBucketPolicyResponse::request() const
     return static_cast<const PutBucketPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketPolicyResponsePrivate
+ * \class PutBucketPolicyResponsePrivate
  *
- * @brief  Private implementation for PutBucketPolicyResponse.
+ * \brief Private implementation for PutBucketPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketPolicyResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketPolicyResponsePrivate::PutBucketPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  AssociateServiceRoleToAccountResponse
+/*!
+ * \class QtAws::Greengrass::AssociateServiceRoleToAccountResponse
  *
- * @brief  Handles Greengrass AssociateServiceRoleToAccount responses.
+ * \brief The AssociateServiceRoleToAccountResponse class encapsulates Greengrass AssociateServiceRoleToAccount responses.
  *
- * @see    GreengrassClient::associateServiceRoleToAccount
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::associateServiceRoleToAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateServiceRoleToAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const AssociateServiceRoleToAccountRequest * AssociateServiceRoleToAccountRespon
     return static_cast<const AssociateServiceRoleToAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass AssociateServiceRoleToAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void AssociateServiceRoleToAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateServiceRoleToAccountResponsePrivate
+ * \class AssociateServiceRoleToAccountResponsePrivate
  *
- * @brief  Private implementation for AssociateServiceRoleToAccountResponse.
+ * \brief Private implementation for AssociateServiceRoleToAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateServiceRoleToAccountResponsePrivate object.
@@ -91,7 +97,7 @@ AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass AssociateServiceRoleToAccountResponse element.
  *
  * @param  xml  XML stream to parse.

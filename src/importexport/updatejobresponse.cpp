@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  UpdateJobResponse
+/*!
+ * \class QtAws::ImportExport::UpdateJobResponse
  *
- * @brief  Handles ImportExport UpdateJob responses.
+ * \brief The UpdateJobResponse class encapsulates ImportExport UpdateJob responses.
  *
- * @see    ImportExportClient::updateJob
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::updateJob
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateJobRequest * UpdateJobResponse::request() const
     return static_cast<const UpdateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ImportExport UpdateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateJobResponsePrivate
+ * \class UpdateJobResponsePrivate
  *
- * @brief  Private implementation for UpdateJobResponse.
+ * \brief Private implementation for UpdateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateJobResponsePrivate::UpdateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ImportExport UpdateJobResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ImportCertificateRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::ImportCertificateRequest
  *
- * @brief  Implements DatabaseMigrationService ImportCertificate requests.
+ * \brief The ImportCertificateRequest class encapsulates DatabaseMigrationService ImportCertificate requests.
  *
- * @see    DatabaseMigrationServiceClient::importCertificate
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::importCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportCertificateRequest object.
  */
 ImportCertificateRequest::ImportCertificateRequest()
@@ -53,13 +67,16 @@ ImportCertificateRequest::ImportCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
     return new ImportCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportCertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  * @brief  Private implementation for ImportCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportCertificateRequestPrivate object.
@@ -97,7 +114,7 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportCertificateRequestPrivate object, copying another.

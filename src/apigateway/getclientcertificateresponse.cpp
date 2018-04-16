@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetClientCertificateResponse
+/*!
+ * \class QtAws::APIGateway::GetClientCertificateResponse
  *
- * @brief  Handles APIGateway GetClientCertificate responses.
+ * \brief The GetClientCertificateResponse class encapsulates APIGateway GetClientCertificate responses.
  *
- * @see    APIGatewayClient::getClientCertificate
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getClientCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetClientCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetClientCertificateRequest * GetClientCertificateResponse::request() cons
     return static_cast<const GetClientCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetClientCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetClientCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetClientCertificateResponsePrivate
+ * \class GetClientCertificateResponsePrivate
  *
- * @brief  Private implementation for GetClientCertificateResponse.
+ * \brief Private implementation for GetClientCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetClientCertificateResponsePrivate object.
@@ -91,7 +99,7 @@ GetClientCertificateResponsePrivate::GetClientCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetClientCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

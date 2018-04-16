@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListV2LoggingLevelsResponse
+/*!
+ * \class QtAws::IoT::ListV2LoggingLevelsResponse
  *
- * @brief  Handles IoT ListV2LoggingLevels responses.
+ * \brief The ListV2LoggingLevelsResponse class encapsulates IoT ListV2LoggingLevels responses.
  *
- * @see    IoTClient::listV2LoggingLevels
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listV2LoggingLevels
  */
 
-/**
+/*!
  * @brief  Constructs a new ListV2LoggingLevelsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListV2LoggingLevelsRequest * ListV2LoggingLevelsResponse::request() const
     return static_cast<const ListV2LoggingLevelsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListV2LoggingLevels response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListV2LoggingLevelsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListV2LoggingLevelsResponsePrivate
+ * \class ListV2LoggingLevelsResponsePrivate
  *
- * @brief  Private implementation for ListV2LoggingLevelsResponse.
+ * \brief Private implementation for ListV2LoggingLevelsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListV2LoggingLevelsResponsePrivate object.
@@ -91,7 +105,7 @@ ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListV2LoggingLevelsResponse element.
  *
  * @param  xml  XML stream to parse.

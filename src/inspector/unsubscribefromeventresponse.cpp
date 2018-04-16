@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  UnsubscribeFromEventResponse
+/*!
+ * \class QtAws::Inspector::UnsubscribeFromEventResponse
  *
- * @brief  Handles Inspector UnsubscribeFromEvent responses.
+ * \brief The UnsubscribeFromEventResponse class encapsulates Inspector UnsubscribeFromEvent responses.
  *
- * @see    InspectorClient::unsubscribeFromEvent
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::unsubscribeFromEvent
  */
 
-/**
+/*!
  * @brief  Constructs a new UnsubscribeFromEventResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UnsubscribeFromEventRequest * UnsubscribeFromEventResponse::request() cons
     return static_cast<const UnsubscribeFromEventRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector UnsubscribeFromEvent response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UnsubscribeFromEventResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UnsubscribeFromEventResponsePrivate
+ * \class UnsubscribeFromEventResponsePrivate
  *
- * @brief  Private implementation for UnsubscribeFromEventResponse.
+ * \brief Private implementation for UnsubscribeFromEventResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnsubscribeFromEventResponsePrivate object.
@@ -91,7 +99,7 @@ UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector UnsubscribeFromEventResponse element.
  *
  * @param  xml  XML stream to parse.

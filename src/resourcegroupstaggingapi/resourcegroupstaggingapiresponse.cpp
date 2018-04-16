@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
-/**
- * @class  ResourceGroupsTaggingAPIResponse
+/*!
+ * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIResponse
  *
- * @brief  Handles ResourceGroupsTaggingAPI ResourceGroupsTaggingAPI responses.
+ * \brief The ResourceGroupsTaggingAPIResponse class is the base class for all ResourceGroupsTaggingAPI responses.
  *
- * @see    ResourceGroupsTaggingAPIClient::resourceGroupsTaggingAPI
+ * \ingroup ResourceGroupsTaggingAPI
  */
 
-/**
+/*!
  * @brief  Constructs a new ResourceGroupsTaggingAPIResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(QObject * con
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResourceGroupsTaggingAPIResponse object.
@@ -63,7 +63,7 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(ResourceGroup
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResourceGroupsTaggingAPIResponsePrivate
@@ -92,7 +92,7 @@ void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ResourceGroupsTaggingAPIResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResourceGroupsTaggingAPIResponsePrivate object.

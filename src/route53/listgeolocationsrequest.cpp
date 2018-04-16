@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListGeoLocationsRequest
+/*!
+ * \class QtAws::Route53::ListGeoLocationsRequest
  *
- * @brief  Implements Route53 ListGeoLocations requests.
+ * \brief The ListGeoLocationsRequest class encapsulates Route53 ListGeoLocations requests.
  *
- * @see    Route53Client::listGeoLocations
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listGeoLocations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGeoLocationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListGeoLocationsRequest::ListGeoLocationsRequest(const ListGeoLocationsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGeoLocationsRequest object.
  */
 ListGeoLocationsRequest::ListGeoLocationsRequest()
@@ -53,13 +56,16 @@ ListGeoLocationsRequest::ListGeoLocationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGeoLocationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGeoLocationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkRep
     return new ListGeoLocationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGeoLocationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkRep
  * @brief  Private implementation for ListGeoLocationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGeoLocationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGeoLocationsRequestPrivate object, copying another.

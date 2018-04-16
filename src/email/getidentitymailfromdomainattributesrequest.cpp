@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetIdentityMailFromDomainAttributesRequest
+/*!
+ * \class QtAws::SES::GetIdentityMailFromDomainAttributesRequest
  *
- * @brief  Implements SES GetIdentityMailFromDomainAttributes requests.
+ * \brief The GetIdentityMailFromDomainAttributesRequest class encapsulates SES GetIdentityMailFromDomainAttributes requests.
  *
- * @see    SESClient::getIdentityMailFromDomainAttributes
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getIdentityMailFromDomainAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequest object.
  */
 GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest()
@@ -53,13 +67,16 @@ GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesR
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIdentityMailFromDomainAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIdentityMailFromDomainAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::r
     return new GetIdentityMailFromDomainAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIdentityMailFromDomainAttributesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::r
  * @brief  Private implementation for GetIdentityMailFromDomainAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequestPrivate object.
@@ -97,7 +114,7 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequestPrivate object, copying another.

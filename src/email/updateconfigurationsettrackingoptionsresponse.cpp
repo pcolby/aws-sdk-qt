@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateConfigurationSetTrackingOptionsResponse
+/*!
+ * \class QtAws::SES::UpdateConfigurationSetTrackingOptionsResponse
  *
- * @brief  Handles SES UpdateConfigurationSetTrackingOptions responses.
+ * \brief The UpdateConfigurationSetTrackingOptionsResponse class encapsulates SES UpdateConfigurationSetTrackingOptions responses.
  *
- * @see    SESClient::updateConfigurationSetTrackingOptions
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateConfigurationSetTrackingOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateConfigurationSetTrackingOptionsRequest * UpdateConfigurationSetTrack
     return static_cast<const UpdateConfigurationSetTrackingOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES UpdateConfigurationSetTrackingOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateConfigurationSetTrackingOptionsResponsePrivate
+ * \class UpdateConfigurationSetTrackingOptionsResponsePrivate
  *
- * @brief  Private implementation for UpdateConfigurationSetTrackingOptionsResponse.
+ * \brief Private implementation for UpdateConfigurationSetTrackingOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateConfigurationSetTrackingOptionsResponsePrivate::UpdateConfigurationSetTrac
 
 }
 
-/**
+/*!
  * @brief  Parse an SES UpdateConfigurationSetTrackingOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

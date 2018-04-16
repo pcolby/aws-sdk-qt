@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  S3Response
+/*!
+ * \class QtAws::S3::S3Response
  *
- * @brief  Handles S3 S3 responses.
+ * \brief The S3Response class is the base class for all S3 responses.
  *
- * @see    S3Client::s3
+ * \ingroup S3
  */
 
-/**
+/*!
  * @brief  Constructs a new S3Response object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ S3Response::S3Response(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new S3Response object.
@@ -63,7 +63,7 @@ S3Response::S3Response(S3ResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void S3Response::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  S3ResponsePrivate
@@ -92,7 +92,7 @@ void S3Response::parseFailure(QIODevice &response)
  * @brief  Private implementation for S3Response.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new S3ResponsePrivate object.

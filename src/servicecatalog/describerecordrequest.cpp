@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeRecordRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeRecordRequest
  *
- * @brief  Implements ServiceCatalog DescribeRecord requests.
+ * \brief The DescribeRecordRequest class encapsulates ServiceCatalog DescribeRecord requests.
  *
- * @see    ServiceCatalogClient::describeRecord
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeRecord
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRecordRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeRecordRequest::DescribeRecordRequest(const DescribeRecordRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeRecordRequest object.
  */
 DescribeRecordRequest::DescribeRecordRequest()
@@ -53,13 +62,16 @@ DescribeRecordRequest::DescribeRecordRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeRecordRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeRecordResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRecordRequest::response(QNetworkReply
     return new DescribeRecordResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeRecordRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRecordRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeRecordRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRecordRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRecordRequestPrivate object, copying another.

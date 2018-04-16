@@ -167,39 +167,47 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Lightsail
+ * \brief The QtAws::Lightsail contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  LightsailClient
+/*!
+ * \class QtAws::Lightsail::LightsailClient
  *
- * @brief  Client for Amazon Lightsail
+ * \brief The LightsailClient class provides access the Amazon Lightsail service.
  *
- * Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
- * Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
- * transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
- * Lightsail console or by using the API or command-line interface
+ * \ingroup Lightsail
  *
- * (CLI)>
- *
- * For more information about Lightsail concepts and tasks, see the <a
- * href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
- *
- * Guide</a>>
- *
- * To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
- * keys. For details about how to set this up, see the <a
- * href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
- * Dev
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
  */
 
-/**
- * @brief  Constructs a new LightsailClient object.
+/*!
+ * \brief Constructs a LightsailClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 LightsailClient::LightsailClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -218,21 +226,16 @@ LightsailClient::LightsailClient(
     d->serviceName = QStringLiteral("lightsail");
 }
 
-/**
- * @brief  Constructs a new LightsailClient object.
+/*!
+ * \overload LightsailClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 LightsailClient::LightsailClient(
     const QUrl &endpoint,
@@ -251,7 +254,7 @@ LightsailClient::LightsailClient(
     d->serviceName = QStringLiteral("lightsail");
 }
 
-/**
+/*!
  * Allocates a static IP
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -265,7 +268,7 @@ AllocateStaticIpResponse * LightsailClient::allocateStaticIp(const AllocateStati
     return qobject_cast<AllocateStaticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the
  * specified disk
  *
@@ -280,7 +283,7 @@ AttachDiskResponse * LightsailClient::attachDisk(const AttachDiskRequest &reques
     return qobject_cast<AttachDiskResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches one or more Lightsail instances to a load
  *
  * balancer>
@@ -298,7 +301,7 @@ AttachInstancesToLoadBalancerResponse * LightsailClient::attachInstancesToLoadBa
     return qobject_cast<AttachInstancesToLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a Transport Layer Security (TLS) certificate to your load balancer. TLS is just an updated, more secure version
  * of Secure Socket Layer
  *
@@ -319,7 +322,7 @@ AttachLoadBalancerTlsCertificateResponse * LightsailClient::attachLoadBalancerTl
     return qobject_cast<AttachLoadBalancerTlsCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a static IP address to a specific Amazon Lightsail
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -333,7 +336,7 @@ AttachStaticIpResponse * LightsailClient::attachStaticIp(const AttachStaticIpReq
     return qobject_cast<AttachStaticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Closes the public ports on a specific Amazon Lightsail
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -347,7 +350,7 @@ CloseInstancePublicPortsResponse * LightsailClient::closeInstancePublicPorts(con
     return qobject_cast<CloseInstancePublicPortsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a block storage disk that can be attached to a Lightsail instance in the same Availability Zone (e.g.,
  * <code>us-east-2a</code>). The disk is created in the regional endpoint that you send the HTTP request to. For more
  * information, see <a
@@ -365,7 +368,7 @@ CreateDiskResponse * LightsailClient::createDisk(const CreateDiskRequest &reques
     return qobject_cast<CreateDiskResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a block storage disk from a disk snapshot that can be attached to a Lightsail instance in the same Availability
  * Zone (e.g., <code>us-east-2a</code>). The disk is created in the regional endpoint that you send the HTTP request to.
  * For more information, see <a
@@ -383,7 +386,7 @@ CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const C
     return qobject_cast<CreateDiskFromSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a snapshot of a block storage disk. You can use snapshots for backups, to make copies of disks, and to save data
  * before shutting down a Lightsail
  *
@@ -407,7 +410,7 @@ CreateDiskSnapshotResponse * LightsailClient::createDiskSnapshot(const CreateDis
     return qobject_cast<CreateDiskSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a domain resource for the specified domain (e.g.,
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -421,7 +424,7 @@ CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &
     return qobject_cast<CreateDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one of the following entry records associated with the domain: A record, CNAME record, TXT record, or MX
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -435,7 +438,7 @@ CreateDomainEntryResponse * LightsailClient::createDomainEntry(const CreateDomai
     return qobject_cast<CreateDomainEntryResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a snapshot of a specific virtual private server, or <i>instance</i>. You can use a snapshot to create a new
  * instance that is based on that
  *
@@ -450,7 +453,7 @@ CreateInstanceSnapshotResponse * LightsailClient::createInstanceSnapshot(const C
     return qobject_cast<CreateInstanceSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one or more Amazon Lightsail virtual private servers, or
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -464,7 +467,7 @@ CreateInstancesResponse * LightsailClient::createInstances(const CreateInstances
     return qobject_cast<CreateInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Uses a specific snapshot as a blueprint for creating one or more new instances that are based on that identical
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -478,7 +481,7 @@ CreateInstancesFromSnapshotResponse * LightsailClient::createInstancesFromSnapsh
     return qobject_cast<CreateInstancesFromSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates sn SSH key
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -492,7 +495,7 @@ CreateKeyPairResponse * LightsailClient::createKeyPair(const CreateKeyPairReques
     return qobject_cast<CreateKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Lightsail load balancer. To learn more about deciding whether to load balance your application, see <a
  * href="https://lightsail.aws.amazon.com/ls/docs/how-to/article/configure-lightsail-instances-for-load-balancing">Configure
  * your Lightsail instances for load balancing</a>. You can create up to 5 load balancers per AWS Region in your
@@ -513,7 +516,7 @@ CreateLoadBalancerResponse * LightsailClient::createLoadBalancer(const CreateLoa
     return qobject_cast<CreateLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Lightsail load balancer TLS
  *
  * certificate>
@@ -531,7 +534,7 @@ CreateLoadBalancerTlsCertificateResponse * LightsailClient::createLoadBalancerTl
     return qobject_cast<CreateLoadBalancerTlsCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified block storage disk. The disk must be in the <code>available</code> state (not attached to a
  * Lightsail
  *
@@ -550,7 +553,7 @@ DeleteDiskResponse * LightsailClient::deleteDisk(const DeleteDiskRequest &reques
     return qobject_cast<DeleteDiskResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified disk
  *
  * snapshot>
@@ -571,7 +574,7 @@ DeleteDiskSnapshotResponse * LightsailClient::deleteDiskSnapshot(const DeleteDis
     return qobject_cast<DeleteDiskSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified domain recordset and all of its domain
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -585,7 +588,7 @@ DeleteDomainResponse * LightsailClient::deleteDomain(const DeleteDomainRequest &
     return qobject_cast<DeleteDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific domain
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -599,7 +602,7 @@ DeleteDomainEntryResponse * LightsailClient::deleteDomainEntry(const DeleteDomai
     return qobject_cast<DeleteDomainEntryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific Amazon Lightsail virtual private server, or
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -613,7 +616,7 @@ DeleteInstanceResponse * LightsailClient::deleteInstance(const DeleteInstanceReq
     return qobject_cast<DeleteInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific snapshot of a virtual private server (or
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -627,7 +630,7 @@ DeleteInstanceSnapshotResponse * LightsailClient::deleteInstanceSnapshot(const D
     return qobject_cast<DeleteInstanceSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific SSH key
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -641,7 +644,7 @@ DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairReques
     return qobject_cast<DeleteKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a Lightsail load balancer and all its associated SSL/TLS certificates. Once the load balancer is deleted, you
  * will need to create a new load balancer, create a new certificate, and verify domain ownership
  *
@@ -656,7 +659,7 @@ DeleteLoadBalancerResponse * LightsailClient::deleteLoadBalancer(const DeleteLoa
     return qobject_cast<DeleteLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an SSL/TLS certificate associated with a Lightsail load
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -670,7 +673,7 @@ DeleteLoadBalancerTlsCertificateResponse * LightsailClient::deleteLoadBalancerTl
     return qobject_cast<DeleteLoadBalancerTlsCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a stopped block storage disk from a Lightsail instance. Make sure to unmount any file systems on the device
  * within your operating system before stopping the instance and detaching the
  *
@@ -685,7 +688,7 @@ DetachDiskResponse * LightsailClient::detachDisk(const DetachDiskRequest &reques
     return qobject_cast<DetachDiskResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches the specified instances from a Lightsail load
  *
  * balancer>
@@ -703,7 +706,7 @@ DetachInstancesFromLoadBalancerResponse * LightsailClient::detachInstancesFromLo
     return qobject_cast<DetachInstancesFromLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a static IP from the Amazon Lightsail instance to which it is
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -717,7 +720,7 @@ DetachStaticIpResponse * LightsailClient::detachStaticIp(const DetachStaticIpReq
     return qobject_cast<DetachStaticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Downloads the default SSH key pair from the user's
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -731,7 +734,7 @@ DownloadDefaultKeyPairResponse * LightsailClient::downloadDefaultKeyPair(const D
     return qobject_cast<DownloadDefaultKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the names of all active (not deleted)
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -745,7 +748,7 @@ GetActiveNamesResponse * LightsailClient::getActiveNames(const GetActiveNamesReq
     return qobject_cast<GetActiveNamesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the list of available instance images, or <i>blueprints</i>. You can use a blueprint to create a new virtual
  * private server already running a specific operating system, as well as a preinstalled app or development stack. The
  * software each instance is running depends on the blueprint image you
@@ -761,7 +764,7 @@ GetBlueprintsResponse * LightsailClient::getBlueprints(const GetBlueprintsReques
     return qobject_cast<GetBlueprintsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the list of bundles that are available for purchase. A bundle describes the specs for your virtual private
  * server (or
  *
@@ -776,7 +779,7 @@ GetBundlesResponse * LightsailClient::getBundles(const GetBundlesRequest &reques
     return qobject_cast<GetBundlesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific block storage
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -790,7 +793,7 @@ GetDiskResponse * LightsailClient::getDisk(const GetDiskRequest &request)
     return qobject_cast<GetDiskResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific block storage disk
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -804,7 +807,7 @@ GetDiskSnapshotResponse * LightsailClient::getDiskSnapshot(const GetDiskSnapshot
     return qobject_cast<GetDiskSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all block storage disk snapshots in your AWS account and
  *
  * region>
@@ -823,7 +826,7 @@ GetDiskSnapshotsResponse * LightsailClient::getDiskSnapshots(const GetDiskSnapsh
     return qobject_cast<GetDiskSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all block storage disks in your AWS account and
  *
  * region>
@@ -842,7 +845,7 @@ GetDisksResponse * LightsailClient::getDisks(const GetDisksRequest &request)
     return qobject_cast<GetDisksResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific domain
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -856,7 +859,7 @@ GetDomainResponse * LightsailClient::getDomain(const GetDomainRequest &request)
     return qobject_cast<GetDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all domains in the user's
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -870,7 +873,7 @@ GetDomainsResponse * LightsailClient::getDomains(const GetDomainsRequest &reques
     return qobject_cast<GetDomainsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific Amazon Lightsail instance, which is a virtual private
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -884,7 +887,7 @@ GetInstanceResponse * LightsailClient::getInstance(const GetInstanceRequest &req
     return qobject_cast<GetInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns temporary SSH keys you can use to connect to a specific virtual private server, or
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -898,7 +901,7 @@ GetInstanceAccessDetailsResponse * LightsailClient::getInstanceAccessDetails(con
     return qobject_cast<GetInstanceAccessDetailsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the data points for the specified Amazon Lightsail instance metric, given an instance
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -912,7 +915,7 @@ GetInstanceMetricDataResponse * LightsailClient::getInstanceMetricData(const Get
     return qobject_cast<GetInstanceMetricDataResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the port states for a specific virtual private server, or
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -926,7 +929,7 @@ GetInstancePortStatesResponse * LightsailClient::getInstancePortStates(const Get
     return qobject_cast<GetInstancePortStatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific instance
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -940,7 +943,7 @@ GetInstanceSnapshotResponse * LightsailClient::getInstanceSnapshot(const GetInst
     return qobject_cast<GetInstanceSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all instance snapshots for the user's
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -954,7 +957,7 @@ GetInstanceSnapshotsResponse * LightsailClient::getInstanceSnapshots(const GetIn
     return qobject_cast<GetInstanceSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the state of a specific instance. Works on one instance at a
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -968,7 +971,7 @@ GetInstanceStateResponse * LightsailClient::getInstanceState(const GetInstanceSt
     return qobject_cast<GetInstanceStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all Amazon Lightsail virtual private servers, or
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -982,7 +985,7 @@ GetInstancesResponse * LightsailClient::getInstances(const GetInstancesRequest &
     return qobject_cast<GetInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific key
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -996,7 +999,7 @@ GetKeyPairResponse * LightsailClient::getKeyPair(const GetKeyPairRequest &reques
     return qobject_cast<GetKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all key pairs in the user's
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1010,7 +1013,7 @@ GetKeyPairsResponse * LightsailClient::getKeyPairs(const GetKeyPairsRequest &req
     return qobject_cast<GetKeyPairsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the specified Lightsail load
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1024,7 +1027,7 @@ GetLoadBalancerResponse * LightsailClient::getLoadBalancer(const GetLoadBalancer
     return qobject_cast<GetLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about health metrics for your Lightsail load
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1038,7 +1041,7 @@ GetLoadBalancerMetricDataResponse * LightsailClient::getLoadBalancerMetricData(c
     return qobject_cast<GetLoadBalancerMetricDataResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the TLS certificates that are associated with the specified Lightsail load
  *
  * balancer>
@@ -1060,7 +1063,7 @@ GetLoadBalancerTlsCertificatesResponse * LightsailClient::getLoadBalancerTlsCert
     return qobject_cast<GetLoadBalancerTlsCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all load balancers in an
  *
  * account>
@@ -1079,7 +1082,7 @@ GetLoadBalancersResponse * LightsailClient::getLoadBalancers(const GetLoadBalanc
     return qobject_cast<GetLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific operation. Operations include events such as when you create an instance, allocate
  * a static IP, attach a static IP, and so
  *
@@ -1094,7 +1097,7 @@ GetOperationResponse * LightsailClient::getOperation(const GetOperationRequest &
     return qobject_cast<GetOperationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all
  *
  * operations>
@@ -1113,7 +1116,7 @@ GetOperationsResponse * LightsailClient::getOperations(const GetOperationsReques
     return qobject_cast<GetOperationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets operations for a specific resource (e.g., an instance or a static
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1127,7 +1130,7 @@ GetOperationsForResourceResponse * LightsailClient::getOperationsForResource(con
     return qobject_cast<GetOperationsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all valid regions for Amazon Lightsail. Use the <code>include availability zones</code> parameter to
  * also return the availability zones in a
  *
@@ -1142,7 +1145,7 @@ GetRegionsResponse * LightsailClient::getRegions(const GetRegionsRequest &reques
     return qobject_cast<GetRegionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific static
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1156,7 +1159,7 @@ GetStaticIpResponse * LightsailClient::getStaticIp(const GetStaticIpRequest &req
     return qobject_cast<GetStaticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all static IPs in the user's
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1170,7 +1173,7 @@ GetStaticIpsResponse * LightsailClient::getStaticIps(const GetStaticIpsRequest &
     return qobject_cast<GetStaticIpsResponse *>(send(request));
 }
 
-/**
+/*!
  * Imports a public SSH key from a specific key
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1184,7 +1187,7 @@ ImportKeyPairResponse * LightsailClient::importKeyPair(const ImportKeyPairReques
     return qobject_cast<ImportKeyPairResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a Boolean value indicating whether your Lightsail VPC is
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1198,7 +1201,7 @@ IsVpcPeeredResponse * LightsailClient::isVpcPeered(const IsVpcPeeredRequest &req
     return qobject_cast<IsVpcPeeredResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds public ports to an Amazon Lightsail
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1212,7 +1215,7 @@ OpenInstancePublicPortsResponse * LightsailClient::openInstancePublicPorts(const
     return qobject_cast<OpenInstancePublicPortsResponse *>(send(request));
 }
 
-/**
+/*!
  * Tries to peer the Lightsail VPC with the user's default
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1226,7 +1229,7 @@ PeerVpcResponse * LightsailClient::peerVpc(const PeerVpcRequest &request)
     return qobject_cast<PeerVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the specified open ports for an Amazon Lightsail instance, and closes all ports for every protocol not included in
  * the current
  *
@@ -1241,7 +1244,7 @@ PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const P
     return qobject_cast<PutInstancePublicPortsResponse *>(send(request));
 }
 
-/**
+/*!
  * Restarts a specific instance. When your Amazon Lightsail instance is finished rebooting, Lightsail assigns a new public
  * IP address. To use the same IP address after restarting, create a static IP address and attach it to the
  *
@@ -1256,7 +1259,7 @@ RebootInstanceResponse * LightsailClient::rebootInstance(const RebootInstanceReq
     return qobject_cast<RebootInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific static IP from your
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1270,7 +1273,7 @@ ReleaseStaticIpResponse * LightsailClient::releaseStaticIp(const ReleaseStaticIp
     return qobject_cast<ReleaseStaticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the reboot instance
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1284,7 +1287,7 @@ StartInstanceResponse * LightsailClient::startInstance(const StartInstanceReques
     return qobject_cast<StartInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a specific Amazon Lightsail instance that is currently
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1298,7 +1301,7 @@ StopInstanceResponse * LightsailClient::stopInstance(const StopInstanceRequest &
     return qobject_cast<StopInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Attempts to unpeer the Lightsail VPC from the user's default
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1312,7 +1315,7 @@ UnpeerVpcResponse * LightsailClient::unpeerVpc(const UnpeerVpcRequest &request)
     return qobject_cast<UnpeerVpcResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a domain recordset after it is
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1326,7 +1329,7 @@ UpdateDomainEntryResponse * LightsailClient::updateDomainEntry(const UpdateDomai
     return qobject_cast<UpdateDomainEntryResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified attribute for a load balancer. You can only update one attribute at a
  *
  * @param  request Request to send to Amazon Lightsail.
@@ -1340,7 +1343,7 @@ UpdateLoadBalancerAttributeResponse * LightsailClient::updateLoadBalancerAttribu
     return qobject_cast<UpdateLoadBalancerAttributeResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LightsailClientPrivate
@@ -1348,7 +1351,7 @@ UpdateLoadBalancerAttributeResponse * LightsailClient::updateLoadBalancerAttribu
  * @brief  Private implementation for LightsailClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LightsailClientPrivate object.

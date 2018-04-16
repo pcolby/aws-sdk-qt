@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetLoggerDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::GetLoggerDefinitionVersionRequest
  *
- * @brief  Implements Greengrass GetLoggerDefinitionVersion requests.
+ * \brief The GetLoggerDefinitionVersionRequest class encapsulates Greengrass GetLoggerDefinitionVersion requests.
  *
- * @see    GreengrassClient::getLoggerDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getLoggerDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLoggerDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest(const GetLo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLoggerDefinitionVersionRequest object.
  */
 GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest()
@@ -53,13 +59,16 @@ GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLoggerDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLoggerDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionVersionRequest::response(Q
     return new GetLoggerDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLoggerDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionVersionRequest::response(Q
  * @brief  Private implementation for GetLoggerDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLoggerDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLoggerDefinitionVersionRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetIdentityVerificationAttributesResponse
+/*!
+ * \class QtAws::SES::GetIdentityVerificationAttributesResponse
  *
- * @brief  Handles SES GetIdentityVerificationAttributes responses.
+ * \brief The GetIdentityVerificationAttributesResponse class encapsulates SES GetIdentityVerificationAttributes responses.
  *
- * @see    SESClient::getIdentityVerificationAttributes
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getIdentityVerificationAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityVerificationAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttribut
     return static_cast<const GetIdentityVerificationAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES GetIdentityVerificationAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIdentityVerificationAttributesResponsePrivate
+ * \class GetIdentityVerificationAttributesResponsePrivate
  *
- * @brief  Private implementation for GetIdentityVerificationAttributesResponse.
+ * \brief Private implementation for GetIdentityVerificationAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityVerificationAttributesResponsePrivate object.
@@ -91,7 +105,7 @@ GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttribu
 
 }
 
-/**
+/*!
  * @brief  Parse an SES GetIdentityVerificationAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

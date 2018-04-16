@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateGroupRequest
+/*!
+ * \class QtAws::Greengrass::UpdateGroupRequest
  *
- * @brief  Implements Greengrass UpdateGroup requests.
+ * \brief The UpdateGroupRequest class encapsulates Greengrass UpdateGroup requests.
  *
- * @see    GreengrassClient::updateGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateGroupRequest object.
  */
 UpdateGroupRequest::UpdateGroupRequest()
@@ -53,13 +59,16 @@ UpdateGroupRequest::UpdateGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
     return new UpdateGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateGroupRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGroupRequestPrivate object, copying another.

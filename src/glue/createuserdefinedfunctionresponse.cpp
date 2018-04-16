@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateUserDefinedFunctionResponse
+/*!
+ * \class QtAws::Glue::CreateUserDefinedFunctionResponse
  *
- * @brief  Handles Glue CreateUserDefinedFunction responses.
+ * \brief The CreateUserDefinedFunctionResponse class encapsulates Glue CreateUserDefinedFunction responses.
  *
- * @see    GlueClient::createUserDefinedFunction
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createUserDefinedFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserDefinedFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateUserDefinedFunctionRequest * CreateUserDefinedFunctionResponse::requ
     return static_cast<const CreateUserDefinedFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue CreateUserDefinedFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateUserDefinedFunctionResponsePrivate
+ * \class CreateUserDefinedFunctionResponsePrivate
  *
- * @brief  Private implementation for CreateUserDefinedFunctionResponse.
+ * \brief Private implementation for CreateUserDefinedFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserDefinedFunctionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateUserDefinedFunctionResponsePrivate::CreateUserDefinedFunctionResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue CreateUserDefinedFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -69,27 +69,35 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ECR
+ * \brief The QtAws::ECR contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  EcrClient
+/*!
+ * \class QtAws::ECR::EcrClient
  *
- * @brief  Client for Amazon EC2 Container Registry ( ECR)
+ * \brief The EcrClient class provides access the Amazon EC2 Container Registry ( ECR) service.
  *
- * Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
- * Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
- * supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
- * instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
  */
 
-/**
- * @brief  Constructs a new EcrClient object.
+/*!
+ * \brief Constructs a EcrClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 EcrClient::EcrClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -108,21 +116,16 @@ EcrClient::EcrClient(
     d->serviceName = QStringLiteral("ecr");
 }
 
-/**
- * @brief  Constructs a new EcrClient object.
+/*!
+ * \overload EcrClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 EcrClient::EcrClient(
     const QUrl &endpoint,
@@ -141,7 +144,7 @@ EcrClient::EcrClient(
     d->serviceName = QStringLiteral("ecr");
 }
 
-/**
+/*!
  * Check the availability of multiple image layers in a specified registry and
  *
  * repository> <note>
@@ -160,7 +163,7 @@ BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(con
     return qobject_cast<BatchCheckLayerAvailabilityResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a list of specified images within a specified repository. Images are specified with either <code>imageTag</code>
  * or
  *
@@ -184,7 +187,7 @@ BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageReq
     return qobject_cast<BatchDeleteImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets detailed information for specified images within a specified repository. Images are specified with either
  * <code>imageTag</code> or
  *
@@ -199,7 +202,7 @@ BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &req
     return qobject_cast<BatchGetImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and upload ID.
  * You can optionally provide a <code>sha256</code> digest of the image layer for data validation
  *
@@ -219,7 +222,7 @@ CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayer
     return qobject_cast<CompleteLayerUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an image
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -233,7 +236,7 @@ CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryReq
     return qobject_cast<CreateRepositoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified lifecycle
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -247,7 +250,7 @@ DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLif
     return qobject_cast<DeleteLifecyclePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing image repository. If a repository contains images, you must use the <code>force</code> option to
  * delete
  *
@@ -262,7 +265,7 @@ DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryReq
     return qobject_cast<DeleteRepositoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the repository policy from a specified
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -276,7 +279,7 @@ DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteR
     return qobject_cast<DeleteRepositoryPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns metadata about the images in a repository, including image size, image tags, and creation
  *
  * date> <note>
@@ -296,7 +299,7 @@ DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &
     return qobject_cast<DescribeImagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes image repositories in a
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -310,7 +313,7 @@ DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRep
     return qobject_cast<DescribeRepositoriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a token that is valid for a specified registry for 12 hours. This command allows you to use the
  * <code>docker</code> CLI to push and pull images with Amazon ECR. If you do not specify a registry, the default registry
  * is
@@ -332,7 +335,7 @@ GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthor
     return qobject_cast<GetAuthorizationTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer. You can only get URLs for image layers
  * that are referenced in an
  *
@@ -352,7 +355,7 @@ GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDown
     return qobject_cast<GetDownloadUrlForLayerResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the specified lifecycle
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -366,7 +369,7 @@ GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePol
     return qobject_cast<GetLifecyclePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the results of the specified lifecycle policy preview
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -380,7 +383,7 @@ GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const G
     return qobject_cast<GetLifecyclePolicyPreviewResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the repository policy for a specified
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -394,7 +397,7 @@ GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepository
     return qobject_cast<GetRepositoryPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Notify Amazon ECR that you intend to upload an image
  *
  * layer> <note>
@@ -413,7 +416,7 @@ InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayer
     return qobject_cast<InitiateLayerUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the image IDs for a given
  *
  * repository>
@@ -434,7 +437,7 @@ ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
     return qobject_cast<ListImagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates the image manifest and tags associated with an
  *
  * image> <note>
@@ -453,7 +456,7 @@ PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
     return qobject_cast<PutImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a lifecycle policy. For information about lifecycle policy syntax, see <a
  * href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
  *
@@ -468,7 +471,7 @@ PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePol
     return qobject_cast<PutLifecyclePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Applies a repository policy on a specified repository to control access
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -482,7 +485,7 @@ SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepository
     return qobject_cast<SetRepositoryPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a preview of the specified lifecycle policy. This allows you to see the results before creating the lifecycle
  *
  * @param  request Request to send to Amazon EC2 Container Registry.
@@ -496,7 +499,7 @@ StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(con
     return qobject_cast<StartLifecyclePolicyPreviewResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads an image layer part to Amazon
  *
  * ECR> <note>
@@ -515,7 +518,7 @@ UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartReques
     return qobject_cast<UploadLayerPartResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EcrClientPrivate
@@ -523,7 +526,7 @@ UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartReques
  * @brief  Private implementation for EcrClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EcrClientPrivate object.

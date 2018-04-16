@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListUsersRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListUsersRequest
  *
- * @brief  Implements CognitoIdentityProvider ListUsers requests.
+ * \brief The ListUsersRequest class encapsulates CognitoIdentityProvider ListUsers requests.
  *
- * @see    CognitoIdentityProviderClient::listUsers
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listUsers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUsersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListUsersRequest object.
  */
 ListUsersRequest::ListUsersRequest()
@@ -53,13 +66,16 @@ ListUsersRequest::ListUsersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListUsersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListUsersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
     return new ListUsersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListUsersRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListUsersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersRequestPrivate object.
@@ -97,7 +113,7 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersRequestPrivate object, copying another.

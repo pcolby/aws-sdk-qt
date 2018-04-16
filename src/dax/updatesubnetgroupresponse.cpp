@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UpdateSubnetGroupResponse
+/*!
+ * \class QtAws::DAX::UpdateSubnetGroupResponse
  *
- * @brief  Handles DAX UpdateSubnetGroup responses.
+ * \brief The UpdateSubnetGroupResponse class encapsulates DAX UpdateSubnetGroup responses.
  *
- * @see    DAXClient::updateSubnetGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::updateSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateSubnetGroupRequest * UpdateSubnetGroupResponse::request() const
     return static_cast<const UpdateSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX UpdateSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateSubnetGroupResponsePrivate
+ * \class UpdateSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for UpdateSubnetGroupResponse.
+ * \brief Private implementation for UpdateSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSubnetGroupResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX UpdateSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

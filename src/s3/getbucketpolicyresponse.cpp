@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketPolicyResponse
+/*!
+ * \class QtAws::S3::GetBucketPolicyResponse
  *
- * @brief  Handles S3 GetBucketPolicy responses.
+ * \brief The GetBucketPolicyResponse class encapsulates S3 GetBucketPolicy responses.
  *
- * @see    S3Client::getBucketPolicy
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketPolicyRequest * GetBucketPolicyResponse::request() const
     return static_cast<const GetBucketPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketPolicyResponsePrivate
+ * \class GetBucketPolicyResponsePrivate
  *
- * @brief  Private implementation for GetBucketPolicyResponse.
+ * \brief Private implementation for GetBucketPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketPolicyResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketPolicyResponsePrivate::GetBucketPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

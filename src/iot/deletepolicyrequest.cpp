@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeletePolicyRequest
+/*!
+ * \class QtAws::IoT::DeletePolicyRequest
  *
- * @brief  Implements IoT DeletePolicy requests.
+ * \brief The DeletePolicyRequest class encapsulates IoT DeletePolicy requests.
  *
- * @see    IoTClient::deletePolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deletePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
@@ -53,13 +67,16 @@ DeletePolicyRequest::DeletePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
     return new DeletePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for DeletePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyRequestPrivate object.
@@ -97,7 +114,7 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyRequestPrivate object, copying another.

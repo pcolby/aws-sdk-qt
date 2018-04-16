@@ -27,15 +27,42 @@
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  DeleteActivationResponse
+/*!
+ * \class QtAws::SSM::DeleteActivationResponse
  *
- * @brief  Handles SSM DeleteActivation responses.
+ * \brief The DeleteActivationResponse class encapsulates SSM DeleteActivation responses.
  *
- * @see    SSMClient::deleteActivation
+ * \ingroup SSM
+ *
+ *  <fullname>AWS Systems Manager</fullname>
+ * 
+ *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
+ *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
+ *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
+ *  configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
+ *  your hybrid environment that has been configured for Systems
+ * 
+ *  Manager>
+ * 
+ *  This reference is intended to be used with the <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  To get started, verify prerequisites and configure managed instances. For more information, see <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ * 
+ *  Prerequisites</a>>
+ * 
+ *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
+ *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
+ *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
+ *  Requests</a>.
+ *
+ * \sa SSMClient::deleteActivation
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteActivationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +85,7 @@ const DeleteActivationRequest * DeleteActivationResponse::request() const
     return static_cast<const DeleteActivationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SSM DeleteActivation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +97,15 @@ void DeleteActivationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteActivationResponsePrivate
+ * \class DeleteActivationResponsePrivate
  *
- * @brief  Private implementation for DeleteActivationResponse.
+ * \brief Private implementation for DeleteActivationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteActivationResponsePrivate object.
@@ -91,7 +118,7 @@ DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SSM DeleteActivationResponse element.
  *
  * @param  xml  XML stream to parse.

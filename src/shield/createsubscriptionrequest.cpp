@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  CreateSubscriptionRequest
+/*!
+ * \class QtAws::Shield::CreateSubscriptionRequest
  *
- * @brief  Implements Shield CreateSubscription requests.
+ * \brief The CreateSubscriptionRequest class encapsulates Shield CreateSubscription requests.
  *
- * @see    ShieldClient::createSubscription
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::createSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateSubscriptionRequest::CreateSubscriptionRequest(const CreateSubscriptionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionRequest object.
  */
 CreateSubscriptionRequest::CreateSubscriptionRequest()
@@ -53,13 +62,16 @@ CreateSubscriptionRequest::CreateSubscriptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkR
     return new CreateSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSubscriptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkR
  * @brief  Private implementation for CreateSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionRequestPrivate object.
@@ -97,7 +109,7 @@ CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionRequestPrivate object, copying another.

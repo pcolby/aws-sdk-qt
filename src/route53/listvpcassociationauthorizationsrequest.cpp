@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListVPCAssociationAuthorizationsRequest
+/*!
+ * \class QtAws::Route53::ListVPCAssociationAuthorizationsRequest
  *
- * @brief  Implements Route53 ListVPCAssociationAuthorizations requests.
+ * \brief The ListVPCAssociationAuthorizationsRequest class encapsulates Route53 ListVPCAssociationAuthorizations requests.
  *
- * @see    Route53Client::listVPCAssociationAuthorizations
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listVPCAssociationAuthorizations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListVPCAssociationAuthorizationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListVPCAssociationAuthorizationsRequest::ListVPCAssociationAuthorizationsRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListVPCAssociationAuthorizationsRequest object.
  */
 ListVPCAssociationAuthorizationsRequest::ListVPCAssociationAuthorizationsRequest()
@@ -53,13 +56,16 @@ ListVPCAssociationAuthorizationsRequest::ListVPCAssociationAuthorizationsRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListVPCAssociationAuthorizationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListVPCAssociationAuthorizationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListVPCAssociationAuthorizationsRequest::resp
     return new ListVPCAssociationAuthorizationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListVPCAssociationAuthorizationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListVPCAssociationAuthorizationsRequest::resp
  * @brief  Private implementation for ListVPCAssociationAuthorizationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListVPCAssociationAuthorizationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListVPCAssociationAuthorizationsRequestPrivate::ListVPCAssociationAuthorizations
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListVPCAssociationAuthorizationsRequestPrivate object, copying another.

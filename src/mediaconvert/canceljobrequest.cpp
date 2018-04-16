@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  CancelJobRequest
+/*!
+ * \class QtAws::MediaConvert::CancelJobRequest
  *
- * @brief  Implements MediaConvert CancelJob requests.
+ * \brief The CancelJobRequest class encapsulates MediaConvert CancelJob requests.
  *
- * @see    MediaConvertClient::cancelJob
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
@@ -53,13 +56,16 @@ CancelJobRequest::CancelJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
     return new CancelJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CancelJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object.
@@ -97,7 +103,7 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetUsagePlanKeysRequest
+/*!
+ * \class QtAws::APIGateway::GetUsagePlanKeysRequest
  *
- * @brief  Implements APIGateway GetUsagePlanKeys requests.
+ * \brief The GetUsagePlanKeysRequest class encapsulates APIGateway GetUsagePlanKeys requests.
  *
- * @see    APIGatewayClient::getUsagePlanKeys
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getUsagePlanKeys
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlanKeysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetUsagePlanKeysRequest::GetUsagePlanKeysRequest(const GetUsagePlanKeysRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlanKeysRequest object.
  */
 GetUsagePlanKeysRequest::GetUsagePlanKeysRequest()
@@ -53,13 +61,16 @@ GetUsagePlanKeysRequest::GetUsagePlanKeysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUsagePlanKeysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUsagePlanKeysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanKeysRequest::response(QNetworkRep
     return new GetUsagePlanKeysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUsagePlanKeysRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanKeysRequest::response(QNetworkRep
  * @brief  Private implementation for GetUsagePlanKeysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlanKeysRequestPrivate object.
@@ -97,7 +108,7 @@ GetUsagePlanKeysRequestPrivate::GetUsagePlanKeysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlanKeysRequestPrivate object, copying another.

@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  NotifyApplicationStateResponse
+/*!
+ * \class QtAws::MigrationHub::NotifyApplicationStateResponse
  *
- * @brief  Handles MigrationHub NotifyApplicationState responses.
+ * \brief The NotifyApplicationStateResponse class encapsulates MigrationHub NotifyApplicationState responses.
  *
- * @see    MigrationHubClient::notifyApplicationState
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::notifyApplicationState
  */
 
-/**
+/*!
  * @brief  Constructs a new NotifyApplicationStateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const NotifyApplicationStateRequest * NotifyApplicationStateResponse::request() 
     return static_cast<const NotifyApplicationStateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub NotifyApplicationState response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void NotifyApplicationStateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  NotifyApplicationStateResponsePrivate
+ * \class NotifyApplicationStateResponsePrivate
  *
- * @brief  Private implementation for NotifyApplicationStateResponse.
+ * \brief Private implementation for NotifyApplicationStateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyApplicationStateResponsePrivate object.
@@ -91,7 +96,7 @@ NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub NotifyApplicationStateResponse element.
  *
  * @param  xml  XML stream to parse.

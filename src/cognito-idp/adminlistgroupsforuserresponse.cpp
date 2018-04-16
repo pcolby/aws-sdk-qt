@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminListGroupsForUserResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminListGroupsForUserResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminListGroupsForUser responses.
+ * \brief The AdminListGroupsForUserResponse class encapsulates CognitoIdentityProvider AdminListGroupsForUser responses.
  *
- * @see    CognitoIdentityProviderClient::adminListGroupsForUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminListGroupsForUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminListGroupsForUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminListGroupsForUserRequest * AdminListGroupsForUserResponse::request() 
     return static_cast<const AdminListGroupsForUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminListGroupsForUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminListGroupsForUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminListGroupsForUserResponsePrivate
+ * \class AdminListGroupsForUserResponsePrivate
  *
- * @brief  Private implementation for AdminListGroupsForUserResponse.
+ * \brief Private implementation for AdminListGroupsForUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminListGroupsForUserResponsePrivate object.
@@ -91,7 +104,7 @@ AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminListGroupsForUserResponse element.
  *
  * @param  xml  XML stream to parse.

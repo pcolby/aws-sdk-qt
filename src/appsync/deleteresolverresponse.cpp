@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteResolverResponse
+/*!
+ * \class QtAws::AppSync::DeleteResolverResponse
  *
- * @brief  Handles AppSync DeleteResolver responses.
+ * \brief The DeleteResolverResponse class encapsulates AppSync DeleteResolver responses.
  *
- * @see    AppSyncClient::deleteResolver
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteResolver
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteResolverResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteResolverRequest * DeleteResolverResponse::request() const
     return static_cast<const DeleteResolverRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync DeleteResolver response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteResolverResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteResolverResponsePrivate
+ * \class DeleteResolverResponsePrivate
  *
- * @brief  Private implementation for DeleteResolverResponse.
+ * \brief Private implementation for DeleteResolverResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResolverResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteResolverResponsePrivate::DeleteResolverResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync DeleteResolverResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,44 @@
 namespace QtAws {
 namespace Pricing {
 
-/**
- * @class  DescribeServicesRequest
+/*!
+ * \class QtAws::Pricing::DescribeServicesRequest
  *
- * @brief  Implements Pricing DescribeServices requests.
+ * \brief The DescribeServicesRequest class encapsulates Pricing DescribeServices requests.
  *
- * @see    PricingClient::describeServices
+ * \ingroup Pricing
+ *
+ *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
+ *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
+ *  attributes such as <code>Location</code>, <code>Storage Class</code>, and <code>Operating System</code>, and provides
+ *  prices at the SKU level. You can use the AWS Price List Service to build cost control and scenario planning tools,
+ *  reconcile billing data, forecast future spend for budgeting purposes, and provide cost benefit analysis that compare
+ *  your internal workloads with
+ * 
+ *  AWS>
+ * 
+ *  Use <code>GetServices</code> without a service code to retrieve the service codes for all AWS services, then
+ *  <code>GetServices</code> with a service code to retreive the attribute names for that service. After you have the
+ *  service code and attribute names, you can use <code>GetAttributeValues</code> to see what values are available for an
+ *  attribute. With the service code and an attribute name and value, you can use <code>GetProducts</code> to find specific
+ *  products that you're interested in, such as an <code>AmazonEC2</code> instance, with a <code>Provisioned IOPS</code>
+ * 
+ *  <code>volumeType</code>>
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  AWS Price List Service API provides the following two
+ * 
+ *  endpoints> <ul> <li>
+ * 
+ *  https://api.pricing.us-east-1.amazonaws.co> </li> <li>
+ *
+ * \sa PricingClient::describeServices
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeServicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +73,7 @@ DescribeServicesRequest::DescribeServicesRequest(const DescribeServicesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeServicesRequest object.
  */
 DescribeServicesRequest::DescribeServicesRequest()
@@ -53,13 +82,16 @@ DescribeServicesRequest::DescribeServicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeServicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeServicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +106,7 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
     return new DescribeServicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeServicesRequestPrivate
@@ -82,7 +114,7 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeServicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeServicesRequestPrivate object.
@@ -97,7 +129,7 @@ DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeServicesRequestPrivate object, copying another.

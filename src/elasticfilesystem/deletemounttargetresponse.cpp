@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DeleteMountTargetResponse
+/*!
+ * \class QtAws::EFS::DeleteMountTargetResponse
  *
- * @brief  Handles EFS DeleteMountTarget responses.
+ * \brief The DeleteMountTargetResponse class encapsulates EFS DeleteMountTarget responses.
  *
- * @see    EFSClient::deleteMountTarget
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::deleteMountTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMountTargetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteMountTargetRequest * DeleteMountTargetResponse::request() const
     return static_cast<const DeleteMountTargetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DeleteMountTarget response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteMountTargetResponsePrivate
+ * \class DeleteMountTargetResponsePrivate
  *
- * @brief  Private implementation for DeleteMountTargetResponse.
+ * \brief Private implementation for DeleteMountTargetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMountTargetResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DeleteMountTargetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSegmentVersionResponse
+/*!
+ * \class QtAws::Pinpoint::GetSegmentVersionResponse
  *
- * @brief  Handles Pinpoint GetSegmentVersion responses.
+ * \brief The GetSegmentVersionResponse class encapsulates Pinpoint GetSegmentVersion responses.
  *
- * @see    PinpointClient::getSegmentVersion
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSegmentVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetSegmentVersionRequest * GetSegmentVersionResponse::request() const
     return static_cast<const GetSegmentVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetSegmentVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetSegmentVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSegmentVersionResponsePrivate
+ * \class GetSegmentVersionResponsePrivate
  *
- * @brief  Private implementation for GetSegmentVersionResponse.
+ * \brief Private implementation for GetSegmentVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentVersionResponsePrivate object.
@@ -91,7 +94,7 @@ GetSegmentVersionResponsePrivate::GetSegmentVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetSegmentVersionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  SearchProductsAsAdminResponse
+/*!
+ * \class QtAws::ServiceCatalog::SearchProductsAsAdminResponse
  *
- * @brief  Handles ServiceCatalog SearchProductsAsAdmin responses.
+ * \brief The SearchProductsAsAdminResponse class encapsulates ServiceCatalog SearchProductsAsAdmin responses.
  *
- * @see    ServiceCatalogClient::searchProductsAsAdmin
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::searchProductsAsAdmin
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProductsAsAdminResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const SearchProductsAsAdminRequest * SearchProductsAsAdminResponse::request() co
     return static_cast<const SearchProductsAsAdminRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog SearchProductsAsAdmin response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void SearchProductsAsAdminResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchProductsAsAdminResponsePrivate
+ * \class SearchProductsAsAdminResponsePrivate
  *
- * @brief  Private implementation for SearchProductsAsAdminResponse.
+ * \brief Private implementation for SearchProductsAsAdminResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProductsAsAdminResponsePrivate object.
@@ -91,7 +100,7 @@ SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog SearchProductsAsAdminResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteHostedZoneResponse
+/*!
+ * \class QtAws::Route53::DeleteHostedZoneResponse
  *
- * @brief  Handles Route53 DeleteHostedZone responses.
+ * \brief The DeleteHostedZoneResponse class encapsulates Route53 DeleteHostedZone responses.
  *
- * @see    Route53Client::deleteHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHostedZoneResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteHostedZoneRequest * DeleteHostedZoneResponse::request() const
     return static_cast<const DeleteHostedZoneRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 DeleteHostedZone response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteHostedZoneResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteHostedZoneResponsePrivate
+ * \class DeleteHostedZoneResponsePrivate
  *
- * @brief  Private implementation for DeleteHostedZoneResponse.
+ * \brief Private implementation for DeleteHostedZoneResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHostedZoneResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 DeleteHostedZoneResponse element.
  *
  * @param  xml  XML stream to parse.

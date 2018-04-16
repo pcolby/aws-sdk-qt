@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetInvalidationResponse
+/*!
+ * \class QtAws::CloudFront::GetInvalidationResponse
  *
- * @brief  Handles CloudFront GetInvalidation responses.
+ * \brief The GetInvalidationResponse class encapsulates CloudFront GetInvalidation responses.
  *
- * @see    CloudFrontClient::getInvalidation
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getInvalidation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInvalidationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetInvalidationRequest * GetInvalidationResponse::request() const
     return static_cast<const GetInvalidationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetInvalidation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetInvalidationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetInvalidationResponsePrivate
+ * \class GetInvalidationResponsePrivate
  *
- * @brief  Private implementation for GetInvalidationResponse.
+ * \brief Private implementation for GetInvalidationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInvalidationResponsePrivate object.
@@ -91,7 +99,7 @@ GetInvalidationResponsePrivate::GetInvalidationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetInvalidationResponse element.
  *
  * @param  xml  XML stream to parse.

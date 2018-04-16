@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProvisionedProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProvisionedProductResponse
  *
- * @brief  Handles ServiceCatalog DescribeProvisionedProduct responses.
+ * \brief The DescribeProvisionedProductResponse class encapsulates ServiceCatalog DescribeProvisionedProduct responses.
  *
- * @see    ServiceCatalogClient::describeProvisionedProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProvisionedProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisionedProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeProvisionedProductRequest * DescribeProvisionedProductResponse::re
     return static_cast<const DescribeProvisionedProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeProvisionedProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeProvisionedProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeProvisionedProductResponsePrivate
+ * \class DescribeProvisionedProductResponsePrivate
  *
- * @brief  Private implementation for DescribeProvisionedProductResponse.
+ * \brief Private implementation for DescribeProvisionedProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisionedProductResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeProvisionedProductResponsePrivate::DescribeProvisionedProductResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeProvisionedProductResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  EstimateTemplateCostRequest
+/*!
+ * \class QtAws::CloudFormation::EstimateTemplateCostRequest
  *
- * @brief  Implements CloudFormation EstimateTemplateCost requests.
+ * \brief The EstimateTemplateCostRequest class encapsulates CloudFormation EstimateTemplateCost requests.
  *
- * @see    CloudFormationClient::estimateTemplateCost
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::estimateTemplateCost
  */
 
-/**
+/*!
  * @brief  Constructs a new EstimateTemplateCostRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ EstimateTemplateCostRequest::EstimateTemplateCostRequest(const EstimateTemplateC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EstimateTemplateCostRequest object.
  */
 EstimateTemplateCostRequest::EstimateTemplateCostRequest()
@@ -53,13 +78,16 @@ EstimateTemplateCostRequest::EstimateTemplateCostRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EstimateTemplateCostRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EstimateTemplateCostResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetwor
     return new EstimateTemplateCostResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EstimateTemplateCostRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetwor
  * @brief  Private implementation for EstimateTemplateCostRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EstimateTemplateCostRequestPrivate object.
@@ -97,7 +125,7 @@ EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EstimateTemplateCostRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribePlacementGroupsRequest
+/*!
+ * \class QtAws::EC2::DescribePlacementGroupsRequest
  *
- * @brief  Implements EC2 DescribePlacementGroups requests.
+ * \brief The DescribePlacementGroupsRequest class encapsulates EC2 DescribePlacementGroups requests.
  *
- * @see    EC2Client::describePlacementGroups
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describePlacementGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePlacementGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribePlacementGroupsRequest::DescribePlacementGroupsRequest(const DescribePla
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribePlacementGroupsRequest object.
  */
 DescribePlacementGroupsRequest::DescribePlacementGroupsRequest()
@@ -53,13 +60,16 @@ DescribePlacementGroupsRequest::DescribePlacementGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribePlacementGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribePlacementGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNet
     return new DescribePlacementGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribePlacementGroupsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNet
  * @brief  Private implementation for DescribePlacementGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePlacementGroupsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePlacementGroupsRequestPrivate object, copying another.

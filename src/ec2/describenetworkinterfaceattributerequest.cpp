@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkInterfaceAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeNetworkInterfaceAttributeRequest
  *
- * @brief  Implements EC2 DescribeNetworkInterfaceAttribute requests.
+ * \brief The DescribeNetworkInterfaceAttributeRequest class encapsulates EC2 DescribeNetworkInterfaceAttribute requests.
  *
- * @see    EC2Client::describeNetworkInterfaceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkInterfaceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfaceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeNetworkInterfaceAttributeRequest::DescribeNetworkInterfaceAttributeReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfaceAttributeRequest object.
  */
 DescribeNetworkInterfaceAttributeRequest::DescribeNetworkInterfaceAttributeRequest()
@@ -53,13 +60,16 @@ DescribeNetworkInterfaceAttributeRequest::DescribeNetworkInterfaceAttributeReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNetworkInterfaceAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNetworkInterfaceAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfaceAttributeRequest::res
     return new DescribeNetworkInterfaceAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNetworkInterfaceAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfaceAttributeRequest::res
  * @brief  Private implementation for DescribeNetworkInterfaceAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfaceAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeNetworkInterfaceAttributeRequestPrivate::DescribeNetworkInterfaceAttribu
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfaceAttributeRequestPrivate object, copying another.

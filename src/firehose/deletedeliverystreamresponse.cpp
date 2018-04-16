@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  DeleteDeliveryStreamResponse
+/*!
+ * \class QtAws::Firehose::DeleteDeliveryStreamResponse
  *
- * @brief  Handles Firehose DeleteDeliveryStream responses.
+ * \brief The DeleteDeliveryStreamResponse class encapsulates Firehose DeleteDeliveryStream responses.
  *
- * @see    FirehoseClient::deleteDeliveryStream
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::deleteDeliveryStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeliveryStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteDeliveryStreamRequest * DeleteDeliveryStreamResponse::request() cons
     return static_cast<const DeleteDeliveryStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Firehose DeleteDeliveryStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteDeliveryStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDeliveryStreamResponsePrivate
+ * \class DeleteDeliveryStreamResponsePrivate
  *
- * @brief  Private implementation for DeleteDeliveryStreamResponse.
+ * \brief Private implementation for DeleteDeliveryStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeliveryStreamResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Firehose DeleteDeliveryStreamResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -53,46 +53,54 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudTrail
+ * \brief The QtAws::CloudTrail contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudTrail {
 
-/**
- * @class  CloudTrailClient
+/*!
+ * \class QtAws::CloudTrail::CloudTrailClient
  *
- * @brief  Client for AWS CloudTrail
+ * \brief The CloudTrailClient class provides access the AWS CloudTrail service.
  *
- * <fullname>AWS CloudTrail</fullname>
+ * \ingroup CloudTrail
  *
- * This is the CloudTrail API Reference. It provides descriptions of actions, data types, common parameters, and common
- * errors for
- *
- * CloudTrail>
- *
- * CloudTrail is a web service that records AWS API calls for your AWS account and delivers log files to an Amazon S3
- * bucket. The recorded information includes the identity of the user, the start time of the AWS API call, the source IP
- * address, the request parameters, and the response elements returned by the
- *
- * service> <note>
- *
- * As an alternative to the API, you can use one of the AWS SDKs, which consist of libraries and sample code for various
- * programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to create
- * programmatic access to AWSCloudTrail. For example, the SDKs take care of cryptographically signing requests, managing
- * errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install
- * them, see the <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services
- *
- * page</a>> </note>
- *
- * See the <a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail
- * User Guide</a> for information about the data that is included with each AWS API call listed in the log
+ *  <fullname>AWS CloudTrail</fullname>
+ * 
+ *  This is the CloudTrail API Reference. It provides descriptions of actions, data types, common parameters, and common
+ *  errors for
+ * 
+ *  CloudTrail>
+ * 
+ *  CloudTrail is a web service that records AWS API calls for your AWS account and delivers log files to an Amazon S3
+ *  bucket. The recorded information includes the identity of the user, the start time of the AWS API call, the source IP
+ *  address, the request parameters, and the response elements returned by the
+ * 
+ *  service> <note>
+ * 
+ *  As an alternative to the API, you can use one of the AWS SDKs, which consist of libraries and sample code for various
+ *  programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to create
+ *  programmatic access to AWSCloudTrail. For example, the SDKs take care of cryptographically signing requests, managing
+ *  errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install
+ *  them, see the <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services
+ * 
+ *  page</a>> </note>
+ * 
+ *  See the <a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail
+ *  User Guide</a> for information about the data that is included with each AWS API call listed in the log
  */
 
-/**
- * @brief  Constructs a new CloudTrailClient object.
+/*!
+ * \brief Constructs a CloudTrailClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudTrailClient::CloudTrailClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -111,21 +119,16 @@ CloudTrailClient::CloudTrailClient(
     d->serviceName = QStringLiteral("cloudtrail");
 }
 
-/**
- * @brief  Constructs a new CloudTrailClient object.
+/*!
+ * \overload CloudTrailClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudTrailClient::CloudTrailClient(
     const QUrl &endpoint,
@@ -144,7 +147,7 @@ CloudTrailClient::CloudTrailClient(
     d->serviceName = QStringLiteral("cloudtrail");
 }
 
-/**
+/*!
  * Adds one or more tags to a trail, up to a limit of 50. Tags must be unique per trail. Overwrites an existing tag's value
  * when a new value is specified for an existing tag key. If you specify a key without a value, the tag will be created
  * with the specified key and a value of null. You can tag a trail that applies to all regions only from the region in
@@ -161,7 +164,7 @@ AddTagsResponse * CloudTrailClient::addTags(const AddTagsRequest &request)
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails
  * can exist in a region, irrespective of the region in which they were
  *
@@ -176,7 +179,7 @@ CreateTrailResponse * CloudTrailClient::createTrail(const CreateTrailRequest &re
     return qobject_cast<CreateTrailResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a trail. This operation must be called from the region in which the trail was created. <code>DeleteTrail</code>
  * cannot be called on the shadow trails (replicated trails in other regions) of a trail that is enabled in all
  *
@@ -191,7 +194,7 @@ DeleteTrailResponse * CloudTrailClient::deleteTrail(const DeleteTrailRequest &re
     return qobject_cast<DeleteTrailResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves settings for the trail associated with the current region for your
  *
  * @param  request Request to send to AWS CloudTrail.
@@ -205,7 +208,7 @@ DescribeTrailsResponse * CloudTrailClient::describeTrails(const DescribeTrailsRe
     return qobject_cast<DescribeTrailsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the settings for the event selectors that you configured for your trail. The information returned for your
  * event selectors includes the
  *
@@ -238,7 +241,7 @@ GetEventSelectorsResponse * CloudTrailClient::getEventSelectors(const GetEventSe
     return qobject_cast<GetEventSelectorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a JSON-formatted list of information about the specified trail. Fields include information on delivery errors,
  * Amazon SNS and Amazon S3 errors, and start and stop logging times for each trail. This operation returns trail status
  * from a single region. To return trail status from all regions, you must call the operation on each
@@ -254,7 +257,7 @@ GetTrailStatusResponse * CloudTrailClient::getTrailStatus(const GetTrailStatusRe
     return qobject_cast<GetTrailStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all public keys whose private keys were used to sign the digest files within the specified time range. The
  * public key is needed to validate digest files that were signed with its corresponding private
  *
@@ -275,7 +278,7 @@ ListPublicKeysResponse * CloudTrailClient::listPublicKeys(const ListPublicKeysRe
     return qobject_cast<ListPublicKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags for the trail in the current
  *
  * @param  request Request to send to AWS CloudTrail.
@@ -289,7 +292,7 @@ ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Looks up API activity events captured by CloudTrail that create, update, or delete resources in your account. Events for
  * a region can be looked up for the times in which you had CloudTrail turned on in that region during the last seven days.
  * Lookup supports the following
@@ -343,7 +346,7 @@ LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest 
     return qobject_cast<LookupEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures an event selector for your trail. Use event selectors to specify whether you want your trail to log
  * management and/or data events. When an event occurs in your account, CloudTrail evaluates the event selectors in all
  * trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event
@@ -394,7 +397,7 @@ PutEventSelectorsResponse * CloudTrailClient::putEventSelectors(const PutEventSe
     return qobject_cast<PutEventSelectorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified tags from a
  *
  * @param  request Request to send to AWS CloudTrail.
@@ -408,7 +411,7 @@ RemoveTagsResponse * CloudTrailClient::removeTags(const RemoveTagsRequest &reque
     return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the recording of AWS API calls and log file delivery for a trail. For a trail that is enabled in all regions,
  * this operation must be called from the region in which the trail was created. This operation cannot be called on the
  * shadow trails (replicated trails in other regions) of a trail that is enabled in all
@@ -424,7 +427,7 @@ StartLoggingResponse * CloudTrailClient::startLogging(const StartLoggingRequest 
     return qobject_cast<StartLoggingResponse *>(send(request));
 }
 
-/**
+/*!
  * Suspends the recording of AWS API calls and log file delivery for the specified trail. Under most circumstances, there
  * is no need to use this action. You can update a trail without stopping it first. This action is the only way to stop
  * recording. For a trail enabled in all regions, this operation must be called from the region in which the trail was
@@ -442,7 +445,7 @@ StopLoggingResponse * CloudTrailClient::stopLogging(const StopLoggingRequest &re
     return qobject_cast<StopLoggingResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the settings that specify delivery of log files. Changes to a trail do not require stopping the CloudTrail
  * service. Use this action to designate an existing bucket for log delivery. If the existing bucket has previously been a
  * target for CloudTrail log files, an IAM policy exists for the bucket. <code>UpdateTrail</code> must be called from the
@@ -459,7 +462,7 @@ UpdateTrailResponse * CloudTrailClient::updateTrail(const UpdateTrailRequest &re
     return qobject_cast<UpdateTrailResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudTrailClientPrivate
@@ -467,7 +470,7 @@ UpdateTrailResponse * CloudTrailClient::updateTrail(const UpdateTrailRequest &re
  * @brief  Private implementation for CloudTrailClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudTrailClientPrivate object.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  SearchFacesRequest
+/*!
+ * \class QtAws::Rekognition::SearchFacesRequest
  *
- * @brief  Implements Rekognition SearchFaces requests.
+ * \brief The SearchFacesRequest class encapsulates Rekognition SearchFaces requests.
  *
- * @see    RekognitionClient::searchFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::searchFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ SearchFacesRequest::SearchFacesRequest(const SearchFacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchFacesRequest object.
  */
 SearchFacesRequest::SearchFacesRequest()
@@ -53,13 +57,16 @@ SearchFacesRequest::SearchFacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchFacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchFacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * 
     return new SearchFacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchFacesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * 
  * @brief  Private implementation for SearchFacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchFacesRequestPrivate object.
@@ -97,7 +104,7 @@ SearchFacesRequestPrivate::SearchFacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchFacesRequestPrivate object, copying another.

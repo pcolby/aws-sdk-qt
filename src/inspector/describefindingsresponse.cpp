@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeFindingsResponse
+/*!
+ * \class QtAws::Inspector::DescribeFindingsResponse
  *
- * @brief  Handles Inspector DescribeFindings responses.
+ * \brief The DescribeFindingsResponse class encapsulates Inspector DescribeFindings responses.
  *
- * @see    InspectorClient::describeFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFindingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeFindingsRequest * DescribeFindingsResponse::request() const
     return static_cast<const DescribeFindingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector DescribeFindings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeFindingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeFindingsResponsePrivate
+ * \class DescribeFindingsResponsePrivate
  *
- * @brief  Private implementation for DescribeFindingsResponse.
+ * \brief Private implementation for DescribeFindingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFindingsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeFindingsResponsePrivate::DescribeFindingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector DescribeFindingsResponse element.
  *
  * @param  xml  XML stream to parse.

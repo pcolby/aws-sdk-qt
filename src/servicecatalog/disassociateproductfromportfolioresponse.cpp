@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DisassociateProductFromPortfolioResponse
+/*!
+ * \class QtAws::ServiceCatalog::DisassociateProductFromPortfolioResponse
  *
- * @brief  Handles ServiceCatalog DisassociateProductFromPortfolio responses.
+ * \brief The DisassociateProductFromPortfolioResponse class encapsulates ServiceCatalog DisassociateProductFromPortfolio responses.
  *
- * @see    ServiceCatalogClient::disassociateProductFromPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::disassociateProductFromPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateProductFromPortfolioResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DisassociateProductFromPortfolioRequest * DisassociateProductFromPortfolio
     return static_cast<const DisassociateProductFromPortfolioRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DisassociateProductFromPortfolio response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DisassociateProductFromPortfolioResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateProductFromPortfolioResponsePrivate
+ * \class DisassociateProductFromPortfolioResponsePrivate
  *
- * @brief  Private implementation for DisassociateProductFromPortfolioResponse.
+ * \brief Private implementation for DisassociateProductFromPortfolioResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateProductFromPortfolioResponsePrivate object.
@@ -91,7 +100,7 @@ DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfoli
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DisassociateProductFromPortfolioResponse element.
  *
  * @param  xml  XML stream to parse.

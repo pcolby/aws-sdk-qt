@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteXssMatchSetRequest
+/*!
+ * \class QtAws::WAF::DeleteXssMatchSetRequest
  *
- * @brief  Implements WAF DeleteXssMatchSet requests.
+ * \brief The DeleteXssMatchSetRequest class encapsulates WAF DeleteXssMatchSet requests.
  *
- * @see    WAFClient::deleteXssMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteXssMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteXssMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteXssMatchSetRequest::DeleteXssMatchSetRequest(const DeleteXssMatchSetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteXssMatchSetRequest object.
  */
 DeleteXssMatchSetRequest::DeleteXssMatchSetRequest()
@@ -53,13 +61,16 @@ DeleteXssMatchSetRequest::DeleteXssMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteXssMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteXssMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
     return new DeleteXssMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteXssMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteXssMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteXssMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteXssMatchSetRequestPrivate object, copying another.

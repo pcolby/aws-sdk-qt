@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  DeleteChangeSetResponse
+/*!
+ * \class QtAws::CloudFormation::DeleteChangeSetResponse
  *
- * @brief  Handles CloudFormation DeleteChangeSet responses.
+ * \brief The DeleteChangeSetResponse class encapsulates CloudFormation DeleteChangeSet responses.
  *
- * @see    CloudFormationClient::deleteChangeSet
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::deleteChangeSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteChangeSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const DeleteChangeSetRequest * DeleteChangeSetResponse::request() const
     return static_cast<const DeleteChangeSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFormation DeleteChangeSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void DeleteChangeSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteChangeSetResponsePrivate
+ * \class DeleteChangeSetResponsePrivate
  *
- * @brief  Private implementation for DeleteChangeSetResponse.
+ * \brief Private implementation for DeleteChangeSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteChangeSetResponsePrivate object.
@@ -91,7 +116,7 @@ DeleteChangeSetResponsePrivate::DeleteChangeSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFormation DeleteChangeSetResponse element.
  *
  * @param  xml  XML stream to parse.

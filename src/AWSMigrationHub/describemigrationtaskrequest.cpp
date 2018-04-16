@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DescribeMigrationTaskRequest
+/*!
+ * \class QtAws::MigrationHub::DescribeMigrationTaskRequest
  *
- * @brief  Implements MigrationHub DescribeMigrationTask requests.
+ * \brief The DescribeMigrationTaskRequest class encapsulates MigrationHub DescribeMigrationTask requests.
  *
- * @see    MigrationHubClient::describeMigrationTask
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::describeMigrationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMigrationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeMigrationTaskRequest::DescribeMigrationTaskRequest(const DescribeMigrati
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeMigrationTaskRequest object.
  */
 DescribeMigrationTaskRequest::DescribeMigrationTaskRequest()
@@ -53,13 +58,16 @@ DescribeMigrationTaskRequest::DescribeMigrationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeMigrationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeMigrationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetwo
     return new DescribeMigrationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeMigrationTaskRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetwo
  * @brief  Private implementation for DescribeMigrationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMigrationTaskRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeMigrationTaskRequestPrivate::DescribeMigrationTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMigrationTaskRequestPrivate object, copying another.

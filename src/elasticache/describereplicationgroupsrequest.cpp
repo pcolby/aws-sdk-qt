@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeReplicationGroupsRequest
+/*!
+ * \class QtAws::ElastiCache::DescribeReplicationGroupsRequest
  *
- * @brief  Implements ElastiCache DescribeReplicationGroups requests.
+ * \brief The DescribeReplicationGroupsRequest class encapsulates ElastiCache DescribeReplicationGroups requests.
  *
- * @see    ElastiCacheClient::describeReplicationGroups
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeReplicationGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationGroupsRequest object.
  */
 DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest()
@@ -53,13 +70,16 @@ DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReplicationGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReplicationGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QN
     return new DescribeReplicationGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReplicationGroupsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QN
  * @brief  Private implementation for DescribeReplicationGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationGroupsRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationGroupsRequestPrivate object, copying another.

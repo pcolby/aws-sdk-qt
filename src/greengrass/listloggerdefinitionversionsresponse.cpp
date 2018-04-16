@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListLoggerDefinitionVersionsResponse
+/*!
+ * \class QtAws::Greengrass::ListLoggerDefinitionVersionsResponse
  *
- * @brief  Handles Greengrass ListLoggerDefinitionVersions responses.
+ * \brief The ListLoggerDefinitionVersionsResponse class encapsulates Greengrass ListLoggerDefinitionVersions responses.
  *
- * @see    GreengrassClient::listLoggerDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listLoggerDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListLoggerDefinitionVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListLoggerDefinitionVersionsRequest * ListLoggerDefinitionVersionsResponse
     return static_cast<const ListLoggerDefinitionVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListLoggerDefinitionVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListLoggerDefinitionVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListLoggerDefinitionVersionsResponsePrivate
+ * \class ListLoggerDefinitionVersionsResponsePrivate
  *
- * @brief  Private implementation for ListLoggerDefinitionVersionsResponse.
+ * \brief Private implementation for ListLoggerDefinitionVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLoggerDefinitionVersionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListLoggerDefinitionVersionsResponsePrivate::ListLoggerDefinitionVersionsRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListLoggerDefinitionVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

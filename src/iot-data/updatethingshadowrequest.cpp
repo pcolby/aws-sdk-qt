@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  UpdateThingShadowRequest
+/*!
+ * \class QtAws::IoTDataPlane::UpdateThingShadowRequest
  *
- * @brief  Implements IoTDataPlane UpdateThingShadow requests.
+ * \brief The UpdateThingShadowRequest class encapsulates IoTDataPlane UpdateThingShadow requests.
  *
- * @see    IoTDataPlaneClient::updateThingShadow
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::updateThingShadow
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingShadowRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdateThingShadowRequest::UpdateThingShadowRequest(const UpdateThingShadowReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingShadowRequest object.
  */
 UpdateThingShadowRequest::UpdateThingShadowRequest()
@@ -53,13 +62,16 @@ UpdateThingShadowRequest::UpdateThingShadowRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateThingShadowRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateThingShadowResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkRe
     return new UpdateThingShadowResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateThingShadowRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateThingShadowRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingShadowRequestPrivate object.
@@ -97,7 +109,7 @@ UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingShadowRequestPrivate object, copying another.

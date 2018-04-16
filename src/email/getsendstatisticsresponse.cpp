@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetSendStatisticsResponse
+/*!
+ * \class QtAws::SES::GetSendStatisticsResponse
  *
- * @brief  Handles SES GetSendStatistics responses.
+ * \brief The GetSendStatisticsResponse class encapsulates SES GetSendStatistics responses.
  *
- * @see    SESClient::getSendStatistics
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getSendStatistics
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSendStatisticsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetSendStatisticsRequest * GetSendStatisticsResponse::request() const
     return static_cast<const GetSendStatisticsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES GetSendStatistics response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSendStatisticsResponsePrivate
+ * \class GetSendStatisticsResponsePrivate
  *
- * @brief  Private implementation for GetSendStatisticsResponse.
+ * \brief Private implementation for GetSendStatisticsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSendStatisticsResponsePrivate object.
@@ -91,7 +105,7 @@ GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES GetSendStatisticsResponse element.
  *
  * @param  xml  XML stream to parse.

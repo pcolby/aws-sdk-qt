@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListStreamingDistributionsResponse
+/*!
+ * \class QtAws::CloudFront::ListStreamingDistributionsResponse
  *
- * @brief  Handles CloudFront ListStreamingDistributions responses.
+ * \brief The ListStreamingDistributionsResponse class encapsulates CloudFront ListStreamingDistributions responses.
  *
- * @see    CloudFrontClient::listStreamingDistributions
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listStreamingDistributions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamingDistributionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListStreamingDistributionsRequest * ListStreamingDistributionsResponse::re
     return static_cast<const ListStreamingDistributionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListStreamingDistributions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListStreamingDistributionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStreamingDistributionsResponsePrivate
+ * \class ListStreamingDistributionsResponsePrivate
  *
- * @brief  Private implementation for ListStreamingDistributionsResponse.
+ * \brief Private implementation for ListStreamingDistributionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamingDistributionsResponsePrivate object.
@@ -91,7 +99,7 @@ ListStreamingDistributionsResponsePrivate::ListStreamingDistributionsResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListStreamingDistributionsResponse element.
  *
  * @param  xml  XML stream to parse.

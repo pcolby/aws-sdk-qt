@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ListDiscoveredResourcesRequest
+/*!
+ * \class QtAws::MigrationHub::ListDiscoveredResourcesRequest
  *
- * @brief  Implements MigrationHub ListDiscoveredResources requests.
+ * \brief The ListDiscoveredResourcesRequest class encapsulates MigrationHub ListDiscoveredResources requests.
  *
- * @see    MigrationHubClient::listDiscoveredResources
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::listDiscoveredResources
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDiscoveredResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest(const ListDiscove
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDiscoveredResourcesRequest object.
  */
 ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest()
@@ -53,13 +58,16 @@ ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDiscoveredResourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDiscoveredResourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
     return new ListDiscoveredResourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDiscoveredResourcesRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
  * @brief  Private implementation for ListDiscoveredResourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object.
@@ -97,7 +105,7 @@ ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  UpdateFleetRequest
+/*!
+ * \class QtAws::AppStream::UpdateFleetRequest
  *
- * @brief  Implements AppStream UpdateFleet requests.
+ * \brief The UpdateFleetRequest class encapsulates AppStream UpdateFleet requests.
  *
- * @see    AppStreamClient::updateFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::updateFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateFleetRequest::UpdateFleetRequest(const UpdateFleetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateFleetRequest object.
  */
 UpdateFleetRequest::UpdateFleetRequest()
@@ -53,13 +59,16 @@ UpdateFleetRequest::UpdateFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetRequest::response(QNetworkReply * 
     return new UpdateFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFleetRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFleetRequestPrivate object, copying another.

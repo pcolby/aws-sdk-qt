@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider CreateGroup requests.
+ * \brief The CreateGroupRequest class encapsulates CognitoIdentityProvider CreateGroup requests.
  *
- * @see    CognitoIdentityProviderClient::createGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupRequest object.
  */
 CreateGroupRequest::CreateGroupRequest()
@@ -53,13 +66,16 @@ CreateGroupRequest::CreateGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
     return new CreateGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupRequestPrivate object.
@@ -97,7 +113,7 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupRequestPrivate object, copying another.

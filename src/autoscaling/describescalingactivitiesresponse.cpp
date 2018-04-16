@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeScalingActivitiesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeScalingActivitiesResponse
  *
- * @brief  Handles AutoScaling DescribeScalingActivities responses.
+ * \brief The DescribeScalingActivitiesResponse class encapsulates AutoScaling DescribeScalingActivities responses.
  *
- * @see    AutoScalingClient::describeScalingActivities
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeScalingActivities
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScalingActivitiesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeScalingActivitiesRequest * DescribeScalingActivitiesResponse::requ
     return static_cast<const DescribeScalingActivitiesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeScalingActivities response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeScalingActivitiesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeScalingActivitiesResponsePrivate
+ * \class DescribeScalingActivitiesResponsePrivate
  *
- * @brief  Private implementation for DescribeScalingActivitiesResponse.
+ * \brief Private implementation for DescribeScalingActivitiesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScalingActivitiesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeScalingActivitiesResponsePrivate::DescribeScalingActivitiesResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeScalingActivitiesResponse element.
  *
  * @param  xml  XML stream to parse.

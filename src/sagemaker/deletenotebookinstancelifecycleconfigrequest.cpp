@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteNotebookInstanceLifecycleConfigRequest
+/*!
+ * \class QtAws::SageMaker::DeleteNotebookInstanceLifecycleConfigRequest
  *
- * @brief  Implements SageMaker DeleteNotebookInstanceLifecycleConfig requests.
+ * \brief The DeleteNotebookInstanceLifecycleConfigRequest class encapsulates SageMaker DeleteNotebookInstanceLifecycleConfig requests.
  *
- * @see    SageMakerClient::deleteNotebookInstanceLifecycleConfig
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteNotebookInstanceLifecycleConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteNotebookInstanceLifecycleConfigRequest::DeleteNotebookInstanceLifecycleCon
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequest object.
  */
 DeleteNotebookInstanceLifecycleConfigRequest::DeleteNotebookInstanceLifecycleConfigRequest()
@@ -53,13 +56,16 @@ DeleteNotebookInstanceLifecycleConfigRequest::DeleteNotebookInstanceLifecycleCon
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNotebookInstanceLifecycleConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNotebookInstanceLifecycleConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceLifecycleConfigRequest:
     return new DeleteNotebookInstanceLifecycleConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNotebookInstanceLifecycleConfigRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceLifecycleConfigRequest:
  * @brief  Private implementation for DeleteNotebookInstanceLifecycleConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifec
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigRequestPrivate object, copying another.

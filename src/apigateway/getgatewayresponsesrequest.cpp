@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetGatewayResponsesRequest
+/*!
+ * \class QtAws::APIGateway::GetGatewayResponsesRequest
  *
- * @brief  Implements APIGateway GetGatewayResponses requests.
+ * \brief The GetGatewayResponsesRequest class encapsulates APIGateway GetGatewayResponses requests.
  *
- * @see    APIGatewayClient::getGatewayResponses
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getGatewayResponses
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGatewayResponsesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetGatewayResponsesRequest::GetGatewayResponsesRequest(const GetGatewayResponses
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGatewayResponsesRequest object.
  */
 GetGatewayResponsesRequest::GetGatewayResponsesRequest()
@@ -53,13 +61,16 @@ GetGatewayResponsesRequest::GetGatewayResponsesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGatewayResponsesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGatewayResponsesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetGatewayResponsesRequest::response(QNetwork
     return new GetGatewayResponsesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGatewayResponsesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetGatewayResponsesRequest::response(QNetwork
  * @brief  Private implementation for GetGatewayResponsesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGatewayResponsesRequestPrivate object.
@@ -97,7 +108,7 @@ GetGatewayResponsesRequestPrivate::GetGatewayResponsesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGatewayResponsesRequestPrivate object, copying another.

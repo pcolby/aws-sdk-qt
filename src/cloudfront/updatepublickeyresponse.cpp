@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdatePublicKeyResponse
+/*!
+ * \class QtAws::CloudFront::UpdatePublicKeyResponse
  *
- * @brief  Handles CloudFront UpdatePublicKey responses.
+ * \brief The UpdatePublicKeyResponse class encapsulates CloudFront UpdatePublicKey responses.
  *
- * @see    CloudFrontClient::updatePublicKey
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updatePublicKey
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePublicKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdatePublicKeyRequest * UpdatePublicKeyResponse::request() const
     return static_cast<const UpdatePublicKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront UpdatePublicKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdatePublicKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdatePublicKeyResponsePrivate
+ * \class UpdatePublicKeyResponsePrivate
  *
- * @brief  Private implementation for UpdatePublicKeyResponse.
+ * \brief Private implementation for UpdatePublicKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePublicKeyResponsePrivate object.
@@ -91,7 +99,7 @@ UpdatePublicKeyResponsePrivate::UpdatePublicKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront UpdatePublicKeyResponse element.
  *
  * @param  xml  XML stream to parse.

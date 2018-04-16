@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  VerifyDomainDkimResponse
+/*!
+ * \class QtAws::SES::VerifyDomainDkimResponse
  *
- * @brief  Handles SES VerifyDomainDkim responses.
+ * \brief The VerifyDomainDkimResponse class encapsulates SES VerifyDomainDkim responses.
  *
- * @see    SESClient::verifyDomainDkim
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::verifyDomainDkim
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyDomainDkimResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
     return static_cast<const VerifyDomainDkimRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES VerifyDomainDkim response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  VerifyDomainDkimResponsePrivate
+ * \class VerifyDomainDkimResponsePrivate
  *
- * @brief  Private implementation for VerifyDomainDkimResponse.
+ * \brief Private implementation for VerifyDomainDkimResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyDomainDkimResponsePrivate object.
@@ -91,7 +105,7 @@ VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES VerifyDomainDkimResponse element.
  *
  * @param  xml  XML stream to parse.

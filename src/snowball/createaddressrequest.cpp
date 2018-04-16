@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  CreateAddressRequest
+/*!
+ * \class QtAws::Snowball::CreateAddressRequest
  *
- * @brief  Implements Snowball CreateAddress requests.
+ * \brief The CreateAddressRequest class encapsulates Snowball CreateAddress requests.
  *
- * @see    SnowballClient::createAddress
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::createAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateAddressRequest::CreateAddressRequest(const CreateAddressRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAddressRequest object.
  */
 CreateAddressRequest::CreateAddressRequest()
@@ -53,13 +62,16 @@ CreateAddressRequest::CreateAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply 
     return new CreateAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAddressRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAddressRequestPrivate object.
@@ -97,7 +109,7 @@ CreateAddressRequestPrivate::CreateAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAddressRequestPrivate object, copying another.

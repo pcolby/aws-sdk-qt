@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetComplianceDetailResponse
+/*!
+ * \class QtAws::FMS::GetComplianceDetailResponse
  *
- * @brief  Handles FMS GetComplianceDetail responses.
+ * \brief The GetComplianceDetailResponse class encapsulates FMS GetComplianceDetail responses.
  *
- * @see    FMSClient::getComplianceDetail
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getComplianceDetail
  */
 
-/**
+/*!
  * @brief  Constructs a new GetComplianceDetailResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const GetComplianceDetailRequest * GetComplianceDetailResponse::request() const
     return static_cast<const GetComplianceDetailRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS GetComplianceDetail response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void GetComplianceDetailResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetComplianceDetailResponsePrivate
+ * \class GetComplianceDetailResponsePrivate
  *
- * @brief  Private implementation for GetComplianceDetailResponse.
+ * \brief Private implementation for GetComplianceDetailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetComplianceDetailResponsePrivate object.
@@ -91,7 +100,7 @@ GetComplianceDetailResponsePrivate::GetComplianceDetailResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS GetComplianceDetailResponse element.
  *
  * @param  xml  XML stream to parse.

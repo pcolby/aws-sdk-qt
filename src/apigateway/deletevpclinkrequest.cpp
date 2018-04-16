@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteVpcLinkRequest
+/*!
+ * \class QtAws::APIGateway::DeleteVpcLinkRequest
  *
- * @brief  Implements APIGateway DeleteVpcLink requests.
+ * \brief The DeleteVpcLinkRequest class encapsulates APIGateway DeleteVpcLink requests.
  *
- * @see    APIGatewayClient::deleteVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteVpcLinkRequest::DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcLinkRequest object.
  */
 DeleteVpcLinkRequest::DeleteVpcLinkRequest()
@@ -53,13 +61,16 @@ DeleteVpcLinkRequest::DeleteVpcLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpcLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpcLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply 
     return new DeleteVpcLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpcLinkRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteVpcLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcLinkRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcLinkRequestPrivate object, copying another.

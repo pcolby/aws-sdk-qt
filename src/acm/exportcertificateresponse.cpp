@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ExportCertificateResponse
+/*!
+ * \class QtAws::ACM::ExportCertificateResponse
  *
- * @brief  Handles ACM ExportCertificate responses.
+ * \brief The ExportCertificateResponse class encapsulates ACM ExportCertificate responses.
  *
- * @see    ACMClient::exportCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::exportCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ExportCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const ExportCertificateRequest * ExportCertificateResponse::request() const
     return static_cast<const ExportCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM ExportCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void ExportCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ExportCertificateResponsePrivate
+ * \class ExportCertificateResponsePrivate
  *
- * @brief  Private implementation for ExportCertificateResponse.
+ * \brief Private implementation for ExportCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExportCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ ExportCertificateResponsePrivate::ExportCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM ExportCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

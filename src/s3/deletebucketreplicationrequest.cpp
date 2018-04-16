@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketReplicationRequest
+/*!
+ * \class QtAws::S3::DeleteBucketReplicationRequest
  *
- * @brief  Implements S3 DeleteBucketReplication requests.
+ * \brief The DeleteBucketReplicationRequest class encapsulates S3 DeleteBucketReplication requests.
  *
- * @see    S3Client::deleteBucketReplication
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketReplication
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketReplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketReplicationRequest::DeleteBucketReplicationRequest(const DeleteBucke
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketReplicationRequest object.
  */
 DeleteBucketReplicationRequest::DeleteBucketReplicationRequest()
@@ -53,13 +56,16 @@ DeleteBucketReplicationRequest::DeleteBucketReplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketReplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketReplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketReplicationRequest::response(QNet
     return new DeleteBucketReplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketReplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketReplicationRequest::response(QNet
  * @brief  Private implementation for DeleteBucketReplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketReplicationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketReplicationRequestPrivate::DeleteBucketReplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketReplicationRequestPrivate object, copying another.

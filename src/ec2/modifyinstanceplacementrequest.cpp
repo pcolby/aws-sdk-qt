@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyInstancePlacementRequest
+/*!
+ * \class QtAws::EC2::ModifyInstancePlacementRequest
  *
- * @brief  Implements EC2 ModifyInstancePlacement requests.
+ * \brief The ModifyInstancePlacementRequest class encapsulates EC2 ModifyInstancePlacement requests.
  *
- * @see    EC2Client::modifyInstancePlacement
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyInstancePlacement
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstancePlacementRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyInstancePlacementRequest::ModifyInstancePlacementRequest(const ModifyInsta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstancePlacementRequest object.
  */
 ModifyInstancePlacementRequest::ModifyInstancePlacementRequest()
@@ -53,13 +60,16 @@ ModifyInstancePlacementRequest::ModifyInstancePlacementRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyInstancePlacementRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyInstancePlacementResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNet
     return new ModifyInstancePlacementResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyInstancePlacementRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNet
  * @brief  Private implementation for ModifyInstancePlacementRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstancePlacementRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstancePlacementRequestPrivate object, copying another.

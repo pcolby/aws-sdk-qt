@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteDevEndpointResponse
+/*!
+ * \class QtAws::Glue::DeleteDevEndpointResponse
  *
- * @brief  Handles Glue DeleteDevEndpoint responses.
+ * \brief The DeleteDevEndpointResponse class encapsulates Glue DeleteDevEndpoint responses.
  *
- * @see    GlueClient::deleteDevEndpoint
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteDevEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDevEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteDevEndpointRequest * DeleteDevEndpointResponse::request() const
     return static_cast<const DeleteDevEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteDevEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteDevEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDevEndpointResponsePrivate
+ * \class DeleteDevEndpointResponsePrivate
  *
- * @brief  Private implementation for DeleteDevEndpointResponse.
+ * \brief Private implementation for DeleteDevEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDevEndpointResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteDevEndpointResponsePrivate::DeleteDevEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteDevEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

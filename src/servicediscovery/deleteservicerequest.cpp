@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  DeleteServiceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::DeleteServiceRequest
  *
- * @brief  Implements ServiceDiscovery DeleteService requests.
+ * \brief The DeleteServiceRequest class encapsulates ServiceDiscovery DeleteService requests.
  *
- * @see    ServiceDiscoveryClient::deleteService
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::deleteService
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteServiceRequest object.
  */
 DeleteServiceRequest::DeleteServiceRequest()
@@ -53,13 +60,16 @@ DeleteServiceRequest::DeleteServiceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteServiceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteServiceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
     return new DeleteServiceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteServiceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteServiceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServiceRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServiceRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  GetStatusResponse
+/*!
+ * \class QtAws::ImportExport::GetStatusResponse
  *
- * @brief  Handles ImportExport GetStatus responses.
+ * \brief The GetStatusResponse class encapsulates ImportExport GetStatus responses.
  *
- * @see    ImportExportClient::getStatus
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::getStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetStatusRequest * GetStatusResponse::request() const
     return static_cast<const GetStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ImportExport GetStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetStatusResponsePrivate
+ * \class GetStatusResponsePrivate
  *
- * @brief  Private implementation for GetStatusResponse.
+ * \brief Private implementation for GetStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStatusResponsePrivate object.
@@ -91,7 +97,7 @@ GetStatusResponsePrivate::GetStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ImportExport GetStatusResponse element.
  *
  * @param  xml  XML stream to parse.

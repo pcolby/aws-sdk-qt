@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListIPSetsResponse
+/*!
+ * \class QtAws::GuardDuty::ListIPSetsResponse
  *
- * @brief  Handles GuardDuty ListIPSets responses.
+ * \brief The ListIPSetsResponse class encapsulates GuardDuty ListIPSets responses.
  *
- * @see    GuardDutyClient::listIPSets
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listIPSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIPSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListIPSetsRequest * ListIPSetsResponse::request() const
     return static_cast<const ListIPSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty ListIPSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListIPSetsResponsePrivate
+ * \class ListIPSetsResponsePrivate
  *
- * @brief  Private implementation for ListIPSetsResponse.
+ * \brief Private implementation for ListIPSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIPSetsResponsePrivate object.
@@ -91,7 +94,7 @@ ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty ListIPSetsResponse element.
  *
  * @param  xml  XML stream to parse.

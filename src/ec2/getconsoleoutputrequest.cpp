@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetConsoleOutputRequest
+/*!
+ * \class QtAws::EC2::GetConsoleOutputRequest
  *
- * @brief  Implements EC2 GetConsoleOutput requests.
+ * \brief The GetConsoleOutputRequest class encapsulates EC2 GetConsoleOutput requests.
  *
- * @see    EC2Client::getConsoleOutput
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getConsoleOutput
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConsoleOutputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetConsoleOutputRequest::GetConsoleOutputRequest(const GetConsoleOutputRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetConsoleOutputRequest object.
  */
 GetConsoleOutputRequest::GetConsoleOutputRequest()
@@ -53,13 +60,16 @@ GetConsoleOutputRequest::GetConsoleOutputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetConsoleOutputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetConsoleOutputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkRep
     return new GetConsoleOutputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetConsoleOutputRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkRep
  * @brief  Private implementation for GetConsoleOutputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConsoleOutputRequestPrivate object.
@@ -97,7 +107,7 @@ GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConsoleOutputRequestPrivate object, copying another.

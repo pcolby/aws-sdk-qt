@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListMembersResponse
+/*!
+ * \class QtAws::GuardDuty::ListMembersResponse
  *
- * @brief  Handles GuardDuty ListMembers responses.
+ * \brief The ListMembersResponse class encapsulates GuardDuty ListMembers responses.
  *
- * @see    GuardDutyClient::listMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListMembersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListMembersRequest * ListMembersResponse::request() const
     return static_cast<const ListMembersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty ListMembers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListMembersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListMembersResponsePrivate
+ * \class ListMembersResponsePrivate
  *
- * @brief  Private implementation for ListMembersResponse.
+ * \brief Private implementation for ListMembersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMembersResponsePrivate object.
@@ -91,7 +94,7 @@ ListMembersResponsePrivate::ListMembersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty ListMembersResponse element.
  *
  * @param  xml  XML stream to parse.

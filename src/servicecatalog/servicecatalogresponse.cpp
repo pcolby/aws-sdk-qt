@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ServiceCatalogResponse
+/*!
+ * \class QtAws::ServiceCatalog::ServiceCatalogResponse
  *
- * @brief  Handles ServiceCatalog ServiceCatalog responses.
+ * \brief The ServiceCatalogResponse class is the base class for all ServiceCatalog responses.
  *
- * @see    ServiceCatalogClient::serviceCatalog
+ * \ingroup ServiceCatalog
  */
 
-/**
+/*!
  * @brief  Constructs a new ServiceCatalogResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ServiceCatalogResponse::ServiceCatalogResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceCatalogResponse object.
@@ -63,7 +63,7 @@ ServiceCatalogResponse::ServiceCatalogResponse(ServiceCatalogResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ServiceCatalogResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ServiceCatalogResponsePrivate
@@ -92,7 +92,7 @@ void ServiceCatalogResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ServiceCatalogResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceCatalogResponsePrivate object.

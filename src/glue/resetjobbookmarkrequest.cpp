@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  ResetJobBookmarkRequest
+/*!
+ * \class QtAws::Glue::ResetJobBookmarkRequest
  *
- * @brief  Implements Glue ResetJobBookmark requests.
+ * \brief The ResetJobBookmarkRequest class encapsulates Glue ResetJobBookmark requests.
  *
- * @see    GlueClient::resetJobBookmark
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::resetJobBookmark
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetJobBookmarkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ResetJobBookmarkRequest::ResetJobBookmarkRequest(const ResetJobBookmarkRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetJobBookmarkRequest object.
  */
 ResetJobBookmarkRequest::ResetJobBookmarkRequest()
@@ -53,13 +59,16 @@ ResetJobBookmarkRequest::ResetJobBookmarkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetJobBookmarkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetJobBookmarkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkRep
     return new ResetJobBookmarkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetJobBookmarkRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkRep
  * @brief  Private implementation for ResetJobBookmarkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetJobBookmarkRequestPrivate object.
@@ -97,7 +106,7 @@ ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetJobBookmarkRequestPrivate object, copying another.

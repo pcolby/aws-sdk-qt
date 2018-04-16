@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListQualificationTypesRequest
+/*!
+ * \class QtAws::MTurk::ListQualificationTypesRequest
  *
- * @brief  Implements MTurk ListQualificationTypes requests.
+ * \brief The ListQualificationTypesRequest class encapsulates MTurk ListQualificationTypes requests.
  *
- * @see    MTurkClient::listQualificationTypes
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listQualificationTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListQualificationTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListQualificationTypesRequest::ListQualificationTypesRequest(const ListQualifica
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListQualificationTypesRequest object.
  */
 ListQualificationTypesRequest::ListQualificationTypesRequest()
@@ -53,13 +56,16 @@ ListQualificationTypesRequest::ListQualificationTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListQualificationTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListQualificationTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListQualificationTypesRequest::response(QNetw
     return new ListQualificationTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListQualificationTypesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListQualificationTypesRequest::response(QNetw
  * @brief  Private implementation for ListQualificationTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQualificationTypesRequestPrivate object.
@@ -97,7 +103,7 @@ ListQualificationTypesRequestPrivate::ListQualificationTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListQualificationTypesRequestPrivate object, copying another.

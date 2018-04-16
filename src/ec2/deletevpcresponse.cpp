@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcResponse
+/*!
+ * \class QtAws::EC2::DeleteVpcResponse
  *
- * @brief  Handles EC2 DeleteVpc responses.
+ * \brief The DeleteVpcResponse class encapsulates EC2 DeleteVpc responses.
  *
- * @see    EC2Client::deleteVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteVpcRequest * DeleteVpcResponse::request() const
     return static_cast<const DeleteVpcRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteVpc response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteVpcResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteVpcResponsePrivate
+ * \class DeleteVpcResponsePrivate
  *
- * @brief  Private implementation for DeleteVpcResponse.
+ * \brief Private implementation for DeleteVpcResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteVpcResponsePrivate::DeleteVpcResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteVpcResponse element.
  *
  * @param  xml  XML stream to parse.

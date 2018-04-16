@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcEndpointServiceConfigurationsRequest
+/*!
+ * \class QtAws::EC2::DeleteVpcEndpointServiceConfigurationsRequest
  *
- * @brief  Implements EC2 DeleteVpcEndpointServiceConfigurations requests.
+ * \brief The DeleteVpcEndpointServiceConfigurationsRequest class encapsulates EC2 DeleteVpcEndpointServiceConfigurations requests.
  *
- * @see    EC2Client::deleteVpcEndpointServiceConfigurations
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpcEndpointServiceConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointServiceConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpcEndpointServiceConfigurationsRequest::DeleteVpcEndpointServiceConfigura
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointServiceConfigurationsRequest object.
  */
 DeleteVpcEndpointServiceConfigurationsRequest::DeleteVpcEndpointServiceConfigurationsRequest()
@@ -53,13 +60,16 @@ DeleteVpcEndpointServiceConfigurationsRequest::DeleteVpcEndpointServiceConfigura
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpcEndpointServiceConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpcEndpointServiceConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest
     return new DeleteVpcEndpointServiceConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpcEndpointServiceConfigurationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest
  * @brief  Private implementation for DeleteVpcEndpointServiceConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointServiceConfigurationsRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceCo
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointServiceConfigurationsRequestPrivate object, copying another.

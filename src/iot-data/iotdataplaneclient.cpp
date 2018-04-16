@@ -33,29 +33,37 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::IoTDataPlane
+ * \brief The QtAws::IoTDataPlane contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  IoTDataPlaneClient
+/*!
+ * \class QtAws::IoTDataPlane::IoTDataPlaneClient
  *
- * @brief  Client for AWS IoT Data Plane
+ * \brief The IoTDataPlaneClient class provides access the AWS IoT Data Plane service.
  *
- * <fullname>AWS IoT</fullname>
+ * \ingroup IoTDataPlane
  *
- * AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
- * embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
- * messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
- * representation of your things and their state in the AWS
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
  */
 
-/**
- * @brief  Constructs a new IoTDataPlaneClient object.
+/*!
+ * \brief Constructs a IoTDataPlaneClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 IoTDataPlaneClient::IoTDataPlaneClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -74,21 +82,16 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->serviceName = QStringLiteral("iotdata");
 }
 
-/**
- * @brief  Constructs a new IoTDataPlaneClient object.
+/*!
+ * \overload IoTDataPlaneClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 IoTDataPlaneClient::IoTDataPlaneClient(
     const QUrl &endpoint,
@@ -107,7 +110,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->serviceName = QStringLiteral("iotdata");
 }
 
-/**
+/*!
  * Deletes the thing shadow for the specified
  *
  * thing>
@@ -127,7 +130,7 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
     return qobject_cast<DeleteThingShadowResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the thing shadow for the specified
  *
  * thing>
@@ -147,7 +150,7 @@ GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadow
     return qobject_cast<GetThingShadowResponse *>(send(request));
 }
 
-/**
+/*!
  * Publishes state
  *
  * information>
@@ -166,7 +169,7 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
     return qobject_cast<PublishResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the thing shadow for the specified
  *
  * thing>
@@ -186,7 +189,7 @@ UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateTh
     return qobject_cast<UpdateThingShadowResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IoTDataPlaneClientPrivate
@@ -194,7 +197,7 @@ UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateTh
  * @brief  Private implementation for IoTDataPlaneClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IoTDataPlaneClientPrivate object.

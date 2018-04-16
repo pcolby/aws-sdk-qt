@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListFieldLevelEncryptionConfigsRequest
+/*!
+ * \class QtAws::CloudFront::ListFieldLevelEncryptionConfigsRequest
  *
- * @brief  Implements CloudFront ListFieldLevelEncryptionConfigs requests.
+ * \brief The ListFieldLevelEncryptionConfigsRequest class encapsulates CloudFront ListFieldLevelEncryptionConfigs requests.
  *
- * @see    CloudFrontClient::listFieldLevelEncryptionConfigs
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listFieldLevelEncryptionConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFieldLevelEncryptionConfigsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListFieldLevelEncryptionConfigsRequest::ListFieldLevelEncryptionConfigsRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFieldLevelEncryptionConfigsRequest object.
  */
 ListFieldLevelEncryptionConfigsRequest::ListFieldLevelEncryptionConfigsRequest()
@@ -53,13 +61,16 @@ ListFieldLevelEncryptionConfigsRequest::ListFieldLevelEncryptionConfigsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFieldLevelEncryptionConfigsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFieldLevelEncryptionConfigsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListFieldLevelEncryptionConfigsRequest::respo
     return new ListFieldLevelEncryptionConfigsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFieldLevelEncryptionConfigsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListFieldLevelEncryptionConfigsRequest::respo
  * @brief  Private implementation for ListFieldLevelEncryptionConfigsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFieldLevelEncryptionConfigsRequestPrivate object.
@@ -97,7 +108,7 @@ ListFieldLevelEncryptionConfigsRequestPrivate::ListFieldLevelEncryptionConfigsRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFieldLevelEncryptionConfigsRequestPrivate object, copying another.

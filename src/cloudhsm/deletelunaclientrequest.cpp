@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DeleteLunaClientRequest
+/*!
+ * \class QtAws::CloudHSM::DeleteLunaClientRequest
  *
- * @brief  Implements CloudHSM DeleteLunaClient requests.
+ * \brief The DeleteLunaClientRequest class encapsulates CloudHSM DeleteLunaClient requests.
  *
- * @see    CloudHSMClient::deleteLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::deleteLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLunaClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ DeleteLunaClientRequest::DeleteLunaClientRequest(const DeleteLunaClientRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLunaClientRequest object.
  */
 DeleteLunaClientRequest::DeleteLunaClientRequest()
@@ -53,13 +68,16 @@ DeleteLunaClientRequest::DeleteLunaClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLunaClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLunaClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkRep
     return new DeleteLunaClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLunaClientRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteLunaClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLunaClientRequestPrivate object.
@@ -97,7 +115,7 @@ DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLunaClientRequestPrivate object, copying another.

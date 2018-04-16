@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBuiltinSlotTypesResponse
+/*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesResponse
  *
- * @brief  Handles LexModelBuildingService GetBuiltinSlotTypes responses.
+ * \brief The GetBuiltinSlotTypesResponse class encapsulates LexModelBuildingService GetBuiltinSlotTypes responses.
  *
- * @see    LexModelBuildingServiceClient::getBuiltinSlotTypes
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBuiltinSlotTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBuiltinSlotTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetBuiltinSlotTypesRequest * GetBuiltinSlotTypesResponse::request() const
     return static_cast<const GetBuiltinSlotTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService GetBuiltinSlotTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetBuiltinSlotTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBuiltinSlotTypesResponsePrivate
+ * \class GetBuiltinSlotTypesResponsePrivate
  *
- * @brief  Private implementation for GetBuiltinSlotTypesResponse.
+ * \brief Private implementation for GetBuiltinSlotTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBuiltinSlotTypesResponsePrivate object.
@@ -91,7 +98,7 @@ GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService GetBuiltinSlotTypesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateTypedLinkFacetResponse
+/*!
+ * \class QtAws::CloudDirectory::CreateTypedLinkFacetResponse
  *
- * @brief  Handles CloudDirectory CreateTypedLinkFacet responses.
+ * \brief The CreateTypedLinkFacetResponse class encapsulates CloudDirectory CreateTypedLinkFacet responses.
  *
- * @see    CloudDirectoryClient::createTypedLinkFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createTypedLinkFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTypedLinkFacetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const CreateTypedLinkFacetRequest * CreateTypedLinkFacetResponse::request() cons
     return static_cast<const CreateTypedLinkFacetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory CreateTypedLinkFacet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void CreateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTypedLinkFacetResponsePrivate
+ * \class CreateTypedLinkFacetResponsePrivate
  *
- * @brief  Private implementation for CreateTypedLinkFacetResponse.
+ * \brief Private implementation for CreateTypedLinkFacetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTypedLinkFacetResponsePrivate object.
@@ -91,7 +101,7 @@ CreateTypedLinkFacetResponsePrivate::CreateTypedLinkFacetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory CreateTypedLinkFacetResponse element.
  *
  * @param  xml  XML stream to parse.

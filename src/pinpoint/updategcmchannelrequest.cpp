@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateGcmChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateGcmChannelRequest
  *
- * @brief  Implements Pinpoint UpdateGcmChannel requests.
+ * \brief The UpdateGcmChannelRequest class encapsulates Pinpoint UpdateGcmChannel requests.
  *
- * @see    PinpointClient::updateGcmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateGcmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGcmChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateGcmChannelRequest::UpdateGcmChannelRequest(const UpdateGcmChannelRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateGcmChannelRequest object.
  */
 UpdateGcmChannelRequest::UpdateGcmChannelRequest()
@@ -53,13 +56,16 @@ UpdateGcmChannelRequest::UpdateGcmChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateGcmChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateGcmChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGcmChannelRequest::response(QNetworkRep
     return new UpdateGcmChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateGcmChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGcmChannelRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateGcmChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGcmChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGcmChannelRequestPrivate object, copying another.

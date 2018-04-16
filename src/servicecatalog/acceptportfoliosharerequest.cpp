@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  AcceptPortfolioShareRequest
+/*!
+ * \class QtAws::ServiceCatalog::AcceptPortfolioShareRequest
  *
- * @brief  Implements ServiceCatalog AcceptPortfolioShare requests.
+ * \brief The AcceptPortfolioShareRequest class encapsulates ServiceCatalog AcceptPortfolioShare requests.
  *
- * @see    ServiceCatalogClient::acceptPortfolioShare
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::acceptPortfolioShare
  */
 
-/**
+/*!
  * @brief  Constructs a new AcceptPortfolioShareRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ AcceptPortfolioShareRequest::AcceptPortfolioShareRequest(const AcceptPortfolioSh
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AcceptPortfolioShareRequest object.
  */
 AcceptPortfolioShareRequest::AcceptPortfolioShareRequest()
@@ -53,13 +62,16 @@ AcceptPortfolioShareRequest::AcceptPortfolioShareRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AcceptPortfolioShareRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AcceptPortfolioShareResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * AcceptPortfolioShareRequest::response(QNetwor
     return new AcceptPortfolioShareResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AcceptPortfolioShareRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AcceptPortfolioShareRequest::response(QNetwor
  * @brief  Private implementation for AcceptPortfolioShareRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptPortfolioShareRequestPrivate object.
@@ -97,7 +109,7 @@ AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptPortfolioShareRequestPrivate object, copying another.

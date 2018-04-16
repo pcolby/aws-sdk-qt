@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListObjectPoliciesResponse
+/*!
+ * \class QtAws::CloudDirectory::ListObjectPoliciesResponse
  *
- * @brief  Handles CloudDirectory ListObjectPolicies responses.
+ * \brief The ListObjectPoliciesResponse class encapsulates CloudDirectory ListObjectPolicies responses.
  *
- * @see    CloudDirectoryClient::listObjectPolicies
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listObjectPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectPoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListObjectPoliciesRequest * ListObjectPoliciesResponse::request() const
     return static_cast<const ListObjectPoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListObjectPolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListObjectPoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListObjectPoliciesResponsePrivate
+ * \class ListObjectPoliciesResponsePrivate
  *
- * @brief  Private implementation for ListObjectPoliciesResponse.
+ * \brief Private implementation for ListObjectPoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectPoliciesResponsePrivate object.
@@ -91,7 +101,7 @@ ListObjectPoliciesResponsePrivate::ListObjectPoliciesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListObjectPoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

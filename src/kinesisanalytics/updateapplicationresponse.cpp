@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  UpdateApplicationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::UpdateApplicationResponse
  *
- * @brief  Handles KinesisAnalytics UpdateApplication responses.
+ * \brief The UpdateApplicationResponse class encapsulates KinesisAnalytics UpdateApplication responses.
  *
- * @see    KinesisAnalyticsClient::updateApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::updateApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
     return static_cast<const UpdateApplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics UpdateApplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateApplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateApplicationResponsePrivate
+ * \class UpdateApplicationResponsePrivate
  *
- * @brief  Private implementation for UpdateApplicationResponse.
+ * \brief Private implementation for UpdateApplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics UpdateApplicationResponse element.
  *
  * @param  xml  XML stream to parse.

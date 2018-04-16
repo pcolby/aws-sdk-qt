@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLifecycleHooksResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeLifecycleHooksResponse
  *
- * @brief  Handles AutoScaling DescribeLifecycleHooks responses.
+ * \brief The DescribeLifecycleHooksResponse class encapsulates AutoScaling DescribeLifecycleHooks responses.
  *
- * @see    AutoScalingClient::describeLifecycleHooks
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLifecycleHooks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLifecycleHooksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeLifecycleHooksRequest * DescribeLifecycleHooksResponse::request() 
     return static_cast<const DescribeLifecycleHooksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeLifecycleHooks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeLifecycleHooksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeLifecycleHooksResponsePrivate
+ * \class DescribeLifecycleHooksResponsePrivate
  *
- * @brief  Private implementation for DescribeLifecycleHooksResponse.
+ * \brief Private implementation for DescribeLifecycleHooksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLifecycleHooksResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeLifecycleHooksResponse element.
  *
  * @param  xml  XML stream to parse.

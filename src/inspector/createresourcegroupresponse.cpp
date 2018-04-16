@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  CreateResourceGroupResponse
+/*!
+ * \class QtAws::Inspector::CreateResourceGroupResponse
  *
- * @brief  Handles Inspector CreateResourceGroup responses.
+ * \brief The CreateResourceGroupResponse class encapsulates Inspector CreateResourceGroup responses.
  *
- * @see    InspectorClient::createResourceGroup
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::createResourceGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateResourceGroupRequest * CreateResourceGroupResponse::request() const
     return static_cast<const CreateResourceGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector CreateResourceGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateResourceGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateResourceGroupResponsePrivate
+ * \class CreateResourceGroupResponsePrivate
  *
- * @brief  Private implementation for CreateResourceGroupResponse.
+ * \brief Private implementation for CreateResourceGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceGroupResponsePrivate object.
@@ -91,7 +99,7 @@ CreateResourceGroupResponsePrivate::CreateResourceGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector CreateResourceGroupResponse element.
  *
  * @param  xml  XML stream to parse.

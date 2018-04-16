@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  DeleteCorsPolicyResponse
+/*!
+ * \class QtAws::MediaStore::DeleteCorsPolicyResponse
  *
- * @brief  Handles MediaStore DeleteCorsPolicy responses.
+ * \brief The DeleteCorsPolicyResponse class encapsulates MediaStore DeleteCorsPolicy responses.
  *
- * @see    MediaStoreClient::deleteCorsPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::deleteCorsPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCorsPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteCorsPolicyRequest * DeleteCorsPolicyResponse::request() const
     return static_cast<const DeleteCorsPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore DeleteCorsPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteCorsPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCorsPolicyResponsePrivate
+ * \class DeleteCorsPolicyResponsePrivate
  *
- * @brief  Private implementation for DeleteCorsPolicyResponse.
+ * \brief Private implementation for DeleteCorsPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCorsPolicyResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore DeleteCorsPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

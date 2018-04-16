@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteConfigurationSetRequest
+/*!
+ * \class QtAws::SES::DeleteConfigurationSetRequest
  *
- * @brief  Implements SES DeleteConfigurationSet requests.
+ * \brief The DeleteConfigurationSetRequest class encapsulates SES DeleteConfigurationSet requests.
  *
- * @see    SESClient::deleteConfigurationSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteConfigurationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetRequest object.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest()
@@ -53,13 +67,16 @@ DeleteConfigurationSetRequest::DeleteConfigurationSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteConfigurationSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteConfigurationSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
     return new DeleteConfigurationSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteConfigurationSetRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
  * @brief  Private implementation for DeleteConfigurationSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetRequestPrivate object, copying another.

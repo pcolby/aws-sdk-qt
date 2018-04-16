@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetTagsRequest
+/*!
+ * \class QtAws::CostExplorer::GetTagsRequest
  *
- * @brief  Implements CostExplorer GetTags requests.
+ * \brief The GetTagsRequest class encapsulates CostExplorer GetTags requests.
  *
- * @see    CostExplorerClient::getTags
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getTags
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTagsRequest object.
  */
 GetTagsRequest::GetTagsRequest()
@@ -53,13 +69,16 @@ GetTagsRequest::GetTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
     return new GetTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTagsRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTagsRequestPrivate object.
@@ -97,7 +116,7 @@ GetTagsRequestPrivate::GetTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTagsRequestPrivate object, copying another.

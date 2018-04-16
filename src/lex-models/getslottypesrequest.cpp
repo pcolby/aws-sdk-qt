@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetSlotTypesRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetSlotTypesRequest
  *
- * @brief  Implements LexModelBuildingService GetSlotTypes requests.
+ * \brief The GetSlotTypesRequest class encapsulates LexModelBuildingService GetSlotTypes requests.
  *
- * @see    LexModelBuildingServiceClient::getSlotTypes
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getSlotTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSlotTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetSlotTypesRequest::GetSlotTypesRequest(const GetSlotTypesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSlotTypesRequest object.
  */
 GetSlotTypesRequest::GetSlotTypesRequest()
@@ -53,13 +60,16 @@ GetSlotTypesRequest::GetSlotTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSlotTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSlotTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypesRequest::response(QNetworkReply *
     return new GetSlotTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSlotTypesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypesRequest::response(QNetworkReply *
  * @brief  Private implementation for GetSlotTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSlotTypesRequestPrivate object.
@@ -97,7 +107,7 @@ GetSlotTypesRequestPrivate::GetSlotTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSlotTypesRequestPrivate object, copying another.

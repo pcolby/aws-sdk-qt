@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Translate {
 
-/**
- * @class  TranslateTextResponse
+/*!
+ * \class QtAws::Translate::TranslateTextResponse
  *
- * @brief  Handles Translate TranslateText responses.
+ * \brief The TranslateTextResponse class encapsulates Translate TranslateText responses.
  *
- * @see    TranslateClient::translateText
+ * \ingroup Translate
+ *
+ *  Provides translation between English and one of six languages, or between one of the six languages and
+ *
+ * \sa TranslateClient::translateText
  */
 
-/**
+/*!
  * @brief  Constructs a new TranslateTextResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const TranslateTextRequest * TranslateTextResponse::request() const
     return static_cast<const TranslateTextRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Translate TranslateText response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void TranslateTextResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TranslateTextResponsePrivate
+ * \class TranslateTextResponsePrivate
  *
- * @brief  Private implementation for TranslateTextResponse.
+ * \brief Private implementation for TranslateTextResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateTextResponsePrivate object.
@@ -91,7 +95,7 @@ TranslateTextResponsePrivate::TranslateTextResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Translate TranslateTextResponse element.
  *
  * @param  xml  XML stream to parse.

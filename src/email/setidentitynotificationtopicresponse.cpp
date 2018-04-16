@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityNotificationTopicResponse
+/*!
+ * \class QtAws::SES::SetIdentityNotificationTopicResponse
  *
- * @brief  Handles SES SetIdentityNotificationTopic responses.
+ * \brief The SetIdentityNotificationTopicResponse class encapsulates SES SetIdentityNotificationTopic responses.
  *
- * @see    SESClient::setIdentityNotificationTopic
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityNotificationTopic
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityNotificationTopicResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetIdentityNotificationTopicRequest * SetIdentityNotificationTopicResponse
     return static_cast<const SetIdentityNotificationTopicRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SetIdentityNotificationTopic response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetIdentityNotificationTopicResponsePrivate
+ * \class SetIdentityNotificationTopicResponsePrivate
  *
- * @brief  Private implementation for SetIdentityNotificationTopicResponse.
+ * \brief Private implementation for SetIdentityNotificationTopicResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityNotificationTopicResponsePrivate object.
@@ -91,7 +105,7 @@ SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SetIdentityNotificationTopicResponse element.
  *
  * @param  xml  XML stream to parse.

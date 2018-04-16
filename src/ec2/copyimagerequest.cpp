@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CopyImageRequest
+/*!
+ * \class QtAws::EC2::CopyImageRequest
  *
- * @brief  Implements EC2 CopyImage requests.
+ * \brief The CopyImageRequest class encapsulates EC2 CopyImage requests.
  *
- * @see    EC2Client::copyImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::copyImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CopyImageRequest object.
  */
 CopyImageRequest::CopyImageRequest()
@@ -53,13 +60,16 @@ CopyImageRequest::CopyImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CopyImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CopyImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
     return new CopyImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CopyImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
  * @brief  Private implementation for CopyImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyImageRequestPrivate object.
@@ -97,7 +107,7 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyImageRequestPrivate object, copying another.

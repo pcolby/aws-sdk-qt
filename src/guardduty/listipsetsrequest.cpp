@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListIPSetsRequest
+/*!
+ * \class QtAws::GuardDuty::ListIPSetsRequest
  *
- * @brief  Implements GuardDuty ListIPSets requests.
+ * \brief The ListIPSetsRequest class encapsulates GuardDuty ListIPSets requests.
  *
- * @see    GuardDutyClient::listIPSets
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listIPSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIPSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListIPSetsRequest object.
  */
 ListIPSetsRequest::ListIPSetsRequest()
@@ -53,13 +56,16 @@ ListIPSetsRequest::ListIPSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListIPSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListIPSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
     return new ListIPSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListIPSetsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListIPSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIPSetsRequestPrivate object.
@@ -97,7 +103,7 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIPSetsRequestPrivate object, copying another.

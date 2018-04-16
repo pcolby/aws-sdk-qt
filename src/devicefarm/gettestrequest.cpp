@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetTestRequest
+/*!
+ * \class QtAws::DeviceFarm::GetTestRequest
  *
- * @brief  Implements DeviceFarm GetTest requests.
+ * \brief The GetTestRequest class encapsulates DeviceFarm GetTest requests.
  *
- * @see    DeviceFarmClient::getTest
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getTest
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTestRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetTestRequest::GetTestRequest(const GetTestRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTestRequest object.
  */
 GetTestRequest::GetTestRequest()
@@ -53,13 +58,16 @@ GetTestRequest::GetTestRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTestRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTestResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetTestRequest::response(QNetworkReply * cons
     return new GetTestResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTestRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetTestRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetTestRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTestRequestPrivate object.
@@ -97,7 +105,7 @@ GetTestRequestPrivate::GetTestRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTestRequestPrivate object, copying another.

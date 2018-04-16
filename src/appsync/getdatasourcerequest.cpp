@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetDataSourceRequest
+/*!
+ * \class QtAws::AppSync::GetDataSourceRequest
  *
- * @brief  Implements AppSync GetDataSource requests.
+ * \brief The GetDataSourceRequest class encapsulates AppSync GetDataSource requests.
  *
- * @see    AppSyncClient::getDataSource
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataSourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDataSourceRequest object.
  */
 GetDataSourceRequest::GetDataSourceRequest()
@@ -53,13 +57,16 @@ GetDataSourceRequest::GetDataSourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDataSourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDataSourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
     return new GetDataSourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDataSourceRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
  * @brief  Private implementation for GetDataSourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataSourceRequestPrivate object.
@@ -97,7 +104,7 @@ GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataSourceRequestPrivate object, copying another.

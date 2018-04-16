@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  GetShippingLabelRequest
+/*!
+ * \class QtAws::ImportExport::GetShippingLabelRequest
  *
- * @brief  Implements ImportExport GetShippingLabel requests.
+ * \brief The GetShippingLabelRequest class encapsulates ImportExport GetShippingLabel requests.
  *
- * @see    ImportExportClient::getShippingLabel
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::getShippingLabel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetShippingLabelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetShippingLabelRequest::GetShippingLabelRequest(const GetShippingLabelRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetShippingLabelRequest object.
  */
 GetShippingLabelRequest::GetShippingLabelRequest()
@@ -53,13 +59,16 @@ GetShippingLabelRequest::GetShippingLabelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetShippingLabelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetShippingLabelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkRep
     return new GetShippingLabelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetShippingLabelRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkRep
  * @brief  Private implementation for GetShippingLabelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetShippingLabelRequestPrivate object.
@@ -97,7 +106,7 @@ GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetShippingLabelRequestPrivate object, copying another.

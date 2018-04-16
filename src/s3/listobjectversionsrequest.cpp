@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListObjectVersionsRequest
+/*!
+ * \class QtAws::S3::ListObjectVersionsRequest
  *
- * @brief  Implements S3 ListObjectVersions requests.
+ * \brief The ListObjectVersionsRequest class encapsulates S3 ListObjectVersions requests.
  *
- * @see    S3Client::listObjectVersions
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listObjectVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListObjectVersionsRequest::ListObjectVersionsRequest(const ListObjectVersionsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListObjectVersionsRequest object.
  */
 ListObjectVersionsRequest::ListObjectVersionsRequest()
@@ -53,13 +56,16 @@ ListObjectVersionsRequest::ListObjectVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListObjectVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListObjectVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectVersionsRequest::response(QNetworkR
     return new ListObjectVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListObjectVersionsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectVersionsRequest::response(QNetworkR
  * @brief  Private implementation for ListObjectVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectVersionsRequestPrivate object.
@@ -97,7 +103,7 @@ ListObjectVersionsRequestPrivate::ListObjectVersionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectVersionsRequestPrivate object, copying another.

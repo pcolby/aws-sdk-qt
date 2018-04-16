@@ -27,15 +27,51 @@
 namespace QtAws {
 namespace WorkMail {
 
-/**
- * @class  CreateUserResponse
+/*!
+ * \class QtAws::WorkMail::CreateUserResponse
  *
- * @brief  Handles WorkMail CreateUser responses.
+ * \brief The CreateUserResponse class encapsulates WorkMail CreateUser responses.
  *
- * @see    WorkMailClient::createUser
+ * \ingroup WorkMail
+ *
+ *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
+ *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
+ *  iOS and Android email applications. You can integrate Amazon WorkMail with your existing corporate directory and control
+ *  both the keys that encrypt your data and the location in which your data is
+ * 
+ *  stored>
+ * 
+ *  The Amazon WorkMail API is designed for the following
+ * 
+ *  scenarios> <ul> <li>
+ * 
+ *  Listing and describing
+ * 
+ *  organization> </li> </ul> <ul> <li>
+ * 
+ *  Managing
+ * 
+ *  user> </li> </ul> <ul> <li>
+ * 
+ *  Managing
+ * 
+ *  group> </li> </ul> <ul> <li>
+ * 
+ *  Managing
+ * 
+ *  resource> </li> </ul>
+ * 
+ *  All Amazon WorkMail API actions are Amazon-authenticated and certificate-signed. They not only require the use of the
+ *  AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission
+ *  policies. By creating a role and allowing an IAM user to access the Amazon WorkMail site, the IAM user gains full
+ *  administrative visibility into the entire Amazon WorkMail organization (or as set in the IAM policy). This includes, but
+ *  is not limited to, the ability to create, update, and delete users, groups, and resources. This allows developers to
+ *  perform the scenarios listed above, as well as give users the ability to grant access on a selective basis using the IAM
+ *
+ * \sa WorkMailClient::createUser
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +94,7 @@ const CreateUserRequest * CreateUserResponse::request() const
     return static_cast<const CreateUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkMail CreateUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +106,15 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateUserResponsePrivate
+ * \class CreateUserResponsePrivate
  *
- * @brief  Private implementation for CreateUserResponse.
+ * \brief Private implementation for CreateUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserResponsePrivate object.
@@ -91,7 +127,7 @@ CreateUserResponsePrivate::CreateUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkMail CreateUserResponse element.
  *
  * @param  xml  XML stream to parse.

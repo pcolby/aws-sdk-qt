@@ -25,15 +25,98 @@
 namespace QtAws {
 namespace CodeBuild {
 
-/**
- * @class  BatchGetBuildsRequest
+/*!
+ * \class QtAws::CodeBuild::BatchGetBuildsRequest
  *
- * @brief  Implements CodeBuild BatchGetBuilds requests.
+ * \brief The BatchGetBuildsRequest class encapsulates CodeBuild BatchGetBuilds requests.
  *
- * @see    CodeBuildClient::batchGetBuilds
+ * \ingroup CodeBuild
+ *
+ *  <fullname>AWS CodeBuild</fullname>
+ * 
+ *  AWS CodeBuild is a fully managed build service in the cloud. AWS CodeBuild compiles your source code, runs unit tests,
+ *  and produces artifacts that are ready to deploy. AWS CodeBuild eliminates the need to provision, manage, and scale your
+ *  own build servers. It provides prepackaged build environments for the most popular programming languages and build
+ *  tools, such as Apache Maven, Gradle, and more. You can also fully customize build environments in AWS CodeBuild to use
+ *  your own build tools. AWS CodeBuild scales automatically to meet peak build requests, and you pay only for the build
+ *  time you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
+ * 
+ *  Guide</i>>
+ * 
+ *  AWS CodeBuild supports these
+ * 
+ *  operations> <ul> <li>
+ * 
+ *  <code>BatchDeleteBuilds</code>: Deletes one or more
+ * 
+ *  builds> </li> <li>
+ * 
+ *  <code>BatchGetProjects</code>: Gets information about one or more build projects. A <i>build project</i> defines how AWS
+ *  CodeBuild will run a build. This includes information such as where to get the source code to build, the build
+ *  environment to use, the build commands to run, and where to store the build output. A <i>build environment</i>
+ *  represents a combination of operating system, programming language runtime, and tools that AWS CodeBuild will use to run
+ *  a build. Also, you can add tags to build projects to help manage your resources and
+ * 
+ *  costs> </li> <li>
+ * 
+ *  <code>CreateProject</code>: Creates a build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
+ *  repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed
+ *  to the
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <code>UpdateWebhook</code>: Changes the settings of an existing
+ * 
+ *  webhook> </li> <li>
+ * 
+ *  <code>DeleteProject</code>: Deletes a build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
+ *  repository, stops AWS CodeBuild from automatically rebuilding the source code every time a code change is pushed to the
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <code>ListProjects</code>: Gets a list of build project names, with each build project name representing a single build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>UpdateProject</code>: Changes the settings of an existing build
+ * 
+ *  project> </li> <li>
+ * 
+ *  <code>BatchGetBuilds</code>: Gets information about one or more
+ * 
+ *  builds> </li> <li>
+ * 
+ *  <code>ListBuilds</code>: Gets a list of build IDs, with each build ID representing a single
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>ListBuildsForProject</code>: Gets a list of build IDs for the specified build project, with each build ID
+ *  representing a single
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>StartBuild</code>: Starts running a
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>StopBuild</code>: Attempts to stop running a
+ * 
+ *  build> </li> <li>
+ * 
+ *  <code>ListCuratedEnvironmentImages</code>: Gets information about Docker images that are managed by AWS
+ *
+ * \sa CodeBuildClient::batchGetBuilds
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetBuildsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +127,7 @@ BatchGetBuildsRequest::BatchGetBuildsRequest(const BatchGetBuildsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchGetBuildsRequest object.
  */
 BatchGetBuildsRequest::BatchGetBuildsRequest()
@@ -53,13 +136,16 @@ BatchGetBuildsRequest::BatchGetBuildsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchGetBuildsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchGetBuildsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +160,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetBuildsRequest::response(QNetworkReply
     return new BatchGetBuildsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchGetBuildsRequestPrivate
@@ -82,7 +168,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetBuildsRequest::response(QNetworkReply
  * @brief  Private implementation for BatchGetBuildsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetBuildsRequestPrivate object.
@@ -97,7 +183,7 @@ BatchGetBuildsRequestPrivate::BatchGetBuildsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetBuildsRequestPrivate object, copying another.

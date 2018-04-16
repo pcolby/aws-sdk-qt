@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  PutTraceSegmentsResponse
+/*!
+ * \class QtAws::XRay::PutTraceSegmentsResponse
  *
- * @brief  Handles XRay PutTraceSegments responses.
+ * \brief The PutTraceSegmentsResponse class encapsulates XRay PutTraceSegments responses.
  *
- * @see    XRayClient::putTraceSegments
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::putTraceSegments
  */
 
-/**
+/*!
  * @brief  Constructs a new PutTraceSegmentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const PutTraceSegmentsRequest * PutTraceSegmentsResponse::request() const
     return static_cast<const PutTraceSegmentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a XRay PutTraceSegments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void PutTraceSegmentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutTraceSegmentsResponsePrivate
+ * \class PutTraceSegmentsResponsePrivate
  *
- * @brief  Private implementation for PutTraceSegmentsResponse.
+ * \brief Private implementation for PutTraceSegmentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutTraceSegmentsResponsePrivate object.
@@ -91,7 +95,7 @@ PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an XRay PutTraceSegmentsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ExportCertificateRequest
+/*!
+ * \class QtAws::ACM::ExportCertificateRequest
  *
- * @brief  Implements ACM ExportCertificate requests.
+ * \brief The ExportCertificateRequest class encapsulates ACM ExportCertificate requests.
  *
- * @see    ACMClient::exportCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::exportCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new ExportCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ExportCertificateRequest::ExportCertificateRequest(const ExportCertificateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ExportCertificateRequest object.
  */
 ExportCertificateRequest::ExportCertificateRequest()
@@ -53,13 +65,16 @@ ExportCertificateRequest::ExportCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ExportCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ExportCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkRe
     return new ExportCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ExportCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkRe
  * @brief  Private implementation for ExportCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExportCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExportCertificateRequestPrivate object, copying another.

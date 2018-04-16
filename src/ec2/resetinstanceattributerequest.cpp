@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetInstanceAttributeRequest
+/*!
+ * \class QtAws::EC2::ResetInstanceAttributeRequest
  *
- * @brief  Implements EC2 ResetInstanceAttribute requests.
+ * \brief The ResetInstanceAttributeRequest class encapsulates EC2 ResetInstanceAttribute requests.
  *
- * @see    EC2Client::resetInstanceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetInstanceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetInstanceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ResetInstanceAttributeRequest::ResetInstanceAttributeRequest(const ResetInstance
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetInstanceAttributeRequest object.
  */
 ResetInstanceAttributeRequest::ResetInstanceAttributeRequest()
@@ -53,13 +60,16 @@ ResetInstanceAttributeRequest::ResetInstanceAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetInstanceAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetInstanceAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetw
     return new ResetInstanceAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetInstanceAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetw
  * @brief  Private implementation for ResetInstanceAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetInstanceAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetInstanceAttributeRequestPrivate object, copying another.

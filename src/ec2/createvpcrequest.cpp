@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpcRequest
+/*!
+ * \class QtAws::EC2::CreateVpcRequest
  *
- * @brief  Implements EC2 CreateVpc requests.
+ * \brief The CreateVpcRequest class encapsulates EC2 CreateVpc requests.
  *
- * @see    EC2Client::createVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateVpcRequest::CreateVpcRequest(const CreateVpcRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcRequest object.
  */
 CreateVpcRequest::CreateVpcRequest()
@@ -53,13 +60,16 @@ CreateVpcRequest::CreateVpcRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVpcRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVpcResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcRequest::response(QNetworkReply * co
     return new CreateVpcResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVpcRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcRequest::response(QNetworkReply * co
  * @brief  Private implementation for CreateVpcRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcRequestPrivate object.
@@ -97,7 +107,7 @@ CreateVpcRequestPrivate::CreateVpcRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcRequestPrivate object, copying another.

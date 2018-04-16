@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  DeletePolicyRequest
+/*!
+ * \class QtAws::FMS::DeletePolicyRequest
  *
- * @brief  Implements FMS DeletePolicy requests.
+ * \brief The DeletePolicyRequest class encapsulates FMS DeletePolicy requests.
  *
- * @see    FMSClient::deletePolicy
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::deletePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
@@ -53,13 +62,16 @@ DeletePolicyRequest::DeletePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
     return new DeletePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePolicyRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for DeletePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyRequestPrivate object.
@@ -97,7 +109,7 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyRequestPrivate object, copying another.

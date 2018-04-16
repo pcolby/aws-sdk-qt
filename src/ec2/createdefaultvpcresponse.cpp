@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateDefaultVpcResponse
+/*!
+ * \class QtAws::EC2::CreateDefaultVpcResponse
  *
- * @brief  Handles EC2 CreateDefaultVpc responses.
+ * \brief The CreateDefaultVpcResponse class encapsulates EC2 CreateDefaultVpc responses.
  *
- * @see    EC2Client::createDefaultVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createDefaultVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDefaultVpcResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateDefaultVpcRequest * CreateDefaultVpcResponse::request() const
     return static_cast<const CreateDefaultVpcRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateDefaultVpc response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateDefaultVpcResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDefaultVpcResponsePrivate
+ * \class CreateDefaultVpcResponsePrivate
  *
- * @brief  Private implementation for CreateDefaultVpcResponse.
+ * \brief Private implementation for CreateDefaultVpcResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDefaultVpcResponsePrivate object.
@@ -91,7 +98,7 @@ CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateDefaultVpcResponse element.
  *
  * @param  xml  XML stream to parse.

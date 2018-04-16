@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListIPSetsRequest
+/*!
+ * \class QtAws::WAF::ListIPSetsRequest
  *
- * @brief  Implements WAF ListIPSets requests.
+ * \brief The ListIPSetsRequest class encapsulates WAF ListIPSets requests.
  *
- * @see    WAFClient::listIPSets
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listIPSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIPSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListIPSetsRequest object.
  */
 ListIPSetsRequest::ListIPSetsRequest()
@@ -53,13 +61,16 @@ ListIPSetsRequest::ListIPSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListIPSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListIPSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
     return new ListIPSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListIPSetsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListIPSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIPSetsRequestPrivate object.
@@ -97,7 +108,7 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIPSetsRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteHealthCheckResponse
+/*!
+ * \class QtAws::Route53::DeleteHealthCheckResponse
  *
- * @brief  Handles Route53 DeleteHealthCheck responses.
+ * \brief The DeleteHealthCheckResponse class encapsulates Route53 DeleteHealthCheck responses.
  *
- * @see    Route53Client::deleteHealthCheck
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteHealthCheck
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHealthCheckResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteHealthCheckRequest * DeleteHealthCheckResponse::request() const
     return static_cast<const DeleteHealthCheckRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 DeleteHealthCheck response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteHealthCheckResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteHealthCheckResponsePrivate
+ * \class DeleteHealthCheckResponsePrivate
  *
- * @brief  Private implementation for DeleteHealthCheckResponse.
+ * \brief Private implementation for DeleteHealthCheckResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHealthCheckResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 DeleteHealthCheckResponse element.
  *
  * @param  xml  XML stream to parse.

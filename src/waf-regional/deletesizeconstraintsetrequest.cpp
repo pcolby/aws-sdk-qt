@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteSizeConstraintSetRequest
+/*!
+ * \class QtAws::WAFRegional::DeleteSizeConstraintSetRequest
  *
- * @brief  Implements WAFRegional DeleteSizeConstraintSet requests.
+ * \brief The DeleteSizeConstraintSetRequest class encapsulates WAFRegional DeleteSizeConstraintSet requests.
  *
- * @see    WAFRegionalClient::deleteSizeConstraintSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteSizeConstraintSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSizeConstraintSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSizeConstraintSetRequest object.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest()
@@ -53,13 +63,16 @@ DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSizeConstraintSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSizeConstraintSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
     return new DeleteSizeConstraintSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSizeConstraintSetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
  * @brief  Private implementation for DeleteSizeConstraintSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSizeConstraintSetRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSizeConstraintSetRequestPrivate object, copying another.

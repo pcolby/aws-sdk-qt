@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  AddPermissionRequest
+/*!
+ * \class QtAws::SNS::AddPermissionRequest
  *
- * @brief  Implements SNS AddPermission requests.
+ * \brief The AddPermissionRequest class encapsulates SNS AddPermission requests.
  *
- * @see    SNSClient::addPermission
+ * \ingroup SNS
+ *
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
+ *
+ * \sa SNSClient::addPermission
  */
 
-/**
+/*!
  * @brief  Constructs a new AddPermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddPermissionRequest object.
  */
 AddPermissionRequest::AddPermissionRequest()
@@ -53,13 +70,16 @@ AddPermissionRequest::AddPermissionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddPermissionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddPermissionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
     return new AddPermissionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddPermissionRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
  * @brief  Private implementation for AddPermissionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddPermissionRequestPrivate object.
@@ -97,7 +117,7 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddPermissionRequestPrivate object, copying another.

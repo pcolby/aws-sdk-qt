@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateKeyPairRequest
+/*!
+ * \class QtAws::EC2::CreateKeyPairRequest
  *
- * @brief  Implements EC2 CreateKeyPair requests.
+ * \brief The CreateKeyPairRequest class encapsulates EC2 CreateKeyPair requests.
  *
- * @see    EC2Client::createKeyPair
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createKeyPair
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateKeyPairRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateKeyPairRequest object.
  */
 CreateKeyPairRequest::CreateKeyPairRequest()
@@ -53,13 +60,16 @@ CreateKeyPairRequest::CreateKeyPairRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateKeyPairRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateKeyPairResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply 
     return new CreateKeyPairResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateKeyPairRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateKeyPairRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateKeyPairRequestPrivate object.
@@ -97,7 +107,7 @@ CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateKeyPairRequestPrivate object, copying another.

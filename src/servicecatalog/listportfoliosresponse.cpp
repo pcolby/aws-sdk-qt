@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListPortfoliosResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListPortfoliosResponse
  *
- * @brief  Handles ServiceCatalog ListPortfolios responses.
+ * \brief The ListPortfoliosResponse class encapsulates ServiceCatalog ListPortfolios responses.
  *
- * @see    ServiceCatalogClient::listPortfolios
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listPortfolios
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPortfoliosResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListPortfoliosRequest * ListPortfoliosResponse::request() const
     return static_cast<const ListPortfoliosRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListPortfolios response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListPortfoliosResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPortfoliosResponsePrivate
+ * \class ListPortfoliosResponsePrivate
  *
- * @brief  Private implementation for ListPortfoliosResponse.
+ * \brief Private implementation for ListPortfoliosResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPortfoliosResponsePrivate object.
@@ -91,7 +100,7 @@ ListPortfoliosResponsePrivate::ListPortfoliosResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListPortfoliosResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteKeyPairRequest
+/*!
+ * \class QtAws::EC2::DeleteKeyPairRequest
  *
- * @brief  Implements EC2 DeleteKeyPair requests.
+ * \brief The DeleteKeyPairRequest class encapsulates EC2 DeleteKeyPair requests.
  *
- * @see    EC2Client::deleteKeyPair
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteKeyPair
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteKeyPairRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteKeyPairRequest object.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest()
@@ -53,13 +60,16 @@ DeleteKeyPairRequest::DeleteKeyPairRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteKeyPairRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteKeyPairResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
     return new DeleteKeyPairResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteKeyPairRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteKeyPairRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteKeyPairRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteKeyPairRequestPrivate object, copying another.

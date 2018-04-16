@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DeleteDomainRequest
+/*!
+ * \class QtAws::CloudSearch::DeleteDomainRequest
  *
- * @brief  Implements CloudSearch DeleteDomain requests.
+ * \brief The DeleteDomainRequest class encapsulates CloudSearch DeleteDomain requests.
  *
- * @see    CloudSearchClient::deleteDomain
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::deleteDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteDomainRequest::DeleteDomainRequest(const DeleteDomainRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDomainRequest object.
  */
 DeleteDomainRequest::DeleteDomainRequest()
@@ -53,13 +67,16 @@ DeleteDomainRequest::DeleteDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply *
     return new DeleteDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDomainRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDomainRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDomainRequestPrivate object, copying another.

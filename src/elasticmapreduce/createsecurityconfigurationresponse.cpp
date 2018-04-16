@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  CreateSecurityConfigurationResponse
+/*!
+ * \class QtAws::EMR::CreateSecurityConfigurationResponse
  *
- * @brief  Handles EMR CreateSecurityConfiguration responses.
+ * \brief The CreateSecurityConfigurationResponse class encapsulates EMR CreateSecurityConfiguration responses.
  *
- * @see    EMRClient::createSecurityConfiguration
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::createSecurityConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSecurityConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateSecurityConfigurationRequest * CreateSecurityConfigurationResponse::
     return static_cast<const CreateSecurityConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR CreateSecurityConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateSecurityConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSecurityConfigurationResponsePrivate
+ * \class CreateSecurityConfigurationResponsePrivate
  *
- * @brief  Private implementation for CreateSecurityConfigurationResponse.
+ * \brief Private implementation for CreateSecurityConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSecurityConfigurationResponsePrivate object.
@@ -91,7 +97,7 @@ CreateSecurityConfigurationResponsePrivate::CreateSecurityConfigurationResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR CreateSecurityConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DescribeNotebookInstanceLifecycleConfigRequest
+/*!
+ * \class QtAws::SageMaker::DescribeNotebookInstanceLifecycleConfigRequest
  *
- * @brief  Implements SageMaker DescribeNotebookInstanceLifecycleConfig requests.
+ * \brief The DescribeNotebookInstanceLifecycleConfigRequest class encapsulates SageMaker DescribeNotebookInstanceLifecycleConfig requests.
  *
- * @see    SageMakerClient::describeNotebookInstanceLifecycleConfig
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::describeNotebookInstanceLifecycleConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeNotebookInstanceLifecycleConfigRequest::DescribeNotebookInstanceLifecycl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequest object.
  */
 DescribeNotebookInstanceLifecycleConfigRequest::DescribeNotebookInstanceLifecycleConfigRequest()
@@ -53,13 +56,16 @@ DescribeNotebookInstanceLifecycleConfigRequest::DescribeNotebookInstanceLifecycl
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNotebookInstanceLifecycleConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNotebookInstanceLifecycleConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigReques
     return new DescribeNotebookInstanceLifecycleConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNotebookInstanceLifecycleConfigRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigReques
  * @brief  Private implementation for DescribeNotebookInstanceLifecycleConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeNotebookInstanceLifecycleConfigRequestPrivate::DescribeNotebookInstanceL
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotebookInstanceLifecycleConfigRequestPrivate object, copying another.

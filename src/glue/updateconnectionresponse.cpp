@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateConnectionResponse
+/*!
+ * \class QtAws::Glue::UpdateConnectionResponse
  *
- * @brief  Handles Glue UpdateConnection responses.
+ * \brief The UpdateConnectionResponse class encapsulates Glue UpdateConnection responses.
  *
- * @see    GlueClient::updateConnection
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConnectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateConnectionRequest * UpdateConnectionResponse::request() const
     return static_cast<const UpdateConnectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateConnection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateConnectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateConnectionResponsePrivate
+ * \class UpdateConnectionResponsePrivate
  *
- * @brief  Private implementation for UpdateConnectionResponse.
+ * \brief Private implementation for UpdateConnectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConnectionResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateConnectionResponsePrivate::UpdateConnectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateConnectionResponse element.
  *
  * @param  xml  XML stream to parse.

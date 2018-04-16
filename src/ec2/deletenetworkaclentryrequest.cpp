@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkAclEntryRequest
+/*!
+ * \class QtAws::EC2::DeleteNetworkAclEntryRequest
  *
- * @brief  Implements EC2 DeleteNetworkAclEntry requests.
+ * \brief The DeleteNetworkAclEntryRequest class encapsulates EC2 DeleteNetworkAclEntry requests.
  *
- * @see    EC2Client::deleteNetworkAclEntry
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkAclEntry
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkAclEntryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteNetworkAclEntryRequest::DeleteNetworkAclEntryRequest(const DeleteNetworkAc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkAclEntryRequest object.
  */
 DeleteNetworkAclEntryRequest::DeleteNetworkAclEntryRequest()
@@ -53,13 +60,16 @@ DeleteNetworkAclEntryRequest::DeleteNetworkAclEntryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNetworkAclEntryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNetworkAclEntryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclEntryRequest::response(QNetwo
     return new DeleteNetworkAclEntryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNetworkAclEntryRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclEntryRequest::response(QNetwo
  * @brief  Private implementation for DeleteNetworkAclEntryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkAclEntryRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteNetworkAclEntryRequestPrivate::DeleteNetworkAclEntryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkAclEntryRequestPrivate object, copying another.

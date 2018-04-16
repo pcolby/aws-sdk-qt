@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateAuthorizerResponse
+/*!
+ * \class QtAws::IoT::CreateAuthorizerResponse
  *
- * @brief  Handles IoT CreateAuthorizer responses.
+ * \brief The CreateAuthorizerResponse class encapsulates IoT CreateAuthorizer responses.
  *
- * @see    IoTClient::createAuthorizer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAuthorizerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
     return static_cast<const CreateAuthorizerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreateAuthorizer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAuthorizerResponsePrivate
+ * \class CreateAuthorizerResponsePrivate
  *
- * @brief  Private implementation for CreateAuthorizerResponse.
+ * \brief Private implementation for CreateAuthorizerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAuthorizerResponsePrivate object.
@@ -91,7 +105,7 @@ CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreateAuthorizerResponse element.
  *
  * @param  xml  XML stream to parse.

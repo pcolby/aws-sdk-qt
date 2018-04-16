@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteBasePathMappingRequest
+/*!
+ * \class QtAws::APIGateway::DeleteBasePathMappingRequest
  *
- * @brief  Implements APIGateway DeleteBasePathMapping requests.
+ * \brief The DeleteBasePathMappingRequest class encapsulates APIGateway DeleteBasePathMapping requests.
  *
- * @see    APIGatewayClient::deleteBasePathMapping
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteBasePathMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBasePathMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteBasePathMappingRequest::DeleteBasePathMappingRequest(const DeleteBasePathM
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBasePathMappingRequest object.
  */
 DeleteBasePathMappingRequest::DeleteBasePathMappingRequest()
@@ -53,13 +61,16 @@ DeleteBasePathMappingRequest::DeleteBasePathMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBasePathMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBasePathMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetwo
     return new DeleteBasePathMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBasePathMappingRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetwo
  * @brief  Private implementation for DeleteBasePathMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBasePathMappingRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBasePathMappingRequestPrivate object, copying another.

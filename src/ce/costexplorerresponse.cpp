@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  CostExplorerResponse
+/*!
+ * \class QtAws::CostExplorer::CostExplorerResponse
  *
- * @brief  Handles CostExplorer CostExplorer responses.
+ * \brief The CostExplorerResponse class is the base class for all CostExplorer responses.
  *
- * @see    CostExplorerClient::costExplorer
+ * \ingroup CostExplorer
  */
 
-/**
+/*!
  * @brief  Constructs a new CostExplorerResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CostExplorerResponse::CostExplorerResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CostExplorerResponse object.
@@ -63,7 +63,7 @@ CostExplorerResponse::CostExplorerResponse(CostExplorerResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CostExplorerResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CostExplorerResponsePrivate
@@ -92,7 +92,7 @@ void CostExplorerResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CostExplorerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CostExplorerResponsePrivate object.

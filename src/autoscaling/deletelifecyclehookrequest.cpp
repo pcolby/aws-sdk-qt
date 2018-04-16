@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteLifecycleHookRequest
+/*!
+ * \class QtAws::AutoScaling::DeleteLifecycleHookRequest
  *
- * @brief  Implements AutoScaling DeleteLifecycleHook requests.
+ * \brief The DeleteLifecycleHookRequest class encapsulates AutoScaling DeleteLifecycleHook requests.
  *
- * @see    AutoScalingClient::deleteLifecycleHook
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteLifecycleHook
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLifecycleHookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteLifecycleHookRequest::DeleteLifecycleHookRequest(const DeleteLifecycleHook
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLifecycleHookRequest object.
  */
 DeleteLifecycleHookRequest::DeleteLifecycleHookRequest()
@@ -53,13 +61,16 @@ DeleteLifecycleHookRequest::DeleteLifecycleHookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLifecycleHookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLifecycleHookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetwork
     return new DeleteLifecycleHookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLifecycleHookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetwork
  * @brief  Private implementation for DeleteLifecycleHookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLifecycleHookRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLifecycleHookRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetCSVHeaderResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetCSVHeaderResponse
  *
- * @brief  Handles CognitoIdentityProvider GetCSVHeader responses.
+ * \brief The GetCSVHeaderResponse class encapsulates CognitoIdentityProvider GetCSVHeader responses.
  *
- * @see    CognitoIdentityProviderClient::getCSVHeader
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getCSVHeader
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCSVHeaderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const GetCSVHeaderRequest * GetCSVHeaderResponse::request() const
     return static_cast<const GetCSVHeaderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider GetCSVHeader response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void GetCSVHeaderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCSVHeaderResponsePrivate
+ * \class GetCSVHeaderResponsePrivate
  *
- * @brief  Private implementation for GetCSVHeaderResponse.
+ * \brief Private implementation for GetCSVHeaderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCSVHeaderResponsePrivate object.
@@ -91,7 +104,7 @@ GetCSVHeaderResponsePrivate::GetCSVHeaderResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider GetCSVHeaderResponse element.
  *
  * @param  xml  XML stream to parse.

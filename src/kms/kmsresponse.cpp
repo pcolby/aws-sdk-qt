@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace KMS {
 
-/**
- * @class  KMSResponse
+/*!
+ * \class QtAws::KMS::KMSResponse
  *
- * @brief  Handles KMS KMS responses.
+ * \brief The KMSResponse class is the base class for all KMS responses.
  *
- * @see    KMSClient::kMS
+ * \ingroup KMS
  */
 
-/**
+/*!
  * @brief  Constructs a new KMSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ KMSResponse::KMSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KMSResponse object.
@@ -63,7 +63,7 @@ KMSResponse::KMSResponse(KMSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void KMSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KMSResponsePrivate
@@ -92,7 +92,7 @@ void KMSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for KMSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KMSResponsePrivate object.

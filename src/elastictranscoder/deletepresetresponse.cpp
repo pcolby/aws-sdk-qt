@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  DeletePresetResponse
+/*!
+ * \class QtAws::ElasticTranscoder::DeletePresetResponse
  *
- * @brief  Handles ElasticTranscoder DeletePreset responses.
+ * \brief The DeletePresetResponse class encapsulates ElasticTranscoder DeletePreset responses.
  *
- * @see    ElasticTranscoderClient::deletePreset
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::deletePreset
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePresetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeletePresetRequest * DeletePresetResponse::request() const
     return static_cast<const DeletePresetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder DeletePreset response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeletePresetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePresetResponsePrivate
+ * \class DeletePresetResponsePrivate
  *
- * @brief  Private implementation for DeletePresetResponse.
+ * \brief Private implementation for DeletePresetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePresetResponsePrivate object.
@@ -91,7 +97,7 @@ DeletePresetResponsePrivate::DeletePresetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder DeletePresetResponse element.
  *
  * @param  xml  XML stream to parse.

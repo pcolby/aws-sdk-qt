@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateCustomVerificationEmailTemplateResponse
+/*!
+ * \class QtAws::SES::UpdateCustomVerificationEmailTemplateResponse
  *
- * @brief  Handles SES UpdateCustomVerificationEmailTemplate responses.
+ * \brief The UpdateCustomVerificationEmailTemplateResponse class encapsulates SES UpdateCustomVerificationEmailTemplate responses.
  *
- * @see    SESClient::updateCustomVerificationEmailTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateCustomVerificationEmailTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCustomVerificationEmailTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateCustomVerificationEmailTemplateRequest * UpdateCustomVerificationEma
     return static_cast<const UpdateCustomVerificationEmailTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES UpdateCustomVerificationEmailTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateCustomVerificationEmailTemplateResponsePrivate
+ * \class UpdateCustomVerificationEmailTemplateResponsePrivate
  *
- * @brief  Private implementation for UpdateCustomVerificationEmailTemplateResponse.
+ * \brief Private implementation for UpdateCustomVerificationEmailTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCustomVerificationEmailTemplateResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateCustomVerificationEmailTemplateResponsePrivate::UpdateCustomVerificationEm
 
 }
 
-/**
+/*!
  * @brief  Parse an SES UpdateCustomVerificationEmailTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

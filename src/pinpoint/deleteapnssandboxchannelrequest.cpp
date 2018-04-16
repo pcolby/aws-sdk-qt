@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteApnsSandboxChannelRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteApnsSandboxChannelRequest
  *
- * @brief  Implements Pinpoint DeleteApnsSandboxChannel requests.
+ * \brief The DeleteApnsSandboxChannelRequest class encapsulates Pinpoint DeleteApnsSandboxChannel requests.
  *
- * @see    PinpointClient::deleteApnsSandboxChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteApnsSandboxChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsSandboxChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApnsSandboxChannelRequest::DeleteApnsSandboxChannelRequest(const DeleteApn
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsSandboxChannelRequest object.
  */
 DeleteApnsSandboxChannelRequest::DeleteApnsSandboxChannelRequest()
@@ -53,13 +56,16 @@ DeleteApnsSandboxChannelRequest::DeleteApnsSandboxChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApnsSandboxChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApnsSandboxChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsSandboxChannelRequest::response(QNe
     return new DeleteApnsSandboxChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApnsSandboxChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsSandboxChannelRequest::response(QNe
  * @brief  Private implementation for DeleteApnsSandboxChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsSandboxChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApnsSandboxChannelRequestPrivate::DeleteApnsSandboxChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsSandboxChannelRequestPrivate object, copying another.

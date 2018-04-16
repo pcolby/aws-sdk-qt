@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteTagOptionRequest
+/*!
+ * \class QtAws::ServiceCatalog::DeleteTagOptionRequest
  *
- * @brief  Implements ServiceCatalog DeleteTagOption requests.
+ * \brief The DeleteTagOptionRequest class encapsulates ServiceCatalog DeleteTagOption requests.
  *
- * @see    ServiceCatalogClient::deleteTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteTagOptionRequest::DeleteTagOptionRequest(const DeleteTagOptionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagOptionRequest object.
  */
 DeleteTagOptionRequest::DeleteTagOptionRequest()
@@ -53,13 +62,16 @@ DeleteTagOptionRequest::DeleteTagOptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTagOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTagOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagOptionRequest::response(QNetworkRepl
     return new DeleteTagOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTagOptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagOptionRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteTagOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagOptionRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagOptionRequestPrivate object, copying another.

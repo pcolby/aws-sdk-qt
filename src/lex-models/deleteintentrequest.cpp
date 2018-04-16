@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteIntentRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteIntentRequest
  *
- * @brief  Implements LexModelBuildingService DeleteIntent requests.
+ * \brief The DeleteIntentRequest class encapsulates LexModelBuildingService DeleteIntent requests.
  *
- * @see    LexModelBuildingServiceClient::deleteIntent
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteIntent
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteIntentRequest::DeleteIntentRequest(const DeleteIntentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntentRequest object.
  */
 DeleteIntentRequest::DeleteIntentRequest()
@@ -53,13 +60,16 @@ DeleteIntentRequest::DeleteIntentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIntentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIntentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply *
     return new DeleteIntentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIntentRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteIntentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntentRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntentRequestPrivate object, copying another.

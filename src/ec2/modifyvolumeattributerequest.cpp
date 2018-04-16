@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVolumeAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifyVolumeAttributeRequest
  *
- * @brief  Implements EC2 ModifyVolumeAttribute requests.
+ * \brief The ModifyVolumeAttributeRequest class encapsulates EC2 ModifyVolumeAttribute requests.
  *
- * @see    EC2Client::modifyVolumeAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVolumeAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVolumeAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest(const ModifyVolumeAtt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVolumeAttributeRequest object.
  */
 ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest()
@@ -53,13 +60,16 @@ ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVolumeAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVolumeAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetwo
     return new ModifyVolumeAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVolumeAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetwo
  * @brief  Private implementation for ModifyVolumeAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVolumeAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVolumeAttributeRequestPrivate object, copying another.

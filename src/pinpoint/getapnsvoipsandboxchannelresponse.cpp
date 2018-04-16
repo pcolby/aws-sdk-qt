@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetApnsVoipSandboxChannelResponse
+/*!
+ * \class QtAws::Pinpoint::GetApnsVoipSandboxChannelResponse
  *
- * @brief  Handles Pinpoint GetApnsVoipSandboxChannel responses.
+ * \brief The GetApnsVoipSandboxChannelResponse class encapsulates Pinpoint GetApnsVoipSandboxChannel responses.
  *
- * @see    PinpointClient::getApnsVoipSandboxChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApnsVoipSandboxChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetApnsVoipSandboxChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetApnsVoipSandboxChannelRequest * GetApnsVoipSandboxChannelResponse::requ
     return static_cast<const GetApnsVoipSandboxChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetApnsVoipSandboxChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetApnsVoipSandboxChannelResponsePrivate
+ * \class GetApnsVoipSandboxChannelResponsePrivate
  *
- * @brief  Private implementation for GetApnsVoipSandboxChannelResponse.
+ * \brief Private implementation for GetApnsVoipSandboxChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApnsVoipSandboxChannelResponsePrivate object.
@@ -91,7 +94,7 @@ GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetApnsVoipSandboxChannelResponse element.
  *
  * @param  xml  XML stream to parse.

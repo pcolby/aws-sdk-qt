@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeIdentityIdFormatRequest
+/*!
+ * \class QtAws::EC2::DescribeIdentityIdFormatRequest
  *
- * @brief  Implements EC2 DescribeIdentityIdFormat requests.
+ * \brief The DescribeIdentityIdFormatRequest class encapsulates EC2 DescribeIdentityIdFormat requests.
  *
- * @see    EC2Client::describeIdentityIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeIdentityIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIdentityIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest(const DescribeI
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeIdentityIdFormatRequest object.
  */
 DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest()
@@ -53,13 +60,16 @@ DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeIdentityIdFormatRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeIdentityIdFormatResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNe
     return new DescribeIdentityIdFormatResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeIdentityIdFormatRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNe
  * @brief  Private implementation for DescribeIdentityIdFormatRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIdentityIdFormatRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIdentityIdFormatRequestPrivate object, copying another.

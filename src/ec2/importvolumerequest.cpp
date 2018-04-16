@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportVolumeRequest
+/*!
+ * \class QtAws::EC2::ImportVolumeRequest
  *
- * @brief  Implements EC2 ImportVolume requests.
+ * \brief The ImportVolumeRequest class encapsulates EC2 ImportVolume requests.
  *
- * @see    EC2Client::importVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ImportVolumeRequest::ImportVolumeRequest(const ImportVolumeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportVolumeRequest object.
  */
 ImportVolumeRequest::ImportVolumeRequest()
@@ -53,13 +60,16 @@ ImportVolumeRequest::ImportVolumeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportVolumeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportVolumeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply *
     return new ImportVolumeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportVolumeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply *
  * @brief  Private implementation for ImportVolumeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportVolumeRequestPrivate object.
@@ -97,7 +107,7 @@ ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportVolumeRequestPrivate object, copying another.

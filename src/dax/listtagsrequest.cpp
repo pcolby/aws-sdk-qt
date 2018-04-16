@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  ListTagsRequest
+/*!
+ * \class QtAws::DAX::ListTagsRequest
  *
- * @brief  Implements DAX ListTags requests.
+ * \brief The ListTagsRequest class encapsulates DAX ListTags requests.
  *
- * @see    DAXClient::listTags
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
@@ -53,13 +60,16 @@ ListTagsRequest::ListTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
     return new ListTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object.
@@ -97,7 +107,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object, copying another.

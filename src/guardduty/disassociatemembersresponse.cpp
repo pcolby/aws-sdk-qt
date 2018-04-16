@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DisassociateMembersResponse
+/*!
+ * \class QtAws::GuardDuty::DisassociateMembersResponse
  *
- * @brief  Handles GuardDuty DisassociateMembers responses.
+ * \brief The DisassociateMembersResponse class encapsulates GuardDuty DisassociateMembers responses.
  *
- * @see    GuardDutyClient::disassociateMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::disassociateMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateMembersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DisassociateMembersRequest * DisassociateMembersResponse::request() const
     return static_cast<const DisassociateMembersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DisassociateMembers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DisassociateMembersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateMembersResponsePrivate
+ * \class DisassociateMembersResponsePrivate
  *
- * @brief  Private implementation for DisassociateMembersResponse.
+ * \brief Private implementation for DisassociateMembersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateMembersResponsePrivate object.
@@ -91,7 +94,7 @@ DisassociateMembersResponsePrivate::DisassociateMembersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DisassociateMembersResponse element.
  *
  * @param  xml  XML stream to parse.

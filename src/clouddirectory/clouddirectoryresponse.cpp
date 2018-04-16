@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CloudDirectoryResponse
+/*!
+ * \class QtAws::CloudDirectory::CloudDirectoryResponse
  *
- * @brief  Handles CloudDirectory CloudDirectory responses.
+ * \brief The CloudDirectoryResponse class is the base class for all CloudDirectory responses.
  *
- * @see    CloudDirectoryClient::cloudDirectory
+ * \ingroup CloudDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudDirectoryResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudDirectoryResponse::CloudDirectoryResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudDirectoryResponse object.
@@ -63,7 +63,7 @@ CloudDirectoryResponse::CloudDirectoryResponse(CloudDirectoryResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudDirectoryResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudDirectoryResponsePrivate
@@ -92,7 +92,7 @@ void CloudDirectoryResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudDirectoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudDirectoryResponsePrivate object.

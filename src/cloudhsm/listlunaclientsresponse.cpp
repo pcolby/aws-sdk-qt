@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListLunaClientsResponse
+/*!
+ * \class QtAws::CloudHSM::ListLunaClientsResponse
  *
- * @brief  Handles CloudHSM ListLunaClients responses.
+ * \brief The ListLunaClientsResponse class encapsulates CloudHSM ListLunaClients responses.
  *
- * @see    CloudHSMClient::listLunaClients
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listLunaClients
  */
 
-/**
+/*!
  * @brief  Constructs a new ListLunaClientsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ListLunaClientsRequest * ListLunaClientsResponse::request() const
     return static_cast<const ListLunaClientsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM ListLunaClients response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ListLunaClientsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListLunaClientsResponsePrivate
+ * \class ListLunaClientsResponsePrivate
  *
- * @brief  Private implementation for ListLunaClientsResponse.
+ * \brief Private implementation for ListLunaClientsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLunaClientsResponsePrivate object.
@@ -91,7 +106,7 @@ ListLunaClientsResponsePrivate::ListLunaClientsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM ListLunaClientsResponse element.
  *
  * @param  xml  XML stream to parse.

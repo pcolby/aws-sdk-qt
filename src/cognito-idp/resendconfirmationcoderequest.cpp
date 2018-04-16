@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ResendConfirmationCodeRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ResendConfirmationCodeRequest
  *
- * @brief  Implements CognitoIdentityProvider ResendConfirmationCode requests.
+ * \brief The ResendConfirmationCodeRequest class encapsulates CognitoIdentityProvider ResendConfirmationCode requests.
  *
- * @see    CognitoIdentityProviderClient::resendConfirmationCode
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::resendConfirmationCode
  */
 
-/**
+/*!
  * @brief  Constructs a new ResendConfirmationCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ResendConfirmationCodeRequest::ResendConfirmationCodeRequest(const ResendConfirm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResendConfirmationCodeRequest object.
  */
 ResendConfirmationCodeRequest::ResendConfirmationCodeRequest()
@@ -53,13 +66,16 @@ ResendConfirmationCodeRequest::ResendConfirmationCodeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResendConfirmationCodeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResendConfirmationCodeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ResendConfirmationCodeRequest::response(QNetw
     return new ResendConfirmationCodeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResendConfirmationCodeRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ResendConfirmationCodeRequest::response(QNetw
  * @brief  Private implementation for ResendConfirmationCodeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendConfirmationCodeRequestPrivate object.
@@ -97,7 +113,7 @@ ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendConfirmationCodeRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StopCrawlerResponse
+/*!
+ * \class QtAws::Glue::StopCrawlerResponse
  *
- * @brief  Handles Glue StopCrawler responses.
+ * \brief The StopCrawlerResponse class encapsulates Glue StopCrawler responses.
  *
- * @see    GlueClient::stopCrawler
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::stopCrawler
  */
 
-/**
+/*!
  * @brief  Constructs a new StopCrawlerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopCrawlerRequest * StopCrawlerResponse::request() const
     return static_cast<const StopCrawlerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue StopCrawler response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopCrawlerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopCrawlerResponsePrivate
+ * \class StopCrawlerResponsePrivate
  *
- * @brief  Private implementation for StopCrawlerResponse.
+ * \brief Private implementation for StopCrawlerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopCrawlerResponsePrivate object.
@@ -91,7 +97,7 @@ StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue StopCrawlerResponse element.
  *
  * @param  xml  XML stream to parse.

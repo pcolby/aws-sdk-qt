@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListResourceDefinitionsRequest
+/*!
+ * \class QtAws::Greengrass::ListResourceDefinitionsRequest
  *
- * @brief  Implements Greengrass ListResourceDefinitions requests.
+ * \brief The ListResourceDefinitionsRequest class encapsulates Greengrass ListResourceDefinitions requests.
  *
- * @see    GreengrassClient::listResourceDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listResourceDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListResourceDefinitionsRequest::ListResourceDefinitionsRequest(const ListResourc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResourceDefinitionsRequest object.
  */
 ListResourceDefinitionsRequest::ListResourceDefinitionsRequest()
@@ -53,13 +59,16 @@ ListResourceDefinitionsRequest::ListResourceDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResourceDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResourceDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceDefinitionsRequest::response(QNet
     return new ListResourceDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResourceDefinitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceDefinitionsRequest::response(QNet
  * @brief  Private implementation for ListResourceDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceDefinitionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListResourceDefinitionsRequestPrivate::ListResourceDefinitionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceDefinitionsRequestPrivate object, copying another.

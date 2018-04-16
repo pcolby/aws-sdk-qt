@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListAvailableZonesRequest
+/*!
+ * \class QtAws::CloudHSM::ListAvailableZonesRequest
  *
- * @brief  Implements CloudHSM ListAvailableZones requests.
+ * \brief The ListAvailableZonesRequest class encapsulates CloudHSM ListAvailableZones requests.
  *
- * @see    CloudHSMClient::listAvailableZones
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listAvailableZones
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAvailableZonesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ListAvailableZonesRequest::ListAvailableZonesRequest(const ListAvailableZonesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAvailableZonesRequest object.
  */
 ListAvailableZonesRequest::ListAvailableZonesRequest()
@@ -53,13 +68,16 @@ ListAvailableZonesRequest::ListAvailableZonesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAvailableZonesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAvailableZonesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkR
     return new ListAvailableZonesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAvailableZonesRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkR
  * @brief  Private implementation for ListAvailableZonesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAvailableZonesRequestPrivate object.
@@ -97,7 +115,7 @@ ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAvailableZonesRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateHITReviewStatusResponse
+/*!
+ * \class QtAws::MTurk::UpdateHITReviewStatusResponse
  *
- * @brief  Handles MTurk UpdateHITReviewStatus responses.
+ * \brief The UpdateHITReviewStatusResponse class encapsulates MTurk UpdateHITReviewStatus responses.
  *
- * @see    MTurkClient::updateHITReviewStatus
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateHITReviewStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateHITReviewStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateHITReviewStatusRequest * UpdateHITReviewStatusResponse::request() co
     return static_cast<const UpdateHITReviewStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk UpdateHITReviewStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateHITReviewStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateHITReviewStatusResponsePrivate
+ * \class UpdateHITReviewStatusResponsePrivate
  *
- * @brief  Private implementation for UpdateHITReviewStatusResponse.
+ * \brief Private implementation for UpdateHITReviewStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHITReviewStatusResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk UpdateHITReviewStatusResponse element.
  *
  * @param  xml  XML stream to parse.

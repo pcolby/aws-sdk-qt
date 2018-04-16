@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeFpgaImagesRequest
+/*!
+ * \class QtAws::EC2::DescribeFpgaImagesRequest
  *
- * @brief  Implements EC2 DescribeFpgaImages requests.
+ * \brief The DescribeFpgaImagesRequest class encapsulates EC2 DescribeFpgaImages requests.
  *
- * @see    EC2Client::describeFpgaImages
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeFpgaImages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFpgaImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeFpgaImagesRequest::DescribeFpgaImagesRequest(const DescribeFpgaImagesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeFpgaImagesRequest object.
  */
 DescribeFpgaImagesRequest::DescribeFpgaImagesRequest()
@@ -53,13 +60,16 @@ DescribeFpgaImagesRequest::DescribeFpgaImagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeFpgaImagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeFpgaImagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkR
     return new DescribeFpgaImagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeFpgaImagesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkR
  * @brief  Private implementation for DescribeFpgaImagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFpgaImagesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFpgaImagesRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  ListConfigurationsRequest
+/*!
+ * \class QtAws::MQ::ListConfigurationsRequest
  *
- * @brief  Implements MQ ListConfigurations requests.
+ * \brief The ListConfigurationsRequest class encapsulates MQ ListConfigurations requests.
  *
- * @see    MQClient::listConfigurations
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::listConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListConfigurationsRequest object.
  */
 ListConfigurationsRequest::ListConfigurationsRequest()
@@ -53,13 +58,16 @@ ListConfigurationsRequest::ListConfigurationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
     return new ListConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListConfigurationsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
  * @brief  Private implementation for ListConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConfigurationsRequestPrivate object.
@@ -97,7 +105,7 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConfigurationsRequestPrivate object, copying another.

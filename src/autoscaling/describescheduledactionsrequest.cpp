@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeScheduledActionsRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeScheduledActionsRequest
  *
- * @brief  Implements AutoScaling DescribeScheduledActions requests.
+ * \brief The DescribeScheduledActionsRequest class encapsulates AutoScaling DescribeScheduledActions requests.
  *
- * @see    AutoScalingClient::describeScheduledActions
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeScheduledActions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledActionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeScheduledActionsRequest::DescribeScheduledActionsRequest(const DescribeS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledActionsRequest object.
  */
 DescribeScheduledActionsRequest::DescribeScheduledActionsRequest()
@@ -53,13 +61,16 @@ DescribeScheduledActionsRequest::DescribeScheduledActionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeScheduledActionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeScheduledActionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNe
     return new DescribeScheduledActionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeScheduledActionsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNe
  * @brief  Private implementation for DescribeScheduledActionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledActionsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledActionsRequestPrivate object, copying another.

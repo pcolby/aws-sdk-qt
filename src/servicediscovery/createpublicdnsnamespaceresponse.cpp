@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  CreatePublicDnsNamespaceResponse
+/*!
+ * \class QtAws::ServiceDiscovery::CreatePublicDnsNamespaceResponse
  *
- * @brief  Handles ServiceDiscovery CreatePublicDnsNamespace responses.
+ * \brief The CreatePublicDnsNamespaceResponse class encapsulates ServiceDiscovery CreatePublicDnsNamespace responses.
  *
- * @see    ServiceDiscoveryClient::createPublicDnsNamespace
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::createPublicDnsNamespace
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePublicDnsNamespaceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreatePublicDnsNamespaceRequest * CreatePublicDnsNamespaceResponse::reques
     return static_cast<const CreatePublicDnsNamespaceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery CreatePublicDnsNamespace response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreatePublicDnsNamespaceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePublicDnsNamespaceResponsePrivate
+ * \class CreatePublicDnsNamespaceResponsePrivate
  *
- * @brief  Private implementation for CreatePublicDnsNamespaceResponse.
+ * \brief Private implementation for CreatePublicDnsNamespaceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePublicDnsNamespaceResponsePrivate object.
@@ -91,7 +98,7 @@ CreatePublicDnsNamespaceResponsePrivate::CreatePublicDnsNamespaceResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery CreatePublicDnsNamespaceResponse element.
  *
  * @param  xml  XML stream to parse.

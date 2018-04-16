@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  ModifyWorkspacePropertiesResponse
+/*!
+ * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesResponse
  *
- * @brief  Handles WorkSpaces ModifyWorkspaceProperties responses.
+ * \brief The ModifyWorkspacePropertiesResponse class encapsulates WorkSpaces ModifyWorkspaceProperties responses.
  *
- * @see    WorkSpacesClient::modifyWorkspaceProperties
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::modifyWorkspaceProperties
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyWorkspacePropertiesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ModifyWorkspacePropertiesRequest * ModifyWorkspacePropertiesResponse::requ
     return static_cast<const ModifyWorkspacePropertiesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces ModifyWorkspaceProperties response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ModifyWorkspacePropertiesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyWorkspacePropertiesResponsePrivate
+ * \class ModifyWorkspacePropertiesResponsePrivate
  *
- * @brief  Private implementation for ModifyWorkspacePropertiesResponse.
+ * \brief Private implementation for ModifyWorkspacePropertiesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyWorkspacePropertiesResponsePrivate object.
@@ -91,7 +97,7 @@ ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces ModifyWorkspacePropertiesResponse element.
  *
  * @param  xml  XML stream to parse.

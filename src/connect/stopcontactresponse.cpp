@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Connect {
 
-/**
- * @class  StopContactResponse
+/*!
+ * \class QtAws::Connect::StopContactResponse
  *
- * @brief  Handles Connect StopContact responses.
+ * \brief The StopContactResponse class encapsulates Connect StopContact responses.
  *
- * @see    ConnectClient::stopContact
+ * \ingroup Connect
+ *
+ *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
+ *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
+ *  to set up and manage a customer contact center and provide reliable customer engagement at any
+ *
+ * \sa ConnectClient::stopContact
  */
 
-/**
+/*!
  * @brief  Constructs a new StopContactResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopContactRequest * StopContactResponse::request() const
     return static_cast<const StopContactRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Connect StopContact response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopContactResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopContactResponsePrivate
+ * \class StopContactResponsePrivate
  *
- * @brief  Private implementation for StopContactResponse.
+ * \brief Private implementation for StopContactResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopContactResponsePrivate object.
@@ -91,7 +97,7 @@ StopContactResponsePrivate::StopContactResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Connect StopContactResponse element.
  *
  * @param  xml  XML stream to parse.

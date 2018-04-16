@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetTrafficPolicyInstanceResponse
+/*!
+ * \class QtAws::Route53::GetTrafficPolicyInstanceResponse
  *
- * @brief  Handles Route53 GetTrafficPolicyInstance responses.
+ * \brief The GetTrafficPolicyInstanceResponse class encapsulates Route53 GetTrafficPolicyInstance responses.
  *
- * @see    Route53Client::getTrafficPolicyInstance
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getTrafficPolicyInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTrafficPolicyInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetTrafficPolicyInstanceRequest * GetTrafficPolicyInstanceResponse::reques
     return static_cast<const GetTrafficPolicyInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetTrafficPolicyInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTrafficPolicyInstanceResponsePrivate
+ * \class GetTrafficPolicyInstanceResponsePrivate
  *
- * @brief  Private implementation for GetTrafficPolicyInstanceResponse.
+ * \brief Private implementation for GetTrafficPolicyInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTrafficPolicyInstanceResponsePrivate object.
@@ -91,7 +94,7 @@ GetTrafficPolicyInstanceResponsePrivate::GetTrafficPolicyInstanceResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetTrafficPolicyInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

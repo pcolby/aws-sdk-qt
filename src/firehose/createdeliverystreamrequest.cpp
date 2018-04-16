@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  CreateDeliveryStreamRequest
+/*!
+ * \class QtAws::Firehose::CreateDeliveryStreamRequest
  *
- * @brief  Implements Firehose CreateDeliveryStream requests.
+ * \brief The CreateDeliveryStreamRequest class encapsulates Firehose CreateDeliveryStream requests.
  *
- * @see    FirehoseClient::createDeliveryStream
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::createDeliveryStream
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeliveryStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateDeliveryStreamRequest::CreateDeliveryStreamRequest(const CreateDeliveryStr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDeliveryStreamRequest object.
  */
 CreateDeliveryStreamRequest::CreateDeliveryStreamRequest()
@@ -53,13 +60,16 @@ CreateDeliveryStreamRequest::CreateDeliveryStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDeliveryStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDeliveryStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeliveryStreamRequest::response(QNetwor
     return new CreateDeliveryStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDeliveryStreamRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeliveryStreamRequest::response(QNetwor
  * @brief  Private implementation for CreateDeliveryStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeliveryStreamRequestPrivate object.
@@ -97,7 +107,7 @@ CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeliveryStreamRequestPrivate object, copying another.

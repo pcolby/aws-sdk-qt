@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeFleetsRequest
+/*!
+ * \class QtAws::AppStream::DescribeFleetsRequest
  *
- * @brief  Implements AppStream DescribeFleets requests.
+ * \brief The DescribeFleetsRequest class encapsulates AppStream DescribeFleets requests.
  *
- * @see    AppStreamClient::describeFleets
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeFleets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFleetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeFleetsRequest::DescribeFleetsRequest(const DescribeFleetsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeFleetsRequest object.
  */
 DescribeFleetsRequest::DescribeFleetsRequest()
@@ -53,13 +59,16 @@ DescribeFleetsRequest::DescribeFleetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeFleetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeFleetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply
     return new DescribeFleetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeFleetsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeFleetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFleetsRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFleetsRequestPrivate object, copying another.

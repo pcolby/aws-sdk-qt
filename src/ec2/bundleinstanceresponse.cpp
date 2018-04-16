@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  BundleInstanceResponse
+/*!
+ * \class QtAws::EC2::BundleInstanceResponse
  *
- * @brief  Handles EC2 BundleInstance responses.
+ * \brief The BundleInstanceResponse class encapsulates EC2 BundleInstance responses.
  *
- * @see    EC2Client::bundleInstance
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::bundleInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new BundleInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const BundleInstanceRequest * BundleInstanceResponse::request() const
     return static_cast<const BundleInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 BundleInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void BundleInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BundleInstanceResponsePrivate
+ * \class BundleInstanceResponsePrivate
  *
- * @brief  Private implementation for BundleInstanceResponse.
+ * \brief Private implementation for BundleInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BundleInstanceResponsePrivate object.
@@ -91,7 +98,7 @@ BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 BundleInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddJobFlowStepsRequest
+/*!
+ * \class QtAws::EMR::AddJobFlowStepsRequest
  *
- * @brief  Implements EMR AddJobFlowSteps requests.
+ * \brief The AddJobFlowStepsRequest class encapsulates EMR AddJobFlowSteps requests.
  *
- * @see    EMRClient::addJobFlowSteps
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addJobFlowSteps
  */
 
-/**
+/*!
  * @brief  Constructs a new AddJobFlowStepsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AddJobFlowStepsRequest::AddJobFlowStepsRequest(const AddJobFlowStepsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddJobFlowStepsRequest object.
  */
 AddJobFlowStepsRequest::AddJobFlowStepsRequest()
@@ -53,13 +59,16 @@ AddJobFlowStepsRequest::AddJobFlowStepsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddJobFlowStepsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddJobFlowStepsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkRepl
     return new AddJobFlowStepsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddJobFlowStepsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkRepl
  * @brief  Private implementation for AddJobFlowStepsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddJobFlowStepsRequestPrivate object.
@@ -97,7 +106,7 @@ AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddJobFlowStepsRequestPrivate object, copying another.

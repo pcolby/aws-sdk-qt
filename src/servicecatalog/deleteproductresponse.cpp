@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::DeleteProductResponse
  *
- * @brief  Handles ServiceCatalog DeleteProduct responses.
+ * \brief The DeleteProductResponse class encapsulates ServiceCatalog DeleteProduct responses.
  *
- * @see    ServiceCatalogClient::deleteProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteProductRequest * DeleteProductResponse::request() const
     return static_cast<const DeleteProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DeleteProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteProductResponsePrivate
+ * \class DeleteProductResponsePrivate
  *
- * @brief  Private implementation for DeleteProductResponse.
+ * \brief Private implementation for DeleteProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProductResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteProductResponsePrivate::DeleteProductResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DeleteProductResponse element.
  *
  * @param  xml  XML stream to parse.

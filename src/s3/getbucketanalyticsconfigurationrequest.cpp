@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketAnalyticsConfigurationRequest
+/*!
+ * \class QtAws::S3::GetBucketAnalyticsConfigurationRequest
  *
- * @brief  Implements S3 GetBucketAnalyticsConfiguration requests.
+ * \brief The GetBucketAnalyticsConfigurationRequest class encapsulates S3 GetBucketAnalyticsConfiguration requests.
  *
- * @see    S3Client::getBucketAnalyticsConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketAnalyticsConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketAnalyticsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketAnalyticsConfigurationRequest::GetBucketAnalyticsConfigurationRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketAnalyticsConfigurationRequest object.
  */
 GetBucketAnalyticsConfigurationRequest::GetBucketAnalyticsConfigurationRequest()
@@ -53,13 +56,16 @@ GetBucketAnalyticsConfigurationRequest::GetBucketAnalyticsConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketAnalyticsConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketAnalyticsConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketAnalyticsConfigurationRequest::respo
     return new GetBucketAnalyticsConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketAnalyticsConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketAnalyticsConfigurationRequest::respo
  * @brief  Private implementation for GetBucketAnalyticsConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketAnalyticsConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketAnalyticsConfigurationRequestPrivate object, copying another.

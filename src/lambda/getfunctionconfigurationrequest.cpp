@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetFunctionConfigurationRequest
+/*!
+ * \class QtAws::Lambda::GetFunctionConfigurationRequest
  *
- * @brief  Implements Lambda GetFunctionConfiguration requests.
+ * \brief The GetFunctionConfigurationRequest class encapsulates Lambda GetFunctionConfiguration requests.
  *
- * @see    LambdaClient::getFunctionConfiguration
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getFunctionConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetFunctionConfigurationRequest::GetFunctionConfigurationRequest(const GetFuncti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionConfigurationRequest object.
  */
 GetFunctionConfigurationRequest::GetFunctionConfigurationRequest()
@@ -53,13 +67,16 @@ GetFunctionConfigurationRequest::GetFunctionConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFunctionConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFunctionConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionConfigurationRequest::response(QNe
     return new GetFunctionConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFunctionConfigurationRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionConfigurationRequest::response(QNe
  * @brief  Private implementation for GetFunctionConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionConfigurationRequestPrivate object.
@@ -97,7 +114,7 @@ GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionConfigurationRequestPrivate object, copying another.

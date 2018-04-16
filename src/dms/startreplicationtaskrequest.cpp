@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  StartReplicationTaskRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskRequest
  *
- * @brief  Implements DatabaseMigrationService StartReplicationTask requests.
+ * \brief The StartReplicationTaskRequest class encapsulates DatabaseMigrationService StartReplicationTask requests.
  *
- * @see    DatabaseMigrationServiceClient::startReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::startReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new StartReplicationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ StartReplicationTaskRequest::StartReplicationTaskRequest(const StartReplicationT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartReplicationTaskRequest object.
  */
 StartReplicationTaskRequest::StartReplicationTaskRequest()
@@ -53,13 +67,16 @@ StartReplicationTaskRequest::StartReplicationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartReplicationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartReplicationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetwor
     return new StartReplicationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartReplicationTaskRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetwor
  * @brief  Private implementation for StartReplicationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartReplicationTaskRequestPrivate object.
@@ -97,7 +114,7 @@ StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartReplicationTaskRequestPrivate object, copying another.

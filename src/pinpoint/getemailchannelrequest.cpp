@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetEmailChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetEmailChannelRequest
  *
- * @brief  Implements Pinpoint GetEmailChannel requests.
+ * \brief The GetEmailChannelRequest class encapsulates Pinpoint GetEmailChannel requests.
  *
- * @see    PinpointClient::getEmailChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getEmailChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEmailChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetEmailChannelRequest::GetEmailChannelRequest(const GetEmailChannelRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEmailChannelRequest object.
  */
 GetEmailChannelRequest::GetEmailChannelRequest()
@@ -53,13 +56,16 @@ GetEmailChannelRequest::GetEmailChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEmailChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEmailChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkRepl
     return new GetEmailChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEmailChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkRepl
  * @brief  Private implementation for GetEmailChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEmailChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEmailChannelRequestPrivate object, copying another.

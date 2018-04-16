@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDocumentationVersionsResponse
+/*!
+ * \class QtAws::APIGateway::GetDocumentationVersionsResponse
  *
- * @brief  Handles APIGateway GetDocumentationVersions responses.
+ * \brief The GetDocumentationVersionsResponse class encapsulates APIGateway GetDocumentationVersions responses.
  *
- * @see    APIGatewayClient::getDocumentationVersions
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDocumentationVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDocumentationVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetDocumentationVersionsRequest * GetDocumentationVersionsResponse::reques
     return static_cast<const GetDocumentationVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetDocumentationVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetDocumentationVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDocumentationVersionsResponsePrivate
+ * \class GetDocumentationVersionsResponsePrivate
  *
- * @brief  Private implementation for GetDocumentationVersionsResponse.
+ * \brief Private implementation for GetDocumentationVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDocumentationVersionsResponsePrivate object.
@@ -91,7 +99,7 @@ GetDocumentationVersionsResponsePrivate::GetDocumentationVersionsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetDocumentationVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

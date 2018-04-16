@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  PutImageResponse
+/*!
+ * \class QtAws::ECR::PutImageResponse
  *
- * @brief  Handles ECR PutImage responses.
+ * \brief The PutImageResponse class encapsulates ECR PutImage responses.
  *
- * @see    ECRClient::putImage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::putImage
  */
 
-/**
+/*!
  * @brief  Constructs a new PutImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const PutImageRequest * PutImageResponse::request() const
     return static_cast<const PutImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR PutImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void PutImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutImageResponsePrivate
+ * \class PutImageResponsePrivate
  *
- * @brief  Private implementation for PutImageResponse.
+ * \brief Private implementation for PutImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutImageResponsePrivate object.
@@ -91,7 +98,7 @@ PutImageResponsePrivate::PutImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR PutImageResponse element.
  *
  * @param  xml  XML stream to parse.

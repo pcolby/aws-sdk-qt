@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CloudSearchDomain {
 
-/**
- * @class  UploadDocumentsResponse
+/*!
+ * \class QtAws::CloudSearchDomain::UploadDocumentsResponse
  *
- * @brief  Handles CloudSearchDomain UploadDocuments responses.
+ * \brief The UploadDocumentsResponse class encapsulates CloudSearchDomain UploadDocuments responses.
  *
- * @see    CloudSearchDomainClient::uploadDocuments
+ * \ingroup CloudSearchDomain
+ *
+ *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
+ * 
+ *  </p
+ * 
+ *  The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are
+ *  domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service
+ *  <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon
+ *  CloudSearch console. You submit suggest requests to the search endpoint.
+ * 
+ *  </p
+ * 
+ *  For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch
+ *  Developer
+ *
+ * \sa CloudSearchDomainClient::uploadDocuments
  */
 
-/**
+/*!
  * @brief  Constructs a new UploadDocumentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const UploadDocumentsRequest * UploadDocumentsResponse::request() const
     return static_cast<const UploadDocumentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearchDomain UploadDocuments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void UploadDocumentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UploadDocumentsResponsePrivate
+ * \class UploadDocumentsResponsePrivate
  *
- * @brief  Private implementation for UploadDocumentsResponse.
+ * \brief Private implementation for UploadDocumentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadDocumentsResponsePrivate object.
@@ -91,7 +107,7 @@ UploadDocumentsResponsePrivate::UploadDocumentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearchDomain UploadDocumentsResponse element.
  *
  * @param  xml  XML stream to parse.

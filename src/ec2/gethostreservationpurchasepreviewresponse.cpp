@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetHostReservationPurchasePreviewResponse
+/*!
+ * \class QtAws::EC2::GetHostReservationPurchasePreviewResponse
  *
- * @brief  Handles EC2 GetHostReservationPurchasePreview responses.
+ * \brief The GetHostReservationPurchasePreviewResponse class encapsulates EC2 GetHostReservationPurchasePreview responses.
  *
- * @see    EC2Client::getHostReservationPurchasePreview
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getHostReservationPurchasePreview
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHostReservationPurchasePreviewResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetHostReservationPurchasePreviewRequest * GetHostReservationPurchasePrevi
     return static_cast<const GetHostReservationPurchasePreviewRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 GetHostReservationPurchasePreview response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetHostReservationPurchasePreviewResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetHostReservationPurchasePreviewResponsePrivate
+ * \class GetHostReservationPurchasePreviewResponsePrivate
  *
- * @brief  Private implementation for GetHostReservationPurchasePreviewResponse.
+ * \brief Private implementation for GetHostReservationPurchasePreviewResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostReservationPurchasePreviewResponsePrivate object.
@@ -91,7 +98,7 @@ GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePrev
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 GetHostReservationPurchasePreviewResponse element.
  *
  * @param  xml  XML stream to parse.

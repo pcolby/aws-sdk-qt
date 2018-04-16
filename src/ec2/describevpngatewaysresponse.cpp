@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpnGatewaysResponse
+/*!
+ * \class QtAws::EC2::DescribeVpnGatewaysResponse
  *
- * @brief  Handles EC2 DescribeVpnGateways responses.
+ * \brief The DescribeVpnGatewaysResponse class encapsulates EC2 DescribeVpnGateways responses.
  *
- * @see    EC2Client::describeVpnGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpnGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpnGatewaysResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpnGatewaysRequest * DescribeVpnGatewaysResponse::request() const
     return static_cast<const DescribeVpnGatewaysRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpnGateways response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpnGatewaysResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpnGatewaysResponsePrivate
+ * \class DescribeVpnGatewaysResponsePrivate
  *
- * @brief  Private implementation for DescribeVpnGatewaysResponse.
+ * \brief Private implementation for DescribeVpnGatewaysResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpnGatewaysResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpnGatewaysResponsePrivate::DescribeVpnGatewaysResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpnGatewaysResponse element.
  *
  * @param  xml  XML stream to parse.

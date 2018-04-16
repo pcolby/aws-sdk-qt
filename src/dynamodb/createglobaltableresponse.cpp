@@ -27,15 +27,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  CreateGlobalTableResponse
+/*!
+ * \class QtAws::DynamoDB::CreateGlobalTableResponse
  *
- * @brief  Handles DynamoDB CreateGlobalTable responses.
+ * \brief The CreateGlobalTableResponse class encapsulates DynamoDB CreateGlobalTable responses.
  *
- * @see    DynamoDBClient::createGlobalTable
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::createGlobalTable
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGlobalTableResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +80,7 @@ const CreateGlobalTableRequest * CreateGlobalTableResponse::request() const
     return static_cast<const CreateGlobalTableRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DynamoDB CreateGlobalTable response.
  *
  * @param  response  Response to parse.
@@ -70,15 +92,15 @@ void CreateGlobalTableResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateGlobalTableResponsePrivate
+ * \class CreateGlobalTableResponsePrivate
  *
- * @brief  Private implementation for CreateGlobalTableResponse.
+ * \brief Private implementation for CreateGlobalTableResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGlobalTableResponsePrivate object.
@@ -91,7 +113,7 @@ CreateGlobalTableResponsePrivate::CreateGlobalTableResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DynamoDB CreateGlobalTableResponse element.
  *
  * @param  xml  XML stream to parse.

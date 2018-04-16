@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  CreateScalingPlanResponse
+/*!
+ * \class QtAws::AutoScalingPlans::CreateScalingPlanResponse
  *
- * @brief  Handles AutoScalingPlans CreateScalingPlan responses.
+ * \brief The CreateScalingPlanResponse class encapsulates AutoScalingPlans CreateScalingPlan responses.
  *
- * @see    AutoScalingPlansClient::createScalingPlan
+ * \ingroup AutoScalingPlans
+ *
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
+ *
+ * \sa AutoScalingPlansClient::createScalingPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateScalingPlanResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const CreateScalingPlanRequest * CreateScalingPlanResponse::request() const
     return static_cast<const CreateScalingPlanRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScalingPlans CreateScalingPlan response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void CreateScalingPlanResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateScalingPlanResponsePrivate
+ * \class CreateScalingPlanResponsePrivate
  *
- * @brief  Private implementation for CreateScalingPlanResponse.
+ * \brief Private implementation for CreateScalingPlanResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateScalingPlanResponsePrivate object.
@@ -91,7 +103,7 @@ CreateScalingPlanResponsePrivate::CreateScalingPlanResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScalingPlans CreateScalingPlanResponse element.
  *
  * @param  xml  XML stream to parse.

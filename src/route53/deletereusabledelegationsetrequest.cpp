@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteReusableDelegationSetRequest
+/*!
+ * \class QtAws::Route53::DeleteReusableDelegationSetRequest
  *
- * @brief  Implements Route53 DeleteReusableDelegationSet requests.
+ * \brief The DeleteReusableDelegationSetRequest class encapsulates Route53 DeleteReusableDelegationSet requests.
  *
- * @see    Route53Client::deleteReusableDelegationSet
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteReusableDelegationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReusableDelegationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteReusableDelegationSetRequest::DeleteReusableDelegationSetRequest(const Del
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReusableDelegationSetRequest object.
  */
 DeleteReusableDelegationSetRequest::DeleteReusableDelegationSetRequest()
@@ -53,13 +56,16 @@ DeleteReusableDelegationSetRequest::DeleteReusableDelegationSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReusableDelegationSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReusableDelegationSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(
     return new DeleteReusableDelegationSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReusableDelegationSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(
  * @brief  Private implementation for DeleteReusableDelegationSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReusableDelegationSetRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReusableDelegationSetRequestPrivate object, copying another.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeMountTargetSecurityGroupsResponse
+/*!
+ * \class QtAws::EFS::DescribeMountTargetSecurityGroupsResponse
  *
- * @brief  Handles EFS DescribeMountTargetSecurityGroups responses.
+ * \brief The DescribeMountTargetSecurityGroupsResponse class encapsulates EFS DescribeMountTargetSecurityGroups responses.
  *
- * @see    EFSClient::describeMountTargetSecurityGroups
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeMountTargetSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMountTargetSecurityGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeMountTargetSecurityGroupsRequest * DescribeMountTargetSecurityGrou
     return static_cast<const DescribeMountTargetSecurityGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DescribeMountTargetSecurityGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeMountTargetSecurityGroupsResponsePrivate
+ * \class DescribeMountTargetSecurityGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribeMountTargetSecurityGroupsResponse.
+ * \brief Private implementation for DescribeMountTargetSecurityGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMountTargetSecurityGroupsResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGro
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DescribeMountTargetSecurityGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

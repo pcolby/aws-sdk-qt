@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetLaunchTemplateDataRequest
+/*!
+ * \class QtAws::EC2::GetLaunchTemplateDataRequest
  *
- * @brief  Implements EC2 GetLaunchTemplateData requests.
+ * \brief The GetLaunchTemplateDataRequest class encapsulates EC2 GetLaunchTemplateData requests.
  *
- * @see    EC2Client::getLaunchTemplateData
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getLaunchTemplateData
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLaunchTemplateDataRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest(const GetLaunchTempla
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLaunchTemplateDataRequest object.
  */
 GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest()
@@ -53,13 +60,16 @@ GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLaunchTemplateDataRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLaunchTemplateDataResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetwo
     return new GetLaunchTemplateDataResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLaunchTemplateDataRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetwo
  * @brief  Private implementation for GetLaunchTemplateDataRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLaunchTemplateDataRequestPrivate object.
@@ -97,7 +107,7 @@ GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLaunchTemplateDataRequestPrivate object, copying another.

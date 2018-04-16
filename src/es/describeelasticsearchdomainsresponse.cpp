@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DescribeElasticsearchDomainsResponse
+/*!
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainsResponse
  *
- * @brief  Handles ElasticsearchService DescribeElasticsearchDomains responses.
+ * \brief The DescribeElasticsearchDomainsResponse class encapsulates ElasticsearchService DescribeElasticsearchDomains responses.
  *
- * @see    ElasticsearchServiceClient::describeElasticsearchDomains
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::describeElasticsearchDomains
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchDomainsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DescribeElasticsearchDomainsRequest * DescribeElasticsearchDomainsResponse
     return static_cast<const DescribeElasticsearchDomainsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService DescribeElasticsearchDomains response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DescribeElasticsearchDomainsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeElasticsearchDomainsResponsePrivate
+ * \class DescribeElasticsearchDomainsResponsePrivate
  *
- * @brief  Private implementation for DescribeElasticsearchDomainsResponse.
+ * \brief Private implementation for DescribeElasticsearchDomainsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchDomainsResponsePrivate object.
@@ -91,7 +103,7 @@ DescribeElasticsearchDomainsResponsePrivate::DescribeElasticsearchDomainsRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService DescribeElasticsearchDomainsResponse element.
  *
  * @param  xml  XML stream to parse.

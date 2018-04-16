@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetActiveReceiptRuleSetRequest
+/*!
+ * \class QtAws::SES::SetActiveReceiptRuleSetRequest
  *
- * @brief  Implements SES SetActiveReceiptRuleSet requests.
+ * \brief The SetActiveReceiptRuleSetRequest class encapsulates SES SetActiveReceiptRuleSet requests.
  *
- * @see    SESClient::setActiveReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setActiveReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new SetActiveReceiptRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SetActiveReceiptRuleSetRequest::SetActiveReceiptRuleSetRequest(const SetActiveRe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetActiveReceiptRuleSetRequest object.
  */
 SetActiveReceiptRuleSetRequest::SetActiveReceiptRuleSetRequest()
@@ -53,13 +67,16 @@ SetActiveReceiptRuleSetRequest::SetActiveReceiptRuleSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetActiveReceiptRuleSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetActiveReceiptRuleSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetActiveReceiptRuleSetRequest::response(QNet
     return new SetActiveReceiptRuleSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetActiveReceiptRuleSetRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SetActiveReceiptRuleSetRequest::response(QNet
  * @brief  Private implementation for SetActiveReceiptRuleSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetActiveReceiptRuleSetRequestPrivate object.
@@ -97,7 +114,7 @@ SetActiveReceiptRuleSetRequestPrivate::SetActiveReceiptRuleSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetActiveReceiptRuleSetRequestPrivate object, copying another.

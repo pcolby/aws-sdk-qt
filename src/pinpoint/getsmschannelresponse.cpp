@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSmsChannelResponse
+/*!
+ * \class QtAws::Pinpoint::GetSmsChannelResponse
  *
- * @brief  Handles Pinpoint GetSmsChannel responses.
+ * \brief The GetSmsChannelResponse class encapsulates Pinpoint GetSmsChannel responses.
  *
- * @see    PinpointClient::getSmsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSmsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSmsChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetSmsChannelRequest * GetSmsChannelResponse::request() const
     return static_cast<const GetSmsChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetSmsChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetSmsChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSmsChannelResponsePrivate
+ * \class GetSmsChannelResponsePrivate
  *
- * @brief  Private implementation for GetSmsChannelResponse.
+ * \brief Private implementation for GetSmsChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSmsChannelResponsePrivate object.
@@ -91,7 +94,7 @@ GetSmsChannelResponsePrivate::GetSmsChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetSmsChannelResponse element.
  *
  * @param  xml  XML stream to parse.

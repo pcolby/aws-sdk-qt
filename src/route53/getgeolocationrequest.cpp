@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetGeoLocationRequest
+/*!
+ * \class QtAws::Route53::GetGeoLocationRequest
  *
- * @brief  Implements Route53 GetGeoLocation requests.
+ * \brief The GetGeoLocationRequest class encapsulates Route53 GetGeoLocation requests.
  *
- * @see    Route53Client::getGeoLocation
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getGeoLocation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGeoLocationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetGeoLocationRequest::GetGeoLocationRequest(const GetGeoLocationRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGeoLocationRequest object.
  */
 GetGeoLocationRequest::GetGeoLocationRequest()
@@ -53,13 +56,16 @@ GetGeoLocationRequest::GetGeoLocationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGeoLocationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGeoLocationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetGeoLocationRequest::response(QNetworkReply
     return new GetGeoLocationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGeoLocationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetGeoLocationRequest::response(QNetworkReply
  * @brief  Private implementation for GetGeoLocationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGeoLocationRequestPrivate object.
@@ -97,7 +103,7 @@ GetGeoLocationRequestPrivate::GetGeoLocationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGeoLocationRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateResourceDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::CreateResourceDefinitionVersionRequest
  *
- * @brief  Implements Greengrass CreateResourceDefinitionVersion requests.
+ * \brief The CreateResourceDefinitionVersionRequest class encapsulates Greengrass CreateResourceDefinitionVersion requests.
  *
- * @see    GreengrassClient::createResourceDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createResourceDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateResourceDefinitionVersionRequest::CreateResourceDefinitionVersionRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceDefinitionVersionRequest object.
  */
 CreateResourceDefinitionVersionRequest::CreateResourceDefinitionVersionRequest()
@@ -53,13 +59,16 @@ CreateResourceDefinitionVersionRequest::CreateResourceDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateResourceDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateResourceDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDefinitionVersionRequest::respo
     return new CreateResourceDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateResourceDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDefinitionVersionRequest::respo
  * @brief  Private implementation for CreateResourceDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateResourceDefinitionVersionRequestPrivate::CreateResourceDefinitionVersionRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceDefinitionVersionRequestPrivate object, copying another.

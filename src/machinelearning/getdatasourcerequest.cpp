@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetDataSourceRequest
+/*!
+ * \class QtAws::MachineLearning::GetDataSourceRequest
  *
- * @brief  Implements MachineLearning GetDataSource requests.
+ * \brief The GetDataSourceRequest class encapsulates MachineLearning GetDataSource requests.
  *
- * @see    MachineLearningClient::getDataSource
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataSourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDataSourceRequest object.
  */
 GetDataSourceRequest::GetDataSourceRequest()
@@ -53,13 +56,16 @@ GetDataSourceRequest::GetDataSourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDataSourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDataSourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
     return new GetDataSourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDataSourceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
  * @brief  Private implementation for GetDataSourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataSourceRequestPrivate object.
@@ -97,7 +103,7 @@ GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataSourceRequestPrivate object, copying another.

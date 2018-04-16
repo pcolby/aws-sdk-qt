@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DescribeStreamSummaryRequest
+/*!
+ * \class QtAws::Kinesis::DescribeStreamSummaryRequest
  *
- * @brief  Implements Kinesis DescribeStreamSummary requests.
+ * \brief The DescribeStreamSummaryRequest class encapsulates Kinesis DescribeStreamSummary requests.
  *
- * @see    KinesisClient::describeStreamSummary
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::describeStreamSummary
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamSummaryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeStreamSummaryRequest::DescribeStreamSummaryRequest(const DescribeStreamS
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamSummaryRequest object.
  */
 DescribeStreamSummaryRequest::DescribeStreamSummaryRequest()
@@ -53,13 +59,16 @@ DescribeStreamSummaryRequest::DescribeStreamSummaryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStreamSummaryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStreamSummaryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamSummaryRequest::response(QNetwo
     return new DescribeStreamSummaryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStreamSummaryRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamSummaryRequest::response(QNetwo
  * @brief  Private implementation for DescribeStreamSummaryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamSummaryRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeStreamSummaryRequestPrivate::DescribeStreamSummaryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamSummaryRequestPrivate object, copying another.

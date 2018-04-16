@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeviceFarmRequest
+/*!
+ * \class QtAws::DeviceFarm::DeviceFarmRequest
  *
- * @brief  Interface class for providing DeviceFarm requests
+ * \brief The DeviceFarmRequest class is the base class for all DeviceFarm requests.
+ *
+ * \ingroup DeviceFarm
  */
 
-
-/**
+/*!
  * @brief  Constructs a new DeviceFarmRequest object.
  *
  * @param  action  The DeviceFarm action to request.
@@ -41,7 +42,7 @@ DeviceFarmRequest::DeviceFarmRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeviceFarmRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ DeviceFarmRequest::DeviceFarmRequest(const DeviceFarmRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ DeviceFarmRequest& DeviceFarmRequest::operator=(const DeviceFarmRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeviceFarmRequest object.
@@ -85,10 +86,8 @@ DeviceFarmRequest::DeviceFarmRequest(DeviceFarmRequestPrivate * const d) : QtAws
 
 }
 
-/**
- * @brief  Get the DeviceFarm action to be performed by this request.
- *
- * @return The DeviceFarm action to be performed by this request.
+/*!
+ * \brief Returns the DeviceFarm action to be performed by this request.
  */
 DeviceFarmRequest::Action DeviceFarmRequest::action() const
 {
@@ -96,20 +95,16 @@ DeviceFarmRequest::Action DeviceFarmRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the DeviceFarm action to be performed by this request.
- *
- * @return The name of the DeviceFarm action to be performed by this request.
+/*!
+ * \brief Returns the name of the DeviceFarm action to be performed by this request.
  */
 QString DeviceFarmRequest::actionString() const
 {
     return DeviceFarmRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the DeviceFarm API version implemented by this request.
- *
- * @return The DeviceFarm API version implmented by this request.
+/*!
+ * \brief Returns the DeviceFarm API version implemented by this request.
  */
 QString DeviceFarmRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString DeviceFarmRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the DeviceFarm action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the DeviceFarm action to be performed by this request to \a action.
  */
 void DeviceFarmRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void DeviceFarmRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the DeviceFarm API version to include in this request.
- *
- * @param  version  The DeviceFarm API version to include in this request.
+/*!
+ * Set the DeviceFarm API version to include in this request to \a version.
  */
 void DeviceFarmRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void DeviceFarmRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool DeviceFarmRequest::operator==(const DeviceFarmRequest &other) const
 {
@@ -159,7 +146,7 @@ bool DeviceFarmRequest::operator==(const DeviceFarmRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid DeviceFarm queue name.
  *
  * @par From DeviceFarm FAQs:
@@ -178,12 +165,10 @@ bool DeviceFarmRequest::operator==(const DeviceFarmRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int DeviceFarmRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int DeviceFarmRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void DeviceFarmRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void DeviceFarmRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this DeviceFarm request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant DeviceFarmRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant DeviceFarmRequest::parameter(const QString &name, const QVariant &defau
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this DeviceFarm request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &DeviceFarmRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &DeviceFarmRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this DeviceFarm request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void DeviceFarmRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void DeviceFarmRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this DeviceFarm request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void DeviceFarmRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void DeviceFarmRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this DeviceFarm request.
+/*!
+ * \brief Returns a network request for this DeviceFarm request using the given \a endpoint.
  *
  * This DeviceFarm implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this DeviceFarm request using the given \a endpoint.
  */
 QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeviceFarmRequestPrivate
+ * \class  DeviceFarmRequestPrivate
  *
- * @brief  Private implementation for DeviceFarmRequest.
+ * \brief  Private implementation for DeviceFarmRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new DeviceFarmRequestPrivate object.
- *
- * @param  action  DeviceFarm action being performed by the \a q request.
- * @param  q       Pointer to this object's public DeviceFarmRequest instance.
+ * \brief Constructs a new DeviceFarmRequestPrivate object.
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Action action, DeviceFarmRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Acti
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new DeviceFarmRequestPrivate object from an existing one.
+ * \brief Constructs a new DeviceFarmRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the DeviceFarmRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public DeviceFarmRequest instance.
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequestPrivate &other,
                                      DeviceFarmRequest * const q)
@@ -312,14 +275,14 @@ DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequestPrivat
 
 }
 
-/**
- * @brief  Convert and DeviceFarm action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts DeviceFarmRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the DeviceFarm service's Action
  * query parameters.
- *
- * @param  action  DeviceFarm action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

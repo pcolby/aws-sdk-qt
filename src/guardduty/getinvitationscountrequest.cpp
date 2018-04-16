@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetInvitationsCountRequest
+/*!
+ * \class QtAws::GuardDuty::GetInvitationsCountRequest
  *
- * @brief  Implements GuardDuty GetInvitationsCount requests.
+ * \brief The GetInvitationsCountRequest class encapsulates GuardDuty GetInvitationsCount requests.
  *
- * @see    GuardDutyClient::getInvitationsCount
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getInvitationsCount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInvitationsCountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetInvitationsCountRequest::GetInvitationsCountRequest(const GetInvitationsCount
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetInvitationsCountRequest object.
  */
 GetInvitationsCountRequest::GetInvitationsCountRequest()
@@ -53,13 +56,16 @@ GetInvitationsCountRequest::GetInvitationsCountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetInvitationsCountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetInvitationsCountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetwork
     return new GetInvitationsCountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetInvitationsCountRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetwork
  * @brief  Private implementation for GetInvitationsCountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInvitationsCountRequestPrivate object.
@@ -97,7 +103,7 @@ GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInvitationsCountRequestPrivate object, copying another.

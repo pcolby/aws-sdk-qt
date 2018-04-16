@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteThreatIntelSetResponse
+/*!
+ * \class QtAws::GuardDuty::DeleteThreatIntelSetResponse
  *
- * @brief  Handles GuardDuty DeleteThreatIntelSet responses.
+ * \brief The DeleteThreatIntelSetResponse class encapsulates GuardDuty DeleteThreatIntelSet responses.
  *
- * @see    GuardDutyClient::deleteThreatIntelSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteThreatIntelSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteThreatIntelSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteThreatIntelSetRequest * DeleteThreatIntelSetResponse::request() cons
     return static_cast<const DeleteThreatIntelSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DeleteThreatIntelSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteThreatIntelSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteThreatIntelSetResponsePrivate
+ * \class DeleteThreatIntelSetResponsePrivate
  *
- * @brief  Private implementation for DeleteThreatIntelSetResponse.
+ * \brief Private implementation for DeleteThreatIntelSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThreatIntelSetResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DeleteThreatIntelSetResponse element.
  *
  * @param  xml  XML stream to parse.

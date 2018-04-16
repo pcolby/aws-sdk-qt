@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListAssignmentsForHITRequest
+/*!
+ * \class QtAws::MTurk::ListAssignmentsForHITRequest
  *
- * @brief  Implements MTurk ListAssignmentsForHIT requests.
+ * \brief The ListAssignmentsForHITRequest class encapsulates MTurk ListAssignmentsForHIT requests.
  *
- * @see    MTurkClient::listAssignmentsForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listAssignmentsForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssignmentsForHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListAssignmentsForHITRequest::ListAssignmentsForHITRequest(const ListAssignments
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssignmentsForHITRequest object.
  */
 ListAssignmentsForHITRequest::ListAssignmentsForHITRequest()
@@ -53,13 +56,16 @@ ListAssignmentsForHITRequest::ListAssignmentsForHITRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssignmentsForHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssignmentsForHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetwo
     return new ListAssignmentsForHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssignmentsForHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetwo
  * @brief  Private implementation for ListAssignmentsForHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssignmentsForHITRequestPrivate object.
@@ -97,7 +103,7 @@ ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssignmentsForHITRequestPrivate object, copying another.

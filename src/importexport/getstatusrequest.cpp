@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  GetStatusRequest
+/*!
+ * \class QtAws::ImportExport::GetStatusRequest
  *
- * @brief  Implements ImportExport GetStatus requests.
+ * \brief The GetStatusRequest class encapsulates ImportExport GetStatus requests.
  *
- * @see    ImportExportClient::getStatus
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::getStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetStatusRequest::GetStatusRequest(const GetStatusRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetStatusRequest object.
  */
 GetStatusRequest::GetStatusRequest()
@@ -53,13 +59,16 @@ GetStatusRequest::GetStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * co
     return new GetStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetStatusRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStatusRequestPrivate object.
@@ -97,7 +106,7 @@ GetStatusRequestPrivate::GetStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStatusRequestPrivate object, copying another.

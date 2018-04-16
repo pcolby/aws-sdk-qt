@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListIndexRequest
+/*!
+ * \class QtAws::CloudDirectory::ListIndexRequest
  *
- * @brief  Implements CloudDirectory ListIndex requests.
+ * \brief The ListIndexRequest class encapsulates CloudDirectory ListIndex requests.
  *
- * @see    CloudDirectoryClient::listIndex
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListIndexRequest::ListIndexRequest(const ListIndexRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListIndexRequest object.
  */
 ListIndexRequest::ListIndexRequest()
@@ -53,13 +63,16 @@ ListIndexRequest::ListIndexRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListIndexRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListIndexResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListIndexRequest::response(QNetworkReply * co
     return new ListIndexResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListIndexRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListIndexRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListIndexRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIndexRequestPrivate object.
@@ -97,7 +110,7 @@ ListIndexRequestPrivate::ListIndexRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIndexRequestPrivate object, copying another.

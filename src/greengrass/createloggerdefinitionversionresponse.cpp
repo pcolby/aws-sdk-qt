@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateLoggerDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateLoggerDefinitionVersionResponse
  *
- * @brief  Handles Greengrass CreateLoggerDefinitionVersion responses.
+ * \brief The CreateLoggerDefinitionVersionResponse class encapsulates Greengrass CreateLoggerDefinitionVersion responses.
  *
- * @see    GreengrassClient::createLoggerDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createLoggerDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLoggerDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateLoggerDefinitionVersionRequest * CreateLoggerDefinitionVersionRespon
     return static_cast<const CreateLoggerDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateLoggerDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateLoggerDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateLoggerDefinitionVersionResponsePrivate
+ * \class CreateLoggerDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for CreateLoggerDefinitionVersionResponse.
+ * \brief Private implementation for CreateLoggerDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoggerDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateLoggerDefinitionVersionResponsePrivate::CreateLoggerDefinitionVersionRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateLoggerDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

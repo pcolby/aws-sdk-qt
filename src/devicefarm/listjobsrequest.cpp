@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListJobsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListJobsRequest
  *
- * @brief  Implements DeviceFarm ListJobs requests.
+ * \brief The ListJobsRequest class encapsulates DeviceFarm ListJobs requests.
  *
- * @see    DeviceFarmClient::listJobs
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
@@ -53,13 +58,16 @@ ListJobsRequest::ListJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
     return new ListJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object.
@@ -97,7 +105,7 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object, copying another.

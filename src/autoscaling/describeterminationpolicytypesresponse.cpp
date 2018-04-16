@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeTerminationPolicyTypesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeTerminationPolicyTypesResponse
  *
- * @brief  Handles AutoScaling DescribeTerminationPolicyTypes responses.
+ * \brief The DescribeTerminationPolicyTypesResponse class encapsulates AutoScaling DescribeTerminationPolicyTypes responses.
  *
- * @see    AutoScalingClient::describeTerminationPolicyTypes
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeTerminationPolicyTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTerminationPolicyTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeTerminationPolicyTypesRequest * DescribeTerminationPolicyTypesResp
     return static_cast<const DescribeTerminationPolicyTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeTerminationPolicyTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeTerminationPolicyTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeTerminationPolicyTypesResponsePrivate
+ * \class DescribeTerminationPolicyTypesResponsePrivate
  *
- * @brief  Private implementation for DescribeTerminationPolicyTypesResponse.
+ * \brief Private implementation for DescribeTerminationPolicyTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTerminationPolicyTypesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesRes
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeTerminationPolicyTypesResponse element.
  *
  * @param  xml  XML stream to parse.

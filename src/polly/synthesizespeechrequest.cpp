@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  SynthesizeSpeechRequest
+/*!
+ * \class QtAws::Polly::SynthesizeSpeechRequest
  *
- * @brief  Implements Polly SynthesizeSpeech requests.
+ * \brief The SynthesizeSpeechRequest class encapsulates Polly SynthesizeSpeech requests.
  *
- * @see    PollyClient::synthesizeSpeech
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::synthesizeSpeech
  */
 
-/**
+/*!
  * @brief  Constructs a new SynthesizeSpeechRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ SynthesizeSpeechRequest::SynthesizeSpeechRequest(const SynthesizeSpeechRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SynthesizeSpeechRequest object.
  */
 SynthesizeSpeechRequest::SynthesizeSpeechRequest()
@@ -53,13 +63,16 @@ SynthesizeSpeechRequest::SynthesizeSpeechRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SynthesizeSpeechRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SynthesizeSpeechResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkRep
     return new SynthesizeSpeechResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SynthesizeSpeechRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkRep
  * @brief  Private implementation for SynthesizeSpeechRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SynthesizeSpeechRequestPrivate object.
@@ -97,7 +110,7 @@ SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SynthesizeSpeechRequestPrivate object, copying another.

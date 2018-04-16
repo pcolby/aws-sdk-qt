@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  UpdateServiceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::UpdateServiceRequest
  *
- * @brief  Implements ServiceDiscovery UpdateService requests.
+ * \brief The UpdateServiceRequest class encapsulates ServiceDiscovery UpdateService requests.
  *
- * @see    ServiceDiscoveryClient::updateService
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::updateService
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateServiceRequest object.
  */
 UpdateServiceRequest::UpdateServiceRequest()
@@ -53,13 +60,16 @@ UpdateServiceRequest::UpdateServiceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateServiceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateServiceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
     return new UpdateServiceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateServiceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateServiceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateServiceRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateServiceRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideoMedia {
 
-/**
- * @class  GetMediaResponse
+/*!
+ * \class QtAws::KinesisVideoMedia::GetMediaResponse
  *
- * @brief  Handles KinesisVideoMedia GetMedia responses.
+ * \brief The GetMediaResponse class encapsulates KinesisVideoMedia GetMedia responses.
  *
- * @see    KinesisVideoMediaClient::getMedia
+ * \ingroup KinesisVideoMedia
+ *
+ *
+ * \sa KinesisVideoMediaClient::getMedia
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMediaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetMediaRequest * GetMediaResponse::request() const
     return static_cast<const GetMediaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideoMedia GetMedia response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetMediaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetMediaResponsePrivate
+ * \class GetMediaResponsePrivate
  *
- * @brief  Private implementation for GetMediaResponse.
+ * \brief Private implementation for GetMediaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMediaResponsePrivate object.
@@ -91,7 +94,7 @@ GetMediaResponsePrivate::GetMediaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideoMedia GetMediaResponse element.
  *
  * @param  xml  XML stream to parse.

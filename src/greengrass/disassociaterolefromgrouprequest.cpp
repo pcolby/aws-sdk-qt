@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DisassociateRoleFromGroupRequest
+/*!
+ * \class QtAws::Greengrass::DisassociateRoleFromGroupRequest
  *
- * @brief  Implements Greengrass DisassociateRoleFromGroup requests.
+ * \brief The DisassociateRoleFromGroupRequest class encapsulates Greengrass DisassociateRoleFromGroup requests.
  *
- * @see    GreengrassClient::disassociateRoleFromGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::disassociateRoleFromGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateRoleFromGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest(const Disasso
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateRoleFromGroupRequest object.
  */
 DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest()
@@ -53,13 +59,16 @@ DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateRoleFromGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateRoleFromGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QN
     return new DisassociateRoleFromGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateRoleFromGroupRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QN
  * @brief  Private implementation for DisassociateRoleFromGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateRoleFromGroupRequestPrivate object.
@@ -97,7 +106,7 @@ DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateRoleFromGroupRequestPrivate object, copying another.

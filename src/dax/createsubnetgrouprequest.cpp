@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  CreateSubnetGroupRequest
+/*!
+ * \class QtAws::DAX::CreateSubnetGroupRequest
  *
- * @brief  Implements DAX CreateSubnetGroup requests.
+ * \brief The CreateSubnetGroupRequest class encapsulates DAX CreateSubnetGroup requests.
  *
- * @see    DAXClient::createSubnetGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::createSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateSubnetGroupRequest::CreateSubnetGroupRequest(const CreateSubnetGroupReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSubnetGroupRequest object.
  */
 CreateSubnetGroupRequest::CreateSubnetGroupRequest()
@@ -53,13 +60,16 @@ CreateSubnetGroupRequest::CreateSubnetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSubnetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSubnetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkRe
     return new CreateSubnetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSubnetGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkRe
  * @brief  Private implementation for CreateSubnetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubnetGroupRequestPrivate object.
@@ -97,7 +107,7 @@ CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubnetGroupRequestPrivate object, copying another.

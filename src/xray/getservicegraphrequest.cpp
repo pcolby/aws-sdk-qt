@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  GetServiceGraphRequest
+/*!
+ * \class QtAws::XRay::GetServiceGraphRequest
  *
- * @brief  Implements XRay GetServiceGraph requests.
+ * \brief The GetServiceGraphRequest class encapsulates XRay GetServiceGraph requests.
  *
- * @see    XRayClient::getServiceGraph
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::getServiceGraph
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServiceGraphRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetServiceGraphRequest::GetServiceGraphRequest(const GetServiceGraphRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetServiceGraphRequest object.
  */
 GetServiceGraphRequest::GetServiceGraphRequest()
@@ -53,13 +57,16 @@ GetServiceGraphRequest::GetServiceGraphRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetServiceGraphRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetServiceGraphResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceGraphRequest::response(QNetworkRepl
     return new GetServiceGraphResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetServiceGraphRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceGraphRequest::response(QNetworkRepl
  * @brief  Private implementation for GetServiceGraphRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceGraphRequestPrivate object.
@@ -97,7 +104,7 @@ GetServiceGraphRequestPrivate::GetServiceGraphRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceGraphRequestPrivate object, copying another.

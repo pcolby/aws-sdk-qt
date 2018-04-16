@@ -173,26 +173,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Greengrass
+ * \brief The QtAws::Greengrass contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GreengrassClient
+/*!
+ * \class QtAws::Greengrass::GreengrassClient
  *
- * @brief  Client for AWS Greengrass
+ * \brief The GreengrassClient class provides access the AWS Greengrass service.
  *
- * AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
- * still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
- * quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
  */
 
-/**
- * @brief  Constructs a new GreengrassClient object.
+/*!
+ * \brief Constructs a GreengrassClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 GreengrassClient::GreengrassClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -211,21 +219,16 @@ GreengrassClient::GreengrassClient(
     d->serviceName = QStringLiteral("greengrass");
 }
 
-/**
- * @brief  Constructs a new GreengrassClient object.
+/*!
+ * \overload GreengrassClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 GreengrassClient::GreengrassClient(
     const QUrl &endpoint,
@@ -244,7 +247,7 @@ GreengrassClient::GreengrassClient(
     d->serviceName = QStringLiteral("greengrass");
 }
 
-/**
+/*!
  * Associates a role with a group. Your AWS Greengrass core will use the role to access AWS cloud services. The role's
  *
  * @param  request Request to send to AWS Greengrass.
@@ -258,7 +261,7 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
     return qobject_cast<AssociateRoleToGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a role with your account. AWS Greengrass will use the role to access your Lambda functions and AWS IoT
  * resources. This is necessary for deployments to succeed. The role must have at least minimum permissions in the policy
  *
@@ -273,7 +276,7 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
     return qobject_cast<AssociateServiceRoleToAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a core definition. You may provide the initial version of the core definition now or use
  * ''CreateCoreDefinitionVersion'' at a later time. AWS Greengrass groups must each contain exactly one AWS Greengrass
  *
@@ -288,7 +291,7 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
     return qobject_cast<CreateCoreDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a version of a core definition that has already been defined. AWS Greengrass groups must each contain exactly
  *
  * @param  request Request to send to AWS Greengrass.
@@ -302,7 +305,7 @@ CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVers
     return qobject_cast<CreateCoreDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -315,7 +318,7 @@ CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploy
     return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a device definition. You may provide the initial version of the device definition now or use
  *
  * @param  request Request to send to AWS Greengrass.
@@ -329,7 +332,7 @@ CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const 
     return qobject_cast<CreateDeviceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -342,7 +345,7 @@ CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinition
     return qobject_cast<CreateDeviceDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a
  * group. You can create an initial version of the definition by providing a list of Lambda functions and their
  *
@@ -357,7 +360,7 @@ CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(co
     return qobject_cast<CreateFunctionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -370,7 +373,7 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
     return qobject_cast<CreateFunctionDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -383,7 +386,7 @@ CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &re
     return qobject_cast<CreateGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -396,7 +399,7 @@ CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertifica
     return qobject_cast<CreateGroupCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -409,7 +412,7 @@ CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGr
     return qobject_cast<CreateGroupVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a logger definition. You may provide the initial version of the logger definition now or use
  *
  * @param  request Request to send to AWS Greengrass.
@@ -423,7 +426,7 @@ CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const 
     return qobject_cast<CreateLoggerDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -436,7 +439,7 @@ CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinition
     return qobject_cast<CreateLoggerDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a resource definition which contains a list of resources to be used in a group. You can create an initial
  *
  * @param  request Request to send to AWS Greengrass.
@@ -450,7 +453,7 @@ CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(co
     return qobject_cast<CreateResourceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -463,7 +466,7 @@ CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefini
     return qobject_cast<CreateResourceDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a software update for a core or group of cores (specified as an IoT thing group.) Use this to update the OTA
  * Agent as well as the Greengrass core software. It makes use of the IoT Jobs feature which provides additional commands
  *
@@ -478,7 +481,7 @@ CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(cons
     return qobject_cast<CreateSoftwareUpdateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a subscription definition. You may provide the initial version of the subscription definition now or use
  *
  * @param  request Request to send to AWS Greengrass.
@@ -492,7 +495,7 @@ CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefin
     return qobject_cast<CreateSubscriptionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -505,7 +508,7 @@ CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscripti
     return qobject_cast<CreateSubscriptionDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -518,7 +521,7 @@ DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const Dele
     return qobject_cast<DeleteCoreDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -531,7 +534,7 @@ DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const 
     return qobject_cast<DeleteDeviceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -544,7 +547,7 @@ DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(co
     return qobject_cast<DeleteFunctionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -557,7 +560,7 @@ DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &re
     return qobject_cast<DeleteGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -570,7 +573,7 @@ DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const 
     return qobject_cast<DeleteLoggerDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -583,7 +586,7 @@ DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(co
     return qobject_cast<DeleteResourceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -596,7 +599,7 @@ DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefin
     return qobject_cast<DeleteSubscriptionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -609,7 +612,7 @@ DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(
     return qobject_cast<DisassociateRoleFromGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -622,7 +625,7 @@ DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServi
     return qobject_cast<DisassociateServiceRoleFromAccountResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -635,7 +638,7 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
     return qobject_cast<GetAssociatedRoleResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -648,7 +651,7 @@ GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetCon
     return qobject_cast<GetConnectivityInfoResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -661,7 +664,7 @@ GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDef
     return qobject_cast<GetCoreDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -674,7 +677,7 @@ GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(co
     return qobject_cast<GetCoreDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -687,7 +690,7 @@ GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDep
     return qobject_cast<GetDeploymentStatusResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -700,7 +703,7 @@ GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDev
     return qobject_cast<GetDeviceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -713,7 +716,7 @@ GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersio
     return qobject_cast<GetDeviceDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -726,7 +729,7 @@ GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const Ge
     return qobject_cast<GetFunctionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about a Lambda function definition version, including which Lambda functions are included in the
  *
  * @param  request Request to send to AWS Greengrass.
@@ -740,7 +743,7 @@ GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVe
     return qobject_cast<GetFunctionDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -753,7 +756,7 @@ GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
     return qobject_cast<GetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -766,7 +769,7 @@ GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuth
     return qobject_cast<GetGroupCertificateAuthorityResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -779,7 +782,7 @@ GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificate
     return qobject_cast<GetGroupCertificateConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -792,7 +795,7 @@ GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersio
     return qobject_cast<GetGroupVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -805,7 +808,7 @@ GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLog
     return qobject_cast<GetLoggerDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -818,7 +821,7 @@ GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersio
     return qobject_cast<GetLoggerDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -831,7 +834,7 @@ GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const Ge
     return qobject_cast<GetResourceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -844,7 +847,7 @@ GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVe
     return qobject_cast<GetResourceDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -857,7 +860,7 @@ GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(co
     return qobject_cast<GetServiceRoleForAccountResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -870,7 +873,7 @@ GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(
     return qobject_cast<GetSubscriptionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -883,7 +886,7 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
     return qobject_cast<GetSubscriptionDefinitionVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -896,7 +899,7 @@ ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersion
     return qobject_cast<ListCoreDefinitionVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -909,7 +912,7 @@ ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCo
     return qobject_cast<ListCoreDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -922,7 +925,7 @@ ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeployment
     return qobject_cast<ListDeploymentsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -935,7 +938,7 @@ ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVer
     return qobject_cast<ListDeviceDefinitionVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -948,7 +951,7 @@ ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const Li
     return qobject_cast<ListDeviceDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -961,7 +964,7 @@ ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitio
     return qobject_cast<ListFunctionDefinitionVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -974,7 +977,7 @@ ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(cons
     return qobject_cast<ListFunctionDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -987,7 +990,7 @@ ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificate
     return qobject_cast<ListGroupCertificateAuthoritiesResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1000,7 +1003,7 @@ ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupV
     return qobject_cast<ListGroupVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1013,7 +1016,7 @@ ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &reque
     return qobject_cast<ListGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1026,7 +1029,7 @@ ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVer
     return qobject_cast<ListLoggerDefinitionVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1039,7 +1042,7 @@ ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const Li
     return qobject_cast<ListLoggerDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1052,7 +1055,7 @@ ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitio
     return qobject_cast<ListResourceDefinitionVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1065,7 +1068,7 @@ ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(cons
     return qobject_cast<ListResourceDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1078,7 +1081,7 @@ ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionD
     return qobject_cast<ListSubscriptionDefinitionVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1091,7 +1094,7 @@ ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefiniti
     return qobject_cast<ListSubscriptionDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1104,7 +1107,7 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
     return qobject_cast<ResetDeploymentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the connectivity information for the core. Any devices that belong to the group which has this core will receive
  *
  * @param  request Request to send to AWS Greengrass.
@@ -1118,7 +1121,7 @@ UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const 
     return qobject_cast<UpdateConnectivityInfoResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1131,7 +1134,7 @@ UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const Upda
     return qobject_cast<UpdateCoreDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1144,7 +1147,7 @@ UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const 
     return qobject_cast<UpdateDeviceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1157,7 +1160,7 @@ UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(co
     return qobject_cast<UpdateFunctionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1170,7 +1173,7 @@ UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &re
     return qobject_cast<UpdateGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1183,7 +1186,7 @@ UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCerti
     return qobject_cast<UpdateGroupCertificateConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1196,7 +1199,7 @@ UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const 
     return qobject_cast<UpdateLoggerDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1209,7 +1212,7 @@ UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(co
     return qobject_cast<UpdateResourceDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Greengrass.
  *
@@ -1222,7 +1225,7 @@ UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefin
     return qobject_cast<UpdateSubscriptionDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GreengrassClientPrivate
@@ -1230,7 +1233,7 @@ UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefin
  * @brief  Private implementation for GreengrassClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GreengrassClientPrivate object.

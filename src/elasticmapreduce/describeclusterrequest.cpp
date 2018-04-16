@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeClusterRequest
+/*!
+ * \class QtAws::EMR::DescribeClusterRequest
  *
- * @brief  Implements EMR DescribeCluster requests.
+ * \brief The DescribeClusterRequest class encapsulates EMR DescribeCluster requests.
  *
- * @see    EMRClient::describeCluster
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeClusterRequest object.
  */
 DescribeClusterRequest::DescribeClusterRequest()
@@ -53,13 +59,16 @@ DescribeClusterRequest::DescribeClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
     return new DescribeClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeClusterRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClusterRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClusterRequestPrivate object, copying another.

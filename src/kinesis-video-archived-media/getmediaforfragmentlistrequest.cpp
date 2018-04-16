@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
-/**
- * @class  GetMediaForFragmentListRequest
+/*!
+ * \class QtAws::KinesisVideoArchivedMedia::GetMediaForFragmentListRequest
  *
- * @brief  Implements KinesisVideoArchivedMedia GetMediaForFragmentList requests.
+ * \brief The GetMediaForFragmentListRequest class encapsulates KinesisVideoArchivedMedia GetMediaForFragmentList requests.
  *
- * @see    KinesisVideoArchivedMediaClient::getMediaForFragmentList
+ * \ingroup KinesisVideoArchivedMedia
+ *
+ *
+ * \sa KinesisVideoArchivedMediaClient::getMediaForFragmentList
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMediaForFragmentListRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetMediaForFragmentListRequest::GetMediaForFragmentListRequest(const GetMediaFor
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMediaForFragmentListRequest object.
  */
 GetMediaForFragmentListRequest::GetMediaForFragmentListRequest()
@@ -53,13 +56,16 @@ GetMediaForFragmentListRequest::GetMediaForFragmentListRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMediaForFragmentListRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMediaForFragmentListResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNet
     return new GetMediaForFragmentListResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMediaForFragmentListRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNet
  * @brief  Private implementation for GetMediaForFragmentListRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMediaForFragmentListRequestPrivate object.
@@ -97,7 +103,7 @@ GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMediaForFragmentListRequestPrivate object, copying another.

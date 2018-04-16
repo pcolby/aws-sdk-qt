@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateHostedZoneRequest
+/*!
+ * \class QtAws::Route53::CreateHostedZoneRequest
  *
- * @brief  Implements Route53 CreateHostedZone requests.
+ * \brief The CreateHostedZoneRequest class encapsulates Route53 CreateHostedZone requests.
  *
- * @see    Route53Client::createHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateHostedZoneRequest::CreateHostedZoneRequest(const CreateHostedZoneRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateHostedZoneRequest object.
  */
 CreateHostedZoneRequest::CreateHostedZoneRequest()
@@ -53,13 +56,16 @@ CreateHostedZoneRequest::CreateHostedZoneRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateHostedZoneRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateHostedZoneResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkRep
     return new CreateHostedZoneResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateHostedZoneRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkRep
  * @brief  Private implementation for CreateHostedZoneRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHostedZoneRequestPrivate object.
@@ -97,7 +103,7 @@ CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHostedZoneRequestPrivate object, copying another.

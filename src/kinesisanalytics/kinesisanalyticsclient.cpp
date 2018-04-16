@@ -59,23 +59,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::KinesisAnalytics
+ * \brief The QtAws::KinesisAnalytics contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  KinesisAnalyticsClient
+/*!
+ * \class QtAws::KinesisAnalytics::KinesisAnalyticsClient
  *
- * @brief  Client for Amazon Kinesis Analytics
+ * \brief The KinesisAnalyticsClient class provides access the Amazon Kinesis Analytics service.
+ *
+ * \ingroup KinesisAnalytics
  *
  */
 
-/**
- * @brief  Constructs a new KinesisAnalyticsClient object.
+/*!
+ * \brief Constructs a KinesisAnalyticsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 KinesisAnalyticsClient::KinesisAnalyticsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -94,21 +102,16 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
     d->serviceName = QStringLiteral("kinesisanalytics");
 }
 
-/**
- * @brief  Constructs a new KinesisAnalyticsClient object.
+/*!
+ * \overload KinesisAnalyticsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 KinesisAnalyticsClient::KinesisAnalyticsClient(
     const QUrl &endpoint,
@@ -127,7 +130,7 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
     d->serviceName = QStringLiteral("kinesisanalytics");
 }
 
-/**
+/*!
  * Adds a CloudWatch log stream to monitor application configuration errors. For more information about using CloudWatch
  * log streams with Amazon Kinesis Analytics applications, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/cloudwatch-logs.html">Working with Amazon CloudWatch
@@ -143,7 +146,7 @@ AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addAppli
     return qobject_cast<AddApplicationCloudWatchLoggingOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a streaming source to your Amazon Kinesis application. For conceptual information, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html">Configuring Application Input</a>.
  *
@@ -172,7 +175,7 @@ AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const 
     return qobject_cast<AddApplicationInputResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds an <a>InputProcessingConfiguration</a> to an application. An input processor preprocesses records on the input
  * stream before the application's SQL code executes. Currently, the only input processor available is <a
  * href="https://aws.amazon.com/documentation/lambda/">AWS
@@ -188,7 +191,7 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::add
     return qobject_cast<AddApplicationInputProcessingConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds an external destination to your Amazon Kinesis Analytics
  *
  * application>
@@ -229,7 +232,7 @@ AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(cons
     return qobject_cast<AddApplicationOutputResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a reference data source to an existing
  *
  * application>
@@ -261,7 +264,7 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicati
     return qobject_cast<AddApplicationReferenceDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon Kinesis Analytics application. You can configure each application with one streaming source as input,
  * application code to process the input, and up to three destinations where you want Amazon Kinesis Analytics to write the
  * output data from your application. For an overview, see <a
@@ -305,7 +308,7 @@ CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const Crea
     return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified application. Amazon Kinesis Analytics halts application execution and deletes the application,
  * including any application artifacts (such as in-application streams, reference table, and application
  *
@@ -324,7 +327,7 @@ DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const Dele
     return qobject_cast<DeleteApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a CloudWatch log stream from an application. For more information about using CloudWatch log streams with Amazon
  * Kinesis Analytics applications, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/cloudwatch-logs.html">Working with Amazon CloudWatch
@@ -340,7 +343,7 @@ DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::delet
     return qobject_cast<DeleteApplicationCloudWatchLoggingOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an <a>InputProcessingConfiguration</a> from an
  *
  * @param  request Request to send to Amazon Kinesis Analytics.
@@ -354,7 +357,7 @@ DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::
     return qobject_cast<DeleteApplicationInputProcessingConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes output destination configuration from your application configuration. Amazon Kinesis Analytics will no longer
  * write data from the corresponding in-application stream to the external output
  *
@@ -373,7 +376,7 @@ DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutpu
     return qobject_cast<DeleteApplicationOutputResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a reference data source configuration from the specified application
  *
  * configuration>
@@ -396,7 +399,7 @@ DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApp
     return qobject_cast<DeleteApplicationReferenceDataSourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific Amazon Kinesis Analytics
  *
  * application>
@@ -420,7 +423,7 @@ DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const 
     return qobject_cast<DescribeApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Infers a schema by evaluating sample records on the specified streaming source (Amazon Kinesis stream or Amazon Kinesis
  * Firehose delivery stream) or S3 object. In the response, the operation returns the inferred schema and also the sample
  * records that the operation used to infer the
@@ -447,7 +450,7 @@ DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const 
     return qobject_cast<DiscoverInputSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of Amazon Kinesis Analytics applications in your account. For each application, the response includes the
  * application name, Amazon Resource Name (ARN), and status. If the response returns the <code>HasMoreApplications</code>
  * value as true, you can send another request by adding the <code>ExclusiveStartApplicationName</code> in the request
@@ -472,7 +475,7 @@ ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListAp
     return qobject_cast<ListApplicationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the specified Amazon Kinesis Analytics application. After creating an application, you must exclusively call this
  * operation to start your
  *
@@ -505,7 +508,7 @@ StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartA
     return qobject_cast<StartApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the application from processing input data. You can stop an application only if it is in the running state. You
  * can use the <a>DescribeApplication</a> operation to find the application state. After the application is stopped, Amazon
  * Kinesis Analytics stops reading data from the input, the application stops processing data, and there is no output
@@ -526,7 +529,7 @@ StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopAppl
     return qobject_cast<StopApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing Amazon Kinesis Analytics application. Using this API, you can update application code, input
  * configuration, and output configuration.
  *
@@ -550,7 +553,7 @@ UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const Upda
     return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisAnalyticsClientPrivate
@@ -558,7 +561,7 @@ UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const Upda
  * @brief  Private implementation for KinesisAnalyticsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisAnalyticsClientPrivate object.

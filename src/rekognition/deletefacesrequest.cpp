@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DeleteFacesRequest
+/*!
+ * \class QtAws::Rekognition::DeleteFacesRequest
  *
- * @brief  Implements Rekognition DeleteFaces requests.
+ * \brief The DeleteFacesRequest class encapsulates Rekognition DeleteFaces requests.
  *
- * @see    RekognitionClient::deleteFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::deleteFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteFacesRequest::DeleteFacesRequest(const DeleteFacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFacesRequest object.
  */
 DeleteFacesRequest::DeleteFacesRequest()
@@ -53,13 +57,16 @@ DeleteFacesRequest::DeleteFacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * 
     return new DeleteFacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFacesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteFacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFacesRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFacesRequestPrivate object, copying another.

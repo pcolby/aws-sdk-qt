@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  DeprecateActivityTypeResponse
+/*!
+ * \class QtAws::SWF::DeprecateActivityTypeResponse
  *
- * @brief  Handles SWF DeprecateActivityType responses.
+ * \brief The DeprecateActivityTypeResponse class encapsulates SWF DeprecateActivityType responses.
  *
- * @see    SWFClient::deprecateActivityType
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::deprecateActivityType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeprecateActivityTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const DeprecateActivityTypeRequest * DeprecateActivityTypeResponse::request() co
     return static_cast<const DeprecateActivityTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF DeprecateActivityType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void DeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeprecateActivityTypeResponsePrivate
+ * \class DeprecateActivityTypeResponsePrivate
  *
- * @brief  Private implementation for DeprecateActivityTypeResponse.
+ * \brief Private implementation for DeprecateActivityTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeprecateActivityTypeResponsePrivate object.
@@ -91,7 +110,7 @@ DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF DeprecateActivityTypeResponse element.
  *
  * @param  xml  XML stream to parse.

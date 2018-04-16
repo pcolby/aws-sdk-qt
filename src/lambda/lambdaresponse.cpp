@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  LambdaResponse
+/*!
+ * \class QtAws::Lambda::LambdaResponse
  *
- * @brief  Handles Lambda Lambda responses.
+ * \brief The LambdaResponse class is the base class for all Lambda responses.
  *
- * @see    LambdaClient::lambda
+ * \ingroup Lambda
  */
 
-/**
+/*!
  * @brief  Constructs a new LambdaResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ LambdaResponse::LambdaResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LambdaResponse object.
@@ -63,7 +63,7 @@ LambdaResponse::LambdaResponse(LambdaResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void LambdaResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LambdaResponsePrivate
@@ -92,7 +92,7 @@ void LambdaResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for LambdaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LambdaResponsePrivate object.

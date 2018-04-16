@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateFpgaImageResponse
+/*!
+ * \class QtAws::EC2::CreateFpgaImageResponse
  *
- * @brief  Handles EC2 CreateFpgaImage responses.
+ * \brief The CreateFpgaImageResponse class encapsulates EC2 CreateFpgaImage responses.
  *
- * @see    EC2Client::createFpgaImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createFpgaImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFpgaImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateFpgaImageRequest * CreateFpgaImageResponse::request() const
     return static_cast<const CreateFpgaImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateFpgaImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateFpgaImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateFpgaImageResponsePrivate
+ * \class CreateFpgaImageResponsePrivate
  *
- * @brief  Private implementation for CreateFpgaImageResponse.
+ * \brief Private implementation for CreateFpgaImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFpgaImageResponsePrivate object.
@@ -91,7 +98,7 @@ CreateFpgaImageResponsePrivate::CreateFpgaImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateFpgaImageResponse element.
  *
  * @param  xml  XML stream to parse.

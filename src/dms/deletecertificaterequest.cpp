@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteCertificateRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteCertificateRequest
  *
- * @brief  Implements DatabaseMigrationService DeleteCertificate requests.
+ * \brief The DeleteCertificateRequest class encapsulates DatabaseMigrationService DeleteCertificate requests.
  *
- * @see    DatabaseMigrationServiceClient::deleteCertificate
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateRequest object.
  */
 DeleteCertificateRequest::DeleteCertificateRequest()
@@ -53,13 +67,16 @@ DeleteCertificateRequest::DeleteCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
     return new DeleteCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateRequestPrivate object, copying another.

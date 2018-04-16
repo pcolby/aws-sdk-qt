@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListRegexMatchSetsResponse
+/*!
+ * \class QtAws::WAF::ListRegexMatchSetsResponse
  *
- * @brief  Handles WAF ListRegexMatchSets responses.
+ * \brief The ListRegexMatchSetsResponse class encapsulates WAF ListRegexMatchSets responses.
  *
- * @see    WAFClient::listRegexMatchSets
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listRegexMatchSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRegexMatchSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListRegexMatchSetsRequest * ListRegexMatchSetsResponse::request() const
     return static_cast<const ListRegexMatchSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF ListRegexMatchSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListRegexMatchSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListRegexMatchSetsResponsePrivate
+ * \class ListRegexMatchSetsResponsePrivate
  *
- * @brief  Private implementation for ListRegexMatchSetsResponse.
+ * \brief Private implementation for ListRegexMatchSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRegexMatchSetsResponsePrivate object.
@@ -91,7 +99,7 @@ ListRegexMatchSetsResponsePrivate::ListRegexMatchSetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF ListRegexMatchSetsResponse element.
  *
  * @param  xml  XML stream to parse.

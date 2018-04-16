@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetUICustomizationResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetUICustomizationResponse
  *
- * @brief  Handles CognitoIdentityProvider SetUICustomization responses.
+ * \brief The SetUICustomizationResponse class encapsulates CognitoIdentityProvider SetUICustomization responses.
  *
- * @see    CognitoIdentityProviderClient::setUICustomization
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setUICustomization
  */
 
-/**
+/*!
  * @brief  Constructs a new SetUICustomizationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const SetUICustomizationRequest * SetUICustomizationResponse::request() const
     return static_cast<const SetUICustomizationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider SetUICustomization response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void SetUICustomizationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetUICustomizationResponsePrivate
+ * \class SetUICustomizationResponsePrivate
  *
- * @brief  Private implementation for SetUICustomizationResponse.
+ * \brief Private implementation for SetUICustomizationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUICustomizationResponsePrivate object.
@@ -91,7 +104,7 @@ SetUICustomizationResponsePrivate::SetUICustomizationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider SetUICustomizationResponse element.
  *
  * @param  xml  XML stream to parse.

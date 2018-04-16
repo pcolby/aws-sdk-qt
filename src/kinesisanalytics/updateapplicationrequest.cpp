@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  UpdateApplicationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::UpdateApplicationRequest
  *
- * @brief  Implements KinesisAnalytics UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class encapsulates KinesisAnalytics UpdateApplication requests.
  *
- * @see    KinesisAnalyticsClient::updateApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::updateApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateApplicationRequest::UpdateApplicationRequest(const UpdateApplicationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationRequest object.
  */
 UpdateApplicationRequest::UpdateApplicationRequest()
@@ -53,13 +56,16 @@ UpdateApplicationRequest::UpdateApplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
     return new UpdateApplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateApplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateApiKeyResponse
+/*!
+ * \class QtAws::APIGateway::CreateApiKeyResponse
  *
- * @brief  Handles APIGateway CreateApiKey responses.
+ * \brief The CreateApiKeyResponse class encapsulates APIGateway CreateApiKey responses.
  *
- * @see    APIGatewayClient::createApiKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateApiKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateApiKeyRequest * CreateApiKeyResponse::request() const
     return static_cast<const CreateApiKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateApiKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateApiKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateApiKeyResponsePrivate
+ * \class CreateApiKeyResponsePrivate
  *
- * @brief  Private implementation for CreateApiKeyResponse.
+ * \brief Private implementation for CreateApiKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApiKeyResponsePrivate object.
@@ -91,7 +99,7 @@ CreateApiKeyResponsePrivate::CreateApiKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateApiKeyResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  RemoveTagsFromResourceResponse
+/*!
+ * \class QtAws::CloudHSM::RemoveTagsFromResourceResponse
  *
- * @brief  Handles CloudHSM RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class encapsulates CloudHSM RemoveTagsFromResource responses.
  *
- * @see    CloudHSMClient::removeTagsFromResource
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::removeTagsFromResource
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
     return static_cast<const RemoveTagsFromResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM RemoveTagsFromResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsFromResourceResponsePrivate
+ * \class RemoveTagsFromResourceResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsFromResourceResponse.
+ * \brief Private implementation for RemoveTagsFromResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromResourceResponsePrivate object.
@@ -91,7 +106,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM RemoveTagsFromResourceResponse element.
  *
  * @param  xml  XML stream to parse.

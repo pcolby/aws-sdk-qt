@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  MediaStoreDataResponse
+/*!
+ * \class QtAws::MediaStoreData::MediaStoreDataResponse
  *
- * @brief  Handles MediaStoreData MediaStoreData responses.
+ * \brief The MediaStoreDataResponse class is the base class for all MediaStoreData responses.
  *
- * @see    MediaStoreDataClient::mediaStoreData
+ * \ingroup MediaStoreData
  */
 
-/**
+/*!
  * @brief  Constructs a new MediaStoreDataResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MediaStoreDataResponse::MediaStoreDataResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaStoreDataResponse object.
@@ -63,7 +63,7 @@ MediaStoreDataResponse::MediaStoreDataResponse(MediaStoreDataResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MediaStoreDataResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaStoreDataResponsePrivate
@@ -92,7 +92,7 @@ void MediaStoreDataResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MediaStoreDataResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaStoreDataResponsePrivate object.

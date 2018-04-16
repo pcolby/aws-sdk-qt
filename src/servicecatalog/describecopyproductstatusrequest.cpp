@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeCopyProductStatusRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeCopyProductStatusRequest
  *
- * @brief  Implements ServiceCatalog DescribeCopyProductStatus requests.
+ * \brief The DescribeCopyProductStatusRequest class encapsulates ServiceCatalog DescribeCopyProductStatus requests.
  *
- * @see    ServiceCatalogClient::describeCopyProductStatus
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeCopyProductStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCopyProductStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeCopyProductStatusRequest::DescribeCopyProductStatusRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCopyProductStatusRequest object.
  */
 DescribeCopyProductStatusRequest::DescribeCopyProductStatusRequest()
@@ -53,13 +62,16 @@ DescribeCopyProductStatusRequest::DescribeCopyProductStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCopyProductStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCopyProductStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QN
     return new DescribeCopyProductStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCopyProductStatusRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QN
  * @brief  Private implementation for DescribeCopyProductStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCopyProductStatusRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCopyProductStatusRequestPrivate object, copying another.

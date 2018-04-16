@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeTagsResponse
+/*!
+ * \class QtAws::EFS::DescribeTagsResponse
  *
- * @brief  Handles EFS DescribeTags responses.
+ * \brief The DescribeTagsResponse class encapsulates EFS DescribeTags responses.
  *
- * @see    EFSClient::describeTags
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
     return static_cast<const DescribeTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DescribeTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeTagsResponsePrivate
+ * \class DescribeTagsResponsePrivate
  *
- * @brief  Private implementation for DescribeTagsResponse.
+ * \brief Private implementation for DescribeTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DescribeTagsResponse element.
  *
  * @param  xml  XML stream to parse.

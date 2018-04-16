@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeSessionsRequest
+/*!
+ * \class QtAws::AppStream::DescribeSessionsRequest
  *
- * @brief  Implements AppStream DescribeSessions requests.
+ * \brief The DescribeSessionsRequest class encapsulates AppStream DescribeSessions requests.
  *
- * @see    AppStreamClient::describeSessions
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeSessions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSessionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeSessionsRequest::DescribeSessionsRequest(const DescribeSessionsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSessionsRequest object.
  */
 DescribeSessionsRequest::DescribeSessionsRequest()
@@ -53,13 +59,16 @@ DescribeSessionsRequest::DescribeSessionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSessionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSessionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSessionsRequest::response(QNetworkRep
     return new DescribeSessionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSessionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSessionsRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeSessionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSessionsRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSessionsRequestPrivate object, copying another.

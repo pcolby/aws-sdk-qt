@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  GetSnapshotLimitsResponse
+/*!
+ * \class QtAws::DirectoryService::GetSnapshotLimitsResponse
  *
- * @brief  Handles DirectoryService GetSnapshotLimits responses.
+ * \brief The GetSnapshotLimitsResponse class encapsulates DirectoryService GetSnapshotLimits responses.
  *
- * @see    DirectoryServiceClient::getSnapshotLimits
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::getSnapshotLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSnapshotLimitsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const GetSnapshotLimitsRequest * GetSnapshotLimitsResponse::request() const
     return static_cast<const GetSnapshotLimitsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DirectoryService GetSnapshotLimits response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void GetSnapshotLimitsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSnapshotLimitsResponsePrivate
+ * \class GetSnapshotLimitsResponsePrivate
  *
- * @brief  Private implementation for GetSnapshotLimitsResponse.
+ * \brief Private implementation for GetSnapshotLimitsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSnapshotLimitsResponsePrivate object.
@@ -91,7 +108,7 @@ GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DirectoryService GetSnapshotLimitsResponse element.
  *
  * @param  xml  XML stream to parse.

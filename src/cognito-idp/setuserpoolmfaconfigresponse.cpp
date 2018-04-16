@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetUserPoolMfaConfigResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetUserPoolMfaConfigResponse
  *
- * @brief  Handles CognitoIdentityProvider SetUserPoolMfaConfig responses.
+ * \brief The SetUserPoolMfaConfigResponse class encapsulates CognitoIdentityProvider SetUserPoolMfaConfig responses.
  *
- * @see    CognitoIdentityProviderClient::setUserPoolMfaConfig
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setUserPoolMfaConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new SetUserPoolMfaConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const SetUserPoolMfaConfigRequest * SetUserPoolMfaConfigResponse::request() cons
     return static_cast<const SetUserPoolMfaConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider SetUserPoolMfaConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void SetUserPoolMfaConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetUserPoolMfaConfigResponsePrivate
+ * \class SetUserPoolMfaConfigResponsePrivate
  *
- * @brief  Private implementation for SetUserPoolMfaConfigResponse.
+ * \brief Private implementation for SetUserPoolMfaConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserPoolMfaConfigResponsePrivate object.
@@ -91,7 +104,7 @@ SetUserPoolMfaConfigResponsePrivate::SetUserPoolMfaConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider SetUserPoolMfaConfigResponse element.
  *
  * @param  xml  XML stream to parse.

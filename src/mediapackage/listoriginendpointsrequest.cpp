@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  ListOriginEndpointsRequest
+/*!
+ * \class QtAws::MediaPackage::ListOriginEndpointsRequest
  *
- * @brief  Implements MediaPackage ListOriginEndpoints requests.
+ * \brief The ListOriginEndpointsRequest class encapsulates MediaPackage ListOriginEndpoints requests.
  *
- * @see    MediaPackageClient::listOriginEndpoints
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::listOriginEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOriginEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListOriginEndpointsRequest::ListOriginEndpointsRequest(const ListOriginEndpoints
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOriginEndpointsRequest object.
  */
 ListOriginEndpointsRequest::ListOriginEndpointsRequest()
@@ -53,13 +56,16 @@ ListOriginEndpointsRequest::ListOriginEndpointsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOriginEndpointsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOriginEndpointsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListOriginEndpointsRequest::response(QNetwork
     return new ListOriginEndpointsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOriginEndpointsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListOriginEndpointsRequest::response(QNetwork
  * @brief  Private implementation for ListOriginEndpointsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOriginEndpointsRequestPrivate object.
@@ -97,7 +103,7 @@ ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOriginEndpointsRequestPrivate object, copying another.

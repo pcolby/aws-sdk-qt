@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateSecurityGroupResponse
+/*!
+ * \class QtAws::EC2::CreateSecurityGroupResponse
  *
- * @brief  Handles EC2 CreateSecurityGroup responses.
+ * \brief The CreateSecurityGroupResponse class encapsulates EC2 CreateSecurityGroup responses.
  *
- * @see    EC2Client::createSecurityGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSecurityGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateSecurityGroupRequest * CreateSecurityGroupResponse::request() const
     return static_cast<const CreateSecurityGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateSecurityGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSecurityGroupResponsePrivate
+ * \class CreateSecurityGroupResponsePrivate
  *
- * @brief  Private implementation for CreateSecurityGroupResponse.
+ * \brief Private implementation for CreateSecurityGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSecurityGroupResponsePrivate object.
@@ -91,7 +98,7 @@ CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateSecurityGroupResponse element.
  *
  * @param  xml  XML stream to parse.

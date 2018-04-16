@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteCampaignResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteCampaignResponse
  *
- * @brief  Handles Pinpoint DeleteCampaign responses.
+ * \brief The DeleteCampaignResponse class encapsulates Pinpoint DeleteCampaign responses.
  *
- * @see    PinpointClient::deleteCampaign
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteCampaign
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCampaignResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteCampaignRequest * DeleteCampaignResponse::request() const
     return static_cast<const DeleteCampaignRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteCampaign response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteCampaignResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCampaignResponsePrivate
+ * \class DeleteCampaignResponsePrivate
  *
- * @brief  Private implementation for DeleteCampaignResponse.
+ * \brief Private implementation for DeleteCampaignResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCampaignResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteCampaignResponsePrivate::DeleteCampaignResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteCampaignResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifySpotFleetRequestRequest
+/*!
+ * \class QtAws::EC2::ModifySpotFleetRequestRequest
  *
- * @brief  Implements EC2 ModifySpotFleetRequest requests.
+ * \brief The ModifySpotFleetRequestRequest class encapsulates EC2 ModifySpotFleetRequest requests.
  *
- * @see    EC2Client::modifySpotFleetRequest
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifySpotFleetRequest
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifySpotFleetRequestRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest(const ModifySpotFle
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifySpotFleetRequestRequest object.
  */
 ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest()
@@ -53,13 +60,16 @@ ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifySpotFleetRequestRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifySpotFleetRequestResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifySpotFleetRequestRequest::response(QNetw
     return new ModifySpotFleetRequestResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifySpotFleetRequestRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifySpotFleetRequestRequest::response(QNetw
  * @brief  Private implementation for ModifySpotFleetRequestRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySpotFleetRequestRequestPrivate object.
@@ -97,7 +107,7 @@ ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySpotFleetRequestRequestPrivate object, copying another.

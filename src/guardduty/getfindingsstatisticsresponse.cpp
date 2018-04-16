@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetFindingsStatisticsResponse
+/*!
+ * \class QtAws::GuardDuty::GetFindingsStatisticsResponse
  *
- * @brief  Handles GuardDuty GetFindingsStatistics responses.
+ * \brief The GetFindingsStatisticsResponse class encapsulates GuardDuty GetFindingsStatistics responses.
  *
- * @see    GuardDutyClient::getFindingsStatistics
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getFindingsStatistics
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFindingsStatisticsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetFindingsStatisticsRequest * GetFindingsStatisticsResponse::request() co
     return static_cast<const GetFindingsStatisticsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty GetFindingsStatistics response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetFindingsStatisticsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFindingsStatisticsResponsePrivate
+ * \class GetFindingsStatisticsResponsePrivate
  *
- * @brief  Private implementation for GetFindingsStatisticsResponse.
+ * \brief Private implementation for GetFindingsStatisticsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFindingsStatisticsResponsePrivate object.
@@ -91,7 +94,7 @@ GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty GetFindingsStatisticsResponse element.
  *
  * @param  xml  XML stream to parse.

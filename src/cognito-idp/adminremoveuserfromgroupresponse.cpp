@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminRemoveUserFromGroupResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminRemoveUserFromGroup responses.
+ * \brief The AdminRemoveUserFromGroupResponse class encapsulates CognitoIdentityProvider AdminRemoveUserFromGroup responses.
  *
- * @see    CognitoIdentityProviderClient::adminRemoveUserFromGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminRemoveUserFromGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminRemoveUserFromGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminRemoveUserFromGroupRequest * AdminRemoveUserFromGroupResponse::reques
     return static_cast<const AdminRemoveUserFromGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminRemoveUserFromGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminRemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminRemoveUserFromGroupResponsePrivate
+ * \class AdminRemoveUserFromGroupResponsePrivate
  *
- * @brief  Private implementation for AdminRemoveUserFromGroupResponse.
+ * \brief Private implementation for AdminRemoveUserFromGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminRemoveUserFromGroupResponsePrivate object.
@@ -91,7 +104,7 @@ AdminRemoveUserFromGroupResponsePrivate::AdminRemoveUserFromGroupResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminRemoveUserFromGroupResponse element.
  *
  * @param  xml  XML stream to parse.

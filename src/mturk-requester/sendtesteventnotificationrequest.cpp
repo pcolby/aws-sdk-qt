@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  SendTestEventNotificationRequest
+/*!
+ * \class QtAws::MTurk::SendTestEventNotificationRequest
  *
- * @brief  Implements MTurk SendTestEventNotification requests.
+ * \brief The SendTestEventNotificationRequest class encapsulates MTurk SendTestEventNotification requests.
  *
- * @see    MTurkClient::sendTestEventNotification
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::sendTestEventNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new SendTestEventNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ SendTestEventNotificationRequest::SendTestEventNotificationRequest(const SendTes
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendTestEventNotificationRequest object.
  */
 SendTestEventNotificationRequest::SendTestEventNotificationRequest()
@@ -53,13 +56,16 @@ SendTestEventNotificationRequest::SendTestEventNotificationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendTestEventNotificationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendTestEventNotificationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * SendTestEventNotificationRequest::response(QN
     return new SendTestEventNotificationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendTestEventNotificationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * SendTestEventNotificationRequest::response(QN
  * @brief  Private implementation for SendTestEventNotificationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendTestEventNotificationRequestPrivate object.
@@ -97,7 +103,7 @@ SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendTestEventNotificationRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyImageAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifyImageAttributeRequest
  *
- * @brief  Implements EC2 ModifyImageAttribute requests.
+ * \brief The ModifyImageAttributeRequest class encapsulates EC2 ModifyImageAttribute requests.
  *
- * @see    EC2Client::modifyImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyImageAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyImageAttributeRequest::ModifyImageAttributeRequest(const ModifyImageAttrib
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyImageAttributeRequest object.
  */
 ModifyImageAttributeRequest::ModifyImageAttributeRequest()
@@ -53,13 +60,16 @@ ModifyImageAttributeRequest::ModifyImageAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyImageAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyImageAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetwor
     return new ModifyImageAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyImageAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetwor
  * @brief  Private implementation for ModifyImageAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyImageAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyImageAttributeRequestPrivate object, copying another.

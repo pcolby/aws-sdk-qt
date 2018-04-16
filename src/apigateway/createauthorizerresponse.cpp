@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateAuthorizerResponse
+/*!
+ * \class QtAws::APIGateway::CreateAuthorizerResponse
  *
- * @brief  Handles APIGateway CreateAuthorizer responses.
+ * \brief The CreateAuthorizerResponse class encapsulates APIGateway CreateAuthorizer responses.
  *
- * @see    APIGatewayClient::createAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAuthorizerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
     return static_cast<const CreateAuthorizerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateAuthorizer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAuthorizerResponsePrivate
+ * \class CreateAuthorizerResponsePrivate
  *
- * @brief  Private implementation for CreateAuthorizerResponse.
+ * \brief Private implementation for CreateAuthorizerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAuthorizerResponsePrivate object.
@@ -91,7 +99,7 @@ CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateAuthorizerResponse element.
  *
  * @param  xml  XML stream to parse.

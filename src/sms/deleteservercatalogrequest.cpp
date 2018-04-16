@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  DeleteServerCatalogRequest
+/*!
+ * \class QtAws::SMS::DeleteServerCatalogRequest
  *
- * @brief  Implements SMS DeleteServerCatalog requests.
+ * \brief The DeleteServerCatalogRequest class encapsulates SMS DeleteServerCatalog requests.
  *
- * @see    SMSClient::deleteServerCatalog
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::deleteServerCatalog
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteServerCatalogRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteServerCatalogRequest::DeleteServerCatalogRequest(const DeleteServerCatalog
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteServerCatalogRequest object.
  */
 DeleteServerCatalogRequest::DeleteServerCatalogRequest()
@@ -53,13 +56,16 @@ DeleteServerCatalogRequest::DeleteServerCatalogRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteServerCatalogRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteServerCatalogResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetwork
     return new DeleteServerCatalogResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteServerCatalogRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetwork
  * @brief  Private implementation for DeleteServerCatalogRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServerCatalogRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServerCatalogRequestPrivate object, copying another.

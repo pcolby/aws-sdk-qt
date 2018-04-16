@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteNotebookInstanceResponse
+/*!
+ * \class QtAws::SageMaker::DeleteNotebookInstanceResponse
  *
- * @brief  Handles SageMaker DeleteNotebookInstance responses.
+ * \brief The DeleteNotebookInstanceResponse class encapsulates SageMaker DeleteNotebookInstance responses.
  *
- * @see    SageMakerClient::deleteNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotebookInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteNotebookInstanceRequest * DeleteNotebookInstanceResponse::request() 
     return static_cast<const DeleteNotebookInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker DeleteNotebookInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteNotebookInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNotebookInstanceResponsePrivate
+ * \class DeleteNotebookInstanceResponsePrivate
  *
- * @brief  Private implementation for DeleteNotebookInstanceResponse.
+ * \brief Private implementation for DeleteNotebookInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotebookInstanceResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker DeleteNotebookInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  RemoveAutoScalingPolicyResponse
+/*!
+ * \class QtAws::EMR::RemoveAutoScalingPolicyResponse
  *
- * @brief  Handles EMR RemoveAutoScalingPolicy responses.
+ * \brief The RemoveAutoScalingPolicyResponse class encapsulates EMR RemoveAutoScalingPolicy responses.
  *
- * @see    EMRClient::removeAutoScalingPolicy
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::removeAutoScalingPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveAutoScalingPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const RemoveAutoScalingPolicyRequest * RemoveAutoScalingPolicyResponse::request(
     return static_cast<const RemoveAutoScalingPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR RemoveAutoScalingPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void RemoveAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveAutoScalingPolicyResponsePrivate
+ * \class RemoveAutoScalingPolicyResponsePrivate
  *
- * @brief  Private implementation for RemoveAutoScalingPolicyResponse.
+ * \brief Private implementation for RemoveAutoScalingPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveAutoScalingPolicyResponsePrivate object.
@@ -91,7 +97,7 @@ RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR RemoveAutoScalingPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

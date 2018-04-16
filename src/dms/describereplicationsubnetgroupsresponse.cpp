@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationSubnetGroupsResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeReplicationSubnetGroups responses.
+ * \brief The DescribeReplicationSubnetGroupsResponse class encapsulates DatabaseMigrationService DescribeReplicationSubnetGroups responses.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationSubnetGroups
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationSubnetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationSubnetGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeReplicationSubnetGroupsRequest * DescribeReplicationSubnetGroupsRe
     return static_cast<const DescribeReplicationSubnetGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeReplicationSubnetGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeReplicationSubnetGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReplicationSubnetGroupsResponsePrivate
+ * \class DescribeReplicationSubnetGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribeReplicationSubnetGroupsResponse.
+ * \brief Private implementation for DescribeReplicationSubnetGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationSubnetGroupsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsR
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeReplicationSubnetGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

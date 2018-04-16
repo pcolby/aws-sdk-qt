@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcEndpointConnectionNotificationsResponse
+/*!
+ * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsResponse
  *
- * @brief  Handles EC2 DeleteVpcEndpointConnectionNotifications responses.
+ * \brief The DeleteVpcEndpointConnectionNotificationsResponse class encapsulates EC2 DeleteVpcEndpointConnectionNotifications responses.
  *
- * @see    EC2Client::deleteVpcEndpointConnectionNotifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpcEndpointConnectionNotifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteVpcEndpointConnectionNotificationsRequest * DeleteVpcEndpointConnect
     return static_cast<const DeleteVpcEndpointConnectionNotificationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteVpcEndpointConnectionNotifications response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &r
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteVpcEndpointConnectionNotificationsResponsePrivate
+ * \class DeleteVpcEndpointConnectionNotificationsResponsePrivate
  *
- * @brief  Private implementation for DeleteVpcEndpointConnectionNotificationsResponse.
+ * \brief Private implementation for DeleteVpcEndpointConnectionNotificationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointConnec
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteVpcEndpointConnectionNotificationsResponse element.
  *
  * @param  xml  XML stream to parse.

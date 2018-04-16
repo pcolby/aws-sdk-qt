@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteCoreDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::DeleteCoreDefinitionResponse
  *
- * @brief  Handles Greengrass DeleteCoreDefinition responses.
+ * \brief The DeleteCoreDefinitionResponse class encapsulates Greengrass DeleteCoreDefinition responses.
  *
- * @see    GreengrassClient::deleteCoreDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteCoreDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCoreDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteCoreDefinitionRequest * DeleteCoreDefinitionResponse::request() cons
     return static_cast<const DeleteCoreDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DeleteCoreDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteCoreDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCoreDefinitionResponsePrivate
+ * \class DeleteCoreDefinitionResponsePrivate
  *
- * @brief  Private implementation for DeleteCoreDefinitionResponse.
+ * \brief Private implementation for DeleteCoreDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCoreDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteCoreDefinitionResponsePrivate::DeleteCoreDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DeleteCoreDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

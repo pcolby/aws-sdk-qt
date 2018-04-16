@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  DeleteFunctionResponse
+/*!
+ * \class QtAws::Lambda::DeleteFunctionResponse
  *
- * @brief  Handles Lambda DeleteFunction responses.
+ * \brief The DeleteFunctionResponse class encapsulates Lambda DeleteFunction responses.
  *
- * @see    LambdaClient::deleteFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::deleteFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteFunctionRequest * DeleteFunctionResponse::request() const
     return static_cast<const DeleteFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda DeleteFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFunctionResponsePrivate
+ * \class DeleteFunctionResponsePrivate
  *
- * @brief  Private implementation for DeleteFunctionResponse.
+ * \brief Private implementation for DeleteFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteFunctionResponsePrivate::DeleteFunctionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda DeleteFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

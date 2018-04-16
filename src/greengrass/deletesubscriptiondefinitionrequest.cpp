@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteSubscriptionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::DeleteSubscriptionDefinitionRequest
  *
- * @brief  Implements Greengrass DeleteSubscriptionDefinition requests.
+ * \brief The DeleteSubscriptionDefinitionRequest class encapsulates Greengrass DeleteSubscriptionDefinition requests.
  *
- * @see    GreengrassClient::deleteSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriptionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriptionDefinitionRequest object.
  */
 DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest()
@@ -53,13 +59,16 @@ DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSubscriptionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSubscriptionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response
     return new DeleteSubscriptionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSubscriptionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response
  * @brief  Private implementation for DeleteSubscriptionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriptionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriptionDefinitionRequestPrivate object, copying another.

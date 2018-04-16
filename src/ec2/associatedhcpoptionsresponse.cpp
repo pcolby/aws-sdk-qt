@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateDhcpOptionsResponse
+/*!
+ * \class QtAws::EC2::AssociateDhcpOptionsResponse
  *
- * @brief  Handles EC2 AssociateDhcpOptions responses.
+ * \brief The AssociateDhcpOptionsResponse class encapsulates EC2 AssociateDhcpOptions responses.
  *
- * @see    EC2Client::associateDhcpOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateDhcpOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateDhcpOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssociateDhcpOptionsRequest * AssociateDhcpOptionsResponse::request() cons
     return static_cast<const AssociateDhcpOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssociateDhcpOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssociateDhcpOptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateDhcpOptionsResponsePrivate
+ * \class AssociateDhcpOptionsResponsePrivate
  *
- * @brief  Private implementation for AssociateDhcpOptionsResponse.
+ * \brief Private implementation for AssociateDhcpOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateDhcpOptionsResponsePrivate object.
@@ -91,7 +98,7 @@ AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssociateDhcpOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

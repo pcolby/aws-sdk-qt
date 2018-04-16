@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  CreateClusterResponse
+/*!
+ * \class QtAws::DAX::CreateClusterResponse
  *
- * @brief  Handles DAX CreateCluster responses.
+ * \brief The CreateClusterResponse class encapsulates DAX CreateCluster responses.
  *
- * @see    DAXClient::createCluster
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::createCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateClusterRequest * CreateClusterResponse::request() const
     return static_cast<const CreateClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX CreateCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateClusterResponsePrivate
+ * \class CreateClusterResponsePrivate
  *
- * @brief  Private implementation for CreateClusterResponse.
+ * \brief Private implementation for CreateClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterResponsePrivate object.
@@ -91,7 +98,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX CreateClusterResponse element.
  *
  * @param  xml  XML stream to parse.

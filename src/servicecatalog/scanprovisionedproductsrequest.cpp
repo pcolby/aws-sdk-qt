@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ScanProvisionedProductsRequest
+/*!
+ * \class QtAws::ServiceCatalog::ScanProvisionedProductsRequest
  *
- * @brief  Implements ServiceCatalog ScanProvisionedProducts requests.
+ * \brief The ScanProvisionedProductsRequest class encapsulates ServiceCatalog ScanProvisionedProducts requests.
  *
- * @see    ServiceCatalogClient::scanProvisionedProducts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::scanProvisionedProducts
  */
 
-/**
+/*!
  * @brief  Constructs a new ScanProvisionedProductsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ScanProvisionedProductsRequest::ScanProvisionedProductsRequest(const ScanProvisi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ScanProvisionedProductsRequest object.
  */
 ScanProvisionedProductsRequest::ScanProvisionedProductsRequest()
@@ -53,13 +62,16 @@ ScanProvisionedProductsRequest::ScanProvisionedProductsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ScanProvisionedProductsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ScanProvisionedProductsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNet
     return new ScanProvisionedProductsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ScanProvisionedProductsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNet
  * @brief  Private implementation for ScanProvisionedProductsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScanProvisionedProductsRequestPrivate object.
@@ -97,7 +109,7 @@ ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScanProvisionedProductsRequestPrivate object, copying another.

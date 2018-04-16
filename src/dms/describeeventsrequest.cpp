@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEventsRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEventsRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeEvents requests.
+ * \brief The DescribeEventsRequest class encapsulates DatabaseMigrationService DescribeEvents requests.
  *
- * @see    DatabaseMigrationServiceClient::describeEvents
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
@@ -53,13 +67,16 @@ DescribeEventsRequest::DescribeEventsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
     return new DescribeEventsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeEventsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateEmailChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateEmailChannelRequest
  *
- * @brief  Implements Pinpoint UpdateEmailChannel requests.
+ * \brief The UpdateEmailChannelRequest class encapsulates Pinpoint UpdateEmailChannel requests.
  *
- * @see    PinpointClient::updateEmailChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateEmailChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEmailChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateEmailChannelRequest::UpdateEmailChannelRequest(const UpdateEmailChannelReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateEmailChannelRequest object.
  */
 UpdateEmailChannelRequest::UpdateEmailChannelRequest()
@@ -53,13 +56,16 @@ UpdateEmailChannelRequest::UpdateEmailChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateEmailChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateEmailChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkR
     return new UpdateEmailChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateEmailChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkR
  * @brief  Private implementation for UpdateEmailChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEmailChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEmailChannelRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  SelectObjectContentRequest
+/*!
+ * \class QtAws::S3::SelectObjectContentRequest
  *
- * @brief  Implements S3 SelectObjectContent requests.
+ * \brief The SelectObjectContentRequest class encapsulates S3 SelectObjectContent requests.
  *
- * @see    S3Client::selectObjectContent
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::selectObjectContent
  */
 
-/**
+/*!
  * @brief  Constructs a new SelectObjectContentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ SelectObjectContentRequest::SelectObjectContentRequest(const SelectObjectContent
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SelectObjectContentRequest object.
  */
 SelectObjectContentRequest::SelectObjectContentRequest()
@@ -53,13 +56,16 @@ SelectObjectContentRequest::SelectObjectContentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SelectObjectContentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SelectObjectContentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * SelectObjectContentRequest::response(QNetwork
     return new SelectObjectContentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SelectObjectContentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * SelectObjectContentRequest::response(QNetwork
  * @brief  Private implementation for SelectObjectContentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SelectObjectContentRequestPrivate object.
@@ -97,7 +103,7 @@ SelectObjectContentRequestPrivate::SelectObjectContentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SelectObjectContentRequestPrivate object, copying another.

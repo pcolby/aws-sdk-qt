@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateFunctionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::UpdateFunctionDefinitionRequest
  *
- * @brief  Implements Greengrass UpdateFunctionDefinition requests.
+ * \brief The UpdateFunctionDefinitionRequest class encapsulates Greengrass UpdateFunctionDefinition requests.
  *
- * @see    GreengrassClient::updateFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFunctionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateFunctionDefinitionRequest::UpdateFunctionDefinitionRequest(const UpdateFun
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateFunctionDefinitionRequest object.
  */
 UpdateFunctionDefinitionRequest::UpdateFunctionDefinitionRequest()
@@ -53,13 +59,16 @@ UpdateFunctionDefinitionRequest::UpdateFunctionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateFunctionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateFunctionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionDefinitionRequest::response(QNe
     return new UpdateFunctionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateFunctionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionDefinitionRequest::response(QNe
  * @brief  Private implementation for UpdateFunctionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFunctionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateFunctionDefinitionRequestPrivate::UpdateFunctionDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFunctionDefinitionRequestPrivate object, copying another.

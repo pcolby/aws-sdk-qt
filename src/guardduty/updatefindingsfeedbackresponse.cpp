@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  UpdateFindingsFeedbackResponse
+/*!
+ * \class QtAws::GuardDuty::UpdateFindingsFeedbackResponse
  *
- * @brief  Handles GuardDuty UpdateFindingsFeedback responses.
+ * \brief The UpdateFindingsFeedbackResponse class encapsulates GuardDuty UpdateFindingsFeedback responses.
  *
- * @see    GuardDutyClient::updateFindingsFeedback
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::updateFindingsFeedback
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFindingsFeedbackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateFindingsFeedbackRequest * UpdateFindingsFeedbackResponse::request() 
     return static_cast<const UpdateFindingsFeedbackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty UpdateFindingsFeedback response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateFindingsFeedbackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateFindingsFeedbackResponsePrivate
+ * \class UpdateFindingsFeedbackResponsePrivate
  *
- * @brief  Private implementation for UpdateFindingsFeedbackResponse.
+ * \brief Private implementation for UpdateFindingsFeedbackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFindingsFeedbackResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty UpdateFindingsFeedbackResponse element.
  *
  * @param  xml  XML stream to parse.

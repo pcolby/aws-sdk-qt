@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DeleteIndexFieldResponse
+/*!
+ * \class QtAws::CloudSearch::DeleteIndexFieldResponse
  *
- * @brief  Handles CloudSearch DeleteIndexField responses.
+ * \brief The DeleteIndexFieldResponse class encapsulates CloudSearch DeleteIndexField responses.
  *
- * @see    CloudSearchClient::deleteIndexField
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::deleteIndexField
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIndexFieldResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteIndexFieldRequest * DeleteIndexFieldResponse::request() const
     return static_cast<const DeleteIndexFieldRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DeleteIndexField response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteIndexFieldResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteIndexFieldResponsePrivate
+ * \class DeleteIndexFieldResponsePrivate
  *
- * @brief  Private implementation for DeleteIndexFieldResponse.
+ * \brief Private implementation for DeleteIndexFieldResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIndexFieldResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DeleteIndexFieldResponse element.
  *
  * @param  xml  XML stream to parse.

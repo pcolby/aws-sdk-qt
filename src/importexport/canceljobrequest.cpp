@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  CancelJobRequest
+/*!
+ * \class QtAws::ImportExport::CancelJobRequest
  *
- * @brief  Implements ImportExport CancelJob requests.
+ * \brief The CancelJobRequest class encapsulates ImportExport CancelJob requests.
  *
- * @see    ImportExportClient::cancelJob
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
@@ -53,13 +59,16 @@ CancelJobRequest::CancelJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
     return new CancelJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CancelJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object.
@@ -97,7 +106,7 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteBatchPredictionRequest
+/*!
+ * \class QtAws::MachineLearning::DeleteBatchPredictionRequest
  *
- * @brief  Implements MachineLearning DeleteBatchPrediction requests.
+ * \brief The DeleteBatchPredictionRequest class encapsulates MachineLearning DeleteBatchPrediction requests.
  *
- * @see    MachineLearningClient::deleteBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBatchPredictionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBatchPredictionRequest::DeleteBatchPredictionRequest(const DeleteBatchPred
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBatchPredictionRequest object.
  */
 DeleteBatchPredictionRequest::DeleteBatchPredictionRequest()
@@ -53,13 +56,16 @@ DeleteBatchPredictionRequest::DeleteBatchPredictionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBatchPredictionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBatchPredictionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetwo
     return new DeleteBatchPredictionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBatchPredictionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetwo
  * @brief  Private implementation for DeleteBatchPredictionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBatchPredictionRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBatchPredictionRequestPrivate object, copying another.

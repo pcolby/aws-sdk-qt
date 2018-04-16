@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetUserSettingsResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetUserSettingsResponse
  *
- * @brief  Handles CognitoIdentityProvider SetUserSettings responses.
+ * \brief The SetUserSettingsResponse class encapsulates CognitoIdentityProvider SetUserSettings responses.
  *
- * @see    CognitoIdentityProviderClient::setUserSettings
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setUserSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new SetUserSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const SetUserSettingsRequest * SetUserSettingsResponse::request() const
     return static_cast<const SetUserSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider SetUserSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void SetUserSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetUserSettingsResponsePrivate
+ * \class SetUserSettingsResponsePrivate
  *
- * @brief  Private implementation for SetUserSettingsResponse.
+ * \brief Private implementation for SetUserSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetUserSettingsResponsePrivate object.
@@ -91,7 +104,7 @@ SetUserSettingsResponsePrivate::SetUserSettingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider SetUserSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

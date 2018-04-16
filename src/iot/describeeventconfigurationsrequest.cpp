@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeEventConfigurationsRequest
+/*!
+ * \class QtAws::IoT::DescribeEventConfigurationsRequest
  *
- * @brief  Implements IoT DescribeEventConfigurations requests.
+ * \brief The DescribeEventConfigurationsRequest class encapsulates IoT DescribeEventConfigurations requests.
  *
- * @see    IoTClient::describeEventConfigurations
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeEventConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest(const Des
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventConfigurationsRequest object.
  */
 DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest()
@@ -53,13 +67,16 @@ DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventConfigurationsRequest::response(
     return new DescribeEventConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventConfigurationsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventConfigurationsRequest::response(
  * @brief  Private implementation for DescribeEventConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventConfigurationsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventConfigurationsRequestPrivate object, copying another.

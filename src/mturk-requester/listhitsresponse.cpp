@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListHITsResponse
+/*!
+ * \class QtAws::MTurk::ListHITsResponse
  *
- * @brief  Handles MTurk ListHITs responses.
+ * \brief The ListHITsResponse class encapsulates MTurk ListHITs responses.
  *
- * @see    MTurkClient::listHITs
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listHITs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHITsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListHITsRequest * ListHITsResponse::request() const
     return static_cast<const ListHITsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListHITs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListHITsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListHITsResponsePrivate
+ * \class ListHITsResponsePrivate
  *
- * @brief  Private implementation for ListHITsResponse.
+ * \brief Private implementation for ListHITsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHITsResponsePrivate object.
@@ -91,7 +94,7 @@ ListHITsResponsePrivate::ListHITsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListHITsResponse element.
  *
  * @param  xml  XML stream to parse.

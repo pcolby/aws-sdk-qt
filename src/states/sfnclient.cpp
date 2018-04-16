@@ -63,42 +63,50 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SFN
+ * \brief The QtAws::SFN contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SFN {
 
-/**
- * @class  SfnClient
+/*!
+ * \class QtAws::SFN::SfnClient
  *
- * @brief  Client for AWS Step Functions ( SFN)
+ * \brief The SfnClient class provides access the AWS Step Functions ( SFN) service.
  *
- * <fullname>AWS Step Functions</fullname>
+ * \ingroup SFN
  *
- * AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
- * using visual
- *
- * workflows>
- *
- * You can use Step Functions to build applications from individual components, each of which performs a discrete function,
- * or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps
- * visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each
- * step, and retries steps when there are errors, so your application executes predictably and in the right order every
- * time. Step Functions logs the state of each step, so you can quickly diagnose and debug any
- *
- * issues>
- *
- * Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
- * You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
- * using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
- * href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
+ *  <fullname>AWS Step Functions</fullname>
+ * 
+ *  AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
+ *  using visual
+ * 
+ *  workflows>
+ * 
+ *  You can use Step Functions to build applications from individual components, each of which performs a discrete function,
+ *  or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps
+ *  visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each
+ *  step, and retries steps when there are errors, so your application executes predictably and in the right order every
+ *  time. Step Functions logs the state of each step, so you can quickly diagnose and debug any
+ * 
+ *  issues>
+ * 
+ *  Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
+ *  You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
+ *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
+ *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
  */
 
-/**
- * @brief  Constructs a new SfnClient object.
+/*!
+ * \brief Constructs a SfnClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SfnClient::SfnClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -117,21 +125,16 @@ SfnClient::SfnClient(
     d->serviceName = QStringLiteral("states");
 }
 
-/**
- * @brief  Constructs a new SfnClient object.
+/*!
+ * \overload SfnClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SfnClient::SfnClient(
     const QUrl &endpoint,
@@ -150,7 +153,7 @@ SfnClient::SfnClient(
     d->serviceName = QStringLiteral("states");
 }
 
-/**
+/*!
  * Creates an activity. An activity is a task which you write in any programming language and host on any machine which has
  * access to AWS Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API action and
  * respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence of your activity
@@ -167,7 +170,7 @@ CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &
     return qobject_cast<CreateActivityResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a state machine. A state machine consists of a collection of states that can do work (<code>Task</code> states),
  * determine to which states to transition next (<code>Choice</code> states), stop an execution with an error
  * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
@@ -183,7 +186,7 @@ CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMach
     return qobject_cast<CreateStateMachineResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an
  *
  * @param  request Request to send to AWS Step Functions.
@@ -197,7 +200,7 @@ DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &
     return qobject_cast<DeleteActivityResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to <code>DELETING</code>
  * and begins the deletion process. Each state machine execution is deleted the next time it makes a state
  *
@@ -216,7 +219,7 @@ DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMach
     return qobject_cast<DeleteStateMachineResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes an
  *
  * @param  request Request to send to AWS Step Functions.
@@ -230,7 +233,7 @@ DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityReq
     return qobject_cast<DescribeActivityResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes an
  *
  * @param  request Request to send to AWS Step Functions.
@@ -244,7 +247,7 @@ DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecution
     return qobject_cast<DescribeExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a state
  *
  * @param  request Request to send to AWS Step Functions.
@@ -258,7 +261,7 @@ DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeSta
     return qobject_cast<DescribeStateMachineResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the state machine associated with a specific
  *
  * @param  request Request to send to AWS Step Functions.
@@ -272,7 +275,7 @@ DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExe
     return qobject_cast<DescribeStateMachineForExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Used by workers to retrieve a task (with the specified activity ARN) which has been scheduled for execution by a running
  * state machine. This initiates a long poll, where the service holds the HTTP connection open and responds as soon as a
  * task becomes available (i.e. an execution of a task of this type is needed.) The maximum time the service holds on to
@@ -295,7 +298,7 @@ GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskReques
     return qobject_cast<GetActivityTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the history of the specified execution as a list of events. By default, the results are returned in ascending
  * order of the <code>timeStamp</code> of the events. Use the <code>reverseOrder</code> parameter to get the latest events
  *
@@ -315,7 +318,7 @@ GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionH
     return qobject_cast<GetExecutionHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the existing
  *
  * activities>
@@ -334,7 +337,7 @@ ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &
     return qobject_cast<ListActivitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the executions of a state machine that meet the filtering
  *
  * criteria>
@@ -353,7 +356,7 @@ ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &
     return qobject_cast<ListExecutionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the existing state
  *
  * machines>
@@ -372,7 +375,7 @@ ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachines
     return qobject_cast<ListStateMachinesResponse *>(send(request));
 }
 
-/**
+/*!
  * Used by workers to report that the task identified by the <code>taskToken</code>
  *
  * @param  request Request to send to AWS Step Functions.
@@ -386,7 +389,7 @@ SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureReques
     return qobject_cast<SendTaskFailureResponse *>(send(request));
 }
 
-/**
+/*!
  * Used by workers to report to the service that the task represented by the specified <code>taskToken</code> is still
  * making progress. This action resets the <code>Heartbeat</code> clock. The <code>Heartbeat</code> threshold is specified
  * in the state machine's Amazon States Language definition. This action does not in itself create an event in the
@@ -412,7 +415,7 @@ SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeat
     return qobject_cast<SendTaskHeartbeatResponse *>(send(request));
 }
 
-/**
+/*!
  * Used by workers to report that the task identified by the <code>taskToken</code> completed
  *
  * @param  request Request to send to AWS Step Functions.
@@ -426,7 +429,7 @@ SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessReques
     return qobject_cast<SendTaskSuccessResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a state machine
  *
  * @param  request Request to send to AWS Step Functions.
@@ -440,7 +443,7 @@ StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &
     return qobject_cast<StartExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops an
  *
  * @param  request Request to send to AWS Step Functions.
@@ -454,7 +457,7 @@ StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &req
     return qobject_cast<StopExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing state machine by modifying its <code>definition</code> and/or <code>roleArn</code>. Running
  * executions will continue to use the previous <code>definition</code> and
  *
@@ -476,7 +479,7 @@ UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMach
     return qobject_cast<UpdateStateMachineResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SfnClientPrivate
@@ -484,7 +487,7 @@ UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMach
  * @brief  Private implementation for SfnClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SfnClientPrivate object.

@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DeleteProgressUpdateStreamResponse
+/*!
+ * \class QtAws::MigrationHub::DeleteProgressUpdateStreamResponse
  *
- * @brief  Handles MigrationHub DeleteProgressUpdateStream responses.
+ * \brief The DeleteProgressUpdateStreamResponse class encapsulates MigrationHub DeleteProgressUpdateStream responses.
  *
- * @see    MigrationHubClient::deleteProgressUpdateStream
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::deleteProgressUpdateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProgressUpdateStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteProgressUpdateStreamRequest * DeleteProgressUpdateStreamResponse::re
     return static_cast<const DeleteProgressUpdateStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub DeleteProgressUpdateStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteProgressUpdateStreamResponsePrivate
+ * \class DeleteProgressUpdateStreamResponsePrivate
  *
- * @brief  Private implementation for DeleteProgressUpdateStreamResponse.
+ * \brief Private implementation for DeleteProgressUpdateStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProgressUpdateStreamResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub DeleteProgressUpdateStreamResponse element.
  *
  * @param  xml  XML stream to parse.

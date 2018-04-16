@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  DeregisterInstanceResponse
+/*!
+ * \class QtAws::ServiceDiscovery::DeregisterInstanceResponse
  *
- * @brief  Handles ServiceDiscovery DeregisterInstance responses.
+ * \brief The DeregisterInstanceResponse class encapsulates ServiceDiscovery DeregisterInstance responses.
  *
- * @see    ServiceDiscoveryClient::deregisterInstance
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::deregisterInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeregisterInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
     return static_cast<const DeregisterInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery DeregisterInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeregisterInstanceResponsePrivate
+ * \class DeregisterInstanceResponsePrivate
  *
- * @brief  Private implementation for DeregisterInstanceResponse.
+ * \brief Private implementation for DeregisterInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterInstanceResponsePrivate object.
@@ -91,7 +98,7 @@ DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery DeregisterInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

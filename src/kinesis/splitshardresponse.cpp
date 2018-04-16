@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  SplitShardResponse
+/*!
+ * \class QtAws::Kinesis::SplitShardResponse
  *
- * @brief  Handles Kinesis SplitShard responses.
+ * \brief The SplitShardResponse class encapsulates Kinesis SplitShard responses.
  *
- * @see    KinesisClient::splitShard
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::splitShard
  */
 
-/**
+/*!
  * @brief  Constructs a new SplitShardResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const SplitShardRequest * SplitShardResponse::request() const
     return static_cast<const SplitShardRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis SplitShard response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void SplitShardResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SplitShardResponsePrivate
+ * \class SplitShardResponsePrivate
  *
- * @brief  Private implementation for SplitShardResponse.
+ * \brief Private implementation for SplitShardResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SplitShardResponsePrivate object.
@@ -91,7 +97,7 @@ SplitShardResponsePrivate::SplitShardResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis SplitShardResponse element.
  *
  * @param  xml  XML stream to parse.

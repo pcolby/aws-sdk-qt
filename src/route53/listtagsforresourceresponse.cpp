@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListTagsForResourceResponse
+/*!
+ * \class QtAws::Route53::ListTagsForResourceResponse
  *
- * @brief  Handles Route53 ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class encapsulates Route53 ListTagsForResource responses.
  *
- * @see    Route53Client::listTagsForResource
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
     return static_cast<const ListTagsForResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ListTagsForResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForResourceResponsePrivate
+ * \class ListTagsForResourceResponsePrivate
  *
- * @brief  Private implementation for ListTagsForResourceResponse.
+ * \brief Private implementation for ListTagsForResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
@@ -91,7 +94,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ListTagsForResourceResponse element.
  *
  * @param  xml  XML stream to parse.

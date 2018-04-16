@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectLabelsRequest
+/*!
+ * \class QtAws::Rekognition::DetectLabelsRequest
  *
- * @brief  Implements Rekognition DetectLabels requests.
+ * \brief The DetectLabelsRequest class encapsulates Rekognition DetectLabels requests.
  *
- * @see    RekognitionClient::detectLabels
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectLabels
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectLabelsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DetectLabelsRequest::DetectLabelsRequest(const DetectLabelsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectLabelsRequest object.
  */
 DetectLabelsRequest::DetectLabelsRequest()
@@ -53,13 +57,16 @@ DetectLabelsRequest::DetectLabelsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectLabelsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectLabelsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply *
     return new DetectLabelsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectLabelsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply *
  * @brief  Private implementation for DetectLabelsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectLabelsRequestPrivate object.
@@ -97,7 +104,7 @@ DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectLabelsRequestPrivate object, copying another.

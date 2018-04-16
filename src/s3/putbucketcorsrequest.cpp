@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketCorsRequest
+/*!
+ * \class QtAws::S3::PutBucketCorsRequest
  *
- * @brief  Implements S3 PutBucketCors requests.
+ * \brief The PutBucketCorsRequest class encapsulates S3 PutBucketCors requests.
  *
- * @see    S3Client::putBucketCors
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketCors
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketCorsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketCorsRequest::PutBucketCorsRequest(const PutBucketCorsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketCorsRequest object.
  */
 PutBucketCorsRequest::PutBucketCorsRequest()
@@ -53,13 +56,16 @@ PutBucketCorsRequest::PutBucketCorsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketCorsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketCorsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketCorsRequest::response(QNetworkReply 
     return new PutBucketCorsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketCorsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketCorsRequest::response(QNetworkReply 
  * @brief  Private implementation for PutBucketCorsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketCorsRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketCorsRequestPrivate object, copying another.

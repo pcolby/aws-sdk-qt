@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ModifyInstanceGroupsRequest
+/*!
+ * \class QtAws::EMR::ModifyInstanceGroupsRequest
  *
- * @brief  Implements EMR ModifyInstanceGroups requests.
+ * \brief The ModifyInstanceGroupsRequest class encapsulates EMR ModifyInstanceGroups requests.
  *
- * @see    EMRClient::modifyInstanceGroups
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::modifyInstanceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ModifyInstanceGroupsRequest::ModifyInstanceGroupsRequest(const ModifyInstanceGro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceGroupsRequest object.
  */
 ModifyInstanceGroupsRequest::ModifyInstanceGroupsRequest()
@@ -53,13 +59,16 @@ ModifyInstanceGroupsRequest::ModifyInstanceGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyInstanceGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyInstanceGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetwor
     return new ModifyInstanceGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyInstanceGroupsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetwor
  * @brief  Private implementation for ModifyInstanceGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceGroupsRequestPrivate object.
@@ -97,7 +106,7 @@ ModifyInstanceGroupsRequestPrivate::ModifyInstanceGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceGroupsRequestPrivate object, copying another.

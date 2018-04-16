@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DisassociateFleetRequest
+/*!
+ * \class QtAws::AppStream::DisassociateFleetRequest
  *
- * @brief  Implements AppStream DisassociateFleet requests.
+ * \brief The DisassociateFleetRequest class encapsulates AppStream DisassociateFleet requests.
  *
- * @see    AppStreamClient::disassociateFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::disassociateFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DisassociateFleetRequest::DisassociateFleetRequest(const DisassociateFleetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateFleetRequest object.
  */
 DisassociateFleetRequest::DisassociateFleetRequest()
@@ -53,13 +59,16 @@ DisassociateFleetRequest::DisassociateFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateFleetRequest::response(QNetworkRe
     return new DisassociateFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateFleetRequest::response(QNetworkRe
  * @brief  Private implementation for DisassociateFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateFleetRequestPrivate object.
@@ -97,7 +106,7 @@ DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateFleetRequestPrivate object, copying another.

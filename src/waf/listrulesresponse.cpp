@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListRulesResponse
+/*!
+ * \class QtAws::WAF::ListRulesResponse
  *
- * @brief  Handles WAF ListRules responses.
+ * \brief The ListRulesResponse class encapsulates WAF ListRules responses.
  *
- * @see    WAFClient::listRules
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listRules
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRulesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListRulesRequest * ListRulesResponse::request() const
     return static_cast<const ListRulesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF ListRules response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListRulesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListRulesResponsePrivate
+ * \class ListRulesResponsePrivate
  *
- * @brief  Private implementation for ListRulesResponse.
+ * \brief Private implementation for ListRulesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRulesResponsePrivate object.
@@ -91,7 +99,7 @@ ListRulesResponsePrivate::ListRulesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF ListRulesResponse element.
  *
  * @param  xml  XML stream to parse.

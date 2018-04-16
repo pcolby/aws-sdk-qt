@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectLabelsResponse
+/*!
+ * \class QtAws::Rekognition::DetectLabelsResponse
  *
- * @brief  Handles Rekognition DetectLabels responses.
+ * \brief The DetectLabelsResponse class encapsulates Rekognition DetectLabels responses.
  *
- * @see    RekognitionClient::detectLabels
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectLabels
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectLabelsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DetectLabelsRequest * DetectLabelsResponse::request() const
     return static_cast<const DetectLabelsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DetectLabels response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DetectLabelsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetectLabelsResponsePrivate
+ * \class DetectLabelsResponsePrivate
  *
- * @brief  Private implementation for DetectLabelsResponse.
+ * \brief Private implementation for DetectLabelsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectLabelsResponsePrivate object.
@@ -91,7 +95,7 @@ DetectLabelsResponsePrivate::DetectLabelsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DetectLabelsResponse element.
  *
  * @param  xml  XML stream to parse.

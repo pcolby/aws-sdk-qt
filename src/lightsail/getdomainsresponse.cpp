@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  GetDomainsResponse
+/*!
+ * \class QtAws::Lightsail::GetDomainsResponse
  *
- * @brief  Handles Lightsail GetDomains responses.
+ * \brief The GetDomainsResponse class encapsulates Lightsail GetDomains responses.
  *
- * @see    LightsailClient::getDomains
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::getDomains
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDomainsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const GetDomainsRequest * GetDomainsResponse::request() const
     return static_cast<const GetDomainsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lightsail GetDomains response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void GetDomainsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDomainsResponsePrivate
+ * \class GetDomainsResponsePrivate
  *
- * @brief  Private implementation for GetDomainsResponse.
+ * \brief Private implementation for GetDomainsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainsResponsePrivate object.
@@ -91,7 +110,7 @@ GetDomainsResponsePrivate::GetDomainsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lightsail GetDomainsResponse element.
  *
  * @param  xml  XML stream to parse.

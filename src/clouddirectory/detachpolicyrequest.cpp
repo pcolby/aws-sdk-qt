@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DetachPolicyRequest
+/*!
+ * \class QtAws::CloudDirectory::DetachPolicyRequest
  *
- * @brief  Implements CloudDirectory DetachPolicy requests.
+ * \brief The DetachPolicyRequest class encapsulates CloudDirectory DetachPolicy requests.
  *
- * @see    CloudDirectoryClient::detachPolicy
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::detachPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachPolicyRequest object.
  */
 DetachPolicyRequest::DetachPolicyRequest()
@@ -53,13 +63,16 @@ DetachPolicyRequest::DetachPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
     return new DetachPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachPolicyRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for DetachPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPolicyRequestPrivate object.
@@ -97,7 +110,7 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPolicyRequestPrivate object, copying another.

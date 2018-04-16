@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DefineAnalysisSchemeResponse
+/*!
+ * \class QtAws::CloudSearch::DefineAnalysisSchemeResponse
  *
- * @brief  Handles CloudSearch DefineAnalysisScheme responses.
+ * \brief The DefineAnalysisSchemeResponse class encapsulates CloudSearch DefineAnalysisScheme responses.
  *
- * @see    CloudSearchClient::defineAnalysisScheme
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::defineAnalysisScheme
  */
 
-/**
+/*!
  * @brief  Constructs a new DefineAnalysisSchemeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DefineAnalysisSchemeRequest * DefineAnalysisSchemeResponse::request() cons
     return static_cast<const DefineAnalysisSchemeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DefineAnalysisScheme response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DefineAnalysisSchemeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DefineAnalysisSchemeResponsePrivate
+ * \class DefineAnalysisSchemeResponsePrivate
  *
- * @brief  Private implementation for DefineAnalysisSchemeResponse.
+ * \brief Private implementation for DefineAnalysisSchemeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DefineAnalysisSchemeResponsePrivate object.
@@ -91,7 +105,7 @@ DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DefineAnalysisSchemeResponse element.
  *
  * @param  xml  XML stream to parse.

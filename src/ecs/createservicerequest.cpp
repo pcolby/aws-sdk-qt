@@ -25,15 +25,35 @@
 namespace QtAws {
 namespace ECS {
 
-/**
- * @class  CreateServiceRequest
+/*!
+ * \class QtAws::ECS::CreateServiceRequest
  *
- * @brief  Implements ECS CreateService requests.
+ * \brief The CreateServiceRequest class encapsulates ECS CreateService requests.
  *
- * @see    ECSClient::createService
+ * \ingroup ECS
+ *
+ *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
+ *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
+ *  that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
+ *  can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
+ *  launch type. For more information about launch types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ * 
+ *  Types</a>>
+ * 
+ *  Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
+ *  your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ * 
+ *  features>
+ * 
+ *  You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
+ *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
+ *  management and configuration management systems or worry about scaling your management
+ *
+ * \sa ECSClient::createService
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +64,7 @@ CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateServiceRequest object.
  */
 CreateServiceRequest::CreateServiceRequest()
@@ -53,13 +73,16 @@ CreateServiceRequest::CreateServiceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateServiceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateServiceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
     return new CreateServiceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateServiceRequestPrivate
@@ -82,7 +105,7 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateServiceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateServiceRequestPrivate object.
@@ -97,7 +120,7 @@ CreateServiceRequestPrivate::CreateServiceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateServiceRequestPrivate object, copying another.

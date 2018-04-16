@@ -145,29 +145,37 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ServiceCatalog
+ * \brief The QtAws::ServiceCatalog contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ServiceCatalogClient
+/*!
+ * \class QtAws::ServiceCatalog::ServiceCatalogClient
  *
- * @brief  Client for AWS Service Catalog
+ * \brief The ServiceCatalogClient class provides access the AWS Service Catalog service.
  *
- * <fullname>AWS Service Catalog</fullname>
+ * \ingroup ServiceCatalog
  *
- * <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
- * catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
- * familiar with the terminology discussed in <a
- * href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
  */
 
-/**
- * @brief  Constructs a new ServiceCatalogClient object.
+/*!
+ * \brief Constructs a ServiceCatalogClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ServiceCatalogClient::ServiceCatalogClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -186,21 +194,16 @@ ServiceCatalogClient::ServiceCatalogClient(
     d->serviceName = QStringLiteral("servicecatalog");
 }
 
-/**
- * @brief  Constructs a new ServiceCatalogClient object.
+/*!
+ * \overload ServiceCatalogClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ServiceCatalogClient::ServiceCatalogClient(
     const QUrl &endpoint,
@@ -219,7 +222,7 @@ ServiceCatalogClient::ServiceCatalogClient(
     d->serviceName = QStringLiteral("servicecatalog");
 }
 
-/**
+/*!
  * Accepts an offer to share the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -233,7 +236,7 @@ AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const 
     return qobject_cast<AcceptPortfolioShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates the specified principal ARN with the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -247,7 +250,7 @@ AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincip
     return qobject_cast<AssociatePrincipalWithPortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates the specified product with the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -261,7 +264,7 @@ AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWi
     return qobject_cast<AssociateProductWithPortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Associate the specified TagOption with the specified portfolio or
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -275,7 +278,7 @@ AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptio
     return qobject_cast<AssociateTagOptionWithResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the specified source product to the specified target product or a new
  *
  * product>
@@ -297,7 +300,7 @@ CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest
     return qobject_cast<CopyProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -311,7 +314,7 @@ CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateCo
     return qobject_cast<CreateConstraintResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -325,7 +328,7 @@ CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePort
     return qobject_cast<CreatePortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Shares the specified portfolio with the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -339,7 +342,7 @@ CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const 
     return qobject_cast<CreatePortfolioShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -353,7 +356,7 @@ CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductR
     return qobject_cast<CreateProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a plan. A plan includes the list of resources to be created (when provisioning a new product) or modified (when
  * updating a provisioned product) when the plan is
  *
@@ -378,7 +381,7 @@ CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedPr
     return qobject_cast<CreateProvisionedProductPlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a provisioning artifact (also known as a version) for the specified
  *
  * product>
@@ -396,7 +399,7 @@ CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArt
     return qobject_cast<CreateProvisioningArtifactResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -410,7 +413,7 @@ CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagO
     return qobject_cast<CreateTagOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -424,7 +427,7 @@ DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteCo
     return qobject_cast<DeleteConstraintResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * portfolio>
@@ -442,7 +445,7 @@ DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePort
     return qobject_cast<DeletePortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops sharing the specified portfolio with the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -456,7 +459,7 @@ DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const 
     return qobject_cast<DeletePortfolioShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * product>
@@ -474,7 +477,7 @@ DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductR
     return qobject_cast<DeleteProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -488,7 +491,7 @@ DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedPr
     return qobject_cast<DeleteProvisionedProductPlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified provisioning artifact (also known as a version) for the specified
  *
  * product>
@@ -507,7 +510,7 @@ DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArt
     return qobject_cast<DeleteProvisioningArtifactResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * TagOption>
@@ -525,7 +528,7 @@ DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagO
     return qobject_cast<DeleteTagOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -539,7 +542,7 @@ DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const Desc
     return qobject_cast<DescribeConstraintResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the status of the specified copy product
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -553,7 +556,7 @@ DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductSta
     return qobject_cast<DescribeCopyProductStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -567,7 +570,7 @@ DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const Descri
     return qobject_cast<DescribePortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -581,7 +584,7 @@ DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribePr
     return qobject_cast<DescribeProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified product. This operation is run with administrator
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -595,7 +598,7 @@ DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(co
     return qobject_cast<DescribeProductAsAdminResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -609,7 +612,7 @@ DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const De
     return qobject_cast<DescribeProductViewResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified provisioned
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -623,7 +626,7 @@ DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedPr
     return qobject_cast<DescribeProvisionedProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the resource changes for the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -637,7 +640,7 @@ DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvision
     return qobject_cast<DescribeProvisionedProductPlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified provisioning artifact (also known as a version) for the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -651,7 +654,7 @@ DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisionin
     return qobject_cast<DescribeProvisioningArtifactResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the configuration required to provision the specified product using the specified provisioning
  *
  * artifact>
@@ -672,7 +675,7 @@ DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvision
     return qobject_cast<DescribeProvisioningParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified request
  *
  * operation>
@@ -691,7 +694,7 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
     return qobject_cast<DescribeRecordResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -705,7 +708,7 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
     return qobject_cast<DescribeTagOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a previously associated principal ARN from a specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -719,7 +722,7 @@ DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociateP
     return qobject_cast<DisassociatePrincipalFromPortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the specified product from the specified portfolio.
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -733,7 +736,7 @@ DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociatePro
     return qobject_cast<DisassociateProductFromPortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the specified TagOption from the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -747,7 +750,7 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
     return qobject_cast<DisassociateTagOptionFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Provisions or modifies a product based on the resource changes for the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -761,7 +764,7 @@ ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisioned
     return qobject_cast<ExecuteProvisionedProductPlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all portfolios for which sharing was accepted by this
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -775,7 +778,7 @@ ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfoli
     return qobject_cast<ListAcceptedPortfolioSharesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the constraints for the specified portfolio and
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -789,7 +792,7 @@ ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPo
     return qobject_cast<ListConstraintsForPortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary
  * when provisioning a product. A path also determines the constraints put on the
  *
@@ -804,7 +807,7 @@ ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunch
     return qobject_cast<ListLaunchPathsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the account IDs that have access to the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -818,7 +821,7 @@ ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const Li
     return qobject_cast<ListPortfolioAccessResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all portfolios in the
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -832,7 +835,7 @@ ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoli
     return qobject_cast<ListPortfoliosResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all portfolios that the specified product is associated
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -846,7 +849,7 @@ ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduc
     return qobject_cast<ListPortfoliosForProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all principal ARNs associated with the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -860,7 +863,7 @@ ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPort
     return qobject_cast<ListPrincipalsForPortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the plans for the specified provisioned product or all plans to which the user has
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -874,7 +877,7 @@ ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProdu
     return qobject_cast<ListProvisionedProductPlansResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all provisioning artifacts (also known as versions) for the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -888,7 +891,7 @@ ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifa
     return qobject_cast<ListProvisioningArtifactsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the specified requests or all performed
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -902,7 +905,7 @@ ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRe
     return qobject_cast<ListRecordHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the resources associated with the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -916,7 +919,7 @@ ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOpt
     return qobject_cast<ListResourcesForTagOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the specified TagOptions or all
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -930,7 +933,7 @@ ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptio
     return qobject_cast<ListTagOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provisions the specified
  *
  * product>
@@ -955,7 +958,7 @@ ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const Provisio
     return qobject_cast<ProvisionProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Rejects an offer to share the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -969,7 +972,7 @@ RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const 
     return qobject_cast<RejectPortfolioShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the provisioned products that are available (not
  *
  * terminated)>
@@ -987,7 +990,7 @@ ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(
     return qobject_cast<ScanProvisionedProductsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the products to which the caller has
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -1001,7 +1004,7 @@ SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProduc
     return qobject_cast<SearchProductsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the products for the specified portfolio or all
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -1015,7 +1018,7 @@ SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(cons
     return qobject_cast<SearchProductsAsAdminResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the provisioned products that meet the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -1029,7 +1032,7 @@ SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProdu
     return qobject_cast<SearchProvisionedProductsResponse *>(send(request));
 }
 
-/**
+/*!
  * Terminates the specified provisioned
  *
  * product>
@@ -1051,7 +1054,7 @@ TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisioned
     return qobject_cast<TerminateProvisionedProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -1065,7 +1068,7 @@ UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateCo
     return qobject_cast<UpdateConstraintResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * portfolio>
@@ -1083,7 +1086,7 @@ UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePort
     return qobject_cast<UpdatePortfolioResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -1097,7 +1100,7 @@ UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductR
     return qobject_cast<UpdateProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests updates to the configuration of the specified provisioned
  *
  * product>
@@ -1120,7 +1123,7 @@ UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduc
     return qobject_cast<UpdateProvisionedProductResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified provisioning artifact (also known as a version) for the specified
  *
  * product>
@@ -1138,7 +1141,7 @@ UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArt
     return qobject_cast<UpdateProvisioningArtifactResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * @param  request Request to send to AWS Service Catalog.
@@ -1152,7 +1155,7 @@ UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagO
     return qobject_cast<UpdateTagOptionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ServiceCatalogClientPrivate
@@ -1160,7 +1163,7 @@ UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagO
  * @brief  Private implementation for ServiceCatalogClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceCatalogClientPrivate object.

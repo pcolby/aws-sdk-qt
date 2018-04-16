@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  CreateContainerRequest
+/*!
+ * \class QtAws::MediaStore::CreateContainerRequest
  *
- * @brief  Implements MediaStore CreateContainer requests.
+ * \brief The CreateContainerRequest class encapsulates MediaStore CreateContainer requests.
  *
- * @see    MediaStoreClient::createContainer
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::createContainer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateContainerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateContainerRequest::CreateContainerRequest(const CreateContainerRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateContainerRequest object.
  */
 CreateContainerRequest::CreateContainerRequest()
@@ -53,13 +58,16 @@ CreateContainerRequest::CreateContainerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateContainerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateContainerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateContainerRequest::response(QNetworkRepl
     return new CreateContainerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateContainerRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateContainerRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateContainerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateContainerRequestPrivate object.
@@ -97,7 +105,7 @@ CreateContainerRequestPrivate::CreateContainerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateContainerRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeIamInstanceProfileAssociationsResponse
+/*!
+ * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsResponse
  *
- * @brief  Handles EC2 DescribeIamInstanceProfileAssociations responses.
+ * \brief The DescribeIamInstanceProfileAssociationsResponse class encapsulates EC2 DescribeIamInstanceProfileAssociations responses.
  *
- * @see    EC2Client::describeIamInstanceProfileAssociations
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeIamInstanceProfileAssociations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeIamInstanceProfileAssociationsRequest * DescribeIamInstanceProfile
     return static_cast<const DescribeIamInstanceProfileAssociationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeIamInstanceProfileAssociations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeIamInstanceProfileAssociationsResponse::parseSuccess(QIODevice &res
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeIamInstanceProfileAssociationsResponsePrivate
+ * \class DescribeIamInstanceProfileAssociationsResponsePrivate
  *
- * @brief  Private implementation for DescribeIamInstanceProfileAssociationsResponse.
+ * \brief Private implementation for DescribeIamInstanceProfileAssociationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeIamInstanceProfileAssociationsResponsePrivate::DescribeIamInstanceProfil
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeIamInstanceProfileAssociationsResponse element.
  *
  * @param  xml  XML stream to parse.

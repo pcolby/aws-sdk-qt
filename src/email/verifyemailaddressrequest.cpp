@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  VerifyEmailAddressRequest
+/*!
+ * \class QtAws::SES::VerifyEmailAddressRequest
  *
- * @brief  Implements SES VerifyEmailAddress requests.
+ * \brief The VerifyEmailAddressRequest class encapsulates SES VerifyEmailAddress requests.
  *
- * @see    SESClient::verifyEmailAddress
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::verifyEmailAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyEmailAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ VerifyEmailAddressRequest::VerifyEmailAddressRequest(const VerifyEmailAddressReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new VerifyEmailAddressRequest object.
  */
 VerifyEmailAddressRequest::VerifyEmailAddressRequest()
@@ -53,13 +67,16 @@ VerifyEmailAddressRequest::VerifyEmailAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool VerifyEmailAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an VerifyEmailAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkR
     return new VerifyEmailAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  VerifyEmailAddressRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkR
  * @brief  Private implementation for VerifyEmailAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyEmailAddressRequestPrivate object.
@@ -97,7 +114,7 @@ VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyEmailAddressRequestPrivate object, copying another.

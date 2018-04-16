@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetDataflowGraphResponse
+/*!
+ * \class QtAws::Glue::GetDataflowGraphResponse
  *
- * @brief  Handles Glue GetDataflowGraph responses.
+ * \brief The GetDataflowGraphResponse class encapsulates Glue GetDataflowGraph responses.
  *
- * @see    GlueClient::getDataflowGraph
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getDataflowGraph
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataflowGraphResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetDataflowGraphRequest * GetDataflowGraphResponse::request() const
     return static_cast<const GetDataflowGraphRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetDataflowGraph response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetDataflowGraphResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDataflowGraphResponsePrivate
+ * \class GetDataflowGraphResponsePrivate
  *
- * @brief  Private implementation for GetDataflowGraphResponse.
+ * \brief Private implementation for GetDataflowGraphResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataflowGraphResponsePrivate object.
@@ -91,7 +97,7 @@ GetDataflowGraphResponsePrivate::GetDataflowGraphResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetDataflowGraphResponse element.
  *
  * @param  xml  XML stream to parse.

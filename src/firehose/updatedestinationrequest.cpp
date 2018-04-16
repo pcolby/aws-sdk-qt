@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  UpdateDestinationRequest
+/*!
+ * \class QtAws::Firehose::UpdateDestinationRequest
  *
- * @brief  Implements Firehose UpdateDestination requests.
+ * \brief The UpdateDestinationRequest class encapsulates Firehose UpdateDestination requests.
  *
- * @see    FirehoseClient::updateDestination
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::updateDestination
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDestinationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateDestinationRequest::UpdateDestinationRequest(const UpdateDestinationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDestinationRequest object.
  */
 UpdateDestinationRequest::UpdateDestinationRequest()
@@ -53,13 +60,16 @@ UpdateDestinationRequest::UpdateDestinationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDestinationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDestinationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkRe
     return new UpdateDestinationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDestinationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateDestinationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDestinationRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDestinationRequestPrivate object, copying another.

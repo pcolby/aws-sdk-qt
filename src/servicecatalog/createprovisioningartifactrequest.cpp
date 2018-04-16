@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateProvisioningArtifactRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreateProvisioningArtifactRequest
  *
- * @brief  Implements ServiceCatalog CreateProvisioningArtifact requests.
+ * \brief The CreateProvisioningArtifactRequest class encapsulates ServiceCatalog CreateProvisioningArtifact requests.
  *
- * @see    ServiceCatalogClient::createProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProvisioningArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateProvisioningArtifactRequest::CreateProvisioningArtifactRequest(const Creat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateProvisioningArtifactRequest object.
  */
 CreateProvisioningArtifactRequest::CreateProvisioningArtifactRequest()
@@ -53,13 +62,16 @@ CreateProvisioningArtifactRequest::CreateProvisioningArtifactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateProvisioningArtifactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateProvisioningArtifactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateProvisioningArtifactRequest::response(Q
     return new CreateProvisioningArtifactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateProvisioningArtifactRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateProvisioningArtifactRequest::response(Q
  * @brief  Private implementation for CreateProvisioningArtifactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProvisioningArtifactRequestPrivate object.
@@ -97,7 +109,7 @@ CreateProvisioningArtifactRequestPrivate::CreateProvisioningArtifactRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProvisioningArtifactRequestPrivate object, copying another.

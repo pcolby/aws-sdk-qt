@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  TerminateInstancesRequest
+/*!
+ * \class QtAws::EC2::TerminateInstancesRequest
  *
- * @brief  Implements EC2 TerminateInstances requests.
+ * \brief The TerminateInstancesRequest class encapsulates EC2 TerminateInstances requests.
  *
- * @see    EC2Client::terminateInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::terminateInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ TerminateInstancesRequest::TerminateInstancesRequest(const TerminateInstancesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TerminateInstancesRequest object.
  */
 TerminateInstancesRequest::TerminateInstancesRequest()
@@ -53,13 +60,16 @@ TerminateInstancesRequest::TerminateInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TerminateInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TerminateInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkR
     return new TerminateInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TerminateInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkR
  * @brief  Private implementation for TerminateInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateInstancesRequestPrivate object, copying another.

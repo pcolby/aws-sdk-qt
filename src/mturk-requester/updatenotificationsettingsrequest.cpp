@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateNotificationSettingsRequest
+/*!
+ * \class QtAws::MTurk::UpdateNotificationSettingsRequest
  *
- * @brief  Implements MTurk UpdateNotificationSettings requests.
+ * \brief The UpdateNotificationSettingsRequest class encapsulates MTurk UpdateNotificationSettings requests.
  *
- * @see    MTurkClient::updateNotificationSettings
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateNotificationSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotificationSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateNotificationSettingsRequest::UpdateNotificationSettingsRequest(const Updat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotificationSettingsRequest object.
  */
 UpdateNotificationSettingsRequest::UpdateNotificationSettingsRequest()
@@ -53,13 +56,16 @@ UpdateNotificationSettingsRequest::UpdateNotificationSettingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateNotificationSettingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateNotificationSettingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationSettingsRequest::response(Q
     return new UpdateNotificationSettingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateNotificationSettingsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationSettingsRequest::response(Q
  * @brief  Private implementation for UpdateNotificationSettingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotificationSettingsRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotificationSettingsRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DescribeSubscriptionRequest
+/*!
+ * \class QtAws::Shield::DescribeSubscriptionRequest
  *
- * @brief  Implements Shield DescribeSubscription requests.
+ * \brief The DescribeSubscriptionRequest class encapsulates Shield DescribeSubscription requests.
  *
- * @see    ShieldClient::describeSubscription
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::describeSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeSubscriptionRequest::DescribeSubscriptionRequest(const DescribeSubscript
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubscriptionRequest object.
  */
 DescribeSubscriptionRequest::DescribeSubscriptionRequest()
@@ -53,13 +62,16 @@ DescribeSubscriptionRequest::DescribeSubscriptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSubscriptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSubscriptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetwor
     return new DescribeSubscriptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSubscriptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetwor
  * @brief  Private implementation for DescribeSubscriptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubscriptionRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubscriptionRequestPrivate object, copying another.

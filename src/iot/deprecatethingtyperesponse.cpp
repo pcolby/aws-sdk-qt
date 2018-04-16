@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeprecateThingTypeResponse
+/*!
+ * \class QtAws::IoT::DeprecateThingTypeResponse
  *
- * @brief  Handles IoT DeprecateThingType responses.
+ * \brief The DeprecateThingTypeResponse class encapsulates IoT DeprecateThingType responses.
  *
- * @see    IoTClient::deprecateThingType
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deprecateThingType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeprecateThingTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeprecateThingTypeRequest * DeprecateThingTypeResponse::request() const
     return static_cast<const DeprecateThingTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeprecateThingType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeprecateThingTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeprecateThingTypeResponsePrivate
+ * \class DeprecateThingTypeResponsePrivate
  *
- * @brief  Private implementation for DeprecateThingTypeResponse.
+ * \brief Private implementation for DeprecateThingTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeprecateThingTypeResponsePrivate object.
@@ -91,7 +105,7 @@ DeprecateThingTypeResponsePrivate::DeprecateThingTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeprecateThingTypeResponse element.
  *
  * @param  xml  XML stream to parse.

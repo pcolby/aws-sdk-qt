@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteJobRequest
+/*!
+ * \class QtAws::Glue::DeleteJobRequest
  *
- * @brief  Implements Glue DeleteJob requests.
+ * \brief The DeleteJobRequest class encapsulates Glue DeleteJob requests.
  *
- * @see    GlueClient::deleteJob
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteJobRequest::DeleteJobRequest(const DeleteJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteJobRequest object.
  */
 DeleteJobRequest::DeleteJobRequest()
@@ -53,13 +59,16 @@ DeleteJobRequest::DeleteJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * co
     return new DeleteJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteJobRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteJobRequestPrivate::DeleteJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteJobRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateProvisionedProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::UpdateProvisionedProductRequest
  *
- * @brief  Implements ServiceCatalog UpdateProvisionedProduct requests.
+ * \brief The UpdateProvisionedProductRequest class encapsulates ServiceCatalog UpdateProvisionedProduct requests.
  *
- * @see    ServiceCatalogClient::updateProvisionedProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateProvisionedProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProvisionedProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdateProvisionedProductRequest::UpdateProvisionedProductRequest(const UpdatePro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateProvisionedProductRequest object.
  */
 UpdateProvisionedProductRequest::UpdateProvisionedProductRequest()
@@ -53,13 +62,16 @@ UpdateProvisionedProductRequest::UpdateProvisionedProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateProvisionedProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateProvisionedProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNe
     return new UpdateProvisionedProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateProvisionedProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNe
  * @brief  Private implementation for UpdateProvisionedProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProvisionedProductRequestPrivate object.
@@ -97,7 +109,7 @@ UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProvisionedProductRequestPrivate object, copying another.

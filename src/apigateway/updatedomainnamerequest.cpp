@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateDomainNameRequest
+/*!
+ * \class QtAws::APIGateway::UpdateDomainNameRequest
  *
- * @brief  Implements APIGateway UpdateDomainName requests.
+ * \brief The UpdateDomainNameRequest class encapsulates APIGateway UpdateDomainName requests.
  *
- * @see    APIGatewayClient::updateDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainNameRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateDomainNameRequest::UpdateDomainNameRequest(const UpdateDomainNameRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainNameRequest object.
  */
 UpdateDomainNameRequest::UpdateDomainNameRequest()
@@ -53,13 +61,16 @@ UpdateDomainNameRequest::UpdateDomainNameRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDomainNameRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDomainNameResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameRequest::response(QNetworkRep
     return new UpdateDomainNameResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDomainNameRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateDomainNameRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainNameRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainNameRequestPrivate object, copying another.

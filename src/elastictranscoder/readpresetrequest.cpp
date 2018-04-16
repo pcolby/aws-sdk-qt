@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ReadPresetRequest
+/*!
+ * \class QtAws::ElasticTranscoder::ReadPresetRequest
  *
- * @brief  Implements ElasticTranscoder ReadPreset requests.
+ * \brief The ReadPresetRequest class encapsulates ElasticTranscoder ReadPreset requests.
  *
- * @see    ElasticTranscoderClient::readPreset
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::readPreset
  */
 
-/**
+/*!
  * @brief  Constructs a new ReadPresetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ReadPresetRequest::ReadPresetRequest(const ReadPresetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReadPresetRequest object.
  */
 ReadPresetRequest::ReadPresetRequest()
@@ -53,13 +59,16 @@ ReadPresetRequest::ReadPresetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReadPresetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReadPresetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ReadPresetRequest::response(QNetworkReply * c
     return new ReadPresetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReadPresetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ReadPresetRequest::response(QNetworkReply * c
  * @brief  Private implementation for ReadPresetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadPresetRequestPrivate object.
@@ -97,7 +106,7 @@ ReadPresetRequestPrivate::ReadPresetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadPresetRequestPrivate object, copying another.

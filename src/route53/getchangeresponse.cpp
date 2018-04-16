@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetChangeResponse
+/*!
+ * \class QtAws::Route53::GetChangeResponse
  *
- * @brief  Handles Route53 GetChange responses.
+ * \brief The GetChangeResponse class encapsulates Route53 GetChange responses.
  *
- * @see    Route53Client::getChange
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getChange
  */
 
-/**
+/*!
  * @brief  Constructs a new GetChangeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetChangeRequest * GetChangeResponse::request() const
     return static_cast<const GetChangeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetChange response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetChangeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetChangeResponsePrivate
+ * \class GetChangeResponsePrivate
  *
- * @brief  Private implementation for GetChangeResponse.
+ * \brief Private implementation for GetChangeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetChangeResponsePrivate object.
@@ -91,7 +94,7 @@ GetChangeResponsePrivate::GetChangeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetChangeResponse element.
  *
  * @param  xml  XML stream to parse.

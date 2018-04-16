@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateBasePathMappingResponse
+/*!
+ * \class QtAws::APIGateway::CreateBasePathMappingResponse
  *
- * @brief  Handles APIGateway CreateBasePathMapping responses.
+ * \brief The CreateBasePathMappingResponse class encapsulates APIGateway CreateBasePathMapping responses.
  *
- * @see    APIGatewayClient::createBasePathMapping
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createBasePathMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBasePathMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateBasePathMappingRequest * CreateBasePathMappingResponse::request() co
     return static_cast<const CreateBasePathMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateBasePathMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateBasePathMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateBasePathMappingResponsePrivate
+ * \class CreateBasePathMappingResponsePrivate
  *
- * @brief  Private implementation for CreateBasePathMappingResponse.
+ * \brief Private implementation for CreateBasePathMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBasePathMappingResponsePrivate object.
@@ -91,7 +99,7 @@ CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateBasePathMappingResponse element.
  *
  * @param  xml  XML stream to parse.

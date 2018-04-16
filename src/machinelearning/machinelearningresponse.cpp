@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  MachineLearningResponse
+/*!
+ * \class QtAws::MachineLearning::MachineLearningResponse
  *
- * @brief  Handles MachineLearning MachineLearning responses.
+ * \brief The MachineLearningResponse class is the base class for all MachineLearning responses.
  *
- * @see    MachineLearningClient::machineLearning
+ * \ingroup MachineLearning
  */
 
-/**
+/*!
  * @brief  Constructs a new MachineLearningResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MachineLearningResponse::MachineLearningResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MachineLearningResponse object.
@@ -63,7 +63,7 @@ MachineLearningResponse::MachineLearningResponse(MachineLearningResponsePrivate 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MachineLearningResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MachineLearningResponsePrivate
@@ -92,7 +92,7 @@ void MachineLearningResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MachineLearningResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MachineLearningResponsePrivate object.

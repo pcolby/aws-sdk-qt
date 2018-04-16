@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteAddressBookRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteAddressBookRequest
  *
- * @brief  Implements AlexaForBusiness DeleteAddressBook requests.
+ * \brief The DeleteAddressBookRequest class encapsulates AlexaForBusiness DeleteAddressBook requests.
  *
- * @see    AlexaForBusinessClient::deleteAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAddressBookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteAddressBookRequest::DeleteAddressBookRequest(const DeleteAddressBookReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAddressBookRequest object.
  */
 DeleteAddressBookRequest::DeleteAddressBookRequest()
@@ -53,13 +61,16 @@ DeleteAddressBookRequest::DeleteAddressBookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAddressBookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAddressBookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAddressBookRequest::response(QNetworkRe
     return new DeleteAddressBookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAddressBookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAddressBookRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteAddressBookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAddressBookRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteAddressBookRequestPrivate::DeleteAddressBookRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAddressBookRequestPrivate object, copying another.

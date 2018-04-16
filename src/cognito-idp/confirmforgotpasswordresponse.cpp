@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ConfirmForgotPasswordResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordResponse
  *
- * @brief  Handles CognitoIdentityProvider ConfirmForgotPassword responses.
+ * \brief The ConfirmForgotPasswordResponse class encapsulates CognitoIdentityProvider ConfirmForgotPassword responses.
  *
- * @see    CognitoIdentityProviderClient::confirmForgotPassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::confirmForgotPassword
  */
 
-/**
+/*!
  * @brief  Constructs a new ConfirmForgotPasswordResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ConfirmForgotPasswordRequest * ConfirmForgotPasswordResponse::request() co
     return static_cast<const ConfirmForgotPasswordRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ConfirmForgotPassword response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ConfirmForgotPasswordResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ConfirmForgotPasswordResponsePrivate
+ * \class ConfirmForgotPasswordResponsePrivate
  *
- * @brief  Private implementation for ConfirmForgotPasswordResponse.
+ * \brief Private implementation for ConfirmForgotPasswordResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmForgotPasswordResponsePrivate object.
@@ -91,7 +104,7 @@ ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ConfirmForgotPasswordResponse element.
  *
  * @param  xml  XML stream to parse.

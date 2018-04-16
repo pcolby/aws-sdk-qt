@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateDistributionRequest
+/*!
+ * \class QtAws::CloudFront::CreateDistributionRequest
  *
- * @brief  Implements CloudFront CreateDistribution requests.
+ * \brief The CreateDistributionRequest class encapsulates CloudFront CreateDistribution requests.
  *
- * @see    CloudFrontClient::createDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateDistributionRequest::CreateDistributionRequest(const CreateDistributionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDistributionRequest object.
  */
 CreateDistributionRequest::CreateDistributionRequest()
@@ -53,13 +61,16 @@ CreateDistributionRequest::CreateDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionRequest::response(QNetworkR
     return new CreateDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionRequest::response(QNetworkR
  * @brief  Private implementation for CreateDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDistributionRequestPrivate object, copying another.

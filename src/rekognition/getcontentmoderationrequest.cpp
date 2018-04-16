@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetContentModerationRequest
+/*!
+ * \class QtAws::Rekognition::GetContentModerationRequest
  *
- * @brief  Implements Rekognition GetContentModeration requests.
+ * \brief The GetContentModerationRequest class encapsulates Rekognition GetContentModeration requests.
  *
- * @see    RekognitionClient::getContentModeration
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getContentModeration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetContentModerationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetContentModerationRequest::GetContentModerationRequest(const GetContentModerat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetContentModerationRequest object.
  */
 GetContentModerationRequest::GetContentModerationRequest()
@@ -53,13 +57,16 @@ GetContentModerationRequest::GetContentModerationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetContentModerationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetContentModerationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetwor
     return new GetContentModerationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetContentModerationRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetwor
  * @brief  Private implementation for GetContentModerationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContentModerationRequestPrivate object.
@@ -97,7 +104,7 @@ GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContentModerationRequestPrivate object, copying another.

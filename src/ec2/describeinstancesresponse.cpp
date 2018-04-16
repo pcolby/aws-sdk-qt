@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeInstancesResponse
+/*!
+ * \class QtAws::EC2::DescribeInstancesResponse
  *
- * @brief  Handles EC2 DescribeInstances responses.
+ * \brief The DescribeInstancesResponse class encapsulates EC2 DescribeInstances responses.
  *
- * @see    EC2Client::describeInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeInstancesRequest * DescribeInstancesResponse::request() const
     return static_cast<const DescribeInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeInstancesResponsePrivate
+ * \class DescribeInstancesResponsePrivate
  *
- * @brief  Private implementation for DescribeInstancesResponse.
+ * \brief Private implementation for DescribeInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeInstancesResponsePrivate::DescribeInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

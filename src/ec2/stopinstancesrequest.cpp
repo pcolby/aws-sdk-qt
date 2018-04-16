@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  StopInstancesRequest
+/*!
+ * \class QtAws::EC2::StopInstancesRequest
  *
- * @brief  Implements EC2 StopInstances requests.
+ * \brief The StopInstancesRequest class encapsulates EC2 StopInstances requests.
  *
- * @see    EC2Client::stopInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::stopInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new StopInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ StopInstancesRequest::StopInstancesRequest(const StopInstancesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopInstancesRequest object.
  */
 StopInstancesRequest::StopInstancesRequest()
@@ -53,13 +60,16 @@ StopInstancesRequest::StopInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply 
     return new StopInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply 
  * @brief  Private implementation for StopInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ StopInstancesRequestPrivate::StopInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopInstancesRequestPrivate object, copying another.

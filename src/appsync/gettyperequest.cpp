@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetTypeRequest
+/*!
+ * \class QtAws::AppSync::GetTypeRequest
  *
- * @brief  Implements AppSync GetType requests.
+ * \brief The GetTypeRequest class encapsulates AppSync GetType requests.
  *
- * @see    AppSyncClient::getType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getType
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetTypeRequest::GetTypeRequest(const GetTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTypeRequest object.
  */
 GetTypeRequest::GetTypeRequest()
@@ -53,13 +57,16 @@ GetTypeRequest::GetTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * cons
     return new GetTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTypeRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTypeRequestPrivate object.
@@ -97,7 +104,7 @@ GetTypeRequestPrivate::GetTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTypeRequestPrivate object, copying another.

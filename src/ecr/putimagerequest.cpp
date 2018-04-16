@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  PutImageRequest
+/*!
+ * \class QtAws::ECR::PutImageRequest
  *
- * @brief  Implements ECR PutImage requests.
+ * \brief The PutImageRequest class encapsulates ECR PutImage requests.
  *
- * @see    ECRClient::putImage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::putImage
  */
 
-/**
+/*!
  * @brief  Constructs a new PutImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PutImageRequest::PutImageRequest(const PutImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutImageRequest object.
  */
 PutImageRequest::PutImageRequest()
@@ -53,13 +60,16 @@ PutImageRequest::PutImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * con
     return new PutImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * con
  * @brief  Private implementation for PutImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutImageRequestPrivate object.
@@ -97,7 +107,7 @@ PutImageRequestPrivate::PutImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutImageRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateNotificationSettingsResponse
+/*!
+ * \class QtAws::MTurk::UpdateNotificationSettingsResponse
  *
- * @brief  Handles MTurk UpdateNotificationSettings responses.
+ * \brief The UpdateNotificationSettingsResponse class encapsulates MTurk UpdateNotificationSettings responses.
  *
- * @see    MTurkClient::updateNotificationSettings
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateNotificationSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotificationSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateNotificationSettingsRequest * UpdateNotificationSettingsResponse::re
     return static_cast<const UpdateNotificationSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk UpdateNotificationSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateNotificationSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateNotificationSettingsResponsePrivate
+ * \class UpdateNotificationSettingsResponsePrivate
  *
- * @brief  Private implementation for UpdateNotificationSettingsResponse.
+ * \brief Private implementation for UpdateNotificationSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotificationSettingsResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateNotificationSettingsResponsePrivate::UpdateNotificationSettingsResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk UpdateNotificationSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

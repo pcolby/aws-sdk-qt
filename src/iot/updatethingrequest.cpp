@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateThingRequest
+/*!
+ * \class QtAws::IoT::UpdateThingRequest
  *
- * @brief  Implements IoT UpdateThing requests.
+ * \brief The UpdateThingRequest class encapsulates IoT UpdateThing requests.
  *
- * @see    IoTClient::updateThing
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateThing
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateThingRequest::UpdateThingRequest(const UpdateThingRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingRequest object.
  */
 UpdateThingRequest::UpdateThingRequest()
@@ -53,13 +67,16 @@ UpdateThingRequest::UpdateThingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateThingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateThingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingRequest::response(QNetworkReply * 
     return new UpdateThingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateThingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateThingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateThingRequestPrivate::UpdateThingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingRequestPrivate object, copying another.

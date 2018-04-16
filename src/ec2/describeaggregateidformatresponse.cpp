@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeAggregateIdFormatResponse
+/*!
+ * \class QtAws::EC2::DescribeAggregateIdFormatResponse
  *
- * @brief  Handles EC2 DescribeAggregateIdFormat responses.
+ * \brief The DescribeAggregateIdFormatResponse class encapsulates EC2 DescribeAggregateIdFormat responses.
  *
- * @see    EC2Client::describeAggregateIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeAggregateIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAggregateIdFormatResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeAggregateIdFormatRequest * DescribeAggregateIdFormatResponse::requ
     return static_cast<const DescribeAggregateIdFormatRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeAggregateIdFormat response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeAggregateIdFormatResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAggregateIdFormatResponsePrivate
+ * \class DescribeAggregateIdFormatResponsePrivate
  *
- * @brief  Private implementation for DescribeAggregateIdFormatResponse.
+ * \brief Private implementation for DescribeAggregateIdFormatResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAggregateIdFormatResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeAggregateIdFormatResponse element.
  *
  * @param  xml  XML stream to parse.

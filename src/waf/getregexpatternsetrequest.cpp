@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetRegexPatternSetRequest
+/*!
+ * \class QtAws::WAF::GetRegexPatternSetRequest
  *
- * @brief  Implements WAF GetRegexPatternSet requests.
+ * \brief The GetRegexPatternSetRequest class encapsulates WAF GetRegexPatternSet requests.
  *
- * @see    WAFClient::getRegexPatternSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getRegexPatternSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRegexPatternSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetRegexPatternSetRequest::GetRegexPatternSetRequest(const GetRegexPatternSetReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRegexPatternSetRequest object.
  */
 GetRegexPatternSetRequest::GetRegexPatternSetRequest()
@@ -53,13 +61,16 @@ GetRegexPatternSetRequest::GetRegexPatternSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRegexPatternSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRegexPatternSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetRegexPatternSetRequest::response(QNetworkR
     return new GetRegexPatternSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRegexPatternSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetRegexPatternSetRequest::response(QNetworkR
  * @brief  Private implementation for GetRegexPatternSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegexPatternSetRequestPrivate object.
@@ -97,7 +108,7 @@ GetRegexPatternSetRequestPrivate::GetRegexPatternSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegexPatternSetRequestPrivate object, copying another.

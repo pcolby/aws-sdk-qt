@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  AttachObjectResponse
+/*!
+ * \class QtAws::CloudDirectory::AttachObjectResponse
  *
- * @brief  Handles CloudDirectory AttachObject responses.
+ * \brief The AttachObjectResponse class encapsulates CloudDirectory AttachObject responses.
  *
- * @see    CloudDirectoryClient::attachObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::attachObject
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const AttachObjectRequest * AttachObjectResponse::request() const
     return static_cast<const AttachObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory AttachObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void AttachObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachObjectResponsePrivate
+ * \class AttachObjectResponsePrivate
  *
- * @brief  Private implementation for AttachObjectResponse.
+ * \brief Private implementation for AttachObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachObjectResponsePrivate object.
@@ -91,7 +101,7 @@ AttachObjectResponsePrivate::AttachObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory AttachObjectResponse element.
  *
  * @param  xml  XML stream to parse.

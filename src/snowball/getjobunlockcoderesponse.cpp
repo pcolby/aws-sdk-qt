@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  GetJobUnlockCodeResponse
+/*!
+ * \class QtAws::Snowball::GetJobUnlockCodeResponse
  *
- * @brief  Handles Snowball GetJobUnlockCode responses.
+ * \brief The GetJobUnlockCodeResponse class encapsulates Snowball GetJobUnlockCode responses.
  *
- * @see    SnowballClient::getJobUnlockCode
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::getJobUnlockCode
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobUnlockCodeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const GetJobUnlockCodeRequest * GetJobUnlockCodeResponse::request() const
     return static_cast<const GetJobUnlockCodeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball GetJobUnlockCode response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void GetJobUnlockCodeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetJobUnlockCodeResponsePrivate
+ * \class GetJobUnlockCodeResponsePrivate
  *
- * @brief  Private implementation for GetJobUnlockCodeResponse.
+ * \brief Private implementation for GetJobUnlockCodeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobUnlockCodeResponsePrivate object.
@@ -91,7 +100,7 @@ GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball GetJobUnlockCodeResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartStreamProcessorResponse
+/*!
+ * \class QtAws::Rekognition::StartStreamProcessorResponse
  *
- * @brief  Handles Rekognition StartStreamProcessor responses.
+ * \brief The StartStreamProcessorResponse class encapsulates Rekognition StartStreamProcessor responses.
  *
- * @see    RekognitionClient::startStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new StartStreamProcessorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartStreamProcessorRequest * StartStreamProcessorResponse::request() cons
     return static_cast<const StartStreamProcessorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition StartStreamProcessor response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartStreamProcessorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartStreamProcessorResponsePrivate
+ * \class StartStreamProcessorResponsePrivate
  *
- * @brief  Private implementation for StartStreamProcessorResponse.
+ * \brief Private implementation for StartStreamProcessorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartStreamProcessorResponsePrivate object.
@@ -91,7 +95,7 @@ StartStreamProcessorResponsePrivate::StartStreamProcessorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition StartStreamProcessorResponse element.
  *
  * @param  xml  XML stream to parse.

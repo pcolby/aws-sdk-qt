@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingsRequest
+/*!
+ * \class QtAws::IoT::ListThingsRequest
  *
- * @brief  Implements IoT ListThings requests.
+ * \brief The ListThingsRequest class encapsulates IoT ListThings requests.
  *
- * @see    IoTClient::listThings
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListThingsRequest::ListThingsRequest(const ListThingsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListThingsRequest object.
  */
 ListThingsRequest::ListThingsRequest()
@@ -53,13 +67,16 @@ ListThingsRequest::ListThingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListThingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListThingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListThingsRequest::response(QNetworkReply * c
     return new ListThingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListThingsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListThingsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListThingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingsRequestPrivate object.
@@ -97,7 +114,7 @@ ListThingsRequestPrivate::ListThingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingsRequestPrivate object, copying another.

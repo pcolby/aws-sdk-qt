@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVolumeResponse
+/*!
+ * \class QtAws::EC2::CreateVolumeResponse
  *
- * @brief  Handles EC2 CreateVolume responses.
+ * \brief The CreateVolumeResponse class encapsulates EC2 CreateVolume responses.
  *
- * @see    EC2Client::createVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVolumeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateVolumeRequest * CreateVolumeResponse::request() const
     return static_cast<const CreateVolumeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateVolume response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateVolumeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateVolumeResponsePrivate
+ * \class CreateVolumeResponsePrivate
  *
- * @brief  Private implementation for CreateVolumeResponse.
+ * \brief Private implementation for CreateVolumeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVolumeResponsePrivate object.
@@ -91,7 +98,7 @@ CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateVolumeResponse element.
  *
  * @param  xml  XML stream to parse.

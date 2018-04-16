@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DescribeTrainingJobRequest
+/*!
+ * \class QtAws::SageMaker::DescribeTrainingJobRequest
  *
- * @brief  Implements SageMaker DescribeTrainingJob requests.
+ * \brief The DescribeTrainingJobRequest class encapsulates SageMaker DescribeTrainingJob requests.
  *
- * @see    SageMakerClient::describeTrainingJob
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::describeTrainingJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTrainingJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeTrainingJobRequest::DescribeTrainingJobRequest(const DescribeTrainingJob
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTrainingJobRequest object.
  */
 DescribeTrainingJobRequest::DescribeTrainingJobRequest()
@@ -53,13 +56,16 @@ DescribeTrainingJobRequest::DescribeTrainingJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTrainingJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTrainingJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTrainingJobRequest::response(QNetwork
     return new DescribeTrainingJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTrainingJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTrainingJobRequest::response(QNetwork
  * @brief  Private implementation for DescribeTrainingJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTrainingJobRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTrainingJobRequestPrivate object, copying another.

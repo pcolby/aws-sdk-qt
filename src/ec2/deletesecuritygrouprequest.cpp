@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSecurityGroupRequest
+/*!
+ * \class QtAws::EC2::DeleteSecurityGroupRequest
  *
- * @brief  Implements EC2 DeleteSecurityGroup requests.
+ * \brief The DeleteSecurityGroupRequest class encapsulates EC2 DeleteSecurityGroup requests.
  *
- * @see    EC2Client::deleteSecurityGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSecurityGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSecurityGroupRequest::DeleteSecurityGroupRequest(const DeleteSecurityGroup
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSecurityGroupRequest object.
  */
 DeleteSecurityGroupRequest::DeleteSecurityGroupRequest()
@@ -53,13 +60,16 @@ DeleteSecurityGroupRequest::DeleteSecurityGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSecurityGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSecurityGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityGroupRequest::response(QNetwork
     return new DeleteSecurityGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSecurityGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityGroupRequest::response(QNetwork
  * @brief  Private implementation for DeleteSecurityGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSecurityGroupRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSecurityGroupRequestPrivate object, copying another.

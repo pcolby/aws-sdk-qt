@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreatePolicyVersionResponse
+/*!
+ * \class QtAws::IoT::CreatePolicyVersionResponse
  *
- * @brief  Handles IoT CreatePolicyVersion responses.
+ * \brief The CreatePolicyVersionResponse class encapsulates IoT CreatePolicyVersion responses.
  *
- * @see    IoTClient::createPolicyVersion
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createPolicyVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePolicyVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
     return static_cast<const CreatePolicyVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreatePolicyVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePolicyVersionResponsePrivate
+ * \class CreatePolicyVersionResponsePrivate
  *
- * @brief  Private implementation for CreatePolicyVersionResponse.
+ * \brief Private implementation for CreatePolicyVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePolicyVersionResponsePrivate object.
@@ -91,7 +105,7 @@ CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreatePolicyVersionResponse element.
  *
  * @param  xml  XML stream to parse.

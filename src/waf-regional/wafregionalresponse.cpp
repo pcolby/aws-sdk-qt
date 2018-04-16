@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  WAFRegionalResponse
+/*!
+ * \class QtAws::WAFRegional::WAFRegionalResponse
  *
- * @brief  Handles WAFRegional WAFRegional responses.
+ * \brief The WAFRegionalResponse class is the base class for all WAFRegional responses.
  *
- * @see    WAFRegionalClient::wAFRegional
+ * \ingroup WAFRegional
  */
 
-/**
+/*!
  * @brief  Constructs a new WAFRegionalResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WAFRegionalResponse object.
@@ -63,7 +63,7 @@ WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, Q
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WAFRegionalResponsePrivate
@@ -92,7 +92,7 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for WAFRegionalResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WAFRegionalResponsePrivate object.

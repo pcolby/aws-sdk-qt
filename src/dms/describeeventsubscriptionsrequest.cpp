@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEventSubscriptionsRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEventSubscriptionsRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeEventSubscriptions requests.
+ * \brief The DescribeEventSubscriptionsRequest class encapsulates DatabaseMigrationService DescribeEventSubscriptions requests.
  *
- * @see    DatabaseMigrationServiceClient::describeEventSubscriptions
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEventSubscriptions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventSubscriptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventSubscriptionsRequest object.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest()
@@ -53,13 +67,16 @@ DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventSubscriptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventSubscriptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
     return new DescribeEventSubscriptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventSubscriptionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
  * @brief  Private implementation for DescribeEventSubscriptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventSubscriptionsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventSubscriptionsRequestPrivate object, copying another.

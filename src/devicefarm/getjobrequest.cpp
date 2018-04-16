@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetJobRequest
+/*!
+ * \class QtAws::DeviceFarm::GetJobRequest
  *
- * @brief  Implements DeviceFarm GetJob requests.
+ * \brief The GetJobRequest class encapsulates DeviceFarm GetJob requests.
  *
- * @see    DeviceFarmClient::getJob
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getJob
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetJobRequest::GetJobRequest(const GetJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetJobRequest object.
  */
 GetJobRequest::GetJobRequest()
@@ -53,13 +58,16 @@ GetJobRequest::GetJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
     return new GetJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetJobRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
  * @brief  Private implementation for GetJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobRequestPrivate object.
@@ -97,7 +105,7 @@ GetJobRequestPrivate::GetJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobRequestPrivate object, copying another.

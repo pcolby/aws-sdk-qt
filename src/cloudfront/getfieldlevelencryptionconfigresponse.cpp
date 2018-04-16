@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionConfigResponse
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionConfigResponse
  *
- * @brief  Handles CloudFront GetFieldLevelEncryptionConfig responses.
+ * \brief The GetFieldLevelEncryptionConfigResponse class encapsulates CloudFront GetFieldLevelEncryptionConfig responses.
  *
- * @see    CloudFrontClient::getFieldLevelEncryptionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryptionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetFieldLevelEncryptionConfigRequest * GetFieldLevelEncryptionConfigRespon
     return static_cast<const GetFieldLevelEncryptionConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetFieldLevelEncryptionConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFieldLevelEncryptionConfigResponsePrivate
+ * \class GetFieldLevelEncryptionConfigResponsePrivate
  *
- * @brief  Private implementation for GetFieldLevelEncryptionConfigResponse.
+ * \brief Private implementation for GetFieldLevelEncryptionConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionConfigResponsePrivate object.
@@ -91,7 +99,7 @@ GetFieldLevelEncryptionConfigResponsePrivate::GetFieldLevelEncryptionConfigRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetFieldLevelEncryptionConfigResponse element.
  *
  * @param  xml  XML stream to parse.

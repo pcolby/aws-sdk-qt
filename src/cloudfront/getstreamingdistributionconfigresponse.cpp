@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetStreamingDistributionConfigResponse
+/*!
+ * \class QtAws::CloudFront::GetStreamingDistributionConfigResponse
  *
- * @brief  Handles CloudFront GetStreamingDistributionConfig responses.
+ * \brief The GetStreamingDistributionConfigResponse class encapsulates CloudFront GetStreamingDistributionConfig responses.
  *
- * @see    CloudFrontClient::getStreamingDistributionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getStreamingDistributionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStreamingDistributionConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetStreamingDistributionConfigRequest * GetStreamingDistributionConfigResp
     return static_cast<const GetStreamingDistributionConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetStreamingDistributionConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetStreamingDistributionConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetStreamingDistributionConfigResponsePrivate
+ * \class GetStreamingDistributionConfigResponsePrivate
  *
- * @brief  Private implementation for GetStreamingDistributionConfigResponse.
+ * \brief Private implementation for GetStreamingDistributionConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStreamingDistributionConfigResponsePrivate object.
@@ -91,7 +99,7 @@ GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigRes
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetStreamingDistributionConfigResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateDefaultVpcRequest
+/*!
+ * \class QtAws::EC2::CreateDefaultVpcRequest
  *
- * @brief  Implements EC2 CreateDefaultVpc requests.
+ * \brief The CreateDefaultVpcRequest class encapsulates EC2 CreateDefaultVpc requests.
  *
- * @see    EC2Client::createDefaultVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createDefaultVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDefaultVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateDefaultVpcRequest::CreateDefaultVpcRequest(const CreateDefaultVpcRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDefaultVpcRequest object.
  */
 CreateDefaultVpcRequest::CreateDefaultVpcRequest()
@@ -53,13 +60,16 @@ CreateDefaultVpcRequest::CreateDefaultVpcRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDefaultVpcRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDefaultVpcResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkRep
     return new CreateDefaultVpcResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDefaultVpcRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkRep
  * @brief  Private implementation for CreateDefaultVpcRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDefaultVpcRequestPrivate object.
@@ -97,7 +107,7 @@ CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDefaultVpcRequestPrivate object, copying another.

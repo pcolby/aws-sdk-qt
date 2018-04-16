@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ApproveAssignmentResponse
+/*!
+ * \class QtAws::MTurk::ApproveAssignmentResponse
  *
- * @brief  Handles MTurk ApproveAssignment responses.
+ * \brief The ApproveAssignmentResponse class encapsulates MTurk ApproveAssignment responses.
  *
- * @see    MTurkClient::approveAssignment
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::approveAssignment
  */
 
-/**
+/*!
  * @brief  Constructs a new ApproveAssignmentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ApproveAssignmentRequest * ApproveAssignmentResponse::request() const
     return static_cast<const ApproveAssignmentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ApproveAssignment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ApproveAssignmentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ApproveAssignmentResponsePrivate
+ * \class ApproveAssignmentResponsePrivate
  *
- * @brief  Private implementation for ApproveAssignmentResponse.
+ * \brief Private implementation for ApproveAssignmentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApproveAssignmentResponsePrivate object.
@@ -91,7 +94,7 @@ ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ApproveAssignmentResponse element.
  *
  * @param  xml  XML stream to parse.

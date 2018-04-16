@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetFaceDetectionRequest
+/*!
+ * \class QtAws::Rekognition::GetFaceDetectionRequest
  *
- * @brief  Implements Rekognition GetFaceDetection requests.
+ * \brief The GetFaceDetectionRequest class encapsulates Rekognition GetFaceDetection requests.
  *
- * @see    RekognitionClient::getFaceDetection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getFaceDetection
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFaceDetectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetFaceDetectionRequest::GetFaceDetectionRequest(const GetFaceDetectionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFaceDetectionRequest object.
  */
 GetFaceDetectionRequest::GetFaceDetectionRequest()
@@ -53,13 +57,16 @@ GetFaceDetectionRequest::GetFaceDetectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFaceDetectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFaceDetectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetFaceDetectionRequest::response(QNetworkRep
     return new GetFaceDetectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFaceDetectionRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetFaceDetectionRequest::response(QNetworkRep
  * @brief  Private implementation for GetFaceDetectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFaceDetectionRequestPrivate object.
@@ -97,7 +104,7 @@ GetFaceDetectionRequestPrivate::GetFaceDetectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFaceDetectionRequestPrivate object, copying another.

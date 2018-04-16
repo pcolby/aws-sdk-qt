@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListPortfolioAccessResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListPortfolioAccessResponse
  *
- * @brief  Handles ServiceCatalog ListPortfolioAccess responses.
+ * \brief The ListPortfolioAccessResponse class encapsulates ServiceCatalog ListPortfolioAccess responses.
  *
- * @see    ServiceCatalogClient::listPortfolioAccess
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listPortfolioAccess
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPortfolioAccessResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListPortfolioAccessRequest * ListPortfolioAccessResponse::request() const
     return static_cast<const ListPortfolioAccessRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListPortfolioAccess response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListPortfolioAccessResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPortfolioAccessResponsePrivate
+ * \class ListPortfolioAccessResponsePrivate
  *
- * @brief  Private implementation for ListPortfolioAccessResponse.
+ * \brief Private implementation for ListPortfolioAccessResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPortfolioAccessResponsePrivate object.
@@ -91,7 +100,7 @@ ListPortfolioAccessResponsePrivate::ListPortfolioAccessResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListPortfolioAccessResponse element.
  *
  * @param  xml  XML stream to parse.

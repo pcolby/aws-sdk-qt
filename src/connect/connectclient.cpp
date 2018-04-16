@@ -29,26 +29,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Connect
+ * \brief The QtAws::Connect contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Connect {
 
-/**
- * @class  ConnectClient
+/*!
+ * \class QtAws::Connect::ConnectClient
  *
- * @brief  Client for Amazon Connect Service
+ * \brief The ConnectClient class provides access the Amazon Connect Service service.
  *
- * The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
- * actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
- * to set up and manage a customer contact center and provide reliable customer engagement at any
+ * \ingroup Connect
+ *
+ *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
+ *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
+ *  to set up and manage a customer contact center and provide reliable customer engagement at any
  */
 
-/**
- * @brief  Constructs a new ConnectClient object.
+/*!
+ * \brief Constructs a ConnectClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ConnectClient::ConnectClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -67,21 +75,16 @@ ConnectClient::ConnectClient(
     d->serviceName = QStringLiteral("connect");
 }
 
-/**
- * @brief  Constructs a new ConnectClient object.
+/*!
+ * \overload ConnectClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ConnectClient::ConnectClient(
     const QUrl &endpoint,
@@ -100,7 +103,7 @@ ConnectClient::ConnectClient(
     d->serviceName = QStringLiteral("connect");
 }
 
-/**
+/*!
  * The <code>StartOutboundVoiceContact</code> operation initiates a contact flow to place an outbound call to a
  *
  * customer>
@@ -123,7 +126,7 @@ StartOutboundVoiceContactResponse * ConnectClient::startOutboundVoiceContact(con
     return qobject_cast<StartOutboundVoiceContactResponse *>(send(request));
 }
 
-/**
+/*!
  * Ends the contact initiated by the <code>StartOutboundVoiceContact</code>
  *
  * operation>
@@ -141,7 +144,7 @@ StopContactResponse * ConnectClient::stopContact(const StopContactRequest &reque
     return qobject_cast<StopContactResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConnectClientPrivate
@@ -149,7 +152,7 @@ StopContactResponse * ConnectClient::stopContact(const StopContactRequest &reque
  * @brief  Private implementation for ConnectClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConnectClientPrivate object.

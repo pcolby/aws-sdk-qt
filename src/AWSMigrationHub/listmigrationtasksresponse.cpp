@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ListMigrationTasksResponse
+/*!
+ * \class QtAws::MigrationHub::ListMigrationTasksResponse
  *
- * @brief  Handles MigrationHub ListMigrationTasks responses.
+ * \brief The ListMigrationTasksResponse class encapsulates MigrationHub ListMigrationTasks responses.
  *
- * @see    MigrationHubClient::listMigrationTasks
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::listMigrationTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListMigrationTasksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListMigrationTasksRequest * ListMigrationTasksResponse::request() const
     return static_cast<const ListMigrationTasksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub ListMigrationTasks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListMigrationTasksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListMigrationTasksResponsePrivate
+ * \class ListMigrationTasksResponsePrivate
  *
- * @brief  Private implementation for ListMigrationTasksResponse.
+ * \brief Private implementation for ListMigrationTasksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMigrationTasksResponsePrivate object.
@@ -91,7 +96,7 @@ ListMigrationTasksResponsePrivate::ListMigrationTasksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub ListMigrationTasksResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ReloadTablesRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::ReloadTablesRequest
  *
- * @brief  Implements DatabaseMigrationService ReloadTables requests.
+ * \brief The ReloadTablesRequest class encapsulates DatabaseMigrationService ReloadTables requests.
  *
- * @see    DatabaseMigrationServiceClient::reloadTables
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::reloadTables
  */
 
-/**
+/*!
  * @brief  Constructs a new ReloadTablesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ReloadTablesRequest::ReloadTablesRequest(const ReloadTablesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReloadTablesRequest object.
  */
 ReloadTablesRequest::ReloadTablesRequest()
@@ -53,13 +67,16 @@ ReloadTablesRequest::ReloadTablesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReloadTablesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReloadTablesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply *
     return new ReloadTablesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReloadTablesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply *
  * @brief  Private implementation for ReloadTablesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReloadTablesRequestPrivate object.
@@ -97,7 +114,7 @@ ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReloadTablesRequestPrivate object, copying another.

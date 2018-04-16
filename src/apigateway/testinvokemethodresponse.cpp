@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  TestInvokeMethodResponse
+/*!
+ * \class QtAws::APIGateway::TestInvokeMethodResponse
  *
- * @brief  Handles APIGateway TestInvokeMethod responses.
+ * \brief The TestInvokeMethodResponse class encapsulates APIGateway TestInvokeMethod responses.
  *
- * @see    APIGatewayClient::testInvokeMethod
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::testInvokeMethod
  */
 
-/**
+/*!
  * @brief  Constructs a new TestInvokeMethodResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const TestInvokeMethodRequest * TestInvokeMethodResponse::request() const
     return static_cast<const TestInvokeMethodRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway TestInvokeMethod response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TestInvokeMethodResponsePrivate
+ * \class TestInvokeMethodResponsePrivate
  *
- * @brief  Private implementation for TestInvokeMethodResponse.
+ * \brief Private implementation for TestInvokeMethodResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestInvokeMethodResponsePrivate object.
@@ -91,7 +99,7 @@ TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway TestInvokeMethodResponse element.
  *
  * @param  xml  XML stream to parse.

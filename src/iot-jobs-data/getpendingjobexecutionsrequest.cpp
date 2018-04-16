@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
-/**
- * @class  GetPendingJobExecutionsRequest
+/*!
+ * \class QtAws::IoTJobsDataPlane::GetPendingJobExecutionsRequest
  *
- * @brief  Implements IoTJobsDataPlane GetPendingJobExecutions requests.
+ * \brief The GetPendingJobExecutionsRequest class encapsulates IoTJobsDataPlane GetPendingJobExecutions requests.
  *
- * @see    IoTJobsDataPlaneClient::getPendingJobExecutions
+ * \ingroup IoTJobsDataPlane
+ *
+ *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
+ *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
+ *  and install application or firmware updates, reboot, rotate certificates, or perform remote troubleshooting
+ * 
+ *  operations>
+ * 
+ *  To create a job, you make a job document which is a description of the remote operations to be performed, and you
+ *  specify a list of targets that should perform the operations. The targets can be individual things, thing groups or
+ * 
+ *  both>
+ * 
+ *  AWS IoT Jobs sends a message to inform the targets that a job is available. The target starts the execution of the job
+ *  by downloading the job document, performing the operations it specifies, and reporting its progress to AWS IoT. The Jobs
+ *  service provides commands to track the progress of a job on a specific target and for all the targets of the
+ *
+ * \sa IoTJobsDataPlaneClient::getPendingJobExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPendingJobExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest(const GetPendingJ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPendingJobExecutionsRequest object.
  */
 GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest()
@@ -53,13 +70,16 @@ GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPendingJobExecutionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPendingJobExecutionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNet
     return new GetPendingJobExecutionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPendingJobExecutionsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNet
  * @brief  Private implementation for GetPendingJobExecutionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPendingJobExecutionsRequestPrivate object.
@@ -97,7 +117,7 @@ GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPendingJobExecutionsRequestPrivate object, copying another.

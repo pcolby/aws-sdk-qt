@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeAddressesRequest
+/*!
+ * \class QtAws::EC2::DescribeAddressesRequest
  *
- * @brief  Implements EC2 DescribeAddresses requests.
+ * \brief The DescribeAddressesRequest class encapsulates EC2 DescribeAddresses requests.
  *
- * @see    EC2Client::describeAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeAddressesRequest::DescribeAddressesRequest(const DescribeAddressesReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAddressesRequest object.
  */
 DescribeAddressesRequest::DescribeAddressesRequest()
@@ -53,13 +60,16 @@ DescribeAddressesRequest::DescribeAddressesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAddressesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAddressesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkRe
     return new DescribeAddressesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAddressesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkRe
  * @brief  Private implementation for DescribeAddressesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAddressesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAddressesRequestPrivate object, copying another.

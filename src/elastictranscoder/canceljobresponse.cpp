@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  CancelJobResponse
+/*!
+ * \class QtAws::ElasticTranscoder::CancelJobResponse
  *
- * @brief  Handles ElasticTranscoder CancelJob responses.
+ * \brief The CancelJobResponse class encapsulates ElasticTranscoder CancelJob responses.
  *
- * @see    ElasticTranscoderClient::cancelJob
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CancelJobRequest * CancelJobResponse::request() const
     return static_cast<const CancelJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder CancelJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelJobResponsePrivate
+ * \class CancelJobResponsePrivate
  *
- * @brief  Private implementation for CancelJobResponse.
+ * \brief Private implementation for CancelJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobResponsePrivate object.
@@ -91,7 +97,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder CancelJobResponse element.
  *
  * @param  xml  XML stream to parse.

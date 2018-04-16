@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  CreateScalingPlanRequest
+/*!
+ * \class QtAws::AutoScalingPlans::CreateScalingPlanRequest
  *
- * @brief  Implements AutoScalingPlans CreateScalingPlan requests.
+ * \brief The CreateScalingPlanRequest class encapsulates AutoScalingPlans CreateScalingPlan requests.
  *
- * @see    AutoScalingPlansClient::createScalingPlan
+ * \ingroup AutoScalingPlans
+ *
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
+ *
+ * \sa AutoScalingPlansClient::createScalingPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateScalingPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ CreateScalingPlanRequest::CreateScalingPlanRequest(const CreateScalingPlanReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateScalingPlanRequest object.
  */
 CreateScalingPlanRequest::CreateScalingPlanRequest()
@@ -53,13 +65,16 @@ CreateScalingPlanRequest::CreateScalingPlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateScalingPlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateScalingPlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkRe
     return new CreateScalingPlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateScalingPlanRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkRe
  * @brief  Private implementation for CreateScalingPlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateScalingPlanRequestPrivate object.
@@ -97,7 +112,7 @@ CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateScalingPlanRequestPrivate object, copying another.

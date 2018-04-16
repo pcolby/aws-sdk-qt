@@ -61,27 +61,35 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ServiceDiscovery
+ * \brief The QtAws::ServiceDiscovery contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ServiceDiscoveryClient
+/*!
+ * \class QtAws::ServiceDiscovery::ServiceDiscoveryClient
  *
- * @brief  Client for Amazon Route 53 Auto Naming (ServiceDiscovery)
+ * \brief The ServiceDiscoveryClient class provides access the Amazon Route 53 Auto Naming (ServiceDiscovery) service.
  *
- * Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
- * When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
- * automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
- * service receive an answer that contains up to eight healthy
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
  */
 
-/**
- * @brief  Constructs a new ServiceDiscoveryClient object.
+/*!
+ * \brief Constructs a ServiceDiscoveryClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ServiceDiscoveryClient::ServiceDiscoveryClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -100,21 +108,16 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->serviceName = QStringLiteral("servicediscovery");
 }
 
-/**
- * @brief  Constructs a new ServiceDiscoveryClient object.
+/*!
+ * \overload ServiceDiscoveryClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ServiceDiscoveryClient::ServiceDiscoveryClient(
     const QUrl &endpoint,
@@ -133,7 +136,7 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->serviceName = QStringLiteral("servicediscovery");
 }
 
-/**
+/*!
  * Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC. The namespace
  * defines your service naming scheme. For example, if you name your namespace <code>example.com</code> and name your
  * service <code>backend</code>, the resulting DNS name for the service will be <code>backend.example.com</code>. For the
@@ -152,7 +155,7 @@ CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsName
     return qobject_cast<CreatePrivateDnsNamespaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a public namespace based on DNS, which will be visible on the internet. The namespace defines your service
  * naming scheme. For example, if you name your namespace <code>example.com</code> and name your service
  * <code>backend</code>, the resulting DNS name for the service will be <code>backend.example.com</code>. For the current
@@ -171,7 +174,7 @@ CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamesp
     return qobject_cast<CreatePublicDnsNamespaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a service, which defines the configuration for the following
  *
  * entities> <ul> <li>
@@ -205,7 +208,7 @@ CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServic
     return qobject_cast<CreateServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a namespace from the current account. If the namespace still contains one or more services, the request
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -219,7 +222,7 @@ DeleteNamespaceResponse * ServiceDiscoveryClient::deleteNamespace(const DeleteNa
     return qobject_cast<DeleteNamespaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified service. If the service still contains one or more registered instances, the request
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -233,7 +236,7 @@ DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServic
     return qobject_cast<DeleteServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the records and the health check, if any, that Amazon Route 53 created for the specified
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -247,7 +250,7 @@ DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const De
     return qobject_cast<DeregisterInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specified
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -261,7 +264,7 @@ GetInstanceResponse * ServiceDiscoveryClient::getInstance(const GetInstanceReque
     return qobject_cast<GetInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the current health status (<code>Healthy</code>, <code>Unhealthy</code>, or <code>Unknown</code>) of one or more
  * instances that are associated with a specified
  *
@@ -280,7 +283,7 @@ GetInstancesHealthStatusResponse * ServiceDiscoveryClient::getInstancesHealthSta
     return qobject_cast<GetInstancesHealthStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -294,7 +297,7 @@ GetNamespaceResponse * ServiceDiscoveryClient::getNamespace(const GetNamespaceRe
     return qobject_cast<GetNamespaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about any operation that returns an operation ID in the response, such as a <code>CreateService</code>
  *
  * request> <note>
@@ -312,7 +315,7 @@ GetOperationResponse * ServiceDiscoveryClient::getOperation(const GetOperationRe
     return qobject_cast<GetOperationResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the settings for a specified
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -326,7 +329,7 @@ GetServiceResponse * ServiceDiscoveryClient::getService(const GetServiceRequest 
     return qobject_cast<GetServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists summary information about the instances that you registered by using a specified
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -340,7 +343,7 @@ ListInstancesResponse * ServiceDiscoveryClient::listInstances(const ListInstance
     return qobject_cast<ListInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists summary information about the namespaces that were created by the current AWS
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -354,7 +357,7 @@ ListNamespacesResponse * ServiceDiscoveryClient::listNamespaces(const ListNamesp
     return qobject_cast<ListNamespacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists operations that match the criteria that you
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -368,7 +371,7 @@ ListOperationsResponse * ServiceDiscoveryClient::listOperations(const ListOperat
     return qobject_cast<ListOperationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists summary information for all the services that are associated with one or more specified
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
@@ -382,7 +385,7 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
     return qobject_cast<ListServicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates one or more records and optionally a health check based on the settings in a specified service. When
  * you submit a <code>RegisterInstance</code> request, Amazon Route 53 does the
  *
@@ -443,7 +446,7 @@ RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const Regist
     return qobject_cast<RegisterInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
@@ -456,7 +459,7 @@ UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanc
     return qobject_cast<UpdateInstanceCustomHealthStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Submits a request to perform the following
  *
  * operations> <ul> <li>
@@ -493,7 +496,7 @@ UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServic
     return qobject_cast<UpdateServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ServiceDiscoveryClientPrivate
@@ -501,7 +504,7 @@ UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServic
  * @brief  Private implementation for ServiceDiscoveryClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceDiscoveryClientPrivate object.

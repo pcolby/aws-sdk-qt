@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  MonitorInstancesResponse
+/*!
+ * \class QtAws::EC2::MonitorInstancesResponse
  *
- * @brief  Handles EC2 MonitorInstances responses.
+ * \brief The MonitorInstancesResponse class encapsulates EC2 MonitorInstances responses.
  *
- * @see    EC2Client::monitorInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::monitorInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new MonitorInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const MonitorInstancesRequest * MonitorInstancesResponse::request() const
     return static_cast<const MonitorInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 MonitorInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void MonitorInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  MonitorInstancesResponsePrivate
+ * \class MonitorInstancesResponsePrivate
  *
- * @brief  Private implementation for MonitorInstancesResponse.
+ * \brief Private implementation for MonitorInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MonitorInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ MonitorInstancesResponsePrivate::MonitorInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 MonitorInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

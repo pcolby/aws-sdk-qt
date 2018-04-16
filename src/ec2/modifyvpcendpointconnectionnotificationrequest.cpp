@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointConnectionNotificationRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationRequest
  *
- * @brief  Implements EC2 ModifyVpcEndpointConnectionNotification requests.
+ * \brief The ModifyVpcEndpointConnectionNotificationRequest class encapsulates EC2 ModifyVpcEndpointConnectionNotification requests.
  *
- * @see    EC2Client::modifyVpcEndpointConnectionNotification
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpointConnectionNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotif
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequest object.
  */
 ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotificationRequest()
@@ -53,13 +60,16 @@ ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotif
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcEndpointConnectionNotificationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcEndpointConnectionNotificationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointConnectionNotificationReques
     return new ModifyVpcEndpointConnectionNotificationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcEndpointConnectionNotificationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointConnectionNotificationReques
  * @brief  Private implementation for ModifyVpcEndpointConnectionNotificationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnecti
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequestPrivate object, copying another.

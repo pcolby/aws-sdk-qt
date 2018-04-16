@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  CostandUsageReportServiceResponse
+/*!
+ * \class QtAws::CostandUsageReportService::CostandUsageReportServiceResponse
  *
- * @brief  Handles CostandUsageReportService CostandUsageReportService responses.
+ * \brief The CostandUsageReportServiceResponse class is the base class for all CostandUsageReportService responses.
  *
- * @see    CostandUsageReportServiceClient::costandUsageReportService
+ * \ingroup CostandUsageReportService
  */
 
-/**
+/*!
  * @brief  Constructs a new CostandUsageReportServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * c
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CostandUsageReportServiceResponse object.
@@ -63,7 +63,7 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsag
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CostandUsageReportServiceResponsePrivate
@@ -92,7 +92,7 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CostandUsageReportServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CostandUsageReportServiceResponsePrivate object.

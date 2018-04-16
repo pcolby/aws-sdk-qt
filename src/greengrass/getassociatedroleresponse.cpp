@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetAssociatedRoleResponse
+/*!
+ * \class QtAws::Greengrass::GetAssociatedRoleResponse
  *
- * @brief  Handles Greengrass GetAssociatedRole responses.
+ * \brief The GetAssociatedRoleResponse class encapsulates Greengrass GetAssociatedRole responses.
  *
- * @see    GreengrassClient::getAssociatedRole
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getAssociatedRole
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAssociatedRoleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetAssociatedRoleRequest * GetAssociatedRoleResponse::request() const
     return static_cast<const GetAssociatedRoleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetAssociatedRole response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetAssociatedRoleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAssociatedRoleResponsePrivate
+ * \class GetAssociatedRoleResponsePrivate
  *
- * @brief  Private implementation for GetAssociatedRoleResponse.
+ * \brief Private implementation for GetAssociatedRoleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssociatedRoleResponsePrivate object.
@@ -91,7 +97,7 @@ GetAssociatedRoleResponsePrivate::GetAssociatedRoleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetAssociatedRoleResponse element.
  *
  * @param  xml  XML stream to parse.

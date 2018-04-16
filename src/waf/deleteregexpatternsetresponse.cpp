@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteRegexPatternSetResponse
+/*!
+ * \class QtAws::WAF::DeleteRegexPatternSetResponse
  *
- * @brief  Handles WAF DeleteRegexPatternSet responses.
+ * \brief The DeleteRegexPatternSetResponse class encapsulates WAF DeleteRegexPatternSet responses.
  *
- * @see    WAFClient::deleteRegexPatternSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteRegexPatternSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRegexPatternSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteRegexPatternSetRequest * DeleteRegexPatternSetResponse::request() co
     return static_cast<const DeleteRegexPatternSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF DeleteRegexPatternSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRegexPatternSetResponsePrivate
+ * \class DeleteRegexPatternSetResponsePrivate
  *
- * @brief  Private implementation for DeleteRegexPatternSetResponse.
+ * \brief Private implementation for DeleteRegexPatternSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRegexPatternSetResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF DeleteRegexPatternSetResponse element.
  *
  * @param  xml  XML stream to parse.

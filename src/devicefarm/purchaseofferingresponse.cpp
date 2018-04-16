@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  PurchaseOfferingResponse
+/*!
+ * \class QtAws::DeviceFarm::PurchaseOfferingResponse
  *
- * @brief  Handles DeviceFarm PurchaseOffering responses.
+ * \brief The PurchaseOfferingResponse class encapsulates DeviceFarm PurchaseOffering responses.
  *
- * @see    DeviceFarmClient::purchaseOffering
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::purchaseOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseOfferingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const PurchaseOfferingRequest * PurchaseOfferingResponse::request() const
     return static_cast<const PurchaseOfferingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm PurchaseOffering response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void PurchaseOfferingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PurchaseOfferingResponsePrivate
+ * \class PurchaseOfferingResponsePrivate
  *
- * @brief  Private implementation for PurchaseOfferingResponse.
+ * \brief Private implementation for PurchaseOfferingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseOfferingResponsePrivate object.
@@ -91,7 +96,7 @@ PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm PurchaseOfferingResponse element.
  *
  * @param  xml  XML stream to parse.

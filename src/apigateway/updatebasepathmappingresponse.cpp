@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateBasePathMappingResponse
+/*!
+ * \class QtAws::APIGateway::UpdateBasePathMappingResponse
  *
- * @brief  Handles APIGateway UpdateBasePathMapping responses.
+ * \brief The UpdateBasePathMappingResponse class encapsulates APIGateway UpdateBasePathMapping responses.
  *
- * @see    APIGatewayClient::updateBasePathMapping
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateBasePathMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBasePathMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateBasePathMappingRequest * UpdateBasePathMappingResponse::request() co
     return static_cast<const UpdateBasePathMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateBasePathMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateBasePathMappingResponsePrivate
+ * \class UpdateBasePathMappingResponsePrivate
  *
- * @brief  Private implementation for UpdateBasePathMappingResponse.
+ * \brief Private implementation for UpdateBasePathMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBasePathMappingResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateBasePathMappingResponse element.
  *
  * @param  xml  XML stream to parse.

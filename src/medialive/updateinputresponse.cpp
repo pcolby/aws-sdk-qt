@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  UpdateInputResponse
+/*!
+ * \class QtAws::MediaLive::UpdateInputResponse
  *
- * @brief  Handles MediaLive UpdateInput responses.
+ * \brief The UpdateInputResponse class encapsulates MediaLive UpdateInput responses.
  *
- * @see    MediaLiveClient::updateInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::updateInput
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateInputResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateInputRequest * UpdateInputResponse::request() const
     return static_cast<const UpdateInputRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive UpdateInput response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateInputResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateInputResponsePrivate
+ * \class UpdateInputResponsePrivate
  *
- * @brief  Private implementation for UpdateInputResponse.
+ * \brief Private implementation for UpdateInputResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInputResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateInputResponsePrivate::UpdateInputResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive UpdateInputResponse element.
  *
  * @param  xml  XML stream to parse.

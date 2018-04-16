@@ -31,23 +31,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CostandUsageReportService
+ * \brief The QtAws::CostandUsageReportService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  CostandUsageReportServiceClient
+/*!
+ * \class QtAws::CostandUsageReportService::CostandUsageReportServiceClient
  *
- * @brief  Client for AWS Cost and Usage Report Service
+ * \brief The CostandUsageReportServiceClient class provides access the AWS Cost and Usage Report Service service.
+ *
+ * \ingroup CostandUsageReportService
  *
  */
 
-/**
- * @brief  Constructs a new CostandUsageReportServiceClient object.
+/*!
+ * \brief Constructs a CostandUsageReportServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -66,21 +74,16 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     d->serviceName = QStringLiteral("cur");
 }
 
-/**
- * @brief  Constructs a new CostandUsageReportServiceClient object.
+/*!
+ * \overload CostandUsageReportServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     const QUrl &endpoint,
@@ -99,7 +102,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     d->serviceName = QStringLiteral("cur");
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Cost and Usage Report Service.
  *
@@ -112,7 +115,7 @@ DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDe
     return qobject_cast<DeleteReportDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Cost and Usage Report Service.
  *
@@ -125,7 +128,7 @@ DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeRep
     return qobject_cast<DescribeReportDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Cost and Usage Report Service.
  *
@@ -138,7 +141,7 @@ PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefiniti
     return qobject_cast<PutReportDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CostandUsageReportServiceClientPrivate
@@ -146,7 +149,7 @@ PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefiniti
  * @brief  Private implementation for CostandUsageReportServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CostandUsageReportServiceClientPrivate object.

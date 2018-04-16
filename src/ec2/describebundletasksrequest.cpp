@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeBundleTasksRequest
+/*!
+ * \class QtAws::EC2::DescribeBundleTasksRequest
  *
- * @brief  Implements EC2 DescribeBundleTasks requests.
+ * \brief The DescribeBundleTasksRequest class encapsulates EC2 DescribeBundleTasks requests.
  *
- * @see    EC2Client::describeBundleTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeBundleTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBundleTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeBundleTasksRequest::DescribeBundleTasksRequest(const DescribeBundleTasks
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeBundleTasksRequest object.
  */
 DescribeBundleTasksRequest::DescribeBundleTasksRequest()
@@ -53,13 +60,16 @@ DescribeBundleTasksRequest::DescribeBundleTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeBundleTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeBundleTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetwork
     return new DescribeBundleTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeBundleTasksRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetwork
  * @brief  Private implementation for DescribeBundleTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBundleTasksRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBundleTasksRequestPrivate object, copying another.

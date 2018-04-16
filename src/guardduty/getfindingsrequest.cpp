@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetFindingsRequest
+/*!
+ * \class QtAws::GuardDuty::GetFindingsRequest
  *
- * @brief  Implements GuardDuty GetFindings requests.
+ * \brief The GetFindingsRequest class encapsulates GuardDuty GetFindings requests.
  *
- * @see    GuardDutyClient::getFindings
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetFindingsRequest::GetFindingsRequest(const GetFindingsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFindingsRequest object.
  */
 GetFindingsRequest::GetFindingsRequest()
@@ -53,13 +56,16 @@ GetFindingsRequest::GetFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetFindingsRequest::response(QNetworkReply * 
     return new GetFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFindingsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetFindingsRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFindingsRequestPrivate object.
@@ -97,7 +103,7 @@ GetFindingsRequestPrivate::GetFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFindingsRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateProfileRequest
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateProfileRequest
  *
- * @brief  Implements AlexaForBusiness UpdateProfile requests.
+ * \brief The UpdateProfileRequest class encapsulates AlexaForBusiness UpdateProfile requests.
  *
- * @see    AlexaForBusinessClient::updateProfile
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateProfileRequest::UpdateProfileRequest(const UpdateProfileRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateProfileRequest object.
  */
 UpdateProfileRequest::UpdateProfileRequest()
@@ -53,13 +61,16 @@ UpdateProfileRequest::UpdateProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProfileRequest::response(QNetworkReply 
     return new UpdateProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProfileRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProfileRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProfileRequestPrivate object, copying another.

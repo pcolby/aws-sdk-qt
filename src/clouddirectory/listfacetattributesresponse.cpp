@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListFacetAttributesResponse
+/*!
+ * \class QtAws::CloudDirectory::ListFacetAttributesResponse
  *
- * @brief  Handles CloudDirectory ListFacetAttributes responses.
+ * \brief The ListFacetAttributesResponse class encapsulates CloudDirectory ListFacetAttributes responses.
  *
- * @see    CloudDirectoryClient::listFacetAttributes
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listFacetAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFacetAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListFacetAttributesRequest * ListFacetAttributesResponse::request() const
     return static_cast<const ListFacetAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListFacetAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListFacetAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListFacetAttributesResponsePrivate
+ * \class ListFacetAttributesResponsePrivate
  *
- * @brief  Private implementation for ListFacetAttributesResponse.
+ * \brief Private implementation for ListFacetAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFacetAttributesResponsePrivate object.
@@ -91,7 +101,7 @@ ListFacetAttributesResponsePrivate::ListFacetAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListFacetAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

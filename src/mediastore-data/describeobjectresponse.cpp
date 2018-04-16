@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  DescribeObjectResponse
+/*!
+ * \class QtAws::MediaStoreData::DescribeObjectResponse
  *
- * @brief  Handles MediaStoreData DescribeObject responses.
+ * \brief The DescribeObjectResponse class encapsulates MediaStoreData DescribeObject responses.
  *
- * @see    MediaStoreDataClient::describeObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::describeObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DescribeObjectRequest * DescribeObjectResponse::request() const
     return static_cast<const DescribeObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStoreData DescribeObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DescribeObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeObjectResponsePrivate
+ * \class DescribeObjectResponsePrivate
  *
- * @brief  Private implementation for DescribeObjectResponse.
+ * \brief Private implementation for DescribeObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeObjectResponsePrivate object.
@@ -91,7 +96,7 @@ DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStoreData DescribeObjectResponse element.
  *
  * @param  xml  XML stream to parse.

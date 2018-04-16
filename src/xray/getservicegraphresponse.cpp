@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  GetServiceGraphResponse
+/*!
+ * \class QtAws::XRay::GetServiceGraphResponse
  *
- * @brief  Handles XRay GetServiceGraph responses.
+ * \brief The GetServiceGraphResponse class encapsulates XRay GetServiceGraph responses.
  *
- * @see    XRayClient::getServiceGraph
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::getServiceGraph
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServiceGraphResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetServiceGraphRequest * GetServiceGraphResponse::request() const
     return static_cast<const GetServiceGraphRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a XRay GetServiceGraph response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetServiceGraphResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetServiceGraphResponsePrivate
+ * \class GetServiceGraphResponsePrivate
  *
- * @brief  Private implementation for GetServiceGraphResponse.
+ * \brief Private implementation for GetServiceGraphResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceGraphResponsePrivate object.
@@ -91,7 +95,7 @@ GetServiceGraphResponsePrivate::GetServiceGraphResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an XRay GetServiceGraphResponse element.
  *
  * @param  xml  XML stream to parse.

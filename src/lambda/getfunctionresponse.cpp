@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetFunctionResponse
+/*!
+ * \class QtAws::Lambda::GetFunctionResponse
  *
- * @brief  Handles Lambda GetFunction responses.
+ * \brief The GetFunctionResponse class encapsulates Lambda GetFunction responses.
  *
- * @see    LambdaClient::getFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetFunctionRequest * GetFunctionResponse::request() const
     return static_cast<const GetFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda GetFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFunctionResponsePrivate
+ * \class GetFunctionResponsePrivate
  *
- * @brief  Private implementation for GetFunctionResponse.
+ * \brief Private implementation for GetFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionResponsePrivate object.
@@ -91,7 +105,7 @@ GetFunctionResponsePrivate::GetFunctionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda GetFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

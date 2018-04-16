@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UntagResourceRequest
+/*!
+ * \class QtAws::DAX::UntagResourceRequest
  *
- * @brief  Implements DAX UntagResource requests.
+ * \brief The UntagResourceRequest class encapsulates DAX UntagResource requests.
  *
- * @see    DAXClient::untagResource
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
@@ -53,13 +60,16 @@ UntagResourceRequest::UntagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
     return new UntagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagResourceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  * @brief  Private implementation for UntagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object.
@@ -97,7 +107,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.

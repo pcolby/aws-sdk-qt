@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  UpdateRadiusResponse
+/*!
+ * \class QtAws::DirectoryService::UpdateRadiusResponse
  *
- * @brief  Handles DirectoryService UpdateRadius responses.
+ * \brief The UpdateRadiusResponse class encapsulates DirectoryService UpdateRadius responses.
  *
- * @see    DirectoryServiceClient::updateRadius
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::updateRadius
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRadiusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const UpdateRadiusRequest * UpdateRadiusResponse::request() const
     return static_cast<const UpdateRadiusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DirectoryService UpdateRadius response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void UpdateRadiusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRadiusResponsePrivate
+ * \class UpdateRadiusResponsePrivate
  *
- * @brief  Private implementation for UpdateRadiusResponse.
+ * \brief Private implementation for UpdateRadiusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRadiusResponsePrivate object.
@@ -91,7 +108,7 @@ UpdateRadiusResponsePrivate::UpdateRadiusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DirectoryService UpdateRadiusResponse element.
  *
  * @param  xml  XML stream to parse.

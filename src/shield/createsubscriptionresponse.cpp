@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  CreateSubscriptionResponse
+/*!
+ * \class QtAws::Shield::CreateSubscriptionResponse
  *
- * @brief  Handles Shield CreateSubscription responses.
+ * \brief The CreateSubscriptionResponse class encapsulates Shield CreateSubscription responses.
  *
- * @see    ShieldClient::createSubscription
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::createSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateSubscriptionRequest * CreateSubscriptionResponse::request() const
     return static_cast<const CreateSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Shield CreateSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSubscriptionResponsePrivate
+ * \class CreateSubscriptionResponsePrivate
  *
- * @brief  Private implementation for CreateSubscriptionResponse.
+ * \brief Private implementation for CreateSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionResponsePrivate object.
@@ -91,7 +100,7 @@ CreateSubscriptionResponsePrivate::CreateSubscriptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Shield CreateSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

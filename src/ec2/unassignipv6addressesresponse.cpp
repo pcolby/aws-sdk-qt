@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UnassignIpv6AddressesResponse
+/*!
+ * \class QtAws::EC2::UnassignIpv6AddressesResponse
  *
- * @brief  Handles EC2 UnassignIpv6Addresses responses.
+ * \brief The UnassignIpv6AddressesResponse class encapsulates EC2 UnassignIpv6Addresses responses.
  *
- * @see    EC2Client::unassignIpv6Addresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::unassignIpv6Addresses
  */
 
-/**
+/*!
  * @brief  Constructs a new UnassignIpv6AddressesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UnassignIpv6AddressesRequest * UnassignIpv6AddressesResponse::request() co
     return static_cast<const UnassignIpv6AddressesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 UnassignIpv6Addresses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UnassignIpv6AddressesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UnassignIpv6AddressesResponsePrivate
+ * \class UnassignIpv6AddressesResponsePrivate
  *
- * @brief  Private implementation for UnassignIpv6AddressesResponse.
+ * \brief Private implementation for UnassignIpv6AddressesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnassignIpv6AddressesResponsePrivate object.
@@ -91,7 +98,7 @@ UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 UnassignIpv6AddressesResponse element.
  *
  * @param  xml  XML stream to parse.

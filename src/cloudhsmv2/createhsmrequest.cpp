@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  CreateHsmRequest
+/*!
+ * \class QtAws::CloudHSMV2::CreateHsmRequest
  *
- * @brief  Implements CloudHSMV2 CreateHsm requests.
+ * \brief The CreateHsmRequest class encapsulates CloudHSMV2 CreateHsm requests.
  *
- * @see    CloudHSMV2Client::createHsm
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::createHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateHsmRequest::CreateHsmRequest(const CreateHsmRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateHsmRequest object.
  */
 CreateHsmRequest::CreateHsmRequest()
@@ -53,13 +58,16 @@ CreateHsmRequest::CreateHsmRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateHsmRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateHsmResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
     return new CreateHsmResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateHsmRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
  * @brief  Private implementation for CreateHsmRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHsmRequestPrivate object.
@@ -97,7 +105,7 @@ CreateHsmRequestPrivate::CreateHsmRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHsmRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserAttributesResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserAttributesResponse
  *
- * @brief  Handles CognitoIdentityProvider DeleteUserAttributes responses.
+ * \brief The DeleteUserAttributesResponse class encapsulates CognitoIdentityProvider DeleteUserAttributes responses.
  *
- * @see    CognitoIdentityProviderClient::deleteUserAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUserAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DeleteUserAttributesRequest * DeleteUserAttributesResponse::request() cons
     return static_cast<const DeleteUserAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DeleteUserAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DeleteUserAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteUserAttributesResponsePrivate
+ * \class DeleteUserAttributesResponsePrivate
  *
- * @brief  Private implementation for DeleteUserAttributesResponse.
+ * \brief Private implementation for DeleteUserAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserAttributesResponsePrivate object.
@@ -91,7 +104,7 @@ DeleteUserAttributesResponsePrivate::DeleteUserAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DeleteUserAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

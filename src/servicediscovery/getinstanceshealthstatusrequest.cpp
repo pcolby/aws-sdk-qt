@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetInstancesHealthStatusRequest
+/*!
+ * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusRequest
  *
- * @brief  Implements ServiceDiscovery GetInstancesHealthStatus requests.
+ * \brief The GetInstancesHealthStatusRequest class encapsulates ServiceDiscovery GetInstancesHealthStatus requests.
  *
- * @see    ServiceDiscoveryClient::getInstancesHealthStatus
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getInstancesHealthStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInstancesHealthStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest(const GetInstan
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetInstancesHealthStatusRequest object.
  */
 GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest()
@@ -53,13 +60,16 @@ GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetInstancesHealthStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetInstancesHealthStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNe
     return new GetInstancesHealthStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetInstancesHealthStatusRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNe
  * @brief  Private implementation for GetInstancesHealthStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstancesHealthStatusRequestPrivate object.
@@ -97,7 +107,7 @@ GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstancesHealthStatusRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  TransferDomainResponse
+/*!
+ * \class QtAws::Route53Domains::TransferDomainResponse
  *
- * @brief  Handles Route53Domains TransferDomain responses.
+ * \brief The TransferDomainResponse class encapsulates Route53Domains TransferDomain responses.
  *
- * @see    Route53DomainsClient::transferDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::transferDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new TransferDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const TransferDomainRequest * TransferDomainResponse::request() const
     return static_cast<const TransferDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains TransferDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void TransferDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TransferDomainResponsePrivate
+ * \class TransferDomainResponsePrivate
  *
- * @brief  Private implementation for TransferDomainResponse.
+ * \brief Private implementation for TransferDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TransferDomainResponsePrivate object.
@@ -91,7 +95,7 @@ TransferDomainResponsePrivate::TransferDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains TransferDomainResponse element.
  *
  * @param  xml  XML stream to parse.

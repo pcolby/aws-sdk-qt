@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeClassicLinkInstancesRequest
+/*!
+ * \class QtAws::EC2::DescribeClassicLinkInstancesRequest
  *
- * @brief  Implements EC2 DescribeClassicLinkInstances requests.
+ * \brief The DescribeClassicLinkInstancesRequest class encapsulates EC2 DescribeClassicLinkInstances requests.
  *
- * @see    EC2Client::describeClassicLinkInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeClassicLinkInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClassicLinkInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeClassicLinkInstancesRequest::DescribeClassicLinkInstancesRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeClassicLinkInstancesRequest object.
  */
 DescribeClassicLinkInstancesRequest::DescribeClassicLinkInstancesRequest()
@@ -53,13 +60,16 @@ DescribeClassicLinkInstancesRequest::DescribeClassicLinkInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeClassicLinkInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeClassicLinkInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response
     return new DescribeClassicLinkInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeClassicLinkInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response
  * @brief  Private implementation for DescribeClassicLinkInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClassicLinkInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClassicLinkInstancesRequestPrivate object, copying another.

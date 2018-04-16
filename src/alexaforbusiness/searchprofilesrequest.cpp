@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SearchProfilesRequest
+/*!
+ * \class QtAws::AlexaForBusiness::SearchProfilesRequest
  *
- * @brief  Implements AlexaForBusiness SearchProfiles requests.
+ * \brief The SearchProfilesRequest class encapsulates AlexaForBusiness SearchProfiles requests.
  *
- * @see    AlexaForBusinessClient::searchProfiles
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::searchProfiles
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProfilesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SearchProfilesRequest::SearchProfilesRequest(const SearchProfilesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchProfilesRequest object.
  */
 SearchProfilesRequest::SearchProfilesRequest()
@@ -53,13 +61,16 @@ SearchProfilesRequest::SearchProfilesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchProfilesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchProfilesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SearchProfilesRequest::response(QNetworkReply
     return new SearchProfilesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchProfilesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SearchProfilesRequest::response(QNetworkReply
  * @brief  Private implementation for SearchProfilesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProfilesRequestPrivate object.
@@ -97,7 +108,7 @@ SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProfilesRequestPrivate object, copying another.

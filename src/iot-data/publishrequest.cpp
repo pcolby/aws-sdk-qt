@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  PublishRequest
+/*!
+ * \class QtAws::IoTDataPlane::PublishRequest
  *
- * @brief  Implements IoTDataPlane Publish requests.
+ * \brief The PublishRequest class encapsulates IoTDataPlane Publish requests.
  *
- * @see    IoTDataPlaneClient::publish
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::publish
  */
 
-/**
+/*!
  * @brief  Constructs a new PublishRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ PublishRequest::PublishRequest(const PublishRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PublishRequest object.
  */
 PublishRequest::PublishRequest()
@@ -53,13 +62,16 @@ PublishRequest::PublishRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PublishRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PublishResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
     return new PublishResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PublishRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
  * @brief  Private implementation for PublishRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishRequestPrivate object.
@@ -97,7 +109,7 @@ PublishRequestPrivate::PublishRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishRequestPrivate object, copying another.

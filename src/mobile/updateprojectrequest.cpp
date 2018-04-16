@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  UpdateProjectRequest
+/*!
+ * \class QtAws::Mobile::UpdateProjectRequest
  *
- * @brief  Implements Mobile UpdateProject requests.
+ * \brief The UpdateProjectRequest class encapsulates Mobile UpdateProject requests.
  *
- * @see    MobileClient::updateProject
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::updateProject
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateProjectRequest::UpdateProjectRequest(const UpdateProjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateProjectRequest object.
  */
 UpdateProjectRequest::UpdateProjectRequest()
@@ -53,13 +59,16 @@ UpdateProjectRequest::UpdateProjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateProjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateProjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
     return new UpdateProjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateProjectRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateProjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProjectRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProjectRequestPrivate object, copying another.

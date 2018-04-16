@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  TestAuthorizationRequest
+/*!
+ * \class QtAws::IoT::TestAuthorizationRequest
  *
- * @brief  Implements IoT TestAuthorization requests.
+ * \brief The TestAuthorizationRequest class encapsulates IoT TestAuthorization requests.
  *
- * @see    IoTClient::testAuthorization
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::testAuthorization
  */
 
-/**
+/*!
  * @brief  Constructs a new TestAuthorizationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ TestAuthorizationRequest::TestAuthorizationRequest(const TestAuthorizationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestAuthorizationRequest object.
  */
 TestAuthorizationRequest::TestAuthorizationRequest()
@@ -53,13 +67,16 @@ TestAuthorizationRequest::TestAuthorizationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestAuthorizationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestAuthorizationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TestAuthorizationRequest::response(QNetworkRe
     return new TestAuthorizationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestAuthorizationRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * TestAuthorizationRequest::response(QNetworkRe
  * @brief  Private implementation for TestAuthorizationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestAuthorizationRequestPrivate object.
@@ -97,7 +114,7 @@ TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestAuthorizationRequestPrivate object, copying another.

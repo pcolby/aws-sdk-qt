@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  CountClosedWorkflowExecutionsRequest
+/*!
+ * \class QtAws::SWF::CountClosedWorkflowExecutionsRequest
  *
- * @brief  Implements SWF CountClosedWorkflowExecutions requests.
+ * \brief The CountClosedWorkflowExecutionsRequest class encapsulates SWF CountClosedWorkflowExecutions requests.
  *
- * @see    SWFClient::countClosedWorkflowExecutions
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::countClosedWorkflowExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new CountClosedWorkflowExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ CountClosedWorkflowExecutionsRequest::CountClosedWorkflowExecutionsRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CountClosedWorkflowExecutionsRequest object.
  */
 CountClosedWorkflowExecutionsRequest::CountClosedWorkflowExecutionsRequest()
@@ -53,13 +72,16 @@ CountClosedWorkflowExecutionsRequest::CountClosedWorkflowExecutionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CountClosedWorkflowExecutionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CountClosedWorkflowExecutionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::respons
     return new CountClosedWorkflowExecutionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CountClosedWorkflowExecutionsRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::respons
  * @brief  Private implementation for CountClosedWorkflowExecutionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountClosedWorkflowExecutionsRequestPrivate object.
@@ -97,7 +119,7 @@ CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountClosedWorkflowExecutionsRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListGraphqlApisRequest
+/*!
+ * \class QtAws::AppSync::ListGraphqlApisRequest
  *
- * @brief  Implements AppSync ListGraphqlApis requests.
+ * \brief The ListGraphqlApisRequest class encapsulates AppSync ListGraphqlApis requests.
  *
- * @see    AppSyncClient::listGraphqlApis
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listGraphqlApis
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGraphqlApisRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListGraphqlApisRequest::ListGraphqlApisRequest(const ListGraphqlApisRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGraphqlApisRequest object.
  */
 ListGraphqlApisRequest::ListGraphqlApisRequest()
@@ -53,13 +57,16 @@ ListGraphqlApisRequest::ListGraphqlApisRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGraphqlApisRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGraphqlApisResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListGraphqlApisRequest::response(QNetworkRepl
     return new ListGraphqlApisResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGraphqlApisRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListGraphqlApisRequest::response(QNetworkRepl
  * @brief  Private implementation for ListGraphqlApisRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGraphqlApisRequestPrivate object.
@@ -97,7 +104,7 @@ ListGraphqlApisRequestPrivate::ListGraphqlApisRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGraphqlApisRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetIntrospectionSchemaRequest
+/*!
+ * \class QtAws::AppSync::GetIntrospectionSchemaRequest
  *
- * @brief  Implements AppSync GetIntrospectionSchema requests.
+ * \brief The GetIntrospectionSchemaRequest class encapsulates AppSync GetIntrospectionSchema requests.
  *
- * @see    AppSyncClient::getIntrospectionSchema
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getIntrospectionSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntrospectionSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest(const GetIntrospect
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIntrospectionSchemaRequest object.
  */
 GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest()
@@ -53,13 +57,16 @@ GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIntrospectionSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIntrospectionSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetw
     return new GetIntrospectionSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIntrospectionSchemaRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetw
  * @brief  Private implementation for GetIntrospectionSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntrospectionSchemaRequestPrivate object.
@@ -97,7 +104,7 @@ GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntrospectionSchemaRequestPrivate object, copying another.

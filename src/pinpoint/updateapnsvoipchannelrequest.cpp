@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateApnsVoipChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateApnsVoipChannelRequest
  *
- * @brief  Implements Pinpoint UpdateApnsVoipChannel requests.
+ * \brief The UpdateApnsVoipChannelRequest class encapsulates Pinpoint UpdateApnsVoipChannel requests.
  *
- * @see    PinpointClient::updateApnsVoipChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateApnsVoipChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsVoipChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateApnsVoipChannelRequest::UpdateApnsVoipChannelRequest(const UpdateApnsVoipC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsVoipChannelRequest object.
  */
 UpdateApnsVoipChannelRequest::UpdateApnsVoipChannelRequest()
@@ -53,13 +56,16 @@ UpdateApnsVoipChannelRequest::UpdateApnsVoipChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApnsVoipChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApnsVoipChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipChannelRequest::response(QNetwo
     return new UpdateApnsVoipChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApnsVoipChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipChannelRequest::response(QNetwo
  * @brief  Private implementation for UpdateApnsVoipChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsVoipChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateApnsVoipChannelRequestPrivate::UpdateApnsVoipChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsVoipChannelRequestPrivate object, copying another.

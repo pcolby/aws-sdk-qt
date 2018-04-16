@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider GetGroup requests.
+ * \brief The GetGroupRequest class encapsulates CognitoIdentityProvider GetGroup requests.
  *
- * @see    CognitoIdentityProviderClient::getGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetGroupRequest::GetGroupRequest(const GetGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGroupRequest object.
  */
 GetGroupRequest::GetGroupRequest()
@@ -53,13 +66,16 @@ GetGroupRequest::GetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
     return new GetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupRequestPrivate object.
@@ -97,7 +113,7 @@ GetGroupRequestPrivate::GetGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupRequestPrivate object, copying another.

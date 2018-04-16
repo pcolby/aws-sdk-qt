@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  CreateElasticsearchDomainResponse
+/*!
+ * \class QtAws::ElasticsearchService::CreateElasticsearchDomainResponse
  *
- * @brief  Handles ElasticsearchService CreateElasticsearchDomain responses.
+ * \brief The CreateElasticsearchDomainResponse class encapsulates ElasticsearchService CreateElasticsearchDomain responses.
  *
- * @see    ElasticsearchServiceClient::createElasticsearchDomain
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::createElasticsearchDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateElasticsearchDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const CreateElasticsearchDomainRequest * CreateElasticsearchDomainResponse::requ
     return static_cast<const CreateElasticsearchDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService CreateElasticsearchDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void CreateElasticsearchDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateElasticsearchDomainResponsePrivate
+ * \class CreateElasticsearchDomainResponsePrivate
  *
- * @brief  Private implementation for CreateElasticsearchDomainResponse.
+ * \brief Private implementation for CreateElasticsearchDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateElasticsearchDomainResponsePrivate object.
@@ -91,7 +103,7 @@ CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService CreateElasticsearchDomainResponse element.
  *
  * @param  xml  XML stream to parse.

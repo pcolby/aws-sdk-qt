@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  UpdateOriginEndpointResponse
+/*!
+ * \class QtAws::MediaPackage::UpdateOriginEndpointResponse
  *
- * @brief  Handles MediaPackage UpdateOriginEndpoint responses.
+ * \brief The UpdateOriginEndpointResponse class encapsulates MediaPackage UpdateOriginEndpoint responses.
  *
- * @see    MediaPackageClient::updateOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::updateOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateOriginEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateOriginEndpointRequest * UpdateOriginEndpointResponse::request() cons
     return static_cast<const UpdateOriginEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaPackage UpdateOriginEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateOriginEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateOriginEndpointResponsePrivate
+ * \class UpdateOriginEndpointResponsePrivate
  *
- * @brief  Private implementation for UpdateOriginEndpointResponse.
+ * \brief Private implementation for UpdateOriginEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateOriginEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaPackage UpdateOriginEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

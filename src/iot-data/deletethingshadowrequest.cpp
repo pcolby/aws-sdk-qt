@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  DeleteThingShadowRequest
+/*!
+ * \class QtAws::IoTDataPlane::DeleteThingShadowRequest
  *
- * @brief  Implements IoTDataPlane DeleteThingShadow requests.
+ * \brief The DeleteThingShadowRequest class encapsulates IoTDataPlane DeleteThingShadow requests.
  *
- * @see    IoTDataPlaneClient::deleteThingShadow
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::deleteThingShadow
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingShadowRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteThingShadowRequest::DeleteThingShadowRequest(const DeleteThingShadowReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteThingShadowRequest object.
  */
 DeleteThingShadowRequest::DeleteThingShadowRequest()
@@ -53,13 +62,16 @@ DeleteThingShadowRequest::DeleteThingShadowRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteThingShadowRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteThingShadowResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkRe
     return new DeleteThingShadowResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteThingShadowRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteThingShadowRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingShadowRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThingShadowRequestPrivate object, copying another.

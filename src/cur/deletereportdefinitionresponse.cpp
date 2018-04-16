@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  DeleteReportDefinitionResponse
+/*!
+ * \class QtAws::CostandUsageReportService::DeleteReportDefinitionResponse
  *
- * @brief  Handles CostandUsageReportService DeleteReportDefinition responses.
+ * \brief The DeleteReportDefinitionResponse class encapsulates CostandUsageReportService DeleteReportDefinition responses.
  *
- * @see    CostandUsageReportServiceClient::deleteReportDefinition
+ * \ingroup CostandUsageReportService
+ *
+ *
+ * \sa CostandUsageReportServiceClient::deleteReportDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReportDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteReportDefinitionRequest * DeleteReportDefinitionResponse::request() 
     return static_cast<const DeleteReportDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostandUsageReportService DeleteReportDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReportDefinitionResponsePrivate
+ * \class DeleteReportDefinitionResponsePrivate
  *
- * @brief  Private implementation for DeleteReportDefinitionResponse.
+ * \brief Private implementation for DeleteReportDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReportDefinitionResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CostandUsageReportService DeleteReportDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

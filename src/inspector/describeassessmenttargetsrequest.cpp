@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeAssessmentTargetsRequest
+/*!
+ * \class QtAws::Inspector::DescribeAssessmentTargetsRequest
  *
- * @brief  Implements Inspector DescribeAssessmentTargets requests.
+ * \brief The DescribeAssessmentTargetsRequest class encapsulates Inspector DescribeAssessmentTargets requests.
  *
- * @see    InspectorClient::describeAssessmentTargets
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeAssessmentTargets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentTargetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentTargetsRequest object.
  */
 DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest()
@@ -53,13 +61,16 @@ DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAssessmentTargetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAssessmentTargetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QN
     return new DescribeAssessmentTargetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAssessmentTargetsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QN
  * @brief  Private implementation for DescribeAssessmentTargetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentTargetsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentTargetsRequestPrivate object, copying another.

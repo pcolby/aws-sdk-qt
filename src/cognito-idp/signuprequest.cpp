@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SignUpRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::SignUpRequest
  *
- * @brief  Implements CognitoIdentityProvider SignUp requests.
+ * \brief The SignUpRequest class encapsulates CognitoIdentityProvider SignUp requests.
  *
- * @see    CognitoIdentityProviderClient::signUp
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::signUp
  */
 
-/**
+/*!
  * @brief  Constructs a new SignUpRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ SignUpRequest::SignUpRequest(const SignUpRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SignUpRequest object.
  */
 SignUpRequest::SignUpRequest()
@@ -53,13 +66,16 @@ SignUpRequest::SignUpRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SignUpRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SignUpResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * SignUpRequest::response(QNetworkReply * const
     return new SignUpResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SignUpRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * SignUpRequest::response(QNetworkReply * const
  * @brief  Private implementation for SignUpRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SignUpRequestPrivate object.
@@ -97,7 +113,7 @@ SignUpRequestPrivate::SignUpRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SignUpRequestPrivate object, copying another.

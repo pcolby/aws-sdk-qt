@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetGroupCertificateConfigurationResponse
+/*!
+ * \class QtAws::Greengrass::GetGroupCertificateConfigurationResponse
  *
- * @brief  Handles Greengrass GetGroupCertificateConfiguration responses.
+ * \brief The GetGroupCertificateConfigurationResponse class encapsulates Greengrass GetGroupCertificateConfiguration responses.
  *
- * @see    GreengrassClient::getGroupCertificateConfiguration
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getGroupCertificateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupCertificateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetGroupCertificateConfigurationRequest * GetGroupCertificateConfiguration
     return static_cast<const GetGroupCertificateConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetGroupCertificateConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGroupCertificateConfigurationResponsePrivate
+ * \class GetGroupCertificateConfigurationResponsePrivate
  *
- * @brief  Private implementation for GetGroupCertificateConfigurationResponse.
+ * \brief Private implementation for GetGroupCertificateConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupCertificateConfigurationResponsePrivate object.
@@ -91,7 +97,7 @@ GetGroupCertificateConfigurationResponsePrivate::GetGroupCertificateConfiguratio
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetGroupCertificateConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

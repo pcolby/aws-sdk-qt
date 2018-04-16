@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateVpcCidrBlockRequest
+/*!
+ * \class QtAws::EC2::DisassociateVpcCidrBlockRequest
  *
- * @brief  Implements EC2 DisassociateVpcCidrBlock requests.
+ * \brief The DisassociateVpcCidrBlockRequest class encapsulates EC2 DisassociateVpcCidrBlock requests.
  *
- * @see    EC2Client::disassociateVpcCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateVpcCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateVpcCidrBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest(const Disassoci
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateVpcCidrBlockRequest object.
  */
 DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest()
@@ -53,13 +60,16 @@ DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateVpcCidrBlockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateVpcCidrBlockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNe
     return new DisassociateVpcCidrBlockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateVpcCidrBlockRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNe
  * @brief  Private implementation for DisassociateVpcCidrBlockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateVpcCidrBlockRequestPrivate object.
@@ -97,7 +107,7 @@ DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateVpcCidrBlockRequestPrivate object, copying another.

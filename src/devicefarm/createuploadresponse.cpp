@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateUploadResponse
+/*!
+ * \class QtAws::DeviceFarm::CreateUploadResponse
  *
- * @brief  Handles DeviceFarm CreateUpload responses.
+ * \brief The CreateUploadResponse class encapsulates DeviceFarm CreateUpload responses.
  *
- * @see    DeviceFarmClient::createUpload
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUploadResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateUploadRequest * CreateUploadResponse::request() const
     return static_cast<const CreateUploadRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm CreateUpload response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateUploadResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateUploadResponsePrivate
+ * \class CreateUploadResponsePrivate
  *
- * @brief  Private implementation for CreateUploadResponse.
+ * \brief Private implementation for CreateUploadResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUploadResponsePrivate object.
@@ -91,7 +96,7 @@ CreateUploadResponsePrivate::CreateUploadResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm CreateUploadResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  SetRepositoryPolicyRequest
+/*!
+ * \class QtAws::ECR::SetRepositoryPolicyRequest
  *
- * @brief  Implements ECR SetRepositoryPolicy requests.
+ * \brief The SetRepositoryPolicyRequest class encapsulates ECR SetRepositoryPolicy requests.
  *
- * @see    ECRClient::setRepositoryPolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::setRepositoryPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new SetRepositoryPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ SetRepositoryPolicyRequest::SetRepositoryPolicyRequest(const SetRepositoryPolicy
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetRepositoryPolicyRequest object.
  */
 SetRepositoryPolicyRequest::SetRepositoryPolicyRequest()
@@ -53,13 +60,16 @@ SetRepositoryPolicyRequest::SetRepositoryPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetRepositoryPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetRepositoryPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * SetRepositoryPolicyRequest::response(QNetwork
     return new SetRepositoryPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetRepositoryPolicyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * SetRepositoryPolicyRequest::response(QNetwork
  * @brief  Private implementation for SetRepositoryPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetRepositoryPolicyRequestPrivate object.
@@ -97,7 +107,7 @@ SetRepositoryPolicyRequestPrivate::SetRepositoryPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetRepositoryPolicyRequestPrivate object, copying another.

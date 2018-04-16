@@ -27,15 +27,37 @@
 namespace QtAws {
 namespace SFN {
 
-/**
- * @class  ListExecutionsResponse
+/*!
+ * \class QtAws::SFN::ListExecutionsResponse
  *
- * @brief  Handles SFN ListExecutions responses.
+ * \brief The ListExecutionsResponse class encapsulates SFN ListExecutions responses.
  *
- * @see    SFNClient::listExecutions
+ * \ingroup SFN
+ *
+ *  <fullname>AWS Step Functions</fullname>
+ * 
+ *  AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
+ *  using visual
+ * 
+ *  workflows>
+ * 
+ *  You can use Step Functions to build applications from individual components, each of which performs a discrete function,
+ *  or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps
+ *  visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each
+ *  step, and retries steps when there are errors, so your application executes predictably and in the right order every
+ *  time. Step Functions logs the state of each step, so you can quickly diagnose and debug any
+ * 
+ *  issues>
+ * 
+ *  Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
+ *  You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
+ *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
+ *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
+ *
+ * \sa SFNClient::listExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListExecutionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +80,7 @@ const ListExecutionsRequest * ListExecutionsResponse::request() const
     return static_cast<const ListExecutionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SFN ListExecutions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +92,15 @@ void ListExecutionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListExecutionsResponsePrivate
+ * \class ListExecutionsResponsePrivate
  *
- * @brief  Private implementation for ListExecutionsResponse.
+ * \brief Private implementation for ListExecutionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListExecutionsResponsePrivate object.
@@ -91,7 +113,7 @@ ListExecutionsResponsePrivate::ListExecutionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SFN ListExecutionsResponse element.
  *
  * @param  xml  XML stream to parse.

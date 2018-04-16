@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListApiKeysRequest
+/*!
+ * \class QtAws::AppSync::ListApiKeysRequest
  *
- * @brief  Implements AppSync ListApiKeys requests.
+ * \brief The ListApiKeysRequest class encapsulates AppSync ListApiKeys requests.
  *
- * @see    AppSyncClient::listApiKeys
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listApiKeys
  */
 
-/**
+/*!
  * @brief  Constructs a new ListApiKeysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListApiKeysRequest::ListApiKeysRequest(const ListApiKeysRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListApiKeysRequest object.
  */
 ListApiKeysRequest::ListApiKeysRequest()
@@ -53,13 +57,16 @@ ListApiKeysRequest::ListApiKeysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListApiKeysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListApiKeysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * 
     return new ListApiKeysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListApiKeysRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListApiKeysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListApiKeysRequestPrivate object.
@@ -97,7 +104,7 @@ ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListApiKeysRequestPrivate object, copying another.

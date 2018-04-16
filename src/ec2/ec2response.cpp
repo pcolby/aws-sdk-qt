@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EC2Response
+/*!
+ * \class QtAws::EC2::EC2Response
  *
- * @brief  Handles EC2 EC2 responses.
+ * \brief The EC2Response class is the base class for all EC2 responses.
  *
- * @see    EC2Client::eC2
+ * \ingroup EC2
  */
 
-/**
+/*!
  * @brief  Constructs a new EC2Response object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ EC2Response::EC2Response(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EC2Response object.
@@ -63,7 +63,7 @@ EC2Response::EC2Response(EC2ResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void EC2Response::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EC2ResponsePrivate
@@ -92,7 +92,7 @@ void EC2Response::parseFailure(QIODevice &response)
  * @brief  Private implementation for EC2Response.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EC2ResponsePrivate object.

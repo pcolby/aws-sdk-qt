@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateAuthorizerResponse
+/*!
+ * \class QtAws::APIGateway::UpdateAuthorizerResponse
  *
- * @brief  Handles APIGateway UpdateAuthorizer responses.
+ * \brief The UpdateAuthorizerResponse class encapsulates APIGateway UpdateAuthorizer responses.
  *
- * @see    APIGatewayClient::updateAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAuthorizerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateAuthorizerRequest * UpdateAuthorizerResponse::request() const
     return static_cast<const UpdateAuthorizerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateAuthorizer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateAuthorizerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateAuthorizerResponsePrivate
+ * \class UpdateAuthorizerResponsePrivate
  *
- * @brief  Private implementation for UpdateAuthorizerResponse.
+ * \brief Private implementation for UpdateAuthorizerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAuthorizerResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateAuthorizerResponsePrivate::UpdateAuthorizerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateAuthorizerResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminLinkProviderForUserResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminLinkProviderForUser responses.
+ * \brief The AdminLinkProviderForUserResponse class encapsulates CognitoIdentityProvider AdminLinkProviderForUser responses.
  *
- * @see    CognitoIdentityProviderClient::adminLinkProviderForUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminLinkProviderForUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminLinkProviderForUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminLinkProviderForUserRequest * AdminLinkProviderForUserResponse::reques
     return static_cast<const AdminLinkProviderForUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminLinkProviderForUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminLinkProviderForUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminLinkProviderForUserResponsePrivate
+ * \class AdminLinkProviderForUserResponsePrivate
  *
- * @brief  Private implementation for AdminLinkProviderForUserResponse.
+ * \brief Private implementation for AdminLinkProviderForUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminLinkProviderForUserResponsePrivate object.
@@ -91,7 +104,7 @@ AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminLinkProviderForUserResponse element.
  *
  * @param  xml  XML stream to parse.

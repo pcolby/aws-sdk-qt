@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteSqlInjectionMatchSetResponse
+/*!
+ * \class QtAws::WAF::DeleteSqlInjectionMatchSetResponse
  *
- * @brief  Handles WAF DeleteSqlInjectionMatchSet responses.
+ * \brief The DeleteSqlInjectionMatchSetResponse class encapsulates WAF DeleteSqlInjectionMatchSet responses.
  *
- * @see    WAFClient::deleteSqlInjectionMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteSqlInjectionMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSqlInjectionMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::re
     return static_cast<const DeleteSqlInjectionMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF DeleteSqlInjectionMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSqlInjectionMatchSetResponsePrivate
+ * \class DeleteSqlInjectionMatchSetResponsePrivate
  *
- * @brief  Private implementation for DeleteSqlInjectionMatchSetResponse.
+ * \brief Private implementation for DeleteSqlInjectionMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSqlInjectionMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF DeleteSqlInjectionMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

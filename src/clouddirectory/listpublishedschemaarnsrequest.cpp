@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListPublishedSchemaArnsRequest
+/*!
+ * \class QtAws::CloudDirectory::ListPublishedSchemaArnsRequest
  *
- * @brief  Implements CloudDirectory ListPublishedSchemaArns requests.
+ * \brief The ListPublishedSchemaArnsRequest class encapsulates CloudDirectory ListPublishedSchemaArns requests.
  *
- * @see    CloudDirectoryClient::listPublishedSchemaArns
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listPublishedSchemaArns
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPublishedSchemaArnsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListPublishedSchemaArnsRequest::ListPublishedSchemaArnsRequest(const ListPublish
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPublishedSchemaArnsRequest object.
  */
 ListPublishedSchemaArnsRequest::ListPublishedSchemaArnsRequest()
@@ -53,13 +63,16 @@ ListPublishedSchemaArnsRequest::ListPublishedSchemaArnsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPublishedSchemaArnsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPublishedSchemaArnsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListPublishedSchemaArnsRequest::response(QNet
     return new ListPublishedSchemaArnsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPublishedSchemaArnsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListPublishedSchemaArnsRequest::response(QNet
  * @brief  Private implementation for ListPublishedSchemaArnsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPublishedSchemaArnsRequestPrivate object.
@@ -97,7 +110,7 @@ ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPublishedSchemaArnsRequestPrivate object, copying another.

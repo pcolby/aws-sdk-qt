@@ -47,23 +47,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SMS
+ * \brief The QtAws::SMS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  SmsClient
+/*!
+ * \class QtAws::SMS::SmsClient
  *
- * @brief  Client for AWS Server Migration Service (SMS)
+ * \brief The SmsClient class provides access the AWS Server Migration Service (SMS) service.
+ *
+ * \ingroup SMS
  *
  */
 
-/**
- * @brief  Constructs a new SmsClient object.
+/*!
+ * \brief Constructs a SmsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SmsClient::SmsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -82,21 +90,16 @@ SmsClient::SmsClient(
     d->serviceName = QStringLiteral("sms");
 }
 
-/**
- * @brief  Constructs a new SmsClient object.
+/*!
+ * \overload SmsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SmsClient::SmsClient(
     const QUrl &endpoint,
@@ -115,7 +118,7 @@ SmsClient::SmsClient(
     d->serviceName = QStringLiteral("sms");
 }
 
-/**
+/*!
  * The CreateReplicationJob API is used to create a ReplicationJob to replicate a server on AWS. Call this API to first
  * create a ReplicationJob, which will then schedule periodic ReplicationRuns to replicate your server to AWS. Each
  *
@@ -130,7 +133,7 @@ CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateRepli
     return qobject_cast<CreateReplicationJobResponse *>(send(request));
 }
 
-/**
+/*!
  * The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further ReplicationRuns. This will
  * delete the contents of the S3 bucket used to store SMS artifacts, but will not delete any AMIs created by the SMS
  *
@@ -145,7 +148,7 @@ DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteRepli
     return qobject_cast<DeleteReplicationJobResponse *>(send(request));
 }
 
-/**
+/*!
  * The DeleteServerCatalog API clears all servers from your server catalog. This means that these servers will no longer be
  *
  * @param  request Request to send to AWS Server Migration Service.
@@ -159,7 +162,7 @@ DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerC
     return qobject_cast<DeleteServerCatalogResponse *>(send(request));
 }
 
-/**
+/*!
  * The DisassociateConnector API will disassociate a connector from the Server Migration Service, rendering it unavailable
  *
  * @param  request Request to send to AWS Server Migration Service.
@@ -173,7 +176,7 @@ DisassociateConnectorResponse * SmsClient::disassociateConnector(const Disassoci
     return qobject_cast<DisassociateConnectorResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Server Migration Service.
  *
@@ -186,7 +189,7 @@ GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &req
     return qobject_cast<GetConnectorsResponse *>(send(request));
 }
 
-/**
+/*!
  * The GetReplicationJobs API will return all of your ReplicationJobs and their details. This API returns a paginated list,
  *
  * @param  request Request to send to AWS Server Migration Service.
@@ -200,7 +203,7 @@ GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJ
     return qobject_cast<GetReplicationJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob. This API returns a paginated
  *
  * @param  request Request to send to AWS Server Migration Service.
@@ -214,7 +217,7 @@ GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationR
     return qobject_cast<GetReplicationRunsResponse *>(send(request));
 }
 
-/**
+/*!
  * The GetServers API returns a list of all servers in your server catalog. For this call to succeed, you must previously
  *
  * @param  request Request to send to AWS Server Migration Service.
@@ -228,7 +231,7 @@ GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
     return qobject_cast<GetServersResponse *>(send(request));
 }
 
-/**
+/*!
  * The ImportServerCatalog API is used to gather the complete list of on-premises servers on your premises. This API call
  * requires connectors to be installed and monitoring all servers you would like imported. This API call returns
  *
@@ -243,7 +246,7 @@ ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerC
     return qobject_cast<ImportServerCatalogResponse *>(send(request));
 }
 
-/**
+/*!
  * The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in addition to those that are scheduled
  * based on your frequency). This ReplicationRun will start immediately. StartOnDemandReplicationRun is subject to limits
  *
@@ -258,7 +261,7 @@ StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(con
     return qobject_cast<StartOnDemandReplicationRunResponse *>(send(request));
 }
 
-/**
+/*!
  * The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob created using
  *
  * @param  request Request to send to AWS Server Migration Service.
@@ -272,7 +275,7 @@ UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateRepli
     return qobject_cast<UpdateReplicationJobResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SmsClientPrivate
@@ -280,7 +283,7 @@ UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateRepli
  * @brief  Private implementation for SmsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SmsClientPrivate object.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DeleteInputSecurityGroupResponse
+/*!
+ * \class QtAws::MediaLive::DeleteInputSecurityGroupResponse
  *
- * @brief  Handles MediaLive DeleteInputSecurityGroup responses.
+ * \brief The DeleteInputSecurityGroupResponse class encapsulates MediaLive DeleteInputSecurityGroup responses.
  *
- * @see    MediaLiveClient::deleteInputSecurityGroup
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::deleteInputSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInputSecurityGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteInputSecurityGroupRequest * DeleteInputSecurityGroupResponse::reques
     return static_cast<const DeleteInputSecurityGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive DeleteInputSecurityGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteInputSecurityGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteInputSecurityGroupResponsePrivate
+ * \class DeleteInputSecurityGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteInputSecurityGroupResponse.
+ * \brief Private implementation for DeleteInputSecurityGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInputSecurityGroupResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive DeleteInputSecurityGroupResponse element.
  *
  * @param  xml  XML stream to parse.

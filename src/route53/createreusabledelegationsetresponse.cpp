@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateReusableDelegationSetResponse
+/*!
+ * \class QtAws::Route53::CreateReusableDelegationSetResponse
  *
- * @brief  Handles Route53 CreateReusableDelegationSet responses.
+ * \brief The CreateReusableDelegationSetResponse class encapsulates Route53 CreateReusableDelegationSet responses.
  *
- * @see    Route53Client::createReusableDelegationSet
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createReusableDelegationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReusableDelegationSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateReusableDelegationSetRequest * CreateReusableDelegationSetResponse::
     return static_cast<const CreateReusableDelegationSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 CreateReusableDelegationSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateReusableDelegationSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateReusableDelegationSetResponsePrivate
+ * \class CreateReusableDelegationSetResponsePrivate
  *
- * @brief  Private implementation for CreateReusableDelegationSetResponse.
+ * \brief Private implementation for CreateReusableDelegationSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReusableDelegationSetResponsePrivate object.
@@ -91,7 +94,7 @@ CreateReusableDelegationSetResponsePrivate::CreateReusableDelegationSetResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 CreateReusableDelegationSetResponse element.
  *
  * @param  xml  XML stream to parse.

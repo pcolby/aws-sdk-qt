@@ -59,26 +59,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ElasticTranscoder
+ * \brief The QtAws::ElasticTranscoder contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ElasticTranscoderClient
+/*!
+ * \class QtAws::ElasticTranscoder::ElasticTranscoderClient
  *
- * @brief  Client for Amazon Elastic Transcoder
+ * \brief The ElasticTranscoderClient class provides access the Amazon Elastic Transcoder service.
  *
- * <fullname>AWS Elastic Transcoder Service</fullname>
+ * \ingroup ElasticTranscoder
  *
- * The AWS Elastic Transcoder
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
  */
 
-/**
- * @brief  Constructs a new ElasticTranscoderClient object.
+/*!
+ * \brief Constructs a ElasticTranscoderClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ElasticTranscoderClient::ElasticTranscoderClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -97,21 +105,16 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     d->serviceName = QStringLiteral("elastictranscoder");
 }
 
-/**
- * @brief  Constructs a new ElasticTranscoderClient object.
+/*!
+ * \overload ElasticTranscoderClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ElasticTranscoderClient::ElasticTranscoderClient(
     const QUrl &endpoint,
@@ -130,7 +133,7 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     d->serviceName = QStringLiteral("elastictranscoder");
 }
 
-/**
+/*!
  * The CancelJob operation cancels an unfinished
  *
  * job> <note>
@@ -149,7 +152,7 @@ CancelJobResponse * ElasticTranscoderClient::cancelJob(const CancelJobRequest &r
     return qobject_cast<CancelJobResponse *>(send(request));
 }
 
-/**
+/*!
  * When you create a job, Elastic Transcoder returns JSON data that includes the values that you specified plus information
  * about the job that is
  *
@@ -169,7 +172,7 @@ CreateJobResponse * ElasticTranscoderClient::createJob(const CreateJobRequest &r
     return qobject_cast<CreateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * The CreatePipeline operation creates a pipeline with settings that you
  *
  * @param  request Request to send to Amazon Elastic Transcoder.
@@ -183,7 +186,7 @@ CreatePipelineResponse * ElasticTranscoderClient::createPipeline(const CreatePip
     return qobject_cast<CreatePipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * The CreatePreset operation creates a preset with settings that you
  *
  * specify> <b>
@@ -211,7 +214,7 @@ CreatePresetResponse * ElasticTranscoderClient::createPreset(const CreatePresetR
     return qobject_cast<CreatePresetResponse *>(send(request));
 }
 
-/**
+/*!
  * The DeletePipeline operation removes a
  *
  * pipeline>
@@ -230,7 +233,7 @@ DeletePipelineResponse * ElasticTranscoderClient::deletePipeline(const DeletePip
     return qobject_cast<DeletePipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * The DeletePreset operation removes a preset that you've added in an AWS
  *
  * region> <note>
@@ -248,7 +251,7 @@ DeletePresetResponse * ElasticTranscoderClient::deletePreset(const DeletePresetR
     return qobject_cast<DeletePresetResponse *>(send(request));
 }
 
-/**
+/*!
  * The ListJobsByPipeline operation gets a list of the jobs currently in a
  *
  * pipeline>
@@ -267,7 +270,7 @@ ListJobsByPipelineResponse * ElasticTranscoderClient::listJobsByPipeline(const L
     return qobject_cast<ListJobsByPipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * The ListJobsByStatus operation gets a list of jobs that have a specified status. The response body contains one element
  * for each job that satisfies the search
  *
@@ -282,7 +285,7 @@ ListJobsByStatusResponse * ElasticTranscoderClient::listJobsByStatus(const ListJ
     return qobject_cast<ListJobsByStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * The ListPipelines operation gets a list of the pipelines associated with the current AWS
  *
  * @param  request Request to send to Amazon Elastic Transcoder.
@@ -296,7 +299,7 @@ ListPipelinesResponse * ElasticTranscoderClient::listPipelines(const ListPipelin
     return qobject_cast<ListPipelinesResponse *>(send(request));
 }
 
-/**
+/*!
  * The ListPresets operation gets a list of the default presets included with Elastic Transcoder and the presets that
  * you've added in an AWS
  *
@@ -311,7 +314,7 @@ ListPresetsResponse * ElasticTranscoderClient::listPresets(const ListPresetsRequ
     return qobject_cast<ListPresetsResponse *>(send(request));
 }
 
-/**
+/*!
  * The ReadJob operation returns detailed information about a
  *
  * @param  request Request to send to Amazon Elastic Transcoder.
@@ -325,7 +328,7 @@ ReadJobResponse * ElasticTranscoderClient::readJob(const ReadJobRequest &request
     return qobject_cast<ReadJobResponse *>(send(request));
 }
 
-/**
+/*!
  * The ReadPipeline operation gets detailed information about a
  *
  * @param  request Request to send to Amazon Elastic Transcoder.
@@ -339,7 +342,7 @@ ReadPipelineResponse * ElasticTranscoderClient::readPipeline(const ReadPipelineR
     return qobject_cast<ReadPipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * The ReadPreset operation gets detailed information about a
  *
  * @param  request Request to send to Amazon Elastic Transcoder.
@@ -353,7 +356,7 @@ ReadPresetResponse * ElasticTranscoderClient::readPreset(const ReadPresetRequest
     return qobject_cast<ReadPresetResponse *>(send(request));
 }
 
-/**
+/*!
  * The TestRole operation tests the IAM role used to create the
  *
  * pipeline>
@@ -374,7 +377,7 @@ TestRoleResponse * ElasticTranscoderClient::testRole(const TestRoleRequest &requ
     return qobject_cast<TestRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Use the <code>UpdatePipeline</code> operation to update settings for a
  *
  * pipeline> <b>
@@ -394,7 +397,7 @@ UpdatePipelineResponse * ElasticTranscoderClient::updatePipeline(const UpdatePip
     return qobject_cast<UpdatePipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * With the UpdatePipelineNotifications operation, you can update Amazon Simple Notification Service (Amazon SNS)
  * notifications for a
  *
@@ -413,7 +416,7 @@ UpdatePipelineNotificationsResponse * ElasticTranscoderClient::updatePipelineNot
     return qobject_cast<UpdatePipelineNotificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * The UpdatePipelineStatus operation pauses or reactivates a pipeline, so that the pipeline stops or restarts the
  * processing of
  *
@@ -434,7 +437,7 @@ UpdatePipelineStatusResponse * ElasticTranscoderClient::updatePipelineStatus(con
     return qobject_cast<UpdatePipelineStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticTranscoderClientPrivate
@@ -442,7 +445,7 @@ UpdatePipelineStatusResponse * ElasticTranscoderClient::updatePipelineStatus(con
  * @brief  Private implementation for ElasticTranscoderClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticTranscoderClientPrivate object.

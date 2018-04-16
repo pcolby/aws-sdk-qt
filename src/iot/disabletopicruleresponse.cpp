@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DisableTopicRuleResponse
+/*!
+ * \class QtAws::IoT::DisableTopicRuleResponse
  *
- * @brief  Handles IoT DisableTopicRule responses.
+ * \brief The DisableTopicRuleResponse class encapsulates IoT DisableTopicRule responses.
  *
- * @see    IoTClient::disableTopicRule
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::disableTopicRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableTopicRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DisableTopicRuleRequest * DisableTopicRuleResponse::request() const
     return static_cast<const DisableTopicRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DisableTopicRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DisableTopicRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableTopicRuleResponsePrivate
+ * \class DisableTopicRuleResponsePrivate
  *
- * @brief  Private implementation for DisableTopicRuleResponse.
+ * \brief Private implementation for DisableTopicRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableTopicRuleResponsePrivate object.
@@ -91,7 +105,7 @@ DisableTopicRuleResponsePrivate::DisableTopicRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DisableTopicRuleResponse element.
  *
  * @param  xml  XML stream to parse.

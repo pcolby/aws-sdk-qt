@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateConfigurationSetReputationMetricsEnabledRequest
+/*!
+ * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequest
  *
- * @brief  Implements SES UpdateConfigurationSetReputationMetricsEnabled requests.
+ * \brief The UpdateConfigurationSetReputationMetricsEnabledRequest class encapsulates SES UpdateConfigurationSetReputationMetricsEnabled requests.
  *
- * @see    SESClient::updateConfigurationSetReputationMetricsEnabled
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateConfigurationSetReputationMetricsEnabled
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetRep
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest()
@@ -53,13 +67,16 @@ UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetRep
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateConfigurationSetReputationMetricsEnabledRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateConfigurationSetReputationMetricsEnabledResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
     return new UpdateConfigurationSetReputationMetricsEnabledResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateConfigurationSetReputationMetricsEnabledRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
  * @brief  Private implementation for UpdateConfigurationSetReputationMetricsEnabledRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfiguratio
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object, copying another.

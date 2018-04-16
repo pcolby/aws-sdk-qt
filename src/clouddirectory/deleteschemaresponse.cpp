@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteSchemaResponse
+/*!
+ * \class QtAws::CloudDirectory::DeleteSchemaResponse
  *
- * @brief  Handles CloudDirectory DeleteSchema responses.
+ * \brief The DeleteSchemaResponse class encapsulates CloudDirectory DeleteSchema responses.
  *
- * @see    CloudDirectoryClient::deleteSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSchemaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DeleteSchemaRequest * DeleteSchemaResponse::request() const
     return static_cast<const DeleteSchemaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory DeleteSchema response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DeleteSchemaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSchemaResponsePrivate
+ * \class DeleteSchemaResponsePrivate
  *
- * @brief  Private implementation for DeleteSchemaResponse.
+ * \brief Private implementation for DeleteSchemaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSchemaResponsePrivate object.
@@ -91,7 +101,7 @@ DeleteSchemaResponsePrivate::DeleteSchemaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory DeleteSchemaResponse element.
  *
  * @param  xml  XML stream to parse.

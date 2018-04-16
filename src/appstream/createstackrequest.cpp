@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateStackRequest
+/*!
+ * \class QtAws::AppStream::CreateStackRequest
  *
- * @brief  Implements AppStream CreateStack requests.
+ * \brief The CreateStackRequest class encapsulates AppStream CreateStack requests.
  *
- * @see    AppStreamClient::createStack
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createStack
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStackRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateStackRequest::CreateStackRequest(const CreateStackRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStackRequest object.
  */
 CreateStackRequest::CreateStackRequest()
@@ -53,13 +59,16 @@ CreateStackRequest::CreateStackRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStackRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStackResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateStackRequest::response(QNetworkReply * 
     return new CreateStackResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStackRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateStackRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateStackRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStackRequestPrivate object.
@@ -97,7 +106,7 @@ CreateStackRequestPrivate::CreateStackRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStackRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetIPSetRequest
+/*!
+ * \class QtAws::GuardDuty::GetIPSetRequest
  *
- * @brief  Implements GuardDuty GetIPSet requests.
+ * \brief The GetIPSetRequest class encapsulates GuardDuty GetIPSet requests.
  *
- * @see    GuardDutyClient::getIPSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIPSetRequest object.
  */
 GetIPSetRequest::GetIPSetRequest()
@@ -53,13 +56,16 @@ GetIPSetRequest::GetIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
     return new GetIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIPSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIPSetRequestPrivate object.
@@ -97,7 +103,7 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIPSetRequestPrivate object, copying another.

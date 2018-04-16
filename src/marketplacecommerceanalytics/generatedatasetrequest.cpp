@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-/**
- * @class  GenerateDataSetRequest
+/*!
+ * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetRequest
  *
- * @brief  Implements MarketplaceCommerceAnalytics GenerateDataSet requests.
+ * \brief The GenerateDataSetRequest class encapsulates MarketplaceCommerceAnalytics GenerateDataSet requests.
  *
- * @see    MarketplaceCommerceAnalyticsClient::generateDataSet
+ * \ingroup MarketplaceCommerceAnalytics
+ *
+ *
+ * \sa MarketplaceCommerceAnalyticsClient::generateDataSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GenerateDataSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GenerateDataSetRequest::GenerateDataSetRequest(const GenerateDataSetRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GenerateDataSetRequest object.
  */
 GenerateDataSetRequest::GenerateDataSetRequest()
@@ -53,13 +56,16 @@ GenerateDataSetRequest::GenerateDataSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GenerateDataSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GenerateDataSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkRepl
     return new GenerateDataSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GenerateDataSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkRepl
  * @brief  Private implementation for GenerateDataSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GenerateDataSetRequestPrivate object.
@@ -97,7 +103,7 @@ GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GenerateDataSetRequestPrivate object, copying another.

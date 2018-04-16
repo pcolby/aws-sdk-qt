@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteFleetRequest
+/*!
+ * \class QtAws::AppStream::DeleteFleetRequest
  *
- * @brief  Implements AppStream DeleteFleet requests.
+ * \brief The DeleteFleetRequest class encapsulates AppStream DeleteFleet requests.
  *
- * @see    AppStreamClient::deleteFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteFleetRequest::DeleteFleetRequest(const DeleteFleetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFleetRequest object.
  */
 DeleteFleetRequest::DeleteFleetRequest()
@@ -53,13 +59,16 @@ DeleteFleetRequest::DeleteFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * 
     return new DeleteFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFleetRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFleetRequestPrivate object, copying another.

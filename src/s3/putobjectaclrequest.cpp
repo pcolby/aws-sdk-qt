@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutObjectAclRequest
+/*!
+ * \class QtAws::S3::PutObjectAclRequest
  *
- * @brief  Implements S3 PutObjectAcl requests.
+ * \brief The PutObjectAclRequest class encapsulates S3 PutObjectAcl requests.
  *
- * @see    S3Client::putObjectAcl
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putObjectAcl
  */
 
-/**
+/*!
  * @brief  Constructs a new PutObjectAclRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutObjectAclRequest::PutObjectAclRequest(const PutObjectAclRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutObjectAclRequest object.
  */
 PutObjectAclRequest::PutObjectAclRequest()
@@ -53,13 +56,16 @@ PutObjectAclRequest::PutObjectAclRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutObjectAclRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutObjectAclResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectAclRequest::response(QNetworkReply *
     return new PutObjectAclResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutObjectAclRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectAclRequest::response(QNetworkReply *
  * @brief  Private implementation for PutObjectAclRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectAclRequestPrivate object.
@@ -97,7 +103,7 @@ PutObjectAclRequestPrivate::PutObjectAclRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectAclRequestPrivate object, copying another.

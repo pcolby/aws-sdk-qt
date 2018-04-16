@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateConstraintResponse
+/*!
+ * \class QtAws::ServiceCatalog::CreateConstraintResponse
  *
- * @brief  Handles ServiceCatalog CreateConstraint responses.
+ * \brief The CreateConstraintResponse class encapsulates ServiceCatalog CreateConstraint responses.
  *
- * @see    ServiceCatalogClient::createConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConstraintResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateConstraintRequest * CreateConstraintResponse::request() const
     return static_cast<const CreateConstraintRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog CreateConstraint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateConstraintResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateConstraintResponsePrivate
+ * \class CreateConstraintResponsePrivate
  *
- * @brief  Private implementation for CreateConstraintResponse.
+ * \brief Private implementation for CreateConstraintResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConstraintResponsePrivate object.
@@ -91,7 +100,7 @@ CreateConstraintResponsePrivate::CreateConstraintResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog CreateConstraintResponse element.
  *
  * @param  xml  XML stream to parse.

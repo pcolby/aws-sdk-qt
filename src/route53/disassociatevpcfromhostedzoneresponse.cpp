@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DisassociateVPCFromHostedZoneResponse
+/*!
+ * \class QtAws::Route53::DisassociateVPCFromHostedZoneResponse
  *
- * @brief  Handles Route53 DisassociateVPCFromHostedZone responses.
+ * \brief The DisassociateVPCFromHostedZoneResponse class encapsulates Route53 DisassociateVPCFromHostedZone responses.
  *
- * @see    Route53Client::disassociateVPCFromHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::disassociateVPCFromHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateVPCFromHostedZoneResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DisassociateVPCFromHostedZoneRequest * DisassociateVPCFromHostedZoneRespon
     return static_cast<const DisassociateVPCFromHostedZoneRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 DisassociateVPCFromHostedZone response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DisassociateVPCFromHostedZoneResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateVPCFromHostedZoneResponsePrivate
+ * \class DisassociateVPCFromHostedZoneResponsePrivate
  *
- * @brief  Private implementation for DisassociateVPCFromHostedZoneResponse.
+ * \brief Private implementation for DisassociateVPCFromHostedZoneResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateVPCFromHostedZoneResponsePrivate object.
@@ -91,7 +94,7 @@ DisassociateVPCFromHostedZoneResponsePrivate::DisassociateVPCFromHostedZoneRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 DisassociateVPCFromHostedZoneResponse element.
  *
  * @param  xml  XML stream to parse.

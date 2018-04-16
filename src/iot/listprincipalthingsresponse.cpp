@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListPrincipalThingsResponse
+/*!
+ * \class QtAws::IoT::ListPrincipalThingsResponse
  *
- * @brief  Handles IoT ListPrincipalThings responses.
+ * \brief The ListPrincipalThingsResponse class encapsulates IoT ListPrincipalThings responses.
  *
- * @see    IoTClient::listPrincipalThings
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listPrincipalThings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPrincipalThingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListPrincipalThingsRequest * ListPrincipalThingsResponse::request() const
     return static_cast<const ListPrincipalThingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListPrincipalThings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListPrincipalThingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPrincipalThingsResponsePrivate
+ * \class ListPrincipalThingsResponsePrivate
  *
- * @brief  Private implementation for ListPrincipalThingsResponse.
+ * \brief Private implementation for ListPrincipalThingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPrincipalThingsResponsePrivate object.
@@ -91,7 +105,7 @@ ListPrincipalThingsResponsePrivate::ListPrincipalThingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListPrincipalThingsResponse element.
  *
  * @param  xml  XML stream to parse.

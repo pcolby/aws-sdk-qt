@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CreateTemplateResponse
+/*!
+ * \class QtAws::SES::CreateTemplateResponse
  *
- * @brief  Handles SES CreateTemplate responses.
+ * \brief The CreateTemplateResponse class encapsulates SES CreateTemplate responses.
  *
- * @see    SESClient::createTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::createTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateTemplateRequest * CreateTemplateResponse::request() const
     return static_cast<const CreateTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES CreateTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTemplateResponsePrivate
+ * \class CreateTemplateResponsePrivate
  *
- * @brief  Private implementation for CreateTemplateResponse.
+ * \brief Private implementation for CreateTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTemplateResponsePrivate object.
@@ -91,7 +105,7 @@ CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES CreateTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

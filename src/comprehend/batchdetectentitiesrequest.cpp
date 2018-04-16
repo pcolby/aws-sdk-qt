@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  BatchDetectEntitiesRequest
+/*!
+ * \class QtAws::Comprehend::BatchDetectEntitiesRequest
  *
- * @brief  Implements Comprehend BatchDetectEntities requests.
+ * \brief The BatchDetectEntitiesRequest class encapsulates Comprehend BatchDetectEntities requests.
  *
- * @see    ComprehendClient::batchDetectEntities
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::batchDetectEntities
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectEntitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchDetectEntitiesRequest::BatchDetectEntitiesRequest(const BatchDetectEntities
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectEntitiesRequest object.
  */
 BatchDetectEntitiesRequest::BatchDetectEntitiesRequest()
@@ -53,13 +59,16 @@ BatchDetectEntitiesRequest::BatchDetectEntitiesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDetectEntitiesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDetectEntitiesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetwork
     return new BatchDetectEntitiesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDetectEntitiesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectEntitiesRequest::response(QNetwork
  * @brief  Private implementation for BatchDetectEntitiesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectEntitiesRequestPrivate object.
@@ -97,7 +106,7 @@ BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectEntitiesRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotPriceHistoryResponse
+/*!
+ * \class QtAws::EC2::DescribeSpotPriceHistoryResponse
  *
- * @brief  Handles EC2 DescribeSpotPriceHistory responses.
+ * \brief The DescribeSpotPriceHistoryResponse class encapsulates EC2 DescribeSpotPriceHistory responses.
  *
- * @see    EC2Client::describeSpotPriceHistory
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotPriceHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotPriceHistoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeSpotPriceHistoryRequest * DescribeSpotPriceHistoryResponse::reques
     return static_cast<const DescribeSpotPriceHistoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeSpotPriceHistory response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeSpotPriceHistoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSpotPriceHistoryResponsePrivate
+ * \class DescribeSpotPriceHistoryResponsePrivate
  *
- * @brief  Private implementation for DescribeSpotPriceHistoryResponse.
+ * \brief Private implementation for DescribeSpotPriceHistoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotPriceHistoryResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeSpotPriceHistoryResponse element.
  *
  * @param  xml  XML stream to parse.

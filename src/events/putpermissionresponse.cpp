@@ -27,15 +27,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  PutPermissionResponse
+/*!
+ * \class QtAws::CloudWatchEvents::PutPermissionResponse
  *
- * @brief  Handles CloudWatchEvents PutPermission responses.
+ * \brief The PutPermissionResponse class encapsulates CloudWatchEvents PutPermission responses.
  *
- * @see    CloudWatchEventsClient::putPermission
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::putPermission
  */
 
-/**
+/*!
  * @brief  Constructs a new PutPermissionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +84,7 @@ const PutPermissionRequest * PutPermissionResponse::request() const
     return static_cast<const PutPermissionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatchEvents PutPermission response.
  *
  * @param  response  Response to parse.
@@ -70,15 +96,15 @@ void PutPermissionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutPermissionResponsePrivate
+ * \class PutPermissionResponsePrivate
  *
- * @brief  Private implementation for PutPermissionResponse.
+ * \brief Private implementation for PutPermissionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutPermissionResponsePrivate object.
@@ -91,7 +117,7 @@ PutPermissionResponsePrivate::PutPermissionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatchEvents PutPermissionResponse element.
  *
  * @param  xml  XML stream to parse.

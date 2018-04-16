@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListReviewPolicyResultsForHITResponse
+/*!
+ * \class QtAws::MTurk::ListReviewPolicyResultsForHITResponse
  *
- * @brief  Handles MTurk ListReviewPolicyResultsForHIT responses.
+ * \brief The ListReviewPolicyResultsForHITResponse class encapsulates MTurk ListReviewPolicyResultsForHIT responses.
  *
- * @see    MTurkClient::listReviewPolicyResultsForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listReviewPolicyResultsForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new ListReviewPolicyResultsForHITResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListReviewPolicyResultsForHITRequest * ListReviewPolicyResultsForHITRespon
     return static_cast<const ListReviewPolicyResultsForHITRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListReviewPolicyResultsForHIT response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListReviewPolicyResultsForHITResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListReviewPolicyResultsForHITResponsePrivate
+ * \class ListReviewPolicyResultsForHITResponsePrivate
  *
- * @brief  Private implementation for ListReviewPolicyResultsForHITResponse.
+ * \brief Private implementation for ListReviewPolicyResultsForHITResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReviewPolicyResultsForHITResponsePrivate object.
@@ -91,7 +94,7 @@ ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListReviewPolicyResultsForHITResponse element.
  *
  * @param  xml  XML stream to parse.

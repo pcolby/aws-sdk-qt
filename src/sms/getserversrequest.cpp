@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetServersRequest
+/*!
+ * \class QtAws::SMS::GetServersRequest
  *
- * @brief  Implements SMS GetServers requests.
+ * \brief The GetServersRequest class encapsulates SMS GetServers requests.
  *
- * @see    SMSClient::getServers
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getServers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetServersRequest::GetServersRequest(const GetServersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetServersRequest object.
  */
 GetServersRequest::GetServersRequest()
@@ -53,13 +56,16 @@ GetServersRequest::GetServersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetServersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetServersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * c
     return new GetServersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetServersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetServersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServersRequestPrivate object.
@@ -97,7 +103,7 @@ GetServersRequestPrivate::GetServersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServersRequestPrivate object, copying another.

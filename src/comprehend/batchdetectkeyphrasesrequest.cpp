@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  BatchDetectKeyPhrasesRequest
+/*!
+ * \class QtAws::Comprehend::BatchDetectKeyPhrasesRequest
  *
- * @brief  Implements Comprehend BatchDetectKeyPhrases requests.
+ * \brief The BatchDetectKeyPhrasesRequest class encapsulates Comprehend BatchDetectKeyPhrases requests.
  *
- * @see    ComprehendClient::batchDetectKeyPhrases
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::batchDetectKeyPhrases
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectKeyPhrasesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchDetectKeyPhrasesRequest::BatchDetectKeyPhrasesRequest(const BatchDetectKeyP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectKeyPhrasesRequest object.
  */
 BatchDetectKeyPhrasesRequest::BatchDetectKeyPhrasesRequest()
@@ -53,13 +59,16 @@ BatchDetectKeyPhrasesRequest::BatchDetectKeyPhrasesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDetectKeyPhrasesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDetectKeyPhrasesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetwo
     return new BatchDetectKeyPhrasesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDetectKeyPhrasesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetwo
  * @brief  Private implementation for BatchDetectKeyPhrasesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectKeyPhrasesRequestPrivate object.
@@ -97,7 +106,7 @@ BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectKeyPhrasesRequestPrivate object, copying another.

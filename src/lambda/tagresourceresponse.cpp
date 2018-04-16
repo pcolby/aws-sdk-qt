@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  TagResourceResponse
+/*!
+ * \class QtAws::Lambda::TagResourceResponse
  *
- * @brief  Handles Lambda TagResource responses.
+ * \brief The TagResourceResponse class encapsulates Lambda TagResource responses.
  *
- * @see    LambdaClient::tagResource
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const TagResourceRequest * TagResourceResponse::request() const
     return static_cast<const TagResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda TagResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TagResourceResponsePrivate
+ * \class TagResourceResponsePrivate
  *
- * @brief  Private implementation for TagResourceResponse.
+ * \brief Private implementation for TagResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceResponsePrivate object.
@@ -91,7 +105,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda TagResourceResponse element.
  *
  * @param  xml  XML stream to parse.

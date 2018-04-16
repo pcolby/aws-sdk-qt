@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteObjectRequest
+/*!
+ * \class QtAws::S3::DeleteObjectRequest
  *
- * @brief  Implements S3 DeleteObject requests.
+ * \brief The DeleteObjectRequest class encapsulates S3 DeleteObject requests.
  *
- * @see    S3Client::deleteObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteObjectRequest::DeleteObjectRequest(const DeleteObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectRequest object.
  */
 DeleteObjectRequest::DeleteObjectRequest()
@@ -53,13 +56,16 @@ DeleteObjectRequest::DeleteObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
     return new DeleteObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteObjectRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectRequestPrivate object, copying another.

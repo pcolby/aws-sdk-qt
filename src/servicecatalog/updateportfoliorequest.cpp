@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdatePortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::UpdatePortfolioRequest
  *
- * @brief  Implements ServiceCatalog UpdatePortfolio requests.
+ * \brief The UpdatePortfolioRequest class encapsulates ServiceCatalog UpdatePortfolio requests.
  *
- * @see    ServiceCatalogClient::updatePortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updatePortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdatePortfolioRequest::UpdatePortfolioRequest(const UpdatePortfolioRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePortfolioRequest object.
  */
 UpdatePortfolioRequest::UpdatePortfolioRequest()
@@ -53,13 +62,16 @@ UpdatePortfolioRequest::UpdatePortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkRepl
     return new UpdatePortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdatePortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePortfolioRequestPrivate object, copying another.

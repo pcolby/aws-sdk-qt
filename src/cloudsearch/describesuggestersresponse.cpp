@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeSuggestersResponse
+/*!
+ * \class QtAws::CloudSearch::DescribeSuggestersResponse
  *
- * @brief  Handles CloudSearch DescribeSuggesters responses.
+ * \brief The DescribeSuggestersResponse class encapsulates CloudSearch DescribeSuggesters responses.
  *
- * @see    CloudSearchClient::describeSuggesters
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeSuggesters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSuggestersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeSuggestersRequest * DescribeSuggestersResponse::request() const
     return static_cast<const DescribeSuggestersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DescribeSuggesters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeSuggestersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSuggestersResponsePrivate
+ * \class DescribeSuggestersResponsePrivate
  *
- * @brief  Private implementation for DescribeSuggestersResponse.
+ * \brief Private implementation for DescribeSuggestersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSuggestersResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeSuggestersResponsePrivate::DescribeSuggestersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DescribeSuggestersResponse element.
  *
  * @param  xml  XML stream to parse.

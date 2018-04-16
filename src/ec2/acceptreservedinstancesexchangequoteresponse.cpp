@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AcceptReservedInstancesExchangeQuoteResponse
+/*!
+ * \class QtAws::EC2::AcceptReservedInstancesExchangeQuoteResponse
  *
- * @brief  Handles EC2 AcceptReservedInstancesExchangeQuote responses.
+ * \brief The AcceptReservedInstancesExchangeQuoteResponse class encapsulates EC2 AcceptReservedInstancesExchangeQuote responses.
  *
- * @see    EC2Client::acceptReservedInstancesExchangeQuote
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::acceptReservedInstancesExchangeQuote
  */
 
-/**
+/*!
  * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AcceptReservedInstancesExchangeQuoteRequest * AcceptReservedInstancesExcha
     return static_cast<const AcceptReservedInstancesExchangeQuoteRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AcceptReservedInstancesExchangeQuote response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AcceptReservedInstancesExchangeQuoteResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AcceptReservedInstancesExchangeQuoteResponsePrivate
+ * \class AcceptReservedInstancesExchangeQuoteResponsePrivate
  *
- * @brief  Private implementation for AcceptReservedInstancesExchangeQuoteResponse.
+ * \brief Private implementation for AcceptReservedInstancesExchangeQuoteResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteResponsePrivate object.
@@ -91,7 +98,7 @@ AcceptReservedInstancesExchangeQuoteResponsePrivate::AcceptReservedInstancesExch
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AcceptReservedInstancesExchangeQuoteResponse element.
  *
  * @param  xml  XML stream to parse.

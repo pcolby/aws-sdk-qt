@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateWorkerBlockResponse
+/*!
+ * \class QtAws::MTurk::CreateWorkerBlockResponse
  *
- * @brief  Handles MTurk CreateWorkerBlock responses.
+ * \brief The CreateWorkerBlockResponse class encapsulates MTurk CreateWorkerBlock responses.
  *
- * @see    MTurkClient::createWorkerBlock
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createWorkerBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateWorkerBlockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateWorkerBlockRequest * CreateWorkerBlockResponse::request() const
     return static_cast<const CreateWorkerBlockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk CreateWorkerBlock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateWorkerBlockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateWorkerBlockResponsePrivate
+ * \class CreateWorkerBlockResponsePrivate
  *
- * @brief  Private implementation for CreateWorkerBlockResponse.
+ * \brief Private implementation for CreateWorkerBlockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateWorkerBlockResponsePrivate object.
@@ -91,7 +94,7 @@ CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk CreateWorkerBlockResponse element.
  *
  * @param  xml  XML stream to parse.

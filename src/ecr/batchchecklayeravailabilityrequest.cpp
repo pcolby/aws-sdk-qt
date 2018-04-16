@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  BatchCheckLayerAvailabilityRequest
+/*!
+ * \class QtAws::ECR::BatchCheckLayerAvailabilityRequest
  *
- * @brief  Implements ECR BatchCheckLayerAvailability requests.
+ * \brief The BatchCheckLayerAvailabilityRequest class encapsulates ECR BatchCheckLayerAvailability requests.
  *
- * @see    ECRClient::batchCheckLayerAvailability
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::batchCheckLayerAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchCheckLayerAvailabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const Bat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchCheckLayerAvailabilityRequest object.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest()
@@ -53,13 +60,16 @@ BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchCheckLayerAvailabilityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchCheckLayerAvailabilityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
     return new BatchCheckLayerAvailabilityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchCheckLayerAvailabilityRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
  * @brief  Private implementation for BatchCheckLayerAvailabilityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchCheckLayerAvailabilityRequestPrivate object.
@@ -97,7 +107,7 @@ BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchCheckLayerAvailabilityRequestPrivate object, copying another.

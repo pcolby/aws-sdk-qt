@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteIdentityProviderRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteIdentityProviderRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteIdentityProvider requests.
+ * \brief The DeleteIdentityProviderRequest class encapsulates CognitoIdentityProvider DeleteIdentityProvider requests.
  *
- * @see    CognitoIdentityProviderClient::deleteIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteIdentityProviderRequest::DeleteIdentityProviderRequest(const DeleteIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityProviderRequest object.
  */
 DeleteIdentityProviderRequest::DeleteIdentityProviderRequest()
@@ -53,13 +66,16 @@ DeleteIdentityProviderRequest::DeleteIdentityProviderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIdentityProviderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIdentityProviderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityProviderRequest::response(QNetw
     return new DeleteIdentityProviderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIdentityProviderRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityProviderRequest::response(QNetw
  * @brief  Private implementation for DeleteIdentityProviderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityProviderRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityProviderRequestPrivate object, copying another.

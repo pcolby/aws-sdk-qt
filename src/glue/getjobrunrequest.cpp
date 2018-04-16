@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetJobRunRequest
+/*!
+ * \class QtAws::Glue::GetJobRunRequest
  *
- * @brief  Implements Glue GetJobRun requests.
+ * \brief The GetJobRunRequest class encapsulates Glue GetJobRun requests.
  *
- * @see    GlueClient::getJobRun
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getJobRun
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetJobRunRequest::GetJobRunRequest(const GetJobRunRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetJobRunRequest object.
  */
 GetJobRunRequest::GetJobRunRequest()
@@ -53,13 +59,16 @@ GetJobRunRequest::GetJobRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetJobRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetJobRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetJobRunRequest::response(QNetworkReply * co
     return new GetJobRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetJobRunRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetJobRunRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetJobRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobRunRequestPrivate object.
@@ -97,7 +106,7 @@ GetJobRunRequestPrivate::GetJobRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobRunRequestPrivate object, copying another.

@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteFacetRequest
+/*!
+ * \class QtAws::CloudDirectory::DeleteFacetRequest
  *
- * @brief  Implements CloudDirectory DeleteFacet requests.
+ * \brief The DeleteFacetRequest class encapsulates CloudDirectory DeleteFacet requests.
  *
- * @see    CloudDirectoryClient::deleteFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteFacetRequest::DeleteFacetRequest(const DeleteFacetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFacetRequest object.
  */
 DeleteFacetRequest::DeleteFacetRequest()
@@ -53,13 +63,16 @@ DeleteFacetRequest::DeleteFacetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFacetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFacetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFacetRequest::response(QNetworkReply * 
     return new DeleteFacetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFacetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFacetRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteFacetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFacetRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteFacetRequestPrivate::DeleteFacetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFacetRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetUsageRequest
+/*!
+ * \class QtAws::APIGateway::GetUsageRequest
  *
- * @brief  Implements APIGateway GetUsage requests.
+ * \brief The GetUsageRequest class encapsulates APIGateway GetUsage requests.
  *
- * @see    APIGatewayClient::getUsage
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetUsageRequest::GetUsageRequest(const GetUsageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUsageRequest object.
  */
 GetUsageRequest::GetUsageRequest()
@@ -53,13 +61,16 @@ GetUsageRequest::GetUsageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUsageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUsageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetUsageRequest::response(QNetworkReply * con
     return new GetUsageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUsageRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetUsageRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetUsageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsageRequestPrivate object.
@@ -97,7 +108,7 @@ GetUsageRequestPrivate::GetUsageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsageRequestPrivate object, copying another.

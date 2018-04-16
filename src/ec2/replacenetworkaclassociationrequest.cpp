@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceNetworkAclAssociationRequest
+/*!
+ * \class QtAws::EC2::ReplaceNetworkAclAssociationRequest
  *
- * @brief  Implements EC2 ReplaceNetworkAclAssociation requests.
+ * \brief The ReplaceNetworkAclAssociationRequest class encapsulates EC2 ReplaceNetworkAclAssociation requests.
  *
- * @see    EC2Client::replaceNetworkAclAssociation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceNetworkAclAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceNetworkAclAssociationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest(const R
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReplaceNetworkAclAssociationRequest object.
  */
 ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest()
@@ -53,13 +60,16 @@ ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReplaceNetworkAclAssociationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReplaceNetworkAclAssociationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response
     return new ReplaceNetworkAclAssociationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReplaceNetworkAclAssociationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response
  * @brief  Private implementation for ReplaceNetworkAclAssociationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceNetworkAclAssociationRequestPrivate object.
@@ -97,7 +107,7 @@ ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceNetworkAclAssociationRequestPrivate object, copying another.

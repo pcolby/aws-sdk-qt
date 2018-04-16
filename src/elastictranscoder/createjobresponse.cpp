@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  CreateJobResponse
+/*!
+ * \class QtAws::ElasticTranscoder::CreateJobResponse
  *
- * @brief  Handles ElasticTranscoder CreateJob responses.
+ * \brief The CreateJobResponse class encapsulates ElasticTranscoder CreateJob responses.
  *
- * @see    ElasticTranscoderClient::createJob
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::createJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateJobRequest * CreateJobResponse::request() const
     return static_cast<const CreateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder CreateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateJobResponsePrivate
+ * \class CreateJobResponsePrivate
  *
- * @brief  Private implementation for CreateJobResponse.
+ * \brief Private implementation for CreateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobResponsePrivate object.
@@ -91,7 +97,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder CreateJobResponse element.
  *
  * @param  xml  XML stream to parse.

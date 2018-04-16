@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  ListGeoMatchSetsRequest
+/*!
+ * \class QtAws::WAFRegional::ListGeoMatchSetsRequest
  *
- * @brief  Implements WAFRegional ListGeoMatchSets requests.
+ * \brief The ListGeoMatchSetsRequest class encapsulates WAFRegional ListGeoMatchSets requests.
  *
- * @see    WAFRegionalClient::listGeoMatchSets
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::listGeoMatchSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGeoMatchSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListGeoMatchSetsRequest::ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGeoMatchSetsRequest object.
  */
 ListGeoMatchSetsRequest::ListGeoMatchSetsRequest()
@@ -53,13 +63,16 @@ ListGeoMatchSetsRequest::ListGeoMatchSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGeoMatchSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGeoMatchSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkRep
     return new ListGeoMatchSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGeoMatchSetsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkRep
  * @brief  Private implementation for ListGeoMatchSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGeoMatchSetsRequestPrivate object.
@@ -97,7 +110,7 @@ ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGeoMatchSetsRequestPrivate object, copying another.

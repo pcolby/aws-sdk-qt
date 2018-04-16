@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  DescribeBrokerRequest
+/*!
+ * \class QtAws::MQ::DescribeBrokerRequest
  *
- * @brief  Implements MQ DescribeBroker requests.
+ * \brief The DescribeBrokerRequest class encapsulates MQ DescribeBroker requests.
  *
- * @see    MQClient::describeBroker
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::describeBroker
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeBrokerRequest::DescribeBrokerRequest(const DescribeBrokerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeBrokerRequest object.
  */
 DescribeBrokerRequest::DescribeBrokerRequest()
@@ -53,13 +58,16 @@ DescribeBrokerRequest::DescribeBrokerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeBrokerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeBrokerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply
     return new DescribeBrokerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeBrokerRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeBrokerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBrokerRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBrokerRequestPrivate object, copying another.

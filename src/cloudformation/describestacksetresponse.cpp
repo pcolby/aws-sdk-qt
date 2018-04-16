@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  DescribeStackSetResponse
+/*!
+ * \class QtAws::CloudFormation::DescribeStackSetResponse
  *
- * @brief  Handles CloudFormation DescribeStackSet responses.
+ * \brief The DescribeStackSetResponse class encapsulates CloudFormation DescribeStackSet responses.
  *
- * @see    CloudFormationClient::describeStackSet
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::describeStackSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStackSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const DescribeStackSetRequest * DescribeStackSetResponse::request() const
     return static_cast<const DescribeStackSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFormation DescribeStackSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void DescribeStackSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeStackSetResponsePrivate
+ * \class DescribeStackSetResponsePrivate
  *
- * @brief  Private implementation for DescribeStackSetResponse.
+ * \brief Private implementation for DescribeStackSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStackSetResponsePrivate object.
@@ -91,7 +116,7 @@ DescribeStackSetResponsePrivate::DescribeStackSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFormation DescribeStackSetResponse element.
  *
  * @param  xml  XML stream to parse.

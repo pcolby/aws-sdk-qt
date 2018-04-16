@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateImageBuilderStreamingURLRequest
+/*!
+ * \class QtAws::AppStream::CreateImageBuilderStreamingURLRequest
  *
- * @brief  Implements AppStream CreateImageBuilderStreamingURL requests.
+ * \brief The CreateImageBuilderStreamingURLRequest class encapsulates AppStream CreateImageBuilderStreamingURL requests.
  *
- * @see    AppStreamClient::createImageBuilderStreamingURL
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createImageBuilderStreamingURL
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateImageBuilderStreamingURLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateImageBuilderStreamingURLRequest object.
  */
 CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest()
@@ -53,13 +59,16 @@ CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateImageBuilderStreamingURLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateImageBuilderStreamingURLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::respon
     return new CreateImageBuilderStreamingURLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateImageBuilderStreamingURLRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::respon
  * @brief  Private implementation for CreateImageBuilderStreamingURLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageBuilderStreamingURLRequestPrivate object.
@@ -97,7 +106,7 @@ CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageBuilderStreamingURLRequestPrivate object, copying another.

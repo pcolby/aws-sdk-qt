@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateDevicePoolRequest
+/*!
+ * \class QtAws::DeviceFarm::CreateDevicePoolRequest
  *
- * @brief  Implements DeviceFarm CreateDevicePool requests.
+ * \brief The CreateDevicePoolRequest class encapsulates DeviceFarm CreateDevicePool requests.
  *
- * @see    DeviceFarmClient::createDevicePool
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createDevicePool
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDevicePoolRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateDevicePoolRequest::CreateDevicePoolRequest(const CreateDevicePoolRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDevicePoolRequest object.
  */
 CreateDevicePoolRequest::CreateDevicePoolRequest()
@@ -53,13 +58,16 @@ CreateDevicePoolRequest::CreateDevicePoolRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDevicePoolRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDevicePoolResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateDevicePoolRequest::response(QNetworkRep
     return new CreateDevicePoolResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDevicePoolRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateDevicePoolRequest::response(QNetworkRep
  * @brief  Private implementation for CreateDevicePoolRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDevicePoolRequestPrivate object.
@@ -97,7 +105,7 @@ CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDevicePoolRequestPrivate object, copying another.

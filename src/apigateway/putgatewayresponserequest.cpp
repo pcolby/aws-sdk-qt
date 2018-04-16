@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  PutGatewayResponseRequest
+/*!
+ * \class QtAws::APIGateway::PutGatewayResponseRequest
  *
- * @brief  Implements APIGateway PutGatewayResponse requests.
+ * \brief The PutGatewayResponseRequest class encapsulates APIGateway PutGatewayResponse requests.
  *
- * @see    APIGatewayClient::putGatewayResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::putGatewayResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new PutGatewayResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutGatewayResponseRequest::PutGatewayResponseRequest(const PutGatewayResponseReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutGatewayResponseRequest object.
  */
 PutGatewayResponseRequest::PutGatewayResponseRequest()
@@ -53,13 +61,16 @@ PutGatewayResponseRequest::PutGatewayResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutGatewayResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutGatewayResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutGatewayResponseRequest::response(QNetworkR
     return new PutGatewayResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutGatewayResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutGatewayResponseRequest::response(QNetworkR
  * @brief  Private implementation for PutGatewayResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutGatewayResponseRequestPrivate object.
@@ -97,7 +108,7 @@ PutGatewayResponseRequestPrivate::PutGatewayResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutGatewayResponseRequestPrivate object, copying another.

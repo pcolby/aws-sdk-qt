@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  StartSchemaExtensionResponse
+/*!
+ * \class QtAws::DirectoryService::StartSchemaExtensionResponse
  *
- * @brief  Handles DirectoryService StartSchemaExtension responses.
+ * \brief The StartSchemaExtensionResponse class encapsulates DirectoryService StartSchemaExtension responses.
  *
- * @see    DirectoryServiceClient::startSchemaExtension
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::startSchemaExtension
  */
 
-/**
+/*!
  * @brief  Constructs a new StartSchemaExtensionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const StartSchemaExtensionRequest * StartSchemaExtensionResponse::request() cons
     return static_cast<const StartSchemaExtensionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DirectoryService StartSchemaExtension response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void StartSchemaExtensionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartSchemaExtensionResponsePrivate
+ * \class StartSchemaExtensionResponsePrivate
  *
- * @brief  Private implementation for StartSchemaExtensionResponse.
+ * \brief Private implementation for StartSchemaExtensionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSchemaExtensionResponsePrivate object.
@@ -91,7 +108,7 @@ StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DirectoryService StartSchemaExtensionResponse element.
  *
  * @param  xml  XML stream to parse.

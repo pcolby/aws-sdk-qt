@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreatePortfolioResponse
+/*!
+ * \class QtAws::ServiceCatalog::CreatePortfolioResponse
  *
- * @brief  Handles ServiceCatalog CreatePortfolio responses.
+ * \brief The CreatePortfolioResponse class encapsulates ServiceCatalog CreatePortfolio responses.
  *
- * @see    ServiceCatalogClient::createPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePortfolioResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreatePortfolioRequest * CreatePortfolioResponse::request() const
     return static_cast<const CreatePortfolioRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog CreatePortfolio response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreatePortfolioResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePortfolioResponsePrivate
+ * \class CreatePortfolioResponsePrivate
  *
- * @brief  Private implementation for CreatePortfolioResponse.
+ * \brief Private implementation for CreatePortfolioResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePortfolioResponsePrivate object.
@@ -91,7 +100,7 @@ CreatePortfolioResponsePrivate::CreatePortfolioResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog CreatePortfolioResponse element.
  *
  * @param  xml  XML stream to parse.

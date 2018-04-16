@@ -29,8 +29,8 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsSignatureV1
+/*!
+ * \class QtAws::Core::AwsSignatureV1
  *
  * @brief  Implements AWS Signature Version 1 \ref deprecated "(deprecated by Amazon)"
  *
@@ -46,7 +46,7 @@ namespace Core {
  * @see  http://lmgtfy.com/?q=aws+signature+version+1+is+insecure
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsSignatureV1 object.
  *
  * Use instances of this object to provide Version 1 signatures for AWS services.
@@ -61,10 +61,10 @@ int AwsSignatureV1::version() const
     return 1;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsSignatureV1Private
+ * \class QtAws::Core::AwsSignatureV1Private
  *
  * @brief  Private implementation for AwsSignatureV1.
  *
@@ -74,7 +74,7 @@ int AwsSignatureV1::version() const
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsSignatureV1Private object.
@@ -86,7 +86,7 @@ AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : AwsSign
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Create an AWS Signature version 1 canonical query.
@@ -139,7 +139,7 @@ QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
     return result.toUtf8();
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Is a key-value pair less than another key-value pair?

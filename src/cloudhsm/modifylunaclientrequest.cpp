@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ModifyLunaClientRequest
+/*!
+ * \class QtAws::CloudHSM::ModifyLunaClientRequest
  *
- * @brief  Implements CloudHSM ModifyLunaClient requests.
+ * \brief The ModifyLunaClientRequest class encapsulates CloudHSM ModifyLunaClient requests.
  *
- * @see    CloudHSMClient::modifyLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::modifyLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyLunaClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ModifyLunaClientRequest::ModifyLunaClientRequest(const ModifyLunaClientRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyLunaClientRequest object.
  */
 ModifyLunaClientRequest::ModifyLunaClientRequest()
@@ -53,13 +68,16 @@ ModifyLunaClientRequest::ModifyLunaClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyLunaClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyLunaClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkRep
     return new ModifyLunaClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyLunaClientRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkRep
  * @brief  Private implementation for ModifyLunaClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyLunaClientRequestPrivate object.
@@ -97,7 +115,7 @@ ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyLunaClientRequestPrivate object, copying another.

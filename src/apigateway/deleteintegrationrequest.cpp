@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteIntegrationRequest
+/*!
+ * \class QtAws::APIGateway::DeleteIntegrationRequest
  *
- * @brief  Implements APIGateway DeleteIntegration requests.
+ * \brief The DeleteIntegrationRequest class encapsulates APIGateway DeleteIntegration requests.
  *
- * @see    APIGatewayClient::deleteIntegration
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteIntegration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntegrationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteIntegrationRequest::DeleteIntegrationRequest(const DeleteIntegrationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntegrationRequest object.
  */
 DeleteIntegrationRequest::DeleteIntegrationRequest()
@@ -53,13 +61,16 @@ DeleteIntegrationRequest::DeleteIntegrationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIntegrationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIntegrationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationRequest::response(QNetworkRe
     return new DeleteIntegrationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIntegrationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteIntegrationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntegrationRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteIntegrationRequestPrivate::DeleteIntegrationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntegrationRequestPrivate object, copying another.

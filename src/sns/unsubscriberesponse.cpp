@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  UnsubscribeResponse
+/*!
+ * \class QtAws::SNS::UnsubscribeResponse
  *
- * @brief  Handles SNS Unsubscribe responses.
+ * \brief The UnsubscribeResponse class encapsulates SNS Unsubscribe responses.
  *
- * @see    SNSClient::unsubscribe
+ * \ingroup SNS
+ *
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
+ *
+ * \sa SNSClient::unsubscribe
  */
 
-/**
+/*!
  * @brief  Constructs a new UnsubscribeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const UnsubscribeRequest * UnsubscribeResponse::request() const
     return static_cast<const UnsubscribeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SNS Unsubscribe response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void UnsubscribeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UnsubscribeResponsePrivate
+ * \class UnsubscribeResponsePrivate
  *
- * @brief  Private implementation for UnsubscribeResponse.
+ * \brief Private implementation for UnsubscribeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnsubscribeResponsePrivate object.
@@ -91,7 +108,7 @@ UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SNS UnsubscribeResponse element.
  *
  * @param  xml  XML stream to parse.

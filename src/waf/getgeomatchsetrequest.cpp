@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetGeoMatchSetRequest
+/*!
+ * \class QtAws::WAF::GetGeoMatchSetRequest
  *
- * @brief  Implements WAF GetGeoMatchSet requests.
+ * \brief The GetGeoMatchSetRequest class encapsulates WAF GetGeoMatchSet requests.
  *
- * @see    WAFClient::getGeoMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getGeoMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGeoMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetGeoMatchSetRequest::GetGeoMatchSetRequest(const GetGeoMatchSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGeoMatchSetRequest object.
  */
 GetGeoMatchSetRequest::GetGeoMatchSetRequest()
@@ -53,13 +61,16 @@ GetGeoMatchSetRequest::GetGeoMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGeoMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGeoMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetGeoMatchSetRequest::response(QNetworkReply
     return new GetGeoMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGeoMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetGeoMatchSetRequest::response(QNetworkReply
  * @brief  Private implementation for GetGeoMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGeoMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGeoMatchSetRequestPrivate object, copying another.

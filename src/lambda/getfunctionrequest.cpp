@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetFunctionRequest
+/*!
+ * \class QtAws::Lambda::GetFunctionRequest
  *
- * @brief  Implements Lambda GetFunction requests.
+ * \brief The GetFunctionRequest class encapsulates Lambda GetFunction requests.
  *
- * @see    LambdaClient::getFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetFunctionRequest::GetFunctionRequest(const GetFunctionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionRequest object.
  */
 GetFunctionRequest::GetFunctionRequest()
@@ -53,13 +67,16 @@ GetFunctionRequest::GetFunctionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFunctionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFunctionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionRequest::response(QNetworkReply * 
     return new GetFunctionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFunctionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetFunctionRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetFunctionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionRequestPrivate object.
@@ -97,7 +114,7 @@ GetFunctionRequestPrivate::GetFunctionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionRequestPrivate object, copying another.

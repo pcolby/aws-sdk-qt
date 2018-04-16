@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  CreateDiskSnapshotRequest
+/*!
+ * \class QtAws::Lightsail::CreateDiskSnapshotRequest
  *
- * @brief  Implements Lightsail CreateDiskSnapshot requests.
+ * \brief The CreateDiskSnapshotRequest class encapsulates Lightsail CreateDiskSnapshot requests.
  *
- * @see    LightsailClient::createDiskSnapshot
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::createDiskSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDiskSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ CreateDiskSnapshotRequest::CreateDiskSnapshotRequest(const CreateDiskSnapshotReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDiskSnapshotRequest object.
  */
 CreateDiskSnapshotRequest::CreateDiskSnapshotRequest()
@@ -53,13 +72,16 @@ CreateDiskSnapshotRequest::CreateDiskSnapshotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDiskSnapshotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDiskSnapshotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * CreateDiskSnapshotRequest::response(QNetworkR
     return new CreateDiskSnapshotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDiskSnapshotRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * CreateDiskSnapshotRequest::response(QNetworkR
  * @brief  Private implementation for CreateDiskSnapshotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDiskSnapshotRequestPrivate object.
@@ -97,7 +119,7 @@ CreateDiskSnapshotRequestPrivate::CreateDiskSnapshotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDiskSnapshotRequestPrivate object, copying another.

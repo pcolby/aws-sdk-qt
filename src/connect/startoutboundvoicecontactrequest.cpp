@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Connect {
 
-/**
- * @class  StartOutboundVoiceContactRequest
+/*!
+ * \class QtAws::Connect::StartOutboundVoiceContactRequest
  *
- * @brief  Implements Connect StartOutboundVoiceContact requests.
+ * \brief The StartOutboundVoiceContactRequest class encapsulates Connect StartOutboundVoiceContact requests.
  *
- * @see    ConnectClient::startOutboundVoiceContact
+ * \ingroup Connect
+ *
+ *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
+ *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
+ *  to set up and manage a customer contact center and provide reliable customer engagement at any
+ *
+ * \sa ConnectClient::startOutboundVoiceContact
  */
 
-/**
+/*!
  * @brief  Constructs a new StartOutboundVoiceContactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartOutboundVoiceContactRequest::StartOutboundVoiceContactRequest(const StartOu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartOutboundVoiceContactRequest object.
  */
 StartOutboundVoiceContactRequest::StartOutboundVoiceContactRequest()
@@ -53,13 +59,16 @@ StartOutboundVoiceContactRequest::StartOutboundVoiceContactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartOutboundVoiceContactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartOutboundVoiceContactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartOutboundVoiceContactRequest::response(QN
     return new StartOutboundVoiceContactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartOutboundVoiceContactRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartOutboundVoiceContactRequest::response(QN
  * @brief  Private implementation for StartOutboundVoiceContactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartOutboundVoiceContactRequestPrivate object.
@@ -97,7 +106,7 @@ StartOutboundVoiceContactRequestPrivate::StartOutboundVoiceContactRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartOutboundVoiceContactRequestPrivate object, copying another.

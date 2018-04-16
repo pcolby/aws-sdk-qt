@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateVPCAssociationAuthorizationRequest
+/*!
+ * \class QtAws::Route53::CreateVPCAssociationAuthorizationRequest
  *
- * @brief  Implements Route53 CreateVPCAssociationAuthorization requests.
+ * \brief The CreateVPCAssociationAuthorizationRequest class encapsulates Route53 CreateVPCAssociationAuthorization requests.
  *
- * @see    Route53Client::createVPCAssociationAuthorization
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createVPCAssociationAuthorization
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVPCAssociationAuthorizationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateVPCAssociationAuthorizationRequest::CreateVPCAssociationAuthorizationReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVPCAssociationAuthorizationRequest object.
  */
 CreateVPCAssociationAuthorizationRequest::CreateVPCAssociationAuthorizationRequest()
@@ -53,13 +56,16 @@ CreateVPCAssociationAuthorizationRequest::CreateVPCAssociationAuthorizationReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVPCAssociationAuthorizationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVPCAssociationAuthorizationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::res
     return new CreateVPCAssociationAuthorizationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVPCAssociationAuthorizationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::res
  * @brief  Private implementation for CreateVPCAssociationAuthorizationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVPCAssociationAuthorizationRequestPrivate object.
@@ -97,7 +103,7 @@ CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizati
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVPCAssociationAuthorizationRequestPrivate object, copying another.

@@ -151,30 +151,38 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudDirectory
+ * \brief The QtAws::CloudDirectory contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CloudDirectoryClient
+/*!
+ * \class QtAws::CloudDirectory::CloudDirectoryClient
  *
- * @brief  Client for Amazon CloudDirectory
+ * \brief The CloudDirectoryClient class provides access the Amazon CloudDirectory service.
  *
- * <fullname>Amazon Cloud Directory</fullname>
+ * \ingroup CloudDirectory
  *
- * Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
- * cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
- * programmatically and includes detailed information on data types and errors. For information about AWS Directory
- * Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
  */
 
-/**
- * @brief  Constructs a new CloudDirectoryClient object.
+/*!
+ * \brief Constructs a CloudDirectoryClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudDirectoryClient::CloudDirectoryClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -193,21 +201,16 @@ CloudDirectoryClient::CloudDirectoryClient(
     d->serviceName = QStringLiteral("clouddirectory");
 }
 
-/**
- * @brief  Constructs a new CloudDirectoryClient object.
+/*!
+ * \overload CloudDirectoryClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudDirectoryClient::CloudDirectoryClient(
     const QUrl &endpoint,
@@ -226,7 +229,7 @@ CloudDirectoryClient::CloudDirectoryClient(
     d->serviceName = QStringLiteral("clouddirectory");
 }
 
-/**
+/*!
  * Adds a new <a>Facet</a> to an object. An object can have more than one facet applied on
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -240,7 +243,7 @@ AddFacetToObjectResponse * CloudDirectoryClient::addFacetToObject(const AddFacet
     return qobject_cast<AddFacetToObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the input published schema, at the specified version, into the <a>Directory</a> with the same name and version as
  * that of the published
  *
@@ -255,7 +258,7 @@ ApplySchemaResponse * CloudDirectoryClient::applySchema(const ApplySchemaRequest
     return qobject_cast<ApplySchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches an existing object to another object. An object can be accessed in two
  *
  * ways> <ol> <li>
@@ -277,7 +280,7 @@ AttachObjectResponse * CloudDirectoryClient::attachObject(const AttachObjectRequ
     return qobject_cast<AttachObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a policy object to a regular object. An object can have a limited number of attached
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -291,7 +294,7 @@ AttachPolicyResponse * CloudDirectoryClient::attachPolicy(const AttachPolicyRequ
     return qobject_cast<AttachPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches the specified object to the specified
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -305,7 +308,7 @@ AttachToIndexResponse * CloudDirectoryClient::attachToIndex(const AttachToIndexR
     return qobject_cast<AttachToIndexResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches a typed link to a specified source and target object. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -320,7 +323,7 @@ AttachTypedLinkResponse * CloudDirectoryClient::attachTypedLink(const AttachType
     return qobject_cast<AttachTypedLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Performs all the read operations in a batch.
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -334,7 +337,7 @@ BatchReadResponse * CloudDirectoryClient::batchRead(const BatchReadRequest &requ
     return qobject_cast<BatchReadResponse *>(send(request));
 }
 
-/**
+/*!
  * Performs all the write operations in a batch. Either all the operations succeed or
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -348,7 +351,7 @@ BatchWriteResponse * CloudDirectoryClient::batchWrite(const BatchWriteRequest &r
     return qobject_cast<BatchWriteResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>Directory</a> by copying the published schema into the directory. A directory cannot be created without a
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -362,7 +365,7 @@ CreateDirectoryResponse * CloudDirectoryClient::createDirectory(const CreateDire
     return qobject_cast<CreateDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new <a>Facet</a> in a schema. Facet creation is allowed only in development or applied
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -376,7 +379,7 @@ CreateFacetResponse * CloudDirectoryClient::createFacet(const CreateFacetRequest
     return qobject_cast<CreateFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an index object. See <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_indexing.html">Indexing</a> for more
  *
@@ -391,7 +394,7 @@ CreateIndexResponse * CloudDirectoryClient::createIndex(const CreateIndexRequest
     return qobject_cast<CreateIndexResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an object in a <a>Directory</a>. Additionally attaches the object to a parent, if a parent reference and
  * <code>LinkName</code> is specified. An object is simply a collection of <a>Facet</a> attributes. You can also use this
  * API call to create a policy object, if the facet from which you create the object is a policy facet.
@@ -407,7 +410,7 @@ CreateObjectResponse * CloudDirectoryClient::createObject(const CreateObjectRequ
     return qobject_cast<CreateObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new schema in a development state. A schema can exist in three
  *
  * phases> <ul> <li>
@@ -435,7 +438,7 @@ CreateSchemaResponse * CloudDirectoryClient::createSchema(const CreateSchemaRequ
     return qobject_cast<CreateSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -450,7 +453,7 @@ CreateTypedLinkFacetResponse * CloudDirectoryClient::createTypedLinkFacet(const 
     return qobject_cast<CreateTypedLinkFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a directory. Only disabled directories can be deleted. A deleted directory cannot be undone. Exercise extreme
  * caution when deleting
  *
@@ -465,7 +468,7 @@ DeleteDirectoryResponse * CloudDirectoryClient::deleteDirectory(const DeleteDire
     return qobject_cast<DeleteDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a given <a>Facet</a>. All attributes and <a>Rule</a>s that are associated with the facet will be deleted. Only
  * development schema facets are allowed
  *
@@ -480,7 +483,7 @@ DeleteFacetResponse * CloudDirectoryClient::deleteFacet(const DeleteFacetRequest
     return qobject_cast<DeleteFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an object and its associated attributes. Only objects with no children and no parents can be
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -494,7 +497,7 @@ DeleteObjectResponse * CloudDirectoryClient::deleteObject(const DeleteObjectRequ
     return qobject_cast<DeleteObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a given schema. Schemas in a development and published state can only be deleted.
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -508,7 +511,7 @@ DeleteSchemaResponse * CloudDirectoryClient::deleteSchema(const DeleteSchemaRequ
     return qobject_cast<DeleteSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -523,7 +526,7 @@ DeleteTypedLinkFacetResponse * CloudDirectoryClient::deleteTypedLinkFacet(const 
     return qobject_cast<DeleteTypedLinkFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches the specified object from the specified
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -537,7 +540,7 @@ DetachFromIndexResponse * CloudDirectoryClient::detachFromIndex(const DetachFrom
     return qobject_cast<DetachFromIndexResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a given object from the parent object. The object that is to be detached from the parent is specified by the
  * link
  *
@@ -552,7 +555,7 @@ DetachObjectResponse * CloudDirectoryClient::detachObject(const DetachObjectRequ
     return qobject_cast<DetachObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a policy from an
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -566,7 +569,7 @@ DetachPolicyResponse * CloudDirectoryClient::detachPolicy(const DetachPolicyRequ
     return qobject_cast<DetachPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a typed link from a specified source and target object. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -581,7 +584,7 @@ DetachTypedLinkResponse * CloudDirectoryClient::detachTypedLink(const DetachType
     return qobject_cast<DetachTypedLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables the specified directory. Disabled directories cannot be read or written to. Only enabled directories can be
  * disabled. Disabled directories may be
  *
@@ -596,7 +599,7 @@ DisableDirectoryResponse * CloudDirectoryClient::disableDirectory(const DisableD
     return qobject_cast<DisableDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the specified directory. Only disabled directories can be enabled. Once enabled, the directory can then be read
  * and written
  *
@@ -611,7 +614,7 @@ EnableDirectoryResponse * CloudDirectoryClient::enableDirectory(const EnableDire
     return qobject_cast<EnableDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns current applied schema version ARN, including the minor version in
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -625,7 +628,7 @@ GetAppliedSchemaVersionResponse * CloudDirectoryClient::getAppliedSchemaVersion(
     return qobject_cast<GetAppliedSchemaVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves metadata about a
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -639,7 +642,7 @@ GetDirectoryResponse * CloudDirectoryClient::getDirectory(const GetDirectoryRequ
     return qobject_cast<GetDirectoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets details of the <a>Facet</a>, such as facet name, attributes, <a>Rule</a>s, or <code>ObjectType</code>. You can call
  * this on all kinds of schema facets -- published, development, or
  *
@@ -654,7 +657,7 @@ GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request
     return qobject_cast<GetFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves attributes within a facet that are associated with an
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -668,7 +671,7 @@ GetObjectAttributesResponse * CloudDirectoryClient::getObjectAttributes(const Ge
     return qobject_cast<GetObjectAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves metadata about an
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -682,7 +685,7 @@ GetObjectInformationResponse * CloudDirectoryClient::getObjectInformation(const 
     return qobject_cast<GetObjectInformationResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a JSON representation of the schema. See <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat">JSON Schema Format</a>
  * for more
@@ -698,7 +701,7 @@ GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaA
     return qobject_cast<GetSchemaAsJsonResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the identity attribute order for a specific <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -713,7 +716,7 @@ GetTypedLinkFacetInformationResponse * CloudDirectoryClient::getTypedLinkFacetIn
     return qobject_cast<GetTypedLinkFacetInformationResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists schema major versions applied to a directory. If <code>SchemaArn</code> is provided, lists the minor
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -727,7 +730,7 @@ ListAppliedSchemaArnsResponse * CloudDirectoryClient::listAppliedSchemaArns(cons
     return qobject_cast<ListAppliedSchemaArnsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists indices attached to the specified
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -741,7 +744,7 @@ ListAttachedIndicesResponse * CloudDirectoryClient::listAttachedIndices(const Li
     return qobject_cast<ListAttachedIndicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves each Amazon Resource Name (ARN) of schemas in the development
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -755,7 +758,7 @@ ListDevelopmentSchemaArnsResponse * CloudDirectoryClient::listDevelopmentSchemaA
     return qobject_cast<ListDevelopmentSchemaArnsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists directories created within an
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -769,7 +772,7 @@ ListDirectoriesResponse * CloudDirectoryClient::listDirectories(const ListDirect
     return qobject_cast<ListDirectoriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves attributes attached to the
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -783,7 +786,7 @@ ListFacetAttributesResponse * CloudDirectoryClient::listFacetAttributes(const Li
     return qobject_cast<ListFacetAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the names of facets that exist in a
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -797,7 +800,7 @@ ListFacetNamesResponse * CloudDirectoryClient::listFacetNames(const ListFacetNam
     return qobject_cast<ListFacetNamesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a paginated list of all the incoming <a>TypedLinkSpecifier</a> information for an object. It also supports
  * filtering by typed link facet and identity attributes. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
@@ -813,7 +816,7 @@ ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(co
     return qobject_cast<ListIncomingTypedLinksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists objects attached to the specified
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -827,7 +830,7 @@ ListIndexResponse * CloudDirectoryClient::listIndex(const ListIndexRequest &requ
     return qobject_cast<ListIndexResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all attributes that are associated with an object.
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -841,7 +844,7 @@ ListObjectAttributesResponse * CloudDirectoryClient::listObjectAttributes(const 
     return qobject_cast<ListObjectAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a paginated list of child objects that are associated with a given
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -855,7 +858,7 @@ ListObjectChildrenResponse * CloudDirectoryClient::listObjectChildren(const List
     return qobject_cast<ListObjectChildrenResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves all available parent paths for any object type such as node, leaf node, policy node, and index node objects.
  * For more information about objects, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#dirstructure">Directory
@@ -878,7 +881,7 @@ ListObjectParentPathsResponse * CloudDirectoryClient::listObjectParentPaths(cons
     return qobject_cast<ListObjectParentPathsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists parent objects that are associated with a given object in pagination
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -892,7 +895,7 @@ ListObjectParentsResponse * CloudDirectoryClient::listObjectParents(const ListOb
     return qobject_cast<ListObjectParentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns policies attached to an object in pagination
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -906,7 +909,7 @@ ListObjectPoliciesResponse * CloudDirectoryClient::listObjectPolicies(const List
     return qobject_cast<ListObjectPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a paginated list of all the outgoing <a>TypedLinkSpecifier</a> information for an object. It also supports
  * filtering by typed link facet and identity attributes. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
@@ -922,7 +925,7 @@ ListOutgoingTypedLinksResponse * CloudDirectoryClient::listOutgoingTypedLinks(co
     return qobject_cast<ListOutgoingTypedLinksResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all of the <code>ObjectIdentifiers</code> to which a given policy is
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -936,7 +939,7 @@ ListPolicyAttachmentsResponse * CloudDirectoryClient::listPolicyAttachments(cons
     return qobject_cast<ListPolicyAttachmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the major version families of each published schema. If a major version ARN is provided as <code>SchemaArn</code>,
  * the minor version revisions in that family are listed
  *
@@ -951,7 +954,7 @@ ListPublishedSchemaArnsResponse * CloudDirectoryClient::listPublishedSchemaArns(
     return qobject_cast<ListPublishedSchemaArnsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns tags for a resource. Tagging is currently supported only for directories with a limit of 50 tags per directory.
  * All 50 tags are returned for a given directory with this API
  *
@@ -966,7 +969,7 @@ ListTagsForResourceResponse * CloudDirectoryClient::listTagsForResource(const Li
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a paginated list of all attribute definitions for a particular <a>TypedLinkFacet</a>. For more information, see
  * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -981,7 +984,7 @@ ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetA
     return qobject_cast<ListTypedLinkFacetAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a paginated list of <code>TypedLink</code> facet names for a particular schema. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -996,7 +999,7 @@ ListTypedLinkFacetNamesResponse * CloudDirectoryClient::listTypedLinkFacetNames(
     return qobject_cast<ListTypedLinkFacetNamesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all policies from the root of the <a>Directory</a> to the object specified. If there are no policies present, an
  * empty list is returned. If policies are present, and if some objects don't have the policies attached, it returns the
  * <code>ObjectIdentifier</code> for such objects. If policies are present, it returns <code>ObjectIdentifier</code>,
@@ -1014,7 +1017,7 @@ LookupPolicyResponse * CloudDirectoryClient::lookupPolicy(const LookupPolicyRequ
     return qobject_cast<LookupPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Publishes a development schema with a major version and a recommended minor
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1028,7 +1031,7 @@ PublishSchemaResponse * CloudDirectoryClient::publishSchema(const PublishSchemaR
     return qobject_cast<PublishSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows a schema to be updated using JSON upload. Only available for development schemas. See <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat">JSON Schema Format</a>
  * for more
@@ -1044,7 +1047,7 @@ PutSchemaFromJsonResponse * CloudDirectoryClient::putSchemaFromJson(const PutSch
     return qobject_cast<PutSchemaFromJsonResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified facet from the specified
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1058,7 +1061,7 @@ RemoveFacetFromObjectResponse * CloudDirectoryClient::removeFacetFromObject(cons
     return qobject_cast<RemoveFacetFromObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * An API operation for adding tags to a
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1072,7 +1075,7 @@ TagResourceResponse * CloudDirectoryClient::tagResource(const TagResourceRequest
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * An API operation for removing tags from a
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1086,7 +1089,7 @@ UntagResourceResponse * CloudDirectoryClient::untagResource(const UntagResourceR
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Does the
  *
  * following> <ol> <li>
@@ -1112,7 +1115,7 @@ UpdateFacetResponse * CloudDirectoryClient::updateFacet(const UpdateFacetRequest
     return qobject_cast<UpdateFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a given object's
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1126,7 +1129,7 @@ UpdateObjectAttributesResponse * CloudDirectoryClient::updateObjectAttributes(co
     return qobject_cast<UpdateObjectAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the schema name with a new name. Only development schema names can be
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1140,7 +1143,7 @@ UpdateSchemaResponse * CloudDirectoryClient::updateSchema(const UpdateSchemaRequ
     return qobject_cast<UpdateSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
  *
@@ -1155,7 +1158,7 @@ UpdateTypedLinkFacetResponse * CloudDirectoryClient::updateTypedLinkFacet(const 
     return qobject_cast<UpdateTypedLinkFacetResponse *>(send(request));
 }
 
-/**
+/*!
  * Upgrades a single directory in-place using the <code>PublishedSchemaArn</code> with schema updates found in
  * <code>MinorVersion</code>. Backwards-compatible minor version upgrades are instantaneously available for readers on all
  * objects in the directory. Note: This is a synchronous API call and upgrades only one schema on a given directory per
@@ -1172,7 +1175,7 @@ UpgradeAppliedSchemaResponse * CloudDirectoryClient::upgradeAppliedSchema(const 
     return qobject_cast<UpgradeAppliedSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Upgrades a published schema under a new minor version revision using the current contents of
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -1186,7 +1189,7 @@ UpgradePublishedSchemaResponse * CloudDirectoryClient::upgradePublishedSchema(co
     return qobject_cast<UpgradePublishedSchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudDirectoryClientPrivate
@@ -1194,7 +1197,7 @@ UpgradePublishedSchemaResponse * CloudDirectoryClient::upgradePublishedSchema(co
  * @brief  Private implementation for CloudDirectoryClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudDirectoryClientPrivate object.

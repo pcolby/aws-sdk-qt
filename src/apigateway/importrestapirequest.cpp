@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  ImportRestApiRequest
+/*!
+ * \class QtAws::APIGateway::ImportRestApiRequest
  *
- * @brief  Implements APIGateway ImportRestApi requests.
+ * \brief The ImportRestApiRequest class encapsulates APIGateway ImportRestApi requests.
  *
- * @see    APIGatewayClient::importRestApi
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::importRestApi
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportRestApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ImportRestApiRequest::ImportRestApiRequest(const ImportRestApiRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportRestApiRequest object.
  */
 ImportRestApiRequest::ImportRestApiRequest()
@@ -53,13 +61,16 @@ ImportRestApiRequest::ImportRestApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportRestApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportRestApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply 
     return new ImportRestApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportRestApiRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply 
  * @brief  Private implementation for ImportRestApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportRestApiRequestPrivate object.
@@ -97,7 +108,7 @@ ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportRestApiRequestPrivate object, copying another.

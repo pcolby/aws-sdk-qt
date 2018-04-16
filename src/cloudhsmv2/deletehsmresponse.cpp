@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  DeleteHsmResponse
+/*!
+ * \class QtAws::CloudHSMV2::DeleteHsmResponse
  *
- * @brief  Handles CloudHSMV2 DeleteHsm responses.
+ * \brief The DeleteHsmResponse class encapsulates CloudHSMV2 DeleteHsm responses.
  *
- * @see    CloudHSMV2Client::deleteHsm
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::deleteHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHsmResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteHsmRequest * DeleteHsmResponse::request() const
     return static_cast<const DeleteHsmRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSMV2 DeleteHsm response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteHsmResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteHsmResponsePrivate
+ * \class DeleteHsmResponsePrivate
  *
- * @brief  Private implementation for DeleteHsmResponse.
+ * \brief Private implementation for DeleteHsmResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHsmResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteHsmResponsePrivate::DeleteHsmResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSMV2 DeleteHsmResponse element.
  *
  * @param  xml  XML stream to parse.

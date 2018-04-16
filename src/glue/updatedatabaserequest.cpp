@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateDatabaseRequest
+/*!
+ * \class QtAws::Glue::UpdateDatabaseRequest
  *
- * @brief  Implements Glue UpdateDatabase requests.
+ * \brief The UpdateDatabaseRequest class encapsulates Glue UpdateDatabase requests.
  *
- * @see    GlueClient::updateDatabase
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateDatabase
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDatabaseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateDatabaseRequest::UpdateDatabaseRequest(const UpdateDatabaseRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDatabaseRequest object.
  */
 UpdateDatabaseRequest::UpdateDatabaseRequest()
@@ -53,13 +59,16 @@ UpdateDatabaseRequest::UpdateDatabaseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDatabaseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDatabaseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDatabaseRequest::response(QNetworkReply
     return new UpdateDatabaseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDatabaseRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDatabaseRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateDatabaseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDatabaseRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateDatabaseRequestPrivate::UpdateDatabaseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDatabaseRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityNotificationTopicRequest
+/*!
+ * \class QtAws::SES::SetIdentityNotificationTopicRequest
  *
- * @brief  Implements SES SetIdentityNotificationTopic requests.
+ * \brief The SetIdentityNotificationTopicRequest class encapsulates SES SetIdentityNotificationTopic requests.
  *
- * @see    SESClient::setIdentityNotificationTopic
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityNotificationTopic
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityNotificationTopicRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest(const S
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityNotificationTopicRequest object.
  */
 SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest()
@@ -53,13 +67,16 @@ SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetIdentityNotificationTopicRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetIdentityNotificationTopicResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response
     return new SetIdentityNotificationTopicResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetIdentityNotificationTopicRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response
  * @brief  Private implementation for SetIdentityNotificationTopicRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityNotificationTopicRequestPrivate object.
@@ -97,7 +114,7 @@ SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityNotificationTopicRequestPrivate object, copying another.

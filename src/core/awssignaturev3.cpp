@@ -29,8 +29,8 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsSignatureV3
+/*!
+ * \class QtAws::Core::AwsSignatureV3
  *
  * @brief  Implements AWS Signature Version 3.
  *
@@ -40,7 +40,7 @@ namespace Core {
  * @see    http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsSignatureV3 object.
  *
  * Use instances of this object to provide Version 3 signatures for AWS services.
@@ -75,17 +75,17 @@ int AwsSignatureV3::version() const
     return 3;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsSignatureV3Private
+ * \class QtAws::Core::AwsSignatureV3Private
  *
  * @brief  Private implementation for AwsSignatureV3.
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsSignatureV3Private object.
  *
  * @param  hashAlgorithm  The algorithm to use during various stages of signing.
@@ -98,7 +98,7 @@ AwsSignatureV3Private::AwsSignatureV3Private(const QCryptographicHash::Algorithm
 
 }
 
-/**
+/*!
  * @brief  Create an AWS V3 Signature algorithm designation.
  *
  * This function returns an algorithm designation, as defined by Amazon, for use with
@@ -124,7 +124,7 @@ QByteArray AwsSignatureV3Private::algorithmDesignation(const QCryptographicHash:
     }
 }
 
-/**
+/*!
  * @brief  Create an AWS V3 Signature authorization header value.
  *
  * This function builds a V3 signature, and returns it to the caller.  The returned
@@ -163,7 +163,7 @@ QByteArray AwsSignatureV3Private::authorizationHeaderValue(const AwsAbstractCred
         "Signature=" + signature.toBase64();
 }
 
-/**
+/*!
  * @brief  Create an AWS V3 Signature canonical header string.
  *
  * @note   Amazon documentation does not specify how to handle whitespace within
@@ -211,7 +211,7 @@ QByteArray AwsSignatureV3Private::canonicalHeader(const QByteArray &headerName, 
     return header;
 }
 
-/**
+/*!
  * @brief  Create an AWS V3 Signature canonical headers string.
  *
  * This function constructs a canonical string containing all of the headers
@@ -268,7 +268,7 @@ QByteArray AwsSignatureV3Private::canonicalHeaders(const QNetworkRequest &reques
     return canonicalHeaders;
 }
 
-/**
+/*!
  * @brief  Create an AWS V3 Signature canonical request.
  *
  * Note, this function implments both `AWS3` and `AWS3-HTTPS` variants of the
@@ -307,7 +307,7 @@ QByteArray AwsSignatureV3Private::canonicalRequest(const QNetworkAccessManager::
            payload;
 }
 
-/**
+/*!
  * @brief  Does a request use the HTTPS scheme?
  *
  * @param  request  The network request to evaluate.
@@ -319,7 +319,7 @@ bool AwsSignatureV3Private::isHttps(const QNetworkRequest &request)
     return (request.url().scheme() == QLatin1String("https"));
 }
 
-/**
+/*!
  * @brief  Set authorization header on a network request.
  *
  * This function will calculate the authorization header value and set it as the `Authorization`
@@ -341,8 +341,8 @@ void AwsSignatureV3Private::setAuthorizationHeader(const AwsAbstractCredentials 
     request.setRawHeader("Authorization", authorizationHeaderValue(credentials, operation, request, payload));
 }
 
-/**
- * @brief   Set the AWS custom date header.
+/*!
+ * \brief Sets the AWS custom date header on \a request to \a dateTime.
  *
  * If \a request does not already contain an `x-amz-date` header, then this function
  * will set a custom `x-amz-date` header to the value of \p dateTime formatted like

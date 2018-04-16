@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetJobDocumentResponse
+/*!
+ * \class QtAws::IoT::GetJobDocumentResponse
  *
- * @brief  Handles IoT GetJobDocument responses.
+ * \brief The GetJobDocumentResponse class encapsulates IoT GetJobDocument responses.
  *
- * @see    IoTClient::getJobDocument
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getJobDocument
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobDocumentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetJobDocumentRequest * GetJobDocumentResponse::request() const
     return static_cast<const GetJobDocumentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT GetJobDocument response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetJobDocumentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetJobDocumentResponsePrivate
+ * \class GetJobDocumentResponsePrivate
  *
- * @brief  Private implementation for GetJobDocumentResponse.
+ * \brief Private implementation for GetJobDocumentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobDocumentResponsePrivate object.
@@ -91,7 +105,7 @@ GetJobDocumentResponsePrivate::GetJobDocumentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT GetJobDocumentResponse element.
  *
  * @param  xml  XML stream to parse.

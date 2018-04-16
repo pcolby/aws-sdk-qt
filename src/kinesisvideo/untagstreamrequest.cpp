@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  UntagStreamRequest
+/*!
+ * \class QtAws::KinesisVideo::UntagStreamRequest
  *
- * @brief  Implements KinesisVideo UntagStream requests.
+ * \brief The UntagStreamRequest class encapsulates KinesisVideo UntagStream requests.
  *
- * @see    KinesisVideoClient::untagStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::untagStream
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UntagStreamRequest::UntagStreamRequest(const UntagStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagStreamRequest object.
  */
 UntagStreamRequest::UntagStreamRequest()
@@ -53,13 +56,16 @@ UntagStreamRequest::UntagStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * 
     return new UntagStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * 
  * @brief  Private implementation for UntagStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagStreamRequestPrivate object.
@@ -97,7 +103,7 @@ UntagStreamRequestPrivate::UntagStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagStreamRequestPrivate object, copying another.

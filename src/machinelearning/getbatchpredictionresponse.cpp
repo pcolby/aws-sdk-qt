@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetBatchPredictionResponse
+/*!
+ * \class QtAws::MachineLearning::GetBatchPredictionResponse
  *
- * @brief  Handles MachineLearning GetBatchPrediction responses.
+ * \brief The GetBatchPredictionResponse class encapsulates MachineLearning GetBatchPrediction responses.
  *
- * @see    MachineLearningClient::getBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBatchPredictionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBatchPredictionRequest * GetBatchPredictionResponse::request() const
     return static_cast<const GetBatchPredictionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning GetBatchPrediction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBatchPredictionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBatchPredictionResponsePrivate
+ * \class GetBatchPredictionResponsePrivate
  *
- * @brief  Private implementation for GetBatchPredictionResponse.
+ * \brief Private implementation for GetBatchPredictionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBatchPredictionResponsePrivate object.
@@ -91,7 +94,7 @@ GetBatchPredictionResponsePrivate::GetBatchPredictionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning GetBatchPredictionResponse element.
  *
  * @param  xml  XML stream to parse.

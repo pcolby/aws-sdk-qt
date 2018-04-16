@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RestoreAddressToClassicResponse
+/*!
+ * \class QtAws::EC2::RestoreAddressToClassicResponse
  *
- * @brief  Handles EC2 RestoreAddressToClassic responses.
+ * \brief The RestoreAddressToClassicResponse class encapsulates EC2 RestoreAddressToClassic responses.
  *
- * @see    EC2Client::restoreAddressToClassic
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::restoreAddressToClassic
  */
 
-/**
+/*!
  * @brief  Constructs a new RestoreAddressToClassicResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RestoreAddressToClassicRequest * RestoreAddressToClassicResponse::request(
     return static_cast<const RestoreAddressToClassicRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RestoreAddressToClassic response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RestoreAddressToClassicResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RestoreAddressToClassicResponsePrivate
+ * \class RestoreAddressToClassicResponsePrivate
  *
- * @brief  Private implementation for RestoreAddressToClassicResponse.
+ * \brief Private implementation for RestoreAddressToClassicResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RestoreAddressToClassicResponsePrivate object.
@@ -91,7 +98,7 @@ RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RestoreAddressToClassicResponse element.
  *
  * @param  xml  XML stream to parse.

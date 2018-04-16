@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CloudFrontResponse
+/*!
+ * \class QtAws::CloudFront::CloudFrontResponse
  *
- * @brief  Handles CloudFront CloudFront responses.
+ * \brief The CloudFrontResponse class is the base class for all CloudFront responses.
  *
- * @see    CloudFrontClient::cloudFront
+ * \ingroup CloudFront
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudFrontResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudFrontResponse::CloudFrontResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFrontResponse object.
@@ -63,7 +63,7 @@ CloudFrontResponse::CloudFrontResponse(CloudFrontResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudFrontResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudFrontResponsePrivate
@@ -92,7 +92,7 @@ void CloudFrontResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudFrontResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFrontResponsePrivate object.

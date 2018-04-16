@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationInstancesRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationInstancesRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeReplicationInstances requests.
+ * \brief The DescribeReplicationInstancesRequest class encapsulates DatabaseMigrationService DescribeReplicationInstances requests.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationInstances
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeReplicationInstancesRequest::DescribeReplicationInstancesRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationInstancesRequest object.
  */
 DescribeReplicationInstancesRequest::DescribeReplicationInstancesRequest()
@@ -53,13 +67,16 @@ DescribeReplicationInstancesRequest::DescribeReplicationInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReplicationInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReplicationInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationInstancesRequest::response
     return new DescribeReplicationInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReplicationInstancesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationInstancesRequest::response
  * @brief  Private implementation for DescribeReplicationInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationInstancesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeReplicationInstancesRequestPrivate::DescribeReplicationInstancesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationInstancesRequestPrivate object, copying another.

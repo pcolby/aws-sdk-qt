@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListRunsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListRunsRequest
  *
- * @brief  Implements DeviceFarm ListRuns requests.
+ * \brief The ListRunsRequest class encapsulates DeviceFarm ListRuns requests.
  *
- * @see    DeviceFarmClient::listRuns
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listRuns
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRunsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListRunsRequest::ListRunsRequest(const ListRunsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRunsRequest object.
  */
 ListRunsRequest::ListRunsRequest()
@@ -53,13 +58,16 @@ ListRunsRequest::ListRunsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRunsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRunsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * con
     return new ListRunsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRunsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListRunsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRunsRequestPrivate object.
@@ -97,7 +105,7 @@ ListRunsRequestPrivate::ListRunsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRunsRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetPolicyRequest
+/*!
+ * \class QtAws::Lambda::GetPolicyRequest
  *
- * @brief  Implements Lambda GetPolicy requests.
+ * \brief The GetPolicyRequest class encapsulates Lambda GetPolicy requests.
  *
- * @see    LambdaClient::getPolicy
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
@@ -53,13 +67,16 @@ GetPolicyRequest::GetPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
     return new GetPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyRequestPrivate object, copying another.

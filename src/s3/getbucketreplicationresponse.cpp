@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketReplicationResponse
+/*!
+ * \class QtAws::S3::GetBucketReplicationResponse
  *
- * @brief  Handles S3 GetBucketReplication responses.
+ * \brief The GetBucketReplicationResponse class encapsulates S3 GetBucketReplication responses.
  *
- * @see    S3Client::getBucketReplication
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketReplication
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketReplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketReplicationRequest * GetBucketReplicationResponse::request() cons
     return static_cast<const GetBucketReplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketReplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketReplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketReplicationResponsePrivate
+ * \class GetBucketReplicationResponsePrivate
  *
- * @brief  Private implementation for GetBucketReplicationResponse.
+ * \brief Private implementation for GetBucketReplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketReplicationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketReplicationResponsePrivate::GetBucketReplicationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketReplicationResponse element.
  *
  * @param  xml  XML stream to parse.

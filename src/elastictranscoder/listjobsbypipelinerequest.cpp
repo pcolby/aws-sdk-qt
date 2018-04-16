@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ListJobsByPipelineRequest
+/*!
+ * \class QtAws::ElasticTranscoder::ListJobsByPipelineRequest
  *
- * @brief  Implements ElasticTranscoder ListJobsByPipeline requests.
+ * \brief The ListJobsByPipelineRequest class encapsulates ElasticTranscoder ListJobsByPipeline requests.
  *
- * @see    ElasticTranscoderClient::listJobsByPipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::listJobsByPipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsByPipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListJobsByPipelineRequest::ListJobsByPipelineRequest(const ListJobsByPipelineReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsByPipelineRequest object.
  */
 ListJobsByPipelineRequest::ListJobsByPipelineRequest()
@@ -53,13 +59,16 @@ ListJobsByPipelineRequest::ListJobsByPipelineRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsByPipelineRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsByPipelineResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsByPipelineRequest::response(QNetworkR
     return new ListJobsByPipelineResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsByPipelineRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsByPipelineRequest::response(QNetworkR
  * @brief  Private implementation for ListJobsByPipelineRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsByPipelineRequestPrivate object.
@@ -97,7 +106,7 @@ ListJobsByPipelineRequestPrivate::ListJobsByPipelineRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsByPipelineRequestPrivate object, copying another.

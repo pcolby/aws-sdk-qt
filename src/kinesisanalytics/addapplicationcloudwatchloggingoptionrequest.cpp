@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationCloudWatchLoggingOptionRequest
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationCloudWatchLoggingOptionRequest
  *
- * @brief  Implements KinesisAnalytics AddApplicationCloudWatchLoggingOption requests.
+ * \brief The AddApplicationCloudWatchLoggingOptionRequest class encapsulates KinesisAnalytics AddApplicationCloudWatchLoggingOption requests.
  *
- * @see    KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AddApplicationCloudWatchLoggingOptionRequest::AddApplicationCloudWatchLoggingOpt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequest object.
  */
 AddApplicationCloudWatchLoggingOptionRequest::AddApplicationCloudWatchLoggingOptionRequest()
@@ -53,13 +56,16 @@ AddApplicationCloudWatchLoggingOptionRequest::AddApplicationCloudWatchLoggingOpt
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddApplicationCloudWatchLoggingOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddApplicationCloudWatchLoggingOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest:
     return new AddApplicationCloudWatchLoggingOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddApplicationCloudWatchLoggingOptionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest:
  * @brief  Private implementation for AddApplicationCloudWatchLoggingOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequestPrivate object.
@@ -97,7 +103,7 @@ AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLog
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequestPrivate object, copying another.

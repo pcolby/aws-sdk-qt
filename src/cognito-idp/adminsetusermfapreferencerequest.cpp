@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminSetUserMFAPreferenceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserMFAPreferenceRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminSetUserMFAPreference requests.
+ * \brief The AdminSetUserMFAPreferenceRequest class encapsulates CognitoIdentityProvider AdminSetUserMFAPreference requests.
  *
- * @see    CognitoIdentityProviderClient::adminSetUserMFAPreference
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminSetUserMFAPreference
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminSetUserMFAPreferenceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest(const AdminSe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminSetUserMFAPreferenceRequest object.
  */
 AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest()
@@ -53,13 +66,16 @@ AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminSetUserMFAPreferenceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminSetUserMFAPreferenceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QN
     return new AdminSetUserMFAPreferenceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminSetUserMFAPreferenceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QN
  * @brief  Private implementation for AdminSetUserMFAPreferenceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminSetUserMFAPreferenceRequestPrivate object.
@@ -97,7 +113,7 @@ AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminSetUserMFAPreferenceRequestPrivate object, copying another.

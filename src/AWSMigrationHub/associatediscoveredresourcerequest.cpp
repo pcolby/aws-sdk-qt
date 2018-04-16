@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  AssociateDiscoveredResourceRequest
+/*!
+ * \class QtAws::MigrationHub::AssociateDiscoveredResourceRequest
  *
- * @brief  Implements MigrationHub AssociateDiscoveredResource requests.
+ * \brief The AssociateDiscoveredResourceRequest class encapsulates MigrationHub AssociateDiscoveredResource requests.
  *
- * @see    MigrationHubClient::associateDiscoveredResource
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::associateDiscoveredResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateDiscoveredResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest(const Ass
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateDiscoveredResourceRequest object.
  */
 AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest()
@@ -53,13 +58,16 @@ AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateDiscoveredResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateDiscoveredResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(
     return new AssociateDiscoveredResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateDiscoveredResourceRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(
  * @brief  Private implementation for AssociateDiscoveredResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateDiscoveredResourceRequestPrivate object.
@@ -97,7 +105,7 @@ AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateDiscoveredResourceRequestPrivate object, copying another.

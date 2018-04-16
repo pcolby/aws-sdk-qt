@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CreateLunaClientResponse
+/*!
+ * \class QtAws::CloudHSM::CreateLunaClientResponse
  *
- * @brief  Handles CloudHSM CreateLunaClient responses.
+ * \brief The CreateLunaClientResponse class encapsulates CloudHSM CreateLunaClient responses.
  *
- * @see    CloudHSMClient::createLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::createLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLunaClientResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const CreateLunaClientRequest * CreateLunaClientResponse::request() const
     return static_cast<const CreateLunaClientRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM CreateLunaClient response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void CreateLunaClientResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateLunaClientResponsePrivate
+ * \class CreateLunaClientResponsePrivate
  *
- * @brief  Private implementation for CreateLunaClientResponse.
+ * \brief Private implementation for CreateLunaClientResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLunaClientResponsePrivate object.
@@ -91,7 +106,7 @@ CreateLunaClientResponsePrivate::CreateLunaClientResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM CreateLunaClientResponse element.
  *
  * @param  xml  XML stream to parse.

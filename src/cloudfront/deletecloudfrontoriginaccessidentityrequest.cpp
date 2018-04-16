@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteCloudFrontOriginAccessIdentityRequest
+/*!
+ * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityRequest
  *
- * @brief  Implements CloudFront DeleteCloudFrontOriginAccessIdentity requests.
+ * \brief The DeleteCloudFrontOriginAccessIdentityRequest class encapsulates CloudFront DeleteCloudFrontOriginAccessIdentity requests.
  *
- * @see    CloudFrontClient::deleteCloudFrontOriginAccessIdentity
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteCloudFrontOriginAccessIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequest object.
  */
 DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentityRequest()
@@ -53,13 +61,16 @@ DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentit
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCloudFrontOriginAccessIdentityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCloudFrontOriginAccessIdentityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::
     return new DeleteCloudFrontOriginAccessIdentityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCloudFrontOriginAccessIdentityRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::
  * @brief  Private implementation for DeleteCloudFrontOriginAccessIdentityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccess
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequestPrivate object, copying another.

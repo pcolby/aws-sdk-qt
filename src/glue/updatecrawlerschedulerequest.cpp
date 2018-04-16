@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateCrawlerScheduleRequest
+/*!
+ * \class QtAws::Glue::UpdateCrawlerScheduleRequest
  *
- * @brief  Implements Glue UpdateCrawlerSchedule requests.
+ * \brief The UpdateCrawlerScheduleRequest class encapsulates Glue UpdateCrawlerSchedule requests.
  *
- * @see    GlueClient::updateCrawlerSchedule
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateCrawlerSchedule
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCrawlerScheduleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateCrawlerScheduleRequest::UpdateCrawlerScheduleRequest(const UpdateCrawlerSc
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCrawlerScheduleRequest object.
  */
 UpdateCrawlerScheduleRequest::UpdateCrawlerScheduleRequest()
@@ -53,13 +59,16 @@ UpdateCrawlerScheduleRequest::UpdateCrawlerScheduleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCrawlerScheduleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCrawlerScheduleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerScheduleRequest::response(QNetwo
     return new UpdateCrawlerScheduleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCrawlerScheduleRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerScheduleRequest::response(QNetwo
  * @brief  Private implementation for UpdateCrawlerScheduleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCrawlerScheduleRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateCrawlerScheduleRequestPrivate::UpdateCrawlerScheduleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCrawlerScheduleRequestPrivate object, copying another.

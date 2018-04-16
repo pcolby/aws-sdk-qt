@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetTableVersionRequest
+/*!
+ * \class QtAws::Glue::GetTableVersionRequest
  *
- * @brief  Implements Glue GetTableVersion requests.
+ * \brief The GetTableVersionRequest class encapsulates Glue GetTableVersion requests.
  *
- * @see    GlueClient::getTableVersion
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getTableVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTableVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetTableVersionRequest::GetTableVersionRequest(const GetTableVersionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTableVersionRequest object.
  */
 GetTableVersionRequest::GetTableVersionRequest()
@@ -53,13 +59,16 @@ GetTableVersionRequest::GetTableVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTableVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTableVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetTableVersionRequest::response(QNetworkRepl
     return new GetTableVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTableVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetTableVersionRequest::response(QNetworkRepl
  * @brief  Private implementation for GetTableVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTableVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetTableVersionRequestPrivate::GetTableVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTableVersionRequestPrivate object, copying another.

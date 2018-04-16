@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetPlanResponse
+/*!
+ * \class QtAws::Glue::GetPlanResponse
  *
- * @brief  Handles Glue GetPlan responses.
+ * \brief The GetPlanResponse class encapsulates Glue GetPlan responses.
  *
- * @see    GlueClient::getPlan
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPlanResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetPlanRequest * GetPlanResponse::request() const
     return static_cast<const GetPlanRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetPlan response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetPlanResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPlanResponsePrivate
+ * \class GetPlanResponsePrivate
  *
- * @brief  Private implementation for GetPlanResponse.
+ * \brief Private implementation for GetPlanResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPlanResponsePrivate object.
@@ -91,7 +97,7 @@ GetPlanResponsePrivate::GetPlanResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetPlanResponse element.
  *
  * @param  xml  XML stream to parse.

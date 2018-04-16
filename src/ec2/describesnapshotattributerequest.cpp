@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSnapshotAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeSnapshotAttributeRequest
  *
- * @brief  Implements EC2 DescribeSnapshotAttribute requests.
+ * \brief The DescribeSnapshotAttributeRequest class encapsulates EC2 DescribeSnapshotAttribute requests.
  *
- * @see    EC2Client::describeSnapshotAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSnapshotAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSnapshotAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSnapshotAttributeRequest object.
  */
 DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest()
@@ -53,13 +60,16 @@ DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSnapshotAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSnapshotAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotAttributeRequest::response(QN
     return new DescribeSnapshotAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSnapshotAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotAttributeRequest::response(QN
  * @brief  Private implementation for DescribeSnapshotAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSnapshotAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSnapshotAttributeRequestPrivate object, copying another.

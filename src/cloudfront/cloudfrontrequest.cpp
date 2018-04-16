@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CloudFrontRequest
+/*!
+ * \class QtAws::CloudFront::CloudFrontRequest
  *
- * @brief  Interface class for providing CloudFront requests
+ * \brief The CloudFrontRequest class is the base class for all CloudFront requests.
+ *
+ * \ingroup CloudFront
  */
 
-
-/**
+/*!
  * @brief  Constructs a new CloudFrontRequest object.
  *
  * @param  action  The CloudFront action to request.
@@ -41,7 +42,7 @@ CloudFrontRequest::CloudFrontRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CloudFrontRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ CloudFrontRequest::CloudFrontRequest(const CloudFrontRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ CloudFrontRequest& CloudFrontRequest::operator=(const CloudFrontRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFrontRequest object.
@@ -85,10 +86,8 @@ CloudFrontRequest::CloudFrontRequest(CloudFrontRequestPrivate * const d) : QtAws
 
 }
 
-/**
- * @brief  Get the CloudFront action to be performed by this request.
- *
- * @return The CloudFront action to be performed by this request.
+/*!
+ * \brief Returns the CloudFront action to be performed by this request.
  */
 CloudFrontRequest::Action CloudFrontRequest::action() const
 {
@@ -96,20 +95,16 @@ CloudFrontRequest::Action CloudFrontRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the CloudFront action to be performed by this request.
- *
- * @return The name of the CloudFront action to be performed by this request.
+/*!
+ * \brief Returns the name of the CloudFront action to be performed by this request.
  */
 QString CloudFrontRequest::actionString() const
 {
     return CloudFrontRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the CloudFront API version implemented by this request.
- *
- * @return The CloudFront API version implmented by this request.
+/*!
+ * \brief Returns the CloudFront API version implemented by this request.
  */
 QString CloudFrontRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString CloudFrontRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the CloudFront action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the CloudFront action to be performed by this request to \a action.
  */
 void CloudFrontRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void CloudFrontRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the CloudFront API version to include in this request.
- *
- * @param  version  The CloudFront API version to include in this request.
+/*!
+ * Set the CloudFront API version to include in this request to \a version.
  */
 void CloudFrontRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void CloudFrontRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool CloudFrontRequest::operator==(const CloudFrontRequest &other) const
 {
@@ -159,7 +146,7 @@ bool CloudFrontRequest::operator==(const CloudFrontRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid CloudFront queue name.
  *
  * @par From CloudFront FAQs:
@@ -178,12 +165,10 @@ bool CloudFrontRequest::operator==(const CloudFrontRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int CloudFrontRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int CloudFrontRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void CloudFrontRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void CloudFrontRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this CloudFront request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant CloudFrontRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant CloudFrontRequest::parameter(const QString &name, const QVariant &defau
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this CloudFront request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &CloudFrontRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &CloudFrontRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this CloudFront request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void CloudFrontRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void CloudFrontRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this CloudFront request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void CloudFrontRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void CloudFrontRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this CloudFront request.
+/*!
+ * \brief Returns a network request for this CloudFront request using the given \a endpoint.
  *
  * This CloudFront implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this CloudFront request using the given \a endpoint.
  */
 QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CloudFrontRequestPrivate
+ * \class  CloudFrontRequestPrivate
  *
- * @brief  Private implementation for CloudFrontRequest.
+ * \brief  Private implementation for CloudFrontRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new CloudFrontRequestPrivate object.
- *
- * @param  action  CloudFront action being performed by the \a q request.
- * @param  q       Pointer to this object's public CloudFrontRequest instance.
+ * \brief Constructs a new CloudFrontRequestPrivate object.
  */
 CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequest::Action action, CloudFrontRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequest::Acti
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new CloudFrontRequestPrivate object from an existing one.
+ * \brief Constructs a new CloudFrontRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the CloudFrontRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public CloudFrontRequest instance.
  */
 CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequestPrivate &other,
                                      CloudFrontRequest * const q)
@@ -312,14 +275,14 @@ CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequestPrivat
 
 }
 
-/**
- * @brief  Convert and CloudFront action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts CloudFrontRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the CloudFront service's Action
  * query parameters.
- *
- * @param  action  CloudFront action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

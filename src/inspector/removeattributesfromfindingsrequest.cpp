@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  RemoveAttributesFromFindingsRequest
+/*!
+ * \class QtAws::Inspector::RemoveAttributesFromFindingsRequest
  *
- * @brief  Implements Inspector RemoveAttributesFromFindings requests.
+ * \brief The RemoveAttributesFromFindingsRequest class encapsulates Inspector RemoveAttributesFromFindings requests.
  *
- * @see    InspectorClient::removeAttributesFromFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::removeAttributesFromFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveAttributesFromFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest(const R
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveAttributesFromFindingsRequest object.
  */
 RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest()
@@ -53,13 +61,16 @@ RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveAttributesFromFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveAttributesFromFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response
     return new RemoveAttributesFromFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveAttributesFromFindingsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response
  * @brief  Private implementation for RemoveAttributesFromFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveAttributesFromFindingsRequestPrivate object.
@@ -97,7 +108,7 @@ RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveAttributesFromFindingsRequestPrivate object, copying another.

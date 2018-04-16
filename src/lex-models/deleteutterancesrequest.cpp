@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteUtterancesRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteUtterancesRequest
  *
- * @brief  Implements LexModelBuildingService DeleteUtterances requests.
+ * \brief The DeleteUtterancesRequest class encapsulates LexModelBuildingService DeleteUtterances requests.
  *
- * @see    LexModelBuildingServiceClient::deleteUtterances
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteUtterances
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUtterancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteUtterancesRequest::DeleteUtterancesRequest(const DeleteUtterancesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUtterancesRequest object.
  */
 DeleteUtterancesRequest::DeleteUtterancesRequest()
@@ -53,13 +60,16 @@ DeleteUtterancesRequest::DeleteUtterancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUtterancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUtterancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkRep
     return new DeleteUtterancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUtterancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteUtterancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUtterancesRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUtterancesRequestPrivate object, copying another.

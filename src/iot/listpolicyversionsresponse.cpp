@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListPolicyVersionsResponse
+/*!
+ * \class QtAws::IoT::ListPolicyVersionsResponse
  *
- * @brief  Handles IoT ListPolicyVersions responses.
+ * \brief The ListPolicyVersionsResponse class encapsulates IoT ListPolicyVersions responses.
  *
- * @see    IoTClient::listPolicyVersions
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listPolicyVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPolicyVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListPolicyVersionsRequest * ListPolicyVersionsResponse::request() const
     return static_cast<const ListPolicyVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListPolicyVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListPolicyVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPolicyVersionsResponsePrivate
+ * \class ListPolicyVersionsResponsePrivate
  *
- * @brief  Private implementation for ListPolicyVersionsResponse.
+ * \brief Private implementation for ListPolicyVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPolicyVersionsResponsePrivate object.
@@ -91,7 +105,7 @@ ListPolicyVersionsResponsePrivate::ListPolicyVersionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListPolicyVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

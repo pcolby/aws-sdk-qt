@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  DeleteQualificationTypeResponse
+/*!
+ * \class QtAws::MTurk::DeleteQualificationTypeResponse
  *
- * @brief  Handles MTurk DeleteQualificationType responses.
+ * \brief The DeleteQualificationTypeResponse class encapsulates MTurk DeleteQualificationType responses.
  *
- * @see    MTurkClient::deleteQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::deleteQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteQualificationTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteQualificationTypeRequest * DeleteQualificationTypeResponse::request(
     return static_cast<const DeleteQualificationTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk DeleteQualificationType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteQualificationTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteQualificationTypeResponsePrivate
+ * \class DeleteQualificationTypeResponsePrivate
  *
- * @brief  Private implementation for DeleteQualificationTypeResponse.
+ * \brief Private implementation for DeleteQualificationTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQualificationTypeResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk DeleteQualificationTypeResponse element.
  *
  * @param  xml  XML stream to parse.

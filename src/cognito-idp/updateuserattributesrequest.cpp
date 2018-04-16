@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateUserAttributesRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateUserAttributesRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateUserAttributes requests.
+ * \brief The UpdateUserAttributesRequest class encapsulates CognitoIdentityProvider UpdateUserAttributes requests.
  *
- * @see    CognitoIdentityProviderClient::updateUserAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateUserAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateUserAttributesRequest::UpdateUserAttributesRequest(const UpdateUserAttribu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserAttributesRequest object.
  */
 UpdateUserAttributesRequest::UpdateUserAttributesRequest()
@@ -53,13 +66,16 @@ UpdateUserAttributesRequest::UpdateUserAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateUserAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateUserAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetwor
     return new UpdateUserAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateUserAttributesRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateUserAttributesRequest::response(QNetwor
  * @brief  Private implementation for UpdateUserAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserAttributesRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserAttributesRequestPrivate object, copying another.

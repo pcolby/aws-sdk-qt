@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  UpdateServiceAccessPoliciesResponse
+/*!
+ * \class QtAws::CloudSearch::UpdateServiceAccessPoliciesResponse
  *
- * @brief  Handles CloudSearch UpdateServiceAccessPolicies responses.
+ * \brief The UpdateServiceAccessPoliciesResponse class encapsulates CloudSearch UpdateServiceAccessPolicies responses.
  *
- * @see    CloudSearchClient::updateServiceAccessPolicies
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::updateServiceAccessPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateServiceAccessPoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateServiceAccessPoliciesRequest * UpdateServiceAccessPoliciesResponse::
     return static_cast<const UpdateServiceAccessPoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch UpdateServiceAccessPolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateServiceAccessPoliciesResponsePrivate
+ * \class UpdateServiceAccessPoliciesResponsePrivate
  *
- * @brief  Private implementation for UpdateServiceAccessPoliciesResponse.
+ * \brief Private implementation for UpdateServiceAccessPoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateServiceAccessPoliciesResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch UpdateServiceAccessPoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

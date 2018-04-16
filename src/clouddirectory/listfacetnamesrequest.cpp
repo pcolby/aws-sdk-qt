@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListFacetNamesRequest
+/*!
+ * \class QtAws::CloudDirectory::ListFacetNamesRequest
  *
- * @brief  Implements CloudDirectory ListFacetNames requests.
+ * \brief The ListFacetNamesRequest class encapsulates CloudDirectory ListFacetNames requests.
  *
- * @see    CloudDirectoryClient::listFacetNames
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listFacetNames
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFacetNamesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListFacetNamesRequest::ListFacetNamesRequest(const ListFacetNamesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFacetNamesRequest object.
  */
 ListFacetNamesRequest::ListFacetNamesRequest()
@@ -53,13 +63,16 @@ ListFacetNamesRequest::ListFacetNamesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFacetNamesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFacetNamesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListFacetNamesRequest::response(QNetworkReply
     return new ListFacetNamesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFacetNamesRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListFacetNamesRequest::response(QNetworkReply
  * @brief  Private implementation for ListFacetNamesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFacetNamesRequestPrivate object.
@@ -97,7 +110,7 @@ ListFacetNamesRequestPrivate::ListFacetNamesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFacetNamesRequestPrivate object, copying another.

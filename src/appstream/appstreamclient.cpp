@@ -91,26 +91,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::AppStream
+ * \brief The QtAws::AppStream contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  AppStreamClient
+/*!
+ * \class QtAws::AppStream::AppStreamClient
  *
- * @brief  Client for Amazon AppStream
+ * \brief The AppStreamClient class provides access the Amazon AppStream service.
  *
- * <fullname>Amazon AppStream 2.0</fullname>
+ * \ingroup AppStream
  *
- * You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
  */
 
-/**
- * @brief  Constructs a new AppStreamClient object.
+/*!
+ * \brief Constructs a AppStreamClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AppStreamClient::AppStreamClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -129,21 +137,16 @@ AppStreamClient::AppStreamClient(
     d->serviceName = QStringLiteral("appstream");
 }
 
-/**
- * @brief  Constructs a new AppStreamClient object.
+/*!
+ * \overload AppStreamClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AppStreamClient::AppStreamClient(
     const QUrl &endpoint,
@@ -162,7 +165,7 @@ AppStreamClient::AppStreamClient(
     d->serviceName = QStringLiteral("appstream");
 }
 
-/**
+/*!
  * Associates the specified fleet with the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -176,7 +179,7 @@ AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetReq
     return qobject_cast<AssociateFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Copies the image within the same region or to a new region within the same AWS account. Note that any tags you added to
  * the image will not be
  *
@@ -191,7 +194,7 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
     return qobject_cast<CopyImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a directory
  *
  * @param  request Request to send to Amazon AppStream.
@@ -205,7 +208,7 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
     return qobject_cast<CreateDirectoryConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to Amazon AppStream.
@@ -219,7 +222,7 @@ CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &req
     return qobject_cast<CreateFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an image
  *
  * builder>
@@ -237,7 +240,7 @@ CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateIma
     return qobject_cast<CreateImageBuilderResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a URL to start an image builder streaming
  *
  * @param  request Request to send to Amazon AppStream.
@@ -251,7 +254,7 @@ CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStre
     return qobject_cast<CreateImageBuilderStreamingURLResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to Amazon AppStream.
@@ -265,7 +268,7 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
     return qobject_cast<CreateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a URL to start a streaming session for the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -279,7 +282,7 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
     return qobject_cast<CreateStreamingURLResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified directory
  *
  * @param  request Request to send to Amazon AppStream.
@@ -293,7 +296,7 @@ DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const Del
     return qobject_cast<DeleteDirectoryConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -307,7 +310,7 @@ DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &req
     return qobject_cast<DeleteFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified image. You cannot delete an image that is currently in use. After you delete an image, you cannot
  * provision new capacity using the
  *
@@ -322,7 +325,7 @@ DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &req
     return qobject_cast<DeleteImageResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified image builder and releases the
  *
  * @param  request Request to send to Amazon AppStream.
@@ -336,7 +339,7 @@ DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteIma
     return qobject_cast<DeleteImageBuilderResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified stack. After this operation completes, the environment can no longer be activated and any
  * reservations made for the stack are
  *
@@ -351,7 +354,7 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
     return qobject_cast<DeleteStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified directory configurations. Note that although the response syntax in this topic includes the
  * account password, this password is not returned in the actual response.
  *
@@ -366,7 +369,7 @@ DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(con
     return qobject_cast<DescribeDirectoryConfigsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified fleets or all fleets in the
  *
  * @param  request Request to send to Amazon AppStream.
@@ -380,7 +383,7 @@ DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsReq
     return qobject_cast<DescribeFleetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified image builders or all image builders in the
  *
  * @param  request Request to send to Amazon AppStream.
@@ -394,7 +397,7 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
     return qobject_cast<DescribeImageBuildersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified images or all images in the
  *
  * @param  request Request to send to Amazon AppStream.
@@ -408,7 +411,7 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
     return qobject_cast<DescribeImagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the streaming sessions for the specified stack and fleet. If a user ID is provided, only the streaming
  * sessions for only that user are returned. If an authentication type is not provided, the default is to authenticate
  * users using a streaming
@@ -424,7 +427,7 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
     return qobject_cast<DescribeSessionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified stacks or all stacks in the
  *
  * @param  request Request to send to Amazon AppStream.
@@ -438,7 +441,7 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
     return qobject_cast<DescribeStacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the specified fleet from the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -452,7 +455,7 @@ DisassociateFleetResponse * AppStreamClient::disassociateFleet(const Disassociat
     return qobject_cast<DisassociateFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the specified streaming
  *
  * @param  request Request to send to Amazon AppStream.
@@ -466,7 +469,7 @@ ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionReques
     return qobject_cast<ExpireSessionResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the fleets associated with the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -480,7 +483,7 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
     return qobject_cast<ListAssociatedFleetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the stacks associated with the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -494,7 +497,7 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
     return qobject_cast<ListAssociatedStacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags for the specified AppStream 2.0 resource. You can tag AppStream 2.0 image builders, images, fleets, and
  *
  * stacks>
@@ -514,7 +517,7 @@ ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTag
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -528,7 +531,7 @@ StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &reques
     return qobject_cast<StartFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the specified image
  *
  * @param  request Request to send to Amazon AppStream.
@@ -542,7 +545,7 @@ StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageB
     return qobject_cast<StartImageBuilderResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -556,7 +559,7 @@ StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
     return qobject_cast<StopFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the specified image
  *
  * @param  request Request to send to Amazon AppStream.
@@ -570,7 +573,7 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
     return qobject_cast<StopImageBuilderResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified AppStream 2.0 resource. You can tag AppStream 2.0 image builders,
  * images, fleets, and
  *
@@ -601,7 +604,7 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the specified tags from the specified AppStream 2.0
  *
  * resource>
@@ -625,7 +628,7 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified directory
  *
  * @param  request Request to send to Amazon AppStream.
@@ -639,7 +642,7 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
     return qobject_cast<UpdateDirectoryConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * fleet>
@@ -659,7 +662,7 @@ UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &req
     return qobject_cast<UpdateFleetResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified
  *
  * @param  request Request to send to Amazon AppStream.
@@ -673,7 +676,7 @@ UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &req
     return qobject_cast<UpdateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AppStreamClientPrivate
@@ -681,7 +684,7 @@ UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &req
  * @brief  Private implementation for AppStreamClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppStreamClientPrivate object.

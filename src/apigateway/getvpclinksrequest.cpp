@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetVpcLinksRequest
+/*!
+ * \class QtAws::APIGateway::GetVpcLinksRequest
  *
- * @brief  Implements APIGateway GetVpcLinks requests.
+ * \brief The GetVpcLinksRequest class encapsulates APIGateway GetVpcLinks requests.
  *
- * @see    APIGatewayClient::getVpcLinks
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getVpcLinks
  */
 
-/**
+/*!
  * @brief  Constructs a new GetVpcLinksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetVpcLinksRequest::GetVpcLinksRequest(const GetVpcLinksRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetVpcLinksRequest object.
  */
 GetVpcLinksRequest::GetVpcLinksRequest()
@@ -53,13 +61,16 @@ GetVpcLinksRequest::GetVpcLinksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetVpcLinksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetVpcLinksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinksRequest::response(QNetworkReply * 
     return new GetVpcLinksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetVpcLinksRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinksRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetVpcLinksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetVpcLinksRequestPrivate object.
@@ -97,7 +108,7 @@ GetVpcLinksRequestPrivate::GetVpcLinksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetVpcLinksRequestPrivate object, copying another.

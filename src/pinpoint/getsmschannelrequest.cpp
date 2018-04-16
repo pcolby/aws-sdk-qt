@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSmsChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetSmsChannelRequest
  *
- * @brief  Implements Pinpoint GetSmsChannel requests.
+ * \brief The GetSmsChannelRequest class encapsulates Pinpoint GetSmsChannel requests.
  *
- * @see    PinpointClient::getSmsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSmsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSmsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetSmsChannelRequest::GetSmsChannelRequest(const GetSmsChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSmsChannelRequest object.
  */
 GetSmsChannelRequest::GetSmsChannelRequest()
@@ -53,13 +56,16 @@ GetSmsChannelRequest::GetSmsChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSmsChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSmsChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply 
     return new GetSmsChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSmsChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply 
  * @brief  Private implementation for GetSmsChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSmsChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSmsChannelRequestPrivate object, copying another.

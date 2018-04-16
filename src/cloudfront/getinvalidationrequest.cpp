@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetInvalidationRequest
+/*!
+ * \class QtAws::CloudFront::GetInvalidationRequest
  *
- * @brief  Implements CloudFront GetInvalidation requests.
+ * \brief The GetInvalidationRequest class encapsulates CloudFront GetInvalidation requests.
  *
- * @see    CloudFrontClient::getInvalidation
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getInvalidation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInvalidationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetInvalidationRequest::GetInvalidationRequest(const GetInvalidationRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetInvalidationRequest object.
  */
 GetInvalidationRequest::GetInvalidationRequest()
@@ -53,13 +61,16 @@ GetInvalidationRequest::GetInvalidationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetInvalidationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetInvalidationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetInvalidationRequest::response(QNetworkRepl
     return new GetInvalidationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetInvalidationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetInvalidationRequest::response(QNetworkRepl
  * @brief  Private implementation for GetInvalidationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInvalidationRequestPrivate object.
@@ -97,7 +108,7 @@ GetInvalidationRequestPrivate::GetInvalidationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInvalidationRequestPrivate object, copying another.

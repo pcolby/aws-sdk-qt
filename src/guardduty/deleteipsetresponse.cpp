@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteIPSetResponse
+/*!
+ * \class QtAws::GuardDuty::DeleteIPSetResponse
  *
- * @brief  Handles GuardDuty DeleteIPSet responses.
+ * \brief The DeleteIPSetResponse class encapsulates GuardDuty DeleteIPSet responses.
  *
- * @see    GuardDutyClient::deleteIPSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIPSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteIPSetRequest * DeleteIPSetResponse::request() const
     return static_cast<const DeleteIPSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DeleteIPSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteIPSetResponsePrivate
+ * \class DeleteIPSetResponsePrivate
  *
- * @brief  Private implementation for DeleteIPSetResponse.
+ * \brief Private implementation for DeleteIPSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIPSetResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DeleteIPSetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeEventsResponse
+/*!
+ * \class QtAws::DAX::DescribeEventsResponse
  *
- * @brief  Handles DAX DescribeEvents responses.
+ * \brief The DescribeEventsResponse class encapsulates DAX DescribeEvents responses.
  *
- * @see    DAXClient::describeEvents
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
     return static_cast<const DescribeEventsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DescribeEvents response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEventsResponsePrivate
+ * \class DescribeEventsResponsePrivate
  *
- * @brief  Private implementation for DescribeEventsResponse.
+ * \brief Private implementation for DescribeEventsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DescribeEventsResponse element.
  *
  * @param  xml  XML stream to parse.

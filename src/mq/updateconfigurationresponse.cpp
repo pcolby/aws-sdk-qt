@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  UpdateConfigurationResponse
+/*!
+ * \class QtAws::MQ::UpdateConfigurationResponse
  *
- * @brief  Handles MQ UpdateConfiguration responses.
+ * \brief The UpdateConfigurationResponse class encapsulates MQ UpdateConfiguration responses.
  *
- * @see    MQClient::updateConfiguration
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::updateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const UpdateConfigurationRequest * UpdateConfigurationResponse::request() const
     return static_cast<const UpdateConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ UpdateConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void UpdateConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateConfigurationResponsePrivate
+ * \class UpdateConfigurationResponsePrivate
  *
- * @brief  Private implementation for UpdateConfigurationResponse.
+ * \brief Private implementation for UpdateConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConfigurationResponsePrivate object.
@@ -91,7 +96,7 @@ UpdateConfigurationResponsePrivate::UpdateConfigurationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ UpdateConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

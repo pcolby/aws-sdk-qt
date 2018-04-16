@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetReceiptRulePositionResponse
+/*!
+ * \class QtAws::SES::SetReceiptRulePositionResponse
  *
- * @brief  Handles SES SetReceiptRulePosition responses.
+ * \brief The SetReceiptRulePositionResponse class encapsulates SES SetReceiptRulePosition responses.
  *
- * @see    SESClient::setReceiptRulePosition
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setReceiptRulePosition
  */
 
-/**
+/*!
  * @brief  Constructs a new SetReceiptRulePositionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetReceiptRulePositionRequest * SetReceiptRulePositionResponse::request() 
     return static_cast<const SetReceiptRulePositionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SetReceiptRulePosition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetReceiptRulePositionResponsePrivate
+ * \class SetReceiptRulePositionResponsePrivate
  *
- * @brief  Private implementation for SetReceiptRulePositionResponse.
+ * \brief Private implementation for SetReceiptRulePositionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetReceiptRulePositionResponsePrivate object.
@@ -91,7 +105,7 @@ SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SetReceiptRulePositionResponse element.
  *
  * @param  xml  XML stream to parse.

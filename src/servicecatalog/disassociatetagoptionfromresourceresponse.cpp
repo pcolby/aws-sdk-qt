@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DisassociateTagOptionFromResourceResponse
+/*!
+ * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceResponse
  *
- * @brief  Handles ServiceCatalog DisassociateTagOptionFromResource responses.
+ * \brief The DisassociateTagOptionFromResourceResponse class encapsulates ServiceCatalog DisassociateTagOptionFromResource responses.
  *
- * @see    ServiceCatalogClient::disassociateTagOptionFromResource
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::disassociateTagOptionFromResource
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateTagOptionFromResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DisassociateTagOptionFromResourceRequest * DisassociateTagOptionFromResour
     return static_cast<const DisassociateTagOptionFromResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DisassociateTagOptionFromResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DisassociateTagOptionFromResourceResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateTagOptionFromResourceResponsePrivate
+ * \class DisassociateTagOptionFromResourceResponsePrivate
  *
- * @brief  Private implementation for DisassociateTagOptionFromResourceResponse.
+ * \brief Private implementation for DisassociateTagOptionFromResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateTagOptionFromResourceResponsePrivate object.
@@ -91,7 +100,7 @@ DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResou
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DisassociateTagOptionFromResourceResponse element.
  *
  * @param  xml  XML stream to parse.

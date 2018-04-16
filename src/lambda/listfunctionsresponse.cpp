@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListFunctionsResponse
+/*!
+ * \class QtAws::Lambda::ListFunctionsResponse
  *
- * @brief  Handles Lambda ListFunctions responses.
+ * \brief The ListFunctionsResponse class encapsulates Lambda ListFunctions responses.
  *
- * @see    LambdaClient::listFunctions
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listFunctions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListFunctionsRequest * ListFunctionsResponse::request() const
     return static_cast<const ListFunctionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda ListFunctions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListFunctionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListFunctionsResponsePrivate
+ * \class ListFunctionsResponsePrivate
  *
- * @brief  Private implementation for ListFunctionsResponse.
+ * \brief Private implementation for ListFunctionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionsResponsePrivate object.
@@ -91,7 +105,7 @@ ListFunctionsResponsePrivate::ListFunctionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda ListFunctionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DeleteSuggesterRequest
+/*!
+ * \class QtAws::CloudSearch::DeleteSuggesterRequest
  *
- * @brief  Implements CloudSearch DeleteSuggester requests.
+ * \brief The DeleteSuggesterRequest class encapsulates CloudSearch DeleteSuggester requests.
  *
- * @see    CloudSearchClient::deleteSuggester
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::deleteSuggester
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSuggesterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteSuggesterRequest::DeleteSuggesterRequest(const DeleteSuggesterRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSuggesterRequest object.
  */
 DeleteSuggesterRequest::DeleteSuggesterRequest()
@@ -53,13 +67,16 @@ DeleteSuggesterRequest::DeleteSuggesterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSuggesterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSuggesterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkRepl
     return new DeleteSuggesterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSuggesterRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteSuggesterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSuggesterRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSuggesterRequestPrivate object, copying another.

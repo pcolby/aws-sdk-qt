@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  ListAttacksResponse
+/*!
+ * \class QtAws::Shield::ListAttacksResponse
  *
- * @brief  Handles Shield ListAttacks responses.
+ * \brief The ListAttacksResponse class encapsulates Shield ListAttacks responses.
  *
- * @see    ShieldClient::listAttacks
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::listAttacks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAttacksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListAttacksRequest * ListAttacksResponse::request() const
     return static_cast<const ListAttacksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Shield ListAttacks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListAttacksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAttacksResponsePrivate
+ * \class ListAttacksResponsePrivate
  *
- * @brief  Private implementation for ListAttacksResponse.
+ * \brief Private implementation for ListAttacksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttacksResponsePrivate object.
@@ -91,7 +100,7 @@ ListAttacksResponsePrivate::ListAttacksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Shield ListAttacksResponse element.
  *
  * @param  xml  XML stream to parse.

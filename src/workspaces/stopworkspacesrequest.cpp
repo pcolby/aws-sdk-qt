@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  StopWorkspacesRequest
+/*!
+ * \class QtAws::WorkSpaces::StopWorkspacesRequest
  *
- * @brief  Implements WorkSpaces StopWorkspaces requests.
+ * \brief The StopWorkspacesRequest class encapsulates WorkSpaces StopWorkspaces requests.
  *
- * @see    WorkSpacesClient::stopWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::stopWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new StopWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopWorkspacesRequest::StopWorkspacesRequest(const StopWorkspacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopWorkspacesRequest object.
  */
 StopWorkspacesRequest::StopWorkspacesRequest()
@@ -53,13 +59,16 @@ StopWorkspacesRequest::StopWorkspacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopWorkspacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopWorkspacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopWorkspacesRequest::response(QNetworkReply
     return new StopWorkspacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopWorkspacesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopWorkspacesRequest::response(QNetworkReply
  * @brief  Private implementation for StopWorkspacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopWorkspacesRequestPrivate object.
@@ -97,7 +106,7 @@ StopWorkspacesRequestPrivate::StopWorkspacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopWorkspacesRequestPrivate object, copying another.

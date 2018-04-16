@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyIdentityIdFormatRequest
+/*!
+ * \class QtAws::EC2::ModifyIdentityIdFormatRequest
  *
- * @brief  Implements EC2 ModifyIdentityIdFormat requests.
+ * \brief The ModifyIdentityIdFormatRequest class encapsulates EC2 ModifyIdentityIdFormat requests.
  *
- * @see    EC2Client::modifyIdentityIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyIdentityIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyIdentityIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyIdentityIdFormatRequest::ModifyIdentityIdFormatRequest(const ModifyIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyIdentityIdFormatRequest object.
  */
 ModifyIdentityIdFormatRequest::ModifyIdentityIdFormatRequest()
@@ -53,13 +60,16 @@ ModifyIdentityIdFormatRequest::ModifyIdentityIdFormatRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyIdentityIdFormatRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyIdentityIdFormatResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyIdentityIdFormatRequest::response(QNetw
     return new ModifyIdentityIdFormatResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyIdentityIdFormatRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyIdentityIdFormatRequest::response(QNetw
  * @brief  Private implementation for ModifyIdentityIdFormatRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyIdentityIdFormatRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyIdentityIdFormatRequestPrivate::ModifyIdentityIdFormatRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyIdentityIdFormatRequestPrivate object, copying another.

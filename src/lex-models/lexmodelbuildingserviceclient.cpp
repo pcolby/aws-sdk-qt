@@ -97,27 +97,35 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::LexModelBuildingService
+ * \brief The QtAws::LexModelBuildingService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  LexModelBuildingServiceClient
+/*!
+ * \class QtAws::LexModelBuildingService::LexModelBuildingServiceClient
  *
- * @brief  Client for Amazon Lex Model Building Service
+ * \brief The LexModelBuildingServiceClient class provides access the Amazon Lex Model Building Service service.
  *
- * <fullname>Amazon Lex Build-Time Actions</fullname>
+ * \ingroup LexModelBuildingService
  *
- * Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
- * and delete conversational bots for new and existing client applications.
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
  */
 
-/**
- * @brief  Constructs a new LexModelBuildingServiceClient object.
+/*!
+ * \brief Constructs a LexModelBuildingServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -136,21 +144,16 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     d->serviceName = QStringLiteral("lex");
 }
 
-/**
- * @brief  Constructs a new LexModelBuildingServiceClient object.
+/*!
+ * \overload LexModelBuildingServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     const QUrl &endpoint,
@@ -169,7 +172,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     d->serviceName = QStringLiteral("lex");
 }
 
-/**
+/*!
  * Creates a new version of the bot based on the <code>$LATEST</code> version. If the <code>$LATEST</code> version of this
  * resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last
  * created
@@ -199,7 +202,7 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
     return qobject_cast<CreateBotVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new version of an intent based on the <code>$LATEST</code> version of the intent. If the <code>$LATEST</code>
  * version of this intent hasn't changed since you last updated it, Amazon Lex doesn't create a new version. It returns the
  * last version you
@@ -229,7 +232,7 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
     return qobject_cast<CreateIntentVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new version of a slot type based on the <code>$LATEST</code> version of the specified slot type. If the
  * <code>$LATEST</code> version of this resource has not changed since the last version that you created, Amazon Lex
  * doesn't create a new version. It returns the last version that you created.
@@ -259,7 +262,7 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
     return qobject_cast<CreateSlotTypeVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes all versions of the bot, including the <code>$LATEST</code> version. To delete a specific version of the bot,
  * use the <a>DeleteBotVersion</a>
  *
@@ -285,7 +288,7 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
     return qobject_cast<DeleteBotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an alias for the specified bot.
  *
  * </p
@@ -307,7 +310,7 @@ DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const Del
     return qobject_cast<DeleteBotAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the association between an Amazon Lex bot and a messaging
  *
  * platform>
@@ -325,7 +328,7 @@ DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotCh
     return qobject_cast<DeleteBotChannelAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific version of a bot. To delete all versions of a bot, use the <a>DeleteBot</a> operation.
  *
  * </p
@@ -343,7 +346,7 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
     return qobject_cast<DeleteBotVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes all versions of the intent, including the <code>$LATEST</code> version. To delete a specific version of the
  * intent, use the <a>DeleteIntentVersion</a>
  *
@@ -374,7 +377,7 @@ DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteI
     return qobject_cast<DeleteIntentResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific version of an intent. To delete all versions of a intent, use the <a>DeleteIntent</a> operation.
  *
  * </p
@@ -392,7 +395,7 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
     return qobject_cast<DeleteIntentVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes all versions of the slot type, including the <code>$LATEST</code> version. To delete a specific version of the
  * slot type, use the <a>DeleteSlotTypeVersion</a>
  *
@@ -423,7 +426,7 @@ DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const Del
     return qobject_cast<DeleteSlotTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specific version of a slot type. To delete all versions of a slot type, use the <a>DeleteSlotType</a>
  * operation.
  *
@@ -442,7 +445,7 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
     return qobject_cast<DeleteSlotTypeVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes stored
  *
  * utterances>
@@ -470,7 +473,7 @@ DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const
     return qobject_cast<DeleteUtterancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias.
  *
  * </p
@@ -488,7 +491,7 @@ GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &requ
     return qobject_cast<GetBotResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about an Amazon Lex bot alias. For more information about aliases, see
  *
  * <a>versioning-aliases</a>>
@@ -506,7 +509,7 @@ GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAli
     return qobject_cast<GetBotAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of aliases for a specified Amazon Lex
  *
  * bot>
@@ -524,7 +527,7 @@ GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBo
     return qobject_cast<GetBotAliasesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the association between an Amazon Lex bot and a messaging
  *
  * platform>
@@ -542,7 +545,7 @@ GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelA
     return qobject_cast<GetBotChannelAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all of the channels associated with the specified bot.
  *
  * </p
@@ -561,7 +564,7 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
     return qobject_cast<GetBotChannelAssociationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about all of the versions of a
  *
  * bot>
@@ -590,7 +593,7 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
     return qobject_cast<GetBotVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns bot information as follows:
  *
  * </p <ul> <li>
@@ -618,7 +621,7 @@ GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &r
     return qobject_cast<GetBotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a built-in
  *
  * intent>
@@ -636,7 +639,7 @@ GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const
     return qobject_cast<GetBuiltinIntentResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of built-in intents that meet the specified
  *
  * criteria>
@@ -654,7 +657,7 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
     return qobject_cast<GetBuiltinIntentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of built-in slot types that meet the specified
  *
  * criteria>
@@ -678,7 +681,7 @@ GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes
     return qobject_cast<GetBuiltinSlotTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Exports the contents of a Amazon Lex resource in a specified format.
  *
  * @param  request Request to send to Amazon Lex Model Building Service.
@@ -692,7 +695,7 @@ GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequ
     return qobject_cast<GetExportResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about an import job started with the <code>StartImport</code>
  *
  * @param  request Request to send to Amazon Lex Model Building Service.
@@ -706,7 +709,7 @@ GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequ
     return qobject_cast<GetImportResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about an intent. In addition to the intent name, you must specify the intent version.
  *
  * </p
@@ -724,7 +727,7 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
     return qobject_cast<GetIntentResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about all of the versions of an
  *
  * intent>
@@ -753,7 +756,7 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
     return qobject_cast<GetIntentVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns intent information as follows:
  *
  * </p <ul> <li>
@@ -781,7 +784,7 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
     return qobject_cast<GetIntentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a specific version of a slot type. In addition to specifying the slot type name, you must
  * specify the slot type
  *
@@ -800,7 +803,7 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
     return qobject_cast<GetSlotTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about all versions of a slot
  *
  * type>
@@ -829,7 +832,7 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
     return qobject_cast<GetSlotTypeVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns slot type information as follows:
  *
  * </p <ul> <li>
@@ -857,7 +860,7 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
     return qobject_cast<GetSlotTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Use the <code>GetUtterancesView</code> operation to get information about the utterances that your users have made to
  * your bot. You can use this list to tune the utterances that your bot responds
  *
@@ -893,7 +896,7 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
     return qobject_cast<GetUtterancesViewResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon Lex conversational bot or replaces an existing bot. When you create or update a bot you are only
  * required to specify a name, a locale, and whether the bot is directed toward children under age 13. You can use this to
  * add intents later, or to remove intents from an existing bot. When you create a bot with the minimum information, the
@@ -922,7 +925,7 @@ PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &requ
     return qobject_cast<PutBotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an alias for the specified version of the bot or replaces an alias for the specified bot. To change the version
  * of the bot that the alias points to, replace the alias. For more information about aliases, see
  *
@@ -941,7 +944,7 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
     return qobject_cast<PutBotAliasResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an intent or replaces an existing
  *
  * intent>
@@ -1017,7 +1020,7 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
     return qobject_cast<PutIntentResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a custom slot type or replaces an existing custom slot
  *
  * type>
@@ -1048,7 +1051,7 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
     return qobject_cast<PutSlotTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a job to import a resource to Amazon
  *
  * @param  request Request to send to Amazon Lex Model Building Service.
@@ -1062,7 +1065,7 @@ StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImpo
     return qobject_cast<StartImportResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LexModelBuildingServiceClientPrivate
@@ -1070,7 +1073,7 @@ StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImpo
  * @brief  Private implementation for LexModelBuildingServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexModelBuildingServiceClientPrivate object.

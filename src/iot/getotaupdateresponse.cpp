@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetOTAUpdateResponse
+/*!
+ * \class QtAws::IoT::GetOTAUpdateResponse
  *
- * @brief  Handles IoT GetOTAUpdate responses.
+ * \brief The GetOTAUpdateResponse class encapsulates IoT GetOTAUpdate responses.
  *
- * @see    IoTClient::getOTAUpdate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getOTAUpdate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOTAUpdateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetOTAUpdateRequest * GetOTAUpdateResponse::request() const
     return static_cast<const GetOTAUpdateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT GetOTAUpdate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetOTAUpdateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetOTAUpdateResponsePrivate
+ * \class GetOTAUpdateResponsePrivate
  *
- * @brief  Private implementation for GetOTAUpdateResponse.
+ * \brief Private implementation for GetOTAUpdateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOTAUpdateResponsePrivate object.
@@ -91,7 +105,7 @@ GetOTAUpdateResponsePrivate::GetOTAUpdateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT GetOTAUpdateResponse element.
  *
  * @param  xml  XML stream to parse.

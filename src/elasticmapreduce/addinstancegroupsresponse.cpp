@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddInstanceGroupsResponse
+/*!
+ * \class QtAws::EMR::AddInstanceGroupsResponse
  *
- * @brief  Handles EMR AddInstanceGroups responses.
+ * \brief The AddInstanceGroupsResponse class encapsulates EMR AddInstanceGroups responses.
  *
- * @see    EMRClient::addInstanceGroups
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addInstanceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new AddInstanceGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
     return static_cast<const AddInstanceGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR AddInstanceGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddInstanceGroupsResponsePrivate
+ * \class AddInstanceGroupsResponsePrivate
  *
- * @brief  Private implementation for AddInstanceGroupsResponse.
+ * \brief Private implementation for AddInstanceGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddInstanceGroupsResponsePrivate object.
@@ -91,7 +97,7 @@ AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR AddInstanceGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

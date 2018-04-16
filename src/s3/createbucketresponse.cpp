@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CreateBucketResponse
+/*!
+ * \class QtAws::S3::CreateBucketResponse
  *
- * @brief  Handles S3 CreateBucket responses.
+ * \brief The CreateBucketResponse class encapsulates S3 CreateBucket responses.
  *
- * @see    S3Client::createBucket
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::createBucket
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBucketResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateBucketRequest * CreateBucketResponse::request() const
     return static_cast<const CreateBucketRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 CreateBucket response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateBucketResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateBucketResponsePrivate
+ * \class CreateBucketResponsePrivate
  *
- * @brief  Private implementation for CreateBucketResponse.
+ * \brief Private implementation for CreateBucketResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBucketResponsePrivate object.
@@ -91,7 +94,7 @@ CreateBucketResponsePrivate::CreateBucketResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 CreateBucketResponse element.
  *
  * @param  xml  XML stream to parse.

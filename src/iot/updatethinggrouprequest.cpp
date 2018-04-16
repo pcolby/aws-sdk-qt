@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateThingGroupRequest
+/*!
+ * \class QtAws::IoT::UpdateThingGroupRequest
  *
- * @brief  Implements IoT UpdateThingGroup requests.
+ * \brief The UpdateThingGroupRequest class encapsulates IoT UpdateThingGroup requests.
  *
- * @see    IoTClient::updateThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateThingGroupRequest::UpdateThingGroupRequest(const UpdateThingGroupRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateThingGroupRequest object.
  */
 UpdateThingGroupRequest::UpdateThingGroupRequest()
@@ -53,13 +67,16 @@ UpdateThingGroupRequest::UpdateThingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateThingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateThingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingGroupRequest::response(QNetworkRep
     return new UpdateThingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateThingGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateThingGroupRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateThingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingGroupRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateThingGroupRequestPrivate::UpdateThingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateThingGroupRequestPrivate object, copying another.

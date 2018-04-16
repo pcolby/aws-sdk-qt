@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AssociateSoftwareTokenRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenRequest
  *
- * @brief  Implements CognitoIdentityProvider AssociateSoftwareToken requests.
+ * \brief The AssociateSoftwareTokenRequest class encapsulates CognitoIdentityProvider AssociateSoftwareToken requests.
  *
- * @see    CognitoIdentityProviderClient::associateSoftwareToken
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::associateSoftwareToken
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateSoftwareTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest(const AssociateSoft
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateSoftwareTokenRequest object.
  */
 AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest()
@@ -53,13 +66,16 @@ AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateSoftwareTokenRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateSoftwareTokenResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetw
     return new AssociateSoftwareTokenResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateSoftwareTokenRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetw
  * @brief  Private implementation for AssociateSoftwareTokenRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateSoftwareTokenRequestPrivate object.
@@ -97,7 +113,7 @@ AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateSoftwareTokenRequestPrivate object, copying another.

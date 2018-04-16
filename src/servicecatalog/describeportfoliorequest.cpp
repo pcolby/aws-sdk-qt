@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribePortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribePortfolioRequest
  *
- * @brief  Implements ServiceCatalog DescribePortfolio requests.
+ * \brief The DescribePortfolioRequest class encapsulates ServiceCatalog DescribePortfolio requests.
  *
- * @see    ServiceCatalogClient::describePortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describePortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribePortfolioRequest::DescribePortfolioRequest(const DescribePortfolioReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribePortfolioRequest object.
  */
 DescribePortfolioRequest::DescribePortfolioRequest()
@@ -53,13 +62,16 @@ DescribePortfolioRequest::DescribePortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribePortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribePortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkRe
     return new DescribePortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribePortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkRe
  * @brief  Private implementation for DescribePortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePortfolioRequestPrivate object, copying another.

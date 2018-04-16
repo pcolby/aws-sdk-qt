@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  DescribeStackEventsRequest
+/*!
+ * \class QtAws::CloudFormation::DescribeStackEventsRequest
  *
- * @brief  Implements CloudFormation DescribeStackEvents requests.
+ * \brief The DescribeStackEventsRequest class encapsulates CloudFormation DescribeStackEvents requests.
  *
- * @see    CloudFormationClient::describeStackEvents
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::describeStackEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStackEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ DescribeStackEventsRequest::DescribeStackEventsRequest(const DescribeStackEvents
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStackEventsRequest object.
  */
 DescribeStackEventsRequest::DescribeStackEventsRequest()
@@ -53,13 +78,16 @@ DescribeStackEventsRequest::DescribeStackEventsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStackEventsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStackEventsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStackEventsRequest::response(QNetwork
     return new DescribeStackEventsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStackEventsRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStackEventsRequest::response(QNetwork
  * @brief  Private implementation for DescribeStackEventsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStackEventsRequestPrivate object.
@@ -97,7 +125,7 @@ DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStackEventsRequestPrivate object, copying another.

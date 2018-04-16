@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  UpdateDetectorRequest
+/*!
+ * \class QtAws::GuardDuty::UpdateDetectorRequest
  *
- * @brief  Implements GuardDuty UpdateDetector requests.
+ * \brief The UpdateDetectorRequest class encapsulates GuardDuty UpdateDetector requests.
  *
- * @see    GuardDutyClient::updateDetector
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::updateDetector
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDetectorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateDetectorRequest::UpdateDetectorRequest(const UpdateDetectorRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDetectorRequest object.
  */
 UpdateDetectorRequest::UpdateDetectorRequest()
@@ -53,13 +56,16 @@ UpdateDetectorRequest::UpdateDetectorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDetectorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDetectorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply
     return new UpdateDetectorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDetectorRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateDetectorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDetectorRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDetectorRequestPrivate object, copying another.

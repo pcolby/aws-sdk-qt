@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeConversionTasksRequest
+/*!
+ * \class QtAws::EC2::DescribeConversionTasksRequest
  *
- * @brief  Implements EC2 DescribeConversionTasks requests.
+ * \brief The DescribeConversionTasksRequest class encapsulates EC2 DescribeConversionTasks requests.
  *
- * @see    EC2Client::describeConversionTasks
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeConversionTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConversionTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeConversionTasksRequest::DescribeConversionTasksRequest(const DescribeCon
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeConversionTasksRequest object.
  */
 DescribeConversionTasksRequest::DescribeConversionTasksRequest()
@@ -53,13 +60,16 @@ DescribeConversionTasksRequest::DescribeConversionTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeConversionTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeConversionTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNet
     return new DescribeConversionTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeConversionTasksRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNet
  * @brief  Private implementation for DescribeConversionTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConversionTasksRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConversionTasksRequestPrivate object, copying another.

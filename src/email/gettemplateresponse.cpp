@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetTemplateResponse
+/*!
+ * \class QtAws::SES::GetTemplateResponse
  *
- * @brief  Handles SES GetTemplate responses.
+ * \brief The GetTemplateResponse class encapsulates SES GetTemplate responses.
  *
- * @see    SESClient::getTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetTemplateRequest * GetTemplateResponse::request() const
     return static_cast<const GetTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES GetTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTemplateResponsePrivate
+ * \class GetTemplateResponsePrivate
  *
- * @brief  Private implementation for GetTemplateResponse.
+ * \brief Private implementation for GetTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTemplateResponsePrivate object.
@@ -91,7 +105,7 @@ GetTemplateResponsePrivate::GetTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES GetTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

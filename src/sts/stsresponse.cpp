@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace STS {
 
-/**
- * @class  STSResponse
+/*!
+ * \class QtAws::STS::STSResponse
  *
- * @brief  Handles STS STS responses.
+ * \brief The STSResponse class is the base class for all STS responses.
  *
- * @see    STSClient::sTS
+ * \ingroup STS
  */
 
-/**
+/*!
  * @brief  Constructs a new STSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ STSResponse::STSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new STSResponse object.
@@ -63,7 +63,7 @@ STSResponse::STSResponse(STSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void STSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  STSResponsePrivate
@@ -92,7 +92,7 @@ void STSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for STSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new STSResponsePrivate object.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  UpdateTrafficPolicyCommentResponse
+/*!
+ * \class QtAws::Route53::UpdateTrafficPolicyCommentResponse
  *
- * @brief  Handles Route53 UpdateTrafficPolicyComment responses.
+ * \brief The UpdateTrafficPolicyCommentResponse class encapsulates Route53 UpdateTrafficPolicyComment responses.
  *
- * @see    Route53Client::updateTrafficPolicyComment
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::updateTrafficPolicyComment
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTrafficPolicyCommentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateTrafficPolicyCommentRequest * UpdateTrafficPolicyCommentResponse::re
     return static_cast<const UpdateTrafficPolicyCommentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 UpdateTrafficPolicyComment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateTrafficPolicyCommentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTrafficPolicyCommentResponsePrivate
+ * \class UpdateTrafficPolicyCommentResponsePrivate
  *
- * @brief  Private implementation for UpdateTrafficPolicyCommentResponse.
+ * \brief Private implementation for UpdateTrafficPolicyCommentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTrafficPolicyCommentResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateTrafficPolicyCommentResponsePrivate::UpdateTrafficPolicyCommentResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 UpdateTrafficPolicyCommentResponse element.
  *
  * @param  xml  XML stream to parse.

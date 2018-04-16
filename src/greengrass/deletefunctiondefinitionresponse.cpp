@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteFunctionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::DeleteFunctionDefinitionResponse
  *
- * @brief  Handles Greengrass DeleteFunctionDefinition responses.
+ * \brief The DeleteFunctionDefinitionResponse class encapsulates Greengrass DeleteFunctionDefinition responses.
  *
- * @see    GreengrassClient::deleteFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteFunctionDefinitionRequest * DeleteFunctionDefinitionResponse::reques
     return static_cast<const DeleteFunctionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DeleteFunctionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteFunctionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFunctionDefinitionResponsePrivate
+ * \class DeleteFunctionDefinitionResponsePrivate
  *
- * @brief  Private implementation for DeleteFunctionDefinitionResponse.
+ * \brief Private implementation for DeleteFunctionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteFunctionDefinitionResponsePrivate::DeleteFunctionDefinitionResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DeleteFunctionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -31,13 +31,28 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsAbstractClient
- *
- * @brief  Interface class for providing access to individual AWS services.
+/*!
+ \namespace QtAws
+
+ Top one
  */
 
-/**
+/*!
+ \namespace QtAws::Core
+\brief Encapsulates stuff..
+ Stuff and things.
+\ingroup Core
+ */
+
+/*!
+ * \class QtAws::Core::AwsAbstractClient
+ *
+ * \brief  Interface class for providing access to individual AWS services.
+ * some more
+ * \ingroup Core
+ */
+
+/*!
  * @brief  Constructs a new AwsAbstractClient object.
  *
  * @param  parent This object's parent.
@@ -48,7 +63,7 @@ AwsAbstractClient::AwsAbstractClient(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractClient object.
@@ -66,7 +81,7 @@ AwsAbstractClient::AwsAbstractClient(AwsAbstractClientPrivate * const d,
 
 }
 
-/**
+/*!
  * @brief  AwsAbstractClient destructor.
  */
 AwsAbstractClient::~AwsAbstractClient()
@@ -76,7 +91,7 @@ AwsAbstractClient::~AwsAbstractClient()
     delete d_ptr;
 }
 
-/**
+/*!
  * @brief  Get the serivce API version this client implementts.
  *
  * @return An Amazon service API version, such as "2012-11-05".
@@ -91,7 +106,7 @@ QString AwsAbstractClient::apiVersion() const
     return d->endpointPrefix;
 }
 
-/**
+/*!
  * @brief  Get the endpoint associated with this AWS client.
  *
  * If a valid QUrl has been set (usually via setEndpoint), then this base
@@ -115,7 +130,7 @@ QUrl AwsAbstractClient::endpoint() const
         AwsEndpoint::getEndpoint(AwsRegion::name(region()), serviceName());
 }
 
-/**
+/*!
  * @brief  Get the endpoint prefix associated with this AWS client.
  *
  * This is the standard endpoint prefix associated with this AWS service, is not
@@ -133,7 +148,7 @@ QString AwsAbstractClient::endpointPrefix() const
     return d->endpointPrefix;
 }
 
-/**
+/*!
  * @brief Get the network access manager for this AWS service object.
  *
  * @return The QNetworkAccessManager that handles requests for this object.
@@ -144,7 +159,7 @@ QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
     return d->networkAccessManager;
 }
 
-/**
+/*!
  * @brief  Get the AWS region associated with this client.
  *
  * @return The AWS region for this client, or AwsRegion::InvalidRegion if none
@@ -159,7 +174,7 @@ AwsRegion::Region AwsAbstractClient::region() const
     return d->region;
 }
 
-/**
+/*!
  * @brief  Send an AWS request.
  *
  * This base implementation simply uses the \a request's \c send method,
@@ -198,7 +213,7 @@ AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &request)
                         *d->signature, *d->credentials);
 }
 
-/**
+/*!
  * @brief  Get the full name of the Amazon service this client accesses.
  *
  * @return An Amazon full service name, such as "Amazon Simple Queue Service".
@@ -210,7 +225,7 @@ QString AwsAbstractClient::serviceFullName() const
     return d->serviceFullName;
 }
 
-/**
+/*!
  * @brief  Get the name of the Amazon service this client accesses.
  *
  * This is name is suitable for generating V4 signatures.
@@ -224,7 +239,7 @@ QString AwsAbstractClient::serviceName() const
     return d->serviceName;
 }
 
-/**
+/*!
  * @brief  Set the credentials object for this client to use for signing requests.
  *
  * This object will not take ownership of the supplied \a credentials pointer.
@@ -242,7 +257,7 @@ void AwsAbstractClient::setCredentials(AwsAbstractCredentials * const credential
     d->credentials = credentials;
 }
 
-/**
+/*!
  * @brief  Set the AWS endpoint to use with this client.
  *
  * Typically, it is simpler for the user to set this client's region instead
@@ -262,15 +277,15 @@ void AwsAbstractClient::setEndpoint(const QUrl &endpoint)
     d->endpoint = endpoint;
 }
 
-/**
- * @brief Set the network access manager for this AWS service object.
+/*!
+ * \brief Set the network access manager for this AWS service object.
  *
  * This object will not take ownership of the supplied \a manager pointer.
  * It is the caller's responsibility to ensure that the pointer remains valid
  * for the life of this object, or until setNetworkAccessManager is used to set
  * a new pointer.
  *
- * @param  manager  Network access manager for this AWS service object to use.
+ * \param  manager  Network access manager for this AWS service object to use.
  */
 void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const manager)
 {
@@ -290,7 +305,7 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
     d->networkAccessManager = manager;
 }
 
-/**
+/*!
  * @brief  Set the AWS region this client accesses.
  *
  * If an endpoint is not explicitly set (eg via setEndpoint), then the supplied
@@ -308,7 +323,7 @@ void AwsAbstractClient::setRegion(const AwsRegion::Region region)
     d->region = region;
 }
 
-/**
+/*!
  * @brief  Get the credentials object to be used for signing requests.
  *
  * @return An AWS credentials object.
@@ -319,7 +334,7 @@ AwsAbstractCredentials * AwsAbstractClient::credentials() const
     return d->credentials;
 }
 
-/**
+/*!
  * @brief  Get the signature object to be used for signing requests.
  *
  * @return An AWS signature object.
@@ -330,15 +345,15 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
     return d->signature;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsAbstractClientPrivate
+ * \class QtAws::Core::AwsAbstractClientPrivate
  *
  * @brief  Private implementation for AwsAbstractClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractClientPrivate object.
@@ -352,7 +367,7 @@ AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  AwsAbstractClientPrivate destructor.

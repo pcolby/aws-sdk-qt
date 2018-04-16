@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  EnableMetricsCollectionResponse
+/*!
+ * \class QtAws::AutoScaling::EnableMetricsCollectionResponse
  *
- * @brief  Handles AutoScaling EnableMetricsCollection responses.
+ * \brief The EnableMetricsCollectionResponse class encapsulates AutoScaling EnableMetricsCollection responses.
  *
- * @see    AutoScalingClient::enableMetricsCollection
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::enableMetricsCollection
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableMetricsCollectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const EnableMetricsCollectionRequest * EnableMetricsCollectionResponse::request(
     return static_cast<const EnableMetricsCollectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling EnableMetricsCollection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void EnableMetricsCollectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableMetricsCollectionResponsePrivate
+ * \class EnableMetricsCollectionResponsePrivate
  *
- * @brief  Private implementation for EnableMetricsCollectionResponse.
+ * \brief Private implementation for EnableMetricsCollectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableMetricsCollectionResponsePrivate object.
@@ -91,7 +99,7 @@ EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling EnableMetricsCollectionResponse element.
  *
  * @param  xml  XML stream to parse.

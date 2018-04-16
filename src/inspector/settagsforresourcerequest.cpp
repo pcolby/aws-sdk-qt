@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  SetTagsForResourceRequest
+/*!
+ * \class QtAws::Inspector::SetTagsForResourceRequest
  *
- * @brief  Implements Inspector SetTagsForResource requests.
+ * \brief The SetTagsForResourceRequest class encapsulates Inspector SetTagsForResource requests.
  *
- * @see    InspectorClient::setTagsForResource
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::setTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new SetTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SetTagsForResourceRequest::SetTagsForResourceRequest(const SetTagsForResourceReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetTagsForResourceRequest object.
  */
 SetTagsForResourceRequest::SetTagsForResourceRequest()
@@ -53,13 +61,16 @@ SetTagsForResourceRequest::SetTagsForResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetTagsForResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetTagsForResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkR
     return new SetTagsForResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetTagsForResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkR
  * @brief  Private implementation for SetTagsForResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTagsForResourceRequestPrivate object.
@@ -97,7 +108,7 @@ SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTagsForResourceRequestPrivate object, copying another.

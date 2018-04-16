@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeMountTargetsResponse
+/*!
+ * \class QtAws::EFS::DescribeMountTargetsResponse
  *
- * @brief  Handles EFS DescribeMountTargets responses.
+ * \brief The DescribeMountTargetsResponse class encapsulates EFS DescribeMountTargets responses.
  *
- * @see    EFSClient::describeMountTargets
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeMountTargets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMountTargetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeMountTargetsRequest * DescribeMountTargetsResponse::request() cons
     return static_cast<const DescribeMountTargetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DescribeMountTargets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeMountTargetsResponsePrivate
+ * \class DescribeMountTargetsResponsePrivate
  *
- * @brief  Private implementation for DescribeMountTargetsResponse.
+ * \brief Private implementation for DescribeMountTargetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMountTargetsResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DescribeMountTargetsResponse element.
  *
  * @param  xml  XML stream to parse.

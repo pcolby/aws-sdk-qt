@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteFlowLogsResponse
+/*!
+ * \class QtAws::EC2::DeleteFlowLogsResponse
  *
- * @brief  Handles EC2 DeleteFlowLogs responses.
+ * \brief The DeleteFlowLogsResponse class encapsulates EC2 DeleteFlowLogs responses.
  *
- * @see    EC2Client::deleteFlowLogs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteFlowLogs
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFlowLogsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteFlowLogsRequest * DeleteFlowLogsResponse::request() const
     return static_cast<const DeleteFlowLogsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteFlowLogs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteFlowLogsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFlowLogsResponsePrivate
+ * \class DeleteFlowLogsResponsePrivate
  *
- * @brief  Private implementation for DeleteFlowLogsResponse.
+ * \brief Private implementation for DeleteFlowLogsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFlowLogsResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteFlowLogsResponse element.
  *
  * @param  xml  XML stream to parse.

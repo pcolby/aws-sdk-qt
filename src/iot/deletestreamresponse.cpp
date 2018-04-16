@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteStreamResponse
+/*!
+ * \class QtAws::IoT::DeleteStreamResponse
  *
- * @brief  Handles IoT DeleteStream responses.
+ * \brief The DeleteStreamResponse class encapsulates IoT DeleteStream responses.
  *
- * @see    IoTClient::deleteStream
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteStreamRequest * DeleteStreamResponse::request() const
     return static_cast<const DeleteStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeleteStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteStreamResponsePrivate
+ * \class DeleteStreamResponsePrivate
  *
- * @brief  Private implementation for DeleteStreamResponse.
+ * \brief Private implementation for DeleteStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeleteStreamResponse element.
  *
  * @param  xml  XML stream to parse.

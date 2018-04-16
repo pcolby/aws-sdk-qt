@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  AcceptInvitationResponse
+/*!
+ * \class QtAws::GuardDuty::AcceptInvitationResponse
  *
- * @brief  Handles GuardDuty AcceptInvitation responses.
+ * \brief The AcceptInvitationResponse class encapsulates GuardDuty AcceptInvitation responses.
  *
- * @see    GuardDutyClient::acceptInvitation
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::acceptInvitation
  */
 
-/**
+/*!
  * @brief  Constructs a new AcceptInvitationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AcceptInvitationRequest * AcceptInvitationResponse::request() const
     return static_cast<const AcceptInvitationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty AcceptInvitation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AcceptInvitationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AcceptInvitationResponsePrivate
+ * \class AcceptInvitationResponsePrivate
  *
- * @brief  Private implementation for AcceptInvitationResponse.
+ * \brief Private implementation for AcceptInvitationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptInvitationResponsePrivate object.
@@ -91,7 +94,7 @@ AcceptInvitationResponsePrivate::AcceptInvitationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty AcceptInvitationResponse element.
  *
  * @param  xml  XML stream to parse.

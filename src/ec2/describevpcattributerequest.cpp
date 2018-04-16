@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcAttributeRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcAttributeRequest
  *
- * @brief  Implements EC2 DescribeVpcAttribute requests.
+ * \brief The DescribeVpcAttributeRequest class encapsulates EC2 DescribeVpcAttribute requests.
  *
- * @see    EC2Client::describeVpcAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcAttributeRequest::DescribeVpcAttributeRequest(const DescribeVpcAttrib
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcAttributeRequest object.
  */
 DescribeVpcAttributeRequest::DescribeVpcAttributeRequest()
@@ -53,13 +60,16 @@ DescribeVpcAttributeRequest::DescribeVpcAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcAttributeRequest::response(QNetwor
     return new DescribeVpcAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcAttributeRequest::response(QNetwor
  * @brief  Private implementation for DescribeVpcAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcAttributeRequestPrivate object, copying another.

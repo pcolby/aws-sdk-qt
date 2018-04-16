@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  DescribeProjectResponse
+/*!
+ * \class QtAws::Mobile::DescribeProjectResponse
  *
- * @brief  Handles Mobile DescribeProject responses.
+ * \brief The DescribeProjectResponse class encapsulates Mobile DescribeProject responses.
  *
- * @see    MobileClient::describeProject
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::describeProject
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeProjectRequest * DescribeProjectResponse::request() const
     return static_cast<const DescribeProjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile DescribeProject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeProjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeProjectResponsePrivate
+ * \class DescribeProjectResponsePrivate
  *
- * @brief  Private implementation for DescribeProjectResponse.
+ * \brief Private implementation for DescribeProjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProjectResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile DescribeProjectResponse element.
  *
  * @param  xml  XML stream to parse.

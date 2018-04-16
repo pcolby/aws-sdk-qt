@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListStreamsRequest
+/*!
+ * \class QtAws::IoT::ListStreamsRequest
  *
- * @brief  Implements IoT ListStreams requests.
+ * \brief The ListStreamsRequest class encapsulates IoT ListStreams requests.
  *
- * @see    IoTClient::listStreams
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
@@ -53,13 +67,16 @@ ListStreamsRequest::ListStreamsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStreamsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStreamsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
     return new ListStreamsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStreamsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListStreamsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object.
@@ -97,7 +114,7 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.

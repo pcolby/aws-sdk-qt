@@ -73,24 +73,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Route53Domains
+ * \brief The QtAws::Route53Domains contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  Route53DomainsClient
+/*!
+ * \class QtAws::Route53Domains::Route53DomainsClient
  *
- * @brief  Client for Amazon Route 53 Domains
+ * \brief The Route53DomainsClient class provides access the Amazon Route 53 Domains service.
  *
- * Amazon Route 53 API actions let you register domain names and perform related
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
  */
 
-/**
- * @brief  Constructs a new Route53DomainsClient object.
+/*!
+ * \brief Constructs a Route53DomainsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 Route53DomainsClient::Route53DomainsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -109,21 +117,16 @@ Route53DomainsClient::Route53DomainsClient(
     d->serviceName = QStringLiteral("route53domains");
 }
 
-/**
- * @brief  Constructs a new Route53DomainsClient object.
+/*!
+ * \overload Route53DomainsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 Route53DomainsClient::Route53DomainsClient(
     const QUrl &endpoint,
@@ -142,7 +145,7 @@ Route53DomainsClient::Route53DomainsClient(
     d->serviceName = QStringLiteral("route53domains");
 }
 
-/**
+/*!
  * This operation checks the availability of one domain name. Note that if the availability status of a domain is pending,
  * you must submit another request to determine the availability of the domain
  *
@@ -157,7 +160,7 @@ CheckDomainAvailabilityResponse * Route53DomainsClient::checkDomainAvailability(
     return qobject_cast<CheckDomainAvailabilityResponse *>(send(request));
 }
 
-/**
+/*!
  * Checks whether a domain name can be transferred to Amazon Route 53.
  *
  * @param  request Request to send to Amazon Route 53 Domains.
@@ -171,7 +174,7 @@ CheckDomainTransferabilityResponse * Route53DomainsClient::checkDomainTransferab
     return qobject_cast<CheckDomainTransferabilityResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation deletes the specified tags for a
  *
  * domain>
@@ -189,7 +192,7 @@ DeleteTagsForDomainResponse * Route53DomainsClient::deleteTagsForDomain(const De
     return qobject_cast<DeleteTagsForDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation disables automatic renewal of domain registration for the specified
  *
  * @param  request Request to send to Amazon Route 53 Domains.
@@ -203,7 +206,7 @@ DisableDomainAutoRenewResponse * Route53DomainsClient::disableDomainAutoRenew(co
     return qobject_cast<DisableDomainAutoRenewResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation removes the transfer lock on the domain (specifically the <code>clientTransferProhibited</code> status)
  * to allow domain transfers. We recommend you refrain from performing this action unless you intend to transfer the domain
  * to a different registrar. Successful submission returns an operation ID that you can use to track the progress and
@@ -220,7 +223,7 @@ DisableDomainTransferLockResponse * Route53DomainsClient::disableDomainTransferL
     return qobject_cast<DisableDomainTransferLockResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation configures Amazon Route 53 to automatically renew the specified domain before the domain registration
  * expires. The cost of renewing your domain registration is billed to your AWS
  *
@@ -242,7 +245,7 @@ EnableDomainAutoRenewResponse * Route53DomainsClient::enableDomainAutoRenew(cons
     return qobject_cast<EnableDomainAutoRenewResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation sets the transfer lock on the domain (specifically the <code>clientTransferProhibited</code> status) to
  * prevent domain transfers. Successful submission returns an operation ID that you can use to track the progress and
  * completion of the action. If the request is not completed successfully, the domain registrant will be notified by
@@ -258,7 +261,7 @@ EnableDomainTransferLockResponse * Route53DomainsClient::enableDomainTransferLoc
     return qobject_cast<EnableDomainTransferLockResponse *>(send(request));
 }
 
-/**
+/*!
  * For operations that require confirmation that the email address for the registrant contact is valid, such as registering
  * a new domain, this operation returns information about whether the registrant contact has
  *
@@ -277,7 +280,7 @@ GetContactReachabilityStatusResponse * Route53DomainsClient::getContactReachabil
     return qobject_cast<GetContactReachabilityStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns detailed information about a specified domain that is associated with the current AWS account.
  * Contact information for the domain is also returned as part of the
  *
@@ -292,7 +295,7 @@ GetDomainDetailResponse * Route53DomainsClient::getDomainDetail(const GetDomainD
     return qobject_cast<GetDomainDetailResponse *>(send(request));
 }
 
-/**
+/*!
  * The GetDomainSuggestions operation returns a list of suggested domain names given a string, which can either be a domain
  * name or simply a word or phrase (without
  *
@@ -307,7 +310,7 @@ GetDomainSuggestionsResponse * Route53DomainsClient::getDomainSuggestions(const 
     return qobject_cast<GetDomainSuggestionsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns the current status of an operation that is not
  *
  * @param  request Request to send to Amazon Route 53 Domains.
@@ -321,7 +324,7 @@ GetOperationDetailResponse * Route53DomainsClient::getOperationDetail(const GetO
     return qobject_cast<GetOperationDetailResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns all the domain names registered with Amazon Route 53 for the current AWS
  *
  * @param  request Request to send to Amazon Route 53 Domains.
@@ -335,7 +338,7 @@ ListDomainsResponse * Route53DomainsClient::listDomains(const ListDomainsRequest
     return qobject_cast<ListDomainsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns the operation IDs of operations that are not yet
  *
  * @param  request Request to send to Amazon Route 53 Domains.
@@ -349,7 +352,7 @@ ListOperationsResponse * Route53DomainsClient::listOperations(const ListOperatio
     return qobject_cast<ListOperationsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns all of the tags that are associated with the specified
  *
  * domain>
@@ -367,7 +370,7 @@ ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTa
     return qobject_cast<ListTagsForDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation registers a domain. Domains are registered by the AWS registrar partner, Gandi. For some top-level
  * domains (TLDs), this operation requires extra
  *
@@ -411,7 +414,7 @@ RegisterDomainResponse * Route53DomainsClient::registerDomain(const RegisterDoma
     return qobject_cast<RegisterDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation renews a domain for the specified number of years. The cost of renewing your domain is billed to your AWS
  *
  * account>
@@ -432,7 +435,7 @@ RenewDomainResponse * Route53DomainsClient::renewDomain(const RenewDomainRequest
     return qobject_cast<RenewDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * For operations that require confirmation that the email address for the registrant contact is valid, such as registering
  * a new domain, this operation resends the confirmation email to the current email address for the registrant
  *
@@ -447,7 +450,7 @@ ResendContactReachabilityEmailResponse * Route53DomainsClient::resendContactReac
     return qobject_cast<ResendContactReachabilityEmailResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns the AuthCode for the domain. To transfer a domain to another registrar, you provide this value to
  * the new
  *
@@ -462,7 +465,7 @@ RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(co
     return qobject_cast<RetrieveDomainAuthCodeResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation transfers a domain from another registrar to Amazon Route 53. When the transfer is complete, the domain
  * is registered with the AWS registrar partner,
  *
@@ -500,7 +503,7 @@ TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDoma
     return qobject_cast<TransferDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation updates the contact information for a particular domain. Information for at least one contact
  * (registrant, administrator, or technical) must be supplied for
  *
@@ -520,7 +523,7 @@ UpdateDomainContactResponse * Route53DomainsClient::updateDomainContact(const Up
     return qobject_cast<UpdateDomainContactResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation updates the specified domain contact's privacy setting. When the privacy option is enabled, personal
  * information such as postal or email address is hidden from the results of a public WHOIS query. The privacy services are
  * provided by the AWS registrar, Gandi. For more information, see the <a
@@ -543,7 +546,7 @@ UpdateDomainContactPrivacyResponse * Route53DomainsClient::updateDomainContactPr
     return qobject_cast<UpdateDomainContactPrivacyResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation replaces the current set of name servers for the domain with the specified set of name servers. If you
  * use Amazon Route 53 as your DNS service, specify the four name servers in the delegation set for the hosted zone for the
  *
@@ -563,7 +566,7 @@ UpdateDomainNameserversResponse * Route53DomainsClient::updateDomainNameservers(
     return qobject_cast<UpdateDomainNameserversResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation adds or updates tags for a specified
  *
  * domain>
@@ -581,7 +584,7 @@ UpdateTagsForDomainResponse * Route53DomainsClient::updateTagsForDomain(const Up
     return qobject_cast<UpdateTagsForDomainResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all the domain-related billing records for the current AWS account for a specified
  *
  * @param  request Request to send to Amazon Route 53 Domains.
@@ -595,7 +598,7 @@ ViewBillingResponse * Route53DomainsClient::viewBilling(const ViewBillingRequest
     return qobject_cast<ViewBillingResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  Route53DomainsClientPrivate
@@ -603,7 +606,7 @@ ViewBillingResponse * Route53DomainsClient::viewBilling(const ViewBillingRequest
  * @brief  Private implementation for Route53DomainsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Route53DomainsClientPrivate object.

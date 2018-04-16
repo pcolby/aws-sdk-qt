@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetOTAUpdateRequest
+/*!
+ * \class QtAws::IoT::GetOTAUpdateRequest
  *
- * @brief  Implements IoT GetOTAUpdate requests.
+ * \brief The GetOTAUpdateRequest class encapsulates IoT GetOTAUpdate requests.
  *
- * @see    IoTClient::getOTAUpdate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getOTAUpdate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOTAUpdateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetOTAUpdateRequest::GetOTAUpdateRequest(const GetOTAUpdateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetOTAUpdateRequest object.
  */
 GetOTAUpdateRequest::GetOTAUpdateRequest()
@@ -53,13 +67,16 @@ GetOTAUpdateRequest::GetOTAUpdateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetOTAUpdateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetOTAUpdateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetOTAUpdateRequest::response(QNetworkReply *
     return new GetOTAUpdateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetOTAUpdateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetOTAUpdateRequest::response(QNetworkReply *
  * @brief  Private implementation for GetOTAUpdateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOTAUpdateRequestPrivate object.
@@ -97,7 +114,7 @@ GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOTAUpdateRequestPrivate object, copying another.

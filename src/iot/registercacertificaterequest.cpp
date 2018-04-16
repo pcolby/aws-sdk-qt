@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  RegisterCACertificateRequest
+/*!
+ * \class QtAws::IoT::RegisterCACertificateRequest
  *
- * @brief  Implements IoT RegisterCACertificate requests.
+ * \brief The RegisterCACertificateRequest class encapsulates IoT RegisterCACertificate requests.
  *
- * @see    IoTClient::registerCACertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::registerCACertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterCACertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ RegisterCACertificateRequest::RegisterCACertificateRequest(const RegisterCACerti
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterCACertificateRequest object.
  */
 RegisterCACertificateRequest::RegisterCACertificateRequest()
@@ -53,13 +67,16 @@ RegisterCACertificateRequest::RegisterCACertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterCACertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterCACertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RegisterCACertificateRequest::response(QNetwo
     return new RegisterCACertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterCACertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * RegisterCACertificateRequest::response(QNetwo
  * @brief  Private implementation for RegisterCACertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCACertificateRequestPrivate object.
@@ -97,7 +114,7 @@ RegisterCACertificateRequestPrivate::RegisterCACertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCACertificateRequestPrivate object, copying another.

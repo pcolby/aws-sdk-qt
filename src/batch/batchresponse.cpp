@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Batch {
 
-/**
- * @class  BatchResponse
+/*!
+ * \class QtAws::Batch::BatchResponse
  *
- * @brief  Handles Batch Batch responses.
+ * \brief The BatchResponse class is the base class for all Batch responses.
  *
- * @see    BatchClient::batch
+ * \ingroup Batch
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ BatchResponse::BatchResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchResponse object.
@@ -63,7 +63,7 @@ BatchResponse::BatchResponse(BatchResponsePrivate * const d, QObject * const par
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void BatchResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchResponsePrivate
@@ -92,7 +92,7 @@ void BatchResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for BatchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchResponsePrivate object.

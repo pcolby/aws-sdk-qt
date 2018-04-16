@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetQualificationTypeRequest
+/*!
+ * \class QtAws::MTurk::GetQualificationTypeRequest
  *
- * @brief  Implements MTurk GetQualificationType requests.
+ * \brief The GetQualificationTypeRequest class encapsulates MTurk GetQualificationType requests.
  *
- * @see    MTurkClient::getQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQualificationTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetQualificationTypeRequest::GetQualificationTypeRequest(const GetQualificationT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetQualificationTypeRequest object.
  */
 GetQualificationTypeRequest::GetQualificationTypeRequest()
@@ -53,13 +56,16 @@ GetQualificationTypeRequest::GetQualificationTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetQualificationTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetQualificationTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetQualificationTypeRequest::response(QNetwor
     return new GetQualificationTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetQualificationTypeRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetQualificationTypeRequest::response(QNetwor
  * @brief  Private implementation for GetQualificationTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQualificationTypeRequestPrivate object.
@@ -97,7 +103,7 @@ GetQualificationTypeRequestPrivate::GetQualificationTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQualificationTypeRequestPrivate object, copying another.

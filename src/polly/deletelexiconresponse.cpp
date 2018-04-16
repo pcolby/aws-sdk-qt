@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  DeleteLexiconResponse
+/*!
+ * \class QtAws::Polly::DeleteLexiconResponse
  *
- * @brief  Handles Polly DeleteLexicon responses.
+ * \brief The DeleteLexiconResponse class encapsulates Polly DeleteLexicon responses.
  *
- * @see    PollyClient::deleteLexicon
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::deleteLexicon
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLexiconResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DeleteLexiconRequest * DeleteLexiconResponse::request() const
     return static_cast<const DeleteLexiconRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Polly DeleteLexicon response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DeleteLexiconResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLexiconResponsePrivate
+ * \class DeleteLexiconResponsePrivate
  *
- * @brief  Private implementation for DeleteLexiconResponse.
+ * \brief Private implementation for DeleteLexiconResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLexiconResponsePrivate object.
@@ -91,7 +101,7 @@ DeleteLexiconResponsePrivate::DeleteLexiconResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Polly DeleteLexiconResponse element.
  *
  * @param  xml  XML stream to parse.

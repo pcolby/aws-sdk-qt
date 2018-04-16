@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  UpdateAssessmentTargetRequest
+/*!
+ * \class QtAws::Inspector::UpdateAssessmentTargetRequest
  *
- * @brief  Implements Inspector UpdateAssessmentTarget requests.
+ * \brief The UpdateAssessmentTargetRequest class encapsulates Inspector UpdateAssessmentTarget requests.
  *
- * @see    InspectorClient::updateAssessmentTarget
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::updateAssessmentTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAssessmentTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateAssessmentTargetRequest::UpdateAssessmentTargetRequest(const UpdateAssessm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAssessmentTargetRequest object.
  */
 UpdateAssessmentTargetRequest::UpdateAssessmentTargetRequest()
@@ -53,13 +61,16 @@ UpdateAssessmentTargetRequest::UpdateAssessmentTargetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAssessmentTargetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAssessmentTargetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAssessmentTargetRequest::response(QNetw
     return new UpdateAssessmentTargetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAssessmentTargetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAssessmentTargetRequest::response(QNetw
  * @brief  Private implementation for UpdateAssessmentTargetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAssessmentTargetRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAssessmentTargetRequestPrivate object, copying another.

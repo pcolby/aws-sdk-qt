@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetDeploymentStatusResponse
+/*!
+ * \class QtAws::Greengrass::GetDeploymentStatusResponse
  *
- * @brief  Handles Greengrass GetDeploymentStatus responses.
+ * \brief The GetDeploymentStatusResponse class encapsulates Greengrass GetDeploymentStatus responses.
  *
- * @see    GreengrassClient::getDeploymentStatus
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getDeploymentStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeploymentStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetDeploymentStatusRequest * GetDeploymentStatusResponse::request() const
     return static_cast<const GetDeploymentStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetDeploymentStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetDeploymentStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDeploymentStatusResponsePrivate
+ * \class GetDeploymentStatusResponsePrivate
  *
- * @brief  Private implementation for GetDeploymentStatusResponse.
+ * \brief Private implementation for GetDeploymentStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeploymentStatusResponsePrivate object.
@@ -91,7 +97,7 @@ GetDeploymentStatusResponsePrivate::GetDeploymentStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetDeploymentStatusResponse element.
  *
  * @param  xml  XML stream to parse.

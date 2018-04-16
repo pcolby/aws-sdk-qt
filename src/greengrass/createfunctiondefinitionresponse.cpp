@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateFunctionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::CreateFunctionDefinitionResponse
  *
- * @brief  Handles Greengrass CreateFunctionDefinition responses.
+ * \brief The CreateFunctionDefinitionResponse class encapsulates Greengrass CreateFunctionDefinition responses.
  *
- * @see    GreengrassClient::createFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateFunctionDefinitionRequest * CreateFunctionDefinitionResponse::reques
     return static_cast<const CreateFunctionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateFunctionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateFunctionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateFunctionDefinitionResponsePrivate
+ * \class CreateFunctionDefinitionResponsePrivate
  *
- * @brief  Private implementation for CreateFunctionDefinitionResponse.
+ * \brief Private implementation for CreateFunctionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateFunctionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

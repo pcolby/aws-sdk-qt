@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  StopRemoteAccessSessionRequest
+/*!
+ * \class QtAws::DeviceFarm::StopRemoteAccessSessionRequest
  *
- * @brief  Implements DeviceFarm StopRemoteAccessSession requests.
+ * \brief The StopRemoteAccessSessionRequest class encapsulates DeviceFarm StopRemoteAccessSession requests.
  *
- * @see    DeviceFarmClient::stopRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::stopRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new StopRemoteAccessSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest(const StopRemoteA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopRemoteAccessSessionRequest object.
  */
 StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest()
@@ -53,13 +58,16 @@ StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopRemoteAccessSessionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopRemoteAccessSessionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNet
     return new StopRemoteAccessSessionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopRemoteAccessSessionRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNet
  * @brief  Private implementation for StopRemoteAccessSessionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopRemoteAccessSessionRequestPrivate object.
@@ -97,7 +105,7 @@ StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopRemoteAccessSessionRequestPrivate object, copying another.

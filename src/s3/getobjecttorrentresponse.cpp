@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetObjectTorrentResponse
+/*!
+ * \class QtAws::S3::GetObjectTorrentResponse
  *
- * @brief  Handles S3 GetObjectTorrent responses.
+ * \brief The GetObjectTorrentResponse class encapsulates S3 GetObjectTorrent responses.
  *
- * @see    S3Client::getObjectTorrent
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getObjectTorrent
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectTorrentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetObjectTorrentRequest * GetObjectTorrentResponse::request() const
     return static_cast<const GetObjectTorrentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetObjectTorrent response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetObjectTorrentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetObjectTorrentResponsePrivate
+ * \class GetObjectTorrentResponsePrivate
  *
- * @brief  Private implementation for GetObjectTorrentResponse.
+ * \brief Private implementation for GetObjectTorrentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectTorrentResponsePrivate object.
@@ -91,7 +94,7 @@ GetObjectTorrentResponsePrivate::GetObjectTorrentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetObjectTorrentResponse element.
  *
  * @param  xml  XML stream to parse.

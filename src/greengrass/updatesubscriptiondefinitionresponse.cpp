@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateSubscriptionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::UpdateSubscriptionDefinitionResponse
  *
- * @brief  Handles Greengrass UpdateSubscriptionDefinition responses.
+ * \brief The UpdateSubscriptionDefinitionResponse class encapsulates Greengrass UpdateSubscriptionDefinition responses.
  *
- * @see    GreengrassClient::updateSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSubscriptionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateSubscriptionDefinitionRequest * UpdateSubscriptionDefinitionResponse
     return static_cast<const UpdateSubscriptionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass UpdateSubscriptionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateSubscriptionDefinitionResponsePrivate
+ * \class UpdateSubscriptionDefinitionResponsePrivate
  *
- * @brief  Private implementation for UpdateSubscriptionDefinitionResponse.
+ * \brief Private implementation for UpdateSubscriptionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSubscriptionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateSubscriptionDefinitionResponsePrivate::UpdateSubscriptionDefinitionRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass UpdateSubscriptionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

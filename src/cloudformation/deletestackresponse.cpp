@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  DeleteStackResponse
+/*!
+ * \class QtAws::CloudFormation::DeleteStackResponse
  *
- * @brief  Handles CloudFormation DeleteStack responses.
+ * \brief The DeleteStackResponse class encapsulates CloudFormation DeleteStack responses.
  *
- * @see    CloudFormationClient::deleteStack
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::deleteStack
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const DeleteStackRequest * DeleteStackResponse::request() const
     return static_cast<const DeleteStackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFormation DeleteStack response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void DeleteStackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteStackResponsePrivate
+ * \class DeleteStackResponsePrivate
  *
- * @brief  Private implementation for DeleteStackResponse.
+ * \brief Private implementation for DeleteStackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStackResponsePrivate object.
@@ -91,7 +116,7 @@ DeleteStackResponsePrivate::DeleteStackResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFormation DeleteStackResponse element.
  *
  * @param  xml  XML stream to parse.

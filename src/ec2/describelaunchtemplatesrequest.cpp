@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeLaunchTemplatesRequest
+/*!
+ * \class QtAws::EC2::DescribeLaunchTemplatesRequest
  *
- * @brief  Implements EC2 DescribeLaunchTemplates requests.
+ * \brief The DescribeLaunchTemplatesRequest class encapsulates EC2 DescribeLaunchTemplates requests.
  *
- * @see    EC2Client::describeLaunchTemplates
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeLaunchTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchTemplatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest(const DescribeLau
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchTemplatesRequest object.
  */
 DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest()
@@ -53,13 +60,16 @@ DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLaunchTemplatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLaunchTemplatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplatesRequest::response(QNet
     return new DescribeLaunchTemplatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLaunchTemplatesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplatesRequest::response(QNet
  * @brief  Private implementation for DescribeLaunchTemplatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchTemplatesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeLaunchTemplatesRequestPrivate::DescribeLaunchTemplatesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchTemplatesRequestPrivate object, copying another.

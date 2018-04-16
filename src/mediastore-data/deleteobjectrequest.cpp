@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  DeleteObjectRequest
+/*!
+ * \class QtAws::MediaStoreData::DeleteObjectRequest
  *
- * @brief  Implements MediaStoreData DeleteObject requests.
+ * \brief The DeleteObjectRequest class encapsulates MediaStoreData DeleteObject requests.
  *
- * @see    MediaStoreDataClient::deleteObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::deleteObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteObjectRequest::DeleteObjectRequest(const DeleteObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectRequest object.
  */
 DeleteObjectRequest::DeleteObjectRequest()
@@ -53,13 +58,16 @@ DeleteObjectRequest::DeleteObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
     return new DeleteObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteObjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectRequestPrivate object, copying another.

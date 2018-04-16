@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  PutTelemetryRecordsResponse
+/*!
+ * \class QtAws::XRay::PutTelemetryRecordsResponse
  *
- * @brief  Handles XRay PutTelemetryRecords responses.
+ * \brief The PutTelemetryRecordsResponse class encapsulates XRay PutTelemetryRecords responses.
  *
- * @see    XRayClient::putTelemetryRecords
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::putTelemetryRecords
  */
 
-/**
+/*!
  * @brief  Constructs a new PutTelemetryRecordsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const PutTelemetryRecordsRequest * PutTelemetryRecordsResponse::request() const
     return static_cast<const PutTelemetryRecordsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a XRay PutTelemetryRecords response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void PutTelemetryRecordsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutTelemetryRecordsResponsePrivate
+ * \class PutTelemetryRecordsResponsePrivate
  *
- * @brief  Private implementation for PutTelemetryRecordsResponse.
+ * \brief Private implementation for PutTelemetryRecordsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutTelemetryRecordsResponsePrivate object.
@@ -91,7 +95,7 @@ PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an XRay PutTelemetryRecordsResponse element.
  *
  * @param  xml  XML stream to parse.

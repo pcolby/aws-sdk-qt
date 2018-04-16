@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetRegexMatchSetRequest
+/*!
+ * \class QtAws::WAFRegional::GetRegexMatchSetRequest
  *
- * @brief  Implements WAFRegional GetRegexMatchSet requests.
+ * \brief The GetRegexMatchSetRequest class encapsulates WAFRegional GetRegexMatchSet requests.
  *
- * @see    WAFRegionalClient::getRegexMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getRegexMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRegexMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ GetRegexMatchSetRequest::GetRegexMatchSetRequest(const GetRegexMatchSetRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRegexMatchSetRequest object.
  */
 GetRegexMatchSetRequest::GetRegexMatchSetRequest()
@@ -53,13 +63,16 @@ GetRegexMatchSetRequest::GetRegexMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRegexMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRegexMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkRep
     return new GetRegexMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRegexMatchSetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkRep
  * @brief  Private implementation for GetRegexMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegexMatchSetRequestPrivate object.
@@ -97,7 +110,7 @@ GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegexMatchSetRequestPrivate object, copying another.

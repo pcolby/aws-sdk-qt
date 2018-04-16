@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DescribeModelRequest
+/*!
+ * \class QtAws::SageMaker::DescribeModelRequest
  *
- * @brief  Implements SageMaker DescribeModel requests.
+ * \brief The DescribeModelRequest class encapsulates SageMaker DescribeModel requests.
  *
- * @see    SageMakerClient::describeModel
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::describeModel
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeModelRequest::DescribeModelRequest(const DescribeModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeModelRequest object.
  */
 DescribeModelRequest::DescribeModelRequest()
@@ -53,13 +56,16 @@ DescribeModelRequest::DescribeModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply 
     return new DescribeModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply 
  * @brief  Private implementation for DescribeModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeModelRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeModelRequestPrivate::DescribeModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeModelRequestPrivate object, copying another.

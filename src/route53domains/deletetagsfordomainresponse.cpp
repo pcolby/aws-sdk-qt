@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  DeleteTagsForDomainResponse
+/*!
+ * \class QtAws::Route53Domains::DeleteTagsForDomainResponse
  *
- * @brief  Handles Route53Domains DeleteTagsForDomain responses.
+ * \brief The DeleteTagsForDomainResponse class encapsulates Route53Domains DeleteTagsForDomain responses.
  *
- * @see    Route53DomainsClient::deleteTagsForDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::deleteTagsForDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsForDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteTagsForDomainRequest * DeleteTagsForDomainResponse::request() const
     return static_cast<const DeleteTagsForDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains DeleteTagsForDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteTagsForDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagsForDomainResponsePrivate
+ * \class DeleteTagsForDomainResponsePrivate
  *
- * @brief  Private implementation for DeleteTagsForDomainResponse.
+ * \brief Private implementation for DeleteTagsForDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsForDomainResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteTagsForDomainResponsePrivate::DeleteTagsForDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains DeleteTagsForDomainResponse element.
  *
  * @param  xml  XML stream to parse.

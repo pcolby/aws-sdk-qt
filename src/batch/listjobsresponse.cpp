@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace Batch {
 
-/**
- * @class  ListJobsResponse
+/*!
+ * \class QtAws::Batch::ListJobsResponse
  *
- * @brief  Handles Batch ListJobs responses.
+ * \brief The ListJobsResponse class encapsulates Batch ListJobs responses.
  *
- * @see    BatchClient::listJobs
+ * \ingroup Batch
+ *
+ *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
+ *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
+ *  lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
+ *  batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
+ *  eliminate capacity constraints, reduce compute costs, and deliver results
+ * 
+ *  quickly>
+ * 
+ *  As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
+ *  any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
+ *  quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
+ *  which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
+ *  time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
+ *  AWS
+ *
+ * \sa BatchClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const ListJobsRequest * ListJobsResponse::request() const
     return static_cast<const ListJobsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Batch ListJobs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void ListJobsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListJobsResponsePrivate
+ * \class ListJobsResponsePrivate
  *
- * @brief  Private implementation for ListJobsResponse.
+ * \brief Private implementation for ListJobsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsResponsePrivate object.
@@ -91,7 +108,7 @@ ListJobsResponsePrivate::ListJobsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Batch ListJobsResponse element.
  *
  * @param  xml  XML stream to parse.

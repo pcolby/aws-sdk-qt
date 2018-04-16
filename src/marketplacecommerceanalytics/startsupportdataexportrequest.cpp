@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
-/**
- * @class  StartSupportDataExportRequest
+/*!
+ * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportRequest
  *
- * @brief  Implements MarketplaceCommerceAnalytics StartSupportDataExport requests.
+ * \brief The StartSupportDataExportRequest class encapsulates MarketplaceCommerceAnalytics StartSupportDataExport requests.
  *
- * @see    MarketplaceCommerceAnalyticsClient::startSupportDataExport
+ * \ingroup MarketplaceCommerceAnalytics
+ *
+ *
+ * \sa MarketplaceCommerceAnalyticsClient::startSupportDataExport
  */
 
-/**
+/*!
  * @brief  Constructs a new StartSupportDataExportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StartSupportDataExportRequest::StartSupportDataExportRequest(const StartSupportD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartSupportDataExportRequest object.
  */
 StartSupportDataExportRequest::StartSupportDataExportRequest()
@@ -53,13 +56,16 @@ StartSupportDataExportRequest::StartSupportDataExportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartSupportDataExportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartSupportDataExportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetw
     return new StartSupportDataExportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartSupportDataExportRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetw
  * @brief  Private implementation for StartSupportDataExportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSupportDataExportRequestPrivate object.
@@ -97,7 +103,7 @@ StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartSupportDataExportRequestPrivate object, copying another.

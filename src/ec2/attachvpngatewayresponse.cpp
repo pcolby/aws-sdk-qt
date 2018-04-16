@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachVpnGatewayResponse
+/*!
+ * \class QtAws::EC2::AttachVpnGatewayResponse
  *
- * @brief  Handles EC2 AttachVpnGateway responses.
+ * \brief The AttachVpnGatewayResponse class encapsulates EC2 AttachVpnGateway responses.
  *
- * @see    EC2Client::attachVpnGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachVpnGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachVpnGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AttachVpnGatewayRequest * AttachVpnGatewayResponse::request() const
     return static_cast<const AttachVpnGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AttachVpnGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AttachVpnGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachVpnGatewayResponsePrivate
+ * \class AttachVpnGatewayResponsePrivate
  *
- * @brief  Private implementation for AttachVpnGatewayResponse.
+ * \brief Private implementation for AttachVpnGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachVpnGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AttachVpnGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

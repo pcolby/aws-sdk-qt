@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteResourceRequest
+/*!
+ * \class QtAws::APIGateway::DeleteResourceRequest
  *
- * @brief  Implements APIGateway DeleteResource requests.
+ * \brief The DeleteResourceRequest class encapsulates APIGateway DeleteResource requests.
  *
- * @see    APIGatewayClient::deleteResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteResource
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteResourceRequest::DeleteResourceRequest(const DeleteResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceRequest object.
  */
 DeleteResourceRequest::DeleteResourceRequest()
@@ -53,13 +61,16 @@ DeleteResourceRequest::DeleteResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply
     return new DeleteResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceRequestPrivate object, copying another.

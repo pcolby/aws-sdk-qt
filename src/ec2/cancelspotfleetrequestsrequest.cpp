@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelSpotFleetRequestsRequest
+/*!
+ * \class QtAws::EC2::CancelSpotFleetRequestsRequest
  *
- * @brief  Implements EC2 CancelSpotFleetRequests requests.
+ * \brief The CancelSpotFleetRequestsRequest class encapsulates EC2 CancelSpotFleetRequests requests.
  *
- * @see    EC2Client::cancelSpotFleetRequests
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelSpotFleetRequests
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelSpotFleetRequestsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest(const CancelSpotF
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelSpotFleetRequestsRequest object.
  */
 CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest()
@@ -53,13 +60,16 @@ CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelSpotFleetRequestsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelSpotFleetRequestsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNet
     return new CancelSpotFleetRequestsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelSpotFleetRequestsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNet
  * @brief  Private implementation for CancelSpotFleetRequestsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSpotFleetRequestsRequestPrivate object.
@@ -97,7 +107,7 @@ CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelSpotFleetRequestsRequestPrivate object, copying another.

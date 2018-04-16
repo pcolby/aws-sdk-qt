@@ -27,15 +27,42 @@
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  GetPatchBaselineForPatchGroupResponse
+/*!
+ * \class QtAws::SSM::GetPatchBaselineForPatchGroupResponse
  *
- * @brief  Handles SSM GetPatchBaselineForPatchGroup responses.
+ * \brief The GetPatchBaselineForPatchGroupResponse class encapsulates SSM GetPatchBaselineForPatchGroup responses.
  *
- * @see    SSMClient::getPatchBaselineForPatchGroup
+ * \ingroup SSM
+ *
+ *  <fullname>AWS Systems Manager</fullname>
+ * 
+ *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
+ *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
+ *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
+ *  configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
+ *  your hybrid environment that has been configured for Systems
+ * 
+ *  Manager>
+ * 
+ *  This reference is intended to be used with the <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  To get started, verify prerequisites and configure managed instances. For more information, see <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ * 
+ *  Prerequisites</a>>
+ * 
+ *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
+ *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
+ *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
+ *  Requests</a>.
+ *
+ * \sa SSMClient::getPatchBaselineForPatchGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPatchBaselineForPatchGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +85,7 @@ const GetPatchBaselineForPatchGroupRequest * GetPatchBaselineForPatchGroupRespon
     return static_cast<const GetPatchBaselineForPatchGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SSM GetPatchBaselineForPatchGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +97,15 @@ void GetPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPatchBaselineForPatchGroupResponsePrivate
+ * \class GetPatchBaselineForPatchGroupResponsePrivate
  *
- * @brief  Private implementation for GetPatchBaselineForPatchGroupResponse.
+ * \brief Private implementation for GetPatchBaselineForPatchGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPatchBaselineForPatchGroupResponsePrivate object.
@@ -91,7 +118,7 @@ GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroupRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an SSM GetPatchBaselineForPatchGroupResponse element.
  *
  * @param  xml  XML stream to parse.

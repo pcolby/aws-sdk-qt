@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListAuthorizersRequest
+/*!
+ * \class QtAws::IoT::ListAuthorizersRequest
  *
- * @brief  Implements IoT ListAuthorizers requests.
+ * \brief The ListAuthorizersRequest class encapsulates IoT ListAuthorizers requests.
  *
- * @see    IoTClient::listAuthorizers
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listAuthorizers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAuthorizersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListAuthorizersRequest::ListAuthorizersRequest(const ListAuthorizersRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAuthorizersRequest object.
  */
 ListAuthorizersRequest::ListAuthorizersRequest()
@@ -53,13 +67,16 @@ ListAuthorizersRequest::ListAuthorizersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAuthorizersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAuthorizersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkRepl
     return new ListAuthorizersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAuthorizersRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkRepl
  * @brief  Private implementation for ListAuthorizersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAuthorizersRequestPrivate object.
@@ -97,7 +114,7 @@ ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAuthorizersRequestPrivate object, copying another.

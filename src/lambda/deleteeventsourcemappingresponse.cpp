@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  DeleteEventSourceMappingResponse
+/*!
+ * \class QtAws::Lambda::DeleteEventSourceMappingResponse
  *
- * @brief  Handles Lambda DeleteEventSourceMapping responses.
+ * \brief The DeleteEventSourceMappingResponse class encapsulates Lambda DeleteEventSourceMapping responses.
  *
- * @see    LambdaClient::deleteEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::deleteEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEventSourceMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteEventSourceMappingRequest * DeleteEventSourceMappingResponse::reques
     return static_cast<const DeleteEventSourceMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda DeleteEventSourceMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteEventSourceMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEventSourceMappingResponsePrivate
+ * \class DeleteEventSourceMappingResponsePrivate
  *
- * @brief  Private implementation for DeleteEventSourceMappingResponse.
+ * \brief Private implementation for DeleteEventSourceMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEventSourceMappingResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda DeleteEventSourceMappingResponse element.
  *
  * @param  xml  XML stream to parse.

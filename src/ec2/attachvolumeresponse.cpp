@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachVolumeResponse
+/*!
+ * \class QtAws::EC2::AttachVolumeResponse
  *
- * @brief  Handles EC2 AttachVolume responses.
+ * \brief The AttachVolumeResponse class encapsulates EC2 AttachVolume responses.
  *
- * @see    EC2Client::attachVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachVolumeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AttachVolumeRequest * AttachVolumeResponse::request() const
     return static_cast<const AttachVolumeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AttachVolume response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AttachVolumeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachVolumeResponsePrivate
+ * \class AttachVolumeResponsePrivate
  *
- * @brief  Private implementation for AttachVolumeResponse.
+ * \brief Private implementation for AttachVolumeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachVolumeResponsePrivate object.
@@ -91,7 +98,7 @@ AttachVolumeResponsePrivate::AttachVolumeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AttachVolumeResponse element.
  *
  * @param  xml  XML stream to parse.

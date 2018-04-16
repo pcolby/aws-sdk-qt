@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  SearchProductsRequest
+/*!
+ * \class QtAws::ServiceCatalog::SearchProductsRequest
  *
- * @brief  Implements ServiceCatalog SearchProducts requests.
+ * \brief The SearchProductsRequest class encapsulates ServiceCatalog SearchProducts requests.
  *
- * @see    ServiceCatalogClient::searchProducts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::searchProducts
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProductsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ SearchProductsRequest::SearchProductsRequest(const SearchProductsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchProductsRequest object.
  */
 SearchProductsRequest::SearchProductsRequest()
@@ -53,13 +62,16 @@ SearchProductsRequest::SearchProductsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchProductsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchProductsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * SearchProductsRequest::response(QNetworkReply
     return new SearchProductsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchProductsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * SearchProductsRequest::response(QNetworkReply
  * @brief  Private implementation for SearchProductsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProductsRequestPrivate object.
@@ -97,7 +109,7 @@ SearchProductsRequestPrivate::SearchProductsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProductsRequestPrivate object, copying another.

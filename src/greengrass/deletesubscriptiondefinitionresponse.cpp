@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteSubscriptionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::DeleteSubscriptionDefinitionResponse
  *
- * @brief  Handles Greengrass DeleteSubscriptionDefinition responses.
+ * \brief The DeleteSubscriptionDefinitionResponse class encapsulates Greengrass DeleteSubscriptionDefinition responses.
  *
- * @see    GreengrassClient::deleteSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriptionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteSubscriptionDefinitionRequest * DeleteSubscriptionDefinitionResponse
     return static_cast<const DeleteSubscriptionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DeleteSubscriptionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSubscriptionDefinitionResponsePrivate
+ * \class DeleteSubscriptionDefinitionResponsePrivate
  *
- * @brief  Private implementation for DeleteSubscriptionDefinitionResponse.
+ * \brief Private implementation for DeleteSubscriptionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriptionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteSubscriptionDefinitionResponsePrivate::DeleteSubscriptionDefinitionRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DeleteSubscriptionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

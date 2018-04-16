@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListNetworkProfilesRequest
+/*!
+ * \class QtAws::DeviceFarm::ListNetworkProfilesRequest
  *
- * @brief  Implements DeviceFarm ListNetworkProfiles requests.
+ * \brief The ListNetworkProfilesRequest class encapsulates DeviceFarm ListNetworkProfiles requests.
  *
- * @see    DeviceFarmClient::listNetworkProfiles
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listNetworkProfiles
  */
 
-/**
+/*!
  * @brief  Constructs a new ListNetworkProfilesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListNetworkProfilesRequest::ListNetworkProfilesRequest(const ListNetworkProfiles
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListNetworkProfilesRequest object.
  */
 ListNetworkProfilesRequest::ListNetworkProfilesRequest()
@@ -53,13 +58,16 @@ ListNetworkProfilesRequest::ListNetworkProfilesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListNetworkProfilesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListNetworkProfilesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListNetworkProfilesRequest::response(QNetwork
     return new ListNetworkProfilesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListNetworkProfilesRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListNetworkProfilesRequest::response(QNetwork
  * @brief  Private implementation for ListNetworkProfilesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNetworkProfilesRequestPrivate object.
@@ -97,7 +105,7 @@ ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNetworkProfilesRequestPrivate object, copying another.

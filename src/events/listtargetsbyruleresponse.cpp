@@ -27,15 +27,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  ListTargetsByRuleResponse
+/*!
+ * \class QtAws::CloudWatchEvents::ListTargetsByRuleResponse
  *
- * @brief  Handles CloudWatchEvents ListTargetsByRule responses.
+ * \brief The ListTargetsByRuleResponse class encapsulates CloudWatchEvents ListTargetsByRule responses.
  *
- * @see    CloudWatchEventsClient::listTargetsByRule
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::listTargetsByRule
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTargetsByRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +84,7 @@ const ListTargetsByRuleRequest * ListTargetsByRuleResponse::request() const
     return static_cast<const ListTargetsByRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatchEvents ListTargetsByRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +96,15 @@ void ListTargetsByRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTargetsByRuleResponsePrivate
+ * \class ListTargetsByRuleResponsePrivate
  *
- * @brief  Private implementation for ListTargetsByRuleResponse.
+ * \brief Private implementation for ListTargetsByRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTargetsByRuleResponsePrivate object.
@@ -91,7 +117,7 @@ ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatchEvents ListTargetsByRuleResponse element.
  *
  * @param  xml  XML stream to parse.

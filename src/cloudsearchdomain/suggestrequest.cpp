@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CloudSearchDomain {
 
-/**
- * @class  SuggestRequest
+/*!
+ * \class QtAws::CloudSearchDomain::SuggestRequest
  *
- * @brief  Implements CloudSearchDomain Suggest requests.
+ * \brief The SuggestRequest class encapsulates CloudSearchDomain Suggest requests.
  *
- * @see    CloudSearchDomainClient::suggest
+ * \ingroup CloudSearchDomain
+ *
+ *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
+ * 
+ *  </p
+ * 
+ *  The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are
+ *  domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service
+ *  <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon
+ *  CloudSearch console. You submit suggest requests to the search endpoint.
+ * 
+ *  </p
+ * 
+ *  For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch
+ *  Developer
+ *
+ * \sa CloudSearchDomainClient::suggest
  */
 
-/**
+/*!
  * @brief  Constructs a new SuggestRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ SuggestRequest::SuggestRequest(const SuggestRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SuggestRequest object.
  */
 SuggestRequest::SuggestRequest()
@@ -53,13 +69,16 @@ SuggestRequest::SuggestRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SuggestRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SuggestResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SuggestRequest::response(QNetworkReply * cons
     return new SuggestResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SuggestRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * SuggestRequest::response(QNetworkReply * cons
  * @brief  Private implementation for SuggestRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SuggestRequestPrivate object.
@@ -97,7 +116,7 @@ SuggestRequestPrivate::SuggestRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SuggestRequestPrivate object, copying another.

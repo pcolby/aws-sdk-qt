@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyInstanceAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifyInstanceAttributeRequest
  *
- * @brief  Implements EC2 ModifyInstanceAttribute requests.
+ * \brief The ModifyInstanceAttributeRequest class encapsulates EC2 ModifyInstanceAttribute requests.
  *
- * @see    EC2Client::modifyInstanceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyInstanceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest(const ModifyInsta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceAttributeRequest object.
  */
 ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest()
@@ -53,13 +60,16 @@ ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyInstanceAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyInstanceAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNet
     return new ModifyInstanceAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyInstanceAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNet
  * @brief  Private implementation for ModifyInstanceAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceAttributeRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  PurchaseOfferingRequest
+/*!
+ * \class QtAws::DeviceFarm::PurchaseOfferingRequest
  *
- * @brief  Implements DeviceFarm PurchaseOffering requests.
+ * \brief The PurchaseOfferingRequest class encapsulates DeviceFarm PurchaseOffering requests.
  *
- * @see    DeviceFarmClient::purchaseOffering
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::purchaseOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseOfferingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ PurchaseOfferingRequest::PurchaseOfferingRequest(const PurchaseOfferingRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PurchaseOfferingRequest object.
  */
 PurchaseOfferingRequest::PurchaseOfferingRequest()
@@ -53,13 +58,16 @@ PurchaseOfferingRequest::PurchaseOfferingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PurchaseOfferingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PurchaseOfferingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkRep
     return new PurchaseOfferingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PurchaseOfferingRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkRep
  * @brief  Private implementation for PurchaseOfferingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseOfferingRequestPrivate object.
@@ -97,7 +105,7 @@ PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseOfferingRequestPrivate object, copying another.

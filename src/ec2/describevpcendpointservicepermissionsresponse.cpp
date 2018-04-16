@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointServicePermissionsResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointServicePermissionsResponse
  *
- * @brief  Handles EC2 DescribeVpcEndpointServicePermissions responses.
+ * \brief The DescribeVpcEndpointServicePermissionsResponse class encapsulates EC2 DescribeVpcEndpointServicePermissions responses.
  *
- * @see    EC2Client::describeVpcEndpointServicePermissions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointServicePermissions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcEndpointServicePermissionsRequest * DescribeVpcEndpointServiceP
     return static_cast<const DescribeVpcEndpointServicePermissionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcEndpointServicePermissions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcEndpointServicePermissionsResponsePrivate
+ * \class DescribeVpcEndpointServicePermissionsResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcEndpointServicePermissionsResponse.
+ * \brief Private implementation for DescribeVpcEndpointServicePermissionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcEndpointServicePermissionsResponsePrivate::DescribeVpcEndpointService
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcEndpointServicePermissionsResponse element.
  *
  * @param  xml  XML stream to parse.

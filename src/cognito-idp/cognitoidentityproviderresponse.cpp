@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CognitoIdentityProviderResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::CognitoIdentityProviderResponse
  *
- * @brief  Handles CognitoIdentityProvider CognitoIdentityProvider responses.
+ * \brief The CognitoIdentityProviderResponse class is the base class for all CognitoIdentityProvider responses.
  *
- * @see    CognitoIdentityProviderClient::cognitoIdentityProvider
+ * \ingroup CognitoIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new CognitoIdentityProviderResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(QObject * const
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CognitoIdentityProviderResponse object.
@@ -63,7 +63,7 @@ CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(CognitoIdentity
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CognitoIdentityProviderResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CognitoIdentityProviderResponsePrivate
@@ -92,7 +92,7 @@ void CognitoIdentityProviderResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CognitoIdentityProviderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CognitoIdentityProviderResponsePrivate object.

@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeEventsResponse
+/*!
+ * \class QtAws::ElastiCache::DescribeEventsResponse
  *
- * @brief  Handles ElastiCache DescribeEvents responses.
+ * \brief The DescribeEventsResponse class encapsulates ElastiCache DescribeEvents responses.
  *
- * @see    ElastiCacheClient::describeEvents
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
     return static_cast<const DescribeEventsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DescribeEvents response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEventsResponsePrivate
+ * \class DescribeEventsResponsePrivate
  *
- * @brief  Private implementation for DescribeEventsResponse.
+ * \brief Private implementation for DescribeEventsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DescribeEventsResponse element.
  *
  * @param  xml  XML stream to parse.

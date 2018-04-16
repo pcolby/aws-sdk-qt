@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketTaggingResponse
+/*!
+ * \class QtAws::S3::PutBucketTaggingResponse
  *
- * @brief  Handles S3 PutBucketTagging responses.
+ * \brief The PutBucketTaggingResponse class encapsulates S3 PutBucketTagging responses.
  *
- * @see    S3Client::putBucketTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketTaggingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketTaggingRequest * PutBucketTaggingResponse::request() const
     return static_cast<const PutBucketTaggingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketTagging response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketTaggingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketTaggingResponsePrivate
+ * \class PutBucketTaggingResponsePrivate
  *
- * @brief  Private implementation for PutBucketTaggingResponse.
+ * \brief Private implementation for PutBucketTaggingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketTaggingResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketTaggingResponsePrivate::PutBucketTaggingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketTaggingResponse element.
  *
  * @param  xml  XML stream to parse.

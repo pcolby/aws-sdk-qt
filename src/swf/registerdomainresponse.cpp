@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  RegisterDomainResponse
+/*!
+ * \class QtAws::SWF::RegisterDomainResponse
  *
- * @brief  Handles SWF RegisterDomain responses.
+ * \brief The RegisterDomainResponse class encapsulates SWF RegisterDomain responses.
  *
- * @see    SWFClient::registerDomain
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::registerDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const RegisterDomainRequest * RegisterDomainResponse::request() const
     return static_cast<const RegisterDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF RegisterDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterDomainResponsePrivate
+ * \class RegisterDomainResponsePrivate
  *
- * @brief  Private implementation for RegisterDomainResponse.
+ * \brief Private implementation for RegisterDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterDomainResponsePrivate object.
@@ -91,7 +110,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF RegisterDomainResponse element.
  *
  * @param  xml  XML stream to parse.

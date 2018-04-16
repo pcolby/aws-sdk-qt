@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeUserPoolResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeUserPoolResponse
  *
- * @brief  Handles CognitoIdentityProvider DescribeUserPool responses.
+ * \brief The DescribeUserPoolResponse class encapsulates CognitoIdentityProvider DescribeUserPool responses.
  *
- * @see    CognitoIdentityProviderClient::describeUserPool
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeUserPool
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserPoolResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DescribeUserPoolRequest * DescribeUserPoolResponse::request() const
     return static_cast<const DescribeUserPoolRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DescribeUserPool response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DescribeUserPoolResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeUserPoolResponsePrivate
+ * \class DescribeUserPoolResponsePrivate
  *
- * @brief  Private implementation for DescribeUserPoolResponse.
+ * \brief Private implementation for DescribeUserPoolResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserPoolResponsePrivate object.
@@ -91,7 +104,7 @@ DescribeUserPoolResponsePrivate::DescribeUserPoolResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DescribeUserPoolResponse element.
  *
  * @param  xml  XML stream to parse.

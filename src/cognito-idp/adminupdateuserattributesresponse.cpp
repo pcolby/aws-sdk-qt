@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUpdateUserAttributesResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateUserAttributesResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminUpdateUserAttributes responses.
+ * \brief The AdminUpdateUserAttributesResponse class encapsulates CognitoIdentityProvider AdminUpdateUserAttributes responses.
  *
- * @see    CognitoIdentityProviderClient::adminUpdateUserAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUpdateUserAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateUserAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminUpdateUserAttributesRequest * AdminUpdateUserAttributesResponse::requ
     return static_cast<const AdminUpdateUserAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminUpdateUserAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminUpdateUserAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminUpdateUserAttributesResponsePrivate
+ * \class AdminUpdateUserAttributesResponsePrivate
  *
- * @brief  Private implementation for AdminUpdateUserAttributesResponse.
+ * \brief Private implementation for AdminUpdateUserAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateUserAttributesResponsePrivate object.
@@ -91,7 +104,7 @@ AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminUpdateUserAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

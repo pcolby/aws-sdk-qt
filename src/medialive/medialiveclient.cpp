@@ -59,23 +59,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MediaLive
+ * \brief The QtAws::MediaLive contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  MediaLiveClient
+/*!
+ * \class QtAws::MediaLive::MediaLiveClient
  *
- * @brief  Client for AWS Elemental MediaLive
+ * \brief The MediaLiveClient class provides access the AWS Elemental MediaLive service.
+ *
+ * \ingroup MediaLive
  *
  */
 
-/**
- * @brief  Constructs a new MediaLiveClient object.
+/*!
+ * \brief Constructs a MediaLiveClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MediaLiveClient::MediaLiveClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -94,21 +102,16 @@ MediaLiveClient::MediaLiveClient(
     d->serviceName = QStringLiteral("medialive");
 }
 
-/**
- * @brief  Constructs a new MediaLiveClient object.
+/*!
+ * \overload MediaLiveClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MediaLiveClient::MediaLiveClient(
     const QUrl &endpoint,
@@ -127,7 +130,7 @@ MediaLiveClient::MediaLiveClient(
     d->serviceName = QStringLiteral("medialive");
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -140,7 +143,7 @@ CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelReques
     return qobject_cast<CreateChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -153,7 +156,7 @@ CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &req
     return qobject_cast<CreateInputResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -166,7 +169,7 @@ CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(con
     return qobject_cast<CreateInputSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -179,7 +182,7 @@ DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelReques
     return qobject_cast<DeleteChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -192,7 +195,7 @@ DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &req
     return qobject_cast<DeleteInputResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -205,7 +208,7 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
     return qobject_cast<DeleteInputSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -218,7 +221,7 @@ DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannel
     return qobject_cast<DescribeChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -231,7 +234,7 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
     return qobject_cast<DescribeInputResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -244,7 +247,7 @@ DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup
     return qobject_cast<DescribeInputSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -257,7 +260,7 @@ ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &
     return qobject_cast<ListChannelsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -270,7 +273,7 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
     return qobject_cast<ListInputSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -283,7 +286,7 @@ ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &reques
     return qobject_cast<ListInputsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -296,7 +299,7 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
     return qobject_cast<StartChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -309,7 +312,7 @@ StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &req
     return qobject_cast<StopChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -322,7 +325,7 @@ UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelReques
     return qobject_cast<UpdateChannelResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -335,7 +338,7 @@ UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &req
     return qobject_cast<UpdateInputResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to AWS Elemental MediaLive.
  *
@@ -348,7 +351,7 @@ UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(con
     return qobject_cast<UpdateInputSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaLiveClientPrivate
@@ -356,7 +359,7 @@ UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(con
  * @brief  Private implementation for MediaLiveClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaLiveClientPrivate object.

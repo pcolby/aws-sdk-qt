@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateSizeConstraintSetResponse
+/*!
+ * \class QtAws::WAF::CreateSizeConstraintSetResponse
  *
- * @brief  Handles WAF CreateSizeConstraintSet responses.
+ * \brief The CreateSizeConstraintSetResponse class encapsulates WAF CreateSizeConstraintSet responses.
  *
- * @see    WAFClient::createSizeConstraintSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createSizeConstraintSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSizeConstraintSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateSizeConstraintSetRequest * CreateSizeConstraintSetResponse::request(
     return static_cast<const CreateSizeConstraintSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF CreateSizeConstraintSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSizeConstraintSetResponsePrivate
+ * \class CreateSizeConstraintSetResponsePrivate
  *
- * @brief  Private implementation for CreateSizeConstraintSetResponse.
+ * \brief Private implementation for CreateSizeConstraintSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSizeConstraintSetResponsePrivate object.
@@ -91,7 +99,7 @@ CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF CreateSizeConstraintSetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVolumeRequest
+/*!
+ * \class QtAws::EC2::ModifyVolumeRequest
  *
- * @brief  Implements EC2 ModifyVolume requests.
+ * \brief The ModifyVolumeRequest class encapsulates EC2 ModifyVolume requests.
  *
- * @see    EC2Client::modifyVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVolumeRequest::ModifyVolumeRequest(const ModifyVolumeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVolumeRequest object.
  */
 ModifyVolumeRequest::ModifyVolumeRequest()
@@ -53,13 +60,16 @@ ModifyVolumeRequest::ModifyVolumeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVolumeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVolumeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeRequest::response(QNetworkReply *
     return new ModifyVolumeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVolumeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeRequest::response(QNetworkReply *
  * @brief  Private implementation for ModifyVolumeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVolumeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVolumeRequestPrivate object, copying another.

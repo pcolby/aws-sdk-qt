@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  UpdateFindingsFeedbackRequest
+/*!
+ * \class QtAws::GuardDuty::UpdateFindingsFeedbackRequest
  *
- * @brief  Implements GuardDuty UpdateFindingsFeedback requests.
+ * \brief The UpdateFindingsFeedbackRequest class encapsulates GuardDuty UpdateFindingsFeedback requests.
  *
- * @see    GuardDutyClient::updateFindingsFeedback
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::updateFindingsFeedback
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFindingsFeedbackRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateFindingsFeedbackRequest::UpdateFindingsFeedbackRequest(const UpdateFinding
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateFindingsFeedbackRequest object.
  */
 UpdateFindingsFeedbackRequest::UpdateFindingsFeedbackRequest()
@@ -53,13 +56,16 @@ UpdateFindingsFeedbackRequest::UpdateFindingsFeedbackRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateFindingsFeedbackRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateFindingsFeedbackResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetw
     return new UpdateFindingsFeedbackResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateFindingsFeedbackRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetw
  * @brief  Private implementation for UpdateFindingsFeedbackRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFindingsFeedbackRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFindingsFeedbackRequestPrivate object, copying another.

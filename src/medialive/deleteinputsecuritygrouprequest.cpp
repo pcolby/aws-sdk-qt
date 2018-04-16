@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DeleteInputSecurityGroupRequest
+/*!
+ * \class QtAws::MediaLive::DeleteInputSecurityGroupRequest
  *
- * @brief  Implements MediaLive DeleteInputSecurityGroup requests.
+ * \brief The DeleteInputSecurityGroupRequest class encapsulates MediaLive DeleteInputSecurityGroup requests.
  *
- * @see    MediaLiveClient::deleteInputSecurityGroup
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::deleteInputSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInputSecurityGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteInputSecurityGroupRequest::DeleteInputSecurityGroupRequest(const DeleteInp
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteInputSecurityGroupRequest object.
  */
 DeleteInputSecurityGroupRequest::DeleteInputSecurityGroupRequest()
@@ -53,13 +56,16 @@ DeleteInputSecurityGroupRequest::DeleteInputSecurityGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteInputSecurityGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteInputSecurityGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInputSecurityGroupRequest::response(QNe
     return new DeleteInputSecurityGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteInputSecurityGroupRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInputSecurityGroupRequest::response(QNe
  * @brief  Private implementation for DeleteInputSecurityGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInputSecurityGroupRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInputSecurityGroupRequestPrivate object, copying another.

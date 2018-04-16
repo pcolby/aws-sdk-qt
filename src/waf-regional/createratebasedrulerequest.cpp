@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  CreateRateBasedRuleRequest
+/*!
+ * \class QtAws::WAFRegional::CreateRateBasedRuleRequest
  *
- * @brief  Implements WAFRegional CreateRateBasedRule requests.
+ * \brief The CreateRateBasedRuleRequest class encapsulates WAFRegional CreateRateBasedRule requests.
  *
- * @see    WAFRegionalClient::createRateBasedRule
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::createRateBasedRule
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRule
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRateBasedRuleRequest object.
  */
 CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
@@ -53,13 +63,16 @@ CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRateBasedRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRateBasedRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
     return new CreateRateBasedRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRateBasedRuleRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
  * @brief  Private implementation for CreateRateBasedRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object.
@@ -97,7 +110,7 @@ CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object, copying another.

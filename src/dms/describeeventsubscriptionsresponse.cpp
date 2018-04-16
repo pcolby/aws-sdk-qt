@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEventSubscriptionsResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEventSubscriptionsResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeEventSubscriptions responses.
+ * \brief The DescribeEventSubscriptionsResponse class encapsulates DatabaseMigrationService DescribeEventSubscriptions responses.
  *
- * @see    DatabaseMigrationServiceClient::describeEventSubscriptions
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEventSubscriptions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventSubscriptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::re
     return static_cast<const DescribeEventSubscriptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeEventSubscriptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEventSubscriptionsResponsePrivate
+ * \class DescribeEventSubscriptionsResponsePrivate
  *
- * @brief  Private implementation for DescribeEventSubscriptionsResponse.
+ * \brief Private implementation for DescribeEventSubscriptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventSubscriptionsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeEventSubscriptionsResponse element.
  *
  * @param  xml  XML stream to parse.

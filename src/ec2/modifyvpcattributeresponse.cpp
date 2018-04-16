@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcAttributeResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcAttributeResponse
  *
- * @brief  Handles EC2 ModifyVpcAttribute responses.
+ * \brief The ModifyVpcAttributeResponse class encapsulates EC2 ModifyVpcAttribute responses.
  *
- * @see    EC2Client::modifyVpcAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcAttributeRequest * ModifyVpcAttributeResponse::request() const
     return static_cast<const ModifyVpcAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcAttributeResponsePrivate
+ * \class ModifyVpcAttributeResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcAttributeResponse.
+ * \brief Private implementation for ModifyVpcAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

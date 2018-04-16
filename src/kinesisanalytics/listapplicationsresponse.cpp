@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  ListApplicationsResponse
+/*!
+ * \class QtAws::KinesisAnalytics::ListApplicationsResponse
  *
- * @brief  Handles KinesisAnalytics ListApplications responses.
+ * \brief The ListApplicationsResponse class encapsulates KinesisAnalytics ListApplications responses.
  *
- * @see    KinesisAnalyticsClient::listApplications
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::listApplications
  */
 
-/**
+/*!
  * @brief  Constructs a new ListApplicationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListApplicationsRequest * ListApplicationsResponse::request() const
     return static_cast<const ListApplicationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics ListApplications response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListApplicationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListApplicationsResponsePrivate
+ * \class ListApplicationsResponsePrivate
  *
- * @brief  Private implementation for ListApplicationsResponse.
+ * \brief Private implementation for ListApplicationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListApplicationsResponsePrivate object.
@@ -91,7 +94,7 @@ ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics ListApplicationsResponse element.
  *
  * @param  xml  XML stream to parse.

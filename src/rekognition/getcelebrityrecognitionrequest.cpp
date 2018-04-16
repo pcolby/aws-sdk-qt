@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetCelebrityRecognitionRequest
+/*!
+ * \class QtAws::Rekognition::GetCelebrityRecognitionRequest
  *
- * @brief  Implements Rekognition GetCelebrityRecognition requests.
+ * \brief The GetCelebrityRecognitionRequest class encapsulates Rekognition GetCelebrityRecognition requests.
  *
- * @see    RekognitionClient::getCelebrityRecognition
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getCelebrityRecognition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCelebrityRecognitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetCelebrityRecognitionRequest::GetCelebrityRecognitionRequest(const GetCelebrit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCelebrityRecognitionRequest object.
  */
 GetCelebrityRecognitionRequest::GetCelebrityRecognitionRequest()
@@ -53,13 +57,16 @@ GetCelebrityRecognitionRequest::GetCelebrityRecognitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCelebrityRecognitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCelebrityRecognitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityRecognitionRequest::response(QNet
     return new GetCelebrityRecognitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCelebrityRecognitionRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityRecognitionRequest::response(QNet
  * @brief  Private implementation for GetCelebrityRecognitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCelebrityRecognitionRequestPrivate object.
@@ -97,7 +104,7 @@ GetCelebrityRecognitionRequestPrivate::GetCelebrityRecognitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCelebrityRecognitionRequestPrivate object, copying another.

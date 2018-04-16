@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SendBounceRequest
+/*!
+ * \class QtAws::SES::SendBounceRequest
  *
- * @brief  Implements SES SendBounce requests.
+ * \brief The SendBounceRequest class encapsulates SES SendBounce requests.
  *
- * @see    SESClient::sendBounce
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::sendBounce
  */
 
-/**
+/*!
  * @brief  Constructs a new SendBounceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SendBounceRequest::SendBounceRequest(const SendBounceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendBounceRequest object.
  */
 SendBounceRequest::SendBounceRequest()
@@ -53,13 +67,16 @@ SendBounceRequest::SendBounceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendBounceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendBounceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * c
     return new SendBounceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendBounceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * c
  * @brief  Private implementation for SendBounceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendBounceRequestPrivate object.
@@ -97,7 +114,7 @@ SendBounceRequestPrivate::SendBounceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendBounceRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetCelebrityInfoRequest
+/*!
+ * \class QtAws::Rekognition::GetCelebrityInfoRequest
  *
- * @brief  Implements Rekognition GetCelebrityInfo requests.
+ * \brief The GetCelebrityInfoRequest class encapsulates Rekognition GetCelebrityInfo requests.
  *
- * @see    RekognitionClient::getCelebrityInfo
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getCelebrityInfo
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCelebrityInfoRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetCelebrityInfoRequest::GetCelebrityInfoRequest(const GetCelebrityInfoRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCelebrityInfoRequest object.
  */
 GetCelebrityInfoRequest::GetCelebrityInfoRequest()
@@ -53,13 +57,16 @@ GetCelebrityInfoRequest::GetCelebrityInfoRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCelebrityInfoRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCelebrityInfoResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkRep
     return new GetCelebrityInfoResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCelebrityInfoRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkRep
  * @brief  Private implementation for GetCelebrityInfoRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCelebrityInfoRequestPrivate object.
@@ -97,7 +104,7 @@ GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCelebrityInfoRequestPrivate object, copying another.

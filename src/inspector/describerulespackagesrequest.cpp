@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeRulesPackagesRequest
+/*!
+ * \class QtAws::Inspector::DescribeRulesPackagesRequest
  *
- * @brief  Implements Inspector DescribeRulesPackages requests.
+ * \brief The DescribeRulesPackagesRequest class encapsulates Inspector DescribeRulesPackages requests.
  *
- * @see    InspectorClient::describeRulesPackages
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeRulesPackages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRulesPackagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeRulesPackagesRequest::DescribeRulesPackagesRequest(const DescribeRulesPa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeRulesPackagesRequest object.
  */
 DescribeRulesPackagesRequest::DescribeRulesPackagesRequest()
@@ -53,13 +61,16 @@ DescribeRulesPackagesRequest::DescribeRulesPackagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeRulesPackagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeRulesPackagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRulesPackagesRequest::response(QNetwo
     return new DescribeRulesPackagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeRulesPackagesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRulesPackagesRequest::response(QNetwo
  * @brief  Private implementation for DescribeRulesPackagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRulesPackagesRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeRulesPackagesRequestPrivate::DescribeRulesPackagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRulesPackagesRequestPrivate object, copying another.

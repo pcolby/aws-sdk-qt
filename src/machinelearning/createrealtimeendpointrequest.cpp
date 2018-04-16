@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateRealtimeEndpointRequest
+/*!
+ * \class QtAws::MachineLearning::CreateRealtimeEndpointRequest
  *
- * @brief  Implements MachineLearning CreateRealtimeEndpoint requests.
+ * \brief The CreateRealtimeEndpointRequest class encapsulates MachineLearning CreateRealtimeEndpoint requests.
  *
- * @see    MachineLearningClient::createRealtimeEndpoint
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createRealtimeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRealtimeEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateRealtimeEndpointRequest::CreateRealtimeEndpointRequest(const CreateRealtim
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRealtimeEndpointRequest object.
  */
 CreateRealtimeEndpointRequest::CreateRealtimeEndpointRequest()
@@ -53,13 +56,16 @@ CreateRealtimeEndpointRequest::CreateRealtimeEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRealtimeEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRealtimeEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetw
     return new CreateRealtimeEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRealtimeEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetw
  * @brief  Private implementation for CreateRealtimeEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRealtimeEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRealtimeEndpointRequestPrivate object, copying another.

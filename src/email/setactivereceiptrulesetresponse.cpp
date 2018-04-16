@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetActiveReceiptRuleSetResponse
+/*!
+ * \class QtAws::SES::SetActiveReceiptRuleSetResponse
  *
- * @brief  Handles SES SetActiveReceiptRuleSet responses.
+ * \brief The SetActiveReceiptRuleSetResponse class encapsulates SES SetActiveReceiptRuleSet responses.
  *
- * @see    SESClient::setActiveReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setActiveReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new SetActiveReceiptRuleSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetActiveReceiptRuleSetRequest * SetActiveReceiptRuleSetResponse::request(
     return static_cast<const SetActiveReceiptRuleSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SetActiveReceiptRuleSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetActiveReceiptRuleSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetActiveReceiptRuleSetResponsePrivate
+ * \class SetActiveReceiptRuleSetResponsePrivate
  *
- * @brief  Private implementation for SetActiveReceiptRuleSetResponse.
+ * \brief Private implementation for SetActiveReceiptRuleSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetActiveReceiptRuleSetResponsePrivate object.
@@ -91,7 +105,7 @@ SetActiveReceiptRuleSetResponsePrivate::SetActiveReceiptRuleSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SetActiveReceiptRuleSetResponse element.
  *
  * @param  xml  XML stream to parse.

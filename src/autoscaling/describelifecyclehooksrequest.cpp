@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLifecycleHooksRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeLifecycleHooksRequest
  *
- * @brief  Implements AutoScaling DescribeLifecycleHooks requests.
+ * \brief The DescribeLifecycleHooksRequest class encapsulates AutoScaling DescribeLifecycleHooks requests.
  *
- * @see    AutoScalingClient::describeLifecycleHooks
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLifecycleHooks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLifecycleHooksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest(const DescribeLifec
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLifecycleHooksRequest object.
  */
 DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest()
@@ -53,13 +61,16 @@ DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLifecycleHooksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLifecycleHooksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLifecycleHooksRequest::response(QNetw
     return new DescribeLifecycleHooksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLifecycleHooksRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLifecycleHooksRequest::response(QNetw
  * @brief  Private implementation for DescribeLifecycleHooksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLifecycleHooksRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLifecycleHooksRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteDataSourceResponse
+/*!
+ * \class QtAws::AppSync::DeleteDataSourceResponse
  *
- * @brief  Handles AppSync DeleteDataSource responses.
+ * \brief The DeleteDataSourceResponse class encapsulates AppSync DeleteDataSource responses.
  *
- * @see    AppSyncClient::deleteDataSource
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDataSourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
     return static_cast<const DeleteDataSourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync DeleteDataSource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDataSourceResponsePrivate
+ * \class DeleteDataSourceResponsePrivate
  *
- * @brief  Private implementation for DeleteDataSourceResponse.
+ * \brief Private implementation for DeleteDataSourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDataSourceResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync DeleteDataSourceResponse element.
  *
  * @param  xml  XML stream to parse.

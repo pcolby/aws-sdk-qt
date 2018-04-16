@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingRegistrationTasksResponse
+/*!
+ * \class QtAws::IoT::ListThingRegistrationTasksResponse
  *
- * @brief  Handles IoT ListThingRegistrationTasks responses.
+ * \brief The ListThingRegistrationTasksResponse class encapsulates IoT ListThingRegistrationTasks responses.
  *
- * @see    IoTClient::listThingRegistrationTasks
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThingRegistrationTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingRegistrationTasksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListThingRegistrationTasksRequest * ListThingRegistrationTasksResponse::re
     return static_cast<const ListThingRegistrationTasksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListThingRegistrationTasks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListThingRegistrationTasksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListThingRegistrationTasksResponsePrivate
+ * \class ListThingRegistrationTasksResponsePrivate
  *
- * @brief  Private implementation for ListThingRegistrationTasksResponse.
+ * \brief Private implementation for ListThingRegistrationTasksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingRegistrationTasksResponsePrivate object.
@@ -91,7 +105,7 @@ ListThingRegistrationTasksResponsePrivate::ListThingRegistrationTasksResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListThingRegistrationTasksResponse element.
  *
  * @param  xml  XML stream to parse.

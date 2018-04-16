@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketNotificationConfigurationRequest
+/*!
+ * \class QtAws::S3::PutBucketNotificationConfigurationRequest
  *
- * @brief  Implements S3 PutBucketNotificationConfiguration requests.
+ * \brief The PutBucketNotificationConfigurationRequest class encapsulates S3 PutBucketNotificationConfiguration requests.
  *
- * @see    S3Client::putBucketNotificationConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketNotificationConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketNotificationConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketNotificationConfigurationRequest::PutBucketNotificationConfigurationReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketNotificationConfigurationRequest object.
  */
 PutBucketNotificationConfigurationRequest::PutBucketNotificationConfigurationRequest()
@@ -53,13 +56,16 @@ PutBucketNotificationConfigurationRequest::PutBucketNotificationConfigurationReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketNotificationConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketNotificationConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationConfigurationRequest::re
     return new PutBucketNotificationConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketNotificationConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationConfigurationRequest::re
  * @brief  Private implementation for PutBucketNotificationConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketNotificationConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketNotificationConfigurationRequestPrivate::PutBucketNotificationConfigura
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketNotificationConfigurationRequestPrivate object, copying another.

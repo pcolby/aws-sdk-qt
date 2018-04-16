@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDeploymentRequest
+/*!
+ * \class QtAws::APIGateway::DeleteDeploymentRequest
  *
- * @brief  Implements APIGateway DeleteDeployment requests.
+ * \brief The DeleteDeploymentRequest class encapsulates APIGateway DeleteDeployment requests.
  *
- * @see    APIGatewayClient::deleteDeployment
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeploymentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteDeploymentRequest::DeleteDeploymentRequest(const DeleteDeploymentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeploymentRequest object.
  */
 DeleteDeploymentRequest::DeleteDeploymentRequest()
@@ -53,13 +61,16 @@ DeleteDeploymentRequest::DeleteDeploymentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDeploymentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDeploymentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkRep
     return new DeleteDeploymentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDeploymentRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteDeploymentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeploymentRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeploymentRequestPrivate object, copying another.

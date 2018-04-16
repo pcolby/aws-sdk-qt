@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  PublishVersionRequest
+/*!
+ * \class QtAws::Lambda::PublishVersionRequest
  *
- * @brief  Implements Lambda PublishVersion requests.
+ * \brief The PublishVersionRequest class encapsulates Lambda PublishVersion requests.
  *
- * @see    LambdaClient::publishVersion
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::publishVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new PublishVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ PublishVersionRequest::PublishVersionRequest(const PublishVersionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PublishVersionRequest object.
  */
 PublishVersionRequest::PublishVersionRequest()
@@ -53,13 +67,16 @@ PublishVersionRequest::PublishVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PublishVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PublishVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply
     return new PublishVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PublishVersionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply
  * @brief  Private implementation for PublishVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishVersionRequestPrivate object.
@@ -97,7 +114,7 @@ PublishVersionRequestPrivate::PublishVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishVersionRequestPrivate object, copying another.

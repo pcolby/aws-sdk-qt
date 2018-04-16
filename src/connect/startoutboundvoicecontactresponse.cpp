@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Connect {
 
-/**
- * @class  StartOutboundVoiceContactResponse
+/*!
+ * \class QtAws::Connect::StartOutboundVoiceContactResponse
  *
- * @brief  Handles Connect StartOutboundVoiceContact responses.
+ * \brief The StartOutboundVoiceContactResponse class encapsulates Connect StartOutboundVoiceContact responses.
  *
- * @see    ConnectClient::startOutboundVoiceContact
+ * \ingroup Connect
+ *
+ *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
+ *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
+ *  to set up and manage a customer contact center and provide reliable customer engagement at any
+ *
+ * \sa ConnectClient::startOutboundVoiceContact
  */
 
-/**
+/*!
  * @brief  Constructs a new StartOutboundVoiceContactResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartOutboundVoiceContactRequest * StartOutboundVoiceContactResponse::requ
     return static_cast<const StartOutboundVoiceContactRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Connect StartOutboundVoiceContact response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartOutboundVoiceContactResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartOutboundVoiceContactResponsePrivate
+ * \class StartOutboundVoiceContactResponsePrivate
  *
- * @brief  Private implementation for StartOutboundVoiceContactResponse.
+ * \brief Private implementation for StartOutboundVoiceContactResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartOutboundVoiceContactResponsePrivate object.
@@ -91,7 +97,7 @@ StartOutboundVoiceContactResponsePrivate::StartOutboundVoiceContactResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Connect StartOutboundVoiceContactResponse element.
  *
  * @param  xml  XML stream to parse.

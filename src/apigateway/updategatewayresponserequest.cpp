@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateGatewayResponseRequest
+/*!
+ * \class QtAws::APIGateway::UpdateGatewayResponseRequest
  *
- * @brief  Implements APIGateway UpdateGatewayResponse requests.
+ * \brief The UpdateGatewayResponseRequest class encapsulates APIGateway UpdateGatewayResponse requests.
  *
- * @see    APIGatewayClient::updateGatewayResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateGatewayResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateGatewayResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateGatewayResponseRequest::UpdateGatewayResponseRequest(const UpdateGatewayRe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateGatewayResponseRequest object.
  */
 UpdateGatewayResponseRequest::UpdateGatewayResponseRequest()
@@ -53,13 +61,16 @@ UpdateGatewayResponseRequest::UpdateGatewayResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateGatewayResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateGatewayResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewayResponseRequest::response(QNetwo
     return new UpdateGatewayResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateGatewayResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewayResponseRequest::response(QNetwo
  * @brief  Private implementation for UpdateGatewayResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGatewayResponseRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateGatewayResponseRequestPrivate::UpdateGatewayResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateGatewayResponseRequestPrivate object, copying another.

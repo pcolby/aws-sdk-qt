@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  ListJobsResponse
+/*!
+ * \class QtAws::MediaConvert::ListJobsResponse
  *
- * @brief  Handles MediaConvert ListJobs responses.
+ * \brief The ListJobsResponse class encapsulates MediaConvert ListJobs responses.
  *
- * @see    MediaConvertClient::listJobs
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListJobsRequest * ListJobsResponse::request() const
     return static_cast<const ListJobsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert ListJobs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListJobsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListJobsResponsePrivate
+ * \class ListJobsResponsePrivate
  *
- * @brief  Private implementation for ListJobsResponse.
+ * \brief Private implementation for ListJobsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsResponsePrivate object.
@@ -91,7 +94,7 @@ ListJobsResponsePrivate::ListJobsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert ListJobsResponse element.
  *
  * @param  xml  XML stream to parse.

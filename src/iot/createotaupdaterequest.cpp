@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateOTAUpdateRequest
+/*!
+ * \class QtAws::IoT::CreateOTAUpdateRequest
  *
- * @brief  Implements IoT CreateOTAUpdate requests.
+ * \brief The CreateOTAUpdateRequest class encapsulates IoT CreateOTAUpdate requests.
  *
- * @see    IoTClient::createOTAUpdate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createOTAUpdate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateOTAUpdateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateOTAUpdateRequest::CreateOTAUpdateRequest(const CreateOTAUpdateRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateOTAUpdateRequest object.
  */
 CreateOTAUpdateRequest::CreateOTAUpdateRequest()
@@ -53,13 +67,16 @@ CreateOTAUpdateRequest::CreateOTAUpdateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateOTAUpdateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateOTAUpdateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateOTAUpdateRequest::response(QNetworkRepl
     return new CreateOTAUpdateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateOTAUpdateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateOTAUpdateRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateOTAUpdateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOTAUpdateRequestPrivate object.
@@ -97,7 +114,7 @@ CreateOTAUpdateRequestPrivate::CreateOTAUpdateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOTAUpdateRequestPrivate object, copying another.

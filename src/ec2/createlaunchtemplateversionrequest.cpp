@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateLaunchTemplateVersionRequest
+/*!
+ * \class QtAws::EC2::CreateLaunchTemplateVersionRequest
  *
- * @brief  Implements EC2 CreateLaunchTemplateVersion requests.
+ * \brief The CreateLaunchTemplateVersionRequest class encapsulates EC2 CreateLaunchTemplateVersion requests.
  *
- * @see    EC2Client::createLaunchTemplateVersion
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createLaunchTemplateVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLaunchTemplateVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest(const Cre
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateLaunchTemplateVersionRequest object.
  */
 CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest()
@@ -53,13 +60,16 @@ CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateLaunchTemplateVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateLaunchTemplateVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateVersionRequest::response(
     return new CreateLaunchTemplateVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateLaunchTemplateVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateVersionRequest::response(
  * @brief  Private implementation for CreateLaunchTemplateVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLaunchTemplateVersionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLaunchTemplateVersionRequestPrivate object, copying another.

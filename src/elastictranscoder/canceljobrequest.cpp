@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  CancelJobRequest
+/*!
+ * \class QtAws::ElasticTranscoder::CancelJobRequest
  *
- * @brief  Implements ElasticTranscoder CancelJob requests.
+ * \brief The CancelJobRequest class encapsulates ElasticTranscoder CancelJob requests.
  *
- * @see    ElasticTranscoderClient::cancelJob
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
@@ -53,13 +59,16 @@ CancelJobRequest::CancelJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
     return new CancelJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CancelJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object.
@@ -97,7 +106,7 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object, copying another.

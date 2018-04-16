@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketCorsResponse
+/*!
+ * \class QtAws::S3::GetBucketCorsResponse
  *
- * @brief  Handles S3 GetBucketCors responses.
+ * \brief The GetBucketCorsResponse class encapsulates S3 GetBucketCors responses.
  *
- * @see    S3Client::getBucketCors
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketCors
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketCorsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketCorsRequest * GetBucketCorsResponse::request() const
     return static_cast<const GetBucketCorsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketCors response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketCorsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketCorsResponsePrivate
+ * \class GetBucketCorsResponsePrivate
  *
- * @brief  Private implementation for GetBucketCorsResponse.
+ * \brief Private implementation for GetBucketCorsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketCorsResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketCorsResponsePrivate::GetBucketCorsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketCorsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DetachThingPrincipalResponse
+/*!
+ * \class QtAws::IoT::DetachThingPrincipalResponse
  *
- * @brief  Handles IoT DetachThingPrincipal responses.
+ * \brief The DetachThingPrincipalResponse class encapsulates IoT DetachThingPrincipal responses.
  *
- * @see    IoTClient::detachThingPrincipal
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::detachThingPrincipal
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachThingPrincipalResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DetachThingPrincipalRequest * DetachThingPrincipalResponse::request() cons
     return static_cast<const DetachThingPrincipalRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DetachThingPrincipal response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DetachThingPrincipalResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachThingPrincipalResponsePrivate
+ * \class DetachThingPrincipalResponsePrivate
  *
- * @brief  Private implementation for DetachThingPrincipalResponse.
+ * \brief Private implementation for DetachThingPrincipalResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachThingPrincipalResponsePrivate object.
@@ -91,7 +105,7 @@ DetachThingPrincipalResponsePrivate::DetachThingPrincipalResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DetachThingPrincipalResponse element.
  *
  * @param  xml  XML stream to parse.

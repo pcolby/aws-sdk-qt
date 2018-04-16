@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateLoggerDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::CreateLoggerDefinitionVersionRequest
  *
- * @brief  Implements Greengrass CreateLoggerDefinitionVersion requests.
+ * \brief The CreateLoggerDefinitionVersionRequest class encapsulates Greengrass CreateLoggerDefinitionVersion requests.
  *
- * @see    GreengrassClient::createLoggerDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createLoggerDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLoggerDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateLoggerDefinitionVersionRequest::CreateLoggerDefinitionVersionRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateLoggerDefinitionVersionRequest object.
  */
 CreateLoggerDefinitionVersionRequest::CreateLoggerDefinitionVersionRequest()
@@ -53,13 +59,16 @@ CreateLoggerDefinitionVersionRequest::CreateLoggerDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateLoggerDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateLoggerDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionVersionRequest::respons
     return new CreateLoggerDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateLoggerDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionVersionRequest::respons
  * @brief  Private implementation for CreateLoggerDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoggerDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateLoggerDefinitionVersionRequestPrivate::CreateLoggerDefinitionVersionReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoggerDefinitionVersionRequestPrivate object, copying another.

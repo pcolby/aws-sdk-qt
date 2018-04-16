@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListSubscriptionDefinitionVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListSubscriptionDefinitionVersionsRequest
  *
- * @brief  Implements Greengrass ListSubscriptionDefinitionVersions requests.
+ * \brief The ListSubscriptionDefinitionVersionsRequest class encapsulates Greengrass ListSubscriptionDefinitionVersions requests.
  *
- * @see    GreengrassClient::listSubscriptionDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listSubscriptionDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequest object.
  */
 ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsRequest()
@@ -53,13 +59,16 @@ ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSubscriptionDefinitionVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSubscriptionDefinitionVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::re
     return new ListSubscriptionDefinitionVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSubscriptionDefinitionVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::re
  * @brief  Private implementation for ListSubscriptionDefinitionVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVers
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequestPrivate object, copying another.

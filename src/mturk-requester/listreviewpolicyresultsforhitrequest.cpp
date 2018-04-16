@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListReviewPolicyResultsForHITRequest
+/*!
+ * \class QtAws::MTurk::ListReviewPolicyResultsForHITRequest
  *
- * @brief  Implements MTurk ListReviewPolicyResultsForHIT requests.
+ * \brief The ListReviewPolicyResultsForHITRequest class encapsulates MTurk ListReviewPolicyResultsForHIT requests.
  *
- * @see    MTurkClient::listReviewPolicyResultsForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listReviewPolicyResultsForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new ListReviewPolicyResultsForHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListReviewPolicyResultsForHITRequest object.
  */
 ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest()
@@ -53,13 +56,16 @@ ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListReviewPolicyResultsForHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListReviewPolicyResultsForHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::respons
     return new ListReviewPolicyResultsForHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListReviewPolicyResultsForHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::respons
  * @brief  Private implementation for ListReviewPolicyResultsForHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReviewPolicyResultsForHITRequestPrivate object.
@@ -97,7 +103,7 @@ ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListReviewPolicyResultsForHITRequestPrivate object, copying another.

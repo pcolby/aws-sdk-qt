@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  GetJobManifestRequest
+/*!
+ * \class QtAws::Snowball::GetJobManifestRequest
  *
- * @brief  Implements Snowball GetJobManifest requests.
+ * \brief The GetJobManifestRequest class encapsulates Snowball GetJobManifest requests.
  *
- * @see    SnowballClient::getJobManifest
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::getJobManifest
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobManifestRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetJobManifestRequest::GetJobManifestRequest(const GetJobManifestRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetJobManifestRequest object.
  */
 GetJobManifestRequest::GetJobManifestRequest()
@@ -53,13 +62,16 @@ GetJobManifestRequest::GetJobManifestRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetJobManifestRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetJobManifestResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply
     return new GetJobManifestResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetJobManifestRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply
  * @brief  Private implementation for GetJobManifestRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobManifestRequestPrivate object.
@@ -97,7 +109,7 @@ GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobManifestRequestPrivate object, copying another.

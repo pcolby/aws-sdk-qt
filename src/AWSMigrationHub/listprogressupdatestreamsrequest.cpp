@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ListProgressUpdateStreamsRequest
+/*!
+ * \class QtAws::MigrationHub::ListProgressUpdateStreamsRequest
  *
- * @brief  Implements MigrationHub ListProgressUpdateStreams requests.
+ * \brief The ListProgressUpdateStreamsRequest class encapsulates MigrationHub ListProgressUpdateStreams requests.
  *
- * @see    MigrationHubClient::listProgressUpdateStreams
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::listProgressUpdateStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListProgressUpdateStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListProgressUpdateStreamsRequest::ListProgressUpdateStreamsRequest(const ListPro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListProgressUpdateStreamsRequest object.
  */
 ListProgressUpdateStreamsRequest::ListProgressUpdateStreamsRequest()
@@ -53,13 +58,16 @@ ListProgressUpdateStreamsRequest::ListProgressUpdateStreamsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListProgressUpdateStreamsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListProgressUpdateStreamsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QN
     return new ListProgressUpdateStreamsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListProgressUpdateStreamsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QN
  * @brief  Private implementation for ListProgressUpdateStreamsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProgressUpdateStreamsRequestPrivate object.
@@ -97,7 +105,7 @@ ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProgressUpdateStreamsRequestPrivate object, copying another.

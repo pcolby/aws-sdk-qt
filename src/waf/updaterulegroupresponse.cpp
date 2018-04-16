@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateRuleGroupResponse
+/*!
+ * \class QtAws::WAF::UpdateRuleGroupResponse
  *
- * @brief  Handles WAF UpdateRuleGroup responses.
+ * \brief The UpdateRuleGroupResponse class encapsulates WAF UpdateRuleGroup responses.
  *
- * @see    WAFClient::updateRuleGroup
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateRuleGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRuleGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateRuleGroupRequest * UpdateRuleGroupResponse::request() const
     return static_cast<const UpdateRuleGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF UpdateRuleGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateRuleGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRuleGroupResponsePrivate
+ * \class UpdateRuleGroupResponsePrivate
  *
- * @brief  Private implementation for UpdateRuleGroupResponse.
+ * \brief Private implementation for UpdateRuleGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRuleGroupResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateRuleGroupResponsePrivate::UpdateRuleGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF UpdateRuleGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetStageRequest
+/*!
+ * \class QtAws::APIGateway::GetStageRequest
  *
- * @brief  Implements APIGateway GetStage requests.
+ * \brief The GetStageRequest class encapsulates APIGateway GetStage requests.
  *
- * @see    APIGatewayClient::getStage
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getStage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetStageRequest::GetStageRequest(const GetStageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetStageRequest object.
  */
 GetStageRequest::GetStageRequest()
@@ -53,13 +61,16 @@ GetStageRequest::GetStageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetStageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetStageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetStageRequest::response(QNetworkReply * con
     return new GetStageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetStageRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetStageRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetStageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStageRequestPrivate object.
@@ -97,7 +108,7 @@ GetStageRequestPrivate::GetStageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStageRequestPrivate object, copying another.

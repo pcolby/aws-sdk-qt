@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteEndpointRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteEndpointRequest
  *
- * @brief  Implements DatabaseMigrationService DeleteEndpoint requests.
+ * \brief The DeleteEndpointRequest class encapsulates DatabaseMigrationService DeleteEndpoint requests.
  *
- * @see    DatabaseMigrationServiceClient::deleteEndpoint
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
@@ -53,13 +67,16 @@ DeleteEndpointRequest::DeleteEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
     return new DeleteEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteEndpointRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointRequestPrivate object, copying another.

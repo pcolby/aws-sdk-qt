@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  ListApplicationsRequest
+/*!
+ * \class QtAws::KinesisAnalytics::ListApplicationsRequest
  *
- * @brief  Implements KinesisAnalytics ListApplications requests.
+ * \brief The ListApplicationsRequest class encapsulates KinesisAnalytics ListApplications requests.
  *
- * @see    KinesisAnalyticsClient::listApplications
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::listApplications
  */
 
-/**
+/*!
  * @brief  Constructs a new ListApplicationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListApplicationsRequest::ListApplicationsRequest(const ListApplicationsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListApplicationsRequest object.
  */
 ListApplicationsRequest::ListApplicationsRequest()
@@ -53,13 +56,16 @@ ListApplicationsRequest::ListApplicationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListApplicationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListApplicationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkRep
     return new ListApplicationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListApplicationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkRep
  * @brief  Private implementation for ListApplicationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListApplicationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListApplicationsRequestPrivate object, copying another.

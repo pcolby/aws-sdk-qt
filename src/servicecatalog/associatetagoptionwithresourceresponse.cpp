@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  AssociateTagOptionWithResourceResponse
+/*!
+ * \class QtAws::ServiceCatalog::AssociateTagOptionWithResourceResponse
  *
- * @brief  Handles ServiceCatalog AssociateTagOptionWithResource responses.
+ * \brief The AssociateTagOptionWithResourceResponse class encapsulates ServiceCatalog AssociateTagOptionWithResource responses.
  *
- * @see    ServiceCatalogClient::associateTagOptionWithResource
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::associateTagOptionWithResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateTagOptionWithResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const AssociateTagOptionWithResourceRequest * AssociateTagOptionWithResourceResp
     return static_cast<const AssociateTagOptionWithResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog AssociateTagOptionWithResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void AssociateTagOptionWithResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateTagOptionWithResourceResponsePrivate
+ * \class AssociateTagOptionWithResourceResponsePrivate
  *
- * @brief  Private implementation for AssociateTagOptionWithResourceResponse.
+ * \brief Private implementation for AssociateTagOptionWithResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateTagOptionWithResourceResponsePrivate object.
@@ -91,7 +100,7 @@ AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceRes
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog AssociateTagOptionWithResourceResponse element.
  *
  * @param  xml  XML stream to parse.

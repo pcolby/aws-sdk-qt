@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListStepsResponse
+/*!
+ * \class QtAws::EMR::ListStepsResponse
  *
- * @brief  Handles EMR ListSteps responses.
+ * \brief The ListStepsResponse class encapsulates EMR ListSteps responses.
  *
- * @see    EMRClient::listSteps
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listSteps
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStepsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListStepsRequest * ListStepsResponse::request() const
     return static_cast<const ListStepsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR ListSteps response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListStepsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStepsResponsePrivate
+ * \class ListStepsResponsePrivate
  *
- * @brief  Private implementation for ListStepsResponse.
+ * \brief Private implementation for ListStepsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStepsResponsePrivate object.
@@ -91,7 +97,7 @@ ListStepsResponsePrivate::ListStepsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR ListStepsResponse element.
  *
  * @param  xml  XML stream to parse.

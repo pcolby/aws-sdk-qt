@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetDeviceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetDeviceRequest
  *
- * @brief  Implements CognitoIdentityProvider GetDevice requests.
+ * \brief The GetDeviceRequest class encapsulates CognitoIdentityProvider GetDevice requests.
  *
- * @see    CognitoIdentityProviderClient::getDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetDeviceRequest::GetDeviceRequest(const GetDeviceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDeviceRequest object.
  */
 GetDeviceRequest::GetDeviceRequest()
@@ -53,13 +66,16 @@ GetDeviceRequest::GetDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * co
     return new GetDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDeviceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetDeviceRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceRequestPrivate object.
@@ -97,7 +113,7 @@ GetDeviceRequestPrivate::GetDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeviceRequestPrivate object, copying another.

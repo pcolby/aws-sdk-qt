@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetJobResponse
+/*!
+ * \class QtAws::Glue::GetJobResponse
  *
- * @brief  Handles Glue GetJob responses.
+ * \brief The GetJobResponse class encapsulates Glue GetJob responses.
  *
- * @see    GlueClient::getJob
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getJob
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetJobRequest * GetJobResponse::request() const
     return static_cast<const GetJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetJobResponsePrivate
+ * \class GetJobResponsePrivate
  *
- * @brief  Private implementation for GetJobResponse.
+ * \brief Private implementation for GetJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobResponsePrivate object.
@@ -91,7 +97,7 @@ GetJobResponsePrivate::GetJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetJobResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateWorkerBlockRequest
+/*!
+ * \class QtAws::MTurk::CreateWorkerBlockRequest
  *
- * @brief  Implements MTurk CreateWorkerBlock requests.
+ * \brief The CreateWorkerBlockRequest class encapsulates MTurk CreateWorkerBlock requests.
  *
- * @see    MTurkClient::createWorkerBlock
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createWorkerBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateWorkerBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateWorkerBlockRequest::CreateWorkerBlockRequest(const CreateWorkerBlockReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateWorkerBlockRequest object.
  */
 CreateWorkerBlockRequest::CreateWorkerBlockRequest()
@@ -53,13 +56,16 @@ CreateWorkerBlockRequest::CreateWorkerBlockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateWorkerBlockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateWorkerBlockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkRe
     return new CreateWorkerBlockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateWorkerBlockRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateWorkerBlockRequest::response(QNetworkRe
  * @brief  Private implementation for CreateWorkerBlockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateWorkerBlockRequestPrivate object.
@@ -97,7 +103,7 @@ CreateWorkerBlockRequestPrivate::CreateWorkerBlockRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateWorkerBlockRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListBonusPaymentsRequest
+/*!
+ * \class QtAws::MTurk::ListBonusPaymentsRequest
  *
- * @brief  Implements MTurk ListBonusPayments requests.
+ * \brief The ListBonusPaymentsRequest class encapsulates MTurk ListBonusPayments requests.
  *
- * @see    MTurkClient::listBonusPayments
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listBonusPayments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBonusPaymentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListBonusPaymentsRequest::ListBonusPaymentsRequest(const ListBonusPaymentsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBonusPaymentsRequest object.
  */
 ListBonusPaymentsRequest::ListBonusPaymentsRequest()
@@ -53,13 +56,16 @@ ListBonusPaymentsRequest::ListBonusPaymentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBonusPaymentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBonusPaymentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkRe
     return new ListBonusPaymentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBonusPaymentsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkRe
  * @brief  Private implementation for ListBonusPaymentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBonusPaymentsRequestPrivate object.
@@ -97,7 +103,7 @@ ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBonusPaymentsRequestPrivate object, copying another.

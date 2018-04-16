@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteEgressOnlyInternetGatewayResponse
+/*!
+ * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayResponse
  *
- * @brief  Handles EC2 DeleteEgressOnlyInternetGateway responses.
+ * \brief The DeleteEgressOnlyInternetGatewayResponse class encapsulates EC2 DeleteEgressOnlyInternetGateway responses.
  *
- * @see    EC2Client::deleteEgressOnlyInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteEgressOnlyInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEgressOnlyInternetGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteEgressOnlyInternetGatewayRequest * DeleteEgressOnlyInternetGatewayRe
     return static_cast<const DeleteEgressOnlyInternetGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteEgressOnlyInternetGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEgressOnlyInternetGatewayResponsePrivate
+ * \class DeleteEgressOnlyInternetGatewayResponsePrivate
  *
- * @brief  Private implementation for DeleteEgressOnlyInternetGatewayResponse.
+ * \brief Private implementation for DeleteEgressOnlyInternetGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEgressOnlyInternetGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayR
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteEgressOnlyInternetGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

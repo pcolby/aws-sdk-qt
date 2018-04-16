@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateProjectResponse
+/*!
+ * \class QtAws::DeviceFarm::UpdateProjectResponse
  *
- * @brief  Handles DeviceFarm UpdateProject responses.
+ * \brief The UpdateProjectResponse class encapsulates DeviceFarm UpdateProject responses.
  *
- * @see    DeviceFarmClient::updateProject
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateProject
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
     return static_cast<const UpdateProjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm UpdateProject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateProjectResponsePrivate
+ * \class UpdateProjectResponsePrivate
  *
- * @brief  Private implementation for UpdateProjectResponse.
+ * \brief Private implementation for UpdateProjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProjectResponsePrivate object.
@@ -91,7 +96,7 @@ UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm UpdateProjectResponse element.
  *
  * @param  xml  XML stream to parse.

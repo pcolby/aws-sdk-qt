@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  StartOnDemandReplicationRunResponse
+/*!
+ * \class QtAws::SMS::StartOnDemandReplicationRunResponse
  *
- * @brief  Handles SMS StartOnDemandReplicationRun responses.
+ * \brief The StartOnDemandReplicationRunResponse class encapsulates SMS StartOnDemandReplicationRun responses.
  *
- * @see    SMSClient::startOnDemandReplicationRun
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::startOnDemandReplicationRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StartOnDemandReplicationRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StartOnDemandReplicationRunRequest * StartOnDemandReplicationRunResponse::
     return static_cast<const StartOnDemandReplicationRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS StartOnDemandReplicationRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StartOnDemandReplicationRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartOnDemandReplicationRunResponsePrivate
+ * \class StartOnDemandReplicationRunResponsePrivate
  *
- * @brief  Private implementation for StartOnDemandReplicationRunResponse.
+ * \brief Private implementation for StartOnDemandReplicationRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartOnDemandReplicationRunResponsePrivate object.
@@ -91,7 +94,7 @@ StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS StartOnDemandReplicationRunResponse element.
  *
  * @param  xml  XML stream to parse.

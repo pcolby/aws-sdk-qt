@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteScheduledActionResponse
+/*!
+ * \class QtAws::AutoScaling::DeleteScheduledActionResponse
  *
- * @brief  Handles AutoScaling DeleteScheduledAction responses.
+ * \brief The DeleteScheduledActionResponse class encapsulates AutoScaling DeleteScheduledAction responses.
  *
- * @see    AutoScalingClient::deleteScheduledAction
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteScheduledAction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteScheduledActionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() co
     return static_cast<const DeleteScheduledActionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeleteScheduledAction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteScheduledActionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteScheduledActionResponsePrivate
+ * \class DeleteScheduledActionResponsePrivate
  *
- * @brief  Private implementation for DeleteScheduledActionResponse.
+ * \brief Private implementation for DeleteScheduledActionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteScheduledActionResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeleteScheduledActionResponse element.
  *
  * @param  xml  XML stream to parse.

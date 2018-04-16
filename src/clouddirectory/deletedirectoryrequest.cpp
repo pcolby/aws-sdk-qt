@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DeleteDirectoryRequest
+/*!
+ * \class QtAws::CloudDirectory::DeleteDirectoryRequest
  *
- * @brief  Implements CloudDirectory DeleteDirectory requests.
+ * \brief The DeleteDirectoryRequest class encapsulates CloudDirectory DeleteDirectory requests.
  *
- * @see    CloudDirectoryClient::deleteDirectory
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::deleteDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDirectoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteDirectoryRequest::DeleteDirectoryRequest(const DeleteDirectoryRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDirectoryRequest object.
  */
 DeleteDirectoryRequest::DeleteDirectoryRequest()
@@ -53,13 +63,16 @@ DeleteDirectoryRequest::DeleteDirectoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDirectoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDirectoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkRepl
     return new DeleteDirectoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDirectoryRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteDirectoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDirectoryRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDirectoryRequestPrivate object, copying another.

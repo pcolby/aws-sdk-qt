@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateIamInstanceProfileRequest
+/*!
+ * \class QtAws::EC2::AssociateIamInstanceProfileRequest
  *
- * @brief  Implements EC2 AssociateIamInstanceProfile requests.
+ * \brief The AssociateIamInstanceProfileRequest class encapsulates EC2 AssociateIamInstanceProfile requests.
  *
- * @see    EC2Client::associateIamInstanceProfile
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateIamInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateIamInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest(const Ass
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateIamInstanceProfileRequest object.
  */
 AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest()
@@ -53,13 +60,16 @@ AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateIamInstanceProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateIamInstanceProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssociateIamInstanceProfileRequest::response(
     return new AssociateIamInstanceProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateIamInstanceProfileRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateIamInstanceProfileRequest::response(
  * @brief  Private implementation for AssociateIamInstanceProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateIamInstanceProfileRequestPrivate object.
@@ -97,7 +107,7 @@ AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateIamInstanceProfileRequestPrivate object, copying another.

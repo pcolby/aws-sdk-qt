@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  UpdateVocabularyRequest
+/*!
+ * \class QtAws::TranscribeService::UpdateVocabularyRequest
  *
- * @brief  Implements TranscribeService UpdateVocabulary requests.
+ * \brief The UpdateVocabularyRequest class encapsulates TranscribeService UpdateVocabulary requests.
  *
- * @see    TranscribeServiceClient::updateVocabulary
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::updateVocabulary
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateVocabularyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateVocabularyRequest::UpdateVocabularyRequest(const UpdateVocabularyRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateVocabularyRequest object.
  */
 UpdateVocabularyRequest::UpdateVocabularyRequest()
@@ -53,13 +57,16 @@ UpdateVocabularyRequest::UpdateVocabularyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateVocabularyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateVocabularyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVocabularyRequest::response(QNetworkRep
     return new UpdateVocabularyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateVocabularyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateVocabularyRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateVocabularyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateVocabularyRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateVocabularyRequestPrivate::UpdateVocabularyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateVocabularyRequestPrivate object, copying another.

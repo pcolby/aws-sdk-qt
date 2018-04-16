@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  ImportServerCatalogResponse
+/*!
+ * \class QtAws::SMS::ImportServerCatalogResponse
  *
- * @brief  Handles SMS ImportServerCatalog responses.
+ * \brief The ImportServerCatalogResponse class encapsulates SMS ImportServerCatalog responses.
  *
- * @see    SMSClient::importServerCatalog
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::importServerCatalog
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportServerCatalogResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ImportServerCatalogRequest * ImportServerCatalogResponse::request() const
     return static_cast<const ImportServerCatalogRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS ImportServerCatalog response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ImportServerCatalogResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportServerCatalogResponsePrivate
+ * \class ImportServerCatalogResponsePrivate
  *
- * @brief  Private implementation for ImportServerCatalogResponse.
+ * \brief Private implementation for ImportServerCatalogResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportServerCatalogResponsePrivate object.
@@ -91,7 +94,7 @@ ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS ImportServerCatalogResponse element.
  *
  * @param  xml  XML stream to parse.

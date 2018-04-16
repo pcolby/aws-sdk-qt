@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteStageRequest
+/*!
+ * \class QtAws::APIGateway::DeleteStageRequest
  *
- * @brief  Implements APIGateway DeleteStage requests.
+ * \brief The DeleteStageRequest class encapsulates APIGateway DeleteStage requests.
  *
- * @see    APIGatewayClient::deleteStage
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteStage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteStageRequest::DeleteStageRequest(const DeleteStageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteStageRequest object.
  */
 DeleteStageRequest::DeleteStageRequest()
@@ -53,13 +61,16 @@ DeleteStageRequest::DeleteStageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteStageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteStageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStageRequest::response(QNetworkReply * 
     return new DeleteStageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteStageRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStageRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteStageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStageRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteStageRequestPrivate::DeleteStageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStageRequestPrivate object, copying another.

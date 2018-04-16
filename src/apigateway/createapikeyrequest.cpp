@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateApiKeyRequest
+/*!
+ * \class QtAws::APIGateway::CreateApiKeyRequest
  *
- * @brief  Implements APIGateway CreateApiKey requests.
+ * \brief The CreateApiKeyRequest class encapsulates APIGateway CreateApiKey requests.
  *
- * @see    APIGatewayClient::createApiKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateApiKeyRequest object.
  */
 CreateApiKeyRequest::CreateApiKeyRequest()
@@ -53,13 +61,16 @@ CreateApiKeyRequest::CreateApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
     return new CreateApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateApiKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApiKeyRequestPrivate object.
@@ -97,7 +108,7 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApiKeyRequestPrivate object, copying another.

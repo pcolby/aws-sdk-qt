@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  GetDataEndpointResponse
+/*!
+ * \class QtAws::KinesisVideo::GetDataEndpointResponse
  *
- * @brief  Handles KinesisVideo GetDataEndpoint responses.
+ * \brief The GetDataEndpointResponse class encapsulates KinesisVideo GetDataEndpoint responses.
  *
- * @see    KinesisVideoClient::getDataEndpoint
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::getDataEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetDataEndpointRequest * GetDataEndpointResponse::request() const
     return static_cast<const GetDataEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideo GetDataEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetDataEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDataEndpointResponsePrivate
+ * \class GetDataEndpointResponsePrivate
  *
- * @brief  Private implementation for GetDataEndpointResponse.
+ * \brief Private implementation for GetDataEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ GetDataEndpointResponsePrivate::GetDataEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideo GetDataEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

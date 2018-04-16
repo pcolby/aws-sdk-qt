@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteMLModelRequest
+/*!
+ * \class QtAws::MachineLearning::DeleteMLModelRequest
  *
- * @brief  Implements MachineLearning DeleteMLModel requests.
+ * \brief The DeleteMLModelRequest class encapsulates MachineLearning DeleteMLModel requests.
  *
- * @see    MachineLearningClient::deleteMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMLModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteMLModelRequest::DeleteMLModelRequest(const DeleteMLModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteMLModelRequest object.
  */
 DeleteMLModelRequest::DeleteMLModelRequest()
@@ -53,13 +56,16 @@ DeleteMLModelRequest::DeleteMLModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteMLModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteMLModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply 
     return new DeleteMLModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteMLModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteMLModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMLModelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMLModelRequestPrivate object, copying another.

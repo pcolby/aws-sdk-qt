@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RequestSpotFleetResponse
+/*!
+ * \class QtAws::EC2::RequestSpotFleetResponse
  *
- * @brief  Handles EC2 RequestSpotFleet responses.
+ * \brief The RequestSpotFleetResponse class encapsulates EC2 RequestSpotFleet responses.
  *
- * @see    EC2Client::requestSpotFleet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::requestSpotFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new RequestSpotFleetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RequestSpotFleetRequest * RequestSpotFleetResponse::request() const
     return static_cast<const RequestSpotFleetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RequestSpotFleet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RequestSpotFleetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RequestSpotFleetResponsePrivate
+ * \class RequestSpotFleetResponsePrivate
  *
- * @brief  Private implementation for RequestSpotFleetResponse.
+ * \brief Private implementation for RequestSpotFleetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestSpotFleetResponsePrivate object.
@@ -91,7 +98,7 @@ RequestSpotFleetResponsePrivate::RequestSpotFleetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RequestSpotFleetResponse element.
  *
  * @param  xml  XML stream to parse.

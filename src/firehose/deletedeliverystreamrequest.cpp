@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  DeleteDeliveryStreamRequest
+/*!
+ * \class QtAws::Firehose::DeleteDeliveryStreamRequest
  *
- * @brief  Implements Firehose DeleteDeliveryStream requests.
+ * \brief The DeleteDeliveryStreamRequest class encapsulates Firehose DeleteDeliveryStream requests.
  *
- * @see    FirehoseClient::deleteDeliveryStream
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::deleteDeliveryStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeliveryStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteDeliveryStreamRequest::DeleteDeliveryStreamRequest(const DeleteDeliveryStr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDeliveryStreamRequest object.
  */
 DeleteDeliveryStreamRequest::DeleteDeliveryStreamRequest()
@@ -53,13 +60,16 @@ DeleteDeliveryStreamRequest::DeleteDeliveryStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDeliveryStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDeliveryStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetwor
     return new DeleteDeliveryStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDeliveryStreamRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetwor
  * @brief  Private implementation for DeleteDeliveryStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeliveryStreamRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDeliveryStreamRequestPrivate object, copying another.

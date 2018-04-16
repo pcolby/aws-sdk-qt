@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  TerminateProvisionedProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::TerminateProvisionedProductRequest
  *
- * @brief  Implements ServiceCatalog TerminateProvisionedProduct requests.
+ * \brief The TerminateProvisionedProductRequest class encapsulates ServiceCatalog TerminateProvisionedProduct requests.
  *
- * @see    ServiceCatalogClient::terminateProvisionedProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::terminateProvisionedProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateProvisionedProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ TerminateProvisionedProductRequest::TerminateProvisionedProductRequest(const Ter
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TerminateProvisionedProductRequest object.
  */
 TerminateProvisionedProductRequest::TerminateProvisionedProductRequest()
@@ -53,13 +62,16 @@ TerminateProvisionedProductRequest::TerminateProvisionedProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TerminateProvisionedProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TerminateProvisionedProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * TerminateProvisionedProductRequest::response(
     return new TerminateProvisionedProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TerminateProvisionedProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * TerminateProvisionedProductRequest::response(
  * @brief  Private implementation for TerminateProvisionedProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateProvisionedProductRequestPrivate object.
@@ -97,7 +109,7 @@ TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateProvisionedProductRequestPrivate object, copying another.

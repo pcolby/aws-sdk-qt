@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListObjectParentPathsResponse
+/*!
+ * \class QtAws::CloudDirectory::ListObjectParentPathsResponse
  *
- * @brief  Handles CloudDirectory ListObjectParentPaths responses.
+ * \brief The ListObjectParentPathsResponse class encapsulates CloudDirectory ListObjectParentPaths responses.
  *
- * @see    CloudDirectoryClient::listObjectParentPaths
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listObjectParentPaths
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectParentPathsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListObjectParentPathsRequest * ListObjectParentPathsResponse::request() co
     return static_cast<const ListObjectParentPathsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListObjectParentPaths response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListObjectParentPathsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListObjectParentPathsResponsePrivate
+ * \class ListObjectParentPathsResponsePrivate
  *
- * @brief  Private implementation for ListObjectParentPathsResponse.
+ * \brief Private implementation for ListObjectParentPathsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectParentPathsResponsePrivate object.
@@ -91,7 +101,7 @@ ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListObjectParentPathsResponse element.
  *
  * @param  xml  XML stream to parse.

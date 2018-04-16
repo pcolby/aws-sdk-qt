@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDomainNamesRequest
+/*!
+ * \class QtAws::APIGateway::GetDomainNamesRequest
  *
- * @brief  Implements APIGateway GetDomainNames requests.
+ * \brief The GetDomainNamesRequest class encapsulates APIGateway GetDomainNames requests.
  *
- * @see    APIGatewayClient::getDomainNames
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDomainNames
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDomainNamesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetDomainNamesRequest::GetDomainNamesRequest(const GetDomainNamesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDomainNamesRequest object.
  */
 GetDomainNamesRequest::GetDomainNamesRequest()
@@ -53,13 +61,16 @@ GetDomainNamesRequest::GetDomainNamesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDomainNamesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDomainNamesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply
     return new GetDomainNamesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDomainNamesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply
  * @brief  Private implementation for GetDomainNamesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainNamesRequestPrivate object.
@@ -97,7 +108,7 @@ GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDomainNamesRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportKeyPairResponse
+/*!
+ * \class QtAws::EC2::ImportKeyPairResponse
  *
- * @brief  Handles EC2 ImportKeyPair responses.
+ * \brief The ImportKeyPairResponse class encapsulates EC2 ImportKeyPair responses.
  *
- * @see    EC2Client::importKeyPair
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importKeyPair
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportKeyPairResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ImportKeyPairRequest * ImportKeyPairResponse::request() const
     return static_cast<const ImportKeyPairRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ImportKeyPair response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ImportKeyPairResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportKeyPairResponsePrivate
+ * \class ImportKeyPairResponsePrivate
  *
- * @brief  Private implementation for ImportKeyPairResponse.
+ * \brief Private implementation for ImportKeyPairResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportKeyPairResponsePrivate object.
@@ -91,7 +98,7 @@ ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ImportKeyPairResponse element.
  *
  * @param  xml  XML stream to parse.

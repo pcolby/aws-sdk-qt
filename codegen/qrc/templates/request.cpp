@@ -7,15 +7,21 @@
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
-/**
- * @class  {{ClassName}}
+/*!
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * @brief  Implements {{ServiceName}} {{OperationName}} requests.
+ * \brief The {{ClassName}} class encapsulates {{ServiceName}} {{OperationName}} requests.
  *
- * @see    {{ServiceName}}Client::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
+ * \ingroup {{NameSpaceName}}
+ *
+{% for line in ClassDocumentation %}
+ * {% if line %} {{ line }}{% endif %}
+{% endfor %}
+ *
+ * \sa {{ServiceName}}Client::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
  */
 
-/**
+/*!
  * @brief  Constructs a new {{ClassName}} object by copying another.
  *
  * @param  other  Instance to copy.
@@ -26,7 +32,7 @@ namespace {{NameSpaceName}} {
 
 }
 
-/**
+/*!
  * @brief  Constructs a new {{ClassName}} object.
  */
 {{ClassName}}::{{ClassName}}()
@@ -35,6 +41,9 @@ namespace {{NameSpaceName}} {
 
 }
 
+/*!
+ * \reimp
+ */
 bool {{ClassName}}::isValid() const
 {
     return false;{# @todo #}
@@ -42,7 +51,7 @@ bool {{ClassName}}::isValid() const
 
 {# @todo Accessor methods #}
 
-/**
+/*!
  * @brief  Construct an {{OperationName}}Response object.
  *
  * @param  reply  Network reply this response should observe.
@@ -57,7 +66,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
     return new {{OperationName}}Response(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  {{ClassName}}Private
@@ -65,7 +74,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  * @brief  Private implementation for {{ClassName}}.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new {{ClassName}}Private object.
@@ -80,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new {{ClassName}}Private object, copying another.

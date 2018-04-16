@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetMembersRequest
+/*!
+ * \class QtAws::GuardDuty::GetMembersRequest
  *
- * @brief  Implements GuardDuty GetMembers requests.
+ * \brief The GetMembersRequest class encapsulates GuardDuty GetMembers requests.
  *
- * @see    GuardDutyClient::getMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetMembersRequest::GetMembersRequest(const GetMembersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMembersRequest object.
  */
 GetMembersRequest::GetMembersRequest()
@@ -53,13 +56,16 @@ GetMembersRequest::GetMembersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMembersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMembersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetMembersRequest::response(QNetworkReply * c
     return new GetMembersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMembersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetMembersRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetMembersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMembersRequestPrivate object.
@@ -97,7 +103,7 @@ GetMembersRequestPrivate::GetMembersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMembersRequestPrivate object, copying another.

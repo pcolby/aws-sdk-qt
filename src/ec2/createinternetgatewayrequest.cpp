@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateInternetGatewayRequest
+/*!
+ * \class QtAws::EC2::CreateInternetGatewayRequest
  *
- * @brief  Implements EC2 CreateInternetGateway requests.
+ * \brief The CreateInternetGatewayRequest class encapsulates EC2 CreateInternetGateway requests.
  *
- * @see    EC2Client::createInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateInternetGatewayRequest::CreateInternetGatewayRequest(const CreateInternetG
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateInternetGatewayRequest object.
  */
 CreateInternetGatewayRequest::CreateInternetGatewayRequest()
@@ -53,13 +60,16 @@ CreateInternetGatewayRequest::CreateInternetGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateInternetGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateInternetGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetwo
     return new CreateInternetGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateInternetGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetwo
  * @brief  Private implementation for CreateInternetGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInternetGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInternetGatewayRequestPrivate object, copying another.

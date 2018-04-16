@@ -62,87 +62,95 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ApplicationDiscoveryService
+ * \brief The QtAws::ApplicationDiscoveryService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ApplicationDiscoveryService {
 
-/**
- * @class  ApplicationDiscoveryServiceClient
+/*!
+ * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClient
  *
- * @brief  Client for AWS Application Discovery Service
+ * \brief The ApplicationDiscoveryServiceClient class provides access the AWS Application Discovery Service service.
  *
- * <fullname>AWS Application Discovery Service</fullname>
+ * \ingroup ApplicationDiscoveryService
  *
- * AWS Application Discovery Service helps you plan application migration projects by automatically identifying servers,
- * virtual machines (VMs), software, and software dependencies running in your on-premises data centers. Application
- * Discovery Service also collects application performance data, which can help you assess the outcome of your migration.
- * The data collected by Application Discovery Service is securely retained in an AWS-hosted and managed database in the
- * cloud. You can export the data as a CSV or XML file into your preferred visualization tool or cloud-migration solution
- * to plan your migration. For more information, see <a href="http://aws.amazon.com/application-discovery/faqs/">AWS
- * Application Discovery Service
- *
- * FAQ</a>>
- *
- * Application Discovery Service offers two modes of
- *
- * operation> <ul> <li>
- *
- * <b>Agentless discovery</b> mode is recommended for environments that use VMware vCenter Server. This mode doesn't
- * require you to install an agent on each host. Agentless discovery gathers server information regardless of the operating
- * systems, which minimizes the time required for initial on-premises infrastructure assessment. Agentless discovery
- * doesn't collect information about software and software dependencies. It also doesn't work in non-VMware environments.
- *
- * </p </li> <li>
- *
- * <b>Agent-based discovery</b> mode collects a richer set of data than agentless discovery by using the AWS Application
- * Discovery Agent, which you install on one or more hosts in your data center. The agent captures infrastructure and
- * application information, including an inventory of installed software applications, system and process performance,
- * resource utilization, and network dependencies between workloads. The information collected by agents is secured at rest
- * and in transit to the Application Discovery Service database in the cloud.
- *
- * </p </li> </ul>
- *
- * We recommend that you use agent-based discovery for non-VMware environments and to collect information about software
- * and software dependencies. You can also run agent-based and agentless discovery simultaneously. Use agentless discovery
- * to quickly complete the initial infrastructure assessment and then install agents on select
- *
- * hosts>
- *
- * Application Discovery Service integrates with application discovery solutions from AWS Partner Network (APN) partners.
- * Third-party application discovery tools can query Application Discovery Service and write to the Application Discovery
- * Service database using a public API. You can then import the data into either a visualization tool or cloud-migration
- *
- * solution> <b>
- *
- * Application Discovery Service doesn't gather sensitive information. All data is handled according to the <a
- * href="http://aws.amazon.com/privacy/">AWS Privacy Policy</a>. You can operate Application Discovery Service offline to
- * inspect collected data before it is shared with the
- *
- * service> </b>
- *
- * Your AWS account must be granted access to Application Discovery Service, a process called <i>whitelisting</i>. This is
- * true for AWS partners and customers alike. To request access, <a
- * href="http://aws.amazon.com/application-discovery/">sign up for Application Discovery Service</a>.
- *
- * </p
- *
- * This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
- * Application Discovery Service. The topic for each action shows the API request parameters and the response.
- * Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform
- * that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
- *
- * SDKs</a>>
- *
- * This guide is intended for use with the <a href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">
- * <i>AWS Application Discovery Service User Guide</i>
+ *  <fullname>AWS Application Discovery Service</fullname>
+ * 
+ *  AWS Application Discovery Service helps you plan application migration projects by automatically identifying servers,
+ *  virtual machines (VMs), software, and software dependencies running in your on-premises data centers. Application
+ *  Discovery Service also collects application performance data, which can help you assess the outcome of your migration.
+ *  The data collected by Application Discovery Service is securely retained in an AWS-hosted and managed database in the
+ *  cloud. You can export the data as a CSV or XML file into your preferred visualization tool or cloud-migration solution
+ *  to plan your migration. For more information, see <a href="http://aws.amazon.com/application-discovery/faqs/">AWS
+ *  Application Discovery Service
+ * 
+ *  FAQ</a>>
+ * 
+ *  Application Discovery Service offers two modes of
+ * 
+ *  operation> <ul> <li>
+ * 
+ *  <b>Agentless discovery</b> mode is recommended for environments that use VMware vCenter Server. This mode doesn't
+ *  require you to install an agent on each host. Agentless discovery gathers server information regardless of the operating
+ *  systems, which minimizes the time required for initial on-premises infrastructure assessment. Agentless discovery
+ *  doesn't collect information about software and software dependencies. It also doesn't work in non-VMware environments.
+ * 
+ *  </p </li> <li>
+ * 
+ *  <b>Agent-based discovery</b> mode collects a richer set of data than agentless discovery by using the AWS Application
+ *  Discovery Agent, which you install on one or more hosts in your data center. The agent captures infrastructure and
+ *  application information, including an inventory of installed software applications, system and process performance,
+ *  resource utilization, and network dependencies between workloads. The information collected by agents is secured at rest
+ *  and in transit to the Application Discovery Service database in the cloud.
+ * 
+ *  </p </li> </ul>
+ * 
+ *  We recommend that you use agent-based discovery for non-VMware environments and to collect information about software
+ *  and software dependencies. You can also run agent-based and agentless discovery simultaneously. Use agentless discovery
+ *  to quickly complete the initial infrastructure assessment and then install agents on select
+ * 
+ *  hosts>
+ * 
+ *  Application Discovery Service integrates with application discovery solutions from AWS Partner Network (APN) partners.
+ *  Third-party application discovery tools can query Application Discovery Service and write to the Application Discovery
+ *  Service database using a public API. You can then import the data into either a visualization tool or cloud-migration
+ * 
+ *  solution> <b>
+ * 
+ *  Application Discovery Service doesn't gather sensitive information. All data is handled according to the <a
+ *  href="http://aws.amazon.com/privacy/">AWS Privacy Policy</a>. You can operate Application Discovery Service offline to
+ *  inspect collected data before it is shared with the
+ * 
+ *  service> </b>
+ * 
+ *  Your AWS account must be granted access to Application Discovery Service, a process called <i>whitelisting</i>. This is
+ *  true for AWS partners and customers alike. To request access, <a
+ *  href="http://aws.amazon.com/application-discovery/">sign up for Application Discovery Service</a>.
+ * 
+ *  </p
+ * 
+ *  This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
+ *  Application Discovery Service. The topic for each action shows the API request parameters and the response.
+ *  Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform
+ *  that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
+ * 
+ *  SDKs</a>>
+ * 
+ *  This guide is intended for use with the <a href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">
+ *  <i>AWS Application Discovery Service User Guide</i>
  */
 
-/**
- * @brief  Constructs a new ApplicationDiscoveryServiceClient object.
+/*!
+ * \brief Constructs a ApplicationDiscoveryServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -161,21 +169,16 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     d->serviceName = QStringLiteral("discovery");
 }
 
-/**
- * @brief  Constructs a new ApplicationDiscoveryServiceClient object.
+/*!
+ * \overload ApplicationDiscoveryServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     const QUrl &endpoint,
@@ -194,7 +197,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     d->serviceName = QStringLiteral("discovery");
 }
 
-/**
+/*!
  * Associates one or more configuration items with an
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -208,7 +211,7 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
     return qobject_cast<AssociateConfigurationItemsToApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an application with the given name and
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -222,7 +225,7 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
     return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts
  * a list of multiple configuration
  *
@@ -237,7 +240,7 @@ CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateT
     return qobject_cast<CreateTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a list of applications and their associations with configuration
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -251,7 +254,7 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
     return qobject_cast<DeleteApplicationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the association between configuration items and one or more tags. This API accepts a list of multiple
  * configuration
  *
@@ -266,7 +269,7 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not
  * specify an
  *
@@ -281,7 +284,7 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
     return qobject_cast<DescribeAgentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves attributes for a list of configuration item IDs. All of the supplied IDs must be for the same asset type
  * (server, application, process, or connection). Output fields are specific to the asset type selected. For example, the
  * output for a <i>server</i> configuration item includes a list of attributes about the server, such as host name,
@@ -304,7 +307,7 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
     return qobject_cast<DescribeConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated. Use <code>DescribeExportTasks</code>
  *
  * instead>
@@ -322,7 +325,7 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
     return qobject_cast<DescribeExportConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -336,7 +339,7 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
     return qobject_cast<DescribeExportTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to
  * a specific configuration
  *
@@ -351,7 +354,7 @@ DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const Des
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates one or more configuration items from an
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -365,7 +368,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
     return qobject_cast<DisassociateConfigurationItemsFromApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated. Use <code>StartExportTask</code>
  *
  * instead>
@@ -386,7 +389,7 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
     return qobject_cast<ExportConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a short summary of discovered
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -400,7 +403,7 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
     return qobject_cast<GetDiscoverySummaryResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria
  * identifies the relationship
  *
@@ -415,7 +418,7 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
     return qobject_cast<ListConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of servers that are one network hop away from a specified
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -429,7 +432,7 @@ ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeigh
     return qobject_cast<ListServerNeighborsResponse *>(send(request));
 }
 
-/**
+/*!
  * Instructs the specified agents or connectors to start collecting
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -443,7 +446,7 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
     return qobject_cast<StartDataCollectionByAgentIdsResponse *>(send(request));
 }
 
-/**
+/*!
  * Begins the export of discovered data to an S3
  *
  * bucket>
@@ -470,7 +473,7 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
     return qobject_cast<StartExportTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Instructs the specified agents or connectors to stop collecting
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -484,7 +487,7 @@ StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDa
     return qobject_cast<StopDataCollectionByAgentIdsResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates metadata about an
  *
  * @param  request Request to send to AWS Application Discovery Service.
@@ -498,7 +501,7 @@ UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication
     return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ApplicationDiscoveryServiceClientPrivate
@@ -506,7 +509,7 @@ UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication
  * @brief  Private implementation for ApplicationDiscoveryServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApplicationDiscoveryServiceClientPrivate object.

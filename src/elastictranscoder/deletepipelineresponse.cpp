@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  DeletePipelineResponse
+/*!
+ * \class QtAws::ElasticTranscoder::DeletePipelineResponse
  *
- * @brief  Handles ElasticTranscoder DeletePipeline responses.
+ * \brief The DeletePipelineResponse class encapsulates ElasticTranscoder DeletePipeline responses.
  *
- * @see    ElasticTranscoderClient::deletePipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::deletePipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePipelineResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeletePipelineRequest * DeletePipelineResponse::request() const
     return static_cast<const DeletePipelineRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder DeletePipeline response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeletePipelineResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePipelineResponsePrivate
+ * \class DeletePipelineResponsePrivate
  *
- * @brief  Private implementation for DeletePipelineResponse.
+ * \brief Private implementation for DeletePipelineResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePipelineResponsePrivate object.
@@ -91,7 +97,7 @@ DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder DeletePipelineResponse element.
  *
  * @param  xml  XML stream to parse.

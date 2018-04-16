@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetByteMatchSetRequest
+/*!
+ * \class QtAws::WAF::GetByteMatchSetRequest
  *
- * @brief  Implements WAF GetByteMatchSet requests.
+ * \brief The GetByteMatchSetRequest class encapsulates WAF GetByteMatchSet requests.
  *
- * @see    WAFClient::getByteMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getByteMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetByteMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetByteMatchSetRequest object.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest()
@@ -53,13 +61,16 @@ GetByteMatchSetRequest::GetByteMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetByteMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetByteMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkRepl
     return new GetByteMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetByteMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkRepl
  * @brief  Private implementation for GetByteMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetByteMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetByteMatchSetRequestPrivate object, copying another.

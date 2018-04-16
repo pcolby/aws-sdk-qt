@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  StartChannelResponse
+/*!
+ * \class QtAws::MediaLive::StartChannelResponse
  *
- * @brief  Handles MediaLive StartChannel responses.
+ * \brief The StartChannelResponse class encapsulates MediaLive StartChannel responses.
  *
- * @see    MediaLiveClient::startChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::startChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new StartChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StartChannelRequest * StartChannelResponse::request() const
     return static_cast<const StartChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive StartChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StartChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartChannelResponsePrivate
+ * \class StartChannelResponsePrivate
  *
- * @brief  Private implementation for StartChannelResponse.
+ * \brief Private implementation for StartChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartChannelResponsePrivate object.
@@ -91,7 +94,7 @@ StartChannelResponsePrivate::StartChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive StartChannelResponse element.
  *
  * @param  xml  XML stream to parse.

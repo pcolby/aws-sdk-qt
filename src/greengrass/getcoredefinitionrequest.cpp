@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetCoreDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::GetCoreDefinitionRequest
  *
- * @brief  Implements Greengrass GetCoreDefinition requests.
+ * \brief The GetCoreDefinitionRequest class encapsulates Greengrass GetCoreDefinition requests.
  *
- * @see    GreengrassClient::getCoreDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getCoreDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCoreDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetCoreDefinitionRequest::GetCoreDefinitionRequest(const GetCoreDefinitionReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCoreDefinitionRequest object.
  */
 GetCoreDefinitionRequest::GetCoreDefinitionRequest()
@@ -53,13 +59,16 @@ GetCoreDefinitionRequest::GetCoreDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCoreDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCoreDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionRequest::response(QNetworkRe
     return new GetCoreDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCoreDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionRequest::response(QNetworkRe
  * @brief  Private implementation for GetCoreDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCoreDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCoreDefinitionRequestPrivate object, copying another.

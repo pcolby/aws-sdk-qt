@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CodeBuild {
 
-/**
- * @class  CodeBuildResponse
+/*!
+ * \class QtAws::CodeBuild::CodeBuildResponse
  *
- * @brief  Handles CodeBuild CodeBuild responses.
+ * \brief The CodeBuildResponse class is the base class for all CodeBuild responses.
  *
- * @see    CodeBuildClient::codeBuild
+ * \ingroup CodeBuild
  */
 
-/**
+/*!
  * @brief  Constructs a new CodeBuildResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CodeBuildResponse::CodeBuildResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeBuildResponse object.
@@ -63,7 +63,7 @@ CodeBuildResponse::CodeBuildResponse(CodeBuildResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CodeBuildResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodeBuildResponsePrivate
@@ -92,7 +92,7 @@ void CodeBuildResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CodeBuildResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeBuildResponsePrivate object.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  WorkSpacesResponse
+/*!
+ * \class QtAws::WorkSpaces::WorkSpacesResponse
  *
- * @brief  Handles WorkSpaces WorkSpaces responses.
+ * \brief The WorkSpacesResponse class is the base class for all WorkSpaces responses.
  *
- * @see    WorkSpacesClient::workSpaces
+ * \ingroup WorkSpaces
  */
 
-/**
+/*!
  * @brief  Constructs a new WorkSpacesResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ WorkSpacesResponse::WorkSpacesResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkSpacesResponse object.
@@ -63,7 +63,7 @@ WorkSpacesResponse::WorkSpacesResponse(WorkSpacesResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void WorkSpacesResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WorkSpacesResponsePrivate
@@ -92,7 +92,7 @@ void WorkSpacesResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for WorkSpacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkSpacesResponsePrivate object.

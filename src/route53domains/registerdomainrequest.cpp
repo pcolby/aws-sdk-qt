@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  RegisterDomainRequest
+/*!
+ * \class QtAws::Route53Domains::RegisterDomainRequest
  *
- * @brief  Implements Route53Domains RegisterDomain requests.
+ * \brief The RegisterDomainRequest class encapsulates Route53Domains RegisterDomain requests.
  *
- * @see    Route53DomainsClient::registerDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::registerDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ RegisterDomainRequest::RegisterDomainRequest(const RegisterDomainRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RegisterDomainRequest object.
  */
 RegisterDomainRequest::RegisterDomainRequest()
@@ -53,13 +57,16 @@ RegisterDomainRequest::RegisterDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RegisterDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RegisterDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
     return new RegisterDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RegisterDomainRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
  * @brief  Private implementation for RegisterDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterDomainRequestPrivate object.
@@ -97,7 +104,7 @@ RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterDomainRequestPrivate object, copying another.

@@ -25,15 +25,42 @@
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  GetAutomationExecutionRequest
+/*!
+ * \class QtAws::SSM::GetAutomationExecutionRequest
  *
- * @brief  Implements SSM GetAutomationExecution requests.
+ * \brief The GetAutomationExecutionRequest class encapsulates SSM GetAutomationExecution requests.
  *
- * @see    SSMClient::getAutomationExecution
+ * \ingroup SSM
+ *
+ *  <fullname>AWS Systems Manager</fullname>
+ * 
+ *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
+ *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
+ *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
+ *  configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
+ *  your hybrid environment that has been configured for Systems
+ * 
+ *  Manager>
+ * 
+ *  This reference is intended to be used with the <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  To get started, verify prerequisites and configure managed instances. For more information, see <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ * 
+ *  Prerequisites</a>>
+ * 
+ *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
+ *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
+ *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
+ *  Requests</a>.
+ *
+ * \sa SSMClient::getAutomationExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAutomationExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +71,7 @@ GetAutomationExecutionRequest::GetAutomationExecutionRequest(const GetAutomation
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAutomationExecutionRequest object.
  */
 GetAutomationExecutionRequest::GetAutomationExecutionRequest()
@@ -53,13 +80,16 @@ GetAutomationExecutionRequest::GetAutomationExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAutomationExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAutomationExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetw
     return new GetAutomationExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAutomationExecutionRequestPrivate
@@ -82,7 +112,7 @@ QtAws::Core::AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetw
  * @brief  Private implementation for GetAutomationExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAutomationExecutionRequestPrivate object.
@@ -97,7 +127,7 @@ GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAutomationExecutionRequestPrivate object, copying another.

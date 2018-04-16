@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateJobRequest
+/*!
+ * \class QtAws::Glue::UpdateJobRequest
  *
- * @brief  Implements Glue UpdateJob requests.
+ * \brief The UpdateJobRequest class encapsulates Glue UpdateJob requests.
  *
- * @see    GlueClient::updateJob
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateJob
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateJobRequest::UpdateJobRequest(const UpdateJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobRequest object.
  */
 UpdateJobRequest::UpdateJobRequest()
@@ -53,13 +59,16 @@ UpdateJobRequest::UpdateJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
     return new UpdateJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for UpdateJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobRequestPrivate object, copying another.

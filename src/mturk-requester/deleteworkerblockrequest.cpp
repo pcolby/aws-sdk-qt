@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  DeleteWorkerBlockRequest
+/*!
+ * \class QtAws::MTurk::DeleteWorkerBlockRequest
  *
- * @brief  Implements MTurk DeleteWorkerBlock requests.
+ * \brief The DeleteWorkerBlockRequest class encapsulates MTurk DeleteWorkerBlock requests.
  *
- * @see    MTurkClient::deleteWorkerBlock
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::deleteWorkerBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteWorkerBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteWorkerBlockRequest::DeleteWorkerBlockRequest(const DeleteWorkerBlockReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteWorkerBlockRequest object.
  */
 DeleteWorkerBlockRequest::DeleteWorkerBlockRequest()
@@ -53,13 +56,16 @@ DeleteWorkerBlockRequest::DeleteWorkerBlockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteWorkerBlockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteWorkerBlockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkRe
     return new DeleteWorkerBlockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteWorkerBlockRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteWorkerBlockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWorkerBlockRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWorkerBlockRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetObjectResponse
+/*!
+ * \class QtAws::S3::GetObjectResponse
  *
- * @brief  Handles S3 GetObject responses.
+ * \brief The GetObjectResponse class encapsulates S3 GetObject responses.
  *
- * @see    S3Client::getObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getObject
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetObjectRequest * GetObjectResponse::request() const
     return static_cast<const GetObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetObjectResponsePrivate
+ * \class GetObjectResponsePrivate
  *
- * @brief  Private implementation for GetObjectResponse.
+ * \brief Private implementation for GetObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectResponsePrivate object.
@@ -91,7 +94,7 @@ GetObjectResponsePrivate::GetObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetObjectResponse element.
  *
  * @param  xml  XML stream to parse.

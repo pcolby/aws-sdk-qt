@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListResourceServersRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListResourceServersRequest
  *
- * @brief  Implements CognitoIdentityProvider ListResourceServers requests.
+ * \brief The ListResourceServersRequest class encapsulates CognitoIdentityProvider ListResourceServers requests.
  *
- * @see    CognitoIdentityProviderClient::listResourceServers
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listResourceServers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceServersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListResourceServersRequest::ListResourceServersRequest(const ListResourceServers
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResourceServersRequest object.
  */
 ListResourceServersRequest::ListResourceServersRequest()
@@ -53,13 +66,16 @@ ListResourceServersRequest::ListResourceServersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResourceServersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResourceServersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceServersRequest::response(QNetwork
     return new ListResourceServersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResourceServersRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceServersRequest::response(QNetwork
  * @brief  Private implementation for ListResourceServersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceServersRequestPrivate object.
@@ -97,7 +113,7 @@ ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceServersRequestPrivate object, copying another.

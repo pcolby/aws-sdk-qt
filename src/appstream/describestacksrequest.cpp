@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeStacksRequest
+/*!
+ * \class QtAws::AppStream::DescribeStacksRequest
  *
- * @brief  Implements AppStream DescribeStacks requests.
+ * \brief The DescribeStacksRequest class encapsulates AppStream DescribeStacks requests.
  *
- * @see    AppStreamClient::describeStacks
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeStacks
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStacksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeStacksRequest::DescribeStacksRequest(const DescribeStacksRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStacksRequest object.
  */
 DescribeStacksRequest::DescribeStacksRequest()
@@ -53,13 +59,16 @@ DescribeStacksRequest::DescribeStacksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStacksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStacksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply
     return new DescribeStacksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStacksRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeStacksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStacksRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStacksRequestPrivate object, copying another.

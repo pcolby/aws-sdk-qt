@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateDevicePoolRequest
+/*!
+ * \class QtAws::DeviceFarm::UpdateDevicePoolRequest
  *
- * @brief  Implements DeviceFarm UpdateDevicePool requests.
+ * \brief The UpdateDevicePoolRequest class encapsulates DeviceFarm UpdateDevicePool requests.
  *
- * @see    DeviceFarmClient::updateDevicePool
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateDevicePool
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDevicePoolRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ UpdateDevicePoolRequest::UpdateDevicePoolRequest(const UpdateDevicePoolRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDevicePoolRequest object.
  */
 UpdateDevicePoolRequest::UpdateDevicePoolRequest()
@@ -53,13 +58,16 @@ UpdateDevicePoolRequest::UpdateDevicePoolRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDevicePoolRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDevicePoolResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkRep
     return new UpdateDevicePoolResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDevicePoolRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateDevicePoolRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDevicePoolRequestPrivate object.
@@ -97,7 +105,7 @@ UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDevicePoolRequestPrivate object, copying another.

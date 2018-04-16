@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListResourceRecordSetsResponse
+/*!
+ * \class QtAws::Route53::ListResourceRecordSetsResponse
  *
- * @brief  Handles Route53 ListResourceRecordSets responses.
+ * \brief The ListResourceRecordSetsResponse class encapsulates Route53 ListResourceRecordSets responses.
  *
- * @see    Route53Client::listResourceRecordSets
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listResourceRecordSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceRecordSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListResourceRecordSetsRequest * ListResourceRecordSetsResponse::request() 
     return static_cast<const ListResourceRecordSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ListResourceRecordSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListResourceRecordSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListResourceRecordSetsResponsePrivate
+ * \class ListResourceRecordSetsResponsePrivate
  *
- * @brief  Private implementation for ListResourceRecordSetsResponse.
+ * \brief Private implementation for ListResourceRecordSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceRecordSetsResponsePrivate object.
@@ -91,7 +94,7 @@ ListResourceRecordSetsResponsePrivate::ListResourceRecordSetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ListResourceRecordSetsResponse element.
  *
  * @param  xml  XML stream to parse.

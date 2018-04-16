@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteInvitationsResponse
+/*!
+ * \class QtAws::GuardDuty::DeleteInvitationsResponse
  *
- * @brief  Handles GuardDuty DeleteInvitations responses.
+ * \brief The DeleteInvitationsResponse class encapsulates GuardDuty DeleteInvitations responses.
  *
- * @see    GuardDutyClient::deleteInvitations
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteInvitations
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInvitationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteInvitationsRequest * DeleteInvitationsResponse::request() const
     return static_cast<const DeleteInvitationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DeleteInvitations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteInvitationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteInvitationsResponsePrivate
+ * \class DeleteInvitationsResponsePrivate
  *
- * @brief  Private implementation for DeleteInvitationsResponse.
+ * \brief Private implementation for DeleteInvitationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInvitationsResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteInvitationsResponsePrivate::DeleteInvitationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DeleteInvitationsResponse element.
  *
  * @param  xml  XML stream to parse.

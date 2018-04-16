@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  ListProjectsResponse
+/*!
+ * \class QtAws::Mobile::ListProjectsResponse
  *
- * @brief  Handles Mobile ListProjects responses.
+ * \brief The ListProjectsResponse class encapsulates Mobile ListProjects responses.
  *
- * @see    MobileClient::listProjects
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::listProjects
  */
 
-/**
+/*!
  * @brief  Constructs a new ListProjectsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListProjectsRequest * ListProjectsResponse::request() const
     return static_cast<const ListProjectsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Mobile ListProjects response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListProjectsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListProjectsResponsePrivate
+ * \class ListProjectsResponsePrivate
  *
- * @brief  Private implementation for ListProjectsResponse.
+ * \brief Private implementation for ListProjectsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProjectsResponsePrivate object.
@@ -91,7 +97,7 @@ ListProjectsResponsePrivate::ListProjectsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Mobile ListProjectsResponse element.
  *
  * @param  xml  XML stream to parse.

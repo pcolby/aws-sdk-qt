@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  GetConfigResponse
+/*!
+ * \class QtAws::CloudHSM::GetConfigResponse
  *
- * @brief  Handles CloudHSM GetConfig responses.
+ * \brief The GetConfigResponse class encapsulates CloudHSM GetConfig responses.
  *
- * @see    CloudHSMClient::getConfig
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::getConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const GetConfigRequest * GetConfigResponse::request() const
     return static_cast<const GetConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM GetConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void GetConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetConfigResponsePrivate
+ * \class GetConfigResponsePrivate
  *
- * @brief  Private implementation for GetConfigResponse.
+ * \brief Private implementation for GetConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConfigResponsePrivate object.
@@ -91,7 +106,7 @@ GetConfigResponsePrivate::GetConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM GetConfigResponse element.
  *
  * @param  xml  XML stream to parse.

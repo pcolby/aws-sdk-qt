@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationInputRequest
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationInputRequest
  *
- * @brief  Implements KinesisAnalytics AddApplicationInput requests.
+ * \brief The AddApplicationInputRequest class encapsulates KinesisAnalytics AddApplicationInput requests.
  *
- * @see    KinesisAnalyticsClient::addApplicationInput
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationInput
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationInputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AddApplicationInputRequest::AddApplicationInputRequest(const AddApplicationInput
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationInputRequest object.
  */
 AddApplicationInputRequest::AddApplicationInputRequest()
@@ -53,13 +56,16 @@ AddApplicationInputRequest::AddApplicationInputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddApplicationInputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddApplicationInputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetwork
     return new AddApplicationInputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddApplicationInputRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetwork
  * @brief  Private implementation for AddApplicationInputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationInputRequestPrivate object.
@@ -97,7 +103,7 @@ AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationInputRequestPrivate object, copying another.

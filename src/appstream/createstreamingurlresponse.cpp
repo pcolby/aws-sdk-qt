@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateStreamingURLResponse
+/*!
+ * \class QtAws::AppStream::CreateStreamingURLResponse
  *
- * @brief  Handles AppStream CreateStreamingURL responses.
+ * \brief The CreateStreamingURLResponse class encapsulates AppStream CreateStreamingURL responses.
  *
- * @see    AppStreamClient::createStreamingURL
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createStreamingURL
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingURLResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateStreamingURLRequest * CreateStreamingURLResponse::request() const
     return static_cast<const CreateStreamingURLRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream CreateStreamingURL response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateStreamingURLResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateStreamingURLResponsePrivate
+ * \class CreateStreamingURLResponsePrivate
  *
- * @brief  Private implementation for CreateStreamingURLResponse.
+ * \brief Private implementation for CreateStreamingURLResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingURLResponsePrivate object.
@@ -91,7 +97,7 @@ CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream CreateStreamingURLResponse element.
  *
  * @param  xml  XML stream to parse.

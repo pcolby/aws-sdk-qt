@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminRemoveUserFromGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminRemoveUserFromGroup requests.
+ * \brief The AdminRemoveUserFromGroupRequest class encapsulates CognitoIdentityProvider AdminRemoveUserFromGroup requests.
  *
- * @see    CognitoIdentityProviderClient::adminRemoveUserFromGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminRemoveUserFromGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminRemoveUserFromGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest(const AdminRemo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminRemoveUserFromGroupRequest object.
  */
 AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest()
@@ -53,13 +66,16 @@ AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminRemoveUserFromGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminRemoveUserFromGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNe
     return new AdminRemoveUserFromGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminRemoveUserFromGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNe
  * @brief  Private implementation for AdminRemoveUserFromGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminRemoveUserFromGroupRequestPrivate object.
@@ -97,7 +113,7 @@ AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminRemoveUserFromGroupRequestPrivate object, copying another.

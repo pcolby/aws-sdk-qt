@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListGroupVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListGroupVersionsRequest
  *
- * @brief  Implements Greengrass ListGroupVersions requests.
+ * \brief The ListGroupVersionsRequest class encapsulates Greengrass ListGroupVersions requests.
  *
- * @see    GreengrassClient::listGroupVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listGroupVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGroupVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListGroupVersionsRequest::ListGroupVersionsRequest(const ListGroupVersionsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGroupVersionsRequest object.
  */
 ListGroupVersionsRequest::ListGroupVersionsRequest()
@@ -53,13 +59,16 @@ ListGroupVersionsRequest::ListGroupVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGroupVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGroupVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupVersionsRequest::response(QNetworkRe
     return new ListGroupVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGroupVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupVersionsRequest::response(QNetworkRe
  * @brief  Private implementation for ListGroupVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListGroupVersionsRequestPrivate::ListGroupVersionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupVersionsRequestPrivate object, copying another.

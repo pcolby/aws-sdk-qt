@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateDistributionResponse
+/*!
+ * \class QtAws::CloudFront::CreateDistributionResponse
  *
- * @brief  Handles CloudFront CreateDistribution responses.
+ * \brief The CreateDistributionResponse class encapsulates CloudFront CreateDistribution responses.
  *
- * @see    CloudFrontClient::createDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDistributionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateDistributionRequest * CreateDistributionResponse::request() const
     return static_cast<const CreateDistributionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront CreateDistribution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateDistributionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDistributionResponsePrivate
+ * \class CreateDistributionResponsePrivate
  *
- * @brief  Private implementation for CreateDistributionResponse.
+ * \brief Private implementation for CreateDistributionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDistributionResponsePrivate object.
@@ -91,7 +99,7 @@ CreateDistributionResponsePrivate::CreateDistributionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront CreateDistributionResponse element.
  *
  * @param  xml  XML stream to parse.

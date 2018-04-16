@@ -93,23 +93,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SageMaker
+ * \brief The QtAws::SageMaker contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  SageMakerClient
+/*!
+ * \class QtAws::SageMaker::SageMakerClient
  *
- * @brief  Client for Amazon SageMaker Service
+ * \brief The SageMakerClient class provides access the Amazon SageMaker Service service.
+ *
+ * \ingroup SageMaker
  *
  */
 
-/**
- * @brief  Constructs a new SageMakerClient object.
+/*!
+ * \brief Constructs a SageMakerClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SageMakerClient::SageMakerClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -128,21 +136,16 @@ SageMakerClient::SageMakerClient(
     d->serviceName = QStringLiteral("sagemaker");
 }
 
-/**
- * @brief  Constructs a new SageMakerClient object.
+/*!
+ * \overload SageMakerClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SageMakerClient::SageMakerClient(
     const QUrl &endpoint,
@@ -161,7 +164,7 @@ SageMakerClient::SageMakerClient(
     d->serviceName = QStringLiteral("sagemaker");
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,
  * training jobs, models, endpoint configurations, and endpoints.
  *
@@ -182,7 +185,7 @@ AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an endpoint using the endpoint configuration specified in the request. Amazon SageMaker uses the endpoint to
  * provision resources and deploy models. You create the endpoint configuration with the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html">CreateEndpointConfig</a> API.
@@ -223,7 +226,7 @@ CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointReq
     return qobject_cast<CreateEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an endpoint configuration that Amazon SageMaker hosting services uses to deploy models. In the configuration,
  * you identify one or more models, created using the <code>CreateModel</code> API, to deploy and the resources that you
  * want Amazon SageMaker to provision. Then you call the <a
@@ -257,7 +260,7 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
     return qobject_cast<CreateEndpointConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a model in Amazon SageMaker. In the request, you name the model and describe one or more containers. For each
  * container, you specify the docker image containing inference code, artifacts (from prior training), and custom
  * environment map that the inference code uses when you deploy the model into production.
@@ -294,7 +297,7 @@ CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &req
     return qobject_cast<CreateModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an Amazon SageMaker notebook instance. A notebook instance is a machine learning (ML) compute instance running
  * on a Jupyter notebook.
  *
@@ -354,7 +357,7 @@ CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const C
     return qobject_cast<CreateNotebookInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a lifecycle configuration that you can associate with a notebook instance. A <i>lifecycle configuration</i> is a
  * collection of shell scripts that run when you create or start a notebook
  *
@@ -391,7 +394,7 @@ CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookI
     return qobject_cast<CreateNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a URL that you can use to connect to the Juypter server from a notebook instance. In the Amazon SageMaker
  * console, when you choose <code>Open</code> next to a notebook instance, Amazon SageMaker opens a new tab showing the
  * Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.
@@ -407,7 +410,7 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
     return qobject_cast<CreatePresignedNotebookInstanceUrlResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a model training job. After training completes, Amazon SageMaker saves the resulting model artifacts to an Amazon
  * S3 location that you specify.
  *
@@ -471,7 +474,7 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
     return qobject_cast<CreateTrainingJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an endpoint. Amazon SageMaker frees up all of the resources that were deployed when the endpoint was created.
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -485,7 +488,7 @@ DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointReq
     return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an endpoint configuration. The <code>DeleteEndpoingConfig</code> API deletes only the specified configuration.
  * It does not delete endpoints created using the configuration.
  *
@@ -500,7 +503,7 @@ DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const Delet
     return qobject_cast<DeleteEndpointConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in Amazon SageMaker when
  * you called the <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a> API. It
  * does not delete model artifacts, inference code, or the IAM role that you specified when creating the model.
@@ -516,7 +519,7 @@ DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &req
     return qobject_cast<DeleteModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an Amazon SageMaker notebook instance. Before you can delete a notebook instance, you must call the
  * <code>StopNotebookInstance</code> API.
  *
@@ -536,7 +539,7 @@ DeleteNotebookInstanceResponse * SageMakerClient::deleteNotebookInstance(const D
     return qobject_cast<DeleteNotebookInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a notebook instance lifecycle
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -550,7 +553,7 @@ DeleteNotebookInstanceLifecycleConfigResponse * SageMakerClient::deleteNotebookI
     return qobject_cast<DeleteNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified tags from an Amazon SageMaker
  *
  * resource>
@@ -568,7 +571,7 @@ DeleteTagsResponse * SageMakerClient::deleteTags(const DeleteTagsRequest &reques
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description of an
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -582,7 +585,7 @@ DescribeEndpointResponse * SageMakerClient::describeEndpoint(const DescribeEndpo
     return qobject_cast<DescribeEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description of an endpoint configuration created using the <code>CreateEndpointConfig</code>
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -596,7 +599,7 @@ DescribeEndpointConfigResponse * SageMakerClient::describeEndpointConfig(const D
     return qobject_cast<DescribeEndpointConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a model that you created using the <code>CreateModel</code>
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -610,7 +613,7 @@ DescribeModelResponse * SageMakerClient::describeModel(const DescribeModelReques
     return qobject_cast<DescribeModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a notebook
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -624,7 +627,7 @@ DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(con
     return qobject_cast<DescribeNotebookInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of a notebook instance lifecycle
  *
  * configuration>
@@ -642,7 +645,7 @@ DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNoteb
     return qobject_cast<DescribeNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a training
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -656,7 +659,7 @@ DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const Describ
     return qobject_cast<DescribeTrainingJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists endpoint
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -670,7 +673,7 @@ ListEndpointConfigsResponse * SageMakerClient::listEndpointConfigs(const ListEnd
     return qobject_cast<ListEndpointConfigsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -684,7 +687,7 @@ ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsReques
     return qobject_cast<ListEndpointsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists models created with the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a>
  *
@@ -699,7 +702,7 @@ ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &reques
     return qobject_cast<ListModelsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists notebook instance lifestyle configurations created with the
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -713,7 +716,7 @@ ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInst
     return qobject_cast<ListNotebookInstanceLifecycleConfigsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the Amazon SageMaker notebook instances in the requester's account in an AWS Region.
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -727,7 +730,7 @@ ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const Lis
     return qobject_cast<ListNotebookInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the tags for the specified Amazon SageMaker
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -741,7 +744,7 @@ ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists training
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -755,7 +758,7 @@ ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJ
     return qobject_cast<ListTrainingJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Launches an ML compute instance with the latest version of the libraries and attaches your ML storage volume. After
  * configuring the notebook instance, Amazon SageMaker sets the notebook instance status to <code>InService</code>. A
  * notebook instance's status must be <code>InService</code> before you can connect to your Jupyter notebook.
@@ -771,7 +774,7 @@ StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const Sta
     return qobject_cast<StartNotebookInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Terminates the ML compute instance. Before terminating the instance, Amazon SageMaker disconnects the ML storage volume
  * from it. Amazon SageMaker preserves the ML storage volume.
  *
@@ -792,7 +795,7 @@ StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopN
     return qobject_cast<StopNotebookInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a training job. To stop a job, Amazon SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays
  * job termination for 120 seconds. Algorithms might use this 120-second window to save the model artifacts, so the results
  * of the training is not lost.
@@ -819,7 +822,7 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
     return qobject_cast<StopTrainingJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Deploys the new <code>EndpointConfig</code> specified in the request, switches to using newly created endpoint, and then
  * deletes resources provisioned for the endpoint using the previous <code>EndpointConfig</code> (there is no availability
  * loss).
@@ -841,7 +844,7 @@ UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointReq
     return qobject_cast<UpdateEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant
  * associated with an existing endpoint. When it receives the request, Amazon SageMaker sets the endpoint status to
  * <code>Updating</code>. After updating the endpoint, it sets the status to <code>InService</code>. To check the status of
@@ -859,7 +862,7 @@ UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeig
     return qobject_cast<UpdateEndpointWeightsAndCapacitiesResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for
  * your notebook instance to accommodate changes in your workload requirements. You can also update the VPC security
  *
@@ -874,7 +877,7 @@ UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const U
     return qobject_cast<UpdateNotebookInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a notebook instance lifecycle configuration created with the
  *
  * @param  request Request to send to Amazon SageMaker Service.
@@ -888,7 +891,7 @@ UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookI
     return qobject_cast<UpdateNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SageMakerClientPrivate
@@ -896,7 +899,7 @@ UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookI
  * @brief  Private implementation for SageMakerClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SageMakerClientPrivate object.

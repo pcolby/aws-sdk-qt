@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetMLModelRequest
+/*!
+ * \class QtAws::MachineLearning::GetMLModelRequest
  *
- * @brief  Implements MachineLearning GetMLModel requests.
+ * \brief The GetMLModelRequest class encapsulates MachineLearning GetMLModel requests.
  *
- * @see    MachineLearningClient::getMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMLModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetMLModelRequest::GetMLModelRequest(const GetMLModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMLModelRequest object.
  */
 GetMLModelRequest::GetMLModelRequest()
@@ -53,13 +56,16 @@ GetMLModelRequest::GetMLModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMLModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMLModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * c
     return new GetMLModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMLModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetMLModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMLModelRequestPrivate object.
@@ -97,7 +103,7 @@ GetMLModelRequestPrivate::GetMLModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMLModelRequestPrivate object, copying another.

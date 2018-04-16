@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  AttachPolicyRequest
+/*!
+ * \class QtAws::CloudDirectory::AttachPolicyRequest
  *
- * @brief  Implements CloudDirectory AttachPolicy requests.
+ * \brief The AttachPolicyRequest class encapsulates CloudDirectory AttachPolicy requests.
  *
- * @see    CloudDirectoryClient::attachPolicy
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::attachPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachPolicyRequest object.
  */
 AttachPolicyRequest::AttachPolicyRequest()
@@ -53,13 +63,16 @@ AttachPolicyRequest::AttachPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
     return new AttachPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachPolicyRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for AttachPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachPolicyRequestPrivate object.
@@ -97,7 +110,7 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachPolicyRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  CreateUserRequest
+/*!
+ * \class QtAws::MQ::CreateUserRequest
  *
- * @brief  Implements MQ CreateUser requests.
+ * \brief The CreateUserRequest class encapsulates MQ CreateUser requests.
  *
- * @see    MQClient::createUser
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::createUser
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUserRequest object.
  */
 CreateUserRequest::CreateUserRequest()
@@ -53,13 +58,16 @@ CreateUserRequest::CreateUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
     return new CreateUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUserRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserRequestPrivate object.
@@ -97,7 +105,7 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  UpdateQueueRequest
+/*!
+ * \class QtAws::MediaConvert::UpdateQueueRequest
  *
- * @brief  Implements MediaConvert UpdateQueue requests.
+ * \brief The UpdateQueueRequest class encapsulates MediaConvert UpdateQueue requests.
  *
- * @see    MediaConvertClient::updateQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::updateQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateQueueRequest::UpdateQueueRequest(const UpdateQueueRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateQueueRequest object.
  */
 UpdateQueueRequest::UpdateQueueRequest()
@@ -53,13 +56,16 @@ UpdateQueueRequest::UpdateQueueRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateQueueRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateQueueResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * 
     return new UpdateQueueResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateQueueRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateQueueRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateQueueRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateQueueRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateQueueRequestPrivate object, copying another.

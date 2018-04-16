@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DirectConnect {
 
-/**
- * @class  DirectConnectResponse
+/*!
+ * \class QtAws::DirectConnect::DirectConnectResponse
  *
- * @brief  Handles DirectConnect DirectConnect responses.
+ * \brief The DirectConnectResponse class is the base class for all DirectConnect responses.
  *
- * @see    DirectConnectClient::directConnect
+ * \ingroup DirectConnect
  */
 
-/**
+/*!
  * @brief  Constructs a new DirectConnectResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DirectConnectResponse::DirectConnectResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectConnectResponse object.
@@ -63,7 +63,7 @@ DirectConnectResponse::DirectConnectResponse(DirectConnectResponsePrivate * cons
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DirectConnectResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DirectConnectResponsePrivate
@@ -92,7 +92,7 @@ void DirectConnectResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DirectConnectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectConnectResponsePrivate object.

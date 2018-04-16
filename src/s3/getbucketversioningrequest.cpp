@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketVersioningRequest
+/*!
+ * \class QtAws::S3::GetBucketVersioningRequest
  *
- * @brief  Implements S3 GetBucketVersioning requests.
+ * \brief The GetBucketVersioningRequest class encapsulates S3 GetBucketVersioning requests.
  *
- * @see    S3Client::getBucketVersioning
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketVersioning
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketVersioningRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketVersioningRequest::GetBucketVersioningRequest(const GetBucketVersioning
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketVersioningRequest object.
  */
 GetBucketVersioningRequest::GetBucketVersioningRequest()
@@ -53,13 +56,16 @@ GetBucketVersioningRequest::GetBucketVersioningRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketVersioningRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketVersioningResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketVersioningRequest::response(QNetwork
     return new GetBucketVersioningResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketVersioningRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketVersioningRequest::response(QNetwork
  * @brief  Private implementation for GetBucketVersioningRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketVersioningRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketVersioningRequestPrivate object, copying another.

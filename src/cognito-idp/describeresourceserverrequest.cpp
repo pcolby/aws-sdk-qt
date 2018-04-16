@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeResourceServerRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeResourceServerRequest
  *
- * @brief  Implements CognitoIdentityProvider DescribeResourceServer requests.
+ * \brief The DescribeResourceServerRequest class encapsulates CognitoIdentityProvider DescribeResourceServer requests.
  *
- * @see    CognitoIdentityProviderClient::describeResourceServer
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeResourceServer
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeResourceServerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DescribeResourceServerRequest::DescribeResourceServerRequest(const DescribeResou
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeResourceServerRequest object.
  */
 DescribeResourceServerRequest::DescribeResourceServerRequest()
@@ -53,13 +66,16 @@ DescribeResourceServerRequest::DescribeResourceServerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeResourceServerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeResourceServerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetw
     return new DescribeResourceServerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeResourceServerRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetw
  * @brief  Private implementation for DescribeResourceServerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeResourceServerRequestPrivate object.
@@ -97,7 +113,7 @@ DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeResourceServerRequestPrivate object, copying another.

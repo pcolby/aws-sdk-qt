@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteEndpointRequest
+/*!
+ * \class QtAws::SageMaker::DeleteEndpointRequest
  *
- * @brief  Implements SageMaker DeleteEndpoint requests.
+ * \brief The DeleteEndpointRequest class encapsulates SageMaker DeleteEndpoint requests.
  *
- * @see    SageMakerClient::deleteEndpoint
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
@@ -53,13 +56,16 @@ DeleteEndpointRequest::DeleteEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
     return new DeleteEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointRequestPrivate object, copying another.

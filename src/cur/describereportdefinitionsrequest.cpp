@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace CostandUsageReportService {
 
-/**
- * @class  DescribeReportDefinitionsRequest
+/*!
+ * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsRequest
  *
- * @brief  Implements CostandUsageReportService DescribeReportDefinitions requests.
+ * \brief The DescribeReportDefinitionsRequest class encapsulates CostandUsageReportService DescribeReportDefinitions requests.
  *
- * @see    CostandUsageReportServiceClient::describeReportDefinitions
+ * \ingroup CostandUsageReportService
+ *
+ *
+ * \sa CostandUsageReportServiceClient::describeReportDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReportDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReportDefinitionsRequest object.
  */
 DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest()
@@ -53,13 +56,16 @@ DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReportDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReportDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QN
     return new DescribeReportDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReportDefinitionsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QN
  * @brief  Private implementation for DescribeReportDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReportDefinitionsRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReportDefinitionsRequestPrivate object, copying another.

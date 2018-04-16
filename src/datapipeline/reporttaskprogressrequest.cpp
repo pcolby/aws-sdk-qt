@@ -25,15 +25,36 @@
 namespace QtAws {
 namespace DataPipeline {
 
-/**
- * @class  ReportTaskProgressRequest
+/*!
+ * \class QtAws::DataPipeline::ReportTaskProgressRequest
  *
- * @brief  Implements DataPipeline ReportTaskProgress requests.
+ * \brief The ReportTaskProgressRequest class encapsulates DataPipeline ReportTaskProgress requests.
  *
- * @see    DataPipelineClient::reportTaskProgress
+ * \ingroup DataPipeline
+ *
+ *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
+ *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
+ * 
+ *  data>
+ * 
+ *  AWS Data Pipeline provides a JAR implementation of a task runner called AWS Data Pipeline Task Runner. AWS Data Pipeline
+ *  Task Runner provides logic for common data management scenarios, such as performing database queries and running data
+ *  analysis using Amazon Elastic MapReduce (Amazon EMR). You can use AWS Data Pipeline Task Runner as your task runner, or
+ *  you can write your own task runner to provide custom data
+ * 
+ *  management>
+ * 
+ *  AWS Data Pipeline implements two main sets of functionality. Use the first set to create a pipeline and define data
+ *  sources, schedules, dependencies, and the transforms to be performed on the data. Use the second set in your task runner
+ *  application to receive the next task ready for processing. The logic for performing the task, such as querying the data,
+ *  running data analysis, or converting the data from one format to another, is contained within the task runner. The task
+ *  runner performs the task assigned to it by the web service, reporting progress to the web service as it does so. When
+ *  the task is done, the task runner reports the final success or failure of the task to the web
+ *
+ * \sa DataPipelineClient::reportTaskProgress
  */
 
-/**
+/*!
  * @brief  Constructs a new ReportTaskProgressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +65,7 @@ ReportTaskProgressRequest::ReportTaskProgressRequest(const ReportTaskProgressReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReportTaskProgressRequest object.
  */
 ReportTaskProgressRequest::ReportTaskProgressRequest()
@@ -53,13 +74,16 @@ ReportTaskProgressRequest::ReportTaskProgressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReportTaskProgressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReportTaskProgressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkR
     return new ReportTaskProgressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReportTaskProgressRequestPrivate
@@ -82,7 +106,7 @@ QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkR
  * @brief  Private implementation for ReportTaskProgressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReportTaskProgressRequestPrivate object.
@@ -97,7 +121,7 @@ ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReportTaskProgressRequestPrivate object, copying another.

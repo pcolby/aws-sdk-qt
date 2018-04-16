@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CopyFpgaImageResponse
+/*!
+ * \class QtAws::EC2::CopyFpgaImageResponse
  *
- * @brief  Handles EC2 CopyFpgaImage responses.
+ * \brief The CopyFpgaImageResponse class encapsulates EC2 CopyFpgaImage responses.
  *
- * @see    EC2Client::copyFpgaImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::copyFpgaImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyFpgaImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CopyFpgaImageRequest * CopyFpgaImageResponse::request() const
     return static_cast<const CopyFpgaImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CopyFpgaImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CopyFpgaImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopyFpgaImageResponsePrivate
+ * \class CopyFpgaImageResponsePrivate
  *
- * @brief  Private implementation for CopyFpgaImageResponse.
+ * \brief Private implementation for CopyFpgaImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyFpgaImageResponsePrivate object.
@@ -91,7 +98,7 @@ CopyFpgaImageResponsePrivate::CopyFpgaImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CopyFpgaImageResponse element.
  *
  * @param  xml  XML stream to parse.

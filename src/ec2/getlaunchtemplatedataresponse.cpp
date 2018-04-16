@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetLaunchTemplateDataResponse
+/*!
+ * \class QtAws::EC2::GetLaunchTemplateDataResponse
  *
- * @brief  Handles EC2 GetLaunchTemplateData responses.
+ * \brief The GetLaunchTemplateDataResponse class encapsulates EC2 GetLaunchTemplateData responses.
  *
- * @see    EC2Client::getLaunchTemplateData
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getLaunchTemplateData
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLaunchTemplateDataResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetLaunchTemplateDataRequest * GetLaunchTemplateDataResponse::request() co
     return static_cast<const GetLaunchTemplateDataRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 GetLaunchTemplateData response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetLaunchTemplateDataResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetLaunchTemplateDataResponsePrivate
+ * \class GetLaunchTemplateDataResponsePrivate
  *
- * @brief  Private implementation for GetLaunchTemplateDataResponse.
+ * \brief Private implementation for GetLaunchTemplateDataResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLaunchTemplateDataResponsePrivate object.
@@ -91,7 +98,7 @@ GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 GetLaunchTemplateDataResponse element.
  *
  * @param  xml  XML stream to parse.

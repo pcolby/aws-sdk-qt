@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetCatalogImportStatusResponse
+/*!
+ * \class QtAws::Glue::GetCatalogImportStatusResponse
  *
- * @brief  Handles Glue GetCatalogImportStatus responses.
+ * \brief The GetCatalogImportStatusResponse class encapsulates Glue GetCatalogImportStatus responses.
  *
- * @see    GlueClient::getCatalogImportStatus
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getCatalogImportStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCatalogImportStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetCatalogImportStatusRequest * GetCatalogImportStatusResponse::request() 
     return static_cast<const GetCatalogImportStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetCatalogImportStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetCatalogImportStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCatalogImportStatusResponsePrivate
+ * \class GetCatalogImportStatusResponsePrivate
  *
- * @brief  Private implementation for GetCatalogImportStatusResponse.
+ * \brief Private implementation for GetCatalogImportStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCatalogImportStatusResponsePrivate object.
@@ -91,7 +97,7 @@ GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetCatalogImportStatusResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateClassifierRequest
+/*!
+ * \class QtAws::Glue::UpdateClassifierRequest
  *
- * @brief  Implements Glue UpdateClassifier requests.
+ * \brief The UpdateClassifierRequest class encapsulates Glue UpdateClassifier requests.
  *
- * @see    GlueClient::updateClassifier
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateClassifier
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateClassifierRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateClassifierRequest::UpdateClassifierRequest(const UpdateClassifierRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateClassifierRequest object.
  */
 UpdateClassifierRequest::UpdateClassifierRequest()
@@ -53,13 +59,16 @@ UpdateClassifierRequest::UpdateClassifierRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateClassifierRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateClassifierResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClassifierRequest::response(QNetworkRep
     return new UpdateClassifierResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateClassifierRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClassifierRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateClassifierRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClassifierRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateClassifierRequestPrivate::UpdateClassifierRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClassifierRequestPrivate object, copying another.

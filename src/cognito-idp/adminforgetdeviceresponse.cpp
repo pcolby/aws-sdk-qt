@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminForgetDeviceResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminForgetDevice responses.
+ * \brief The AdminForgetDeviceResponse class encapsulates CognitoIdentityProvider AdminForgetDevice responses.
  *
- * @see    CognitoIdentityProviderClient::adminForgetDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminForgetDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminForgetDeviceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminForgetDeviceRequest * AdminForgetDeviceResponse::request() const
     return static_cast<const AdminForgetDeviceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminForgetDevice response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminForgetDeviceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminForgetDeviceResponsePrivate
+ * \class AdminForgetDeviceResponsePrivate
  *
- * @brief  Private implementation for AdminForgetDeviceResponse.
+ * \brief Private implementation for AdminForgetDeviceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminForgetDeviceResponsePrivate object.
@@ -91,7 +104,7 @@ AdminForgetDeviceResponsePrivate::AdminForgetDeviceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminForgetDeviceResponse element.
  *
  * @param  xml  XML stream to parse.

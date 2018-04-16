@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteSmsChannelResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteSmsChannelResponse
  *
- * @brief  Handles Pinpoint DeleteSmsChannel responses.
+ * \brief The DeleteSmsChannelResponse class encapsulates Pinpoint DeleteSmsChannel responses.
  *
- * @see    PinpointClient::deleteSmsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteSmsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSmsChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteSmsChannelRequest * DeleteSmsChannelResponse::request() const
     return static_cast<const DeleteSmsChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteSmsChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteSmsChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSmsChannelResponsePrivate
+ * \class DeleteSmsChannelResponsePrivate
  *
- * @brief  Private implementation for DeleteSmsChannelResponse.
+ * \brief Private implementation for DeleteSmsChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSmsChannelResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteSmsChannelResponsePrivate::DeleteSmsChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteSmsChannelResponse element.
  *
  * @param  xml  XML stream to parse.

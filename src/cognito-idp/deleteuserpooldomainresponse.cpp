@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserPoolDomainResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserPoolDomainResponse
  *
- * @brief  Handles CognitoIdentityProvider DeleteUserPoolDomain responses.
+ * \brief The DeleteUserPoolDomainResponse class encapsulates CognitoIdentityProvider DeleteUserPoolDomain responses.
  *
- * @see    CognitoIdentityProviderClient::deleteUserPoolDomain
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUserPoolDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DeleteUserPoolDomainRequest * DeleteUserPoolDomainResponse::request() cons
     return static_cast<const DeleteUserPoolDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DeleteUserPoolDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DeleteUserPoolDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteUserPoolDomainResponsePrivate
+ * \class DeleteUserPoolDomainResponsePrivate
  *
- * @brief  Private implementation for DeleteUserPoolDomainResponse.
+ * \brief Private implementation for DeleteUserPoolDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolDomainResponsePrivate object.
@@ -91,7 +104,7 @@ DeleteUserPoolDomainResponsePrivate::DeleteUserPoolDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DeleteUserPoolDomainResponse element.
  *
  * @param  xml  XML stream to parse.

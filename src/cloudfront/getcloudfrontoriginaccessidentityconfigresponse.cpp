@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetCloudFrontOriginAccessIdentityConfigResponse
+/*!
+ * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigResponse
  *
- * @brief  Handles CloudFront GetCloudFrontOriginAccessIdentityConfig responses.
+ * \brief The GetCloudFrontOriginAccessIdentityConfigResponse class encapsulates CloudFront GetCloudFrontOriginAccessIdentityConfig responses.
  *
- * @see    CloudFrontClient::getCloudFrontOriginAccessIdentityConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getCloudFrontOriginAccessIdentityConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetCloudFrontOriginAccessIdentityConfigRequest * GetCloudFrontOriginAccess
     return static_cast<const GetCloudFrontOriginAccessIdentityConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront GetCloudFrontOriginAccessIdentityConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetCloudFrontOriginAccessIdentityConfigResponse::parseSuccess(QIODevice &re
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCloudFrontOriginAccessIdentityConfigResponsePrivate
+ * \class GetCloudFrontOriginAccessIdentityConfigResponsePrivate
  *
- * @brief  Private implementation for GetCloudFrontOriginAccessIdentityConfigResponse.
+ * \brief Private implementation for GetCloudFrontOriginAccessIdentityConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigResponsePrivate object.
@@ -91,7 +99,7 @@ GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAcces
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront GetCloudFrontOriginAccessIdentityConfigResponse element.
  *
  * @param  xml  XML stream to parse.

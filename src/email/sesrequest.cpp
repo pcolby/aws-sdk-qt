@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SESRequest
+/*!
+ * \class QtAws::SES::SESRequest
  *
- * @brief  Interface class for providing SES requests
+ * \brief The SESRequest class is the base class for all SES requests.
+ *
+ * \ingroup SES
  */
 
-
-/**
+/*!
  * @brief  Constructs a new SESRequest object.
  *
  * @param  action  The SES action to request.
@@ -41,7 +42,7 @@ SESRequest::SESRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SESRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ SESRequest::SESRequest(const SESRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ SESRequest& SESRequest::operator=(const SESRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SESRequest object.
@@ -85,10 +86,8 @@ SESRequest::SESRequest(SESRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 
 }
 
-/**
- * @brief  Get the SES action to be performed by this request.
- *
- * @return The SES action to be performed by this request.
+/*!
+ * \brief Returns the SES action to be performed by this request.
  */
 SESRequest::Action SESRequest::action() const
 {
@@ -96,20 +95,16 @@ SESRequest::Action SESRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the SES action to be performed by this request.
- *
- * @return The name of the SES action to be performed by this request.
+/*!
+ * \brief Returns the name of the SES action to be performed by this request.
  */
 QString SESRequest::actionString() const
 {
     return SESRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the SES API version implemented by this request.
- *
- * @return The SES API version implmented by this request.
+/*!
+ * \brief Returns the SES API version implemented by this request.
  */
 QString SESRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString SESRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the SES action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the SES action to be performed by this request to \a action.
  */
 void SESRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void SESRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the SES API version to include in this request.
- *
- * @param  version  The SES API version to include in this request.
+/*!
+ * Set the SES API version to include in this request to \a version.
  */
 void SESRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void SESRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool SESRequest::operator==(const SESRequest &other) const
 {
@@ -159,7 +146,7 @@ bool SESRequest::operator==(const SESRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid SES queue name.
  *
  * @par From SES FAQs:
@@ -178,12 +165,10 @@ bool SESRequest::operator==(const SESRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int SESRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int SESRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void SESRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void SESRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this SES request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant SESRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant SESRequest::parameter(const QString &name, const QVariant &defaultValue
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this SES request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &SESRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &SESRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this SES request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void SESRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void SESRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this SES request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void SESRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void SESRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this SES request.
+/*!
+ * \brief Returns a network request for this SES request using the given \a endpoint.
  *
  * This SES implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this SES request using the given \a endpoint.
  */
 QNetworkRequest SESRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest SESRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SESRequestPrivate
+ * \class  SESRequestPrivate
  *
- * @brief  Private implementation for SESRequest.
+ * \brief  Private implementation for SESRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new SESRequestPrivate object.
- *
- * @param  action  SES action being performed by the \a q request.
- * @param  q       Pointer to this object's public SESRequest instance.
+ * \brief Constructs a new SESRequestPrivate object.
  */
 SESRequestPrivate::SESRequestPrivate(const SESRequest::Action action, SESRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ SESRequestPrivate::SESRequestPrivate(const SESRequest::Action action, SESRequest
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new SESRequestPrivate object from an existing one.
+ * \brief Constructs a new SESRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the SESRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SESRequest instance.
  */
 SESRequestPrivate::SESRequestPrivate(const SESRequestPrivate &other,
                                      SESRequest * const q)
@@ -312,14 +275,14 @@ SESRequestPrivate::SESRequestPrivate(const SESRequestPrivate &other,
 
 }
 
-/**
- * @brief  Convert and SES action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts SESRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SES service's Action
  * query parameters.
- *
- * @param  action  SES action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

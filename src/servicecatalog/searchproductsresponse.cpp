@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  SearchProductsResponse
+/*!
+ * \class QtAws::ServiceCatalog::SearchProductsResponse
  *
- * @brief  Handles ServiceCatalog SearchProducts responses.
+ * \brief The SearchProductsResponse class encapsulates ServiceCatalog SearchProducts responses.
  *
- * @see    ServiceCatalogClient::searchProducts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::searchProducts
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchProductsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const SearchProductsRequest * SearchProductsResponse::request() const
     return static_cast<const SearchProductsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog SearchProducts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void SearchProductsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchProductsResponsePrivate
+ * \class SearchProductsResponsePrivate
  *
- * @brief  Private implementation for SearchProductsResponse.
+ * \brief Private implementation for SearchProductsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchProductsResponsePrivate object.
@@ -91,7 +100,7 @@ SearchProductsResponsePrivate::SearchProductsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog SearchProductsResponse element.
  *
  * @param  xml  XML stream to parse.

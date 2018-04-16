@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeRouteTablesResponse
+/*!
+ * \class QtAws::EC2::DescribeRouteTablesResponse
  *
- * @brief  Handles EC2 DescribeRouteTables responses.
+ * \brief The DescribeRouteTablesResponse class encapsulates EC2 DescribeRouteTables responses.
  *
- * @see    EC2Client::describeRouteTables
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeRouteTables
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRouteTablesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeRouteTablesRequest * DescribeRouteTablesResponse::request() const
     return static_cast<const DescribeRouteTablesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeRouteTables response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeRouteTablesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeRouteTablesResponsePrivate
+ * \class DescribeRouteTablesResponsePrivate
  *
- * @brief  Private implementation for DescribeRouteTablesResponse.
+ * \brief Private implementation for DescribeRouteTablesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRouteTablesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeRouteTablesResponse element.
  *
  * @param  xml  XML stream to parse.

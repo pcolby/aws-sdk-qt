@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  GetTranscriptionJobRequest
+/*!
+ * \class QtAws::TranscribeService::GetTranscriptionJobRequest
  *
- * @brief  Implements TranscribeService GetTranscriptionJob requests.
+ * \brief The GetTranscriptionJobRequest class encapsulates TranscribeService GetTranscriptionJob requests.
  *
- * @see    TranscribeServiceClient::getTranscriptionJob
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::getTranscriptionJob
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTranscriptionJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetTranscriptionJobRequest::GetTranscriptionJobRequest(const GetTranscriptionJob
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTranscriptionJobRequest object.
  */
 GetTranscriptionJobRequest::GetTranscriptionJobRequest()
@@ -53,13 +57,16 @@ GetTranscriptionJobRequest::GetTranscriptionJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTranscriptionJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTranscriptionJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetTranscriptionJobRequest::response(QNetwork
     return new GetTranscriptionJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTranscriptionJobRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetTranscriptionJobRequest::response(QNetwork
  * @brief  Private implementation for GetTranscriptionJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTranscriptionJobRequestPrivate object.
@@ -97,7 +104,7 @@ GetTranscriptionJobRequestPrivate::GetTranscriptionJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTranscriptionJobRequestPrivate object, copying another.

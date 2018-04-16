@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  DescribeAddressesResponse
+/*!
+ * \class QtAws::Snowball::DescribeAddressesResponse
  *
- * @brief  Handles Snowball DescribeAddresses responses.
+ * \brief The DescribeAddressesResponse class encapsulates Snowball DescribeAddresses responses.
  *
- * @see    SnowballClient::describeAddresses
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::describeAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAddressesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeAddressesRequest * DescribeAddressesResponse::request() const
     return static_cast<const DescribeAddressesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball DescribeAddresses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeAddressesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAddressesResponsePrivate
+ * \class DescribeAddressesResponsePrivate
  *
- * @brief  Private implementation for DescribeAddressesResponse.
+ * \brief Private implementation for DescribeAddressesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAddressesResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeAddressesResponsePrivate::DescribeAddressesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball DescribeAddressesResponse element.
  *
  * @param  xml  XML stream to parse.

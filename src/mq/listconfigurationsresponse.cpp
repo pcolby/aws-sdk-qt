@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  ListConfigurationsResponse
+/*!
+ * \class QtAws::MQ::ListConfigurationsResponse
  *
- * @brief  Handles MQ ListConfigurations responses.
+ * \brief The ListConfigurationsResponse class encapsulates MQ ListConfigurations responses.
  *
- * @see    MQClient::listConfigurations
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::listConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListConfigurationsRequest * ListConfigurationsResponse::request() const
     return static_cast<const ListConfigurationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ ListConfigurations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListConfigurationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListConfigurationsResponsePrivate
+ * \class ListConfigurationsResponsePrivate
  *
- * @brief  Private implementation for ListConfigurationsResponse.
+ * \brief Private implementation for ListConfigurationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConfigurationsResponsePrivate object.
@@ -91,7 +96,7 @@ ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ ListConfigurationsResponse element.
  *
  * @param  xml  XML stream to parse.

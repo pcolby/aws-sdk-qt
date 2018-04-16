@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteAuthorizerRequest
+/*!
+ * \class QtAws::IoT::DeleteAuthorizerRequest
  *
- * @brief  Implements IoT DeleteAuthorizer requests.
+ * \brief The DeleteAuthorizerRequest class encapsulates IoT DeleteAuthorizer requests.
  *
- * @see    IoTClient::deleteAuthorizer
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteAuthorizerRequest::DeleteAuthorizerRequest(const DeleteAuthorizerRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAuthorizerRequest object.
  */
 DeleteAuthorizerRequest::DeleteAuthorizerRequest()
@@ -53,13 +67,16 @@ DeleteAuthorizerRequest::DeleteAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
     return new DeleteAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAuthorizerRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAuthorizerRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAuthorizerRequestPrivate object, copying another.

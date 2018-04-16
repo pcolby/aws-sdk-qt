@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  UpdateScalingParametersRequest
+/*!
+ * \class QtAws::CloudSearch::UpdateScalingParametersRequest
  *
- * @brief  Implements CloudSearch UpdateScalingParameters requests.
+ * \brief The UpdateScalingParametersRequest class encapsulates CloudSearch UpdateScalingParameters requests.
  *
- * @see    CloudSearchClient::updateScalingParameters
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::updateScalingParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateScalingParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateScalingParametersRequest::UpdateScalingParametersRequest(const UpdateScali
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateScalingParametersRequest object.
  */
 UpdateScalingParametersRequest::UpdateScalingParametersRequest()
@@ -53,13 +67,16 @@ UpdateScalingParametersRequest::UpdateScalingParametersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateScalingParametersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateScalingParametersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNet
     return new UpdateScalingParametersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateScalingParametersRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNet
  * @brief  Private implementation for UpdateScalingParametersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateScalingParametersRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateScalingParametersRequestPrivate object, copying another.

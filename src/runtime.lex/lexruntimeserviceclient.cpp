@@ -29,30 +29,38 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::LexRuntimeService
+ * \brief The QtAws::LexRuntimeService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace LexRuntimeService {
 
-/**
- * @class  LexRuntimeServiceClient
+/*!
+ * \class QtAws::LexRuntimeService::LexRuntimeServiceClient
  *
- * @brief  Client for Amazon Lex Runtime Service
+ * \brief The LexRuntimeServiceClient class provides access the Amazon Lex Runtime Service service.
  *
- * Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
- * conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
- * user says "I want pizza", your bot sends this input to Amazon Lex using the runtime API. Amazon Lex recognizes that the
- * user request is for the OrderPizza intent (one of the intents defined in the bot). Then Amazon Lex engages in user
- * conversation on behalf of the bot to elicit required information (slot values, such as pizza size and crust type), and
- * then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
- * and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
+ * \ingroup LexRuntimeService
+ *
+ *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
+ *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
+ *  user says "I want pizza", your bot sends this input to Amazon Lex using the runtime API. Amazon Lex recognizes that the
+ *  user request is for the OrderPizza intent (one of the intents defined in the bot). Then Amazon Lex engages in user
+ *  conversation on behalf of the bot to elicit required information (slot values, such as pizza size and crust type), and
+ *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
+ *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  */
 
-/**
- * @brief  Constructs a new LexRuntimeServiceClient object.
+/*!
+ * \brief Constructs a LexRuntimeServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 LexRuntimeServiceClient::LexRuntimeServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -71,21 +79,16 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
     d->serviceName = QStringLiteral("lex");
 }
 
-/**
- * @brief  Constructs a new LexRuntimeServiceClient object.
+/*!
+ * \overload LexRuntimeServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 LexRuntimeServiceClient::LexRuntimeServiceClient(
     const QUrl &endpoint,
@@ -104,7 +107,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
     d->serviceName = QStringLiteral("lex");
 }
 
-/**
+/*!
  * Sends user input (text or speech) to Amazon Lex. Clients use this API to send text and audio requests to Amazon Lex at
  * runtime. Amazon Lex interprets the user input using the machine learning model that it built for the bot.
  *
@@ -187,7 +190,7 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
     return qobject_cast<PostContentResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends user input (text-only) to Amazon Lex. Client applications can use this API to send requests to Amazon Lex at
  * runtime. Amazon Lex then interprets the user input using the machine learning model it built for the bot.
  *
@@ -265,7 +268,7 @@ PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &requ
     return qobject_cast<PostTextResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LexRuntimeServiceClientPrivate
@@ -273,7 +276,7 @@ PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &requ
  * @brief  Private implementation for LexRuntimeServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexRuntimeServiceClientPrivate object.

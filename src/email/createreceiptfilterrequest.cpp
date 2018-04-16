@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CreateReceiptFilterRequest
+/*!
+ * \class QtAws::SES::CreateReceiptFilterRequest
  *
- * @brief  Implements SES CreateReceiptFilter requests.
+ * \brief The CreateReceiptFilterRequest class encapsulates SES CreateReceiptFilter requests.
  *
- * @see    SESClient::createReceiptFilter
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::createReceiptFilter
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReceiptFilterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateReceiptFilterRequest::CreateReceiptFilterRequest(const CreateReceiptFilter
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReceiptFilterRequest object.
  */
 CreateReceiptFilterRequest::CreateReceiptFilterRequest()
@@ -53,13 +67,16 @@ CreateReceiptFilterRequest::CreateReceiptFilterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReceiptFilterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReceiptFilterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetwork
     return new CreateReceiptFilterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReceiptFilterRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetwork
  * @brief  Private implementation for CreateReceiptFilterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReceiptFilterRequestPrivate object.
@@ -97,7 +114,7 @@ CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReceiptFilterRequestPrivate object, copying another.

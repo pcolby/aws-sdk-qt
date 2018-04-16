@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  CancelJobRequest
+/*!
+ * \class QtAws::Snowball::CancelJobRequest
  *
- * @brief  Implements Snowball CancelJob requests.
+ * \brief The CancelJobRequest class encapsulates Snowball CancelJob requests.
  *
- * @see    SnowballClient::cancelJob
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
@@ -53,13 +62,16 @@ CancelJobRequest::CancelJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
     return new CancelJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelJobRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CancelJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object.
@@ -97,7 +109,7 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object, copying another.

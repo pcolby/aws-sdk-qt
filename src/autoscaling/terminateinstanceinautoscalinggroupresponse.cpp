@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  TerminateInstanceInAutoScalingGroupResponse
+/*!
+ * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupResponse
  *
- * @brief  Handles AutoScaling TerminateInstanceInAutoScalingGroup responses.
+ * \brief The TerminateInstanceInAutoScalingGroupResponse class encapsulates AutoScaling TerminateInstanceInAutoScalingGroup responses.
  *
- * @see    AutoScalingClient::terminateInstanceInAutoScalingGroup
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::terminateInstanceInAutoScalingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const TerminateInstanceInAutoScalingGroupRequest * TerminateInstanceInAutoScalin
     return static_cast<const TerminateInstanceInAutoScalingGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling TerminateInstanceInAutoScalingGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void TerminateInstanceInAutoScalingGroupResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TerminateInstanceInAutoScalingGroupResponsePrivate
+ * \class TerminateInstanceInAutoScalingGroupResponsePrivate
  *
- * @brief  Private implementation for TerminateInstanceInAutoScalingGroupResponse.
+ * \brief Private implementation for TerminateInstanceInAutoScalingGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponsePrivate object.
@@ -91,7 +99,7 @@ TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScali
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling TerminateInstanceInAutoScalingGroupResponse element.
  *
  * @param  xml  XML stream to parse.

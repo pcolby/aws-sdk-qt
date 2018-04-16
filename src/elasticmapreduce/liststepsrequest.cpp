@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListStepsRequest
+/*!
+ * \class QtAws::EMR::ListStepsRequest
  *
- * @brief  Implements EMR ListSteps requests.
+ * \brief The ListStepsRequest class encapsulates EMR ListSteps requests.
  *
- * @see    EMRClient::listSteps
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listSteps
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStepsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListStepsRequest::ListStepsRequest(const ListStepsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStepsRequest object.
  */
 ListStepsRequest::ListStepsRequest()
@@ -53,13 +59,16 @@ ListStepsRequest::ListStepsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStepsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStepsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * co
     return new ListStepsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStepsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListStepsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStepsRequestPrivate object.
@@ -97,7 +106,7 @@ ListStepsRequestPrivate::ListStepsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStepsRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateNotebookInstanceLifecycleConfigRequest
+/*!
+ * \class QtAws::SageMaker::UpdateNotebookInstanceLifecycleConfigRequest
  *
- * @brief  Implements SageMaker UpdateNotebookInstanceLifecycleConfig requests.
+ * \brief The UpdateNotebookInstanceLifecycleConfigRequest class encapsulates SageMaker UpdateNotebookInstanceLifecycleConfig requests.
  *
- * @see    SageMakerClient::updateNotebookInstanceLifecycleConfig
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateNotebookInstanceLifecycleConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleCon
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequest object.
  */
 UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleConfigRequest()
@@ -53,13 +56,16 @@ UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleCon
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateNotebookInstanceLifecycleConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateNotebookInstanceLifecycleConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest:
     return new UpdateNotebookInstanceLifecycleConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateNotebookInstanceLifecycleConfigRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest:
  * @brief  Private implementation for UpdateNotebookInstanceLifecycleConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifec
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequestPrivate object, copying another.

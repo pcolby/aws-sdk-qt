@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeEngineDefaultParametersResponse
+/*!
+ * \class QtAws::ElastiCache::DescribeEngineDefaultParametersResponse
  *
- * @brief  Handles ElastiCache DescribeEngineDefaultParameters responses.
+ * \brief The DescribeEngineDefaultParametersResponse class encapsulates ElastiCache DescribeEngineDefaultParameters responses.
  *
- * @see    ElastiCacheClient::describeEngineDefaultParameters
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeEngineDefaultParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEngineDefaultParametersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeEngineDefaultParametersRequest * DescribeEngineDefaultParametersRe
     return static_cast<const DescribeEngineDefaultParametersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DescribeEngineDefaultParameters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEngineDefaultParametersResponsePrivate
+ * \class DescribeEngineDefaultParametersResponsePrivate
  *
- * @brief  Private implementation for DescribeEngineDefaultParametersResponse.
+ * \brief Private implementation for DescribeEngineDefaultParametersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEngineDefaultParametersResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersR
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DescribeEngineDefaultParametersResponse element.
  *
  * @param  xml  XML stream to parse.

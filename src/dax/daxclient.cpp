@@ -67,27 +67,35 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DAX
+ * \brief The QtAws::DAX contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DaxClient
+/*!
+ * \class QtAws::DAX::DaxClient
  *
- * @brief  Client for Amazon DynamoDB Accelerator (DAX) ( DAX)
+ * \brief The DaxClient class provides access the Amazon DynamoDB Accelerator (DAX) ( DAX) service.
  *
- * DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
- * frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
- * create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
- * application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
  */
 
-/**
- * @brief  Constructs a new DaxClient object.
+/*!
+ * \brief Constructs a DaxClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DaxClient::DaxClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -106,21 +114,16 @@ DaxClient::DaxClient(
     d->serviceName = QStringLiteral("dax");
 }
 
-/**
- * @brief  Constructs a new DaxClient object.
+/*!
+ * \overload DaxClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DaxClient::DaxClient(
     const QUrl &endpoint,
@@ -139,7 +142,7 @@ DaxClient::DaxClient(
     d->serviceName = QStringLiteral("dax");
 }
 
-/**
+/*!
  * Creates a DAX cluster. All nodes in the cluster run the same DAX caching
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -153,7 +156,7 @@ CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &req
     return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new parameter group. A parameter group is a collection of parameters that you apply to all of the nodes in a
  * DAX
  *
@@ -168,7 +171,7 @@ CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParam
     return qobject_cast<CreateParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new subnet
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -182,7 +185,7 @@ CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroup
     return qobject_cast<CreateSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more nodes from a DAX
  *
  * cluster> <note>
@@ -201,7 +204,7 @@ DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const D
     return qobject_cast<DecreaseReplicationFactorResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a previously provisioned DAX cluster. <i>DeleteCluster</i> deletes all associated nodes, node endpoints and the
  * DAX cluster itself. When you receive a successful response from this action, DAX immediately begins deleting the
  * cluster; you cannot cancel or revert this
@@ -217,7 +220,7 @@ DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &req
     return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified parameter group. You cannot delete a parameter group if it is associated with any DAX
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -231,7 +234,7 @@ DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParam
     return qobject_cast<DeleteParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a subnet
  *
  * group> <note>
@@ -249,7 +252,7 @@ DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroup
     return qobject_cast<DeleteSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all provisioned DAX clusters if no cluster identifier is specified, or about a specific DAX
  * cluster if a cluster identifier is
  *
@@ -283,7 +286,7 @@ DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersReq
     return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the default system parameter information for the DAX caching
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -297,7 +300,7 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
     return qobject_cast<DescribeDefaultParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns events related to DAX clusters and parameter groups. You can obtain events specific to a particular DAX cluster
  * or parameter group by providing the name as a
  *
@@ -317,7 +320,7 @@ DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of parameter group descriptions. If a parameter group name is specified, the list will contain only the
  * descriptions for that
  *
@@ -332,7 +335,7 @@ DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const Descr
     return qobject_cast<DescribeParameterGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the detailed parameter list for a particular parameter
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -346,7 +349,7 @@ DescribeParametersResponse * DaxClient::describeParameters(const DescribeParamet
     return qobject_cast<DescribeParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of subnet group descriptions. If a subnet group name is specified, the list will contain only the
  * description of that
  *
@@ -361,7 +364,7 @@ DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSub
     return qobject_cast<DescribeSubnetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more nodes to a DAX
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -375,7 +378,7 @@ IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const I
     return qobject_cast<IncreaseReplicationFactorResponse *>(send(request));
 }
 
-/**
+/*!
  * List all of the tags for a DAX cluster. You can call <code>ListTags</code> up to 10 times per second, per
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -389,7 +392,7 @@ ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node
  * status is set to
  *
@@ -404,7 +407,7 @@ RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
     return qobject_cast<RebootNodeResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a set of tags with a DAX resource. You can call <code>TagResource</code> up to 5 times per second, per
  * account.
  *
@@ -419,7 +422,7 @@ TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the association of tags from a DAX resource. You can call <code>UntagResource</code> up to 5 times per second,
  * per account.
  *
@@ -434,7 +437,7 @@ UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &req
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters
  * by specifying the parameters and the new
  *
@@ -449,7 +452,7 @@ UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &req
     return qobject_cast<UpdateClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a
  * list parameter name and value
  *
@@ -464,7 +467,7 @@ UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParam
     return qobject_cast<UpdateParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing subnet
  *
  * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
@@ -478,7 +481,7 @@ UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroup
     return qobject_cast<UpdateSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DaxClientPrivate
@@ -486,7 +489,7 @@ UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroup
  * @brief  Private implementation for DaxClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DaxClientPrivate object.

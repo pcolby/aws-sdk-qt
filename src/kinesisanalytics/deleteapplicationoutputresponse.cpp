@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DeleteApplicationOutputResponse
+/*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationOutputResponse
  *
- * @brief  Handles KinesisAnalytics DeleteApplicationOutput responses.
+ * \brief The DeleteApplicationOutputResponse class encapsulates KinesisAnalytics DeleteApplicationOutput responses.
  *
- * @see    KinesisAnalyticsClient::deleteApplicationOutput
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::deleteApplicationOutput
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationOutputResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteApplicationOutputRequest * DeleteApplicationOutputResponse::request(
     return static_cast<const DeleteApplicationOutputRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics DeleteApplicationOutput response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteApplicationOutputResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteApplicationOutputResponsePrivate
+ * \class DeleteApplicationOutputResponsePrivate
  *
- * @brief  Private implementation for DeleteApplicationOutputResponse.
+ * \brief Private implementation for DeleteApplicationOutputResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationOutputResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteApplicationOutputResponsePrivate::DeleteApplicationOutputResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics DeleteApplicationOutputResponse element.
  *
  * @param  xml  XML stream to parse.

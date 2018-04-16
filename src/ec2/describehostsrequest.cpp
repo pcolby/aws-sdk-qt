@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeHostsRequest
+/*!
+ * \class QtAws::EC2::DescribeHostsRequest
  *
- * @brief  Implements EC2 DescribeHosts requests.
+ * \brief The DescribeHostsRequest class encapsulates EC2 DescribeHosts requests.
  *
- * @see    EC2Client::describeHosts
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeHosts
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeHostsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeHostsRequest::DescribeHostsRequest(const DescribeHostsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeHostsRequest object.
  */
 DescribeHostsRequest::DescribeHostsRequest()
@@ -53,13 +60,16 @@ DescribeHostsRequest::DescribeHostsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeHostsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeHostsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply 
     return new DescribeHostsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeHostsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply 
  * @brief  Private implementation for DescribeHostsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHostsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHostsRequestPrivate object, copying another.

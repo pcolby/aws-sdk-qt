@@ -22,13 +22,13 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsAnonymousCredentials
+/*!
+ * \class QtAws::Core::AwsAnonymousCredentials
  *
  * @brief  Basic implementation of AwsAbstractCredentials that allows use of "anonymous" credentials.
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsAnonymousCredentials object.
  *
  * Constructs a new AwsAnonymousCredentials object, with no credentials at all.

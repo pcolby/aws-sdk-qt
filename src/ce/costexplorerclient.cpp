@@ -37,36 +37,44 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CostExplorer
+ * \brief The QtAws::CostExplorer contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  CostExplorerClient
+/*!
+ * \class QtAws::CostExplorer::CostExplorerClient
  *
- * @brief  Client for AWS Cost Explorer Service
+ * \brief The CostExplorerClient class provides access the AWS Cost Explorer Service service.
  *
- * The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
- * such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
- * write operations for DynamoDB database tables in your production environment.
+ * \ingroup CostExplorer
  *
- * </p
- *
- * Service
- *
- * Endpoin>
- *
- * The Cost Explorer API provides the following
- *
- * endpoint> <ul> <li>
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
  */
 
-/**
- * @brief  Constructs a new CostExplorerClient object.
+/*!
+ * \brief Constructs a CostExplorerClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CostExplorerClient::CostExplorerClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -85,21 +93,16 @@ CostExplorerClient::CostExplorerClient(
     d->serviceName = QStringLiteral("ce");
 }
 
-/**
- * @brief  Constructs a new CostExplorerClient object.
+/*!
+ * \overload CostExplorerClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CostExplorerClient::CostExplorerClient(
     const QUrl &endpoint,
@@ -118,7 +121,7 @@ CostExplorerClient::CostExplorerClient(
     d->serviceName = QStringLiteral("ce");
 }
 
-/**
+/*!
  * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as
  * <code>BlendedCosts</code> or <code>UsageQuantity</code>, that you want the request to return. You can also filter and
  * group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. For a
@@ -137,7 +140,7 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
     return qobject_cast<GetCostAndUsageResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves all available filter values for a specific filter over a period of time. You can search the dimension values
  * for an arbitrary string.
  *
@@ -152,7 +155,7 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
     return qobject_cast<GetDimensionValuesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the reservation coverage for your account. This allows you to see how much of your Amazon Elastic Compute
  * Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An
  * organization's master account can see the coverage of the associated member accounts. For any time period, you can
@@ -185,7 +188,7 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
     return qobject_cast<GetReservationCoverageResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets recommendations for which reservations to purchase. These recommendations could help you reduce your costs.
  * Reservations provide a discounted hourly rate (up to 75%) compared to On-Demand
  *
@@ -215,7 +218,7 @@ GetReservationPurchaseRecommendationResponse * CostExplorerClient::getReservatio
     return qobject_cast<GetReservationPurchaseRecommendationResponse *>(send(request));
 }
 
-/**
+/*!
  * You can retrieve the reservation utilization for your account. Master accounts in an organization in AWS Organizations
  * have access to their associated member accounts. You can filter data by dimensions in a time period. You can use
  * <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by
@@ -232,7 +235,7 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
     return qobject_cast<GetReservationUtilizationResponse *>(send(request));
 }
 
-/**
+/*!
  * You can query for available tag keys and tag values for a specified period. You can search the tag values for an
  * arbitrary string.
  *
@@ -247,7 +250,7 @@ GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
     return qobject_cast<GetTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CostExplorerClientPrivate
@@ -255,7 +258,7 @@ GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
  * @brief  Private implementation for CostExplorerClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CostExplorerClientPrivate object.

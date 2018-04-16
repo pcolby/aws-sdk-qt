@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CreateHapgRequest
+/*!
+ * \class QtAws::CloudHSM::CreateHapgRequest
  *
- * @brief  Implements CloudHSM CreateHapg requests.
+ * \brief The CreateHapgRequest class encapsulates CloudHSM CreateHapg requests.
  *
- * @see    CloudHSMClient::createHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::createHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHapgRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ CreateHapgRequest::CreateHapgRequest(const CreateHapgRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateHapgRequest object.
  */
 CreateHapgRequest::CreateHapgRequest()
@@ -53,13 +68,16 @@ CreateHapgRequest::CreateHapgRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateHapgRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateHapgResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * c
     return new CreateHapgResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateHapgRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateHapgRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHapgRequestPrivate object.
@@ -97,7 +115,7 @@ CreateHapgRequestPrivate::CreateHapgRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHapgRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListTagsResponse
+/*!
+ * \class QtAws::Lambda::ListTagsResponse
  *
- * @brief  Handles Lambda ListTags responses.
+ * \brief The ListTagsResponse class encapsulates Lambda ListTags responses.
  *
- * @see    LambdaClient::listTags
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListTagsRequest * ListTagsResponse::request() const
     return static_cast<const ListTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda ListTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsResponsePrivate
+ * \class ListTagsResponsePrivate
  *
- * @brief  Private implementation for ListTagsResponse.
+ * \brief Private implementation for ListTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsResponsePrivate object.
@@ -91,7 +105,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda ListTagsResponse element.
  *
  * @param  xml  XML stream to parse.

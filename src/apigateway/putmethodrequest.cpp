@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  PutMethodRequest
+/*!
+ * \class QtAws::APIGateway::PutMethodRequest
  *
- * @brief  Implements APIGateway PutMethod requests.
+ * \brief The PutMethodRequest class encapsulates APIGateway PutMethod requests.
  *
- * @see    APIGatewayClient::putMethod
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::putMethod
  */
 
-/**
+/*!
  * @brief  Constructs a new PutMethodRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutMethodRequest::PutMethodRequest(const PutMethodRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutMethodRequest object.
  */
 PutMethodRequest::PutMethodRequest()
@@ -53,13 +61,16 @@ PutMethodRequest::PutMethodRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutMethodRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutMethodResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutMethodRequest::response(QNetworkReply * co
     return new PutMethodResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutMethodRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutMethodRequest::response(QNetworkReply * co
  * @brief  Private implementation for PutMethodRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutMethodRequestPrivate object.
@@ -97,7 +108,7 @@ PutMethodRequestPrivate::PutMethodRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutMethodRequestPrivate object, copying another.

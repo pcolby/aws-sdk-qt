@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  TestConnectionRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::TestConnectionRequest
  *
- * @brief  Implements DatabaseMigrationService TestConnection requests.
+ * \brief The TestConnectionRequest class encapsulates DatabaseMigrationService TestConnection requests.
  *
- * @see    DatabaseMigrationServiceClient::testConnection
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::testConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new TestConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ TestConnectionRequest::TestConnectionRequest(const TestConnectionRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestConnectionRequest object.
  */
 TestConnectionRequest::TestConnectionRequest()
@@ -53,13 +67,16 @@ TestConnectionRequest::TestConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply
     return new TestConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestConnectionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply
  * @brief  Private implementation for TestConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestConnectionRequestPrivate object.
@@ -97,7 +114,7 @@ TestConnectionRequestPrivate::TestConnectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestConnectionRequestPrivate object, copying another.

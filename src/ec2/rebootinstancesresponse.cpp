@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RebootInstancesResponse
+/*!
+ * \class QtAws::EC2::RebootInstancesResponse
  *
- * @brief  Handles EC2 RebootInstances responses.
+ * \brief The RebootInstancesResponse class encapsulates EC2 RebootInstances responses.
  *
- * @see    EC2Client::rebootInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::rebootInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RebootInstancesRequest * RebootInstancesResponse::request() const
     return static_cast<const RebootInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RebootInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RebootInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RebootInstancesResponsePrivate
+ * \class RebootInstancesResponsePrivate
  *
- * @brief  Private implementation for RebootInstancesResponse.
+ * \brief Private implementation for RebootInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ RebootInstancesResponsePrivate::RebootInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RebootInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

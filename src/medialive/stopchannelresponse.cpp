@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  StopChannelResponse
+/*!
+ * \class QtAws::MediaLive::StopChannelResponse
  *
- * @brief  Handles MediaLive StopChannel responses.
+ * \brief The StopChannelResponse class encapsulates MediaLive StopChannel responses.
  *
- * @see    MediaLiveClient::stopChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::stopChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new StopChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StopChannelRequest * StopChannelResponse::request() const
     return static_cast<const StopChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive StopChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StopChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopChannelResponsePrivate
+ * \class StopChannelResponsePrivate
  *
- * @brief  Private implementation for StopChannelResponse.
+ * \brief Private implementation for StopChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopChannelResponsePrivate object.
@@ -91,7 +94,7 @@ StopChannelResponsePrivate::StopChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive StopChannelResponse element.
  *
  * @param  xml  XML stream to parse.

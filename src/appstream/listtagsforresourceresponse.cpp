@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ListTagsForResourceResponse
+/*!
+ * \class QtAws::AppStream::ListTagsForResourceResponse
  *
- * @brief  Handles AppStream ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class encapsulates AppStream ListTagsForResource responses.
  *
- * @see    AppStreamClient::listTagsForResource
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::listTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
     return static_cast<const ListTagsForResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream ListTagsForResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForResourceResponsePrivate
+ * \class ListTagsForResourceResponsePrivate
  *
- * @brief  Private implementation for ListTagsForResourceResponse.
+ * \brief Private implementation for ListTagsForResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
@@ -91,7 +97,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream ListTagsForResourceResponse element.
  *
  * @param  xml  XML stream to parse.

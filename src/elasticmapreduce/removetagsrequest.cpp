@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  RemoveTagsRequest
+/*!
+ * \class QtAws::EMR::RemoveTagsRequest
  *
- * @brief  Implements EMR RemoveTags requests.
+ * \brief The RemoveTagsRequest class encapsulates EMR RemoveTags requests.
  *
- * @see    EMRClient::removeTags
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::removeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
@@ -53,13 +59,16 @@ RemoveTagsRequest::RemoveTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
     return new RemoveTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveTagsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for RemoveTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsRequestPrivate object.
@@ -97,7 +106,7 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsRequestPrivate object, copying another.

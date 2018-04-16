@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  StartApplicationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::StartApplicationResponse
  *
- * @brief  Handles KinesisAnalytics StartApplication responses.
+ * \brief The StartApplicationResponse class encapsulates KinesisAnalytics StartApplication responses.
  *
- * @see    KinesisAnalyticsClient::startApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::startApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new StartApplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StartApplicationRequest * StartApplicationResponse::request() const
     return static_cast<const StartApplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics StartApplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StartApplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartApplicationResponsePrivate
+ * \class StartApplicationResponsePrivate
  *
- * @brief  Private implementation for StartApplicationResponse.
+ * \brief Private implementation for StartApplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartApplicationResponsePrivate object.
@@ -91,7 +94,7 @@ StartApplicationResponsePrivate::StartApplicationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics StartApplicationResponse element.
  *
  * @param  xml  XML stream to parse.

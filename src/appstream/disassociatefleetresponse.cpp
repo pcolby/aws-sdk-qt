@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DisassociateFleetResponse
+/*!
+ * \class QtAws::AppStream::DisassociateFleetResponse
  *
- * @brief  Handles AppStream DisassociateFleet responses.
+ * \brief The DisassociateFleetResponse class encapsulates AppStream DisassociateFleet responses.
  *
- * @see    AppStreamClient::disassociateFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::disassociateFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateFleetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DisassociateFleetRequest * DisassociateFleetResponse::request() const
     return static_cast<const DisassociateFleetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DisassociateFleet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DisassociateFleetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateFleetResponsePrivate
+ * \class DisassociateFleetResponsePrivate
  *
- * @brief  Private implementation for DisassociateFleetResponse.
+ * \brief Private implementation for DisassociateFleetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateFleetResponsePrivate object.
@@ -91,7 +97,7 @@ DisassociateFleetResponsePrivate::DisassociateFleetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DisassociateFleetResponse element.
  *
  * @param  xml  XML stream to parse.

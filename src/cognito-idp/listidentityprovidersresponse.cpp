@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListIdentityProvidersResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListIdentityProvidersResponse
  *
- * @brief  Handles CognitoIdentityProvider ListIdentityProviders responses.
+ * \brief The ListIdentityProvidersResponse class encapsulates CognitoIdentityProvider ListIdentityProviders responses.
  *
- * @see    CognitoIdentityProviderClient::listIdentityProviders
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listIdentityProviders
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIdentityProvidersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ListIdentityProvidersRequest * ListIdentityProvidersResponse::request() co
     return static_cast<const ListIdentityProvidersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ListIdentityProviders response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ListIdentityProvidersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListIdentityProvidersResponsePrivate
+ * \class ListIdentityProvidersResponsePrivate
  *
- * @brief  Private implementation for ListIdentityProvidersResponse.
+ * \brief Private implementation for ListIdentityProvidersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIdentityProvidersResponsePrivate object.
@@ -91,7 +104,7 @@ ListIdentityProvidersResponsePrivate::ListIdentityProvidersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ListIdentityProvidersResponse element.
  *
  * @param  xml  XML stream to parse.

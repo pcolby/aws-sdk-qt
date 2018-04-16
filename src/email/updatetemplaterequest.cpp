@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateTemplateRequest
+/*!
+ * \class QtAws::SES::UpdateTemplateRequest
  *
- * @brief  Implements SES UpdateTemplate requests.
+ * \brief The UpdateTemplateRequest class encapsulates SES UpdateTemplate requests.
  *
- * @see    SESClient::updateTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateTemplateRequest::UpdateTemplateRequest(const UpdateTemplateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTemplateRequest object.
  */
 UpdateTemplateRequest::UpdateTemplateRequest()
@@ -53,13 +67,16 @@ UpdateTemplateRequest::UpdateTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTemplateRequest::response(QNetworkReply
     return new UpdateTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTemplateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTemplateRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTemplateRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTemplateRequestPrivate object, copying another.

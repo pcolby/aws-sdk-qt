@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GlueResponse
+/*!
+ * \class QtAws::Glue::GlueResponse
  *
- * @brief  Handles Glue Glue responses.
+ * \brief The GlueResponse class is the base class for all Glue responses.
  *
- * @see    GlueClient::glue
+ * \ingroup Glue
  */
 
-/**
+/*!
  * @brief  Constructs a new GlueResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ GlueResponse::GlueResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlueResponse object.
@@ -63,7 +63,7 @@ GlueResponse::GlueResponse(GlueResponsePrivate * const d, QObject * const parent
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void GlueResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GlueResponsePrivate
@@ -92,7 +92,7 @@ void GlueResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for GlueResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlueResponsePrivate object.

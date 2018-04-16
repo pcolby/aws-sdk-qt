@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  StopThingRegistrationTaskResponse
+/*!
+ * \class QtAws::IoT::StopThingRegistrationTaskResponse
  *
- * @brief  Handles IoT StopThingRegistrationTask responses.
+ * \brief The StopThingRegistrationTaskResponse class encapsulates IoT StopThingRegistrationTask responses.
  *
- * @see    IoTClient::stopThingRegistrationTask
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::stopThingRegistrationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new StopThingRegistrationTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const StopThingRegistrationTaskRequest * StopThingRegistrationTaskResponse::requ
     return static_cast<const StopThingRegistrationTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT StopThingRegistrationTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void StopThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopThingRegistrationTaskResponsePrivate
+ * \class StopThingRegistrationTaskResponsePrivate
  *
- * @brief  Private implementation for StopThingRegistrationTaskResponse.
+ * \brief Private implementation for StopThingRegistrationTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopThingRegistrationTaskResponsePrivate object.
@@ -91,7 +105,7 @@ StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT StopThingRegistrationTaskResponse element.
  *
  * @param  xml  XML stream to parse.

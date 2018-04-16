@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SESResponse
+/*!
+ * \class QtAws::SES::SESResponse
  *
- * @brief  Handles SES SES responses.
+ * \brief The SESResponse class is the base class for all SES responses.
  *
- * @see    SESClient::sES
+ * \ingroup SES
  */
 
-/**
+/*!
  * @brief  Constructs a new SESResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SESResponse::SESResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SESResponse object.
@@ -63,7 +63,7 @@ SESResponse::SESResponse(SESResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SESResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SESResponsePrivate
@@ -92,7 +92,7 @@ void SESResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SESResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SESResponsePrivate object.

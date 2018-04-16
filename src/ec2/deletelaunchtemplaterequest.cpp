@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteLaunchTemplateRequest
+/*!
+ * \class QtAws::EC2::DeleteLaunchTemplateRequest
  *
- * @brief  Implements EC2 DeleteLaunchTemplate requests.
+ * \brief The DeleteLaunchTemplateRequest class encapsulates EC2 DeleteLaunchTemplate requests.
  *
- * @see    EC2Client::deleteLaunchTemplate
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteLaunchTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLaunchTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest(const DeleteLaunchTempl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLaunchTemplateRequest object.
  */
 DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest()
@@ -53,13 +60,16 @@ DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLaunchTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLaunchTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateRequest::response(QNetwor
     return new DeleteLaunchTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLaunchTemplateRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateRequest::response(QNetwor
  * @brief  Private implementation for DeleteLaunchTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLaunchTemplateRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLaunchTemplateRequestPrivate object, copying another.

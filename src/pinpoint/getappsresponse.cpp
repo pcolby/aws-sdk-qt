@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetAppsResponse
+/*!
+ * \class QtAws::Pinpoint::GetAppsResponse
  *
- * @brief  Handles Pinpoint GetApps responses.
+ * \brief The GetAppsResponse class encapsulates Pinpoint GetApps responses.
  *
- * @see    PinpointClient::getApps
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApps
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAppsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetAppsRequest * GetAppsResponse::request() const
     return static_cast<const GetAppsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetApps response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetAppsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAppsResponsePrivate
+ * \class GetAppsResponsePrivate
  *
- * @brief  Private implementation for GetAppsResponse.
+ * \brief Private implementation for GetAppsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAppsResponsePrivate object.
@@ -91,7 +94,7 @@ GetAppsResponsePrivate::GetAppsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetAppsResponse element.
  *
  * @param  xml  XML stream to parse.

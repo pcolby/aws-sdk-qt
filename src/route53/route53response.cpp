@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  Route53Response
+/*!
+ * \class QtAws::Route53::Route53Response
  *
- * @brief  Handles Route53 Route53 responses.
+ * \brief The Route53Response class is the base class for all Route53 responses.
  *
- * @see    Route53Client::route53
+ * \ingroup Route53
  */
 
-/**
+/*!
  * @brief  Constructs a new Route53Response object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ Route53Response::Route53Response(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Route53Response object.
@@ -63,7 +63,7 @@ Route53Response::Route53Response(Route53ResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void Route53Response::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  Route53ResponsePrivate
@@ -92,7 +92,7 @@ void Route53Response::parseFailure(QIODevice &response)
  * @brief  Private implementation for Route53Response.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Route53ResponsePrivate object.

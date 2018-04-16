@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DisableRadiusRequest
+/*!
+ * \class QtAws::DirectoryService::DisableRadiusRequest
  *
- * @brief  Implements DirectoryService DisableRadius requests.
+ * \brief The DisableRadiusRequest class encapsulates DirectoryService DisableRadius requests.
  *
- * @see    DirectoryServiceClient::disableRadius
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::disableRadius
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableRadiusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DisableRadiusRequest::DisableRadiusRequest(const DisableRadiusRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableRadiusRequest object.
  */
 DisableRadiusRequest::DisableRadiusRequest()
@@ -53,13 +70,16 @@ DisableRadiusRequest::DisableRadiusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableRadiusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableRadiusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply 
     return new DisableRadiusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableRadiusRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply 
  * @brief  Private implementation for DisableRadiusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableRadiusRequestPrivate object.
@@ -97,7 +117,7 @@ DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableRadiusRequestPrivate object, copying another.

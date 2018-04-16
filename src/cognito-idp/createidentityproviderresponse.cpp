@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateIdentityProviderResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateIdentityProviderResponse
  *
- * @brief  Handles CognitoIdentityProvider CreateIdentityProvider responses.
+ * \brief The CreateIdentityProviderResponse class encapsulates CognitoIdentityProvider CreateIdentityProvider responses.
  *
- * @see    CognitoIdentityProviderClient::createIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIdentityProviderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const CreateIdentityProviderRequest * CreateIdentityProviderResponse::request() 
     return static_cast<const CreateIdentityProviderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider CreateIdentityProvider response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void CreateIdentityProviderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateIdentityProviderResponsePrivate
+ * \class CreateIdentityProviderResponsePrivate
  *
- * @brief  Private implementation for CreateIdentityProviderResponse.
+ * \brief Private implementation for CreateIdentityProviderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIdentityProviderResponsePrivate object.
@@ -91,7 +104,7 @@ CreateIdentityProviderResponsePrivate::CreateIdentityProviderResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider CreateIdentityProviderResponse element.
  *
  * @param  xml  XML stream to parse.

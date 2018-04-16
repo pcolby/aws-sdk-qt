@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  TestInvokeAuthorizerResponse
+/*!
+ * \class QtAws::APIGateway::TestInvokeAuthorizerResponse
  *
- * @brief  Handles APIGateway TestInvokeAuthorizer responses.
+ * \brief The TestInvokeAuthorizerResponse class encapsulates APIGateway TestInvokeAuthorizer responses.
  *
- * @see    APIGatewayClient::testInvokeAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::testInvokeAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new TestInvokeAuthorizerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() cons
     return static_cast<const TestInvokeAuthorizerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway TestInvokeAuthorizer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TestInvokeAuthorizerResponsePrivate
+ * \class TestInvokeAuthorizerResponsePrivate
  *
- * @brief  Private implementation for TestInvokeAuthorizerResponse.
+ * \brief Private implementation for TestInvokeAuthorizerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestInvokeAuthorizerResponsePrivate object.
@@ -91,7 +99,7 @@ TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway TestInvokeAuthorizerResponse element.
  *
  * @param  xml  XML stream to parse.

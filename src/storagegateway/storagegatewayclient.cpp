@@ -151,92 +151,100 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::StorageGateway
+ * \brief The QtAws::StorageGateway contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace StorageGateway {
 
-/**
- * @class  StorageGatewayClient
+/*!
+ * \class QtAws::StorageGateway::StorageGatewayClient
  *
- * @brief  Client for AWS Storage Gateway
+ * \brief The StorageGatewayClient class provides access the AWS Storage Gateway service.
  *
- * <fullname>AWS Storage Gateway Service</fullname>
+ * \ingroup StorageGateway
  *
- * AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
- * seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure.
- * The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster
- *
- * recovery>
- *
- * Use the following links to get started using the <i>AWS Storage Gateway Service API
- *
- * Reference</i>> <ul> <li>
- *
- * <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
- * Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
- * to AWS Storage
- *
- * Gateway> </li> <li>
- *
- * <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
- * Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
- * such a
- *
- * request> </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
- * Responses</a>: Provides reference information about AWS Storage Gateway
- *
- * errors> </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
- * Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response
- * elements, possible errors, and examples of requests and
- *
- * responses> </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sg_region">AWS Storage Gateway Regions and
- * Endpoints:</a> Provides a list of each region and endpoints available for use with AWS Storage Gateway.
- *
- * </p </li> </ul> <note>
- *
- * AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
- * resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in
- * Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API,
- * you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as
- *
- * expected> </note> <b>
- *
- * IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
- * Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
- * 2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information,
- * see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource
- *
- * IDs</a>>
- *
- * For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the
- *
- * following>
- *
- *
- * <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>>
- *
- * A snapshot ID with the longer ID format looks like the following:
- *
- * <code>snap-78e226633445566ee</code>>
- *
- * For more information, see <a href="https://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer
- * AWS Storage Gateway volume and snapshot IDs coming in
+ *  <fullname>AWS Storage Gateway Service</fullname>
+ * 
+ *  AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
+ *  seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure.
+ *  The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster
+ * 
+ *  recovery>
+ * 
+ *  Use the following links to get started using the <i>AWS Storage Gateway Service API
+ * 
+ *  Reference</i>> <ul> <li>
+ * 
+ *  <a
+ *  href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
+ *  Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
+ *  to AWS Storage
+ * 
+ *  Gateway> </li> <li>
+ * 
+ *  <a
+ *  href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
+ *  Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
+ *  such a
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
+ *  Responses</a>: Provides reference information about AWS Storage Gateway
+ * 
+ *  errors> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
+ *  Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response
+ *  elements, possible errors, and examples of requests and
+ * 
+ *  responses> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sg_region">AWS Storage Gateway Regions and
+ *  Endpoints:</a> Provides a list of each region and endpoints available for use with AWS Storage Gateway.
+ * 
+ *  </p </li> </ul> <note>
+ * 
+ *  AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
+ *  resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in
+ *  Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API,
+ *  you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as
+ * 
+ *  expected> </note> <b>
+ * 
+ *  IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
+ *  Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
+ *  2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information,
+ *  see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource
+ * 
+ *  IDs</a>>
+ * 
+ *  For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the
+ * 
+ *  following>
+ * 
+ * 
+ *  <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>>
+ * 
+ *  A snapshot ID with the longer ID format looks like the following:
+ * 
+ *  <code>snap-78e226633445566ee</code>>
+ * 
+ *  For more information, see <a href="https://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer
+ *  AWS Storage Gateway volume and snapshot IDs coming in
  */
 
-/**
- * @brief  Constructs a new StorageGatewayClient object.
+/*!
+ * \brief Constructs a StorageGatewayClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 StorageGatewayClient::StorageGatewayClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -255,21 +263,16 @@ StorageGatewayClient::StorageGatewayClient(
     d->serviceName = QStringLiteral("storagegateway");
 }
 
-/**
- * @brief  Constructs a new StorageGatewayClient object.
+/*!
+ * \overload StorageGatewayClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 StorageGatewayClient::StorageGatewayClient(
     const QUrl &endpoint,
@@ -288,7 +291,7 @@ StorageGatewayClient::StorageGatewayClient(
     d->serviceName = QStringLiteral("storagegateway");
 }
 
-/**
+/*!
  * Activates the gateway you previously deployed on your host. In the activation process, you specify information such as
  * the region you want to use for storing snapshots or tapes, the time zone for scheduled snapshots the gateway snapshot
  * schedule window, an activation key, and a name for your gateway. The activation process also associates your gateway
@@ -309,7 +312,7 @@ ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGa
     return qobject_cast<ActivateGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures one or more gateway local disks as cache for a gateway. This operation is only supported in the cached
  * volume, tape and file gateway type (see <a
  * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">Storage Gateway
@@ -330,7 +333,7 @@ AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request
     return qobject_cast<AddCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more tags to the specified resource. You use tags to add metadata to resources, which you can use to
  * categorize these resources. For example, you can categorize resources by purpose, owner, environment, or team. Each tag
  * consists of a key and a value, which you define. You can add tags to the following AWS Storage Gateway
@@ -363,7 +366,7 @@ AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTag
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures one or more gateway local disks as upload buffer for a specified gateway. This operation is supported for the
  * stored volume, cached volume and tape gateway
  *
@@ -383,7 +386,7 @@ AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadB
     return qobject_cast<AddUploadBufferResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures one or more gateway local disks as working storage for a gateway. This operation is only supported in the
  * stored volume gateway type. This operation is deprecated in cached volume API version 20120630. Use
  * <a>AddUploadBuffer</a>
@@ -409,7 +412,7 @@ AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWor
     return qobject_cast<AddWorkingStorageResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels archiving of a virtual tape to the virtual tape shelf (VTS) after the archiving process is initiated. This
  * operation is only supported in the tape gateway
  *
@@ -424,7 +427,7 @@ CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchiv
     return qobject_cast<CancelArchivalResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels retrieval of a virtual tape from the virtual tape shelf (VTS) to a gateway after the retrieval process is
  * initiated. The virtual tape is returned to the VTS. This operation is only supported in the tape gateway
  *
@@ -439,7 +442,7 @@ CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetr
     return qobject_cast<CancelRetrievalResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a cached volume on a specified cached volume gateway. This operation is only supported in the cached volume
  * gateway
  *
@@ -472,7 +475,7 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
     return qobject_cast<CreateCachediSCSIVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a file share on an existing file gateway. In Storage Gateway, a file share is a file system mount point backed
  * by Amazon S3 cloud storage. Storage Gateway exposes file shares using a Network File System (NFS) interface. This
  * operation is only supported in the file gateway
@@ -499,7 +502,7 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
     return qobject_cast<CreateNFSFileShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates a snapshot of a
  *
  * volume>
@@ -540,7 +543,7 @@ CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapsh
     return qobject_cast<CreateSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates a snapshot of a gateway from a volume recovery point. This operation is only supported in the cached volume
  * gateway
  *
@@ -573,7 +576,7 @@ CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnap
     return qobject_cast<CreateSnapshotFromVolumeRecoveryPointResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a volume on a specified gateway. This operation is only supported in the stored volume gateway
  *
  * type>
@@ -599,7 +602,7 @@ CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(
     return qobject_cast<CreateStorediSCSIVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a virtual tape by using your own barcode. You write data to the virtual tape and then archive the tape. A
  * barcode is unique and can not be reused if it has already been used on a tape . This applies to barcodes used on deleted
  * tapes. This operation is only supported in the tape gateway
@@ -620,7 +623,7 @@ CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(cons
     return qobject_cast<CreateTapeWithBarcodeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one or more virtual tapes. You write data to the virtual tapes and then archive the tapes. This operation is
  * only supported in the tape gateway
  *
@@ -640,7 +643,7 @@ CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest
     return qobject_cast<CreateTapesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the bandwidth rate limits of a gateway. You can delete either the upload and download bandwidth rate limit, or
  * you can delete both. If you delete only one of the limits, the other limit remains unchanged. To specify which gateway
  * to work with, use the Amazon Resource Name (ARN) of the gateway in your
@@ -656,7 +659,7 @@ DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimi
     return qobject_cast<DeleteBandwidthRateLimitResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target and initiator
  *
  * @param  request Request to send to AWS Storage Gateway.
@@ -670,7 +673,7 @@ DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(cons
     return qobject_cast<DeleteChapCredentialsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a file share from a file gateway. This operation is only supported in the file gateway
  *
  * @param  request Request to send to AWS Storage Gateway.
@@ -684,7 +687,7 @@ DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFile
     return qobject_cast<DeleteFileShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a gateway. To specify which gateway to delete, use the Amazon Resource Name (ARN) of the gateway in your
  * request. The operation deletes the gateway; however, it does not delete the gateway virtual machine (VM) from your host
  *
@@ -713,7 +716,7 @@ DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayR
     return qobject_cast<DeleteGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a snapshot of a
  *
  * volume>
@@ -739,7 +742,7 @@ DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(co
     return qobject_cast<DeleteSnapshotScheduleResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified virtual tape. This operation is only supported in the tape gateway
  *
  * @param  request Request to send to AWS Storage Gateway.
@@ -753,7 +756,7 @@ DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &r
     return qobject_cast<DeleteTapeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified virtual tape from the virtual tape shelf (VTS). This operation is only supported in the tape
  * gateway
  *
@@ -768,7 +771,7 @@ DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const Delete
     return qobject_cast<DeleteTapeArchiveResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified storage volume that you previously created using the <a>CreateCachediSCSIVolume</a> or
  * <a>CreateStorediSCSIVolume</a> API. This operation is only supported in the cached volume and stored volume types. For
  * stored volume gateways, the local disk that was configured as the storage volume is not deleted. You can reuse the local
@@ -797,7 +800,7 @@ DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequ
     return qobject_cast<DeleteVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the bandwidth rate limits of a gateway. By default, these limits are not set, which means no bandwidth rate
  * limiting is in
  *
@@ -818,7 +821,7 @@ DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRate
     return qobject_cast<DescribeBandwidthRateLimitResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the cache of a gateway. This operation is only supported in the cached volume, tape and file
  * gateway
  *
@@ -837,7 +840,7 @@ DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheR
     return qobject_cast<DescribeCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of the gateway volumes specified in the request. This operation is only supported in the cached
  * volume gateway
  *
@@ -857,7 +860,7 @@ DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVo
     return qobject_cast<DescribeCachediSCSIVolumesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of Challenge-Handshake Authentication Protocol (CHAP) credentials information for a specified iSCSI
  * target, one for each target-initiator
  *
@@ -872,7 +875,7 @@ DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(
     return qobject_cast<DescribeChapCredentialsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns metadata about a gateway such as its name, network interfaces, configured time zone, and the state (whether the
  * gateway is running or not). To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in
  * your
@@ -888,7 +891,7 @@ DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInform
     return qobject_cast<DescribeGatewayInformationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are in
  * terms of the gateway's time
  *
@@ -903,7 +906,7 @@ DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenance
     return qobject_cast<DescribeMaintenanceStartTimeResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a description for one or more file shares from a file gateway. This operation is only supported in the file gateway
  *
  * @param  request Request to send to AWS Storage Gateway.
@@ -917,7 +920,7 @@ DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(cons
     return qobject_cast<DescribeNFSFileSharesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the snapshot schedule for the specified gateway volume. The snapshot schedule information includes intervals
  * at which snapshots are automatically initiated on the volume. This operation is only supported in the cached volume and
  * stored volume
@@ -933,7 +936,7 @@ DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedul
     return qobject_cast<DescribeSnapshotScheduleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description of the gateway volumes specified in the request. The list of gateway volumes in the request must
  * be from one gateway. In the response Amazon Storage Gateway returns volume information sorted by volume ARNs. This
  * operation is only supported in stored volume gateway
@@ -949,7 +952,7 @@ DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVo
     return qobject_cast<DescribeStorediSCSIVolumesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of specified virtual tapes in the virtual tape shelf (VTS). This operation is only supported in
  * the tape gateway
  *
@@ -969,7 +972,7 @@ DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const 
     return qobject_cast<DescribeTapeArchivesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of virtual tape recovery points that are available for the specified tape
  *
  * gateway>
@@ -989,7 +992,7 @@ DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryP
     return qobject_cast<DescribeTapeRecoveryPointsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a <code>TapeARN</code> is not
  * specified, returns a description of all virtual tapes associated with the specified gateway. This operation is only
  * supported in the tape gateway
@@ -1005,7 +1008,7 @@ DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesR
     return qobject_cast<DescribeTapesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the upload buffer of a gateway. This operation is supported for the stored volume, cached
  * volume and tape gateway
  *
@@ -1025,7 +1028,7 @@ DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const 
     return qobject_cast<DescribeUploadBufferResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of virtual tape library (VTL) devices for the specified tape gateway. In the response, AWS Storage
  * Gateway returns VTL device
  *
@@ -1044,7 +1047,7 @@ DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const Desc
     return qobject_cast<DescribeVTLDevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the working storage of a gateway. This operation is only supported in the stored volumes
  * gateway type. This operation is deprecated in cached volumes API version (20120630). Use DescribeUploadBuffer
  *
@@ -1069,7 +1072,7 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
     return qobject_cast<DescribeWorkingStorageResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables a tape gateway when the gateway is no longer functioning. For example, if your gateway VM is damaged, you can
  * disable the gateway so you can recover virtual
  *
@@ -1093,7 +1096,7 @@ DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatew
     return qobject_cast<DisableGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of the file shares for a specific file gateway, or the list of file shares that belong to the calling user
  * account. This operation is only supported in the file gateway
  *
@@ -1108,7 +1111,7 @@ ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileShar
     return qobject_cast<ListFileSharesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists gateways owned by an AWS account in a region specified in the request. The returned list is ordered by gateway
  * Amazon Resource Name
  *
@@ -1133,7 +1136,7 @@ ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequ
     return qobject_cast<ListGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the gateway's local disks. To specify which gateway to describe, you use the Amazon Resource Name
  * (ARN) of the gateway in the body of the
  *
@@ -1155,7 +1158,7 @@ ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDis
     return qobject_cast<ListLocalDisksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags that have been added to the specified resource. This operation is only supported in the cached volume,
  * stored volume and tape gateway
  *
@@ -1170,7 +1173,7 @@ ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const Li
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists virtual tapes in your virtual tape library (VTL) and your virtual tape shelf (VTS). You specify the tapes to list
  * by specifying one or more tape Amazon Resource Names (ARNs). If you don't specify a tape ARN, the operation lists all
  * virtual tapes in both your VTL and
@@ -1193,7 +1196,7 @@ ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &requ
     return qobject_cast<ListTapesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists iSCSI initiators that are connected to a volume. You can use this operation to determine whether a volume is being
  * used or not. This operation is only supported in the cached volume and stored volume gateway
  *
@@ -1208,7 +1211,7 @@ ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const 
     return qobject_cast<ListVolumeInitiatorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the recovery points for a specified gateway. This operation is only supported in the cached volume gateway
  *
  * type>
@@ -1228,7 +1231,7 @@ ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoint
     return qobject_cast<ListVolumeRecoveryPointsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the iSCSI stored volumes of a gateway. Results are sorted by volume ARN. The response includes only the volume
  * ARNs. If you want additional volume information, use the <a>DescribeStorediSCSIVolumes</a> or the
  * <a>DescribeCachediSCSIVolumes</a>
@@ -1252,7 +1255,7 @@ ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest
     return qobject_cast<ListVolumesResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends you notification through CloudWatch Events when all files written to your NFS file share have been uploaded to
  * Amazon
  *
@@ -1280,7 +1283,7 @@ NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const Noti
     return qobject_cast<NotifyWhenUploadedResponse *>(send(request));
 }
 
-/**
+/*!
  * Refreshes the cache for the specified file share. This operation finds objects in the Amazon S3 bucket that were added,
  * removed or replaced since the gateway last listed the bucket's contents and cached the results. This operation is only
  * supported in the file gateway
@@ -1296,7 +1299,7 @@ RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequ
     return qobject_cast<RefreshCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more tags from the specified resource. This operation is only supported in the cached volume, stored
  * volume and tape gateway
  *
@@ -1311,7 +1314,7 @@ RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(co
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets all cache disks that have encountered a error and makes the disks available for reconfiguration as cache storage.
  * If your cache disk encounters a error, the gateway prevents read and write operations on virtual tapes in the gateway.
  * For example, an error can occur when a disk is corrupted or removed from the gateway. When a cache is reset, the gateway
@@ -1335,7 +1338,7 @@ ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &r
     return qobject_cast<ResetCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves an archived virtual tape from the virtual tape shelf (VTS) to a tape gateway. Virtual tapes archived in the
  * VTS are not associated with any gateway. However after a tape is retrieved, it is associated with a gateway, even though
  * it is also listed in the VTS, that is, archive. This operation is only supported in the tape gateway
@@ -1356,7 +1359,7 @@ RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const Re
     return qobject_cast<RetrieveTapeArchiveResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the recovery point for the specified virtual tape. This operation is only supported in the tape gateway
  *
  * type>
@@ -1380,7 +1383,7 @@ RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPo
     return qobject_cast<RetrieveTapeRecoveryPointResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the password for your VM local console. When you log in to the local console for the first time, you log in to the
  * VM with the default credentials. We recommend that you set a new password. You don't need to know the default password
  * to set a new
@@ -1396,7 +1399,7 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
     return qobject_cast<SetLocalConsolePasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Shuts down a gateway. To specify which gateway to shut down, use the Amazon Resource Name (ARN) of the gateway in the
  * body of your
  *
@@ -1437,7 +1440,7 @@ ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGa
     return qobject_cast<ShutdownGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a gateway that you previously shut down (see <a>ShutdownGateway</a>). After the gateway starts, you can then make
  * other API calls, your applications can read from or write to the gateway's storage volumes and you will be able to take
  * snapshot
@@ -1463,7 +1466,7 @@ StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequ
     return qobject_cast<StartGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the bandwidth rate limits of a gateway. You can update both the upload and download bandwidth rate limit or
  * specify only one of the two. If you don't set a bandwidth rate limit, the existing rate limit
  *
@@ -1487,7 +1490,7 @@ UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimi
     return qobject_cast<UpdateBandwidthRateLimitResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target. By default, a
  * gateway does not have CHAP enabled; however, for added security, you might use
  *
@@ -1507,7 +1510,7 @@ UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(cons
     return qobject_cast<UpdateChapCredentialsResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a gateway's metadata, which includes the gateway's name and time zone. To specify which gateway to update, use
  * the Amazon Resource Name (ARN) of the gateway in your
  *
@@ -1527,7 +1530,7 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
     return qobject_cast<UpdateGatewayInformationResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the gateway virtual machine (VM) software. The request immediately triggers the software
  *
  * update> <note>
@@ -1557,7 +1560,7 @@ UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNo
     return qobject_cast<UpdateGatewaySoftwareNowResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a gateway's weekly maintenance start time information, including day and time of the week. The maintenance time
  * is the time in your gateway's time
  *
@@ -1572,7 +1575,7 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
     return qobject_cast<UpdateMaintenanceStartTimeResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a file share. This operation is only supported in the file gateway
  *
  * type> <note>
@@ -1619,7 +1622,7 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
     return qobject_cast<UpdateNFSFileShareResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a snapshot schedule configured for a gateway volume. This operation is only supported in the cached volume and
  * stored volume gateway
  *
@@ -1644,7 +1647,7 @@ UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(co
     return qobject_cast<UpdateSnapshotScheduleResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the type of medium changer in a tape gateway. When you activate a tape gateway, you select a medium changer type
  * for the tape gateway. This operation enables you to select a different type of medium changer after a tape gateway is
  * activated. This operation is only supported in the tape gateway
@@ -1660,7 +1663,7 @@ UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const Up
     return qobject_cast<UpdateVTLDeviceTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StorageGatewayClientPrivate
@@ -1668,7 +1671,7 @@ UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const Up
  * @brief  Private implementation for StorageGatewayClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StorageGatewayClientPrivate object.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListTagOptionsRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListTagOptionsRequest
  *
- * @brief  Implements ServiceCatalog ListTagOptions requests.
+ * \brief The ListTagOptionsRequest class encapsulates ServiceCatalog ListTagOptions requests.
  *
- * @see    ServiceCatalogClient::listTagOptions
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listTagOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListTagOptionsRequest::ListTagOptionsRequest(const ListTagOptionsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagOptionsRequest object.
  */
 ListTagOptionsRequest::ListTagOptionsRequest()
@@ -53,13 +62,16 @@ ListTagOptionsRequest::ListTagOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListTagOptionsRequest::response(QNetworkReply
     return new ListTagOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagOptionsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListTagOptionsRequest::response(QNetworkReply
  * @brief  Private implementation for ListTagOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagOptionsRequestPrivate object.
@@ -97,7 +109,7 @@ ListTagOptionsRequestPrivate::ListTagOptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagOptionsRequestPrivate object, copying another.

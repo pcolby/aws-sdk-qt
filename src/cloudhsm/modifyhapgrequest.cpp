@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ModifyHapgRequest
+/*!
+ * \class QtAws::CloudHSM::ModifyHapgRequest
  *
- * @brief  Implements CloudHSM ModifyHapg requests.
+ * \brief The ModifyHapgRequest class encapsulates CloudHSM ModifyHapg requests.
  *
- * @see    CloudHSMClient::modifyHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::modifyHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyHapgRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ ModifyHapgRequest::ModifyHapgRequest(const ModifyHapgRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyHapgRequest object.
  */
 ModifyHapgRequest::ModifyHapgRequest()
@@ -53,13 +68,16 @@ ModifyHapgRequest::ModifyHapgRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyHapgRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyHapgResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * c
     return new ModifyHapgResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyHapgRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * c
  * @brief  Private implementation for ModifyHapgRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHapgRequestPrivate object.
@@ -97,7 +115,7 @@ ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHapgRequestPrivate object, copying another.

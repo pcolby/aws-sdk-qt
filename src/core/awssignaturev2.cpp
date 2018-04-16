@@ -28,15 +28,15 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsSignatureV2
+/*!
+ * \class QtAws::Core::AwsSignatureV2
  *
  * @brief  Implements AWS Signature Version 2.
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsSignatureV2 object.
  *
  * Use instances of this object to provide Version 2 signatures for AWS services.
@@ -76,10 +76,10 @@ int AwsSignatureV2::version() const
     return 2;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsSignatureV2Private
+ * \class QtAws::Core::AwsSignatureV2Private
  *
  * @brief  Private implementation for AwsSignatureV2.
  *
@@ -89,7 +89,7 @@ int AwsSignatureV2::version() const
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsSignatureV2Private object.
@@ -104,7 +104,7 @@ AwsSignatureV2Private::AwsSignatureV2Private(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Add AWS Signature Version 2 adornments to an AWS request.
@@ -150,7 +150,7 @@ void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
     }
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Create an AWS V2 Signature canonical request.
@@ -187,7 +187,7 @@ QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::
            canonicalQuery(QUrlQuery(url));
 }
 
-/**
+/*!
  * @brief  Create an AWS V2 Signature method designation.
  *
  * This function returns a signature method designation, as defined by Amazon, for

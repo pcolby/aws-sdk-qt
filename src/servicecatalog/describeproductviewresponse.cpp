@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProductViewResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProductViewResponse
  *
- * @brief  Handles ServiceCatalog DescribeProductView responses.
+ * \brief The DescribeProductViewResponse class encapsulates ServiceCatalog DescribeProductView responses.
  *
- * @see    ServiceCatalogClient::describeProductView
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProductView
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductViewResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeProductViewRequest * DescribeProductViewResponse::request() const
     return static_cast<const DescribeProductViewRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeProductView response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeProductViewResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeProductViewResponsePrivate
+ * \class DescribeProductViewResponsePrivate
  *
- * @brief  Private implementation for DescribeProductViewResponse.
+ * \brief Private implementation for DescribeProductViewResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductViewResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeProductViewResponsePrivate::DescribeProductViewResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeProductViewResponse element.
  *
  * @param  xml  XML stream to parse.

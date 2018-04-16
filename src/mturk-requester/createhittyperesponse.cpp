@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateHITTypeResponse
+/*!
+ * \class QtAws::MTurk::CreateHITTypeResponse
  *
- * @brief  Handles MTurk CreateHITType responses.
+ * \brief The CreateHITTypeResponse class encapsulates MTurk CreateHITType responses.
  *
- * @see    MTurkClient::createHITType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createHITType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHITTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateHITTypeRequest * CreateHITTypeResponse::request() const
     return static_cast<const CreateHITTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk CreateHITType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateHITTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateHITTypeResponsePrivate
+ * \class CreateHITTypeResponsePrivate
  *
- * @brief  Private implementation for CreateHITTypeResponse.
+ * \brief Private implementation for CreateHITTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHITTypeResponsePrivate object.
@@ -91,7 +94,7 @@ CreateHITTypeResponsePrivate::CreateHITTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk CreateHITTypeResponse element.
  *
  * @param  xml  XML stream to parse.

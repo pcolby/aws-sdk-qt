@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  IsVpcPeeredResponse
+/*!
+ * \class QtAws::Lightsail::IsVpcPeeredResponse
  *
- * @brief  Handles Lightsail IsVpcPeered responses.
+ * \brief The IsVpcPeeredResponse class encapsulates Lightsail IsVpcPeered responses.
  *
- * @see    LightsailClient::isVpcPeered
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::isVpcPeered
  */
 
-/**
+/*!
  * @brief  Constructs a new IsVpcPeeredResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const IsVpcPeeredRequest * IsVpcPeeredResponse::request() const
     return static_cast<const IsVpcPeeredRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lightsail IsVpcPeered response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void IsVpcPeeredResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  IsVpcPeeredResponsePrivate
+ * \class IsVpcPeeredResponsePrivate
  *
- * @brief  Private implementation for IsVpcPeeredResponse.
+ * \brief Private implementation for IsVpcPeeredResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IsVpcPeeredResponsePrivate object.
@@ -91,7 +110,7 @@ IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lightsail IsVpcPeeredResponse element.
  *
  * @param  xml  XML stream to parse.

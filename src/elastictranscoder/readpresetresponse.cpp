@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ReadPresetResponse
+/*!
+ * \class QtAws::ElasticTranscoder::ReadPresetResponse
  *
- * @brief  Handles ElasticTranscoder ReadPreset responses.
+ * \brief The ReadPresetResponse class encapsulates ElasticTranscoder ReadPreset responses.
  *
- * @see    ElasticTranscoderClient::readPreset
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::readPreset
  */
 
-/**
+/*!
  * @brief  Constructs a new ReadPresetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ReadPresetRequest * ReadPresetResponse::request() const
     return static_cast<const ReadPresetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder ReadPreset response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ReadPresetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReadPresetResponsePrivate
+ * \class ReadPresetResponsePrivate
  *
- * @brief  Private implementation for ReadPresetResponse.
+ * \brief Private implementation for ReadPresetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadPresetResponsePrivate object.
@@ -91,7 +97,7 @@ ReadPresetResponsePrivate::ReadPresetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder ReadPresetResponse element.
  *
  * @param  xml  XML stream to parse.

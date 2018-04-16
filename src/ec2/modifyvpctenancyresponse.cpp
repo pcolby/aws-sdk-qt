@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcTenancyResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcTenancyResponse
  *
- * @brief  Handles EC2 ModifyVpcTenancy responses.
+ * \brief The ModifyVpcTenancyResponse class encapsulates EC2 ModifyVpcTenancy responses.
  *
- * @see    EC2Client::modifyVpcTenancy
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcTenancy
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcTenancyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcTenancyRequest * ModifyVpcTenancyResponse::request() const
     return static_cast<const ModifyVpcTenancyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcTenancy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcTenancyResponsePrivate
+ * \class ModifyVpcTenancyResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcTenancyResponse.
+ * \brief Private implementation for ModifyVpcTenancyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcTenancyResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcTenancyResponse element.
  *
  * @param  xml  XML stream to parse.

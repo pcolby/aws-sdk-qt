@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace Batch {
 
-/**
- * @class  DescribeComputeEnvironmentsRequest
+/*!
+ * \class QtAws::Batch::DescribeComputeEnvironmentsRequest
  *
- * @brief  Implements Batch DescribeComputeEnvironments requests.
+ * \brief The DescribeComputeEnvironmentsRequest class encapsulates Batch DescribeComputeEnvironments requests.
  *
- * @see    BatchClient::describeComputeEnvironments
+ * \ingroup Batch
+ *
+ *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
+ *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
+ *  lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
+ *  batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
+ *  eliminate capacity constraints, reduce compute costs, and deliver results
+ * 
+ *  quickly>
+ * 
+ *  As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
+ *  any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
+ *  quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
+ *  which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
+ *  time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
+ *  AWS
+ *
+ * \sa BatchClient::describeComputeEnvironments
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeComputeEnvironmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeComputeEnvironmentsRequest::DescribeComputeEnvironmentsRequest(const Des
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeComputeEnvironmentsRequest object.
  */
 DescribeComputeEnvironmentsRequest::DescribeComputeEnvironmentsRequest()
@@ -53,13 +70,16 @@ DescribeComputeEnvironmentsRequest::DescribeComputeEnvironmentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeComputeEnvironmentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeComputeEnvironmentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeComputeEnvironmentsRequest::response(
     return new DescribeComputeEnvironmentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeComputeEnvironmentsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeComputeEnvironmentsRequest::response(
  * @brief  Private implementation for DescribeComputeEnvironmentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeComputeEnvironmentsRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeComputeEnvironmentsRequestPrivate object, copying another.

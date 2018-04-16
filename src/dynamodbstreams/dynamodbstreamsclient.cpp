@@ -33,56 +33,64 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DynamoDBStreams
+ * \brief The QtAws::DynamoDBStreams contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DynamoDBStreams {
 
-/**
- * @class  DynamoDBStreamsClient
+/*!
+ * \class QtAws::DynamoDBStreams::DynamoDBStreamsClient
  *
- * @brief  Client for Amazon DynamoDB Streams
+ * \brief The DynamoDBStreamsClient class provides access the Amazon DynamoDB Streams service.
  *
- * <fullname>Amazon DynamoDB Streams</fullname>
+ * \ingroup DynamoDBStreams
  *
- * This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams
- * and processing stream records. For information about application development with DynamoDB Streams, see the <a
- * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer
- *
- * Guide</a>>
- *
- * Note that this document is intended for use with the following DynamoDB
- *
- * documentation> <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
- *
- * </p </li> </ul>
- *
- * The following are short descriptions of each low-level DynamoDB Streams API action, organized by
- *
- * function> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li>
- *
- * <i>GetRecords</i> - Retrieves the stream records from within a
- *
- * shard> </li> <li>
- *
- * <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard
- *
- * ID> </li> <li>
- *
- * <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and
+ *  <fullname>Amazon DynamoDB Streams</fullname>
+ * 
+ *  This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams
+ *  and processing stream records. For information about application development with DynamoDB Streams, see the <a
+ *  href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer
+ * 
+ *  Guide</a>>
+ * 
+ *  Note that this document is intended for use with the following DynamoDB
+ * 
+ *  documentation> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  The following are short descriptions of each low-level DynamoDB Streams API action, organized by
+ * 
+ *  function> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li>
+ * 
+ *  <i>GetRecords</i> - Retrieves the stream records from within a
+ * 
+ *  shard> </li> <li>
+ * 
+ *  <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard
+ * 
+ *  ID> </li> <li>
+ * 
+ *  <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and
  */
 
-/**
- * @brief  Constructs a new DynamoDBStreamsClient object.
+/*!
+ * \brief Constructs a DynamoDBStreamsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DynamoDBStreamsClient::DynamoDBStreamsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -101,21 +109,16 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     d->serviceName = QStringLiteral("dynamodb");
 }
 
-/**
- * @brief  Constructs a new DynamoDBStreamsClient object.
+/*!
+ * \overload DynamoDBStreamsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DynamoDBStreamsClient::DynamoDBStreamsClient(
     const QUrl &endpoint,
@@ -134,7 +137,7 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     d->serviceName = QStringLiteral("dynamodb");
 }
 
-/**
+/*!
  * Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the
  * composition of its shards, and its corresponding DynamoDB
  *
@@ -156,7 +159,7 @@ DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStr
     return qobject_cast<DescribeStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the stream records from a given
  *
  * shard>
@@ -179,7 +182,7 @@ GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &
     return qobject_cast<GetRecordsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a shard iterator. A shard iterator provides information about how to retrieve the stream records from within a
  * shard. Use the shard iterator in a subsequent <code>GetRecords</code> request to read the stream records from the
  *
@@ -194,7 +197,7 @@ GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShar
     return qobject_cast<GetShardIteratorResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns an array of stream ARNs associated with the current account and endpoint. If the <code>TableName</code>
  * parameter is present, then <i>ListStreams</i> will return only the streams ARNs for that
  *
@@ -209,7 +212,7 @@ ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsReques
     return qobject_cast<ListStreamsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DynamoDBStreamsClientPrivate
@@ -217,7 +220,7 @@ ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsReques
  * @brief  Private implementation for DynamoDBStreamsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DynamoDBStreamsClientPrivate object.

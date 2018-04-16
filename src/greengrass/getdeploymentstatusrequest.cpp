@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetDeploymentStatusRequest
+/*!
+ * \class QtAws::Greengrass::GetDeploymentStatusRequest
  *
- * @brief  Implements Greengrass GetDeploymentStatus requests.
+ * \brief The GetDeploymentStatusRequest class encapsulates Greengrass GetDeploymentStatus requests.
  *
- * @see    GreengrassClient::getDeploymentStatus
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getDeploymentStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDeploymentStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetDeploymentStatusRequest::GetDeploymentStatusRequest(const GetDeploymentStatus
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDeploymentStatusRequest object.
  */
 GetDeploymentStatusRequest::GetDeploymentStatusRequest()
@@ -53,13 +59,16 @@ GetDeploymentStatusRequest::GetDeploymentStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDeploymentStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDeploymentStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetwork
     return new GetDeploymentStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDeploymentStatusRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetwork
  * @brief  Private implementation for GetDeploymentStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeploymentStatusRequestPrivate object.
@@ -97,7 +106,7 @@ GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDeploymentStatusRequestPrivate object, copying another.

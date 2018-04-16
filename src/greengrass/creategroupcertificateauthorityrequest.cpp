@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateGroupCertificateAuthorityRequest
+/*!
+ * \class QtAws::Greengrass::CreateGroupCertificateAuthorityRequest
  *
- * @brief  Implements Greengrass CreateGroupCertificateAuthority requests.
+ * \brief The CreateGroupCertificateAuthorityRequest class encapsulates Greengrass CreateGroupCertificateAuthority requests.
  *
- * @see    GreengrassClient::createGroupCertificateAuthority
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createGroupCertificateAuthority
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupCertificateAuthorityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateGroupCertificateAuthorityRequest::CreateGroupCertificateAuthorityRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupCertificateAuthorityRequest object.
  */
 CreateGroupCertificateAuthorityRequest::CreateGroupCertificateAuthorityRequest()
@@ -53,13 +59,16 @@ CreateGroupCertificateAuthorityRequest::CreateGroupCertificateAuthorityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateGroupCertificateAuthorityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateGroupCertificateAuthorityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupCertificateAuthorityRequest::respo
     return new CreateGroupCertificateAuthorityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateGroupCertificateAuthorityRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateGroupCertificateAuthorityRequest::respo
  * @brief  Private implementation for CreateGroupCertificateAuthorityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupCertificateAuthorityRequestPrivate object.
@@ -97,7 +106,7 @@ CreateGroupCertificateAuthorityRequestPrivate::CreateGroupCertificateAuthorityRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupCertificateAuthorityRequestPrivate object, copying another.

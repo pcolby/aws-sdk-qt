@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetUtterancesViewRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetUtterancesViewRequest
  *
- * @brief  Implements LexModelBuildingService GetUtterancesView requests.
+ * \brief The GetUtterancesViewRequest class encapsulates LexModelBuildingService GetUtterancesView requests.
  *
- * @see    LexModelBuildingServiceClient::getUtterancesView
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getUtterancesView
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUtterancesViewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetUtterancesViewRequest::GetUtterancesViewRequest(const GetUtterancesViewReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUtterancesViewRequest object.
  */
 GetUtterancesViewRequest::GetUtterancesViewRequest()
@@ -53,13 +60,16 @@ GetUtterancesViewRequest::GetUtterancesViewRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUtterancesViewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUtterancesViewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkRe
     return new GetUtterancesViewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUtterancesViewRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkRe
  * @brief  Private implementation for GetUtterancesViewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUtterancesViewRequestPrivate object.
@@ -97,7 +107,7 @@ GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUtterancesViewRequestPrivate object, copying another.

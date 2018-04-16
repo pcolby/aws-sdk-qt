@@ -111,31 +111,39 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DirectConnect
+ * \brief The QtAws::DirectConnect contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DirectConnect {
 
-/**
- * @class  DirectConnectClient
+/*!
+ * \class QtAws::DirectConnect::DirectConnectClient
  *
- * @brief  Client for AWS Direct Connect
+ * \brief The DirectConnectClient class provides access the AWS Direct Connect service.
  *
- * AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
- * Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
- * With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon
- * Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud
- * (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access
- * to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a
- * single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US
- * Regions and AWS GovCloud
+ * \ingroup DirectConnect
+ *
+ *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
+ *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
+ *  With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon
+ *  Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud
+ *  (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access
+ *  to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a
+ *  single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US
+ *  Regions and AWS GovCloud
  */
 
-/**
- * @brief  Constructs a new DirectConnectClient object.
+/*!
+ * \brief Constructs a DirectConnectClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DirectConnectClient::DirectConnectClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -154,21 +162,16 @@ DirectConnectClient::DirectConnectClient(
     d->serviceName = QStringLiteral("directconnect");
 }
 
-/**
- * @brief  Constructs a new DirectConnectClient object.
+/*!
+ * \overload DirectConnectClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DirectConnectClient::DirectConnectClient(
     const QUrl &endpoint,
@@ -187,7 +190,7 @@ DirectConnectClient::DirectConnectClient(
     d->serviceName = QStringLiteral("directconnect");
 }
 
-/**
+/*!
  * Deprecated in favor of
  *
  * <a>AllocateHostedConnection</a>>
@@ -213,7 +216,7 @@ AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnecti
     return qobject_cast<AllocateConnectionOnInterconnectResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a hosted connection on an interconnect or a link aggregation group
  *
  * (LAG)>
@@ -235,7 +238,7 @@ AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection
     return qobject_cast<AllocateHostedConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Provisions a private virtual interface to be owned by another AWS
  *
  * customer>
@@ -255,7 +258,7 @@ AllocatePrivateVirtualInterfaceResponse * DirectConnectClient::allocatePrivateVi
     return qobject_cast<AllocatePrivateVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Provisions a public virtual interface to be owned by a different
  *
  * customer>
@@ -284,7 +287,7 @@ AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirt
     return qobject_cast<AllocatePublicVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates an existing connection with a link aggregation group (LAG). The connection is interrupted and re-established
  * as a member of the LAG (connectivity to AWS will be interrupted). The connection must be hosted on the same AWS Direct
  * Connect endpoint as the LAG, and its bandwidth must match the bandwidth for the LAG. You can reassociate a connection
@@ -313,7 +316,7 @@ AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWit
     return qobject_cast<AssociateConnectionWithLagResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect. If the
  * target interconnect or LAG has an existing hosted connection with a conflicting VLAN number or IP address, the operation
  * fails. This action temporarily interrupts the hosted connection's connectivity to AWS as it is being
@@ -333,7 +336,7 @@ AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnecti
     return qobject_cast<AssociateHostedConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a virtual interface with a specified link aggregation group (LAG) or connection. Connectivity to AWS is
  * temporarily interrupted as the virtual interface is being migrated. If the target connection or LAG has an associated
  * virtual interface with a conflicting VLAN number or a conflicting IP address, the operation fails.
@@ -360,7 +363,7 @@ AssociateVirtualInterfaceResponse * DirectConnectClient::associateVirtualInterfa
     return qobject_cast<AssociateVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Confirm the creation of a hosted connection on an
  *
  * interconnect>
@@ -379,7 +382,7 @@ ConfirmConnectionResponse * DirectConnectClient::confirmConnection(const Confirm
     return qobject_cast<ConfirmConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Accept ownership of a private virtual interface created by another
  *
  * customer>
@@ -398,7 +401,7 @@ ConfirmPrivateVirtualInterfaceResponse * DirectConnectClient::confirmPrivateVirt
     return qobject_cast<ConfirmPrivateVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Accept ownership of a public virtual interface created by another
  *
  * customer>
@@ -417,7 +420,7 @@ ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtua
     return qobject_cast<ConfirmPublicVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new BGP peer on a specified virtual interface. The BGP peer cannot be in the same address family (IPv4/IPv6)
  * of an existing BGP peer on the virtual
  *
@@ -447,7 +450,7 @@ CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRe
     return qobject_cast<CreateBGPPeerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new connection between the customer network and a specific AWS Direct Connect
  *
  * location>
@@ -479,7 +482,7 @@ CreateConnectionResponse * DirectConnectClient::createConnection(const CreateCon
     return qobject_cast<CreateConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new direct connect gateway. A direct connect gateway is an intermediate object that enables you to connect a
  * set of virtual interfaces and virtual private gateways. direct connect gateways are global and visible in any AWS region
  * after they are created. The virtual interfaces and virtual private gateways that are connected through a direct connect
@@ -497,7 +500,7 @@ CreateDirectConnectGatewayResponse * DirectConnectClient::createDirectConnectGat
     return qobject_cast<CreateDirectConnectGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an association between a direct connect gateway and a virtual private gateway (VGW). The VGW must be attached to
  * a VPC and must not be associated with another direct connect
  *
@@ -512,7 +515,7 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
     return qobject_cast<CreateDirectConnectGatewayAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new interconnect between a AWS Direct Connect partner's network and a specific AWS Direct Connect
  *
  * location>
@@ -550,7 +553,7 @@ CreateInterconnectResponse * DirectConnectClient::createInterconnect(const Creat
     return qobject_cast<CreateInterconnectResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new link aggregation group (LAG) with the specified number of bundled physical connections between the
  * customer network and a specific AWS Direct Connect location. A LAG is a logical interface that uses the Link Aggregation
  * Control Protocol (LACP) to aggregate multiple 1 gigabit or 10 gigabit interfaces, allowing you to treat them as a single
@@ -589,7 +592,7 @@ CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &reque
     return qobject_cast<CreateLagResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new private virtual interface. A virtual interface is the VLAN that transports AWS Direct Connect traffic. A
  * private virtual interface supports sending traffic to a single virtual private cloud
  *
@@ -604,7 +607,7 @@ CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtua
     return qobject_cast<CreatePrivateVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new public virtual interface. A virtual interface is the VLAN that transports AWS Direct Connect traffic. A
  * public virtual interface supports sending traffic to public services of AWS such as Amazon Simple Storage Service
  * (Amazon
@@ -625,7 +628,7 @@ CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualI
     return qobject_cast<CreatePublicVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a BGP peer on the specified virtual interface that matches the specified customer address and ASN. You cannot
  * delete the last BGP peer from a virtual
  *
@@ -640,7 +643,7 @@ DeleteBGPPeerResponse * DirectConnectClient::deleteBGPPeer(const DeleteBGPPeerRe
     return qobject_cast<DeleteBGPPeerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the
  *
  * connection>
@@ -660,7 +663,7 @@ DeleteConnectionResponse * DirectConnectClient::deleteConnection(const DeleteCon
     return qobject_cast<DeleteConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a direct connect gateway. You must first delete all virtual interfaces that are attached to the direct connect
  * gateway and disassociate all virtual private gateways that are associated with the direct connect
  *
@@ -675,7 +678,7 @@ DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGat
     return qobject_cast<DeleteDirectConnectGatewayResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the association between a direct connect gateway and a virtual private
  *
  * @param  request Request to send to AWS Direct Connect.
@@ -689,7 +692,7 @@ DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirec
     return qobject_cast<DeleteDirectConnectGatewayAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * interconnect> <note>
@@ -707,7 +710,7 @@ DeleteInterconnectResponse * DirectConnectClient::deleteInterconnect(const Delet
     return qobject_cast<DeleteInterconnectResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a link aggregation group (LAG). You cannot delete a LAG if it has active virtual interfaces or hosted
  *
  * @param  request Request to send to AWS Direct Connect.
@@ -721,7 +724,7 @@ DeleteLagResponse * DirectConnectClient::deleteLag(const DeleteLagRequest &reque
     return qobject_cast<DeleteLagResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a virtual
  *
  * @param  request Request to send to AWS Direct Connect.
@@ -735,7 +738,7 @@ DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(con
     return qobject_cast<DeleteVirtualInterfaceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated in favor of
  *
  * <a>DescribeLoa</a>>
@@ -760,7 +763,7 @@ DescribeConnectionLoaResponse * DirectConnectClient::describeConnectionLoa(const
     return qobject_cast<DescribeConnectionLoaResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays all connections in this
  *
  * region>
@@ -778,7 +781,7 @@ DescribeConnectionsResponse * DirectConnectClient::describeConnections(const Des
     return qobject_cast<DescribeConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated in favor of
  *
  * <a>DescribeHostedConnections</a>>
@@ -800,7 +803,7 @@ DescribeConnectionsOnInterconnectResponse * DirectConnectClient::describeConnect
     return qobject_cast<DescribeConnectionsOnInterconnectResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all direct connect gateway and virtual private gateway (VGW) associations. Either a direct connect
  * gateway ID or a VGW ID must be provided in the request. If a direct connect gateway ID is provided, the response returns
  * all VGWs associated with the direct connect gateway. If a VGW ID is provided, the response returns all direct connect
@@ -818,7 +821,7 @@ DescribeDirectConnectGatewayAssociationsResponse * DirectConnectClient::describe
     return qobject_cast<DescribeDirectConnectGatewayAssociationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of all direct connect gateway and virtual interface (VIF) attachments. Either a direct connect gateway ID
  * or a VIF ID must be provided in the request. If a direct connect gateway ID is provided, the response returns all VIFs
  * attached to the direct connect gateway. If a VIF ID is provided, the response returns all direct connect gateways
@@ -836,7 +839,7 @@ DescribeDirectConnectGatewayAttachmentsResponse * DirectConnectClient::describeD
     return qobject_cast<DescribeDirectConnectGatewayAttachmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of direct connect gateways in your account. Deleted direct connect gateways are not returned. You can
  * provide a direct connect gateway ID in the request to return information about the specific direct connect gateway only.
  * Otherwise, if a direct connect gateway ID is not provided, information about all of your direct connect gateways is
@@ -853,7 +856,7 @@ DescribeDirectConnectGatewaysResponse * DirectConnectClient::describeDirectConne
     return qobject_cast<DescribeDirectConnectGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of hosted connections that have been provisioned on the given interconnect or link aggregation group
  *
  * (LAG)> <note>
@@ -871,7 +874,7 @@ DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnectio
     return qobject_cast<DescribeHostedConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deprecated in favor of
  *
  * <a>DescribeLoa</a>>
@@ -896,7 +899,7 @@ DescribeInterconnectLoaResponse * DirectConnectClient::describeInterconnectLoa(c
     return qobject_cast<DescribeInterconnectLoaResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of interconnects owned by the AWS
  *
  * account>
@@ -914,7 +917,7 @@ DescribeInterconnectsResponse * DirectConnectClient::describeInterconnects(const
     return qobject_cast<DescribeInterconnectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the link aggregation groups (LAGs) in your account.
  *
  * </p
@@ -932,7 +935,7 @@ DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsReque
     return qobject_cast<DescribeLagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the LOA-CFA for a connection, interconnect, or link aggregation group
  *
  * (LAG)>
@@ -953,7 +956,7 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
     return qobject_cast<DescribeLoaResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the list of AWS Direct Connect locations in the current AWS region. These are the locations that may be selected
  * when calling <a>CreateConnection</a> or
  *
@@ -968,7 +971,7 @@ DescribeLocationsResponse * DirectConnectClient::describeLocations()
     return qobject_cast<DescribeLocationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the tags associated with the specified Direct Connect
  *
  * @param  request Request to send to AWS Direct Connect.
@@ -982,7 +985,7 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of virtual private gateways owned by the AWS
  *
  * account>
@@ -1003,7 +1006,7 @@ DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
     return qobject_cast<DescribeVirtualGatewaysResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays all virtual interfaces for an AWS account. Virtual interfaces deleted fewer than 15 minutes before you make the
  * request are also returned. If you specify a connection ID, only the virtual interfaces associated with the connection
  * are returned. If you specify a virtual interface ID, then only a single virtual interface is
@@ -1023,7 +1026,7 @@ DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfac
     return qobject_cast<DescribeVirtualInterfacesResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a connection from a link aggregation group (LAG). The connection is interrupted and re-established as a
  * standalone connection (the connection is not deleted; to delete the connection, use the <a>DeleteConnection</a>
  * request). If the LAG has associated virtual interfaces or hosted connections, they remain associated with the LAG. A
@@ -1046,7 +1049,7 @@ DisassociateConnectionFromLagResponse * DirectConnectClient::disassociateConnect
     return qobject_cast<DisassociateConnectionFromLagResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified tags to the specified Direct Connect resource. Each Direct Connect resource can have a maximum of 50
  *
  * tags>
@@ -1065,7 +1068,7 @@ TagResourceResponse * DirectConnectClient::tagResource(const TagResourceRequest 
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more tags from the specified Direct Connect
  *
  * @param  request Request to send to AWS Direct Connect.
@@ -1079,7 +1082,7 @@ UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRe
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the attributes of a link aggregation group (LAG).
  *
  * </p
@@ -1112,7 +1115,7 @@ UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &reque
     return qobject_cast<UpdateLagResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DirectConnectClientPrivate
@@ -1120,7 +1123,7 @@ UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &reque
  * @brief  Private implementation for DirectConnectClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectConnectClientPrivate object.

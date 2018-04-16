@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SuspendProcessesRequest
+/*!
+ * \class QtAws::AutoScaling::SuspendProcessesRequest
  *
- * @brief  Implements AutoScaling SuspendProcesses requests.
+ * \brief The SuspendProcessesRequest class encapsulates AutoScaling SuspendProcesses requests.
  *
- * @see    AutoScalingClient::suspendProcesses
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::suspendProcesses
  */
 
-/**
+/*!
  * @brief  Constructs a new SuspendProcessesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SuspendProcessesRequest::SuspendProcessesRequest(const SuspendProcessesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SuspendProcessesRequest object.
  */
 SuspendProcessesRequest::SuspendProcessesRequest()
@@ -53,13 +61,16 @@ SuspendProcessesRequest::SuspendProcessesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SuspendProcessesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SuspendProcessesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkRep
     return new SuspendProcessesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SuspendProcessesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkRep
  * @brief  Private implementation for SuspendProcessesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SuspendProcessesRequestPrivate object.
@@ -97,7 +108,7 @@ SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SuspendProcessesRequestPrivate object, copying another.

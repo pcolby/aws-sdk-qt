@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateStreamingDistributionWithTagsRequest
+/*!
+ * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsRequest
  *
- * @brief  Implements CloudFront CreateStreamingDistributionWithTags requests.
+ * \brief The CreateStreamingDistributionWithTagsRequest class encapsulates CloudFront CreateStreamingDistributionWithTags requests.
  *
- * @see    CloudFrontClient::createStreamingDistributionWithTags
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createStreamingDistributionWithTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingDistributionWithTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateStreamingDistributionWithTagsRequest::CreateStreamingDistributionWithTagsR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingDistributionWithTagsRequest object.
  */
 CreateStreamingDistributionWithTagsRequest::CreateStreamingDistributionWithTagsRequest()
@@ -53,13 +61,16 @@ CreateStreamingDistributionWithTagsRequest::CreateStreamingDistributionWithTagsR
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStreamingDistributionWithTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStreamingDistributionWithTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::r
     return new CreateStreamingDistributionWithTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStreamingDistributionWithTagsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::r
  * @brief  Private implementation for CreateStreamingDistributionWithTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingDistributionWithTagsRequestPrivate object.
@@ -97,7 +108,7 @@ CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingDistributionWithTagsRequestPrivate object, copying another.

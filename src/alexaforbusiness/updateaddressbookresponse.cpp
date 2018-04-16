@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateAddressBookResponse
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateAddressBookResponse
  *
- * @brief  Handles AlexaForBusiness UpdateAddressBook responses.
+ * \brief The UpdateAddressBookResponse class encapsulates AlexaForBusiness UpdateAddressBook responses.
  *
- * @see    AlexaForBusinessClient::updateAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAddressBookResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateAddressBookRequest * UpdateAddressBookResponse::request() const
     return static_cast<const UpdateAddressBookRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness UpdateAddressBook response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateAddressBookResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateAddressBookResponsePrivate
+ * \class UpdateAddressBookResponsePrivate
  *
- * @brief  Private implementation for UpdateAddressBookResponse.
+ * \brief Private implementation for UpdateAddressBookResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAddressBookResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateAddressBookResponsePrivate::UpdateAddressBookResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness UpdateAddressBookResponse element.
  *
  * @param  xml  XML stream to parse.

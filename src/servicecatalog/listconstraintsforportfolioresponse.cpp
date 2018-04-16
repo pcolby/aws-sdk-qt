@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListConstraintsForPortfolioResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioResponse
  *
- * @brief  Handles ServiceCatalog ListConstraintsForPortfolio responses.
+ * \brief The ListConstraintsForPortfolioResponse class encapsulates ServiceCatalog ListConstraintsForPortfolio responses.
  *
- * @see    ServiceCatalogClient::listConstraintsForPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listConstraintsForPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new ListConstraintsForPortfolioResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListConstraintsForPortfolioRequest * ListConstraintsForPortfolioResponse::
     return static_cast<const ListConstraintsForPortfolioRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListConstraintsForPortfolio response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListConstraintsForPortfolioResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListConstraintsForPortfolioResponsePrivate
+ * \class ListConstraintsForPortfolioResponsePrivate
  *
- * @brief  Private implementation for ListConstraintsForPortfolioResponse.
+ * \brief Private implementation for ListConstraintsForPortfolioResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListConstraintsForPortfolioResponsePrivate object.
@@ -91,7 +100,7 @@ ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListConstraintsForPortfolioResponse element.
  *
  * @param  xml  XML stream to parse.

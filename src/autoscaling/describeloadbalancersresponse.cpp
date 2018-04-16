@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLoadBalancersResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeLoadBalancersResponse
  *
- * @brief  Handles AutoScaling DescribeLoadBalancers responses.
+ * \brief The DescribeLoadBalancersResponse class encapsulates AutoScaling DescribeLoadBalancers responses.
  *
- * @see    AutoScalingClient::describeLoadBalancers
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLoadBalancers
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeLoadBalancersRequest * DescribeLoadBalancersResponse::request() co
     return static_cast<const DescribeLoadBalancersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeLoadBalancers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeLoadBalancersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeLoadBalancersResponsePrivate
+ * \class DescribeLoadBalancersResponsePrivate
  *
- * @brief  Private implementation for DescribeLoadBalancersResponse.
+ * \brief Private implementation for DescribeLoadBalancersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancersResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeLoadBalancersResponsePrivate::DescribeLoadBalancersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeLoadBalancersResponse element.
  *
  * @param  xml  XML stream to parse.

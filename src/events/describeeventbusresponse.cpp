@@ -27,15 +27,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  DescribeEventBusResponse
+/*!
+ * \class QtAws::CloudWatchEvents::DescribeEventBusResponse
  *
- * @brief  Handles CloudWatchEvents DescribeEventBus responses.
+ * \brief The DescribeEventBusResponse class encapsulates CloudWatchEvents DescribeEventBus responses.
  *
- * @see    CloudWatchEventsClient::describeEventBus
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::describeEventBus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventBusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +84,7 @@ const DescribeEventBusRequest * DescribeEventBusResponse::request() const
     return static_cast<const DescribeEventBusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatchEvents DescribeEventBus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +96,15 @@ void DescribeEventBusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEventBusResponsePrivate
+ * \class DescribeEventBusResponsePrivate
  *
- * @brief  Private implementation for DescribeEventBusResponse.
+ * \brief Private implementation for DescribeEventBusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventBusResponsePrivate object.
@@ -91,7 +117,7 @@ DescribeEventBusResponsePrivate::DescribeEventBusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatchEvents DescribeEventBusResponse element.
  *
  * @param  xml  XML stream to parse.

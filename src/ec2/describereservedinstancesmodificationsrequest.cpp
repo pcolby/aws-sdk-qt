@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeReservedInstancesModificationsRequest
+/*!
+ * \class QtAws::EC2::DescribeReservedInstancesModificationsRequest
  *
- * @brief  Implements EC2 DescribeReservedInstancesModifications requests.
+ * \brief The DescribeReservedInstancesModificationsRequest class encapsulates EC2 DescribeReservedInstancesModifications requests.
  *
- * @see    EC2Client::describeReservedInstancesModifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeReservedInstancesModifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesModificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeReservedInstancesModificationsRequest::DescribeReservedInstancesModifica
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesModificationsRequest object.
  */
 DescribeReservedInstancesModificationsRequest::DescribeReservedInstancesModificationsRequest()
@@ -53,13 +60,16 @@ DescribeReservedInstancesModificationsRequest::DescribeReservedInstancesModifica
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReservedInstancesModificationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReservedInstancesModificationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesModificationsRequest
     return new DescribeReservedInstancesModificationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReservedInstancesModificationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesModificationsRequest
  * @brief  Private implementation for DescribeReservedInstancesModificationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesModificationsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeReservedInstancesModificationsRequestPrivate::DescribeReservedInstancesM
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesModificationsRequestPrivate object, copying another.

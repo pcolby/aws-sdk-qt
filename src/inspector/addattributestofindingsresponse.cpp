@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  AddAttributesToFindingsResponse
+/*!
+ * \class QtAws::Inspector::AddAttributesToFindingsResponse
  *
- * @brief  Handles Inspector AddAttributesToFindings responses.
+ * \brief The AddAttributesToFindingsResponse class encapsulates Inspector AddAttributesToFindings responses.
  *
- * @see    InspectorClient::addAttributesToFindings
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::addAttributesToFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new AddAttributesToFindingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const AddAttributesToFindingsRequest * AddAttributesToFindingsResponse::request(
     return static_cast<const AddAttributesToFindingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector AddAttributesToFindings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void AddAttributesToFindingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddAttributesToFindingsResponsePrivate
+ * \class AddAttributesToFindingsResponsePrivate
  *
- * @brief  Private implementation for AddAttributesToFindingsResponse.
+ * \brief Private implementation for AddAttributesToFindingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddAttributesToFindingsResponsePrivate object.
@@ -91,7 +99,7 @@ AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector AddAttributesToFindingsResponse element.
  *
  * @param  xml  XML stream to parse.

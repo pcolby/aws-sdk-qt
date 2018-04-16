@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLoadBalancerTargetGroupsResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeLoadBalancerTargetGroupsResponse
  *
- * @brief  Handles AutoScaling DescribeLoadBalancerTargetGroups responses.
+ * \brief The DescribeLoadBalancerTargetGroupsResponse class encapsulates AutoScaling DescribeLoadBalancerTargetGroups responses.
  *
- * @see    AutoScalingClient::describeLoadBalancerTargetGroups
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLoadBalancerTargetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancerTargetGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeLoadBalancerTargetGroupsRequest * DescribeLoadBalancerTargetGroups
     return static_cast<const DescribeLoadBalancerTargetGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeLoadBalancerTargetGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeLoadBalancerTargetGroupsResponsePrivate
+ * \class DescribeLoadBalancerTargetGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribeLoadBalancerTargetGroupsResponse.
+ * \brief Private implementation for DescribeLoadBalancerTargetGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancerTargetGroupsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroup
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeLoadBalancerTargetGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

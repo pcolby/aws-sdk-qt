@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetSubscriptionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::GetSubscriptionDefinitionResponse
  *
- * @brief  Handles Greengrass GetSubscriptionDefinition responses.
+ * \brief The GetSubscriptionDefinitionResponse class encapsulates Greengrass GetSubscriptionDefinition responses.
  *
- * @see    GreengrassClient::getSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetSubscriptionDefinitionRequest * GetSubscriptionDefinitionResponse::requ
     return static_cast<const GetSubscriptionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetSubscriptionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSubscriptionDefinitionResponsePrivate
+ * \class GetSubscriptionDefinitionResponsePrivate
  *
- * @brief  Private implementation for GetSubscriptionDefinitionResponse.
+ * \brief Private implementation for GetSubscriptionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetSubscriptionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

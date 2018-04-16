@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  UpdateBatchPredictionResponse
+/*!
+ * \class QtAws::MachineLearning::UpdateBatchPredictionResponse
  *
- * @brief  Handles MachineLearning UpdateBatchPrediction responses.
+ * \brief The UpdateBatchPredictionResponse class encapsulates MachineLearning UpdateBatchPrediction responses.
  *
- * @see    MachineLearningClient::updateBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::updateBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBatchPredictionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateBatchPredictionRequest * UpdateBatchPredictionResponse::request() co
     return static_cast<const UpdateBatchPredictionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning UpdateBatchPrediction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateBatchPredictionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateBatchPredictionResponsePrivate
+ * \class UpdateBatchPredictionResponsePrivate
  *
- * @brief  Private implementation for UpdateBatchPredictionResponse.
+ * \brief Private implementation for UpdateBatchPredictionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBatchPredictionResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateBatchPredictionResponsePrivate::UpdateBatchPredictionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning UpdateBatchPredictionResponse element.
  *
  * @param  xml  XML stream to parse.

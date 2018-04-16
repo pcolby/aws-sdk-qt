@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CreateHsmRequest
+/*!
+ * \class QtAws::CloudHSM::CreateHsmRequest
  *
- * @brief  Implements CloudHSM CreateHsm requests.
+ * \brief The CreateHsmRequest class encapsulates CloudHSM CreateHsm requests.
  *
- * @see    CloudHSMClient::createHsm
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::createHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ CreateHsmRequest::CreateHsmRequest(const CreateHsmRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateHsmRequest object.
  */
 CreateHsmRequest::CreateHsmRequest()
@@ -53,13 +68,16 @@ CreateHsmRequest::CreateHsmRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateHsmRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateHsmResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
     return new CreateHsmResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateHsmRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
  * @brief  Private implementation for CreateHsmRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHsmRequestPrivate object.
@@ -97,7 +115,7 @@ CreateHsmRequestPrivate::CreateHsmRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHsmRequestPrivate object, copying another.

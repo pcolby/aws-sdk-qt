@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateSkillGroupRequest
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateSkillGroupRequest
  *
- * @brief  Implements AlexaForBusiness UpdateSkillGroup requests.
+ * \brief The UpdateSkillGroupRequest class encapsulates AlexaForBusiness UpdateSkillGroup requests.
  *
- * @see    AlexaForBusinessClient::updateSkillGroup
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateSkillGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSkillGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateSkillGroupRequest::UpdateSkillGroupRequest(const UpdateSkillGroupRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSkillGroupRequest object.
  */
 UpdateSkillGroupRequest::UpdateSkillGroupRequest()
@@ -53,13 +61,16 @@ UpdateSkillGroupRequest::UpdateSkillGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSkillGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSkillGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkRep
     return new UpdateSkillGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSkillGroupRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateSkillGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSkillGroupRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSkillGroupRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  CreateMountTargetRequest
+/*!
+ * \class QtAws::EFS::CreateMountTargetRequest
  *
- * @brief  Implements EFS CreateMountTarget requests.
+ * \brief The CreateMountTargetRequest class encapsulates EFS CreateMountTarget requests.
  *
- * @see    EFSClient::createMountTarget
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::createMountTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateMountTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateMountTargetRequest::CreateMountTargetRequest(const CreateMountTargetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateMountTargetRequest object.
  */
 CreateMountTargetRequest::CreateMountTargetRequest()
@@ -53,13 +62,16 @@ CreateMountTargetRequest::CreateMountTargetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateMountTargetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateMountTargetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkRe
     return new CreateMountTargetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateMountTargetRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkRe
  * @brief  Private implementation for CreateMountTargetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMountTargetRequestPrivate object.
@@ -97,7 +109,7 @@ CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMountTargetRequestPrivate object, copying another.

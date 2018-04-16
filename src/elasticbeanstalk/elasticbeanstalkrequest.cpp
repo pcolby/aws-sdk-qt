@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  ElasticBeanstalkRequest
+/*!
+ * \class QtAws::ElasticBeanstalk::ElasticBeanstalkRequest
  *
- * @brief  Interface class for providing ElasticBeanstalk requests
+ * \brief The ElasticBeanstalkRequest class is the base class for all ElasticBeanstalk requests.
+ *
+ * \ingroup ElasticBeanstalk
  */
 
-
-/**
+/*!
  * @brief  Constructs a new ElasticBeanstalkRequest object.
  *
  * @param  action  The ElasticBeanstalk action to request.
@@ -41,7 +42,7 @@ ElasticBeanstalkRequest::ElasticBeanstalkRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ElasticBeanstalkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ ElasticBeanstalkRequest::ElasticBeanstalkRequest(const ElasticBeanstalkRequest &
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ ElasticBeanstalkRequest& ElasticBeanstalkRequest::operator=(const ElasticBeansta
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticBeanstalkRequest object.
@@ -85,10 +86,8 @@ ElasticBeanstalkRequest::ElasticBeanstalkRequest(ElasticBeanstalkRequestPrivate 
 
 }
 
-/**
- * @brief  Get the ElasticBeanstalk action to be performed by this request.
- *
- * @return The ElasticBeanstalk action to be performed by this request.
+/*!
+ * \brief Returns the ElasticBeanstalk action to be performed by this request.
  */
 ElasticBeanstalkRequest::Action ElasticBeanstalkRequest::action() const
 {
@@ -96,20 +95,16 @@ ElasticBeanstalkRequest::Action ElasticBeanstalkRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the ElasticBeanstalk action to be performed by this request.
- *
- * @return The name of the ElasticBeanstalk action to be performed by this request.
+/*!
+ * \brief Returns the name of the ElasticBeanstalk action to be performed by this request.
  */
 QString ElasticBeanstalkRequest::actionString() const
 {
     return ElasticBeanstalkRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the ElasticBeanstalk API version implemented by this request.
- *
- * @return The ElasticBeanstalk API version implmented by this request.
+/*!
+ * \brief Returns the ElasticBeanstalk API version implemented by this request.
  */
 QString ElasticBeanstalkRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString ElasticBeanstalkRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the ElasticBeanstalk action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the ElasticBeanstalk action to be performed by this request to \a action.
  */
 void ElasticBeanstalkRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void ElasticBeanstalkRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the ElasticBeanstalk API version to include in this request.
- *
- * @param  version  The ElasticBeanstalk API version to include in this request.
+/*!
+ * Set the ElasticBeanstalk API version to include in this request to \a version.
  */
 void ElasticBeanstalkRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void ElasticBeanstalkRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool ElasticBeanstalkRequest::operator==(const ElasticBeanstalkRequest &other) const
 {
@@ -159,7 +146,7 @@ bool ElasticBeanstalkRequest::operator==(const ElasticBeanstalkRequest &other) c
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid ElasticBeanstalk queue name.
  *
  * @par From ElasticBeanstalk FAQs:
@@ -178,12 +165,10 @@ bool ElasticBeanstalkRequest::operator==(const ElasticBeanstalkRequest &other) c
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int ElasticBeanstalkRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int ElasticBeanstalkRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void ElasticBeanstalkRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void ElasticBeanstalkRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this ElasticBeanstalk request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant ElasticBeanstalkRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant ElasticBeanstalkRequest::parameter(const QString &name, const QVariant 
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this ElasticBeanstalk request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &ElasticBeanstalkRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &ElasticBeanstalkRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this ElasticBeanstalk request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void ElasticBeanstalkRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void ElasticBeanstalkRequest::setParameter(const QString &name, const QVariant &
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this ElasticBeanstalk request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void ElasticBeanstalkRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void ElasticBeanstalkRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this ElasticBeanstalk request.
+/*!
+ * \brief Returns a network request for this ElasticBeanstalk request using the given \a endpoint.
  *
  * This ElasticBeanstalk implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this ElasticBeanstalk request using the given \a endpoint.
  */
 QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) c
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ElasticBeanstalkRequestPrivate
+ * \class  ElasticBeanstalkRequestPrivate
  *
- * @brief  Private implementation for ElasticBeanstalkRequest.
+ * \brief  Private implementation for ElasticBeanstalkRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ElasticBeanstalkRequestPrivate object.
- *
- * @param  action  ElasticBeanstalk action being performed by the \a q request.
- * @param  q       Pointer to this object's public ElasticBeanstalkRequest instance.
+ * \brief Constructs a new ElasticBeanstalkRequestPrivate object.
  */
 ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBeanstalkRequest::Action action, ElasticBeanstalkRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBean
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ElasticBeanstalkRequestPrivate object from an existing one.
+ * \brief Constructs a new ElasticBeanstalkRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the ElasticBeanstalkRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ElasticBeanstalkRequest instance.
  */
 ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBeanstalkRequestPrivate &other,
                                      ElasticBeanstalkRequest * const q)
@@ -312,14 +275,14 @@ ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBean
 
 }
 
-/**
- * @brief  Convert and ElasticBeanstalk action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts ElasticBeanstalkRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ElasticBeanstalk service's Action
  * query parameters.
- *
- * @param  action  ElasticBeanstalk action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

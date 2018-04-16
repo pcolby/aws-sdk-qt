@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetDatabasesResponse
+/*!
+ * \class QtAws::Glue::GetDatabasesResponse
  *
- * @brief  Handles Glue GetDatabases responses.
+ * \brief The GetDatabasesResponse class encapsulates Glue GetDatabases responses.
  *
- * @see    GlueClient::getDatabases
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getDatabases
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDatabasesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetDatabasesRequest * GetDatabasesResponse::request() const
     return static_cast<const GetDatabasesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetDatabases response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetDatabasesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDatabasesResponsePrivate
+ * \class GetDatabasesResponsePrivate
  *
- * @brief  Private implementation for GetDatabasesResponse.
+ * \brief Private implementation for GetDatabasesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDatabasesResponsePrivate object.
@@ -91,7 +97,7 @@ GetDatabasesResponsePrivate::GetDatabasesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetDatabasesResponse element.
  *
  * @param  xml  XML stream to parse.

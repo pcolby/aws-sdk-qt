@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateVpcCidrBlockResponse
+/*!
+ * \class QtAws::EC2::AssociateVpcCidrBlockResponse
  *
- * @brief  Handles EC2 AssociateVpcCidrBlock responses.
+ * \brief The AssociateVpcCidrBlockResponse class encapsulates EC2 AssociateVpcCidrBlock responses.
  *
- * @see    EC2Client::associateVpcCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateVpcCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateVpcCidrBlockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssociateVpcCidrBlockRequest * AssociateVpcCidrBlockResponse::request() co
     return static_cast<const AssociateVpcCidrBlockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssociateVpcCidrBlock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateVpcCidrBlockResponsePrivate
+ * \class AssociateVpcCidrBlockResponsePrivate
  *
- * @brief  Private implementation for AssociateVpcCidrBlockResponse.
+ * \brief Private implementation for AssociateVpcCidrBlockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateVpcCidrBlockResponsePrivate object.
@@ -91,7 +98,7 @@ AssociateVpcCidrBlockResponsePrivate::AssociateVpcCidrBlockResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssociateVpcCidrBlockResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListPolicyAttachmentsRequest
+/*!
+ * \class QtAws::CloudDirectory::ListPolicyAttachmentsRequest
  *
- * @brief  Implements CloudDirectory ListPolicyAttachments requests.
+ * \brief The ListPolicyAttachmentsRequest class encapsulates CloudDirectory ListPolicyAttachments requests.
  *
- * @see    CloudDirectoryClient::listPolicyAttachments
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listPolicyAttachments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPolicyAttachmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest(const ListPolicyAttac
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPolicyAttachmentsRequest object.
  */
 ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest()
@@ -53,13 +63,16 @@ ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPolicyAttachmentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPolicyAttachmentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetwo
     return new ListPolicyAttachmentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPolicyAttachmentsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetwo
  * @brief  Private implementation for ListPolicyAttachmentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPolicyAttachmentsRequestPrivate object.
@@ -97,7 +110,7 @@ ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPolicyAttachmentsRequestPrivate object, copying another.

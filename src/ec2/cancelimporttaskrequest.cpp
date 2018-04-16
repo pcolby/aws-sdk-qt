@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelImportTaskRequest
+/*!
+ * \class QtAws::EC2::CancelImportTaskRequest
  *
- * @brief  Implements EC2 CancelImportTask requests.
+ * \brief The CancelImportTaskRequest class encapsulates EC2 CancelImportTask requests.
  *
- * @see    EC2Client::cancelImportTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelImportTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelImportTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CancelImportTaskRequest::CancelImportTaskRequest(const CancelImportTaskRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelImportTaskRequest object.
  */
 CancelImportTaskRequest::CancelImportTaskRequest()
@@ -53,13 +60,16 @@ CancelImportTaskRequest::CancelImportTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelImportTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelImportTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkRep
     return new CancelImportTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelImportTaskRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkRep
  * @brief  Private implementation for CancelImportTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelImportTaskRequestPrivate object.
@@ -97,7 +107,7 @@ CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelImportTaskRequestPrivate object, copying another.

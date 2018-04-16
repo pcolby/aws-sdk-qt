@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteEvaluationRequest
+/*!
+ * \class QtAws::MachineLearning::DeleteEvaluationRequest
  *
- * @brief  Implements MachineLearning DeleteEvaluation requests.
+ * \brief The DeleteEvaluationRequest class encapsulates MachineLearning DeleteEvaluation requests.
  *
- * @see    MachineLearningClient::deleteEvaluation
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteEvaluation
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEvaluationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteEvaluationRequest::DeleteEvaluationRequest(const DeleteEvaluationRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteEvaluationRequest object.
  */
 DeleteEvaluationRequest::DeleteEvaluationRequest()
@@ -53,13 +56,16 @@ DeleteEvaluationRequest::DeleteEvaluationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteEvaluationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteEvaluationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkRep
     return new DeleteEvaluationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteEvaluationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteEvaluationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEvaluationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEvaluationRequestPrivate object, copying another.

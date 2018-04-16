@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  ResendValidationEmailRequest
+/*!
+ * \class QtAws::ACM::ResendValidationEmailRequest
  *
- * @brief  Implements ACM ResendValidationEmail requests.
+ * \brief The ResendValidationEmailRequest class encapsulates ACM ResendValidationEmail requests.
  *
- * @see    ACMClient::resendValidationEmail
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::resendValidationEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new ResendValidationEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ResendValidationEmailRequest::ResendValidationEmailRequest(const ResendValidatio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResendValidationEmailRequest object.
  */
 ResendValidationEmailRequest::ResendValidationEmailRequest()
@@ -53,13 +65,16 @@ ResendValidationEmailRequest::ResendValidationEmailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResendValidationEmailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResendValidationEmailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetwo
     return new ResendValidationEmailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResendValidationEmailRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetwo
  * @brief  Private implementation for ResendValidationEmailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendValidationEmailRequestPrivate object.
@@ -97,7 +112,7 @@ ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendValidationEmailRequestPrivate object, copying another.

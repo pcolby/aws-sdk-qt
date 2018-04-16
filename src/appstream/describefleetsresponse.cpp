@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeFleetsResponse
+/*!
+ * \class QtAws::AppStream::DescribeFleetsResponse
  *
- * @brief  Handles AppStream DescribeFleets responses.
+ * \brief The DescribeFleetsResponse class encapsulates AppStream DescribeFleets responses.
  *
- * @see    AppStreamClient::describeFleets
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeFleets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeFleetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeFleetsRequest * DescribeFleetsResponse::request() const
     return static_cast<const DescribeFleetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DescribeFleets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeFleetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeFleetsResponsePrivate
+ * \class DescribeFleetsResponsePrivate
  *
- * @brief  Private implementation for DescribeFleetsResponse.
+ * \brief Private implementation for DescribeFleetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeFleetsResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeFleetsResponsePrivate::DescribeFleetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DescribeFleetsResponse element.
  *
  * @param  xml  XML stream to parse.

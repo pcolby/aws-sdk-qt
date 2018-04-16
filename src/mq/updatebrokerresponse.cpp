@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  UpdateBrokerResponse
+/*!
+ * \class QtAws::MQ::UpdateBrokerResponse
  *
- * @brief  Handles MQ UpdateBroker responses.
+ * \brief The UpdateBrokerResponse class encapsulates MQ UpdateBroker responses.
  *
- * @see    MQClient::updateBroker
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::updateBroker
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBrokerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const UpdateBrokerRequest * UpdateBrokerResponse::request() const
     return static_cast<const UpdateBrokerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ UpdateBroker response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void UpdateBrokerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateBrokerResponsePrivate
+ * \class UpdateBrokerResponsePrivate
  *
- * @brief  Private implementation for UpdateBrokerResponse.
+ * \brief Private implementation for UpdateBrokerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBrokerResponsePrivate object.
@@ -91,7 +96,7 @@ UpdateBrokerResponsePrivate::UpdateBrokerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ UpdateBrokerResponse element.
  *
  * @param  xml  XML stream to parse.

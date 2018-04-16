@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  BatchGetImageResponse
+/*!
+ * \class QtAws::ECR::BatchGetImageResponse
  *
- * @brief  Handles ECR BatchGetImage responses.
+ * \brief The BatchGetImageResponse class encapsulates ECR BatchGetImage responses.
  *
- * @see    ECRClient::batchGetImage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::batchGetImage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const BatchGetImageRequest * BatchGetImageResponse::request() const
     return static_cast<const BatchGetImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR BatchGetImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void BatchGetImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchGetImageResponsePrivate
+ * \class BatchGetImageResponsePrivate
  *
- * @brief  Private implementation for BatchGetImageResponse.
+ * \brief Private implementation for BatchGetImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetImageResponsePrivate object.
@@ -91,7 +98,7 @@ BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR BatchGetImageResponse element.
  *
  * @param  xml  XML stream to parse.

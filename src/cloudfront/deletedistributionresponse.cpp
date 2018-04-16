@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteDistributionResponse
+/*!
+ * \class QtAws::CloudFront::DeleteDistributionResponse
  *
- * @brief  Handles CloudFront DeleteDistribution responses.
+ * \brief The DeleteDistributionResponse class encapsulates CloudFront DeleteDistribution responses.
  *
- * @see    CloudFrontClient::deleteDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDistributionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteDistributionRequest * DeleteDistributionResponse::request() const
     return static_cast<const DeleteDistributionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront DeleteDistribution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteDistributionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDistributionResponsePrivate
+ * \class DeleteDistributionResponsePrivate
  *
- * @brief  Private implementation for DeleteDistributionResponse.
+ * \brief Private implementation for DeleteDistributionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDistributionResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteDistributionResponsePrivate::DeleteDistributionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront DeleteDistributionResponse element.
  *
  * @param  xml  XML stream to parse.

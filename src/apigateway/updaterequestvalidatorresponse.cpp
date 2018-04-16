@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateRequestValidatorResponse
+/*!
+ * \class QtAws::APIGateway::UpdateRequestValidatorResponse
  *
- * @brief  Handles APIGateway UpdateRequestValidator responses.
+ * \brief The UpdateRequestValidatorResponse class encapsulates APIGateway UpdateRequestValidator responses.
  *
- * @see    APIGatewayClient::updateRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRequestValidatorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() 
     return static_cast<const UpdateRequestValidatorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateRequestValidator response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRequestValidatorResponsePrivate
+ * \class UpdateRequestValidatorResponsePrivate
  *
- * @brief  Private implementation for UpdateRequestValidatorResponse.
+ * \brief Private implementation for UpdateRequestValidatorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRequestValidatorResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateRequestValidatorResponse element.
  *
  * @param  xml  XML stream to parse.

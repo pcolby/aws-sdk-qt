@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSubnetRequest
+/*!
+ * \class QtAws::EC2::DeleteSubnetRequest
  *
- * @brief  Implements EC2 DeleteSubnet requests.
+ * \brief The DeleteSubnetRequest class encapsulates EC2 DeleteSubnet requests.
  *
- * @see    EC2Client::deleteSubnet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSubnet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubnetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSubnetRequest::DeleteSubnetRequest(const DeleteSubnetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubnetRequest object.
  */
 DeleteSubnetRequest::DeleteSubnetRequest()
@@ -53,13 +60,16 @@ DeleteSubnetRequest::DeleteSubnetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSubnetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSubnetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply *
     return new DeleteSubnetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSubnetRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteSubnetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubnetRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubnetRequestPrivate object, copying another.

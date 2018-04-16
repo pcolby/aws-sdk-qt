@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateResourceDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateResourceDefinitionVersionResponse
  *
- * @brief  Handles Greengrass CreateResourceDefinitionVersion responses.
+ * \brief The CreateResourceDefinitionVersionResponse class encapsulates Greengrass CreateResourceDefinitionVersion responses.
  *
- * @see    GreengrassClient::createResourceDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createResourceDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateResourceDefinitionVersionRequest * CreateResourceDefinitionVersionRe
     return static_cast<const CreateResourceDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateResourceDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateResourceDefinitionVersionResponsePrivate
+ * \class CreateResourceDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for CreateResourceDefinitionVersionResponse.
+ * \brief Private implementation for CreateResourceDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateResourceDefinitionVersionResponsePrivate::CreateResourceDefinitionVersionR
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateResourceDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

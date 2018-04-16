@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetUICustomizationRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetUICustomizationRequest
  *
- * @brief  Implements CognitoIdentityProvider GetUICustomization requests.
+ * \brief The GetUICustomizationRequest class encapsulates CognitoIdentityProvider GetUICustomization requests.
  *
- * @see    CognitoIdentityProviderClient::getUICustomization
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getUICustomization
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUICustomizationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetUICustomizationRequest::GetUICustomizationRequest(const GetUICustomizationReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUICustomizationRequest object.
  */
 GetUICustomizationRequest::GetUICustomizationRequest()
@@ -53,13 +66,16 @@ GetUICustomizationRequest::GetUICustomizationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUICustomizationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUICustomizationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetUICustomizationRequest::response(QNetworkR
     return new GetUICustomizationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUICustomizationRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetUICustomizationRequest::response(QNetworkR
  * @brief  Private implementation for GetUICustomizationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUICustomizationRequestPrivate object.
@@ -97,7 +113,7 @@ GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUICustomizationRequestPrivate object, copying another.

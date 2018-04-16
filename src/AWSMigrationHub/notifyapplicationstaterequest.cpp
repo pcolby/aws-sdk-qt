@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  NotifyApplicationStateRequest
+/*!
+ * \class QtAws::MigrationHub::NotifyApplicationStateRequest
  *
- * @brief  Implements MigrationHub NotifyApplicationState requests.
+ * \brief The NotifyApplicationStateRequest class encapsulates MigrationHub NotifyApplicationState requests.
  *
- * @see    MigrationHubClient::notifyApplicationState
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::notifyApplicationState
  */
 
-/**
+/*!
  * @brief  Constructs a new NotifyApplicationStateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ NotifyApplicationStateRequest::NotifyApplicationStateRequest(const NotifyApplica
 
 }
 
-/**
+/*!
  * @brief  Constructs a new NotifyApplicationStateRequest object.
  */
 NotifyApplicationStateRequest::NotifyApplicationStateRequest()
@@ -53,13 +58,16 @@ NotifyApplicationStateRequest::NotifyApplicationStateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool NotifyApplicationStateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an NotifyApplicationStateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * NotifyApplicationStateRequest::response(QNetw
     return new NotifyApplicationStateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  NotifyApplicationStateRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * NotifyApplicationStateRequest::response(QNetw
  * @brief  Private implementation for NotifyApplicationStateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyApplicationStateRequestPrivate object.
@@ -97,7 +105,7 @@ NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyApplicationStateRequestPrivate object, copying another.

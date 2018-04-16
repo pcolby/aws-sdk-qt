@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UntagResourceRequest
+/*!
+ * \class QtAws::APIGateway::UntagResourceRequest
  *
- * @brief  Implements APIGateway UntagResource requests.
+ * \brief The UntagResourceRequest class encapsulates APIGateway UntagResource requests.
  *
- * @see    APIGatewayClient::untagResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
@@ -53,13 +61,16 @@ UntagResourceRequest::UntagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
     return new UntagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  * @brief  Private implementation for UntagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object.
@@ -97,7 +108,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateUserPoolRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateUserPoolRequest
  *
- * @brief  Implements CognitoIdentityProvider CreateUserPool requests.
+ * \brief The CreateUserPoolRequest class encapsulates CognitoIdentityProvider CreateUserPool requests.
  *
- * @see    CognitoIdentityProviderClient::createUserPool
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createUserPool
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserPoolRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ CreateUserPoolRequest::CreateUserPoolRequest(const CreateUserPoolRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUserPoolRequest object.
  */
 CreateUserPoolRequest::CreateUserPoolRequest()
@@ -53,13 +66,16 @@ CreateUserPoolRequest::CreateUserPoolRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUserPoolRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUserPoolResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolRequest::response(QNetworkReply
     return new CreateUserPoolResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUserPoolRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolRequest::response(QNetworkReply
  * @brief  Private implementation for CreateUserPoolRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserPoolRequestPrivate object.
@@ -97,7 +113,7 @@ CreateUserPoolRequestPrivate::CreateUserPoolRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserPoolRequestPrivate object, copying another.

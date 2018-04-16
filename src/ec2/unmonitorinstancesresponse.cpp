@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UnmonitorInstancesResponse
+/*!
+ * \class QtAws::EC2::UnmonitorInstancesResponse
  *
- * @brief  Handles EC2 UnmonitorInstances responses.
+ * \brief The UnmonitorInstancesResponse class encapsulates EC2 UnmonitorInstances responses.
  *
- * @see    EC2Client::unmonitorInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::unmonitorInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new UnmonitorInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UnmonitorInstancesRequest * UnmonitorInstancesResponse::request() const
     return static_cast<const UnmonitorInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 UnmonitorInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UnmonitorInstancesResponsePrivate
+ * \class UnmonitorInstancesResponsePrivate
  *
- * @brief  Private implementation for UnmonitorInstancesResponse.
+ * \brief Private implementation for UnmonitorInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnmonitorInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 UnmonitorInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketLifecycleRequest
+/*!
+ * \class QtAws::S3::GetBucketLifecycleRequest
  *
- * @brief  Implements S3 GetBucketLifecycle requests.
+ * \brief The GetBucketLifecycleRequest class encapsulates S3 GetBucketLifecycle requests.
  *
- * @see    S3Client::getBucketLifecycle
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketLifecycle
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLifecycleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketLifecycleRequest::GetBucketLifecycleRequest(const GetBucketLifecycleReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLifecycleRequest object.
  */
 GetBucketLifecycleRequest::GetBucketLifecycleRequest()
@@ -53,13 +56,16 @@ GetBucketLifecycleRequest::GetBucketLifecycleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketLifecycleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketLifecycleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLifecycleRequest::response(QNetworkR
     return new GetBucketLifecycleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketLifecycleRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLifecycleRequest::response(QNetworkR
  * @brief  Private implementation for GetBucketLifecycleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLifecycleRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketLifecycleRequestPrivate::GetBucketLifecycleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLifecycleRequestPrivate object, copying another.

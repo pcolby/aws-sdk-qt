@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteRequestValidatorResponse
+/*!
+ * \class QtAws::APIGateway::DeleteRequestValidatorResponse
  *
- * @brief  Handles APIGateway DeleteRequestValidator responses.
+ * \brief The DeleteRequestValidatorResponse class encapsulates APIGateway DeleteRequestValidator responses.
  *
- * @see    APIGatewayClient::deleteRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRequestValidatorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() 
     return static_cast<const DeleteRequestValidatorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteRequestValidator response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRequestValidatorResponsePrivate
+ * \class DeleteRequestValidatorResponsePrivate
  *
- * @brief  Private implementation for DeleteRequestValidatorResponse.
+ * \brief Private implementation for DeleteRequestValidatorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRequestValidatorResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteRequestValidatorResponse element.
  *
  * @param  xml  XML stream to parse.

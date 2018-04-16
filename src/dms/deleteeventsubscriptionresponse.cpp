@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteEventSubscriptionResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteEventSubscriptionResponse
  *
- * @brief  Handles DatabaseMigrationService DeleteEventSubscription responses.
+ * \brief The DeleteEventSubscriptionResponse class encapsulates DatabaseMigrationService DeleteEventSubscription responses.
  *
- * @see    DatabaseMigrationServiceClient::deleteEventSubscription
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteEventSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEventSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request(
     return static_cast<const DeleteEventSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DeleteEventSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEventSubscriptionResponsePrivate
+ * \class DeleteEventSubscriptionResponsePrivate
  *
- * @brief  Private implementation for DeleteEventSubscriptionResponse.
+ * \brief Private implementation for DeleteEventSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEventSubscriptionResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DeleteEventSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

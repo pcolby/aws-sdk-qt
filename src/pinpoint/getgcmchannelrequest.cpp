@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetGcmChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetGcmChannelRequest
  *
- * @brief  Implements Pinpoint GetGcmChannel requests.
+ * \brief The GetGcmChannelRequest class encapsulates Pinpoint GetGcmChannel requests.
  *
- * @see    PinpointClient::getGcmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getGcmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGcmChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetGcmChannelRequest::GetGcmChannelRequest(const GetGcmChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGcmChannelRequest object.
  */
 GetGcmChannelRequest::GetGcmChannelRequest()
@@ -53,13 +56,16 @@ GetGcmChannelRequest::GetGcmChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGcmChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGcmChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply 
     return new GetGcmChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGcmChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply 
  * @brief  Private implementation for GetGcmChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGcmChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetGcmChannelRequestPrivate::GetGcmChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGcmChannelRequestPrivate object, copying another.

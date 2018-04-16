@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteRegexMatchSetResponse
+/*!
+ * \class QtAws::WAF::DeleteRegexMatchSetResponse
  *
- * @brief  Handles WAF DeleteRegexMatchSet responses.
+ * \brief The DeleteRegexMatchSetResponse class encapsulates WAF DeleteRegexMatchSet responses.
  *
- * @see    WAFClient::deleteRegexMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteRegexMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRegexMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
     return static_cast<const DeleteRegexMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF DeleteRegexMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRegexMatchSetResponsePrivate
+ * \class DeleteRegexMatchSetResponsePrivate
  *
- * @brief  Private implementation for DeleteRegexMatchSetResponse.
+ * \brief Private implementation for DeleteRegexMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRegexMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF DeleteRegexMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

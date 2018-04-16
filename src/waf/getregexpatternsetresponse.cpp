@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetRegexPatternSetResponse
+/*!
+ * \class QtAws::WAF::GetRegexPatternSetResponse
  *
- * @brief  Handles WAF GetRegexPatternSet responses.
+ * \brief The GetRegexPatternSetResponse class encapsulates WAF GetRegexPatternSet responses.
  *
- * @see    WAFClient::getRegexPatternSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getRegexPatternSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRegexPatternSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
     return static_cast<const GetRegexPatternSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF GetRegexPatternSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetRegexPatternSetResponsePrivate
+ * \class GetRegexPatternSetResponsePrivate
  *
- * @brief  Private implementation for GetRegexPatternSetResponse.
+ * \brief Private implementation for GetRegexPatternSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRegexPatternSetResponsePrivate object.
@@ -91,7 +99,7 @@ GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF GetRegexPatternSetResponse element.
  *
  * @param  xml  XML stream to parse.

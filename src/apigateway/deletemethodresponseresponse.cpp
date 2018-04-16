@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteMethodResponseResponse
+/*!
+ * \class QtAws::APIGateway::DeleteMethodResponseResponse
  *
- * @brief  Handles APIGateway DeleteMethodResponse responses.
+ * \brief The DeleteMethodResponseResponse class encapsulates APIGateway DeleteMethodResponse responses.
  *
- * @see    APIGatewayClient::deleteMethodResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteMethodResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMethodResponseResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteMethodResponseRequest * DeleteMethodResponseResponse::request() cons
     return static_cast<const DeleteMethodResponseRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteMethodResponse response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteMethodResponseResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteMethodResponseResponsePrivate
+ * \class DeleteMethodResponseResponsePrivate
  *
- * @brief  Private implementation for DeleteMethodResponseResponse.
+ * \brief Private implementation for DeleteMethodResponseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMethodResponseResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteMethodResponseResponsePrivate::DeleteMethodResponseResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteMethodResponseResponse element.
  *
  * @param  xml  XML stream to parse.

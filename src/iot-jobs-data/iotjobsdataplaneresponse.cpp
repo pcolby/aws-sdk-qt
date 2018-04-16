@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
-/**
- * @class  IoTJobsDataPlaneResponse
+/*!
+ * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneResponse
  *
- * @brief  Handles IoTJobsDataPlane IoTJobsDataPlane responses.
+ * \brief The IoTJobsDataPlaneResponse class is the base class for all IoTJobsDataPlane responses.
  *
- * @see    IoTJobsDataPlaneClient::ioTJobsDataPlane
+ * \ingroup IoTJobsDataPlane
  */
 
-/**
+/*!
  * @brief  Constructs a new IoTJobsDataPlaneResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IoTJobsDataPlaneResponse object.
@@ -63,7 +63,7 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(IoTJobsDataPlaneResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IoTJobsDataPlaneResponsePrivate
@@ -92,7 +92,7 @@ void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for IoTJobsDataPlaneResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IoTJobsDataPlaneResponsePrivate object.

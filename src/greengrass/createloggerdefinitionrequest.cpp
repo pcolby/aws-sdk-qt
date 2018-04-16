@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateLoggerDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::CreateLoggerDefinitionRequest
  *
- * @brief  Implements Greengrass CreateLoggerDefinition requests.
+ * \brief The CreateLoggerDefinitionRequest class encapsulates Greengrass CreateLoggerDefinition requests.
  *
- * @see    GreengrassClient::createLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLoggerDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateLoggerDefinitionRequest::CreateLoggerDefinitionRequest(const CreateLoggerD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateLoggerDefinitionRequest object.
  */
 CreateLoggerDefinitionRequest::CreateLoggerDefinitionRequest()
@@ -53,13 +59,16 @@ CreateLoggerDefinitionRequest::CreateLoggerDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateLoggerDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateLoggerDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionRequest::response(QNetw
     return new CreateLoggerDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateLoggerDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateLoggerDefinitionRequest::response(QNetw
  * @brief  Private implementation for CreateLoggerDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoggerDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoggerDefinitionRequestPrivate object, copying another.

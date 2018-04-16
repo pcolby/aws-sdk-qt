@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  GetQueueRequest
+/*!
+ * \class QtAws::MediaConvert::GetQueueRequest
  *
- * @brief  Implements MediaConvert GetQueue requests.
+ * \brief The GetQueueRequest class encapsulates MediaConvert GetQueue requests.
  *
- * @see    MediaConvertClient::getQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::getQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetQueueRequest::GetQueueRequest(const GetQueueRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetQueueRequest object.
  */
 GetQueueRequest::GetQueueRequest()
@@ -53,13 +56,16 @@ GetQueueRequest::GetQueueRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetQueueRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetQueueResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * con
     return new GetQueueResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetQueueRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetQueueRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueueRequestPrivate object.
@@ -97,7 +103,7 @@ GetQueueRequestPrivate::GetQueueRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueueRequestPrivate object, copying another.

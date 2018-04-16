@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  UpdateInputRequest
+/*!
+ * \class QtAws::MediaLive::UpdateInputRequest
  *
- * @brief  Implements MediaLive UpdateInput requests.
+ * \brief The UpdateInputRequest class encapsulates MediaLive UpdateInput requests.
  *
- * @see    MediaLiveClient::updateInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::updateInput
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateInputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateInputRequest::UpdateInputRequest(const UpdateInputRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateInputRequest object.
  */
 UpdateInputRequest::UpdateInputRequest()
@@ -53,13 +56,16 @@ UpdateInputRequest::UpdateInputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateInputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateInputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * 
     return new UpdateInputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateInputRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateInputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInputRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateInputRequestPrivate::UpdateInputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateInputRequestPrivate object, copying another.

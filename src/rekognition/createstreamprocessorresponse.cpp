@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  CreateStreamProcessorResponse
+/*!
+ * \class QtAws::Rekognition::CreateStreamProcessorResponse
  *
- * @brief  Handles Rekognition CreateStreamProcessor responses.
+ * \brief The CreateStreamProcessorResponse class encapsulates Rekognition CreateStreamProcessor responses.
  *
- * @see    RekognitionClient::createStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::createStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamProcessorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateStreamProcessorRequest * CreateStreamProcessorResponse::request() co
     return static_cast<const CreateStreamProcessorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition CreateStreamProcessor response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateStreamProcessorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateStreamProcessorResponsePrivate
+ * \class CreateStreamProcessorResponsePrivate
  *
- * @brief  Private implementation for CreateStreamProcessorResponse.
+ * \brief Private implementation for CreateStreamProcessorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamProcessorResponsePrivate object.
@@ -91,7 +95,7 @@ CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition CreateStreamProcessorResponse element.
  *
  * @param  xml  XML stream to parse.

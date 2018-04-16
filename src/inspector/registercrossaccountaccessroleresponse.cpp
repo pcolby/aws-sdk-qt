@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  RegisterCrossAccountAccessRoleResponse
+/*!
+ * \class QtAws::Inspector::RegisterCrossAccountAccessRoleResponse
  *
- * @brief  Handles Inspector RegisterCrossAccountAccessRole responses.
+ * \brief The RegisterCrossAccountAccessRoleResponse class encapsulates Inspector RegisterCrossAccountAccessRole responses.
  *
- * @see    InspectorClient::registerCrossAccountAccessRole
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::registerCrossAccountAccessRole
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterCrossAccountAccessRoleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const RegisterCrossAccountAccessRoleRequest * RegisterCrossAccountAccessRoleResp
     return static_cast<const RegisterCrossAccountAccessRoleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector RegisterCrossAccountAccessRole response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void RegisterCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterCrossAccountAccessRoleResponsePrivate
+ * \class RegisterCrossAccountAccessRoleResponsePrivate
  *
- * @brief  Private implementation for RegisterCrossAccountAccessRoleResponse.
+ * \brief Private implementation for RegisterCrossAccountAccessRoleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCrossAccountAccessRoleResponsePrivate object.
@@ -91,7 +99,7 @@ RegisterCrossAccountAccessRoleResponsePrivate::RegisterCrossAccountAccessRoleRes
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector RegisterCrossAccountAccessRoleResponse element.
  *
  * @param  xml  XML stream to parse.

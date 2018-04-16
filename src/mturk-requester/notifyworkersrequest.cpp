@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  NotifyWorkersRequest
+/*!
+ * \class QtAws::MTurk::NotifyWorkersRequest
  *
- * @brief  Implements MTurk NotifyWorkers requests.
+ * \brief The NotifyWorkersRequest class encapsulates MTurk NotifyWorkers requests.
  *
- * @see    MTurkClient::notifyWorkers
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::notifyWorkers
  */
 
-/**
+/*!
  * @brief  Constructs a new NotifyWorkersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ NotifyWorkersRequest::NotifyWorkersRequest(const NotifyWorkersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new NotifyWorkersRequest object.
  */
 NotifyWorkersRequest::NotifyWorkersRequest()
@@ -53,13 +56,16 @@ NotifyWorkersRequest::NotifyWorkersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool NotifyWorkersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an NotifyWorkersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * NotifyWorkersRequest::response(QNetworkReply 
     return new NotifyWorkersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  NotifyWorkersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * NotifyWorkersRequest::response(QNetworkReply 
  * @brief  Private implementation for NotifyWorkersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyWorkersRequestPrivate object.
@@ -97,7 +103,7 @@ NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new NotifyWorkersRequestPrivate object, copying another.

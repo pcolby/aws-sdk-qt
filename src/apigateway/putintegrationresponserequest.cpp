@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  PutIntegrationResponseRequest
+/*!
+ * \class QtAws::APIGateway::PutIntegrationResponseRequest
  *
- * @brief  Implements APIGateway PutIntegrationResponse requests.
+ * \brief The PutIntegrationResponseRequest class encapsulates APIGateway PutIntegrationResponse requests.
  *
- * @see    APIGatewayClient::putIntegrationResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::putIntegrationResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new PutIntegrationResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutIntegrationResponseRequest::PutIntegrationResponseRequest(const PutIntegratio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutIntegrationResponseRequest object.
  */
 PutIntegrationResponseRequest::PutIntegrationResponseRequest()
@@ -53,13 +61,16 @@ PutIntegrationResponseRequest::PutIntegrationResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutIntegrationResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutIntegrationResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutIntegrationResponseRequest::response(QNetw
     return new PutIntegrationResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutIntegrationResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutIntegrationResponseRequest::response(QNetw
  * @brief  Private implementation for PutIntegrationResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIntegrationResponseRequestPrivate object.
@@ -97,7 +108,7 @@ PutIntegrationResponseRequestPrivate::PutIntegrationResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIntegrationResponseRequestPrivate object, copying another.

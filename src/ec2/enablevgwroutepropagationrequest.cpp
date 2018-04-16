@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVgwRoutePropagationRequest
+/*!
+ * \class QtAws::EC2::EnableVgwRoutePropagationRequest
  *
- * @brief  Implements EC2 EnableVgwRoutePropagation requests.
+ * \brief The EnableVgwRoutePropagationRequest class encapsulates EC2 EnableVgwRoutePropagation requests.
  *
- * @see    EC2Client::enableVgwRoutePropagation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVgwRoutePropagation
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVgwRoutePropagationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ EnableVgwRoutePropagationRequest::EnableVgwRoutePropagationRequest(const EnableV
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableVgwRoutePropagationRequest object.
  */
 EnableVgwRoutePropagationRequest::EnableVgwRoutePropagationRequest()
@@ -53,13 +60,16 @@ EnableVgwRoutePropagationRequest::EnableVgwRoutePropagationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableVgwRoutePropagationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableVgwRoutePropagationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * EnableVgwRoutePropagationRequest::response(QN
     return new EnableVgwRoutePropagationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableVgwRoutePropagationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableVgwRoutePropagationRequest::response(QN
  * @brief  Private implementation for EnableVgwRoutePropagationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVgwRoutePropagationRequestPrivate object.
@@ -97,7 +107,7 @@ EnableVgwRoutePropagationRequestPrivate::EnableVgwRoutePropagationRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVgwRoutePropagationRequestPrivate object, copying another.

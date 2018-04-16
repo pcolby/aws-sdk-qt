@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationSubnetGroupsRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeReplicationSubnetGroups requests.
+ * \brief The DescribeReplicationSubnetGroupsRequest class encapsulates DatabaseMigrationService DescribeReplicationSubnetGroups requests.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationSubnetGroups
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationSubnetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationSubnetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationSubnetGroupsRequest object.
  */
 DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest()
@@ -53,13 +67,16 @@ DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReplicationSubnetGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReplicationSubnetGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::respo
     return new DescribeReplicationSubnetGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReplicationSubnetGroupsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::respo
  * @brief  Private implementation for DescribeReplicationSubnetGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationSubnetGroupsRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationSubnetGroupsRequestPrivate object, copying another.

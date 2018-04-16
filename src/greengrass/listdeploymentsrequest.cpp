@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListDeploymentsRequest
+/*!
+ * \class QtAws::Greengrass::ListDeploymentsRequest
  *
- * @brief  Implements Greengrass ListDeployments requests.
+ * \brief The ListDeploymentsRequest class encapsulates Greengrass ListDeployments requests.
  *
- * @see    GreengrassClient::listDeployments
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listDeployments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDeploymentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListDeploymentsRequest::ListDeploymentsRequest(const ListDeploymentsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDeploymentsRequest object.
  */
 ListDeploymentsRequest::ListDeploymentsRequest()
@@ -53,13 +59,16 @@ ListDeploymentsRequest::ListDeploymentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDeploymentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDeploymentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkRepl
     return new ListDeploymentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDeploymentsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkRepl
  * @brief  Private implementation for ListDeploymentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeploymentsRequestPrivate object.
@@ -97,7 +106,7 @@ ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDeploymentsRequestPrivate object, copying another.

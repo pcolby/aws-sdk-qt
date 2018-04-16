@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  DeleteObjectResponse
+/*!
+ * \class QtAws::MediaStoreData::DeleteObjectResponse
  *
- * @brief  Handles MediaStoreData DeleteObject responses.
+ * \brief The DeleteObjectResponse class encapsulates MediaStoreData DeleteObject responses.
  *
- * @see    MediaStoreDataClient::deleteObject
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::deleteObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteObjectRequest * DeleteObjectResponse::request() const
     return static_cast<const DeleteObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStoreData DeleteObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteObjectResponsePrivate
+ * \class DeleteObjectResponsePrivate
  *
- * @brief  Private implementation for DeleteObjectResponse.
+ * \brief Private implementation for DeleteObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteObjectResponsePrivate::DeleteObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStoreData DeleteObjectResponse element.
  *
  * @param  xml  XML stream to parse.

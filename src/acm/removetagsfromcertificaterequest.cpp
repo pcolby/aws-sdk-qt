@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  RemoveTagsFromCertificateRequest
+/*!
+ * \class QtAws::ACM::RemoveTagsFromCertificateRequest
  *
- * @brief  Implements ACM RemoveTagsFromCertificate requests.
+ * \brief The RemoveTagsFromCertificateRequest class encapsulates ACM RemoveTagsFromCertificate requests.
  *
- * @see    ACMClient::removeTagsFromCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::removeTagsFromCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest(const RemoveT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromCertificateRequest object.
  */
 RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest()
@@ -53,13 +65,16 @@ RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveTagsFromCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveTagsFromCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QN
     return new RemoveTagsFromCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveTagsFromCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QN
  * @brief  Private implementation for RemoveTagsFromCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromCertificateRequestPrivate object, copying another.

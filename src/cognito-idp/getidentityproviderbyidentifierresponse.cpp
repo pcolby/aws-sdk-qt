@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetIdentityProviderByIdentifierResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetIdentityProviderByIdentifierResponse
  *
- * @brief  Handles CognitoIdentityProvider GetIdentityProviderByIdentifier responses.
+ * \brief The GetIdentityProviderByIdentifierResponse class encapsulates CognitoIdentityProvider GetIdentityProviderByIdentifier responses.
  *
- * @see    CognitoIdentityProviderClient::getIdentityProviderByIdentifier
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getIdentityProviderByIdentifier
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityProviderByIdentifierResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const GetIdentityProviderByIdentifierRequest * GetIdentityProviderByIdentifierRe
     return static_cast<const GetIdentityProviderByIdentifierRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider GetIdentityProviderByIdentifier response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void GetIdentityProviderByIdentifierResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIdentityProviderByIdentifierResponsePrivate
+ * \class GetIdentityProviderByIdentifierResponsePrivate
  *
- * @brief  Private implementation for GetIdentityProviderByIdentifierResponse.
+ * \brief Private implementation for GetIdentityProviderByIdentifierResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityProviderByIdentifierResponsePrivate object.
@@ -91,7 +104,7 @@ GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierR
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider GetIdentityProviderByIdentifierResponse element.
  *
  * @param  xml  XML stream to parse.

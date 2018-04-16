@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchDeleteTableVersionRequest
+/*!
+ * \class QtAws::Glue::BatchDeleteTableVersionRequest
  *
- * @brief  Implements Glue BatchDeleteTableVersion requests.
+ * \brief The BatchDeleteTableVersionRequest class encapsulates Glue BatchDeleteTableVersion requests.
  *
- * @see    GlueClient::batchDeleteTableVersion
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchDeleteTableVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteTableVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchDeleteTableVersionRequest::BatchDeleteTableVersionRequest(const BatchDelete
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDeleteTableVersionRequest object.
  */
 BatchDeleteTableVersionRequest::BatchDeleteTableVersionRequest()
@@ -53,13 +59,16 @@ BatchDeleteTableVersionRequest::BatchDeleteTableVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDeleteTableVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDeleteTableVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteTableVersionRequest::response(QNet
     return new BatchDeleteTableVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDeleteTableVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteTableVersionRequest::response(QNet
  * @brief  Private implementation for BatchDeleteTableVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteTableVersionRequestPrivate object.
@@ -97,7 +106,7 @@ BatchDeleteTableVersionRequestPrivate::BatchDeleteTableVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeleteTableVersionRequestPrivate object, copying another.

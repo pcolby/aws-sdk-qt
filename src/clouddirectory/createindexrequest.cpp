@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateIndexRequest
+/*!
+ * \class QtAws::CloudDirectory::CreateIndexRequest
  *
- * @brief  Implements CloudDirectory CreateIndex requests.
+ * \brief The CreateIndexRequest class encapsulates CloudDirectory CreateIndex requests.
  *
- * @see    CloudDirectoryClient::createIndex
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateIndexRequest::CreateIndexRequest(const CreateIndexRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateIndexRequest object.
  */
 CreateIndexRequest::CreateIndexRequest()
@@ -53,13 +63,16 @@ CreateIndexRequest::CreateIndexRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateIndexRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateIndexResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * 
     return new CreateIndexResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateIndexRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateIndexRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIndexRequestPrivate object.
@@ -97,7 +110,7 @@ CreateIndexRequestPrivate::CreateIndexRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIndexRequestPrivate object, copying another.

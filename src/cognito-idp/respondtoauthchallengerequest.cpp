@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  RespondToAuthChallengeRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::RespondToAuthChallengeRequest
  *
- * @brief  Implements CognitoIdentityProvider RespondToAuthChallenge requests.
+ * \brief The RespondToAuthChallengeRequest class encapsulates CognitoIdentityProvider RespondToAuthChallenge requests.
  *
- * @see    CognitoIdentityProviderClient::respondToAuthChallenge
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::respondToAuthChallenge
  */
 
-/**
+/*!
  * @brief  Constructs a new RespondToAuthChallengeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ RespondToAuthChallengeRequest::RespondToAuthChallengeRequest(const RespondToAuth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RespondToAuthChallengeRequest object.
  */
 RespondToAuthChallengeRequest::RespondToAuthChallengeRequest()
@@ -53,13 +66,16 @@ RespondToAuthChallengeRequest::RespondToAuthChallengeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RespondToAuthChallengeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RespondToAuthChallengeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetw
     return new RespondToAuthChallengeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RespondToAuthChallengeRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetw
  * @brief  Private implementation for RespondToAuthChallengeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RespondToAuthChallengeRequestPrivate object.
@@ -97,7 +113,7 @@ RespondToAuthChallengeRequestPrivate::RespondToAuthChallengeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RespondToAuthChallengeRequestPrivate object, copying another.

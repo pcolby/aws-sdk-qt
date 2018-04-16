@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListCACertificatesResponse
+/*!
+ * \class QtAws::IoT::ListCACertificatesResponse
  *
- * @brief  Handles IoT ListCACertificates responses.
+ * \brief The ListCACertificatesResponse class encapsulates IoT ListCACertificates responses.
  *
- * @see    IoTClient::listCACertificates
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listCACertificates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCACertificatesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListCACertificatesRequest * ListCACertificatesResponse::request() const
     return static_cast<const ListCACertificatesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListCACertificates response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListCACertificatesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListCACertificatesResponsePrivate
+ * \class ListCACertificatesResponsePrivate
  *
- * @brief  Private implementation for ListCACertificatesResponse.
+ * \brief Private implementation for ListCACertificatesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCACertificatesResponsePrivate object.
@@ -91,7 +105,7 @@ ListCACertificatesResponsePrivate::ListCACertificatesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListCACertificatesResponse element.
  *
  * @param  xml  XML stream to parse.

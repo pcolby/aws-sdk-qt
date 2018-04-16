@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetServersResponse
+/*!
+ * \class QtAws::SMS::GetServersResponse
  *
- * @brief  Handles SMS GetServers responses.
+ * \brief The GetServersResponse class encapsulates SMS GetServers responses.
  *
- * @see    SMSClient::getServers
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getServers
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetServersRequest * GetServersResponse::request() const
     return static_cast<const GetServersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS GetServers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetServersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetServersResponsePrivate
+ * \class GetServersResponsePrivate
  *
- * @brief  Private implementation for GetServersResponse.
+ * \brief Private implementation for GetServersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServersResponsePrivate object.
@@ -91,7 +94,7 @@ GetServersResponsePrivate::GetServersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS GetServersResponse element.
  *
  * @param  xml  XML stream to parse.

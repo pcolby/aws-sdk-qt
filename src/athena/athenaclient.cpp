@@ -47,35 +47,43 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Athena
+ * \brief The QtAws::Athena contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  AthenaClient
+/*!
+ * \class QtAws::Athena::AthenaClient
  *
- * @brief  Client for Amazon Athena
+ * \brief The AthenaClient class provides access the Amazon Athena service.
  *
- * Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
- * can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
- * there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
- * automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
- * information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
- * <i>Amazon Athena User
+ * \ingroup Athena
  *
- * Guide</i>>
- *
- * For code samples using the AWS SDK for Java, see <a
- * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
- * Athena User
+ *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
+ *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
+ *  there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
+ *  automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
+ *  information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
+ *  <i>Amazon Athena User
+ * 
+ *  Guide</i>>
+ * 
+ *  For code samples using the AWS SDK for Java, see <a
+ *  href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
+ *  Athena User
  */
 
-/**
- * @brief  Constructs a new AthenaClient object.
+/*!
+ * \brief Constructs a AthenaClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AthenaClient::AthenaClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -94,21 +102,16 @@ AthenaClient::AthenaClient(
     d->serviceName = QStringLiteral("athena");
 }
 
-/**
- * @brief  Constructs a new AthenaClient object.
+/*!
+ * \overload AthenaClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AthenaClient::AthenaClient(
     const QUrl &endpoint,
@@ -127,7 +130,7 @@ AthenaClient::AthenaClient(
     d->serviceName = QStringLiteral("athena");
 }
 
-/**
+/*!
  * Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID
  * strings. Use <a>ListNamedQueries</a> to get the list of named query IDs. If information could not be retrieved for a
  * submitted query ID, information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>. Named
@@ -145,7 +148,7 @@ BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetName
     return qobject_cast<BatchGetNamedQueryResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of
  * query execution ID strings. To get a list of query execution IDs, use <a>ListQueryExecutions</a>. Query executions are
  * different from named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named
@@ -161,7 +164,7 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
     return qobject_cast<BatchGetQueryExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a named
  *
  * query>
@@ -181,7 +184,7 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
     return qobject_cast<CreateNamedQueryResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a named
  *
  * query>
@@ -201,7 +204,7 @@ DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQuery
     return qobject_cast<DeleteNamedQueryResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a single
  *
  * @param  request Request to send to Amazon Athena.
@@ -215,7 +218,7 @@ GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &
     return qobject_cast<GetNamedQueryResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a single execution of a query. Each time a query executes, information about the query
  * execution is saved with a unique
  *
@@ -230,7 +233,7 @@ GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecut
     return qobject_cast<GetQueryExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the results of a single query execution specified by <code>QueryExecutionId</code>. This request does not
  * execute the query but returns results. Use <a>StartQueryExecution</a> to run a
  *
@@ -245,7 +248,7 @@ GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsReq
     return qobject_cast<GetQueryResultsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a list of all available query
  *
  * IDs>
@@ -265,7 +268,7 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
     return qobject_cast<ListNamedQueriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a list of all available query execution
  *
  * IDs>
@@ -285,7 +288,7 @@ ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryE
     return qobject_cast<ListQueryExecutionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Runs (executes) the SQL query statements contained in the <code>Query</code>
  *
  * string>
@@ -305,7 +308,7 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
     return qobject_cast<StartQueryExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a query
  *
  * execution>
@@ -325,7 +328,7 @@ StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExe
     return qobject_cast<StopQueryExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AthenaClientPrivate
@@ -333,7 +336,7 @@ StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExe
  * @brief  Private implementation for AthenaClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AthenaClientPrivate object.

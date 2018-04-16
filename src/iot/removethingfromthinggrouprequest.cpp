@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  RemoveThingFromThingGroupRequest
+/*!
+ * \class QtAws::IoT::RemoveThingFromThingGroupRequest
  *
- * @brief  Implements IoT RemoveThingFromThingGroup requests.
+ * \brief The RemoveThingFromThingGroupRequest class encapsulates IoT RemoveThingFromThingGroup requests.
  *
- * @see    IoTClient::removeThingFromThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::removeThingFromThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveThingFromThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest(const RemoveT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveThingFromThingGroupRequest object.
  */
 RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest()
@@ -53,13 +67,16 @@ RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveThingFromThingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveThingFromThingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QN
     return new RemoveThingFromThingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveThingFromThingGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QN
  * @brief  Private implementation for RemoveThingFromThingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveThingFromThingGroupRequestPrivate object.
@@ -97,7 +114,7 @@ RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveThingFromThingGroupRequestPrivate object, copying another.

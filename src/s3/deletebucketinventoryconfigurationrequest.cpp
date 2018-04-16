@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketInventoryConfigurationRequest
+/*!
+ * \class QtAws::S3::DeleteBucketInventoryConfigurationRequest
  *
- * @brief  Implements S3 DeleteBucketInventoryConfiguration requests.
+ * \brief The DeleteBucketInventoryConfigurationRequest class encapsulates S3 DeleteBucketInventoryConfiguration requests.
  *
- * @see    S3Client::deleteBucketInventoryConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketInventoryConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketInventoryConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketInventoryConfigurationRequest::DeleteBucketInventoryConfigurationReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketInventoryConfigurationRequest object.
  */
 DeleteBucketInventoryConfigurationRequest::DeleteBucketInventoryConfigurationRequest()
@@ -53,13 +56,16 @@ DeleteBucketInventoryConfigurationRequest::DeleteBucketInventoryConfigurationReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketInventoryConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketInventoryConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::re
     return new DeleteBucketInventoryConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketInventoryConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::re
  * @brief  Private implementation for DeleteBucketInventoryConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketInventoryConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigura
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketInventoryConfigurationRequestPrivate object, copying another.

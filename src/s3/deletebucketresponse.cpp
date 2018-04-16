@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketResponse
+/*!
+ * \class QtAws::S3::DeleteBucketResponse
  *
- * @brief  Handles S3 DeleteBucket responses.
+ * \brief The DeleteBucketResponse class encapsulates S3 DeleteBucket responses.
  *
- * @see    S3Client::deleteBucket
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucket
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteBucketRequest * DeleteBucketResponse::request() const
     return static_cast<const DeleteBucketRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 DeleteBucket response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteBucketResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBucketResponsePrivate
+ * \class DeleteBucketResponsePrivate
  *
- * @brief  Private implementation for DeleteBucketResponse.
+ * \brief Private implementation for DeleteBucketResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteBucketResponsePrivate::DeleteBucketResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 DeleteBucketResponse element.
  *
  * @param  xml  XML stream to parse.

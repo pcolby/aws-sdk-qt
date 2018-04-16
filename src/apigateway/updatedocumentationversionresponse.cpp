@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateDocumentationVersionResponse
+/*!
+ * \class QtAws::APIGateway::UpdateDocumentationVersionResponse
  *
- * @brief  Handles APIGateway UpdateDocumentationVersion responses.
+ * \brief The UpdateDocumentationVersionResponse class encapsulates APIGateway UpdateDocumentationVersion responses.
  *
- * @see    APIGatewayClient::updateDocumentationVersion
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateDocumentationVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDocumentationVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateDocumentationVersionRequest * UpdateDocumentationVersionResponse::re
     return static_cast<const UpdateDocumentationVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateDocumentationVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateDocumentationVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDocumentationVersionResponsePrivate
+ * \class UpdateDocumentationVersionResponsePrivate
  *
- * @brief  Private implementation for UpdateDocumentationVersionResponse.
+ * \brief Private implementation for UpdateDocumentationVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDocumentationVersionResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateDocumentationVersionResponsePrivate::UpdateDocumentationVersionResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateDocumentationVersionResponse element.
  *
  * @param  xml  XML stream to parse.

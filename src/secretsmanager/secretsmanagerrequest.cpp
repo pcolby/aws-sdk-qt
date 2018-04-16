@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace SecretsManager {
 
-/**
- * @class  SecretsManagerRequest
+/*!
+ * \class QtAws::SecretsManager::SecretsManagerRequest
  *
- * @brief  Interface class for providing SecretsManager requests
+ * \brief The SecretsManagerRequest class is the base class for all SecretsManager requests.
+ *
+ * \ingroup SecretsManager
  */
 
-
-/**
+/*!
  * @brief  Constructs a new SecretsManagerRequest object.
  *
  * @param  action  The SecretsManager action to request.
@@ -41,7 +42,7 @@ SecretsManagerRequest::SecretsManagerRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SecretsManagerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ SecretsManagerRequest::SecretsManagerRequest(const SecretsManagerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ SecretsManagerRequest& SecretsManagerRequest::operator=(const SecretsManagerRequ
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SecretsManagerRequest object.
@@ -85,10 +86,8 @@ SecretsManagerRequest::SecretsManagerRequest(SecretsManagerRequestPrivate * cons
 
 }
 
-/**
- * @brief  Get the SecretsManager action to be performed by this request.
- *
- * @return The SecretsManager action to be performed by this request.
+/*!
+ * \brief Returns the SecretsManager action to be performed by this request.
  */
 SecretsManagerRequest::Action SecretsManagerRequest::action() const
 {
@@ -96,20 +95,16 @@ SecretsManagerRequest::Action SecretsManagerRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the SecretsManager action to be performed by this request.
- *
- * @return The name of the SecretsManager action to be performed by this request.
+/*!
+ * \brief Returns the name of the SecretsManager action to be performed by this request.
  */
 QString SecretsManagerRequest::actionString() const
 {
     return SecretsManagerRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the SecretsManager API version implemented by this request.
- *
- * @return The SecretsManager API version implmented by this request.
+/*!
+ * \brief Returns the SecretsManager API version implemented by this request.
  */
 QString SecretsManagerRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString SecretsManagerRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the SecretsManager action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the SecretsManager action to be performed by this request to \a action.
  */
 void SecretsManagerRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void SecretsManagerRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the SecretsManager API version to include in this request.
- *
- * @param  version  The SecretsManager API version to include in this request.
+/*!
+ * Set the SecretsManager API version to include in this request to \a version.
  */
 void SecretsManagerRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void SecretsManagerRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool SecretsManagerRequest::operator==(const SecretsManagerRequest &other) const
 {
@@ -159,7 +146,7 @@ bool SecretsManagerRequest::operator==(const SecretsManagerRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid SecretsManager queue name.
  *
  * @par From SecretsManager FAQs:
@@ -178,12 +165,10 @@ bool SecretsManagerRequest::operator==(const SecretsManagerRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int SecretsManagerRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int SecretsManagerRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void SecretsManagerRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void SecretsManagerRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this SecretsManager request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant SecretsManagerRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant SecretsManagerRequest::parameter(const QString &name, const QVariant &d
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this SecretsManager request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &SecretsManagerRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &SecretsManagerRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this SecretsManager request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void SecretsManagerRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void SecretsManagerRequest::setParameter(const QString &name, const QVariant &va
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this SecretsManager request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void SecretsManagerRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void SecretsManagerRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this SecretsManager request.
+/*!
+ * \brief Returns a network request for this SecretsManager request using the given \a endpoint.
  *
  * This SecretsManager implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this SecretsManager request using the given \a endpoint.
  */
 QNetworkRequest SecretsManagerRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest SecretsManagerRequest::unsignedRequest(const QUrl &endpoint) con
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SecretsManagerRequestPrivate
+ * \class  SecretsManagerRequestPrivate
  *
- * @brief  Private implementation for SecretsManagerRequest.
+ * \brief  Private implementation for SecretsManagerRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new SecretsManagerRequestPrivate object.
- *
- * @param  action  SecretsManager action being performed by the \a q request.
- * @param  q       Pointer to this object's public SecretsManagerRequest instance.
+ * \brief Constructs a new SecretsManagerRequestPrivate object.
  */
 SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerRequest::Action action, SecretsManagerRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerR
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new SecretsManagerRequestPrivate object from an existing one.
+ * \brief Constructs a new SecretsManagerRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the SecretsManagerRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SecretsManagerRequest instance.
  */
 SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerRequestPrivate &other,
                                      SecretsManagerRequest * const q)
@@ -312,14 +275,14 @@ SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerR
 
 }
 
-/**
- * @brief  Convert and SecretsManager action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts SecretsManagerRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SecretsManager service's Action
  * query parameters.
- *
- * @param  action  SecretsManager action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

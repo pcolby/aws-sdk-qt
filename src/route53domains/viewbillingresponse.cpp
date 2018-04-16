@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ViewBillingResponse
+/*!
+ * \class QtAws::Route53Domains::ViewBillingResponse
  *
- * @brief  Handles Route53Domains ViewBilling responses.
+ * \brief The ViewBillingResponse class encapsulates Route53Domains ViewBilling responses.
  *
- * @see    Route53DomainsClient::viewBilling
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::viewBilling
  */
 
-/**
+/*!
  * @brief  Constructs a new ViewBillingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ViewBillingRequest * ViewBillingResponse::request() const
     return static_cast<const ViewBillingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains ViewBilling response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ViewBillingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ViewBillingResponsePrivate
+ * \class ViewBillingResponsePrivate
  *
- * @brief  Private implementation for ViewBillingResponse.
+ * \brief Private implementation for ViewBillingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ViewBillingResponsePrivate object.
@@ -91,7 +95,7 @@ ViewBillingResponsePrivate::ViewBillingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains ViewBillingResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  WAFResponse
+/*!
+ * \class QtAws::WAF::WAFResponse
  *
- * @brief  Handles WAF WAF responses.
+ * \brief The WAFResponse class is the base class for all WAF responses.
  *
- * @see    WAFClient::wAF
+ * \ingroup WAF
  */
 
-/**
+/*!
  * @brief  Constructs a new WAFResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ WAFResponse::WAFResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WAFResponse object.
@@ -63,7 +63,7 @@ WAFResponse::WAFResponse(WAFResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void WAFResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WAFResponsePrivate
@@ -92,7 +92,7 @@ void WAFResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for WAFResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WAFResponsePrivate object.

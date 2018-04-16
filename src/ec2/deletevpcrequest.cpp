@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcRequest
+/*!
+ * \class QtAws::EC2::DeleteVpcRequest
  *
- * @brief  Implements EC2 DeleteVpc requests.
+ * \brief The DeleteVpcRequest class encapsulates EC2 DeleteVpc requests.
  *
- * @see    EC2Client::deleteVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpcRequest::DeleteVpcRequest(const DeleteVpcRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcRequest object.
  */
 DeleteVpcRequest::DeleteVpcRequest()
@@ -53,13 +60,16 @@ DeleteVpcRequest::DeleteVpcRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpcRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpcResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcRequest::response(QNetworkReply * co
     return new DeleteVpcResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpcRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteVpcRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpcRequestPrivate::DeleteVpcRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcRequestPrivate object, copying another.

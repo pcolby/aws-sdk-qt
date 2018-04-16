@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketNotificationRequest
+/*!
+ * \class QtAws::S3::PutBucketNotificationRequest
  *
- * @brief  Implements S3 PutBucketNotification requests.
+ * \brief The PutBucketNotificationRequest class encapsulates S3 PutBucketNotification requests.
  *
- * @see    S3Client::putBucketNotification
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketNotificationRequest::PutBucketNotificationRequest(const PutBucketNotifi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketNotificationRequest object.
  */
 PutBucketNotificationRequest::PutBucketNotificationRequest()
@@ -53,13 +56,16 @@ PutBucketNotificationRequest::PutBucketNotificationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketNotificationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketNotificationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationRequest::response(QNetwo
     return new PutBucketNotificationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketNotificationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationRequest::response(QNetwo
  * @brief  Private implementation for PutBucketNotificationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketNotificationRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketNotificationRequestPrivate::PutBucketNotificationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketNotificationRequestPrivate object, copying another.

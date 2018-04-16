@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkInterfacesRequest
+/*!
+ * \class QtAws::EC2::DescribeNetworkInterfacesRequest
  *
- * @brief  Implements EC2 DescribeNetworkInterfaces requests.
+ * \brief The DescribeNetworkInterfacesRequest class encapsulates EC2 DescribeNetworkInterfaces requests.
  *
- * @see    EC2Client::describeNetworkInterfaces
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkInterfaces
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfacesRequest object.
  */
 DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest()
@@ -53,13 +60,16 @@ DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNetworkInterfacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNetworkInterfacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QN
     return new DescribeNetworkInterfacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNetworkInterfacesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QN
  * @brief  Private implementation for DescribeNetworkInterfacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfacesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfacesRequestPrivate object, copying another.

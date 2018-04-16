@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  CreateJobTemplateRequest
+/*!
+ * \class QtAws::MediaConvert::CreateJobTemplateRequest
  *
- * @brief  Implements MediaConvert CreateJobTemplate requests.
+ * \brief The CreateJobTemplateRequest class encapsulates MediaConvert CreateJobTemplate requests.
  *
- * @see    MediaConvertClient::createJobTemplate
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::createJobTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateJobTemplateRequest::CreateJobTemplateRequest(const CreateJobTemplateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateJobTemplateRequest object.
  */
 CreateJobTemplateRequest::CreateJobTemplateRequest()
@@ -53,13 +56,16 @@ CreateJobTemplateRequest::CreateJobTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateJobTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateJobTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkRe
     return new CreateJobTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateJobTemplateRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkRe
  * @brief  Private implementation for CreateJobTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobTemplateRequestPrivate object.
@@ -97,7 +103,7 @@ CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobTemplateRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssociateSubnetCidrBlockRequest
+/*!
+ * \class QtAws::EC2::AssociateSubnetCidrBlockRequest
  *
- * @brief  Implements EC2 AssociateSubnetCidrBlock requests.
+ * \brief The AssociateSubnetCidrBlockRequest class encapsulates EC2 AssociateSubnetCidrBlock requests.
  *
- * @see    EC2Client::associateSubnetCidrBlock
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::associateSubnetCidrBlock
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateSubnetCidrBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest(const Associate
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateSubnetCidrBlockRequest object.
  */
 AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest()
@@ -53,13 +60,16 @@ AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateSubnetCidrBlockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateSubnetCidrBlockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNe
     return new AssociateSubnetCidrBlockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateSubnetCidrBlockRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNe
  * @brief  Private implementation for AssociateSubnetCidrBlockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateSubnetCidrBlockRequestPrivate object.
@@ -97,7 +107,7 @@ AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateSubnetCidrBlockRequestPrivate object, copying another.

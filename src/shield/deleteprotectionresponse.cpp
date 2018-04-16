@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DeleteProtectionResponse
+/*!
+ * \class QtAws::Shield::DeleteProtectionResponse
  *
- * @brief  Handles Shield DeleteProtection responses.
+ * \brief The DeleteProtectionResponse class encapsulates Shield DeleteProtection responses.
  *
- * @see    ShieldClient::deleteProtection
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::deleteProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProtectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteProtectionRequest * DeleteProtectionResponse::request() const
     return static_cast<const DeleteProtectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Shield DeleteProtection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteProtectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteProtectionResponsePrivate
+ * \class DeleteProtectionResponsePrivate
  *
- * @brief  Private implementation for DeleteProtectionResponse.
+ * \brief Private implementation for DeleteProtectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProtectionResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteProtectionResponsePrivate::DeleteProtectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Shield DeleteProtectionResponse element.
  *
  * @param  xml  XML stream to parse.

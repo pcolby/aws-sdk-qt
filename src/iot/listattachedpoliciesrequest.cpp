@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListAttachedPoliciesRequest
+/*!
+ * \class QtAws::IoT::ListAttachedPoliciesRequest
  *
- * @brief  Implements IoT ListAttachedPolicies requests.
+ * \brief The ListAttachedPoliciesRequest class encapsulates IoT ListAttachedPolicies requests.
  *
- * @see    IoTClient::listAttachedPolicies
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listAttachedPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAttachedPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListAttachedPoliciesRequest::ListAttachedPoliciesRequest(const ListAttachedPolic
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAttachedPoliciesRequest object.
  */
 ListAttachedPoliciesRequest::ListAttachedPoliciesRequest()
@@ -53,13 +67,16 @@ ListAttachedPoliciesRequest::ListAttachedPoliciesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAttachedPoliciesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAttachedPoliciesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListAttachedPoliciesRequest::response(QNetwor
     return new ListAttachedPoliciesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAttachedPoliciesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListAttachedPoliciesRequest::response(QNetwor
  * @brief  Private implementation for ListAttachedPoliciesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttachedPoliciesRequestPrivate object.
@@ -97,7 +114,7 @@ ListAttachedPoliciesRequestPrivate::ListAttachedPoliciesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttachedPoliciesRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationInstanceTaskLogsResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeReplicationInstanceTaskLogs responses.
+ * \brief The DescribeReplicationInstanceTaskLogsResponse class encapsulates DatabaseMigrationService DescribeReplicationInstanceTaskLogs responses.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationInstanceTaskLogsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeReplicationInstanceTaskLogsRequest * DescribeReplicationInstanceTa
     return static_cast<const DescribeReplicationInstanceTaskLogsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeReplicationInstanceTaskLogs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeReplicationInstanceTaskLogsResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReplicationInstanceTaskLogsResponsePrivate
+ * \class DescribeReplicationInstanceTaskLogsResponsePrivate
  *
- * @brief  Private implementation for DescribeReplicationInstanceTaskLogsResponse.
+ * \brief Private implementation for DescribeReplicationInstanceTaskLogsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationInstanceTaskLogsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeReplicationInstanceTaskLogsResponsePrivate::DescribeReplicationInstanceT
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeReplicationInstanceTaskLogsResponse element.
  *
  * @param  xml  XML stream to parse.

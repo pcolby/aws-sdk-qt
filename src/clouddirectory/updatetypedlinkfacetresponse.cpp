@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpdateTypedLinkFacetResponse
+/*!
+ * \class QtAws::CloudDirectory::UpdateTypedLinkFacetResponse
  *
- * @brief  Handles CloudDirectory UpdateTypedLinkFacet responses.
+ * \brief The UpdateTypedLinkFacetResponse class encapsulates CloudDirectory UpdateTypedLinkFacet responses.
  *
- * @see    CloudDirectoryClient::updateTypedLinkFacet
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::updateTypedLinkFacet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTypedLinkFacetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const UpdateTypedLinkFacetRequest * UpdateTypedLinkFacetResponse::request() cons
     return static_cast<const UpdateTypedLinkFacetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory UpdateTypedLinkFacet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void UpdateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTypedLinkFacetResponsePrivate
+ * \class UpdateTypedLinkFacetResponsePrivate
  *
- * @brief  Private implementation for UpdateTypedLinkFacetResponse.
+ * \brief Private implementation for UpdateTypedLinkFacetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTypedLinkFacetResponsePrivate object.
@@ -91,7 +101,7 @@ UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory UpdateTypedLinkFacetResponse element.
  *
  * @param  xml  XML stream to parse.

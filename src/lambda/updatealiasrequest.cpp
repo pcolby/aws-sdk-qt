@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateAliasRequest
+/*!
+ * \class QtAws::Lambda::UpdateAliasRequest
  *
- * @brief  Implements Lambda UpdateAlias requests.
+ * \brief The UpdateAliasRequest class encapsulates Lambda UpdateAlias requests.
  *
- * @see    LambdaClient::updateAlias
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateAliasRequest::UpdateAliasRequest(const UpdateAliasRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateAliasRequest object.
  */
 UpdateAliasRequest::UpdateAliasRequest()
@@ -53,13 +67,16 @@ UpdateAliasRequest::UpdateAliasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateAliasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateAliasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
     return new UpdateAliasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateAliasRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateAliasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAliasRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAliasRequestPrivate object, copying another.

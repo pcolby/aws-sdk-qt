@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RestoreAddressToClassicRequest
+/*!
+ * \class QtAws::EC2::RestoreAddressToClassicRequest
  *
- * @brief  Implements EC2 RestoreAddressToClassic requests.
+ * \brief The RestoreAddressToClassicRequest class encapsulates EC2 RestoreAddressToClassic requests.
  *
- * @see    EC2Client::restoreAddressToClassic
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::restoreAddressToClassic
  */
 
-/**
+/*!
  * @brief  Constructs a new RestoreAddressToClassicRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RestoreAddressToClassicRequest::RestoreAddressToClassicRequest(const RestoreAddr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RestoreAddressToClassicRequest object.
  */
 RestoreAddressToClassicRequest::RestoreAddressToClassicRequest()
@@ -53,13 +60,16 @@ RestoreAddressToClassicRequest::RestoreAddressToClassicRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RestoreAddressToClassicRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RestoreAddressToClassicResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNet
     return new RestoreAddressToClassicResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RestoreAddressToClassicRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNet
  * @brief  Private implementation for RestoreAddressToClassicRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RestoreAddressToClassicRequestPrivate object.
@@ -97,7 +107,7 @@ RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RestoreAddressToClassicRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ModifyReplicationSubnetGroupResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupResponse
  *
- * @brief  Handles DatabaseMigrationService ModifyReplicationSubnetGroup responses.
+ * \brief The ModifyReplicationSubnetGroupResponse class encapsulates DatabaseMigrationService ModifyReplicationSubnetGroup responses.
  *
- * @see    DatabaseMigrationServiceClient::modifyReplicationSubnetGroup
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::modifyReplicationSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ModifyReplicationSubnetGroupRequest * ModifyReplicationSubnetGroupResponse
     return static_cast<const ModifyReplicationSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService ModifyReplicationSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ModifyReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyReplicationSubnetGroupResponsePrivate
+ * \class ModifyReplicationSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for ModifyReplicationSubnetGroupResponse.
+ * \brief Private implementation for ModifyReplicationSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationSubnetGroupResponsePrivate object.
@@ -91,7 +105,7 @@ ModifyReplicationSubnetGroupResponsePrivate::ModifyReplicationSubnetGroupRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService ModifyReplicationSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

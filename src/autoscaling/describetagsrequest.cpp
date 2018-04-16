@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeTagsRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeTagsRequest
  *
- * @brief  Implements AutoScaling DescribeTags requests.
+ * \brief The DescribeTagsRequest class encapsulates AutoScaling DescribeTags requests.
  *
- * @see    AutoScalingClient::describeTags
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
@@ -53,13 +61,16 @@ DescribeTagsRequest::DescribeTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
     return new DescribeTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTagsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CreateBucketRequest
+/*!
+ * \class QtAws::S3::CreateBucketRequest
  *
- * @brief  Implements S3 CreateBucket requests.
+ * \brief The CreateBucketRequest class encapsulates S3 CreateBucket requests.
  *
- * @see    S3Client::createBucket
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::createBucket
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBucketRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateBucketRequest::CreateBucketRequest(const CreateBucketRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateBucketRequest object.
  */
 CreateBucketRequest::CreateBucketRequest()
@@ -53,13 +56,16 @@ CreateBucketRequest::CreateBucketRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateBucketRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateBucketResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateBucketRequest::response(QNetworkReply *
     return new CreateBucketResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateBucketRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateBucketRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateBucketRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBucketRequestPrivate object.
@@ -97,7 +103,7 @@ CreateBucketRequestPrivate::CreateBucketRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBucketRequestPrivate object, copying another.

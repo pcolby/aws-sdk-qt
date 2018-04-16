@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteRouteRequest
+/*!
+ * \class QtAws::EC2::DeleteRouteRequest
  *
- * @brief  Implements EC2 DeleteRoute requests.
+ * \brief The DeleteRouteRequest class encapsulates EC2 DeleteRoute requests.
  *
- * @see    EC2Client::deleteRoute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteRoute
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRouteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteRouteRequest::DeleteRouteRequest(const DeleteRouteRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRouteRequest object.
  */
 DeleteRouteRequest::DeleteRouteRequest()
@@ -53,13 +60,16 @@ DeleteRouteRequest::DeleteRouteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRouteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRouteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteRequest::response(QNetworkReply * 
     return new DeleteRouteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRouteRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteRouteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRouteRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRouteRequestPrivate object, copying another.

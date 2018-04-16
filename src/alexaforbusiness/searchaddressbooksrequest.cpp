@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SearchAddressBooksRequest
+/*!
+ * \class QtAws::AlexaForBusiness::SearchAddressBooksRequest
  *
- * @brief  Implements AlexaForBusiness SearchAddressBooks requests.
+ * \brief The SearchAddressBooksRequest class encapsulates AlexaForBusiness SearchAddressBooks requests.
  *
- * @see    AlexaForBusinessClient::searchAddressBooks
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::searchAddressBooks
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchAddressBooksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SearchAddressBooksRequest::SearchAddressBooksRequest(const SearchAddressBooksReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchAddressBooksRequest object.
  */
 SearchAddressBooksRequest::SearchAddressBooksRequest()
@@ -53,13 +61,16 @@ SearchAddressBooksRequest::SearchAddressBooksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchAddressBooksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchAddressBooksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SearchAddressBooksRequest::response(QNetworkR
     return new SearchAddressBooksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchAddressBooksRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SearchAddressBooksRequest::response(QNetworkR
  * @brief  Private implementation for SearchAddressBooksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchAddressBooksRequestPrivate object.
@@ -97,7 +108,7 @@ SearchAddressBooksRequestPrivate::SearchAddressBooksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchAddressBooksRequestPrivate object, copying another.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Health {
 
-/**
- * @class  HealthResponse
+/*!
+ * \class QtAws::Health::HealthResponse
  *
- * @brief  Handles Health Health responses.
+ * \brief The HealthResponse class is the base class for all Health responses.
  *
- * @see    HealthClient::health
+ * \ingroup Health
  */
 
-/**
+/*!
  * @brief  Constructs a new HealthResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ HealthResponse::HealthResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new HealthResponse object.
@@ -63,7 +63,7 @@ HealthResponse::HealthResponse(HealthResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void HealthResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  HealthResponsePrivate
@@ -92,7 +92,7 @@ void HealthResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for HealthResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new HealthResponsePrivate object.

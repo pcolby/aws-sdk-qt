@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  GetContactRequest
+/*!
+ * \class QtAws::AlexaForBusiness::GetContactRequest
  *
- * @brief  Implements AlexaForBusiness GetContact requests.
+ * \brief The GetContactRequest class encapsulates AlexaForBusiness GetContact requests.
  *
- * @see    AlexaForBusinessClient::getContact
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::getContact
  */
 
-/**
+/*!
  * @brief  Constructs a new GetContactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetContactRequest::GetContactRequest(const GetContactRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetContactRequest object.
  */
 GetContactRequest::GetContactRequest()
@@ -53,13 +61,16 @@ GetContactRequest::GetContactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetContactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetContactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetContactRequest::response(QNetworkReply * c
     return new GetContactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetContactRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetContactRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetContactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContactRequestPrivate object.
@@ -97,7 +108,7 @@ GetContactRequestPrivate::GetContactRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContactRequestPrivate object, copying another.

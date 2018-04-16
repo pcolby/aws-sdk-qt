@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteTrafficPolicyResponse
+/*!
+ * \class QtAws::Route53::DeleteTrafficPolicyResponse
  *
- * @brief  Handles Route53 DeleteTrafficPolicy responses.
+ * \brief The DeleteTrafficPolicyResponse class encapsulates Route53 DeleteTrafficPolicy responses.
  *
- * @see    Route53Client::deleteTrafficPolicy
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteTrafficPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTrafficPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteTrafficPolicyRequest * DeleteTrafficPolicyResponse::request() const
     return static_cast<const DeleteTrafficPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 DeleteTrafficPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteTrafficPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTrafficPolicyResponsePrivate
+ * \class DeleteTrafficPolicyResponsePrivate
  *
- * @brief  Private implementation for DeleteTrafficPolicyResponse.
+ * \brief Private implementation for DeleteTrafficPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTrafficPolicyResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 DeleteTrafficPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

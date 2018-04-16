@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  AttachTypedLinkResponse
+/*!
+ * \class QtAws::CloudDirectory::AttachTypedLinkResponse
  *
- * @brief  Handles CloudDirectory AttachTypedLink responses.
+ * \brief The AttachTypedLinkResponse class encapsulates CloudDirectory AttachTypedLink responses.
  *
- * @see    CloudDirectoryClient::attachTypedLink
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::attachTypedLink
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachTypedLinkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const AttachTypedLinkRequest * AttachTypedLinkResponse::request() const
     return static_cast<const AttachTypedLinkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory AttachTypedLink response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void AttachTypedLinkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachTypedLinkResponsePrivate
+ * \class AttachTypedLinkResponsePrivate
  *
- * @brief  Private implementation for AttachTypedLinkResponse.
+ * \brief Private implementation for AttachTypedLinkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachTypedLinkResponsePrivate object.
@@ -91,7 +101,7 @@ AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory AttachTypedLinkResponse element.
  *
  * @param  xml  XML stream to parse.

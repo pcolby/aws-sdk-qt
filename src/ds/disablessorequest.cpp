@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DisableSsoRequest
+/*!
+ * \class QtAws::DirectoryService::DisableSsoRequest
  *
- * @brief  Implements DirectoryService DisableSso requests.
+ * \brief The DisableSsoRequest class encapsulates DirectoryService DisableSso requests.
  *
- * @see    DirectoryServiceClient::disableSso
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::disableSso
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableSsoRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DisableSsoRequest::DisableSsoRequest(const DisableSsoRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableSsoRequest object.
  */
 DisableSsoRequest::DisableSsoRequest()
@@ -53,13 +70,16 @@ DisableSsoRequest::DisableSsoRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableSsoRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableSsoResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * c
     return new DisableSsoResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableSsoRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * c
  * @brief  Private implementation for DisableSsoRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableSsoRequestPrivate object.
@@ -97,7 +117,7 @@ DisableSsoRequestPrivate::DisableSsoRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableSsoRequestPrivate object, copying another.

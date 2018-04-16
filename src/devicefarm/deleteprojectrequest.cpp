@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteProjectRequest
+/*!
+ * \class QtAws::DeviceFarm::DeleteProjectRequest
  *
- * @brief  Implements DeviceFarm DeleteProject requests.
+ * \brief The DeleteProjectRequest class encapsulates DeviceFarm DeleteProject requests.
  *
- * @see    DeviceFarmClient::deleteProject
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteProject
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteProjectRequest::DeleteProjectRequest(const DeleteProjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteProjectRequest object.
  */
 DeleteProjectRequest::DeleteProjectRequest()
@@ -53,13 +58,16 @@ DeleteProjectRequest::DeleteProjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteProjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteProjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
     return new DeleteProjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteProjectRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteProjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProjectRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProjectRequestPrivate object, copying another.

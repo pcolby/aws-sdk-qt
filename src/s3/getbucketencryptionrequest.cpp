@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketEncryptionRequest
+/*!
+ * \class QtAws::S3::GetBucketEncryptionRequest
  *
- * @brief  Implements S3 GetBucketEncryption requests.
+ * \brief The GetBucketEncryptionRequest class encapsulates S3 GetBucketEncryption requests.
  *
- * @see    S3Client::getBucketEncryption
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketEncryptionRequest::GetBucketEncryptionRequest(const GetBucketEncryption
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketEncryptionRequest object.
  */
 GetBucketEncryptionRequest::GetBucketEncryptionRequest()
@@ -53,13 +56,16 @@ GetBucketEncryptionRequest::GetBucketEncryptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketEncryptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketEncryptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketEncryptionRequest::response(QNetwork
     return new GetBucketEncryptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketEncryptionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketEncryptionRequest::response(QNetwork
  * @brief  Private implementation for GetBucketEncryptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketEncryptionRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketEncryptionRequestPrivate::GetBucketEncryptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketEncryptionRequestPrivate object, copying another.

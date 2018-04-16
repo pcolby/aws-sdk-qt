@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectFacesRequest
+/*!
+ * \class QtAws::Rekognition::DetectFacesRequest
  *
- * @brief  Implements Rekognition DetectFaces requests.
+ * \brief The DetectFacesRequest class encapsulates Rekognition DetectFaces requests.
  *
- * @see    RekognitionClient::detectFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DetectFacesRequest::DetectFacesRequest(const DetectFacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectFacesRequest object.
  */
 DetectFacesRequest::DetectFacesRequest()
@@ -53,13 +57,16 @@ DetectFacesRequest::DetectFacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectFacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectFacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DetectFacesRequest::response(QNetworkReply * 
     return new DetectFacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectFacesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DetectFacesRequest::response(QNetworkReply * 
  * @brief  Private implementation for DetectFacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectFacesRequestPrivate object.
@@ -97,7 +104,7 @@ DetectFacesRequestPrivate::DetectFacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectFacesRequestPrivate object, copying another.

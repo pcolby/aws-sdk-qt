@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketLifecycleRequest
+/*!
+ * \class QtAws::S3::PutBucketLifecycleRequest
  *
- * @brief  Implements S3 PutBucketLifecycle requests.
+ * \brief The PutBucketLifecycleRequest class encapsulates S3 PutBucketLifecycle requests.
  *
- * @see    S3Client::putBucketLifecycle
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketLifecycle
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketLifecycleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketLifecycleRequest::PutBucketLifecycleRequest(const PutBucketLifecycleReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketLifecycleRequest object.
  */
 PutBucketLifecycleRequest::PutBucketLifecycleRequest()
@@ -53,13 +56,16 @@ PutBucketLifecycleRequest::PutBucketLifecycleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketLifecycleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketLifecycleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketLifecycleRequest::response(QNetworkR
     return new PutBucketLifecycleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketLifecycleRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketLifecycleRequest::response(QNetworkR
  * @brief  Private implementation for PutBucketLifecycleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketLifecycleRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketLifecycleRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CopySnapshotResponse
+/*!
+ * \class QtAws::EC2::CopySnapshotResponse
  *
- * @brief  Handles EC2 CopySnapshot responses.
+ * \brief The CopySnapshotResponse class encapsulates EC2 CopySnapshot responses.
  *
- * @see    EC2Client::copySnapshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::copySnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new CopySnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CopySnapshotRequest * CopySnapshotResponse::request() const
     return static_cast<const CopySnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CopySnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CopySnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopySnapshotResponsePrivate
+ * \class CopySnapshotResponsePrivate
  *
- * @brief  Private implementation for CopySnapshotResponse.
+ * \brief Private implementation for CopySnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopySnapshotResponsePrivate object.
@@ -91,7 +98,7 @@ CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CopySnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

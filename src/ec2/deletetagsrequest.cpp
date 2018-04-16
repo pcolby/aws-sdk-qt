@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteTagsRequest
+/*!
+ * \class QtAws::EC2::DeleteTagsRequest
  *
- * @brief  Implements EC2 DeleteTags requests.
+ * \brief The DeleteTagsRequest class encapsulates EC2 DeleteTags requests.
  *
- * @see    EC2Client::deleteTags
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
@@ -53,13 +60,16 @@ DeleteTagsRequest::DeleteTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
     return new DeleteTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTagsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsRequestPrivate object, copying another.

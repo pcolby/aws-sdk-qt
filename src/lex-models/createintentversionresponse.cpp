@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  CreateIntentVersionResponse
+/*!
+ * \class QtAws::LexModelBuildingService::CreateIntentVersionResponse
  *
- * @brief  Handles LexModelBuildingService CreateIntentVersion responses.
+ * \brief The CreateIntentVersionResponse class encapsulates LexModelBuildingService CreateIntentVersion responses.
  *
- * @see    LexModelBuildingServiceClient::createIntentVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::createIntentVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIntentVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateIntentVersionRequest * CreateIntentVersionResponse::request() const
     return static_cast<const CreateIntentVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService CreateIntentVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateIntentVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateIntentVersionResponsePrivate
+ * \class CreateIntentVersionResponsePrivate
  *
- * @brief  Private implementation for CreateIntentVersionResponse.
+ * \brief Private implementation for CreateIntentVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIntentVersionResponsePrivate object.
@@ -91,7 +98,7 @@ CreateIntentVersionResponsePrivate::CreateIntentVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService CreateIntentVersionResponse element.
  *
  * @param  xml  XML stream to parse.

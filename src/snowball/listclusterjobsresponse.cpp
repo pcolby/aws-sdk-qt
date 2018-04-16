@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  ListClusterJobsResponse
+/*!
+ * \class QtAws::Snowball::ListClusterJobsResponse
  *
- * @brief  Handles Snowball ListClusterJobs responses.
+ * \brief The ListClusterJobsResponse class encapsulates Snowball ListClusterJobs responses.
  *
- * @see    SnowballClient::listClusterJobs
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::listClusterJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListClusterJobsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListClusterJobsRequest * ListClusterJobsResponse::request() const
     return static_cast<const ListClusterJobsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball ListClusterJobs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListClusterJobsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListClusterJobsResponsePrivate
+ * \class ListClusterJobsResponsePrivate
  *
- * @brief  Private implementation for ListClusterJobsResponse.
+ * \brief Private implementation for ListClusterJobsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListClusterJobsResponsePrivate object.
@@ -91,7 +100,7 @@ ListClusterJobsResponsePrivate::ListClusterJobsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball ListClusterJobsResponse element.
  *
  * @param  xml  XML stream to parse.

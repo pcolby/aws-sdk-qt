@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListPublicKeysRequest
+/*!
+ * \class QtAws::CloudFront::ListPublicKeysRequest
  *
- * @brief  Implements CloudFront ListPublicKeys requests.
+ * \brief The ListPublicKeysRequest class encapsulates CloudFront ListPublicKeys requests.
  *
- * @see    CloudFrontClient::listPublicKeys
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listPublicKeys
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPublicKeysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListPublicKeysRequest::ListPublicKeysRequest(const ListPublicKeysRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPublicKeysRequest object.
  */
 ListPublicKeysRequest::ListPublicKeysRequest()
@@ -53,13 +61,16 @@ ListPublicKeysRequest::ListPublicKeysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPublicKeysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPublicKeysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply
     return new ListPublicKeysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPublicKeysRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply
  * @brief  Private implementation for ListPublicKeysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPublicKeysRequestPrivate object.
@@ -97,7 +108,7 @@ ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPublicKeysRequestPrivate object, copying another.

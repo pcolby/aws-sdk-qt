@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  PutEventStreamRequest
+/*!
+ * \class QtAws::Pinpoint::PutEventStreamRequest
  *
- * @brief  Implements Pinpoint PutEventStream requests.
+ * \brief The PutEventStreamRequest class encapsulates Pinpoint PutEventStream requests.
  *
- * @see    PinpointClient::putEventStream
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::putEventStream
  */
 
-/**
+/*!
  * @brief  Constructs a new PutEventStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutEventStreamRequest::PutEventStreamRequest(const PutEventStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutEventStreamRequest object.
  */
 PutEventStreamRequest::PutEventStreamRequest()
@@ -53,13 +56,16 @@ PutEventStreamRequest::PutEventStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutEventStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutEventStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutEventStreamRequest::response(QNetworkReply
     return new PutEventStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutEventStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutEventStreamRequest::response(QNetworkReply
  * @brief  Private implementation for PutEventStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutEventStreamRequestPrivate object.
@@ -97,7 +103,7 @@ PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutEventStreamRequestPrivate object, copying another.

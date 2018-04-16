@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReportInstanceStatusRequest
+/*!
+ * \class QtAws::EC2::ReportInstanceStatusRequest
  *
- * @brief  Implements EC2 ReportInstanceStatus requests.
+ * \brief The ReportInstanceStatusRequest class encapsulates EC2 ReportInstanceStatus requests.
  *
- * @see    EC2Client::reportInstanceStatus
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::reportInstanceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new ReportInstanceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReportInstanceStatusRequest::ReportInstanceStatusRequest(const ReportInstanceSta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReportInstanceStatusRequest object.
  */
 ReportInstanceStatusRequest::ReportInstanceStatusRequest()
@@ -53,13 +60,16 @@ ReportInstanceStatusRequest::ReportInstanceStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReportInstanceStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReportInstanceStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetwor
     return new ReportInstanceStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReportInstanceStatusRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetwor
  * @brief  Private implementation for ReportInstanceStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReportInstanceStatusRequestPrivate object.
@@ -97,7 +107,7 @@ ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReportInstanceStatusRequestPrivate object, copying another.

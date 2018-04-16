@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  UpdateTrafficPolicyInstanceRequest
+/*!
+ * \class QtAws::Route53::UpdateTrafficPolicyInstanceRequest
  *
- * @brief  Implements Route53 UpdateTrafficPolicyInstance requests.
+ * \brief The UpdateTrafficPolicyInstanceRequest class encapsulates Route53 UpdateTrafficPolicyInstance requests.
  *
- * @see    Route53Client::updateTrafficPolicyInstance
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::updateTrafficPolicyInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTrafficPolicyInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateTrafficPolicyInstanceRequest::UpdateTrafficPolicyInstanceRequest(const Upd
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTrafficPolicyInstanceRequest object.
  */
 UpdateTrafficPolicyInstanceRequest::UpdateTrafficPolicyInstanceRequest()
@@ -53,13 +56,16 @@ UpdateTrafficPolicyInstanceRequest::UpdateTrafficPolicyInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTrafficPolicyInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTrafficPolicyInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyInstanceRequest::response(
     return new UpdateTrafficPolicyInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTrafficPolicyInstanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyInstanceRequest::response(
  * @brief  Private implementation for UpdateTrafficPolicyInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTrafficPolicyInstanceRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateTrafficPolicyInstanceRequestPrivate::UpdateTrafficPolicyInstanceRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTrafficPolicyInstanceRequestPrivate object, copying another.

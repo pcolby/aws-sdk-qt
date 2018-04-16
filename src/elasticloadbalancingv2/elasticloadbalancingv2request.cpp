@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
-/**
- * @class  ElasticLoadBalancingv2Request
+/*!
+ * \class QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request
  *
- * @brief  Interface class for providing ElasticLoadBalancingv2 requests
+ * \brief The ElasticLoadBalancingv2Request class is the base class for all ElasticLoadBalancingv2 requests.
+ *
+ * \ingroup ElasticLoadBalancingv2
  */
 
-
-/**
+/*!
  * @brief  Constructs a new ElasticLoadBalancingv2Request object.
  *
  * @param  action  The ElasticLoadBalancingv2 action to request.
@@ -41,7 +42,7 @@ ElasticLoadBalancingv2Request::ElasticLoadBalancingv2Request(const Action action
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ElasticLoadBalancingv2Request object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ ElasticLoadBalancingv2Request::ElasticLoadBalancingv2Request(const ElasticLoadBa
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ ElasticLoadBalancingv2Request& ElasticLoadBalancingv2Request::operator=(const El
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticLoadBalancingv2Request object.
@@ -85,10 +86,8 @@ ElasticLoadBalancingv2Request::ElasticLoadBalancingv2Request(ElasticLoadBalancin
 
 }
 
-/**
- * @brief  Get the ElasticLoadBalancingv2 action to be performed by this request.
- *
- * @return The ElasticLoadBalancingv2 action to be performed by this request.
+/*!
+ * \brief Returns the ElasticLoadBalancingv2 action to be performed by this request.
  */
 ElasticLoadBalancingv2Request::Action ElasticLoadBalancingv2Request::action() const
 {
@@ -96,20 +95,16 @@ ElasticLoadBalancingv2Request::Action ElasticLoadBalancingv2Request::action() co
     return d->action;
 }
 
-/**
- * @brief Get the name of the ElasticLoadBalancingv2 action to be performed by this request.
- *
- * @return The name of the ElasticLoadBalancingv2 action to be performed by this request.
+/*!
+ * \brief Returns the name of the ElasticLoadBalancingv2 action to be performed by this request.
  */
 QString ElasticLoadBalancingv2Request::actionString() const
 {
     return ElasticLoadBalancingv2RequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the ElasticLoadBalancingv2 API version implemented by this request.
- *
- * @return The ElasticLoadBalancingv2 API version implmented by this request.
+/*!
+ * \brief Returns the ElasticLoadBalancingv2 API version implemented by this request.
  */
 QString ElasticLoadBalancingv2Request::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString ElasticLoadBalancingv2Request::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the ElasticLoadBalancingv2 action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the ElasticLoadBalancingv2 action to be performed by this request to \a action.
  */
 void ElasticLoadBalancingv2Request::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void ElasticLoadBalancingv2Request::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the ElasticLoadBalancingv2 API version to include in this request.
- *
- * @param  version  The ElasticLoadBalancingv2 API version to include in this request.
+/*!
+ * Set the ElasticLoadBalancingv2 API version to include in this request to \a version.
  */
 void ElasticLoadBalancingv2Request::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void ElasticLoadBalancingv2Request::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool ElasticLoadBalancingv2Request::operator==(const ElasticLoadBalancingv2Request &other) const
 {
@@ -159,7 +146,7 @@ bool ElasticLoadBalancingv2Request::operator==(const ElasticLoadBalancingv2Reque
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid ElasticLoadBalancingv2 queue name.
  *
  * @par From ElasticLoadBalancingv2 FAQs:
@@ -178,12 +165,10 @@ bool ElasticLoadBalancingv2Request::operator==(const ElasticLoadBalancingv2Reque
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int ElasticLoadBalancingv2Request::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int ElasticLoadBalancingv2Request::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void ElasticLoadBalancingv2Request::clearParameters()
 {
@@ -200,13 +185,8 @@ void ElasticLoadBalancingv2Request::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this ElasticLoadBalancingv2 request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant ElasticLoadBalancingv2Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant ElasticLoadBalancingv2Request::parameter(const QString &name, const QVa
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this ElasticLoadBalancingv2 request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &ElasticLoadBalancingv2Request::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &ElasticLoadBalancingv2Request::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this ElasticLoadBalancingv2 request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void ElasticLoadBalancingv2Request::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void ElasticLoadBalancingv2Request::setParameter(const QString &name, const QVar
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this ElasticLoadBalancingv2 request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void ElasticLoadBalancingv2Request::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void ElasticLoadBalancingv2Request::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this ElasticLoadBalancingv2 request.
+/*!
+ * \brief Returns a network request for this ElasticLoadBalancingv2 request using the given \a endpoint.
  *
  * This ElasticLoadBalancingv2 implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this ElasticLoadBalancingv2 request using the given \a endpoint.
  */
 QNetworkRequest ElasticLoadBalancingv2Request::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest ElasticLoadBalancingv2Request::unsignedRequest(const QUrl &endpo
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ElasticLoadBalancingv2RequestPrivate
+ * \class  ElasticLoadBalancingv2RequestPrivate
  *
- * @brief  Private implementation for ElasticLoadBalancingv2Request.
+ * \brief  Private implementation for ElasticLoadBalancingv2Request.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ElasticLoadBalancingv2RequestPrivate object.
- *
- * @param  action  ElasticLoadBalancingv2 action being performed by the \a q request.
- * @param  q       Pointer to this object's public ElasticLoadBalancingv2Request instance.
+ * \brief Constructs a new ElasticLoadBalancingv2RequestPrivate object.
  */
 ElasticLoadBalancingv2RequestPrivate::ElasticLoadBalancingv2RequestPrivate(const ElasticLoadBalancingv2Request::Action action, ElasticLoadBalancingv2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ ElasticLoadBalancingv2RequestPrivate::ElasticLoadBalancingv2RequestPrivate(const
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ElasticLoadBalancingv2RequestPrivate object from an existing one.
+ * \brief Constructs a new ElasticLoadBalancingv2RequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the ElasticLoadBalancingv2Request class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ElasticLoadBalancingv2Request instance.
  */
 ElasticLoadBalancingv2RequestPrivate::ElasticLoadBalancingv2RequestPrivate(const ElasticLoadBalancingv2RequestPrivate &other,
                                      ElasticLoadBalancingv2Request * const q)
@@ -312,14 +275,14 @@ ElasticLoadBalancingv2RequestPrivate::ElasticLoadBalancingv2RequestPrivate(const
 
 }
 
-/**
- * @brief  Convert and ElasticLoadBalancingv2 action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts ElasticLoadBalancingv2Request::Action enumerator values to their respective
  * string representations, appropriate for use with the ElasticLoadBalancingv2 service's Action
  * query parameters.
- *
- * @param  action  ElasticLoadBalancingv2 action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

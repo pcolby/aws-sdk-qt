@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  GetSubscriptionStateRequest
+/*!
+ * \class QtAws::Shield::GetSubscriptionStateRequest
  *
- * @brief  Implements Shield GetSubscriptionState requests.
+ * \brief The GetSubscriptionStateRequest class encapsulates Shield GetSubscriptionState requests.
  *
- * @see    ShieldClient::getSubscriptionState
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::getSubscriptionState
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionStateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetSubscriptionStateRequest::GetSubscriptionStateRequest(const GetSubscriptionSt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionStateRequest object.
  */
 GetSubscriptionStateRequest::GetSubscriptionStateRequest()
@@ -53,13 +62,16 @@ GetSubscriptionStateRequest::GetSubscriptionStateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSubscriptionStateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSubscriptionStateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetwor
     return new GetSubscriptionStateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSubscriptionStateRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetwor
  * @brief  Private implementation for GetSubscriptionStateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionStateRequestPrivate object.
@@ -97,7 +109,7 @@ GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionStateRequestPrivate object, copying another.

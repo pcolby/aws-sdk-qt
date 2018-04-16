@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotChannelAssociationsRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotChannelAssociationsRequest
  *
- * @brief  Implements LexModelBuildingService GetBotChannelAssociations requests.
+ * \brief The GetBotChannelAssociationsRequest class encapsulates LexModelBuildingService GetBotChannelAssociations requests.
  *
- * @see    LexModelBuildingServiceClient::getBotChannelAssociations
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBotChannelAssociations
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotChannelAssociationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest(const GetBotC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBotChannelAssociationsRequest object.
  */
 GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest()
@@ -53,13 +60,16 @@ GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBotChannelAssociationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBotChannelAssociationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationsRequest::response(QN
     return new GetBotChannelAssociationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBotChannelAssociationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationsRequest::response(QN
  * @brief  Private implementation for GetBotChannelAssociationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotChannelAssociationsRequestPrivate object.
@@ -97,7 +107,7 @@ GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotChannelAssociationsRequestPrivate object, copying another.

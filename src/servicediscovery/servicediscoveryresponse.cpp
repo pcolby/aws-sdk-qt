@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ServiceDiscoveryResponse
+/*!
+ * \class QtAws::ServiceDiscovery::ServiceDiscoveryResponse
  *
- * @brief  Handles ServiceDiscovery ServiceDiscovery responses.
+ * \brief The ServiceDiscoveryResponse class is the base class for all ServiceDiscovery responses.
  *
- * @see    ServiceDiscoveryClient::serviceDiscovery
+ * \ingroup ServiceDiscovery
  */
 
-/**
+/*!
  * @brief  Constructs a new ServiceDiscoveryResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ServiceDiscoveryResponse::ServiceDiscoveryResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceDiscoveryResponse object.
@@ -63,7 +63,7 @@ ServiceDiscoveryResponse::ServiceDiscoveryResponse(ServiceDiscoveryResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ServiceDiscoveryResponsePrivate
@@ -92,7 +92,7 @@ void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ServiceDiscoveryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServiceDiscoveryResponsePrivate object.

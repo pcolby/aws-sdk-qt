@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateRouteTableResponse
+/*!
+ * \class QtAws::EC2::DisassociateRouteTableResponse
  *
- * @brief  Handles EC2 DisassociateRouteTable responses.
+ * \brief The DisassociateRouteTableResponse class encapsulates EC2 DisassociateRouteTable responses.
  *
- * @see    EC2Client::disassociateRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateRouteTableResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DisassociateRouteTableRequest * DisassociateRouteTableResponse::request() 
     return static_cast<const DisassociateRouteTableRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DisassociateRouteTable response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DisassociateRouteTableResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateRouteTableResponsePrivate
+ * \class DisassociateRouteTableResponsePrivate
  *
- * @brief  Private implementation for DisassociateRouteTableResponse.
+ * \brief Private implementation for DisassociateRouteTableResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateRouteTableResponsePrivate object.
@@ -91,7 +98,7 @@ DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DisassociateRouteTableResponse element.
  *
  * @param  xml  XML stream to parse.

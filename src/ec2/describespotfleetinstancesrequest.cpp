@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotFleetInstancesRequest
+/*!
+ * \class QtAws::EC2::DescribeSpotFleetInstancesRequest
  *
- * @brief  Implements EC2 DescribeSpotFleetInstances requests.
+ * \brief The DescribeSpotFleetInstancesRequest class encapsulates EC2 DescribeSpotFleetInstances requests.
  *
- * @see    EC2Client::describeSpotFleetInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotFleetInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotFleetInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSpotFleetInstancesRequest::DescribeSpotFleetInstancesRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotFleetInstancesRequest object.
  */
 DescribeSpotFleetInstancesRequest::DescribeSpotFleetInstancesRequest()
@@ -53,13 +60,16 @@ DescribeSpotFleetInstancesRequest::DescribeSpotFleetInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSpotFleetInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSpotFleetInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetInstancesRequest::response(Q
     return new DescribeSpotFleetInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSpotFleetInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetInstancesRequest::response(Q
  * @brief  Private implementation for DescribeSpotFleetInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotFleetInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSpotFleetInstancesRequestPrivate::DescribeSpotFleetInstancesRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotFleetInstancesRequestPrivate object, copying another.

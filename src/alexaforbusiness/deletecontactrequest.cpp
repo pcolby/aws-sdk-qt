@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteContactRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteContactRequest
  *
- * @brief  Implements AlexaForBusiness DeleteContact requests.
+ * \brief The DeleteContactRequest class encapsulates AlexaForBusiness DeleteContact requests.
  *
- * @see    AlexaForBusinessClient::deleteContact
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteContact
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteContactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteContactRequest::DeleteContactRequest(const DeleteContactRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteContactRequest object.
  */
 DeleteContactRequest::DeleteContactRequest()
@@ -53,13 +61,16 @@ DeleteContactRequest::DeleteContactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteContactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteContactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteContactRequest::response(QNetworkReply 
     return new DeleteContactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteContactRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteContactRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteContactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteContactRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteContactRequestPrivate::DeleteContactRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteContactRequestPrivate object, copying another.

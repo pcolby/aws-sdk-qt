@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeEgressOnlyInternetGatewaysResponse
+/*!
+ * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysResponse
  *
- * @brief  Handles EC2 DescribeEgressOnlyInternetGateways responses.
+ * \brief The DescribeEgressOnlyInternetGatewaysResponse class encapsulates EC2 DescribeEgressOnlyInternetGateways responses.
  *
- * @see    EC2Client::describeEgressOnlyInternetGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeEgressOnlyInternetGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeEgressOnlyInternetGatewaysRequest * DescribeEgressOnlyInternetGate
     return static_cast<const DescribeEgressOnlyInternetGatewaysRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeEgressOnlyInternetGateways response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeEgressOnlyInternetGatewaysResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeEgressOnlyInternetGatewaysResponsePrivate
+ * \class DescribeEgressOnlyInternetGatewaysResponsePrivate
  *
- * @brief  Private implementation for DescribeEgressOnlyInternetGatewaysResponse.
+ * \brief Private implementation for DescribeEgressOnlyInternetGatewaysResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyInternetGat
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeEgressOnlyInternetGatewaysResponse element.
  *
  * @param  xml  XML stream to parse.

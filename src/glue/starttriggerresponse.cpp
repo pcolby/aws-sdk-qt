@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StartTriggerResponse
+/*!
+ * \class QtAws::Glue::StartTriggerResponse
  *
- * @brief  Handles Glue StartTrigger responses.
+ * \brief The StartTriggerResponse class encapsulates Glue StartTrigger responses.
  *
- * @see    GlueClient::startTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::startTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new StartTriggerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartTriggerRequest * StartTriggerResponse::request() const
     return static_cast<const StartTriggerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue StartTrigger response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartTriggerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartTriggerResponsePrivate
+ * \class StartTriggerResponsePrivate
  *
- * @brief  Private implementation for StartTriggerResponse.
+ * \brief Private implementation for StartTriggerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTriggerResponsePrivate object.
@@ -91,7 +97,7 @@ StartTriggerResponsePrivate::StartTriggerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue StartTriggerResponse element.
  *
  * @param  xml  XML stream to parse.

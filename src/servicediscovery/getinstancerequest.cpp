@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetInstanceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::GetInstanceRequest
  *
- * @brief  Implements ServiceDiscovery GetInstance requests.
+ * \brief The GetInstanceRequest class encapsulates ServiceDiscovery GetInstance requests.
  *
- * @see    ServiceDiscoveryClient::getInstance
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetInstanceRequest::GetInstanceRequest(const GetInstanceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetInstanceRequest object.
  */
 GetInstanceRequest::GetInstanceRequest()
@@ -53,13 +60,16 @@ GetInstanceRequest::GetInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceRequest::response(QNetworkReply * 
     return new GetInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetInstanceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetInstanceRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstanceRequestPrivate object.
@@ -97,7 +107,7 @@ GetInstanceRequestPrivate::GetInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstanceRequestPrivate object, copying another.

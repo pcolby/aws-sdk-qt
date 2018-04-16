@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  ListByteMatchSetsRequest
+/*!
+ * \class QtAws::WAFRegional::ListByteMatchSetsRequest
  *
- * @brief  Implements WAFRegional ListByteMatchSets requests.
+ * \brief The ListByteMatchSetsRequest class encapsulates WAFRegional ListByteMatchSets requests.
  *
- * @see    WAFRegionalClient::listByteMatchSets
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::listByteMatchSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListByteMatchSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListByteMatchSetsRequest object.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest()
@@ -53,13 +63,16 @@ ListByteMatchSetsRequest::ListByteMatchSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListByteMatchSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListByteMatchSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
     return new ListByteMatchSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListByteMatchSetsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
  * @brief  Private implementation for ListByteMatchSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListByteMatchSetsRequestPrivate object.
@@ -97,7 +110,7 @@ ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListByteMatchSetsRequestPrivate object, copying another.

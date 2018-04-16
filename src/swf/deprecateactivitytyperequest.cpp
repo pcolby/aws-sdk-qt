@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  DeprecateActivityTypeRequest
+/*!
+ * \class QtAws::SWF::DeprecateActivityTypeRequest
  *
- * @brief  Implements SWF DeprecateActivityType requests.
+ * \brief The DeprecateActivityTypeRequest class encapsulates SWF DeprecateActivityType requests.
  *
- * @see    SWFClient::deprecateActivityType
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::deprecateActivityType
  */
 
-/**
+/*!
  * @brief  Constructs a new DeprecateActivityTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ DeprecateActivityTypeRequest::DeprecateActivityTypeRequest(const DeprecateActivi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeprecateActivityTypeRequest object.
  */
 DeprecateActivityTypeRequest::DeprecateActivityTypeRequest()
@@ -53,13 +72,16 @@ DeprecateActivityTypeRequest::DeprecateActivityTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeprecateActivityTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeprecateActivityTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
     return new DeprecateActivityTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeprecateActivityTypeRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
  * @brief  Private implementation for DeprecateActivityTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeprecateActivityTypeRequestPrivate object.
@@ -97,7 +119,7 @@ DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeprecateActivityTypeRequestPrivate object, copying another.

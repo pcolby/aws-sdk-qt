@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheParameterGroupsRequest
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheParameterGroupsRequest
  *
- * @brief  Implements ElastiCache DescribeCacheParameterGroups requests.
+ * \brief The DescribeCacheParameterGroupsRequest class encapsulates ElastiCache DescribeCacheParameterGroups requests.
  *
- * @see    ElastiCacheClient::describeCacheParameterGroups
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheParameterGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheParameterGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeCacheParameterGroupsRequest::DescribeCacheParameterGroupsRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheParameterGroupsRequest object.
  */
 DescribeCacheParameterGroupsRequest::DescribeCacheParameterGroupsRequest()
@@ -53,13 +70,16 @@ DescribeCacheParameterGroupsRequest::DescribeCacheParameterGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCacheParameterGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCacheParameterGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheParameterGroupsRequest::response
     return new DescribeCacheParameterGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCacheParameterGroupsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheParameterGroupsRequest::response
  * @brief  Private implementation for DescribeCacheParameterGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheParameterGroupsRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeCacheParameterGroupsRequestPrivate::DescribeCacheParameterGroupsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheParameterGroupsRequestPrivate object, copying another.

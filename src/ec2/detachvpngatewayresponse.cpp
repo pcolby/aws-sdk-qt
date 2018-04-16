@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachVpnGatewayResponse
+/*!
+ * \class QtAws::EC2::DetachVpnGatewayResponse
  *
- * @brief  Handles EC2 DetachVpnGateway responses.
+ * \brief The DetachVpnGatewayResponse class encapsulates EC2 DetachVpnGateway responses.
  *
- * @see    EC2Client::detachVpnGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachVpnGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachVpnGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DetachVpnGatewayRequest * DetachVpnGatewayResponse::request() const
     return static_cast<const DetachVpnGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DetachVpnGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachVpnGatewayResponsePrivate
+ * \class DetachVpnGatewayResponsePrivate
  *
- * @brief  Private implementation for DetachVpnGatewayResponse.
+ * \brief Private implementation for DetachVpnGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachVpnGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DetachVpnGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateGroupResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateGroupResponse
  *
- * @brief  Handles CognitoIdentityProvider CreateGroup responses.
+ * \brief The CreateGroupResponse class encapsulates CognitoIdentityProvider CreateGroup responses.
  *
- * @see    CognitoIdentityProviderClient::createGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const CreateGroupRequest * CreateGroupResponse::request() const
     return static_cast<const CreateGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider CreateGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void CreateGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateGroupResponsePrivate
+ * \class CreateGroupResponsePrivate
  *
- * @brief  Private implementation for CreateGroupResponse.
+ * \brief Private implementation for CreateGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupResponsePrivate object.
@@ -91,7 +104,7 @@ CreateGroupResponsePrivate::CreateGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider CreateGroupResponse element.
  *
  * @param  xml  XML stream to parse.

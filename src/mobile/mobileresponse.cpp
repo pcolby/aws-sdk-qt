@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  MobileResponse
+/*!
+ * \class QtAws::Mobile::MobileResponse
  *
- * @brief  Handles Mobile Mobile responses.
+ * \brief The MobileResponse class is the base class for all Mobile responses.
  *
- * @see    MobileClient::mobile
+ * \ingroup Mobile
  */
 
-/**
+/*!
  * @brief  Constructs a new MobileResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MobileResponse::MobileResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MobileResponse object.
@@ -63,7 +63,7 @@ MobileResponse::MobileResponse(MobileResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MobileResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MobileResponsePrivate
@@ -92,7 +92,7 @@ void MobileResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MobileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MobileResponsePrivate object.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteTagsResponse
+/*!
+ * \class QtAws::SageMaker::DeleteTagsResponse
  *
- * @brief  Handles SageMaker DeleteTags responses.
+ * \brief The DeleteTagsResponse class encapsulates SageMaker DeleteTags responses.
  *
- * @see    SageMakerClient::deleteTags
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
     return static_cast<const DeleteTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker DeleteTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagsResponsePrivate
+ * \class DeleteTagsResponsePrivate
  *
- * @brief  Private implementation for DeleteTagsResponse.
+ * \brief Private implementation for DeleteTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker DeleteTagsResponse element.
  *
  * @param  xml  XML stream to parse.

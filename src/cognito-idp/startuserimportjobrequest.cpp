@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  StartUserImportJobRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::StartUserImportJobRequest
  *
- * @brief  Implements CognitoIdentityProvider StartUserImportJob requests.
+ * \brief The StartUserImportJobRequest class encapsulates CognitoIdentityProvider StartUserImportJob requests.
  *
- * @see    CognitoIdentityProviderClient::startUserImportJob
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::startUserImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StartUserImportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ StartUserImportJobRequest::StartUserImportJobRequest(const StartUserImportJobReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartUserImportJobRequest object.
  */
 StartUserImportJobRequest::StartUserImportJobRequest()
@@ -53,13 +66,16 @@ StartUserImportJobRequest::StartUserImportJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartUserImportJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartUserImportJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkR
     return new StartUserImportJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartUserImportJobRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkR
  * @brief  Private implementation for StartUserImportJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartUserImportJobRequestPrivate object.
@@ -97,7 +113,7 @@ StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartUserImportJobRequestPrivate object, copying another.

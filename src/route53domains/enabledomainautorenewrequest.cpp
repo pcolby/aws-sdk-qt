@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  EnableDomainAutoRenewRequest
+/*!
+ * \class QtAws::Route53Domains::EnableDomainAutoRenewRequest
  *
- * @brief  Implements Route53Domains EnableDomainAutoRenew requests.
+ * \brief The EnableDomainAutoRenewRequest class encapsulates Route53Domains EnableDomainAutoRenew requests.
  *
- * @see    Route53DomainsClient::enableDomainAutoRenew
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::enableDomainAutoRenew
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableDomainAutoRenewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest(const EnableDomainAut
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableDomainAutoRenewRequest object.
  */
 EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest()
@@ -53,13 +57,16 @@ EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableDomainAutoRenewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableDomainAutoRenewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * EnableDomainAutoRenewRequest::response(QNetwo
     return new EnableDomainAutoRenewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableDomainAutoRenewRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * EnableDomainAutoRenewRequest::response(QNetwo
  * @brief  Private implementation for EnableDomainAutoRenewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableDomainAutoRenewRequestPrivate object.
@@ -97,7 +104,7 @@ EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableDomainAutoRenewRequestPrivate object, copying another.

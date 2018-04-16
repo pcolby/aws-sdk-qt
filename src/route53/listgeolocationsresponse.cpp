@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListGeoLocationsResponse
+/*!
+ * \class QtAws::Route53::ListGeoLocationsResponse
  *
- * @brief  Handles Route53 ListGeoLocations responses.
+ * \brief The ListGeoLocationsResponse class encapsulates Route53 ListGeoLocations responses.
  *
- * @see    Route53Client::listGeoLocations
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listGeoLocations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGeoLocationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListGeoLocationsRequest * ListGeoLocationsResponse::request() const
     return static_cast<const ListGeoLocationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 ListGeoLocations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListGeoLocationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListGeoLocationsResponsePrivate
+ * \class ListGeoLocationsResponsePrivate
  *
- * @brief  Private implementation for ListGeoLocationsResponse.
+ * \brief Private implementation for ListGeoLocationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGeoLocationsResponsePrivate object.
@@ -91,7 +94,7 @@ ListGeoLocationsResponsePrivate::ListGeoLocationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 ListGeoLocationsResponse element.
  *
  * @param  xml  XML stream to parse.

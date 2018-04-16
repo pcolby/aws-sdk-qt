@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  CreateServiceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::CreateServiceRequest
  *
- * @brief  Implements ServiceDiscovery CreateService requests.
+ * \brief The CreateServiceRequest class encapsulates ServiceDiscovery CreateService requests.
  *
- * @see    ServiceDiscoveryClient::createService
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::createService
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateServiceRequest object.
  */
 CreateServiceRequest::CreateServiceRequest()
@@ -53,13 +60,16 @@ CreateServiceRequest::CreateServiceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateServiceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateServiceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
     return new CreateServiceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateServiceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateServiceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateServiceRequestPrivate object.
@@ -97,7 +107,7 @@ CreateServiceRequestPrivate::CreateServiceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateServiceRequestPrivate object, copying another.

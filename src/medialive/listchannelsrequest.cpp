@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  ListChannelsRequest
+/*!
+ * \class QtAws::MediaLive::ListChannelsRequest
  *
- * @brief  Implements MediaLive ListChannels requests.
+ * \brief The ListChannelsRequest class encapsulates MediaLive ListChannels requests.
  *
- * @see    MediaLiveClient::listChannels
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::listChannels
  */
 
-/**
+/*!
  * @brief  Constructs a new ListChannelsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListChannelsRequest::ListChannelsRequest(const ListChannelsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListChannelsRequest object.
  */
 ListChannelsRequest::ListChannelsRequest()
@@ -53,13 +56,16 @@ ListChannelsRequest::ListChannelsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListChannelsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListChannelsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply *
     return new ListChannelsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListChannelsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply *
  * @brief  Private implementation for ListChannelsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListChannelsRequestPrivate object.
@@ -97,7 +103,7 @@ ListChannelsRequestPrivate::ListChannelsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListChannelsRequestPrivate object, copying another.

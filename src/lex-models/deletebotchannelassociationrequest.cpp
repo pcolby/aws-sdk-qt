@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteBotChannelAssociationRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationRequest
  *
- * @brief  Implements LexModelBuildingService DeleteBotChannelAssociation requests.
+ * \brief The DeleteBotChannelAssociationRequest class encapsulates LexModelBuildingService DeleteBotChannelAssociation requests.
  *
- * @see    LexModelBuildingServiceClient::deleteBotChannelAssociation
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteBotChannelAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotChannelAssociationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteBotChannelAssociationRequest::DeleteBotChannelAssociationRequest(const Del
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotChannelAssociationRequest object.
  */
 DeleteBotChannelAssociationRequest::DeleteBotChannelAssociationRequest()
@@ -53,13 +60,16 @@ DeleteBotChannelAssociationRequest::DeleteBotChannelAssociationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBotChannelAssociationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBotChannelAssociationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(
     return new DeleteBotChannelAssociationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBotChannelAssociationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(
  * @brief  Private implementation for DeleteBotChannelAssociationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotChannelAssociationRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotChannelAssociationRequestPrivate object, copying another.

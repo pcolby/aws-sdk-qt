@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  DisassociateQualificationFromWorkerRequest
+/*!
+ * \class QtAws::MTurk::DisassociateQualificationFromWorkerRequest
  *
- * @brief  Implements MTurk DisassociateQualificationFromWorker requests.
+ * \brief The DisassociateQualificationFromWorkerRequest class encapsulates MTurk DisassociateQualificationFromWorker requests.
  *
- * @see    MTurkClient::disassociateQualificationFromWorker
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::disassociateQualificationFromWorker
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object.
  */
 DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerRequest()
@@ -53,13 +56,16 @@ DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerR
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateQualificationFromWorkerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateQualificationFromWorkerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::r
     return new DisassociateQualificationFromWorkerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateQualificationFromWorkerRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::r
  * @brief  Private implementation for DisassociateQualificationFromWorkerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateQualificationFromWorkerRequestPrivate object.
@@ -97,7 +103,7 @@ DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFrom
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateQualificationFromWorkerRequestPrivate object, copying another.

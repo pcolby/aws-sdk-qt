@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateClassifierResponse
+/*!
+ * \class QtAws::Glue::UpdateClassifierResponse
  *
- * @brief  Handles Glue UpdateClassifier responses.
+ * \brief The UpdateClassifierResponse class encapsulates Glue UpdateClassifier responses.
  *
- * @see    GlueClient::updateClassifier
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateClassifier
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateClassifierResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateClassifierRequest * UpdateClassifierResponse::request() const
     return static_cast<const UpdateClassifierRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateClassifier response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateClassifierResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateClassifierResponsePrivate
+ * \class UpdateClassifierResponsePrivate
  *
- * @brief  Private implementation for UpdateClassifierResponse.
+ * \brief Private implementation for UpdateClassifierResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClassifierResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateClassifierResponse element.
  *
  * @param  xml  XML stream to parse.

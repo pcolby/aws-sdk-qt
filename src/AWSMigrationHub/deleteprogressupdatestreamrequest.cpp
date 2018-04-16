@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DeleteProgressUpdateStreamRequest
+/*!
+ * \class QtAws::MigrationHub::DeleteProgressUpdateStreamRequest
  *
- * @brief  Implements MigrationHub DeleteProgressUpdateStream requests.
+ * \brief The DeleteProgressUpdateStreamRequest class encapsulates MigrationHub DeleteProgressUpdateStream requests.
  *
- * @see    MigrationHubClient::deleteProgressUpdateStream
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::deleteProgressUpdateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProgressUpdateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest(const Delet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteProgressUpdateStreamRequest object.
  */
 DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest()
@@ -53,13 +58,16 @@ DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteProgressUpdateStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteProgressUpdateStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(Q
     return new DeleteProgressUpdateStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteProgressUpdateStreamRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(Q
  * @brief  Private implementation for DeleteProgressUpdateStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProgressUpdateStreamRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProgressUpdateStreamRequestPrivate object, copying another.

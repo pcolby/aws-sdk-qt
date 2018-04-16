@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteBotAliasRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteBotAliasRequest
  *
- * @brief  Implements LexModelBuildingService DeleteBotAlias requests.
+ * \brief The DeleteBotAliasRequest class encapsulates LexModelBuildingService DeleteBotAlias requests.
  *
- * @see    LexModelBuildingServiceClient::deleteBotAlias
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteBotAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteBotAliasRequest::DeleteBotAliasRequest(const DeleteBotAliasRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotAliasRequest object.
  */
 DeleteBotAliasRequest::DeleteBotAliasRequest()
@@ -53,13 +60,16 @@ DeleteBotAliasRequest::DeleteBotAliasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBotAliasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBotAliasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotAliasRequest::response(QNetworkReply
     return new DeleteBotAliasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBotAliasRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotAliasRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteBotAliasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotAliasRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteBotAliasRequestPrivate::DeleteBotAliasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotAliasRequestPrivate object, copying another.

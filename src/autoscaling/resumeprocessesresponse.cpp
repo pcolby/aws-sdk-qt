@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  ResumeProcessesResponse
+/*!
+ * \class QtAws::AutoScaling::ResumeProcessesResponse
  *
- * @brief  Handles AutoScaling ResumeProcesses responses.
+ * \brief The ResumeProcessesResponse class encapsulates AutoScaling ResumeProcesses responses.
  *
- * @see    AutoScalingClient::resumeProcesses
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::resumeProcesses
  */
 
-/**
+/*!
  * @brief  Constructs a new ResumeProcessesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ResumeProcessesRequest * ResumeProcessesResponse::request() const
     return static_cast<const ResumeProcessesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling ResumeProcesses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ResumeProcessesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResumeProcessesResponsePrivate
+ * \class ResumeProcessesResponsePrivate
  *
- * @brief  Private implementation for ResumeProcessesResponse.
+ * \brief Private implementation for ResumeProcessesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResumeProcessesResponsePrivate object.
@@ -91,7 +99,7 @@ ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling ResumeProcessesResponse element.
  *
  * @param  xml  XML stream to parse.

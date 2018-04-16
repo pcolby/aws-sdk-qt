@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetLifecyclePolicyResponse
+/*!
+ * \class QtAws::ECR::GetLifecyclePolicyResponse
  *
- * @brief  Handles ECR GetLifecyclePolicy responses.
+ * \brief The GetLifecyclePolicyResponse class encapsulates ECR GetLifecyclePolicy responses.
  *
- * @see    ECRClient::getLifecyclePolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getLifecyclePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLifecyclePolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetLifecyclePolicyRequest * GetLifecyclePolicyResponse::request() const
     return static_cast<const GetLifecyclePolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR GetLifecyclePolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetLifecyclePolicyResponsePrivate
+ * \class GetLifecyclePolicyResponsePrivate
  *
- * @brief  Private implementation for GetLifecyclePolicyResponse.
+ * \brief Private implementation for GetLifecyclePolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLifecyclePolicyResponsePrivate object.
@@ -91,7 +98,7 @@ GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR GetLifecyclePolicyResponse element.
  *
  * @param  xml  XML stream to parse.

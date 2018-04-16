@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetConnectorsRequest
+/*!
+ * \class QtAws::SMS::GetConnectorsRequest
  *
- * @brief  Implements SMS GetConnectors requests.
+ * \brief The GetConnectorsRequest class encapsulates SMS GetConnectors requests.
  *
- * @see    SMSClient::getConnectors
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getConnectors
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConnectorsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetConnectorsRequest::GetConnectorsRequest(const GetConnectorsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetConnectorsRequest object.
  */
 GetConnectorsRequest::GetConnectorsRequest()
@@ -53,13 +56,16 @@ GetConnectorsRequest::GetConnectorsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetConnectorsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetConnectorsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply 
     return new GetConnectorsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetConnectorsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply 
  * @brief  Private implementation for GetConnectorsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectorsRequestPrivate object.
@@ -97,7 +103,7 @@ GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectorsRequestPrivate object, copying another.

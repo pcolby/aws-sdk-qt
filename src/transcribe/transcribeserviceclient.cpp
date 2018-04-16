@@ -41,24 +41,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::TranscribeService
+ * \brief The QtAws::TranscribeService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  TranscribeServiceClient
+/*!
+ * \class QtAws::TranscribeService::TranscribeServiceClient
  *
- * @brief  Client for Amazon Transcribe Service
+ * \brief The TranscribeServiceClient class provides access the Amazon Transcribe Service service.
  *
- * Operations and objects for transcribing speech to
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
  */
 
-/**
- * @brief  Constructs a new TranscribeServiceClient object.
+/*!
+ * \brief Constructs a TranscribeServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 TranscribeServiceClient::TranscribeServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -77,21 +85,16 @@ TranscribeServiceClient::TranscribeServiceClient(
     d->serviceName = QStringLiteral("transcribe");
 }
 
-/**
- * @brief  Constructs a new TranscribeServiceClient object.
+/*!
+ * \overload TranscribeServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 TranscribeServiceClient::TranscribeServiceClient(
     const QUrl &endpoint,
@@ -110,7 +113,7 @@ TranscribeServiceClient::TranscribeServiceClient(
     d->serviceName = QStringLiteral("transcribe");
 }
 
-/**
+/*!
  * Creates a new custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -124,7 +127,7 @@ CreateVocabularyResponse * TranscribeServiceClient::createVocabulary(const Creat
     return qobject_cast<CreateVocabularyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a vocabulary from Amazon Transcribe.
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -138,7 +141,7 @@ DeleteVocabularyResponse * TranscribeServiceClient::deleteVocabulary(const Delet
     return qobject_cast<DeleteVocabularyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a transcription job. To see the status of the job, check the
  * <code>TranscriptionJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you can find
  * the results at the location specified in the <code>TranscriptionFileUri</code>
@@ -154,7 +157,7 @@ GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const
     return qobject_cast<GetTranscriptionJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -168,7 +171,7 @@ GetVocabularyResponse * TranscribeServiceClient::getVocabulary(const GetVocabula
     return qobject_cast<GetVocabularyResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists transcription jobs with the specified
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -182,7 +185,7 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
     return qobject_cast<ListTranscriptionJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of vocabularies that match the specified criteria. If no criteria are specified, returns the entire list
  * of
  *
@@ -197,7 +200,7 @@ ListVocabulariesResponse * TranscribeServiceClient::listVocabularies(const ListV
     return qobject_cast<ListVocabulariesResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts an asynchronous job to transcribe speech to
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -211,7 +214,7 @@ StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(c
     return qobject_cast<StartTranscriptionJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing vocabulary with new
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -225,7 +228,7 @@ UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const Updat
     return qobject_cast<UpdateVocabularyResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TranscribeServiceClientPrivate
@@ -233,7 +236,7 @@ UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const Updat
  * @brief  Private implementation for TranscribeServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranscribeServiceClientPrivate object.

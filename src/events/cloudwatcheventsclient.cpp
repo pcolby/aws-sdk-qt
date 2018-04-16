@@ -55,46 +55,54 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudWatchEvents
+ * \brief The QtAws::CloudWatchEvents contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  CloudWatchEventsClient
+/*!
+ * \class QtAws::CloudWatchEvents::CloudWatchEventsClient
  *
- * @brief  Client for Amazon CloudWatch Events
+ * \brief The CloudWatchEventsClient class provides access the Amazon CloudWatch Events service.
  *
- * Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
- * they automatically send events into an event stream. You can create rules that match selected events in the stream and
- * route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
- * you can configure rules
+ * \ingroup CloudWatchEvents
  *
- * to> <ul> <li>
- *
- * Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
- * enters the running
- *
- * state> </li> <li>
- *
- * Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
- * availability
- *
- * risks> </li> <li>
- *
- * Periodically invoke a built-in target to create a snapshot of an Amazon EBS
- *
- * volume> </li> </ul>
- *
- * For more information about the features of Amazon CloudWatch Events, see the <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
  */
 
-/**
- * @brief  Constructs a new CloudWatchEventsClient object.
+/*!
+ * \brief Constructs a CloudWatchEventsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudWatchEventsClient::CloudWatchEventsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -113,21 +121,16 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     d->serviceName = QStringLiteral("events");
 }
 
-/**
- * @brief  Constructs a new CloudWatchEventsClient object.
+/*!
+ * \overload CloudWatchEventsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudWatchEventsClient::CloudWatchEventsClient(
     const QUrl &endpoint,
@@ -146,7 +149,7 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     d->serviceName = QStringLiteral("events");
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * rule>
@@ -169,7 +172,7 @@ DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest 
     return qobject_cast<DeleteRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays the external AWS accounts that are permitted to write events to your account using your account's event bus,
  * and the associated policy. To enable your account to receive events from other accounts, use
  *
@@ -184,7 +187,7 @@ DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const Descri
     return qobject_cast<DescribeEventBusResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified
  *
  * @param  request Request to send to Amazon CloudWatch Events.
@@ -198,7 +201,7 @@ DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRe
     return qobject_cast<DescribeRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables the specified rule. A disabled rule won't match any events, and won't self-trigger if it has a schedule
  *
  * expression>
@@ -217,7 +220,7 @@ DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleReque
     return qobject_cast<DisableRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the specified rule. If the rule does not exist, the operation
  *
  * fails>
@@ -236,7 +239,7 @@ EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest 
     return qobject_cast<EnableRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the rules for the specified target. You can see which of the rules in Amazon CloudWatch Events can invoke a
  * specific target in your
  *
@@ -251,7 +254,7 @@ ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(co
     return qobject_cast<ListRuleNamesByTargetResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists your Amazon CloudWatch Events rules. You can either list all the rules or you can provide a prefix to match to the
  * rule
  *
@@ -266,7 +269,7 @@ ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &re
     return qobject_cast<ListRulesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the targets assigned to the specified
  *
  * @param  request Request to send to Amazon CloudWatch Events.
@@ -280,7 +283,7 @@ ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const List
     return qobject_cast<ListTargetsByRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends custom events to Amazon CloudWatch Events so that they can be matched to
  *
  * @param  request Request to send to Amazon CloudWatch Events.
@@ -294,7 +297,7 @@ PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &re
     return qobject_cast<PutEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Running <code>PutPermission</code> permits the specified AWS account to put events to your account's default <i>event
  * bus</i>. CloudWatch Events rules in your account are triggered by these events arriving to your default event bus.
  *
@@ -323,7 +326,7 @@ PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissio
     return qobject_cast<PutPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates the specified rule. Rules are enabled by default, or based on value of the state. You can disable a
  * rule using
  *
@@ -361,7 +364,7 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
     return qobject_cast<PutRuleResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified targets to the specified rule, or updates the targets if they are already associated with the
  *
  * rule>
@@ -503,7 +506,7 @@ PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest 
     return qobject_cast<PutTargetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes the permission of another AWS account to be able to put events to your default event bus. Specify the account to
  * revoke by the <code>StatementId</code> value that you associated with the account when you granted it permission with
  * <code>PutPermission</code>. You can find the <code>StatementId</code> by using
@@ -519,7 +522,7 @@ RemovePermissionResponse * CloudWatchEventsClient::removePermission(const Remove
     return qobject_cast<RemovePermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified targets from the specified rule. When the rule is triggered, those targets are no longer be
  *
  * invoked>
@@ -544,7 +547,7 @@ RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTarget
     return qobject_cast<RemoveTargetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Tests whether the specified event pattern matches the provided
  *
  * event>
@@ -564,7 +567,7 @@ TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEv
     return qobject_cast<TestEventPatternResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudWatchEventsClientPrivate
@@ -572,7 +575,7 @@ TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEv
  * @brief  Private implementation for CloudWatchEventsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudWatchEventsClientPrivate object.

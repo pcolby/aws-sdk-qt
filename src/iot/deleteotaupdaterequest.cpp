@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteOTAUpdateRequest
+/*!
+ * \class QtAws::IoT::DeleteOTAUpdateRequest
  *
- * @brief  Implements IoT DeleteOTAUpdate requests.
+ * \brief The DeleteOTAUpdateRequest class encapsulates IoT DeleteOTAUpdate requests.
  *
- * @see    IoTClient::deleteOTAUpdate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteOTAUpdate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteOTAUpdateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteOTAUpdateRequest::DeleteOTAUpdateRequest(const DeleteOTAUpdateRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteOTAUpdateRequest object.
  */
 DeleteOTAUpdateRequest::DeleteOTAUpdateRequest()
@@ -53,13 +67,16 @@ DeleteOTAUpdateRequest::DeleteOTAUpdateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteOTAUpdateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteOTAUpdateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkRepl
     return new DeleteOTAUpdateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteOTAUpdateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteOTAUpdateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteOTAUpdateRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteOTAUpdateRequestPrivate object, copying another.

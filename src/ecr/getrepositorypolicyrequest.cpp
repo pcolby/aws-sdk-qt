@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetRepositoryPolicyRequest
+/*!
+ * \class QtAws::ECR::GetRepositoryPolicyRequest
  *
- * @brief  Implements ECR GetRepositoryPolicy requests.
+ * \brief The GetRepositoryPolicyRequest class encapsulates ECR GetRepositoryPolicy requests.
  *
- * @see    ECRClient::getRepositoryPolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getRepositoryPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRepositoryPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicy
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRepositoryPolicyRequest object.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest()
@@ -53,13 +60,16 @@ GetRepositoryPolicyRequest::GetRepositoryPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRepositoryPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRepositoryPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetwork
     return new GetRepositoryPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRepositoryPolicyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetwork
  * @brief  Private implementation for GetRepositoryPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRepositoryPolicyRequestPrivate object.
@@ -97,7 +107,7 @@ GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRepositoryPolicyRequestPrivate object, copying another.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeUserPoolClientRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeUserPoolClientRequest
  *
- * @brief  Implements CognitoIdentityProvider DescribeUserPoolClient requests.
+ * \brief The DescribeUserPoolClientRequest class encapsulates CognitoIdentityProvider DescribeUserPoolClient requests.
  *
- * @see    CognitoIdentityProviderClient::describeUserPoolClient
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeUserPoolClient
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserPoolClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DescribeUserPoolClientRequest::DescribeUserPoolClientRequest(const DescribeUserP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserPoolClientRequest object.
  */
 DescribeUserPoolClientRequest::DescribeUserPoolClientRequest()
@@ -53,13 +66,16 @@ DescribeUserPoolClientRequest::DescribeUserPoolClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeUserPoolClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeUserPoolClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserPoolClientRequest::response(QNetw
     return new DescribeUserPoolClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeUserPoolClientRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserPoolClientRequest::response(QNetw
  * @brief  Private implementation for DescribeUserPoolClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserPoolClientRequestPrivate object.
@@ -97,7 +113,7 @@ DescribeUserPoolClientRequestPrivate::DescribeUserPoolClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserPoolClientRequestPrivate object, copying another.

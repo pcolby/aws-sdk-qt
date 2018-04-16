@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ExpireSessionResponse
+/*!
+ * \class QtAws::AppStream::ExpireSessionResponse
  *
- * @brief  Handles AppStream ExpireSession responses.
+ * \brief The ExpireSessionResponse class encapsulates AppStream ExpireSession responses.
  *
- * @see    AppStreamClient::expireSession
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::expireSession
  */
 
-/**
+/*!
  * @brief  Constructs a new ExpireSessionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ExpireSessionRequest * ExpireSessionResponse::request() const
     return static_cast<const ExpireSessionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream ExpireSession response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ExpireSessionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ExpireSessionResponsePrivate
+ * \class ExpireSessionResponsePrivate
  *
- * @brief  Private implementation for ExpireSessionResponse.
+ * \brief Private implementation for ExpireSessionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExpireSessionResponsePrivate object.
@@ -91,7 +97,7 @@ ExpireSessionResponsePrivate::ExpireSessionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream ExpireSessionResponse element.
  *
  * @param  xml  XML stream to parse.

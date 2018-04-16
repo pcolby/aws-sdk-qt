@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AllocateAddressRequest
+/*!
+ * \class QtAws::EC2::AllocateAddressRequest
  *
- * @brief  Implements EC2 AllocateAddress requests.
+ * \brief The AllocateAddressRequest class encapsulates EC2 AllocateAddress requests.
  *
- * @see    EC2Client::allocateAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::allocateAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new AllocateAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AllocateAddressRequest::AllocateAddressRequest(const AllocateAddressRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AllocateAddressRequest object.
  */
 AllocateAddressRequest::AllocateAddressRequest()
@@ -53,13 +60,16 @@ AllocateAddressRequest::AllocateAddressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AllocateAddressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AllocateAddressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkRepl
     return new AllocateAddressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AllocateAddressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkRepl
  * @brief  Private implementation for AllocateAddressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AllocateAddressRequestPrivate object.
@@ -97,7 +107,7 @@ AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AllocateAddressRequestPrivate object, copying another.

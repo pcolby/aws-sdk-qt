@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  SWFResponse
+/*!
+ * \class QtAws::SWF::SWFResponse
  *
- * @brief  Handles SWF SWF responses.
+ * \brief The SWFResponse class is the base class for all SWF responses.
  *
- * @see    SWFClient::sWF
+ * \ingroup SWF
  */
 
-/**
+/*!
  * @brief  Constructs a new SWFResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SWFResponse::SWFResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SWFResponse object.
@@ -63,7 +63,7 @@ SWFResponse::SWFResponse(SWFResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SWFResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SWFResponsePrivate
@@ -92,7 +92,7 @@ void SWFResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SWFResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SWFResponsePrivate object.

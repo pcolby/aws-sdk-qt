@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteFunctionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::DeleteFunctionDefinitionRequest
  *
- * @brief  Implements Greengrass DeleteFunctionDefinition requests.
+ * \brief The DeleteFunctionDefinitionRequest class encapsulates Greengrass DeleteFunctionDefinition requests.
  *
- * @see    GreengrassClient::deleteFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteFunctionDefinitionRequest::DeleteFunctionDefinitionRequest(const DeleteFun
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFunctionDefinitionRequest object.
  */
 DeleteFunctionDefinitionRequest::DeleteFunctionDefinitionRequest()
@@ -53,13 +59,16 @@ DeleteFunctionDefinitionRequest::DeleteFunctionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFunctionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFunctionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionDefinitionRequest::response(QNe
     return new DeleteFunctionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFunctionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionDefinitionRequest::response(QNe
  * @brief  Private implementation for DeleteFunctionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteFunctionDefinitionRequestPrivate::DeleteFunctionDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFunctionDefinitionRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DeleteLifecyclePolicyResponse
+/*!
+ * \class QtAws::ECR::DeleteLifecyclePolicyResponse
  *
- * @brief  Handles ECR DeleteLifecyclePolicy responses.
+ * \brief The DeleteLifecyclePolicyResponse class encapsulates ECR DeleteLifecyclePolicy responses.
  *
- * @see    ECRClient::deleteLifecyclePolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::deleteLifecyclePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLifecyclePolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteLifecyclePolicyRequest * DeleteLifecyclePolicyResponse::request() co
     return static_cast<const DeleteLifecyclePolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR DeleteLifecyclePolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLifecyclePolicyResponsePrivate
+ * \class DeleteLifecyclePolicyResponsePrivate
  *
- * @brief  Private implementation for DeleteLifecyclePolicyResponse.
+ * \brief Private implementation for DeleteLifecyclePolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLifecyclePolicyResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR DeleteLifecyclePolicyResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeConstraintRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeConstraintRequest
  *
- * @brief  Implements ServiceCatalog DescribeConstraint requests.
+ * \brief The DescribeConstraintRequest class encapsulates ServiceCatalog DescribeConstraint requests.
  *
- * @see    ServiceCatalogClient::describeConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConstraintRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeConstraintRequest::DescribeConstraintRequest(const DescribeConstraintReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeConstraintRequest object.
  */
 DescribeConstraintRequest::DescribeConstraintRequest()
@@ -53,13 +62,16 @@ DescribeConstraintRequest::DescribeConstraintRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeConstraintRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeConstraintResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkR
     return new DescribeConstraintResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeConstraintRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkR
  * @brief  Private implementation for DescribeConstraintRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConstraintRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConstraintRequestPrivate object, copying another.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Translate {
 
-/**
- * @class  TranslateResponse
+/*!
+ * \class QtAws::Translate::TranslateResponse
  *
- * @brief  Handles Translate Translate responses.
+ * \brief The TranslateResponse class is the base class for all Translate responses.
  *
- * @see    TranslateClient::translate
+ * \ingroup Translate
  */
 
-/**
+/*!
  * @brief  Constructs a new TranslateResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ TranslateResponse::TranslateResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateResponse object.
@@ -63,7 +63,7 @@ TranslateResponse::TranslateResponse(TranslateResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void TranslateResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TranslateResponsePrivate
@@ -92,7 +92,7 @@ void TranslateResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for TranslateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateResponsePrivate object.

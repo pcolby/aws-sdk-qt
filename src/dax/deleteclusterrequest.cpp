@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DeleteClusterRequest
+/*!
+ * \class QtAws::DAX::DeleteClusterRequest
  *
- * @brief  Implements DAX DeleteCluster requests.
+ * \brief The DeleteClusterRequest class encapsulates DAX DeleteCluster requests.
  *
- * @see    DAXClient::deleteCluster
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::deleteCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
@@ -53,13 +60,16 @@ DeleteClusterRequest::DeleteClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
     return new DeleteClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteClusterRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClusterRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClusterRequestPrivate object, copying another.

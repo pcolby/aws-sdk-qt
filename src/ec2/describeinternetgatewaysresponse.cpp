@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeInternetGatewaysResponse
+/*!
+ * \class QtAws::EC2::DescribeInternetGatewaysResponse
  *
- * @brief  Handles EC2 DescribeInternetGateways responses.
+ * \brief The DescribeInternetGatewaysResponse class encapsulates EC2 DescribeInternetGateways responses.
  *
- * @see    EC2Client::describeInternetGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeInternetGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInternetGatewaysResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeInternetGatewaysRequest * DescribeInternetGatewaysResponse::reques
     return static_cast<const DescribeInternetGatewaysRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeInternetGateways response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeInternetGatewaysResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeInternetGatewaysResponsePrivate
+ * \class DescribeInternetGatewaysResponsePrivate
  *
- * @brief  Private implementation for DescribeInternetGatewaysResponse.
+ * \brief Private implementation for DescribeInternetGatewaysResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInternetGatewaysResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeInternetGatewaysResponsePrivate::DescribeInternetGatewaysResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeInternetGatewaysResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteUsagePlanResponse
+/*!
+ * \class QtAws::APIGateway::DeleteUsagePlanResponse
  *
- * @brief  Handles APIGateway DeleteUsagePlan responses.
+ * \brief The DeleteUsagePlanResponse class encapsulates APIGateway DeleteUsagePlan responses.
  *
- * @see    APIGatewayClient::deleteUsagePlan
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteUsagePlan
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUsagePlanResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteUsagePlanRequest * DeleteUsagePlanResponse::request() const
     return static_cast<const DeleteUsagePlanRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteUsagePlan response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteUsagePlanResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteUsagePlanResponsePrivate
+ * \class DeleteUsagePlanResponsePrivate
  *
- * @brief  Private implementation for DeleteUsagePlanResponse.
+ * \brief Private implementation for DeleteUsagePlanResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUsagePlanResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteUsagePlanResponse element.
  *
  * @param  xml  XML stream to parse.

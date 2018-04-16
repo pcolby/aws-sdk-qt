@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  PutLifecycleHookRequest
+/*!
+ * \class QtAws::AutoScaling::PutLifecycleHookRequest
  *
- * @brief  Implements AutoScaling PutLifecycleHook requests.
+ * \brief The PutLifecycleHookRequest class encapsulates AutoScaling PutLifecycleHook requests.
  *
- * @see    AutoScalingClient::putLifecycleHook
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::putLifecycleHook
  */
 
-/**
+/*!
  * @brief  Constructs a new PutLifecycleHookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutLifecycleHookRequest::PutLifecycleHookRequest(const PutLifecycleHookRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutLifecycleHookRequest object.
  */
 PutLifecycleHookRequest::PutLifecycleHookRequest()
@@ -53,13 +61,16 @@ PutLifecycleHookRequest::PutLifecycleHookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutLifecycleHookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutLifecycleHookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkRep
     return new PutLifecycleHookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutLifecycleHookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkRep
  * @brief  Private implementation for PutLifecycleHookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutLifecycleHookRequestPrivate object.
@@ -97,7 +108,7 @@ PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutLifecycleHookRequestPrivate object, copying another.

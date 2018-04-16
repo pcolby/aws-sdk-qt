@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  GetPasswordDataRequest
+/*!
+ * \class QtAws::EC2::GetPasswordDataRequest
  *
- * @brief  Implements EC2 GetPasswordData requests.
+ * \brief The GetPasswordDataRequest class encapsulates EC2 GetPasswordData requests.
  *
- * @see    EC2Client::getPasswordData
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::getPasswordData
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPasswordDataRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetPasswordDataRequest::GetPasswordDataRequest(const GetPasswordDataRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPasswordDataRequest object.
  */
 GetPasswordDataRequest::GetPasswordDataRequest()
@@ -53,13 +60,16 @@ GetPasswordDataRequest::GetPasswordDataRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPasswordDataRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPasswordDataResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkRepl
     return new GetPasswordDataResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPasswordDataRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkRepl
  * @brief  Private implementation for GetPasswordDataRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPasswordDataRequestPrivate object.
@@ -97,7 +107,7 @@ GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPasswordDataRequestPrivate object, copying another.

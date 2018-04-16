@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  ListInputsResponse
+/*!
+ * \class QtAws::MediaLive::ListInputsResponse
  *
- * @brief  Handles MediaLive ListInputs responses.
+ * \brief The ListInputsResponse class encapsulates MediaLive ListInputs responses.
  *
- * @see    MediaLiveClient::listInputs
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::listInputs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInputsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListInputsRequest * ListInputsResponse::request() const
     return static_cast<const ListInputsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive ListInputs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListInputsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListInputsResponsePrivate
+ * \class ListInputsResponsePrivate
  *
- * @brief  Private implementation for ListInputsResponse.
+ * \brief Private implementation for ListInputsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInputsResponsePrivate object.
@@ -91,7 +94,7 @@ ListInputsResponsePrivate::ListInputsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive ListInputsResponse element.
  *
  * @param  xml  XML stream to parse.

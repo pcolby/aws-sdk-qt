@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  LookupPolicyResponse
+/*!
+ * \class QtAws::CloudDirectory::LookupPolicyResponse
  *
- * @brief  Handles CloudDirectory LookupPolicy responses.
+ * \brief The LookupPolicyResponse class encapsulates CloudDirectory LookupPolicy responses.
  *
- * @see    CloudDirectoryClient::lookupPolicy
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::lookupPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new LookupPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const LookupPolicyRequest * LookupPolicyResponse::request() const
     return static_cast<const LookupPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory LookupPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void LookupPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  LookupPolicyResponsePrivate
+ * \class LookupPolicyResponsePrivate
  *
- * @brief  Private implementation for LookupPolicyResponse.
+ * \brief Private implementation for LookupPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LookupPolicyResponsePrivate object.
@@ -91,7 +101,7 @@ LookupPolicyResponsePrivate::LookupPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory LookupPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

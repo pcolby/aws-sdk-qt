@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  CreateIntentVersionRequest
+/*!
+ * \class QtAws::LexModelBuildingService::CreateIntentVersionRequest
  *
- * @brief  Implements LexModelBuildingService CreateIntentVersion requests.
+ * \brief The CreateIntentVersionRequest class encapsulates LexModelBuildingService CreateIntentVersion requests.
  *
- * @see    LexModelBuildingServiceClient::createIntentVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::createIntentVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIntentVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateIntentVersionRequest::CreateIntentVersionRequest(const CreateIntentVersion
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateIntentVersionRequest object.
  */
 CreateIntentVersionRequest::CreateIntentVersionRequest()
@@ -53,13 +60,16 @@ CreateIntentVersionRequest::CreateIntentVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateIntentVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateIntentVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateIntentVersionRequest::response(QNetwork
     return new CreateIntentVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateIntentVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateIntentVersionRequest::response(QNetwork
  * @brief  Private implementation for CreateIntentVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIntentVersionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIntentVersionRequestPrivate object, copying another.

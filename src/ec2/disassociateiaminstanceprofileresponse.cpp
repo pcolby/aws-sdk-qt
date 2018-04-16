@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateIamInstanceProfileResponse
+/*!
+ * \class QtAws::EC2::DisassociateIamInstanceProfileResponse
  *
- * @brief  Handles EC2 DisassociateIamInstanceProfile responses.
+ * \brief The DisassociateIamInstanceProfileResponse class encapsulates EC2 DisassociateIamInstanceProfile responses.
  *
- * @see    EC2Client::disassociateIamInstanceProfile
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateIamInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateIamInstanceProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DisassociateIamInstanceProfileRequest * DisassociateIamInstanceProfileResp
     return static_cast<const DisassociateIamInstanceProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DisassociateIamInstanceProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateIamInstanceProfileResponsePrivate
+ * \class DisassociateIamInstanceProfileResponsePrivate
  *
- * @brief  Private implementation for DisassociateIamInstanceProfileResponse.
+ * \brief Private implementation for DisassociateIamInstanceProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateIamInstanceProfileResponsePrivate object.
@@ -91,7 +98,7 @@ DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DisassociateIamInstanceProfileResponse element.
  *
  * @param  xml  XML stream to parse.

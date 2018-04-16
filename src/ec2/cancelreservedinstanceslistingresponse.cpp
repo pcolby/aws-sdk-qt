@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelReservedInstancesListingResponse
+/*!
+ * \class QtAws::EC2::CancelReservedInstancesListingResponse
  *
- * @brief  Handles EC2 CancelReservedInstancesListing responses.
+ * \brief The CancelReservedInstancesListingResponse class encapsulates EC2 CancelReservedInstancesListing responses.
  *
- * @see    EC2Client::cancelReservedInstancesListing
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelReservedInstancesListing
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelReservedInstancesListingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CancelReservedInstancesListingRequest * CancelReservedInstancesListingResp
     return static_cast<const CancelReservedInstancesListingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CancelReservedInstancesListing response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CancelReservedInstancesListingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelReservedInstancesListingResponsePrivate
+ * \class CancelReservedInstancesListingResponsePrivate
  *
- * @brief  Private implementation for CancelReservedInstancesListingResponse.
+ * \brief Private implementation for CancelReservedInstancesListingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelReservedInstancesListingResponsePrivate object.
@@ -91,7 +98,7 @@ CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CancelReservedInstancesListingResponse element.
  *
  * @param  xml  XML stream to parse.

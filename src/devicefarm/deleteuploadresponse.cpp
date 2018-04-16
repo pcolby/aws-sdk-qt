@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteUploadResponse
+/*!
+ * \class QtAws::DeviceFarm::DeleteUploadResponse
  *
- * @brief  Handles DeviceFarm DeleteUpload responses.
+ * \brief The DeleteUploadResponse class encapsulates DeviceFarm DeleteUpload responses.
  *
- * @see    DeviceFarmClient::deleteUpload
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUploadResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteUploadRequest * DeleteUploadResponse::request() const
     return static_cast<const DeleteUploadRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm DeleteUpload response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteUploadResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteUploadResponsePrivate
+ * \class DeleteUploadResponsePrivate
  *
- * @brief  Private implementation for DeleteUploadResponse.
+ * \brief Private implementation for DeleteUploadResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUploadResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteUploadResponsePrivate::DeleteUploadResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm DeleteUploadResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminCreateUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminCreateUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminCreateUser requests.
+ * \brief The AdminCreateUserRequest class encapsulates CognitoIdentityProvider AdminCreateUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminCreateUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminCreateUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminCreateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminCreateUserRequest::AdminCreateUserRequest(const AdminCreateUserRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminCreateUserRequest object.
  */
 AdminCreateUserRequest::AdminCreateUserRequest()
@@ -53,13 +66,16 @@ AdminCreateUserRequest::AdminCreateUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminCreateUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminCreateUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkRepl
     return new AdminCreateUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminCreateUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkRepl
  * @brief  Private implementation for AdminCreateUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminCreateUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminCreateUserRequestPrivate::AdminCreateUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminCreateUserRequestPrivate object, copying another.

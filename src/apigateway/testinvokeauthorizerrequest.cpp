@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  TestInvokeAuthorizerRequest
+/*!
+ * \class QtAws::APIGateway::TestInvokeAuthorizerRequest
  *
- * @brief  Implements APIGateway TestInvokeAuthorizer requests.
+ * \brief The TestInvokeAuthorizerRequest class encapsulates APIGateway TestInvokeAuthorizer requests.
  *
- * @see    APIGatewayClient::testInvokeAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::testInvokeAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new TestInvokeAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest(const TestInvokeAuthori
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestInvokeAuthorizerRequest object.
  */
 TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest()
@@ -53,13 +61,16 @@ TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestInvokeAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestInvokeAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
     return new TestInvokeAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestInvokeAuthorizerRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
  * @brief  Private implementation for TestInvokeAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestInvokeAuthorizerRequestPrivate object.
@@ -97,7 +108,7 @@ TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestInvokeAuthorizerRequestPrivate object, copying another.

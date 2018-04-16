@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetModelRequest
+/*!
+ * \class QtAws::APIGateway::GetModelRequest
  *
- * @brief  Implements APIGateway GetModel requests.
+ * \brief The GetModelRequest class encapsulates APIGateway GetModel requests.
  *
- * @see    APIGatewayClient::getModel
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getModel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetModelRequest::GetModelRequest(const GetModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetModelRequest object.
  */
 GetModelRequest::GetModelRequest()
@@ -53,13 +61,16 @@ GetModelRequest::GetModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetModelRequest::response(QNetworkReply * con
     return new GetModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetModelRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetModelRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetModelRequestPrivate object.
@@ -97,7 +108,7 @@ GetModelRequestPrivate::GetModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetModelRequestPrivate object, copying another.

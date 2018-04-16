@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  UpdateQueueResponse
+/*!
+ * \class QtAws::MediaConvert::UpdateQueueResponse
  *
- * @brief  Handles MediaConvert UpdateQueue responses.
+ * \brief The UpdateQueueResponse class encapsulates MediaConvert UpdateQueue responses.
  *
- * @see    MediaConvertClient::updateQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::updateQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateQueueResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateQueueRequest * UpdateQueueResponse::request() const
     return static_cast<const UpdateQueueRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert UpdateQueue response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateQueueResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateQueueResponsePrivate
+ * \class UpdateQueueResponsePrivate
  *
- * @brief  Private implementation for UpdateQueueResponse.
+ * \brief Private implementation for UpdateQueueResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateQueueResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateQueueResponsePrivate::UpdateQueueResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert UpdateQueueResponse element.
  *
  * @param  xml  XML stream to parse.

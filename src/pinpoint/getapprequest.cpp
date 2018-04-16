@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetAppRequest
+/*!
+ * \class QtAws::Pinpoint::GetAppRequest
  *
- * @brief  Implements Pinpoint GetApp requests.
+ * \brief The GetAppRequest class encapsulates Pinpoint GetApp requests.
  *
- * @see    PinpointClient::getApp
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApp
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAppRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetAppRequest::GetAppRequest(const GetAppRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAppRequest object.
  */
 GetAppRequest::GetAppRequest()
@@ -53,13 +56,16 @@ GetAppRequest::GetAppRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAppRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAppResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetAppRequest::response(QNetworkReply * const
     return new GetAppResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAppRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetAppRequest::response(QNetworkReply * const
  * @brief  Private implementation for GetAppRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAppRequestPrivate object.
@@ -97,7 +103,7 @@ GetAppRequestPrivate::GetAppRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAppRequestPrivate object, copying another.

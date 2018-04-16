@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeleteCertificateRequest
+/*!
+ * \class QtAws::IoT::DeleteCertificateRequest
  *
- * @brief  Implements IoT DeleteCertificate requests.
+ * \brief The DeleteCertificateRequest class encapsulates IoT DeleteCertificate requests.
  *
- * @see    IoTClient::deleteCertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deleteCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateRequest object.
  */
 DeleteCertificateRequest::DeleteCertificateRequest()
@@ -53,13 +67,16 @@ DeleteCertificateRequest::DeleteCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
     return new DeleteCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateRequestPrivate object, copying another.

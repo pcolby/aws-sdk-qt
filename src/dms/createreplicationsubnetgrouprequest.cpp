@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateReplicationSubnetGroupRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupRequest
  *
- * @brief  Implements DatabaseMigrationService CreateReplicationSubnetGroup requests.
+ * \brief The CreateReplicationSubnetGroupRequest class encapsulates DatabaseMigrationService CreateReplicationSubnetGroup requests.
  *
- * @see    DatabaseMigrationServiceClient::createReplicationSubnetGroup
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createReplicationSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest(const C
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationSubnetGroupRequest object.
  */
 CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest()
@@ -53,13 +67,16 @@ CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReplicationSubnetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReplicationSubnetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response
     return new CreateReplicationSubnetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReplicationSubnetGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response
  * @brief  Private implementation for CreateReplicationSubnetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationSubnetGroupRequestPrivate object.
@@ -97,7 +114,7 @@ CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationSubnetGroupRequestPrivate object, copying another.

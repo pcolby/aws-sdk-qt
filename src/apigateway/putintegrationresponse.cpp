@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  PutIntegrationResponse
+/*!
+ * \class QtAws::APIGateway::PutIntegrationResponse
  *
- * @brief  Handles APIGateway PutIntegration responses.
+ * \brief The PutIntegrationResponse class encapsulates APIGateway PutIntegration responses.
  *
- * @see    APIGatewayClient::putIntegration
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::putIntegration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutIntegrationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const PutIntegrationRequest * PutIntegrationResponse::request() const
     return static_cast<const PutIntegrationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway PutIntegration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void PutIntegrationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutIntegrationResponsePrivate
+ * \class PutIntegrationResponsePrivate
  *
- * @brief  Private implementation for PutIntegrationResponse.
+ * \brief Private implementation for PutIntegrationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIntegrationResponsePrivate object.
@@ -91,7 +99,7 @@ PutIntegrationResponsePrivate::PutIntegrationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway PutIntegrationResponse element.
  *
  * @param  xml  XML stream to parse.

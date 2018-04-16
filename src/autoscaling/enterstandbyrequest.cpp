@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  EnterStandbyRequest
+/*!
+ * \class QtAws::AutoScaling::EnterStandbyRequest
  *
- * @brief  Implements AutoScaling EnterStandby requests.
+ * \brief The EnterStandbyRequest class encapsulates AutoScaling EnterStandby requests.
  *
- * @see    AutoScalingClient::enterStandby
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::enterStandby
  */
 
-/**
+/*!
  * @brief  Constructs a new EnterStandbyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ EnterStandbyRequest::EnterStandbyRequest(const EnterStandbyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnterStandbyRequest object.
  */
 EnterStandbyRequest::EnterStandbyRequest()
@@ -53,13 +61,16 @@ EnterStandbyRequest::EnterStandbyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnterStandbyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnterStandbyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply *
     return new EnterStandbyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnterStandbyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply *
  * @brief  Private implementation for EnterStandbyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnterStandbyRequestPrivate object.
@@ -97,7 +108,7 @@ EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnterStandbyRequestPrivate object, copying another.

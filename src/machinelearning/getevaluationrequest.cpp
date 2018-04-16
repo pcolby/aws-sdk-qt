@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetEvaluationRequest
+/*!
+ * \class QtAws::MachineLearning::GetEvaluationRequest
  *
- * @brief  Implements MachineLearning GetEvaluation requests.
+ * \brief The GetEvaluationRequest class encapsulates MachineLearning GetEvaluation requests.
  *
- * @see    MachineLearningClient::getEvaluation
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getEvaluation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEvaluationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetEvaluationRequest::GetEvaluationRequest(const GetEvaluationRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEvaluationRequest object.
  */
 GetEvaluationRequest::GetEvaluationRequest()
@@ -53,13 +56,16 @@ GetEvaluationRequest::GetEvaluationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEvaluationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEvaluationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply 
     return new GetEvaluationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEvaluationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply 
  * @brief  Private implementation for GetEvaluationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEvaluationRequestPrivate object.
@@ -97,7 +103,7 @@ GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEvaluationRequestPrivate object, copying another.

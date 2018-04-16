@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  ListWorkflowTypesRequest
+/*!
+ * \class QtAws::SWF::ListWorkflowTypesRequest
  *
- * @brief  Implements SWF ListWorkflowTypes requests.
+ * \brief The ListWorkflowTypesRequest class encapsulates SWF ListWorkflowTypes requests.
  *
- * @see    SWFClient::listWorkflowTypes
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::listWorkflowTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListWorkflowTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ ListWorkflowTypesRequest::ListWorkflowTypesRequest(const ListWorkflowTypesReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListWorkflowTypesRequest object.
  */
 ListWorkflowTypesRequest::ListWorkflowTypesRequest()
@@ -53,13 +72,16 @@ ListWorkflowTypesRequest::ListWorkflowTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListWorkflowTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListWorkflowTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkRe
     return new ListWorkflowTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListWorkflowTypesRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkRe
  * @brief  Private implementation for ListWorkflowTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkflowTypesRequestPrivate object.
@@ -97,7 +119,7 @@ ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkflowTypesRequestPrivate object, copying another.

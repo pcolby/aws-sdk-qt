@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DeletePresetRequest
+/*!
+ * \class QtAws::MediaConvert::DeletePresetRequest
  *
- * @brief  Implements MediaConvert DeletePreset requests.
+ * \brief The DeletePresetRequest class encapsulates MediaConvert DeletePreset requests.
  *
- * @see    MediaConvertClient::deletePreset
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::deletePreset
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePresetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeletePresetRequest::DeletePresetRequest(const DeletePresetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePresetRequest object.
  */
 DeletePresetRequest::DeletePresetRequest()
@@ -53,13 +56,16 @@ DeletePresetRequest::DeletePresetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePresetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePresetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
     return new DeletePresetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePresetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
  * @brief  Private implementation for DeletePresetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePresetRequestPrivate object.
@@ -97,7 +103,7 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePresetRequestPrivate object, copying another.

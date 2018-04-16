@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  CompareFacesRequest
+/*!
+ * \class QtAws::Rekognition::CompareFacesRequest
  *
- * @brief  Implements Rekognition CompareFaces requests.
+ * \brief The CompareFacesRequest class encapsulates Rekognition CompareFaces requests.
  *
- * @see    RekognitionClient::compareFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::compareFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new CompareFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CompareFacesRequest::CompareFacesRequest(const CompareFacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CompareFacesRequest object.
  */
 CompareFacesRequest::CompareFacesRequest()
@@ -53,13 +57,16 @@ CompareFacesRequest::CompareFacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CompareFacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CompareFacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CompareFacesRequest::response(QNetworkReply *
     return new CompareFacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CompareFacesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CompareFacesRequest::response(QNetworkReply *
  * @brief  Private implementation for CompareFacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompareFacesRequestPrivate object.
@@ -97,7 +104,7 @@ CompareFacesRequestPrivate::CompareFacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompareFacesRequestPrivate object, copying another.

@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  DescribeAccountLimitsResponse
+/*!
+ * \class QtAws::CloudFormation::DescribeAccountLimitsResponse
  *
- * @brief  Handles CloudFormation DescribeAccountLimits responses.
+ * \brief The DescribeAccountLimitsResponse class encapsulates CloudFormation DescribeAccountLimits responses.
  *
- * @see    CloudFormationClient::describeAccountLimits
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::describeAccountLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAccountLimitsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() co
     return static_cast<const DescribeAccountLimitsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFormation DescribeAccountLimits response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAccountLimitsResponsePrivate
+ * \class DescribeAccountLimitsResponsePrivate
  *
- * @brief  Private implementation for DescribeAccountLimitsResponse.
+ * \brief Private implementation for DescribeAccountLimitsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAccountLimitsResponsePrivate object.
@@ -91,7 +116,7 @@ DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFormation DescribeAccountLimitsResponse element.
  *
  * @param  xml  XML stream to parse.

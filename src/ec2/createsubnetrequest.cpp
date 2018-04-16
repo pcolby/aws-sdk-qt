@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateSubnetRequest
+/*!
+ * \class QtAws::EC2::CreateSubnetRequest
  *
- * @brief  Implements EC2 CreateSubnet requests.
+ * \brief The CreateSubnetRequest class encapsulates EC2 CreateSubnet requests.
  *
- * @see    EC2Client::createSubnet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createSubnet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubnetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateSubnetRequest::CreateSubnetRequest(const CreateSubnetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSubnetRequest object.
  */
 CreateSubnetRequest::CreateSubnetRequest()
@@ -53,13 +60,16 @@ CreateSubnetRequest::CreateSubnetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSubnetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSubnetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetRequest::response(QNetworkReply *
     return new CreateSubnetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSubnetRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateSubnetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubnetRequestPrivate object.
@@ -97,7 +107,7 @@ CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubnetRequestPrivate object, copying another.

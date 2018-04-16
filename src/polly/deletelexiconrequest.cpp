@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  DeleteLexiconRequest
+/*!
+ * \class QtAws::Polly::DeleteLexiconRequest
  *
- * @brief  Implements Polly DeleteLexicon requests.
+ * \brief The DeleteLexiconRequest class encapsulates Polly DeleteLexicon requests.
  *
- * @see    PollyClient::deleteLexicon
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::deleteLexicon
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLexiconRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteLexiconRequest::DeleteLexiconRequest(const DeleteLexiconRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLexiconRequest object.
  */
 DeleteLexiconRequest::DeleteLexiconRequest()
@@ -53,13 +63,16 @@ DeleteLexiconRequest::DeleteLexiconRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLexiconRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLexiconResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply 
     return new DeleteLexiconResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLexiconRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteLexiconRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLexiconRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLexiconRequestPrivate object, copying another.

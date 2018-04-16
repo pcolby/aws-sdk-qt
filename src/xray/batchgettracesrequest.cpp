@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  BatchGetTracesRequest
+/*!
+ * \class QtAws::XRay::BatchGetTracesRequest
  *
- * @brief  Implements XRay BatchGetTraces requests.
+ * \brief The BatchGetTracesRequest class encapsulates XRay BatchGetTraces requests.
  *
- * @see    XRayClient::batchGetTraces
+ * \ingroup XRay
+ *
+ *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *
+ * \sa XRayClient::batchGetTraces
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetTracesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ BatchGetTracesRequest::BatchGetTracesRequest(const BatchGetTracesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchGetTracesRequest object.
  */
 BatchGetTracesRequest::BatchGetTracesRequest()
@@ -53,13 +57,16 @@ BatchGetTracesRequest::BatchGetTracesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchGetTracesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchGetTracesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply
     return new BatchGetTracesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchGetTracesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply
  * @brief  Private implementation for BatchGetTracesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetTracesRequestPrivate object.
@@ -97,7 +104,7 @@ BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetTracesRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeIdentityProviderResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeIdentityProviderResponse
  *
- * @brief  Handles CognitoIdentityProvider DescribeIdentityProvider responses.
+ * \brief The DescribeIdentityProviderResponse class encapsulates CognitoIdentityProvider DescribeIdentityProvider responses.
  *
- * @see    CognitoIdentityProviderClient::describeIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIdentityProviderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DescribeIdentityProviderRequest * DescribeIdentityProviderResponse::reques
     return static_cast<const DescribeIdentityProviderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DescribeIdentityProvider response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DescribeIdentityProviderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeIdentityProviderResponsePrivate
+ * \class DescribeIdentityProviderResponsePrivate
  *
- * @brief  Private implementation for DescribeIdentityProviderResponse.
+ * \brief Private implementation for DescribeIdentityProviderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIdentityProviderResponsePrivate object.
@@ -91,7 +104,7 @@ DescribeIdentityProviderResponsePrivate::DescribeIdentityProviderResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DescribeIdentityProviderResponse element.
  *
  * @param  xml  XML stream to parse.

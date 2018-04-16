@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteIntegrationResponseRequest
+/*!
+ * \class QtAws::APIGateway::DeleteIntegrationResponseRequest
  *
- * @brief  Implements APIGateway DeleteIntegrationResponse requests.
+ * \brief The DeleteIntegrationResponseRequest class encapsulates APIGateway DeleteIntegrationResponse requests.
  *
- * @see    APIGatewayClient::deleteIntegrationResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteIntegrationResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntegrationResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest(const DeleteI
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIntegrationResponseRequest object.
  */
 DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest()
@@ -53,13 +61,16 @@ DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIntegrationResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIntegrationResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationResponseRequest::response(QN
     return new DeleteIntegrationResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIntegrationResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationResponseRequest::response(QN
  * @brief  Private implementation for DeleteIntegrationResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntegrationResponseRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIntegrationResponseRequestPrivate object, copying another.

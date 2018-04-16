@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  DeleteScalingPlanResponse
+/*!
+ * \class QtAws::AutoScalingPlans::DeleteScalingPlanResponse
  *
- * @brief  Handles AutoScalingPlans DeleteScalingPlan responses.
+ * \brief The DeleteScalingPlanResponse class encapsulates AutoScalingPlans DeleteScalingPlan responses.
  *
- * @see    AutoScalingPlansClient::deleteScalingPlan
+ * \ingroup AutoScalingPlans
+ *
+ *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
+ *  scaling for your scalable
+ * 
+ *  resources>
+ * 
+ *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
+ *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
+ *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ *  maintain resource utilization at the target value that you
+ *
+ * \sa AutoScalingPlansClient::deleteScalingPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteScalingPlanResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DeleteScalingPlanRequest * DeleteScalingPlanResponse::request() const
     return static_cast<const DeleteScalingPlanRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScalingPlans DeleteScalingPlan response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DeleteScalingPlanResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteScalingPlanResponsePrivate
+ * \class DeleteScalingPlanResponsePrivate
  *
- * @brief  Private implementation for DeleteScalingPlanResponse.
+ * \brief Private implementation for DeleteScalingPlanResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteScalingPlanResponsePrivate object.
@@ -91,7 +103,7 @@ DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScalingPlans DeleteScalingPlanResponse element.
  *
  * @param  xml  XML stream to parse.

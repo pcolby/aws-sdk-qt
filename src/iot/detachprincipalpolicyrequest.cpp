@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DetachPrincipalPolicyRequest
+/*!
+ * \class QtAws::IoT::DetachPrincipalPolicyRequest
  *
- * @brief  Implements IoT DetachPrincipalPolicy requests.
+ * \brief The DetachPrincipalPolicyRequest class encapsulates IoT DetachPrincipalPolicy requests.
  *
- * @see    IoTClient::detachPrincipalPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::detachPrincipalPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachPrincipalPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DetachPrincipalPolicyRequest::DetachPrincipalPolicyRequest(const DetachPrincipal
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachPrincipalPolicyRequest object.
  */
 DetachPrincipalPolicyRequest::DetachPrincipalPolicyRequest()
@@ -53,13 +67,16 @@ DetachPrincipalPolicyRequest::DetachPrincipalPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachPrincipalPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachPrincipalPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DetachPrincipalPolicyRequest::response(QNetwo
     return new DetachPrincipalPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachPrincipalPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DetachPrincipalPolicyRequest::response(QNetwo
  * @brief  Private implementation for DetachPrincipalPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPrincipalPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ DetachPrincipalPolicyRequestPrivate::DetachPrincipalPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPrincipalPolicyRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportKeyPairRequest
+/*!
+ * \class QtAws::EC2::ImportKeyPairRequest
  *
- * @brief  Implements EC2 ImportKeyPair requests.
+ * \brief The ImportKeyPairRequest class encapsulates EC2 ImportKeyPair requests.
  *
- * @see    EC2Client::importKeyPair
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importKeyPair
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportKeyPairRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ImportKeyPairRequest::ImportKeyPairRequest(const ImportKeyPairRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportKeyPairRequest object.
  */
 ImportKeyPairRequest::ImportKeyPairRequest()
@@ -53,13 +60,16 @@ ImportKeyPairRequest::ImportKeyPairRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportKeyPairRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportKeyPairResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
     return new ImportKeyPairResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportKeyPairRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
  * @brief  Private implementation for ImportKeyPairRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportKeyPairRequestPrivate object.
@@ -97,7 +107,7 @@ ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportKeyPairRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  StartChannelRequest
+/*!
+ * \class QtAws::MediaLive::StartChannelRequest
  *
- * @brief  Implements MediaLive StartChannel requests.
+ * \brief The StartChannelRequest class encapsulates MediaLive StartChannel requests.
  *
- * @see    MediaLiveClient::startChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::startChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new StartChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StartChannelRequest::StartChannelRequest(const StartChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartChannelRequest object.
  */
 StartChannelRequest::StartChannelRequest()
@@ -53,13 +56,16 @@ StartChannelRequest::StartChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StartChannelRequest::response(QNetworkReply *
     return new StartChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StartChannelRequest::response(QNetworkReply *
  * @brief  Private implementation for StartChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartChannelRequestPrivate object.
@@ -97,7 +103,7 @@ StartChannelRequestPrivate::StartChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartChannelRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetEventSourceMappingResponse
+/*!
+ * \class QtAws::Lambda::GetEventSourceMappingResponse
  *
- * @brief  Handles Lambda GetEventSourceMapping responses.
+ * \brief The GetEventSourceMappingResponse class encapsulates Lambda GetEventSourceMapping responses.
  *
- * @see    LambdaClient::getEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEventSourceMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetEventSourceMappingRequest * GetEventSourceMappingResponse::request() co
     return static_cast<const GetEventSourceMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda GetEventSourceMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetEventSourceMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetEventSourceMappingResponsePrivate
+ * \class GetEventSourceMappingResponsePrivate
  *
- * @brief  Private implementation for GetEventSourceMappingResponse.
+ * \brief Private implementation for GetEventSourceMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEventSourceMappingResponsePrivate object.
@@ -91,7 +105,7 @@ GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda GetEventSourceMappingResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  CreatePipelineResponse
+/*!
+ * \class QtAws::ElasticTranscoder::CreatePipelineResponse
  *
- * @brief  Handles ElasticTranscoder CreatePipeline responses.
+ * \brief The CreatePipelineResponse class encapsulates ElasticTranscoder CreatePipeline responses.
  *
- * @see    ElasticTranscoderClient::createPipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::createPipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePipelineResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreatePipelineRequest * CreatePipelineResponse::request() const
     return static_cast<const CreatePipelineRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticTranscoder CreatePipeline response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreatePipelineResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePipelineResponsePrivate
+ * \class CreatePipelineResponsePrivate
  *
- * @brief  Private implementation for CreatePipelineResponse.
+ * \brief Private implementation for CreatePipelineResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePipelineResponsePrivate object.
@@ -91,7 +97,7 @@ CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticTranscoder CreatePipelineResponse element.
  *
  * @param  xml  XML stream to parse.

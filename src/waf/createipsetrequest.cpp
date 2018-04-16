@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateIPSetRequest
+/*!
+ * \class QtAws::WAF::CreateIPSetRequest
  *
- * @brief  Implements WAF CreateIPSet requests.
+ * \brief The CreateIPSetRequest class encapsulates WAF CreateIPSet requests.
  *
- * @see    WAFClient::createIPSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateIPSetRequest object.
  */
 CreateIPSetRequest::CreateIPSetRequest()
@@ -53,13 +61,16 @@ CreateIPSetRequest::CreateIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
     return new CreateIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateIPSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIPSetRequestPrivate object.
@@ -97,7 +108,7 @@ CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateIPSetRequestPrivate object, copying another.

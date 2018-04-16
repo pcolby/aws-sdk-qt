@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteMethodRequest
+/*!
+ * \class QtAws::APIGateway::DeleteMethodRequest
  *
- * @brief  Implements APIGateway DeleteMethod requests.
+ * \brief The DeleteMethodRequest class encapsulates APIGateway DeleteMethod requests.
  *
- * @see    APIGatewayClient::deleteMethod
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteMethod
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteMethodRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteMethodRequest::DeleteMethodRequest(const DeleteMethodRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteMethodRequest object.
  */
 DeleteMethodRequest::DeleteMethodRequest()
@@ -53,13 +61,16 @@ DeleteMethodRequest::DeleteMethodRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteMethodRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteMethodResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodRequest::response(QNetworkReply *
     return new DeleteMethodResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteMethodRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteMethodRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMethodRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteMethodRequestPrivate::DeleteMethodRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteMethodRequestPrivate object, copying another.

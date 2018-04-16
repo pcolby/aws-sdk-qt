@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  ImportRestApiResponse
+/*!
+ * \class QtAws::APIGateway::ImportRestApiResponse
  *
- * @brief  Handles APIGateway ImportRestApi responses.
+ * \brief The ImportRestApiResponse class encapsulates APIGateway ImportRestApi responses.
  *
- * @see    APIGatewayClient::importRestApi
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::importRestApi
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportRestApiResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ImportRestApiRequest * ImportRestApiResponse::request() const
     return static_cast<const ImportRestApiRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway ImportRestApi response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ImportRestApiResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportRestApiResponsePrivate
+ * \class ImportRestApiResponsePrivate
  *
- * @brief  Private implementation for ImportRestApiResponse.
+ * \brief Private implementation for ImportRestApiResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportRestApiResponsePrivate object.
@@ -91,7 +99,7 @@ ImportRestApiResponsePrivate::ImportRestApiResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway ImportRestApiResponse element.
  *
  * @param  xml  XML stream to parse.

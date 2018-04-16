@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListTagOptionsResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListTagOptionsResponse
  *
- * @brief  Handles ServiceCatalog ListTagOptions responses.
+ * \brief The ListTagOptionsResponse class encapsulates ServiceCatalog ListTagOptions responses.
  *
- * @see    ServiceCatalogClient::listTagOptions
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listTagOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListTagOptionsRequest * ListTagOptionsResponse::request() const
     return static_cast<const ListTagOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListTagOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListTagOptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagOptionsResponsePrivate
+ * \class ListTagOptionsResponsePrivate
  *
- * @brief  Private implementation for ListTagOptionsResponse.
+ * \brief Private implementation for ListTagOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagOptionsResponsePrivate object.
@@ -91,7 +100,7 @@ ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListTagOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

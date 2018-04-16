@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProvisioningArtifactRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProvisioningArtifactRequest
  *
- * @brief  Implements ServiceCatalog DescribeProvisioningArtifact requests.
+ * \brief The DescribeProvisioningArtifactRequest class encapsulates ServiceCatalog DescribeProvisioningArtifact requests.
  *
- * @see    ServiceCatalogClient::describeProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisioningArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProvisioningArtifactRequest::DescribeProvisioningArtifactRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisioningArtifactRequest object.
  */
 DescribeProvisioningArtifactRequest::DescribeProvisioningArtifactRequest()
@@ -53,13 +62,16 @@ DescribeProvisioningArtifactRequest::DescribeProvisioningArtifactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProvisioningArtifactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProvisioningArtifactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningArtifactRequest::response
     return new DescribeProvisioningArtifactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProvisioningArtifactRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningArtifactRequest::response
  * @brief  Private implementation for DescribeProvisioningArtifactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisioningArtifactRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProvisioningArtifactRequestPrivate::DescribeProvisioningArtifactRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisioningArtifactRequestPrivate object, copying another.

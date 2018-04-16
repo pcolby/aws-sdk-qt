@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteCrawlerRequest
+/*!
+ * \class QtAws::Glue::DeleteCrawlerRequest
  *
- * @brief  Implements Glue DeleteCrawler requests.
+ * \brief The DeleteCrawlerRequest class encapsulates Glue DeleteCrawler requests.
  *
- * @see    GlueClient::deleteCrawler
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteCrawler
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCrawlerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteCrawlerRequest::DeleteCrawlerRequest(const DeleteCrawlerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCrawlerRequest object.
  */
 DeleteCrawlerRequest::DeleteCrawlerRequest()
@@ -53,13 +59,16 @@ DeleteCrawlerRequest::DeleteCrawlerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCrawlerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCrawlerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply 
     return new DeleteCrawlerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCrawlerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteCrawlerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCrawlerRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCrawlerRequestPrivate object, copying another.

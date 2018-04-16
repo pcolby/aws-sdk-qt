@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StartFleetResponse
+/*!
+ * \class QtAws::AppStream::StartFleetResponse
  *
- * @brief  Handles AppStream StartFleet responses.
+ * \brief The StartFleetResponse class encapsulates AppStream StartFleet responses.
  *
- * @see    AppStreamClient::startFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::startFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new StartFleetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartFleetRequest * StartFleetResponse::request() const
     return static_cast<const StartFleetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream StartFleet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartFleetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartFleetResponsePrivate
+ * \class StartFleetResponsePrivate
  *
- * @brief  Private implementation for StartFleetResponse.
+ * \brief Private implementation for StartFleetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartFleetResponsePrivate object.
@@ -91,7 +97,7 @@ StartFleetResponsePrivate::StartFleetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream StartFleetResponse element.
  *
  * @param  xml  XML stream to parse.

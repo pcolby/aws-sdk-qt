@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotsRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotsRequest
  *
- * @brief  Implements LexModelBuildingService GetBots requests.
+ * \brief The GetBotsRequest class encapsulates LexModelBuildingService GetBots requests.
  *
- * @see    LexModelBuildingServiceClient::getBots
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBots
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBotsRequest::GetBotsRequest(const GetBotsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBotsRequest object.
  */
 GetBotsRequest::GetBotsRequest()
@@ -53,13 +60,16 @@ GetBotsRequest::GetBotsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBotsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBotsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBotsRequest::response(QNetworkReply * cons
     return new GetBotsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBotsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetBotsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotsRequestPrivate object.
@@ -97,7 +107,7 @@ GetBotsRequestPrivate::GetBotsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotsRequestPrivate object, copying another.

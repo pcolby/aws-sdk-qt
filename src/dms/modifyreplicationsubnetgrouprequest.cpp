@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ModifyReplicationSubnetGroupRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupRequest
  *
- * @brief  Implements DatabaseMigrationService ModifyReplicationSubnetGroup requests.
+ * \brief The ModifyReplicationSubnetGroupRequest class encapsulates DatabaseMigrationService ModifyReplicationSubnetGroup requests.
  *
- * @see    DatabaseMigrationServiceClient::modifyReplicationSubnetGroup
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::modifyReplicationSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ModifyReplicationSubnetGroupRequest::ModifyReplicationSubnetGroupRequest(const M
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationSubnetGroupRequest object.
  */
 ModifyReplicationSubnetGroupRequest::ModifyReplicationSubnetGroupRequest()
@@ -53,13 +67,16 @@ ModifyReplicationSubnetGroupRequest::ModifyReplicationSubnetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyReplicationSubnetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyReplicationSubnetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationSubnetGroupRequest::response
     return new ModifyReplicationSubnetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyReplicationSubnetGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationSubnetGroupRequest::response
  * @brief  Private implementation for ModifyReplicationSubnetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationSubnetGroupRequestPrivate object.
@@ -97,7 +114,7 @@ ModifyReplicationSubnetGroupRequestPrivate::ModifyReplicationSubnetGroupRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationSubnetGroupRequestPrivate object, copying another.

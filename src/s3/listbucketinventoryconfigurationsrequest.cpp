@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListBucketInventoryConfigurationsRequest
+/*!
+ * \class QtAws::S3::ListBucketInventoryConfigurationsRequest
  *
- * @brief  Implements S3 ListBucketInventoryConfigurations requests.
+ * \brief The ListBucketInventoryConfigurationsRequest class encapsulates S3 ListBucketInventoryConfigurations requests.
  *
- * @see    S3Client::listBucketInventoryConfigurations
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listBucketInventoryConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBucketInventoryConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListBucketInventoryConfigurationsRequest::ListBucketInventoryConfigurationsReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBucketInventoryConfigurationsRequest object.
  */
 ListBucketInventoryConfigurationsRequest::ListBucketInventoryConfigurationsRequest()
@@ -53,13 +56,16 @@ ListBucketInventoryConfigurationsRequest::ListBucketInventoryConfigurationsReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBucketInventoryConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBucketInventoryConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketInventoryConfigurationsRequest::res
     return new ListBucketInventoryConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBucketInventoryConfigurationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketInventoryConfigurationsRequest::res
  * @brief  Private implementation for ListBucketInventoryConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketInventoryConfigurationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListBucketInventoryConfigurationsRequestPrivate::ListBucketInventoryConfiguratio
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketInventoryConfigurationsRequestPrivate object, copying another.

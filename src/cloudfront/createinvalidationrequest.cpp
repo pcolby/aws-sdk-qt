@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateInvalidationRequest
+/*!
+ * \class QtAws::CloudFront::CreateInvalidationRequest
  *
- * @brief  Implements CloudFront CreateInvalidation requests.
+ * \brief The CreateInvalidationRequest class encapsulates CloudFront CreateInvalidation requests.
  *
- * @see    CloudFrontClient::createInvalidation
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createInvalidation
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInvalidationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateInvalidationRequest::CreateInvalidationRequest(const CreateInvalidationReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateInvalidationRequest object.
  */
 CreateInvalidationRequest::CreateInvalidationRequest()
@@ -53,13 +61,16 @@ CreateInvalidationRequest::CreateInvalidationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateInvalidationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateInvalidationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkR
     return new CreateInvalidationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateInvalidationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkR
  * @brief  Private implementation for CreateInvalidationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInvalidationRequestPrivate object.
@@ -97,7 +108,7 @@ CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInvalidationRequestPrivate object, copying another.

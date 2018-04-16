@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteInternetGatewayRequest
+/*!
+ * \class QtAws::EC2::DeleteInternetGatewayRequest
  *
- * @brief  Implements EC2 DeleteInternetGateway requests.
+ * \brief The DeleteInternetGatewayRequest class encapsulates EC2 DeleteInternetGateway requests.
  *
- * @see    EC2Client::deleteInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteInternetGatewayRequest::DeleteInternetGatewayRequest(const DeleteInternetG
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteInternetGatewayRequest object.
  */
 DeleteInternetGatewayRequest::DeleteInternetGatewayRequest()
@@ -53,13 +60,16 @@ DeleteInternetGatewayRequest::DeleteInternetGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteInternetGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteInternetGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetwo
     return new DeleteInternetGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteInternetGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetwo
  * @brief  Private implementation for DeleteInternetGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInternetGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInternetGatewayRequestPrivate object, copying another.

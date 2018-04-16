@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateEmailChannelResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateEmailChannelResponse
  *
- * @brief  Handles Pinpoint UpdateEmailChannel responses.
+ * \brief The UpdateEmailChannelResponse class encapsulates Pinpoint UpdateEmailChannel responses.
  *
- * @see    PinpointClient::updateEmailChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateEmailChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEmailChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateEmailChannelRequest * UpdateEmailChannelResponse::request() const
     return static_cast<const UpdateEmailChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateEmailChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateEmailChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateEmailChannelResponsePrivate
+ * \class UpdateEmailChannelResponsePrivate
  *
- * @brief  Private implementation for UpdateEmailChannelResponse.
+ * \brief Private implementation for UpdateEmailChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEmailChannelResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateEmailChannelResponse element.
  *
  * @param  xml  XML stream to parse.

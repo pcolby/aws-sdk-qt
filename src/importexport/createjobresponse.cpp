@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  CreateJobResponse
+/*!
+ * \class QtAws::ImportExport::CreateJobResponse
  *
- * @brief  Handles ImportExport CreateJob responses.
+ * \brief The CreateJobResponse class encapsulates ImportExport CreateJob responses.
  *
- * @see    ImportExportClient::createJob
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::createJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateJobRequest * CreateJobResponse::request() const
     return static_cast<const CreateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ImportExport CreateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateJobResponsePrivate
+ * \class CreateJobResponsePrivate
  *
- * @brief  Private implementation for CreateJobResponse.
+ * \brief Private implementation for CreateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobResponsePrivate object.
@@ -91,7 +97,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ImportExport CreateJobResponse element.
  *
  * @param  xml  XML stream to parse.

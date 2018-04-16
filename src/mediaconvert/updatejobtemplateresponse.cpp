@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  UpdateJobTemplateResponse
+/*!
+ * \class QtAws::MediaConvert::UpdateJobTemplateResponse
  *
- * @brief  Handles MediaConvert UpdateJobTemplate responses.
+ * \brief The UpdateJobTemplateResponse class encapsulates MediaConvert UpdateJobTemplate responses.
  *
- * @see    MediaConvertClient::updateJobTemplate
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::updateJobTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateJobTemplateRequest * UpdateJobTemplateResponse::request() const
     return static_cast<const UpdateJobTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert UpdateJobTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateJobTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateJobTemplateResponsePrivate
+ * \class UpdateJobTemplateResponsePrivate
  *
- * @brief  Private implementation for UpdateJobTemplateResponse.
+ * \brief Private implementation for UpdateJobTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobTemplateResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert UpdateJobTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

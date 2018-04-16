@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DecreaseStreamRetentionPeriodRequest
+/*!
+ * \class QtAws::Kinesis::DecreaseStreamRetentionPeriodRequest
  *
- * @brief  Implements Kinesis DecreaseStreamRetentionPeriod requests.
+ * \brief The DecreaseStreamRetentionPeriodRequest class encapsulates Kinesis DecreaseStreamRetentionPeriod requests.
  *
- * @see    KinesisClient::decreaseStreamRetentionPeriod
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::decreaseStreamRetentionPeriod
  */
 
-/**
+/*!
  * @brief  Constructs a new DecreaseStreamRetentionPeriodRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DecreaseStreamRetentionPeriodRequest::DecreaseStreamRetentionPeriodRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DecreaseStreamRetentionPeriodRequest object.
  */
 DecreaseStreamRetentionPeriodRequest::DecreaseStreamRetentionPeriodRequest()
@@ -53,13 +59,16 @@ DecreaseStreamRetentionPeriodRequest::DecreaseStreamRetentionPeriodRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DecreaseStreamRetentionPeriodRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DecreaseStreamRetentionPeriodResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DecreaseStreamRetentionPeriodRequest::respons
     return new DecreaseStreamRetentionPeriodResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DecreaseStreamRetentionPeriodRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DecreaseStreamRetentionPeriodRequest::respons
  * @brief  Private implementation for DecreaseStreamRetentionPeriodRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DecreaseStreamRetentionPeriodRequestPrivate object.
@@ -97,7 +106,7 @@ DecreaseStreamRetentionPeriodRequestPrivate::DecreaseStreamRetentionPeriodReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DecreaseStreamRetentionPeriodRequestPrivate object, copying another.

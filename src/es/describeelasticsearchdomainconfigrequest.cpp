@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DescribeElasticsearchDomainConfigRequest
+/*!
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainConfigRequest
  *
- * @brief  Implements ElasticsearchService DescribeElasticsearchDomainConfig requests.
+ * \brief The DescribeElasticsearchDomainConfigRequest class encapsulates ElasticsearchService DescribeElasticsearchDomainConfig requests.
  *
- * @see    ElasticsearchServiceClient::describeElasticsearchDomainConfig
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::describeElasticsearchDomainConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchDomainConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ DescribeElasticsearchDomainConfigRequest::DescribeElasticsearchDomainConfigReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchDomainConfigRequest object.
  */
 DescribeElasticsearchDomainConfigRequest::DescribeElasticsearchDomainConfigRequest()
@@ -53,13 +65,16 @@ DescribeElasticsearchDomainConfigRequest::DescribeElasticsearchDomainConfigReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeElasticsearchDomainConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeElasticsearchDomainConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainConfigRequest::res
     return new DescribeElasticsearchDomainConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeElasticsearchDomainConfigRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainConfigRequest::res
  * @brief  Private implementation for DescribeElasticsearchDomainConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchDomainConfigRequestPrivate object.
@@ -97,7 +112,7 @@ DescribeElasticsearchDomainConfigRequestPrivate::DescribeElasticsearchDomainConf
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchDomainConfigRequestPrivate object, copying another.

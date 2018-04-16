@@ -25,15 +25,35 @@
 namespace QtAws {
 namespace ECS {
 
-/**
- * @class  UpdateContainerInstancesStateRequest
+/*!
+ * \class QtAws::ECS::UpdateContainerInstancesStateRequest
  *
- * @brief  Implements ECS UpdateContainerInstancesState requests.
+ * \brief The UpdateContainerInstancesStateRequest class encapsulates ECS UpdateContainerInstancesState requests.
  *
- * @see    ECSClient::updateContainerInstancesState
+ * \ingroup ECS
+ *
+ *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
+ *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
+ *  that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
+ *  can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
+ *  launch type. For more information about launch types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ * 
+ *  Types</a>>
+ * 
+ *  Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
+ *  your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ * 
+ *  features>
+ * 
+ *  You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
+ *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
+ *  management and configuration management systems or worry about scaling your management
+ *
+ * \sa ECSClient::updateContainerInstancesState
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateContainerInstancesStateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +64,7 @@ UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateContainerInstancesStateRequest object.
  */
 UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest()
@@ -53,13 +73,16 @@ UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateContainerInstancesStateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateContainerInstancesStateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::respons
     return new UpdateContainerInstancesStateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateContainerInstancesStateRequestPrivate
@@ -82,7 +105,7 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::respons
  * @brief  Private implementation for UpdateContainerInstancesStateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateContainerInstancesStateRequestPrivate object.
@@ -97,7 +120,7 @@ UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateContainerInstancesStateRequestPrivate object, copying another.

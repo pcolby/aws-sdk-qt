@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateDeploymentRequest
+/*!
+ * \class QtAws::Greengrass::CreateDeploymentRequest
  *
- * @brief  Implements Greengrass CreateDeployment requests.
+ * \brief The CreateDeploymentRequest class encapsulates Greengrass CreateDeployment requests.
  *
- * @see    GreengrassClient::createDeployment
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeploymentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDeploymentRequest object.
  */
 CreateDeploymentRequest::CreateDeploymentRequest()
@@ -53,13 +59,16 @@ CreateDeploymentRequest::CreateDeploymentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDeploymentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDeploymentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
     return new CreateDeploymentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDeploymentRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
  * @brief  Private implementation for CreateDeploymentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeploymentRequestPrivate object.
@@ -97,7 +106,7 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeploymentRequestPrivate object, copying another.

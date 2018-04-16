@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateInvalidationResponse
+/*!
+ * \class QtAws::CloudFront::CreateInvalidationResponse
  *
- * @brief  Handles CloudFront CreateInvalidation responses.
+ * \brief The CreateInvalidationResponse class encapsulates CloudFront CreateInvalidation responses.
  *
- * @see    CloudFrontClient::createInvalidation
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createInvalidation
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInvalidationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateInvalidationRequest * CreateInvalidationResponse::request() const
     return static_cast<const CreateInvalidationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront CreateInvalidation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateInvalidationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateInvalidationResponsePrivate
+ * \class CreateInvalidationResponsePrivate
  *
- * @brief  Private implementation for CreateInvalidationResponse.
+ * \brief Private implementation for CreateInvalidationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInvalidationResponsePrivate object.
@@ -91,7 +99,7 @@ CreateInvalidationResponsePrivate::CreateInvalidationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront CreateInvalidationResponse element.
  *
  * @param  xml  XML stream to parse.

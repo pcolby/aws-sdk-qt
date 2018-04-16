@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheParametersResponse
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheParametersResponse
  *
- * @brief  Handles ElastiCache DescribeCacheParameters responses.
+ * \brief The DescribeCacheParametersResponse class encapsulates ElastiCache DescribeCacheParameters responses.
  *
- * @see    ElastiCacheClient::describeCacheParameters
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheParametersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeCacheParametersRequest * DescribeCacheParametersResponse::request(
     return static_cast<const DescribeCacheParametersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DescribeCacheParameters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeCacheParametersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCacheParametersResponsePrivate
+ * \class DescribeCacheParametersResponsePrivate
  *
- * @brief  Private implementation for DescribeCacheParametersResponse.
+ * \brief Private implementation for DescribeCacheParametersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheParametersResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DescribeCacheParametersResponse element.
  *
  * @param  xml  XML stream to parse.

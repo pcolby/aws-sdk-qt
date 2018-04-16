@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetIntegrationResponseRequest
+/*!
+ * \class QtAws::APIGateway::GetIntegrationResponseRequest
  *
- * @brief  Implements APIGateway GetIntegrationResponse requests.
+ * \brief The GetIntegrationResponseRequest class encapsulates APIGateway GetIntegrationResponse requests.
  *
- * @see    APIGatewayClient::getIntegrationResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getIntegrationResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntegrationResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetIntegrationResponseRequest::GetIntegrationResponseRequest(const GetIntegratio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIntegrationResponseRequest object.
  */
 GetIntegrationResponseRequest::GetIntegrationResponseRequest()
@@ -53,13 +61,16 @@ GetIntegrationResponseRequest::GetIntegrationResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIntegrationResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIntegrationResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetIntegrationResponseRequest::response(QNetw
     return new GetIntegrationResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIntegrationResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetIntegrationResponseRequest::response(QNetw
  * @brief  Private implementation for GetIntegrationResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntegrationResponseRequestPrivate object.
@@ -97,7 +108,7 @@ GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntegrationResponseRequestPrivate object, copying another.

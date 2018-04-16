@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeAssessmentRunsRequest
+/*!
+ * \class QtAws::Inspector::DescribeAssessmentRunsRequest
  *
- * @brief  Implements Inspector DescribeAssessmentRuns requests.
+ * \brief The DescribeAssessmentRunsRequest class encapsulates Inspector DescribeAssessmentRuns requests.
  *
- * @see    InspectorClient::describeAssessmentRuns
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeAssessmentRuns
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentRunsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeAssessmentRunsRequest::DescribeAssessmentRunsRequest(const DescribeAsses
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentRunsRequest object.
  */
 DescribeAssessmentRunsRequest::DescribeAssessmentRunsRequest()
@@ -53,13 +61,16 @@ DescribeAssessmentRunsRequest::DescribeAssessmentRunsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAssessmentRunsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAssessmentRunsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentRunsRequest::response(QNetw
     return new DescribeAssessmentRunsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAssessmentRunsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAssessmentRunsRequest::response(QNetw
  * @brief  Private implementation for DescribeAssessmentRunsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentRunsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeAssessmentRunsRequestPrivate::DescribeAssessmentRunsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentRunsRequestPrivate object, copying another.

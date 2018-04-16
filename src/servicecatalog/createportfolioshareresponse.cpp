@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreatePortfolioShareResponse
+/*!
+ * \class QtAws::ServiceCatalog::CreatePortfolioShareResponse
  *
- * @brief  Handles ServiceCatalog CreatePortfolioShare responses.
+ * \brief The CreatePortfolioShareResponse class encapsulates ServiceCatalog CreatePortfolioShare responses.
  *
- * @see    ServiceCatalogClient::createPortfolioShare
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createPortfolioShare
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePortfolioShareResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreatePortfolioShareRequest * CreatePortfolioShareResponse::request() cons
     return static_cast<const CreatePortfolioShareRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog CreatePortfolioShare response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreatePortfolioShareResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePortfolioShareResponsePrivate
+ * \class CreatePortfolioShareResponsePrivate
  *
- * @brief  Private implementation for CreatePortfolioShareResponse.
+ * \brief Private implementation for CreatePortfolioShareResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePortfolioShareResponsePrivate object.
@@ -91,7 +100,7 @@ CreatePortfolioShareResponsePrivate::CreatePortfolioShareResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog CreatePortfolioShareResponse element.
  *
  * @param  xml  XML stream to parse.

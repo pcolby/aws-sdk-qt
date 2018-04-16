@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  PurchaseScheduledInstancesRequest
+/*!
+ * \class QtAws::EC2::PurchaseScheduledInstancesRequest
  *
- * @brief  Implements EC2 PurchaseScheduledInstances requests.
+ * \brief The PurchaseScheduledInstancesRequest class encapsulates EC2 PurchaseScheduledInstances requests.
  *
- * @see    EC2Client::purchaseScheduledInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::purchaseScheduledInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseScheduledInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest(const Purch
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PurchaseScheduledInstancesRequest object.
  */
 PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest()
@@ -53,13 +60,16 @@ PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PurchaseScheduledInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PurchaseScheduledInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(Q
     return new PurchaseScheduledInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PurchaseScheduledInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(Q
  * @brief  Private implementation for PurchaseScheduledInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseScheduledInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseScheduledInstancesRequestPrivate object, copying another.

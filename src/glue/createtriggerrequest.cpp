@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateTriggerRequest
+/*!
+ * \class QtAws::Glue::CreateTriggerRequest
  *
- * @brief  Implements Glue CreateTrigger requests.
+ * \brief The CreateTriggerRequest class encapsulates Glue CreateTrigger requests.
  *
- * @see    GlueClient::createTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateTriggerRequest::CreateTriggerRequest(const CreateTriggerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTriggerRequest object.
  */
 CreateTriggerRequest::CreateTriggerRequest()
@@ -53,13 +59,16 @@ CreateTriggerRequest::CreateTriggerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTriggerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTriggerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateTriggerRequest::response(QNetworkReply 
     return new CreateTriggerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTriggerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateTriggerRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateTriggerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTriggerRequestPrivate object.
@@ -97,7 +106,7 @@ CreateTriggerRequestPrivate::CreateTriggerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTriggerRequestPrivate object, copying another.

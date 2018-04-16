@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteDataSourceResponse
+/*!
+ * \class QtAws::MachineLearning::DeleteDataSourceResponse
  *
- * @brief  Handles MachineLearning DeleteDataSource responses.
+ * \brief The DeleteDataSourceResponse class encapsulates MachineLearning DeleteDataSource responses.
  *
- * @see    MachineLearningClient::deleteDataSource
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDataSourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
     return static_cast<const DeleteDataSourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DeleteDataSource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDataSourceResponsePrivate
+ * \class DeleteDataSourceResponsePrivate
  *
- * @brief  Private implementation for DeleteDataSourceResponse.
+ * \brief Private implementation for DeleteDataSourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDataSourceResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DeleteDataSourceResponse element.
  *
  * @param  xml  XML stream to parse.

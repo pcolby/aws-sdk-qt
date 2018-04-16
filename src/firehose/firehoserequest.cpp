@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  FirehoseRequest
+/*!
+ * \class QtAws::Firehose::FirehoseRequest
  *
- * @brief  Interface class for providing Firehose requests
+ * \brief The FirehoseRequest class is the base class for all Firehose requests.
+ *
+ * \ingroup Firehose
  */
 
-
-/**
+/*!
  * @brief  Constructs a new FirehoseRequest object.
  *
  * @param  action  The Firehose action to request.
@@ -41,7 +42,7 @@ FirehoseRequest::FirehoseRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new FirehoseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ FirehoseRequest::FirehoseRequest(const FirehoseRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ FirehoseRequest& FirehoseRequest::operator=(const FirehoseRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FirehoseRequest object.
@@ -85,10 +86,8 @@ FirehoseRequest::FirehoseRequest(FirehoseRequestPrivate * const d) : QtAws::Core
 
 }
 
-/**
- * @brief  Get the Firehose action to be performed by this request.
- *
- * @return The Firehose action to be performed by this request.
+/*!
+ * \brief Returns the Firehose action to be performed by this request.
  */
 FirehoseRequest::Action FirehoseRequest::action() const
 {
@@ -96,20 +95,16 @@ FirehoseRequest::Action FirehoseRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the Firehose action to be performed by this request.
- *
- * @return The name of the Firehose action to be performed by this request.
+/*!
+ * \brief Returns the name of the Firehose action to be performed by this request.
  */
 QString FirehoseRequest::actionString() const
 {
     return FirehoseRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the Firehose API version implemented by this request.
- *
- * @return The Firehose API version implmented by this request.
+/*!
+ * \brief Returns the Firehose API version implemented by this request.
  */
 QString FirehoseRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString FirehoseRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the Firehose action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the Firehose action to be performed by this request to \a action.
  */
 void FirehoseRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void FirehoseRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the Firehose API version to include in this request.
- *
- * @param  version  The Firehose API version to include in this request.
+/*!
+ * Set the Firehose API version to include in this request to \a version.
  */
 void FirehoseRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void FirehoseRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool FirehoseRequest::operator==(const FirehoseRequest &other) const
 {
@@ -159,7 +146,7 @@ bool FirehoseRequest::operator==(const FirehoseRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid Firehose queue name.
  *
  * @par From Firehose FAQs:
@@ -178,12 +165,10 @@ bool FirehoseRequest::operator==(const FirehoseRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int FirehoseRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int FirehoseRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void FirehoseRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void FirehoseRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this Firehose request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant FirehoseRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant FirehoseRequest::parameter(const QString &name, const QVariant &default
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this Firehose request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &FirehoseRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &FirehoseRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this Firehose request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void FirehoseRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void FirehoseRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this Firehose request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void FirehoseRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void FirehoseRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this Firehose request.
+/*!
+ * \brief Returns a network request for this Firehose request using the given \a endpoint.
  *
  * This Firehose implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this Firehose request using the given \a endpoint.
  */
 QNetworkRequest FirehoseRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest FirehoseRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  FirehoseRequestPrivate
+ * \class  FirehoseRequestPrivate
  *
- * @brief  Private implementation for FirehoseRequest.
+ * \brief  Private implementation for FirehoseRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new FirehoseRequestPrivate object.
- *
- * @param  action  Firehose action being performed by the \a q request.
- * @param  q       Pointer to this object's public FirehoseRequest instance.
+ * \brief Constructs a new FirehoseRequestPrivate object.
  */
 FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequest::Action action, FirehoseRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequest::Action act
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new FirehoseRequestPrivate object from an existing one.
+ * \brief Constructs a new FirehoseRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the FirehoseRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public FirehoseRequest instance.
  */
 FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequestPrivate &other,
                                      FirehoseRequest * const q)
@@ -312,14 +275,14 @@ FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequestPrivate &oth
 
 }
 
-/**
- * @brief  Convert and Firehose action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts FirehoseRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the Firehose service's Action
  * query parameters.
- *
- * @param  action  Firehose action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

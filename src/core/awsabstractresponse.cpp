@@ -28,10 +28,10 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsAbstractResponse
+/*!
+ * \class QtAws::Core::AwsAbstractResponse
  *
- * @brief  Interface class for processing AWS responses
+ * \brief Interface class for processing AWS responses
  *
  * Typically instances of AwsAbstractResponse-derviced classes are returned by
  * their respective AwsAbstractRequest-derived classes, often via an
@@ -44,10 +44,8 @@ namespace Core {
  * @see  AwsAbstractClient
  */
 
-/**
- * @brief  Constructs a new AwsAbstractResponse object.
- *
- * @param  parent  This object's parent.
+/*!
+ * \brief  Constructs a new AwsAbstractResponse parent object \a parent
  */
 AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractResponsePrivate(this))
@@ -55,16 +53,12 @@ AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
 
 }
 
-/**
- * @internal
- *
- * @brief  Constructs a new AwsAbstractResponse object.
+/*!
+ * \internal
+ * \overload AwsAbstractResponse()
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AwsAbstractRequestPrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
                                          QObject * const parent)
@@ -73,8 +67,8 @@ AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
 
 }
 
-/**
- * @brief AwsAbstractResponse destructor.
+/*!
+ * \brief Destroys the object.
  */
 AwsAbstractResponse::~AwsAbstractResponse()
 {
@@ -82,8 +76,8 @@ AwsAbstractResponse::~AwsAbstractResponse()
     delete d_ptr;
 }
 
-/**
- * @brief Get this response's error string.
+/*!
+ * \brief Return this response's error string, or a null string if no errors.
  *
  * This base implementation returns either the internal network reply object's
  * error string (if the reply object has an error), or the internal XML parse
@@ -101,11 +95,9 @@ AwsAbstractResponse::~AwsAbstractResponse()
  * }
  * @endcode
  *
- * @return  An error string, or a null QString if this response has no errors.
- *
- * @see  hasError
- * @see  networkError
- * @see  xmlParseError
+ * \sa hasError()
+ * \sa networkError()
+ * \sa xmlParseError()
  */
 QString AwsAbstractResponse::errorString() const
 {
@@ -119,8 +111,8 @@ QString AwsAbstractResponse::errorString() const
     }
 }
 
-/**
- * @brief  Did any error occurr processing this reponse?
+/*!
+ * \brief Returns \c true if an error occurred processing this reponse; \c false otherwise.
  *
  * Errors could be anything from network requests errors, to errors validating
  * AWS response content.
@@ -128,16 +120,13 @@ QString AwsAbstractResponse::errorString() const
  * This base implementation supports network, and XML parsing errors. Derived
  * classes may override this function to support additional error types.
  *
- * @return \c true if this response contains one or more errors, \c false
- *         otherwise.
- *
- * @note  This function may be equivalent to !isValid, however, it is not safe
+ * \note  This function may be equivalent to !isValid, however, it is not safe
  *        for this function's implementation to be just that, since derived
  *        classes may assume the inverse, resulting in an infinite cycle between
  *        the two functions.
  *
- * @see  errorString
- * @see  isValid
+ * \sa errorString()
+ * \sa isValid()
  */
 bool AwsAbstractResponse::hasError() const
 {
@@ -146,8 +135,8 @@ bool AwsAbstractResponse::hasError() const
             (d->xmlError != QXmlStreamReader::NoError));
 }
 
-/**
- * @brief  Is this AWS response valid?
+/*!
+ * \brief Return \c true of this response is valid; \c false otherwise.
  *
  * This base implementation simply checks for the absense of network and XML
  * parsing errors.  Derived classes may override this function to check other
@@ -160,7 +149,7 @@ bool AwsAbstractResponse::hasError() const
  *        classes may assume the inverse, resulting in an infinite cycle between
  *        the two functions.
  *
- * @see  hasError
+ * \sa hasError()
  */
 bool AwsAbstractResponse::isValid() const
 {
@@ -169,14 +158,11 @@ bool AwsAbstractResponse::isValid() const
             (d->xmlError == QXmlStreamReader::NoError));
 }
 
-/**
- * @brief  Get this response's network error, if there is one.
+/*!
+ * \brief Returns this reponse's network error, or \c QNetowkrReply::NoError is there is none.
  *
- * @return This response's network error, if there is one, otherwise
- *         QNetworkReply::NoError.
- *
- * @see  hasError
- * @see  errorString
+ * \sa hasError()
+ * \sa errorString()
  */
 QNetworkReply::NetworkError AwsAbstractResponse::networkError() const
 {
@@ -184,7 +170,7 @@ QNetworkReply::NetworkError AwsAbstractResponse::networkError() const
     return (d->reply) ? d->reply->error() : QNetworkReply::NoError;
 }
 
-/**
+/*!
  * @brief  Get this response's XML parse error, if there is one.
  *
  * @return This response's XML parse error, if there is one, otherwise
@@ -199,7 +185,7 @@ QXmlStreamReader::Error AwsAbstractResponse::xmlParseError() const
     return d->xmlError;
 }
 
-/**
+/*!
  * @brief  Get this response's XML parse error string, if there is one.
  *
  * @return This response's XML parse error string, if there is one, otherwise
@@ -214,7 +200,7 @@ QString AwsAbstractResponse::xmlParseErrorString() const
     return d->xmlErrorString;
 }
 
-/**
+/*!
  * @fn     const AwsAbstractRequest * AwsAbstractResponse::request() const
  *
  * @brief  Get this response's originating AWS request.
@@ -222,7 +208,7 @@ QString AwsAbstractResponse::xmlParseErrorString() const
  * @return This response's originating AWS request.
  */
 
-/**
+/*!
  * @brief  Convert an XML stream to a hierarchical QVariantMap.
  *
  * This function is used internally to embed opaque XML structures, such as the
@@ -310,7 +296,7 @@ QVariantMap AwsAbstractResponse::toVariant(
     return map;
 }
 
-/**
+/*!
  * @brief  Does a network reply indicate a successful response?
  *
  * This base implementation simply checks that \a reply has no errors, and that
@@ -334,7 +320,7 @@ bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
             ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));
 }
 
-/**
+/*!
  * @brief  Set the network reply from which to expect an AWS response.
  *
  * @param  reply  Network reply to an AWS requests.
@@ -346,7 +332,7 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
     d->reply = reply;
 }
 
-/**
+/*!
  * @brief  Set this response's originating AWS request.
  *
  * @note   This object will take ownership of the \a request pointer, and will
@@ -368,7 +354,7 @@ void AwsAbstractResponse::setRequest(const AwsAbstractRequest * const request)
     d->request = request;
 }
 
-/**
+/*!
  * @brief  Record the details of an XML parse error.
  *
  * If \a xml has no error, this effectively clears any existing XML parsing
@@ -386,7 +372,7 @@ void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
     d->xmlErrorString = xml.errorString();
 }
 
-/**
+/*!
  * @brief  Parse an AWS response from a network reply.
  *
  * This base implementation reports networks, if any occurred, otherwise uses
@@ -414,7 +400,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
     emit finished();
 }
 
-/**
+/*!
  * @fn     void AwsAbstractResponse::parseFailure(QIODevice &response)
  *
  * @brief  Parse a failure response.
@@ -425,7 +411,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
  * @param  response  Response to parse.
  */
 
-/**
+/*!
  * @fn     void AwsAbstractResponse::parseSuccess(QIODevice &response)
  *
  * @brief  Parse a successful response.
@@ -436,7 +422,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
  * @param  response  Response to parse.
  */
 
-/**
+/*!
  * @brief  Slot to be invoked when the internal network reply is finished.
  *
  * This slot should only be connectedd to QNetworkReply signals (specifcally,
@@ -456,7 +442,7 @@ void AwsAbstractResponse::replyFinished()
     }
 }
 
-/**
+/*!
  * @fn     void AwsAbstractResponse::finished()
  *
  * @brief  Signal emitted when this object has finished parsing the response.
@@ -468,15 +454,15 @@ void AwsAbstractResponse::replyFinished()
  * @see    isValid
  */
 
-/**
+/*!
  * @internal
  *
- * @class  AwsAbstractResponsePrivate
+ * \class QtAws::Core::AwsAbstractResponsePrivate
  *
  * @brief  Private implementation for AwsAbstractResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractResponsePrivate object.
@@ -489,7 +475,7 @@ AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * con
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  AwsAbstractResponsePrivate destructor.

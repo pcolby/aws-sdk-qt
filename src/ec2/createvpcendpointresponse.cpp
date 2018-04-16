@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpcEndpointResponse
+/*!
+ * \class QtAws::EC2::CreateVpcEndpointResponse
  *
- * @brief  Handles EC2 CreateVpcEndpoint responses.
+ * \brief The CreateVpcEndpointResponse class encapsulates EC2 CreateVpcEndpoint responses.
  *
- * @see    EC2Client::createVpcEndpoint
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpcEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateVpcEndpointRequest * CreateVpcEndpointResponse::request() const
     return static_cast<const CreateVpcEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateVpcEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateVpcEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateVpcEndpointResponsePrivate
+ * \class CreateVpcEndpointResponsePrivate
  *
- * @brief  Private implementation for CreateVpcEndpointResponse.
+ * \brief Private implementation for CreateVpcEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcEndpointResponsePrivate object.
@@ -91,7 +98,7 @@ CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateVpcEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

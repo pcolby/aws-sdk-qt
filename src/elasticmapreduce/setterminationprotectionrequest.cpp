@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  SetTerminationProtectionRequest
+/*!
+ * \class QtAws::EMR::SetTerminationProtectionRequest
  *
- * @brief  Implements EMR SetTerminationProtection requests.
+ * \brief The SetTerminationProtectionRequest class encapsulates EMR SetTerminationProtection requests.
  *
- * @see    EMRClient::setTerminationProtection
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::setTerminationProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new SetTerminationProtectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ SetTerminationProtectionRequest::SetTerminationProtectionRequest(const SetTermin
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetTerminationProtectionRequest object.
  */
 SetTerminationProtectionRequest::SetTerminationProtectionRequest()
@@ -53,13 +59,16 @@ SetTerminationProtectionRequest::SetTerminationProtectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetTerminationProtectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetTerminationProtectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
     return new SetTerminationProtectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetTerminationProtectionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
  * @brief  Private implementation for SetTerminationProtectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTerminationProtectionRequestPrivate object.
@@ -97,7 +106,7 @@ SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTerminationProtectionRequestPrivate object, copying another.

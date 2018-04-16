@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachVolumeResponse
+/*!
+ * \class QtAws::EC2::DetachVolumeResponse
  *
- * @brief  Handles EC2 DetachVolume responses.
+ * \brief The DetachVolumeResponse class encapsulates EC2 DetachVolume responses.
  *
- * @see    EC2Client::detachVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachVolumeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DetachVolumeRequest * DetachVolumeResponse::request() const
     return static_cast<const DetachVolumeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DetachVolume response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DetachVolumeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachVolumeResponsePrivate
+ * \class DetachVolumeResponsePrivate
  *
- * @brief  Private implementation for DetachVolumeResponse.
+ * \brief Private implementation for DetachVolumeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachVolumeResponsePrivate object.
@@ -91,7 +98,7 @@ DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DetachVolumeResponse element.
  *
  * @param  xml  XML stream to parse.

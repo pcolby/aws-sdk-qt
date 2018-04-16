@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateGeoMatchSetRequest
+/*!
+ * \class QtAws::WAF::CreateGeoMatchSetRequest
  *
- * @brief  Implements WAF CreateGeoMatchSet requests.
+ * \brief The CreateGeoMatchSetRequest class encapsulates WAF CreateGeoMatchSet requests.
  *
- * @see    WAFClient::createGeoMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createGeoMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGeoMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateGeoMatchSetRequest::CreateGeoMatchSetRequest(const CreateGeoMatchSetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateGeoMatchSetRequest object.
  */
 CreateGeoMatchSetRequest::CreateGeoMatchSetRequest()
@@ -53,13 +61,16 @@ CreateGeoMatchSetRequest::CreateGeoMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateGeoMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateGeoMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateGeoMatchSetRequest::response(QNetworkRe
     return new CreateGeoMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateGeoMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateGeoMatchSetRequest::response(QNetworkRe
  * @brief  Private implementation for CreateGeoMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGeoMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ CreateGeoMatchSetRequestPrivate::CreateGeoMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGeoMatchSetRequestPrivate object, copying another.

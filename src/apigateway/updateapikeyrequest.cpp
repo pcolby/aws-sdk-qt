@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateApiKeyRequest
+/*!
+ * \class QtAws::APIGateway::UpdateApiKeyRequest
  *
- * @brief  Implements APIGateway UpdateApiKey requests.
+ * \brief The UpdateApiKeyRequest class encapsulates APIGateway UpdateApiKey requests.
  *
- * @see    APIGatewayClient::updateApiKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateApiKeyRequest::UpdateApiKeyRequest(const UpdateApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApiKeyRequest object.
  */
 UpdateApiKeyRequest::UpdateApiKeyRequest()
@@ -53,13 +61,16 @@ UpdateApiKeyRequest::UpdateApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
     return new UpdateApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApiKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApiKeyRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApiKeyRequestPrivate object, copying another.

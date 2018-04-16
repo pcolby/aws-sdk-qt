@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  GetRecordsResponse
+/*!
+ * \class QtAws::Kinesis::GetRecordsResponse
  *
- * @brief  Handles Kinesis GetRecords responses.
+ * \brief The GetRecordsResponse class encapsulates Kinesis GetRecords responses.
  *
- * @see    KinesisClient::getRecords
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::getRecords
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRecordsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetRecordsRequest * GetRecordsResponse::request() const
     return static_cast<const GetRecordsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis GetRecords response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetRecordsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetRecordsResponsePrivate
+ * \class GetRecordsResponsePrivate
  *
- * @brief  Private implementation for GetRecordsResponse.
+ * \brief Private implementation for GetRecordsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRecordsResponsePrivate object.
@@ -91,7 +97,7 @@ GetRecordsResponsePrivate::GetRecordsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis GetRecordsResponse element.
  *
  * @param  xml  XML stream to parse.

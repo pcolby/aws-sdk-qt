@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeKeyPairsResponse
+/*!
+ * \class QtAws::EC2::DescribeKeyPairsResponse
  *
- * @brief  Handles EC2 DescribeKeyPairs responses.
+ * \brief The DescribeKeyPairsResponse class encapsulates EC2 DescribeKeyPairs responses.
  *
- * @see    EC2Client::describeKeyPairs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeKeyPairs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeKeyPairsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeKeyPairsRequest * DescribeKeyPairsResponse::request() const
     return static_cast<const DescribeKeyPairsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeKeyPairs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeKeyPairsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeKeyPairsResponsePrivate
+ * \class DescribeKeyPairsResponsePrivate
  *
- * @brief  Private implementation for DescribeKeyPairsResponse.
+ * \brief Private implementation for DescribeKeyPairsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeKeyPairsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeKeyPairsResponse element.
  *
  * @param  xml  XML stream to parse.

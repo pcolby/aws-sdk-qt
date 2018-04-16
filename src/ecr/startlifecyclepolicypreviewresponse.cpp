@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  StartLifecyclePolicyPreviewResponse
+/*!
+ * \class QtAws::ECR::StartLifecyclePolicyPreviewResponse
  *
- * @brief  Handles ECR StartLifecyclePolicyPreview responses.
+ * \brief The StartLifecyclePolicyPreviewResponse class encapsulates ECR StartLifecyclePolicyPreview responses.
  *
- * @see    ECRClient::startLifecyclePolicyPreview
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::startLifecyclePolicyPreview
  */
 
-/**
+/*!
  * @brief  Constructs a new StartLifecyclePolicyPreviewResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const StartLifecyclePolicyPreviewRequest * StartLifecyclePolicyPreviewResponse::
     return static_cast<const StartLifecyclePolicyPreviewRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR StartLifecyclePolicyPreview response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void StartLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartLifecyclePolicyPreviewResponsePrivate
+ * \class StartLifecyclePolicyPreviewResponsePrivate
  *
- * @brief  Private implementation for StartLifecyclePolicyPreviewResponse.
+ * \brief Private implementation for StartLifecyclePolicyPreviewResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartLifecyclePolicyPreviewResponsePrivate object.
@@ -91,7 +98,7 @@ StartLifecyclePolicyPreviewResponsePrivate::StartLifecyclePolicyPreviewResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR StartLifecyclePolicyPreviewResponse element.
  *
  * @param  xml  XML stream to parse.

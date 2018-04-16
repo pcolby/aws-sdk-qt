@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  GetJobResponse
+/*!
+ * \class QtAws::MediaConvert::GetJobResponse
  *
- * @brief  Handles MediaConvert GetJob responses.
+ * \brief The GetJobResponse class encapsulates MediaConvert GetJob responses.
  *
- * @see    MediaConvertClient::getJob
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::getJob
  */
 
-/**
+/*!
  * @brief  Constructs a new GetJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetJobRequest * GetJobResponse::request() const
     return static_cast<const GetJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert GetJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetJobResponsePrivate
+ * \class GetJobResponsePrivate
  *
- * @brief  Private implementation for GetJobResponse.
+ * \brief Private implementation for GetJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetJobResponsePrivate object.
@@ -91,7 +94,7 @@ GetJobResponsePrivate::GetJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert GetJobResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DeleteLunaClientResponse
+/*!
+ * \class QtAws::CloudHSM::DeleteLunaClientResponse
  *
- * @brief  Handles CloudHSM DeleteLunaClient responses.
+ * \brief The DeleteLunaClientResponse class encapsulates CloudHSM DeleteLunaClient responses.
  *
- * @see    CloudHSMClient::deleteLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::deleteLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLunaClientResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const DeleteLunaClientRequest * DeleteLunaClientResponse::request() const
     return static_cast<const DeleteLunaClientRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM DeleteLunaClient response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void DeleteLunaClientResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLunaClientResponsePrivate
+ * \class DeleteLunaClientResponsePrivate
  *
- * @brief  Private implementation for DeleteLunaClientResponse.
+ * \brief Private implementation for DeleteLunaClientResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLunaClientResponsePrivate object.
@@ -91,7 +106,7 @@ DeleteLunaClientResponsePrivate::DeleteLunaClientResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM DeleteLunaClientResponse element.
  *
  * @param  xml  XML stream to parse.

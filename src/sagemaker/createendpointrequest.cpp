@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  CreateEndpointRequest
+/*!
+ * \class QtAws::SageMaker::CreateEndpointRequest
  *
- * @brief  Implements SageMaker CreateEndpoint requests.
+ * \brief The CreateEndpointRequest class encapsulates SageMaker CreateEndpoint requests.
  *
- * @see    SageMakerClient::createEndpoint
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::createEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEndpointRequest object.
  */
 CreateEndpointRequest::CreateEndpointRequest()
@@ -53,13 +56,16 @@ CreateEndpointRequest::CreateEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
     return new CreateEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
  * @brief  Private implementation for CreateEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEndpointRequestPrivate object, copying another.

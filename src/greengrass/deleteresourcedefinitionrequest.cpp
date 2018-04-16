@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteResourceDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::DeleteResourceDefinitionRequest
  *
- * @brief  Implements Greengrass DeleteResourceDefinition requests.
+ * \brief The DeleteResourceDefinitionRequest class encapsulates Greengrass DeleteResourceDefinition requests.
  *
- * @see    GreengrassClient::deleteResourceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteResourceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteResourceDefinitionRequest::DeleteResourceDefinitionRequest(const DeleteRes
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteResourceDefinitionRequest object.
  */
 DeleteResourceDefinitionRequest::DeleteResourceDefinitionRequest()
@@ -53,13 +59,16 @@ DeleteResourceDefinitionRequest::DeleteResourceDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteResourceDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteResourceDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDefinitionRequest::response(QNe
     return new DeleteResourceDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteResourceDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDefinitionRequest::response(QNe
  * @brief  Private implementation for DeleteResourceDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteResourceDefinitionRequestPrivate object, copying another.

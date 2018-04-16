@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSecurityGroupsRequest
+/*!
+ * \class QtAws::EC2::DescribeSecurityGroupsRequest
  *
- * @brief  Implements EC2 DescribeSecurityGroups requests.
+ * \brief The DescribeSecurityGroupsRequest class encapsulates EC2 DescribeSecurityGroups requests.
  *
- * @see    EC2Client::describeSecurityGroups
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSecurityGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest(const DescribeSecur
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSecurityGroupsRequest object.
  */
 DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest()
@@ -53,13 +60,16 @@ DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSecurityGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSecurityGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupsRequest::response(QNetw
     return new DescribeSecurityGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSecurityGroupsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupsRequest::response(QNetw
  * @brief  Private implementation for DescribeSecurityGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSecurityGroupsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSecurityGroupsRequestPrivate::DescribeSecurityGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSecurityGroupsRequestPrivate object, copying another.

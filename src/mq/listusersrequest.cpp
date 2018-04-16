@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  ListUsersRequest
+/*!
+ * \class QtAws::MQ::ListUsersRequest
  *
- * @brief  Implements MQ ListUsers requests.
+ * \brief The ListUsersRequest class encapsulates MQ ListUsers requests.
  *
- * @see    MQClient::listUsers
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::listUsers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUsersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListUsersRequest object.
  */
 ListUsersRequest::ListUsersRequest()
@@ -53,13 +58,16 @@ ListUsersRequest::ListUsersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListUsersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListUsersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
     return new ListUsersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListUsersRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListUsersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersRequestPrivate object.
@@ -97,7 +105,7 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersRequestPrivate object, copying another.

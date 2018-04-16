@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DeleteApplicationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationRequest
  *
- * @brief  Implements KinesisAnalytics DeleteApplication requests.
+ * \brief The DeleteApplicationRequest class encapsulates KinesisAnalytics DeleteApplication requests.
  *
- * @see    KinesisAnalyticsClient::deleteApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::deleteApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApplicationRequest::DeleteApplicationRequest(const DeleteApplicationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApplicationRequest object.
  */
 DeleteApplicationRequest::DeleteApplicationRequest()
@@ -53,13 +56,16 @@ DeleteApplicationRequest::DeleteApplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
     return new DeleteApplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteApplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApplicationRequestPrivate object, copying another.

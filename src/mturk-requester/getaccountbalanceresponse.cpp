@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetAccountBalanceResponse
+/*!
+ * \class QtAws::MTurk::GetAccountBalanceResponse
  *
- * @brief  Handles MTurk GetAccountBalance responses.
+ * \brief The GetAccountBalanceResponse class encapsulates MTurk GetAccountBalance responses.
  *
- * @see    MTurkClient::getAccountBalance
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getAccountBalance
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountBalanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetAccountBalanceRequest * GetAccountBalanceResponse::request() const
     return static_cast<const GetAccountBalanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk GetAccountBalance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetAccountBalanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAccountBalanceResponsePrivate
+ * \class GetAccountBalanceResponsePrivate
  *
- * @brief  Private implementation for GetAccountBalanceResponse.
+ * \brief Private implementation for GetAccountBalanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountBalanceResponsePrivate object.
@@ -91,7 +94,7 @@ GetAccountBalanceResponsePrivate::GetAccountBalanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk GetAccountBalanceResponse element.
  *
  * @param  xml  XML stream to parse.

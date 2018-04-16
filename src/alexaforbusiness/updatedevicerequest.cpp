@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateDeviceRequest
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateDeviceRequest
  *
- * @brief  Implements AlexaForBusiness UpdateDevice requests.
+ * \brief The UpdateDeviceRequest class encapsulates AlexaForBusiness UpdateDevice requests.
  *
- * @see    AlexaForBusinessClient::updateDevice
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateDeviceRequest::UpdateDeviceRequest(const UpdateDeviceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeviceRequest object.
  */
 UpdateDeviceRequest::UpdateDeviceRequest()
@@ -53,13 +61,16 @@ UpdateDeviceRequest::UpdateDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply *
     return new UpdateDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDeviceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeviceRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeviceRequestPrivate object, copying another.

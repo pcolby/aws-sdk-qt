@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelBundleTaskResponse
+/*!
+ * \class QtAws::EC2::CancelBundleTaskResponse
  *
- * @brief  Handles EC2 CancelBundleTask responses.
+ * \brief The CancelBundleTaskResponse class encapsulates EC2 CancelBundleTask responses.
  *
- * @see    EC2Client::cancelBundleTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelBundleTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelBundleTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CancelBundleTaskRequest * CancelBundleTaskResponse::request() const
     return static_cast<const CancelBundleTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CancelBundleTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CancelBundleTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelBundleTaskResponsePrivate
+ * \class CancelBundleTaskResponsePrivate
  *
- * @brief  Private implementation for CancelBundleTaskResponse.
+ * \brief Private implementation for CancelBundleTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelBundleTaskResponsePrivate object.
@@ -91,7 +98,7 @@ CancelBundleTaskResponsePrivate::CancelBundleTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CancelBundleTaskResponse element.
  *
  * @param  xml  XML stream to parse.

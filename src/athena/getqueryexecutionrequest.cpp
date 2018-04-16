@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  GetQueryExecutionRequest
+/*!
+ * \class QtAws::Athena::GetQueryExecutionRequest
  *
- * @brief  Implements Athena GetQueryExecution requests.
+ * \brief The GetQueryExecutionRequest class encapsulates Athena GetQueryExecution requests.
  *
- * @see    AthenaClient::getQueryExecution
+ * \ingroup Athena
+ *
+ *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
+ *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
+ *  there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
+ *  automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
+ *  information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
+ *  <i>Amazon Athena User
+ * 
+ *  Guide</i>>
+ * 
+ *  For code samples using the AWS SDK for Java, see <a
+ *  href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
+ *  Athena User
+ *
+ * \sa AthenaClient::getQueryExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQueryExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ GetQueryExecutionRequest::GetQueryExecutionRequest(const GetQueryExecutionReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetQueryExecutionRequest object.
  */
 GetQueryExecutionRequest::GetQueryExecutionRequest()
@@ -53,13 +68,16 @@ GetQueryExecutionRequest::GetQueryExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetQueryExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetQueryExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetQueryExecutionRequest::response(QNetworkRe
     return new GetQueryExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetQueryExecutionRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * GetQueryExecutionRequest::response(QNetworkRe
  * @brief  Private implementation for GetQueryExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueryExecutionRequestPrivate object.
@@ -97,7 +115,7 @@ GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueryExecutionRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListAssessmentTemplatesResponse
+/*!
+ * \class QtAws::Inspector::ListAssessmentTemplatesResponse
  *
- * @brief  Handles Inspector ListAssessmentTemplates responses.
+ * \brief The ListAssessmentTemplatesResponse class encapsulates Inspector ListAssessmentTemplates responses.
  *
- * @see    InspectorClient::listAssessmentTemplates
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listAssessmentTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentTemplatesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListAssessmentTemplatesRequest * ListAssessmentTemplatesResponse::request(
     return static_cast<const ListAssessmentTemplatesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector ListAssessmentTemplates response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListAssessmentTemplatesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAssessmentTemplatesResponsePrivate
+ * \class ListAssessmentTemplatesResponsePrivate
  *
- * @brief  Private implementation for ListAssessmentTemplatesResponse.
+ * \brief Private implementation for ListAssessmentTemplatesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentTemplatesResponsePrivate object.
@@ -91,7 +99,7 @@ ListAssessmentTemplatesResponsePrivate::ListAssessmentTemplatesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector ListAssessmentTemplatesResponse element.
  *
  * @param  xml  XML stream to parse.

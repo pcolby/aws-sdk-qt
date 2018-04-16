@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeServiceAccessPoliciesRequest
+/*!
+ * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesRequest
  *
- * @brief  Implements CloudSearch DescribeServiceAccessPolicies requests.
+ * \brief The DescribeServiceAccessPoliciesRequest class encapsulates CloudSearch DescribeServiceAccessPolicies requests.
  *
- * @see    CloudSearchClient::describeServiceAccessPolicies
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeServiceAccessPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object.
  */
 DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest()
@@ -53,13 +67,16 @@ DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeServiceAccessPoliciesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeServiceAccessPoliciesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::respons
     return new DescribeServiceAccessPoliciesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeServiceAccessPoliciesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::respons
  * @brief  Private implementation for DescribeServiceAccessPoliciesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeServiceAccessPoliciesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeServiceAccessPoliciesRequestPrivate object, copying another.

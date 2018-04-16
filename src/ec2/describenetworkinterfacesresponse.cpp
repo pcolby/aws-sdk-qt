@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkInterfacesResponse
+/*!
+ * \class QtAws::EC2::DescribeNetworkInterfacesResponse
  *
- * @brief  Handles EC2 DescribeNetworkInterfaces responses.
+ * \brief The DescribeNetworkInterfacesResponse class encapsulates EC2 DescribeNetworkInterfaces responses.
  *
- * @see    EC2Client::describeNetworkInterfaces
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkInterfaces
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeNetworkInterfacesRequest * DescribeNetworkInterfacesResponse::requ
     return static_cast<const DescribeNetworkInterfacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeNetworkInterfaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeNetworkInterfacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeNetworkInterfacesResponsePrivate
+ * \class DescribeNetworkInterfacesResponsePrivate
  *
- * @brief  Private implementation for DescribeNetworkInterfacesResponse.
+ * \brief Private implementation for DescribeNetworkInterfacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfacesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeNetworkInterfacesResponsePrivate::DescribeNetworkInterfacesResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeNetworkInterfacesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeNotificationConfigurationsRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeNotificationConfigurationsRequest
  *
- * @brief  Implements AutoScaling DescribeNotificationConfigurations requests.
+ * \brief The DescribeNotificationConfigurationsRequest class encapsulates AutoScaling DescribeNotificationConfigurations requests.
  *
- * @see    AutoScalingClient::describeNotificationConfigurations
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeNotificationConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotificationConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeNotificationConfigurationsRequest::DescribeNotificationConfigurationsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotificationConfigurationsRequest object.
  */
 DescribeNotificationConfigurationsRequest::DescribeNotificationConfigurationsRequest()
@@ -53,13 +61,16 @@ DescribeNotificationConfigurationsRequest::DescribeNotificationConfigurationsReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNotificationConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNotificationConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::re
     return new DescribeNotificationConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNotificationConfigurationsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::re
  * @brief  Private implementation for DescribeNotificationConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotificationConfigurationsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurat
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotificationConfigurationsRequestPrivate object, copying another.

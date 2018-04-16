@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DetectEntitiesRequest
+/*!
+ * \class QtAws::Comprehend::DetectEntitiesRequest
  *
- * @brief  Implements Comprehend DetectEntities requests.
+ * \brief The DetectEntitiesRequest class encapsulates Comprehend DetectEntities requests.
  *
- * @see    ComprehendClient::detectEntities
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::detectEntities
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectEntitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DetectEntitiesRequest::DetectEntitiesRequest(const DetectEntitiesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectEntitiesRequest object.
  */
 DetectEntitiesRequest::DetectEntitiesRequest()
@@ -53,13 +59,16 @@ DetectEntitiesRequest::DetectEntitiesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectEntitiesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectEntitiesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DetectEntitiesRequest::response(QNetworkReply
     return new DetectEntitiesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectEntitiesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DetectEntitiesRequest::response(QNetworkReply
  * @brief  Private implementation for DetectEntitiesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectEntitiesRequestPrivate object.
@@ -97,7 +106,7 @@ DetectEntitiesRequestPrivate::DetectEntitiesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectEntitiesRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  CreateDeliveryStreamResponse
+/*!
+ * \class QtAws::Firehose::CreateDeliveryStreamResponse
  *
- * @brief  Handles Firehose CreateDeliveryStream responses.
+ * \brief The CreateDeliveryStreamResponse class encapsulates Firehose CreateDeliveryStream responses.
  *
- * @see    FirehoseClient::createDeliveryStream
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::createDeliveryStream
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeliveryStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateDeliveryStreamRequest * CreateDeliveryStreamResponse::request() cons
     return static_cast<const CreateDeliveryStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Firehose CreateDeliveryStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateDeliveryStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDeliveryStreamResponsePrivate
+ * \class CreateDeliveryStreamResponsePrivate
  *
- * @brief  Private implementation for CreateDeliveryStreamResponse.
+ * \brief Private implementation for CreateDeliveryStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeliveryStreamResponsePrivate object.
@@ -91,7 +98,7 @@ CreateDeliveryStreamResponsePrivate::CreateDeliveryStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Firehose CreateDeliveryStreamResponse element.
  *
  * @param  xml  XML stream to parse.

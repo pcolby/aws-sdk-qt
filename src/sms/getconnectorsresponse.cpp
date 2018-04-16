@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetConnectorsResponse
+/*!
+ * \class QtAws::SMS::GetConnectorsResponse
  *
- * @brief  Handles SMS GetConnectors responses.
+ * \brief The GetConnectorsResponse class encapsulates SMS GetConnectors responses.
  *
- * @see    SMSClient::getConnectors
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getConnectors
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConnectorsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetConnectorsRequest * GetConnectorsResponse::request() const
     return static_cast<const GetConnectorsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS GetConnectors response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetConnectorsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetConnectorsResponsePrivate
+ * \class GetConnectorsResponsePrivate
  *
- * @brief  Private implementation for GetConnectorsResponse.
+ * \brief Private implementation for GetConnectorsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectorsResponsePrivate object.
@@ -91,7 +94,7 @@ GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS GetConnectorsResponse element.
  *
  * @param  xml  XML stream to parse.

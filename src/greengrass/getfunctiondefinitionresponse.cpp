@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetFunctionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::GetFunctionDefinitionResponse
  *
- * @brief  Handles Greengrass GetFunctionDefinition responses.
+ * \brief The GetFunctionDefinitionResponse class encapsulates Greengrass GetFunctionDefinition responses.
  *
- * @see    GreengrassClient::getFunctionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getFunctionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFunctionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetFunctionDefinitionRequest * GetFunctionDefinitionResponse::request() co
     return static_cast<const GetFunctionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetFunctionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetFunctionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFunctionDefinitionResponsePrivate
+ * \class GetFunctionDefinitionResponsePrivate
  *
- * @brief  Private implementation for GetFunctionDefinitionResponse.
+ * \brief Private implementation for GetFunctionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFunctionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ GetFunctionDefinitionResponsePrivate::GetFunctionDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetFunctionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

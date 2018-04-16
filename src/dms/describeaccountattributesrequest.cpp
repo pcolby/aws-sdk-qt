@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeAccountAttributesRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeAccountAttributes requests.
+ * \brief The DescribeAccountAttributesRequest class encapsulates DatabaseMigrationService DescribeAccountAttributes requests.
  *
- * @see    DatabaseMigrationServiceClient::describeAccountAttributes
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeAccountAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
@@ -53,13 +67,16 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAccountAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAccountAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
     return new DescribeAccountAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAccountAttributesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  * @brief  Private implementation for DescribeAccountAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAccountAttributesRequestPrivate object, copying another.

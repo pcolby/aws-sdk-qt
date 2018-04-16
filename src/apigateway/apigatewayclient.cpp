@@ -265,28 +265,36 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::APIGateway
+ * \brief The QtAws::APIGateway contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  APIGatewayClient
+/*!
+ * \class QtAws::APIGateway::APIGatewayClient
  *
- * @brief  Client for Amazon API Gateway
+ * \brief The APIGatewayClient class provides access the Amazon API Gateway service.
  *
- * <fullname>Amazon API Gateway</fullname>
+ * \ingroup APIGateway
  *
- * Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
- * Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
- * other publicly addressable web services that are hosted outside of
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
  */
 
-/**
- * @brief  Constructs a new APIGatewayClient object.
+/*!
+ * \brief Constructs a APIGatewayClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 APIGatewayClient::APIGatewayClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -305,21 +313,16 @@ APIGatewayClient::APIGatewayClient(
     d->serviceName = QStringLiteral("apigateway");
 }
 
-/**
- * @brief  Constructs a new APIGatewayClient object.
+/*!
+ * \overload APIGatewayClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 APIGatewayClient::APIGatewayClient(
     const QUrl &endpoint,
@@ -338,7 +341,7 @@ APIGatewayClient::APIGatewayClient(
     d->serviceName = QStringLiteral("apigateway");
 }
 
-/**
+/*!
  * Create an <a>ApiKey</a> resource.
  *
  * </p <div class="seeAlso"><a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS
@@ -354,7 +357,7 @@ CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest 
     return qobject_cast<CreateApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a>
  *
  * resource> <div class="seeAlso"><a
@@ -370,7 +373,7 @@ CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthor
     return qobject_cast<CreateAuthorizerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new <a>BasePathMapping</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -384,7 +387,7 @@ CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const Cr
     return qobject_cast<CreateBasePathMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -398,7 +401,7 @@ CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploy
     return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -411,7 +414,7 @@ CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(cons
     return qobject_cast<CreateDocumentationPartResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -424,7 +427,7 @@ CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersio
     return qobject_cast<CreateDocumentationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new domain
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -438,7 +441,7 @@ CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomain
     return qobject_cast<CreateDomainNameResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a new <a>Model</a> resource to an existing <a>RestApi</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -452,7 +455,7 @@ CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &re
     return qobject_cast<CreateModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>ReqeustValidator</a> of a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -466,7 +469,7 @@ CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const 
     return qobject_cast<CreateRequestValidatorResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a <a>Resource</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -480,7 +483,7 @@ CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRe
     return qobject_cast<CreateResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new <a>RestApi</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -494,7 +497,7 @@ CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiReque
     return qobject_cast<CreateRestApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API.
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -508,7 +511,7 @@ CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &re
     return qobject_cast<CreateStageResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -522,7 +525,7 @@ CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePla
     return qobject_cast<CreateUsagePlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a usage plan key for adding an existing API key to a usage
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -536,7 +539,7 @@ CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUs
     return qobject_cast<CreateUsagePlanKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes
  * 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint
  *
@@ -551,7 +554,7 @@ CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkReque
     return qobject_cast<CreateVpcLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the <a>ApiKey</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -565,7 +568,7 @@ DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest 
     return qobject_cast<DeleteApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
@@ -581,7 +584,7 @@ DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthor
     return qobject_cast<DeleteAuthorizerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the <a>BasePathMapping</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -595,7 +598,7 @@ DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const De
     return qobject_cast<DeleteBasePathMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the <a>ClientCertificate</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -609,7 +612,7 @@ DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(cons
     return qobject_cast<DeleteClientCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources
  * associated with
  *
@@ -624,7 +627,7 @@ DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploy
     return qobject_cast<DeleteDeploymentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -637,7 +640,7 @@ DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(cons
     return qobject_cast<DeleteDocumentationPartResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -650,7 +653,7 @@ DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersio
     return qobject_cast<DeleteDocumentationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the <a>DomainName</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -664,7 +667,7 @@ DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomain
     return qobject_cast<DeleteDomainNameResponse *>(send(request));
 }
 
-/**
+/*!
  * Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets
  * it with the default
  *
@@ -679,7 +682,7 @@ DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const De
     return qobject_cast<DeleteGatewayResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a delete
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -693,7 +696,7 @@ DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteInte
     return qobject_cast<DeleteIntegrationResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a delete integration
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -707,7 +710,7 @@ DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(
     return qobject_cast<DeleteIntegrationResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing <a>Method</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -721,7 +724,7 @@ DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest 
     return qobject_cast<DeleteMethodResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing <a>MethodResponse</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -735,7 +738,7 @@ DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const Dele
     return qobject_cast<DeleteMethodResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -749,7 +752,7 @@ DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &re
     return qobject_cast<DeleteModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <a>RequestValidator</a> of a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -763,7 +766,7 @@ DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const 
     return qobject_cast<DeleteRequestValidatorResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <a>Resource</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -777,7 +780,7 @@ DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRe
     return qobject_cast<DeleteResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -791,7 +794,7 @@ DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiReque
     return qobject_cast<DeleteRestApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a <a>Stage</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -805,7 +808,7 @@ DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &re
     return qobject_cast<DeleteStageResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a usage plan of a given plan
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -819,7 +822,7 @@ DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePla
     return qobject_cast<DeleteUsagePlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a usage plan key and remove the underlying API key from the associated usage
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -833,7 +836,7 @@ DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUs
     return qobject_cast<DeleteUsagePlanKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing <a>VpcLink</a> of a specified
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -847,7 +850,7 @@ DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkReque
     return qobject_cast<DeleteVpcLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Flushes all authorizer cache entries on a
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -861,7 +864,7 @@ FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCach
     return qobject_cast<FlushStageAuthorizersCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Flushes a stage's
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -875,7 +878,7 @@ FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCach
     return qobject_cast<FlushStageCacheResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a <a>ClientCertificate</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -889,7 +892,7 @@ GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(
     return qobject_cast<GenerateClientCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the current <a>Account</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -903,7 +906,7 @@ GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &reque
     return qobject_cast<GetAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the current <a>ApiKey</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -917,7 +920,7 @@ GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
     return qobject_cast<GetApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the current <a>ApiKeys</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -931,7 +934,7 @@ GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &reque
     return qobject_cast<GetApiKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
@@ -947,7 +950,7 @@ GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerReque
     return qobject_cast<GetAuthorizerResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe an existing <a>Authorizers</a>
  *
  * resource> <div class="seeAlso"><a
@@ -963,7 +966,7 @@ GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRe
     return qobject_cast<GetAuthorizersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe a <a>BasePathMapping</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -977,7 +980,7 @@ GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBaseP
     return qobject_cast<GetBasePathMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a collection of <a>BasePathMapping</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -991,7 +994,7 @@ GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBas
     return qobject_cast<GetBasePathMappingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the current <a>ClientCertificate</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1005,7 +1008,7 @@ GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetC
     return qobject_cast<GetClientCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a collection of <a>ClientCertificate</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1019,7 +1022,7 @@ GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const Ge
     return qobject_cast<GetClientCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a <a>Deployment</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1033,7 +1036,7 @@ GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentReque
     return qobject_cast<GetDeploymentResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a <a>Deployments</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1047,7 +1050,7 @@ GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRe
     return qobject_cast<GetDeploymentsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1060,7 +1063,7 @@ GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetD
     return qobject_cast<GetDocumentationPartResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1073,7 +1076,7 @@ GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const Ge
     return qobject_cast<GetDocumentationPartsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1086,7 +1089,7 @@ GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(cons
     return qobject_cast<GetDocumentationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1099,7 +1102,7 @@ GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(co
     return qobject_cast<GetDocumentationVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a domain name that is contained in a simpler, more intuitive URL that can be
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1113,7 +1116,7 @@ GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameReque
     return qobject_cast<GetDomainNameResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a collection of <a>DomainName</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1127,7 +1130,7 @@ GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRe
     return qobject_cast<GetDomainNamesResponse *>(send(request));
 }
 
-/**
+/*!
  * Exports a deployed version of a <a>RestApi</a> in a specified
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1141,7 +1144,7 @@ GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
     return qobject_cast<GetExportResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a <a>GatewayResponse</a> of a specified response type on the given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1155,7 +1158,7 @@ GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatew
     return qobject_cast<GetGatewayResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any
  * definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a>
  * collection for the supported response
@@ -1171,7 +1174,7 @@ GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGat
     return qobject_cast<GetGatewayResponsesResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the integration
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1185,7 +1188,7 @@ GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRe
     return qobject_cast<GetIntegrationResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a get integration
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1199,7 +1202,7 @@ GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const 
     return qobject_cast<GetIntegrationResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe an existing <a>Method</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1213,7 +1216,7 @@ GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
     return qobject_cast<GetMethodResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a <a>MethodResponse</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1227,7 +1230,7 @@ GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodR
     return qobject_cast<GetMethodResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes an existing model defined for a <a>RestApi</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1241,7 +1244,7 @@ GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
     return qobject_cast<GetModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a sample mapping template that can be used to transform a payload into the structure of a
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1255,7 +1258,7 @@ GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemp
     return qobject_cast<GetModelTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes existing <a>Models</a> defined for a <a>RestApi</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1269,7 +1272,7 @@ GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
     return qobject_cast<GetModelsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a <a>RequestValidator</a> of a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1283,7 +1286,7 @@ GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetReq
     return qobject_cast<GetRequestValidatorResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the <a>RequestValidators</a> collection of a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1297,7 +1300,7 @@ GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetR
     return qobject_cast<GetRequestValidatorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about a
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1311,7 +1314,7 @@ GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &re
     return qobject_cast<GetResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists information about a collection of <a>Resource</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1325,7 +1328,7 @@ GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest 
     return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the <a>RestApi</a> resource in the
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1339,7 +1342,7 @@ GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &reque
     return qobject_cast<GetRestApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the <a>RestApis</a> resources for your
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1353,7 +1356,7 @@ GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &re
     return qobject_cast<GetRestApisResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a client SDK for a <a>RestApi</a> and
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1367,7 +1370,7 @@ GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
     return qobject_cast<GetSdkResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1380,7 +1383,7 @@ GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &reque
     return qobject_cast<GetSdkTypeResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1393,7 +1396,7 @@ GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &re
     return qobject_cast<GetSdkTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a <a>Stage</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1407,7 +1410,7 @@ GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
     return qobject_cast<GetStageResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about one or more <a>Stage</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1421,7 +1424,7 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
     return qobject_cast<GetStagesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the <a>Tags</a> collection for a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1435,7 +1438,7 @@ GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
     return qobject_cast<GetTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the usage data of a usage plan in a specified time
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1449,7 +1452,7 @@ GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
     return qobject_cast<GetUsageResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a usage plan of a given plan
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1463,7 +1466,7 @@ GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest 
     return qobject_cast<GetUsagePlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a usage plan key of a given key
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1477,7 +1480,7 @@ GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKe
     return qobject_cast<GetUsagePlanKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets all the usage plan keys representing the API keys added to a specified usage
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1491,7 +1494,7 @@ GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlan
     return qobject_cast<GetUsagePlanKeysResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets all the usage plans of the caller's
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1505,7 +1508,7 @@ GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansReque
     return qobject_cast<GetUsagePlansResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a specified VPC link under the caller's account in a
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1519,7 +1522,7 @@ GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &reque
     return qobject_cast<GetVpcLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the <a>VpcLinks</a> collection under the caller's account in a selected
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1533,7 +1536,7 @@ GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &re
     return qobject_cast<GetVpcLinksResponse *>(send(request));
 }
 
-/**
+/*!
  * Import API keys from an external source, such as a CSV-formatted
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1547,7 +1550,7 @@ ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysReque
     return qobject_cast<ImportApiKeysResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1560,7 +1563,7 @@ ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(co
     return qobject_cast<ImportDocumentationPartsResponse *>(send(request));
 }
 
-/**
+/*!
  * A feature of the API Gateway control service for creating a new API from an external API definition
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1574,7 +1577,7 @@ ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiReque
     return qobject_cast<ImportRestApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1588,7 +1591,7 @@ PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatew
     return qobject_cast<PutGatewayResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets up a method's
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1602,7 +1605,7 @@ PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRe
     return qobject_cast<PutIntegrationResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents a put
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1616,7 +1619,7 @@ PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const 
     return qobject_cast<PutIntegrationResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Add a method to an existing <a>Resource</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1630,7 +1633,7 @@ PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
     return qobject_cast<PutMethodResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a <a>MethodResponse</a> to an existing <a>Method</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1644,7 +1647,7 @@ PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodR
     return qobject_cast<PutMethodResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The
  * update can take the form of merging the supplied definition into the existing API or overwriting the existing
  *
@@ -1659,7 +1662,7 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
     return qobject_cast<PutRestApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates a tag on a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1673,7 +1676,7 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
  *
  * body> <div class="seeAlso"> <a
@@ -1690,7 +1693,7 @@ TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const Test
     return qobject_cast<TestInvokeAuthorizerResponse *>(send(request));
 }
 
-/**
+/*!
  * Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1704,7 +1707,7 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
     return qobject_cast<TestInvokeMethodResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a tag from a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1718,7 +1721,7 @@ UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceReque
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about the current <a>Account</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1732,7 +1735,7 @@ UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountReque
     return qobject_cast<UpdateAccountResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about an <a>ApiKey</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1746,7 +1749,7 @@ UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest 
     return qobject_cast<UpdateApiKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
@@ -1762,7 +1765,7 @@ UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthor
     return qobject_cast<UpdateAuthorizerResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about the <a>BasePathMapping</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1776,7 +1779,7 @@ UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const Up
     return qobject_cast<UpdateBasePathMappingResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about an <a>ClientCertificate</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1790,7 +1793,7 @@ UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(cons
     return qobject_cast<UpdateClientCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about a <a>Deployment</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1804,7 +1807,7 @@ UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploy
     return qobject_cast<UpdateDeploymentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1817,7 +1820,7 @@ UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(cons
     return qobject_cast<UpdateDocumentationPartResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon API Gateway.
  *
@@ -1830,7 +1833,7 @@ UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersio
     return qobject_cast<UpdateDocumentationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about the <a>DomainName</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1844,7 +1847,7 @@ UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomain
     return qobject_cast<UpdateDomainNameResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <a>GatewayResponse</a> of a specified response type on the given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1858,7 +1861,7 @@ UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const Up
     return qobject_cast<UpdateGatewayResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents an update
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1872,7 +1875,7 @@ UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateInte
     return qobject_cast<UpdateIntegrationResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents an update integration
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1886,7 +1889,7 @@ UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(
     return qobject_cast<UpdateIntegrationResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing <a>Method</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1900,7 +1903,7 @@ UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest 
     return qobject_cast<UpdateMethodResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing <a>MethodResponse</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1914,7 +1917,7 @@ UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const Upda
     return qobject_cast<UpdateMethodResponseResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about a
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1928,7 +1931,7 @@ UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &re
     return qobject_cast<UpdateModelResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a <a>RequestValidator</a> of a given
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1942,7 +1945,7 @@ UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const 
     return qobject_cast<UpdateRequestValidatorResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about a <a>Resource</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1956,7 +1959,7 @@ UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRe
     return qobject_cast<UpdateResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about the specified
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1970,7 +1973,7 @@ UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiReque
     return qobject_cast<UpdateRestApiResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes information about a <a>Stage</a>
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1984,7 +1987,7 @@ UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &re
     return qobject_cast<UpdateStageResponse *>(send(request));
 }
 
-/**
+/*!
  * Grants a temporary extension to the remaining quota of a usage plan associated with a specified API
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -1998,7 +2001,7 @@ UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &re
     return qobject_cast<UpdateUsageResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a usage plan of a given plan
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -2012,7 +2015,7 @@ UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePla
     return qobject_cast<UpdateUsagePlanResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing <a>VpcLink</a> of a specified
  *
  * @param  request Request to send to Amazon API Gateway.
@@ -2026,7 +2029,7 @@ UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkReque
     return qobject_cast<UpdateVpcLinkResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  APIGatewayClientPrivate
@@ -2034,7 +2037,7 @@ UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkReque
  * @brief  Private implementation for APIGatewayClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new APIGatewayClientPrivate object.

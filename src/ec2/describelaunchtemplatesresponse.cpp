@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeLaunchTemplatesResponse
+/*!
+ * \class QtAws::EC2::DescribeLaunchTemplatesResponse
  *
- * @brief  Handles EC2 DescribeLaunchTemplates responses.
+ * \brief The DescribeLaunchTemplatesResponse class encapsulates EC2 DescribeLaunchTemplates responses.
  *
- * @see    EC2Client::describeLaunchTemplates
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeLaunchTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLaunchTemplatesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeLaunchTemplatesRequest * DescribeLaunchTemplatesResponse::request(
     return static_cast<const DescribeLaunchTemplatesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeLaunchTemplates response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeLaunchTemplatesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeLaunchTemplatesResponsePrivate
+ * \class DescribeLaunchTemplatesResponsePrivate
  *
- * @brief  Private implementation for DescribeLaunchTemplatesResponse.
+ * \brief Private implementation for DescribeLaunchTemplatesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLaunchTemplatesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeLaunchTemplatesResponse element.
  *
  * @param  xml  XML stream to parse.

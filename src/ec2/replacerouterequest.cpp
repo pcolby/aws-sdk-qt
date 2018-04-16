@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceRouteRequest
+/*!
+ * \class QtAws::EC2::ReplaceRouteRequest
  *
- * @brief  Implements EC2 ReplaceRoute requests.
+ * \brief The ReplaceRouteRequest class encapsulates EC2 ReplaceRoute requests.
  *
- * @see    EC2Client::replaceRoute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceRoute
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceRouteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReplaceRouteRequest::ReplaceRouteRequest(const ReplaceRouteRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReplaceRouteRequest object.
  */
 ReplaceRouteRequest::ReplaceRouteRequest()
@@ -53,13 +60,16 @@ ReplaceRouteRequest::ReplaceRouteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReplaceRouteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReplaceRouteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply *
     return new ReplaceRouteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReplaceRouteRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply *
  * @brief  Private implementation for ReplaceRouteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceRouteRequestPrivate object.
@@ -97,7 +107,7 @@ ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceRouteRequestPrivate object, copying another.

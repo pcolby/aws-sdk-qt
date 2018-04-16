@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeDomainsResponse
+/*!
+ * \class QtAws::CloudSearch::DescribeDomainsResponse
  *
- * @brief  Handles CloudSearch DescribeDomains responses.
+ * \brief The DescribeDomainsResponse class encapsulates CloudSearch DescribeDomains responses.
  *
- * @see    CloudSearchClient::describeDomains
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeDomains
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDomainsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeDomainsRequest * DescribeDomainsResponse::request() const
     return static_cast<const DescribeDomainsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DescribeDomains response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeDomainsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeDomainsResponsePrivate
+ * \class DescribeDomainsResponsePrivate
  *
- * @brief  Private implementation for DescribeDomainsResponse.
+ * \brief Private implementation for DescribeDomainsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDomainsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeDomainsResponsePrivate::DescribeDomainsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DescribeDomainsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  RemovePermissionResponse
+/*!
+ * \class QtAws::Lambda::RemovePermissionResponse
  *
- * @brief  Handles Lambda RemovePermission responses.
+ * \brief The RemovePermissionResponse class encapsulates Lambda RemovePermission responses.
  *
- * @see    LambdaClient::removePermission
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::removePermission
  */
 
-/**
+/*!
  * @brief  Constructs a new RemovePermissionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const RemovePermissionRequest * RemovePermissionResponse::request() const
     return static_cast<const RemovePermissionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda RemovePermission response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemovePermissionResponsePrivate
+ * \class RemovePermissionResponsePrivate
  *
- * @brief  Private implementation for RemovePermissionResponse.
+ * \brief Private implementation for RemovePermissionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemovePermissionResponsePrivate object.
@@ -91,7 +105,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda RemovePermissionResponse element.
  *
  * @param  xml  XML stream to parse.

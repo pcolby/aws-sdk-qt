@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteNotebookInstanceRequest
+/*!
+ * \class QtAws::SageMaker::DeleteNotebookInstanceRequest
  *
- * @brief  Implements SageMaker DeleteNotebookInstance requests.
+ * \brief The DeleteNotebookInstanceRequest class encapsulates SageMaker DeleteNotebookInstance requests.
  *
- * @see    SageMakerClient::deleteNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotebookInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteNotebookInstanceRequest::DeleteNotebookInstanceRequest(const DeleteNoteboo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNotebookInstanceRequest object.
  */
 DeleteNotebookInstanceRequest::DeleteNotebookInstanceRequest()
@@ -53,13 +56,16 @@ DeleteNotebookInstanceRequest::DeleteNotebookInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNotebookInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNotebookInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceRequest::response(QNetw
     return new DeleteNotebookInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNotebookInstanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceRequest::response(QNetw
  * @brief  Private implementation for DeleteNotebookInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotebookInstanceRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteNotebookInstanceRequestPrivate::DeleteNotebookInstanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNotebookInstanceRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  UpdateStackResponse
+/*!
+ * \class QtAws::AppStream::UpdateStackResponse
  *
- * @brief  Handles AppStream UpdateStack responses.
+ * \brief The UpdateStackResponse class encapsulates AppStream UpdateStack responses.
  *
- * @see    AppStreamClient::updateStack
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::updateStack
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateStackRequest * UpdateStackResponse::request() const
     return static_cast<const UpdateStackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream UpdateStack response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateStackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateStackResponsePrivate
+ * \class UpdateStackResponsePrivate
  *
- * @brief  Private implementation for UpdateStackResponse.
+ * \brief Private implementation for UpdateStackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStackResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateStackResponsePrivate::UpdateStackResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream UpdateStackResponse element.
  *
  * @param  xml  XML stream to parse.

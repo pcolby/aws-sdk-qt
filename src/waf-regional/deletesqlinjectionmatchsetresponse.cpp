@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteSqlInjectionMatchSetResponse
+/*!
+ * \class QtAws::WAFRegional::DeleteSqlInjectionMatchSetResponse
  *
- * @brief  Handles WAFRegional DeleteSqlInjectionMatchSet responses.
+ * \brief The DeleteSqlInjectionMatchSetResponse class encapsulates WAFRegional DeleteSqlInjectionMatchSet responses.
  *
- * @see    WAFRegionalClient::deleteSqlInjectionMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteSqlInjectionMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSqlInjectionMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::re
     return static_cast<const DeleteSqlInjectionMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional DeleteSqlInjectionMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSqlInjectionMatchSetResponsePrivate
+ * \class DeleteSqlInjectionMatchSetResponsePrivate
  *
- * @brief  Private implementation for DeleteSqlInjectionMatchSetResponse.
+ * \brief Private implementation for DeleteSqlInjectionMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSqlInjectionMatchSetResponsePrivate object.
@@ -91,7 +101,7 @@ DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional DeleteSqlInjectionMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

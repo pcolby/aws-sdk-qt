@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpnConnectionResponse
+/*!
+ * \class QtAws::EC2::CreateVpnConnectionResponse
  *
- * @brief  Handles EC2 CreateVpnConnection responses.
+ * \brief The CreateVpnConnectionResponse class encapsulates EC2 CreateVpnConnection responses.
  *
- * @see    EC2Client::createVpnConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpnConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpnConnectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateVpnConnectionRequest * CreateVpnConnectionResponse::request() const
     return static_cast<const CreateVpnConnectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateVpnConnection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateVpnConnectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateVpnConnectionResponsePrivate
+ * \class CreateVpnConnectionResponsePrivate
  *
- * @brief  Private implementation for CreateVpnConnectionResponse.
+ * \brief Private implementation for CreateVpnConnectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpnConnectionResponsePrivate object.
@@ -91,7 +98,7 @@ CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateVpnConnectionResponse element.
  *
  * @param  xml  XML stream to parse.

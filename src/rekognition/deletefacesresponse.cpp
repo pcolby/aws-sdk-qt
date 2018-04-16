@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DeleteFacesResponse
+/*!
+ * \class QtAws::Rekognition::DeleteFacesResponse
  *
- * @brief  Handles Rekognition DeleteFaces responses.
+ * \brief The DeleteFacesResponse class encapsulates Rekognition DeleteFaces responses.
  *
- * @see    RekognitionClient::deleteFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::deleteFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteFacesRequest * DeleteFacesResponse::request() const
     return static_cast<const DeleteFacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DeleteFaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteFacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFacesResponsePrivate
+ * \class DeleteFacesResponsePrivate
  *
- * @brief  Private implementation for DeleteFacesResponse.
+ * \brief Private implementation for DeleteFacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFacesResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteFacesResponsePrivate::DeleteFacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DeleteFacesResponse element.
  *
  * @param  xml  XML stream to parse.

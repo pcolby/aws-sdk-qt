@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminResetUserPasswordRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminResetUserPasswordRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminResetUserPassword requests.
+ * \brief The AdminResetUserPasswordRequest class encapsulates CognitoIdentityProvider AdminResetUserPassword requests.
  *
- * @see    CognitoIdentityProviderClient::adminResetUserPassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminResetUserPassword
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminResetUserPasswordRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminResetUserPasswordRequest::AdminResetUserPasswordRequest(const AdminResetUse
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminResetUserPasswordRequest object.
  */
 AdminResetUserPasswordRequest::AdminResetUserPasswordRequest()
@@ -53,13 +66,16 @@ AdminResetUserPasswordRequest::AdminResetUserPasswordRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminResetUserPasswordRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminResetUserPasswordResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetw
     return new AdminResetUserPasswordResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminResetUserPasswordRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetw
  * @brief  Private implementation for AdminResetUserPasswordRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminResetUserPasswordRequestPrivate object.
@@ -97,7 +113,7 @@ AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminResetUserPasswordRequestPrivate object, copying another.

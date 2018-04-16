@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetObjectAclRequest
+/*!
+ * \class QtAws::S3::GetObjectAclRequest
  *
- * @brief  Implements S3 GetObjectAcl requests.
+ * \brief The GetObjectAclRequest class encapsulates S3 GetObjectAcl requests.
  *
- * @see    S3Client::getObjectAcl
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getObjectAcl
  */
 
-/**
+/*!
  * @brief  Constructs a new GetObjectAclRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetObjectAclRequest::GetObjectAclRequest(const GetObjectAclRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetObjectAclRequest object.
  */
 GetObjectAclRequest::GetObjectAclRequest()
@@ -53,13 +56,16 @@ GetObjectAclRequest::GetObjectAclRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetObjectAclRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetObjectAclResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply *
     return new GetObjectAclResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetObjectAclRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetObjectAclRequest::response(QNetworkReply *
  * @brief  Private implementation for GetObjectAclRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectAclRequestPrivate object.
@@ -97,7 +103,7 @@ GetObjectAclRequestPrivate::GetObjectAclRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetObjectAclRequestPrivate object, copying another.

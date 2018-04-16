@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  StopReplicationTaskRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::StopReplicationTaskRequest
  *
- * @brief  Implements DatabaseMigrationService StopReplicationTask requests.
+ * \brief The StopReplicationTaskRequest class encapsulates DatabaseMigrationService StopReplicationTask requests.
  *
- * @see    DatabaseMigrationServiceClient::stopReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::stopReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new StopReplicationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ StopReplicationTaskRequest::StopReplicationTaskRequest(const StopReplicationTask
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopReplicationTaskRequest object.
  */
 StopReplicationTaskRequest::StopReplicationTaskRequest()
@@ -53,13 +67,16 @@ StopReplicationTaskRequest::StopReplicationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopReplicationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopReplicationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetwork
     return new StopReplicationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopReplicationTaskRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetwork
  * @brief  Private implementation for StopReplicationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopReplicationTaskRequestPrivate object.
@@ -97,7 +114,7 @@ StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopReplicationTaskRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdatePublicKeyRequest
+/*!
+ * \class QtAws::CloudFront::UpdatePublicKeyRequest
  *
- * @brief  Implements CloudFront UpdatePublicKey requests.
+ * \brief The UpdatePublicKeyRequest class encapsulates CloudFront UpdatePublicKey requests.
  *
- * @see    CloudFrontClient::updatePublicKey
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updatePublicKey
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePublicKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdatePublicKeyRequest::UpdatePublicKeyRequest(const UpdatePublicKeyRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePublicKeyRequest object.
  */
 UpdatePublicKeyRequest::UpdatePublicKeyRequest()
@@ -53,13 +61,16 @@ UpdatePublicKeyRequest::UpdatePublicKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePublicKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePublicKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePublicKeyRequest::response(QNetworkRepl
     return new UpdatePublicKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePublicKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePublicKeyRequest::response(QNetworkRepl
  * @brief  Private implementation for UpdatePublicKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePublicKeyRequestPrivate object.
@@ -97,7 +108,7 @@ UpdatePublicKeyRequestPrivate::UpdatePublicKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePublicKeyRequestPrivate object, copying another.

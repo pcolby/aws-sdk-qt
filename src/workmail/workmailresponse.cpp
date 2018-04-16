@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace WorkMail {
 
-/**
- * @class  WorkMailResponse
+/*!
+ * \class QtAws::WorkMail::WorkMailResponse
  *
- * @brief  Handles WorkMail WorkMail responses.
+ * \brief The WorkMailResponse class is the base class for all WorkMail responses.
  *
- * @see    WorkMailClient::workMail
+ * \ingroup WorkMail
  */
 
-/**
+/*!
  * @brief  Constructs a new WorkMailResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ WorkMailResponse::WorkMailResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkMailResponse object.
@@ -63,7 +63,7 @@ WorkMailResponse::WorkMailResponse(WorkMailResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void WorkMailResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  WorkMailResponsePrivate
@@ -92,7 +92,7 @@ void WorkMailResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for WorkMailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new WorkMailResponsePrivate object.

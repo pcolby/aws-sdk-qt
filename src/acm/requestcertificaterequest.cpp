@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  RequestCertificateRequest
+/*!
+ * \class QtAws::ACM::RequestCertificateRequest
  *
- * @brief  Implements ACM RequestCertificate requests.
+ * \brief The RequestCertificateRequest class encapsulates ACM RequestCertificate requests.
  *
- * @see    ACMClient::requestCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::requestCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RequestCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ RequestCertificateRequest::RequestCertificateRequest(const RequestCertificateReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RequestCertificateRequest object.
  */
 RequestCertificateRequest::RequestCertificateRequest()
@@ -53,13 +65,16 @@ RequestCertificateRequest::RequestCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RequestCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RequestCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * RequestCertificateRequest::response(QNetworkR
     return new RequestCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RequestCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * RequestCertificateRequest::response(QNetworkR
  * @brief  Private implementation for RequestCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RequestCertificateRequestPrivate object, copying another.

@@ -25,15 +25,37 @@
 namespace QtAws {
 namespace SFN {
 
-/**
- * @class  CreateStateMachineRequest
+/*!
+ * \class QtAws::SFN::CreateStateMachineRequest
  *
- * @brief  Implements SFN CreateStateMachine requests.
+ * \brief The CreateStateMachineRequest class encapsulates SFN CreateStateMachine requests.
  *
- * @see    SFNClient::createStateMachine
+ * \ingroup SFN
+ *
+ *  <fullname>AWS Step Functions</fullname>
+ * 
+ *  AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
+ *  using visual
+ * 
+ *  workflows>
+ * 
+ *  You can use Step Functions to build applications from individual components, each of which performs a discrete function,
+ *  or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps
+ *  visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each
+ *  step, and retries steps when there are errors, so your application executes predictably and in the right order every
+ *  time. Step Functions logs the state of each step, so you can quickly diagnose and debug any
+ * 
+ *  issues>
+ * 
+ *  Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
+ *  You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
+ *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
+ *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
+ *
+ * \sa SFNClient::createStateMachine
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStateMachineRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +66,7 @@ CreateStateMachineRequest::CreateStateMachineRequest(const CreateStateMachineReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStateMachineRequest object.
  */
 CreateStateMachineRequest::CreateStateMachineRequest()
@@ -53,13 +75,16 @@ CreateStateMachineRequest::CreateStateMachineRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStateMachineRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStateMachineResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkR
     return new CreateStateMachineResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStateMachineRequestPrivate
@@ -82,7 +107,7 @@ QtAws::Core::AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkR
  * @brief  Private implementation for CreateStateMachineRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStateMachineRequestPrivate object.
@@ -97,7 +122,7 @@ CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStateMachineRequestPrivate object, copying another.

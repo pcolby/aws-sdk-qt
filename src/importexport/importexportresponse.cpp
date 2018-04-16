@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  ImportExportResponse
+/*!
+ * \class QtAws::ImportExport::ImportExportResponse
  *
- * @brief  Handles ImportExport ImportExport responses.
+ * \brief The ImportExportResponse class is the base class for all ImportExport responses.
  *
- * @see    ImportExportClient::importExport
+ * \ingroup ImportExport
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportExportResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ImportExportResponse::ImportExportResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportExportResponse object.
@@ -63,7 +63,7 @@ ImportExportResponse::ImportExportResponse(ImportExportResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ImportExportResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportExportResponsePrivate
@@ -92,7 +92,7 @@ void ImportExportResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ImportExportResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportExportResponsePrivate object.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  PutCorsPolicyRequest
+/*!
+ * \class QtAws::MediaStore::PutCorsPolicyRequest
  *
- * @brief  Implements MediaStore PutCorsPolicy requests.
+ * \brief The PutCorsPolicyRequest class encapsulates MediaStore PutCorsPolicy requests.
  *
- * @see    MediaStoreClient::putCorsPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::putCorsPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutCorsPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ PutCorsPolicyRequest::PutCorsPolicyRequest(const PutCorsPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutCorsPolicyRequest object.
  */
 PutCorsPolicyRequest::PutCorsPolicyRequest()
@@ -53,13 +58,16 @@ PutCorsPolicyRequest::PutCorsPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutCorsPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutCorsPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * PutCorsPolicyRequest::response(QNetworkReply 
     return new PutCorsPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutCorsPolicyRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * PutCorsPolicyRequest::response(QNetworkReply 
  * @brief  Private implementation for PutCorsPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutCorsPolicyRequestPrivate object.
@@ -97,7 +105,7 @@ PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutCorsPolicyRequestPrivate object, copying another.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  GetSnowballUsageResponse
+/*!
+ * \class QtAws::Snowball::GetSnowballUsageResponse
  *
- * @brief  Handles Snowball GetSnowballUsage responses.
+ * \brief The GetSnowballUsageResponse class encapsulates Snowball GetSnowballUsage responses.
  *
- * @see    SnowballClient::getSnowballUsage
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::getSnowballUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSnowballUsageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const GetSnowballUsageRequest * GetSnowballUsageResponse::request() const
     return static_cast<const GetSnowballUsageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball GetSnowballUsage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void GetSnowballUsageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSnowballUsageResponsePrivate
+ * \class GetSnowballUsageResponsePrivate
  *
- * @brief  Private implementation for GetSnowballUsageResponse.
+ * \brief Private implementation for GetSnowballUsageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSnowballUsageResponsePrivate object.
@@ -91,7 +100,7 @@ GetSnowballUsageResponsePrivate::GetSnowballUsageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball GetSnowballUsageResponse element.
  *
  * @param  xml  XML stream to parse.

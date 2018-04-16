@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateRouteTableResponse
+/*!
+ * \class QtAws::EC2::CreateRouteTableResponse
  *
- * @brief  Handles EC2 CreateRouteTable responses.
+ * \brief The CreateRouteTableResponse class encapsulates EC2 CreateRouteTable responses.
  *
- * @see    EC2Client::createRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRouteTableResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateRouteTableRequest * CreateRouteTableResponse::request() const
     return static_cast<const CreateRouteTableRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateRouteTable response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateRouteTableResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateRouteTableResponsePrivate
+ * \class CreateRouteTableResponsePrivate
  *
- * @brief  Private implementation for CreateRouteTableResponse.
+ * \brief Private implementation for CreateRouteTableResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRouteTableResponsePrivate object.
@@ -91,7 +98,7 @@ CreateRouteTableResponsePrivate::CreateRouteTableResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateRouteTableResponse element.
  *
  * @param  xml  XML stream to parse.

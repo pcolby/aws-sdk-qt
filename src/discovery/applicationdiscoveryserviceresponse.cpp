@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ApplicationDiscoveryService {
 
-/**
- * @class  ApplicationDiscoveryServiceResponse
+/*!
+ * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponse
  *
- * @brief  Handles ApplicationDiscoveryService ApplicationDiscoveryService responses.
+ * \brief The ApplicationDiscoveryServiceResponse class is the base class for all ApplicationDiscoveryService responses.
  *
- * @see    ApplicationDiscoveryServiceClient::applicationDiscoveryService
+ * \ingroup ApplicationDiscoveryService
  */
 
-/**
+/*!
  * @brief  Constructs a new ApplicationDiscoveryServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(QObject
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApplicationDiscoveryServiceResponse object.
@@ -63,7 +63,7 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(Applica
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ApplicationDiscoveryServiceResponsePrivate
@@ -92,7 +92,7 @@ void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ApplicationDiscoveryServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApplicationDiscoveryServiceResponsePrivate object.

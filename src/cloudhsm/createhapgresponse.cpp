@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  CreateHapgResponse
+/*!
+ * \class QtAws::CloudHSM::CreateHapgResponse
  *
- * @brief  Handles CloudHSM CreateHapg responses.
+ * \brief The CreateHapgResponse class encapsulates CloudHSM CreateHapg responses.
  *
- * @see    CloudHSMClient::createHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::createHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHapgResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const CreateHapgRequest * CreateHapgResponse::request() const
     return static_cast<const CreateHapgRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM CreateHapg response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void CreateHapgResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateHapgResponsePrivate
+ * \class CreateHapgResponsePrivate
  *
- * @brief  Private implementation for CreateHapgResponse.
+ * \brief Private implementation for CreateHapgResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHapgResponsePrivate object.
@@ -91,7 +106,7 @@ CreateHapgResponsePrivate::CreateHapgResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM CreateHapgResponse element.
  *
  * @param  xml  XML stream to parse.

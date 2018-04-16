@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DisassociateDiscoveredResourceRequest
+/*!
+ * \class QtAws::MigrationHub::DisassociateDiscoveredResourceRequest
  *
- * @brief  Implements MigrationHub DisassociateDiscoveredResource requests.
+ * \brief The DisassociateDiscoveredResourceRequest class encapsulates MigrationHub DisassociateDiscoveredResource requests.
  *
- * @see    MigrationHubClient::disassociateDiscoveredResource
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::disassociateDiscoveredResource
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateDiscoveredResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DisassociateDiscoveredResourceRequest::DisassociateDiscoveredResourceRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateDiscoveredResourceRequest object.
  */
 DisassociateDiscoveredResourceRequest::DisassociateDiscoveredResourceRequest()
@@ -53,13 +58,16 @@ DisassociateDiscoveredResourceRequest::DisassociateDiscoveredResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateDiscoveredResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateDiscoveredResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateDiscoveredResourceRequest::respon
     return new DisassociateDiscoveredResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateDiscoveredResourceRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateDiscoveredResourceRequest::respon
  * @brief  Private implementation for DisassociateDiscoveredResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateDiscoveredResourceRequestPrivate object.
@@ -97,7 +105,7 @@ DisassociateDiscoveredResourceRequestPrivate::DisassociateDiscoveredResourceRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateDiscoveredResourceRequestPrivate object, copying another.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ApplySchemaResponse
+/*!
+ * \class QtAws::CloudDirectory::ApplySchemaResponse
  *
- * @brief  Handles CloudDirectory ApplySchema responses.
+ * \brief The ApplySchemaResponse class encapsulates CloudDirectory ApplySchema responses.
  *
- * @see    CloudDirectoryClient::applySchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::applySchema
  */
 
-/**
+/*!
  * @brief  Constructs a new ApplySchemaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ApplySchemaRequest * ApplySchemaResponse::request() const
     return static_cast<const ApplySchemaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ApplySchema response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ApplySchemaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ApplySchemaResponsePrivate
+ * \class ApplySchemaResponsePrivate
  *
- * @brief  Private implementation for ApplySchemaResponse.
+ * \brief Private implementation for ApplySchemaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ApplySchemaResponsePrivate object.
@@ -91,7 +101,7 @@ ApplySchemaResponsePrivate::ApplySchemaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ApplySchemaResponse element.
  *
  * @param  xml  XML stream to parse.

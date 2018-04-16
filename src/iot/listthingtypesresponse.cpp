@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingTypesResponse
+/*!
+ * \class QtAws::IoT::ListThingTypesResponse
  *
- * @brief  Handles IoT ListThingTypes responses.
+ * \brief The ListThingTypesResponse class encapsulates IoT ListThingTypes responses.
  *
- * @see    IoTClient::listThingTypes
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThingTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListThingTypesRequest * ListThingTypesResponse::request() const
     return static_cast<const ListThingTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListThingTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListThingTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListThingTypesResponsePrivate
+ * \class ListThingTypesResponsePrivate
  *
- * @brief  Private implementation for ListThingTypesResponse.
+ * \brief Private implementation for ListThingTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingTypesResponsePrivate object.
@@ -91,7 +105,7 @@ ListThingTypesResponsePrivate::ListThingTypesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListThingTypesResponse element.
  *
  * @param  xml  XML stream to parse.

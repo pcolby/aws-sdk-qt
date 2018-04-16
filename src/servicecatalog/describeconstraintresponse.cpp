@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeConstraintResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeConstraintResponse
  *
- * @brief  Handles ServiceCatalog DescribeConstraint responses.
+ * \brief The DescribeConstraintResponse class encapsulates ServiceCatalog DescribeConstraint responses.
  *
- * @see    ServiceCatalogClient::describeConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConstraintResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeConstraintRequest * DescribeConstraintResponse::request() const
     return static_cast<const DescribeConstraintRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeConstraint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeConstraintResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeConstraintResponsePrivate
+ * \class DescribeConstraintResponsePrivate
  *
- * @brief  Private implementation for DescribeConstraintResponse.
+ * \brief Private implementation for DescribeConstraintResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConstraintResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeConstraintResponsePrivate::DescribeConstraintResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeConstraintResponse element.
  *
  * @param  xml  XML stream to parse.

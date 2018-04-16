@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateRouteTableRequest
+/*!
+ * \class QtAws::EC2::CreateRouteTableRequest
  *
- * @brief  Implements EC2 CreateRouteTable requests.
+ * \brief The CreateRouteTableRequest class encapsulates EC2 CreateRouteTable requests.
  *
- * @see    EC2Client::createRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRouteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateRouteTableRequest::CreateRouteTableRequest(const CreateRouteTableRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRouteTableRequest object.
  */
 CreateRouteTableRequest::CreateRouteTableRequest()
@@ -53,13 +60,16 @@ CreateRouteTableRequest::CreateRouteTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRouteTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRouteTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkRep
     return new CreateRouteTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRouteTableRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkRep
  * @brief  Private implementation for CreateRouteTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRouteTableRequestPrivate object.
@@ -97,7 +107,7 @@ CreateRouteTableRequestPrivate::CreateRouteTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRouteTableRequestPrivate object, copying another.

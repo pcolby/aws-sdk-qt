@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUpdateAuthEventFeedbackRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateAuthEventFeedbackRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminUpdateAuthEventFeedback requests.
+ * \brief The AdminUpdateAuthEventFeedbackRequest class encapsulates CognitoIdentityProvider AdminUpdateAuthEventFeedback requests.
  *
- * @see    CognitoIdentityProviderClient::adminUpdateAuthEventFeedback
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUpdateAuthEventFeedback
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest(const A
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequest object.
  */
 AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest()
@@ -53,13 +66,16 @@ AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminUpdateAuthEventFeedbackRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminUpdateAuthEventFeedbackResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateAuthEventFeedbackRequest::response
     return new AdminUpdateAuthEventFeedbackResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminUpdateAuthEventFeedbackRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateAuthEventFeedbackRequest::response
  * @brief  Private implementation for AdminUpdateAuthEventFeedbackRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequestPrivate object.
@@ -97,7 +113,7 @@ AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequestPrivate object, copying another.

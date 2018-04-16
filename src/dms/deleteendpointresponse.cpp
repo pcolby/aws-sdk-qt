@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteEndpointResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteEndpointResponse
  *
- * @brief  Handles DatabaseMigrationService DeleteEndpoint responses.
+ * \brief The DeleteEndpointResponse class encapsulates DatabaseMigrationService DeleteEndpoint responses.
  *
- * @see    DatabaseMigrationServiceClient::deleteEndpoint
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteEndpointRequest * DeleteEndpointResponse::request() const
     return static_cast<const DeleteEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DeleteEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEndpointResponsePrivate
+ * \class DeleteEndpointResponsePrivate
  *
- * @brief  Private implementation for DeleteEndpointResponse.
+ * \brief Private implementation for DeleteEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DeleteEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

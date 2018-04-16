@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteConfigurationSetResponse
+/*!
+ * \class QtAws::SES::DeleteConfigurationSetResponse
  *
- * @brief  Handles SES DeleteConfigurationSet responses.
+ * \brief The DeleteConfigurationSetResponse class encapsulates SES DeleteConfigurationSet responses.
  *
- * @see    SESClient::deleteConfigurationSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteConfigurationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() 
     return static_cast<const DeleteConfigurationSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES DeleteConfigurationSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteConfigurationSetResponsePrivate
+ * \class DeleteConfigurationSetResponsePrivate
  *
- * @brief  Private implementation for DeleteConfigurationSetResponse.
+ * \brief Private implementation for DeleteConfigurationSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES DeleteConfigurationSetResponse element.
  *
  * @param  xml  XML stream to parse.

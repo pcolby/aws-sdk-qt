@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  CreateTagsResponse
+/*!
+ * \class QtAws::WorkSpaces::CreateTagsResponse
  *
- * @brief  Handles WorkSpaces CreateTags responses.
+ * \brief The CreateTagsResponse class encapsulates WorkSpaces CreateTags responses.
  *
- * @see    WorkSpacesClient::createTags
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::createTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateTagsRequest * CreateTagsResponse::request() const
     return static_cast<const CreateTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces CreateTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTagsResponsePrivate
+ * \class CreateTagsResponsePrivate
  *
- * @brief  Private implementation for CreateTagsResponse.
+ * \brief Private implementation for CreateTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsResponsePrivate object.
@@ -91,7 +97,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces CreateTagsResponse element.
  *
  * @param  xml  XML stream to parse.

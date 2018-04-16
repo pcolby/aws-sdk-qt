@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  PollForDecisionTaskResponse
+/*!
+ * \class QtAws::SWF::PollForDecisionTaskResponse
  *
- * @brief  Handles SWF PollForDecisionTask responses.
+ * \brief The PollForDecisionTaskResponse class encapsulates SWF PollForDecisionTask responses.
  *
- * @see    SWFClient::pollForDecisionTask
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::pollForDecisionTask
  */
 
-/**
+/*!
  * @brief  Constructs a new PollForDecisionTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const PollForDecisionTaskRequest * PollForDecisionTaskResponse::request() const
     return static_cast<const PollForDecisionTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF PollForDecisionTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void PollForDecisionTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PollForDecisionTaskResponsePrivate
+ * \class PollForDecisionTaskResponsePrivate
  *
- * @brief  Private implementation for PollForDecisionTaskResponse.
+ * \brief Private implementation for PollForDecisionTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PollForDecisionTaskResponsePrivate object.
@@ -91,7 +110,7 @@ PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF PollForDecisionTaskResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetUserRequest
  *
- * @brief  Implements CognitoIdentityProvider GetUser requests.
+ * \brief The GetUserRequest class encapsulates CognitoIdentityProvider GetUser requests.
  *
- * @see    CognitoIdentityProviderClient::getUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getUser
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetUserRequest::GetUserRequest(const GetUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUserRequest object.
  */
 GetUserRequest::GetUserRequest()
@@ -53,13 +66,16 @@ GetUserRequest::GetUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
     return new GetUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserRequestPrivate object.
@@ -97,7 +113,7 @@ GetUserRequestPrivate::GetUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserRequestPrivate object, copying another.

@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DeleteReplicationGroupResponse
+/*!
+ * \class QtAws::ElastiCache::DeleteReplicationGroupResponse
  *
- * @brief  Handles ElastiCache DeleteReplicationGroup responses.
+ * \brief The DeleteReplicationGroupResponse class encapsulates ElastiCache DeleteReplicationGroup responses.
  *
- * @see    ElastiCacheClient::deleteReplicationGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::deleteReplicationGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DeleteReplicationGroupRequest * DeleteReplicationGroupResponse::request() 
     return static_cast<const DeleteReplicationGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DeleteReplicationGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DeleteReplicationGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReplicationGroupResponsePrivate
+ * \class DeleteReplicationGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteReplicationGroupResponse.
+ * \brief Private implementation for DeleteReplicationGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationGroupResponsePrivate object.
@@ -91,7 +108,7 @@ DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DeleteReplicationGroupResponse element.
  *
  * @param  xml  XML stream to parse.

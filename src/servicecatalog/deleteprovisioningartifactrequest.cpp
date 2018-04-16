@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteProvisioningArtifactRequest
+/*!
+ * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactRequest
  *
- * @brief  Implements ServiceCatalog DeleteProvisioningArtifact requests.
+ * \brief The DeleteProvisioningArtifactRequest class encapsulates ServiceCatalog DeleteProvisioningArtifact requests.
  *
- * @see    ServiceCatalogClient::deleteProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteProvisioningArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest(const Delet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteProvisioningArtifactRequest object.
  */
 DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest()
@@ -53,13 +62,16 @@ DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteProvisioningArtifactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteProvisioningArtifactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(Q
     return new DeleteProvisioningArtifactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteProvisioningArtifactRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(Q
  * @brief  Private implementation for DeleteProvisioningArtifactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProvisioningArtifactRequestPrivate object.
@@ -97,7 +109,7 @@ DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteProvisioningArtifactRequestPrivate object, copying another.

@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateObjectRequest
+/*!
+ * \class QtAws::CloudDirectory::CreateObjectRequest
  *
- * @brief  Implements CloudDirectory CreateObject requests.
+ * \brief The CreateObjectRequest class encapsulates CloudDirectory CreateObject requests.
  *
- * @see    CloudDirectoryClient::createObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createObject
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateObjectRequest::CreateObjectRequest(const CreateObjectRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateObjectRequest object.
  */
 CreateObjectRequest::CreateObjectRequest()
@@ -53,13 +63,16 @@ CreateObjectRequest::CreateObjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateObjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateObjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateObjectRequest::response(QNetworkReply *
     return new CreateObjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateObjectRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateObjectRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateObjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateObjectRequestPrivate object.
@@ -97,7 +110,7 @@ CreateObjectRequestPrivate::CreateObjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateObjectRequestPrivate object, copying another.

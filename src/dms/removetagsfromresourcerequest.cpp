@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  RemoveTagsFromResourceRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceRequest
  *
- * @brief  Implements DatabaseMigrationService RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class encapsulates DatabaseMigrationService RemoveTagsFromResource requests.
  *
- * @see    DatabaseMigrationServiceClient::removeTagsFromResource
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::removeTagsFromResource
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
@@ -53,13 +67,16 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RemoveTagsFromResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RemoveTagsFromResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
     return new RemoveTagsFromResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RemoveTagsFromResourceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  * @brief  Private implementation for RemoveTagsFromResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object.
@@ -97,7 +114,7 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object, copying another.

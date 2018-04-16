@@ -29,23 +29,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::KinesisVideoArchivedMedia
+ * \brief The QtAws::KinesisVideoArchivedMedia contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
-/**
- * @class  KinesisVideoArchivedMediaClient
+/*!
+ * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaClient
  *
- * @brief  Client for Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media)
+ * \brief The KinesisVideoArchivedMediaClient class provides access the Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media) service.
+ *
+ * \ingroup KinesisVideoArchivedMedia
  *
  */
 
-/**
- * @brief  Constructs a new KinesisVideoArchivedMediaClient object.
+/*!
+ * \brief Constructs a KinesisVideoArchivedMediaClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -64,21 +72,16 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/**
- * @brief  Constructs a new KinesisVideoArchivedMediaClient object.
+/*!
+ * \overload KinesisVideoArchivedMediaClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     const QUrl &endpoint,
@@ -97,7 +100,7 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/**
+/*!
  * Gets media for a list of fragments (specified by fragment number) from the archived data in a Kinesis video
  *
  * stream> <note>
@@ -128,7 +131,7 @@ GetMediaForFragmentListResponse * KinesisVideoArchivedMediaClient::getMediaForFr
     return qobject_cast<GetMediaForFragmentListResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of <a>Fragment</a> objects from the specified stream and start location within the archived
  *
  * @param  request Request to send to Amazon Kinesis Video Streams Archived Media.
@@ -142,7 +145,7 @@ ListFragmentsResponse * KinesisVideoArchivedMediaClient::listFragments(const Lis
     return qobject_cast<ListFragmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisVideoArchivedMediaClientPrivate
@@ -150,7 +153,7 @@ ListFragmentsResponse * KinesisVideoArchivedMediaClient::listFragments(const Lis
  * @brief  Private implementation for KinesisVideoArchivedMediaClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisVideoArchivedMediaClientPrivate object.

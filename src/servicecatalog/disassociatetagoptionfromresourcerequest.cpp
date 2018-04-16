@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DisassociateTagOptionFromResourceRequest
+/*!
+ * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceRequest
  *
- * @brief  Implements ServiceCatalog DisassociateTagOptionFromResource requests.
+ * \brief The DisassociateTagOptionFromResourceRequest class encapsulates ServiceCatalog DisassociateTagOptionFromResource requests.
  *
- * @see    ServiceCatalogClient::disassociateTagOptionFromResource
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::disassociateTagOptionFromResource
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateTagOptionFromResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DisassociateTagOptionFromResourceRequest::DisassociateTagOptionFromResourceReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateTagOptionFromResourceRequest object.
  */
 DisassociateTagOptionFromResourceRequest::DisassociateTagOptionFromResourceRequest()
@@ -53,13 +62,16 @@ DisassociateTagOptionFromResourceRequest::DisassociateTagOptionFromResourceReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateTagOptionFromResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateTagOptionFromResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::res
     return new DisassociateTagOptionFromResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateTagOptionFromResourceRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::res
  * @brief  Private implementation for DisassociateTagOptionFromResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateTagOptionFromResourceRequestPrivate object.
@@ -97,7 +109,7 @@ DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResour
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateTagOptionFromResourceRequestPrivate object, copying another.

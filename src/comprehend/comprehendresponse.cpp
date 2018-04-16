@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  ComprehendResponse
+/*!
+ * \class QtAws::Comprehend::ComprehendResponse
  *
- * @brief  Handles Comprehend Comprehend responses.
+ * \brief The ComprehendResponse class is the base class for all Comprehend responses.
  *
- * @see    ComprehendClient::comprehend
+ * \ingroup Comprehend
  */
 
-/**
+/*!
  * @brief  Constructs a new ComprehendResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ComprehendResponse::ComprehendResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ComprehendResponse object.
@@ -63,7 +63,7 @@ ComprehendResponse::ComprehendResponse(ComprehendResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ComprehendResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ComprehendResponsePrivate
@@ -92,7 +92,7 @@ void ComprehendResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ComprehendResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ComprehendResponsePrivate object.

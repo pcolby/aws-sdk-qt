@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListCertificatesByCARequest
+/*!
+ * \class QtAws::IoT::ListCertificatesByCARequest
  *
- * @brief  Implements IoT ListCertificatesByCA requests.
+ * \brief The ListCertificatesByCARequest class encapsulates IoT ListCertificatesByCA requests.
  *
- * @see    IoTClient::listCertificatesByCA
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listCertificatesByCA
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCertificatesByCARequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListCertificatesByCARequest::ListCertificatesByCARequest(const ListCertificatesB
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListCertificatesByCARequest object.
  */
 ListCertificatesByCARequest::ListCertificatesByCARequest()
@@ -53,13 +67,16 @@ ListCertificatesByCARequest::ListCertificatesByCARequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListCertificatesByCARequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListCertificatesByCAResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesByCARequest::response(QNetwor
     return new ListCertificatesByCAResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListCertificatesByCARequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesByCARequest::response(QNetwor
  * @brief  Private implementation for ListCertificatesByCARequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCertificatesByCARequestPrivate object.
@@ -97,7 +114,7 @@ ListCertificatesByCARequestPrivate::ListCertificatesByCARequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCertificatesByCARequestPrivate object, copying another.

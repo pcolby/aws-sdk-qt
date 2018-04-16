@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateImageRequest
+/*!
+ * \class QtAws::EC2::CreateImageRequest
  *
- * @brief  Implements EC2 CreateImage requests.
+ * \brief The CreateImageRequest class encapsulates EC2 CreateImage requests.
  *
- * @see    EC2Client::createImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateImageRequest::CreateImageRequest(const CreateImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateImageRequest object.
  */
 CreateImageRequest::CreateImageRequest()
@@ -53,13 +60,16 @@ CreateImageRequest::CreateImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * 
     return new CreateImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageRequestPrivate object.
@@ -97,7 +107,7 @@ CreateImageRequestPrivate::CreateImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateImageRequestPrivate object, copying another.

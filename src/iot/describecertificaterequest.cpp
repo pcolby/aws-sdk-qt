@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeCertificateRequest
+/*!
+ * \class QtAws::IoT::DescribeCertificateRequest
  *
- * @brief  Implements IoT DescribeCertificate requests.
+ * \brief The DescribeCertificateRequest class encapsulates IoT DescribeCertificate requests.
  *
- * @see    IoTClient::describeCertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeCertificateRequest::DescribeCertificateRequest(const DescribeCertificate
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeCertificateRequest object.
  */
 DescribeCertificateRequest::DescribeCertificateRequest()
@@ -53,13 +67,16 @@ DescribeCertificateRequest::DescribeCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
     return new DescribeCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeCertificateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
  * @brief  Private implementation for DescribeCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCertificateRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCertificateRequestPrivate object, copying another.

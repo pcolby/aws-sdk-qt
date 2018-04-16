@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateDeploymentRequest
+/*!
+ * \class QtAws::APIGateway::UpdateDeploymentRequest
  *
- * @brief  Implements APIGateway UpdateDeployment requests.
+ * \brief The UpdateDeploymentRequest class encapsulates APIGateway UpdateDeployment requests.
  *
- * @see    APIGatewayClient::updateDeployment
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateDeployment
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeploymentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateDeploymentRequest::UpdateDeploymentRequest(const UpdateDeploymentRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDeploymentRequest object.
  */
 UpdateDeploymentRequest::UpdateDeploymentRequest()
@@ -53,13 +61,16 @@ UpdateDeploymentRequest::UpdateDeploymentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDeploymentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDeploymentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkRep
     return new UpdateDeploymentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDeploymentRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateDeploymentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeploymentRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDeploymentRequestPrivate object, copying another.

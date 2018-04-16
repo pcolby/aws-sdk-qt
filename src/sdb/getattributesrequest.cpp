@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  GetAttributesRequest
+/*!
+ * \class QtAws::SimpleDB::GetAttributesRequest
  *
- * @brief  Implements SimpleDB GetAttributes requests.
+ * \brief The GetAttributesRequest class encapsulates SimpleDB GetAttributes requests.
  *
- * @see    SimpleDBClient::getAttributes
+ * \ingroup SimpleDB
+ *
+ *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
+ *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
+ *  the freedom to focus on application development.
+ * 
+ *  A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often
+ *  requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema,
+ *  automatically indexing your data and providing a simple API for storage and access. This approach eliminates the
+ *  administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this
+ *  functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.
+ * 
+ *  </p
+ * 
+ *  Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information.
+ *
+ * \sa SimpleDBClient::getAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ GetAttributesRequest::GetAttributesRequest(const GetAttributesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAttributesRequest object.
  */
 GetAttributesRequest::GetAttributesRequest()
@@ -53,13 +69,16 @@ GetAttributesRequest::GetAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply 
     return new GetAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAttributesRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply 
  * @brief  Private implementation for GetAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAttributesRequestPrivate object.
@@ -97,7 +116,7 @@ GetAttributesRequestPrivate::GetAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAttributesRequestPrivate object, copying another.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListTypedLinkFacetNamesResponse
+/*!
+ * \class QtAws::CloudDirectory::ListTypedLinkFacetNamesResponse
  *
- * @brief  Handles CloudDirectory ListTypedLinkFacetNames responses.
+ * \brief The ListTypedLinkFacetNamesResponse class encapsulates CloudDirectory ListTypedLinkFacetNames responses.
  *
- * @see    CloudDirectoryClient::listTypedLinkFacetNames
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listTypedLinkFacetNames
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTypedLinkFacetNamesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListTypedLinkFacetNamesRequest * ListTypedLinkFacetNamesResponse::request(
     return static_cast<const ListTypedLinkFacetNamesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListTypedLinkFacetNames response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListTypedLinkFacetNamesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTypedLinkFacetNamesResponsePrivate
+ * \class ListTypedLinkFacetNamesResponsePrivate
  *
- * @brief  Private implementation for ListTypedLinkFacetNamesResponse.
+ * \brief Private implementation for ListTypedLinkFacetNamesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTypedLinkFacetNamesResponsePrivate object.
@@ -91,7 +101,7 @@ ListTypedLinkFacetNamesResponsePrivate::ListTypedLinkFacetNamesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListTypedLinkFacetNamesResponse element.
  *
  * @param  xml  XML stream to parse.

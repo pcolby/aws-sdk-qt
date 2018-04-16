@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeThingGroupRequest
+/*!
+ * \class QtAws::IoT::DescribeThingGroupRequest
  *
- * @brief  Implements IoT DescribeThingGroup requests.
+ * \brief The DescribeThingGroupRequest class encapsulates IoT DescribeThingGroup requests.
  *
- * @see    IoTClient::describeThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeThingGroupRequest::DescribeThingGroupRequest(const DescribeThingGroupReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingGroupRequest object.
  */
 DescribeThingGroupRequest::DescribeThingGroupRequest()
@@ -53,13 +67,16 @@ DescribeThingGroupRequest::DescribeThingGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeThingGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeThingGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingGroupRequest::response(QNetworkR
     return new DescribeThingGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeThingGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingGroupRequest::response(QNetworkR
  * @brief  Private implementation for DescribeThingGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingGroupRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingGroupRequestPrivate object, copying another.

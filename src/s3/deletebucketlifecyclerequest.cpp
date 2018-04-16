@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketLifecycleRequest
+/*!
+ * \class QtAws::S3::DeleteBucketLifecycleRequest
  *
- * @brief  Implements S3 DeleteBucketLifecycle requests.
+ * \brief The DeleteBucketLifecycleRequest class encapsulates S3 DeleteBucketLifecycle requests.
  *
- * @see    S3Client::deleteBucketLifecycle
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketLifecycle
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketLifecycleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketLifecycleRequest::DeleteBucketLifecycleRequest(const DeleteBucketLif
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketLifecycleRequest object.
  */
 DeleteBucketLifecycleRequest::DeleteBucketLifecycleRequest()
@@ -53,13 +56,16 @@ DeleteBucketLifecycleRequest::DeleteBucketLifecycleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketLifecycleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketLifecycleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketLifecycleRequest::response(QNetwo
     return new DeleteBucketLifecycleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketLifecycleRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketLifecycleRequest::response(QNetwo
  * @brief  Private implementation for DeleteBucketLifecycleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketLifecycleRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketLifecycleRequestPrivate::DeleteBucketLifecycleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketLifecycleRequestPrivate object, copying another.

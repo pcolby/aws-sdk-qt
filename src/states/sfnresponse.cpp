@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SFN {
 
-/**
- * @class  SFNResponse
+/*!
+ * \class QtAws::SFN::SFNResponse
  *
- * @brief  Handles SFN SFN responses.
+ * \brief The SFNResponse class is the base class for all SFN responses.
  *
- * @see    SFNClient::sFN
+ * \ingroup SFN
  */
 
-/**
+/*!
  * @brief  Constructs a new SFNResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SFNResponse::SFNResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SFNResponse object.
@@ -63,7 +63,7 @@ SFNResponse::SFNResponse(SFNResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SFNResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SFNResponsePrivate
@@ -92,7 +92,7 @@ void SFNResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SFNResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SFNResponsePrivate object.

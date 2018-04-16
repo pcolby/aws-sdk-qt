@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  ModifyReplicationInstanceRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceRequest
  *
- * @brief  Implements DatabaseMigrationService ModifyReplicationInstance requests.
+ * \brief The ModifyReplicationInstanceRequest class encapsulates DatabaseMigrationService ModifyReplicationInstance requests.
  *
- * @see    DatabaseMigrationServiceClient::modifyReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::modifyReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest(const ModifyR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyReplicationInstanceRequest object.
  */
 ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest()
@@ -53,13 +67,16 @@ ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyReplicationInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyReplicationInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QN
     return new ModifyReplicationInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyReplicationInstanceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QN
  * @brief  Private implementation for ModifyReplicationInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationInstanceRequestPrivate object.
@@ -97,7 +114,7 @@ ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReplicationInstanceRequestPrivate object, copying another.

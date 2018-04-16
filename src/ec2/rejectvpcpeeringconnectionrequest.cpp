@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RejectVpcPeeringConnectionRequest
+/*!
+ * \class QtAws::EC2::RejectVpcPeeringConnectionRequest
  *
- * @brief  Implements EC2 RejectVpcPeeringConnection requests.
+ * \brief The RejectVpcPeeringConnectionRequest class encapsulates EC2 RejectVpcPeeringConnection requests.
  *
- * @see    EC2Client::rejectVpcPeeringConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::rejectVpcPeeringConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectVpcPeeringConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest(const Rejec
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RejectVpcPeeringConnectionRequest object.
  */
 RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest()
@@ -53,13 +60,16 @@ RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RejectVpcPeeringConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RejectVpcPeeringConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(Q
     return new RejectVpcPeeringConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RejectVpcPeeringConnectionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(Q
  * @brief  Private implementation for RejectVpcPeeringConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectVpcPeeringConnectionRequestPrivate object.
@@ -97,7 +107,7 @@ RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectVpcPeeringConnectionRequestPrivate object, copying another.

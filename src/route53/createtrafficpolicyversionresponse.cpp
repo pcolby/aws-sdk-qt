@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateTrafficPolicyVersionResponse
+/*!
+ * \class QtAws::Route53::CreateTrafficPolicyVersionResponse
  *
- * @brief  Handles Route53 CreateTrafficPolicyVersion responses.
+ * \brief The CreateTrafficPolicyVersionResponse class encapsulates Route53 CreateTrafficPolicyVersion responses.
  *
- * @see    Route53Client::createTrafficPolicyVersion
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createTrafficPolicyVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTrafficPolicyVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateTrafficPolicyVersionRequest * CreateTrafficPolicyVersionResponse::re
     return static_cast<const CreateTrafficPolicyVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 CreateTrafficPolicyVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateTrafficPolicyVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTrafficPolicyVersionResponsePrivate
+ * \class CreateTrafficPolicyVersionResponsePrivate
  *
- * @brief  Private implementation for CreateTrafficPolicyVersionResponse.
+ * \brief Private implementation for CreateTrafficPolicyVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTrafficPolicyVersionResponsePrivate object.
@@ -91,7 +94,7 @@ CreateTrafficPolicyVersionResponsePrivate::CreateTrafficPolicyVersionResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 CreateTrafficPolicyVersionResponse element.
  *
  * @param  xml  XML stream to parse.

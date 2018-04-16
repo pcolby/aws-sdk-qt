@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetTrafficPolicyRequest
+/*!
+ * \class QtAws::Route53::GetTrafficPolicyRequest
  *
- * @brief  Implements Route53 GetTrafficPolicy requests.
+ * \brief The GetTrafficPolicyRequest class encapsulates Route53 GetTrafficPolicy requests.
  *
- * @see    Route53Client::getTrafficPolicy
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getTrafficPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTrafficPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetTrafficPolicyRequest::GetTrafficPolicyRequest(const GetTrafficPolicyRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTrafficPolicyRequest object.
  */
 GetTrafficPolicyRequest::GetTrafficPolicyRequest()
@@ -53,13 +56,16 @@ GetTrafficPolicyRequest::GetTrafficPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTrafficPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTrafficPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyRequest::response(QNetworkRep
     return new GetTrafficPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTrafficPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyRequest::response(QNetworkRep
  * @brief  Private implementation for GetTrafficPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTrafficPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ GetTrafficPolicyRequestPrivate::GetTrafficPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTrafficPolicyRequestPrivate object, copying another.

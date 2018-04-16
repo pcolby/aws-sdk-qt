@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpnConnectionRequest
+/*!
+ * \class QtAws::EC2::CreateVpnConnectionRequest
  *
- * @brief  Implements EC2 CreateVpnConnection requests.
+ * \brief The CreateVpnConnectionRequest class encapsulates EC2 CreateVpnConnection requests.
  *
- * @see    EC2Client::createVpnConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpnConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpnConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateVpnConnectionRequest::CreateVpnConnectionRequest(const CreateVpnConnection
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVpnConnectionRequest object.
  */
 CreateVpnConnectionRequest::CreateVpnConnectionRequest()
@@ -53,13 +60,16 @@ CreateVpnConnectionRequest::CreateVpnConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVpnConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVpnConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRequest::response(QNetwork
     return new CreateVpnConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVpnConnectionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRequest::response(QNetwork
  * @brief  Private implementation for CreateVpnConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpnConnectionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateVpnConnectionRequestPrivate::CreateVpnConnectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpnConnectionRequestPrivate object, copying another.

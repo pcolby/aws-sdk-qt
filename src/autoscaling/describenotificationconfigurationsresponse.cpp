@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeNotificationConfigurationsResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeNotificationConfigurationsResponse
  *
- * @brief  Handles AutoScaling DescribeNotificationConfigurations responses.
+ * \brief The DescribeNotificationConfigurationsResponse class encapsulates AutoScaling DescribeNotificationConfigurations responses.
  *
- * @see    AutoScalingClient::describeNotificationConfigurations
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeNotificationConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNotificationConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeNotificationConfigurationsRequest * DescribeNotificationConfigurat
     return static_cast<const DescribeNotificationConfigurationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeNotificationConfigurations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeNotificationConfigurationsResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeNotificationConfigurationsResponsePrivate
+ * \class DescribeNotificationConfigurationsResponsePrivate
  *
- * @brief  Private implementation for DescribeNotificationConfigurationsResponse.
+ * \brief Private implementation for DescribeNotificationConfigurationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNotificationConfigurationsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeNotificationConfigurationsResponsePrivate::DescribeNotificationConfigura
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeNotificationConfigurationsResponse element.
  *
  * @param  xml  XML stream to parse.

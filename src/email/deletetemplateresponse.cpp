@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteTemplateResponse
+/*!
+ * \class QtAws::SES::DeleteTemplateResponse
  *
- * @brief  Handles SES DeleteTemplate responses.
+ * \brief The DeleteTemplateResponse class encapsulates SES DeleteTemplate responses.
  *
- * @see    SESClient::deleteTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteTemplateRequest * DeleteTemplateResponse::request() const
     return static_cast<const DeleteTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES DeleteTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTemplateResponsePrivate
+ * \class DeleteTemplateResponsePrivate
  *
- * @brief  Private implementation for DeleteTemplateResponse.
+ * \brief Private implementation for DeleteTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTemplateResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteTemplateResponsePrivate::DeleteTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES DeleteTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

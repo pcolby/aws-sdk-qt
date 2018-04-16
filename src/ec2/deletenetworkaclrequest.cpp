@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkAclRequest
+/*!
+ * \class QtAws::EC2::DeleteNetworkAclRequest
  *
- * @brief  Implements EC2 DeleteNetworkAcl requests.
+ * \brief The DeleteNetworkAclRequest class encapsulates EC2 DeleteNetworkAcl requests.
  *
- * @see    EC2Client::deleteNetworkAcl
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkAcl
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkAclRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteNetworkAclRequest::DeleteNetworkAclRequest(const DeleteNetworkAclRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkAclRequest object.
  */
 DeleteNetworkAclRequest::DeleteNetworkAclRequest()
@@ -53,13 +60,16 @@ DeleteNetworkAclRequest::DeleteNetworkAclRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNetworkAclRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNetworkAclResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkRep
     return new DeleteNetworkAclResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNetworkAclRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteNetworkAclRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkAclRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkAclRequestPrivate object, copying another.

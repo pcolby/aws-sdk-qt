@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  PutNotificationChannelRequest
+/*!
+ * \class QtAws::FMS::PutNotificationChannelRequest
  *
- * @brief  Implements FMS PutNotificationChannel requests.
+ * \brief The PutNotificationChannelRequest class encapsulates FMS PutNotificationChannel requests.
  *
- * @see    FMSClient::putNotificationChannel
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::putNotificationChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new PutNotificationChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ PutNotificationChannelRequest::PutNotificationChannelRequest(const PutNotificati
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutNotificationChannelRequest object.
  */
 PutNotificationChannelRequest::PutNotificationChannelRequest()
@@ -53,13 +62,16 @@ PutNotificationChannelRequest::PutNotificationChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutNotificationChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutNotificationChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * PutNotificationChannelRequest::response(QNetw
     return new PutNotificationChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutNotificationChannelRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * PutNotificationChannelRequest::response(QNetw
  * @brief  Private implementation for PutNotificationChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutNotificationChannelRequestPrivate object.
@@ -97,7 +109,7 @@ PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutNotificationChannelRequestPrivate object, copying another.

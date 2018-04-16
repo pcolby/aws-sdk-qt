@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetMappingResponse
+/*!
+ * \class QtAws::Glue::GetMappingResponse
  *
- * @brief  Handles Glue GetMapping responses.
+ * \brief The GetMappingResponse class encapsulates Glue GetMapping responses.
  *
- * @see    GlueClient::getMapping
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetMappingRequest * GetMappingResponse::request() const
     return static_cast<const GetMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetMappingResponsePrivate
+ * \class GetMappingResponsePrivate
  *
- * @brief  Private implementation for GetMappingResponse.
+ * \brief Private implementation for GetMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMappingResponsePrivate object.
@@ -91,7 +97,7 @@ GetMappingResponsePrivate::GetMappingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetMappingResponse element.
  *
  * @param  xml  XML stream to parse.

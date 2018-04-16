@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  UploadLayerPartRequest
+/*!
+ * \class QtAws::ECR::UploadLayerPartRequest
  *
- * @brief  Implements ECR UploadLayerPart requests.
+ * \brief The UploadLayerPartRequest class encapsulates ECR UploadLayerPart requests.
  *
- * @see    ECRClient::uploadLayerPart
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::uploadLayerPart
  */
 
-/**
+/*!
  * @brief  Constructs a new UploadLayerPartRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UploadLayerPartRequest object.
  */
 UploadLayerPartRequest::UploadLayerPartRequest()
@@ -53,13 +60,16 @@ UploadLayerPartRequest::UploadLayerPartRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UploadLayerPartRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UploadLayerPartResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
     return new UploadLayerPartResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UploadLayerPartRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
  * @brief  Private implementation for UploadLayerPartRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadLayerPartRequestPrivate object.
@@ -97,7 +107,7 @@ UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadLayerPartRequestPrivate object, copying another.

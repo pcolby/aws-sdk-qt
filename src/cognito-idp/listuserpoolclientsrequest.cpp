@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListUserPoolClientsRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListUserPoolClientsRequest
  *
- * @brief  Implements CognitoIdentityProvider ListUserPoolClients requests.
+ * \brief The ListUserPoolClientsRequest class encapsulates CognitoIdentityProvider ListUserPoolClients requests.
  *
- * @see    CognitoIdentityProviderClient::listUserPoolClients
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listUserPoolClients
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUserPoolClientsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListUserPoolClientsRequest::ListUserPoolClientsRequest(const ListUserPoolClients
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListUserPoolClientsRequest object.
  */
 ListUserPoolClientsRequest::ListUserPoolClientsRequest()
@@ -53,13 +66,16 @@ ListUserPoolClientsRequest::ListUserPoolClientsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListUserPoolClientsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListUserPoolClientsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListUserPoolClientsRequest::response(QNetwork
     return new ListUserPoolClientsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListUserPoolClientsRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListUserPoolClientsRequest::response(QNetwork
  * @brief  Private implementation for ListUserPoolClientsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUserPoolClientsRequestPrivate object.
@@ -97,7 +113,7 @@ ListUserPoolClientsRequestPrivate::ListUserPoolClientsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUserPoolClientsRequestPrivate object, copying another.

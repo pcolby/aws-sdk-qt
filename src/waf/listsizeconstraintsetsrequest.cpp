@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListSizeConstraintSetsRequest
+/*!
+ * \class QtAws::WAF::ListSizeConstraintSetsRequest
  *
- * @brief  Implements WAF ListSizeConstraintSets requests.
+ * \brief The ListSizeConstraintSetsRequest class encapsulates WAF ListSizeConstraintSets requests.
  *
- * @see    WAFClient::listSizeConstraintSets
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listSizeConstraintSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSizeConstraintSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest(const ListSizeConst
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSizeConstraintSetsRequest object.
  */
 ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest()
@@ -53,13 +61,16 @@ ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSizeConstraintSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSizeConstraintSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetw
     return new ListSizeConstraintSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSizeConstraintSetsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetw
  * @brief  Private implementation for ListSizeConstraintSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSizeConstraintSetsRequestPrivate object.
@@ -97,7 +108,7 @@ ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSizeConstraintSetsRequestPrivate object, copying another.

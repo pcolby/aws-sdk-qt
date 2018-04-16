@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateRuleResponse
+/*!
+ * \class QtAws::WAF::CreateRuleResponse
  *
- * @brief  Handles WAF CreateRule responses.
+ * \brief The CreateRuleResponse class encapsulates WAF CreateRule responses.
  *
- * @see    WAFClient::createRule
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createRule
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateRuleRequest * CreateRuleResponse::request() const
     return static_cast<const CreateRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF CreateRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateRuleResponsePrivate
+ * \class CreateRuleResponsePrivate
  *
- * @brief  Private implementation for CreateRuleResponse.
+ * \brief Private implementation for CreateRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRuleResponsePrivate object.
@@ -91,7 +99,7 @@ CreateRuleResponsePrivate::CreateRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF CreateRuleResponse element.
  *
  * @param  xml  XML stream to parse.

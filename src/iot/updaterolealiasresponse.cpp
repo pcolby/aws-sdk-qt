@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateRoleAliasResponse
+/*!
+ * \class QtAws::IoT::UpdateRoleAliasResponse
  *
- * @brief  Handles IoT UpdateRoleAlias responses.
+ * \brief The UpdateRoleAliasResponse class encapsulates IoT UpdateRoleAlias responses.
  *
- * @see    IoTClient::updateRoleAlias
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateRoleAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRoleAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateRoleAliasRequest * UpdateRoleAliasResponse::request() const
     return static_cast<const UpdateRoleAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT UpdateRoleAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateRoleAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRoleAliasResponsePrivate
+ * \class UpdateRoleAliasResponsePrivate
  *
- * @brief  Private implementation for UpdateRoleAliasResponse.
+ * \brief Private implementation for UpdateRoleAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRoleAliasResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT UpdateRoleAliasResponse element.
  *
  * @param  xml  XML stream to parse.

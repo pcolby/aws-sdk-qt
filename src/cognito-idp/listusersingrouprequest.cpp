@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListUsersInGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListUsersInGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider ListUsersInGroup requests.
+ * \brief The ListUsersInGroupRequest class encapsulates CognitoIdentityProvider ListUsersInGroup requests.
  *
- * @see    CognitoIdentityProviderClient::listUsersInGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listUsersInGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new ListUsersInGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListUsersInGroupRequest::ListUsersInGroupRequest(const ListUsersInGroupRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListUsersInGroupRequest object.
  */
 ListUsersInGroupRequest::ListUsersInGroupRequest()
@@ -53,13 +66,16 @@ ListUsersInGroupRequest::ListUsersInGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListUsersInGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListUsersInGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersInGroupRequest::response(QNetworkRep
     return new ListUsersInGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListUsersInGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListUsersInGroupRequest::response(QNetworkRep
  * @brief  Private implementation for ListUsersInGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersInGroupRequestPrivate object.
@@ -97,7 +113,7 @@ ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListUsersInGroupRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateEventSourceMappingRequest
+/*!
+ * \class QtAws::Lambda::UpdateEventSourceMappingRequest
  *
- * @brief  Implements Lambda UpdateEventSourceMapping requests.
+ * \brief The UpdateEventSourceMappingRequest class encapsulates Lambda UpdateEventSourceMapping requests.
  *
- * @see    LambdaClient::updateEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEventSourceMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest(const UpdateEve
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateEventSourceMappingRequest object.
  */
 UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest()
@@ -53,13 +67,16 @@ UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateEventSourceMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateEventSourceMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEventSourceMappingRequest::response(QNe
     return new UpdateEventSourceMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateEventSourceMappingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEventSourceMappingRequest::response(QNe
  * @brief  Private implementation for UpdateEventSourceMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEventSourceMappingRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEventSourceMappingRequestPrivate object, copying another.

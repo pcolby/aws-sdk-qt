@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetSchemaCreationStatusResponse
+/*!
+ * \class QtAws::AppSync::GetSchemaCreationStatusResponse
  *
- * @brief  Handles AppSync GetSchemaCreationStatus responses.
+ * \brief The GetSchemaCreationStatusResponse class encapsulates AppSync GetSchemaCreationStatus responses.
  *
- * @see    AppSyncClient::getSchemaCreationStatus
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getSchemaCreationStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSchemaCreationStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetSchemaCreationStatusRequest * GetSchemaCreationStatusResponse::request(
     return static_cast<const GetSchemaCreationStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync GetSchemaCreationStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetSchemaCreationStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSchemaCreationStatusResponsePrivate
+ * \class GetSchemaCreationStatusResponsePrivate
  *
- * @brief  Private implementation for GetSchemaCreationStatusResponse.
+ * \brief Private implementation for GetSchemaCreationStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSchemaCreationStatusResponsePrivate object.
@@ -91,7 +95,7 @@ GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync GetSchemaCreationStatusResponse element.
  *
  * @param  xml  XML stream to parse.

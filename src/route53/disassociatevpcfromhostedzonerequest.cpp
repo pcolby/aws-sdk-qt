@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DisassociateVPCFromHostedZoneRequest
+/*!
+ * \class QtAws::Route53::DisassociateVPCFromHostedZoneRequest
  *
- * @brief  Implements Route53 DisassociateVPCFromHostedZone requests.
+ * \brief The DisassociateVPCFromHostedZoneRequest class encapsulates Route53 DisassociateVPCFromHostedZone requests.
  *
- * @see    Route53Client::disassociateVPCFromHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::disassociateVPCFromHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object.
  */
 DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest()
@@ -53,13 +56,16 @@ DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateVPCFromHostedZoneRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateVPCFromHostedZoneResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::respons
     return new DisassociateVPCFromHostedZoneResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateVPCFromHostedZoneRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::respons
  * @brief  Private implementation for DisassociateVPCFromHostedZoneRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateVPCFromHostedZoneRequestPrivate object.
@@ -97,7 +103,7 @@ DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateVPCFromHostedZoneRequestPrivate object, copying another.

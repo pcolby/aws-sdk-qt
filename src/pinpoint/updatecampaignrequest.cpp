@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateCampaignRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateCampaignRequest
  *
- * @brief  Implements Pinpoint UpdateCampaign requests.
+ * \brief The UpdateCampaignRequest class encapsulates Pinpoint UpdateCampaign requests.
  *
- * @see    PinpointClient::updateCampaign
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateCampaign
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCampaignRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateCampaignRequest::UpdateCampaignRequest(const UpdateCampaignRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCampaignRequest object.
  */
 UpdateCampaignRequest::UpdateCampaignRequest()
@@ -53,13 +56,16 @@ UpdateCampaignRequest::UpdateCampaignRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCampaignRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCampaignResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCampaignRequest::response(QNetworkReply
     return new UpdateCampaignResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCampaignRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCampaignRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateCampaignRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCampaignRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCampaignRequestPrivate object, copying another.

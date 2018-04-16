@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateSoftwareUpdateJobRequest
+/*!
+ * \class QtAws::Greengrass::CreateSoftwareUpdateJobRequest
  *
- * @brief  Implements Greengrass CreateSoftwareUpdateJob requests.
+ * \brief The CreateSoftwareUpdateJobRequest class encapsulates Greengrass CreateSoftwareUpdateJob requests.
  *
- * @see    GreengrassClient::createSoftwareUpdateJob
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createSoftwareUpdateJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSoftwareUpdateJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest(const CreateSoftw
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSoftwareUpdateJobRequest object.
  */
 CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest()
@@ -53,13 +59,16 @@ CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSoftwareUpdateJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSoftwareUpdateJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNet
     return new CreateSoftwareUpdateJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSoftwareUpdateJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNet
  * @brief  Private implementation for CreateSoftwareUpdateJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSoftwareUpdateJobRequestPrivate object.
@@ -97,7 +106,7 @@ CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSoftwareUpdateJobRequestPrivate object, copying another.

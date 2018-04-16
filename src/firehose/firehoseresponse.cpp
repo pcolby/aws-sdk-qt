@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  FirehoseResponse
+/*!
+ * \class QtAws::Firehose::FirehoseResponse
  *
- * @brief  Handles Firehose Firehose responses.
+ * \brief The FirehoseResponse class is the base class for all Firehose responses.
  *
- * @see    FirehoseClient::firehose
+ * \ingroup Firehose
  */
 
-/**
+/*!
  * @brief  Constructs a new FirehoseResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ FirehoseResponse::FirehoseResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FirehoseResponse object.
@@ -63,7 +63,7 @@ FirehoseResponse::FirehoseResponse(FirehoseResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void FirehoseResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  FirehoseResponsePrivate
@@ -92,7 +92,7 @@ void FirehoseResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for FirehoseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FirehoseResponsePrivate object.

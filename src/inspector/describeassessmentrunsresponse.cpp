@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeAssessmentRunsResponse
+/*!
+ * \class QtAws::Inspector::DescribeAssessmentRunsResponse
  *
- * @brief  Handles Inspector DescribeAssessmentRuns responses.
+ * \brief The DescribeAssessmentRunsResponse class encapsulates Inspector DescribeAssessmentRuns responses.
  *
- * @see    InspectorClient::describeAssessmentRuns
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeAssessmentRuns
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentRunsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeAssessmentRunsRequest * DescribeAssessmentRunsResponse::request() 
     return static_cast<const DescribeAssessmentRunsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector DescribeAssessmentRuns response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeAssessmentRunsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAssessmentRunsResponsePrivate
+ * \class DescribeAssessmentRunsResponsePrivate
  *
- * @brief  Private implementation for DescribeAssessmentRunsResponse.
+ * \brief Private implementation for DescribeAssessmentRunsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentRunsResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector DescribeAssessmentRunsResponse element.
  *
  * @param  xml  XML stream to parse.

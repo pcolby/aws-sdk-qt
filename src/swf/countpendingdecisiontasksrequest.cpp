@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  CountPendingDecisionTasksRequest
+/*!
+ * \class QtAws::SWF::CountPendingDecisionTasksRequest
  *
- * @brief  Implements SWF CountPendingDecisionTasks requests.
+ * \brief The CountPendingDecisionTasksRequest class encapsulates SWF CountPendingDecisionTasks requests.
  *
- * @see    SWFClient::countPendingDecisionTasks
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::countPendingDecisionTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new CountPendingDecisionTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest(const CountPe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CountPendingDecisionTasksRequest object.
  */
 CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest()
@@ -53,13 +72,16 @@ CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CountPendingDecisionTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CountPendingDecisionTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QN
     return new CountPendingDecisionTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CountPendingDecisionTasksRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QN
  * @brief  Private implementation for CountPendingDecisionTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountPendingDecisionTasksRequestPrivate object.
@@ -97,7 +119,7 @@ CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountPendingDecisionTasksRequestPrivate object, copying another.

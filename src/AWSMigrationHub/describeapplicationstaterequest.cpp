@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DescribeApplicationStateRequest
+/*!
+ * \class QtAws::MigrationHub::DescribeApplicationStateRequest
  *
- * @brief  Implements MigrationHub DescribeApplicationState requests.
+ * \brief The DescribeApplicationStateRequest class encapsulates MigrationHub DescribeApplicationState requests.
  *
- * @see    MigrationHubClient::describeApplicationState
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::describeApplicationState
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeApplicationStateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeApplicationStateRequest::DescribeApplicationStateRequest(const DescribeA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeApplicationStateRequest object.
  */
 DescribeApplicationStateRequest::DescribeApplicationStateRequest()
@@ -53,13 +58,16 @@ DescribeApplicationStateRequest::DescribeApplicationStateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeApplicationStateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeApplicationStateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationStateRequest::response(QNe
     return new DescribeApplicationStateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeApplicationStateRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationStateRequest::response(QNe
  * @brief  Private implementation for DescribeApplicationStateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeApplicationStateRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeApplicationStateRequestPrivate object, copying another.

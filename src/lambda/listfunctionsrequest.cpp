@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListFunctionsRequest
+/*!
+ * \class QtAws::Lambda::ListFunctionsRequest
  *
- * @brief  Implements Lambda ListFunctions requests.
+ * \brief The ListFunctionsRequest class encapsulates Lambda ListFunctions requests.
  *
- * @see    LambdaClient::listFunctions
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listFunctions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListFunctionsRequest::ListFunctionsRequest(const ListFunctionsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionsRequest object.
  */
 ListFunctionsRequest::ListFunctionsRequest()
@@ -53,13 +67,16 @@ ListFunctionsRequest::ListFunctionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFunctionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFunctionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply 
     return new ListFunctionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFunctionsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionsRequest::response(QNetworkReply 
  * @brief  Private implementation for ListFunctionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionsRequestPrivate object.
@@ -97,7 +114,7 @@ ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionsRequestPrivate object, copying another.

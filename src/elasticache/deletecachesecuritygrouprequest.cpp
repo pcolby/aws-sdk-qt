@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DeleteCacheSecurityGroupRequest
+/*!
+ * \class QtAws::ElastiCache::DeleteCacheSecurityGroupRequest
  *
- * @brief  Implements ElastiCache DeleteCacheSecurityGroup requests.
+ * \brief The DeleteCacheSecurityGroupRequest class encapsulates ElastiCache DeleteCacheSecurityGroup requests.
  *
- * @see    ElastiCacheClient::deleteCacheSecurityGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::deleteCacheSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheSecurityGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DeleteCacheSecurityGroupRequest::DeleteCacheSecurityGroupRequest(const DeleteCac
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheSecurityGroupRequest object.
  */
 DeleteCacheSecurityGroupRequest::DeleteCacheSecurityGroupRequest()
@@ -53,13 +70,16 @@ DeleteCacheSecurityGroupRequest::DeleteCacheSecurityGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCacheSecurityGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCacheSecurityGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheSecurityGroupRequest::response(QNe
     return new DeleteCacheSecurityGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCacheSecurityGroupRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheSecurityGroupRequest::response(QNe
  * @brief  Private implementation for DeleteCacheSecurityGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheSecurityGroupRequestPrivate object.
@@ -97,7 +117,7 @@ DeleteCacheSecurityGroupRequestPrivate::DeleteCacheSecurityGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheSecurityGroupRequestPrivate object, copying another.

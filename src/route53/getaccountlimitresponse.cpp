@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetAccountLimitResponse
+/*!
+ * \class QtAws::Route53::GetAccountLimitResponse
  *
- * @brief  Handles Route53 GetAccountLimit responses.
+ * \brief The GetAccountLimitResponse class encapsulates Route53 GetAccountLimit responses.
  *
- * @see    Route53Client::getAccountLimit
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getAccountLimit
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountLimitResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetAccountLimitRequest * GetAccountLimitResponse::request() const
     return static_cast<const GetAccountLimitRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetAccountLimit response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetAccountLimitResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAccountLimitResponsePrivate
+ * \class GetAccountLimitResponsePrivate
  *
- * @brief  Private implementation for GetAccountLimitResponse.
+ * \brief Private implementation for GetAccountLimitResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountLimitResponsePrivate object.
@@ -91,7 +94,7 @@ GetAccountLimitResponsePrivate::GetAccountLimitResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetAccountLimitResponse element.
  *
  * @param  xml  XML stream to parse.

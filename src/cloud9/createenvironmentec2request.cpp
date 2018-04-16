@@ -25,15 +25,72 @@
 namespace QtAws {
 namespace Cloud9 {
 
-/**
- * @class  CreateEnvironmentEC2Request
+/*!
+ * \class QtAws::Cloud9::CreateEnvironmentEC2Request
  *
- * @brief  Implements Cloud9 CreateEnvironmentEC2 requests.
+ * \brief The CreateEnvironmentEC2Request class encapsulates Cloud9 CreateEnvironmentEC2 requests.
  *
- * @see    Cloud9Client::createEnvironmentEC2
+ * \ingroup Cloud9
+ *
+ *  <fullname>AWS Cloud9</fullname>
+ * 
+ *  AWS Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
+ * 
+ *  cloud>
+ * 
+ *  For more information about AWS Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">AWS Cloud9
+ *  User
+ * 
+ *  Guide</a>>
+ * 
+ *  AWS Cloud9 supports these
+ * 
+ *  operations> <ul> <li>
+ * 
+ *  <code>CreateEnvironmentEC2</code>: Creates an AWS Cloud9 development environment, launches an Amazon EC2 instance, and
+ *  then connects from the instance to the
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>CreateEnvironmentMembership</code>: Adds an environment member to an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DeleteEnvironment</code>: Deletes an environment. If an Amazon EC2 instance is connected to the environment, also
+ *  terminates the
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <code>DeleteEnvironmentMembership</code>: Deletes an environment member from an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DescribeEnvironmentMemberships</code>: Gets information about environment members for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>DescribeEnvironments</code>: Gets information about
+ * 
+ *  environments> </li> <li>
+ * 
+ *  <code>DescribeEnvironmentStatus</code>: Gets status information for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>ListEnvironments</code>: Gets a list of environment
+ * 
+ *  identifiers> </li> <li>
+ * 
+ *  <code>UpdateEnvironment</code>: Changes the settings of an existing
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>UpdateEnvironmentMembership</code>: Changes the settings of an existing environment member for an
+ *
+ * \sa Cloud9Client::createEnvironmentEC2
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEnvironmentEC2Request object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +101,7 @@ CreateEnvironmentEC2Request::CreateEnvironmentEC2Request(const CreateEnvironment
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateEnvironmentEC2Request object.
  */
 CreateEnvironmentEC2Request::CreateEnvironmentEC2Request()
@@ -53,13 +110,16 @@ CreateEnvironmentEC2Request::CreateEnvironmentEC2Request()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateEnvironmentEC2Request::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateEnvironmentEC2Response object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +134,7 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetwor
     return new CreateEnvironmentEC2Response(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateEnvironmentEC2RequestPrivate
@@ -82,7 +142,7 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetwor
  * @brief  Private implementation for CreateEnvironmentEC2Request.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEnvironmentEC2RequestPrivate object.
@@ -97,7 +157,7 @@ CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEnvironmentEC2RequestPrivate object, copying another.

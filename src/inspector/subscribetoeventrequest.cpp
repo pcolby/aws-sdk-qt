@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  SubscribeToEventRequest
+/*!
+ * \class QtAws::Inspector::SubscribeToEventRequest
  *
- * @brief  Implements Inspector SubscribeToEvent requests.
+ * \brief The SubscribeToEventRequest class encapsulates Inspector SubscribeToEvent requests.
  *
- * @see    InspectorClient::subscribeToEvent
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::subscribeToEvent
  */
 
-/**
+/*!
  * @brief  Constructs a new SubscribeToEventRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SubscribeToEventRequest::SubscribeToEventRequest(const SubscribeToEventRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SubscribeToEventRequest object.
  */
 SubscribeToEventRequest::SubscribeToEventRequest()
@@ -53,13 +61,16 @@ SubscribeToEventRequest::SubscribeToEventRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SubscribeToEventRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SubscribeToEventResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SubscribeToEventRequest::response(QNetworkRep
     return new SubscribeToEventResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SubscribeToEventRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SubscribeToEventRequest::response(QNetworkRep
  * @brief  Private implementation for SubscribeToEventRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SubscribeToEventRequestPrivate object.
@@ -97,7 +108,7 @@ SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SubscribeToEventRequestPrivate object, copying another.

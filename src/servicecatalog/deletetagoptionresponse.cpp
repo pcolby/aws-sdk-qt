@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteTagOptionResponse
+/*!
+ * \class QtAws::ServiceCatalog::DeleteTagOptionResponse
  *
- * @brief  Handles ServiceCatalog DeleteTagOption responses.
+ * \brief The DeleteTagOptionResponse class encapsulates ServiceCatalog DeleteTagOption responses.
  *
- * @see    ServiceCatalogClient::deleteTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagOptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteTagOptionRequest * DeleteTagOptionResponse::request() const
     return static_cast<const DeleteTagOptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DeleteTagOption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteTagOptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagOptionResponsePrivate
+ * \class DeleteTagOptionResponsePrivate
  *
- * @brief  Private implementation for DeleteTagOptionResponse.
+ * \brief Private implementation for DeleteTagOptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagOptionResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteTagOptionResponsePrivate::DeleteTagOptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DeleteTagOptionResponse element.
  *
  * @param  xml  XML stream to parse.

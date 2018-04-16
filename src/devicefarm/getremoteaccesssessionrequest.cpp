@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetRemoteAccessSessionRequest
+/*!
+ * \class QtAws::DeviceFarm::GetRemoteAccessSessionRequest
  *
- * @brief  Implements DeviceFarm GetRemoteAccessSession requests.
+ * \brief The GetRemoteAccessSessionRequest class encapsulates DeviceFarm GetRemoteAccessSession requests.
  *
- * @see    DeviceFarmClient::getRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRemoteAccessSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetRemoteAccessSessionRequest::GetRemoteAccessSessionRequest(const GetRemoteAcce
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRemoteAccessSessionRequest object.
  */
 GetRemoteAccessSessionRequest::GetRemoteAccessSessionRequest()
@@ -53,13 +58,16 @@ GetRemoteAccessSessionRequest::GetRemoteAccessSessionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRemoteAccessSessionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRemoteAccessSessionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetRemoteAccessSessionRequest::response(QNetw
     return new GetRemoteAccessSessionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRemoteAccessSessionRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetRemoteAccessSessionRequest::response(QNetw
  * @brief  Private implementation for GetRemoteAccessSessionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRemoteAccessSessionRequestPrivate object.
@@ -97,7 +105,7 @@ GetRemoteAccessSessionRequestPrivate::GetRemoteAccessSessionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRemoteAccessSessionRequestPrivate object, copying another.

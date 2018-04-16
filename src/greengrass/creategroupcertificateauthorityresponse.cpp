@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateGroupCertificateAuthorityResponse
+/*!
+ * \class QtAws::Greengrass::CreateGroupCertificateAuthorityResponse
  *
- * @brief  Handles Greengrass CreateGroupCertificateAuthority responses.
+ * \brief The CreateGroupCertificateAuthorityResponse class encapsulates Greengrass CreateGroupCertificateAuthority responses.
  *
- * @see    GreengrassClient::createGroupCertificateAuthority
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createGroupCertificateAuthority
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupCertificateAuthorityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateGroupCertificateAuthorityRequest * CreateGroupCertificateAuthorityRe
     return static_cast<const CreateGroupCertificateAuthorityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateGroupCertificateAuthority response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateGroupCertificateAuthorityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateGroupCertificateAuthorityResponsePrivate
+ * \class CreateGroupCertificateAuthorityResponsePrivate
  *
- * @brief  Private implementation for CreateGroupCertificateAuthorityResponse.
+ * \brief Private implementation for CreateGroupCertificateAuthorityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupCertificateAuthorityResponsePrivate object.
@@ -91,7 +97,7 @@ CreateGroupCertificateAuthorityResponsePrivate::CreateGroupCertificateAuthorityR
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateGroupCertificateAuthorityResponse element.
  *
  * @param  xml  XML stream to parse.

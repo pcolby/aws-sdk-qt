@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CompleteLifecycleActionResponse
+/*!
+ * \class QtAws::AutoScaling::CompleteLifecycleActionResponse
  *
- * @brief  Handles AutoScaling CompleteLifecycleAction responses.
+ * \brief The CompleteLifecycleActionResponse class encapsulates AutoScaling CompleteLifecycleAction responses.
  *
- * @see    AutoScalingClient::completeLifecycleAction
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::completeLifecycleAction
  */
 
-/**
+/*!
  * @brief  Constructs a new CompleteLifecycleActionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CompleteLifecycleActionRequest * CompleteLifecycleActionResponse::request(
     return static_cast<const CompleteLifecycleActionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling CompleteLifecycleAction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CompleteLifecycleActionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CompleteLifecycleActionResponsePrivate
+ * \class CompleteLifecycleActionResponsePrivate
  *
- * @brief  Private implementation for CompleteLifecycleActionResponse.
+ * \brief Private implementation for CompleteLifecycleActionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteLifecycleActionResponsePrivate object.
@@ -91,7 +99,7 @@ CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling CompleteLifecycleActionResponse element.
  *
  * @param  xml  XML stream to parse.

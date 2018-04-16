@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetQualificationTypeResponse
+/*!
+ * \class QtAws::MTurk::GetQualificationTypeResponse
  *
- * @brief  Handles MTurk GetQualificationType responses.
+ * \brief The GetQualificationTypeResponse class encapsulates MTurk GetQualificationType responses.
  *
- * @see    MTurkClient::getQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQualificationTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetQualificationTypeRequest * GetQualificationTypeResponse::request() cons
     return static_cast<const GetQualificationTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk GetQualificationType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetQualificationTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetQualificationTypeResponsePrivate
+ * \class GetQualificationTypeResponsePrivate
  *
- * @brief  Private implementation for GetQualificationTypeResponse.
+ * \brief Private implementation for GetQualificationTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQualificationTypeResponsePrivate object.
@@ -91,7 +94,7 @@ GetQualificationTypeResponsePrivate::GetQualificationTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk GetQualificationTypeResponse element.
  *
  * @param  xml  XML stream to parse.

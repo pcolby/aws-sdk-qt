@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeTagOptionRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeTagOptionRequest
  *
- * @brief  Implements ServiceCatalog DescribeTagOption requests.
+ * \brief The DescribeTagOptionRequest class encapsulates ServiceCatalog DescribeTagOption requests.
  *
- * @see    ServiceCatalogClient::describeTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeTagOptionRequest::DescribeTagOptionRequest(const DescribeTagOptionReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagOptionRequest object.
  */
 DescribeTagOptionRequest::DescribeTagOptionRequest()
@@ -53,13 +62,16 @@ DescribeTagOptionRequest::DescribeTagOptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTagOptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTagOptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkRe
     return new DescribeTagOptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTagOptionRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkRe
  * @brief  Private implementation for DescribeTagOptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagOptionRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagOptionRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationCloudWatchLoggingOptionResponse
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationCloudWatchLoggingOptionResponse
  *
- * @brief  Handles KinesisAnalytics AddApplicationCloudWatchLoggingOption responses.
+ * \brief The AddApplicationCloudWatchLoggingOptionResponse class encapsulates KinesisAnalytics AddApplicationCloudWatchLoggingOption responses.
  *
- * @see    KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AddApplicationCloudWatchLoggingOptionRequest * AddApplicationCloudWatchLog
     return static_cast<const AddApplicationCloudWatchLoggingOptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics AddApplicationCloudWatchLoggingOption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AddApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddApplicationCloudWatchLoggingOptionResponsePrivate
+ * \class AddApplicationCloudWatchLoggingOptionResponsePrivate
  *
- * @brief  Private implementation for AddApplicationCloudWatchLoggingOptionResponse.
+ * \brief Private implementation for AddApplicationCloudWatchLoggingOptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionResponsePrivate object.
@@ -91,7 +94,7 @@ AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWatchLo
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics AddApplicationCloudWatchLoggingOptionResponse element.
  *
  * @param  xml  XML stream to parse.

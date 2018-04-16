@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetCrawlerMetricsRequest
+/*!
+ * \class QtAws::Glue::GetCrawlerMetricsRequest
  *
- * @brief  Implements Glue GetCrawlerMetrics requests.
+ * \brief The GetCrawlerMetricsRequest class encapsulates Glue GetCrawlerMetrics requests.
  *
- * @see    GlueClient::getCrawlerMetrics
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getCrawlerMetrics
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCrawlerMetricsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetCrawlerMetricsRequest::GetCrawlerMetricsRequest(const GetCrawlerMetricsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCrawlerMetricsRequest object.
  */
 GetCrawlerMetricsRequest::GetCrawlerMetricsRequest()
@@ -53,13 +59,16 @@ GetCrawlerMetricsRequest::GetCrawlerMetricsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCrawlerMetricsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCrawlerMetricsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetCrawlerMetricsRequest::response(QNetworkRe
     return new GetCrawlerMetricsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCrawlerMetricsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetCrawlerMetricsRequest::response(QNetworkRe
  * @brief  Private implementation for GetCrawlerMetricsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCrawlerMetricsRequestPrivate object.
@@ -97,7 +106,7 @@ GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCrawlerMetricsRequestPrivate object, copying another.

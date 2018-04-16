@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeJobFlowsResponse
+/*!
+ * \class QtAws::EMR::DescribeJobFlowsResponse
  *
- * @brief  Handles EMR DescribeJobFlows responses.
+ * \brief The DescribeJobFlowsResponse class encapsulates EMR DescribeJobFlows responses.
  *
- * @see    EMRClient::describeJobFlows
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeJobFlows
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobFlowsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeJobFlowsRequest * DescribeJobFlowsResponse::request() const
     return static_cast<const DescribeJobFlowsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR DescribeJobFlows response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeJobFlowsResponsePrivate
+ * \class DescribeJobFlowsResponsePrivate
  *
- * @brief  Private implementation for DescribeJobFlowsResponse.
+ * \brief Private implementation for DescribeJobFlowsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobFlowsResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR DescribeJobFlowsResponse element.
  *
  * @param  xml  XML stream to parse.

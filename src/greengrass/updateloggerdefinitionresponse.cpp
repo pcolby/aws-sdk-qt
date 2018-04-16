@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateLoggerDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::UpdateLoggerDefinitionResponse
  *
- * @brief  Handles Greengrass UpdateLoggerDefinition responses.
+ * \brief The UpdateLoggerDefinitionResponse class encapsulates Greengrass UpdateLoggerDefinition responses.
  *
- * @see    GreengrassClient::updateLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateLoggerDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateLoggerDefinitionRequest * UpdateLoggerDefinitionResponse::request() 
     return static_cast<const UpdateLoggerDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass UpdateLoggerDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateLoggerDefinitionResponsePrivate
+ * \class UpdateLoggerDefinitionResponsePrivate
  *
- * @brief  Private implementation for UpdateLoggerDefinitionResponse.
+ * \brief Private implementation for UpdateLoggerDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateLoggerDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass UpdateLoggerDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

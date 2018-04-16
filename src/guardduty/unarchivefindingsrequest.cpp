@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  UnarchiveFindingsRequest
+/*!
+ * \class QtAws::GuardDuty::UnarchiveFindingsRequest
  *
- * @brief  Implements GuardDuty UnarchiveFindings requests.
+ * \brief The UnarchiveFindingsRequest class encapsulates GuardDuty UnarchiveFindings requests.
  *
- * @see    GuardDutyClient::unarchiveFindings
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::unarchiveFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new UnarchiveFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UnarchiveFindingsRequest::UnarchiveFindingsRequest(const UnarchiveFindingsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UnarchiveFindingsRequest object.
  */
 UnarchiveFindingsRequest::UnarchiveFindingsRequest()
@@ -53,13 +56,16 @@ UnarchiveFindingsRequest::UnarchiveFindingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UnarchiveFindingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UnarchiveFindingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UnarchiveFindingsRequest::response(QNetworkRe
     return new UnarchiveFindingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UnarchiveFindingsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UnarchiveFindingsRequest::response(QNetworkRe
  * @brief  Private implementation for UnarchiveFindingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnarchiveFindingsRequestPrivate object.
@@ -97,7 +103,7 @@ UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnarchiveFindingsRequestPrivate object, copying another.

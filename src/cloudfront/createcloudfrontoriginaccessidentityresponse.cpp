@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateCloudFrontOriginAccessIdentityResponse
+/*!
+ * \class QtAws::CloudFront::CreateCloudFrontOriginAccessIdentityResponse
  *
- * @brief  Handles CloudFront CreateCloudFrontOriginAccessIdentity responses.
+ * \brief The CreateCloudFrontOriginAccessIdentityResponse class encapsulates CloudFront CreateCloudFrontOriginAccessIdentity responses.
  *
- * @see    CloudFrontClient::createCloudFrontOriginAccessIdentity
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createCloudFrontOriginAccessIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCloudFrontOriginAccessIdentityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateCloudFrontOriginAccessIdentityRequest * CreateCloudFrontOriginAccess
     return static_cast<const CreateCloudFrontOriginAccessIdentityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront CreateCloudFrontOriginAccessIdentity response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCloudFrontOriginAccessIdentityResponsePrivate
+ * \class CreateCloudFrontOriginAccessIdentityResponsePrivate
  *
- * @brief  Private implementation for CreateCloudFrontOriginAccessIdentityResponse.
+ * \brief Private implementation for CreateCloudFrontOriginAccessIdentityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCloudFrontOriginAccessIdentityResponsePrivate object.
@@ -91,7 +99,7 @@ CreateCloudFrontOriginAccessIdentityResponsePrivate::CreateCloudFrontOriginAcces
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront CreateCloudFrontOriginAccessIdentityResponse element.
  *
  * @param  xml  XML stream to parse.

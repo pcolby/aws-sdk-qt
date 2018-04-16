@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DetachPolicyResponse
+/*!
+ * \class QtAws::IoT::DetachPolicyResponse
  *
- * @brief  Handles IoT DetachPolicy responses.
+ * \brief The DetachPolicyResponse class encapsulates IoT DetachPolicy responses.
  *
- * @see    IoTClient::detachPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::detachPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DetachPolicyRequest * DetachPolicyResponse::request() const
     return static_cast<const DetachPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DetachPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DetachPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachPolicyResponsePrivate
+ * \class DetachPolicyResponsePrivate
  *
- * @brief  Private implementation for DetachPolicyResponse.
+ * \brief Private implementation for DetachPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachPolicyResponsePrivate object.
@@ -91,7 +105,7 @@ DetachPolicyResponsePrivate::DetachPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DetachPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

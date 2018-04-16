@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DescribeExpressionsResponse
+/*!
+ * \class QtAws::CloudSearch::DescribeExpressionsResponse
  *
- * @brief  Handles CloudSearch DescribeExpressions responses.
+ * \brief The DescribeExpressionsResponse class encapsulates CloudSearch DescribeExpressions responses.
  *
- * @see    CloudSearchClient::describeExpressions
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::describeExpressions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeExpressionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeExpressionsRequest * DescribeExpressionsResponse::request() const
     return static_cast<const DescribeExpressionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DescribeExpressions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeExpressionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeExpressionsResponsePrivate
+ * \class DescribeExpressionsResponsePrivate
  *
- * @brief  Private implementation for DescribeExpressionsResponse.
+ * \brief Private implementation for DescribeExpressionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeExpressionsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeExpressionsResponsePrivate::DescribeExpressionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DescribeExpressionsResponse element.
  *
  * @param  xml  XML stream to parse.

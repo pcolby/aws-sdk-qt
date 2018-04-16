@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisableVgwRoutePropagationRequest
+/*!
+ * \class QtAws::EC2::DisableVgwRoutePropagationRequest
  *
- * @brief  Implements EC2 DisableVgwRoutePropagation requests.
+ * \brief The DisableVgwRoutePropagationRequest class encapsulates EC2 DisableVgwRoutePropagation requests.
  *
- * @see    EC2Client::disableVgwRoutePropagation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disableVgwRoutePropagation
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableVgwRoutePropagationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest(const Disab
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableVgwRoutePropagationRequest object.
  */
 DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest()
@@ -53,13 +60,16 @@ DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableVgwRoutePropagationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableVgwRoutePropagationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(Q
     return new DisableVgwRoutePropagationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableVgwRoutePropagationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(Q
  * @brief  Private implementation for DisableVgwRoutePropagationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableVgwRoutePropagationRequestPrivate object.
@@ -97,7 +107,7 @@ DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableVgwRoutePropagationRequestPrivate object, copying another.

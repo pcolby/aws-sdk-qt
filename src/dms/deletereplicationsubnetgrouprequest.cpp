@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteReplicationSubnetGroupRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupRequest
  *
- * @brief  Implements DatabaseMigrationService DeleteReplicationSubnetGroup requests.
+ * \brief The DeleteReplicationSubnetGroupRequest class encapsulates DatabaseMigrationService DeleteReplicationSubnetGroup requests.
  *
- * @see    DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationSubnetGroupRequest object.
  */
 DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest()
@@ -53,13 +67,16 @@ DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReplicationSubnetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReplicationSubnetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response
     return new DeleteReplicationSubnetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReplicationSubnetGroupRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response
  * @brief  Private implementation for DeleteReplicationSubnetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationSubnetGroupRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationSubnetGroupRequestPrivate object, copying another.

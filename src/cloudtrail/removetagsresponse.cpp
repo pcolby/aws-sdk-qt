@@ -27,15 +27,41 @@
 namespace QtAws {
 namespace CloudTrail {
 
-/**
- * @class  RemoveTagsResponse
+/*!
+ * \class QtAws::CloudTrail::RemoveTagsResponse
  *
- * @brief  Handles CloudTrail RemoveTags responses.
+ * \brief The RemoveTagsResponse class encapsulates CloudTrail RemoveTags responses.
  *
- * @see    CloudTrailClient::removeTags
+ * \ingroup CloudTrail
+ *
+ *  <fullname>AWS CloudTrail</fullname>
+ * 
+ *  This is the CloudTrail API Reference. It provides descriptions of actions, data types, common parameters, and common
+ *  errors for
+ * 
+ *  CloudTrail>
+ * 
+ *  CloudTrail is a web service that records AWS API calls for your AWS account and delivers log files to an Amazon S3
+ *  bucket. The recorded information includes the identity of the user, the start time of the AWS API call, the source IP
+ *  address, the request parameters, and the response elements returned by the
+ * 
+ *  service> <note>
+ * 
+ *  As an alternative to the API, you can use one of the AWS SDKs, which consist of libraries and sample code for various
+ *  programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to create
+ *  programmatic access to AWSCloudTrail. For example, the SDKs take care of cryptographically signing requests, managing
+ *  errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install
+ *  them, see the <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services
+ * 
+ *  page</a>> </note>
+ * 
+ *  See the <a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail
+ *  User Guide</a> for information about the data that is included with each AWS API call listed in the log
+ *
+ * \sa CloudTrailClient::removeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +84,7 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
     return static_cast<const RemoveTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudTrail RemoveTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +96,15 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsResponsePrivate
+ * \class RemoveTagsResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsResponse.
+ * \brief Private implementation for RemoveTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsResponsePrivate object.
@@ -91,7 +117,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudTrail RemoveTagsResponse element.
  *
  * @param  xml  XML stream to parse.

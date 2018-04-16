@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  CreateClusterResponse
+/*!
+ * \class QtAws::CloudHSMV2::CreateClusterResponse
  *
- * @brief  Handles CloudHSMV2 CreateCluster responses.
+ * \brief The CreateClusterResponse class encapsulates CloudHSMV2 CreateCluster responses.
  *
- * @see    CloudHSMV2Client::createCluster
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::createCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateClusterRequest * CreateClusterResponse::request() const
     return static_cast<const CreateClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSMV2 CreateCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateClusterResponsePrivate
+ * \class CreateClusterResponsePrivate
  *
- * @brief  Private implementation for CreateClusterResponse.
+ * \brief Private implementation for CreateClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterResponsePrivate object.
@@ -91,7 +96,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSMV2 CreateClusterResponse element.
  *
  * @param  xml  XML stream to parse.

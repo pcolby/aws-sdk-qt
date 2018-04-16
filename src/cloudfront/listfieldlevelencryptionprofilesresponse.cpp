@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListFieldLevelEncryptionProfilesResponse
+/*!
+ * \class QtAws::CloudFront::ListFieldLevelEncryptionProfilesResponse
  *
- * @brief  Handles CloudFront ListFieldLevelEncryptionProfiles responses.
+ * \brief The ListFieldLevelEncryptionProfilesResponse class encapsulates CloudFront ListFieldLevelEncryptionProfiles responses.
  *
- * @see    CloudFrontClient::listFieldLevelEncryptionProfiles
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listFieldLevelEncryptionProfiles
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFieldLevelEncryptionProfilesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListFieldLevelEncryptionProfilesRequest * ListFieldLevelEncryptionProfiles
     return static_cast<const ListFieldLevelEncryptionProfilesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListFieldLevelEncryptionProfiles response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListFieldLevelEncryptionProfilesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListFieldLevelEncryptionProfilesResponsePrivate
+ * \class ListFieldLevelEncryptionProfilesResponsePrivate
  *
- * @brief  Private implementation for ListFieldLevelEncryptionProfilesResponse.
+ * \brief Private implementation for ListFieldLevelEncryptionProfilesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFieldLevelEncryptionProfilesResponsePrivate object.
@@ -91,7 +99,7 @@ ListFieldLevelEncryptionProfilesResponsePrivate::ListFieldLevelEncryptionProfile
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListFieldLevelEncryptionProfilesResponse element.
  *
  * @param  xml  XML stream to parse.

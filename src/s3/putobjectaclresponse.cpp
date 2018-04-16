@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutObjectAclResponse
+/*!
+ * \class QtAws::S3::PutObjectAclResponse
  *
- * @brief  Handles S3 PutObjectAcl responses.
+ * \brief The PutObjectAclResponse class encapsulates S3 PutObjectAcl responses.
  *
- * @see    S3Client::putObjectAcl
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putObjectAcl
  */
 
-/**
+/*!
  * @brief  Constructs a new PutObjectAclResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutObjectAclRequest * PutObjectAclResponse::request() const
     return static_cast<const PutObjectAclRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutObjectAcl response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutObjectAclResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutObjectAclResponsePrivate
+ * \class PutObjectAclResponsePrivate
  *
- * @brief  Private implementation for PutObjectAclResponse.
+ * \brief Private implementation for PutObjectAclResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectAclResponsePrivate object.
@@ -91,7 +94,7 @@ PutObjectAclResponsePrivate::PutObjectAclResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutObjectAclResponse element.
  *
  * @param  xml  XML stream to parse.

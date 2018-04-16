@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DescribeInputResponse
+/*!
+ * \class QtAws::MediaLive::DescribeInputResponse
  *
- * @brief  Handles MediaLive DescribeInput responses.
+ * \brief The DescribeInputResponse class encapsulates MediaLive DescribeInput responses.
  *
- * @see    MediaLiveClient::describeInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::describeInput
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInputResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeInputRequest * DescribeInputResponse::request() const
     return static_cast<const DescribeInputRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive DescribeInput response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeInputResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeInputResponsePrivate
+ * \class DescribeInputResponsePrivate
  *
- * @brief  Private implementation for DescribeInputResponse.
+ * \brief Private implementation for DescribeInputResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInputResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeInputResponsePrivate::DescribeInputResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive DescribeInputResponse element.
  *
  * @param  xml  XML stream to parse.

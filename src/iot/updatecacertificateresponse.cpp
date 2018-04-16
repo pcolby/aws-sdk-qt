@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateCACertificateResponse
+/*!
+ * \class QtAws::IoT::UpdateCACertificateResponse
  *
- * @brief  Handles IoT UpdateCACertificate responses.
+ * \brief The UpdateCACertificateResponse class encapsulates IoT UpdateCACertificate responses.
  *
- * @see    IoTClient::updateCACertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateCACertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCACertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateCACertificateRequest * UpdateCACertificateResponse::request() const
     return static_cast<const UpdateCACertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT UpdateCACertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateCACertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateCACertificateResponsePrivate
+ * \class UpdateCACertificateResponsePrivate
  *
- * @brief  Private implementation for UpdateCACertificateResponse.
+ * \brief Private implementation for UpdateCACertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCACertificateResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateCACertificateResponsePrivate::UpdateCACertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT UpdateCACertificateResponse element.
  *
  * @param  xml  XML stream to parse.

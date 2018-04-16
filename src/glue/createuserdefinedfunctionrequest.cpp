@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateUserDefinedFunctionRequest
+/*!
+ * \class QtAws::Glue::CreateUserDefinedFunctionRequest
  *
- * @brief  Implements Glue CreateUserDefinedFunction requests.
+ * \brief The CreateUserDefinedFunctionRequest class encapsulates Glue CreateUserDefinedFunction requests.
  *
- * @see    GlueClient::createUserDefinedFunction
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createUserDefinedFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserDefinedFunctionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateUserDefinedFunctionRequest::CreateUserDefinedFunctionRequest(const CreateU
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUserDefinedFunctionRequest object.
  */
 CreateUserDefinedFunctionRequest::CreateUserDefinedFunctionRequest()
@@ -53,13 +59,16 @@ CreateUserDefinedFunctionRequest::CreateUserDefinedFunctionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUserDefinedFunctionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUserDefinedFunctionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserDefinedFunctionRequest::response(QN
     return new CreateUserDefinedFunctionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUserDefinedFunctionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserDefinedFunctionRequest::response(QN
  * @brief  Private implementation for CreateUserDefinedFunctionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserDefinedFunctionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateUserDefinedFunctionRequestPrivate::CreateUserDefinedFunctionRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserDefinedFunctionRequestPrivate object, copying another.

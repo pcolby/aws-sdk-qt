@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  StopApplicationRequest
+/*!
+ * \class QtAws::KinesisAnalytics::StopApplicationRequest
  *
- * @brief  Implements KinesisAnalytics StopApplication requests.
+ * \brief The StopApplicationRequest class encapsulates KinesisAnalytics StopApplication requests.
  *
- * @see    KinesisAnalyticsClient::stopApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::stopApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new StopApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StopApplicationRequest::StopApplicationRequest(const StopApplicationRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopApplicationRequest object.
  */
 StopApplicationRequest::StopApplicationRequest()
@@ -53,13 +56,16 @@ StopApplicationRequest::StopApplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopApplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopApplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkRepl
     return new StopApplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopApplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkRepl
  * @brief  Private implementation for StopApplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopApplicationRequestPrivate object.
@@ -97,7 +103,7 @@ StopApplicationRequestPrivate::StopApplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopApplicationRequestPrivate object, copying another.

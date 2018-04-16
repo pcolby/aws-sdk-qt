@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  ListComplianceStatusResponse
+/*!
+ * \class QtAws::FMS::ListComplianceStatusResponse
  *
- * @brief  Handles FMS ListComplianceStatus responses.
+ * \brief The ListComplianceStatusResponse class encapsulates FMS ListComplianceStatus responses.
  *
- * @see    FMSClient::listComplianceStatus
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::listComplianceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new ListComplianceStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListComplianceStatusRequest * ListComplianceStatusResponse::request() cons
     return static_cast<const ListComplianceStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a FMS ListComplianceStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListComplianceStatusResponsePrivate
+ * \class ListComplianceStatusResponsePrivate
  *
- * @brief  Private implementation for ListComplianceStatusResponse.
+ * \brief Private implementation for ListComplianceStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListComplianceStatusResponsePrivate object.
@@ -91,7 +100,7 @@ ListComplianceStatusResponsePrivate::ListComplianceStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an FMS ListComplianceStatusResponse element.
  *
  * @param  xml  XML stream to parse.

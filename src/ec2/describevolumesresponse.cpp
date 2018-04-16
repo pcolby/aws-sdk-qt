@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVolumesResponse
+/*!
+ * \class QtAws::EC2::DescribeVolumesResponse
  *
- * @brief  Handles EC2 DescribeVolumes responses.
+ * \brief The DescribeVolumesResponse class encapsulates EC2 DescribeVolumes responses.
  *
- * @see    EC2Client::describeVolumes
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVolumes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVolumesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVolumesRequest * DescribeVolumesResponse::request() const
     return static_cast<const DescribeVolumesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVolumes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVolumesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVolumesResponsePrivate
+ * \class DescribeVolumesResponsePrivate
  *
- * @brief  Private implementation for DescribeVolumesResponse.
+ * \brief Private implementation for DescribeVolumesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVolumesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVolumesResponse element.
  *
  * @param  xml  XML stream to parse.

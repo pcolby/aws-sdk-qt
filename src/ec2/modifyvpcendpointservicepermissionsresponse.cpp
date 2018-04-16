@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointServicePermissionsResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointServicePermissionsResponse
  *
- * @brief  Handles EC2 ModifyVpcEndpointServicePermissions responses.
+ * \brief The ModifyVpcEndpointServicePermissionsResponse class encapsulates EC2 ModifyVpcEndpointServicePermissions responses.
  *
- * @see    EC2Client::modifyVpcEndpointServicePermissions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpointServicePermissions
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointServicePermissionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcEndpointServicePermissionsRequest * ModifyVpcEndpointServicePermi
     return static_cast<const ModifyVpcEndpointServicePermissionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcEndpointServicePermissions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcEndpointServicePermissionsResponsePrivate
+ * \class ModifyVpcEndpointServicePermissionsResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcEndpointServicePermissionsResponse.
+ * \brief Private implementation for ModifyVpcEndpointServicePermissionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointServicePermissionsResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePerm
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcEndpointServicePermissionsResponse element.
  *
  * @param  xml  XML stream to parse.

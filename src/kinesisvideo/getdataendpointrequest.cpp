@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  GetDataEndpointRequest
+/*!
+ * \class QtAws::KinesisVideo::GetDataEndpointRequest
  *
- * @brief  Implements KinesisVideo GetDataEndpoint requests.
+ * \brief The GetDataEndpointRequest class encapsulates KinesisVideo GetDataEndpoint requests.
  *
- * @see    KinesisVideoClient::getDataEndpoint
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::getDataEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDataEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetDataEndpointRequest::GetDataEndpointRequest(const GetDataEndpointRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDataEndpointRequest object.
  */
 GetDataEndpointRequest::GetDataEndpointRequest()
@@ -53,13 +56,16 @@ GetDataEndpointRequest::GetDataEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDataEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDataEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkRepl
     return new GetDataEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDataEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkRepl
  * @brief  Private implementation for GetDataEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDataEndpointRequestPrivate object, copying another.

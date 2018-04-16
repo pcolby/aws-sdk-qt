@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetReceiptRulePositionRequest
+/*!
+ * \class QtAws::SES::SetReceiptRulePositionRequest
  *
- * @brief  Implements SES SetReceiptRulePosition requests.
+ * \brief The SetReceiptRulePositionRequest class encapsulates SES SetReceiptRulePosition requests.
  *
- * @see    SESClient::setReceiptRulePosition
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setReceiptRulePosition
  */
 
-/**
+/*!
  * @brief  Constructs a new SetReceiptRulePositionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SetReceiptRulePositionRequest::SetReceiptRulePositionRequest(const SetReceiptRul
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetReceiptRulePositionRequest object.
  */
 SetReceiptRulePositionRequest::SetReceiptRulePositionRequest()
@@ -53,13 +67,16 @@ SetReceiptRulePositionRequest::SetReceiptRulePositionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetReceiptRulePositionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetReceiptRulePositionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetw
     return new SetReceiptRulePositionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetReceiptRulePositionRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetw
  * @brief  Private implementation for SetReceiptRulePositionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetReceiptRulePositionRequestPrivate object.
@@ -97,7 +114,7 @@ SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetReceiptRulePositionRequestPrivate object, copying another.

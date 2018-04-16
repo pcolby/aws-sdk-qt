@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  GetSnowballUsageRequest
+/*!
+ * \class QtAws::Snowball::GetSnowballUsageRequest
  *
- * @brief  Implements Snowball GetSnowballUsage requests.
+ * \brief The GetSnowballUsageRequest class encapsulates Snowball GetSnowballUsage requests.
  *
- * @see    SnowballClient::getSnowballUsage
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::getSnowballUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSnowballUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetSnowballUsageRequest::GetSnowballUsageRequest(const GetSnowballUsageRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSnowballUsageRequest object.
  */
 GetSnowballUsageRequest::GetSnowballUsageRequest()
@@ -53,13 +62,16 @@ GetSnowballUsageRequest::GetSnowballUsageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSnowballUsageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSnowballUsageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetSnowballUsageRequest::response(QNetworkRep
     return new GetSnowballUsageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSnowballUsageRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetSnowballUsageRequest::response(QNetworkRep
  * @brief  Private implementation for GetSnowballUsageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSnowballUsageRequestPrivate object.
@@ -97,7 +109,7 @@ GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSnowballUsageRequestPrivate object, copying another.

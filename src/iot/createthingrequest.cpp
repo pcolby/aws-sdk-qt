@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateThingRequest
+/*!
+ * \class QtAws::IoT::CreateThingRequest
  *
- * @brief  Implements IoT CreateThing requests.
+ * \brief The CreateThingRequest class encapsulates IoT CreateThing requests.
  *
- * @see    IoTClient::createThing
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createThing
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateThingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateThingRequest::CreateThingRequest(const CreateThingRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateThingRequest object.
  */
 CreateThingRequest::CreateThingRequest()
@@ -53,13 +67,16 @@ CreateThingRequest::CreateThingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateThingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateThingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingRequest::response(QNetworkReply * 
     return new CreateThingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateThingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingRequest::response(QNetworkReply * 
  * @brief  Private implementation for CreateThingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingRequestPrivate object.
@@ -97,7 +114,7 @@ CreateThingRequestPrivate::CreateThingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingRequestPrivate object, copying another.

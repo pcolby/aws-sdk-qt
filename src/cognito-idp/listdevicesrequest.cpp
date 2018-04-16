@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListDevicesRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListDevicesRequest
  *
- * @brief  Implements CognitoIdentityProvider ListDevices requests.
+ * \brief The ListDevicesRequest class encapsulates CognitoIdentityProvider ListDevices requests.
  *
- * @see    CognitoIdentityProviderClient::listDevices
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listDevices
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDevicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListDevicesRequest::ListDevicesRequest(const ListDevicesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDevicesRequest object.
  */
 ListDevicesRequest::ListDevicesRequest()
@@ -53,13 +66,16 @@ ListDevicesRequest::ListDevicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDevicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDevicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListDevicesRequest::response(QNetworkReply * 
     return new ListDevicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDevicesRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListDevicesRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListDevicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDevicesRequestPrivate object.
@@ -97,7 +113,7 @@ ListDevicesRequestPrivate::ListDevicesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDevicesRequestPrivate object, copying another.

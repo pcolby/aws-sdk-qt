@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketTaggingRequest
+/*!
+ * \class QtAws::S3::PutBucketTaggingRequest
  *
- * @brief  Implements S3 PutBucketTagging requests.
+ * \brief The PutBucketTaggingRequest class encapsulates S3 PutBucketTagging requests.
  *
- * @see    S3Client::putBucketTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketTaggingRequest::PutBucketTaggingRequest(const PutBucketTaggingRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketTaggingRequest object.
  */
 PutBucketTaggingRequest::PutBucketTaggingRequest()
@@ -53,13 +56,16 @@ PutBucketTaggingRequest::PutBucketTaggingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketTaggingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketTaggingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketTaggingRequest::response(QNetworkRep
     return new PutBucketTaggingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketTaggingRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketTaggingRequest::response(QNetworkRep
  * @brief  Private implementation for PutBucketTaggingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketTaggingRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketTaggingRequestPrivate::PutBucketTaggingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketTaggingRequestPrivate object, copying another.

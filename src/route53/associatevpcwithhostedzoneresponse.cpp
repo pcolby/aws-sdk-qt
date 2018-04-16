@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  AssociateVPCWithHostedZoneResponse
+/*!
+ * \class QtAws::Route53::AssociateVPCWithHostedZoneResponse
  *
- * @brief  Handles Route53 AssociateVPCWithHostedZone responses.
+ * \brief The AssociateVPCWithHostedZoneResponse class encapsulates Route53 AssociateVPCWithHostedZone responses.
  *
- * @see    Route53Client::associateVPCWithHostedZone
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::associateVPCWithHostedZone
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateVPCWithHostedZoneResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const AssociateVPCWithHostedZoneRequest * AssociateVPCWithHostedZoneResponse::re
     return static_cast<const AssociateVPCWithHostedZoneRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 AssociateVPCWithHostedZone response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void AssociateVPCWithHostedZoneResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssociateVPCWithHostedZoneResponsePrivate
+ * \class AssociateVPCWithHostedZoneResponsePrivate
  *
- * @brief  Private implementation for AssociateVPCWithHostedZoneResponse.
+ * \brief Private implementation for AssociateVPCWithHostedZoneResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateVPCWithHostedZoneResponsePrivate object.
@@ -91,7 +94,7 @@ AssociateVPCWithHostedZoneResponsePrivate::AssociateVPCWithHostedZoneResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 AssociateVPCWithHostedZoneResponse element.
  *
  * @param  xml  XML stream to parse.

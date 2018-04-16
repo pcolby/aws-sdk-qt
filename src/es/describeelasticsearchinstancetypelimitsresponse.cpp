@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DescribeElasticsearchInstanceTypeLimitsResponse
+/*!
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsResponse
  *
- * @brief  Handles ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
+ * \brief The DescribeElasticsearchInstanceTypeLimitsResponse class encapsulates ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
  *
- * @see    ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInst
     return static_cast<const DescribeElasticsearchInstanceTypeLimitsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService DescribeElasticsearchInstanceTypeLimits response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &re
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeElasticsearchInstanceTypeLimitsResponsePrivate
+ * \class DescribeElasticsearchInstanceTypeLimitsResponsePrivate
  *
- * @brief  Private implementation for DescribeElasticsearchInstanceTypeLimitsResponse.
+ * \brief Private implementation for DescribeElasticsearchInstanceTypeLimitsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsResponsePrivate object.
@@ -91,7 +103,7 @@ DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchIns
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService DescribeElasticsearchInstanceTypeLimitsResponse element.
  *
  * @param  xml  XML stream to parse.

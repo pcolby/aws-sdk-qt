@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetGroupVersionRequest
+/*!
+ * \class QtAws::Greengrass::GetGroupVersionRequest
  *
- * @brief  Implements Greengrass GetGroupVersion requests.
+ * \brief The GetGroupVersionRequest class encapsulates Greengrass GetGroupVersion requests.
  *
- * @see    GreengrassClient::getGroupVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getGroupVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetGroupVersionRequest::GetGroupVersionRequest(const GetGroupVersionRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGroupVersionRequest object.
  */
 GetGroupVersionRequest::GetGroupVersionRequest()
@@ -53,13 +59,16 @@ GetGroupVersionRequest::GetGroupVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGroupVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGroupVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkRepl
     return new GetGroupVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGroupVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkRepl
  * @brief  Private implementation for GetGroupVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupVersionRequestPrivate object, copying another.

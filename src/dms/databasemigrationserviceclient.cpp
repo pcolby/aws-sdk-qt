@@ -113,34 +113,42 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::DatabaseMigrationService
+ * \brief The QtAws::DatabaseMigrationService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DatabaseMigrationServiceClient
+/*!
+ * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceClient
  *
- * @brief  Client for AWS Database Migration Service
+ * \brief The DatabaseMigrationServiceClient class provides access the AWS Database Migration Service service.
  *
- * <fullname>AWS Database Migration Service</fullname>
+ * \ingroup DatabaseMigrationService
  *
- * AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
- * open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
- * and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
- * as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
- *
- * PostgreSQL>
- *
- * For more information about AWS DMS, see the AWS DMS user guide at <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
  */
 
-/**
- * @brief  Constructs a new DatabaseMigrationServiceClient object.
+/*!
+ * \brief Constructs a DatabaseMigrationServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -159,21 +167,16 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     d->serviceName = QStringLiteral("dms");
 }
 
-/**
- * @brief  Constructs a new DatabaseMigrationServiceClient object.
+/*!
+ * \overload DatabaseMigrationServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     const QUrl &endpoint,
@@ -192,7 +195,7 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     d->serviceName = QStringLiteral("dms");
 }
 
-/**
+/*!
  * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task.
  * These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a
  * Condition statement in an IAM policy for
@@ -208,7 +211,7 @@ AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(co
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an endpoint using the provided
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -222,7 +225,7 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
     return qobject_cast<CreateEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS DMS event notification subscription.
  *
  * </p
@@ -254,7 +257,7 @@ CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSub
     return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates the replication instance using the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -268,7 +271,7 @@ CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplic
     return qobject_cast<CreateReplicationInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a replication subnet group given a list of the subnet IDs in a
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -282,7 +285,7 @@ CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createRep
     return qobject_cast<CreateReplicationSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a replication task using the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -296,7 +299,7 @@ CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicatio
     return qobject_cast<CreateReplicationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified certificate.
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -310,7 +313,7 @@ DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(co
     return qobject_cast<DeleteCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * endpoint> <note>
@@ -328,7 +331,7 @@ DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const De
     return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an AWS DMS event subscription.
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -342,7 +345,7 @@ DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSub
     return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified replication
  *
  * instance> <note>
@@ -360,7 +363,7 @@ DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplic
     return qobject_cast<DeleteReplicationInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a subnet
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -374,7 +377,7 @@ DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteRep
     return qobject_cast<DeleteReplicationSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified replication
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -388,7 +391,7 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
     return qobject_cast<DeleteReplicationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all of the AWS DMS attributes for a customer account. The attributes include AWS DMS quotas for the account, such
  * as the number of replication instances allowed. The description for a quota includes the quota name, current usage
  * toward that quota, and the quota's maximum
@@ -408,7 +411,7 @@ DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAcco
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a description of the
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -422,7 +425,7 @@ DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertifica
     return qobject_cast<DescribeCertificatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the status of the connections that have been made between the replication instance and an endpoint.
  * Connections are created when you test an
  *
@@ -437,7 +440,7 @@ DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnection
     return qobject_cast<DescribeConnectionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the type of endpoints
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -451,7 +454,7 @@ DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpoint
     return qobject_cast<DescribeEndpointTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the endpoints for your account in the current
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -465,7 +468,7 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
     return qobject_cast<DescribeEndpointsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the
  * event categories and source types in <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
  * with Events and Notifications </a> in the AWS Database Migration Service User Guide.
@@ -481,7 +484,7 @@ DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventC
     return qobject_cast<DescribeEventCategoriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all the event subscriptions for a customer account. The description of a subscription includes
  * <code>SubscriptionName</code>, <code>SNSTopicARN</code>, <code>CustomerID</code>, <code>SourceType</code>,
  * <code>SourceID</code>, <code>CreationTime</code>, and <code>Status</code>.
@@ -501,7 +504,7 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
     return qobject_cast<DescribeEventSubscriptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists events for a given source identifier and source type. You can also specify a start and end time. For more
  * information on AWS DMS events, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
  * with Events and Notifications </a>.
@@ -517,7 +520,7 @@ DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const De
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the replication instance types that can be created in the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -531,7 +534,7 @@ DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::
     return qobject_cast<DescribeOrderableReplicationInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the status of the RefreshSchemas
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -545,7 +548,7 @@ DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeR
     return qobject_cast<DescribeRefreshSchemasStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the task logs for the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -559,7 +562,7 @@ DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::de
     return qobject_cast<DescribeReplicationInstanceTaskLogsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about replication instances for your account in the current
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -573,7 +576,7 @@ DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeR
     return qobject_cast<DescribeReplicationInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the replication subnet
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -587,7 +590,7 @@ DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::descri
     return qobject_cast<DescribeReplicationSubnetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the task assessment results from Amazon S3. This action always returns the latest
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -601,7 +604,7 @@ DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClien
     return qobject_cast<DescribeReplicationTaskAssessmentResultsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about replication tasks for your account in the current
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -615,7 +618,7 @@ DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeRepli
     return qobject_cast<DescribeReplicationTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the schema for the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -629,7 +632,7 @@ DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const 
     return qobject_cast<DescribeSchemasResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns table statistics on the database migration task, including table name, rows inserted, rows updated, and rows
  *
  * deleted>
@@ -648,7 +651,7 @@ DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableS
     return qobject_cast<DescribeTableStatisticsResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -662,7 +665,7 @@ ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(co
     return qobject_cast<ImportCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all tags for an AWS DMS
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -676,7 +679,7 @@ ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResourc
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -690,7 +693,7 @@ ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const Mo
     return qobject_cast<ModifyEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing AWS DMS event notification subscription.
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -704,7 +707,7 @@ ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSub
     return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the replication instance to apply new settings. You can change one or more parameters by specifying these
  * parameters and the new values in the
  *
@@ -723,7 +726,7 @@ ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplic
     return qobject_cast<ModifyReplicationInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the settings for the specified replication subnet
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -737,7 +740,7 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
     return qobject_cast<ModifyReplicationSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the specified replication
  *
  * task>
@@ -760,7 +763,7 @@ ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicatio
     return qobject_cast<ModifyReplicationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes
  * available
  *
@@ -775,7 +778,7 @@ RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplic
     return qobject_cast<RebootReplicationInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Populates the schema for the specified endpoint. This is an asynchronous operation and can take several minutes. You can
  * check the status of this operation by calling the DescribeRefreshSchemasStatus
  *
@@ -790,7 +793,7 @@ RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const Re
     return qobject_cast<RefreshSchemasResponse *>(send(request));
 }
 
-/**
+/*!
  * Reloads the target database table with the source data.
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -804,7 +807,7 @@ ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const Reload
     return qobject_cast<ReloadTablesResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes metadata tags from a DMS
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -818,7 +821,7 @@ RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromR
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the replication
  *
  * task>
@@ -837,7 +840,7 @@ StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationT
     return qobject_cast<StartReplicationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the replication task assessment for unsupported data types in the source database.
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -851,7 +854,7 @@ StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startRe
     return qobject_cast<StartReplicationTaskAssessmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops the replication
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -865,7 +868,7 @@ StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTas
     return qobject_cast<StopReplicationTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Tests the connection between the replication instance and the
  *
  * @param  request Request to send to AWS Database Migration Service.
@@ -879,7 +882,7 @@ TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const Te
     return qobject_cast<TestConnectionResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DatabaseMigrationServiceClientPrivate
@@ -887,7 +890,7 @@ TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const Te
  * @brief  Private implementation for DatabaseMigrationServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DatabaseMigrationServiceClientPrivate object.

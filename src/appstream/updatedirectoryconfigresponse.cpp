@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  UpdateDirectoryConfigResponse
+/*!
+ * \class QtAws::AppStream::UpdateDirectoryConfigResponse
  *
- * @brief  Handles AppStream UpdateDirectoryConfig responses.
+ * \brief The UpdateDirectoryConfigResponse class encapsulates AppStream UpdateDirectoryConfig responses.
  *
- * @see    AppStreamClient::updateDirectoryConfig
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::updateDirectoryConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDirectoryConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateDirectoryConfigRequest * UpdateDirectoryConfigResponse::request() co
     return static_cast<const UpdateDirectoryConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream UpdateDirectoryConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateDirectoryConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDirectoryConfigResponsePrivate
+ * \class UpdateDirectoryConfigResponsePrivate
  *
- * @brief  Private implementation for UpdateDirectoryConfigResponse.
+ * \brief Private implementation for UpdateDirectoryConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDirectoryConfigResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream UpdateDirectoryConfigResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  GetEvaluationResponse
+/*!
+ * \class QtAws::MachineLearning::GetEvaluationResponse
  *
- * @brief  Handles MachineLearning GetEvaluation responses.
+ * \brief The GetEvaluationResponse class encapsulates MachineLearning GetEvaluation responses.
  *
- * @see    MachineLearningClient::getEvaluation
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::getEvaluation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEvaluationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetEvaluationRequest * GetEvaluationResponse::request() const
     return static_cast<const GetEvaluationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning GetEvaluation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetEvaluationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetEvaluationResponsePrivate
+ * \class GetEvaluationResponsePrivate
  *
- * @brief  Private implementation for GetEvaluationResponse.
+ * \brief Private implementation for GetEvaluationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEvaluationResponsePrivate object.
@@ -91,7 +94,7 @@ GetEvaluationResponsePrivate::GetEvaluationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning GetEvaluationResponse element.
  *
  * @param  xml  XML stream to parse.

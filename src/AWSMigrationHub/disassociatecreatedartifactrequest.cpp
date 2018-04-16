@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DisassociateCreatedArtifactRequest
+/*!
+ * \class QtAws::MigrationHub::DisassociateCreatedArtifactRequest
  *
- * @brief  Implements MigrationHub DisassociateCreatedArtifact requests.
+ * \brief The DisassociateCreatedArtifactRequest class encapsulates MigrationHub DisassociateCreatedArtifact requests.
  *
- * @see    MigrationHubClient::disassociateCreatedArtifact
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::disassociateCreatedArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateCreatedArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DisassociateCreatedArtifactRequest::DisassociateCreatedArtifactRequest(const Dis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateCreatedArtifactRequest object.
  */
 DisassociateCreatedArtifactRequest::DisassociateCreatedArtifactRequest()
@@ -53,13 +58,16 @@ DisassociateCreatedArtifactRequest::DisassociateCreatedArtifactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateCreatedArtifactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateCreatedArtifactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(
     return new DisassociateCreatedArtifactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateCreatedArtifactRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(
  * @brief  Private implementation for DisassociateCreatedArtifactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateCreatedArtifactRequestPrivate object.
@@ -97,7 +105,7 @@ DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateCreatedArtifactRequestPrivate object, copying another.

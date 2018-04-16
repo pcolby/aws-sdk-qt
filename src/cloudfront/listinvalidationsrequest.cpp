@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListInvalidationsRequest
+/*!
+ * \class QtAws::CloudFront::ListInvalidationsRequest
  *
- * @brief  Implements CloudFront ListInvalidations requests.
+ * \brief The ListInvalidationsRequest class encapsulates CloudFront ListInvalidations requests.
  *
- * @see    CloudFrontClient::listInvalidations
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listInvalidations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInvalidationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListInvalidationsRequest::ListInvalidationsRequest(const ListInvalidationsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInvalidationsRequest object.
  */
 ListInvalidationsRequest::ListInvalidationsRequest()
@@ -53,13 +61,16 @@ ListInvalidationsRequest::ListInvalidationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInvalidationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInvalidationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkRe
     return new ListInvalidationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInvalidationsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkRe
  * @brief  Private implementation for ListInvalidationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInvalidationsRequestPrivate object.
@@ -97,7 +108,7 @@ ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInvalidationsRequestPrivate object, copying another.

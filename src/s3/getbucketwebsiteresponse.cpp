@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketWebsiteResponse
+/*!
+ * \class QtAws::S3::GetBucketWebsiteResponse
  *
- * @brief  Handles S3 GetBucketWebsite responses.
+ * \brief The GetBucketWebsiteResponse class encapsulates S3 GetBucketWebsite responses.
  *
- * @see    S3Client::getBucketWebsite
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketWebsite
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketWebsiteResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketWebsiteRequest * GetBucketWebsiteResponse::request() const
     return static_cast<const GetBucketWebsiteRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketWebsite response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketWebsiteResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketWebsiteResponsePrivate
+ * \class GetBucketWebsiteResponsePrivate
  *
- * @brief  Private implementation for GetBucketWebsiteResponse.
+ * \brief Private implementation for GetBucketWebsiteResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketWebsiteResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketWebsiteResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetNotificationChannelRequest
+/*!
+ * \class QtAws::FMS::GetNotificationChannelRequest
  *
- * @brief  Implements FMS GetNotificationChannel requests.
+ * \brief The GetNotificationChannelRequest class encapsulates FMS GetNotificationChannel requests.
  *
- * @see    FMSClient::getNotificationChannel
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getNotificationChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetNotificationChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetNotificationChannelRequest::GetNotificationChannelRequest(const GetNotificati
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetNotificationChannelRequest object.
  */
 GetNotificationChannelRequest::GetNotificationChannelRequest()
@@ -53,13 +62,16 @@ GetNotificationChannelRequest::GetNotificationChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetNotificationChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetNotificationChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetNotificationChannelRequest::response(QNetw
     return new GetNotificationChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetNotificationChannelRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetNotificationChannelRequest::response(QNetw
  * @brief  Private implementation for GetNotificationChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetNotificationChannelRequestPrivate object.
@@ -97,7 +109,7 @@ GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetNotificationChannelRequestPrivate object, copying another.

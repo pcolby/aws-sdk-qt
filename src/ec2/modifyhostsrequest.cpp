@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyHostsRequest
+/*!
+ * \class QtAws::EC2::ModifyHostsRequest
  *
- * @brief  Implements EC2 ModifyHosts requests.
+ * \brief The ModifyHostsRequest class encapsulates EC2 ModifyHosts requests.
  *
- * @see    EC2Client::modifyHosts
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyHosts
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyHostsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyHostsRequest::ModifyHostsRequest(const ModifyHostsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyHostsRequest object.
  */
 ModifyHostsRequest::ModifyHostsRequest()
@@ -53,13 +60,16 @@ ModifyHostsRequest::ModifyHostsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyHostsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyHostsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * 
     return new ModifyHostsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyHostsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ModifyHostsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHostsRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHostsRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListResourceDefinitionVersionsResponse
+/*!
+ * \class QtAws::Greengrass::ListResourceDefinitionVersionsResponse
  *
- * @brief  Handles Greengrass ListResourceDefinitionVersions responses.
+ * \brief The ListResourceDefinitionVersionsResponse class encapsulates Greengrass ListResourceDefinitionVersions responses.
  *
- * @see    GreengrassClient::listResourceDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listResourceDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceDefinitionVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListResourceDefinitionVersionsRequest * ListResourceDefinitionVersionsResp
     return static_cast<const ListResourceDefinitionVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListResourceDefinitionVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListResourceDefinitionVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListResourceDefinitionVersionsResponsePrivate
+ * \class ListResourceDefinitionVersionsResponsePrivate
  *
- * @brief  Private implementation for ListResourceDefinitionVersionsResponse.
+ * \brief Private implementation for ListResourceDefinitionVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceDefinitionVersionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListResourceDefinitionVersionsResponsePrivate::ListResourceDefinitionVersionsRes
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListResourceDefinitionVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

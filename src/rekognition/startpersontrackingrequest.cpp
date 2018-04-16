@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartPersonTrackingRequest
+/*!
+ * \class QtAws::Rekognition::StartPersonTrackingRequest
  *
- * @brief  Implements Rekognition StartPersonTracking requests.
+ * \brief The StartPersonTrackingRequest class encapsulates Rekognition StartPersonTracking requests.
  *
- * @see    RekognitionClient::startPersonTracking
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startPersonTracking
  */
 
-/**
+/*!
  * @brief  Constructs a new StartPersonTrackingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ StartPersonTrackingRequest::StartPersonTrackingRequest(const StartPersonTracking
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartPersonTrackingRequest object.
  */
 StartPersonTrackingRequest::StartPersonTrackingRequest()
@@ -53,13 +57,16 @@ StartPersonTrackingRequest::StartPersonTrackingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartPersonTrackingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartPersonTrackingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * StartPersonTrackingRequest::response(QNetwork
     return new StartPersonTrackingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartPersonTrackingRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * StartPersonTrackingRequest::response(QNetwork
  * @brief  Private implementation for StartPersonTrackingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartPersonTrackingRequestPrivate object.
@@ -97,7 +104,7 @@ StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartPersonTrackingRequestPrivate object, copying another.

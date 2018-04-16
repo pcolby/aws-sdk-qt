@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  CreateReplicationJobRequest
+/*!
+ * \class QtAws::SMS::CreateReplicationJobRequest
  *
- * @brief  Implements SMS CreateReplicationJob requests.
+ * \brief The CreateReplicationJobRequest class encapsulates SMS CreateReplicationJob requests.
  *
- * @see    SMSClient::createReplicationJob
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::createReplicationJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateReplicationJobRequest::CreateReplicationJobRequest(const CreateReplication
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationJobRequest object.
  */
 CreateReplicationJobRequest::CreateReplicationJobRequest()
@@ -53,13 +56,16 @@ CreateReplicationJobRequest::CreateReplicationJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReplicationJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReplicationJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationJobRequest::response(QNetwor
     return new CreateReplicationJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReplicationJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationJobRequest::response(QNetwor
  * @brief  Private implementation for CreateReplicationJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationJobRequestPrivate object.
@@ -97,7 +103,7 @@ CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationJobRequestPrivate object, copying another.

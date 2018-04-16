@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::UpdateProductResponse
  *
- * @brief  Handles ServiceCatalog UpdateProduct responses.
+ * \brief The UpdateProductResponse class encapsulates ServiceCatalog UpdateProduct responses.
  *
- * @see    ServiceCatalogClient::updateProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const UpdateProductRequest * UpdateProductResponse::request() const
     return static_cast<const UpdateProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog UpdateProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void UpdateProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateProductResponsePrivate
+ * \class UpdateProductResponsePrivate
  *
- * @brief  Private implementation for UpdateProductResponse.
+ * \brief Private implementation for UpdateProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProductResponsePrivate object.
@@ -91,7 +100,7 @@ UpdateProductResponsePrivate::UpdateProductResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog UpdateProductResponse element.
  *
  * @param  xml  XML stream to parse.

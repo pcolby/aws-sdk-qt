@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  DisableDomainTransferLockResponse
+/*!
+ * \class QtAws::Route53Domains::DisableDomainTransferLockResponse
  *
- * @brief  Handles Route53Domains DisableDomainTransferLock responses.
+ * \brief The DisableDomainTransferLockResponse class encapsulates Route53Domains DisableDomainTransferLock responses.
  *
- * @see    Route53DomainsClient::disableDomainTransferLock
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::disableDomainTransferLock
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableDomainTransferLockResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DisableDomainTransferLockRequest * DisableDomainTransferLockResponse::requ
     return static_cast<const DisableDomainTransferLockRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains DisableDomainTransferLock response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DisableDomainTransferLockResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableDomainTransferLockResponsePrivate
+ * \class DisableDomainTransferLockResponsePrivate
  *
- * @brief  Private implementation for DisableDomainTransferLockResponse.
+ * \brief Private implementation for DisableDomainTransferLockResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDomainTransferLockResponsePrivate object.
@@ -91,7 +95,7 @@ DisableDomainTransferLockResponsePrivate::DisableDomainTransferLockResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains DisableDomainTransferLockResponse element.
  *
  * @param  xml  XML stream to parse.

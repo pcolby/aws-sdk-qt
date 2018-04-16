@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  SMSResponse
+/*!
+ * \class QtAws::SMS::SMSResponse
  *
- * @brief  Handles SMS SMS responses.
+ * \brief The SMSResponse class is the base class for all SMS responses.
  *
- * @see    SMSClient::sMS
+ * \ingroup SMS
  */
 
-/**
+/*!
  * @brief  Constructs a new SMSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SMSResponse::SMSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SMSResponse object.
@@ -63,7 +63,7 @@ SMSResponse::SMSResponse(SMSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SMSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SMSResponsePrivate
@@ -92,7 +92,7 @@ void SMSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SMSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SMSResponsePrivate object.

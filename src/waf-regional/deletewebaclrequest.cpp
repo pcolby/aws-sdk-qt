@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteWebACLRequest
+/*!
+ * \class QtAws::WAFRegional::DeleteWebACLRequest
  *
- * @brief  Implements WAFRegional DeleteWebACL requests.
+ * \brief The DeleteWebACLRequest class encapsulates WAFRegional DeleteWebACL requests.
  *
- * @see    WAFRegionalClient::deleteWebACL
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteWebACLRequest object.
  */
 DeleteWebACLRequest::DeleteWebACLRequest()
@@ -53,13 +63,16 @@ DeleteWebACLRequest::DeleteWebACLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteWebACLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteWebACLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
     return new DeleteWebACLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteWebACLRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteWebACLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWebACLRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWebACLRequestPrivate object, copying another.

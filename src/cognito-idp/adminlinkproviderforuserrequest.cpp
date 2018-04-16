@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminLinkProviderForUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminLinkProviderForUser requests.
+ * \brief The AdminLinkProviderForUserRequest class encapsulates CognitoIdentityProvider AdminLinkProviderForUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminLinkProviderForUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminLinkProviderForUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminLinkProviderForUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest(const AdminLink
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminLinkProviderForUserRequest object.
  */
 AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest()
@@ -53,13 +66,16 @@ AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminLinkProviderForUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminLinkProviderForUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNe
     return new AdminLinkProviderForUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminLinkProviderForUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNe
  * @brief  Private implementation for AdminLinkProviderForUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminLinkProviderForUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminLinkProviderForUserRequestPrivate object, copying another.

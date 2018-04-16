@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  GetDirectoryResponse
+/*!
+ * \class QtAws::CloudDirectory::GetDirectoryResponse
  *
- * @brief  Handles CloudDirectory GetDirectory responses.
+ * \brief The GetDirectoryResponse class encapsulates CloudDirectory GetDirectory responses.
  *
- * @see    CloudDirectoryClient::getDirectory
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::getDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDirectoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetDirectoryRequest * GetDirectoryResponse::request() const
     return static_cast<const GetDirectoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory GetDirectory response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetDirectoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetDirectoryResponsePrivate
+ * \class GetDirectoryResponsePrivate
  *
- * @brief  Private implementation for GetDirectoryResponse.
+ * \brief Private implementation for GetDirectoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDirectoryResponsePrivate object.
@@ -91,7 +101,7 @@ GetDirectoryResponsePrivate::GetDirectoryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory GetDirectoryResponse element.
  *
  * @param  xml  XML stream to parse.

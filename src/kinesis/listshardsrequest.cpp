@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  ListShardsRequest
+/*!
+ * \class QtAws::Kinesis::ListShardsRequest
  *
- * @brief  Implements Kinesis ListShards requests.
+ * \brief The ListShardsRequest class encapsulates Kinesis ListShards requests.
  *
- * @see    KinesisClient::listShards
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::listShards
  */
 
-/**
+/*!
  * @brief  Constructs a new ListShardsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListShardsRequest::ListShardsRequest(const ListShardsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListShardsRequest object.
  */
 ListShardsRequest::ListShardsRequest()
@@ -53,13 +59,16 @@ ListShardsRequest::ListShardsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListShardsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListShardsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListShardsRequest::response(QNetworkReply * c
     return new ListShardsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListShardsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListShardsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListShardsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListShardsRequestPrivate object.
@@ -97,7 +106,7 @@ ListShardsRequestPrivate::ListShardsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListShardsRequestPrivate object, copying another.

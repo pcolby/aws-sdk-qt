@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreateConstraintRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreateConstraintRequest
  *
- * @brief  Implements ServiceCatalog CreateConstraint requests.
+ * \brief The CreateConstraintRequest class encapsulates ServiceCatalog CreateConstraint requests.
  *
- * @see    ServiceCatalogClient::createConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConstraintRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateConstraintRequest::CreateConstraintRequest(const CreateConstraintRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateConstraintRequest object.
  */
 CreateConstraintRequest::CreateConstraintRequest()
@@ -53,13 +62,16 @@ CreateConstraintRequest::CreateConstraintRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateConstraintRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateConstraintResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateConstraintRequest::response(QNetworkRep
     return new CreateConstraintResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateConstraintRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateConstraintRequest::response(QNetworkRep
  * @brief  Private implementation for CreateConstraintRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConstraintRequestPrivate object.
@@ -97,7 +109,7 @@ CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConstraintRequestPrivate object, copying another.

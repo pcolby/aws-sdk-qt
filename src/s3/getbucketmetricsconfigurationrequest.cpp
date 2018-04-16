@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketMetricsConfigurationRequest
+/*!
+ * \class QtAws::S3::GetBucketMetricsConfigurationRequest
  *
- * @brief  Implements S3 GetBucketMetricsConfiguration requests.
+ * \brief The GetBucketMetricsConfigurationRequest class encapsulates S3 GetBucketMetricsConfiguration requests.
  *
- * @see    S3Client::getBucketMetricsConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketMetricsConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketMetricsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketMetricsConfigurationRequest::GetBucketMetricsConfigurationRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketMetricsConfigurationRequest object.
  */
 GetBucketMetricsConfigurationRequest::GetBucketMetricsConfigurationRequest()
@@ -53,13 +56,16 @@ GetBucketMetricsConfigurationRequest::GetBucketMetricsConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketMetricsConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketMetricsConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketMetricsConfigurationRequest::respons
     return new GetBucketMetricsConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketMetricsConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketMetricsConfigurationRequest::respons
  * @brief  Private implementation for GetBucketMetricsConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketMetricsConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketMetricsConfigurationRequestPrivate::GetBucketMetricsConfigurationReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketMetricsConfigurationRequestPrivate object, copying another.

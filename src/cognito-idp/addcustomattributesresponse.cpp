@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AddCustomAttributesResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AddCustomAttributesResponse
  *
- * @brief  Handles CognitoIdentityProvider AddCustomAttributes responses.
+ * \brief The AddCustomAttributesResponse class encapsulates CognitoIdentityProvider AddCustomAttributes responses.
  *
- * @see    CognitoIdentityProviderClient::addCustomAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::addCustomAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new AddCustomAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AddCustomAttributesRequest * AddCustomAttributesResponse::request() const
     return static_cast<const AddCustomAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AddCustomAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AddCustomAttributesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddCustomAttributesResponsePrivate
+ * \class AddCustomAttributesResponsePrivate
  *
- * @brief  Private implementation for AddCustomAttributesResponse.
+ * \brief Private implementation for AddCustomAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddCustomAttributesResponsePrivate object.
@@ -91,7 +104,7 @@ AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AddCustomAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

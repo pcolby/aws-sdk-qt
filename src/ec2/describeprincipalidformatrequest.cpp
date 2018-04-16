@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribePrincipalIdFormatRequest
+/*!
+ * \class QtAws::EC2::DescribePrincipalIdFormatRequest
  *
- * @brief  Implements EC2 DescribePrincipalIdFormat requests.
+ * \brief The DescribePrincipalIdFormatRequest class encapsulates EC2 DescribePrincipalIdFormat requests.
  *
- * @see    EC2Client::describePrincipalIdFormat
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describePrincipalIdFormat
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePrincipalIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribePrincipalIdFormatRequest object.
  */
 DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest()
@@ -53,13 +60,16 @@ DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribePrincipalIdFormatRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribePrincipalIdFormatResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QN
     return new DescribePrincipalIdFormatResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribePrincipalIdFormatRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QN
  * @brief  Private implementation for DescribePrincipalIdFormatRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePrincipalIdFormatRequestPrivate object.
@@ -97,7 +107,7 @@ DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePrincipalIdFormatRequestPrivate object, copying another.

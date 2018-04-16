@@ -219,47 +219,55 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SSM
+ * \brief The QtAws::SSM contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SSM {
 
-/**
- * @class  SsmClient
+/*!
+ * \class QtAws::SSM::SsmClient
  *
- * @brief  Client for Amazon Simple Systems Manager (SSM) ( SSM)
+ * \brief The SsmClient class provides access the Amazon Simple Systems Manager (SSM) ( SSM) service.
  *
- * <fullname>AWS Systems Manager</fullname>
+ * \ingroup SSM
  *
- * AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
- * inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
- * configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
- * configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
- * your hybrid environment that has been configured for Systems
- *
- * Manager>
- *
- * This reference is intended to be used with the <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
- *
- * Guide</a>>
- *
- * To get started, verify prerequisites and configure managed instances. For more information, see <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
- *
- * Prerequisites</a>>
- *
- * For information about other API actions you can perform on Amazon EC2 instances, see the <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
- * use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
- * Requests</a>.
+ *  <fullname>AWS Systems Manager</fullname>
+ * 
+ *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
+ *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
+ *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
+ *  configuration of your managed instances. A <i>managed instance</i> is any Amazon EC2 instance or on-premises machine in
+ *  your hybrid environment that has been configured for Systems
+ * 
+ *  Manager>
+ * 
+ *  This reference is intended to be used with the <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  To get started, verify prerequisites and configure managed instances. For more information, see <a
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ * 
+ *  Prerequisites</a>>
+ * 
+ *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
+ *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
+ *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
+ *  Requests</a>.
  */
 
-/**
- * @brief  Constructs a new SsmClient object.
+/*!
+ * \brief Constructs a SsmClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SsmClient::SsmClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -278,21 +286,16 @@ SsmClient::SsmClient(
     d->serviceName = QStringLiteral("ssm");
 }
 
-/**
- * @brief  Constructs a new SsmClient object.
+/*!
+ * \overload SsmClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SsmClient::SsmClient(
     const QUrl &endpoint,
@@ -311,7 +314,7 @@ SsmClient::SsmClient(
     d->serviceName = QStringLiteral("ssm");
 }
 
-/**
+/*!
  * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents,
  * managed instances, Maintenance Windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize
  * your resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an
@@ -346,7 +349,7 @@ AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResource
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Attempts to cancel the command specified by the Command ID. There is no guarantee that the command will be terminated
  * and the underlying process
  *
@@ -361,7 +364,7 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
     return qobject_cast<CancelCommandResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers your on-premises server or virtual machine with Amazon EC2 so that you can manage these resources using Run
  * Command. An on-premises server or virtual machine that has been registered with EC2 is called a managed instance. For
  * more information about activations, see <a
@@ -379,7 +382,7 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
     return qobject_cast<CreateActivationResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates the specified Systems Manager document with the specified instances or
  *
  * targets>
@@ -403,7 +406,7 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
     return qobject_cast<CreateAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates the specified Systems Manager document with the specified instances or
  *
  * targets>
@@ -427,7 +430,7 @@ CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateA
     return qobject_cast<CreateAssociationBatchResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Systems Manager
  *
  * document>
@@ -445,7 +448,7 @@ CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &
     return qobject_cast<CreateDocumentResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -459,7 +462,7 @@ CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const Creat
     return qobject_cast<CreateMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a patch
  *
  * baseline> <note>
@@ -478,7 +481,7 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
     return qobject_cast<CreatePatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a resource data sync configuration to a single bucket in Amazon S3. This is an asynchronous operation that
  * returns immediately. After a successful initial sync is completed, the system continuously syncs data to the Amazon S3
  * bucket. To check the status of the sync, use the
@@ -502,7 +505,7 @@ CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateR
     return qobject_cast<CreateResourceDataSyncResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an activation. You are not required to delete an activation. If you delete an activation, you can no longer use
  * it to register additional managed instances. Deleting an activation does not de-register managed instances. You must
  * manually de-register managed
@@ -518,7 +521,7 @@ DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationReq
     return qobject_cast<DeleteActivationResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the specified Systems Manager document from the specified
  *
  * instance>
@@ -538,7 +541,7 @@ DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociation
     return qobject_cast<DeleteAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the Systems Manager document and all instance associations to the
  *
  * document>
@@ -557,7 +560,7 @@ DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &
     return qobject_cast<DeleteDocumentResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -571,7 +574,7 @@ DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const Delet
     return qobject_cast<DeleteMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Delete a parameter from the
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -585,7 +588,7 @@ DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterReques
     return qobject_cast<DeleteParameterResponse *>(send(request));
 }
 
-/**
+/*!
  * Delete a list of parameters. This API is used to delete parameters by using the Amazon EC2
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -599,7 +602,7 @@ DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersReq
     return qobject_cast<DeleteParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -613,7 +616,7 @@ DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBa
     return qobject_cast<DeletePatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a Resource Data Sync configuration. After the configuration is deleted, changes to inventory data on managed
  * instances are no longer synced with the target Amazon S3 bucket. Deleting a sync configuration does not delete data in
  * the target Amazon S3
@@ -629,7 +632,7 @@ DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteR
     return qobject_cast<DeleteResourceDataSyncResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the server or virtual machine from the list of registered servers. You can reregister the instance again at any
  * time. If you don't plan to use Run Command on the server, we suggest uninstalling the SSM Agent
  *
@@ -644,7 +647,7 @@ DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const D
     return qobject_cast<DeregisterManagedInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a patch group from a patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -658,7 +661,7 @@ DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselin
     return qobject_cast<DeregisterPatchBaselineForPatchGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a target from a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -672,7 +675,7 @@ DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromM
     return qobject_cast<DeregisterTargetFromMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes a task from a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -686,7 +689,7 @@ DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaint
     return qobject_cast<DeregisterTaskFromMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Details about the activation, including: the date and time the activation was created, the expiration date, the IAM role
  * assigned to the instances in the activation, and the number of instances activated by this
  *
@@ -701,7 +704,7 @@ DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActiv
     return qobject_cast<DescribeActivationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the association for the specified target or instance. If you created the association by using the
  * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you created the
  * association by specifying an instance ID and a Systems Manager document, then you retrieve the association by specifying
@@ -718,7 +721,7 @@ DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssoc
     return qobject_cast<DescribeAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides details about all active and terminated Automation
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -732,7 +735,7 @@ DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(c
     return qobject_cast<DescribeAutomationExecutionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Information about all active and terminated step executions in an Automation
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -746,7 +749,7 @@ DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExec
     return qobject_cast<DescribeAutomationStepExecutionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all patches that could possibly be included in a patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -760,7 +763,7 @@ DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const Des
     return qobject_cast<DescribeAvailablePatchesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified Systems Manager
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -774,7 +777,7 @@ DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentReq
     return qobject_cast<DescribeDocumentResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the permissions for a Systems Manager document. If you created the document, you are the owner. If a document
  * is shared, it can either be shared privately (by specifying a user's AWS account ID) or publicly (<i>All</i>).
  *
@@ -789,7 +792,7 @@ DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const
     return qobject_cast<DescribeDocumentPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * All associations for the
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -803,7 +806,7 @@ DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInst
     return qobject_cast<DescribeEffectiveInstanceAssociationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline. Note that
  * this API applies only to Windows patch
  *
@@ -818,7 +821,7 @@ DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectiveP
     return qobject_cast<DescribeEffectivePatchesForPatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * The status of the associations for the
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -832,7 +835,7 @@ DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociat
     return qobject_cast<DescribeInstanceAssociationsStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your instances. You can use this to get information about instances like the operating system
  * platform, the SSM Agent version (Linux), status etc. If you specify one or more instance IDs, it returns information for
  * those instances. If you do not specify instance IDs, it returns information for all your instances. If you specify an
@@ -849,7 +852,7 @@ DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(con
     return qobject_cast<DescribeInstanceInformationResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the high-level patch state of one or more
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -863,7 +866,7 @@ DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(con
     return qobject_cast<DescribeInstancePatchStatesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the high-level patch state for the instances in the specified patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -877,7 +880,7 @@ DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePa
     return qobject_cast<DescribeInstancePatchStatesForPatchGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about the patches on the specified instance and their state relative to the patch baseline being
  * used for the
  *
@@ -892,7 +895,7 @@ DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const Descr
     return qobject_cast<DescribeInstancePatchesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the individual task executions (one per target) for a particular task executed as part of a Maintenance Window
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -906,7 +909,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeM
     return qobject_cast<DescribeMaintenanceWindowExecutionTaskInvocationsResponse *>(send(request));
 }
 
-/**
+/*!
  * For a given Maintenance Window execution, lists the tasks that were
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -920,7 +923,7 @@ DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenance
     return qobject_cast<DescribeMaintenanceWindowExecutionTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the executions of a Maintenance Window. This includes information about when the Maintenance Window was scheduled
  * to be active, and information about tasks registered and run with the Maintenance
  *
@@ -935,7 +938,7 @@ DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWind
     return qobject_cast<DescribeMaintenanceWindowExecutionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the targets registered with the Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -949,7 +952,7 @@ DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowT
     return qobject_cast<DescribeMaintenanceWindowTargetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tasks in a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -963,7 +966,7 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
     return qobject_cast<DescribeMaintenanceWindowTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the Maintenance Windows in an AWS
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -977,7 +980,7 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
     return qobject_cast<DescribeMaintenanceWindowsResponse *>(send(request));
 }
 
-/**
+/*!
  * Get information about a
  *
  * parameter>
@@ -999,7 +1002,7 @@ DescribeParametersResponse * SsmClient::describeParameters(const DescribeParamet
     return qobject_cast<DescribeParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the patch baselines in your AWS
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1013,7 +1016,7 @@ DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const Describ
     return qobject_cast<DescribePatchBaselinesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns high-level aggregated patch compliance state for a patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1027,7 +1030,7 @@ DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const Descr
     return qobject_cast<DescribePatchGroupStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all patch groups that have been registered with patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1041,7 +1044,7 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
     return qobject_cast<DescribePatchGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Get detailed information about a particular Automation
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1055,7 +1058,7 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
     return qobject_cast<GetAutomationExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns detailed information about command execution for an invocation or plugin.
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1069,7 +1072,7 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
     return qobject_cast<GetCommandInvocationResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For
  * example, you can create a default patch baseline for each operating
  *
@@ -1084,7 +1087,7 @@ GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDe
     return qobject_cast<GetDefaultPatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the current snapshot for the patch baseline the instance uses. This API is primarily used by the
  * AWS-RunPatchBaseline Systems Manager document.
  *
@@ -1099,7 +1102,7 @@ GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSna
     return qobject_cast<GetDeployablePatchSnapshotForInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the contents of the specified Systems Manager
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1113,7 +1116,7 @@ GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
     return qobject_cast<GetDocumentResponse *>(send(request));
 }
 
-/**
+/*!
  * Query inventory
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1127,7 +1130,7 @@ GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &reques
     return qobject_cast<GetInventoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Return a list of inventory type names for the account, or return a list of attribute names for a specific Inventory item
  * type.
  *
@@ -1142,7 +1145,7 @@ GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySch
     return qobject_cast<GetInventorySchemaResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1156,7 +1159,7 @@ GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintena
     return qobject_cast<GetMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves details about a specific task executed as part of a Maintenance Window
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1170,7 +1173,7 @@ GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution
     return qobject_cast<GetMaintenanceWindowExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the details about a specific task executed as part of a Maintenance Window
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1184,7 +1187,7 @@ GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecu
     return qobject_cast<GetMaintenanceWindowExecutionTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a task invocation. A task invocation is a specific task executing on a specific target. Maintenance Windows
  * report status for all invocations.
  *
@@ -1199,7 +1202,7 @@ GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceW
     return qobject_cast<GetMaintenanceWindowExecutionTaskInvocationResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tasks in a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1213,7 +1216,7 @@ GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const Get
     return qobject_cast<GetMaintenanceWindowTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Get information about a parameter by using the parameter name.
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1227,7 +1230,7 @@ GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &reques
     return qobject_cast<GetParameterResponse *>(send(request));
 }
 
-/**
+/*!
  * Query a list of all parameters used by the AWS
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1241,7 +1244,7 @@ GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterH
     return qobject_cast<GetParameterHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Get details of a
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1255,7 +1258,7 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
     return qobject_cast<GetParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve parameters in a specific hierarchy. For more information, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-working.html">Working with Systems
  * Manager Parameters</a>.
@@ -1283,7 +1286,7 @@ GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParameters
     return qobject_cast<GetParametersByPathResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about a patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1297,7 +1300,7 @@ GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineReq
     return qobject_cast<GetPatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the patch baseline that should be used for the specified patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1311,7 +1314,7 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
     return qobject_cast<GetPatchBaselineForPatchGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves all versions of an association for a specific association
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1325,7 +1328,7 @@ ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListA
     return qobject_cast<ListAssociationVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the associations for the specified Systems Manager document or
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1339,7 +1342,7 @@ ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsReq
     return qobject_cast<ListAssociationsResponse *>(send(request));
 }
 
-/**
+/*!
  * An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command
  * invocation applies to one instance. For example, if a user executes SendCommand against three instances, then a command
  * invocation is created for each requested instance ID. ListCommandInvocations provide status about command
@@ -1355,7 +1358,7 @@ ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCom
     return qobject_cast<ListCommandInvocationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the commands requested by users of the AWS
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1369,7 +1372,7 @@ ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &reques
     return qobject_cast<ListCommandsResponse *>(send(request));
 }
 
-/**
+/*!
  * For a specified resource ID, this API action returns a list of compliance statuses for different resource types.
  * Currently, you can only specify one resource ID per call. List results depend on the criteria specified in the filter.
  *
@@ -1384,7 +1387,7 @@ ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianc
     return qobject_cast<ListComplianceItemsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a summary count of compliant and non-compliant resources for a compliance type. For example, this call can
  * return State Manager associations, patches, or custom compliance types according to the filter criteria that you
  * specify.
@@ -1400,7 +1403,7 @@ ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListC
     return qobject_cast<ListComplianceSummariesResponse *>(send(request));
 }
 
-/**
+/*!
  * List all versions for a
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1414,7 +1417,7 @@ ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumen
     return qobject_cast<ListDocumentVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your Systems Manager
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1428,7 +1431,7 @@ ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &req
     return qobject_cast<ListDocumentsResponse *>(send(request));
 }
 
-/**
+/*!
  * A list of inventory items returned by the
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1442,7 +1445,7 @@ ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInvento
     return qobject_cast<ListInventoryEntriesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a resource-level summary count. The summary includes information about compliant and non-compliant statuses and
  * detailed compliance-item severity counts, according to the filter criteria you
  *
@@ -1457,7 +1460,7 @@ ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSumma
     return qobject_cast<ListResourceComplianceSummariesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists your resource data sync configurations. Includes information about the last time a sync attempted to start, the
  * last sync status, and the last time a sync successfully
  *
@@ -1480,7 +1483,7 @@ ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourc
     return qobject_cast<ListResourceDataSyncResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the tags assigned to the specified
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1494,7 +1497,7 @@ ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForRe
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Shares a Systems Manager document publicly or privately. If you share a document privately, you must specify the AWS
  * user account IDs for those people who can use the document. If you share a document publicly, you must specify
  * <i>All</i> as the account
@@ -1510,7 +1513,7 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
     return qobject_cast<ModifyDocumentPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers a compliance type and other compliance details on a designated resource. This action lets you register custom
  * compliance details with a resource. This call overwrites existing compliance information on the resource, so you must
  * provide a full list of compliance items each time that you send the
@@ -1591,7 +1594,7 @@ PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceIt
     return qobject_cast<PutComplianceItemsResponse *>(send(request));
 }
 
-/**
+/*!
  * Bulk update custom inventory items on one more instance. The request adds an inventory item, if it doesn't already
  * exist, or updates an inventory item, if it does
  *
@@ -1606,7 +1609,7 @@ PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &reques
     return qobject_cast<PutInventoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Add one or more parameters to the
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1620,7 +1623,7 @@ PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &reques
     return qobject_cast<PutParameterResponse *>(send(request));
 }
 
-/**
+/*!
  * Defines the default patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1634,7 +1637,7 @@ RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(c
     return qobject_cast<RegisterDefaultPatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers a patch baseline for a patch
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1648,7 +1651,7 @@ RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineFor
     return qobject_cast<RegisterPatchBaselineForPatchGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers a target with a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1662,7 +1665,7 @@ RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaint
     return qobject_cast<RegisterTargetWithMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds a new task to a Maintenance
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1676,7 +1679,7 @@ RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenan
     return qobject_cast<RegisterTaskWithMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes all tags from the specified
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1690,7 +1693,7 @@ RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveT
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends a signal to an Automation execution to change the current behavior or status of the execution.
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1704,7 +1707,7 @@ SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomat
     return qobject_cast<SendAutomationSignalResponse *>(send(request));
 }
 
-/**
+/*!
  * Executes commands on one or more managed
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1718,7 +1721,7 @@ SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
     return qobject_cast<SendCommandResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates execution of an Automation
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1732,7 +1735,7 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
     return qobject_cast<StartAutomationExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Stop an Automation that is currently
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1746,7 +1749,7 @@ StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopA
     return qobject_cast<StopAutomationExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an association. You can update the association name and version, the document version, schedule, parameters, and
  * Amazon S3
  *
@@ -1761,7 +1764,7 @@ UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociation
     return qobject_cast<UpdateAssociationResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the status of the Systems Manager document associated with the specified
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1775,7 +1778,7 @@ UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const Updat
     return qobject_cast<UpdateAssociationStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * The document you want to
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1789,7 +1792,7 @@ UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &
     return qobject_cast<UpdateDocumentResponse *>(send(request));
 }
 
-/**
+/*!
  * Set the default version of a document.
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1803,7 +1806,7 @@ UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(c
     return qobject_cast<UpdateDocumentDefaultVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing Maintenance Window. Only specified parameters are
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1817,7 +1820,7 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
     return qobject_cast<UpdateMaintenanceWindowResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the target of an existing Maintenance Window. You can't change the target type, but you can change the
  *
  * following>
@@ -1853,7 +1856,7 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
     return qobject_cast<UpdateMaintenanceWindowTargetResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies a task assigned to a Maintenance Window. You can't change the task type, but you can change the following
  *
  * values>
@@ -1897,7 +1900,7 @@ UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(con
     return qobject_cast<UpdateMaintenanceWindowTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns or changes an Amazon Identity and Access Management (IAM) role to the managed
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
@@ -1911,7 +1914,7 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
     return qobject_cast<UpdateManagedInstanceRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing patch baseline. Fields not specified in the request are left
  *
  * unchanged> <note>
@@ -1930,7 +1933,7 @@ UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBa
     return qobject_cast<UpdatePatchBaselineResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SsmClientPrivate
@@ -1938,7 +1941,7 @@ UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBa
  * @brief  Private implementation for SsmClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SsmClientPrivate object.

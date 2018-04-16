@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteConnectionRequest
+/*!
+ * \class QtAws::Glue::DeleteConnectionRequest
  *
- * @brief  Implements Glue DeleteConnection requests.
+ * \brief The DeleteConnectionRequest class encapsulates Glue DeleteConnection requests.
  *
- * @see    GlueClient::deleteConnection
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteConnectionRequest object.
  */
 DeleteConnectionRequest::DeleteConnectionRequest()
@@ -53,13 +59,16 @@ DeleteConnectionRequest::DeleteConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
     return new DeleteConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteConnectionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConnectionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConnectionRequestPrivate object, copying another.

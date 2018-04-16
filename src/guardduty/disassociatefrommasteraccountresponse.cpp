@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DisassociateFromMasterAccountResponse
+/*!
+ * \class QtAws::GuardDuty::DisassociateFromMasterAccountResponse
  *
- * @brief  Handles GuardDuty DisassociateFromMasterAccount responses.
+ * \brief The DisassociateFromMasterAccountResponse class encapsulates GuardDuty DisassociateFromMasterAccount responses.
  *
- * @see    GuardDutyClient::disassociateFromMasterAccount
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::disassociateFromMasterAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateFromMasterAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DisassociateFromMasterAccountRequest * DisassociateFromMasterAccountRespon
     return static_cast<const DisassociateFromMasterAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty DisassociateFromMasterAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DisassociateFromMasterAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateFromMasterAccountResponsePrivate
+ * \class DisassociateFromMasterAccountResponsePrivate
  *
- * @brief  Private implementation for DisassociateFromMasterAccountResponse.
+ * \brief Private implementation for DisassociateFromMasterAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateFromMasterAccountResponsePrivate object.
@@ -91,7 +94,7 @@ DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty DisassociateFromMasterAccountResponse element.
  *
  * @param  xml  XML stream to parse.

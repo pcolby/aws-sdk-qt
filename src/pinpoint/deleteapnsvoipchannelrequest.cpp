@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteApnsVoipChannelRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteApnsVoipChannelRequest
  *
- * @brief  Implements Pinpoint DeleteApnsVoipChannel requests.
+ * \brief The DeleteApnsVoipChannelRequest class encapsulates Pinpoint DeleteApnsVoipChannel requests.
  *
- * @see    PinpointClient::deleteApnsVoipChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteApnsVoipChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsVoipChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteApnsVoipChannelRequest::DeleteApnsVoipChannelRequest(const DeleteApnsVoipC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsVoipChannelRequest object.
  */
 DeleteApnsVoipChannelRequest::DeleteApnsVoipChannelRequest()
@@ -53,13 +56,16 @@ DeleteApnsVoipChannelRequest::DeleteApnsVoipChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApnsVoipChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApnsVoipChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsVoipChannelRequest::response(QNetwo
     return new DeleteApnsVoipChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApnsVoipChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsVoipChannelRequest::response(QNetwo
  * @brief  Private implementation for DeleteApnsVoipChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsVoipChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteApnsVoipChannelRequestPrivate::DeleteApnsVoipChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsVoipChannelRequestPrivate object, copying another.

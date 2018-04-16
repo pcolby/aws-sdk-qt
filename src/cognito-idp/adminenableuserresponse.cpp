@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminEnableUserResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminEnableUserResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminEnableUser responses.
+ * \brief The AdminEnableUserResponse class encapsulates CognitoIdentityProvider AdminEnableUser responses.
  *
- * @see    CognitoIdentityProviderClient::adminEnableUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminEnableUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminEnableUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminEnableUserRequest * AdminEnableUserResponse::request() const
     return static_cast<const AdminEnableUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminEnableUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminEnableUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminEnableUserResponsePrivate
+ * \class AdminEnableUserResponsePrivate
  *
- * @brief  Private implementation for AdminEnableUserResponse.
+ * \brief Private implementation for AdminEnableUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminEnableUserResponsePrivate object.
@@ -91,7 +104,7 @@ AdminEnableUserResponsePrivate::AdminEnableUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminEnableUserResponse element.
  *
  * @param  xml  XML stream to parse.

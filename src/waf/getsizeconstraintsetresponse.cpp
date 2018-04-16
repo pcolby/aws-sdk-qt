@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetSizeConstraintSetResponse
+/*!
+ * \class QtAws::WAF::GetSizeConstraintSetResponse
  *
- * @brief  Handles WAF GetSizeConstraintSet responses.
+ * \brief The GetSizeConstraintSetResponse class encapsulates WAF GetSizeConstraintSet responses.
  *
- * @see    WAFClient::getSizeConstraintSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getSizeConstraintSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSizeConstraintSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() cons
     return static_cast<const GetSizeConstraintSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF GetSizeConstraintSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSizeConstraintSetResponsePrivate
+ * \class GetSizeConstraintSetResponsePrivate
  *
- * @brief  Private implementation for GetSizeConstraintSetResponse.
+ * \brief Private implementation for GetSizeConstraintSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSizeConstraintSetResponsePrivate object.
@@ -91,7 +99,7 @@ GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF GetSizeConstraintSetResponse element.
  *
  * @param  xml  XML stream to parse.

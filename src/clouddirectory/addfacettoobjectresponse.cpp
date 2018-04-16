@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  AddFacetToObjectResponse
+/*!
+ * \class QtAws::CloudDirectory::AddFacetToObjectResponse
  *
- * @brief  Handles CloudDirectory AddFacetToObject responses.
+ * \brief The AddFacetToObjectResponse class encapsulates CloudDirectory AddFacetToObject responses.
  *
- * @see    CloudDirectoryClient::addFacetToObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::addFacetToObject
  */
 
-/**
+/*!
  * @brief  Constructs a new AddFacetToObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const AddFacetToObjectRequest * AddFacetToObjectResponse::request() const
     return static_cast<const AddFacetToObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory AddFacetToObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void AddFacetToObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddFacetToObjectResponsePrivate
+ * \class AddFacetToObjectResponsePrivate
  *
- * @brief  Private implementation for AddFacetToObjectResponse.
+ * \brief Private implementation for AddFacetToObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddFacetToObjectResponsePrivate object.
@@ -91,7 +101,7 @@ AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory AddFacetToObjectResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AllocateHostsRequest
+/*!
+ * \class QtAws::EC2::AllocateHostsRequest
  *
- * @brief  Implements EC2 AllocateHosts requests.
+ * \brief The AllocateHostsRequest class encapsulates EC2 AllocateHosts requests.
  *
- * @see    EC2Client::allocateHosts
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::allocateHosts
  */
 
-/**
+/*!
  * @brief  Constructs a new AllocateHostsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AllocateHostsRequest::AllocateHostsRequest(const AllocateHostsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AllocateHostsRequest object.
  */
 AllocateHostsRequest::AllocateHostsRequest()
@@ -53,13 +60,16 @@ AllocateHostsRequest::AllocateHostsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AllocateHostsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AllocateHostsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply 
     return new AllocateHostsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AllocateHostsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply 
  * @brief  Private implementation for AllocateHostsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AllocateHostsRequestPrivate object.
@@ -97,7 +107,7 @@ AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AllocateHostsRequestPrivate object, copying another.

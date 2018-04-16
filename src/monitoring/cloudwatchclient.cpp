@@ -57,37 +57,45 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudWatch
+ * \brief The QtAws::CloudWatch contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudWatch {
 
-/**
- * @class  CloudWatchClient
+/*!
+ * \class QtAws::CloudWatch::CloudWatchClient
  *
- * @brief  Client for Amazon CloudWatch
+ * \brief The CloudWatchClient class provides access the Amazon CloudWatch service.
  *
- * Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
- * You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ * \ingroup CloudWatch
  *
- * applications>
- *
- * CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you
- * define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use
- * this data to determine whether you should launch additional instances to handle increased load. You can also use this
- * data to stop under-used instances to save
- *
- * money>
- *
- * In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
- * CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+ *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ * 
+ *  applications>
+ * 
+ *  CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you
+ *  define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use
+ *  this data to determine whether you should launch additional instances to handle increased load. You can also use this
+ *  data to stop under-used instances to save
+ * 
+ *  money>
+ * 
+ *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
+ *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
  */
 
-/**
- * @brief  Constructs a new CloudWatchClient object.
+/*!
+ * \brief Constructs a CloudWatchClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudWatchClient::CloudWatchClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -106,21 +114,16 @@ CloudWatchClient::CloudWatchClient(
     d->serviceName = QStringLiteral("monitoring");
 }
 
-/**
- * @brief  Constructs a new CloudWatchClient object.
+/*!
+ * \overload CloudWatchClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudWatchClient::CloudWatchClient(
     const QUrl &endpoint,
@@ -139,7 +142,7 @@ CloudWatchClient::CloudWatchClient(
     d->serviceName = QStringLiteral("monitoring");
 }
 
-/**
+/*!
  * Deletes the specified alarms. In the event of an error, no alarms are
  *
  * @param  request Request to send to Amazon CloudWatch.
@@ -153,7 +156,7 @@ DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest 
     return qobject_cast<DeleteAlarmsResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes all dashboards that you specify. You may specify up to 100 dashboards to delete. If there is an error during
  * this call, no dashboards are
  *
@@ -168,7 +171,7 @@ DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashbo
     return qobject_cast<DeleteDashboardsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the history for the specified alarm. You can filter the results by date range or item type. If an alarm name
  * is not specified, the histories for all alarms are
  *
@@ -187,7 +190,7 @@ DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const Desc
     return qobject_cast<DescribeAlarmHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the specified alarms. If no alarms are specified, all alarms are returned. Alarms can be retrieved by using
  * only a prefix for the alarm name, the alarm state, or a prefix for any
  *
@@ -202,7 +205,7 @@ DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRe
     return qobject_cast<DescribeAlarmsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the alarms for the specified metric. To filter the results, specify a statistic, period, or
  *
  * @param  request Request to send to Amazon CloudWatch.
@@ -216,7 +219,7 @@ DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(cons
     return qobject_cast<DescribeAlarmsForMetricResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables the actions for the specified alarms. When an alarm's actions are disabled, the alarm actions do not execute
  * when the alarm state
  *
@@ -231,7 +234,7 @@ DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const Disabl
     return qobject_cast<DisableAlarmActionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables the actions for the specified
  *
  * @param  request Request to send to Amazon CloudWatch.
@@ -245,7 +248,7 @@ EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAl
     return qobject_cast<EnableAlarmActionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Displays the details of the dashboard that you
  *
  * specify>
@@ -264,7 +267,7 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
     return qobject_cast<GetDashboardResponse *>(send(request));
 }
 
-/**
+/*!
  * You can use the <code>GetMetricData</code> API to retrieve as many as 100 different metrics in a single request, with a
  * total of as many as 100,800 datapoints. You can also optionally perform math expressions on the values of the returned
  * statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you
@@ -290,7 +293,7 @@ GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataReque
     return qobject_cast<GetMetricDataResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets statistics for the specified
  *
  * metric>
@@ -368,7 +371,7 @@ GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMet
     return qobject_cast<GetMetricStatisticsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the dashboards for your account. If you include <code>DashboardNamePrefix</code>, only those
  * dashboards with names starting with the prefix are listed. Otherwise, all dashboards in your account are listed.
  *
@@ -383,7 +386,7 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
     return qobject_cast<ListDashboardsResponse *>(send(request));
 }
 
-/**
+/*!
  * List the specified metrics. You can use the returned metrics with <a>GetMetricStatistics</a> to obtain statistical
  *
  * data>
@@ -406,7 +409,7 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
     return qobject_cast<ListMetricsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a dashboard if it does not already exist, or updates an existing dashboard. If you update a dashboard, the
  * entire contents are replaced with what you specify
  *
@@ -439,7 +442,7 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
     return qobject_cast<PutDashboardResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates an alarm and associates it with the specified metric. Optionally, this operation can associate one or
  * more Amazon SNS resources with the
  *
@@ -511,7 +514,7 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
     return qobject_cast<PutMetricAlarmResponse *>(send(request));
 }
 
-/**
+/*!
  * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified metric. If
  * the specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric, it can take up to
  * fifteen minutes for the metric to appear in calls to
@@ -562,7 +565,7 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
     return qobject_cast<PutMetricDataResponse *>(send(request));
 }
 
-/**
+/*!
  * Temporarily sets the state of an alarm for testing purposes. When the updated state differs from the previous value, the
  * action configured for the appropriate state is invoked. For example, if your alarm is configured to send an Amazon SNS
  * message when an alarm is triggered, temporarily changing the alarm state to <code>ALARM</code> sends an SNS message. The
@@ -580,7 +583,7 @@ SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateReque
     return qobject_cast<SetAlarmStateResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudWatchClientPrivate
@@ -588,7 +591,7 @@ SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateReque
  * @brief  Private implementation for CloudWatchClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudWatchClientPrivate object.

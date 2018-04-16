@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  DescribeClustersResponse
+/*!
+ * \class QtAws::CloudHSMV2::DescribeClustersResponse
  *
- * @brief  Handles CloudHSMV2 DescribeClusters responses.
+ * \brief The DescribeClustersResponse class encapsulates CloudHSMV2 DescribeClusters responses.
  *
- * @see    CloudHSMV2Client::describeClusters
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::describeClusters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClustersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
     return static_cast<const DescribeClustersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSMV2 DescribeClusters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeClustersResponsePrivate
+ * \class DescribeClustersResponsePrivate
  *
- * @brief  Private implementation for DescribeClustersResponse.
+ * \brief Private implementation for DescribeClustersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClustersResponsePrivate object.
@@ -91,7 +96,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSMV2 DescribeClustersResponse element.
  *
  * @param  xml  XML stream to parse.

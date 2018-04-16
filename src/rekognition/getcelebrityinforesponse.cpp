@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetCelebrityInfoResponse
+/*!
+ * \class QtAws::Rekognition::GetCelebrityInfoResponse
  *
- * @brief  Handles Rekognition GetCelebrityInfo responses.
+ * \brief The GetCelebrityInfoResponse class encapsulates Rekognition GetCelebrityInfo responses.
  *
- * @see    RekognitionClient::getCelebrityInfo
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getCelebrityInfo
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCelebrityInfoResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetCelebrityInfoRequest * GetCelebrityInfoResponse::request() const
     return static_cast<const GetCelebrityInfoRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition GetCelebrityInfo response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetCelebrityInfoResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCelebrityInfoResponsePrivate
+ * \class GetCelebrityInfoResponsePrivate
  *
- * @brief  Private implementation for GetCelebrityInfoResponse.
+ * \brief Private implementation for GetCelebrityInfoResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCelebrityInfoResponsePrivate object.
@@ -91,7 +95,7 @@ GetCelebrityInfoResponsePrivate::GetCelebrityInfoResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition GetCelebrityInfoResponse element.
  *
  * @param  xml  XML stream to parse.

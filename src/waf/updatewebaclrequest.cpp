@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateWebACLRequest
+/*!
+ * \class QtAws::WAF::UpdateWebACLRequest
  *
- * @brief  Implements WAF UpdateWebACL requests.
+ * \brief The UpdateWebACLRequest class encapsulates WAF UpdateWebACL requests.
  *
- * @see    WAFClient::updateWebACL
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateWebACLRequest object.
  */
 UpdateWebACLRequest::UpdateWebACLRequest()
@@ -53,13 +61,16 @@ UpdateWebACLRequest::UpdateWebACLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateWebACLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateWebACLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
     return new UpdateWebACLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateWebACLRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateWebACLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateWebACLRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateWebACLRequestPrivate object, copying another.

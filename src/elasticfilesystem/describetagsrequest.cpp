@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeTagsRequest
+/*!
+ * \class QtAws::EFS::DescribeTagsRequest
  *
- * @brief  Implements EFS DescribeTags requests.
+ * \brief The DescribeTagsRequest class encapsulates EFS DescribeTags requests.
  *
- * @see    EFSClient::describeTags
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
@@ -53,13 +62,16 @@ DescribeTagsRequest::DescribeTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
     return new DescribeTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTagsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.

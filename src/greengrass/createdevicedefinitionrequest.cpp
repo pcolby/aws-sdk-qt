@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateDeviceDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::CreateDeviceDefinitionRequest
  *
- * @brief  Implements Greengrass CreateDeviceDefinition requests.
+ * \brief The CreateDeviceDefinitionRequest class encapsulates Greengrass CreateDeviceDefinition requests.
  *
- * @see    GreengrassClient::createDeviceDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createDeviceDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDeviceDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest(const CreateDeviceD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDeviceDefinitionRequest object.
  */
 CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest()
@@ -53,13 +59,16 @@ CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDeviceDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDeviceDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeviceDefinitionRequest::response(QNetw
     return new CreateDeviceDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDeviceDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateDeviceDefinitionRequest::response(QNetw
  * @brief  Private implementation for CreateDeviceDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeviceDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateDeviceDefinitionRequestPrivate::CreateDeviceDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDeviceDefinitionRequestPrivate object, copying another.

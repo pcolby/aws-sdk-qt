@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetCoreDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::GetCoreDefinitionResponse
  *
- * @brief  Handles Greengrass GetCoreDefinition responses.
+ * \brief The GetCoreDefinitionResponse class encapsulates Greengrass GetCoreDefinition responses.
  *
- * @see    GreengrassClient::getCoreDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getCoreDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCoreDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetCoreDefinitionRequest * GetCoreDefinitionResponse::request() const
     return static_cast<const GetCoreDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass GetCoreDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetCoreDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCoreDefinitionResponsePrivate
+ * \class GetCoreDefinitionResponsePrivate
  *
- * @brief  Private implementation for GetCoreDefinitionResponse.
+ * \brief Private implementation for GetCoreDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCoreDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ GetCoreDefinitionResponsePrivate::GetCoreDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass GetCoreDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

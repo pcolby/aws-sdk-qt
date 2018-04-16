@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeJobResponse
+/*!
+ * \class QtAws::IoT::DescribeJobResponse
  *
- * @brief  Handles IoT DescribeJob responses.
+ * \brief The DescribeJobResponse class encapsulates IoT DescribeJob responses.
  *
- * @see    IoTClient::describeJob
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeJobRequest * DescribeJobResponse::request() const
     return static_cast<const DescribeJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DescribeJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeJobResponsePrivate
+ * \class DescribeJobResponsePrivate
  *
- * @brief  Private implementation for DescribeJobResponse.
+ * \brief Private implementation for DescribeJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeJobResponsePrivate::DescribeJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DescribeJobResponse element.
  *
  * @param  xml  XML stream to parse.

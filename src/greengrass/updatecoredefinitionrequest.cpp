@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateCoreDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::UpdateCoreDefinitionRequest
  *
- * @brief  Implements Greengrass UpdateCoreDefinition requests.
+ * \brief The UpdateCoreDefinitionRequest class encapsulates Greengrass UpdateCoreDefinition requests.
  *
- * @see    GreengrassClient::updateCoreDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateCoreDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCoreDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest(const UpdateCoreDefinit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateCoreDefinitionRequest object.
  */
 UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest()
@@ -53,13 +59,16 @@ UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateCoreDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateCoreDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCoreDefinitionRequest::response(QNetwor
     return new UpdateCoreDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateCoreDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateCoreDefinitionRequest::response(QNetwor
  * @brief  Private implementation for UpdateCoreDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCoreDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCoreDefinitionRequestPrivate object, copying another.

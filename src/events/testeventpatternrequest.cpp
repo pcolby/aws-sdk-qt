@@ -25,15 +25,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  TestEventPatternRequest
+/*!
+ * \class QtAws::CloudWatchEvents::TestEventPatternRequest
  *
- * @brief  Implements CloudWatchEvents TestEventPattern requests.
+ * \brief The TestEventPatternRequest class encapsulates CloudWatchEvents TestEventPattern requests.
  *
- * @see    CloudWatchEventsClient::testEventPattern
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::testEventPattern
  */
 
-/**
+/*!
  * @brief  Constructs a new TestEventPatternRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +70,7 @@ TestEventPatternRequest::TestEventPatternRequest(const TestEventPatternRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestEventPatternRequest object.
  */
 TestEventPatternRequest::TestEventPatternRequest()
@@ -53,13 +79,16 @@ TestEventPatternRequest::TestEventPatternRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestEventPatternRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestEventPatternResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +103,7 @@ QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkRep
     return new TestEventPatternResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestEventPatternRequestPrivate
@@ -82,7 +111,7 @@ QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkRep
  * @brief  Private implementation for TestEventPatternRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestEventPatternRequestPrivate object.
@@ -97,7 +126,7 @@ TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestEventPatternRequestPrivate object, copying another.

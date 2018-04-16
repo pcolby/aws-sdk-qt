@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateTypeResponse
+/*!
+ * \class QtAws::AppSync::CreateTypeResponse
  *
- * @brief  Handles AppSync CreateType responses.
+ * \brief The CreateTypeResponse class encapsulates AppSync CreateType responses.
  *
- * @see    AppSyncClient::createType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateTypeRequest * CreateTypeResponse::request() const
     return static_cast<const CreateTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync CreateType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateTypeResponsePrivate
+ * \class CreateTypeResponsePrivate
  *
- * @brief  Private implementation for CreateTypeResponse.
+ * \brief Private implementation for CreateTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTypeResponsePrivate object.
@@ -91,7 +95,7 @@ CreateTypeResponsePrivate::CreateTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync CreateTypeResponse element.
  *
  * @param  xml  XML stream to parse.

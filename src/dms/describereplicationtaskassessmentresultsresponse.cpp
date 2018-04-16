@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeReplicationTaskAssessmentResultsResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeReplicationTaskAssessmentResults responses.
+ * \brief The DescribeReplicationTaskAssessmentResultsResponse class encapsulates DatabaseMigrationService DescribeReplicationTaskAssessmentResults responses.
  *
- * @see    DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeReplicationTaskAssessmentResultsRequest * DescribeReplicationTaskA
     return static_cast<const DescribeReplicationTaskAssessmentResultsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeReplicationTaskAssessmentResults response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeReplicationTaskAssessmentResultsResponse::parseSuccess(QIODevice &r
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeReplicationTaskAssessmentResultsResponsePrivate
+ * \class DescribeReplicationTaskAssessmentResultsResponsePrivate
  *
- * @brief  Private implementation for DescribeReplicationTaskAssessmentResultsResponse.
+ * \brief Private implementation for DescribeReplicationTaskAssessmentResultsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTask
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeReplicationTaskAssessmentResultsResponse element.
  *
  * @param  xml  XML stream to parse.

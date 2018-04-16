@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  CreateCacheClusterResponse
+/*!
+ * \class QtAws::ElastiCache::CreateCacheClusterResponse
  *
- * @brief  Handles ElastiCache CreateCacheCluster responses.
+ * \brief The CreateCacheClusterResponse class encapsulates ElastiCache CreateCacheCluster responses.
  *
- * @see    ElastiCacheClient::createCacheCluster
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::createCacheCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCacheClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const CreateCacheClusterRequest * CreateCacheClusterResponse::request() const
     return static_cast<const CreateCacheClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache CreateCacheCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void CreateCacheClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateCacheClusterResponsePrivate
+ * \class CreateCacheClusterResponsePrivate
  *
- * @brief  Private implementation for CreateCacheClusterResponse.
+ * \brief Private implementation for CreateCacheClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCacheClusterResponsePrivate object.
@@ -91,7 +108,7 @@ CreateCacheClusterResponsePrivate::CreateCacheClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache CreateCacheClusterResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeMovingAddressesResponse
+/*!
+ * \class QtAws::EC2::DescribeMovingAddressesResponse
  *
- * @brief  Handles EC2 DescribeMovingAddresses responses.
+ * \brief The DescribeMovingAddressesResponse class encapsulates EC2 DescribeMovingAddresses responses.
  *
- * @see    EC2Client::describeMovingAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeMovingAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMovingAddressesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeMovingAddressesRequest * DescribeMovingAddressesResponse::request(
     return static_cast<const DescribeMovingAddressesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeMovingAddresses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeMovingAddressesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeMovingAddressesResponsePrivate
+ * \class DescribeMovingAddressesResponsePrivate
  *
- * @brief  Private implementation for DescribeMovingAddressesResponse.
+ * \brief Private implementation for DescribeMovingAddressesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMovingAddressesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeMovingAddressesResponse element.
  *
  * @param  xml  XML stream to parse.

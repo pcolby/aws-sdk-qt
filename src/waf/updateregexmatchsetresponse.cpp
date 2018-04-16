@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateRegexMatchSetResponse
+/*!
+ * \class QtAws::WAF::UpdateRegexMatchSetResponse
  *
- * @brief  Handles WAF UpdateRegexMatchSet responses.
+ * \brief The UpdateRegexMatchSetResponse class encapsulates WAF UpdateRegexMatchSet responses.
  *
- * @see    WAFClient::updateRegexMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateRegexMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRegexMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
     return static_cast<const UpdateRegexMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF UpdateRegexMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRegexMatchSetResponsePrivate
+ * \class UpdateRegexMatchSetResponsePrivate
  *
- * @brief  Private implementation for UpdateRegexMatchSetResponse.
+ * \brief Private implementation for UpdateRegexMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRegexMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF UpdateRegexMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

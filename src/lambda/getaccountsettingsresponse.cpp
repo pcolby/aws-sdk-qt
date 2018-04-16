@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetAccountSettingsResponse
+/*!
+ * \class QtAws::Lambda::GetAccountSettingsResponse
  *
- * @brief  Handles Lambda GetAccountSettings responses.
+ * \brief The GetAccountSettingsResponse class encapsulates Lambda GetAccountSettings responses.
  *
- * @see    LambdaClient::getAccountSettings
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getAccountSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
     return static_cast<const GetAccountSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda GetAccountSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAccountSettingsResponsePrivate
+ * \class GetAccountSettingsResponsePrivate
  *
- * @brief  Private implementation for GetAccountSettingsResponse.
+ * \brief Private implementation for GetAccountSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSettingsResponsePrivate object.
@@ -91,7 +105,7 @@ GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda GetAccountSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

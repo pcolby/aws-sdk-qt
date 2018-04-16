@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListResourceRecordSetsRequest
+/*!
+ * \class QtAws::Route53::ListResourceRecordSetsRequest
  *
- * @brief  Implements Route53 ListResourceRecordSets requests.
+ * \brief The ListResourceRecordSetsRequest class encapsulates Route53 ListResourceRecordSets requests.
  *
- * @see    Route53Client::listResourceRecordSets
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listResourceRecordSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceRecordSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListResourceRecordSetsRequest::ListResourceRecordSetsRequest(const ListResourceR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResourceRecordSetsRequest object.
  */
 ListResourceRecordSetsRequest::ListResourceRecordSetsRequest()
@@ -53,13 +56,16 @@ ListResourceRecordSetsRequest::ListResourceRecordSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResourceRecordSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResourceRecordSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetw
     return new ListResourceRecordSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResourceRecordSetsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetw
  * @brief  Private implementation for ListResourceRecordSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceRecordSetsRequestPrivate object.
@@ -97,7 +103,7 @@ ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceRecordSetsRequestPrivate object, copying another.

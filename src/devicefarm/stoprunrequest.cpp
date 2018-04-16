@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  StopRunRequest
+/*!
+ * \class QtAws::DeviceFarm::StopRunRequest
  *
- * @brief  Implements DeviceFarm StopRun requests.
+ * \brief The StopRunRequest class encapsulates DeviceFarm StopRun requests.
  *
- * @see    DeviceFarmClient::stopRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::stopRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StopRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ StopRunRequest::StopRunRequest(const StopRunRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopRunRequest object.
  */
 StopRunRequest::StopRunRequest()
@@ -53,13 +58,16 @@ StopRunRequest::StopRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * cons
     return new StopRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopRunRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * cons
  * @brief  Private implementation for StopRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopRunRequestPrivate object.
@@ -97,7 +105,7 @@ StopRunRequestPrivate::StopRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopRunRequestPrivate object, copying another.

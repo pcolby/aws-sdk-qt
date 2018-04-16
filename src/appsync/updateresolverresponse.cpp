@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateResolverResponse
+/*!
+ * \class QtAws::AppSync::UpdateResolverResponse
  *
- * @brief  Handles AppSync UpdateResolver responses.
+ * \brief The UpdateResolverResponse class encapsulates AppSync UpdateResolver responses.
  *
- * @see    AppSyncClient::updateResolver
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateResolver
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateResolverResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateResolverRequest * UpdateResolverResponse::request() const
     return static_cast<const UpdateResolverRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync UpdateResolver response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateResolverResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateResolverResponsePrivate
+ * \class UpdateResolverResponsePrivate
  *
- * @brief  Private implementation for UpdateResolverResponse.
+ * \brief Private implementation for UpdateResolverResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResolverResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateResolverResponsePrivate::UpdateResolverResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync UpdateResolverResponse element.
  *
  * @param  xml  XML stream to parse.

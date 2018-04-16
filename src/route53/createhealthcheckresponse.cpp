@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateHealthCheckResponse
+/*!
+ * \class QtAws::Route53::CreateHealthCheckResponse
  *
- * @brief  Handles Route53 CreateHealthCheck responses.
+ * \brief The CreateHealthCheckResponse class encapsulates Route53 CreateHealthCheck responses.
  *
- * @see    Route53Client::createHealthCheck
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createHealthCheck
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHealthCheckResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateHealthCheckRequest * CreateHealthCheckResponse::request() const
     return static_cast<const CreateHealthCheckRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 CreateHealthCheck response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateHealthCheckResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateHealthCheckResponsePrivate
+ * \class CreateHealthCheckResponsePrivate
  *
- * @brief  Private implementation for CreateHealthCheckResponse.
+ * \brief Private implementation for CreateHealthCheckResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHealthCheckResponsePrivate object.
@@ -91,7 +94,7 @@ CreateHealthCheckResponsePrivate::CreateHealthCheckResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 CreateHealthCheckResponse element.
  *
  * @param  xml  XML stream to parse.

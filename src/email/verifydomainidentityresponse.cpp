@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  VerifyDomainIdentityResponse
+/*!
+ * \class QtAws::SES::VerifyDomainIdentityResponse
  *
- * @brief  Handles SES VerifyDomainIdentity responses.
+ * \brief The VerifyDomainIdentityResponse class encapsulates SES VerifyDomainIdentity responses.
  *
- * @see    SESClient::verifyDomainIdentity
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::verifyDomainIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyDomainIdentityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() cons
     return static_cast<const VerifyDomainIdentityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES VerifyDomainIdentity response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  VerifyDomainIdentityResponsePrivate
+ * \class VerifyDomainIdentityResponsePrivate
  *
- * @brief  Private implementation for VerifyDomainIdentityResponse.
+ * \brief Private implementation for VerifyDomainIdentityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyDomainIdentityResponsePrivate object.
@@ -91,7 +105,7 @@ VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES VerifyDomainIdentityResponse element.
  *
  * @param  xml  XML stream to parse.

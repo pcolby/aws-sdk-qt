@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  SetLoggingOptionsResponse
+/*!
+ * \class QtAws::IoT::SetLoggingOptionsResponse
  *
- * @brief  Handles IoT SetLoggingOptions responses.
+ * \brief The SetLoggingOptionsResponse class encapsulates IoT SetLoggingOptions responses.
  *
- * @see    IoTClient::setLoggingOptions
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::setLoggingOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new SetLoggingOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetLoggingOptionsRequest * SetLoggingOptionsResponse::request() const
     return static_cast<const SetLoggingOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT SetLoggingOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetLoggingOptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetLoggingOptionsResponsePrivate
+ * \class SetLoggingOptionsResponsePrivate
  *
- * @brief  Private implementation for SetLoggingOptionsResponse.
+ * \brief Private implementation for SetLoggingOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetLoggingOptionsResponsePrivate object.
@@ -91,7 +105,7 @@ SetLoggingOptionsResponsePrivate::SetLoggingOptionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT SetLoggingOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

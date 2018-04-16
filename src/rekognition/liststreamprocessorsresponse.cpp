@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  ListStreamProcessorsResponse
+/*!
+ * \class QtAws::Rekognition::ListStreamProcessorsResponse
  *
- * @brief  Handles Rekognition ListStreamProcessors responses.
+ * \brief The ListStreamProcessorsResponse class encapsulates Rekognition ListStreamProcessors responses.
  *
- * @see    RekognitionClient::listStreamProcessors
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::listStreamProcessors
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamProcessorsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListStreamProcessorsRequest * ListStreamProcessorsResponse::request() cons
     return static_cast<const ListStreamProcessorsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition ListStreamProcessors response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListStreamProcessorsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStreamProcessorsResponsePrivate
+ * \class ListStreamProcessorsResponsePrivate
  *
- * @brief  Private implementation for ListStreamProcessorsResponse.
+ * \brief Private implementation for ListStreamProcessorsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamProcessorsResponsePrivate object.
@@ -91,7 +95,7 @@ ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition ListStreamProcessorsResponse element.
  *
  * @param  xml  XML stream to parse.

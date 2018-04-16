@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetPlanRequest
+/*!
+ * \class QtAws::Glue::GetPlanRequest
  *
- * @brief  Implements Glue GetPlan requests.
+ * \brief The GetPlanRequest class encapsulates Glue GetPlan requests.
  *
- * @see    GlueClient::getPlan
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getPlan
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetPlanRequest::GetPlanRequest(const GetPlanRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPlanRequest object.
  */
 GetPlanRequest::GetPlanRequest()
@@ -53,13 +59,16 @@ GetPlanRequest::GetPlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * cons
     return new GetPlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPlanRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetPlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPlanRequestPrivate object.
@@ -97,7 +106,7 @@ GetPlanRequestPrivate::GetPlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPlanRequestPrivate object, copying another.

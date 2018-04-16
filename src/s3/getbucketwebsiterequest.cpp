@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketWebsiteRequest
+/*!
+ * \class QtAws::S3::GetBucketWebsiteRequest
  *
- * @brief  Implements S3 GetBucketWebsite requests.
+ * \brief The GetBucketWebsiteRequest class encapsulates S3 GetBucketWebsite requests.
  *
- * @see    S3Client::getBucketWebsite
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketWebsite
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketWebsiteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketWebsiteRequest::GetBucketWebsiteRequest(const GetBucketWebsiteRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketWebsiteRequest object.
  */
 GetBucketWebsiteRequest::GetBucketWebsiteRequest()
@@ -53,13 +56,16 @@ GetBucketWebsiteRequest::GetBucketWebsiteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketWebsiteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketWebsiteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketWebsiteRequest::response(QNetworkRep
     return new GetBucketWebsiteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketWebsiteRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketWebsiteRequest::response(QNetworkRep
  * @brief  Private implementation for GetBucketWebsiteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketWebsiteRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketWebsiteRequestPrivate object, copying another.

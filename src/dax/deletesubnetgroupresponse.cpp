@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DeleteSubnetGroupResponse
+/*!
+ * \class QtAws::DAX::DeleteSubnetGroupResponse
  *
- * @brief  Handles DAX DeleteSubnetGroup responses.
+ * \brief The DeleteSubnetGroupResponse class encapsulates DAX DeleteSubnetGroup responses.
  *
- * @see    DAXClient::deleteSubnetGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::deleteSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteSubnetGroupRequest * DeleteSubnetGroupResponse::request() const
     return static_cast<const DeleteSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DeleteSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSubnetGroupResponsePrivate
+ * \class DeleteSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteSubnetGroupResponse.
+ * \brief Private implementation for DeleteSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubnetGroupResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DeleteSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteXssMatchSetResponse
+/*!
+ * \class QtAws::WAF::DeleteXssMatchSetResponse
  *
- * @brief  Handles WAF DeleteXssMatchSet responses.
+ * \brief The DeleteXssMatchSetResponse class encapsulates WAF DeleteXssMatchSet responses.
  *
- * @see    WAFClient::deleteXssMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteXssMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteXssMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteXssMatchSetRequest * DeleteXssMatchSetResponse::request() const
     return static_cast<const DeleteXssMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF DeleteXssMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteXssMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteXssMatchSetResponsePrivate
+ * \class DeleteXssMatchSetResponsePrivate
  *
- * @brief  Private implementation for DeleteXssMatchSetResponse.
+ * \brief Private implementation for DeleteXssMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteXssMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF DeleteXssMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

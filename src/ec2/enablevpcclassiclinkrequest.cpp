@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVpcClassicLinkRequest
+/*!
+ * \class QtAws::EC2::EnableVpcClassicLinkRequest
  *
- * @brief  Implements EC2 EnableVpcClassicLink requests.
+ * \brief The EnableVpcClassicLinkRequest class encapsulates EC2 EnableVpcClassicLink requests.
  *
- * @see    EC2Client::enableVpcClassicLink
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVpcClassicLink
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVpcClassicLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest(const EnableVpcClassicL
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableVpcClassicLinkRequest object.
  */
 EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest()
@@ -53,13 +60,16 @@ EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableVpcClassicLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableVpcClassicLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkRequest::response(QNetwor
     return new EnableVpcClassicLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableVpcClassicLinkRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkRequest::response(QNetwor
  * @brief  Private implementation for EnableVpcClassicLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVpcClassicLinkRequestPrivate object.
@@ -97,7 +107,7 @@ EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVpcClassicLinkRequestPrivate object, copying another.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetHostedZoneLimitResponse
+/*!
+ * \class QtAws::Route53::GetHostedZoneLimitResponse
  *
- * @brief  Handles Route53 GetHostedZoneLimit responses.
+ * \brief The GetHostedZoneLimitResponse class encapsulates Route53 GetHostedZoneLimit responses.
  *
- * @see    Route53Client::getHostedZoneLimit
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getHostedZoneLimit
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHostedZoneLimitResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetHostedZoneLimitRequest * GetHostedZoneLimitResponse::request() const
     return static_cast<const GetHostedZoneLimitRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetHostedZoneLimit response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetHostedZoneLimitResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetHostedZoneLimitResponsePrivate
+ * \class GetHostedZoneLimitResponsePrivate
  *
- * @brief  Private implementation for GetHostedZoneLimitResponse.
+ * \brief Private implementation for GetHostedZoneLimitResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostedZoneLimitResponsePrivate object.
@@ -91,7 +94,7 @@ GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetHostedZoneLimitResponse element.
  *
  * @param  xml  XML stream to parse.

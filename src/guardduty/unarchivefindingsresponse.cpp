@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  UnarchiveFindingsResponse
+/*!
+ * \class QtAws::GuardDuty::UnarchiveFindingsResponse
  *
- * @brief  Handles GuardDuty UnarchiveFindings responses.
+ * \brief The UnarchiveFindingsResponse class encapsulates GuardDuty UnarchiveFindings responses.
  *
- * @see    GuardDutyClient::unarchiveFindings
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::unarchiveFindings
  */
 
-/**
+/*!
  * @brief  Constructs a new UnarchiveFindingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UnarchiveFindingsRequest * UnarchiveFindingsResponse::request() const
     return static_cast<const UnarchiveFindingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty UnarchiveFindings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UnarchiveFindingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UnarchiveFindingsResponsePrivate
+ * \class UnarchiveFindingsResponsePrivate
  *
- * @brief  Private implementation for UnarchiveFindingsResponse.
+ * \brief Private implementation for UnarchiveFindingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnarchiveFindingsResponsePrivate object.
@@ -91,7 +94,7 @@ UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty UnarchiveFindingsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  MediaPackageResponse
+/*!
+ * \class QtAws::MediaPackage::MediaPackageResponse
  *
- * @brief  Handles MediaPackage MediaPackage responses.
+ * \brief The MediaPackageResponse class is the base class for all MediaPackage responses.
  *
- * @see    MediaPackageClient::mediaPackage
+ * \ingroup MediaPackage
  */
 
-/**
+/*!
  * @brief  Constructs a new MediaPackageResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MediaPackageResponse::MediaPackageResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaPackageResponse object.
@@ -63,7 +63,7 @@ MediaPackageResponse::MediaPackageResponse(MediaPackageResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MediaPackageResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaPackageResponsePrivate
@@ -92,7 +92,7 @@ void MediaPackageResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MediaPackageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaPackageResponsePrivate object.

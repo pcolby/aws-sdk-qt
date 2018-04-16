@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  IncreaseReplicationFactorRequest
+/*!
+ * \class QtAws::DAX::IncreaseReplicationFactorRequest
  *
- * @brief  Implements DAX IncreaseReplicationFactor requests.
+ * \brief The IncreaseReplicationFactorRequest class encapsulates DAX IncreaseReplicationFactor requests.
  *
- * @see    DAXClient::increaseReplicationFactor
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::increaseReplicationFactor
  */
 
-/**
+/*!
  * @brief  Constructs a new IncreaseReplicationFactorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest(const Increas
 
 }
 
-/**
+/*!
  * @brief  Constructs a new IncreaseReplicationFactorRequest object.
  */
 IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest()
@@ -53,13 +60,16 @@ IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool IncreaseReplicationFactorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an IncreaseReplicationFactorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QN
     return new IncreaseReplicationFactorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IncreaseReplicationFactorRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QN
  * @brief  Private implementation for IncreaseReplicationFactorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IncreaseReplicationFactorRequestPrivate object.
@@ -97,7 +107,7 @@ IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IncreaseReplicationFactorRequestPrivate object, copying another.

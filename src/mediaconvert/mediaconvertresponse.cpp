@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  MediaConvertResponse
+/*!
+ * \class QtAws::MediaConvert::MediaConvertResponse
  *
- * @brief  Handles MediaConvert MediaConvert responses.
+ * \brief The MediaConvertResponse class is the base class for all MediaConvert responses.
  *
- * @see    MediaConvertClient::mediaConvert
+ * \ingroup MediaConvert
  */
 
-/**
+/*!
  * @brief  Constructs a new MediaConvertResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MediaConvertResponse::MediaConvertResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaConvertResponse object.
@@ -63,7 +63,7 @@ MediaConvertResponse::MediaConvertResponse(MediaConvertResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MediaConvertResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaConvertResponsePrivate
@@ -92,7 +92,7 @@ void MediaConvertResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MediaConvertResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaConvertResponsePrivate object.

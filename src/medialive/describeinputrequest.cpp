@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  DescribeInputRequest
+/*!
+ * \class QtAws::MediaLive::DescribeInputRequest
  *
- * @brief  Implements MediaLive DescribeInput requests.
+ * \brief The DescribeInputRequest class encapsulates MediaLive DescribeInput requests.
  *
- * @see    MediaLiveClient::describeInput
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::describeInput
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInputRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeInputRequest::DescribeInputRequest(const DescribeInputRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeInputRequest object.
  */
 DescribeInputRequest::DescribeInputRequest()
@@ -53,13 +56,16 @@ DescribeInputRequest::DescribeInputRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeInputRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeInputResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply 
     return new DescribeInputResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeInputRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply 
  * @brief  Private implementation for DescribeInputRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInputRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeInputRequestPrivate::DescribeInputRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInputRequestPrivate object, copying another.

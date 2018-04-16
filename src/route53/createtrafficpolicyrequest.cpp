@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateTrafficPolicyRequest
+/*!
+ * \class QtAws::Route53::CreateTrafficPolicyRequest
  *
- * @brief  Implements Route53 CreateTrafficPolicy requests.
+ * \brief The CreateTrafficPolicyRequest class encapsulates Route53 CreateTrafficPolicy requests.
  *
- * @see    Route53Client::createTrafficPolicy
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createTrafficPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTrafficPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateTrafficPolicyRequest::CreateTrafficPolicyRequest(const CreateTrafficPolicy
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTrafficPolicyRequest object.
  */
 CreateTrafficPolicyRequest::CreateTrafficPolicyRequest()
@@ -53,13 +56,16 @@ CreateTrafficPolicyRequest::CreateTrafficPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTrafficPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTrafficPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrafficPolicyRequest::response(QNetwork
     return new CreateTrafficPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTrafficPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrafficPolicyRequest::response(QNetwork
  * @brief  Private implementation for CreateTrafficPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTrafficPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ CreateTrafficPolicyRequestPrivate::CreateTrafficPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTrafficPolicyRequestPrivate object, copying another.

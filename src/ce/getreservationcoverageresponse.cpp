@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetReservationCoverageResponse
+/*!
+ * \class QtAws::CostExplorer::GetReservationCoverageResponse
  *
- * @brief  Handles CostExplorer GetReservationCoverage responses.
+ * \brief The GetReservationCoverageResponse class encapsulates CostExplorer GetReservationCoverage responses.
  *
- * @see    CostExplorerClient::getReservationCoverage
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getReservationCoverage
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReservationCoverageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const GetReservationCoverageRequest * GetReservationCoverageResponse::request() 
     return static_cast<const GetReservationCoverageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostExplorer GetReservationCoverage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void GetReservationCoverageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetReservationCoverageResponsePrivate
+ * \class GetReservationCoverageResponsePrivate
  *
- * @brief  Private implementation for GetReservationCoverageResponse.
+ * \brief Private implementation for GetReservationCoverageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationCoverageResponsePrivate object.
@@ -91,7 +107,7 @@ GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CostExplorer GetReservationCoverageResponse element.
  *
  * @param  xml  XML stream to parse.

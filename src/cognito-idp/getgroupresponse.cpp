@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetGroupResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetGroupResponse
  *
- * @brief  Handles CognitoIdentityProvider GetGroup responses.
+ * \brief The GetGroupResponse class encapsulates CognitoIdentityProvider GetGroup responses.
  *
- * @see    CognitoIdentityProviderClient::getGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const GetGroupRequest * GetGroupResponse::request() const
     return static_cast<const GetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider GetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void GetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGroupResponsePrivate
+ * \class GetGroupResponsePrivate
  *
- * @brief  Private implementation for GetGroupResponse.
+ * \brief Private implementation for GetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupResponsePrivate object.
@@ -91,7 +104,7 @@ GetGroupResponsePrivate::GetGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider GetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -171,129 +171,137 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::OpsWorks
+ * \brief The QtAws::OpsWorks contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace OpsWorks {
 
-/**
- * @class  OpsWorksClient
+/*!
+ * \class QtAws::OpsWorks::OpsWorksClient
  *
- * @brief  Client for AWS OpsWorks
+ * \brief The OpsWorksClient class provides access the AWS OpsWorks service.
  *
- * <fullname>AWS OpsWorks</fullname>
+ * \ingroup OpsWorks
  *
- * Welcome to the <i>AWS OpsWorks Stacks API Reference</i>. This guide provides descriptions, syntax, and usage examples
- * for AWS OpsWorks Stacks actions and data types, including common parameters and error codes.
- *
- * </p
- *
- * AWS OpsWorks Stacks is an application management service that provides an integrated experience for overseeing the
- * complete application lifecycle. For information about this product, go to the <a
- * href="http://aws.amazon.com/opsworks/">AWS OpsWorks</a> details page.
- *
- * </p
- *
- * <b>SDKs and CLI</b>
- *
- * </p
- *
- * The most common way to use the AWS OpsWorks Stacks API is by using the AWS Command Line Interface (CLI) or by using one
- * of the AWS SDKs to implement applications in your preferred language. For more information,
- *
- * see> <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS CLI</a>
- *
- * </p </li> <li>
- *
- * <a
- * href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html">AWS
- * SDK for Java</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/sdkfornet/latest/apidocs/html/N_Amazon_OpsWorks.htm">AWS SDK for .NET</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.OpsWorks.OpsWorksClient.html">AWS SDK for PHP 2</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/sdkforruby/api/">AWS SDK for Ruby</a>
- *
- * </p </li> <li>
- *
- * <a href="http://aws.amazon.com/documentation/sdkforjavascript/">AWS SDK for Node.js</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.pythonboto.org/en/latest/ref/opsworks.html">AWS SDK for Python(Boto)</a>
- *
- * </p </li> </ul>
- *
- * <b>Endpoints</b>
- *
- * </p
- *
- * AWS OpsWorks Stacks supports the following endpoints, all HTTPS. You must connect to one of the following endpoints.
- * Stacks can only be accessed or managed within the endpoint in which they are
- *
- * created> <ul> <li>
- *
- * opsworks.us-east-1.amazonaws.co> </li> <li>
- *
- * opsworks.us-east-2.amazonaws.co> </li> <li>
- *
- * opsworks.us-west-1.amazonaws.co> </li> <li>
- *
- * opsworks.us-west-2.amazonaws.co> </li> <li>
- *
- * opsworks.ca-central-1.amazonaws.com (API only; not available in the AWS
- *
- * console> </li> <li>
- *
- * opsworks.eu-west-1.amazonaws.co> </li> <li>
- *
- * opsworks.eu-west-2.amazonaws.co> </li> <li>
- *
- * opsworks.eu-west-3.amazonaws.co> </li> <li>
- *
- * opsworks.eu-central-1.amazonaws.co> </li> <li>
- *
- * opsworks.ap-northeast-1.amazonaws.co> </li> <li>
- *
- * opsworks.ap-northeast-2.amazonaws.co> </li> <li>
- *
- * opsworks.ap-south-1.amazonaws.co> </li> <li>
- *
- * opsworks.ap-southeast-1.amazonaws.co> </li> <li>
- *
- * opsworks.ap-southeast-2.amazonaws.co> </li> <li>
- *
- * opsworks.sa-east-1.amazonaws.co> </li> </ul>
- *
- * <b>Chef Versions</b>
- *
- * </p
- *
- * When you call <a>CreateStack</a>, <a>CloneStack</a>, or <a>UpdateStack</a> we recommend you use the
- * <code>ConfigurationManager</code> parameter to specify the Chef version. The recommended and default value for Linux
- * stacks is currently 12. Windows stacks use Chef 12.2. For more information, see <a
- * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef
- *
- * Versions</a>> <note>
- *
- * You can specify Chef 12, 11.10, or 11.4 for your Linux stack. We recommend migrating your existing Linux stacks to Chef
- * 12 as soon as
+ *  <fullname>AWS OpsWorks</fullname>
+ * 
+ *  Welcome to the <i>AWS OpsWorks Stacks API Reference</i>. This guide provides descriptions, syntax, and usage examples
+ *  for AWS OpsWorks Stacks actions and data types, including common parameters and error codes.
+ * 
+ *  </p
+ * 
+ *  AWS OpsWorks Stacks is an application management service that provides an integrated experience for overseeing the
+ *  complete application lifecycle. For information about this product, go to the <a
+ *  href="http://aws.amazon.com/opsworks/">AWS OpsWorks</a> details page.
+ * 
+ *  </p
+ * 
+ *  <b>SDKs and CLI</b>
+ * 
+ *  </p
+ * 
+ *  The most common way to use the AWS OpsWorks Stacks API is by using the AWS Command Line Interface (CLI) or by using one
+ *  of the AWS SDKs to implement applications in your preferred language. For more information,
+ * 
+ *  see> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS CLI</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html">AWS
+ *  SDK for Java</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/sdkfornet/latest/apidocs/html/N_Amazon_OpsWorks.htm">AWS SDK for .NET</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.OpsWorks.OpsWorksClient.html">AWS SDK for PHP 2</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/sdkforruby/api/">AWS SDK for Ruby</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://aws.amazon.com/documentation/sdkforjavascript/">AWS SDK for Node.js</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.pythonboto.org/en/latest/ref/opsworks.html">AWS SDK for Python(Boto)</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  AWS OpsWorks Stacks supports the following endpoints, all HTTPS. You must connect to one of the following endpoints.
+ *  Stacks can only be accessed or managed within the endpoint in which they are
+ * 
+ *  created> <ul> <li>
+ * 
+ *  opsworks.us-east-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.us-east-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.us-west-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.us-west-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.ca-central-1.amazonaws.com (API only; not available in the AWS
+ * 
+ *  console> </li> <li>
+ * 
+ *  opsworks.eu-west-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.eu-west-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.eu-west-3.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.eu-central-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.ap-northeast-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.ap-northeast-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.ap-south-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.ap-southeast-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.ap-southeast-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks.sa-east-1.amazonaws.co> </li> </ul>
+ * 
+ *  <b>Chef Versions</b>
+ * 
+ *  </p
+ * 
+ *  When you call <a>CreateStack</a>, <a>CloneStack</a>, or <a>UpdateStack</a> we recommend you use the
+ *  <code>ConfigurationManager</code> parameter to specify the Chef version. The recommended and default value for Linux
+ *  stacks is currently 12. Windows stacks use Chef 12.2. For more information, see <a
+ *  href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef
+ * 
+ *  Versions</a>> <note>
+ * 
+ *  You can specify Chef 12, 11.10, or 11.4 for your Linux stack. We recommend migrating your existing Linux stacks to Chef
+ *  12 as soon as
  */
 
-/**
- * @brief  Constructs a new OpsWorksClient object.
+/*!
+ * \brief Constructs a OpsWorksClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 OpsWorksClient::OpsWorksClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -312,21 +320,16 @@ OpsWorksClient::OpsWorksClient(
     d->serviceName = QStringLiteral("opsworks");
 }
 
-/**
- * @brief  Constructs a new OpsWorksClient object.
+/*!
+ * \overload OpsWorksClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 OpsWorksClient::OpsWorksClient(
     const QUrl &endpoint,
@@ -345,7 +348,7 @@ OpsWorksClient::OpsWorksClient(
     d->serviceName = QStringLiteral("opsworks");
 }
 
-/**
+/*!
  * Assign a registered instance to a
  *
  * layer> <ul> <li>
@@ -378,7 +381,7 @@ AssignInstanceResponse * OpsWorksClient::assignInstance(const AssignInstanceRequ
     return qobject_cast<AssignInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Assigns one of the stack's registered Amazon EBS volumes to a specified instance. The volume must first be registered
  * with the stack by calling <a>RegisterVolume</a>. After you register the volume, you must call <a>UpdateVolume</a> to
  * specify a mount point before calling <code>AssignVolume</code>. For more information, see <a
@@ -401,7 +404,7 @@ AssignVolumeResponse * OpsWorksClient::assignVolume(const AssignVolumeRequest &r
     return qobject_cast<AssignVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates one of the stack's registered Elastic IP addresses with a specified instance. The address must first be
  * registered with the stack by calling <a>RegisterElasticIp</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
@@ -423,7 +426,7 @@ AssociateElasticIpResponse * OpsWorksClient::associateElasticIp(const AssociateE
     return qobject_cast<AssociateElasticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches an Elastic Load Balancing load balancer to a specified layer. AWS OpsWorks Stacks does not support Application
  * Load Balancer. You can only use Classic Load Balancer with AWS OpsWorks Stacks. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/layers-elb.html">Elastic Load
@@ -452,7 +455,7 @@ AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(co
     return qobject_cast<AttachElasticLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a clone of a specified stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-cloning.html">Clone a Stack</a>. By default,
  * all parameters are set to the values used by the parent
@@ -474,7 +477,7 @@ CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request
     return qobject_cast<CloneStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an app for a specified stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html">Creating
  *
@@ -495,7 +498,7 @@ CreateAppResponse * OpsWorksClient::createApp(const CreateAppRequest &request)
     return qobject_cast<CreateAppResponse *>(send(request));
 }
 
-/**
+/*!
  * Runs deployment or stack commands. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-deploying.html">Deploying Apps</a> and <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-commands.html">Run Stack
@@ -517,7 +520,7 @@ CreateDeploymentResponse * OpsWorksClient::createDeployment(const CreateDeployme
     return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an instance in a specified stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html">Adding an Instance to a
  *
@@ -538,7 +541,7 @@ CreateInstanceResponse * OpsWorksClient::createInstance(const CreateInstanceRequ
     return qobject_cast<CreateInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a layer. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html">How to Create a
  *
@@ -566,7 +569,7 @@ CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &requ
     return qobject_cast<CreateLayerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html">Create a New
  *
@@ -587,7 +590,7 @@ CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &requ
     return qobject_cast<CreateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new user
  *
  * profile>
@@ -607,7 +610,7 @@ CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserPr
     return qobject_cast<CreateUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified
  *
  * app>
@@ -627,7 +630,7 @@ DeleteAppResponse * OpsWorksClient::deleteApp(const DeleteAppRequest &request)
     return qobject_cast<DeleteAppResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified instance, which terminates the associated Amazon EC2 instance. You must stop an instance before you
  * can delete
  *
@@ -653,7 +656,7 @@ DeleteInstanceResponse * OpsWorksClient::deleteInstance(const DeleteInstanceRequ
     return qobject_cast<DeleteInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified layer. You must first stop and then delete all associated instances or unassign registered
  * instances. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-delete.html">How to Delete a
@@ -675,7 +678,7 @@ DeleteLayerResponse * OpsWorksClient::deleteLayer(const DeleteLayerRequest &requ
     return qobject_cast<DeleteLayerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified stack. You must first delete all instances, layers, and apps or deregister registered instances. For
  * more information, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-shutting.html">Shut
  * Down a
@@ -697,7 +700,7 @@ DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &requ
     return qobject_cast<DeleteStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a user
  *
  * profile>
@@ -717,7 +720,7 @@ DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserPr
     return qobject_cast<DeleteUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters a specified Amazon ECS cluster from a stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-ecscluster.html#workinglayers-ecscluster-delete">
  * Resource
@@ -738,7 +741,7 @@ DeregisterEcsClusterResponse * OpsWorksClient::deregisterEcsCluster(const Deregi
     return qobject_cast<DeregisterEcsClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters a specified Elastic IP address. The address can then be registered by another stack. For more information,
  * see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
  *
@@ -759,7 +762,7 @@ DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const Deregist
     return qobject_cast<DeregisterElasticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregister a registered Amazon EC2 or on-premises instance. This action removes the instance from the stack and returns
  * it to your control. This action can not be used with instances that were created with AWS OpsWorks
  *
@@ -780,7 +783,7 @@ DeregisterInstanceResponse * OpsWorksClient::deregisterInstance(const Deregister
     return qobject_cast<DeregisterInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters an Amazon RDS
  *
  * instance>
@@ -800,7 +803,7 @@ DeregisterRdsDbInstanceResponse * OpsWorksClient::deregisterRdsDbInstance(const 
     return qobject_cast<DeregisterRdsDbInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters an Amazon EBS volume. The volume can then be registered by another stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
  *
@@ -821,7 +824,7 @@ DeregisterVolumeResponse * OpsWorksClient::deregisterVolume(const DeregisterVolu
     return qobject_cast<DeregisterVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the available AWS OpsWorks Stacks agent versions. You must specify a stack ID or a configuration manager.
  * <code>DescribeAgentVersions</code> returns a list of available agent versions for the specified stack or configuration
  *
@@ -836,7 +839,7 @@ DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const Desc
     return qobject_cast<DescribeAgentVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a description of a specified set of
  *
  * apps> <note>
@@ -860,7 +863,7 @@ DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &r
     return qobject_cast<DescribeAppsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the results of specified
  *
  * commands> <note>
@@ -884,7 +887,7 @@ DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeComman
     return qobject_cast<DescribeCommandsResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a description of a specified set of
  *
  * deployments> <note>
@@ -908,7 +911,7 @@ DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const Describe
     return qobject_cast<DescribeDeploymentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes Amazon ECS clusters that are registered with a stack. If you specify only a stack ID, you can use the
  * <code>MaxResults</code> and <code>NextToken</code> parameters to paginate the response. However, AWS OpsWorks Stacks
  * currently supports only one cluster per layer, so the result set has a maximum of one
@@ -934,7 +937,7 @@ DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const Describe
     return qobject_cast<DescribeEcsClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP
  *
  * addresses</a>> <note>
@@ -958,7 +961,7 @@ DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeEl
     return qobject_cast<DescribeElasticIpsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a stack's Elastic Load Balancing
  *
  * instances> <note>
@@ -982,7 +985,7 @@ DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalanc
     return qobject_cast<DescribeElasticLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a description of a set of
  *
  * instances> <note>
@@ -1006,7 +1009,7 @@ DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInst
     return qobject_cast<DescribeInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a description of one or more layers in a specified
  *
  * stack> <note>
@@ -1030,7 +1033,7 @@ DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequ
     return qobject_cast<DescribeLayersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes load-based auto scaling configurations for specified
  *
  * layers> <note>
@@ -1054,7 +1057,7 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
     return qobject_cast<DescribeLoadBasedAutoScalingResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a user's SSH
  *
  * information>
@@ -1074,7 +1077,7 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
     return qobject_cast<DescribeMyUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the operating systems that are supported by AWS OpsWorks
  *
  * @param  request Request to send to AWS OpsWorks.
@@ -1088,7 +1091,7 @@ DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
     return qobject_cast<DescribeOperatingSystemsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the permissions for a specified
  *
  * stack>
@@ -1108,7 +1111,7 @@ DescribePermissionsResponse * OpsWorksClient::describePermissions(const Describe
     return qobject_cast<DescribePermissionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe an instance's RAID
  *
  * arrays> <note>
@@ -1132,7 +1135,7 @@ DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRa
     return qobject_cast<DescribeRaidArraysResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes Amazon RDS
  *
  * instances>
@@ -1156,7 +1159,7 @@ DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const De
     return qobject_cast<DescribeRdsDbInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes AWS OpsWorks Stacks service
  *
  * errors>
@@ -1180,7 +1183,7 @@ DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const Desc
     return qobject_cast<DescribeServiceErrorsResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a description of a stack's provisioning
  *
  * parameters>
@@ -1200,7 +1203,7 @@ DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvi
     return qobject_cast<DescribeStackProvisioningParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the number of layers and apps in a specified stack, and the number of instances in each state, such as
  * <code>running_setup</code> or
  *
@@ -1221,7 +1224,7 @@ DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const Descri
     return qobject_cast<DescribeStackSummaryResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests a description of one or more
  *
  * stacks>
@@ -1241,7 +1244,7 @@ DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequ
     return qobject_cast<DescribeStacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes time-based auto scaling configurations for specified
  *
  * instances> <note>
@@ -1265,7 +1268,7 @@ DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScal
     return qobject_cast<DescribeTimeBasedAutoScalingResponse *>(send(request));
 }
 
-/**
+/*!
  * Describe specified
  *
  * users>
@@ -1285,7 +1288,7 @@ DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const Descri
     return qobject_cast<DescribeUserProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes an instance's Amazon EBS
  *
  * volumes> <note>
@@ -1309,7 +1312,7 @@ DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesR
     return qobject_cast<DescribeVolumesResponse *>(send(request));
 }
 
-/**
+/*!
  * Detaches a specified Elastic Load Balancing instance from its
  *
  * layer>
@@ -1329,7 +1332,7 @@ DetachElasticLoadBalancerResponse * OpsWorksClient::detachElasticLoadBalancer(co
     return qobject_cast<DetachElasticLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates an Elastic IP address from its instance. The address remains registered with the stack. For more
  * information, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
  *
@@ -1350,7 +1353,7 @@ DisassociateElasticIpResponse * OpsWorksClient::disassociateElasticIp(const Disa
     return qobject_cast<DisassociateElasticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a generated host name for the specified layer, based on the current host name
  *
  * theme>
@@ -1370,7 +1373,7 @@ GetHostnameSuggestionResponse * OpsWorksClient::getHostnameSuggestion(const GetH
     return qobject_cast<GetHostnameSuggestionResponse *>(send(request));
 }
 
-/**
+/*!
  * <note>
  *
  * This action can be used only with Windows
@@ -1390,7 +1393,7 @@ GrantAccessResponse * OpsWorksClient::grantAccess(const GrantAccessRequest &requ
     return qobject_cast<GrantAccessResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of tags that are applied to the specified stack or
  *
  * @param  request Request to send to AWS OpsWorks.
@@ -1404,7 +1407,7 @@ ListTagsResponse * OpsWorksClient::listTags(const ListTagsRequest &request)
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Reboots a specified instance. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-starting.html">Starting, Stopping, and
  * Rebooting
@@ -1426,7 +1429,7 @@ RebootInstanceResponse * OpsWorksClient::rebootInstance(const RebootInstanceRequ
     return qobject_cast<RebootInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers a specified Amazon ECS cluster with a stack. You can register only one cluster with a stack. A cluster can be
  * registered with only one stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-ecscluster.html"> Resource
@@ -1448,7 +1451,7 @@ RegisterEcsClusterResponse * OpsWorksClient::registerEcsCluster(const RegisterEc
     return qobject_cast<RegisterEcsClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers an Elastic IP address with a specified stack. An address can be registered with only one stack at a time. If
  * the address is already registered, you must first deregister it by calling <a>DeregisterElasticIp</a>. For more
  * information, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
@@ -1470,7 +1473,7 @@ RegisterElasticIpResponse * OpsWorksClient::registerElasticIp(const RegisterElas
     return qobject_cast<RegisterElasticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers instances that were created outside of AWS OpsWorks Stacks with a specified
  *
  * stack> <note>
@@ -1507,7 +1510,7 @@ RegisterInstanceResponse * OpsWorksClient::registerInstance(const RegisterInstan
     return qobject_cast<RegisterInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers an Amazon RDS instance with a
  *
  * stack>
@@ -1527,7 +1530,7 @@ RegisterRdsDbInstanceResponse * OpsWorksClient::registerRdsDbInstance(const Regi
     return qobject_cast<RegisterRdsDbInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers an Amazon EBS volume with a specified stack. A volume can be registered with only one stack at a time. If the
  * volume is already registered, you must first deregister it by calling <a>DeregisterVolume</a>. For more information, see
  * <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
@@ -1549,7 +1552,7 @@ RegisterVolumeResponse * OpsWorksClient::registerVolume(const RegisterVolumeRequ
     return qobject_cast<RegisterVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Specify the load-based auto scaling configuration for a specified layer. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autoscaling.html">Managing Load with
  * Time-based and Load-based
@@ -1577,7 +1580,7 @@ SetLoadBasedAutoScalingResponse * OpsWorksClient::setLoadBasedAutoScaling(const 
     return qobject_cast<SetLoadBasedAutoScalingResponse *>(send(request));
 }
 
-/**
+/*!
  * Specifies a user's permissions. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingsecurity.html">Security and
  *
@@ -1598,7 +1601,7 @@ SetPermissionResponse * OpsWorksClient::setPermission(const SetPermissionRequest
     return qobject_cast<SetPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Specify the time-based auto scaling configuration for a specified instance. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autoscaling.html">Managing Load with
  * Time-based and Load-based
@@ -1620,7 +1623,7 @@ SetTimeBasedAutoScalingResponse * OpsWorksClient::setTimeBasedAutoScaling(const 
     return qobject_cast<SetTimeBasedAutoScalingResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a specified instance. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-starting.html">Starting, Stopping, and
  * Rebooting
@@ -1642,7 +1645,7 @@ StartInstanceResponse * OpsWorksClient::startInstance(const StartInstanceRequest
     return qobject_cast<StartInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a stack's
  *
  * instances>
@@ -1662,7 +1665,7 @@ StartStackResponse * OpsWorksClient::startStack(const StartStackRequest &request
     return qobject_cast<StartStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a specified instance. When you stop a standard instance, the data disappears and must be reinstalled when you
  * restart the instance. You can stop an Amazon EBS-backed instance without losing data. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-starting.html">Starting, Stopping, and
@@ -1685,7 +1688,7 @@ StopInstanceResponse * OpsWorksClient::stopInstance(const StopInstanceRequest &r
     return qobject_cast<StopInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a specified
  *
  * stack>
@@ -1705,7 +1708,7 @@ StopStackResponse * OpsWorksClient::stopStack(const StopStackRequest &request)
     return qobject_cast<StopStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Apply cost-allocation tags to a specified stack or layer in AWS OpsWorks Stacks. For more information about how tagging
  * works, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/tagging.html">Tags</a> in the AWS OpsWorks User
  *
@@ -1720,7 +1723,7 @@ TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &requ
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Unassigns a registered instance from all of it's layers. The instance remains in the stack as an unassigned instance and
  * can be assigned to another layer, as needed. You cannot use this action with instances that were created with AWS
  * OpsWorks
@@ -1742,7 +1745,7 @@ UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstan
     return qobject_cast<UnassignInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Unassigns an assigned Amazon EBS volume. The volume remains registered with the stack. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
  *
@@ -1763,7 +1766,7 @@ UnassignVolumeResponse * OpsWorksClient::unassignVolume(const UnassignVolumeRequ
     return qobject_cast<UnassignVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes tags from a specified stack or
  *
  * @param  request Request to send to AWS OpsWorks.
@@ -1777,7 +1780,7 @@ UntagResourceResponse * OpsWorksClient::untagResource(const UntagResourceRequest
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a specified
  *
  * app>
@@ -1797,7 +1800,7 @@ UpdateAppResponse * OpsWorksClient::updateApp(const UpdateAppRequest &request)
     return qobject_cast<UpdateAppResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a registered Elastic IP address's name. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
  *
@@ -1818,7 +1821,7 @@ UpdateElasticIpResponse * OpsWorksClient::updateElasticIp(const UpdateElasticIpR
     return qobject_cast<UpdateElasticIpResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a specified
  *
  * instance>
@@ -1838,7 +1841,7 @@ UpdateInstanceResponse * OpsWorksClient::updateInstance(const UpdateInstanceRequ
     return qobject_cast<UpdateInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a specified
  *
  * layer>
@@ -1858,7 +1861,7 @@ UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &requ
     return qobject_cast<UpdateLayerResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a user's SSH public
  *
  * key>
@@ -1878,7 +1881,7 @@ UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMy
     return qobject_cast<UpdateMyUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an Amazon RDS
  *
  * instance>
@@ -1898,7 +1901,7 @@ UpdateRdsDbInstanceResponse * OpsWorksClient::updateRdsDbInstance(const UpdateRd
     return qobject_cast<UpdateRdsDbInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a specified
  *
  * stack>
@@ -1918,7 +1921,7 @@ UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &requ
     return qobject_cast<UpdateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a specified user
  *
  * profile>
@@ -1938,7 +1941,7 @@ UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserPr
     return qobject_cast<UpdateUserProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an Amazon EBS volume's name or mount point. For more information, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html">Resource
  *
@@ -1959,7 +1962,7 @@ UpdateVolumeResponse * OpsWorksClient::updateVolume(const UpdateVolumeRequest &r
     return qobject_cast<UpdateVolumeResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  OpsWorksClientPrivate
@@ -1967,7 +1970,7 @@ UpdateVolumeResponse * OpsWorksClient::updateVolume(const UpdateVolumeRequest &r
  * @brief  Private implementation for OpsWorksClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new OpsWorksClientPrivate object.

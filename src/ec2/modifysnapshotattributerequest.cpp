@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifySnapshotAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifySnapshotAttributeRequest
  *
- * @brief  Implements EC2 ModifySnapshotAttribute requests.
+ * \brief The ModifySnapshotAttributeRequest class encapsulates EC2 ModifySnapshotAttribute requests.
  *
- * @see    EC2Client::modifySnapshotAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifySnapshotAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifySnapshotAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest(const ModifySnaps
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifySnapshotAttributeRequest object.
  */
 ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest()
@@ -53,13 +60,16 @@ ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifySnapshotAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifySnapshotAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotAttributeRequest::response(QNet
     return new ModifySnapshotAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifySnapshotAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotAttributeRequest::response(QNet
  * @brief  Private implementation for ModifySnapshotAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySnapshotAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySnapshotAttributeRequestPrivate object, copying another.

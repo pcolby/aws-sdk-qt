@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDeleteUserAttributesRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDeleteUserAttributesRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminDeleteUserAttributes requests.
+ * \brief The AdminDeleteUserAttributesRequest class encapsulates CognitoIdentityProvider AdminDeleteUserAttributes requests.
  *
- * @see    CognitoIdentityProviderClient::adminDeleteUserAttributes
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDeleteUserAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDeleteUserAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminDeleteUserAttributesRequest::AdminDeleteUserAttributesRequest(const AdminDe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminDeleteUserAttributesRequest object.
  */
 AdminDeleteUserAttributesRequest::AdminDeleteUserAttributesRequest()
@@ -53,13 +66,16 @@ AdminDeleteUserAttributesRequest::AdminDeleteUserAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminDeleteUserAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminDeleteUserAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserAttributesRequest::response(QN
     return new AdminDeleteUserAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminDeleteUserAttributesRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserAttributesRequest::response(QN
  * @brief  Private implementation for AdminDeleteUserAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDeleteUserAttributesRequestPrivate object.
@@ -97,7 +113,7 @@ AdminDeleteUserAttributesRequestPrivate::AdminDeleteUserAttributesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDeleteUserAttributesRequestPrivate object, copying another.

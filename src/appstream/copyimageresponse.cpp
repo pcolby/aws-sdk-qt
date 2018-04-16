@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CopyImageResponse
+/*!
+ * \class QtAws::AppStream::CopyImageResponse
  *
- * @brief  Handles AppStream CopyImage responses.
+ * \brief The CopyImageResponse class encapsulates AppStream CopyImage responses.
  *
- * @see    AppStreamClient::copyImage
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::copyImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CopyImageRequest * CopyImageResponse::request() const
     return static_cast<const CopyImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream CopyImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CopyImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopyImageResponsePrivate
+ * \class CopyImageResponsePrivate
  *
- * @brief  Private implementation for CopyImageResponse.
+ * \brief Private implementation for CopyImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyImageResponsePrivate object.
@@ -91,7 +97,7 @@ CopyImageResponsePrivate::CopyImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream CopyImageResponse element.
  *
  * @param  xml  XML stream to parse.

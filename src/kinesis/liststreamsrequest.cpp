@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  ListStreamsRequest
+/*!
+ * \class QtAws::Kinesis::ListStreamsRequest
  *
- * @brief  Implements Kinesis ListStreams requests.
+ * \brief The ListStreamsRequest class encapsulates Kinesis ListStreams requests.
  *
- * @see    KinesisClient::listStreams
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::listStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
@@ -53,13 +59,16 @@ ListStreamsRequest::ListStreamsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStreamsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStreamsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
     return new ListStreamsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStreamsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListStreamsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object.
@@ -97,7 +106,7 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsRequestPrivate object, copying another.

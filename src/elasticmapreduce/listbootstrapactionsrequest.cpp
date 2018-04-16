@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListBootstrapActionsRequest
+/*!
+ * \class QtAws::EMR::ListBootstrapActionsRequest
  *
- * @brief  Implements EMR ListBootstrapActions requests.
+ * \brief The ListBootstrapActionsRequest class encapsulates EMR ListBootstrapActions requests.
  *
- * @see    EMRClient::listBootstrapActions
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listBootstrapActions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBootstrapActionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListBootstrapActionsRequest::ListBootstrapActionsRequest(const ListBootstrapActi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBootstrapActionsRequest object.
  */
 ListBootstrapActionsRequest::ListBootstrapActionsRequest()
@@ -53,13 +59,16 @@ ListBootstrapActionsRequest::ListBootstrapActionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBootstrapActionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBootstrapActionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetwor
     return new ListBootstrapActionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBootstrapActionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetwor
  * @brief  Private implementation for ListBootstrapActionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBootstrapActionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBootstrapActionsRequestPrivate object, copying another.

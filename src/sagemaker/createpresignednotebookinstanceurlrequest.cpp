@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  CreatePresignedNotebookInstanceUrlRequest
+/*!
+ * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlRequest
  *
- * @brief  Implements SageMaker CreatePresignedNotebookInstanceUrl requests.
+ * \brief The CreatePresignedNotebookInstanceUrlRequest class encapsulates SageMaker CreatePresignedNotebookInstanceUrl requests.
  *
- * @see    SageMakerClient::createPresignedNotebookInstanceUrl
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::createPresignedNotebookInstanceUrl
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreatePresignedNotebookInstanceUrlRequest::CreatePresignedNotebookInstanceUrlReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequest object.
  */
 CreatePresignedNotebookInstanceUrlRequest::CreatePresignedNotebookInstanceUrlRequest()
@@ -53,13 +56,16 @@ CreatePresignedNotebookInstanceUrlRequest::CreatePresignedNotebookInstanceUrlReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePresignedNotebookInstanceUrlRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePresignedNotebookInstanceUrlResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::re
     return new CreatePresignedNotebookInstanceUrlResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePresignedNotebookInstanceUrlRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::re
  * @brief  Private implementation for CreatePresignedNotebookInstanceUrlRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequestPrivate object.
@@ -97,7 +103,7 @@ CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanc
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePresignedNotebookInstanceUrlRequestPrivate object, copying another.

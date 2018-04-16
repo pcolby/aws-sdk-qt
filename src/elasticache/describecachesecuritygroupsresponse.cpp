@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheSecurityGroupsResponse
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheSecurityGroupsResponse
  *
- * @brief  Handles ElastiCache DescribeCacheSecurityGroups responses.
+ * \brief The DescribeCacheSecurityGroupsResponse class encapsulates ElastiCache DescribeCacheSecurityGroups responses.
  *
- * @see    ElastiCacheClient::describeCacheSecurityGroups
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheSecurityGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeCacheSecurityGroupsRequest * DescribeCacheSecurityGroupsResponse::
     return static_cast<const DescribeCacheSecurityGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DescribeCacheSecurityGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeCacheSecurityGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCacheSecurityGroupsResponsePrivate
+ * \class DescribeCacheSecurityGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribeCacheSecurityGroupsResponse.
+ * \brief Private implementation for DescribeCacheSecurityGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheSecurityGroupsResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeCacheSecurityGroupsResponsePrivate::DescribeCacheSecurityGroupsResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DescribeCacheSecurityGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

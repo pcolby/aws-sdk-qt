@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  ListStreamProcessorsRequest
+/*!
+ * \class QtAws::Rekognition::ListStreamProcessorsRequest
  *
- * @brief  Implements Rekognition ListStreamProcessors requests.
+ * \brief The ListStreamProcessorsRequest class encapsulates Rekognition ListStreamProcessors requests.
  *
- * @see    RekognitionClient::listStreamProcessors
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::listStreamProcessors
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamProcessorsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListStreamProcessorsRequest::ListStreamProcessorsRequest(const ListStreamProcess
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListStreamProcessorsRequest object.
  */
 ListStreamProcessorsRequest::ListStreamProcessorsRequest()
@@ -53,13 +57,16 @@ ListStreamProcessorsRequest::ListStreamProcessorsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListStreamProcessorsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListStreamProcessorsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetwor
     return new ListStreamProcessorsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListStreamProcessorsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetwor
  * @brief  Private implementation for ListStreamProcessorsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamProcessorsRequestPrivate object.
@@ -97,7 +104,7 @@ ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamProcessorsRequestPrivate object, copying another.

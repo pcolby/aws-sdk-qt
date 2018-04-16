@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  ListPoliciesRequest
+/*!
+ * \class QtAws::FMS::ListPoliciesRequest
  *
- * @brief  Implements FMS ListPolicies requests.
+ * \brief The ListPoliciesRequest class encapsulates FMS ListPolicies requests.
  *
- * @see    FMSClient::listPolicies
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::listPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListPoliciesRequest::ListPoliciesRequest(const ListPoliciesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPoliciesRequest object.
  */
 ListPoliciesRequest::ListPoliciesRequest()
@@ -53,13 +62,16 @@ ListPoliciesRequest::ListPoliciesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPoliciesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPoliciesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListPoliciesRequest::response(QNetworkReply *
     return new ListPoliciesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPoliciesRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListPoliciesRequest::response(QNetworkReply *
  * @brief  Private implementation for ListPoliciesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPoliciesRequestPrivate object.
@@ -97,7 +109,7 @@ ListPoliciesRequestPrivate::ListPoliciesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPoliciesRequestPrivate object, copying another.

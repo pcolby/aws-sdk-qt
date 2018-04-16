@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteApiKeyResponse
+/*!
+ * \class QtAws::AppSync::DeleteApiKeyResponse
  *
- * @brief  Handles AppSync DeleteApiKey responses.
+ * \brief The DeleteApiKeyResponse class encapsulates AppSync DeleteApiKey responses.
  *
- * @see    AppSyncClient::deleteApiKey
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApiKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
     return static_cast<const DeleteApiKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync DeleteApiKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteApiKeyResponsePrivate
+ * \class DeleteApiKeyResponsePrivate
  *
- * @brief  Private implementation for DeleteApiKeyResponse.
+ * \brief Private implementation for DeleteApiKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApiKeyResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync DeleteApiKeyResponse element.
  *
  * @param  xml  XML stream to parse.

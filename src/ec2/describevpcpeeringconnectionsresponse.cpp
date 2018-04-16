@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcPeeringConnectionsResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcPeeringConnectionsResponse
  *
- * @brief  Handles EC2 DescribeVpcPeeringConnections responses.
+ * \brief The DescribeVpcPeeringConnectionsResponse class encapsulates EC2 DescribeVpcPeeringConnections responses.
  *
- * @see    EC2Client::describeVpcPeeringConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcPeeringConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcPeeringConnectionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcPeeringConnectionsRequest * DescribeVpcPeeringConnectionsRespon
     return static_cast<const DescribeVpcPeeringConnectionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcPeeringConnections response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcPeeringConnectionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcPeeringConnectionsResponsePrivate
+ * \class DescribeVpcPeeringConnectionsResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcPeeringConnectionsResponse.
+ * \brief Private implementation for DescribeVpcPeeringConnectionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcPeeringConnectionsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcPeeringConnectionsResponsePrivate::DescribeVpcPeeringConnectionsRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcPeeringConnectionsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProductRequest
  *
- * @brief  Implements ServiceCatalog DescribeProduct requests.
+ * \brief The DescribeProductRequest class encapsulates ServiceCatalog DescribeProduct requests.
  *
- * @see    ServiceCatalogClient::describeProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProductRequest::DescribeProductRequest(const DescribeProductRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductRequest object.
  */
 DescribeProductRequest::DescribeProductRequest()
@@ -53,13 +62,16 @@ DescribeProductRequest::DescribeProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductRequest::response(QNetworkRepl
     return new DescribeProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProductRequestPrivate::DescribeProductRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductRequestPrivate object, copying another.

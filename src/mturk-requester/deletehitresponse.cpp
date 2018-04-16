@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  DeleteHITResponse
+/*!
+ * \class QtAws::MTurk::DeleteHITResponse
  *
- * @brief  Handles MTurk DeleteHIT responses.
+ * \brief The DeleteHITResponse class encapsulates MTurk DeleteHIT responses.
  *
- * @see    MTurkClient::deleteHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::deleteHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHITResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteHITRequest * DeleteHITResponse::request() const
     return static_cast<const DeleteHITRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk DeleteHIT response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteHITResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteHITResponsePrivate
+ * \class DeleteHITResponsePrivate
  *
- * @brief  Private implementation for DeleteHITResponse.
+ * \brief Private implementation for DeleteHITResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHITResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteHITResponsePrivate::DeleteHITResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk DeleteHITResponse element.
  *
  * @param  xml  XML stream to parse.

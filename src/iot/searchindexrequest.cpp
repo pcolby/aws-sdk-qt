@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  SearchIndexRequest
+/*!
+ * \class QtAws::IoT::SearchIndexRequest
  *
- * @brief  Implements IoT SearchIndex requests.
+ * \brief The SearchIndexRequest class encapsulates IoT SearchIndex requests.
  *
- * @see    IoTClient::searchIndex
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::searchIndex
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SearchIndexRequest::SearchIndexRequest(const SearchIndexRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchIndexRequest object.
  */
 SearchIndexRequest::SearchIndexRequest()
@@ -53,13 +67,16 @@ SearchIndexRequest::SearchIndexRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchIndexRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchIndexResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SearchIndexRequest::response(QNetworkReply * 
     return new SearchIndexResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchIndexRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SearchIndexRequest::response(QNetworkReply * 
  * @brief  Private implementation for SearchIndexRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchIndexRequestPrivate object.
@@ -97,7 +114,7 @@ SearchIndexRequestPrivate::SearchIndexRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchIndexRequestPrivate object, copying another.

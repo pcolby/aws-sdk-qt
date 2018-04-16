@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteKeyPairResponse
+/*!
+ * \class QtAws::EC2::DeleteKeyPairResponse
  *
- * @brief  Handles EC2 DeleteKeyPair responses.
+ * \brief The DeleteKeyPairResponse class encapsulates EC2 DeleteKeyPair responses.
  *
- * @see    EC2Client::deleteKeyPair
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteKeyPair
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteKeyPairResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
     return static_cast<const DeleteKeyPairRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteKeyPair response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteKeyPairResponsePrivate
+ * \class DeleteKeyPairResponsePrivate
  *
- * @brief  Private implementation for DeleteKeyPairResponse.
+ * \brief Private implementation for DeleteKeyPairResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteKeyPairResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteKeyPairResponse element.
  *
  * @param  xml  XML stream to parse.

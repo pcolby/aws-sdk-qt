@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetAuthorizationTokenResponse
+/*!
+ * \class QtAws::ECR::GetAuthorizationTokenResponse
  *
- * @brief  Handles ECR GetAuthorizationToken responses.
+ * \brief The GetAuthorizationTokenResponse class encapsulates ECR GetAuthorizationToken responses.
  *
- * @see    ECRClient::getAuthorizationToken
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getAuthorizationToken
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizationTokenResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() co
     return static_cast<const GetAuthorizationTokenRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR GetAuthorizationToken response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAuthorizationTokenResponsePrivate
+ * \class GetAuthorizationTokenResponsePrivate
  *
- * @brief  Private implementation for GetAuthorizationTokenResponse.
+ * \brief Private implementation for GetAuthorizationTokenResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizationTokenResponsePrivate object.
@@ -91,7 +98,7 @@ GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR GetAuthorizationTokenResponse element.
  *
  * @param  xml  XML stream to parse.

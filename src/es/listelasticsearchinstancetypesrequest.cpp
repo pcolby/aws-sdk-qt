@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ListElasticsearchInstanceTypesRequest
+/*!
+ * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesRequest
  *
- * @brief  Implements ElasticsearchService ListElasticsearchInstanceTypes requests.
+ * \brief The ListElasticsearchInstanceTypesRequest class encapsulates ElasticsearchService ListElasticsearchInstanceTypes requests.
  *
- * @see    ElasticsearchServiceClient::listElasticsearchInstanceTypes
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::listElasticsearchInstanceTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListElasticsearchInstanceTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListElasticsearchInstanceTypesRequest object.
  */
 ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest()
@@ -53,13 +65,16 @@ ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListElasticsearchInstanceTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListElasticsearchInstanceTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::respon
     return new ListElasticsearchInstanceTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListElasticsearchInstanceTypesRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::respon
  * @brief  Private implementation for ListElasticsearchInstanceTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListElasticsearchInstanceTypesRequestPrivate object.
@@ -97,7 +112,7 @@ ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListElasticsearchInstanceTypesRequestPrivate object, copying another.

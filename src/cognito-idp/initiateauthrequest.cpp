@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  InitiateAuthRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::InitiateAuthRequest
  *
- * @brief  Implements CognitoIdentityProvider InitiateAuth requests.
+ * \brief The InitiateAuthRequest class encapsulates CognitoIdentityProvider InitiateAuth requests.
  *
- * @see    CognitoIdentityProviderClient::initiateAuth
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::initiateAuth
  */
 
-/**
+/*!
  * @brief  Constructs a new InitiateAuthRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ InitiateAuthRequest::InitiateAuthRequest(const InitiateAuthRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InitiateAuthRequest object.
  */
 InitiateAuthRequest::InitiateAuthRequest()
@@ -53,13 +66,16 @@ InitiateAuthRequest::InitiateAuthRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InitiateAuthRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InitiateAuthResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * InitiateAuthRequest::response(QNetworkReply *
     return new InitiateAuthResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InitiateAuthRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * InitiateAuthRequest::response(QNetworkReply *
  * @brief  Private implementation for InitiateAuthRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitiateAuthRequestPrivate object.
@@ -97,7 +113,7 @@ InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitiateAuthRequestPrivate object, copying another.

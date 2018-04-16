@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyInstanceCreditSpecificationResponse
+/*!
+ * \class QtAws::EC2::ModifyInstanceCreditSpecificationResponse
  *
- * @brief  Handles EC2 ModifyInstanceCreditSpecification responses.
+ * \brief The ModifyInstanceCreditSpecificationResponse class encapsulates EC2 ModifyInstanceCreditSpecification responses.
  *
- * @see    EC2Client::modifyInstanceCreditSpecification
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyInstanceCreditSpecification
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceCreditSpecificationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyInstanceCreditSpecificationRequest * ModifyInstanceCreditSpecificati
     return static_cast<const ModifyInstanceCreditSpecificationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyInstanceCreditSpecification response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyInstanceCreditSpecificationResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyInstanceCreditSpecificationResponsePrivate
+ * \class ModifyInstanceCreditSpecificationResponsePrivate
  *
- * @brief  Private implementation for ModifyInstanceCreditSpecificationResponse.
+ * \brief Private implementation for ModifyInstanceCreditSpecificationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceCreditSpecificationResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificat
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyInstanceCreditSpecificationResponse element.
  *
  * @param  xml  XML stream to parse.

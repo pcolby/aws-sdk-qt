@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  InitiateLayerUploadRequest
+/*!
+ * \class QtAws::ECR::InitiateLayerUploadRequest
  *
- * @brief  Implements ECR InitiateLayerUpload requests.
+ * \brief The InitiateLayerUploadRequest class encapsulates ECR InitiateLayerUpload requests.
  *
- * @see    ECRClient::initiateLayerUpload
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::initiateLayerUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new InitiateLayerUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ InitiateLayerUploadRequest::InitiateLayerUploadRequest(const InitiateLayerUpload
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InitiateLayerUploadRequest object.
  */
 InitiateLayerUploadRequest::InitiateLayerUploadRequest()
@@ -53,13 +60,16 @@ InitiateLayerUploadRequest::InitiateLayerUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InitiateLayerUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InitiateLayerUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
     return new InitiateLayerUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InitiateLayerUploadRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
  * @brief  Private implementation for InitiateLayerUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitiateLayerUploadRequestPrivate object.
@@ -97,7 +107,7 @@ InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InitiateLayerUploadRequestPrivate object, copying another.

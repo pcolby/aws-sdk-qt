@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeMetricCollectionTypesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeMetricCollectionTypesResponse
  *
- * @brief  Handles AutoScaling DescribeMetricCollectionTypes responses.
+ * \brief The DescribeMetricCollectionTypesResponse class encapsulates AutoScaling DescribeMetricCollectionTypes responses.
  *
- * @see    AutoScalingClient::describeMetricCollectionTypes
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeMetricCollectionTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMetricCollectionTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeMetricCollectionTypesRequest * DescribeMetricCollectionTypesRespon
     return static_cast<const DescribeMetricCollectionTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeMetricCollectionTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeMetricCollectionTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeMetricCollectionTypesResponsePrivate
+ * \class DescribeMetricCollectionTypesResponsePrivate
  *
- * @brief  Private implementation for DescribeMetricCollectionTypesResponse.
+ * \brief Private implementation for DescribeMetricCollectionTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMetricCollectionTypesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeMetricCollectionTypesResponse element.
  *
  * @param  xml  XML stream to parse.

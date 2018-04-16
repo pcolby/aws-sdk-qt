@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AllocateHostsResponse
+/*!
+ * \class QtAws::EC2::AllocateHostsResponse
  *
- * @brief  Handles EC2 AllocateHosts responses.
+ * \brief The AllocateHostsResponse class encapsulates EC2 AllocateHosts responses.
  *
- * @see    EC2Client::allocateHosts
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::allocateHosts
  */
 
-/**
+/*!
  * @brief  Constructs a new AllocateHostsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AllocateHostsRequest * AllocateHostsResponse::request() const
     return static_cast<const AllocateHostsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AllocateHosts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AllocateHostsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AllocateHostsResponsePrivate
+ * \class AllocateHostsResponsePrivate
  *
- * @brief  Private implementation for AllocateHostsResponse.
+ * \brief Private implementation for AllocateHostsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AllocateHostsResponsePrivate object.
@@ -91,7 +98,7 @@ AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AllocateHostsResponse element.
  *
  * @param  xml  XML stream to parse.

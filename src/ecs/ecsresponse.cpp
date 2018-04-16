@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ECS {
 
-/**
- * @class  ECSResponse
+/*!
+ * \class QtAws::ECS::ECSResponse
  *
- * @brief  Handles ECS ECS responses.
+ * \brief The ECSResponse class is the base class for all ECS responses.
  *
- * @see    ECSClient::eCS
+ * \ingroup ECS
  */
 
-/**
+/*!
  * @brief  Constructs a new ECSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ECSResponse::ECSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ECSResponse object.
@@ -63,7 +63,7 @@ ECSResponse::ECSResponse(ECSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ECSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ECSResponsePrivate
@@ -92,7 +92,7 @@ void ECSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ECSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ECSResponsePrivate object.

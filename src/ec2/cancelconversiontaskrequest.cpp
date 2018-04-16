@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelConversionTaskRequest
+/*!
+ * \class QtAws::EC2::CancelConversionTaskRequest
  *
- * @brief  Implements EC2 CancelConversionTask requests.
+ * \brief The CancelConversionTaskRequest class encapsulates EC2 CancelConversionTask requests.
  *
- * @see    EC2Client::cancelConversionTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelConversionTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelConversionTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CancelConversionTaskRequest::CancelConversionTaskRequest(const CancelConversionT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelConversionTaskRequest object.
  */
 CancelConversionTaskRequest::CancelConversionTaskRequest()
@@ -53,13 +60,16 @@ CancelConversionTaskRequest::CancelConversionTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelConversionTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelConversionTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetwor
     return new CancelConversionTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelConversionTaskRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetwor
  * @brief  Private implementation for CancelConversionTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelConversionTaskRequestPrivate object.
@@ -97,7 +107,7 @@ CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelConversionTaskRequestPrivate object, copying another.

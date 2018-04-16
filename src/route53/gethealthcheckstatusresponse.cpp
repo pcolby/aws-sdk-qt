@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetHealthCheckStatusResponse
+/*!
+ * \class QtAws::Route53::GetHealthCheckStatusResponse
  *
- * @brief  Handles Route53 GetHealthCheckStatus responses.
+ * \brief The GetHealthCheckStatusResponse class encapsulates Route53 GetHealthCheckStatus responses.
  *
- * @see    Route53Client::getHealthCheckStatus
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getHealthCheckStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHealthCheckStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetHealthCheckStatusRequest * GetHealthCheckStatusResponse::request() cons
     return static_cast<const GetHealthCheckStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetHealthCheckStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetHealthCheckStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetHealthCheckStatusResponsePrivate
+ * \class GetHealthCheckStatusResponsePrivate
  *
- * @brief  Private implementation for GetHealthCheckStatusResponse.
+ * \brief Private implementation for GetHealthCheckStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHealthCheckStatusResponsePrivate object.
@@ -91,7 +94,7 @@ GetHealthCheckStatusResponsePrivate::GetHealthCheckStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetHealthCheckStatusResponse element.
  *
  * @param  xml  XML stream to parse.

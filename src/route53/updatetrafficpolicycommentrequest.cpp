@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  UpdateTrafficPolicyCommentRequest
+/*!
+ * \class QtAws::Route53::UpdateTrafficPolicyCommentRequest
  *
- * @brief  Implements Route53 UpdateTrafficPolicyComment requests.
+ * \brief The UpdateTrafficPolicyCommentRequest class encapsulates Route53 UpdateTrafficPolicyComment requests.
  *
- * @see    Route53Client::updateTrafficPolicyComment
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::updateTrafficPolicyComment
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest(const Updat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object.
  */
 UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest()
@@ -53,13 +56,16 @@ UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTrafficPolicyCommentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTrafficPolicyCommentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(Q
     return new UpdateTrafficPolicyCommentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTrafficPolicyCommentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(Q
  * @brief  Private implementation for UpdateTrafficPolicyCommentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTrafficPolicyCommentRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTrafficPolicyCommentRequestPrivate object, copying another.

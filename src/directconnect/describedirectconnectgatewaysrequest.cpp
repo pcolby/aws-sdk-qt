@@ -25,15 +25,26 @@
 namespace QtAws {
 namespace DirectConnect {
 
-/**
- * @class  DescribeDirectConnectGatewaysRequest
+/*!
+ * \class QtAws::DirectConnect::DescribeDirectConnectGatewaysRequest
  *
- * @brief  Implements DirectConnect DescribeDirectConnectGateways requests.
+ * \brief The DescribeDirectConnectGatewaysRequest class encapsulates DirectConnect DescribeDirectConnectGateways requests.
  *
- * @see    DirectConnectClient::describeDirectConnectGateways
+ * \ingroup DirectConnect
+ *
+ *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
+ *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
+ *  With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon
+ *  Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud
+ *  (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access
+ *  to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a
+ *  single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US
+ *  Regions and AWS GovCloud
+ *
+ * \sa DirectConnectClient::describeDirectConnectGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDirectConnectGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +55,7 @@ DescribeDirectConnectGatewaysRequest::DescribeDirectConnectGatewaysRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDirectConnectGatewaysRequest object.
  */
 DescribeDirectConnectGatewaysRequest::DescribeDirectConnectGatewaysRequest()
@@ -53,13 +64,16 @@ DescribeDirectConnectGatewaysRequest::DescribeDirectConnectGatewaysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDirectConnectGatewaysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDirectConnectGatewaysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewaysRequest::respons
     return new DescribeDirectConnectGatewaysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDirectConnectGatewaysRequestPrivate
@@ -82,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewaysRequest::respons
  * @brief  Private implementation for DescribeDirectConnectGatewaysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDirectConnectGatewaysRequestPrivate object.
@@ -97,7 +111,7 @@ DescribeDirectConnectGatewaysRequestPrivate::DescribeDirectConnectGatewaysReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDirectConnectGatewaysRequestPrivate object, copying another.

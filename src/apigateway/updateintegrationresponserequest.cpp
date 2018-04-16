@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateIntegrationResponseRequest
+/*!
+ * \class QtAws::APIGateway::UpdateIntegrationResponseRequest
  *
- * @brief  Implements APIGateway UpdateIntegrationResponse requests.
+ * \brief The UpdateIntegrationResponseRequest class encapsulates APIGateway UpdateIntegrationResponse requests.
  *
- * @see    APIGatewayClient::updateIntegrationResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateIntegrationResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIntegrationResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateIntegrationResponseRequest::UpdateIntegrationResponseRequest(const UpdateI
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateIntegrationResponseRequest object.
  */
 UpdateIntegrationResponseRequest::UpdateIntegrationResponseRequest()
@@ -53,13 +61,16 @@ UpdateIntegrationResponseRequest::UpdateIntegrationResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateIntegrationResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateIntegrationResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIntegrationResponseRequest::response(QN
     return new UpdateIntegrationResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateIntegrationResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIntegrationResponseRequest::response(QN
  * @brief  Private implementation for UpdateIntegrationResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIntegrationResponseRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateIntegrationResponseRequestPrivate::UpdateIntegrationResponseRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIntegrationResponseRequestPrivate object, copying another.

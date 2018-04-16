@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeScalingActivitiesRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeScalingActivitiesRequest
  *
- * @brief  Implements AutoScaling DescribeScalingActivities requests.
+ * \brief The DescribeScalingActivitiesRequest class encapsulates AutoScaling DescribeScalingActivities requests.
  *
- * @see    AutoScalingClient::describeScalingActivities
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeScalingActivities
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScalingActivitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeScalingActivitiesRequest object.
  */
 DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest()
@@ -53,13 +61,16 @@ DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeScalingActivitiesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeScalingActivitiesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QN
     return new DescribeScalingActivitiesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeScalingActivitiesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QN
  * @brief  Private implementation for DescribeScalingActivitiesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object, copying another.

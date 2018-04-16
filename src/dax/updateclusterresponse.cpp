@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UpdateClusterResponse
+/*!
+ * \class QtAws::DAX::UpdateClusterResponse
  *
- * @brief  Handles DAX UpdateCluster responses.
+ * \brief The UpdateClusterResponse class encapsulates DAX UpdateCluster responses.
  *
- * @see    DAXClient::updateCluster
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::updateCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateClusterRequest * UpdateClusterResponse::request() const
     return static_cast<const UpdateClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX UpdateCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateClusterResponsePrivate
+ * \class UpdateClusterResponsePrivate
  *
- * @brief  Private implementation for UpdateClusterResponse.
+ * \brief Private implementation for UpdateClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClusterResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX UpdateClusterResponse element.
  *
  * @param  xml  XML stream to parse.

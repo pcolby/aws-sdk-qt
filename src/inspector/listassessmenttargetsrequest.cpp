@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListAssessmentTargetsRequest
+/*!
+ * \class QtAws::Inspector::ListAssessmentTargetsRequest
  *
- * @brief  Implements Inspector ListAssessmentTargets requests.
+ * \brief The ListAssessmentTargetsRequest class encapsulates Inspector ListAssessmentTargets requests.
  *
- * @see    InspectorClient::listAssessmentTargets
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listAssessmentTargets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentTargetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListAssessmentTargetsRequest::ListAssessmentTargetsRequest(const ListAssessmentT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentTargetsRequest object.
  */
 ListAssessmentTargetsRequest::ListAssessmentTargetsRequest()
@@ -53,13 +61,16 @@ ListAssessmentTargetsRequest::ListAssessmentTargetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssessmentTargetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssessmentTargetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentTargetsRequest::response(QNetwo
     return new ListAssessmentTargetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssessmentTargetsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentTargetsRequest::response(QNetwo
  * @brief  Private implementation for ListAssessmentTargetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentTargetsRequestPrivate object.
@@ -97,7 +108,7 @@ ListAssessmentTargetsRequestPrivate::ListAssessmentTargetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentTargetsRequestPrivate object, copying another.

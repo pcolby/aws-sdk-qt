@@ -39,81 +39,89 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::STS
+ * \brief The QtAws::STS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace STS {
 
-/**
- * @class  StsClient
+/*!
+ * \class QtAws::STS::StsClient
  *
- * @brief  Client for AWS Security Token Service ( STS)
+ * \brief The StsClient class provides access the AWS Security Token Service ( STS) service.
  *
- * <fullname>AWS Security Token Service</fullname>
+ * \ingroup STS
  *
- * The AWS Security Token Service (STS) is a web service that enables you to request temporary, limited-privilege
- * credentials for AWS Identity and Access Management (IAM) users or for users that you authenticate (federated users).
- * This guide provides descriptions of the STS API. For more detailed information about using this service, go to <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a>.
- *
- * </p <note>
- *
- * As an alternative to using the API, you can use one of the AWS SDKs, which consist of libraries and sample code for
- * various programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to
- * create programmatic access to STS. For example, the SDKs take care of cryptographically signing requests, managing
- * errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install
- * them, see the <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services page</a>.
- *
- * </p </note>
- *
- * For information about setting up signatures and authorization through the API, go to <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html">Signing AWS API Requests</a> in the
- * <i>AWS General Reference</i>. For general information about the Query API, go to <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in <i>Using
- * IAM</i>. For information about using security tokens with other AWS products, go to <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">AWS Services That
- * Work with IAM</a> in the <i>IAM User Guide</i>.
- *
- * </p
- *
- * If you're new to AWS and need additional technical information about a specific AWS product, you can find the product's
- * technical documentation at <a href="http://aws.amazon.com/documentation/">http://aws.amazon.com/documentation/</a>.
- *
- * </p
- *
- * <b>Endpoints</b>
- *
- * </p
- *
- * The AWS Security Token Service (STS) has a default endpoint of https://sts.amazonaws.com that maps to the US East (N.
- * Virginia) region. Additional regions are available and are activated by default. For more information, see <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
- * Deactivating AWS STS in an AWS Region</a> in the <i>IAM User
- *
- * Guide</i>>
- *
- * For information about STS endpoints, see <a
- * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sts_region">Regions and Endpoints</a> in the <i>AWS
- * General
- *
- * Reference</i>>
- *
- * <b>Recording API requests</b>
- *
- * </p
- *
- * STS supports AWS CloudTrail, which is a service that records AWS calls for your AWS account and delivers log files to an
- * Amazon S3 bucket. By using information collected by CloudTrail, you can determine what requests were successfully made
- * to STS, who made the request, when it was made, and so on. To learn more about CloudTrail, including how to turn it on
- * and find your log files, see the <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
+ *  <fullname>AWS Security Token Service</fullname>
+ * 
+ *  The AWS Security Token Service (STS) is a web service that enables you to request temporary, limited-privilege
+ *  credentials for AWS Identity and Access Management (IAM) users or for users that you authenticate (federated users).
+ *  This guide provides descriptions of the STS API. For more detailed information about using this service, go to <a
+ *  href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a>.
+ * 
+ *  </p <note>
+ * 
+ *  As an alternative to using the API, you can use one of the AWS SDKs, which consist of libraries and sample code for
+ *  various programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.). The SDKs provide a convenient way to
+ *  create programmatic access to STS. For example, the SDKs take care of cryptographically signing requests, managing
+ *  errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install
+ *  them, see the <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services page</a>.
+ * 
+ *  </p </note>
+ * 
+ *  For information about setting up signatures and authorization through the API, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html">Signing AWS API Requests</a> in the
+ *  <i>AWS General Reference</i>. For general information about the Query API, go to <a
+ *  href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in <i>Using
+ *  IAM</i>. For information about using security tokens with other AWS products, go to <a
+ *  href="http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">AWS Services That
+ *  Work with IAM</a> in the <i>IAM User Guide</i>.
+ * 
+ *  </p
+ * 
+ *  If you're new to AWS and need additional technical information about a specific AWS product, you can find the product's
+ *  technical documentation at <a href="http://aws.amazon.com/documentation/">http://aws.amazon.com/documentation/</a>.
+ * 
+ *  </p
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  The AWS Security Token Service (STS) has a default endpoint of https://sts.amazonaws.com that maps to the US East (N.
+ *  Virginia) region. Additional regions are available and are activated by default. For more information, see <a
+ *  href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+ *  Deactivating AWS STS in an AWS Region</a> in the <i>IAM User
+ * 
+ *  Guide</i>>
+ * 
+ *  For information about STS endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sts_region">Regions and Endpoints</a> in the <i>AWS
+ *  General
+ * 
+ *  Reference</i>>
+ * 
+ *  <b>Recording API requests</b>
+ * 
+ *  </p
+ * 
+ *  STS supports AWS CloudTrail, which is a service that records AWS calls for your AWS account and delivers log files to an
+ *  Amazon S3 bucket. By using information collected by CloudTrail, you can determine what requests were successfully made
+ *  to STS, who made the request, when it was made, and so on. To learn more about CloudTrail, including how to turn it on
+ *  and find your log files, see the <a
+ *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  */
 
-/**
- * @brief  Constructs a new StsClient object.
+/*!
+ * \brief Constructs a StsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 StsClient::StsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -132,21 +140,16 @@ StsClient::StsClient(
     d->serviceName = QStringLiteral("sts");
 }
 
-/**
- * @brief  Constructs a new StsClient object.
+/*!
+ * \overload StsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 StsClient::StsClient(
     const QUrl &endpoint,
@@ -165,7 +168,7 @@ StsClient::StsClient(
     d->serviceName = QStringLiteral("sts");
 }
 
-/**
+/*!
  * Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security
  * token) that you can use to access AWS resources that you might not normally have access to. Typically, you use
  * <code>AssumeRole</code> for cross-account access or federation. For a comparison of <code>AssumeRole</code> with the
@@ -286,7 +289,7 @@ AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
     return qobject_cast<AssumeRoleResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a set of temporary security credentials for users who have been authenticated via a SAML authentication
  * response. This operation provides a mechanism for tying an enterprise identity store or directory to role-based AWS
  * access without user-specific credentials or configuration. For a comparison of <code>AssumeRoleWithSAML</code> with the
@@ -388,7 +391,7 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
     return qobject_cast<AssumeRoleWithSAMLResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a set of temporary security credentials for users who have been authenticated in a mobile or web application
  * with a web identity provider, such as Amazon Cognito, Login with Amazon, Facebook, Google, or any OpenID
  * Connect-compatible identity
@@ -512,7 +515,7 @@ AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const A
     return qobject_cast<AssumeRoleWithWebIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Decodes additional information about the authorization status of a request from an encoded message returned in response
  * to an AWS
  *
@@ -572,7 +575,7 @@ DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const
     return qobject_cast<DecodeAuthorizationMessageResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns details about the IAM identity whose credentials are used to call the
  *
  * @param  request Request to send to AWS Security Token Service.
@@ -586,7 +589,7 @@ GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentity
     return qobject_cast<GetCallerIdentityResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security
  * token) for a federated user. A typical use is in a proxy application that gets temporary security credentials on behalf
  * of distributed applications inside a corporate network. Because you must call the <code>GetFederationToken</code> action
@@ -696,7 +699,7 @@ GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTo
     return qobject_cast<GetFederationTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a set of temporary credentials for an AWS account or IAM user. The credentials consist of an access key ID, a
  * secret access key, and a security token. Typically, you use <code>GetSessionToken</code> if you want to use MFA to
  * protect programmatic calls to specific AWS APIs like Amazon EC2 <code>StopInstances</code>. MFA-enabled IAM users would
@@ -762,7 +765,7 @@ GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenReques
     return qobject_cast<GetSessionTokenResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StsClientPrivate
@@ -770,7 +773,7 @@ GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenReques
  * @brief  Private implementation for StsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StsClientPrivate object.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetEventStreamRequest
+/*!
+ * \class QtAws::Pinpoint::GetEventStreamRequest
  *
- * @brief  Implements Pinpoint GetEventStream requests.
+ * \brief The GetEventStreamRequest class encapsulates Pinpoint GetEventStream requests.
  *
- * @see    PinpointClient::getEventStream
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getEventStream
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEventStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetEventStreamRequest::GetEventStreamRequest(const GetEventStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEventStreamRequest object.
  */
 GetEventStreamRequest::GetEventStreamRequest()
@@ -53,13 +56,16 @@ GetEventStreamRequest::GetEventStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEventStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEventStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply
     return new GetEventStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEventStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply
  * @brief  Private implementation for GetEventStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEventStreamRequestPrivate object.
@@ -97,7 +103,7 @@ GetEventStreamRequestPrivate::GetEventStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEventStreamRequestPrivate object, copying another.

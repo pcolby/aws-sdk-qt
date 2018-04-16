@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RunScheduledInstancesRequest
+/*!
+ * \class QtAws::EC2::RunScheduledInstancesRequest
  *
- * @brief  Implements EC2 RunScheduledInstances requests.
+ * \brief The RunScheduledInstancesRequest class encapsulates EC2 RunScheduledInstances requests.
  *
- * @see    EC2Client::runScheduledInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::runScheduledInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new RunScheduledInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RunScheduledInstancesRequest::RunScheduledInstancesRequest(const RunScheduledIns
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RunScheduledInstancesRequest object.
  */
 RunScheduledInstancesRequest::RunScheduledInstancesRequest()
@@ -53,13 +60,16 @@ RunScheduledInstancesRequest::RunScheduledInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RunScheduledInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RunScheduledInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetwo
     return new RunScheduledInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RunScheduledInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetwo
  * @brief  Private implementation for RunScheduledInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunScheduledInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunScheduledInstancesRequestPrivate object, copying another.

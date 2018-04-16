@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  CreateDetectorRequest
+/*!
+ * \class QtAws::GuardDuty::CreateDetectorRequest
  *
- * @brief  Implements GuardDuty CreateDetector requests.
+ * \brief The CreateDetectorRequest class encapsulates GuardDuty CreateDetector requests.
  *
- * @see    GuardDutyClient::createDetector
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::createDetector
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDetectorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateDetectorRequest::CreateDetectorRequest(const CreateDetectorRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDetectorRequest object.
  */
 CreateDetectorRequest::CreateDetectorRequest()
@@ -53,13 +56,16 @@ CreateDetectorRequest::CreateDetectorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDetectorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDetectorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateDetectorRequest::response(QNetworkReply
     return new CreateDetectorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDetectorRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateDetectorRequest::response(QNetworkReply
  * @brief  Private implementation for CreateDetectorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDetectorRequestPrivate object.
@@ -97,7 +103,7 @@ CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDetectorRequestPrivate object, copying another.

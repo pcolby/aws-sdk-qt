@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  CreateAppRequest
+/*!
+ * \class QtAws::Pinpoint::CreateAppRequest
  *
- * @brief  Implements Pinpoint CreateApp requests.
+ * \brief The CreateAppRequest class encapsulates Pinpoint CreateApp requests.
  *
- * @see    PinpointClient::createApp
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::createApp
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAppRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateAppRequest::CreateAppRequest(const CreateAppRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAppRequest object.
  */
 CreateAppRequest::CreateAppRequest()
@@ -53,13 +56,16 @@ CreateAppRequest::CreateAppRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAppRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAppResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * co
     return new CreateAppResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAppRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * co
  * @brief  Private implementation for CreateAppRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAppRequestPrivate object.
@@ -97,7 +103,7 @@ CreateAppRequestPrivate::CreateAppRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAppRequestPrivate object, copying another.

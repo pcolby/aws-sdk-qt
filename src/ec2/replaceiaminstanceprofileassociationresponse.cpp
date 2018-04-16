@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceIamInstanceProfileAssociationResponse
+/*!
+ * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationResponse
  *
- * @brief  Handles EC2 ReplaceIamInstanceProfileAssociation responses.
+ * \brief The ReplaceIamInstanceProfileAssociationResponse class encapsulates EC2 ReplaceIamInstanceProfileAssociation responses.
  *
- * @see    EC2Client::replaceIamInstanceProfileAssociation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceIamInstanceProfileAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceIamInstanceProfileAssociationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ReplaceIamInstanceProfileAssociationRequest * ReplaceIamInstanceProfileAss
     return static_cast<const ReplaceIamInstanceProfileAssociationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ReplaceIamInstanceProfileAssociation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ReplaceIamInstanceProfileAssociationResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReplaceIamInstanceProfileAssociationResponsePrivate
+ * \class ReplaceIamInstanceProfileAssociationResponsePrivate
  *
- * @brief  Private implementation for ReplaceIamInstanceProfileAssociationResponse.
+ * \brief Private implementation for ReplaceIamInstanceProfileAssociationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceIamInstanceProfileAssociationResponsePrivate object.
@@ -91,7 +98,7 @@ ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAs
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ReplaceIamInstanceProfileAssociationResponse element.
  *
  * @param  xml  XML stream to parse.

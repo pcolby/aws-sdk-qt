@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteTagsResponse
+/*!
+ * \class QtAws::AutoScaling::DeleteTagsResponse
  *
- * @brief  Handles AutoScaling DeleteTags responses.
+ * \brief The DeleteTagsResponse class encapsulates AutoScaling DeleteTags responses.
  *
- * @see    AutoScalingClient::deleteTags
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
     return static_cast<const DeleteTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeleteTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagsResponsePrivate
+ * \class DeleteTagsResponsePrivate
  *
- * @brief  Private implementation for DeleteTagsResponse.
+ * \brief Private implementation for DeleteTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeleteTagsResponse element.
  *
  * @param  xml  XML stream to parse.

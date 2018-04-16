@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateDocumentationPartRequest
+/*!
+ * \class QtAws::APIGateway::CreateDocumentationPartRequest
  *
- * @brief  Implements APIGateway CreateDocumentationPart requests.
+ * \brief The CreateDocumentationPartRequest class encapsulates APIGateway CreateDocumentationPart requests.
  *
- * @see    APIGatewayClient::createDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDocumentationPartRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateDocumentationPartRequest::CreateDocumentationPartRequest(const CreateDocum
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDocumentationPartRequest object.
  */
 CreateDocumentationPartRequest::CreateDocumentationPartRequest()
@@ -53,13 +61,16 @@ CreateDocumentationPartRequest::CreateDocumentationPartRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDocumentationPartRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDocumentationPartResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationPartRequest::response(QNet
     return new CreateDocumentationPartResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDocumentationPartRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationPartRequest::response(QNet
  * @brief  Private implementation for CreateDocumentationPartRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDocumentationPartRequestPrivate object.
@@ -97,7 +108,7 @@ CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDocumentationPartRequestPrivate object, copying another.

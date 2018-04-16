@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CancelJobRequest
+/*!
+ * \class QtAws::IoT::CancelJobRequest
  *
- * @brief  Implements IoT CancelJob requests.
+ * \brief The CancelJobRequest class encapsulates IoT CancelJob requests.
  *
- * @see    IoTClient::cancelJob
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::cancelJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CancelJobRequest::CancelJobRequest(const CancelJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CancelJobRequest object.
  */
 CancelJobRequest::CancelJobRequest()
@@ -53,13 +67,16 @@ CancelJobRequest::CancelJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CancelJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CancelJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
     return new CancelJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CancelJobRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CancelJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object.
@@ -97,7 +114,7 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelJobRequestPrivate object, copying another.

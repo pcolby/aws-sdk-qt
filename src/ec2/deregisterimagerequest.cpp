@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeregisterImageRequest
+/*!
+ * \class QtAws::EC2::DeregisterImageRequest
  *
- * @brief  Implements EC2 DeregisterImage requests.
+ * \brief The DeregisterImageRequest class encapsulates EC2 DeregisterImage requests.
  *
- * @see    EC2Client::deregisterImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deregisterImage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeregisterImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeregisterImageRequest::DeregisterImageRequest(const DeregisterImageRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeregisterImageRequest object.
  */
 DeregisterImageRequest::DeregisterImageRequest()
@@ -53,13 +60,16 @@ DeregisterImageRequest::DeregisterImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeregisterImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeregisterImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkRepl
     return new DeregisterImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeregisterImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkRepl
  * @brief  Private implementation for DeregisterImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterImageRequestPrivate object.
@@ -97,7 +107,7 @@ DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeregisterImageRequestPrivate object, copying another.

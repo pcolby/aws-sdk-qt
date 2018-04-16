@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  GetTypedLinkFacetInformationResponse
+/*!
+ * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationResponse
  *
- * @brief  Handles CloudDirectory GetTypedLinkFacetInformation responses.
+ * \brief The GetTypedLinkFacetInformationResponse class encapsulates CloudDirectory GetTypedLinkFacetInformation responses.
  *
- * @see    CloudDirectoryClient::getTypedLinkFacetInformation
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::getTypedLinkFacetInformation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTypedLinkFacetInformationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetTypedLinkFacetInformationRequest * GetTypedLinkFacetInformationResponse
     return static_cast<const GetTypedLinkFacetInformationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory GetTypedLinkFacetInformation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetTypedLinkFacetInformationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTypedLinkFacetInformationResponsePrivate
+ * \class GetTypedLinkFacetInformationResponsePrivate
  *
- * @brief  Private implementation for GetTypedLinkFacetInformationResponse.
+ * \brief Private implementation for GetTypedLinkFacetInformationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTypedLinkFacetInformationResponsePrivate object.
@@ -91,7 +101,7 @@ GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory GetTypedLinkFacetInformationResponse element.
  *
  * @param  xml  XML stream to parse.

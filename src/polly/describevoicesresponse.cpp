@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  DescribeVoicesResponse
+/*!
+ * \class QtAws::Polly::DescribeVoicesResponse
  *
- * @brief  Handles Polly DescribeVoices responses.
+ * \brief The DescribeVoicesResponse class encapsulates Polly DescribeVoices responses.
  *
- * @see    PollyClient::describeVoices
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::describeVoices
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVoicesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DescribeVoicesRequest * DescribeVoicesResponse::request() const
     return static_cast<const DescribeVoicesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Polly DescribeVoices response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DescribeVoicesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVoicesResponsePrivate
+ * \class DescribeVoicesResponsePrivate
  *
- * @brief  Private implementation for DescribeVoicesResponse.
+ * \brief Private implementation for DescribeVoicesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVoicesResponsePrivate object.
@@ -91,7 +101,7 @@ DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Polly DescribeVoicesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDisableProviderForUserResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDisableProviderForUserResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminDisableProviderForUser responses.
+ * \brief The AdminDisableProviderForUserResponse class encapsulates CognitoIdentityProvider AdminDisableProviderForUser responses.
  *
- * @see    CognitoIdentityProviderClient::adminDisableProviderForUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDisableProviderForUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDisableProviderForUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminDisableProviderForUserRequest * AdminDisableProviderForUserResponse::
     return static_cast<const AdminDisableProviderForUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminDisableProviderForUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminDisableProviderForUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminDisableProviderForUserResponsePrivate
+ * \class AdminDisableProviderForUserResponsePrivate
  *
- * @brief  Private implementation for AdminDisableProviderForUserResponse.
+ * \brief Private implementation for AdminDisableProviderForUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDisableProviderForUserResponsePrivate object.
@@ -91,7 +104,7 @@ AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminDisableProviderForUserResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Organizations {
 
-/**
- * @class  OrganizationsResponse
+/*!
+ * \class QtAws::Organizations::OrganizationsResponse
  *
- * @brief  Handles Organizations Organizations responses.
+ * \brief The OrganizationsResponse class is the base class for all Organizations responses.
  *
- * @see    OrganizationsClient::organizations
+ * \ingroup Organizations
  */
 
-/**
+/*!
  * @brief  Constructs a new OrganizationsResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ OrganizationsResponse::OrganizationsResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new OrganizationsResponse object.
@@ -63,7 +63,7 @@ OrganizationsResponse::OrganizationsResponse(OrganizationsResponsePrivate * cons
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void OrganizationsResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  OrganizationsResponsePrivate
@@ -92,7 +92,7 @@ void OrganizationsResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for OrganizationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new OrganizationsResponsePrivate object.

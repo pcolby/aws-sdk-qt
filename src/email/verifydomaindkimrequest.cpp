@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  VerifyDomainDkimRequest
+/*!
+ * \class QtAws::SES::VerifyDomainDkimRequest
  *
- * @brief  Implements SES VerifyDomainDkim requests.
+ * \brief The VerifyDomainDkimRequest class encapsulates SES VerifyDomainDkim requests.
  *
- * @see    SESClient::verifyDomainDkim
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::verifyDomainDkim
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifyDomainDkimRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ VerifyDomainDkimRequest::VerifyDomainDkimRequest(const VerifyDomainDkimRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new VerifyDomainDkimRequest object.
  */
 VerifyDomainDkimRequest::VerifyDomainDkimRequest()
@@ -53,13 +67,16 @@ VerifyDomainDkimRequest::VerifyDomainDkimRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool VerifyDomainDkimRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an VerifyDomainDkimResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
     return new VerifyDomainDkimResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  VerifyDomainDkimRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
  * @brief  Private implementation for VerifyDomainDkimRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyDomainDkimRequestPrivate object.
@@ -97,7 +114,7 @@ VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifyDomainDkimRequestPrivate object, copying another.

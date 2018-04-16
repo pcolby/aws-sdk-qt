@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProductAsAdminResponse
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProductAsAdminResponse
  *
- * @brief  Handles ServiceCatalog DescribeProductAsAdmin responses.
+ * \brief The DescribeProductAsAdminResponse class encapsulates ServiceCatalog DescribeProductAsAdmin responses.
  *
- * @see    ServiceCatalogClient::describeProductAsAdmin
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProductAsAdmin
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductAsAdminResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeProductAsAdminRequest * DescribeProductAsAdminResponse::request() 
     return static_cast<const DescribeProductAsAdminRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DescribeProductAsAdmin response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeProductAsAdminResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeProductAsAdminResponsePrivate
+ * \class DescribeProductAsAdminResponsePrivate
  *
- * @brief  Private implementation for DescribeProductAsAdminResponse.
+ * \brief Private implementation for DescribeProductAsAdminResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductAsAdminResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DescribeProductAsAdminResponse element.
  *
  * @param  xml  XML stream to parse.

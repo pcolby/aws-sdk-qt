@@ -27,40 +27,48 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::MarketplaceEntitlementService
+ * \brief The QtAws::MarketplaceEntitlementService contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
-/**
- * @class  MarketplaceEntitlementServiceClient
+/*!
+ * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClient
  *
- * @brief  Client for AWS Marketplace Entitlement Service
+ * \brief The MarketplaceEntitlementServiceClient class provides access the AWS Marketplace Entitlement Service service.
  *
- * <fullname>AWS Marketplace Entitlement Service</fullname>
+ * \ingroup MarketplaceEntitlementService
  *
- * This reference provides descriptions of the AWS Marketplace Entitlement Service
- *
- * API>
- *
- * AWS Marketplace Entitlement Service is used to determine the entitlement of a customer to a given product. An
- * entitlement represents capacity in a product owned by the customer. For example, a customer might own some number of
- * users or seats in an SaaS application or some amount of data capacity in a multi-tenant
- *
- * database>
- *
- * <b>Getting Entitlement Records</b>
- *
- * </p <ul> <li>
- *
- * <i>GetEntitlements</i>- Gets the entitlements for a Marketplace
+ *  <fullname>AWS Marketplace Entitlement Service</fullname>
+ * 
+ *  This reference provides descriptions of the AWS Marketplace Entitlement Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace Entitlement Service is used to determine the entitlement of a customer to a given product. An
+ *  entitlement represents capacity in a product owned by the customer. For example, a customer might own some number of
+ *  users or seats in an SaaS application or some amount of data capacity in a multi-tenant
+ * 
+ *  database>
+ * 
+ *  <b>Getting Entitlement Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>GetEntitlements</i>- Gets the entitlements for a Marketplace
  */
 
-/**
- * @brief  Constructs a new MarketplaceEntitlementServiceClient object.
+/*!
+ * \brief Constructs a MarketplaceEntitlementServiceClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -79,21 +87,16 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
-/**
- * @brief  Constructs a new MarketplaceEntitlementServiceClient object.
+/*!
+ * \overload MarketplaceEntitlementServiceClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     const QUrl &endpoint,
@@ -112,7 +115,7 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
-/**
+/*!
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
  * identifier or product
  *
@@ -127,7 +130,7 @@ GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(c
     return qobject_cast<GetEntitlementsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MarketplaceEntitlementServiceClientPrivate
@@ -135,7 +138,7 @@ GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(c
  * @brief  Private implementation for MarketplaceEntitlementServiceClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MarketplaceEntitlementServiceClientPrivate object.

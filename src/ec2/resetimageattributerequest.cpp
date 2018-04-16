@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetImageAttributeRequest
+/*!
+ * \class QtAws::EC2::ResetImageAttributeRequest
  *
- * @brief  Implements EC2 ResetImageAttribute requests.
+ * \brief The ResetImageAttributeRequest class encapsulates EC2 ResetImageAttribute requests.
  *
- * @see    EC2Client::resetImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetImageAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ResetImageAttributeRequest::ResetImageAttributeRequest(const ResetImageAttribute
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetImageAttributeRequest object.
  */
 ResetImageAttributeRequest::ResetImageAttributeRequest()
@@ -53,13 +60,16 @@ ResetImageAttributeRequest::ResetImageAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetImageAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetImageAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetwork
     return new ResetImageAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetImageAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetwork
  * @brief  Private implementation for ResetImageAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetImageAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetImageAttributeRequestPrivate object, copying another.

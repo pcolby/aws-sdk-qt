@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetTemplateRequest
+/*!
+ * \class QtAws::SES::GetTemplateRequest
  *
- * @brief  Implements SES GetTemplate requests.
+ * \brief The GetTemplateRequest class encapsulates SES GetTemplate requests.
  *
- * @see    SESClient::getTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTemplateRequest object.
  */
 GetTemplateRequest::GetTemplateRequest()
@@ -53,13 +67,16 @@ GetTemplateRequest::GetTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
     return new GetTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTemplateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTemplateRequestPrivate object.
@@ -97,7 +114,7 @@ GetTemplateRequestPrivate::GetTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTemplateRequestPrivate object, copying another.

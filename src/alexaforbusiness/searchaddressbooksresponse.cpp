@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SearchAddressBooksResponse
+/*!
+ * \class QtAws::AlexaForBusiness::SearchAddressBooksResponse
  *
- * @brief  Handles AlexaForBusiness SearchAddressBooks responses.
+ * \brief The SearchAddressBooksResponse class encapsulates AlexaForBusiness SearchAddressBooks responses.
  *
- * @see    AlexaForBusinessClient::searchAddressBooks
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::searchAddressBooks
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchAddressBooksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SearchAddressBooksRequest * SearchAddressBooksResponse::request() const
     return static_cast<const SearchAddressBooksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness SearchAddressBooks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SearchAddressBooksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchAddressBooksResponsePrivate
+ * \class SearchAddressBooksResponsePrivate
  *
- * @brief  Private implementation for SearchAddressBooksResponse.
+ * \brief Private implementation for SearchAddressBooksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchAddressBooksResponsePrivate object.
@@ -91,7 +99,7 @@ SearchAddressBooksResponsePrivate::SearchAddressBooksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness SearchAddressBooksResponse element.
  *
  * @param  xml  XML stream to parse.

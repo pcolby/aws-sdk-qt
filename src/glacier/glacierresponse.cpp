@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Glacier {
 
-/**
- * @class  GlacierResponse
+/*!
+ * \class QtAws::Glacier::GlacierResponse
  *
- * @brief  Handles Glacier Glacier responses.
+ * \brief The GlacierResponse class is the base class for all Glacier responses.
  *
- * @see    GlacierClient::glacier
+ * \ingroup Glacier
  */
 
-/**
+/*!
  * @brief  Constructs a new GlacierResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ GlacierResponse::GlacierResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlacierResponse object.
@@ -63,7 +63,7 @@ GlacierResponse::GlacierResponse(GlacierResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void GlacierResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GlacierResponsePrivate
@@ -92,7 +92,7 @@ void GlacierResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for GlacierResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlacierResponsePrivate object.

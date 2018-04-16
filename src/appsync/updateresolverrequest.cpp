@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateResolverRequest
+/*!
+ * \class QtAws::AppSync::UpdateResolverRequest
  *
- * @brief  Implements AppSync UpdateResolver requests.
+ * \brief The UpdateResolverRequest class encapsulates AppSync UpdateResolver requests.
  *
- * @see    AppSyncClient::updateResolver
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateResolver
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateResolverRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateResolverRequest::UpdateResolverRequest(const UpdateResolverRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateResolverRequest object.
  */
 UpdateResolverRequest::UpdateResolverRequest()
@@ -53,13 +57,16 @@ UpdateResolverRequest::UpdateResolverRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateResolverRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateResolverResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply
     return new UpdateResolverResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateResolverRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateResolverRequest::response(QNetworkReply
  * @brief  Private implementation for UpdateResolverRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResolverRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateResolverRequestPrivate object, copying another.

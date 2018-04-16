@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CodeCommit {
 
-/**
- * @class  CodeCommitResponse
+/*!
+ * \class QtAws::CodeCommit::CodeCommitResponse
  *
- * @brief  Handles CodeCommit CodeCommit responses.
+ * \brief The CodeCommitResponse class is the base class for all CodeCommit responses.
  *
- * @see    CodeCommitClient::codeCommit
+ * \ingroup CodeCommit
  */
 
-/**
+/*!
  * @brief  Constructs a new CodeCommitResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CodeCommitResponse::CodeCommitResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeCommitResponse object.
@@ -63,7 +63,7 @@ CodeCommitResponse::CodeCommitResponse(CodeCommitResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CodeCommitResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodeCommitResponsePrivate
@@ -92,7 +92,7 @@ void CodeCommitResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CodeCommitResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeCommitResponsePrivate object.

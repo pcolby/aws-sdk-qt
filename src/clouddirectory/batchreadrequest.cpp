@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  BatchReadRequest
+/*!
+ * \class QtAws::CloudDirectory::BatchReadRequest
  *
- * @brief  Implements CloudDirectory BatchRead requests.
+ * \brief The BatchReadRequest class encapsulates CloudDirectory BatchRead requests.
  *
- * @see    CloudDirectoryClient::batchRead
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::batchRead
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchReadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ BatchReadRequest::BatchReadRequest(const BatchReadRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchReadRequest object.
  */
 BatchReadRequest::BatchReadRequest()
@@ -53,13 +63,16 @@ BatchReadRequest::BatchReadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchReadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchReadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * BatchReadRequest::response(QNetworkReply * co
     return new BatchReadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchReadRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * BatchReadRequest::response(QNetworkReply * co
  * @brief  Private implementation for BatchReadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchReadRequestPrivate object.
@@ -97,7 +110,7 @@ BatchReadRequestPrivate::BatchReadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchReadRequestPrivate object, copying another.

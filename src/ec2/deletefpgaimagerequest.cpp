@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteFpgaImageRequest
+/*!
+ * \class QtAws::EC2::DeleteFpgaImageRequest
  *
- * @brief  Implements EC2 DeleteFpgaImage requests.
+ * \brief The DeleteFpgaImageRequest class encapsulates EC2 DeleteFpgaImage requests.
  *
- * @see    EC2Client::deleteFpgaImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteFpgaImage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFpgaImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteFpgaImageRequest::DeleteFpgaImageRequest(const DeleteFpgaImageRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFpgaImageRequest object.
  */
 DeleteFpgaImageRequest::DeleteFpgaImageRequest()
@@ -53,13 +60,16 @@ DeleteFpgaImageRequest::DeleteFpgaImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFpgaImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFpgaImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkRepl
     return new DeleteFpgaImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFpgaImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkRepl
  * @brief  Private implementation for DeleteFpgaImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFpgaImageRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFpgaImageRequestPrivate object, copying another.

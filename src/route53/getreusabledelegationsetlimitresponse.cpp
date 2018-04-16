@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetReusableDelegationSetLimitResponse
+/*!
+ * \class QtAws::Route53::GetReusableDelegationSetLimitResponse
  *
- * @brief  Handles Route53 GetReusableDelegationSetLimit responses.
+ * \brief The GetReusableDelegationSetLimitResponse class encapsulates Route53 GetReusableDelegationSetLimit responses.
  *
- * @see    Route53Client::getReusableDelegationSetLimit
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getReusableDelegationSetLimit
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReusableDelegationSetLimitResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetReusableDelegationSetLimitRequest * GetReusableDelegationSetLimitRespon
     return static_cast<const GetReusableDelegationSetLimitRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetReusableDelegationSetLimit response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetReusableDelegationSetLimitResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetReusableDelegationSetLimitResponsePrivate
+ * \class GetReusableDelegationSetLimitResponsePrivate
  *
- * @brief  Private implementation for GetReusableDelegationSetLimitResponse.
+ * \brief Private implementation for GetReusableDelegationSetLimitResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReusableDelegationSetLimitResponsePrivate object.
@@ -91,7 +94,7 @@ GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitRespo
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetReusableDelegationSetLimitResponse element.
  *
  * @param  xml  XML stream to parse.

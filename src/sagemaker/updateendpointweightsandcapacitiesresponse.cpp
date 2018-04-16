@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateEndpointWeightsAndCapacitiesResponse
+/*!
+ * \class QtAws::SageMaker::UpdateEndpointWeightsAndCapacitiesResponse
  *
- * @brief  Handles SageMaker UpdateEndpointWeightsAndCapacities responses.
+ * \brief The UpdateEndpointWeightsAndCapacitiesResponse class encapsulates SageMaker UpdateEndpointWeightsAndCapacities responses.
  *
- * @see    SageMakerClient::updateEndpointWeightsAndCapacities
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateEndpointWeightsAndCapacities
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateEndpointWeightsAndCapacitiesRequest * UpdateEndpointWeightsAndCapaci
     return static_cast<const UpdateEndpointWeightsAndCapacitiesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker UpdateEndpointWeightsAndCapacities response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateEndpointWeightsAndCapacitiesResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateEndpointWeightsAndCapacitiesResponsePrivate
+ * \class UpdateEndpointWeightsAndCapacitiesResponsePrivate
  *
- * @brief  Private implementation for UpdateEndpointWeightsAndCapacitiesResponse.
+ * \brief Private implementation for UpdateEndpointWeightsAndCapacitiesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAndCapac
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker UpdateEndpointWeightsAndCapacitiesResponse element.
  *
  * @param  xml  XML stream to parse.

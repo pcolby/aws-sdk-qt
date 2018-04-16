@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateBasePathMappingRequest
+/*!
+ * \class QtAws::APIGateway::UpdateBasePathMappingRequest
  *
- * @brief  Implements APIGateway UpdateBasePathMapping requests.
+ * \brief The UpdateBasePathMappingRequest class encapsulates APIGateway UpdateBasePathMapping requests.
  *
- * @see    APIGatewayClient::updateBasePathMapping
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateBasePathMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBasePathMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateBasePathMappingRequest::UpdateBasePathMappingRequest(const UpdateBasePathM
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateBasePathMappingRequest object.
  */
 UpdateBasePathMappingRequest::UpdateBasePathMappingRequest()
@@ -53,13 +61,16 @@ UpdateBasePathMappingRequest::UpdateBasePathMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateBasePathMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateBasePathMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetwo
     return new UpdateBasePathMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateBasePathMappingRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetwo
  * @brief  Private implementation for UpdateBasePathMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBasePathMappingRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBasePathMappingRequestPrivate object, copying another.

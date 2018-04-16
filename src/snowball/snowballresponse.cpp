@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  SnowballResponse
+/*!
+ * \class QtAws::Snowball::SnowballResponse
  *
- * @brief  Handles Snowball Snowball responses.
+ * \brief The SnowballResponse class is the base class for all Snowball responses.
  *
- * @see    SnowballClient::snowball
+ * \ingroup Snowball
  */
 
-/**
+/*!
  * @brief  Constructs a new SnowballResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SnowballResponse::SnowballResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SnowballResponse object.
@@ -63,7 +63,7 @@ SnowballResponse::SnowballResponse(SnowballResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SnowballResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SnowballResponsePrivate
@@ -92,7 +92,7 @@ void SnowballResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SnowballResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SnowballResponsePrivate object.

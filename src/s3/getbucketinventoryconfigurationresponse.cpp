@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketInventoryConfigurationResponse
+/*!
+ * \class QtAws::S3::GetBucketInventoryConfigurationResponse
  *
- * @brief  Handles S3 GetBucketInventoryConfiguration responses.
+ * \brief The GetBucketInventoryConfigurationResponse class encapsulates S3 GetBucketInventoryConfiguration responses.
  *
- * @see    S3Client::getBucketInventoryConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketInventoryConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketInventoryConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketInventoryConfigurationRequest * GetBucketInventoryConfigurationRe
     return static_cast<const GetBucketInventoryConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketInventoryConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketInventoryConfigurationResponsePrivate
+ * \class GetBucketInventoryConfigurationResponsePrivate
  *
- * @brief  Private implementation for GetBucketInventoryConfigurationResponse.
+ * \brief Private implementation for GetBucketInventoryConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketInventoryConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketInventoryConfigurationResponsePrivate::GetBucketInventoryConfigurationR
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketInventoryConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

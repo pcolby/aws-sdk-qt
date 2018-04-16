@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DetectKeyPhrasesRequest
+/*!
+ * \class QtAws::Comprehend::DetectKeyPhrasesRequest
  *
- * @brief  Implements Comprehend DetectKeyPhrases requests.
+ * \brief The DetectKeyPhrasesRequest class encapsulates Comprehend DetectKeyPhrases requests.
  *
- * @see    ComprehendClient::detectKeyPhrases
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::detectKeyPhrases
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectKeyPhrasesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DetectKeyPhrasesRequest::DetectKeyPhrasesRequest(const DetectKeyPhrasesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectKeyPhrasesRequest object.
  */
 DetectKeyPhrasesRequest::DetectKeyPhrasesRequest()
@@ -53,13 +59,16 @@ DetectKeyPhrasesRequest::DetectKeyPhrasesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectKeyPhrasesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectKeyPhrasesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkRep
     return new DetectKeyPhrasesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectKeyPhrasesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkRep
  * @brief  Private implementation for DetectKeyPhrasesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectKeyPhrasesRequestPrivate object.
@@ -97,7 +106,7 @@ DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectKeyPhrasesRequestPrivate object, copying another.

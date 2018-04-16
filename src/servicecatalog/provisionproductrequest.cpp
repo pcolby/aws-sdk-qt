@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ProvisionProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::ProvisionProductRequest
  *
- * @brief  Implements ServiceCatalog ProvisionProduct requests.
+ * \brief The ProvisionProductRequest class encapsulates ServiceCatalog ProvisionProduct requests.
  *
- * @see    ServiceCatalogClient::provisionProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::provisionProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new ProvisionProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ProvisionProductRequest::ProvisionProductRequest(const ProvisionProductRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ProvisionProductRequest object.
  */
 ProvisionProductRequest::ProvisionProductRequest()
@@ -53,13 +62,16 @@ ProvisionProductRequest::ProvisionProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ProvisionProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ProvisionProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ProvisionProductRequest::response(QNetworkRep
     return new ProvisionProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ProvisionProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ProvisionProductRequest::response(QNetworkRep
  * @brief  Private implementation for ProvisionProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ProvisionProductRequestPrivate object.
@@ -97,7 +109,7 @@ ProvisionProductRequestPrivate::ProvisionProductRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ProvisionProductRequestPrivate object, copying another.

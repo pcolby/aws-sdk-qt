@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateDevEndpointRequest
+/*!
+ * \class QtAws::Glue::CreateDevEndpointRequest
  *
- * @brief  Implements Glue CreateDevEndpoint requests.
+ * \brief The CreateDevEndpointRequest class encapsulates Glue CreateDevEndpoint requests.
  *
- * @see    GlueClient::createDevEndpoint
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createDevEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDevEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateDevEndpointRequest::CreateDevEndpointRequest(const CreateDevEndpointReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDevEndpointRequest object.
  */
 CreateDevEndpointRequest::CreateDevEndpointRequest()
@@ -53,13 +59,16 @@ CreateDevEndpointRequest::CreateDevEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDevEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDevEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateDevEndpointRequest::response(QNetworkRe
     return new CreateDevEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDevEndpointRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateDevEndpointRequest::response(QNetworkRe
  * @brief  Private implementation for CreateDevEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDevEndpointRequestPrivate object.
@@ -97,7 +106,7 @@ CreateDevEndpointRequestPrivate::CreateDevEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDevEndpointRequestPrivate object, copying another.

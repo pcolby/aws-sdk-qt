@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeAvailabilityZonesResponse
+/*!
+ * \class QtAws::EC2::DescribeAvailabilityZonesResponse
  *
- * @brief  Handles EC2 DescribeAvailabilityZones responses.
+ * \brief The DescribeAvailabilityZonesResponse class encapsulates EC2 DescribeAvailabilityZones responses.
  *
- * @see    EC2Client::describeAvailabilityZones
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeAvailabilityZones
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAvailabilityZonesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeAvailabilityZonesRequest * DescribeAvailabilityZonesResponse::requ
     return static_cast<const DescribeAvailabilityZonesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeAvailabilityZones response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeAvailabilityZonesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAvailabilityZonesResponsePrivate
+ * \class DescribeAvailabilityZonesResponsePrivate
  *
- * @brief  Private implementation for DescribeAvailabilityZonesResponse.
+ * \brief Private implementation for DescribeAvailabilityZonesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAvailabilityZonesResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeAvailabilityZonesResponse element.
  *
  * @param  xml  XML stream to parse.

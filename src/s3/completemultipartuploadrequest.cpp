@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CompleteMultipartUploadRequest
+/*!
+ * \class QtAws::S3::CompleteMultipartUploadRequest
  *
- * @brief  Implements S3 CompleteMultipartUpload requests.
+ * \brief The CompleteMultipartUploadRequest class encapsulates S3 CompleteMultipartUpload requests.
  *
- * @see    S3Client::completeMultipartUpload
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::completeMultipartUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new CompleteMultipartUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CompleteMultipartUploadRequest::CompleteMultipartUploadRequest(const CompleteMul
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CompleteMultipartUploadRequest object.
  */
 CompleteMultipartUploadRequest::CompleteMultipartUploadRequest()
@@ -53,13 +56,16 @@ CompleteMultipartUploadRequest::CompleteMultipartUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CompleteMultipartUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CompleteMultipartUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CompleteMultipartUploadRequest::response(QNet
     return new CompleteMultipartUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CompleteMultipartUploadRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CompleteMultipartUploadRequest::response(QNet
  * @brief  Private implementation for CompleteMultipartUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteMultipartUploadRequestPrivate object.
@@ -97,7 +103,7 @@ CompleteMultipartUploadRequestPrivate::CompleteMultipartUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteMultipartUploadRequestPrivate object, copying another.

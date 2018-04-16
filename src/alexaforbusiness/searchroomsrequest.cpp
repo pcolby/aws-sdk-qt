@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  SearchRoomsRequest
+/*!
+ * \class QtAws::AlexaForBusiness::SearchRoomsRequest
  *
- * @brief  Implements AlexaForBusiness SearchRooms requests.
+ * \brief The SearchRoomsRequest class encapsulates AlexaForBusiness SearchRooms requests.
  *
- * @see    AlexaForBusinessClient::searchRooms
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::searchRooms
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchRoomsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SearchRoomsRequest::SearchRoomsRequest(const SearchRoomsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SearchRoomsRequest object.
  */
 SearchRoomsRequest::SearchRoomsRequest()
@@ -53,13 +61,16 @@ SearchRoomsRequest::SearchRoomsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SearchRoomsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SearchRoomsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SearchRoomsRequest::response(QNetworkReply * 
     return new SearchRoomsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SearchRoomsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SearchRoomsRequest::response(QNetworkReply * 
  * @brief  Private implementation for SearchRoomsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchRoomsRequestPrivate object.
@@ -97,7 +108,7 @@ SearchRoomsRequestPrivate::SearchRoomsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchRoomsRequestPrivate object, copying another.

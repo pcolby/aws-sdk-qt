@@ -57,37 +57,45 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Batch
+ * \brief The QtAws::Batch contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Batch {
 
-/**
- * @class  BatchClient
+/*!
+ * \class QtAws::Batch::BatchClient
  *
- * @brief  Client for AWS Batch
+ * \brief The BatchClient class provides access the AWS Batch service.
  *
- * AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
- * scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
- * lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
- * batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
- * eliminate capacity constraints, reduce compute costs, and deliver results
+ * \ingroup Batch
  *
- * quickly>
- *
- * As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
- * any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
- * quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
- * which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
- * time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
- * AWS
+ *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
+ *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
+ *  lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
+ *  batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
+ *  eliminate capacity constraints, reduce compute costs, and deliver results
+ * 
+ *  quickly>
+ * 
+ *  As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
+ *  any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
+ *  quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
+ *  which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
+ *  time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
+ *  AWS
  */
 
-/**
- * @brief  Constructs a new BatchClient object.
+/*!
+ * \brief Constructs a BatchClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 BatchClient::BatchClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -106,21 +114,16 @@ BatchClient::BatchClient(
     d->serviceName = QStringLiteral("batch");
 }
 
-/**
- * @brief  Constructs a new BatchClient object.
+/*!
+ * \overload BatchClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 BatchClient::BatchClient(
     const QUrl &endpoint,
@@ -139,7 +142,7 @@ BatchClient::BatchClient(
     d->serviceName = QStringLiteral("batch");
 }
 
-/**
+/*!
  * Cancels a job in an AWS Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or
  * <code>RUNNABLE</code> state are cancelled. Jobs that have progressed to <code>STARTING</code> or <code>RUNNING</code>
  * are not cancelled (but the API operation still succeeds, even if no job is cancelled); these jobs must be terminated
@@ -156,7 +159,7 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
     return qobject_cast<CancelJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS Batch compute environment. You can create <code>MANAGED</code> or <code>UNMANAGED</code> compute
  *
  * environments>
@@ -190,7 +193,7 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
     return qobject_cast<CreateComputeEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an AWS Batch job queue. When you create a job queue, you associate one or more compute environments to the queue
  * and assign an order of preference for the compute
  *
@@ -211,7 +214,7 @@ CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest
     return qobject_cast<CreateJobQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an AWS Batch compute
  *
  * environment>
@@ -230,7 +233,7 @@ DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const D
     return qobject_cast<DeleteComputeEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified job queue. You must first disable submissions for a queue with the <a>UpdateJobQueue</a>
  * operation. All jobs in the queue are terminated when you delete a job
  *
@@ -250,7 +253,7 @@ DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest
     return qobject_cast<DeleteJobQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters an AWS Batch job
  *
  * @param  request Request to send to AWS Batch.
@@ -264,7 +267,7 @@ DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const Der
     return qobject_cast<DeregisterJobDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your compute
  *
  * environments>
@@ -283,7 +286,7 @@ DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(c
     return qobject_cast<DescribeComputeEnvironmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a list of job definitions. You can specify a <code>status</code> (such as <code>ACTIVE</code>) to only return
  * job definitions that match that
  *
@@ -298,7 +301,7 @@ DescribeJobDefinitionsResponse * BatchClient::describeJobDefinitions(const Descr
     return qobject_cast<DescribeJobDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your job
  *
  * @param  request Request to send to AWS Batch.
@@ -312,7 +315,7 @@ DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueu
     return qobject_cast<DescribeJobQueuesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a list of AWS Batch
  *
  * @param  request Request to send to AWS Batch.
@@ -326,7 +329,7 @@ DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &requ
     return qobject_cast<DescribeJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of task jobs for a specified job queue. You can filter the results by job status with the
  * <code>jobStatus</code> parameter. If you do not specify a status, only <code>RUNNING</code> jobs are
  *
@@ -341,7 +344,7 @@ ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
     return qobject_cast<ListJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers an AWS Batch job definition.
  *
  * @param  request Request to send to AWS Batch.
@@ -355,7 +358,7 @@ RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const Registe
     return qobject_cast<RegisterJobDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Submits an AWS Batch job from a job definition. Parameters specified during <a>SubmitJob</a> override parameters defined
  * in the job definition.
  *
@@ -370,7 +373,7 @@ SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
     return qobject_cast<SubmitJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Terminates a job in a job queue. Jobs that are in the <code>STARTING</code> or <code>RUNNING</code> state are
  * terminated, which causes them to transition to <code>FAILED</code>. Jobs that have not progressed to the
  * <code>STARTING</code> state are
@@ -386,7 +389,7 @@ TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &requ
     return qobject_cast<TerminateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an AWS Batch compute
  *
  * @param  request Request to send to AWS Batch.
@@ -400,7 +403,7 @@ UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const U
     return qobject_cast<UpdateComputeEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a job
  *
  * @param  request Request to send to AWS Batch.
@@ -414,7 +417,7 @@ UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest
     return qobject_cast<UpdateJobQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchClientPrivate
@@ -422,7 +425,7 @@ UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest
  * @brief  Private implementation for BatchClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchClientPrivate object.

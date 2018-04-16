@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpgradePublishedSchemaRequest
+/*!
+ * \class QtAws::CloudDirectory::UpgradePublishedSchemaRequest
  *
- * @brief  Implements CloudDirectory UpgradePublishedSchema requests.
+ * \brief The UpgradePublishedSchemaRequest class encapsulates CloudDirectory UpgradePublishedSchema requests.
  *
- * @see    CloudDirectoryClient::upgradePublishedSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::upgradePublishedSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new UpgradePublishedSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ UpgradePublishedSchemaRequest::UpgradePublishedSchemaRequest(const UpgradePublis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpgradePublishedSchemaRequest object.
  */
 UpgradePublishedSchemaRequest::UpgradePublishedSchemaRequest()
@@ -53,13 +63,16 @@ UpgradePublishedSchemaRequest::UpgradePublishedSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpgradePublishedSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpgradePublishedSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetw
     return new UpgradePublishedSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpgradePublishedSchemaRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetw
  * @brief  Private implementation for UpgradePublishedSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpgradePublishedSchemaRequestPrivate object.
@@ -97,7 +110,7 @@ UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpgradePublishedSchemaRequestPrivate object, copying another.

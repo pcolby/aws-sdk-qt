@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListGroupsRequest
+/*!
+ * \class QtAws::Greengrass::ListGroupsRequest
  *
- * @brief  Implements Greengrass ListGroups requests.
+ * \brief The ListGroupsRequest class encapsulates Greengrass ListGroups requests.
  *
- * @see    GreengrassClient::listGroups
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGroupsRequest object.
  */
 ListGroupsRequest::ListGroupsRequest()
@@ -53,13 +59,16 @@ ListGroupsRequest::ListGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
     return new ListGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGroupsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupsRequestPrivate object.
@@ -97,7 +106,7 @@ ListGroupsRequestPrivate::ListGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupsRequestPrivate object, copying another.

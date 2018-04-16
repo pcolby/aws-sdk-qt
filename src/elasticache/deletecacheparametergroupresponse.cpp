@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DeleteCacheParameterGroupResponse
+/*!
+ * \class QtAws::ElastiCache::DeleteCacheParameterGroupResponse
  *
- * @brief  Handles ElastiCache DeleteCacheParameterGroup responses.
+ * \brief The DeleteCacheParameterGroupResponse class encapsulates ElastiCache DeleteCacheParameterGroup responses.
  *
- * @see    ElastiCacheClient::deleteCacheParameterGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::deleteCacheParameterGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheParameterGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DeleteCacheParameterGroupRequest * DeleteCacheParameterGroupResponse::requ
     return static_cast<const DeleteCacheParameterGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DeleteCacheParameterGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DeleteCacheParameterGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCacheParameterGroupResponsePrivate
+ * \class DeleteCacheParameterGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteCacheParameterGroupResponse.
+ * \brief Private implementation for DeleteCacheParameterGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheParameterGroupResponsePrivate object.
@@ -91,7 +108,7 @@ DeleteCacheParameterGroupResponsePrivate::DeleteCacheParameterGroupResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DeleteCacheParameterGroupResponse element.
  *
  * @param  xml  XML stream to parse.

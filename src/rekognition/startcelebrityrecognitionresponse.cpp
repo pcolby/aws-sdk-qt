@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartCelebrityRecognitionResponse
+/*!
+ * \class QtAws::Rekognition::StartCelebrityRecognitionResponse
  *
- * @brief  Handles Rekognition StartCelebrityRecognition responses.
+ * \brief The StartCelebrityRecognitionResponse class encapsulates Rekognition StartCelebrityRecognition responses.
  *
- * @see    RekognitionClient::startCelebrityRecognition
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startCelebrityRecognition
  */
 
-/**
+/*!
  * @brief  Constructs a new StartCelebrityRecognitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartCelebrityRecognitionRequest * StartCelebrityRecognitionResponse::requ
     return static_cast<const StartCelebrityRecognitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition StartCelebrityRecognition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartCelebrityRecognitionResponsePrivate
+ * \class StartCelebrityRecognitionResponsePrivate
  *
- * @brief  Private implementation for StartCelebrityRecognitionResponse.
+ * \brief Private implementation for StartCelebrityRecognitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartCelebrityRecognitionResponsePrivate object.
@@ -91,7 +95,7 @@ StartCelebrityRecognitionResponsePrivate::StartCelebrityRecognitionResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition StartCelebrityRecognitionResponse element.
  *
  * @param  xml  XML stream to parse.

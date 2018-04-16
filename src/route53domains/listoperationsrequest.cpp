@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ListOperationsRequest
+/*!
+ * \class QtAws::Route53Domains::ListOperationsRequest
  *
- * @brief  Implements Route53Domains ListOperations requests.
+ * \brief The ListOperationsRequest class encapsulates Route53Domains ListOperations requests.
  *
- * @see    Route53DomainsClient::listOperations
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::listOperations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOperationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListOperationsRequest::ListOperationsRequest(const ListOperationsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOperationsRequest object.
  */
 ListOperationsRequest::ListOperationsRequest()
@@ -53,13 +57,16 @@ ListOperationsRequest::ListOperationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOperationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOperationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
     return new ListOperationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOperationsRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
  * @brief  Private implementation for ListOperationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOperationsRequestPrivate object.
@@ -97,7 +104,7 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOperationsRequestPrivate object, copying another.

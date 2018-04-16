@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeRiskConfigurationRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeRiskConfigurationRequest
  *
- * @brief  Implements CognitoIdentityProvider DescribeRiskConfiguration requests.
+ * \brief The DescribeRiskConfigurationRequest class encapsulates CognitoIdentityProvider DescribeRiskConfiguration requests.
  *
- * @see    CognitoIdentityProviderClient::describeRiskConfiguration
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeRiskConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRiskConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeRiskConfigurationRequest object.
  */
 DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest()
@@ -53,13 +66,16 @@ DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeRiskConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeRiskConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QN
     return new DescribeRiskConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeRiskConfigurationRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QN
  * @brief  Private implementation for DescribeRiskConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRiskConfigurationRequestPrivate object.
@@ -97,7 +113,7 @@ DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRiskConfigurationRequestPrivate object, copying another.

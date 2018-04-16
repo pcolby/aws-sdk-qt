@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DetectDominantLanguageRequest
+/*!
+ * \class QtAws::Comprehend::DetectDominantLanguageRequest
  *
- * @brief  Implements Comprehend DetectDominantLanguage requests.
+ * \brief The DetectDominantLanguageRequest class encapsulates Comprehend DetectDominantLanguage requests.
  *
- * @see    ComprehendClient::detectDominantLanguage
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::detectDominantLanguage
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectDominantLanguageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DetectDominantLanguageRequest::DetectDominantLanguageRequest(const DetectDominan
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectDominantLanguageRequest object.
  */
 DetectDominantLanguageRequest::DetectDominantLanguageRequest()
@@ -53,13 +59,16 @@ DetectDominantLanguageRequest::DetectDominantLanguageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectDominantLanguageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectDominantLanguageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetw
     return new DetectDominantLanguageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectDominantLanguageRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetw
  * @brief  Private implementation for DetectDominantLanguageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectDominantLanguageRequestPrivate object.
@@ -97,7 +106,7 @@ DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectDominantLanguageRequestPrivate object, copying another.

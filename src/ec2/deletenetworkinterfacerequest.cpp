@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkInterfaceRequest
+/*!
+ * \class QtAws::EC2::DeleteNetworkInterfaceRequest
  *
- * @brief  Implements EC2 DeleteNetworkInterface requests.
+ * \brief The DeleteNetworkInterfaceRequest class encapsulates EC2 DeleteNetworkInterface requests.
  *
- * @see    EC2Client::deleteNetworkInterface
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkInterface
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkInterfaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest(const DeleteNetwork
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkInterfaceRequest object.
  */
 DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest()
@@ -53,13 +60,16 @@ DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNetworkInterfaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNetworkInterfaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetw
     return new DeleteNetworkInterfaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNetworkInterfaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetw
  * @brief  Private implementation for DeleteNetworkInterfaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkInterfaceRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkInterfaceRequestPrivate object, copying another.

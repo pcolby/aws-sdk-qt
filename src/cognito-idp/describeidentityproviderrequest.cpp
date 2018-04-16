@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeIdentityProviderRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeIdentityProviderRequest
  *
- * @brief  Implements CognitoIdentityProvider DescribeIdentityProvider requests.
+ * \brief The DescribeIdentityProviderRequest class encapsulates CognitoIdentityProvider DescribeIdentityProvider requests.
  *
- * @see    CognitoIdentityProviderClient::describeIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeIdentityProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DescribeIdentityProviderRequest::DescribeIdentityProviderRequest(const DescribeI
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeIdentityProviderRequest object.
  */
 DescribeIdentityProviderRequest::DescribeIdentityProviderRequest()
@@ -53,13 +66,16 @@ DescribeIdentityProviderRequest::DescribeIdentityProviderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeIdentityProviderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeIdentityProviderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityProviderRequest::response(QNe
     return new DescribeIdentityProviderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeIdentityProviderRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityProviderRequest::response(QNe
  * @brief  Private implementation for DescribeIdentityProviderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIdentityProviderRequestPrivate object.
@@ -97,7 +113,7 @@ DescribeIdentityProviderRequestPrivate::DescribeIdentityProviderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeIdentityProviderRequestPrivate object, copying another.

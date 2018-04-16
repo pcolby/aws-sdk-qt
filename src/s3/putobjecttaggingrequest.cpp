@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutObjectTaggingRequest
+/*!
+ * \class QtAws::S3::PutObjectTaggingRequest
  *
- * @brief  Implements S3 PutObjectTagging requests.
+ * \brief The PutObjectTaggingRequest class encapsulates S3 PutObjectTagging requests.
  *
- * @see    S3Client::putObjectTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putObjectTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new PutObjectTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutObjectTaggingRequest::PutObjectTaggingRequest(const PutObjectTaggingRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutObjectTaggingRequest object.
  */
 PutObjectTaggingRequest::PutObjectTaggingRequest()
@@ -53,13 +56,16 @@ PutObjectTaggingRequest::PutObjectTaggingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutObjectTaggingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutObjectTaggingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectTaggingRequest::response(QNetworkRep
     return new PutObjectTaggingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutObjectTaggingRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutObjectTaggingRequest::response(QNetworkRep
  * @brief  Private implementation for PutObjectTaggingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectTaggingRequestPrivate object.
@@ -97,7 +103,7 @@ PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutObjectTaggingRequestPrivate object, copying another.

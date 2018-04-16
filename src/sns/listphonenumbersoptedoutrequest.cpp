@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  ListPhoneNumbersOptedOutRequest
+/*!
+ * \class QtAws::SNS::ListPhoneNumbersOptedOutRequest
  *
- * @brief  Implements SNS ListPhoneNumbersOptedOut requests.
+ * \brief The ListPhoneNumbersOptedOutRequest class encapsulates SNS ListPhoneNumbersOptedOut requests.
  *
- * @see    SNSClient::listPhoneNumbersOptedOut
+ * \ingroup SNS
+ *
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
+ *
+ * \sa SNSClient::listPhoneNumbersOptedOut
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPhoneNumbersOptedOutRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest(const ListPhone
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListPhoneNumbersOptedOutRequest object.
  */
 ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest()
@@ -53,13 +70,16 @@ ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListPhoneNumbersOptedOutRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListPhoneNumbersOptedOutResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
     return new ListPhoneNumbersOptedOutResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListPhoneNumbersOptedOutRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
  * @brief  Private implementation for ListPhoneNumbersOptedOutRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPhoneNumbersOptedOutRequestPrivate object.
@@ -97,7 +117,7 @@ ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPhoneNumbersOptedOutRequestPrivate object, copying another.

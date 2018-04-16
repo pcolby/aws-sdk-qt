@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateConnectionRequest
+/*!
+ * \class QtAws::Glue::CreateConnectionRequest
  *
- * @brief  Implements Glue CreateConnection requests.
+ * \brief The CreateConnectionRequest class encapsulates Glue CreateConnection requests.
  *
- * @see    GlueClient::createConnection
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateConnectionRequest::CreateConnectionRequest(const CreateConnectionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateConnectionRequest object.
  */
 CreateConnectionRequest::CreateConnectionRequest()
@@ -53,13 +59,16 @@ CreateConnectionRequest::CreateConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateConnectionRequest::response(QNetworkRep
     return new CreateConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateConnectionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateConnectionRequest::response(QNetworkRep
  * @brief  Private implementation for CreateConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConnectionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConnectionRequestPrivate object, copying another.

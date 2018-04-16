@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DisassociateRouteTableRequest
+/*!
+ * \class QtAws::EC2::DisassociateRouteTableRequest
  *
- * @brief  Implements EC2 DisassociateRouteTable requests.
+ * \brief The DisassociateRouteTableRequest class encapsulates EC2 DisassociateRouteTable requests.
  *
- * @see    EC2Client::disassociateRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::disassociateRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateRouteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DisassociateRouteTableRequest::DisassociateRouteTableRequest(const DisassociateR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisassociateRouteTableRequest object.
  */
 DisassociateRouteTableRequest::DisassociateRouteTableRequest()
@@ -53,13 +60,16 @@ DisassociateRouteTableRequest::DisassociateRouteTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisassociateRouteTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisassociateRouteTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetw
     return new DisassociateRouteTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisassociateRouteTableRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetw
  * @brief  Private implementation for DisassociateRouteTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateRouteTableRequestPrivate object.
@@ -97,7 +107,7 @@ DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateRouteTableRequestPrivate object, copying another.

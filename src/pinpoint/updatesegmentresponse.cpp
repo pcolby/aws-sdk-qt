@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateSegmentResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateSegmentResponse
  *
- * @brief  Handles Pinpoint UpdateSegment responses.
+ * \brief The UpdateSegmentResponse class encapsulates Pinpoint UpdateSegment responses.
  *
- * @see    PinpointClient::updateSegment
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateSegment
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSegmentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateSegmentRequest * UpdateSegmentResponse::request() const
     return static_cast<const UpdateSegmentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateSegment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateSegmentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateSegmentResponsePrivate
+ * \class UpdateSegmentResponsePrivate
  *
- * @brief  Private implementation for UpdateSegmentResponse.
+ * \brief Private implementation for UpdateSegmentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSegmentResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateSegmentResponsePrivate::UpdateSegmentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateSegmentResponse element.
  *
  * @param  xml  XML stream to parse.

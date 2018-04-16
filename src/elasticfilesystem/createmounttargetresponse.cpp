@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  CreateMountTargetResponse
+/*!
+ * \class QtAws::EFS::CreateMountTargetResponse
  *
- * @brief  Handles EFS CreateMountTarget responses.
+ * \brief The CreateMountTargetResponse class encapsulates EFS CreateMountTarget responses.
  *
- * @see    EFSClient::createMountTarget
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::createMountTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateMountTargetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateMountTargetRequest * CreateMountTargetResponse::request() const
     return static_cast<const CreateMountTargetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS CreateMountTarget response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateMountTargetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateMountTargetResponsePrivate
+ * \class CreateMountTargetResponsePrivate
  *
- * @brief  Private implementation for CreateMountTargetResponse.
+ * \brief Private implementation for CreateMountTargetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMountTargetResponsePrivate object.
@@ -91,7 +100,7 @@ CreateMountTargetResponsePrivate::CreateMountTargetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS CreateMountTargetResponse element.
  *
  * @param  xml  XML stream to parse.

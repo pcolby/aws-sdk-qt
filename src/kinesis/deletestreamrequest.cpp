@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DeleteStreamRequest
+/*!
+ * \class QtAws::Kinesis::DeleteStreamRequest
  *
- * @brief  Implements Kinesis DeleteStream requests.
+ * \brief The DeleteStreamRequest class encapsulates Kinesis DeleteStream requests.
  *
- * @see    KinesisClient::deleteStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::deleteStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteStreamRequest::DeleteStreamRequest(const DeleteStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamRequest object.
  */
 DeleteStreamRequest::DeleteStreamRequest()
@@ -53,13 +59,16 @@ DeleteStreamRequest::DeleteStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply *
     return new DeleteStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteStreamRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamRequestPrivate object, copying another.

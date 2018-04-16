@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  AddTagsToResourceResponse
+/*!
+ * \class QtAws::CloudHSM::AddTagsToResourceResponse
  *
- * @brief  Handles CloudHSM AddTagsToResource responses.
+ * \brief The AddTagsToResourceResponse class encapsulates CloudHSM AddTagsToResource responses.
  *
- * @see    CloudHSMClient::addTagsToResource
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::addTagsToResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
     return static_cast<const AddTagsToResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM AddTagsToResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsToResourceResponsePrivate
+ * \class AddTagsToResourceResponsePrivate
  *
- * @brief  Private implementation for AddTagsToResourceResponse.
+ * \brief Private implementation for AddTagsToResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceResponsePrivate object.
@@ -91,7 +106,7 @@ AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM AddTagsToResourceResponse element.
  *
  * @param  xml  XML stream to parse.

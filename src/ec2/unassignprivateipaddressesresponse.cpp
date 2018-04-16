@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UnassignPrivateIpAddressesResponse
+/*!
+ * \class QtAws::EC2::UnassignPrivateIpAddressesResponse
  *
- * @brief  Handles EC2 UnassignPrivateIpAddresses responses.
+ * \brief The UnassignPrivateIpAddressesResponse class encapsulates EC2 UnassignPrivateIpAddresses responses.
  *
- * @see    EC2Client::unassignPrivateIpAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::unassignPrivateIpAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new UnassignPrivateIpAddressesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UnassignPrivateIpAddressesRequest * UnassignPrivateIpAddressesResponse::re
     return static_cast<const UnassignPrivateIpAddressesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 UnassignPrivateIpAddresses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UnassignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UnassignPrivateIpAddressesResponsePrivate
+ * \class UnassignPrivateIpAddressesResponsePrivate
  *
- * @brief  Private implementation for UnassignPrivateIpAddressesResponse.
+ * \brief Private implementation for UnassignPrivateIpAddressesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnassignPrivateIpAddressesResponsePrivate object.
@@ -91,7 +98,7 @@ UnassignPrivateIpAddressesResponsePrivate::UnassignPrivateIpAddressesResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 UnassignPrivateIpAddressesResponse element.
  *
  * @param  xml  XML stream to parse.

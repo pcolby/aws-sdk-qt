@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeInternetGatewaysRequest
+/*!
+ * \class QtAws::EC2::DescribeInternetGatewaysRequest
  *
- * @brief  Implements EC2 DescribeInternetGateways requests.
+ * \brief The DescribeInternetGatewaysRequest class encapsulates EC2 DescribeInternetGateways requests.
  *
- * @see    EC2Client::describeInternetGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeInternetGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInternetGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest(const DescribeI
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeInternetGatewaysRequest object.
  */
 DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest()
@@ -53,13 +60,16 @@ DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeInternetGatewaysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeInternetGatewaysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInternetGatewaysRequest::response(QNe
     return new DescribeInternetGatewaysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeInternetGatewaysRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeInternetGatewaysRequest::response(QNe
  * @brief  Private implementation for DescribeInternetGatewaysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInternetGatewaysRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeInternetGatewaysRequestPrivate::DescribeInternetGatewaysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInternetGatewaysRequestPrivate object, copying another.

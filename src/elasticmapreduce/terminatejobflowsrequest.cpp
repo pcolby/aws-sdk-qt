@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  TerminateJobFlowsRequest
+/*!
+ * \class QtAws::EMR::TerminateJobFlowsRequest
  *
- * @brief  Implements EMR TerminateJobFlows requests.
+ * \brief The TerminateJobFlowsRequest class encapsulates EMR TerminateJobFlows requests.
  *
- * @see    EMRClient::terminateJobFlows
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::terminateJobFlows
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateJobFlowsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ TerminateJobFlowsRequest::TerminateJobFlowsRequest(const TerminateJobFlowsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TerminateJobFlowsRequest object.
  */
 TerminateJobFlowsRequest::TerminateJobFlowsRequest()
@@ -53,13 +59,16 @@ TerminateJobFlowsRequest::TerminateJobFlowsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TerminateJobFlowsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TerminateJobFlowsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
     return new TerminateJobFlowsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TerminateJobFlowsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
  * @brief  Private implementation for TerminateJobFlowsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateJobFlowsRequestPrivate object.
@@ -97,7 +106,7 @@ TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateJobFlowsRequestPrivate object, copying another.

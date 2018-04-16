@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListHITsForQualificationTypeRequest
+/*!
+ * \class QtAws::MTurk::ListHITsForQualificationTypeRequest
  *
- * @brief  Implements MTurk ListHITsForQualificationType requests.
+ * \brief The ListHITsForQualificationTypeRequest class encapsulates MTurk ListHITsForQualificationType requests.
  *
- * @see    MTurkClient::listHITsForQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listHITsForQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new ListHITsForQualificationTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListHITsForQualificationTypeRequest::ListHITsForQualificationTypeRequest(const L
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListHITsForQualificationTypeRequest object.
  */
 ListHITsForQualificationTypeRequest::ListHITsForQualificationTypeRequest()
@@ -53,13 +56,16 @@ ListHITsForQualificationTypeRequest::ListHITsForQualificationTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListHITsForQualificationTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListHITsForQualificationTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListHITsForQualificationTypeRequest::response
     return new ListHITsForQualificationTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListHITsForQualificationTypeRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListHITsForQualificationTypeRequest::response
  * @brief  Private implementation for ListHITsForQualificationTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHITsForQualificationTypeRequestPrivate object.
@@ -97,7 +103,7 @@ ListHITsForQualificationTypeRequestPrivate::ListHITsForQualificationTypeRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListHITsForQualificationTypeRequestPrivate object, copying another.

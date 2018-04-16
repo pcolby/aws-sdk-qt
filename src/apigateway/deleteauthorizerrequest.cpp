@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteAuthorizerRequest
+/*!
+ * \class QtAws::APIGateway::DeleteAuthorizerRequest
  *
- * @brief  Implements APIGateway DeleteAuthorizer requests.
+ * \brief The DeleteAuthorizerRequest class encapsulates APIGateway DeleteAuthorizer requests.
  *
- * @see    APIGatewayClient::deleteAuthorizer
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteAuthorizer
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAuthorizerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteAuthorizerRequest::DeleteAuthorizerRequest(const DeleteAuthorizerRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAuthorizerRequest object.
  */
 DeleteAuthorizerRequest::DeleteAuthorizerRequest()
@@ -53,13 +61,16 @@ DeleteAuthorizerRequest::DeleteAuthorizerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAuthorizerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAuthorizerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
     return new DeleteAuthorizerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAuthorizerRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteAuthorizerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAuthorizerRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAuthorizerRequestPrivate object, copying another.

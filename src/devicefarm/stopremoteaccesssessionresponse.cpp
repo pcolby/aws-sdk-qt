@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  StopRemoteAccessSessionResponse
+/*!
+ * \class QtAws::DeviceFarm::StopRemoteAccessSessionResponse
  *
- * @brief  Handles DeviceFarm StopRemoteAccessSession responses.
+ * \brief The StopRemoteAccessSessionResponse class encapsulates DeviceFarm StopRemoteAccessSession responses.
  *
- * @see    DeviceFarmClient::stopRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::stopRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new StopRemoteAccessSessionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const StopRemoteAccessSessionRequest * StopRemoteAccessSessionResponse::request(
     return static_cast<const StopRemoteAccessSessionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm StopRemoteAccessSession response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void StopRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopRemoteAccessSessionResponsePrivate
+ * \class StopRemoteAccessSessionResponsePrivate
  *
- * @brief  Private implementation for StopRemoteAccessSessionResponse.
+ * \brief Private implementation for StopRemoteAccessSessionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopRemoteAccessSessionResponsePrivate object.
@@ -91,7 +96,7 @@ StopRemoteAccessSessionResponsePrivate::StopRemoteAccessSessionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm StopRemoteAccessSessionResponse element.
  *
  * @param  xml  XML stream to parse.

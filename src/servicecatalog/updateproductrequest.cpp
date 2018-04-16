@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::UpdateProductRequest
  *
- * @brief  Implements ServiceCatalog UpdateProduct requests.
+ * \brief The UpdateProductRequest class encapsulates ServiceCatalog UpdateProduct requests.
  *
- * @see    ServiceCatalogClient::updateProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ UpdateProductRequest::UpdateProductRequest(const UpdateProductRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateProductRequest object.
  */
 UpdateProductRequest::UpdateProductRequest()
@@ -53,13 +62,16 @@ UpdateProductRequest::UpdateProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProductRequest::response(QNetworkReply 
     return new UpdateProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateProductRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProductRequestPrivate object.
@@ -97,7 +109,7 @@ UpdateProductRequestPrivate::UpdateProductRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProductRequestPrivate object, copying another.

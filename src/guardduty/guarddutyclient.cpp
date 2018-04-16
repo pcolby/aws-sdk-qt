@@ -99,23 +99,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::GuardDuty
+ * \brief The QtAws::GuardDuty contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GuardDutyClient
+/*!
+ * \class QtAws::GuardDuty::GuardDutyClient
  *
- * @brief  Client for Amazon GuardDuty
+ * \brief The GuardDutyClient class provides access the Amazon GuardDuty service.
+ *
+ * \ingroup GuardDuty
  *
  */
 
-/**
- * @brief  Constructs a new GuardDutyClient object.
+/*!
+ * \brief Constructs a GuardDutyClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 GuardDutyClient::GuardDutyClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -134,21 +142,16 @@ GuardDutyClient::GuardDutyClient(
     d->serviceName = QStringLiteral("guardduty");
 }
 
-/**
- * @brief  Constructs a new GuardDutyClient object.
+/*!
+ * \overload GuardDutyClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 GuardDutyClient::GuardDutyClient(
     const QUrl &endpoint,
@@ -167,7 +170,7 @@ GuardDutyClient::GuardDutyClient(
     d->serviceName = QStringLiteral("guardduty");
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -180,7 +183,7 @@ AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitat
     return qobject_cast<AcceptInvitationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -193,7 +196,7 @@ ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindings
     return qobject_cast<ArchiveFindingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -207,7 +210,7 @@ CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorReq
     return qobject_cast<CreateDetectorResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -221,7 +224,7 @@ CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &req
     return qobject_cast<CreateIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -235,7 +238,7 @@ CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersReques
     return qobject_cast<CreateMembersResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates example findings of types specified by the list of finding types. If 'NULL' is specified for findingTypes, the
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -249,7 +252,7 @@ CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const Creat
     return qobject_cast<CreateSampleFindingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -263,7 +266,7 @@ CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const Creat
     return qobject_cast<CreateThreatIntelSetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -276,7 +279,7 @@ DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineIn
     return qobject_cast<DeclineInvitationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -289,7 +292,7 @@ DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorReq
     return qobject_cast<DeleteDetectorResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -302,7 +305,7 @@ DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &req
     return qobject_cast<DeleteIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -315,7 +318,7 @@ DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvit
     return qobject_cast<DeleteInvitationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -328,7 +331,7 @@ DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersReques
     return qobject_cast<DeleteMembersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -341,7 +344,7 @@ DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const Delet
     return qobject_cast<DeleteThreatIntelSetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -354,7 +357,7 @@ DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterA
     return qobject_cast<DisassociateFromMasterAccountResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -367,7 +370,7 @@ DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const Disasso
     return qobject_cast<DisassociateMembersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -380,7 +383,7 @@ GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &req
     return qobject_cast<GetDetectorResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -393,7 +396,7 @@ GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &req
     return qobject_cast<GetFindingsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -406,7 +409,7 @@ GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const Get
     return qobject_cast<GetFindingsStatisticsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -419,7 +422,7 @@ GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
     return qobject_cast<GetIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the count of all GuardDuty membership invitations that were sent to the current member account except the
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -433,7 +436,7 @@ GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvi
     return qobject_cast<GetInvitationsCountResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -446,7 +449,7 @@ GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAcco
     return qobject_cast<GetMasterAccountResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -459,7 +462,7 @@ GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &reques
     return qobject_cast<GetMembersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -472,7 +475,7 @@ GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIn
     return qobject_cast<GetThreatIntelSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable GuardDuty and
  * allow the current AWS account to view and manage these accounts' GuardDuty findings on their behalf as the master
  *
@@ -487,7 +490,7 @@ InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersReques
     return qobject_cast<InviteMembersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -500,7 +503,7 @@ ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsReques
     return qobject_cast<ListDetectorsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -513,7 +516,7 @@ ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &
     return qobject_cast<ListFindingsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -526,7 +529,7 @@ ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &reques
     return qobject_cast<ListIPSetsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -539,7 +542,7 @@ ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitations
     return qobject_cast<ListInvitationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -552,7 +555,7 @@ ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &req
     return qobject_cast<ListMembersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -565,7 +568,7 @@ ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThr
     return qobject_cast<ListThreatIntelSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account
  *
  * @param  request Request to send to Amazon GuardDuty.
@@ -579,7 +582,7 @@ StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const S
     return qobject_cast<StartMonitoringMembersResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this
  * command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members'
  *
@@ -594,7 +597,7 @@ StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const Sto
     return qobject_cast<StopMonitoringMembersResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -607,7 +610,7 @@ UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFi
     return qobject_cast<UnarchiveFindingsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -620,7 +623,7 @@ UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorReq
     return qobject_cast<UpdateDetectorResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -633,7 +636,7 @@ UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const U
     return qobject_cast<UpdateFindingsFeedbackResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -646,7 +649,7 @@ UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &req
     return qobject_cast<UpdateIPSetResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon GuardDuty.
  *
@@ -659,7 +662,7 @@ UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const Updat
     return qobject_cast<UpdateThreatIntelSetResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GuardDutyClientPrivate
@@ -667,7 +670,7 @@ UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const Updat
  * @brief  Private implementation for GuardDutyClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GuardDutyClientPrivate object.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  CreateJobResponse
+/*!
+ * \class QtAws::Snowball::CreateJobResponse
  *
- * @brief  Handles Snowball CreateJob responses.
+ * \brief The CreateJobResponse class encapsulates Snowball CreateJob responses.
  *
- * @see    SnowballClient::createJob
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::createJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateJobRequest * CreateJobResponse::request() const
     return static_cast<const CreateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball CreateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateJobResponsePrivate
+ * \class CreateJobResponsePrivate
  *
- * @brief  Private implementation for CreateJobResponse.
+ * \brief Private implementation for CreateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobResponsePrivate object.
@@ -91,7 +100,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball CreateJobResponse element.
  *
  * @param  xml  XML stream to parse.

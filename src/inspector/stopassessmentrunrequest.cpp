@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  StopAssessmentRunRequest
+/*!
+ * \class QtAws::Inspector::StopAssessmentRunRequest
  *
- * @brief  Implements Inspector StopAssessmentRun requests.
+ * \brief The StopAssessmentRunRequest class encapsulates Inspector StopAssessmentRun requests.
  *
- * @see    InspectorClient::stopAssessmentRun
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::stopAssessmentRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StopAssessmentRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ StopAssessmentRunRequest::StopAssessmentRunRequest(const StopAssessmentRunReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopAssessmentRunRequest object.
  */
 StopAssessmentRunRequest::StopAssessmentRunRequest()
@@ -53,13 +61,16 @@ StopAssessmentRunRequest::StopAssessmentRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopAssessmentRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopAssessmentRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * StopAssessmentRunRequest::response(QNetworkRe
     return new StopAssessmentRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopAssessmentRunRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * StopAssessmentRunRequest::response(QNetworkRe
  * @brief  Private implementation for StopAssessmentRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopAssessmentRunRequestPrivate object.
@@ -97,7 +108,7 @@ StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopAssessmentRunRequestPrivate object, copying another.

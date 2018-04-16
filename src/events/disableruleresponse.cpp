@@ -27,15 +27,41 @@
 namespace QtAws {
 namespace CloudWatchEvents {
 
-/**
- * @class  DisableRuleResponse
+/*!
+ * \class QtAws::CloudWatchEvents::DisableRuleResponse
  *
- * @brief  Handles CloudWatchEvents DisableRule responses.
+ * \brief The DisableRuleResponse class encapsulates CloudWatchEvents DisableRule responses.
  *
- * @see    CloudWatchEventsClient::disableRule
+ * \ingroup CloudWatchEvents
+ *
+ *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
+ *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
+ *  route them to targets to take action. You can also use rules to take action on a pre-determined schedule. For example,
+ *  you can configure rules
+ * 
+ *  to> <ul> <li>
+ * 
+ *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ *  enters the running
+ * 
+ *  state> </li> <li>
+ * 
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis stream for detailed analysis of potential security or
+ *  availability
+ * 
+ *  risks> </li> <li>
+ * 
+ *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
+ * 
+ *  volume> </li> </ul>
+ * 
+ *  For more information about the features of Amazon CloudWatch Events, see the <a
+ *  href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events">Amazon CloudWatch Events User
+ *
+ * \sa CloudWatchEventsClient::disableRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +84,7 @@ const DisableRuleRequest * DisableRuleResponse::request() const
     return static_cast<const DisableRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatchEvents DisableRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +96,15 @@ void DisableRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableRuleResponsePrivate
+ * \class DisableRuleResponsePrivate
  *
- * @brief  Private implementation for DisableRuleResponse.
+ * \brief Private implementation for DisableRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableRuleResponsePrivate object.
@@ -91,7 +117,7 @@ DisableRuleResponsePrivate::DisableRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatchEvents DisableRuleResponse element.
  *
  * @param  xml  XML stream to parse.

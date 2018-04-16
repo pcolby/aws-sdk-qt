@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  RekognitionResponse
+/*!
+ * \class QtAws::Rekognition::RekognitionResponse
  *
- * @brief  Handles Rekognition Rekognition responses.
+ * \brief The RekognitionResponse class is the base class for all Rekognition responses.
  *
- * @see    RekognitionClient::rekognition
+ * \ingroup Rekognition
  */
 
-/**
+/*!
  * @brief  Constructs a new RekognitionResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ RekognitionResponse::RekognitionResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RekognitionResponse object.
@@ -63,7 +63,7 @@ RekognitionResponse::RekognitionResponse(RekognitionResponsePrivate * const d, Q
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void RekognitionResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RekognitionResponsePrivate
@@ -92,7 +92,7 @@ void RekognitionResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for RekognitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RekognitionResponsePrivate object.

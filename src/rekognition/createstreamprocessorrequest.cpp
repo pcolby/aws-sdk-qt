@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  CreateStreamProcessorRequest
+/*!
+ * \class QtAws::Rekognition::CreateStreamProcessorRequest
  *
- * @brief  Implements Rekognition CreateStreamProcessor requests.
+ * \brief The CreateStreamProcessorRequest class encapsulates Rekognition CreateStreamProcessor requests.
  *
- * @see    RekognitionClient::createStreamProcessor
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::createStreamProcessor
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamProcessorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateStreamProcessorRequest::CreateStreamProcessorRequest(const CreateStreamPro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamProcessorRequest object.
  */
 CreateStreamProcessorRequest::CreateStreamProcessorRequest()
@@ -53,13 +57,16 @@ CreateStreamProcessorRequest::CreateStreamProcessorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStreamProcessorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStreamProcessorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamProcessorRequest::response(QNetwo
     return new CreateStreamProcessorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStreamProcessorRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamProcessorRequest::response(QNetwo
  * @brief  Private implementation for CreateStreamProcessorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamProcessorRequestPrivate object.
@@ -97,7 +104,7 @@ CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamProcessorRequestPrivate object, copying another.

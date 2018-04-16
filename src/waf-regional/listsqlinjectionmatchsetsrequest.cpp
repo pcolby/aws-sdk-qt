@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  ListSqlInjectionMatchSetsRequest
+/*!
+ * \class QtAws::WAFRegional::ListSqlInjectionMatchSetsRequest
  *
- * @brief  Implements WAFRegional ListSqlInjectionMatchSets requests.
+ * \brief The ListSqlInjectionMatchSetsRequest class encapsulates WAFRegional ListSqlInjectionMatchSets requests.
  *
- * @see    WAFRegionalClient::listSqlInjectionMatchSets
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::listSqlInjectionMatchSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSql
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object.
  */
 ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
@@ -53,13 +63,16 @@ ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListSqlInjectionMatchSetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListSqlInjectionMatchSetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
     return new ListSqlInjectionMatchSetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListSqlInjectionMatchSetsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
  * @brief  Private implementation for ListSqlInjectionMatchSetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequestPrivate object.
@@ -97,7 +110,7 @@ ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequestPrivate object, copying another.

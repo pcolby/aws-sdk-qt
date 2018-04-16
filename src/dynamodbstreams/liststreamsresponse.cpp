@@ -27,15 +27,51 @@
 namespace QtAws {
 namespace DynamoDBStreams {
 
-/**
- * @class  ListStreamsResponse
+/*!
+ * \class QtAws::DynamoDBStreams::ListStreamsResponse
  *
- * @brief  Handles DynamoDBStreams ListStreams responses.
+ * \brief The ListStreamsResponse class encapsulates DynamoDBStreams ListStreams responses.
  *
- * @see    DynamoDBStreamsClient::listStreams
+ * \ingroup DynamoDBStreams
+ *
+ *  <fullname>Amazon DynamoDB Streams</fullname>
+ * 
+ *  This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams
+ *  and processing stream records. For information about application development with DynamoDB Streams, see the <a
+ *  href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer
+ * 
+ *  Guide</a>>
+ * 
+ *  Note that this document is intended for use with the following DynamoDB
+ * 
+ *  documentation> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  The following are short descriptions of each low-level DynamoDB Streams API action, organized by
+ * 
+ *  function> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li>
+ * 
+ *  <i>GetRecords</i> - Retrieves the stream records from within a
+ * 
+ *  shard> </li> <li>
+ * 
+ *  <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard
+ * 
+ *  ID> </li> <li>
+ * 
+ *  <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and
+ *
+ * \sa DynamoDBStreamsClient::listStreams
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStreamsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +94,7 @@ const ListStreamsRequest * ListStreamsResponse::request() const
     return static_cast<const ListStreamsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DynamoDBStreams ListStreams response.
  *
  * @param  response  Response to parse.
@@ -70,15 +106,15 @@ void ListStreamsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStreamsResponsePrivate
+ * \class ListStreamsResponsePrivate
  *
- * @brief  Private implementation for ListStreamsResponse.
+ * \brief Private implementation for ListStreamsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStreamsResponsePrivate object.
@@ -91,7 +127,7 @@ ListStreamsResponsePrivate::ListStreamsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DynamoDBStreams ListStreamsResponse element.
  *
  * @param  xml  XML stream to parse.

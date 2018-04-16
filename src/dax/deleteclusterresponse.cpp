@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DeleteClusterResponse
+/*!
+ * \class QtAws::DAX::DeleteClusterResponse
  *
- * @brief  Handles DAX DeleteCluster responses.
+ * \brief The DeleteClusterResponse class encapsulates DAX DeleteCluster responses.
  *
- * @see    DAXClient::deleteCluster
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::deleteCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
     return static_cast<const DeleteClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DeleteCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteClusterResponsePrivate
+ * \class DeleteClusterResponsePrivate
  *
- * @brief  Private implementation for DeleteClusterResponse.
+ * \brief Private implementation for DeleteClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClusterResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DeleteClusterResponse element.
  *
  * @param  xml  XML stream to parse.

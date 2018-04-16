@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  CompleteLayerUploadRequest
+/*!
+ * \class QtAws::ECR::CompleteLayerUploadRequest
  *
- * @brief  Implements ECR CompleteLayerUpload requests.
+ * \brief The CompleteLayerUploadRequest class encapsulates ECR CompleteLayerUpload requests.
  *
- * @see    ECRClient::completeLayerUpload
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::completeLayerUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new CompleteLayerUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUpload
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CompleteLayerUploadRequest object.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest()
@@ -53,13 +60,16 @@ CompleteLayerUploadRequest::CompleteLayerUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CompleteLayerUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CompleteLayerUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
     return new CompleteLayerUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CompleteLayerUploadRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
  * @brief  Private implementation for CompleteLayerUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteLayerUploadRequestPrivate object.
@@ -97,7 +107,7 @@ CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteLayerUploadRequestPrivate object, copying another.

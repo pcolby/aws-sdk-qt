@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateLoggerDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::UpdateLoggerDefinitionRequest
  *
- * @brief  Implements Greengrass UpdateLoggerDefinition requests.
+ * \brief The UpdateLoggerDefinitionRequest class encapsulates Greengrass UpdateLoggerDefinition requests.
  *
- * @see    GreengrassClient::updateLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateLoggerDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateLoggerDefinitionRequest::UpdateLoggerDefinitionRequest(const UpdateLoggerD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateLoggerDefinitionRequest object.
  */
 UpdateLoggerDefinitionRequest::UpdateLoggerDefinitionRequest()
@@ -53,13 +59,16 @@ UpdateLoggerDefinitionRequest::UpdateLoggerDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateLoggerDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateLoggerDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetw
     return new UpdateLoggerDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateLoggerDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetw
  * @brief  Private implementation for UpdateLoggerDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateLoggerDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateLoggerDefinitionRequestPrivate object, copying another.

@@ -27,24 +27,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Translate
+ * \brief The QtAws::Translate contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Translate {
 
-/**
- * @class  TranslateClient
+/*!
+ * \class QtAws::Translate::TranslateClient
  *
- * @brief  Client for Amazon Translate
+ * \brief The TranslateClient class provides access the Amazon Translate service.
  *
- * Provides translation between English and one of six languages, or between one of the six languages and
+ * \ingroup Translate
+ *
+ *  Provides translation between English and one of six languages, or between one of the six languages and
  */
 
-/**
- * @brief  Constructs a new TranslateClient object.
+/*!
+ * \brief Constructs a TranslateClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 TranslateClient::TranslateClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -63,21 +71,16 @@ TranslateClient::TranslateClient(
     d->serviceName = QStringLiteral("translate");
 }
 
-/**
- * @brief  Constructs a new TranslateClient object.
+/*!
+ * \overload TranslateClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 TranslateClient::TranslateClient(
     const QUrl &endpoint,
@@ -96,7 +99,7 @@ TranslateClient::TranslateClient(
     d->serviceName = QStringLiteral("translate");
 }
 
-/**
+/*!
  * Translates input text from the source language to the target language. You can translate between English (en) and one of
  * the following languages, or between one of the following languages and
  *
@@ -141,7 +144,7 @@ TranslateTextResponse * TranslateClient::translateText(const TranslateTextReques
     return qobject_cast<TranslateTextResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TranslateClientPrivate
@@ -149,7 +152,7 @@ TranslateTextResponse * TranslateClient::translateText(const TranslateTextReques
  * @brief  Private implementation for TranslateClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateClientPrivate object.

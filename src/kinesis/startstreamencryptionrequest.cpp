@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  StartStreamEncryptionRequest
+/*!
+ * \class QtAws::Kinesis::StartStreamEncryptionRequest
  *
- * @brief  Implements Kinesis StartStreamEncryption requests.
+ * \brief The StartStreamEncryptionRequest class encapsulates Kinesis StartStreamEncryption requests.
  *
- * @see    KinesisClient::startStreamEncryption
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::startStreamEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new StartStreamEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartStreamEncryptionRequest::StartStreamEncryptionRequest(const StartStreamEncr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartStreamEncryptionRequest object.
  */
 StartStreamEncryptionRequest::StartStreamEncryptionRequest()
@@ -53,13 +59,16 @@ StartStreamEncryptionRequest::StartStreamEncryptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartStreamEncryptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartStreamEncryptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetwo
     return new StartStreamEncryptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartStreamEncryptionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetwo
  * @brief  Private implementation for StartStreamEncryptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartStreamEncryptionRequestPrivate object.
@@ -97,7 +106,7 @@ StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartStreamEncryptionRequestPrivate object, copying another.

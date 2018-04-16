@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteDevicePoolResponse
+/*!
+ * \class QtAws::DeviceFarm::DeleteDevicePoolResponse
  *
- * @brief  Handles DeviceFarm DeleteDevicePool responses.
+ * \brief The DeleteDevicePoolResponse class encapsulates DeviceFarm DeleteDevicePool responses.
  *
- * @see    DeviceFarmClient::deleteDevicePool
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteDevicePool
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDevicePoolResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DeleteDevicePoolRequest * DeleteDevicePoolResponse::request() const
     return static_cast<const DeleteDevicePoolRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm DeleteDevicePool response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DeleteDevicePoolResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDevicePoolResponsePrivate
+ * \class DeleteDevicePoolResponsePrivate
  *
- * @brief  Private implementation for DeleteDevicePoolResponse.
+ * \brief Private implementation for DeleteDevicePoolResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDevicePoolResponsePrivate object.
@@ -91,7 +96,7 @@ DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm DeleteDevicePoolResponse element.
  *
  * @param  xml  XML stream to parse.

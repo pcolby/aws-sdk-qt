@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateLoggerDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::CreateLoggerDefinitionResponse
  *
- * @brief  Handles Greengrass CreateLoggerDefinition responses.
+ * \brief The CreateLoggerDefinitionResponse class encapsulates Greengrass CreateLoggerDefinition responses.
  *
- * @see    GreengrassClient::createLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLoggerDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateLoggerDefinitionRequest * CreateLoggerDefinitionResponse::request() 
     return static_cast<const CreateLoggerDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateLoggerDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateLoggerDefinitionResponsePrivate
+ * \class CreateLoggerDefinitionResponsePrivate
  *
- * @brief  Private implementation for CreateLoggerDefinitionResponse.
+ * \brief Private implementation for CreateLoggerDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoggerDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateLoggerDefinitionResponsePrivate::CreateLoggerDefinitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateLoggerDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

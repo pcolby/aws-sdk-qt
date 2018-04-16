@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace SimpleDB {
 
-/**
- * @class  SimpleDBRequest
+/*!
+ * \class QtAws::SimpleDB::SimpleDBRequest
  *
- * @brief  Interface class for providing SimpleDB requests
+ * \brief The SimpleDBRequest class is the base class for all SimpleDB requests.
+ *
+ * \ingroup SimpleDB
  */
 
-
-/**
+/*!
  * @brief  Constructs a new SimpleDBRequest object.
  *
  * @param  action  The SimpleDB action to request.
@@ -41,7 +42,7 @@ SimpleDBRequest::SimpleDBRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SimpleDBRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ SimpleDBRequest::SimpleDBRequest(const SimpleDBRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ SimpleDBRequest& SimpleDBRequest::operator=(const SimpleDBRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SimpleDBRequest object.
@@ -85,10 +86,8 @@ SimpleDBRequest::SimpleDBRequest(SimpleDBRequestPrivate * const d) : QtAws::Core
 
 }
 
-/**
- * @brief  Get the SimpleDB action to be performed by this request.
- *
- * @return The SimpleDB action to be performed by this request.
+/*!
+ * \brief Returns the SimpleDB action to be performed by this request.
  */
 SimpleDBRequest::Action SimpleDBRequest::action() const
 {
@@ -96,20 +95,16 @@ SimpleDBRequest::Action SimpleDBRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the SimpleDB action to be performed by this request.
- *
- * @return The name of the SimpleDB action to be performed by this request.
+/*!
+ * \brief Returns the name of the SimpleDB action to be performed by this request.
  */
 QString SimpleDBRequest::actionString() const
 {
     return SimpleDBRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the SimpleDB API version implemented by this request.
- *
- * @return The SimpleDB API version implmented by this request.
+/*!
+ * \brief Returns the SimpleDB API version implemented by this request.
  */
 QString SimpleDBRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString SimpleDBRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the SimpleDB action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the SimpleDB action to be performed by this request to \a action.
  */
 void SimpleDBRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void SimpleDBRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the SimpleDB API version to include in this request.
- *
- * @param  version  The SimpleDB API version to include in this request.
+/*!
+ * Set the SimpleDB API version to include in this request to \a version.
  */
 void SimpleDBRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void SimpleDBRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool SimpleDBRequest::operator==(const SimpleDBRequest &other) const
 {
@@ -159,7 +146,7 @@ bool SimpleDBRequest::operator==(const SimpleDBRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid SimpleDB queue name.
  *
  * @par From SimpleDB FAQs:
@@ -178,12 +165,10 @@ bool SimpleDBRequest::operator==(const SimpleDBRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int SimpleDBRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int SimpleDBRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void SimpleDBRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void SimpleDBRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this SimpleDB request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant SimpleDBRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant SimpleDBRequest::parameter(const QString &name, const QVariant &default
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this SimpleDB request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &SimpleDBRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &SimpleDBRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this SimpleDB request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void SimpleDBRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void SimpleDBRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this SimpleDB request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void SimpleDBRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void SimpleDBRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this SimpleDB request.
+/*!
+ * \brief Returns a network request for this SimpleDB request using the given \a endpoint.
  *
  * This SimpleDB implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this SimpleDB request using the given \a endpoint.
  */
 QNetworkRequest SimpleDBRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest SimpleDBRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SimpleDBRequestPrivate
+ * \class  SimpleDBRequestPrivate
  *
- * @brief  Private implementation for SimpleDBRequest.
+ * \brief  Private implementation for SimpleDBRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new SimpleDBRequestPrivate object.
- *
- * @param  action  SimpleDB action being performed by the \a q request.
- * @param  q       Pointer to this object's public SimpleDBRequest instance.
+ * \brief Constructs a new SimpleDBRequestPrivate object.
  */
 SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequest::Action action, SimpleDBRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequest::Action act
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new SimpleDBRequestPrivate object from an existing one.
+ * \brief Constructs a new SimpleDBRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the SimpleDBRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public SimpleDBRequest instance.
  */
 SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequestPrivate &other,
                                      SimpleDBRequest * const q)
@@ -312,14 +275,14 @@ SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequestPrivate &oth
 
 }
 
-/**
- * @brief  Convert and SimpleDB action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts SimpleDBRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SimpleDB service's Action
  * query parameters.
- *
- * @param  action  SimpleDB action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeAutoScalingGroupsRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeAutoScalingGroupsRequest
  *
- * @brief  Implements AutoScaling DescribeAutoScalingGroups requests.
+ * \brief The DescribeAutoScalingGroupsRequest class encapsulates AutoScaling DescribeAutoScalingGroups requests.
  *
- * @see    AutoScalingClient::describeAutoScalingGroups
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeAutoScalingGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAutoScalingGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeAutoScalingGroupsRequest::DescribeAutoScalingGroupsRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeAutoScalingGroupsRequest object.
  */
 DescribeAutoScalingGroupsRequest::DescribeAutoScalingGroupsRequest()
@@ -53,13 +61,16 @@ DescribeAutoScalingGroupsRequest::DescribeAutoScalingGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeAutoScalingGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeAutoScalingGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAutoScalingGroupsRequest::response(QN
     return new DescribeAutoScalingGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeAutoScalingGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeAutoScalingGroupsRequest::response(QN
  * @brief  Private implementation for DescribeAutoScalingGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAutoScalingGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeAutoScalingGroupsRequestPrivate::DescribeAutoScalingGroupsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAutoScalingGroupsRequestPrivate object, copying another.

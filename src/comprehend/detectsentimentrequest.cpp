@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DetectSentimentRequest
+/*!
+ * \class QtAws::Comprehend::DetectSentimentRequest
  *
- * @brief  Implements Comprehend DetectSentiment requests.
+ * \brief The DetectSentimentRequest class encapsulates Comprehend DetectSentiment requests.
  *
- * @see    ComprehendClient::detectSentiment
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::detectSentiment
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectSentimentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DetectSentimentRequest::DetectSentimentRequest(const DetectSentimentRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectSentimentRequest object.
  */
 DetectSentimentRequest::DetectSentimentRequest()
@@ -53,13 +59,16 @@ DetectSentimentRequest::DetectSentimentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectSentimentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectSentimentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DetectSentimentRequest::response(QNetworkRepl
     return new DetectSentimentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectSentimentRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DetectSentimentRequest::response(QNetworkRepl
  * @brief  Private implementation for DetectSentimentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectSentimentRequestPrivate object.
@@ -97,7 +106,7 @@ DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectSentimentRequestPrivate object, copying another.

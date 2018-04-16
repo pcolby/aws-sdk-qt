@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ForgetDeviceRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ForgetDeviceRequest
  *
- * @brief  Implements CognitoIdentityProvider ForgetDevice requests.
+ * \brief The ForgetDeviceRequest class encapsulates CognitoIdentityProvider ForgetDevice requests.
  *
- * @see    CognitoIdentityProviderClient::forgetDevice
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::forgetDevice
  */
 
-/**
+/*!
  * @brief  Constructs a new ForgetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ForgetDeviceRequest::ForgetDeviceRequest(const ForgetDeviceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ForgetDeviceRequest object.
  */
 ForgetDeviceRequest::ForgetDeviceRequest()
@@ -53,13 +66,16 @@ ForgetDeviceRequest::ForgetDeviceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ForgetDeviceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ForgetDeviceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply *
     return new ForgetDeviceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ForgetDeviceRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply *
  * @brief  Private implementation for ForgetDeviceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ForgetDeviceRequestPrivate object.
@@ -97,7 +113,7 @@ ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ForgetDeviceRequestPrivate object, copying another.

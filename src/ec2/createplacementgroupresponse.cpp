@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreatePlacementGroupResponse
+/*!
+ * \class QtAws::EC2::CreatePlacementGroupResponse
  *
- * @brief  Handles EC2 CreatePlacementGroup responses.
+ * \brief The CreatePlacementGroupResponse class encapsulates EC2 CreatePlacementGroup responses.
  *
- * @see    EC2Client::createPlacementGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createPlacementGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePlacementGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreatePlacementGroupRequest * CreatePlacementGroupResponse::request() cons
     return static_cast<const CreatePlacementGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreatePlacementGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreatePlacementGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreatePlacementGroupResponsePrivate
+ * \class CreatePlacementGroupResponsePrivate
  *
- * @brief  Private implementation for CreatePlacementGroupResponse.
+ * \brief Private implementation for CreatePlacementGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePlacementGroupResponsePrivate object.
@@ -91,7 +98,7 @@ CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreatePlacementGroupResponse element.
  *
  * @param  xml  XML stream to parse.

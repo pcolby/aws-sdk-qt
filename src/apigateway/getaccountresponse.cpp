@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetAccountResponse
+/*!
+ * \class QtAws::APIGateway::GetAccountResponse
  *
- * @brief  Handles APIGateway GetAccount responses.
+ * \brief The GetAccountResponse class encapsulates APIGateway GetAccount responses.
  *
- * @see    APIGatewayClient::getAccount
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetAccountRequest * GetAccountResponse::request() const
     return static_cast<const GetAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetAccountResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAccountResponsePrivate
+ * \class GetAccountResponsePrivate
  *
- * @brief  Private implementation for GetAccountResponse.
+ * \brief Private implementation for GetAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountResponsePrivate object.
@@ -91,7 +99,7 @@ GetAccountResponsePrivate::GetAccountResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetAccountResponse element.
  *
  * @param  xml  XML stream to parse.

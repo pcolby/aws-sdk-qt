@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetRuleRequest
+/*!
+ * \class QtAws::WAF::GetRuleRequest
  *
- * @brief  Implements WAF GetRule requests.
+ * \brief The GetRuleRequest class encapsulates WAF GetRule requests.
  *
- * @see    WAFClient::getRule
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getRule
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetRuleRequest object.
  */
 GetRuleRequest::GetRuleRequest()
@@ -53,13 +61,16 @@ GetRuleRequest::GetRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * cons
     return new GetRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetRuleRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRuleRequestPrivate object.
@@ -97,7 +108,7 @@ GetRuleRequestPrivate::GetRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRuleRequestPrivate object, copying another.

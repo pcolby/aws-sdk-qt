@@ -91,61 +91,69 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Glacier
+ * \brief The QtAws::Glacier contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Glacier {
 
-/**
- * @class  GlacierClient
+/*!
+ * \class QtAws::Glacier::GlacierClient
  *
- * @brief  Client for Amazon Glacier
+ * \brief The GlacierClient class provides access the Amazon Glacier service.
  *
- * Amazon Glacier is a storage solution for "cold
+ * \ingroup Glacier
  *
- * data.>
- *
- * Amazon Glacier is an extremely low-cost storage service that provides secure, durable, and easy-to-use storage for data
- * backup and archival. With Amazon Glacier, customers can store their data cost effectively for months, years, or decades.
- * Amazon Glacier also enables customers to offload the administrative burdens of operating and scaling storage to AWS, so
- * they don't have to worry about capacity planning, hardware provisioning, data replication, hardware failure and
- * recovery, or time-consuming hardware
- *
- * migrations>
- *
- * Amazon Glacier is a great storage choice when low storage cost is paramount, your data is rarely retrieved, and
- * retrieval latency of several hours is acceptable. If your application requires fast or frequent access to your data,
- * consider using Amazon S3. For more information, see <a href="http://aws.amazon.com/s3/">Amazon Simple Storage Service
- * (Amazon
- *
- * S3)</a>>
- *
- * You can store any kind of data in any format. There is no maximum limit on the total amount of data you can store in
- * Amazon
- *
- * Glacier>
- *
- * If you are a first-time user of Amazon Glacier, we recommend that you begin by reading the following sections in the
- * <i>Amazon Glacier Developer
- *
- * Guide</i>> <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html">What is Amazon Glacier</a> - This
- * section of the Developer Guide describes the underlying data model, the operations it supports, and the AWS SDKs that
- * you can use to interact with the
- *
- * service> </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html">Getting Started with
- * Amazon Glacier</a> - The Getting Started section walks you through the process of creating a vault, uploading archives,
- * creating jobs to download archives, retrieving the job output, and deleting
+ *  Amazon Glacier is a storage solution for "cold
+ * 
+ *  data.>
+ * 
+ *  Amazon Glacier is an extremely low-cost storage service that provides secure, durable, and easy-to-use storage for data
+ *  backup and archival. With Amazon Glacier, customers can store their data cost effectively for months, years, or decades.
+ *  Amazon Glacier also enables customers to offload the administrative burdens of operating and scaling storage to AWS, so
+ *  they don't have to worry about capacity planning, hardware provisioning, data replication, hardware failure and
+ *  recovery, or time-consuming hardware
+ * 
+ *  migrations>
+ * 
+ *  Amazon Glacier is a great storage choice when low storage cost is paramount, your data is rarely retrieved, and
+ *  retrieval latency of several hours is acceptable. If your application requires fast or frequent access to your data,
+ *  consider using Amazon S3. For more information, see <a href="http://aws.amazon.com/s3/">Amazon Simple Storage Service
+ *  (Amazon
+ * 
+ *  S3)</a>>
+ * 
+ *  You can store any kind of data in any format. There is no maximum limit on the total amount of data you can store in
+ *  Amazon
+ * 
+ *  Glacier>
+ * 
+ *  If you are a first-time user of Amazon Glacier, we recommend that you begin by reading the following sections in the
+ *  <i>Amazon Glacier Developer
+ * 
+ *  Guide</i>> <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html">What is Amazon Glacier</a> - This
+ *  section of the Developer Guide describes the underlying data model, the operations it supports, and the AWS SDKs that
+ *  you can use to interact with the
+ * 
+ *  service> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html">Getting Started with
+ *  Amazon Glacier</a> - The Getting Started section walks you through the process of creating a vault, uploading archives,
+ *  creating jobs to download archives, retrieving the job output, and deleting
  */
 
-/**
- * @brief  Constructs a new GlacierClient object.
+/*!
+ * \brief Constructs a GlacierClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 GlacierClient::GlacierClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -164,21 +172,16 @@ GlacierClient::GlacierClient(
     d->serviceName = QStringLiteral("glacier");
 }
 
-/**
- * @brief  Constructs a new GlacierClient object.
+/*!
+ * \overload GlacierClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 GlacierClient::GlacierClient(
     const QUrl &endpoint,
@@ -197,7 +200,7 @@ GlacierClient::GlacierClient(
     d->serviceName = QStringLiteral("glacier");
 }
 
-/**
+/*!
  * This operation aborts a multipart upload identified by the upload
  *
  * ID>
@@ -237,7 +240,7 @@ AbortMultipartUploadResponse * GlacierClient::abortMultipartUpload(const AbortMu
     return qobject_cast<AbortMultipartUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation aborts the vault locking process if the vault lock is not in the <code>Locked</code> state. If the vault
  * lock is in the <code>Locked</code> state when this operation is requested, the operation returns an
  * <code>AccessDeniedException</code> error. Aborting the vault locking process removes the vault lock policy from the
@@ -269,7 +272,7 @@ AbortVaultLockResponse * GlacierClient::abortVaultLock(const AbortVaultLockReque
     return qobject_cast<AbortVaultLockResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation adds the specified tags to a vault. Each tag is composed of a key and a value. Each vault can have up to
  * 10 tags. If your request would cause the tag limit for the vault to be exceeded, the operation throws the
  * <code>LimitExceededException</code> error. If a tag already exists on the vault under a specified key, the existing key
@@ -287,7 +290,7 @@ AddTagsToVaultResponse * GlacierClient::addTagsToVault(const AddTagsToVaultReque
     return qobject_cast<AddTagsToVaultResponse *>(send(request));
 }
 
-/**
+/*!
  * You call this operation to inform Amazon Glacier that all the archive parts have been uploaded and that Amazon Glacier
  * can now assemble the archive from the uploaded parts. After assembling and saving the archive to the vault, Amazon
  * Glacier returns the URI path of the newly created archive resource. Using the URI path, you can then access the archive.
@@ -345,7 +348,7 @@ CompleteMultipartUploadResponse * GlacierClient::completeMultipartUpload(const C
     return qobject_cast<CompleteMultipartUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation completes the vault locking process by transitioning the vault lock from the <code>InProgress</code>
  * state to the <code>Locked</code> state, which causes the vault lock policy to become unchangeable. A vault lock is put
  * into the <code>InProgress</code> state by calling <a>InitiateVaultLock</a>. You can obtain the state of the vault lock
@@ -374,7 +377,7 @@ CompleteVaultLockResponse * GlacierClient::completeVaultLock(const CompleteVault
     return qobject_cast<CompleteVaultLockResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation creates a new vault with the specified name. The name of the vault must be unique within a region for an
  * AWS account. You can create up to 1,000 vaults per account. If you need to create more vaults, contact Amazon
  *
@@ -420,7 +423,7 @@ CreateVaultResponse * GlacierClient::createVault(const CreateVaultRequest &reque
     return qobject_cast<CreateVaultResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation deletes an archive from a vault. Subsequent requests to initiate a retrieval of this archive will fail.
  * Archive retrievals that are in progress for this archive ID may or may not succeed according to the following
  *
@@ -464,7 +467,7 @@ DeleteArchiveResponse * GlacierClient::deleteArchive(const DeleteArchiveRequest 
     return qobject_cast<DeleteArchiveResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation deletes a vault. Amazon Glacier will delete a vault only if there are no archives in the vault as of the
  * last inventory and there have been no writes to the vault since the last inventory. If either of these conditions is not
  * satisfied, the vault deletion fails (that is, the vault is not removed) and Amazon Glacier returns an error. You can use
@@ -503,7 +506,7 @@ DeleteVaultResponse * GlacierClient::deleteVault(const DeleteVaultRequest &reque
     return qobject_cast<DeleteVaultResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation deletes the access policy associated with the specified vault. The operation is eventually consistent;
  * that is, it might take some time for Amazon Glacier to completely remove the access policy, and you might still see the
  * effect of the policy for a short time after you send the delete
@@ -526,7 +529,7 @@ DeleteVaultAccessPolicyResponse * GlacierClient::deleteVaultAccessPolicy(const D
     return qobject_cast<DeleteVaultAccessPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation deletes the notification configuration set for a vault. The operation is eventually consistent; that is,
  * it might take some time for Amazon Glacier to completely disable the notifications and you might still receive some
  * notifications for a short time after you send the delete
@@ -557,7 +560,7 @@ DeleteVaultNotificationsResponse * GlacierClient::deleteVaultNotifications(const
     return qobject_cast<DeleteVaultNotificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns information about a job you previously initiated, including the job initiation date, the user who
  * initiated the job, the job status code/message and the Amazon SNS topic to notify after Amazon Glacier completes the
  * job. For more information about initiating a job, see <a>InitiateJob</a>.
@@ -597,7 +600,7 @@ DescribeJobResponse * GlacierClient::describeJob(const DescribeJobRequest &reque
     return qobject_cast<DescribeJobResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns information about a vault, including the vault's Amazon Resource Name (ARN), the date the vault
  * was created, the number of archives it contains, and the total size of all the archives in the vault. The number of
  * archives and their total size are as of the last inventory generation. This means that if you add or remove an archive
@@ -633,7 +636,7 @@ DescribeVaultResponse * GlacierClient::describeVault(const DescribeVaultRequest 
     return qobject_cast<DescribeVaultResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation returns the current data retrieval policy for the account and region specified in the GET request. For
  * more information about data retrieval policies, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html">Amazon Glacier Data Retrieval
@@ -649,7 +652,7 @@ GetDataRetrievalPolicyResponse * GlacierClient::getDataRetrievalPolicy(const Get
     return qobject_cast<GetDataRetrievalPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation downloads the output of the job you initiated using <a>InitiateJob</a>. Depending on the job type you
  * specified when you initiated the job, the output will be either the content of an archive or a vault
  *
@@ -711,7 +714,7 @@ GetJobOutputResponse * GlacierClient::getJobOutput(const GetJobOutputRequest &re
     return qobject_cast<GetJobOutputResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation retrieves the <code>access-policy</code> subresource set on the vault; for more information on setting
  * this subresource, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-SetVaultAccessPolicy.html">Set
  * Vault Access Policy (PUT access-policy)</a>. If there is no access policy set on the vault, the operation returns a
@@ -730,7 +733,7 @@ GetVaultAccessPolicyResponse * GlacierClient::getVaultAccessPolicy(const GetVaul
     return qobject_cast<GetVaultAccessPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation retrieves the following attributes from the <code>lock-policy</code> subresource set on the specified
  * vault:
  *
@@ -775,7 +778,7 @@ GetVaultLockResponse * GlacierClient::getVaultLock(const GetVaultLockRequest &re
     return qobject_cast<GetVaultLockResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation retrieves the <code>notification-configuration</code> subresource of the specified
  *
  * vault>
@@ -813,7 +816,7 @@ GetVaultNotificationsResponse * GlacierClient::getVaultNotifications(const GetVa
     return qobject_cast<GetVaultNotificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation initiates a job of the specified type, which can be a select, an archival retrieval, or a vault
  * retrieval. For more information about using this operation, see the documentation for the underlying REST API <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-initiate-job-post.html">Initiate a Job</a>.
@@ -829,7 +832,7 @@ InitiateJobResponse * GlacierClient::initiateJob(const InitiateJobRequest &reque
     return qobject_cast<InitiateJobResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation initiates a multipart upload. Amazon Glacier creates a multipart upload resource and returns its ID in
  * the response. The multipart upload ID is used in subsequent requests to upload parts of an archive (see
  *
@@ -883,7 +886,7 @@ InitiateMultipartUploadResponse * GlacierClient::initiateMultipartUpload(const I
     return qobject_cast<InitiateMultipartUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation initiates the vault locking process by doing the
  *
  * following> <ul> <li>
@@ -938,7 +941,7 @@ InitiateVaultLockResponse * GlacierClient::initiateVaultLock(const InitiateVault
     return qobject_cast<InitiateVaultLockResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation lists jobs for a vault, including jobs that are in-progress and jobs that have recently finished. The
  * List Job operation returns a list of these jobs sorted by job initiation
  *
@@ -989,7 +992,7 @@ ListJobsResponse * GlacierClient::listJobs(const ListJobsRequest &request)
     return qobject_cast<ListJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation lists in-progress multipart uploads for the specified vault. An in-progress multipart upload is a
  * multipart upload that has been initiated by an <a>InitiateMultipartUpload</a> request, but has not yet been completed or
  * aborted. The list returned in the List Multipart Upload response has no guaranteed order.
@@ -1035,7 +1038,7 @@ ListMultipartUploadsResponse * GlacierClient::listMultipartUploads(const ListMul
     return qobject_cast<ListMultipartUploadsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation lists the parts of an archive that have been uploaded in a specific multipart upload. You can make this
  * request at any time during an in-progress multipart upload before you complete the upload (see
  * <a>CompleteMultipartUpload</a>. List Parts returns an error for completed uploads. The list returned in the List Parts
@@ -1075,7 +1078,7 @@ ListPartsResponse * GlacierClient::listParts(const ListPartsRequest &request)
     return qobject_cast<ListPartsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation lists the provisioned capacity units for the specified AWS
  *
  * @param  request Request to send to Amazon Glacier.
@@ -1089,7 +1092,7 @@ ListProvisionedCapacityResponse * GlacierClient::listProvisionedCapacity(const L
     return qobject_cast<ListProvisionedCapacityResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation lists all the tags attached to a vault. The operation returns an empty map if there are no tags. For more
  * information about tags, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html">Tagging Amazon
  * Glacier
@@ -1105,7 +1108,7 @@ ListTagsForVaultResponse * GlacierClient::listTagsForVault(const ListTagsForVaul
     return qobject_cast<ListTagsForVaultResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation lists all vaults owned by the calling user's account. The list returned in the response is ASCII-sorted
  * by vault
  *
@@ -1144,7 +1147,7 @@ ListVaultsResponse * GlacierClient::listVaults(const ListVaultsRequest &request)
     return qobject_cast<ListVaultsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation purchases a provisioned capacity unit for an AWS account.
  *
  * @param  request Request to send to Amazon Glacier.
@@ -1158,7 +1161,7 @@ PurchaseProvisionedCapacityResponse * GlacierClient::purchaseProvisionedCapacity
     return qobject_cast<PurchaseProvisionedCapacityResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation removes one or more tags from the set of tags attached to a vault. For more information about tags, see
  * <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html">Tagging Amazon Glacier Resources</a>. This
  * operation is idempotent. The operation will be successful, even if there are no tags attached to the vault.
@@ -1174,7 +1177,7 @@ RemoveTagsFromVaultResponse * GlacierClient::removeTagsFromVault(const RemoveTag
     return qobject_cast<RemoveTagsFromVaultResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation sets and then enacts a data retrieval policy in the region specified in the PUT request. You can set one
  * policy per region for an AWS account. The policy is enacted within a few minutes of a successful PUT
  *
@@ -1196,7 +1199,7 @@ SetDataRetrievalPolicyResponse * GlacierClient::setDataRetrievalPolicy(const Set
     return qobject_cast<SetDataRetrievalPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation configures an access policy for a vault and will overwrite an existing policy. To configure a vault
  * access policy, send a PUT request to the <code>access-policy</code> subresource of the vault. An access policy is
  * specific to a vault and is also called a vault subresource. You can set one access policy per vault and the policy can
@@ -1215,7 +1218,7 @@ SetVaultAccessPolicyResponse * GlacierClient::setVaultAccessPolicy(const SetVaul
     return qobject_cast<SetVaultAccessPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation configures notifications that will be sent when specific events happen to a vault. By default, you don't
  * get any
  *
@@ -1269,7 +1272,7 @@ SetVaultNotificationsResponse * GlacierClient::setVaultNotifications(const SetVa
     return qobject_cast<SetVaultNotificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation adds an archive to a vault. This is a synchronous operation, and for a successful upload, your data is
  * durably persisted. Amazon Glacier returns the archive ID in the <code>x-amz-archive-id</code> header of the response.
  *
@@ -1324,7 +1327,7 @@ UploadArchiveResponse * GlacierClient::uploadArchive(const UploadArchiveRequest 
     return qobject_cast<UploadArchiveResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation uploads a part of an archive. You can upload archive parts in any order. You can also upload them in
  * parallel. You can upload up to 10,000 parts for a multipart
  *
@@ -1389,7 +1392,7 @@ UploadMultipartPartResponse * GlacierClient::uploadMultipartPart(const UploadMul
     return qobject_cast<UploadMultipartPartResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GlacierClientPrivate
@@ -1397,7 +1400,7 @@ UploadMultipartPartResponse * GlacierClient::uploadMultipartPart(const UploadMul
  * @brief  Private implementation for GlacierClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GlacierClientPrivate object.

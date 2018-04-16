@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListModelsRequest
+/*!
+ * \class QtAws::SageMaker::ListModelsRequest
  *
- * @brief  Implements SageMaker ListModels requests.
+ * \brief The ListModelsRequest class encapsulates SageMaker ListModels requests.
  *
- * @see    SageMakerClient::listModels
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listModels
  */
 
-/**
+/*!
  * @brief  Constructs a new ListModelsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListModelsRequest::ListModelsRequest(const ListModelsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListModelsRequest object.
  */
 ListModelsRequest::ListModelsRequest()
@@ -53,13 +56,16 @@ ListModelsRequest::ListModelsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListModelsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListModelsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * c
     return new ListModelsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListModelsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListModelsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListModelsRequestPrivate object.
@@ -97,7 +103,7 @@ ListModelsRequestPrivate::ListModelsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListModelsRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  CreateStackResponse
+/*!
+ * \class QtAws::AppStream::CreateStackResponse
  *
- * @brief  Handles AppStream CreateStack responses.
+ * \brief The CreateStackResponse class encapsulates AppStream CreateStack responses.
  *
- * @see    AppStreamClient::createStack
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::createStack
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStackResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateStackRequest * CreateStackResponse::request() const
     return static_cast<const CreateStackRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream CreateStack response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateStackResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateStackResponsePrivate
+ * \class CreateStackResponsePrivate
  *
- * @brief  Private implementation for CreateStackResponse.
+ * \brief Private implementation for CreateStackResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStackResponsePrivate object.
@@ -91,7 +97,7 @@ CreateStackResponsePrivate::CreateStackResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream CreateStackResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  LightsailResponse
+/*!
+ * \class QtAws::Lightsail::LightsailResponse
  *
- * @brief  Handles Lightsail Lightsail responses.
+ * \brief The LightsailResponse class is the base class for all Lightsail responses.
  *
- * @see    LightsailClient::lightsail
+ * \ingroup Lightsail
  */
 
-/**
+/*!
  * @brief  Constructs a new LightsailResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ LightsailResponse::LightsailResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LightsailResponse object.
@@ -63,7 +63,7 @@ LightsailResponse::LightsailResponse(LightsailResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void LightsailResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LightsailResponsePrivate
@@ -92,7 +92,7 @@ void LightsailResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for LightsailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LightsailResponsePrivate object.

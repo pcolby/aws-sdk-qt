@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeEventsRequest
+/*!
+ * \class QtAws::ElastiCache::DescribeEventsRequest
  *
- * @brief  Implements ElastiCache DescribeEvents requests.
+ * \brief The DescribeEventsRequest class encapsulates ElastiCache DescribeEvents requests.
  *
- * @see    ElastiCacheClient::describeEvents
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
@@ -53,13 +70,16 @@ DescribeEventsRequest::DescribeEventsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
     return new DescribeEventsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventsRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeEventsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsRequestPrivate object.
@@ -97,7 +117,7 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsRequestPrivate object, copying another.

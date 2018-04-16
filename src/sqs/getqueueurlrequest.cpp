@@ -25,15 +25,84 @@
 namespace QtAws {
 namespace SQS {
 
-/**
- * @class  GetQueueUrlRequest
+/*!
+ * \class QtAws::SQS::GetQueueUrlRequest
  *
- * @brief  Implements SQS GetQueueUrl requests.
+ * \brief The GetQueueUrlRequest class encapsulates SQS GetQueueUrl requests.
  *
- * @see    SQSClient::getQueueUrl
+ * \ingroup SQS
+ *
+ *  Welcome to the <i>Amazon Simple Queue Service API
+ * 
+ *  Reference</i>>
+ * 
+ *  Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
+ *  between applications or microservices. Amazon SQS moves data between distributed application components and helps you
+ *  decouple these
+ * 
+ *  components> <note>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Standard
+ *  queues</a> are available in all regions. <a
+ *  href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html">FIFO queues</a> are
+ *  available in the US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland)
+ * 
+ *  regions> </note>
+ * 
+ *  You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
+ *  language. The SDKs perform tasks such as the following
+ * 
+ *  automatically> <ul> <li>
+ * 
+ *  Cryptographically sign your service
+ * 
+ *  request> </li> <li>
+ * 
+ *  Retry
+ * 
+ *  request> </li> <li>
+ * 
+ *  Handle error
+ * 
+ *  response> </li> </ul>
+ * 
+ *  <b>Additional Information</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/sqs/">Amazon SQS Product Page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <i>Amazon Simple Queue Service Developer Guide</i>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making
+ *  API Requests</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Using
+ *  Amazon SQS Message Attributes</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
+ *  Amazon SQS Dead-Letter Queues</a>
+ * 
+ *  </p </li> </ul> </li> <li>
+ * 
+ *  <i>Amazon Web Services General Reference</i>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
+ *
+ * \sa SQSClient::getQueueUrl
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQueueUrlRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +113,7 @@ GetQueueUrlRequest::GetQueueUrlRequest(const GetQueueUrlRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetQueueUrlRequest object.
  */
 GetQueueUrlRequest::GetQueueUrlRequest()
@@ -53,13 +122,16 @@ GetQueueUrlRequest::GetQueueUrlRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetQueueUrlRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetQueueUrlResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +146,7 @@ QtAws::Core::AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * 
     return new GetQueueUrlResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetQueueUrlRequestPrivate
@@ -82,7 +154,7 @@ QtAws::Core::AwsAbstractResponse * GetQueueUrlRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetQueueUrlRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueueUrlRequestPrivate object.
@@ -97,7 +169,7 @@ GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueueUrlRequestPrivate object, copying another.

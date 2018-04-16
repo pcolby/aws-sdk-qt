@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DescribeUserImportJobRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DescribeUserImportJobRequest
  *
- * @brief  Implements CognitoIdentityProvider DescribeUserImportJob requests.
+ * \brief The DescribeUserImportJobRequest class encapsulates CognitoIdentityProvider DescribeUserImportJob requests.
  *
- * @see    CognitoIdentityProviderClient::describeUserImportJob
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::describeUserImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserImportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DescribeUserImportJobRequest::DescribeUserImportJobRequest(const DescribeUserImp
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeUserImportJobRequest object.
  */
 DescribeUserImportJobRequest::DescribeUserImportJobRequest()
@@ -53,13 +66,16 @@ DescribeUserImportJobRequest::DescribeUserImportJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeUserImportJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeUserImportJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserImportJobRequest::response(QNetwo
     return new DescribeUserImportJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeUserImportJobRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DescribeUserImportJobRequest::response(QNetwo
  * @brief  Private implementation for DescribeUserImportJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserImportJobRequestPrivate object.
@@ -97,7 +113,7 @@ DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeUserImportJobRequestPrivate object, copying another.

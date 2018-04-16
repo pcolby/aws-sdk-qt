@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  DeleteReplicationJobResponse
+/*!
+ * \class QtAws::SMS::DeleteReplicationJobResponse
  *
- * @brief  Handles SMS DeleteReplicationJob responses.
+ * \brief The DeleteReplicationJobResponse class encapsulates SMS DeleteReplicationJob responses.
  *
- * @see    SMSClient::deleteReplicationJob
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::deleteReplicationJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteReplicationJobRequest * DeleteReplicationJobResponse::request() cons
     return static_cast<const DeleteReplicationJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS DeleteReplicationJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteReplicationJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReplicationJobResponsePrivate
+ * \class DeleteReplicationJobResponsePrivate
  *
- * @brief  Private implementation for DeleteReplicationJobResponse.
+ * \brief Private implementation for DeleteReplicationJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationJobResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS DeleteReplicationJobResponse element.
  *
  * @param  xml  XML stream to parse.

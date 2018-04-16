@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpnGatewaysRequest
+/*!
+ * \class QtAws::EC2::DescribeVpnGatewaysRequest
  *
- * @brief  Implements EC2 DescribeVpnGateways requests.
+ * \brief The DescribeVpnGatewaysRequest class encapsulates EC2 DescribeVpnGateways requests.
  *
- * @see    EC2Client::describeVpnGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpnGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpnGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest(const DescribeVpnGateways
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpnGatewaysRequest object.
  */
 DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest()
@@ -53,13 +60,16 @@ DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpnGatewaysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpnGatewaysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnGatewaysRequest::response(QNetwork
     return new DescribeVpnGatewaysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpnGatewaysRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnGatewaysRequest::response(QNetwork
  * @brief  Private implementation for DescribeVpnGatewaysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpnGatewaysRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpnGatewaysRequestPrivate object, copying another.

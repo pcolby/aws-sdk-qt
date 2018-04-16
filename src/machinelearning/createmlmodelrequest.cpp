@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateMLModelRequest
+/*!
+ * \class QtAws::MachineLearning::CreateMLModelRequest
  *
- * @brief  Implements MachineLearning CreateMLModel requests.
+ * \brief The CreateMLModelRequest class encapsulates MachineLearning CreateMLModel requests.
  *
- * @see    MachineLearningClient::createMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateMLModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateMLModelRequest::CreateMLModelRequest(const CreateMLModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateMLModelRequest object.
  */
 CreateMLModelRequest::CreateMLModelRequest()
@@ -53,13 +56,16 @@ CreateMLModelRequest::CreateMLModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateMLModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateMLModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateMLModelRequest::response(QNetworkReply 
     return new CreateMLModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateMLModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateMLModelRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateMLModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMLModelRequestPrivate object.
@@ -97,7 +103,7 @@ CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMLModelRequestPrivate object, copying another.

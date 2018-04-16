@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssignPrivateIpAddressesRequest
+/*!
+ * \class QtAws::EC2::AssignPrivateIpAddressesRequest
  *
- * @brief  Implements EC2 AssignPrivateIpAddresses requests.
+ * \brief The AssignPrivateIpAddressesRequest class encapsulates EC2 AssignPrivateIpAddresses requests.
  *
- * @see    EC2Client::assignPrivateIpAddresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::assignPrivateIpAddresses
  */
 
-/**
+/*!
  * @brief  Constructs a new AssignPrivateIpAddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest(const AssignPri
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssignPrivateIpAddressesRequest object.
  */
 AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest()
@@ -53,13 +60,16 @@ AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssignPrivateIpAddressesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssignPrivateIpAddressesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNe
     return new AssignPrivateIpAddressesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssignPrivateIpAddressesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNe
  * @brief  Private implementation for AssignPrivateIpAddressesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssignPrivateIpAddressesRequestPrivate object.
@@ -97,7 +107,7 @@ AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssignPrivateIpAddressesRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateEndpointsBatchRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateEndpointsBatchRequest
  *
- * @brief  Implements Pinpoint UpdateEndpointsBatch requests.
+ * \brief The UpdateEndpointsBatchRequest class encapsulates Pinpoint UpdateEndpointsBatch requests.
  *
- * @see    PinpointClient::updateEndpointsBatch
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateEndpointsBatch
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointsBatchRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest(const UpdateEndpointsBa
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointsBatchRequest object.
  */
 UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest()
@@ -53,13 +56,16 @@ UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateEndpointsBatchRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateEndpointsBatchResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetwor
     return new UpdateEndpointsBatchResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateEndpointsBatchRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetwor
  * @brief  Private implementation for UpdateEndpointsBatchRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointsBatchRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointsBatchRequestPrivate object, copying another.

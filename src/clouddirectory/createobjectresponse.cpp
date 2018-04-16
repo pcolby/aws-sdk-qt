@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateObjectResponse
+/*!
+ * \class QtAws::CloudDirectory::CreateObjectResponse
  *
- * @brief  Handles CloudDirectory CreateObject responses.
+ * \brief The CreateObjectResponse class encapsulates CloudDirectory CreateObject responses.
  *
- * @see    CloudDirectoryClient::createObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createObject
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const CreateObjectRequest * CreateObjectResponse::request() const
     return static_cast<const CreateObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory CreateObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void CreateObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateObjectResponsePrivate
+ * \class CreateObjectResponsePrivate
  *
- * @brief  Private implementation for CreateObjectResponse.
+ * \brief Private implementation for CreateObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateObjectResponsePrivate object.
@@ -91,7 +101,7 @@ CreateObjectResponsePrivate::CreateObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory CreateObjectResponse element.
  *
  * @param  xml  XML stream to parse.

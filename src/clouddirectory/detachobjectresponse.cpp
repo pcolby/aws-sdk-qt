@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  DetachObjectResponse
+/*!
+ * \class QtAws::CloudDirectory::DetachObjectResponse
  *
- * @brief  Handles CloudDirectory DetachObject responses.
+ * \brief The DetachObjectResponse class encapsulates CloudDirectory DetachObject responses.
  *
- * @see    CloudDirectoryClient::detachObject
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::detachObject
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const DetachObjectRequest * DetachObjectResponse::request() const
     return static_cast<const DetachObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory DetachObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void DetachObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachObjectResponsePrivate
+ * \class DetachObjectResponsePrivate
  *
- * @brief  Private implementation for DetachObjectResponse.
+ * \brief Private implementation for DetachObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachObjectResponsePrivate object.
@@ -91,7 +101,7 @@ DetachObjectResponsePrivate::DetachObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory DetachObjectResponse element.
  *
  * @param  xml  XML stream to parse.

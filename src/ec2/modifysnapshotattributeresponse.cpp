@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifySnapshotAttributeResponse
+/*!
+ * \class QtAws::EC2::ModifySnapshotAttributeResponse
  *
- * @brief  Handles EC2 ModifySnapshotAttribute responses.
+ * \brief The ModifySnapshotAttributeResponse class encapsulates EC2 ModifySnapshotAttribute responses.
  *
- * @see    EC2Client::modifySnapshotAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifySnapshotAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifySnapshotAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifySnapshotAttributeRequest * ModifySnapshotAttributeResponse::request(
     return static_cast<const ModifySnapshotAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifySnapshotAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifySnapshotAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifySnapshotAttributeResponsePrivate
+ * \class ModifySnapshotAttributeResponsePrivate
  *
- * @brief  Private implementation for ModifySnapshotAttributeResponse.
+ * \brief Private implementation for ModifySnapshotAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySnapshotAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifySnapshotAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

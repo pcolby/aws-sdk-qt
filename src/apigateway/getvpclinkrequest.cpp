@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetVpcLinkRequest
+/*!
+ * \class QtAws::APIGateway::GetVpcLinkRequest
  *
- * @brief  Implements APIGateway GetVpcLink requests.
+ * \brief The GetVpcLinkRequest class encapsulates APIGateway GetVpcLink requests.
  *
- * @see    APIGatewayClient::getVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new GetVpcLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetVpcLinkRequest::GetVpcLinkRequest(const GetVpcLinkRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetVpcLinkRequest object.
  */
 GetVpcLinkRequest::GetVpcLinkRequest()
@@ -53,13 +61,16 @@ GetVpcLinkRequest::GetVpcLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetVpcLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetVpcLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinkRequest::response(QNetworkReply * c
     return new GetVpcLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetVpcLinkRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinkRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetVpcLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetVpcLinkRequestPrivate object.
@@ -97,7 +108,7 @@ GetVpcLinkRequestPrivate::GetVpcLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetVpcLinkRequestPrivate object, copying another.

@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  AddTagsToCertificateResponse
+/*!
+ * \class QtAws::ACM::AddTagsToCertificateResponse
  *
- * @brief  Handles ACM AddTagsToCertificate responses.
+ * \brief The AddTagsToCertificateResponse class encapsulates ACM AddTagsToCertificate responses.
  *
- * @see    ACMClient::addTagsToCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::addTagsToCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const AddTagsToCertificateRequest * AddTagsToCertificateResponse::request() cons
     return static_cast<const AddTagsToCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM AddTagsToCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsToCertificateResponsePrivate
+ * \class AddTagsToCertificateResponsePrivate
  *
- * @brief  Private implementation for AddTagsToCertificateResponse.
+ * \brief Private implementation for AddTagsToCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM AddTagsToCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

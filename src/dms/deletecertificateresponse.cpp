@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteCertificateResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteCertificateResponse
  *
- * @brief  Handles DatabaseMigrationService DeleteCertificate responses.
+ * \brief The DeleteCertificateResponse class encapsulates DatabaseMigrationService DeleteCertificate responses.
  *
- * @see    DatabaseMigrationServiceClient::deleteCertificate
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
     return static_cast<const DeleteCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DeleteCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCertificateResponsePrivate
+ * \class DeleteCertificateResponsePrivate
  *
- * @brief  Private implementation for DeleteCertificateResponse.
+ * \brief Private implementation for DeleteCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCertificateResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DeleteCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

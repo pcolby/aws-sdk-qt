@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteServiceLinkedRoleResponse
+/*!
+ * \class QtAws::CloudFront::DeleteServiceLinkedRoleResponse
  *
- * @brief  Handles CloudFront DeleteServiceLinkedRole responses.
+ * \brief The DeleteServiceLinkedRoleResponse class encapsulates CloudFront DeleteServiceLinkedRole responses.
  *
- * @see    CloudFrontClient::deleteServiceLinkedRole
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteServiceLinkedRole
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteServiceLinkedRoleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteServiceLinkedRoleRequest * DeleteServiceLinkedRoleResponse::request(
     return static_cast<const DeleteServiceLinkedRoleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront DeleteServiceLinkedRole response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteServiceLinkedRoleResponsePrivate
+ * \class DeleteServiceLinkedRoleResponsePrivate
  *
- * @brief  Private implementation for DeleteServiceLinkedRoleResponse.
+ * \brief Private implementation for DeleteServiceLinkedRoleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServiceLinkedRoleResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront DeleteServiceLinkedRoleResponse element.
  *
  * @param  xml  XML stream to parse.

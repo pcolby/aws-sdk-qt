@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingRegistrationTaskReportsRequest
+/*!
+ * \class QtAws::IoT::ListThingRegistrationTaskReportsRequest
  *
- * @brief  Implements IoT ListThingRegistrationTaskReports requests.
+ * \brief The ListThingRegistrationTaskReportsRequest class encapsulates IoT ListThingRegistrationTaskReports requests.
  *
- * @see    IoTClient::listThingRegistrationTaskReports
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThingRegistrationTaskReports
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingRegistrationTaskReportsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListThingRegistrationTaskReportsRequest object.
  */
 ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest()
@@ -53,13 +67,16 @@ ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListThingRegistrationTaskReportsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListThingRegistrationTaskReportsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::resp
     return new ListThingRegistrationTaskReportsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListThingRegistrationTaskReportsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::resp
  * @brief  Private implementation for ListThingRegistrationTaskReportsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingRegistrationTaskReportsRequestPrivate object.
@@ -97,7 +114,7 @@ ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReports
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingRegistrationTaskReportsRequestPrivate object, copying another.

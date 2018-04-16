@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  SetVisibleToAllUsersRequest
+/*!
+ * \class QtAws::EMR::SetVisibleToAllUsersRequest
  *
- * @brief  Implements EMR SetVisibleToAllUsers requests.
+ * \brief The SetVisibleToAllUsersRequest class encapsulates EMR SetVisibleToAllUsers requests.
  *
- * @see    EMRClient::setVisibleToAllUsers
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::setVisibleToAllUsers
  */
 
-/**
+/*!
  * @brief  Constructs a new SetVisibleToAllUsersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest(const SetVisibleToAllUs
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetVisibleToAllUsersRequest object.
  */
 SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest()
@@ -53,13 +59,16 @@ SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetVisibleToAllUsersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetVisibleToAllUsersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
     return new SetVisibleToAllUsersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetVisibleToAllUsersRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
  * @brief  Private implementation for SetVisibleToAllUsersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetVisibleToAllUsersRequestPrivate object.
@@ -97,7 +106,7 @@ SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetVisibleToAllUsersRequestPrivate object, copying another.

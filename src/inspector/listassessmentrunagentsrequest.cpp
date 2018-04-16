@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListAssessmentRunAgentsRequest
+/*!
+ * \class QtAws::Inspector::ListAssessmentRunAgentsRequest
  *
- * @brief  Implements Inspector ListAssessmentRunAgents requests.
+ * \brief The ListAssessmentRunAgentsRequest class encapsulates Inspector ListAssessmentRunAgents requests.
  *
- * @see    InspectorClient::listAssessmentRunAgents
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listAssessmentRunAgents
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentRunAgentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListAssessmentRunAgentsRequest::ListAssessmentRunAgentsRequest(const ListAssessm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssessmentRunAgentsRequest object.
  */
 ListAssessmentRunAgentsRequest::ListAssessmentRunAgentsRequest()
@@ -53,13 +61,16 @@ ListAssessmentRunAgentsRequest::ListAssessmentRunAgentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssessmentRunAgentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssessmentRunAgentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunAgentsRequest::response(QNet
     return new ListAssessmentRunAgentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssessmentRunAgentsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunAgentsRequest::response(QNet
  * @brief  Private implementation for ListAssessmentRunAgentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentRunAgentsRequestPrivate object.
@@ -97,7 +108,7 @@ ListAssessmentRunAgentsRequestPrivate::ListAssessmentRunAgentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssessmentRunAgentsRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  CreateJobRequest
+/*!
+ * \class QtAws::Snowball::CreateJobRequest
  *
- * @brief  Implements Snowball CreateJob requests.
+ * \brief The CreateJobRequest class encapsulates Snowball CreateJob requests.
  *
- * @see    SnowballClient::createJob
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::createJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateJobRequest::CreateJobRequest(const CreateJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateJobRequest object.
  */
 CreateJobRequest::CreateJobRequest()
@@ -53,13 +62,16 @@ CreateJobRequest::CreateJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
     return new CreateJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateJobRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CreateJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobRequestPrivate object.
@@ -97,7 +109,7 @@ CreateJobRequestPrivate::CreateJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobRequestPrivate object, copying another.

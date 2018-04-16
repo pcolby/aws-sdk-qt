@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  UpdateNetworkProfileRequest
+/*!
+ * \class QtAws::DeviceFarm::UpdateNetworkProfileRequest
  *
- * @brief  Implements DeviceFarm UpdateNetworkProfile requests.
+ * \brief The UpdateNetworkProfileRequest class encapsulates DeviceFarm UpdateNetworkProfile requests.
  *
- * @see    DeviceFarmClient::updateNetworkProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::updateNetworkProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNetworkProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ UpdateNetworkProfileRequest::UpdateNetworkProfileRequest(const UpdateNetworkProf
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateNetworkProfileRequest object.
  */
 UpdateNetworkProfileRequest::UpdateNetworkProfileRequest()
@@ -53,13 +58,16 @@ UpdateNetworkProfileRequest::UpdateNetworkProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateNetworkProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateNetworkProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNetworkProfileRequest::response(QNetwor
     return new UpdateNetworkProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateNetworkProfileRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateNetworkProfileRequest::response(QNetwor
  * @brief  Private implementation for UpdateNetworkProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNetworkProfileRequestPrivate object.
@@ -97,7 +105,7 @@ UpdateNetworkProfileRequestPrivate::UpdateNetworkProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNetworkProfileRequestPrivate object, copying another.

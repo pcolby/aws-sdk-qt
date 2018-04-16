@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateGroupVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateGroupVersionResponse
  *
- * @brief  Handles Greengrass CreateGroupVersion responses.
+ * \brief The CreateGroupVersionResponse class encapsulates Greengrass CreateGroupVersion responses.
  *
- * @see    GreengrassClient::createGroupVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createGroupVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGroupVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateGroupVersionRequest * CreateGroupVersionResponse::request() const
     return static_cast<const CreateGroupVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateGroupVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateGroupVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateGroupVersionResponsePrivate
+ * \class CreateGroupVersionResponsePrivate
  *
- * @brief  Private implementation for CreateGroupVersionResponse.
+ * \brief Private implementation for CreateGroupVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGroupVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateGroupVersionResponsePrivate::CreateGroupVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateGroupVersionResponse element.
  *
  * @param  xml  XML stream to parse.

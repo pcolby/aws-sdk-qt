@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketNotificationRequest
+/*!
+ * \class QtAws::S3::GetBucketNotificationRequest
  *
- * @brief  Implements S3 GetBucketNotification requests.
+ * \brief The GetBucketNotificationRequest class encapsulates S3 GetBucketNotification requests.
  *
- * @see    S3Client::getBucketNotification
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketNotificationRequest::GetBucketNotificationRequest(const GetBucketNotifi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketNotificationRequest object.
  */
 GetBucketNotificationRequest::GetBucketNotificationRequest()
@@ -53,13 +56,16 @@ GetBucketNotificationRequest::GetBucketNotificationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketNotificationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketNotificationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationRequest::response(QNetwo
     return new GetBucketNotificationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketNotificationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationRequest::response(QNetwo
  * @brief  Private implementation for GetBucketNotificationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketNotificationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketNotificationRequestPrivate object, copying another.

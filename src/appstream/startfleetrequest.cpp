@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StartFleetRequest
+/*!
+ * \class QtAws::AppStream::StartFleetRequest
  *
- * @brief  Implements AppStream StartFleet requests.
+ * \brief The StartFleetRequest class encapsulates AppStream StartFleet requests.
  *
- * @see    AppStreamClient::startFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::startFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new StartFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartFleetRequest::StartFleetRequest(const StartFleetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartFleetRequest object.
  */
 StartFleetRequest::StartFleetRequest()
@@ -53,13 +59,16 @@ StartFleetRequest::StartFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * c
     return new StartFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * c
  * @brief  Private implementation for StartFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartFleetRequestPrivate object.
@@ -97,7 +106,7 @@ StartFleetRequestPrivate::StartFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartFleetRequestPrivate object, copying another.

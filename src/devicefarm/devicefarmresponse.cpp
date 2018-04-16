@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeviceFarmResponse
+/*!
+ * \class QtAws::DeviceFarm::DeviceFarmResponse
  *
- * @brief  Handles DeviceFarm DeviceFarm responses.
+ * \brief The DeviceFarmResponse class is the base class for all DeviceFarm responses.
  *
- * @see    DeviceFarmClient::deviceFarm
+ * \ingroup DeviceFarm
  */
 
-/**
+/*!
  * @brief  Constructs a new DeviceFarmResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DeviceFarmResponse::DeviceFarmResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeviceFarmResponse object.
@@ -63,7 +63,7 @@ DeviceFarmResponse::DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DeviceFarmResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeviceFarmResponsePrivate
@@ -92,7 +92,7 @@ void DeviceFarmResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DeviceFarmResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeviceFarmResponsePrivate object.

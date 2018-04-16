@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  ListAssociatedStacksRequest
+/*!
+ * \class QtAws::AppStream::ListAssociatedStacksRequest
  *
- * @brief  Implements AppStream ListAssociatedStacks requests.
+ * \brief The ListAssociatedStacksRequest class encapsulates AppStream ListAssociatedStacks requests.
  *
- * @see    AppStreamClient::listAssociatedStacks
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::listAssociatedStacks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssociatedStacksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListAssociatedStacksRequest::ListAssociatedStacksRequest(const ListAssociatedSta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAssociatedStacksRequest object.
  */
 ListAssociatedStacksRequest::ListAssociatedStacksRequest()
@@ -53,13 +59,16 @@ ListAssociatedStacksRequest::ListAssociatedStacksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAssociatedStacksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAssociatedStacksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedStacksRequest::response(QNetwor
     return new ListAssociatedStacksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAssociatedStacksRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedStacksRequest::response(QNetwor
  * @brief  Private implementation for ListAssociatedStacksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssociatedStacksRequestPrivate object.
@@ -97,7 +106,7 @@ ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssociatedStacksRequestPrivate object, copying another.

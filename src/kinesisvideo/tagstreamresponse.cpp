@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  TagStreamResponse
+/*!
+ * \class QtAws::KinesisVideo::TagStreamResponse
  *
- * @brief  Handles KinesisVideo TagStream responses.
+ * \brief The TagStreamResponse class encapsulates KinesisVideo TagStream responses.
  *
- * @see    KinesisVideoClient::tagStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::tagStream
  */
 
-/**
+/*!
  * @brief  Constructs a new TagStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const TagStreamRequest * TagStreamResponse::request() const
     return static_cast<const TagStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideo TagStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void TagStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TagStreamResponsePrivate
+ * \class TagStreamResponsePrivate
  *
- * @brief  Private implementation for TagStreamResponse.
+ * \brief Private implementation for TagStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagStreamResponsePrivate object.
@@ -91,7 +94,7 @@ TagStreamResponsePrivate::TagStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideo TagStreamResponse element.
  *
  * @param  xml  XML stream to parse.

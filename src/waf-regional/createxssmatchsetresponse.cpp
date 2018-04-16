@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  CreateXssMatchSetResponse
+/*!
+ * \class QtAws::WAFRegional::CreateXssMatchSetResponse
  *
- * @brief  Handles WAFRegional CreateXssMatchSet responses.
+ * \brief The CreateXssMatchSetResponse class encapsulates WAFRegional CreateXssMatchSet responses.
  *
- * @see    WAFRegionalClient::createXssMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::createXssMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateXssMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const CreateXssMatchSetRequest * CreateXssMatchSetResponse::request() const
     return static_cast<const CreateXssMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional CreateXssMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void CreateXssMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateXssMatchSetResponsePrivate
+ * \class CreateXssMatchSetResponsePrivate
  *
- * @brief  Private implementation for CreateXssMatchSetResponse.
+ * \brief Private implementation for CreateXssMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateXssMatchSetResponsePrivate object.
@@ -91,7 +101,7 @@ CreateXssMatchSetResponsePrivate::CreateXssMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional CreateXssMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

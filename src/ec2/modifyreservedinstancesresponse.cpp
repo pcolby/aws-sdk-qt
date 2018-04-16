@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyReservedInstancesResponse
+/*!
+ * \class QtAws::EC2::ModifyReservedInstancesResponse
  *
- * @brief  Handles EC2 ModifyReservedInstances responses.
+ * \brief The ModifyReservedInstancesResponse class encapsulates EC2 ModifyReservedInstances responses.
  *
- * @see    EC2Client::modifyReservedInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyReservedInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReservedInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyReservedInstancesRequest * ModifyReservedInstancesResponse::request(
     return static_cast<const ModifyReservedInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyReservedInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyReservedInstancesResponsePrivate
+ * \class ModifyReservedInstancesResponsePrivate
  *
- * @brief  Private implementation for ModifyReservedInstancesResponse.
+ * \brief Private implementation for ModifyReservedInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReservedInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyReservedInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ListGroupsRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ListGroupsRequest
  *
- * @brief  Implements CognitoIdentityProvider ListGroups requests.
+ * \brief The ListGroupsRequest class encapsulates CognitoIdentityProvider ListGroups requests.
  *
- * @see    CognitoIdentityProviderClient::listGroups
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::listGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListGroupsRequest object.
  */
 ListGroupsRequest::ListGroupsRequest()
@@ -53,13 +66,16 @@ ListGroupsRequest::ListGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
     return new ListGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListGroupsRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupsRequestPrivate object.
@@ -97,7 +113,7 @@ ListGroupsRequestPrivate::ListGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListGroupsRequestPrivate object, copying another.

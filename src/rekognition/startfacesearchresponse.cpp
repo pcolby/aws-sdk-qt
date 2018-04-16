@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartFaceSearchResponse
+/*!
+ * \class QtAws::Rekognition::StartFaceSearchResponse
  *
- * @brief  Handles Rekognition StartFaceSearch responses.
+ * \brief The StartFaceSearchResponse class encapsulates Rekognition StartFaceSearch responses.
  *
- * @see    RekognitionClient::startFaceSearch
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startFaceSearch
  */
 
-/**
+/*!
  * @brief  Constructs a new StartFaceSearchResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartFaceSearchRequest * StartFaceSearchResponse::request() const
     return static_cast<const StartFaceSearchRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition StartFaceSearch response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartFaceSearchResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartFaceSearchResponsePrivate
+ * \class StartFaceSearchResponsePrivate
  *
- * @brief  Private implementation for StartFaceSearchResponse.
+ * \brief Private implementation for StartFaceSearchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartFaceSearchResponsePrivate object.
@@ -91,7 +95,7 @@ StartFaceSearchResponsePrivate::StartFaceSearchResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition StartFaceSearchResponse element.
  *
  * @param  xml  XML stream to parse.

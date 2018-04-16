@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetQualificationScoreRequest
+/*!
+ * \class QtAws::MTurk::GetQualificationScoreRequest
  *
- * @brief  Implements MTurk GetQualificationScore requests.
+ * \brief The GetQualificationScoreRequest class encapsulates MTurk GetQualificationScore requests.
  *
- * @see    MTurkClient::getQualificationScore
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getQualificationScore
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQualificationScoreRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetQualificationScoreRequest::GetQualificationScoreRequest(const GetQualificatio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetQualificationScoreRequest object.
  */
 GetQualificationScoreRequest::GetQualificationScoreRequest()
@@ -53,13 +56,16 @@ GetQualificationScoreRequest::GetQualificationScoreRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetQualificationScoreRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetQualificationScoreResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetQualificationScoreRequest::response(QNetwo
     return new GetQualificationScoreResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetQualificationScoreRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetQualificationScoreRequest::response(QNetwo
  * @brief  Private implementation for GetQualificationScoreRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQualificationScoreRequestPrivate object.
@@ -97,7 +103,7 @@ GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQualificationScoreRequestPrivate object, copying another.

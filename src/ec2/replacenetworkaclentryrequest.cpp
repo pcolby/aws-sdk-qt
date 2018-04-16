@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceNetworkAclEntryRequest
+/*!
+ * \class QtAws::EC2::ReplaceNetworkAclEntryRequest
  *
- * @brief  Implements EC2 ReplaceNetworkAclEntry requests.
+ * \brief The ReplaceNetworkAclEntryRequest class encapsulates EC2 ReplaceNetworkAclEntry requests.
  *
- * @see    EC2Client::replaceNetworkAclEntry
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceNetworkAclEntry
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceNetworkAclEntryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest(const ReplaceNetwor
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReplaceNetworkAclEntryRequest object.
  */
 ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest()
@@ -53,13 +60,16 @@ ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReplaceNetworkAclEntryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReplaceNetworkAclEntryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetw
     return new ReplaceNetworkAclEntryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReplaceNetworkAclEntryRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetw
  * @brief  Private implementation for ReplaceNetworkAclEntryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceNetworkAclEntryRequestPrivate object.
@@ -97,7 +107,7 @@ ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceNetworkAclEntryRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetImportJobRequest
+/*!
+ * \class QtAws::Pinpoint::GetImportJobRequest
  *
- * @brief  Implements Pinpoint GetImportJob requests.
+ * \brief The GetImportJobRequest class encapsulates Pinpoint GetImportJob requests.
  *
- * @see    PinpointClient::getImportJob
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getImportJob
  */
 
-/**
+/*!
  * @brief  Constructs a new GetImportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetImportJobRequest::GetImportJobRequest(const GetImportJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetImportJobRequest object.
  */
 GetImportJobRequest::GetImportJobRequest()
@@ -53,13 +56,16 @@ GetImportJobRequest::GetImportJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetImportJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetImportJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetImportJobRequest::response(QNetworkReply *
     return new GetImportJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetImportJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetImportJobRequest::response(QNetworkReply *
  * @brief  Private implementation for GetImportJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetImportJobRequestPrivate object.
@@ -97,7 +103,7 @@ GetImportJobRequestPrivate::GetImportJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetImportJobRequestPrivate object, copying another.

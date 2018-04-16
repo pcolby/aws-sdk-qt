@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  CreateConfigurationSetRequest
+/*!
+ * \class QtAws::SES::CreateConfigurationSetRequest
  *
- * @brief  Implements SES CreateConfigurationSet requests.
+ * \brief The CreateConfigurationSetRequest class encapsulates SES CreateConfigurationSet requests.
  *
- * @see    SESClient::createConfigurationSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::createConfigurationSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateConfigurationSetRequest object.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest()
@@ -53,13 +67,16 @@ CreateConfigurationSetRequest::CreateConfigurationSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateConfigurationSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateConfigurationSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
     return new CreateConfigurationSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateConfigurationSetRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
  * @brief  Private implementation for CreateConfigurationSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationSetRequestPrivate object.
@@ -97,7 +114,7 @@ CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateConfigurationSetRequestPrivate object, copying another.

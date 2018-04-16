@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  UpdateDomainContactResponse
+/*!
+ * \class QtAws::Route53Domains::UpdateDomainContactResponse
  *
- * @brief  Handles Route53Domains UpdateDomainContact responses.
+ * \brief The UpdateDomainContactResponse class encapsulates Route53Domains UpdateDomainContact responses.
  *
- * @see    Route53DomainsClient::updateDomainContact
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::updateDomainContact
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDomainContactResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateDomainContactRequest * UpdateDomainContactResponse::request() const
     return static_cast<const UpdateDomainContactRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains UpdateDomainContact response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateDomainContactResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDomainContactResponsePrivate
+ * \class UpdateDomainContactResponsePrivate
  *
- * @brief  Private implementation for UpdateDomainContactResponse.
+ * \brief Private implementation for UpdateDomainContactResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDomainContactResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateDomainContactResponsePrivate::UpdateDomainContactResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains UpdateDomainContactResponse element.
  *
  * @param  xml  XML stream to parse.

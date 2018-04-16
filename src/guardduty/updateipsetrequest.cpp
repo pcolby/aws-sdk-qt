@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  UpdateIPSetRequest
+/*!
+ * \class QtAws::GuardDuty::UpdateIPSetRequest
  *
- * @brief  Implements GuardDuty UpdateIPSet requests.
+ * \brief The UpdateIPSetRequest class encapsulates GuardDuty UpdateIPSet requests.
  *
- * @see    GuardDutyClient::updateIPSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::updateIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
@@ -53,13 +56,16 @@ UpdateIPSetRequest::UpdateIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
     return new UpdateIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateIPSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIPSetRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIPSetRequestPrivate object, copying another.

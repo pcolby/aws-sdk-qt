@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  TagResourceRequest
+/*!
+ * \class QtAws::AlexaForBusiness::TagResourceRequest
  *
- * @brief  Implements AlexaForBusiness TagResource requests.
+ * \brief The TagResourceRequest class encapsulates AlexaForBusiness TagResource requests.
  *
- * @see    AlexaForBusinessClient::tagResource
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
@@ -53,13 +61,16 @@ TagResourceRequest::TagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
     return new TagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TagResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  * @brief  Private implementation for TagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object.
@@ -97,7 +108,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object, copying another.

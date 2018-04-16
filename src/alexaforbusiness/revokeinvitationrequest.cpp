@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  RevokeInvitationRequest
+/*!
+ * \class QtAws::AlexaForBusiness::RevokeInvitationRequest
  *
- * @brief  Implements AlexaForBusiness RevokeInvitation requests.
+ * \brief The RevokeInvitationRequest class encapsulates AlexaForBusiness RevokeInvitation requests.
  *
- * @see    AlexaForBusinessClient::revokeInvitation
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::revokeInvitation
  */
 
-/**
+/*!
  * @brief  Constructs a new RevokeInvitationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ RevokeInvitationRequest::RevokeInvitationRequest(const RevokeInvitationRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RevokeInvitationRequest object.
  */
 RevokeInvitationRequest::RevokeInvitationRequest()
@@ -53,13 +61,16 @@ RevokeInvitationRequest::RevokeInvitationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RevokeInvitationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RevokeInvitationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkRep
     return new RevokeInvitationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RevokeInvitationRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkRep
  * @brief  Private implementation for RevokeInvitationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeInvitationRequestPrivate object.
@@ -97,7 +108,7 @@ RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeInvitationRequestPrivate object, copying another.

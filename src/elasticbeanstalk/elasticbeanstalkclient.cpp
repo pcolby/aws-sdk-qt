@@ -110,45 +110,53 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ElasticBeanstalk
+ * \brief The QtAws::ElasticBeanstalk contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  ElasticBeanstalkClient
+/*!
+ * \class QtAws::ElasticBeanstalk::ElasticBeanstalkClient
  *
- * @brief  Client for AWS Elastic Beanstalk
+ * \brief The ElasticBeanstalkClient class provides access the AWS Elastic Beanstalk service.
  *
- * <fullname>AWS Elastic Beanstalk</fullname>
+ * \ingroup ElasticBeanstalk
  *
- * AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
- * on the Amazon Web Services
- *
- * cloud>
- *
- * For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
- * Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
- * href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
- * To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
- * tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
- *
- * Services</a>>
- *
- * <b>Endpoints</b>
- *
- * </p
- *
- * For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
- * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
- * <i>Amazon Web Services
+ *  <fullname>AWS Elastic Beanstalk</fullname>
+ * 
+ *  AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
+ *  on the Amazon Web Services
+ * 
+ *  cloud>
+ * 
+ *  For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
+ *  Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
+ *  href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
+ *  To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
+ *  tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services
  */
 
-/**
- * @brief  Constructs a new ElasticBeanstalkClient object.
+/*!
+ * \brief Constructs a ElasticBeanstalkClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ElasticBeanstalkClient::ElasticBeanstalkClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -167,21 +175,16 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
     d->serviceName = QStringLiteral("elasticbeanstalk");
 }
 
-/**
- * @brief  Constructs a new ElasticBeanstalkClient object.
+/*!
+ * \overload ElasticBeanstalkClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ElasticBeanstalkClient::ElasticBeanstalkClient(
     const QUrl &endpoint,
@@ -200,7 +203,7 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
     d->serviceName = QStringLiteral("elasticbeanstalk");
 }
 
-/**
+/*!
  * Cancels in-progress environment configuration update or application version
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -214,7 +217,7 @@ AbortEnvironmentUpdateResponse * ElasticBeanstalkClient::abortEnvironmentUpdate(
     return qobject_cast<AbortEnvironmentUpdateResponse *>(send(request));
 }
 
-/**
+/*!
  * Applies a scheduled managed action immediately. A managed action can be applied only if its status is
  * <code>Scheduled</code>. Get the status and action ID of a managed action with
  *
@@ -229,7 +232,7 @@ ApplyEnvironmentManagedActionResponse * ElasticBeanstalkClient::applyEnvironment
     return qobject_cast<ApplyEnvironmentManagedActionResponse *>(send(request));
 }
 
-/**
+/*!
  * Checks if the specified CNAME is
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -243,7 +246,7 @@ CheckDNSAvailabilityResponse * ElasticBeanstalkClient::checkDNSAvailability(cons
     return qobject_cast<CheckDNSAvailabilityResponse *>(send(request));
 }
 
-/**
+/*!
  * Create or update a group of environments that each run a separate component of a single application. Takes a list of
  * version labels that specify application source bundles for each of the environments to create or update. The name of
  * each environment and other required information must be included in the source bundles in an environment manifest named
@@ -261,7 +264,7 @@ ComposeEnvironmentsResponse * ElasticBeanstalkClient::composeEnvironments(const 
     return qobject_cast<ComposeEnvironmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an application that has one configuration template named <code>default</code> and no application versions.
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -275,7 +278,7 @@ CreateApplicationResponse * ElasticBeanstalkClient::createApplication(const Crea
     return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an application version for the specified application. You can create an application version from a source bundle
  * in Amazon S3, a commit in AWS CodeCommit, or the output of an AWS CodeBuild build as
  *
@@ -312,7 +315,7 @@ CreateApplicationVersionResponse * ElasticBeanstalkClient::createApplicationVers
     return qobject_cast<CreateApplicationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a configuration template. Templates are associated with a specific application and are used to deploy different
  * versions of the application with the same configuration
  *
@@ -343,7 +346,7 @@ CreateConfigurationTemplateResponse * ElasticBeanstalkClient::createConfiguratio
     return qobject_cast<CreateConfigurationTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Launches an environment for the specified application using the specified
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -357,7 +360,7 @@ CreateEnvironmentResponse * ElasticBeanstalkClient::createEnvironment(const Crea
     return qobject_cast<CreateEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Create a new version of your custom
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -371,7 +374,7 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
     return qobject_cast<CreatePlatformVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a bucket in Amazon S3 to store application versions, logs, and other files used by Elastic Beanstalk
  * environments. The Elastic Beanstalk console and EB CLI call this API the first time you create an environment in a
  * region. If the storage location already exists, <code>CreateStorageLocation</code> still returns the bucket name but
@@ -388,7 +391,7 @@ CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
     return qobject_cast<CreateStorageLocationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified application along with all associated versions and configurations. The application versions will
  * not be deleted from your Amazon S3
  *
@@ -407,7 +410,7 @@ DeleteApplicationResponse * ElasticBeanstalkClient::deleteApplication(const Dele
     return qobject_cast<DeleteApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified version from the specified
  *
  * application> <note>
@@ -425,7 +428,7 @@ DeleteApplicationVersionResponse * ElasticBeanstalkClient::deleteApplicationVers
     return qobject_cast<DeleteApplicationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified configuration
  *
  * template> <note>
@@ -444,7 +447,7 @@ DeleteConfigurationTemplateResponse * ElasticBeanstalkClient::deleteConfiguratio
     return qobject_cast<DeleteConfigurationTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the draft configuration associated with the running
  *
  * environment>
@@ -465,7 +468,7 @@ DeleteEnvironmentConfigurationResponse * ElasticBeanstalkClient::deleteEnvironme
     return qobject_cast<DeleteEnvironmentConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified version of a custom
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -479,7 +482,7 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
     return qobject_cast<DeletePlatformVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns attributes related to AWS Elastic Beanstalk that are associated with the calling AWS
  *
  * account>
@@ -497,7 +500,7 @@ DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttri
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a list of application
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -511,7 +514,7 @@ DescribeApplicationVersionsResponse * ElasticBeanstalkClient::describeApplicatio
     return qobject_cast<DescribeApplicationVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the descriptions of existing
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -525,7 +528,7 @@ DescribeApplicationsResponse * ElasticBeanstalkClient::describeApplications(cons
     return qobject_cast<DescribeApplicationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the configuration options that are used in a particular configuration template or environment, or that a
  * specified solution stack defines. The description includes the values the options, their default values, and an
  * indication of the required action on a running environment if an option value is
@@ -541,7 +544,7 @@ DescribeConfigurationOptionsResponse * ElasticBeanstalkClient::describeConfigura
     return qobject_cast<DescribeConfigurationOptionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of the settings for the specified configuration set, that is, either a configuration template or
  * the configuration set associated with a running
  *
@@ -570,7 +573,7 @@ DescribeConfigurationSettingsResponse * ElasticBeanstalkClient::describeConfigur
     return qobject_cast<DescribeConfigurationSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the overall health of the specified environment. The <b>DescribeEnvironmentHealth</b>
  * operation is only available with AWS Elastic Beanstalk Enhanced
  *
@@ -585,7 +588,7 @@ DescribeEnvironmentHealthResponse * ElasticBeanstalkClient::describeEnvironmentH
     return qobject_cast<DescribeEnvironmentHealthResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists an environment's completed and failed managed
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -599,7 +602,7 @@ DescribeEnvironmentManagedActionHistoryResponse * ElasticBeanstalkClient::descri
     return qobject_cast<DescribeEnvironmentManagedActionHistoryResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists an environment's upcoming and in-progress managed
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -613,7 +616,7 @@ DescribeEnvironmentManagedActionsResponse * ElasticBeanstalkClient::describeEnvi
     return qobject_cast<DescribeEnvironmentManagedActionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns AWS resources for this
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -627,7 +630,7 @@ DescribeEnvironmentResourcesResponse * ElasticBeanstalkClient::describeEnvironme
     return qobject_cast<DescribeEnvironmentResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns descriptions for existing
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -641,7 +644,7 @@ DescribeEnvironmentsResponse * ElasticBeanstalkClient::describeEnvironments(cons
     return qobject_cast<DescribeEnvironmentsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns list of event descriptions matching criteria up to the last 6
  *
  * weeks> <note>
@@ -659,7 +662,7 @@ DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEv
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrives detailed information about the health of instances in your AWS Elastic Beanstalk. This operation requires <a
  * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced.html">enhanced health
  *
@@ -674,7 +677,7 @@ DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealt
     return qobject_cast<DescribeInstancesHealthResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the version of the
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -688,7 +691,7 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
     return qobject_cast<DescribePlatformVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the available solution stack names, with the public version first and then in reverse chronological
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -702,7 +705,7 @@ ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolut
     return qobject_cast<ListAvailableSolutionStacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the available
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -716,7 +719,7 @@ ListPlatformVersionsResponse * ElasticBeanstalkClient::listPlatformVersions(cons
     return qobject_cast<ListPlatformVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the tags applied to an AWS Elastic Beanstalk resource. The response contains a list of tag key-value
  *
  * pairs>
@@ -736,7 +739,7 @@ ListTagsForResourceResponse * ElasticBeanstalkClient::listTagsForResource(const 
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc.) for a
  * specified environment and forces a
  *
@@ -751,7 +754,7 @@ RebuildEnvironmentResponse * ElasticBeanstalkClient::rebuildEnvironment(const Re
     return qobject_cast<RebuildEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates a request to compile the specified type of information of the deployed
  *
  * environment>
@@ -787,7 +790,7 @@ RequestEnvironmentInfoResponse * ElasticBeanstalkClient::requestEnvironmentInfo(
     return qobject_cast<RequestEnvironmentInfoResponse *>(send(request));
 }
 
-/**
+/*!
  * Causes the environment to restart the application container server running on each Amazon EC2
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -801,7 +804,7 @@ RestartAppServerResponse * ElasticBeanstalkClient::restartAppServer(const Restar
     return qobject_cast<RestartAppServerResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the compiled information from a <a>RequestEnvironmentInfo</a>
  *
  * request>
@@ -823,7 +826,7 @@ RetrieveEnvironmentInfoResponse * ElasticBeanstalkClient::retrieveEnvironmentInf
     return qobject_cast<RetrieveEnvironmentInfoResponse *>(send(request));
 }
 
-/**
+/*!
  * Swaps the CNAMEs of two
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -837,7 +840,7 @@ SwapEnvironmentCNAMEsResponse * ElasticBeanstalkClient::swapEnvironmentCNAMEs(co
     return qobject_cast<SwapEnvironmentCNAMEsResponse *>(send(request));
 }
 
-/**
+/*!
  * Terminates the specified
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -851,7 +854,7 @@ TerminateEnvironmentResponse * ElasticBeanstalkClient::terminateEnvironment(cons
     return qobject_cast<TerminateEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified application to have the specified
  *
  * properties> <note>
@@ -870,7 +873,7 @@ UpdateApplicationResponse * ElasticBeanstalkClient::updateApplication(const Upda
     return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies lifecycle settings for an
  *
  * @param  request Request to send to AWS Elastic Beanstalk.
@@ -884,7 +887,7 @@ UpdateApplicationResourceLifecycleResponse * ElasticBeanstalkClient::updateAppli
     return qobject_cast<UpdateApplicationResourceLifecycleResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified application version to have the specified
  *
  * properties> <note>
@@ -903,7 +906,7 @@ UpdateApplicationVersionResponse * ElasticBeanstalkClient::updateApplicationVers
     return qobject_cast<UpdateApplicationVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the specified configuration template to have the specified properties or configuration option
  *
  * values> <note>
@@ -930,7 +933,7 @@ UpdateConfigurationTemplateResponse * ElasticBeanstalkClient::updateConfiguratio
     return qobject_cast<UpdateConfigurationTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the environment description, deploys a new application version, updates the configuration settings to an
  * entirely new configuration template, or updates select configuration option values in the running
  *
@@ -956,7 +959,7 @@ UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const Upda
     return qobject_cast<UpdateEnvironmentResponse *>(send(request));
 }
 
-/**
+/*!
  * Update the list of tags applied to an AWS Elastic Beanstalk resource. Two lists can be passed: <code>TagsToAdd</code>
  * for tags to add or update, and
  *
@@ -998,7 +1001,7 @@ UpdateTagsForResourceResponse * ElasticBeanstalkClient::updateTagsForResource(co
     return qobject_cast<UpdateTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Takes a set of configuration settings and either a configuration template or environment, and determines whether those
  * values are
  *
@@ -1017,7 +1020,7 @@ ValidateConfigurationSettingsResponse * ElasticBeanstalkClient::validateConfigur
     return qobject_cast<ValidateConfigurationSettingsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticBeanstalkClientPrivate
@@ -1025,7 +1028,7 @@ ValidateConfigurationSettingsResponse * ElasticBeanstalkClient::validateConfigur
  * @brief  Private implementation for ElasticBeanstalkClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticBeanstalkClientPrivate object.

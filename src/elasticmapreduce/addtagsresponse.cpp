@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  AddTagsResponse
+/*!
+ * \class QtAws::EMR::AddTagsResponse
  *
- * @brief  Handles EMR AddTags responses.
+ * \brief The AddTagsResponse class encapsulates EMR AddTags responses.
  *
- * @see    EMRClient::addTags
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::addTags
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const AddTagsRequest * AddTagsResponse::request() const
     return static_cast<const AddTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR AddTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsResponsePrivate
+ * \class AddTagsResponsePrivate
  *
- * @brief  Private implementation for AddTagsResponse.
+ * \brief Private implementation for AddTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsResponsePrivate object.
@@ -91,7 +97,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR AddTagsResponse element.
  *
  * @param  xml  XML stream to parse.

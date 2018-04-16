@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStoreData {
 
-/**
- * @class  ListItemsRequest
+/*!
+ * \class QtAws::MediaStoreData::ListItemsRequest
  *
- * @brief  Implements MediaStoreData ListItems requests.
+ * \brief The ListItemsRequest class encapsulates MediaStoreData ListItems requests.
  *
- * @see    MediaStoreDataClient::listItems
+ * \ingroup MediaStoreData
+ *
+ *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
+ *  fundamental entities that are stored in AWS Elemental
+ *
+ * \sa MediaStoreDataClient::listItems
  */
 
-/**
+/*!
  * @brief  Constructs a new ListItemsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListItemsRequest::ListItemsRequest(const ListItemsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListItemsRequest object.
  */
 ListItemsRequest::ListItemsRequest()
@@ -53,13 +58,16 @@ ListItemsRequest::ListItemsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListItemsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListItemsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * co
     return new ListItemsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListItemsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListItemsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListItemsRequestPrivate object.
@@ -97,7 +105,7 @@ ListItemsRequestPrivate::ListItemsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListItemsRequestPrivate object, copying another.

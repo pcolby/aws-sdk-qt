@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  SetTerminationProtectionResponse
+/*!
+ * \class QtAws::EMR::SetTerminationProtectionResponse
  *
- * @brief  Handles EMR SetTerminationProtection responses.
+ * \brief The SetTerminationProtectionResponse class encapsulates EMR SetTerminationProtection responses.
  *
- * @see    EMRClient::setTerminationProtection
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::setTerminationProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new SetTerminationProtectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const SetTerminationProtectionRequest * SetTerminationProtectionResponse::reques
     return static_cast<const SetTerminationProtectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR SetTerminationProtection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetTerminationProtectionResponsePrivate
+ * \class SetTerminationProtectionResponsePrivate
  *
- * @brief  Private implementation for SetTerminationProtectionResponse.
+ * \brief Private implementation for SetTerminationProtectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTerminationProtectionResponsePrivate object.
@@ -91,7 +97,7 @@ SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR SetTerminationProtectionResponse element.
  *
  * @param  xml  XML stream to parse.

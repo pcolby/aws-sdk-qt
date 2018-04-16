@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeMLModelsResponse
+/*!
+ * \class QtAws::MachineLearning::DescribeMLModelsResponse
  *
- * @brief  Handles MachineLearning DescribeMLModels responses.
+ * \brief The DescribeMLModelsResponse class encapsulates MachineLearning DescribeMLModels responses.
  *
- * @see    MachineLearningClient::describeMLModels
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeMLModels
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMLModelsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeMLModelsRequest * DescribeMLModelsResponse::request() const
     return static_cast<const DescribeMLModelsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DescribeMLModels response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeMLModelsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeMLModelsResponsePrivate
+ * \class DescribeMLModelsResponsePrivate
  *
- * @brief  Private implementation for DescribeMLModelsResponse.
+ * \brief Private implementation for DescribeMLModelsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMLModelsResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeMLModelsResponsePrivate::DescribeMLModelsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DescribeMLModelsResponse element.
  *
  * @param  xml  XML stream to parse.

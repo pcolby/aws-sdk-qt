@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ForgotPasswordRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ForgotPasswordRequest
  *
- * @brief  Implements CognitoIdentityProvider ForgotPassword requests.
+ * \brief The ForgotPasswordRequest class encapsulates CognitoIdentityProvider ForgotPassword requests.
  *
- * @see    CognitoIdentityProviderClient::forgotPassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::forgotPassword
  */
 
-/**
+/*!
  * @brief  Constructs a new ForgotPasswordRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ForgotPasswordRequest::ForgotPasswordRequest(const ForgotPasswordRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ForgotPasswordRequest object.
  */
 ForgotPasswordRequest::ForgotPasswordRequest()
@@ -53,13 +66,16 @@ ForgotPasswordRequest::ForgotPasswordRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ForgotPasswordRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ForgotPasswordResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ForgotPasswordRequest::response(QNetworkReply
     return new ForgotPasswordResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ForgotPasswordRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ForgotPasswordRequest::response(QNetworkReply
  * @brief  Private implementation for ForgotPasswordRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ForgotPasswordRequestPrivate object.
@@ -97,7 +113,7 @@ ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ForgotPasswordRequestPrivate object, copying another.

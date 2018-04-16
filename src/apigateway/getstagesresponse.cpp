@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetStagesResponse
+/*!
+ * \class QtAws::APIGateway::GetStagesResponse
  *
- * @brief  Handles APIGateway GetStages responses.
+ * \brief The GetStagesResponse class encapsulates APIGateway GetStages responses.
  *
- * @see    APIGatewayClient::getStages
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getStages
  */
 
-/**
+/*!
  * @brief  Constructs a new GetStagesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetStagesRequest * GetStagesResponse::request() const
     return static_cast<const GetStagesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway GetStages response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetStagesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetStagesResponsePrivate
+ * \class GetStagesResponsePrivate
  *
- * @brief  Private implementation for GetStagesResponse.
+ * \brief Private implementation for GetStagesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetStagesResponsePrivate object.
@@ -91,7 +99,7 @@ GetStagesResponsePrivate::GetStagesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway GetStagesResponse element.
  *
  * @param  xml  XML stream to parse.

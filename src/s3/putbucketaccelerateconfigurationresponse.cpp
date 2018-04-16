@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketAccelerateConfigurationResponse
+/*!
+ * \class QtAws::S3::PutBucketAccelerateConfigurationResponse
  *
- * @brief  Handles S3 PutBucketAccelerateConfiguration responses.
+ * \brief The PutBucketAccelerateConfigurationResponse class encapsulates S3 PutBucketAccelerateConfiguration responses.
  *
- * @see    S3Client::putBucketAccelerateConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketAccelerateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketAccelerateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketAccelerateConfigurationRequest * PutBucketAccelerateConfiguration
     return static_cast<const PutBucketAccelerateConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketAccelerateConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketAccelerateConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketAccelerateConfigurationResponsePrivate
+ * \class PutBucketAccelerateConfigurationResponsePrivate
  *
- * @brief  Private implementation for PutBucketAccelerateConfigurationResponse.
+ * \brief Private implementation for PutBucketAccelerateConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketAccelerateConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfiguratio
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketAccelerateConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

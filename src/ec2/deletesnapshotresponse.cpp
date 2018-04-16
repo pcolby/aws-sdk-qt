@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSnapshotResponse
+/*!
+ * \class QtAws::EC2::DeleteSnapshotResponse
  *
- * @brief  Handles EC2 DeleteSnapshot responses.
+ * \brief The DeleteSnapshotResponse class encapsulates EC2 DeleteSnapshot responses.
  *
- * @see    EC2Client::deleteSnapshot
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
     return static_cast<const DeleteSnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteSnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSnapshotResponsePrivate
+ * \class DeleteSnapshotResponsePrivate
  *
- * @brief  Private implementation for DeleteSnapshotResponse.
+ * \brief Private implementation for DeleteSnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSnapshotResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteSnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

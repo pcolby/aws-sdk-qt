@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteBaiduChannelResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteBaiduChannelResponse
  *
- * @brief  Handles Pinpoint DeleteBaiduChannel responses.
+ * \brief The DeleteBaiduChannelResponse class encapsulates Pinpoint DeleteBaiduChannel responses.
  *
- * @see    PinpointClient::deleteBaiduChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteBaiduChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBaiduChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteBaiduChannelRequest * DeleteBaiduChannelResponse::request() const
     return static_cast<const DeleteBaiduChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteBaiduChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteBaiduChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBaiduChannelResponsePrivate
+ * \class DeleteBaiduChannelResponsePrivate
  *
- * @brief  Private implementation for DeleteBaiduChannelResponse.
+ * \brief Private implementation for DeleteBaiduChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBaiduChannelResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteBaiduChannelResponse element.
  *
  * @param  xml  XML stream to parse.

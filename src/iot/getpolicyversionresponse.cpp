@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  GetPolicyVersionResponse
+/*!
+ * \class QtAws::IoT::GetPolicyVersionResponse
  *
- * @brief  Handles IoT GetPolicyVersion responses.
+ * \brief The GetPolicyVersionResponse class encapsulates IoT GetPolicyVersion responses.
  *
- * @see    IoTClient::getPolicyVersion
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::getPolicyVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetPolicyVersionRequest * GetPolicyVersionResponse::request() const
     return static_cast<const GetPolicyVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT GetPolicyVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetPolicyVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPolicyVersionResponsePrivate
+ * \class GetPolicyVersionResponsePrivate
  *
- * @brief  Private implementation for GetPolicyVersionResponse.
+ * \brief Private implementation for GetPolicyVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyVersionResponsePrivate object.
@@ -91,7 +105,7 @@ GetPolicyVersionResponsePrivate::GetPolicyVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT GetPolicyVersionResponse element.
  *
  * @param  xml  XML stream to parse.

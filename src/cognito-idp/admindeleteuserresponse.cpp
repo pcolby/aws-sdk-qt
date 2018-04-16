@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDeleteUserResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDeleteUserResponse
  *
- * @brief  Handles CognitoIdentityProvider AdminDeleteUser responses.
+ * \brief The AdminDeleteUserResponse class encapsulates CognitoIdentityProvider AdminDeleteUser responses.
  *
- * @see    CognitoIdentityProviderClient::adminDeleteUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDeleteUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDeleteUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const AdminDeleteUserRequest * AdminDeleteUserResponse::request() const
     return static_cast<const AdminDeleteUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider AdminDeleteUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void AdminDeleteUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AdminDeleteUserResponsePrivate
+ * \class AdminDeleteUserResponsePrivate
  *
- * @brief  Private implementation for AdminDeleteUserResponse.
+ * \brief Private implementation for AdminDeleteUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDeleteUserResponsePrivate object.
@@ -91,7 +104,7 @@ AdminDeleteUserResponsePrivate::AdminDeleteUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider AdminDeleteUserResponse element.
  *
  * @param  xml  XML stream to parse.

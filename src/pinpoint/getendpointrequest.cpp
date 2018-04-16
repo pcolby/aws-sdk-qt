@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetEndpointRequest
+/*!
+ * \class QtAws::Pinpoint::GetEndpointRequest
  *
- * @brief  Implements Pinpoint GetEndpoint requests.
+ * \brief The GetEndpointRequest class encapsulates Pinpoint GetEndpoint requests.
  *
- * @see    PinpointClient::getEndpoint
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetEndpointRequest::GetEndpointRequest(const GetEndpointRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEndpointRequest object.
  */
 GetEndpointRequest::GetEndpointRequest()
@@ -53,13 +56,16 @@ GetEndpointRequest::GetEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * 
     return new GetEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ GetEndpointRequestPrivate::GetEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEndpointRequestPrivate object, copying another.

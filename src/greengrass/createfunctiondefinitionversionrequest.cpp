@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateFunctionDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::CreateFunctionDefinitionVersionRequest
  *
- * @brief  Implements Greengrass CreateFunctionDefinitionVersion requests.
+ * \brief The CreateFunctionDefinitionVersionRequest class encapsulates Greengrass CreateFunctionDefinitionVersion requests.
  *
- * @see    GreengrassClient::createFunctionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createFunctionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateFunctionDefinitionVersionRequest::CreateFunctionDefinitionVersionRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionDefinitionVersionRequest object.
  */
 CreateFunctionDefinitionVersionRequest::CreateFunctionDefinitionVersionRequest()
@@ -53,13 +59,16 @@ CreateFunctionDefinitionVersionRequest::CreateFunctionDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFunctionDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFunctionDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionVersionRequest::respo
     return new CreateFunctionDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFunctionDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionVersionRequest::respo
  * @brief  Private implementation for CreateFunctionDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateFunctionDefinitionVersionRequestPrivate::CreateFunctionDefinitionVersionRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionDefinitionVersionRequestPrivate object, copying another.

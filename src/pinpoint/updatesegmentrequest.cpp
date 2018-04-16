@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateSegmentRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateSegmentRequest
  *
- * @brief  Implements Pinpoint UpdateSegment requests.
+ * \brief The UpdateSegmentRequest class encapsulates Pinpoint UpdateSegment requests.
  *
- * @see    PinpointClient::updateSegment
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateSegment
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSegmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateSegmentRequest::UpdateSegmentRequest(const UpdateSegmentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateSegmentRequest object.
  */
 UpdateSegmentRequest::UpdateSegmentRequest()
@@ -53,13 +56,16 @@ UpdateSegmentRequest::UpdateSegmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateSegmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateSegmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSegmentRequest::response(QNetworkReply 
     return new UpdateSegmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateSegmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateSegmentRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateSegmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSegmentRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSegmentRequestPrivate object, copying another.

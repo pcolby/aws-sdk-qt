@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetAccountBalanceRequest
+/*!
+ * \class QtAws::MTurk::GetAccountBalanceRequest
  *
- * @brief  Implements MTurk GetAccountBalance requests.
+ * \brief The GetAccountBalanceRequest class encapsulates MTurk GetAccountBalance requests.
  *
- * @see    MTurkClient::getAccountBalance
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getAccountBalance
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountBalanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetAccountBalanceRequest::GetAccountBalanceRequest(const GetAccountBalanceReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAccountBalanceRequest object.
  */
 GetAccountBalanceRequest::GetAccountBalanceRequest()
@@ -53,13 +56,16 @@ GetAccountBalanceRequest::GetAccountBalanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAccountBalanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAccountBalanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkRe
     return new GetAccountBalanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAccountBalanceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkRe
  * @brief  Private implementation for GetAccountBalanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountBalanceRequestPrivate object.
@@ -97,7 +103,7 @@ GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountBalanceRequestPrivate object, copying another.

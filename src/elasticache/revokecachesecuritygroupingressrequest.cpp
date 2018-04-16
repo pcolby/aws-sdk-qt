@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  RevokeCacheSecurityGroupIngressRequest
+/*!
+ * \class QtAws::ElastiCache::RevokeCacheSecurityGroupIngressRequest
  *
- * @brief  Implements ElastiCache RevokeCacheSecurityGroupIngress requests.
+ * \brief The RevokeCacheSecurityGroupIngressRequest class encapsulates ElastiCache RevokeCacheSecurityGroupIngress requests.
  *
- * @see    ElastiCacheClient::revokeCacheSecurityGroupIngress
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::revokeCacheSecurityGroupIngress
  */
 
-/**
+/*!
  * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequest object.
  */
 RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest()
@@ -53,13 +70,16 @@ RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RevokeCacheSecurityGroupIngressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RevokeCacheSecurityGroupIngressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::respo
     return new RevokeCacheSecurityGroupIngressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RevokeCacheSecurityGroupIngressRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::respo
  * @brief  Private implementation for RevokeCacheSecurityGroupIngressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequestPrivate object.
@@ -97,7 +117,7 @@ RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequestPrivate object, copying another.

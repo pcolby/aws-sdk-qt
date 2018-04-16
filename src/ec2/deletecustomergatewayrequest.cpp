@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteCustomerGatewayRequest
+/*!
+ * \class QtAws::EC2::DeleteCustomerGatewayRequest
  *
- * @brief  Implements EC2 DeleteCustomerGateway requests.
+ * \brief The DeleteCustomerGatewayRequest class encapsulates EC2 DeleteCustomerGateway requests.
  *
- * @see    EC2Client::deleteCustomerGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteCustomerGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCustomerGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest(const DeleteCustomerG
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteCustomerGatewayRequest object.
  */
 DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest()
@@ -53,13 +60,16 @@ DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteCustomerGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteCustomerGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetwo
     return new DeleteCustomerGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteCustomerGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetwo
  * @brief  Private implementation for DeleteCustomerGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCustomerGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCustomerGatewayRequestPrivate object, copying another.

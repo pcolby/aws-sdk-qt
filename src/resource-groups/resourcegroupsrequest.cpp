@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace ResourceGroups {
 
-/**
- * @class  ResourceGroupsRequest
+/*!
+ * \class QtAws::ResourceGroups::ResourceGroupsRequest
  *
- * @brief  Interface class for providing ResourceGroups requests
+ * \brief The ResourceGroupsRequest class is the base class for all ResourceGroups requests.
+ *
+ * \ingroup ResourceGroups
  */
 
-
-/**
+/*!
  * @brief  Constructs a new ResourceGroupsRequest object.
  *
  * @param  action  The ResourceGroups action to request.
@@ -41,7 +42,7 @@ ResourceGroupsRequest::ResourceGroupsRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResourceGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ ResourceGroupsRequest::ResourceGroupsRequest(const ResourceGroupsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ ResourceGroupsRequest& ResourceGroupsRequest::operator=(const ResourceGroupsRequ
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResourceGroupsRequest object.
@@ -85,10 +86,8 @@ ResourceGroupsRequest::ResourceGroupsRequest(ResourceGroupsRequestPrivate * cons
 
 }
 
-/**
- * @brief  Get the ResourceGroups action to be performed by this request.
- *
- * @return The ResourceGroups action to be performed by this request.
+/*!
+ * \brief Returns the ResourceGroups action to be performed by this request.
  */
 ResourceGroupsRequest::Action ResourceGroupsRequest::action() const
 {
@@ -96,20 +95,16 @@ ResourceGroupsRequest::Action ResourceGroupsRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the ResourceGroups action to be performed by this request.
- *
- * @return The name of the ResourceGroups action to be performed by this request.
+/*!
+ * \brief Returns the name of the ResourceGroups action to be performed by this request.
  */
 QString ResourceGroupsRequest::actionString() const
 {
     return ResourceGroupsRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the ResourceGroups API version implemented by this request.
- *
- * @return The ResourceGroups API version implmented by this request.
+/*!
+ * \brief Returns the ResourceGroups API version implemented by this request.
  */
 QString ResourceGroupsRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString ResourceGroupsRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the ResourceGroups action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the ResourceGroups action to be performed by this request to \a action.
  */
 void ResourceGroupsRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void ResourceGroupsRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the ResourceGroups API version to include in this request.
- *
- * @param  version  The ResourceGroups API version to include in this request.
+/*!
+ * Set the ResourceGroups API version to include in this request to \a version.
  */
 void ResourceGroupsRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void ResourceGroupsRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool ResourceGroupsRequest::operator==(const ResourceGroupsRequest &other) const
 {
@@ -159,7 +146,7 @@ bool ResourceGroupsRequest::operator==(const ResourceGroupsRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid ResourceGroups queue name.
  *
  * @par From ResourceGroups FAQs:
@@ -178,12 +165,10 @@ bool ResourceGroupsRequest::operator==(const ResourceGroupsRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int ResourceGroupsRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int ResourceGroupsRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void ResourceGroupsRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void ResourceGroupsRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this ResourceGroups request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant ResourceGroupsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant ResourceGroupsRequest::parameter(const QString &name, const QVariant &d
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this ResourceGroups request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &ResourceGroupsRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &ResourceGroupsRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this ResourceGroups request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void ResourceGroupsRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void ResourceGroupsRequest::setParameter(const QString &name, const QVariant &va
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this ResourceGroups request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void ResourceGroupsRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void ResourceGroupsRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this ResourceGroups request.
+/*!
+ * \brief Returns a network request for this ResourceGroups request using the given \a endpoint.
  *
  * This ResourceGroups implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this ResourceGroups request using the given \a endpoint.
  */
 QNetworkRequest ResourceGroupsRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest ResourceGroupsRequest::unsignedRequest(const QUrl &endpoint) con
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResourceGroupsRequestPrivate
+ * \class  ResourceGroupsRequestPrivate
  *
- * @brief  Private implementation for ResourceGroupsRequest.
+ * \brief  Private implementation for ResourceGroupsRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ResourceGroupsRequestPrivate object.
- *
- * @param  action  ResourceGroups action being performed by the \a q request.
- * @param  q       Pointer to this object's public ResourceGroupsRequest instance.
+ * \brief Constructs a new ResourceGroupsRequestPrivate object.
  */
 ResourceGroupsRequestPrivate::ResourceGroupsRequestPrivate(const ResourceGroupsRequest::Action action, ResourceGroupsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ ResourceGroupsRequestPrivate::ResourceGroupsRequestPrivate(const ResourceGroupsR
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new ResourceGroupsRequestPrivate object from an existing one.
+ * \brief Constructs a new ResourceGroupsRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the ResourceGroupsRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public ResourceGroupsRequest instance.
  */
 ResourceGroupsRequestPrivate::ResourceGroupsRequestPrivate(const ResourceGroupsRequestPrivate &other,
                                      ResourceGroupsRequest * const q)
@@ -312,14 +275,14 @@ ResourceGroupsRequestPrivate::ResourceGroupsRequestPrivate(const ResourceGroupsR
 
 }
 
-/**
- * @brief  Convert and ResourceGroups action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts ResourceGroupsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ResourceGroups service's Action
  * query parameters.
- *
- * @param  action  ResourceGroups action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

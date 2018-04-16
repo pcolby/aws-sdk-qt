@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetSuiteRequest
+/*!
+ * \class QtAws::DeviceFarm::GetSuiteRequest
  *
- * @brief  Implements DeviceFarm GetSuite requests.
+ * \brief The GetSuiteRequest class encapsulates DeviceFarm GetSuite requests.
  *
- * @see    DeviceFarmClient::getSuite
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getSuite
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSuiteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetSuiteRequest::GetSuiteRequest(const GetSuiteRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSuiteRequest object.
  */
 GetSuiteRequest::GetSuiteRequest()
@@ -53,13 +58,16 @@ GetSuiteRequest::GetSuiteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSuiteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSuiteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * con
     return new GetSuiteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSuiteRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetSuiteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSuiteRequestPrivate object.
@@ -97,7 +105,7 @@ GetSuiteRequestPrivate::GetSuiteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSuiteRequestPrivate object, copying another.

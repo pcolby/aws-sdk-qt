@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  DeleteHITRequest
+/*!
+ * \class QtAws::MTurk::DeleteHITRequest
  *
- * @brief  Implements MTurk DeleteHIT requests.
+ * \brief The DeleteHITRequest class encapsulates MTurk DeleteHIT requests.
  *
- * @see    MTurkClient::deleteHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::deleteHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteHITRequest::DeleteHITRequest(const DeleteHITRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteHITRequest object.
  */
 DeleteHITRequest::DeleteHITRequest()
@@ -53,13 +56,16 @@ DeleteHITRequest::DeleteHITRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * co
     return new DeleteHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHITRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteHITRequestPrivate::DeleteHITRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHITRequestPrivate object, copying another.

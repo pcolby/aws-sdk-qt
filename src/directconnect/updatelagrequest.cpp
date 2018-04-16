@@ -25,15 +25,26 @@
 namespace QtAws {
 namespace DirectConnect {
 
-/**
- * @class  UpdateLagRequest
+/*!
+ * \class QtAws::DirectConnect::UpdateLagRequest
  *
- * @brief  Implements DirectConnect UpdateLag requests.
+ * \brief The UpdateLagRequest class encapsulates DirectConnect UpdateLag requests.
  *
- * @see    DirectConnectClient::updateLag
+ * \ingroup DirectConnect
+ *
+ *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
+ *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
+ *  With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon
+ *  Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud
+ *  (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access
+ *  to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a
+ *  single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US
+ *  Regions and AWS GovCloud
+ *
+ * \sa DirectConnectClient::updateLag
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateLagRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +55,7 @@ UpdateLagRequest::UpdateLagRequest(const UpdateLagRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateLagRequest object.
  */
 UpdateLagRequest::UpdateLagRequest()
@@ -53,13 +64,16 @@ UpdateLagRequest::UpdateLagRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateLagRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateLagResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * co
     return new UpdateLagResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateLagRequestPrivate
@@ -82,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * co
  * @brief  Private implementation for UpdateLagRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateLagRequestPrivate object.
@@ -97,7 +111,7 @@ UpdateLagRequestPrivate::UpdateLagRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateLagRequestPrivate object, copying another.

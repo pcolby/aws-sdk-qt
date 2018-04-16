@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  UpdatePipelineStatusRequest
+/*!
+ * \class QtAws::ElasticTranscoder::UpdatePipelineStatusRequest
  *
- * @brief  Implements ElasticTranscoder UpdatePipelineStatus requests.
+ * \brief The UpdatePipelineStatusRequest class encapsulates ElasticTranscoder UpdatePipelineStatus requests.
  *
- * @see    ElasticTranscoderClient::updatePipelineStatus
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::updatePipelineStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdatePipelineStatusRequest::UpdatePipelineStatusRequest(const UpdatePipelineSta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePipelineStatusRequest object.
  */
 UpdatePipelineStatusRequest::UpdatePipelineStatusRequest()
@@ -53,13 +59,16 @@ UpdatePipelineStatusRequest::UpdatePipelineStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePipelineStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePipelineStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineStatusRequest::response(QNetwor
     return new UpdatePipelineStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePipelineStatusRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineStatusRequest::response(QNetwor
  * @brief  Private implementation for UpdatePipelineStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineStatusRequestPrivate object.
@@ -97,7 +106,7 @@ UpdatePipelineStatusRequestPrivate::UpdatePipelineStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePipelineStatusRequestPrivate object, copying another.

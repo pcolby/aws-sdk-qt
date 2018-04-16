@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateRestApiRequest
+/*!
+ * \class QtAws::APIGateway::UpdateRestApiRequest
  *
- * @brief  Implements APIGateway UpdateRestApi requests.
+ * \brief The UpdateRestApiRequest class encapsulates APIGateway UpdateRestApi requests.
  *
- * @see    APIGatewayClient::updateRestApi
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateRestApi
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRestApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateRestApiRequest::UpdateRestApiRequest(const UpdateRestApiRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateRestApiRequest object.
  */
 UpdateRestApiRequest::UpdateRestApiRequest()
@@ -53,13 +61,16 @@ UpdateRestApiRequest::UpdateRestApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateRestApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateRestApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRestApiRequest::response(QNetworkReply 
     return new UpdateRestApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateRestApiRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRestApiRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateRestApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRestApiRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRestApiRequestPrivate object, copying another.

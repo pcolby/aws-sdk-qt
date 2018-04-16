@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  PreviewAgentsResponse
+/*!
+ * \class QtAws::Inspector::PreviewAgentsResponse
  *
- * @brief  Handles Inspector PreviewAgents responses.
+ * \brief The PreviewAgentsResponse class encapsulates Inspector PreviewAgents responses.
  *
- * @see    InspectorClient::previewAgents
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::previewAgents
  */
 
-/**
+/*!
  * @brief  Constructs a new PreviewAgentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const PreviewAgentsRequest * PreviewAgentsResponse::request() const
     return static_cast<const PreviewAgentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector PreviewAgents response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void PreviewAgentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PreviewAgentsResponsePrivate
+ * \class PreviewAgentsResponsePrivate
  *
- * @brief  Private implementation for PreviewAgentsResponse.
+ * \brief Private implementation for PreviewAgentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PreviewAgentsResponsePrivate object.
@@ -91,7 +99,7 @@ PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector PreviewAgentsResponse element.
  *
  * @param  xml  XML stream to parse.

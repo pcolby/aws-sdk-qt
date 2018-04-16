@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  AssociateServiceRoleToAccountRequest
+/*!
+ * \class QtAws::Greengrass::AssociateServiceRoleToAccountRequest
  *
- * @brief  Implements Greengrass AssociateServiceRoleToAccount requests.
+ * \brief The AssociateServiceRoleToAccountRequest class encapsulates Greengrass AssociateServiceRoleToAccount requests.
  *
- * @see    GreengrassClient::associateServiceRoleToAccount
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::associateServiceRoleToAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateServiceRoleToAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ AssociateServiceRoleToAccountRequest::AssociateServiceRoleToAccountRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateServiceRoleToAccountRequest object.
  */
 AssociateServiceRoleToAccountRequest::AssociateServiceRoleToAccountRequest()
@@ -53,13 +59,16 @@ AssociateServiceRoleToAccountRequest::AssociateServiceRoleToAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateServiceRoleToAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateServiceRoleToAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::respons
     return new AssociateServiceRoleToAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateServiceRoleToAccountRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::respons
  * @brief  Private implementation for AssociateServiceRoleToAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateServiceRoleToAccountRequestPrivate object.
@@ -97,7 +106,7 @@ AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateServiceRoleToAccountRequestPrivate object, copying another.

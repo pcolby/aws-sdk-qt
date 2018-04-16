@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteAppRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteAppRequest
  *
- * @brief  Implements Pinpoint DeleteApp requests.
+ * \brief The DeleteAppRequest class encapsulates Pinpoint DeleteApp requests.
  *
- * @see    PinpointClient::deleteApp
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteApp
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteAppRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteAppRequest::DeleteAppRequest(const DeleteAppRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteAppRequest object.
  */
 DeleteAppRequest::DeleteAppRequest()
@@ -53,13 +56,16 @@ DeleteAppRequest::DeleteAppRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteAppRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteAppResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * co
     return new DeleteAppResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteAppRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteAppRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAppRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteAppRequestPrivate::DeleteAppRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteAppRequestPrivate object, copying another.

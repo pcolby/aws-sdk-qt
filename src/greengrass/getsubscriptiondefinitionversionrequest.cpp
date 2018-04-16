@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetSubscriptionDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::GetSubscriptionDefinitionVersionRequest
  *
- * @brief  Implements Greengrass GetSubscriptionDefinitionVersion requests.
+ * \brief The GetSubscriptionDefinitionVersionRequest class encapsulates Greengrass GetSubscriptionDefinitionVersion requests.
  *
- * @see    GreengrassClient::getSubscriptionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getSubscriptionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetSubscriptionDefinitionVersionRequest::GetSubscriptionDefinitionVersionRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSubscriptionDefinitionVersionRequest object.
  */
 GetSubscriptionDefinitionVersionRequest::GetSubscriptionDefinitionVersionRequest()
@@ -53,13 +59,16 @@ GetSubscriptionDefinitionVersionRequest::GetSubscriptionDefinitionVersionRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSubscriptionDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSubscriptionDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionDefinitionVersionRequest::resp
     return new GetSubscriptionDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSubscriptionDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionDefinitionVersionRequest::resp
  * @brief  Private implementation for GetSubscriptionDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetSubscriptionDefinitionVersionRequestPrivate::GetSubscriptionDefinitionVersion
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSubscriptionDefinitionVersionRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteGraphqlApiResponse
+/*!
+ * \class QtAws::AppSync::DeleteGraphqlApiResponse
  *
- * @brief  Handles AppSync DeleteGraphqlApi responses.
+ * \brief The DeleteGraphqlApiResponse class encapsulates AppSync DeleteGraphqlApi responses.
  *
- * @see    AppSyncClient::deleteGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGraphqlApiResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DeleteGraphqlApiRequest * DeleteGraphqlApiResponse::request() const
     return static_cast<const DeleteGraphqlApiRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync DeleteGraphqlApi response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DeleteGraphqlApiResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteGraphqlApiResponsePrivate
+ * \class DeleteGraphqlApiResponsePrivate
  *
- * @brief  Private implementation for DeleteGraphqlApiResponse.
+ * \brief Private implementation for DeleteGraphqlApiResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGraphqlApiResponsePrivate object.
@@ -91,7 +95,7 @@ DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync DeleteGraphqlApiResponse element.
  *
  * @param  xml  XML stream to parse.

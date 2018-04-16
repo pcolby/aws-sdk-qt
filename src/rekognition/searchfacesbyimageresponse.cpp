@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  SearchFacesByImageResponse
+/*!
+ * \class QtAws::Rekognition::SearchFacesByImageResponse
  *
- * @brief  Handles Rekognition SearchFacesByImage responses.
+ * \brief The SearchFacesByImageResponse class encapsulates Rekognition SearchFacesByImage responses.
  *
- * @see    RekognitionClient::searchFacesByImage
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::searchFacesByImage
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchFacesByImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const SearchFacesByImageRequest * SearchFacesByImageResponse::request() const
     return static_cast<const SearchFacesByImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition SearchFacesByImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void SearchFacesByImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchFacesByImageResponsePrivate
+ * \class SearchFacesByImageResponsePrivate
  *
- * @brief  Private implementation for SearchFacesByImageResponse.
+ * \brief Private implementation for SearchFacesByImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchFacesByImageResponsePrivate object.
@@ -91,7 +95,7 @@ SearchFacesByImageResponsePrivate::SearchFacesByImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition SearchFacesByImageResponse element.
  *
  * @param  xml  XML stream to parse.

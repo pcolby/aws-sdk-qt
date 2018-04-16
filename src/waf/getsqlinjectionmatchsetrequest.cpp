@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetSqlInjectionMatchSetRequest
+/*!
+ * \class QtAws::WAF::GetSqlInjectionMatchSetRequest
  *
- * @brief  Implements WAF GetSqlInjectionMatchSet requests.
+ * \brief The GetSqlInjectionMatchSetRequest class encapsulates WAF GetSqlInjectionMatchSet requests.
  *
- * @see    WAFClient::getSqlInjectionMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getSqlInjectionMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSqlInjectionMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest(const GetSqlInjec
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSqlInjectionMatchSetRequest object.
  */
 GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest()
@@ -53,13 +61,16 @@ GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSqlInjectionMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSqlInjectionMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNet
     return new GetSqlInjectionMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSqlInjectionMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNet
  * @brief  Private implementation for GetSqlInjectionMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSqlInjectionMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ GetSqlInjectionMatchSetRequestPrivate::GetSqlInjectionMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSqlInjectionMatchSetRequestPrivate object, copying another.

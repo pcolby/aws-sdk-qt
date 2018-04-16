@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkInterfacePermissionsRequest
+/*!
+ * \class QtAws::EC2::DescribeNetworkInterfacePermissionsRequest
  *
- * @brief  Implements EC2 DescribeNetworkInterfacePermissions requests.
+ * \brief The DescribeNetworkInterfacePermissionsRequest class encapsulates EC2 DescribeNetworkInterfacePermissions requests.
  *
- * @see    EC2Client::describeNetworkInterfacePermissions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkInterfacePermissions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequest object.
  */
 DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsRequest()
@@ -53,13 +60,16 @@ DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsR
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNetworkInterfacePermissionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNetworkInterfacePermissionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacePermissionsRequest::r
     return new DescribeNetworkInterfacePermissionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNetworkInterfacePermissionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacePermissionsRequest::r
  * @brief  Private implementation for DescribeNetworkInterfacePermissionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequestPrivate object, copying another.

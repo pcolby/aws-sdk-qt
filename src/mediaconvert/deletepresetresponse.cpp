@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DeletePresetResponse
+/*!
+ * \class QtAws::MediaConvert::DeletePresetResponse
  *
- * @brief  Handles MediaConvert DeletePreset responses.
+ * \brief The DeletePresetResponse class encapsulates MediaConvert DeletePreset responses.
  *
- * @see    MediaConvertClient::deletePreset
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::deletePreset
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePresetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeletePresetRequest * DeletePresetResponse::request() const
     return static_cast<const DeletePresetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert DeletePreset response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeletePresetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePresetResponsePrivate
+ * \class DeletePresetResponsePrivate
  *
- * @brief  Private implementation for DeletePresetResponse.
+ * \brief Private implementation for DeletePresetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePresetResponsePrivate object.
@@ -91,7 +94,7 @@ DeletePresetResponsePrivate::DeletePresetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert DeletePresetResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetExportRequest
+/*!
+ * \class QtAws::APIGateway::GetExportRequest
  *
- * @brief  Implements APIGateway GetExport requests.
+ * \brief The GetExportRequest class encapsulates APIGateway GetExport requests.
  *
- * @see    APIGatewayClient::getExport
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getExport
  */
 
-/**
+/*!
  * @brief  Constructs a new GetExportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetExportRequest::GetExportRequest(const GetExportRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetExportRequest object.
  */
 GetExportRequest::GetExportRequest()
@@ -53,13 +61,16 @@ GetExportRequest::GetExportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetExportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetExportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
     return new GetExportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetExportRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetExportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExportRequestPrivate object.
@@ -97,7 +108,7 @@ GetExportRequestPrivate::GetExportRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExportRequestPrivate object, copying another.

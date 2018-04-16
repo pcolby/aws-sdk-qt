@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetServiceRoleForAccountRequest
+/*!
+ * \class QtAws::Greengrass::GetServiceRoleForAccountRequest
  *
- * @brief  Implements Greengrass GetServiceRoleForAccount requests.
+ * \brief The GetServiceRoleForAccountRequest class encapsulates Greengrass GetServiceRoleForAccount requests.
  *
- * @see    GreengrassClient::getServiceRoleForAccount
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getServiceRoleForAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetServiceRoleForAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetServiceRoleForAccountRequest::GetServiceRoleForAccountRequest(const GetServic
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetServiceRoleForAccountRequest object.
  */
 GetServiceRoleForAccountRequest::GetServiceRoleForAccountRequest()
@@ -53,13 +59,16 @@ GetServiceRoleForAccountRequest::GetServiceRoleForAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetServiceRoleForAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetServiceRoleForAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNe
     return new GetServiceRoleForAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetServiceRoleForAccountRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNe
  * @brief  Private implementation for GetServiceRoleForAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceRoleForAccountRequestPrivate object.
@@ -97,7 +106,7 @@ GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetServiceRoleForAccountRequestPrivate object, copying another.

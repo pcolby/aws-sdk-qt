@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetImportRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetImportRequest
  *
- * @brief  Implements LexModelBuildingService GetImport requests.
+ * \brief The GetImportRequest class encapsulates LexModelBuildingService GetImport requests.
  *
- * @see    LexModelBuildingServiceClient::getImport
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getImport
  */
 
-/**
+/*!
  * @brief  Constructs a new GetImportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetImportRequest::GetImportRequest(const GetImportRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetImportRequest object.
  */
 GetImportRequest::GetImportRequest()
@@ -53,13 +60,16 @@ GetImportRequest::GetImportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetImportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetImportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * co
     return new GetImportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetImportRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetImportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetImportRequestPrivate object.
@@ -97,7 +107,7 @@ GetImportRequestPrivate::GetImportRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetImportRequestPrivate object, copying another.

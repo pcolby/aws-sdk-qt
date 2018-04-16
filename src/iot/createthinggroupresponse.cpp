@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateThingGroupResponse
+/*!
+ * \class QtAws::IoT::CreateThingGroupResponse
  *
- * @brief  Handles IoT CreateThingGroup responses.
+ * \brief The CreateThingGroupResponse class encapsulates IoT CreateThingGroup responses.
  *
- * @see    IoTClient::createThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateThingGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateThingGroupRequest * CreateThingGroupResponse::request() const
     return static_cast<const CreateThingGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreateThingGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateThingGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateThingGroupResponsePrivate
+ * \class CreateThingGroupResponsePrivate
  *
- * @brief  Private implementation for CreateThingGroupResponse.
+ * \brief Private implementation for CreateThingGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingGroupResponsePrivate object.
@@ -91,7 +105,7 @@ CreateThingGroupResponsePrivate::CreateThingGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreateThingGroupResponse element.
  *
  * @param  xml  XML stream to parse.

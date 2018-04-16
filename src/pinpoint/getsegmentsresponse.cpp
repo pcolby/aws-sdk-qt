@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSegmentsResponse
+/*!
+ * \class QtAws::Pinpoint::GetSegmentsResponse
  *
- * @brief  Handles Pinpoint GetSegments responses.
+ * \brief The GetSegmentsResponse class encapsulates Pinpoint GetSegments responses.
  *
- * @see    PinpointClient::getSegments
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSegments
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetSegmentsRequest * GetSegmentsResponse::request() const
     return static_cast<const GetSegmentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetSegments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetSegmentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSegmentsResponsePrivate
+ * \class GetSegmentsResponsePrivate
  *
- * @brief  Private implementation for GetSegmentsResponse.
+ * \brief Private implementation for GetSegmentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentsResponsePrivate object.
@@ -91,7 +94,7 @@ GetSegmentsResponsePrivate::GetSegmentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetSegmentsResponse element.
  *
  * @param  xml  XML stream to parse.

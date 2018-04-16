@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListFacetNamesResponse
+/*!
+ * \class QtAws::CloudDirectory::ListFacetNamesResponse
  *
- * @brief  Handles CloudDirectory ListFacetNames responses.
+ * \brief The ListFacetNamesResponse class encapsulates CloudDirectory ListFacetNames responses.
  *
- * @see    CloudDirectoryClient::listFacetNames
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listFacetNames
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFacetNamesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const ListFacetNamesRequest * ListFacetNamesResponse::request() const
     return static_cast<const ListFacetNamesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory ListFacetNames response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void ListFacetNamesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListFacetNamesResponsePrivate
+ * \class ListFacetNamesResponsePrivate
  *
- * @brief  Private implementation for ListFacetNamesResponse.
+ * \brief Private implementation for ListFacetNamesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFacetNamesResponsePrivate object.
@@ -91,7 +101,7 @@ ListFacetNamesResponsePrivate::ListFacetNamesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory ListFacetNamesResponse element.
  *
  * @param  xml  XML stream to parse.

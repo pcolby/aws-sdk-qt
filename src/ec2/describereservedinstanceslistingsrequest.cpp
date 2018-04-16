@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeReservedInstancesListingsRequest
+/*!
+ * \class QtAws::EC2::DescribeReservedInstancesListingsRequest
  *
- * @brief  Implements EC2 DescribeReservedInstancesListings requests.
+ * \brief The DescribeReservedInstancesListingsRequest class encapsulates EC2 DescribeReservedInstancesListings requests.
  *
- * @see    EC2Client::describeReservedInstancesListings
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeReservedInstancesListings
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesListingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeReservedInstancesListingsRequest::DescribeReservedInstancesListingsReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeReservedInstancesListingsRequest object.
  */
 DescribeReservedInstancesListingsRequest::DescribeReservedInstancesListingsRequest()
@@ -53,13 +60,16 @@ DescribeReservedInstancesListingsRequest::DescribeReservedInstancesListingsReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeReservedInstancesListingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeReservedInstancesListingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesListingsRequest::res
     return new DescribeReservedInstancesListingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeReservedInstancesListingsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesListingsRequest::res
  * @brief  Private implementation for DescribeReservedInstancesListingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesListingsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeReservedInstancesListingsRequestPrivate::DescribeReservedInstancesListin
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeReservedInstancesListingsRequestPrivate object, copying another.

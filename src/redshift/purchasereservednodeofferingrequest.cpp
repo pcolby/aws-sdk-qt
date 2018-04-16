@@ -25,15 +25,48 @@
 namespace QtAws {
 namespace Redshift {
 
-/**
- * @class  PurchaseReservedNodeOfferingRequest
+/*!
+ * \class QtAws::Redshift::PurchaseReservedNodeOfferingRequest
  *
- * @brief  Implements Redshift PurchaseReservedNodeOffering requests.
+ * \brief The PurchaseReservedNodeOfferingRequest class encapsulates Redshift PurchaseReservedNodeOffering requests.
  *
- * @see    RedshiftClient::purchaseReservedNodeOffering
+ * \ingroup Redshift
+ *
+ *  <fullname>Amazon Redshift</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is an interface reference for Amazon Redshift. It contains documentation for one of the programming or command line
+ *  interfaces you can use to manage Amazon Redshift clusters. Note that Amazon Redshift is asynchronous, which means that
+ *  some interfaces may require techniques, such as polling or asynchronous callback handlers, to determine when a command
+ *  has been applied. In this reference, the parameter descriptions indicate whether a change is applied immediately, on the
+ *  next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster management
+ *  interfaces, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html">Using the Amazon Redshift
+ *  Management
+ * 
+ *  Interfaces</a>>
+ * 
+ *  Amazon Redshift manages all the work of setting up, operating, and scaling a data warehouse: provisioning capacity,
+ *  monitoring and backing up the cluster, and applying patches and upgrades to the Amazon Redshift engine. You can focus on
+ *  using your data to acquire new insights for your business and
+ * 
+ *  customers>
+ * 
+ *  If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the <a
+ *  href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html">Amazon Redshift Getting Started
+ * 
+ *  Guide</a>>
+ * 
+ *  If you are a database developer, the <a href="http://docs.aws.amazon.com/redshift/latest/dg/welcome.html">Amazon
+ *  Redshift Database Developer Guide</a> explains how to design, build, query, and maintain the databases that make up your
+ *  data warehouse.
+ *
+ * \sa RedshiftClient::purchaseReservedNodeOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseReservedNodeOfferingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +77,7 @@ PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest(const P
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PurchaseReservedNodeOfferingRequest object.
  */
 PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest()
@@ -53,13 +86,16 @@ PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PurchaseReservedNodeOfferingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PurchaseReservedNodeOfferingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response
     return new PurchaseReservedNodeOfferingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PurchaseReservedNodeOfferingRequestPrivate
@@ -82,7 +118,7 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response
  * @brief  Private implementation for PurchaseReservedNodeOfferingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseReservedNodeOfferingRequestPrivate object.
@@ -97,7 +133,7 @@ PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseReservedNodeOfferingRequestPrivate object, copying another.

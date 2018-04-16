@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetFpgaImageAttributeResponse
+/*!
+ * \class QtAws::EC2::ResetFpgaImageAttributeResponse
  *
- * @brief  Handles EC2 ResetFpgaImageAttribute responses.
+ * \brief The ResetFpgaImageAttributeResponse class encapsulates EC2 ResetFpgaImageAttribute responses.
  *
- * @see    EC2Client::resetFpgaImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetFpgaImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetFpgaImageAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ResetFpgaImageAttributeRequest * ResetFpgaImageAttributeResponse::request(
     return static_cast<const ResetFpgaImageAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ResetFpgaImageAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ResetFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetFpgaImageAttributeResponsePrivate
+ * \class ResetFpgaImageAttributeResponsePrivate
  *
- * @brief  Private implementation for ResetFpgaImageAttributeResponse.
+ * \brief Private implementation for ResetFpgaImageAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetFpgaImageAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ResetFpgaImageAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

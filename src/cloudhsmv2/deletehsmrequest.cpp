@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  DeleteHsmRequest
+/*!
+ * \class QtAws::CloudHSMV2::DeleteHsmRequest
  *
- * @brief  Implements CloudHSMV2 DeleteHsm requests.
+ * \brief The DeleteHsmRequest class encapsulates CloudHSMV2 DeleteHsm requests.
  *
- * @see    CloudHSMV2Client::deleteHsm
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::deleteHsm
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteHsmRequest::DeleteHsmRequest(const DeleteHsmRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteHsmRequest object.
  */
 DeleteHsmRequest::DeleteHsmRequest()
@@ -53,13 +58,16 @@ DeleteHsmRequest::DeleteHsmRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteHsmRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteHsmResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * co
     return new DeleteHsmResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteHsmRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteHsmRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHsmRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteHsmRequestPrivate object, copying another.

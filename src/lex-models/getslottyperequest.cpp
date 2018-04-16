@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetSlotTypeRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetSlotTypeRequest
  *
- * @brief  Implements LexModelBuildingService GetSlotType requests.
+ * \brief The GetSlotTypeRequest class encapsulates LexModelBuildingService GetSlotType requests.
  *
- * @see    LexModelBuildingServiceClient::getSlotType
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getSlotType
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSlotTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetSlotTypeRequest::GetSlotTypeRequest(const GetSlotTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSlotTypeRequest object.
  */
 GetSlotTypeRequest::GetSlotTypeRequest()
@@ -53,13 +60,16 @@ GetSlotTypeRequest::GetSlotTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSlotTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSlotTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypeRequest::response(QNetworkReply * 
     return new GetSlotTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSlotTypeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypeRequest::response(QNetworkReply * 
  * @brief  Private implementation for GetSlotTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSlotTypeRequestPrivate object.
@@ -97,7 +107,7 @@ GetSlotTypeRequestPrivate::GetSlotTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSlotTypeRequestPrivate object, copying another.

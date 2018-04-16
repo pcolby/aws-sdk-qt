@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  RebootNodeResponse
+/*!
+ * \class QtAws::DAX::RebootNodeResponse
  *
- * @brief  Handles DAX RebootNode responses.
+ * \brief The RebootNodeResponse class encapsulates DAX RebootNode responses.
  *
- * @see    DAXClient::rebootNode
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::rebootNode
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootNodeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RebootNodeRequest * RebootNodeResponse::request() const
     return static_cast<const RebootNodeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX RebootNode response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RebootNodeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RebootNodeResponsePrivate
+ * \class RebootNodeResponsePrivate
  *
- * @brief  Private implementation for RebootNodeResponse.
+ * \brief Private implementation for RebootNodeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootNodeResponsePrivate object.
@@ -91,7 +98,7 @@ RebootNodeResponsePrivate::RebootNodeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX RebootNodeResponse element.
  *
  * @param  xml  XML stream to parse.

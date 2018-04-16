@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  BatchWriteResponse
+/*!
+ * \class QtAws::CloudDirectory::BatchWriteResponse
  *
- * @brief  Handles CloudDirectory BatchWrite responses.
+ * \brief The BatchWriteResponse class encapsulates CloudDirectory BatchWrite responses.
  *
- * @see    CloudDirectoryClient::batchWrite
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::batchWrite
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchWriteResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const BatchWriteRequest * BatchWriteResponse::request() const
     return static_cast<const BatchWriteRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory BatchWrite response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void BatchWriteResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchWriteResponsePrivate
+ * \class BatchWriteResponsePrivate
  *
- * @brief  Private implementation for BatchWriteResponse.
+ * \brief Private implementation for BatchWriteResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchWriteResponsePrivate object.
@@ -91,7 +101,7 @@ BatchWriteResponsePrivate::BatchWriteResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory BatchWriteResponse element.
  *
  * @param  xml  XML stream to parse.

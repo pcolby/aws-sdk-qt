@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListBucketAnalyticsConfigurationsRequest
+/*!
+ * \class QtAws::S3::ListBucketAnalyticsConfigurationsRequest
  *
- * @brief  Implements S3 ListBucketAnalyticsConfigurations requests.
+ * \brief The ListBucketAnalyticsConfigurationsRequest class encapsulates S3 ListBucketAnalyticsConfigurations requests.
  *
- * @see    S3Client::listBucketAnalyticsConfigurations
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listBucketAnalyticsConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListBucketAnalyticsConfigurationsRequest::ListBucketAnalyticsConfigurationsReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequest object.
  */
 ListBucketAnalyticsConfigurationsRequest::ListBucketAnalyticsConfigurationsRequest()
@@ -53,13 +56,16 @@ ListBucketAnalyticsConfigurationsRequest::ListBucketAnalyticsConfigurationsReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListBucketAnalyticsConfigurationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListBucketAnalyticsConfigurationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::res
     return new ListBucketAnalyticsConfigurationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListBucketAnalyticsConfigurationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListBucketAnalyticsConfigurationsRequest::res
  * @brief  Private implementation for ListBucketAnalyticsConfigurationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequestPrivate object.
@@ -97,7 +103,7 @@ ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfiguratio
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequestPrivate object, copying another.

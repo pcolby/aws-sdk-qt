@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketInventoryConfigurationResponse
+/*!
+ * \class QtAws::S3::PutBucketInventoryConfigurationResponse
  *
- * @brief  Handles S3 PutBucketInventoryConfiguration responses.
+ * \brief The PutBucketInventoryConfigurationResponse class encapsulates S3 PutBucketInventoryConfiguration responses.
  *
- * @see    S3Client::putBucketInventoryConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketInventoryConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketInventoryConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketInventoryConfigurationRequest * PutBucketInventoryConfigurationRe
     return static_cast<const PutBucketInventoryConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketInventoryConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketInventoryConfigurationResponsePrivate
+ * \class PutBucketInventoryConfigurationResponsePrivate
  *
- * @brief  Private implementation for PutBucketInventoryConfigurationResponse.
+ * \brief Private implementation for PutBucketInventoryConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketInventoryConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationR
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketInventoryConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

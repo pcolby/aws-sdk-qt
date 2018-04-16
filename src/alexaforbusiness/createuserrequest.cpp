@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  CreateUserRequest
+/*!
+ * \class QtAws::AlexaForBusiness::CreateUserRequest
  *
- * @brief  Implements AlexaForBusiness CreateUser requests.
+ * \brief The CreateUserRequest class encapsulates AlexaForBusiness CreateUser requests.
  *
- * @see    AlexaForBusinessClient::createUser
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::createUser
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUserRequest object.
  */
 CreateUserRequest::CreateUserRequest()
@@ -53,13 +61,16 @@ CreateUserRequest::CreateUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
     return new CreateUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUserRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserRequestPrivate object.
@@ -97,7 +108,7 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserRequestPrivate object, copying another.

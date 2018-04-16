@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  StopWorkspacesResponse
+/*!
+ * \class QtAws::WorkSpaces::StopWorkspacesResponse
  *
- * @brief  Handles WorkSpaces StopWorkspaces responses.
+ * \brief The StopWorkspacesResponse class encapsulates WorkSpaces StopWorkspaces responses.
  *
- * @see    WorkSpacesClient::stopWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::stopWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new StopWorkspacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopWorkspacesRequest * StopWorkspacesResponse::request() const
     return static_cast<const StopWorkspacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces StopWorkspaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopWorkspacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopWorkspacesResponsePrivate
+ * \class StopWorkspacesResponsePrivate
  *
- * @brief  Private implementation for StopWorkspacesResponse.
+ * \brief Private implementation for StopWorkspacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopWorkspacesResponsePrivate object.
@@ -91,7 +97,7 @@ StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces StopWorkspacesResponse element.
  *
  * @param  xml  XML stream to parse.

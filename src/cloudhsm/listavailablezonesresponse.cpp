@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ListAvailableZonesResponse
+/*!
+ * \class QtAws::CloudHSM::ListAvailableZonesResponse
  *
- * @brief  Handles CloudHSM ListAvailableZones responses.
+ * \brief The ListAvailableZonesResponse class encapsulates CloudHSM ListAvailableZones responses.
  *
- * @see    CloudHSMClient::listAvailableZones
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::listAvailableZones
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAvailableZonesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ListAvailableZonesRequest * ListAvailableZonesResponse::request() const
     return static_cast<const ListAvailableZonesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM ListAvailableZones response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAvailableZonesResponsePrivate
+ * \class ListAvailableZonesResponsePrivate
  *
- * @brief  Private implementation for ListAvailableZonesResponse.
+ * \brief Private implementation for ListAvailableZonesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAvailableZonesResponsePrivate object.
@@ -91,7 +106,7 @@ ListAvailableZonesResponsePrivate::ListAvailableZonesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM ListAvailableZonesResponse element.
  *
  * @param  xml  XML stream to parse.

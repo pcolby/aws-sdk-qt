@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateNetworkAclRequest
+/*!
+ * \class QtAws::EC2::CreateNetworkAclRequest
  *
- * @brief  Implements EC2 CreateNetworkAcl requests.
+ * \brief The CreateNetworkAclRequest class encapsulates EC2 CreateNetworkAcl requests.
  *
- * @see    EC2Client::createNetworkAcl
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createNetworkAcl
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkAclRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateNetworkAclRequest::CreateNetworkAclRequest(const CreateNetworkAclRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateNetworkAclRequest object.
  */
 CreateNetworkAclRequest::CreateNetworkAclRequest()
@@ -53,13 +60,16 @@ CreateNetworkAclRequest::CreateNetworkAclRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateNetworkAclRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateNetworkAclResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclRequest::response(QNetworkRep
     return new CreateNetworkAclResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateNetworkAclRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclRequest::response(QNetworkRep
  * @brief  Private implementation for CreateNetworkAclRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkAclRequestPrivate object.
@@ -97,7 +107,7 @@ CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateNetworkAclRequestPrivate object, copying another.

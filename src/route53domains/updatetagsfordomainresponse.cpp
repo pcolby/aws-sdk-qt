@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  UpdateTagsForDomainResponse
+/*!
+ * \class QtAws::Route53Domains::UpdateTagsForDomainResponse
  *
- * @brief  Handles Route53Domains UpdateTagsForDomain responses.
+ * \brief The UpdateTagsForDomainResponse class encapsulates Route53Domains UpdateTagsForDomain responses.
  *
- * @see    Route53DomainsClient::updateTagsForDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::updateTagsForDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTagsForDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const UpdateTagsForDomainRequest * UpdateTagsForDomainResponse::request() const
     return static_cast<const UpdateTagsForDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains UpdateTagsForDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void UpdateTagsForDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTagsForDomainResponsePrivate
+ * \class UpdateTagsForDomainResponsePrivate
  *
- * @brief  Private implementation for UpdateTagsForDomainResponse.
+ * \brief Private implementation for UpdateTagsForDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTagsForDomainResponsePrivate object.
@@ -91,7 +95,7 @@ UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains UpdateTagsForDomainResponse element.
  *
  * @param  xml  XML stream to parse.

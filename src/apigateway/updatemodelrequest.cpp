@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateModelRequest
+/*!
+ * \class QtAws::APIGateway::UpdateModelRequest
  *
- * @brief  Implements APIGateway UpdateModel requests.
+ * \brief The UpdateModelRequest class encapsulates APIGateway UpdateModel requests.
  *
- * @see    APIGatewayClient::updateModel
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateModel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateModelRequest::UpdateModelRequest(const UpdateModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateModelRequest object.
  */
 UpdateModelRequest::UpdateModelRequest()
@@ -53,13 +61,16 @@ UpdateModelRequest::UpdateModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateModelRequest::response(QNetworkReply * 
     return new UpdateModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateModelRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateModelRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateModelRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateModelRequestPrivate::UpdateModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateModelRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CreateMultipartUploadRequest
+/*!
+ * \class QtAws::S3::CreateMultipartUploadRequest
  *
- * @brief  Implements S3 CreateMultipartUpload requests.
+ * \brief The CreateMultipartUploadRequest class encapsulates S3 CreateMultipartUpload requests.
  *
- * @see    S3Client::createMultipartUpload
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::createMultipartUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateMultipartUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateMultipartUploadRequest::CreateMultipartUploadRequest(const CreateMultipart
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateMultipartUploadRequest object.
  */
 CreateMultipartUploadRequest::CreateMultipartUploadRequest()
@@ -53,13 +56,16 @@ CreateMultipartUploadRequest::CreateMultipartUploadRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateMultipartUploadRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateMultipartUploadResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateMultipartUploadRequest::response(QNetwo
     return new CreateMultipartUploadResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateMultipartUploadRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateMultipartUploadRequest::response(QNetwo
  * @brief  Private implementation for CreateMultipartUploadRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMultipartUploadRequestPrivate object.
@@ -97,7 +103,7 @@ CreateMultipartUploadRequestPrivate::CreateMultipartUploadRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateMultipartUploadRequestPrivate object, copying another.

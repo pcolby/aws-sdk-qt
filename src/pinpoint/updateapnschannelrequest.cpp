@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateApnsChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateApnsChannelRequest
  *
- * @brief  Implements Pinpoint UpdateApnsChannel requests.
+ * \brief The UpdateApnsChannelRequest class encapsulates Pinpoint UpdateApnsChannel requests.
  *
- * @see    PinpointClient::updateApnsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateApnsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateApnsChannelRequest::UpdateApnsChannelRequest(const UpdateApnsChannelReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsChannelRequest object.
  */
 UpdateApnsChannelRequest::UpdateApnsChannelRequest()
@@ -53,13 +56,16 @@ UpdateApnsChannelRequest::UpdateApnsChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApnsChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApnsChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkRe
     return new UpdateApnsChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApnsChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateApnsChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsChannelRequestPrivate object, copying another.

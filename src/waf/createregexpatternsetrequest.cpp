@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateRegexPatternSetRequest
+/*!
+ * \class QtAws::WAF::CreateRegexPatternSetRequest
  *
- * @brief  Implements WAF CreateRegexPatternSet requests.
+ * \brief The CreateRegexPatternSetRequest class encapsulates WAF CreateRegexPatternSet requests.
  *
- * @see    WAFClient::createRegexPatternSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createRegexPatternSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRegexPatternSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateRegexPatternSetRequest::CreateRegexPatternSetRequest(const CreateRegexPatt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRegexPatternSetRequest object.
  */
 CreateRegexPatternSetRequest::CreateRegexPatternSetRequest()
@@ -53,13 +61,16 @@ CreateRegexPatternSetRequest::CreateRegexPatternSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRegexPatternSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRegexPatternSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetwo
     return new CreateRegexPatternSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRegexPatternSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetwo
  * @brief  Private implementation for CreateRegexPatternSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRegexPatternSetRequestPrivate object.
@@ -97,7 +108,7 @@ CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRegexPatternSetRequestPrivate object, copying another.

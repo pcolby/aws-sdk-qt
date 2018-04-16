@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RunInstancesResponse
+/*!
+ * \class QtAws::EC2::RunInstancesResponse
  *
- * @brief  Handles EC2 RunInstances responses.
+ * \brief The RunInstancesResponse class encapsulates EC2 RunInstances responses.
  *
- * @see    EC2Client::runInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::runInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new RunInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RunInstancesRequest * RunInstancesResponse::request() const
     return static_cast<const RunInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RunInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RunInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RunInstancesResponsePrivate
+ * \class RunInstancesResponsePrivate
  *
- * @brief  Private implementation for RunInstancesResponse.
+ * \brief Private implementation for RunInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunInstancesResponsePrivate object.
@@ -91,7 +98,7 @@ RunInstancesResponsePrivate::RunInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RunInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

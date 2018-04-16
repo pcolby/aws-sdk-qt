@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketPolicyRequest
+/*!
+ * \class QtAws::S3::GetBucketPolicyRequest
  *
- * @brief  Implements S3 GetBucketPolicy requests.
+ * \brief The GetBucketPolicyRequest class encapsulates S3 GetBucketPolicy requests.
  *
- * @see    S3Client::getBucketPolicy
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketPolicyRequest::GetBucketPolicyRequest(const GetBucketPolicyRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketPolicyRequest object.
  */
 GetBucketPolicyRequest::GetBucketPolicyRequest()
@@ -53,13 +56,16 @@ GetBucketPolicyRequest::GetBucketPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketPolicyRequest::response(QNetworkRepl
     return new GetBucketPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketPolicyRequest::response(QNetworkRepl
  * @brief  Private implementation for GetBucketPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketPolicyRequestPrivate::GetBucketPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketPolicyRequestPrivate object, copying another.

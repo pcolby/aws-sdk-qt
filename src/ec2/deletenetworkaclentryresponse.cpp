@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkAclEntryResponse
+/*!
+ * \class QtAws::EC2::DeleteNetworkAclEntryResponse
  *
- * @brief  Handles EC2 DeleteNetworkAclEntry responses.
+ * \brief The DeleteNetworkAclEntryResponse class encapsulates EC2 DeleteNetworkAclEntry responses.
  *
- * @see    EC2Client::deleteNetworkAclEntry
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkAclEntry
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkAclEntryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteNetworkAclEntryRequest * DeleteNetworkAclEntryResponse::request() co
     return static_cast<const DeleteNetworkAclEntryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteNetworkAclEntry response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteNetworkAclEntryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNetworkAclEntryResponsePrivate
+ * \class DeleteNetworkAclEntryResponsePrivate
  *
- * @brief  Private implementation for DeleteNetworkAclEntryResponse.
+ * \brief Private implementation for DeleteNetworkAclEntryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkAclEntryResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteNetworkAclEntryResponsePrivate::DeleteNetworkAclEntryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteNetworkAclEntryResponse element.
  *
  * @param  xml  XML stream to parse.

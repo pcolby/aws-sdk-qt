@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateCloudFrontOriginAccessIdentityResponse
+/*!
+ * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityResponse
  *
- * @brief  Handles CloudFront UpdateCloudFrontOriginAccessIdentity responses.
+ * \brief The UpdateCloudFrontOriginAccessIdentityResponse class encapsulates CloudFront UpdateCloudFrontOriginAccessIdentity responses.
  *
- * @see    CloudFrontClient::updateCloudFrontOriginAccessIdentity
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateCloudFrontOriginAccessIdentity
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateCloudFrontOriginAccessIdentityRequest * UpdateCloudFrontOriginAccess
     return static_cast<const UpdateCloudFrontOriginAccessIdentityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront UpdateCloudFrontOriginAccessIdentity response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateCloudFrontOriginAccessIdentityResponsePrivate
+ * \class UpdateCloudFrontOriginAccessIdentityResponsePrivate
  *
- * @brief  Private implementation for UpdateCloudFrontOriginAccessIdentityResponse.
+ * \brief Private implementation for UpdateCloudFrontOriginAccessIdentityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAcces
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront UpdateCloudFrontOriginAccessIdentityResponse element.
  *
  * @param  xml  XML stream to parse.

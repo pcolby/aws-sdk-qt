@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeEventsRequest
+/*!
+ * \class QtAws::DAX::DescribeEventsRequest
  *
- * @brief  Implements DAX DescribeEvents requests.
+ * \brief The DescribeEventsRequest class encapsulates DAX DescribeEvents requests.
  *
- * @see    DAXClient::describeEvents
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
@@ -53,13 +60,16 @@ DescribeEventsRequest::DescribeEventsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEventsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEventsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
     return new DescribeEventsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEventsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeEventsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEventsRequestPrivate object, copying another.

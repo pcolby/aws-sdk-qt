@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  GetTelemetryMetadataResponse
+/*!
+ * \class QtAws::Inspector::GetTelemetryMetadataResponse
  *
- * @brief  Handles Inspector GetTelemetryMetadata responses.
+ * \brief The GetTelemetryMetadataResponse class encapsulates Inspector GetTelemetryMetadata responses.
  *
- * @see    InspectorClient::getTelemetryMetadata
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::getTelemetryMetadata
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTelemetryMetadataResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetTelemetryMetadataRequest * GetTelemetryMetadataResponse::request() cons
     return static_cast<const GetTelemetryMetadataRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector GetTelemetryMetadata response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetTelemetryMetadataResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTelemetryMetadataResponsePrivate
+ * \class GetTelemetryMetadataResponsePrivate
  *
- * @brief  Private implementation for GetTelemetryMetadataResponse.
+ * \brief Private implementation for GetTelemetryMetadataResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTelemetryMetadataResponsePrivate object.
@@ -91,7 +99,7 @@ GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector GetTelemetryMetadataResponse element.
  *
  * @param  xml  XML stream to parse.

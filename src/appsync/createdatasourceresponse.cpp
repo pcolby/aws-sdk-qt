@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateDataSourceResponse
+/*!
+ * \class QtAws::AppSync::CreateDataSourceResponse
  *
- * @brief  Handles AppSync CreateDataSource responses.
+ * \brief The CreateDataSourceResponse class encapsulates AppSync CreateDataSource responses.
  *
- * @see    AppSyncClient::createDataSource
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDataSourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateDataSourceRequest * CreateDataSourceResponse::request() const
     return static_cast<const CreateDataSourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync CreateDataSource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateDataSourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDataSourceResponsePrivate
+ * \class CreateDataSourceResponsePrivate
  *
- * @brief  Private implementation for CreateDataSourceResponse.
+ * \brief Private implementation for CreateDataSourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDataSourceResponsePrivate object.
@@ -91,7 +95,7 @@ CreateDataSourceResponsePrivate::CreateDataSourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync CreateDataSourceResponse element.
  *
  * @param  xml  XML stream to parse.

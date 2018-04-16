@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  StopTrainingJobRequest
+/*!
+ * \class QtAws::SageMaker::StopTrainingJobRequest
  *
- * @brief  Implements SageMaker StopTrainingJob requests.
+ * \brief The StopTrainingJobRequest class encapsulates SageMaker StopTrainingJob requests.
  *
- * @see    SageMakerClient::stopTrainingJob
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::stopTrainingJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StopTrainingJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StopTrainingJobRequest::StopTrainingJobRequest(const StopTrainingJobRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopTrainingJobRequest object.
  */
 StopTrainingJobRequest::StopTrainingJobRequest()
@@ -53,13 +56,16 @@ StopTrainingJobRequest::StopTrainingJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopTrainingJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopTrainingJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkRepl
     return new StopTrainingJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopTrainingJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkRepl
  * @brief  Private implementation for StopTrainingJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopTrainingJobRequestPrivate object.
@@ -97,7 +103,7 @@ StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopTrainingJobRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  ListInputsRequest
+/*!
+ * \class QtAws::MediaLive::ListInputsRequest
  *
- * @brief  Implements MediaLive ListInputs requests.
+ * \brief The ListInputsRequest class encapsulates MediaLive ListInputs requests.
  *
- * @see    MediaLiveClient::listInputs
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::listInputs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInputsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListInputsRequest::ListInputsRequest(const ListInputsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInputsRequest object.
  */
 ListInputsRequest::ListInputsRequest()
@@ -53,13 +56,16 @@ ListInputsRequest::ListInputsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInputsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInputsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * c
     return new ListInputsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInputsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListInputsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInputsRequestPrivate object.
@@ -97,7 +103,7 @@ ListInputsRequestPrivate::ListInputsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInputsRequestPrivate object, copying another.

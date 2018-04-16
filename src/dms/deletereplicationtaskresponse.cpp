@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DeleteReplicationTaskResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskResponse
  *
- * @brief  Handles DatabaseMigrationService DeleteReplicationTask responses.
+ * \brief The DeleteReplicationTaskResponse class encapsulates DatabaseMigrationService DeleteReplicationTask responses.
  *
- * @see    DatabaseMigrationServiceClient::deleteReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReplicationTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeleteReplicationTaskRequest * DeleteReplicationTaskResponse::request() co
     return static_cast<const DeleteReplicationTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DeleteReplicationTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeleteReplicationTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteReplicationTaskResponsePrivate
+ * \class DeleteReplicationTaskResponsePrivate
  *
- * @brief  Private implementation for DeleteReplicationTaskResponse.
+ * \brief Private implementation for DeleteReplicationTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReplicationTaskResponsePrivate object.
@@ -91,7 +105,7 @@ DeleteReplicationTaskResponsePrivate::DeleteReplicationTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DeleteReplicationTaskResponse element.
  *
  * @param  xml  XML stream to parse.

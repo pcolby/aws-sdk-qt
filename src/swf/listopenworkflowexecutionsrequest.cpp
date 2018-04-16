@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  ListOpenWorkflowExecutionsRequest
+/*!
+ * \class QtAws::SWF::ListOpenWorkflowExecutionsRequest
  *
- * @brief  Implements SWF ListOpenWorkflowExecutions requests.
+ * \brief The ListOpenWorkflowExecutionsRequest class encapsulates SWF ListOpenWorkflowExecutions requests.
  *
- * @see    SWFClient::listOpenWorkflowExecutions
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::listOpenWorkflowExecutions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest(const ListO
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object.
  */
 ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest()
@@ -53,13 +72,16 @@ ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOpenWorkflowExecutionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOpenWorkflowExecutionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(Q
     return new ListOpenWorkflowExecutionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOpenWorkflowExecutionsRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(Q
  * @brief  Private implementation for ListOpenWorkflowExecutionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOpenWorkflowExecutionsRequestPrivate object.
@@ -97,7 +119,7 @@ ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOpenWorkflowExecutionsRequestPrivate object, copying another.

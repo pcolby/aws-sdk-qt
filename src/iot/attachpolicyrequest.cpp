@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  AttachPolicyRequest
+/*!
+ * \class QtAws::IoT::AttachPolicyRequest
  *
- * @brief  Implements IoT AttachPolicy requests.
+ * \brief The AttachPolicyRequest class encapsulates IoT AttachPolicy requests.
  *
- * @see    IoTClient::attachPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::attachPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachPolicyRequest object.
  */
 AttachPolicyRequest::AttachPolicyRequest()
@@ -53,13 +67,16 @@ AttachPolicyRequest::AttachPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
     return new AttachPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for AttachPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachPolicyRequestPrivate object, copying another.

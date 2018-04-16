@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  DescribeEnvironmentResourcesRequest
+/*!
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentResourcesRequest
  *
- * @brief  Implements ElasticBeanstalk DescribeEnvironmentResources requests.
+ * \brief The DescribeEnvironmentResourcesRequest class encapsulates ElasticBeanstalk DescribeEnvironmentResources requests.
  *
- * @see    ElasticBeanstalkClient::describeEnvironmentResources
+ * \ingroup ElasticBeanstalk
+ *
+ *  <fullname>AWS Elastic Beanstalk</fullname>
+ * 
+ *  AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
+ *  on the Amazon Web Services
+ * 
+ *  cloud>
+ * 
+ *  For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
+ *  Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
+ *  href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
+ *  To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
+ *  tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services
+ *
+ * \sa ElasticBeanstalkClient::describeEnvironmentResources
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEnvironmentResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest(const D
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEnvironmentResourcesRequest object.
  */
 DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest()
@@ -53,13 +78,16 @@ DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEnvironmentResourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEnvironmentResourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response
     return new DescribeEnvironmentResourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEnvironmentResourcesRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response
  * @brief  Private implementation for DescribeEnvironmentResourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEnvironmentResourcesRequestPrivate object.
@@ -97,7 +125,7 @@ DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEnvironmentResourcesRequestPrivate object, copying another.

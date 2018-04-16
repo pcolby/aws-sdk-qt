@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListTagsResponse
+/*!
+ * \class QtAws::SageMaker::ListTagsResponse
  *
- * @brief  Handles SageMaker ListTags responses.
+ * \brief The ListTagsResponse class encapsulates SageMaker ListTags responses.
  *
- * @see    SageMakerClient::listTags
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListTagsRequest * ListTagsResponse::request() const
     return static_cast<const ListTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker ListTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsResponsePrivate
+ * \class ListTagsResponsePrivate
  *
- * @brief  Private implementation for ListTagsResponse.
+ * \brief Private implementation for ListTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsResponsePrivate object.
@@ -91,7 +94,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker ListTagsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteGraphqlApiRequest
+/*!
+ * \class QtAws::AppSync::DeleteGraphqlApiRequest
  *
- * @brief  Implements AppSync DeleteGraphqlApi requests.
+ * \brief The DeleteGraphqlApiRequest class encapsulates AppSync DeleteGraphqlApi requests.
  *
- * @see    AppSyncClient::deleteGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGraphqlApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteGraphqlApiRequest::DeleteGraphqlApiRequest(const DeleteGraphqlApiRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteGraphqlApiRequest object.
  */
 DeleteGraphqlApiRequest::DeleteGraphqlApiRequest()
@@ -53,13 +57,16 @@ DeleteGraphqlApiRequest::DeleteGraphqlApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteGraphqlApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteGraphqlApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkRep
     return new DeleteGraphqlApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteGraphqlApiRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteGraphqlApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGraphqlApiRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGraphqlApiRequestPrivate object, copying another.

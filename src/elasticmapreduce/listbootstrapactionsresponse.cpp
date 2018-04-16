@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListBootstrapActionsResponse
+/*!
+ * \class QtAws::EMR::ListBootstrapActionsResponse
  *
- * @brief  Handles EMR ListBootstrapActions responses.
+ * \brief The ListBootstrapActionsResponse class encapsulates EMR ListBootstrapActions responses.
  *
- * @see    EMRClient::listBootstrapActions
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listBootstrapActions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBootstrapActionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() cons
     return static_cast<const ListBootstrapActionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR ListBootstrapActions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListBootstrapActionsResponsePrivate
+ * \class ListBootstrapActionsResponsePrivate
  *
- * @brief  Private implementation for ListBootstrapActionsResponse.
+ * \brief Private implementation for ListBootstrapActionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBootstrapActionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR ListBootstrapActionsResponse element.
  *
  * @param  xml  XML stream to parse.

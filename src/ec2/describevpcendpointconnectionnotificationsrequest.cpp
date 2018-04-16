@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointConnectionNotificationsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointConnectionNotificationsRequest
  *
- * @brief  Implements EC2 DescribeVpcEndpointConnectionNotifications requests.
+ * \brief The DescribeVpcEndpointConnectionNotificationsRequest class encapsulates EC2 DescribeVpcEndpointConnectionNotifications requests.
  *
- * @see    EC2Client::describeVpcEndpointConnectionNotifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointConnectionNotifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcEndpointConnectionNotificationsRequest::DescribeVpcEndpointConnection
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsRequest object.
  */
 DescribeVpcEndpointConnectionNotificationsRequest::DescribeVpcEndpointConnectionNotificationsRequest()
@@ -53,13 +60,16 @@ DescribeVpcEndpointConnectionNotificationsRequest::DescribeVpcEndpointConnection
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcEndpointConnectionNotificationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcEndpointConnectionNotificationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionNotificationsReq
     return new DescribeVpcEndpointConnectionNotificationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcEndpointConnectionNotificationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointConnectionNotificationsReq
  * @brief  Private implementation for DescribeVpcEndpointConnectionNotificationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcEndpointConnectionNotificationsRequestPrivate::DescribeVpcEndpointCon
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsRequestPrivate object, copying another.

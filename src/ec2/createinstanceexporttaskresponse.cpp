@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateInstanceExportTaskResponse
+/*!
+ * \class QtAws::EC2::CreateInstanceExportTaskResponse
  *
- * @brief  Handles EC2 CreateInstanceExportTask responses.
+ * \brief The CreateInstanceExportTaskResponse class encapsulates EC2 CreateInstanceExportTask responses.
  *
- * @see    EC2Client::createInstanceExportTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createInstanceExportTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInstanceExportTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CreateInstanceExportTaskRequest * CreateInstanceExportTaskResponse::reques
     return static_cast<const CreateInstanceExportTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CreateInstanceExportTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateInstanceExportTaskResponsePrivate
+ * \class CreateInstanceExportTaskResponsePrivate
  *
- * @brief  Private implementation for CreateInstanceExportTaskResponse.
+ * \brief Private implementation for CreateInstanceExportTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInstanceExportTaskResponsePrivate object.
@@ -91,7 +98,7 @@ CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CreateInstanceExportTaskResponse element.
  *
  * @param  xml  XML stream to parse.

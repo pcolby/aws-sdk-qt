@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  UpdateServiceResponse
+/*!
+ * \class QtAws::ServiceDiscovery::UpdateServiceResponse
  *
- * @brief  Handles ServiceDiscovery UpdateService responses.
+ * \brief The UpdateServiceResponse class encapsulates ServiceDiscovery UpdateService responses.
  *
- * @see    ServiceDiscoveryClient::updateService
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::updateService
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateServiceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateServiceRequest * UpdateServiceResponse::request() const
     return static_cast<const UpdateServiceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery UpdateService response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateServiceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateServiceResponsePrivate
+ * \class UpdateServiceResponsePrivate
  *
- * @brief  Private implementation for UpdateServiceResponse.
+ * \brief Private implementation for UpdateServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateServiceResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery UpdateServiceResponse element.
  *
  * @param  xml  XML stream to parse.

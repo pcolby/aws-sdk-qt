@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  StopAssessmentRunResponse
+/*!
+ * \class QtAws::Inspector::StopAssessmentRunResponse
  *
- * @brief  Handles Inspector StopAssessmentRun responses.
+ * \brief The StopAssessmentRunResponse class encapsulates Inspector StopAssessmentRun responses.
  *
- * @see    InspectorClient::stopAssessmentRun
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::stopAssessmentRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StopAssessmentRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const StopAssessmentRunRequest * StopAssessmentRunResponse::request() const
     return static_cast<const StopAssessmentRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector StopAssessmentRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void StopAssessmentRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopAssessmentRunResponsePrivate
+ * \class StopAssessmentRunResponsePrivate
  *
- * @brief  Private implementation for StopAssessmentRunResponse.
+ * \brief Private implementation for StopAssessmentRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopAssessmentRunResponsePrivate object.
@@ -91,7 +99,7 @@ StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector StopAssessmentRunResponse element.
  *
  * @param  xml  XML stream to parse.

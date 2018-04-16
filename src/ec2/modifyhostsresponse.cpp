@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyHostsResponse
+/*!
+ * \class QtAws::EC2::ModifyHostsResponse
  *
- * @brief  Handles EC2 ModifyHosts responses.
+ * \brief The ModifyHostsResponse class encapsulates EC2 ModifyHosts responses.
  *
- * @see    EC2Client::modifyHosts
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyHosts
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyHostsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyHostsRequest * ModifyHostsResponse::request() const
     return static_cast<const ModifyHostsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyHosts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyHostsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyHostsResponsePrivate
+ * \class ModifyHostsResponsePrivate
  *
- * @brief  Private implementation for ModifyHostsResponse.
+ * \brief Private implementation for ModifyHostsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHostsResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyHostsResponse element.
  *
  * @param  xml  XML stream to parse.

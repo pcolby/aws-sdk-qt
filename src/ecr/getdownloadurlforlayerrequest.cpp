@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetDownloadUrlForLayerRequest
+/*!
+ * \class QtAws::ECR::GetDownloadUrlForLayerRequest
  *
- * @brief  Implements ECR GetDownloadUrlForLayer requests.
+ * \brief The GetDownloadUrlForLayerRequest class encapsulates ECR GetDownloadUrlForLayer requests.
  *
- * @see    ECRClient::getDownloadUrlForLayer
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getDownloadUrlForLayer
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDownloadUrlForLayerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest(const GetDownloadUr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDownloadUrlForLayerRequest object.
  */
 GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest()
@@ -53,13 +60,16 @@ GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDownloadUrlForLayerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDownloadUrlForLayerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetw
     return new GetDownloadUrlForLayerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDownloadUrlForLayerRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetw
  * @brief  Private implementation for GetDownloadUrlForLayerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDownloadUrlForLayerRequestPrivate object.
@@ -97,7 +107,7 @@ GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDownloadUrlForLayerRequestPrivate object, copying another.

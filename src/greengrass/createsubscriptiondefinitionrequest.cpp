@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateSubscriptionDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionRequest
  *
- * @brief  Implements Greengrass CreateSubscriptionDefinition requests.
+ * \brief The CreateSubscriptionDefinitionRequest class encapsulates Greengrass CreateSubscriptionDefinition requests.
  *
- * @see    GreengrassClient::createSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateSubscriptionDefinitionRequest::CreateSubscriptionDefinitionRequest(const C
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionDefinitionRequest object.
  */
 CreateSubscriptionDefinitionRequest::CreateSubscriptionDefinitionRequest()
@@ -53,13 +59,16 @@ CreateSubscriptionDefinitionRequest::CreateSubscriptionDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSubscriptionDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSubscriptionDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionRequest::response
     return new CreateSubscriptionDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSubscriptionDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionRequest::response
  * @brief  Private implementation for CreateSubscriptionDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateSubscriptionDefinitionRequestPrivate::CreateSubscriptionDefinitionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionDefinitionRequestPrivate object, copying another.

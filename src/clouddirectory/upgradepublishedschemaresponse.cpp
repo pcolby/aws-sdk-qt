@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  UpgradePublishedSchemaResponse
+/*!
+ * \class QtAws::CloudDirectory::UpgradePublishedSchemaResponse
  *
- * @brief  Handles CloudDirectory UpgradePublishedSchema responses.
+ * \brief The UpgradePublishedSchemaResponse class encapsulates CloudDirectory UpgradePublishedSchema responses.
  *
- * @see    CloudDirectoryClient::upgradePublishedSchema
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::upgradePublishedSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new UpgradePublishedSchemaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const UpgradePublishedSchemaRequest * UpgradePublishedSchemaResponse::request() 
     return static_cast<const UpgradePublishedSchemaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudDirectory UpgradePublishedSchema response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void UpgradePublishedSchemaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpgradePublishedSchemaResponsePrivate
+ * \class UpgradePublishedSchemaResponsePrivate
  *
- * @brief  Private implementation for UpgradePublishedSchemaResponse.
+ * \brief Private implementation for UpgradePublishedSchemaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpgradePublishedSchemaResponsePrivate object.
@@ -91,7 +101,7 @@ UpgradePublishedSchemaResponsePrivate::UpgradePublishedSchemaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudDirectory UpgradePublishedSchemaResponse element.
  *
  * @param  xml  XML stream to parse.

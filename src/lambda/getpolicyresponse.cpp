@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetPolicyResponse
+/*!
+ * \class QtAws::Lambda::GetPolicyResponse
  *
- * @brief  Handles Lambda GetPolicy responses.
+ * \brief The GetPolicyResponse class encapsulates Lambda GetPolicy responses.
  *
- * @see    LambdaClient::getPolicy
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetPolicyRequest * GetPolicyResponse::request() const
     return static_cast<const GetPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda GetPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPolicyResponsePrivate
+ * \class GetPolicyResponsePrivate
  *
- * @brief  Private implementation for GetPolicyResponse.
+ * \brief Private implementation for GetPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyResponsePrivate object.
@@ -91,7 +105,7 @@ GetPolicyResponsePrivate::GetPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda GetPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

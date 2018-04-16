@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeBatchPredictionsRequest
+/*!
+ * \class QtAws::MachineLearning::DescribeBatchPredictionsRequest
  *
- * @brief  Implements MachineLearning DescribeBatchPredictions requests.
+ * \brief The DescribeBatchPredictionsRequest class encapsulates MachineLearning DescribeBatchPredictions requests.
  *
- * @see    MachineLearningClient::describeBatchPredictions
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeBatchPredictions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBatchPredictionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeBatchPredictionsRequest::DescribeBatchPredictionsRequest(const DescribeB
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeBatchPredictionsRequest object.
  */
 DescribeBatchPredictionsRequest::DescribeBatchPredictionsRequest()
@@ -53,13 +56,16 @@ DescribeBatchPredictionsRequest::DescribeBatchPredictionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeBatchPredictionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeBatchPredictionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBatchPredictionsRequest::response(QNe
     return new DescribeBatchPredictionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeBatchPredictionsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeBatchPredictionsRequest::response(QNe
  * @brief  Private implementation for DescribeBatchPredictionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBatchPredictionsRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeBatchPredictionsRequestPrivate::DescribeBatchPredictionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBatchPredictionsRequestPrivate object, copying another.

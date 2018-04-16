@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeImagesResponse
+/*!
+ * \class QtAws::AppStream::DescribeImagesResponse
  *
- * @brief  Handles AppStream DescribeImages responses.
+ * \brief The DescribeImagesResponse class encapsulates AppStream DescribeImages responses.
  *
- * @see    AppStreamClient::describeImages
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeImages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeImagesRequest * DescribeImagesResponse::request() const
     return static_cast<const DescribeImagesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DescribeImages response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeImagesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeImagesResponsePrivate
+ * \class DescribeImagesResponsePrivate
  *
- * @brief  Private implementation for DescribeImagesResponse.
+ * \brief Private implementation for DescribeImagesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DescribeImagesResponse element.
  *
  * @param  xml  XML stream to parse.

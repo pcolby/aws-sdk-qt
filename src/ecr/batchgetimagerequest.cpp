@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  BatchGetImageRequest
+/*!
+ * \class QtAws::ECR::BatchGetImageRequest
  *
- * @brief  Implements ECR BatchGetImage requests.
+ * \brief The BatchGetImageRequest class encapsulates ECR BatchGetImage requests.
  *
- * @see    ECRClient::batchGetImage
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::batchGetImage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ BatchGetImageRequest::BatchGetImageRequest(const BatchGetImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchGetImageRequest object.
  */
 BatchGetImageRequest::BatchGetImageRequest()
@@ -53,13 +60,16 @@ BatchGetImageRequest::BatchGetImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchGetImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchGetImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply 
     return new BatchGetImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchGetImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply 
  * @brief  Private implementation for BatchGetImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetImageRequestPrivate object.
@@ -97,7 +107,7 @@ BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetImageRequestPrivate object, copying another.

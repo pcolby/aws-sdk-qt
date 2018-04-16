@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DescribeSubscriptionResponse
+/*!
+ * \class QtAws::Shield::DescribeSubscriptionResponse
  *
- * @brief  Handles Shield DescribeSubscription responses.
+ * \brief The DescribeSubscriptionResponse class encapsulates Shield DescribeSubscription responses.
  *
- * @see    ShieldClient::describeSubscription
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::describeSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeSubscriptionRequest * DescribeSubscriptionResponse::request() cons
     return static_cast<const DescribeSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Shield DescribeSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSubscriptionResponsePrivate
+ * \class DescribeSubscriptionResponsePrivate
  *
- * @brief  Private implementation for DescribeSubscriptionResponse.
+ * \brief Private implementation for DescribeSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubscriptionResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Shield DescribeSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

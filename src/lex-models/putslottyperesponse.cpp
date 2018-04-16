@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  PutSlotTypeResponse
+/*!
+ * \class QtAws::LexModelBuildingService::PutSlotTypeResponse
  *
- * @brief  Handles LexModelBuildingService PutSlotType responses.
+ * \brief The PutSlotTypeResponse class encapsulates LexModelBuildingService PutSlotType responses.
  *
- * @see    LexModelBuildingServiceClient::putSlotType
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::putSlotType
  */
 
-/**
+/*!
  * @brief  Constructs a new PutSlotTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const PutSlotTypeRequest * PutSlotTypeResponse::request() const
     return static_cast<const PutSlotTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService PutSlotType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void PutSlotTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutSlotTypeResponsePrivate
+ * \class PutSlotTypeResponsePrivate
  *
- * @brief  Private implementation for PutSlotTypeResponse.
+ * \brief Private implementation for PutSlotTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutSlotTypeResponsePrivate object.
@@ -91,7 +98,7 @@ PutSlotTypeResponsePrivate::PutSlotTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService PutSlotTypeResponse element.
  *
  * @param  xml  XML stream to parse.

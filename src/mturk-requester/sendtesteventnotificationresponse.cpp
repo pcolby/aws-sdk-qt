@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  SendTestEventNotificationResponse
+/*!
+ * \class QtAws::MTurk::SendTestEventNotificationResponse
  *
- * @brief  Handles MTurk SendTestEventNotification responses.
+ * \brief The SendTestEventNotificationResponse class encapsulates MTurk SendTestEventNotification responses.
  *
- * @see    MTurkClient::sendTestEventNotification
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::sendTestEventNotification
  */
 
-/**
+/*!
  * @brief  Constructs a new SendTestEventNotificationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const SendTestEventNotificationRequest * SendTestEventNotificationResponse::requ
     return static_cast<const SendTestEventNotificationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk SendTestEventNotification response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void SendTestEventNotificationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SendTestEventNotificationResponsePrivate
+ * \class SendTestEventNotificationResponsePrivate
  *
- * @brief  Private implementation for SendTestEventNotificationResponse.
+ * \brief Private implementation for SendTestEventNotificationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendTestEventNotificationResponsePrivate object.
@@ -91,7 +94,7 @@ SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk SendTestEventNotificationResponse element.
  *
  * @param  xml  XML stream to parse.

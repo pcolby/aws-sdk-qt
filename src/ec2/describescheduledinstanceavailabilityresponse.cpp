@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeScheduledInstanceAvailabilityResponse
+/*!
+ * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityResponse
  *
- * @brief  Handles EC2 DescribeScheduledInstanceAvailability responses.
+ * \brief The DescribeScheduledInstanceAvailabilityResponse class encapsulates EC2 DescribeScheduledInstanceAvailability responses.
  *
- * @see    EC2Client::describeScheduledInstanceAvailability
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeScheduledInstanceAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledInstanceAvailabilityResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeScheduledInstanceAvailabilityRequest * DescribeScheduledInstanceAv
     return static_cast<const DescribeScheduledInstanceAvailabilityRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeScheduledInstanceAvailability response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeScheduledInstanceAvailabilityResponse::parseSuccess(QIODevice &resp
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeScheduledInstanceAvailabilityResponsePrivate
+ * \class DescribeScheduledInstanceAvailabilityResponsePrivate
  *
- * @brief  Private implementation for DescribeScheduledInstanceAvailabilityResponse.
+ * \brief Private implementation for DescribeScheduledInstanceAvailabilityResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledInstanceAvailabilityResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceA
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeScheduledInstanceAvailabilityResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetFileUploadURLResponse
+/*!
+ * \class QtAws::MTurk::GetFileUploadURLResponse
  *
- * @brief  Handles MTurk GetFileUploadURL responses.
+ * \brief The GetFileUploadURLResponse class encapsulates MTurk GetFileUploadURL responses.
  *
- * @see    MTurkClient::getFileUploadURL
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getFileUploadURL
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFileUploadURLResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetFileUploadURLRequest * GetFileUploadURLResponse::request() const
     return static_cast<const GetFileUploadURLRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk GetFileUploadURL response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetFileUploadURLResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetFileUploadURLResponsePrivate
+ * \class GetFileUploadURLResponsePrivate
  *
- * @brief  Private implementation for GetFileUploadURLResponse.
+ * \brief Private implementation for GetFileUploadURLResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFileUploadURLResponsePrivate object.
@@ -91,7 +94,7 @@ GetFileUploadURLResponsePrivate::GetFileUploadURLResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk GetFileUploadURLResponse element.
  *
  * @param  xml  XML stream to parse.

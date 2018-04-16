@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  IoTResponse
+/*!
+ * \class QtAws::IoT::IoTResponse
  *
- * @brief  Handles IoT IoT responses.
+ * \brief The IoTResponse class is the base class for all IoT responses.
  *
- * @see    IoTClient::ioT
+ * \ingroup IoT
  */
 
-/**
+/*!
  * @brief  Constructs a new IoTResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ IoTResponse::IoTResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IoTResponse object.
@@ -63,7 +63,7 @@ IoTResponse::IoTResponse(IoTResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void IoTResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  IoTResponsePrivate
@@ -92,7 +92,7 @@ void IoTResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for IoTResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new IoTResponsePrivate object.

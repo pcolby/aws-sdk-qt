@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteConfigurationSetEventDestinationRequest
+/*!
+ * \class QtAws::SES::DeleteConfigurationSetEventDestinationRequest
  *
- * @brief  Implements SES DeleteConfigurationSetEventDestination requests.
+ * \brief The DeleteConfigurationSetEventDestinationRequest class encapsulates SES DeleteConfigurationSetEventDestination requests.
  *
- * @see    SESClient::deleteConfigurationSetEventDestination
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteConfigurationSetEventDestination
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestin
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequest object.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest()
@@ -53,13 +67,16 @@ DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestin
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteConfigurationSetEventDestinationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteConfigurationSetEventDestinationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest
     return new DeleteConfigurationSetEventDestinationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteConfigurationSetEventDestinationRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest
  * @brief  Private implementation for DeleteConfigurationSetEventDestinationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEven
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConfigurationSetEventDestinationRequestPrivate object, copying another.

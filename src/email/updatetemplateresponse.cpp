@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  UpdateTemplateResponse
+/*!
+ * \class QtAws::SES::UpdateTemplateResponse
  *
- * @brief  Handles SES UpdateTemplate responses.
+ * \brief The UpdateTemplateResponse class encapsulates SES UpdateTemplate responses.
  *
- * @see    SESClient::updateTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::updateTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateTemplateRequest * UpdateTemplateResponse::request() const
     return static_cast<const UpdateTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES UpdateTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTemplateResponsePrivate
+ * \class UpdateTemplateResponsePrivate
  *
- * @brief  Private implementation for UpdateTemplateResponse.
+ * \brief Private implementation for UpdateTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTemplateResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES UpdateTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

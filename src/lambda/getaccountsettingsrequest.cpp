@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetAccountSettingsRequest
+/*!
+ * \class QtAws::Lambda::GetAccountSettingsRequest
  *
- * @brief  Implements Lambda GetAccountSettings requests.
+ * \brief The GetAccountSettingsRequest class encapsulates Lambda GetAccountSettings requests.
  *
- * @see    LambdaClient::getAccountSettings
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getAccountSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ GetAccountSettingsRequest::GetAccountSettingsRequest(const GetAccountSettingsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSettingsRequest object.
  */
 GetAccountSettingsRequest::GetAccountSettingsRequest()
@@ -53,13 +67,16 @@ GetAccountSettingsRequest::GetAccountSettingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAccountSettingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAccountSettingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
     return new GetAccountSettingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAccountSettingsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
  * @brief  Private implementation for GetAccountSettingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSettingsRequestPrivate object.
@@ -97,7 +114,7 @@ GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSettingsRequestPrivate object, copying another.

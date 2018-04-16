@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ChangeTagsForResourceRequest
+/*!
+ * \class QtAws::Route53::ChangeTagsForResourceRequest
  *
- * @brief  Implements Route53 ChangeTagsForResource requests.
+ * \brief The ChangeTagsForResourceRequest class encapsulates Route53 ChangeTagsForResource requests.
  *
- * @see    Route53Client::changeTagsForResource
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::changeTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new ChangeTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ChangeTagsForResourceRequest::ChangeTagsForResourceRequest(const ChangeTagsForRe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ChangeTagsForResourceRequest object.
  */
 ChangeTagsForResourceRequest::ChangeTagsForResourceRequest()
@@ -53,13 +56,16 @@ ChangeTagsForResourceRequest::ChangeTagsForResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ChangeTagsForResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ChangeTagsForResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetwo
     return new ChangeTagsForResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ChangeTagsForResourceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetwo
  * @brief  Private implementation for ChangeTagsForResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ChangeTagsForResourceRequestPrivate object.
@@ -97,7 +103,7 @@ ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ChangeTagsForResourceRequestPrivate object, copying another.

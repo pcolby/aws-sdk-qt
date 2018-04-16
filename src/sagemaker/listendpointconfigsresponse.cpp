@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListEndpointConfigsResponse
+/*!
+ * \class QtAws::SageMaker::ListEndpointConfigsResponse
  *
- * @brief  Handles SageMaker ListEndpointConfigs responses.
+ * \brief The ListEndpointConfigsResponse class encapsulates SageMaker ListEndpointConfigs responses.
  *
- * @see    SageMakerClient::listEndpointConfigs
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listEndpointConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListEndpointConfigsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListEndpointConfigsRequest * ListEndpointConfigsResponse::request() const
     return static_cast<const ListEndpointConfigsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker ListEndpointConfigs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListEndpointConfigsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListEndpointConfigsResponsePrivate
+ * \class ListEndpointConfigsResponsePrivate
  *
- * @brief  Private implementation for ListEndpointConfigsResponse.
+ * \brief Private implementation for ListEndpointConfigsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEndpointConfigsResponsePrivate object.
@@ -91,7 +94,7 @@ ListEndpointConfigsResponsePrivate::ListEndpointConfigsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker ListEndpointConfigsResponse element.
  *
  * @param  xml  XML stream to parse.

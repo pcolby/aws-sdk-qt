@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateDomainNameResponse
+/*!
+ * \class QtAws::APIGateway::CreateDomainNameResponse
  *
- * @brief  Handles APIGateway CreateDomainName responses.
+ * \brief The CreateDomainNameResponse class encapsulates APIGateway CreateDomainName responses.
  *
- * @see    APIGatewayClient::createDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDomainNameResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateDomainNameRequest * CreateDomainNameResponse::request() const
     return static_cast<const CreateDomainNameRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateDomainName response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateDomainNameResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDomainNameResponsePrivate
+ * \class CreateDomainNameResponsePrivate
  *
- * @brief  Private implementation for CreateDomainNameResponse.
+ * \brief Private implementation for CreateDomainNameResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDomainNameResponsePrivate object.
@@ -91,7 +99,7 @@ CreateDomainNameResponsePrivate::CreateDomainNameResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateDomainNameResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetCampaignsRequest
+/*!
+ * \class QtAws::Pinpoint::GetCampaignsRequest
  *
- * @brief  Implements Pinpoint GetCampaigns requests.
+ * \brief The GetCampaignsRequest class encapsulates Pinpoint GetCampaigns requests.
  *
- * @see    PinpointClient::getCampaigns
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getCampaigns
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCampaignsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetCampaignsRequest::GetCampaignsRequest(const GetCampaignsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCampaignsRequest object.
  */
 GetCampaignsRequest::GetCampaignsRequest()
@@ -53,13 +56,16 @@ GetCampaignsRequest::GetCampaignsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCampaignsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCampaignsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetCampaignsRequest::response(QNetworkReply *
     return new GetCampaignsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCampaignsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetCampaignsRequest::response(QNetworkReply *
  * @brief  Private implementation for GetCampaignsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCampaignsRequestPrivate object.
@@ -97,7 +103,7 @@ GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCampaignsRequestPrivate object, copying another.

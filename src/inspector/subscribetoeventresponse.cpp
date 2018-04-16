@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  SubscribeToEventResponse
+/*!
+ * \class QtAws::Inspector::SubscribeToEventResponse
  *
- * @brief  Handles Inspector SubscribeToEvent responses.
+ * \brief The SubscribeToEventResponse class encapsulates Inspector SubscribeToEvent responses.
  *
- * @see    InspectorClient::subscribeToEvent
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::subscribeToEvent
  */
 
-/**
+/*!
  * @brief  Constructs a new SubscribeToEventResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SubscribeToEventRequest * SubscribeToEventResponse::request() const
     return static_cast<const SubscribeToEventRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector SubscribeToEvent response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SubscribeToEventResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SubscribeToEventResponsePrivate
+ * \class SubscribeToEventResponsePrivate
  *
- * @brief  Private implementation for SubscribeToEventResponse.
+ * \brief Private implementation for SubscribeToEventResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SubscribeToEventResponsePrivate object.
@@ -91,7 +99,7 @@ SubscribeToEventResponsePrivate::SubscribeToEventResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector SubscribeToEventResponse element.
  *
  * @param  xml  XML stream to parse.

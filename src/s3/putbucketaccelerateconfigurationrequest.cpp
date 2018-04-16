@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketAccelerateConfigurationRequest
+/*!
+ * \class QtAws::S3::PutBucketAccelerateConfigurationRequest
  *
- * @brief  Implements S3 PutBucketAccelerateConfiguration requests.
+ * \brief The PutBucketAccelerateConfigurationRequest class encapsulates S3 PutBucketAccelerateConfiguration requests.
  *
- * @see    S3Client::putBucketAccelerateConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketAccelerateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketAccelerateConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketAccelerateConfigurationRequest object.
  */
 PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest()
@@ -53,13 +56,16 @@ PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketAccelerateConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketAccelerateConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::resp
     return new PutBucketAccelerateConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketAccelerateConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::resp
  * @brief  Private implementation for PutBucketAccelerateConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketAccelerateConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfiguration
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketAccelerateConfigurationRequestPrivate object, copying another.

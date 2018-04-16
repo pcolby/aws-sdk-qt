@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace AutoScalingPlans {
 
-/**
- * @class  AutoScalingPlansResponse
+/*!
+ * \class QtAws::AutoScalingPlans::AutoScalingPlansResponse
  *
- * @brief  Handles AutoScalingPlans AutoScalingPlans responses.
+ * \brief The AutoScalingPlansResponse class is the base class for all AutoScalingPlans responses.
  *
- * @see    AutoScalingPlansClient::autoScalingPlans
+ * \ingroup AutoScalingPlans
  */
 
-/**
+/*!
  * @brief  Constructs a new AutoScalingPlansResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ AutoScalingPlansResponse::AutoScalingPlansResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AutoScalingPlansResponse object.
@@ -63,7 +63,7 @@ AutoScalingPlansResponse::AutoScalingPlansResponse(AutoScalingPlansResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void AutoScalingPlansResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AutoScalingPlansResponsePrivate
@@ -92,7 +92,7 @@ void AutoScalingPlansResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for AutoScalingPlansResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AutoScalingPlansResponsePrivate object.

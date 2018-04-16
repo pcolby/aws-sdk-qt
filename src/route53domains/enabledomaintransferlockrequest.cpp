@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  EnableDomainTransferLockRequest
+/*!
+ * \class QtAws::Route53Domains::EnableDomainTransferLockRequest
  *
- * @brief  Implements Route53Domains EnableDomainTransferLock requests.
+ * \brief The EnableDomainTransferLockRequest class encapsulates Route53Domains EnableDomainTransferLock requests.
  *
- * @see    Route53DomainsClient::enableDomainTransferLock
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::enableDomainTransferLock
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableDomainTransferLockRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ EnableDomainTransferLockRequest::EnableDomainTransferLockRequest(const EnableDom
 
 }
 
-/**
+/*!
  * @brief  Constructs a new EnableDomainTransferLockRequest object.
  */
 EnableDomainTransferLockRequest::EnableDomainTransferLockRequest()
@@ -53,13 +57,16 @@ EnableDomainTransferLockRequest::EnableDomainTransferLockRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool EnableDomainTransferLockRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an EnableDomainTransferLockResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNe
     return new EnableDomainTransferLockResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EnableDomainTransferLockRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNe
  * @brief  Private implementation for EnableDomainTransferLockRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableDomainTransferLockRequestPrivate object.
@@ -97,7 +104,7 @@ EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableDomainTransferLockRequestPrivate object, copying another.

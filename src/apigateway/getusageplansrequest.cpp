@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetUsagePlansRequest
+/*!
+ * \class QtAws::APIGateway::GetUsagePlansRequest
  *
- * @brief  Implements APIGateway GetUsagePlans requests.
+ * \brief The GetUsagePlansRequest class encapsulates APIGateway GetUsagePlans requests.
  *
- * @see    APIGatewayClient::getUsagePlans
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getUsagePlans
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlansRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetUsagePlansRequest::GetUsagePlansRequest(const GetUsagePlansRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlansRequest object.
  */
 GetUsagePlansRequest::GetUsagePlansRequest()
@@ -53,13 +61,16 @@ GetUsagePlansRequest::GetUsagePlansRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUsagePlansRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUsagePlansResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlansRequest::response(QNetworkReply 
     return new GetUsagePlansResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUsagePlansRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlansRequest::response(QNetworkReply 
  * @brief  Private implementation for GetUsagePlansRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlansRequestPrivate object.
@@ -97,7 +108,7 @@ GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlansRequestPrivate object, copying another.

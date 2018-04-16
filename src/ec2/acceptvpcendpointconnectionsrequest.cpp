@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AcceptVpcEndpointConnectionsRequest
+/*!
+ * \class QtAws::EC2::AcceptVpcEndpointConnectionsRequest
  *
- * @brief  Implements EC2 AcceptVpcEndpointConnections requests.
+ * \brief The AcceptVpcEndpointConnectionsRequest class encapsulates EC2 AcceptVpcEndpointConnections requests.
  *
- * @see    EC2Client::acceptVpcEndpointConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::acceptVpcEndpointConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new AcceptVpcEndpointConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest(const A
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AcceptVpcEndpointConnectionsRequest object.
  */
 AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest()
@@ -53,13 +60,16 @@ AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AcceptVpcEndpointConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AcceptVpcEndpointConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AcceptVpcEndpointConnectionsRequest::response
     return new AcceptVpcEndpointConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AcceptVpcEndpointConnectionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AcceptVpcEndpointConnectionsRequest::response
  * @brief  Private implementation for AcceptVpcEndpointConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptVpcEndpointConnectionsRequestPrivate object.
@@ -97,7 +107,7 @@ AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AcceptVpcEndpointConnectionsRequestPrivate object, copying another.

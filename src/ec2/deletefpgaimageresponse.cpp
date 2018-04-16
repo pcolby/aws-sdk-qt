@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteFpgaImageResponse
+/*!
+ * \class QtAws::EC2::DeleteFpgaImageResponse
  *
- * @brief  Handles EC2 DeleteFpgaImage responses.
+ * \brief The DeleteFpgaImageResponse class encapsulates EC2 DeleteFpgaImage responses.
  *
- * @see    EC2Client::deleteFpgaImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteFpgaImage
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFpgaImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteFpgaImageRequest * DeleteFpgaImageResponse::request() const
     return static_cast<const DeleteFpgaImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteFpgaImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteFpgaImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFpgaImageResponsePrivate
+ * \class DeleteFpgaImageResponsePrivate
  *
- * @brief  Private implementation for DeleteFpgaImageResponse.
+ * \brief Private implementation for DeleteFpgaImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFpgaImageResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteFpgaImageResponse element.
  *
  * @param  xml  XML stream to parse.

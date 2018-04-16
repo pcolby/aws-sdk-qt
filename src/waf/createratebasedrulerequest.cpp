@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateRateBasedRuleRequest
+/*!
+ * \class QtAws::WAF::CreateRateBasedRuleRequest
  *
- * @brief  Implements WAF CreateRateBasedRule requests.
+ * \brief The CreateRateBasedRuleRequest class encapsulates WAF CreateRateBasedRule requests.
  *
- * @see    WAFClient::createRateBasedRule
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createRateBasedRule
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRule
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateRateBasedRuleRequest object.
  */
 CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
@@ -53,13 +61,16 @@ CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateRateBasedRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateRateBasedRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
     return new CreateRateBasedRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateRateBasedRuleRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
  * @brief  Private implementation for CreateRateBasedRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object.
@@ -97,7 +108,7 @@ CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object, copying another.

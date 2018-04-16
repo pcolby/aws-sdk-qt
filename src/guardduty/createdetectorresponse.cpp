@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  CreateDetectorResponse
+/*!
+ * \class QtAws::GuardDuty::CreateDetectorResponse
  *
- * @brief  Handles GuardDuty CreateDetector responses.
+ * \brief The CreateDetectorResponse class encapsulates GuardDuty CreateDetector responses.
  *
- * @see    GuardDutyClient::createDetector
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::createDetector
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDetectorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateDetectorRequest * CreateDetectorResponse::request() const
     return static_cast<const CreateDetectorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a GuardDuty CreateDetector response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateDetectorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDetectorResponsePrivate
+ * \class CreateDetectorResponsePrivate
  *
- * @brief  Private implementation for CreateDetectorResponse.
+ * \brief Private implementation for CreateDetectorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDetectorResponsePrivate object.
@@ -91,7 +94,7 @@ CreateDetectorResponsePrivate::CreateDetectorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an GuardDuty CreateDetectorResponse element.
  *
  * @param  xml  XML stream to parse.

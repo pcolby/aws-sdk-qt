@@ -65,89 +65,97 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SQS
+ * \brief The QtAws::SQS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SQS {
 
-/**
- * @class  SqsClient
+/*!
+ * \class QtAws::SQS::SqsClient
  *
- * @brief  Client for Amazon Simple Queue Service ( SQS)
+ * \brief The SqsClient class provides access the Amazon Simple Queue Service ( SQS) service.
  *
- * Welcome to the <i>Amazon Simple Queue Service API
+ * \ingroup SQS
  *
- * Reference</i>>
- *
- * Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
- * between applications or microservices. Amazon SQS moves data between distributed application components and helps you
- * decouple these
- *
- * components> <note>
- *
- * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Standard
- * queues</a> are available in all regions. <a
- * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html">FIFO queues</a> are
- * available in the US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland)
- *
- * regions> </note>
- *
- * You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
- * language. The SDKs perform tasks such as the following
- *
- * automatically> <ul> <li>
- *
- * Cryptographically sign your service
- *
- * request> </li> <li>
- *
- * Retry
- *
- * request> </li> <li>
- *
- * Handle error
- *
- * response> </li> </ul>
- *
- * <b>Additional Information</b>
- *
- * </p <ul> <li>
- *
- * <a href="http://aws.amazon.com/sqs/">Amazon SQS Product Page</a>
- *
- * </p </li> <li>
- *
- * <i>Amazon Simple Queue Service Developer Guide</i>
- *
- * </p <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making
- * API Requests</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Using
- * Amazon SQS Message Attributes</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
- * Amazon SQS Dead-Letter Queues</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <i>Amazon Web Services General Reference</i>
- *
- * </p <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
+ *  Welcome to the <i>Amazon Simple Queue Service API
+ * 
+ *  Reference</i>>
+ * 
+ *  Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
+ *  between applications or microservices. Amazon SQS moves data between distributed application components and helps you
+ *  decouple these
+ * 
+ *  components> <note>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Standard
+ *  queues</a> are available in all regions. <a
+ *  href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html">FIFO queues</a> are
+ *  available in the US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland)
+ * 
+ *  regions> </note>
+ * 
+ *  You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
+ *  language. The SDKs perform tasks such as the following
+ * 
+ *  automatically> <ul> <li>
+ * 
+ *  Cryptographically sign your service
+ * 
+ *  request> </li> <li>
+ * 
+ *  Retry
+ * 
+ *  request> </li> <li>
+ * 
+ *  Handle error
+ * 
+ *  response> </li> </ul>
+ * 
+ *  <b>Additional Information</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/sqs/">Amazon SQS Product Page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <i>Amazon Simple Queue Service Developer Guide</i>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making
+ *  API Requests</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Using
+ *  Amazon SQS Message Attributes</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
+ *  Amazon SQS Dead-Letter Queues</a>
+ * 
+ *  </p </li> </ul> </li> <li>
+ * 
+ *  <i>Amazon Web Services General Reference</i>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
  */
 
-/**
- * @brief  Constructs a new SqsClient object.
+/*!
+ * \brief Constructs a SqsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SqsClient::SqsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -166,21 +174,16 @@ SqsClient::SqsClient(
     d->serviceName = QStringLiteral("sqs");
 }
 
-/**
- * @brief  Constructs a new SqsClient object.
+/*!
+ * \overload SqsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SqsClient::SqsClient(
     const QUrl &endpoint,
@@ -199,7 +202,7 @@ SqsClient::SqsClient(
     d->serviceName = QStringLiteral("sqs");
 }
 
-/**
+/*!
  * Adds a permission to a queue for a specific <a
  * href="http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principal</a>. This allows sharing access to the
  *
@@ -241,7 +244,7 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
     return qobject_cast<AddPermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the visibility timeout of a specified message in a queue to a new value. The maximum allowed timeout value is 12
  * hours. Thus, you can't extend the timeout of a message in an existing queue to more than a total visibility timeout of
  * 12 hours. For more information, see <a
@@ -295,7 +298,7 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
     return qobject_cast<ChangeMessageVisibilityResponse *>(send(request));
 }
 
-/**
+/*!
  * Changes the visibility timeout of multiple messages. This is a batch version of <code>
  * <a>ChangeMessageVisibility</a>.</code> The result of the action on each message is reported individually in the
  * response. You can send up to 10 <code> <a>ChangeMessageVisibility</a> </code> requests with each
@@ -330,7 +333,7 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
     return qobject_cast<ChangeMessageVisibilityBatchResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new standard or FIFO queue. You can pass one or more attributes in the request. Keep the following caveats in
  *
  * mind> <ul> <li>
@@ -398,7 +401,7 @@ CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
     return qobject_cast<CreateQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified message from the specified queue. You specify the message by using the message's <i>receipt
  * handle</i> and not the <i>MessageId</i> you receive when you send the message. Even if the message is locked by another
  * reader due to the visibility timeout setting, it is still deleted from the queue. If you leave a message in the queue
@@ -429,7 +432,7 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
     return qobject_cast<DeleteMessageResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes up to ten messages from the specified queue. This is a batch version of <code> <a>DeleteMessage</a>.</code> The
  * result of the action on each message is reported individually in the
  *
@@ -462,7 +465,7 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
     return qobject_cast<DeleteMessageBatchResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the queue specified by the <code>QueueUrl</code>, regardless of the queue's contents. If the specified queue
  * doesn't exist, Amazon SQS returns a successful
  *
@@ -492,7 +495,7 @@ DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
     return qobject_cast<DeleteQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets attributes for the specified
  *
  * queue> <note>
@@ -525,7 +528,7 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
     return qobject_cast<GetQueueAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the URL of an existing queue. This action provides a simple way to retrieve the URL of an Amazon SQS
  *
  * queue>
@@ -547,7 +550,7 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
     return qobject_cast<GetQueueUrlResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of your queues that have the <code>RedrivePolicy</code> queue attribute configured with a dead-letter
  *
  * queue>
@@ -567,7 +570,7 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
     return qobject_cast<ListDeadLetterSourceQueuesResponse *>(send(request));
 }
 
-/**
+/*!
  * List all cost allocation tags added to the specified Amazon SQS queue. For an overview, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-tagging-queues.html">Tagging Amazon
  * SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
@@ -614,7 +617,7 @@ ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &req
     return qobject_cast<ListQueueTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of your queues. The maximum number of queues that can be returned is 1,000. If you specify a value for
  * the optional <code>QueueNamePrefix</code> parameter, only queues with a name that begins with the specified value are
  *
@@ -629,7 +632,7 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
     return qobject_cast<ListQueuesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the messages in a queue specified by the <code>QueueURL</code>
  *
  * parameter> <b>
@@ -654,7 +657,7 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
     return qobject_cast<PurgeQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves one or more messages (up to 10), from the specified queue. Using the <code>WaitTimeSeconds</code> parameter
  * enables long-poll support. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html">Amazon SQS Long
@@ -731,7 +734,7 @@ ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &
     return qobject_cast<ReceiveMessageResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes any permissions in the queue policy that matches the specified <code>Label</code> parameter. Only the owner of
  * the queue can remove
  *
@@ -746,7 +749,7 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
     return qobject_cast<RemovePermissionResponse *>(send(request));
 }
 
-/**
+/*!
  * Delivers a message to the specified
  *
  * queue> <b>
@@ -774,7 +777,7 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
     return qobject_cast<SendMessageResponse *>(send(request));
 }
 
-/**
+/*!
  * Delivers up to ten messages to the specified queue. This is a batch version of <code> <a>SendMessage</a>.</code> For a
  * FIFO queue, multiple messages within a single batch are enqueued in the order they are
  *
@@ -831,7 +834,7 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
     return qobject_cast<SendMessageBatchResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the value of one or more queue attributes. When you change a queue's attributes, the change can take up to 60
  * seconds for most of the attributes to propagate throughout the Amazon SQS system. Changes made to the
  * <code>MessageRetentionPeriod</code> attribute can take up to 15
@@ -852,7 +855,7 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
     return qobject_cast<SetQueueAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Add cost allocation tags to the specified Amazon SQS queue. For an overview, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-tagging-queues.html">Tagging Amazon
  * SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
@@ -899,7 +902,7 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
     return qobject_cast<TagQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * Remove cost allocation tags from the specified Amazon SQS queue. For an overview, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-tagging-queues.html">Tagging Amazon
  * SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
@@ -946,7 +949,7 @@ UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
     return qobject_cast<UntagQueueResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SqsClientPrivate
@@ -954,7 +957,7 @@ UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
  * @brief  Private implementation for SqsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SqsClientPrivate object.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVolumeIOResponse
+/*!
+ * \class QtAws::EC2::EnableVolumeIOResponse
  *
- * @brief  Handles EC2 EnableVolumeIO responses.
+ * \brief The EnableVolumeIOResponse class encapsulates EC2 EnableVolumeIO responses.
  *
- * @see    EC2Client::enableVolumeIO
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVolumeIO
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVolumeIOResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const EnableVolumeIORequest * EnableVolumeIOResponse::request() const
     return static_cast<const EnableVolumeIORequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 EnableVolumeIO response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void EnableVolumeIOResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableVolumeIOResponsePrivate
+ * \class EnableVolumeIOResponsePrivate
  *
- * @brief  Private implementation for EnableVolumeIOResponse.
+ * \brief Private implementation for EnableVolumeIOResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVolumeIOResponsePrivate object.
@@ -91,7 +98,7 @@ EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 EnableVolumeIOResponse element.
  *
  * @param  xml  XML stream to parse.

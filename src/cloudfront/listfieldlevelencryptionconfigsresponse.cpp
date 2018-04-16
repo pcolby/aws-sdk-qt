@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListFieldLevelEncryptionConfigsResponse
+/*!
+ * \class QtAws::CloudFront::ListFieldLevelEncryptionConfigsResponse
  *
- * @brief  Handles CloudFront ListFieldLevelEncryptionConfigs responses.
+ * \brief The ListFieldLevelEncryptionConfigsResponse class encapsulates CloudFront ListFieldLevelEncryptionConfigs responses.
  *
- * @see    CloudFrontClient::listFieldLevelEncryptionConfigs
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listFieldLevelEncryptionConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFieldLevelEncryptionConfigsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListFieldLevelEncryptionConfigsRequest * ListFieldLevelEncryptionConfigsRe
     return static_cast<const ListFieldLevelEncryptionConfigsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListFieldLevelEncryptionConfigs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListFieldLevelEncryptionConfigsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListFieldLevelEncryptionConfigsResponsePrivate
+ * \class ListFieldLevelEncryptionConfigsResponsePrivate
  *
- * @brief  Private implementation for ListFieldLevelEncryptionConfigsResponse.
+ * \brief Private implementation for ListFieldLevelEncryptionConfigsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFieldLevelEncryptionConfigsResponsePrivate object.
@@ -91,7 +99,7 @@ ListFieldLevelEncryptionConfigsResponsePrivate::ListFieldLevelEncryptionConfigsR
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListFieldLevelEncryptionConfigsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListTestsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListTestsRequest
  *
- * @brief  Implements DeviceFarm ListTests requests.
+ * \brief The ListTestsRequest class encapsulates DeviceFarm ListTests requests.
  *
- * @see    DeviceFarmClient::listTests
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listTests
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTestsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListTestsRequest::ListTestsRequest(const ListTestsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTestsRequest object.
  */
 ListTestsRequest::ListTestsRequest()
@@ -53,13 +58,16 @@ ListTestsRequest::ListTestsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTestsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTestsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListTestsRequest::response(QNetworkReply * co
     return new ListTestsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTestsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListTestsRequest::response(QNetworkReply * co
  * @brief  Private implementation for ListTestsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTestsRequestPrivate object.
@@ -97,7 +105,7 @@ ListTestsRequestPrivate::ListTestsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTestsRequestPrivate object, copying another.

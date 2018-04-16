@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetAccountSettingsRequest
+/*!
+ * \class QtAws::DeviceFarm::GetAccountSettingsRequest
  *
- * @brief  Implements DeviceFarm GetAccountSettings requests.
+ * \brief The GetAccountSettingsRequest class encapsulates DeviceFarm GetAccountSettings requests.
  *
- * @see    DeviceFarmClient::getAccountSettings
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getAccountSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ GetAccountSettingsRequest::GetAccountSettingsRequest(const GetAccountSettingsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAccountSettingsRequest object.
  */
 GetAccountSettingsRequest::GetAccountSettingsRequest()
@@ -53,13 +58,16 @@ GetAccountSettingsRequest::GetAccountSettingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAccountSettingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAccountSettingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
     return new GetAccountSettingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAccountSettingsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
  * @brief  Private implementation for GetAccountSettingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSettingsRequestPrivate object.
@@ -97,7 +105,7 @@ GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAccountSettingsRequestPrivate object, copying another.

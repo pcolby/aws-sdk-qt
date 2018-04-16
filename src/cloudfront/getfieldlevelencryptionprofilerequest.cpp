@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionProfileRequest
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileRequest
  *
- * @brief  Implements CloudFront GetFieldLevelEncryptionProfile requests.
+ * \brief The GetFieldLevelEncryptionProfileRequest class encapsulates CloudFront GetFieldLevelEncryptionProfile requests.
  *
- * @see    CloudFrontClient::getFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetFieldLevelEncryptionProfileRequest::GetFieldLevelEncryptionProfileRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionProfileRequest object.
  */
 GetFieldLevelEncryptionProfileRequest::GetFieldLevelEncryptionProfileRequest()
@@ -53,13 +61,16 @@ GetFieldLevelEncryptionProfileRequest::GetFieldLevelEncryptionProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFieldLevelEncryptionProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFieldLevelEncryptionProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionProfileRequest::respon
     return new GetFieldLevelEncryptionProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFieldLevelEncryptionProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionProfileRequest::respon
  * @brief  Private implementation for GetFieldLevelEncryptionProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionProfileRequestPrivate object.
@@ -97,7 +108,7 @@ GetFieldLevelEncryptionProfileRequestPrivate::GetFieldLevelEncryptionProfileRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionProfileRequestPrivate object, copying another.

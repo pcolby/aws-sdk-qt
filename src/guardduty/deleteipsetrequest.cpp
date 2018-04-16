@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteIPSetRequest
+/*!
+ * \class QtAws::GuardDuty::DeleteIPSetRequest
  *
- * @brief  Implements GuardDuty DeleteIPSet requests.
+ * \brief The DeleteIPSetRequest class encapsulates GuardDuty DeleteIPSet requests.
  *
- * @see    GuardDutyClient::deleteIPSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteIPSetRequest object.
  */
 DeleteIPSetRequest::DeleteIPSetRequest()
@@ -53,13 +56,16 @@ DeleteIPSetRequest::DeleteIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
     return new DeleteIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteIPSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIPSetRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIPSetRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SendTemplatedEmailRequest
+/*!
+ * \class QtAws::SES::SendTemplatedEmailRequest
  *
- * @brief  Implements SES SendTemplatedEmail requests.
+ * \brief The SendTemplatedEmailRequest class encapsulates SES SendTemplatedEmail requests.
  *
- * @see    SESClient::sendTemplatedEmail
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::sendTemplatedEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new SendTemplatedEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SendTemplatedEmailRequest::SendTemplatedEmailRequest(const SendTemplatedEmailReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendTemplatedEmailRequest object.
  */
 SendTemplatedEmailRequest::SendTemplatedEmailRequest()
@@ -53,13 +67,16 @@ SendTemplatedEmailRequest::SendTemplatedEmailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendTemplatedEmailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendTemplatedEmailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkR
     return new SendTemplatedEmailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendTemplatedEmailRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkR
  * @brief  Private implementation for SendTemplatedEmailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendTemplatedEmailRequestPrivate object.
@@ -97,7 +114,7 @@ SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendTemplatedEmailRequestPrivate object, copying another.

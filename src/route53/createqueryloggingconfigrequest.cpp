@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  CreateQueryLoggingConfigRequest
+/*!
+ * \class QtAws::Route53::CreateQueryLoggingConfigRequest
  *
- * @brief  Implements Route53 CreateQueryLoggingConfig requests.
+ * \brief The CreateQueryLoggingConfigRequest class encapsulates Route53 CreateQueryLoggingConfig requests.
  *
- * @see    Route53Client::createQueryLoggingConfig
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::createQueryLoggingConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateQueryLoggingConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateQueryLoggingConfigRequest::CreateQueryLoggingConfigRequest(const CreateQue
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateQueryLoggingConfigRequest object.
  */
 CreateQueryLoggingConfigRequest::CreateQueryLoggingConfigRequest()
@@ -53,13 +56,16 @@ CreateQueryLoggingConfigRequest::CreateQueryLoggingConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateQueryLoggingConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateQueryLoggingConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateQueryLoggingConfigRequest::response(QNe
     return new CreateQueryLoggingConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateQueryLoggingConfigRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateQueryLoggingConfigRequest::response(QNe
  * @brief  Private implementation for CreateQueryLoggingConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQueryLoggingConfigRequestPrivate object.
@@ -97,7 +103,7 @@ CreateQueryLoggingConfigRequestPrivate::CreateQueryLoggingConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQueryLoggingConfigRequestPrivate object, copying another.

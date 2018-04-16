@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UnmonitorInstancesRequest
+/*!
+ * \class QtAws::EC2::UnmonitorInstancesRequest
  *
- * @brief  Implements EC2 UnmonitorInstances requests.
+ * \brief The UnmonitorInstancesRequest class encapsulates EC2 UnmonitorInstances requests.
  *
- * @see    EC2Client::unmonitorInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::unmonitorInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new UnmonitorInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UnmonitorInstancesRequest::UnmonitorInstancesRequest(const UnmonitorInstancesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UnmonitorInstancesRequest object.
  */
 UnmonitorInstancesRequest::UnmonitorInstancesRequest()
@@ -53,13 +60,16 @@ UnmonitorInstancesRequest::UnmonitorInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UnmonitorInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UnmonitorInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkR
     return new UnmonitorInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UnmonitorInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkR
  * @brief  Private implementation for UnmonitorInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnmonitorInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnmonitorInstancesRequestPrivate object, copying another.

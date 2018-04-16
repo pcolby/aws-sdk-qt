@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  UnassignIpv6AddressesRequest
+/*!
+ * \class QtAws::EC2::UnassignIpv6AddressesRequest
  *
- * @brief  Implements EC2 UnassignIpv6Addresses requests.
+ * \brief The UnassignIpv6AddressesRequest class encapsulates EC2 UnassignIpv6Addresses requests.
  *
- * @see    EC2Client::unassignIpv6Addresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::unassignIpv6Addresses
  */
 
-/**
+/*!
  * @brief  Constructs a new UnassignIpv6AddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest(const UnassignIpv6Add
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UnassignIpv6AddressesRequest object.
  */
 UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest()
@@ -53,13 +60,16 @@ UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UnassignIpv6AddressesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UnassignIpv6AddressesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UnassignIpv6AddressesRequest::response(QNetwo
     return new UnassignIpv6AddressesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UnassignIpv6AddressesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UnassignIpv6AddressesRequest::response(QNetwo
  * @brief  Private implementation for UnassignIpv6AddressesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnassignIpv6AddressesRequestPrivate object.
@@ -97,7 +107,7 @@ UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UnassignIpv6AddressesRequestPrivate object, copying another.

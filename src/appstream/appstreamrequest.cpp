@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  AppStreamRequest
+/*!
+ * \class QtAws::AppStream::AppStreamRequest
  *
- * @brief  Interface class for providing AppStream requests
+ * \brief The AppStreamRequest class is the base class for all AppStream requests.
+ *
+ * \ingroup AppStream
  */
 
-
-/**
+/*!
  * @brief  Constructs a new AppStreamRequest object.
  *
  * @param  action  The AppStream action to request.
@@ -41,7 +42,7 @@ AppStreamRequest::AppStreamRequest(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AppStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ AppStreamRequest::AppStreamRequest(const AppStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ AppStreamRequest& AppStreamRequest::operator=(const AppStreamRequest &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppStreamRequest object.
@@ -85,10 +86,8 @@ AppStreamRequest::AppStreamRequest(AppStreamRequestPrivate * const d) : QtAws::C
 
 }
 
-/**
- * @brief  Get the AppStream action to be performed by this request.
- *
- * @return The AppStream action to be performed by this request.
+/*!
+ * \brief Returns the AppStream action to be performed by this request.
  */
 AppStreamRequest::Action AppStreamRequest::action() const
 {
@@ -96,20 +95,16 @@ AppStreamRequest::Action AppStreamRequest::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the AppStream action to be performed by this request.
- *
- * @return The name of the AppStream action to be performed by this request.
+/*!
+ * \brief Returns the name of the AppStream action to be performed by this request.
  */
 QString AppStreamRequest::actionString() const
 {
     return AppStreamRequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the AppStream API version implemented by this request.
- *
- * @return The AppStream API version implmented by this request.
+/*!
+ * \brief Returns the AppStream API version implemented by this request.
  */
 QString AppStreamRequest::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString AppStreamRequest::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the AppStream action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the AppStream action to be performed by this request to \a action.
  */
 void AppStreamRequest::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void AppStreamRequest::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the AppStream API version to include in this request.
- *
- * @param  version  The AppStream API version to include in this request.
+/*!
+ * Set the AppStream API version to include in this request to \a version.
  */
 void AppStreamRequest::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void AppStreamRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool AppStreamRequest::operator==(const AppStreamRequest &other) const
 {
@@ -159,7 +146,7 @@ bool AppStreamRequest::operator==(const AppStreamRequest &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid AppStream queue name.
  *
  * @par From AppStream FAQs:
@@ -178,12 +165,10 @@ bool AppStreamRequest::operator==(const AppStreamRequest &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int AppStreamRequest::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int AppStreamRequest::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void AppStreamRequest::clearParameters()
 {
@@ -200,13 +185,8 @@ void AppStreamRequest::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this AppStream request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant AppStreamRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant AppStreamRequest::parameter(const QString &name, const QVariant &defaul
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this AppStream request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &AppStreamRequest::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &AppStreamRequest::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this AppStream request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void AppStreamRequest::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void AppStreamRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this AppStream request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void AppStreamRequest::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void AppStreamRequest::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this AppStream request.
+/*!
+ * \brief Returns a network request for this AppStream request using the given \a endpoint.
  *
  * This AppStream implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this AppStream request using the given \a endpoint.
  */
 QNetworkRequest AppStreamRequest::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest AppStreamRequest::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AppStreamRequestPrivate
+ * \class  AppStreamRequestPrivate
  *
- * @brief  Private implementation for AppStreamRequest.
+ * \brief  Private implementation for AppStreamRequest.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new AppStreamRequestPrivate object.
- *
- * @param  action  AppStream action being performed by the \a q request.
- * @param  q       Pointer to this object's public AppStreamRequest instance.
+ * \brief Constructs a new AppStreamRequestPrivate object.
  */
 AppStreamRequestPrivate::AppStreamRequestPrivate(const AppStreamRequest::Action action, AppStreamRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ AppStreamRequestPrivate::AppStreamRequestPrivate(const AppStreamRequest::Action 
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new AppStreamRequestPrivate object from an existing one.
+ * \brief Constructs a new AppStreamRequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the AppStreamRequest class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public AppStreamRequest instance.
  */
 AppStreamRequestPrivate::AppStreamRequestPrivate(const AppStreamRequestPrivate &other,
                                      AppStreamRequest * const q)
@@ -312,14 +275,14 @@ AppStreamRequestPrivate::AppStreamRequestPrivate(const AppStreamRequestPrivate &
 
 }
 
-/**
- * @brief  Convert and AppStream action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts AppStreamRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the AppStream service's Action
  * query parameters.
- *
- * @param  action  AppStream action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

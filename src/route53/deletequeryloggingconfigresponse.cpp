@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  DeleteQueryLoggingConfigResponse
+/*!
+ * \class QtAws::Route53::DeleteQueryLoggingConfigResponse
  *
- * @brief  Handles Route53 DeleteQueryLoggingConfig responses.
+ * \brief The DeleteQueryLoggingConfigResponse class encapsulates Route53 DeleteQueryLoggingConfig responses.
  *
- * @see    Route53Client::deleteQueryLoggingConfig
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::deleteQueryLoggingConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteQueryLoggingConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteQueryLoggingConfigRequest * DeleteQueryLoggingConfigResponse::reques
     return static_cast<const DeleteQueryLoggingConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 DeleteQueryLoggingConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteQueryLoggingConfigResponsePrivate
+ * \class DeleteQueryLoggingConfigResponsePrivate
  *
- * @brief  Private implementation for DeleteQueryLoggingConfigResponse.
+ * \brief Private implementation for DeleteQueryLoggingConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteQueryLoggingConfigResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 DeleteQueryLoggingConfigResponse element.
  *
  * @param  xml  XML stream to parse.

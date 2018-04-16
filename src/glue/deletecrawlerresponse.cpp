@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteCrawlerResponse
+/*!
+ * \class QtAws::Glue::DeleteCrawlerResponse
  *
- * @brief  Handles Glue DeleteCrawler responses.
+ * \brief The DeleteCrawlerResponse class encapsulates Glue DeleteCrawler responses.
  *
- * @see    GlueClient::deleteCrawler
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteCrawler
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCrawlerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteCrawlerRequest * DeleteCrawlerResponse::request() const
     return static_cast<const DeleteCrawlerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteCrawler response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteCrawlerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCrawlerResponsePrivate
+ * \class DeleteCrawlerResponsePrivate
  *
- * @brief  Private implementation for DeleteCrawlerResponse.
+ * \brief Private implementation for DeleteCrawlerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCrawlerResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteCrawlerResponse element.
  *
  * @param  xml  XML stream to parse.

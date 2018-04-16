@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  UpdateElasticsearchDomainConfigRequest
+/*!
+ * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigRequest
  *
- * @brief  Implements ElasticsearchService UpdateElasticsearchDomainConfig requests.
+ * \brief The UpdateElasticsearchDomainConfigRequest class encapsulates ElasticsearchService UpdateElasticsearchDomainConfig requests.
  *
- * @see    ElasticsearchServiceClient::updateElasticsearchDomainConfig
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::updateElasticsearchDomainConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateElasticsearchDomainConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateElasticsearchDomainConfigRequest object.
  */
 UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest()
@@ -53,13 +65,16 @@ UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateElasticsearchDomainConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateElasticsearchDomainConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::respo
     return new UpdateElasticsearchDomainConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateElasticsearchDomainConfigRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::respo
  * @brief  Private implementation for UpdateElasticsearchDomainConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateElasticsearchDomainConfigRequestPrivate object.
@@ -97,7 +112,7 @@ UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateElasticsearchDomainConfigRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLoadBalancerTargetGroupsRequest
+/*!
+ * \class QtAws::AutoScaling::DescribeLoadBalancerTargetGroupsRequest
  *
- * @brief  Implements AutoScaling DescribeLoadBalancerTargetGroups requests.
+ * \brief The DescribeLoadBalancerTargetGroupsRequest class encapsulates AutoScaling DescribeLoadBalancerTargetGroups requests.
  *
- * @see    AutoScalingClient::describeLoadBalancerTargetGroups
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLoadBalancerTargetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancerTargetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DescribeLoadBalancerTargetGroupsRequest::DescribeLoadBalancerTargetGroupsRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLoadBalancerTargetGroupsRequest object.
  */
 DescribeLoadBalancerTargetGroupsRequest::DescribeLoadBalancerTargetGroupsRequest()
@@ -53,13 +61,16 @@ DescribeLoadBalancerTargetGroupsRequest::DescribeLoadBalancerTargetGroupsRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLoadBalancerTargetGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLoadBalancerTargetGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerTargetGroupsRequest::resp
     return new DescribeLoadBalancerTargetGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLoadBalancerTargetGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerTargetGroupsRequest::resp
  * @brief  Private implementation for DescribeLoadBalancerTargetGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancerTargetGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ DescribeLoadBalancerTargetGroupsRequestPrivate::DescribeLoadBalancerTargetGroups
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLoadBalancerTargetGroupsRequestPrivate object, copying another.

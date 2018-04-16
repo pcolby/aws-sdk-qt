@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListAliasesRequest
+/*!
+ * \class QtAws::Lambda::ListAliasesRequest
  *
- * @brief  Implements Lambda ListAliases requests.
+ * \brief The ListAliasesRequest class encapsulates Lambda ListAliases requests.
  *
- * @see    LambdaClient::listAliases
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listAliases
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAliasesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListAliasesRequest::ListAliasesRequest(const ListAliasesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAliasesRequest object.
  */
 ListAliasesRequest::ListAliasesRequest()
@@ -53,13 +67,16 @@ ListAliasesRequest::ListAliasesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAliasesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAliasesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
     return new ListAliasesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAliasesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListAliasesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAliasesRequestPrivate object.
@@ -97,7 +114,7 @@ ListAliasesRequestPrivate::ListAliasesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAliasesRequestPrivate object, copying another.

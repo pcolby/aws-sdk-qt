@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetPolicyRequest
+/*!
+ * \class QtAws::FMS::GetPolicyRequest
  *
- * @brief  Implements FMS GetPolicy requests.
+ * \brief The GetPolicyRequest class encapsulates FMS GetPolicy requests.
  *
- * @see    FMSClient::getPolicy
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
@@ -53,13 +62,16 @@ GetPolicyRequest::GetPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
     return new GetPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPolicyRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyRequestPrivate object.
@@ -97,7 +109,7 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPolicyRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateStageResponse
+/*!
+ * \class QtAws::APIGateway::UpdateStageResponse
  *
- * @brief  Handles APIGateway UpdateStage responses.
+ * \brief The UpdateStageResponse class encapsulates APIGateway UpdateStage responses.
  *
- * @see    APIGatewayClient::updateStage
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateStage
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateStageRequest * UpdateStageResponse::request() const
     return static_cast<const UpdateStageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateStage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateStageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateStageResponsePrivate
+ * \class UpdateStageResponsePrivate
  *
- * @brief  Private implementation for UpdateStageResponse.
+ * \brief Private implementation for UpdateStageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStageResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateStageResponsePrivate::UpdateStageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateStageResponse element.
  *
  * @param  xml  XML stream to parse.

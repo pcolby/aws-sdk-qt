@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateApplicationSettingsRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateApplicationSettingsRequest
  *
- * @brief  Implements Pinpoint UpdateApplicationSettings requests.
+ * \brief The UpdateApplicationSettingsRequest class encapsulates Pinpoint UpdateApplicationSettings requests.
  *
- * @see    PinpointClient::updateApplicationSettings
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateApplicationSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest(const UpdateA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApplicationSettingsRequest object.
  */
 UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest()
@@ -53,13 +56,16 @@ UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApplicationSettingsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApplicationSettingsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QN
     return new UpdateApplicationSettingsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApplicationSettingsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QN
  * @brief  Private implementation for UpdateApplicationSettingsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationSettingsRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApplicationSettingsRequestPrivate object, copying another.

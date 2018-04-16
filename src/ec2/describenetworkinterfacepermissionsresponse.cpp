@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkInterfacePermissionsResponse
+/*!
+ * \class QtAws::EC2::DescribeNetworkInterfacePermissionsResponse
  *
- * @brief  Handles EC2 DescribeNetworkInterfacePermissions responses.
+ * \brief The DescribeNetworkInterfacePermissionsResponse class encapsulates EC2 DescribeNetworkInterfacePermissions responses.
  *
- * @see    EC2Client::describeNetworkInterfacePermissions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkInterfacePermissions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeNetworkInterfacePermissionsRequest * DescribeNetworkInterfacePermi
     return static_cast<const DescribeNetworkInterfacePermissionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeNetworkInterfacePermissions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeNetworkInterfacePermissionsResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeNetworkInterfacePermissionsResponsePrivate
+ * \class DescribeNetworkInterfacePermissionsResponsePrivate
  *
- * @brief  Private implementation for DescribeNetworkInterfacePermissionsResponse.
+ * \brief Private implementation for DescribeNetworkInterfacePermissionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePerm
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeNetworkInterfacePermissionsResponse element.
  *
  * @param  xml  XML stream to parse.

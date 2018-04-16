@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateSubscriptionDefinitionResponse
+/*!
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionResponse
  *
- * @brief  Handles Greengrass CreateSubscriptionDefinition responses.
+ * \brief The CreateSubscriptionDefinitionResponse class encapsulates Greengrass CreateSubscriptionDefinition responses.
  *
- * @see    GreengrassClient::createSubscriptionDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createSubscriptionDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateSubscriptionDefinitionRequest * CreateSubscriptionDefinitionResponse
     return static_cast<const CreateSubscriptionDefinitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateSubscriptionDefinition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSubscriptionDefinitionResponsePrivate
+ * \class CreateSubscriptionDefinitionResponsePrivate
  *
- * @brief  Private implementation for CreateSubscriptionDefinitionResponse.
+ * \brief Private implementation for CreateSubscriptionDefinitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionDefinitionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateSubscriptionDefinitionResponsePrivate::CreateSubscriptionDefinitionRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateSubscriptionDefinitionResponse element.
  *
  * @param  xml  XML stream to parse.

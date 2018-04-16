@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  DeleteGeoMatchSetRequest
+/*!
+ * \class QtAws::WAFRegional::DeleteGeoMatchSetRequest
  *
- * @brief  Implements WAFRegional DeleteGeoMatchSet requests.
+ * \brief The DeleteGeoMatchSetRequest class encapsulates WAFRegional DeleteGeoMatchSet requests.
  *
- * @see    WAFRegionalClient::deleteGeoMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::deleteGeoMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGeoMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteGeoMatchSetRequest object.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest()
@@ -53,13 +63,16 @@ DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteGeoMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteGeoMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
     return new DeleteGeoMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteGeoMatchSetRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteGeoMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGeoMatchSetRequestPrivate object.
@@ -97,7 +110,7 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGeoMatchSetRequestPrivate object, copying another.

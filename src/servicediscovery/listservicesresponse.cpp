@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ListServicesResponse
+/*!
+ * \class QtAws::ServiceDiscovery::ListServicesResponse
  *
- * @brief  Handles ServiceDiscovery ListServices responses.
+ * \brief The ListServicesResponse class encapsulates ServiceDiscovery ListServices responses.
  *
- * @see    ServiceDiscoveryClient::listServices
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::listServices
  */
 
-/**
+/*!
  * @brief  Constructs a new ListServicesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ListServicesRequest * ListServicesResponse::request() const
     return static_cast<const ListServicesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceDiscovery ListServices response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ListServicesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListServicesResponsePrivate
+ * \class ListServicesResponsePrivate
  *
- * @brief  Private implementation for ListServicesResponse.
+ * \brief Private implementation for ListServicesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListServicesResponsePrivate object.
@@ -91,7 +98,7 @@ ListServicesResponsePrivate::ListServicesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceDiscovery ListServicesResponse element.
  *
  * @param  xml  XML stream to parse.

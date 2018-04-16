@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetIntentVersionsRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetIntentVersionsRequest
  *
- * @brief  Implements LexModelBuildingService GetIntentVersions requests.
+ * \brief The GetIntentVersionsRequest class encapsulates LexModelBuildingService GetIntentVersions requests.
  *
- * @see    LexModelBuildingServiceClient::getIntentVersions
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getIntentVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntentVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetIntentVersionsRequest::GetIntentVersionsRequest(const GetIntentVersionsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIntentVersionsRequest object.
  */
 GetIntentVersionsRequest::GetIntentVersionsRequest()
@@ -53,13 +60,16 @@ GetIntentVersionsRequest::GetIntentVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIntentVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIntentVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkRe
     return new GetIntentVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIntentVersionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkRe
  * @brief  Private implementation for GetIntentVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntentVersionsRequestPrivate object.
@@ -97,7 +107,7 @@ GetIntentVersionsRequestPrivate::GetIntentVersionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntentVersionsRequestPrivate object, copying another.

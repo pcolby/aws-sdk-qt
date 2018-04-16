@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeParameterGroupsResponse
+/*!
+ * \class QtAws::DAX::DescribeParameterGroupsResponse
  *
- * @brief  Handles DAX DescribeParameterGroups responses.
+ * \brief The DescribeParameterGroupsResponse class encapsulates DAX DescribeParameterGroups responses.
  *
- * @see    DAXClient::describeParameterGroups
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeParameterGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeParameterGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeParameterGroupsRequest * DescribeParameterGroupsResponse::request(
     return static_cast<const DescribeParameterGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX DescribeParameterGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeParameterGroupsResponsePrivate
+ * \class DescribeParameterGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribeParameterGroupsResponse.
+ * \brief Private implementation for DescribeParameterGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeParameterGroupsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX DescribeParameterGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

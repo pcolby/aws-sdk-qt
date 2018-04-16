@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateApnsVoipSandboxChannelRequest
+/*!
+ * \class QtAws::Pinpoint::UpdateApnsVoipSandboxChannelRequest
  *
- * @brief  Implements Pinpoint UpdateApnsVoipSandboxChannel requests.
+ * \brief The UpdateApnsVoipSandboxChannelRequest class encapsulates Pinpoint UpdateApnsVoipSandboxChannel requests.
  *
- * @see    PinpointClient::updateApnsVoipSandboxChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateApnsVoipSandboxChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest(const U
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequest object.
  */
 UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest()
@@ -53,13 +56,16 @@ UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApnsVoipSandboxChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApnsVoipSandboxChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipSandboxChannelRequest::response
     return new UpdateApnsVoipSandboxChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApnsVoipSandboxChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsVoipSandboxChannelRequest::response
  * @brief  Private implementation for UpdateApnsVoipSandboxChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequestPrivate object, copying another.

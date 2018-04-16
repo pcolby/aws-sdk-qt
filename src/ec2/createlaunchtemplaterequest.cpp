@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateLaunchTemplateRequest
+/*!
+ * \class QtAws::EC2::CreateLaunchTemplateRequest
  *
- * @brief  Implements EC2 CreateLaunchTemplate requests.
+ * \brief The CreateLaunchTemplateRequest class encapsulates EC2 CreateLaunchTemplate requests.
  *
- * @see    EC2Client::createLaunchTemplate
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createLaunchTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLaunchTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateLaunchTemplateRequest::CreateLaunchTemplateRequest(const CreateLaunchTempl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateLaunchTemplateRequest object.
  */
 CreateLaunchTemplateRequest::CreateLaunchTemplateRequest()
@@ -53,13 +60,16 @@ CreateLaunchTemplateRequest::CreateLaunchTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateLaunchTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateLaunchTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateRequest::response(QNetwor
     return new CreateLaunchTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateLaunchTemplateRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateRequest::response(QNetwor
  * @brief  Private implementation for CreateLaunchTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLaunchTemplateRequestPrivate object.
@@ -97,7 +107,7 @@ CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLaunchTemplateRequestPrivate object, copying another.

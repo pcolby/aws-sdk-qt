@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ConfirmSignUpRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmSignUpRequest
  *
- * @brief  Implements CognitoIdentityProvider ConfirmSignUp requests.
+ * \brief The ConfirmSignUpRequest class encapsulates CognitoIdentityProvider ConfirmSignUp requests.
  *
- * @see    CognitoIdentityProviderClient::confirmSignUp
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::confirmSignUp
  */
 
-/**
+/*!
  * @brief  Constructs a new ConfirmSignUpRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ ConfirmSignUpRequest::ConfirmSignUpRequest(const ConfirmSignUpRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ConfirmSignUpRequest object.
  */
 ConfirmSignUpRequest::ConfirmSignUpRequest()
@@ -53,13 +66,16 @@ ConfirmSignUpRequest::ConfirmSignUpRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ConfirmSignUpRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ConfirmSignUpResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmSignUpRequest::response(QNetworkReply 
     return new ConfirmSignUpResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ConfirmSignUpRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * ConfirmSignUpRequest::response(QNetworkReply 
  * @brief  Private implementation for ConfirmSignUpRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmSignUpRequestPrivate object.
@@ -97,7 +113,7 @@ ConfirmSignUpRequestPrivate::ConfirmSignUpRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ConfirmSignUpRequestPrivate object, copying another.

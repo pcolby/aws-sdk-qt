@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointServicesRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointServicesRequest
  *
- * @brief  Implements EC2 DescribeVpcEndpointServices requests.
+ * \brief The DescribeVpcEndpointServicesRequest class encapsulates EC2 DescribeVpcEndpointServices requests.
  *
- * @see    EC2Client::describeVpcEndpointServices
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointServices
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointServicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcEndpointServicesRequest::DescribeVpcEndpointServicesRequest(const Des
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointServicesRequest object.
  */
 DescribeVpcEndpointServicesRequest::DescribeVpcEndpointServicesRequest()
@@ -53,13 +60,16 @@ DescribeVpcEndpointServicesRequest::DescribeVpcEndpointServicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcEndpointServicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcEndpointServicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServicesRequest::response(
     return new DescribeVpcEndpointServicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcEndpointServicesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServicesRequest::response(
  * @brief  Private implementation for DescribeVpcEndpointServicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointServicesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcEndpointServicesRequestPrivate::DescribeVpcEndpointServicesRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointServicesRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ResetSnapshotAttributeRequest
+/*!
+ * \class QtAws::EC2::ResetSnapshotAttributeRequest
  *
- * @brief  Implements EC2 ResetSnapshotAttribute requests.
+ * \brief The ResetSnapshotAttributeRequest class encapsulates EC2 ResetSnapshotAttribute requests.
  *
- * @see    EC2Client::resetSnapshotAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::resetSnapshotAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetSnapshotAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest(const ResetSnapshot
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResetSnapshotAttributeRequest object.
  */
 ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest()
@@ -53,13 +60,16 @@ ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResetSnapshotAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResetSnapshotAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetw
     return new ResetSnapshotAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResetSnapshotAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetw
  * @brief  Private implementation for ResetSnapshotAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetSnapshotAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetSnapshotAttributeRequestPrivate object, copying another.

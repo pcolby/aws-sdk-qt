@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  CloudSearchResponse
+/*!
+ * \class QtAws::CloudSearch::CloudSearchResponse
  *
- * @brief  Handles CloudSearch CloudSearch responses.
+ * \brief The CloudSearchResponse class is the base class for all CloudSearch responses.
  *
- * @see    CloudSearchClient::cloudSearch
+ * \ingroup CloudSearch
  */
 
-/**
+/*!
  * @brief  Constructs a new CloudSearchResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CloudSearchResponse::CloudSearchResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudSearchResponse object.
@@ -63,7 +63,7 @@ CloudSearchResponse::CloudSearchResponse(CloudSearchResponsePrivate * const d, Q
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CloudSearchResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudSearchResponsePrivate
@@ -92,7 +92,7 @@ void CloudSearchResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CloudSearchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudSearchResponsePrivate object.

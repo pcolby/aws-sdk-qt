@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyFpgaImageAttributeResponse
+/*!
+ * \class QtAws::EC2::ModifyFpgaImageAttributeResponse
  *
- * @brief  Handles EC2 ModifyFpgaImageAttribute responses.
+ * \brief The ModifyFpgaImageAttributeResponse class encapsulates EC2 ModifyFpgaImageAttribute responses.
  *
- * @see    EC2Client::modifyFpgaImageAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyFpgaImageAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyFpgaImageAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyFpgaImageAttributeRequest * ModifyFpgaImageAttributeResponse::reques
     return static_cast<const ModifyFpgaImageAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyFpgaImageAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyFpgaImageAttributeResponsePrivate
+ * \class ModifyFpgaImageAttributeResponsePrivate
  *
- * @brief  Private implementation for ModifyFpgaImageAttributeResponse.
+ * \brief Private implementation for ModifyFpgaImageAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyFpgaImageAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyFpgaImageAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

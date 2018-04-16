@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcClassicLinkDnsSupportRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportRequest
  *
- * @brief  Implements EC2 DescribeVpcClassicLinkDnsSupport requests.
+ * \brief The DescribeVpcClassicLinkDnsSupportRequest class encapsulates EC2 DescribeVpcClassicLinkDnsSupport requests.
  *
- * @see    EC2Client::describeVpcClassicLinkDnsSupport
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcClassicLinkDnsSupport
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object.
  */
 DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest()
@@ -53,13 +60,16 @@ DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcClassicLinkDnsSupportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcClassicLinkDnsSupportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkDnsSupportRequest::resp
     return new DescribeVpcClassicLinkDnsSupportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcClassicLinkDnsSupportRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkDnsSupportRequest::resp
  * @brief  Private implementation for DescribeVpcClassicLinkDnsSupportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupport
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequestPrivate object, copying another.

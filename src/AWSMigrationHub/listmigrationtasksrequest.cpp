@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  ListMigrationTasksRequest
+/*!
+ * \class QtAws::MigrationHub::ListMigrationTasksRequest
  *
- * @brief  Implements MigrationHub ListMigrationTasks requests.
+ * \brief The ListMigrationTasksRequest class encapsulates MigrationHub ListMigrationTasks requests.
  *
- * @see    MigrationHubClient::listMigrationTasks
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::listMigrationTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListMigrationTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListMigrationTasksRequest::ListMigrationTasksRequest(const ListMigrationTasksReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListMigrationTasksRequest object.
  */
 ListMigrationTasksRequest::ListMigrationTasksRequest()
@@ -53,13 +58,16 @@ ListMigrationTasksRequest::ListMigrationTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListMigrationTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListMigrationTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListMigrationTasksRequest::response(QNetworkR
     return new ListMigrationTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListMigrationTasksRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListMigrationTasksRequest::response(QNetworkR
  * @brief  Private implementation for ListMigrationTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMigrationTasksRequestPrivate object.
@@ -97,7 +105,7 @@ ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMigrationTasksRequestPrivate object, copying another.

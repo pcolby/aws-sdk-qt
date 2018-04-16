@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionRequest
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionRequest
  *
- * @brief  Implements CloudFront GetFieldLevelEncryption requests.
+ * \brief The GetFieldLevelEncryptionRequest class encapsulates CloudFront GetFieldLevelEncryption requests.
  *
- * @see    CloudFrontClient::getFieldLevelEncryption
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetFieldLevelEncryptionRequest::GetFieldLevelEncryptionRequest(const GetFieldLev
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionRequest object.
  */
 GetFieldLevelEncryptionRequest::GetFieldLevelEncryptionRequest()
@@ -53,13 +61,16 @@ GetFieldLevelEncryptionRequest::GetFieldLevelEncryptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFieldLevelEncryptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFieldLevelEncryptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionRequest::response(QNet
     return new GetFieldLevelEncryptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFieldLevelEncryptionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionRequest::response(QNet
  * @brief  Private implementation for GetFieldLevelEncryptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionRequestPrivate object.
@@ -97,7 +108,7 @@ GetFieldLevelEncryptionRequestPrivate::GetFieldLevelEncryptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionRequestPrivate object, copying another.

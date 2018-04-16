@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketEncryptionRequest
+/*!
+ * \class QtAws::S3::PutBucketEncryptionRequest
  *
- * @brief  Implements S3 PutBucketEncryption requests.
+ * \brief The PutBucketEncryptionRequest class encapsulates S3 PutBucketEncryption requests.
  *
- * @see    S3Client::putBucketEncryption
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketEncryptionRequest::PutBucketEncryptionRequest(const PutBucketEncryption
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketEncryptionRequest object.
  */
 PutBucketEncryptionRequest::PutBucketEncryptionRequest()
@@ -53,13 +56,16 @@ PutBucketEncryptionRequest::PutBucketEncryptionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketEncryptionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketEncryptionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketEncryptionRequest::response(QNetwork
     return new PutBucketEncryptionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketEncryptionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketEncryptionRequest::response(QNetwork
  * @brief  Private implementation for PutBucketEncryptionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketEncryptionRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketEncryptionRequestPrivate object, copying another.

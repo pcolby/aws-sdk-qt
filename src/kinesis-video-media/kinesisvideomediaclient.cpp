@@ -27,23 +27,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::KinesisVideoMedia
+ * \brief The QtAws::KinesisVideoMedia contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace KinesisVideoMedia {
 
-/**
- * @class  KinesisVideoMediaClient
+/*!
+ * \class QtAws::KinesisVideoMedia::KinesisVideoMediaClient
  *
- * @brief  Client for Amazon Kinesis Video Streams Media (Kinesis Video Media)
+ * \brief The KinesisVideoMediaClient class provides access the Amazon Kinesis Video Streams Media (Kinesis Video Media) service.
+ *
+ * \ingroup KinesisVideoMedia
  *
  */
 
-/**
- * @brief  Constructs a new KinesisVideoMediaClient object.
+/*!
+ * \brief Constructs a KinesisVideoMediaClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 KinesisVideoMediaClient::KinesisVideoMediaClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -62,21 +70,16 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/**
- * @brief  Constructs a new KinesisVideoMediaClient object.
+/*!
+ * \overload KinesisVideoMediaClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 KinesisVideoMediaClient::KinesisVideoMediaClient(
     const QUrl &endpoint,
@@ -95,7 +98,7 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/**
+/*!
  * Use this API to retrieve media content from a Kinesis video stream. In the request, you identify stream name or stream
  * Amazon Resource Name (ARN), and the starting chunk. Kinesis Video Streams then returns a stream of chunks in order by
  * fragment
@@ -135,7 +138,7 @@ GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &requ
     return qobject_cast<GetMediaResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisVideoMediaClientPrivate
@@ -143,7 +146,7 @@ GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &requ
  * @brief  Private implementation for KinesisVideoMediaClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisVideoMediaClientPrivate object.

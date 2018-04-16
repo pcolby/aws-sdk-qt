@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListFunctionDefinitionVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListFunctionDefinitionVersionsRequest
  *
- * @brief  Implements Greengrass ListFunctionDefinitionVersions requests.
+ * \brief The ListFunctionDefinitionVersionsRequest class encapsulates Greengrass ListFunctionDefinitionVersions requests.
  *
- * @see    GreengrassClient::listFunctionDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listFunctionDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionDefinitionVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListFunctionDefinitionVersionsRequest::ListFunctionDefinitionVersionsRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionDefinitionVersionsRequest object.
  */
 ListFunctionDefinitionVersionsRequest::ListFunctionDefinitionVersionsRequest()
@@ -53,13 +59,16 @@ ListFunctionDefinitionVersionsRequest::ListFunctionDefinitionVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFunctionDefinitionVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFunctionDefinitionVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionVersionsRequest::respon
     return new ListFunctionDefinitionVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFunctionDefinitionVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionVersionsRequest::respon
  * @brief  Private implementation for ListFunctionDefinitionVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionDefinitionVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListFunctionDefinitionVersionsRequestPrivate::ListFunctionDefinitionVersionsRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionDefinitionVersionsRequestPrivate object, copying another.

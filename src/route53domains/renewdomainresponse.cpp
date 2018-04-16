@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  RenewDomainResponse
+/*!
+ * \class QtAws::Route53Domains::RenewDomainResponse
  *
- * @brief  Handles Route53Domains RenewDomain responses.
+ * \brief The RenewDomainResponse class encapsulates Route53Domains RenewDomain responses.
  *
- * @see    Route53DomainsClient::renewDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::renewDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new RenewDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const RenewDomainRequest * RenewDomainResponse::request() const
     return static_cast<const RenewDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains RenewDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void RenewDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RenewDomainResponsePrivate
+ * \class RenewDomainResponsePrivate
  *
- * @brief  Private implementation for RenewDomainResponse.
+ * \brief Private implementation for RenewDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RenewDomainResponsePrivate object.
@@ -91,7 +95,7 @@ RenewDomainResponsePrivate::RenewDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains RenewDomainResponse element.
  *
  * @param  xml  XML stream to parse.

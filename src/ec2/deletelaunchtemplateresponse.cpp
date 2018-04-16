@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteLaunchTemplateResponse
+/*!
+ * \class QtAws::EC2::DeleteLaunchTemplateResponse
  *
- * @brief  Handles EC2 DeleteLaunchTemplate responses.
+ * \brief The DeleteLaunchTemplateResponse class encapsulates EC2 DeleteLaunchTemplate responses.
  *
- * @see    EC2Client::deleteLaunchTemplate
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteLaunchTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLaunchTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteLaunchTemplateRequest * DeleteLaunchTemplateResponse::request() cons
     return static_cast<const DeleteLaunchTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteLaunchTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteLaunchTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLaunchTemplateResponsePrivate
+ * \class DeleteLaunchTemplateResponsePrivate
  *
- * @brief  Private implementation for DeleteLaunchTemplateResponse.
+ * \brief Private implementation for DeleteLaunchTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLaunchTemplateResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteLaunchTemplateResponsePrivate::DeleteLaunchTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteLaunchTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

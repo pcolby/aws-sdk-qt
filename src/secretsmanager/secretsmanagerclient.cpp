@@ -55,123 +55,131 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SecretsManager
+ * \brief The QtAws::SecretsManager contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SecretsManager {
 
-/**
- * @class  SecretsManagerClient
+/*!
+ * \class QtAws::SecretsManager::SecretsManagerClient
  *
- * @brief  Client for AWS Secrets Manager
+ * \brief The SecretsManagerClient class provides access the AWS Secrets Manager service.
  *
- * <fullname>AWS Secrets Manager API Reference</fullname>
+ * \ingroup SecretsManager
  *
- * AWS Secrets Manager is a web service that enables you to store, manage, and retrieve,
- *
- * secrets>
- *
- * This guide provides descriptions of the AWS Secrets Manager API. For more information about using this service, see the
- * <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.com/secretsmanager/latest/userguide/introduction.html">AWS
- * Secrets Manager User
- *
- * Guide</a>>
- *
- * <b>API Version</b>
- *
- * </p
- *
- * This version of the AWS Secrets Manager API Reference documents the AWS Secrets Manager API version
- *
- * 2017-10-17> <note>
- *
- * As an alternative to using the API directly, you can use one of the AWS SDKs, which consist of libraries and sample code
- * for various programming languages and platforms (such as Java, Ruby, .NET, iOS, and Android). The SDKs provide a
- * convenient way to create programmatic access to AWS Secrets Manager. For example, the SDKs take care of
- * cryptographically signing requests, managing errors, and retrying requests automatically. For more information about the
- * AWS SDKs, including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
- *
- * Services</a>> </note>
- *
- * We recommend that you use the AWS SDKs to make programmatic API calls to AWS Secrets Manager. However, you also can use
- * the AWS Secrets Manager HTTP Query API to make direct calls to the AWS Secrets Manager web service. To learn more about
- * the AWS Secrets Manager HTTP Query API, see <a
- * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_query-requests.html">Making Query Requests</a> in
- * the <i>AWS Secrets Manager User Guide</i>.
- *
- * </p
- *
- * AWS Secrets Manager supports GET and POST requests for all actions. That is, the API doesn't require you to use GET for
- * some actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
- * operations that require larger sizes, use a POST
- *
- * request>
- *
- * <b>Signing Requests</b>
- *
- * </p
- *
- * When you send HTTP requests to AWS, you must sign the requests so that AWS can identify who sent them. You sign requests
- * with your AWS access key, which consists of an access key ID and a secret access key. We strongly recommend that you
- * don't create an access key for your root account. Anyone who has the access key for your root account has unrestricted
- * access to all the resources in your account. Instead, create an access key for an IAM user account that has the
- * permissions required for the task at hand. As another option, use AWS Security Token Service to generate temporary
- * security credentials, and use those credentials to sign requests.
- *
- * </p
- *
- * To sign requests, you must use <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
- * Version 4</a>. If you have an existing application that uses Signature Version 2, you must update it to use Signature
- * Version 4.
- *
- * </p
- *
- * When you use the AWS Command Line Interface (AWS CLI) or one of the AWS SDKs to make requests to AWS, these tools
- * automatically sign the requests for you with the access key that you specify when you configure the
- *
- * tools>
- *
- * <b>Support and Feedback for AWS Secrets Manager</b>
- *
- * </p
- *
- * We welcome your feedback. Send your comments to <a
- * href="mailto:awssecretsmanager-feedback@amazon.com">awssecretsmanager-feedback@amazon.com</a>, or post your feedback and
- * questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=296">AWS Secrets Manager Discussion Forum</a>.
- * For more information about the AWS Discussion Forums, see <a href="http://forums.aws.amazon.com/help.jspa">Forums
- *
- * Help</a>>
- *
- * <b>How examples are presented</b>
- *
- * </p
- *
- * The JSON that AWS Secrets Manager returns as a response to your requests is a single long string without line breaks or
- * white space formatting. Both line breaks and white space are included in the examples in this guide to improve
- * readability. When example input parameters would also result in long strings that extend beyond the screen, we insert
- * line breaks to enhance readability. You should always submit the input as a single JSON text
- *
- * string>
- *
- * <b>Logging API Requests</b>
- *
- * </p
- *
- * AWS Secrets Manager supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
- * files to an Amazon S3 bucket. By using information that's collected by AWS CloudTrail, you can determine which requests
- * were successfully made to AWS Secrets Manager, who made the request, when it was made, and so on. For more about AWS
- * Secrets Manager and its support for AWS CloudTrail, see <a
- * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_cloudtrail-integration.html">Logging AWS Secrets
- * Manager Events with AWS CloudTrail</a> in the <i>AWS Secrets Manager User Guide</i>. To learn more about CloudTrail,
- * including how to turn it on and find your log files, see the <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
+ *  <fullname>AWS Secrets Manager API Reference</fullname>
+ * 
+ *  AWS Secrets Manager is a web service that enables you to store, manage, and retrieve,
+ * 
+ *  secrets>
+ * 
+ *  This guide provides descriptions of the AWS Secrets Manager API. For more information about using this service, see the
+ *  <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.com/secretsmanager/latest/userguide/introduction.html">AWS
+ *  Secrets Manager User
+ * 
+ *  Guide</a>>
+ * 
+ *  <b>API Version</b>
+ * 
+ *  </p
+ * 
+ *  This version of the AWS Secrets Manager API Reference documents the AWS Secrets Manager API version
+ * 
+ *  2017-10-17> <note>
+ * 
+ *  As an alternative to using the API directly, you can use one of the AWS SDKs, which consist of libraries and sample code
+ *  for various programming languages and platforms (such as Java, Ruby, .NET, iOS, and Android). The SDKs provide a
+ *  convenient way to create programmatic access to AWS Secrets Manager. For example, the SDKs take care of
+ *  cryptographically signing requests, managing errors, and retrying requests automatically. For more information about the
+ *  AWS SDKs, including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>> </note>
+ * 
+ *  We recommend that you use the AWS SDKs to make programmatic API calls to AWS Secrets Manager. However, you also can use
+ *  the AWS Secrets Manager HTTP Query API to make direct calls to the AWS Secrets Manager web service. To learn more about
+ *  the AWS Secrets Manager HTTP Query API, see <a
+ *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_query-requests.html">Making Query Requests</a> in
+ *  the <i>AWS Secrets Manager User Guide</i>.
+ * 
+ *  </p
+ * 
+ *  AWS Secrets Manager supports GET and POST requests for all actions. That is, the API doesn't require you to use GET for
+ *  some actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
+ *  operations that require larger sizes, use a POST
+ * 
+ *  request>
+ * 
+ *  <b>Signing Requests</b>
+ * 
+ *  </p
+ * 
+ *  When you send HTTP requests to AWS, you must sign the requests so that AWS can identify who sent them. You sign requests
+ *  with your AWS access key, which consists of an access key ID and a secret access key. We strongly recommend that you
+ *  don't create an access key for your root account. Anyone who has the access key for your root account has unrestricted
+ *  access to all the resources in your account. Instead, create an access key for an IAM user account that has the
+ *  permissions required for the task at hand. As another option, use AWS Security Token Service to generate temporary
+ *  security credentials, and use those credentials to sign requests.
+ * 
+ *  </p
+ * 
+ *  To sign requests, you must use <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
+ *  Version 4</a>. If you have an existing application that uses Signature Version 2, you must update it to use Signature
+ *  Version 4.
+ * 
+ *  </p
+ * 
+ *  When you use the AWS Command Line Interface (AWS CLI) or one of the AWS SDKs to make requests to AWS, these tools
+ *  automatically sign the requests for you with the access key that you specify when you configure the
+ * 
+ *  tools>
+ * 
+ *  <b>Support and Feedback for AWS Secrets Manager</b>
+ * 
+ *  </p
+ * 
+ *  We welcome your feedback. Send your comments to <a
+ *  href="mailto:awssecretsmanager-feedback@amazon.com">awssecretsmanager-feedback@amazon.com</a>, or post your feedback and
+ *  questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=296">AWS Secrets Manager Discussion Forum</a>.
+ *  For more information about the AWS Discussion Forums, see <a href="http://forums.aws.amazon.com/help.jspa">Forums
+ * 
+ *  Help</a>>
+ * 
+ *  <b>How examples are presented</b>
+ * 
+ *  </p
+ * 
+ *  The JSON that AWS Secrets Manager returns as a response to your requests is a single long string without line breaks or
+ *  white space formatting. Both line breaks and white space are included in the examples in this guide to improve
+ *  readability. When example input parameters would also result in long strings that extend beyond the screen, we insert
+ *  line breaks to enhance readability. You should always submit the input as a single JSON text
+ * 
+ *  string>
+ * 
+ *  <b>Logging API Requests</b>
+ * 
+ *  </p
+ * 
+ *  AWS Secrets Manager supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
+ *  files to an Amazon S3 bucket. By using information that's collected by AWS CloudTrail, you can determine which requests
+ *  were successfully made to AWS Secrets Manager, who made the request, when it was made, and so on. For more about AWS
+ *  Secrets Manager and its support for AWS CloudTrail, see <a
+ *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_cloudtrail-integration.html">Logging AWS Secrets
+ *  Manager Events with AWS CloudTrail</a> in the <i>AWS Secrets Manager User Guide</i>. To learn more about CloudTrail,
+ *  including how to turn it on and find your log files, see the <a
+ *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  */
 
-/**
- * @brief  Constructs a new SecretsManagerClient object.
+/*!
+ * \brief Constructs a SecretsManagerClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SecretsManagerClient::SecretsManagerClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -190,21 +198,16 @@ SecretsManagerClient::SecretsManagerClient(
     d->serviceName = QStringLiteral("secretsmanager");
 }
 
-/**
- * @brief  Constructs a new SecretsManagerClient object.
+/*!
+ * \overload SecretsManagerClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SecretsManagerClient::SecretsManagerClient(
     const QUrl &endpoint,
@@ -223,7 +226,7 @@ SecretsManagerClient::SecretsManagerClient(
     d->serviceName = QStringLiteral("secretsmanager");
 }
 
-/**
+/*!
  * Disables automatic scheduled rotation and cancels the rotation of a secret if one is currently in
  *
  * progress>
@@ -297,7 +300,7 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
     return qobject_cast<CancelRotateSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new secret. A secret in AWS Secrets Manager consists of both the protected secret data and the important
  * information needed to manage the
  *
@@ -396,7 +399,7 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
     return qobject_cast<CreateSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an entire secret and all of its versions. You can optionally include a recovery window during which you can
  * restore the secret. If you don't provide a recovery window value, the operation defaults to 30 days. Secrets Manager
  * attaches a <code>DeletionDate</code> stamp to the secret that specifies the end of the recovery window. At the end of
@@ -457,7 +460,7 @@ DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequ
     return qobject_cast<DeleteSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the details of a secret. It does not include the encrypted fields. Only those fields that are populated with a
  * value are returned in the response.
  *
@@ -502,7 +505,7 @@ DescribeSecretResponse * SecretsManagerClient::describeSecret(const DescribeSecr
     return qobject_cast<DescribeSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a random password of the specified complexity. This operation is intended for use in the Lambda rotation
  * function. Per best practice, we recommend that you specify the maximum length and include every character type that the
  * system you are generating a password for can
@@ -528,7 +531,7 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
     return qobject_cast<GetRandomPasswordResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the contents of the encrypted fields <code>SecretString</code> and <code>SecretBinary</code> from the
  * specified version of a
  *
@@ -570,7 +573,7 @@ GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretVal
     return qobject_cast<GetSecretValueResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all of the versions attached to the specified secret. The output does not include the <code>SecretString</code> or
  * <code>SecretBinary</code> fields. By default, the list includes only versions that have at least one staging label in
  * <code>VersionStage</code>
@@ -611,7 +614,7 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
     return qobject_cast<ListSecretVersionIdsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all of the secrets that are stored by AWS Secrets Manager in the AWS account. To list the versions currently
  * stored for a specific secret, use <a>ListSecretVersionIds</a>. The encrypted fields <code>SecretString</code> and
  * <code>SecretBinary</code> are not included in the output. To get that information, call the <a>GetSecretValue</a>
@@ -652,7 +655,7 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
     return qobject_cast<ListSecretsResponse *>(send(request));
 }
 
-/**
+/*!
  * Stores a new encrypted secret value in the specified secret. To do this, the operation creates a new version and
  * attaches it to the secret. The version can contain a new <code>SecretString</code> value or a new
  * <code>SecretBinary</code>
@@ -755,7 +758,7 @@ PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretVal
     return qobject_cast<PutSecretValueResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels the scheduled deletion of a secret by removing the <code>DeletedDate</code> time stamp. This makes the secret
  * accessible to query once
  *
@@ -788,7 +791,7 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
     return qobject_cast<RestoreSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Configures and starts the asynchronous process of rotating this secret. If you include the configuration parameters, the
  * operation sets those values for the secret and then immediately starts a rotation. If you do not include the
  * configuration parameters, the operation starts a rotation with the values already stored in the secret. After the
@@ -867,7 +870,7 @@ RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequ
     return qobject_cast<RotateSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Attaches one or more tags, each consisting of a key name and a value, to the specified secret. Tags are part of the
  * secret's overall metadata, and are not associated with any specific version of the secret. This operation only appends
  * tags to the existing list of tags. To remove tags, you must use
@@ -942,7 +945,7 @@ TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more tags from the specified
  *
  * secret>
@@ -989,7 +992,7 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies many of the details of a secret. If you include a <code>ClientRequestToken</code> and either
  * <code>SecretString</code> or <code>SecretBinary</code> then it also creates a new version attached to the
  *
@@ -1084,7 +1087,7 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
     return qobject_cast<UpdateSecretResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the staging labels attached to a version of a secret. Staging labels are used to track a version as it
  * progresses through the secret rotation process. You can attach a staging label to only one version of a secret at a
  * time. If a staging label to be added is already attached to another version, then it is moved--removed from the other
@@ -1141,7 +1144,7 @@ UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStag
     return qobject_cast<UpdateSecretVersionStageResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SecretsManagerClientPrivate
@@ -1149,7 +1152,7 @@ UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStag
  * @brief  Private implementation for SecretsManagerClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SecretsManagerClientPrivate object.

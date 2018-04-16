@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  UpdateTagsForDomainRequest
+/*!
+ * \class QtAws::Route53Domains::UpdateTagsForDomainRequest
  *
- * @brief  Implements Route53Domains UpdateTagsForDomain requests.
+ * \brief The UpdateTagsForDomainRequest class encapsulates Route53Domains UpdateTagsForDomain requests.
  *
- * @see    Route53DomainsClient::updateTagsForDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::updateTagsForDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTagsForDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateTagsForDomainRequest::UpdateTagsForDomainRequest(const UpdateTagsForDomain
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTagsForDomainRequest object.
  */
 UpdateTagsForDomainRequest::UpdateTagsForDomainRequest()
@@ -53,13 +57,16 @@ UpdateTagsForDomainRequest::UpdateTagsForDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTagsForDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTagsForDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetwork
     return new UpdateTagsForDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTagsForDomainRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetwork
  * @brief  Private implementation for UpdateTagsForDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTagsForDomainRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTagsForDomainRequestPrivate object, copying another.

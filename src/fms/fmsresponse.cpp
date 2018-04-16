@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  FMSResponse
+/*!
+ * \class QtAws::FMS::FMSResponse
  *
- * @brief  Handles FMS FMS responses.
+ * \brief The FMSResponse class is the base class for all FMS responses.
  *
- * @see    FMSClient::fMS
+ * \ingroup FMS
  */
 
-/**
+/*!
  * @brief  Constructs a new FMSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ FMSResponse::FMSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FMSResponse object.
@@ -63,7 +63,7 @@ FMSResponse::FMSResponse(FMSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void FMSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  FMSResponsePrivate
@@ -92,7 +92,7 @@ void FMSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for FMSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FMSResponsePrivate object.

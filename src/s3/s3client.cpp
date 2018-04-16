@@ -180,23 +180,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::S3
+ * \brief The QtAws::S3 contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  S3Client
+/*!
+ * \class QtAws::S3::S3Client
  *
- * @brief  Client for Amazon Simple Storage Service ( S3)
+ * \brief The S3Client class provides access the Amazon Simple Storage Service ( S3) service.
+ *
+ * \ingroup S3
  *
  */
 
-/**
- * @brief  Constructs a new S3Client object.
+/*!
+ * \brief Constructs a S3Client object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 S3Client::S3Client(
     const QtAws::Core::AwsRegion::Region region,
@@ -215,21 +223,16 @@ S3Client::S3Client(
     d->serviceName = QStringLiteral("s3");
 }
 
-/**
- * @brief  Constructs a new S3Client object.
+/*!
+ * \overload S3Client()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 S3Client::S3Client(
     const QUrl &endpoint,
@@ -248,7 +251,7 @@ S3Client::S3Client(
     d->serviceName = QStringLiteral("s3");
 }
 
-/**
+/*!
  * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
  * storage, you should call the List Parts operation and ensure the parts list is
  *
@@ -263,7 +266,7 @@ AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipa
     return qobject_cast<AbortMultipartUploadResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -276,7 +279,7 @@ CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const Comple
     return qobject_cast<CompleteMultipartUploadResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -289,7 +292,7 @@ CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
     return qobject_cast<CopyObjectResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -302,7 +305,7 @@ CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request
     return qobject_cast<CreateBucketResponse *>(send(request));
 }
 
-/**
+/*!
  * Initiates a multipart upload and returns an upload ID.</p><p><b>Note:</b> After you initiate multipart upload and upload
  * one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of
  * the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and
@@ -319,7 +322,7 @@ CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMult
     return qobject_cast<CreateMultipartUploadResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the bucket. All objects (including all object versions and Delete Markers) in the bucket must be deleted before
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -333,7 +336,7 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
     return qobject_cast<DeleteBucketResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -346,7 +349,7 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
     return qobject_cast<DeleteBucketAnalyticsConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -359,7 +362,7 @@ DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequ
     return qobject_cast<DeleteBucketCorsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -372,7 +375,7 @@ DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBu
     return qobject_cast<DeleteBucketEncryptionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -385,7 +388,7 @@ DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConf
     return qobject_cast<DeleteBucketInventoryConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -398,7 +401,7 @@ DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBuck
     return qobject_cast<DeleteBucketLifecycleResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -411,7 +414,7 @@ DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfigur
     return qobject_cast<DeleteBucketMetricsConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -424,7 +427,7 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
     return qobject_cast<DeleteBucketPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -437,7 +440,7 @@ DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const Delete
     return qobject_cast<DeleteBucketReplicationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -450,7 +453,7 @@ DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTa
     return qobject_cast<DeleteBucketTaggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -463,7 +466,7 @@ DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWe
     return qobject_cast<DeleteBucketWebsiteResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -477,7 +480,7 @@ DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request
     return qobject_cast<DeleteObjectResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -490,7 +493,7 @@ DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTa
     return qobject_cast<DeleteObjectTaggingResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation enables you to delete multiple objects from a bucket using a single HTTP request. You may specify up to
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -504,7 +507,7 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
     return qobject_cast<DeleteObjectsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -517,7 +520,7 @@ GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfigur
     return qobject_cast<GetBucketAccelerateConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -530,7 +533,7 @@ GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request
     return qobject_cast<GetBucketAclResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -543,7 +546,7 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
     return qobject_cast<GetBucketAnalyticsConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -556,7 +559,7 @@ GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &requ
     return qobject_cast<GetBucketCorsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -569,7 +572,7 @@ GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncry
     return qobject_cast<GetBucketEncryptionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -582,7 +585,7 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
     return qobject_cast<GetBucketInventoryConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -595,7 +598,7 @@ GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecyc
     return qobject_cast<GetBucketLifecycleResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -608,7 +611,7 @@ GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfigurat
     return qobject_cast<GetBucketLifecycleConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -621,7 +624,7 @@ GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationR
     return qobject_cast<GetBucketLocationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -635,7 +638,7 @@ GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequ
     return qobject_cast<GetBucketLoggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -648,7 +651,7 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
     return qobject_cast<GetBucketMetricsConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -661,7 +664,7 @@ GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketN
     return qobject_cast<GetBucketNotificationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -674,7 +677,7 @@ GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConf
     return qobject_cast<GetBucketNotificationConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -687,7 +690,7 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
     return qobject_cast<GetBucketPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -700,7 +703,7 @@ GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketRep
     return qobject_cast<GetBucketReplicationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -713,7 +716,7 @@ GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBuc
     return qobject_cast<GetBucketRequestPaymentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -726,7 +729,7 @@ GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequ
     return qobject_cast<GetBucketTaggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -739,7 +742,7 @@ GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersi
     return qobject_cast<GetBucketVersioningResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -752,7 +755,7 @@ GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequ
     return qobject_cast<GetBucketWebsiteResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -765,7 +768,7 @@ GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
     return qobject_cast<GetObjectResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -778,7 +781,7 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
     return qobject_cast<GetObjectAclResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -791,7 +794,7 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
     return qobject_cast<GetObjectTaggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -804,7 +807,7 @@ GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequ
     return qobject_cast<GetObjectTorrentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -817,7 +820,7 @@ HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
     return qobject_cast<HeadBucketResponse *>(send(request));
 }
 
-/**
+/*!
  * The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -831,7 +834,7 @@ HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
     return qobject_cast<HeadObjectResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -844,7 +847,7 @@ ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigu
     return qobject_cast<ListBucketAnalyticsConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -857,7 +860,7 @@ ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigu
     return qobject_cast<ListBucketInventoryConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -870,7 +873,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
     return qobject_cast<ListBucketMetricsConfigurationsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -883,7 +886,7 @@ ListBucketsResponse * S3Client::listBuckets()
     return qobject_cast<ListBucketsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -896,7 +899,7 @@ ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipar
     return qobject_cast<ListMultipartUploadsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -909,7 +912,7 @@ ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersio
     return qobject_cast<ListObjectVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -923,7 +926,7 @@ ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
     return qobject_cast<ListObjectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  * return a subset of the objects in a bucket. Note: ListObjectsV2 is the revised List Objects API and we recommend you use
  *
@@ -938,7 +941,7 @@ ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &requ
     return qobject_cast<ListObjectsV2Response *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -951,7 +954,7 @@ ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
     return qobject_cast<ListPartsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -964,7 +967,7 @@ PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfigur
     return qobject_cast<PutBucketAccelerateConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -977,7 +980,7 @@ PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request
     return qobject_cast<PutBucketAclResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -990,7 +993,7 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
     return qobject_cast<PutBucketAnalyticsConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1003,7 +1006,7 @@ PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &requ
     return qobject_cast<PutBucketCorsResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1016,7 +1019,7 @@ PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncry
     return qobject_cast<PutBucketEncryptionResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1029,7 +1032,7 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
     return qobject_cast<PutBucketInventoryConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1042,7 +1045,7 @@ PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecyc
     return qobject_cast<PutBucketLifecycleResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1055,7 +1058,7 @@ PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfigurat
     return qobject_cast<PutBucketLifecycleConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters.
  *
  * @param  request Request to send to Amazon Simple Storage Service.
@@ -1069,7 +1072,7 @@ PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequ
     return qobject_cast<PutBucketLoggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1082,7 +1085,7 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
     return qobject_cast<PutBucketMetricsConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1095,7 +1098,7 @@ PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketN
     return qobject_cast<PutBucketNotificationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1108,7 +1111,7 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
     return qobject_cast<PutBucketNotificationConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1121,7 +1124,7 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
     return qobject_cast<PutBucketPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1134,7 +1137,7 @@ PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketRep
     return qobject_cast<PutBucketReplicationResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the request payment configuration for a bucket. By default, the bucket owner pays for downloads from the bucket.
  * This configuration parameter enables the bucket owner (only) to specify that the person requesting the download will be
  * charged for the download. Documentation on requester pays buckets can be found at
@@ -1150,7 +1153,7 @@ PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBuc
     return qobject_cast<PutBucketRequestPaymentResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1163,7 +1166,7 @@ PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequ
     return qobject_cast<PutBucketTaggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1176,7 +1179,7 @@ PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersi
     return qobject_cast<PutBucketVersioningResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1189,7 +1192,7 @@ PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequ
     return qobject_cast<PutBucketWebsiteResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1202,7 +1205,7 @@ PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
     return qobject_cast<PutObjectResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1215,7 +1218,7 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
     return qobject_cast<PutObjectAclResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1228,7 +1231,7 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
     return qobject_cast<PutObjectTaggingResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1241,7 +1244,7 @@ RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &requ
     return qobject_cast<RestoreObjectResponse *>(send(request));
 }
 
-/**
+/*!
  * This operation filters the contents of an Amazon S3 object based on a simple Structured Query Language (SQL) statement.
  * In the request, along with the SQL expression, you must also specify a data serialization format (JSON or CSV) of the
  * object. Amazon S3 uses this to parse object data into records, and returns only records that match the specified SQL
@@ -1257,7 +1260,7 @@ SelectObjectContentResponse * S3Client::selectObjectContent(const SelectObjectCo
     return qobject_cast<SelectObjectContentResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads a part in a multipart upload.</p><p><b>Note:</b> After you initiate multipart upload and upload one or more
  * parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded
  * parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging
@@ -1274,7 +1277,7 @@ UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
     return qobject_cast<UploadPartResponse *>(send(request));
 }
 
-/**
+/*!
  *
  * @param  request Request to send to Amazon Simple Storage Service.
  *
@@ -1287,7 +1290,7 @@ UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &r
     return qobject_cast<UploadPartCopyResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  S3ClientPrivate
@@ -1295,7 +1298,7 @@ UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &r
  * @brief  Private implementation for S3Client.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new S3ClientPrivate object.

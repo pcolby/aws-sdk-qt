@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  UpdateElasticsearchDomainConfigResponse
+/*!
+ * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigResponse
  *
- * @brief  Handles ElasticsearchService UpdateElasticsearchDomainConfig responses.
+ * \brief The UpdateElasticsearchDomainConfigResponse class encapsulates ElasticsearchService UpdateElasticsearchDomainConfig responses.
  *
- * @see    ElasticsearchServiceClient::updateElasticsearchDomainConfig
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::updateElasticsearchDomainConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateElasticsearchDomainConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const UpdateElasticsearchDomainConfigRequest * UpdateElasticsearchDomainConfigRe
     return static_cast<const UpdateElasticsearchDomainConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService UpdateElasticsearchDomainConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void UpdateElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateElasticsearchDomainConfigResponsePrivate
+ * \class UpdateElasticsearchDomainConfigResponsePrivate
  *
- * @brief  Private implementation for UpdateElasticsearchDomainConfigResponse.
+ * \brief Private implementation for UpdateElasticsearchDomainConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateElasticsearchDomainConfigResponsePrivate object.
@@ -91,7 +103,7 @@ UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigR
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService UpdateElasticsearchDomainConfigResponse element.
  *
  * @param  xml  XML stream to parse.

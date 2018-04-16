@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DeleteConstraintResponse
+/*!
+ * \class QtAws::ServiceCatalog::DeleteConstraintResponse
  *
- * @brief  Handles ServiceCatalog DeleteConstraint responses.
+ * \brief The DeleteConstraintResponse class encapsulates ServiceCatalog DeleteConstraint responses.
  *
- * @see    ServiceCatalogClient::deleteConstraint
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::deleteConstraint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteConstraintResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteConstraintRequest * DeleteConstraintResponse::request() const
     return static_cast<const DeleteConstraintRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog DeleteConstraint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteConstraintResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteConstraintResponsePrivate
+ * \class DeleteConstraintResponsePrivate
  *
- * @brief  Private implementation for DeleteConstraintResponse.
+ * \brief Private implementation for DeleteConstraintResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteConstraintResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteConstraintResponsePrivate::DeleteConstraintResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog DeleteConstraintResponse element.
  *
  * @param  xml  XML stream to parse.

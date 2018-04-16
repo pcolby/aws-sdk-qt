@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateRealtimeEndpointResponse
+/*!
+ * \class QtAws::MachineLearning::CreateRealtimeEndpointResponse
  *
- * @brief  Handles MachineLearning CreateRealtimeEndpoint responses.
+ * \brief The CreateRealtimeEndpointResponse class encapsulates MachineLearning CreateRealtimeEndpoint responses.
  *
- * @see    MachineLearningClient::createRealtimeEndpoint
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createRealtimeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRealtimeEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateRealtimeEndpointRequest * CreateRealtimeEndpointResponse::request() 
     return static_cast<const CreateRealtimeEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning CreateRealtimeEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateRealtimeEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateRealtimeEndpointResponsePrivate
+ * \class CreateRealtimeEndpointResponsePrivate
  *
- * @brief  Private implementation for CreateRealtimeEndpointResponse.
+ * \brief Private implementation for CreateRealtimeEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRealtimeEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning CreateRealtimeEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

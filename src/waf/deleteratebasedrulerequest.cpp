@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteRateBasedRuleRequest
+/*!
+ * \class QtAws::WAF::DeleteRateBasedRuleRequest
  *
- * @brief  Implements WAF DeleteRateBasedRule requests.
+ * \brief The DeleteRateBasedRuleRequest class encapsulates WAF DeleteRateBasedRule requests.
  *
- * @see    WAFClient::deleteRateBasedRule
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteRateBasedRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest(const DeleteRateBasedRule
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRateBasedRuleRequest object.
  */
 DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest()
@@ -53,13 +61,16 @@ DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRateBasedRuleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRateBasedRuleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
     return new DeleteRateBasedRuleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRateBasedRuleRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
  * @brief  Private implementation for DeleteRateBasedRuleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRateBasedRuleRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRateBasedRuleRequestPrivate object, copying another.

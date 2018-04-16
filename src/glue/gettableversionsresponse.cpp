@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetTableVersionsResponse
+/*!
+ * \class QtAws::Glue::GetTableVersionsResponse
  *
- * @brief  Handles Glue GetTableVersions responses.
+ * \brief The GetTableVersionsResponse class encapsulates Glue GetTableVersions responses.
  *
- * @see    GlueClient::getTableVersions
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getTableVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTableVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetTableVersionsRequest * GetTableVersionsResponse::request() const
     return static_cast<const GetTableVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetTableVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetTableVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTableVersionsResponsePrivate
+ * \class GetTableVersionsResponsePrivate
  *
- * @brief  Private implementation for GetTableVersionsResponse.
+ * \brief Private implementation for GetTableVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTableVersionsResponsePrivate object.
@@ -91,7 +97,7 @@ GetTableVersionsResponsePrivate::GetTableVersionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetTableVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

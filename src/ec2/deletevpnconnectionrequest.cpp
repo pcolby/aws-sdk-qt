@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpnConnectionRequest
+/*!
+ * \class QtAws::EC2::DeleteVpnConnectionRequest
  *
- * @brief  Implements EC2 DeleteVpnConnection requests.
+ * \brief The DeleteVpnConnectionRequest class encapsulates EC2 DeleteVpnConnection requests.
  *
- * @see    EC2Client::deleteVpnConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpnConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpnConnectionRequest::DeleteVpnConnectionRequest(const DeleteVpnConnection
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnConnectionRequest object.
  */
 DeleteVpnConnectionRequest::DeleteVpnConnectionRequest()
@@ -53,13 +60,16 @@ DeleteVpnConnectionRequest::DeleteVpnConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpnConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpnConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetwork
     return new DeleteVpnConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpnConnectionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetwork
  * @brief  Private implementation for DeleteVpnConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnConnectionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnConnectionRequestPrivate object, copying another.

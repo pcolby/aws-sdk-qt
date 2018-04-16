@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListBonusPaymentsResponse
+/*!
+ * \class QtAws::MTurk::ListBonusPaymentsResponse
  *
- * @brief  Handles MTurk ListBonusPayments responses.
+ * \brief The ListBonusPaymentsResponse class encapsulates MTurk ListBonusPayments responses.
  *
- * @see    MTurkClient::listBonusPayments
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listBonusPayments
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBonusPaymentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListBonusPaymentsRequest * ListBonusPaymentsResponse::request() const
     return static_cast<const ListBonusPaymentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListBonusPayments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListBonusPaymentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListBonusPaymentsResponsePrivate
+ * \class ListBonusPaymentsResponsePrivate
  *
- * @brief  Private implementation for ListBonusPaymentsResponse.
+ * \brief Private implementation for ListBonusPaymentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBonusPaymentsResponsePrivate object.
@@ -91,7 +94,7 @@ ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListBonusPaymentsResponse element.
  *
  * @param  xml  XML stream to parse.

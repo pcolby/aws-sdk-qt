@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateTagOptionResponse
+/*!
+ * \class QtAws::ServiceCatalog::UpdateTagOptionResponse
  *
- * @brief  Handles ServiceCatalog UpdateTagOption responses.
+ * \brief The UpdateTagOptionResponse class encapsulates ServiceCatalog UpdateTagOption responses.
  *
- * @see    ServiceCatalogClient::updateTagOption
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateTagOption
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTagOptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const UpdateTagOptionRequest * UpdateTagOptionResponse::request() const
     return static_cast<const UpdateTagOptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog UpdateTagOption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void UpdateTagOptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateTagOptionResponsePrivate
+ * \class UpdateTagOptionResponsePrivate
  *
- * @brief  Private implementation for UpdateTagOptionResponse.
+ * \brief Private implementation for UpdateTagOptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTagOptionResponsePrivate object.
@@ -91,7 +100,7 @@ UpdateTagOptionResponsePrivate::UpdateTagOptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog UpdateTagOptionResponse element.
  *
  * @param  xml  XML stream to parse.

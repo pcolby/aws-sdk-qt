@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUpdateDeviceStatusRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateDeviceStatusRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminUpdateDeviceStatus requests.
+ * \brief The AdminUpdateDeviceStatusRequest class encapsulates CognitoIdentityProvider AdminUpdateDeviceStatus requests.
  *
- * @see    CognitoIdentityProviderClient::adminUpdateDeviceStatus
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUpdateDeviceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateDeviceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminUpdateDeviceStatusRequest::AdminUpdateDeviceStatusRequest(const AdminUpdate
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminUpdateDeviceStatusRequest object.
  */
 AdminUpdateDeviceStatusRequest::AdminUpdateDeviceStatusRequest()
@@ -53,13 +66,16 @@ AdminUpdateDeviceStatusRequest::AdminUpdateDeviceStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminUpdateDeviceStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminUpdateDeviceStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateDeviceStatusRequest::response(QNet
     return new AdminUpdateDeviceStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminUpdateDeviceStatusRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateDeviceStatusRequest::response(QNet
  * @brief  Private implementation for AdminUpdateDeviceStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateDeviceStatusRequestPrivate object.
@@ -97,7 +113,7 @@ AdminUpdateDeviceStatusRequestPrivate::AdminUpdateDeviceStatusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUpdateDeviceStatusRequestPrivate object, copying another.

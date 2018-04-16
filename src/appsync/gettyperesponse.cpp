@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetTypeResponse
+/*!
+ * \class QtAws::AppSync::GetTypeResponse
  *
- * @brief  Handles AppSync GetType responses.
+ * \brief The GetTypeResponse class encapsulates AppSync GetType responses.
  *
- * @see    AppSyncClient::getType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getType
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetTypeRequest * GetTypeResponse::request() const
     return static_cast<const GetTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync GetType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTypeResponsePrivate
+ * \class GetTypeResponsePrivate
  *
- * @brief  Private implementation for GetTypeResponse.
+ * \brief Private implementation for GetTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTypeResponsePrivate object.
@@ -91,7 +95,7 @@ GetTypeResponsePrivate::GetTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync GetTypeResponse element.
  *
  * @param  xml  XML stream to parse.

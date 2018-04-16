@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateExpirationForHITRequest
+/*!
+ * \class QtAws::MTurk::UpdateExpirationForHITRequest
  *
- * @brief  Implements MTurk UpdateExpirationForHIT requests.
+ * \brief The UpdateExpirationForHITRequest class encapsulates MTurk UpdateExpirationForHIT requests.
  *
- * @see    MTurkClient::updateExpirationForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateExpirationForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateExpirationForHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateExpirationForHITRequest::UpdateExpirationForHITRequest(const UpdateExpirat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateExpirationForHITRequest object.
  */
 UpdateExpirationForHITRequest::UpdateExpirationForHITRequest()
@@ -53,13 +56,16 @@ UpdateExpirationForHITRequest::UpdateExpirationForHITRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateExpirationForHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateExpirationForHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetw
     return new UpdateExpirationForHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateExpirationForHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetw
  * @brief  Private implementation for UpdateExpirationForHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateExpirationForHITRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateExpirationForHITRequestPrivate object, copying another.

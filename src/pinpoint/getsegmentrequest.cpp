@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSegmentRequest
+/*!
+ * \class QtAws::Pinpoint::GetSegmentRequest
  *
- * @brief  Implements Pinpoint GetSegment requests.
+ * \brief The GetSegmentRequest class encapsulates Pinpoint GetSegment requests.
  *
- * @see    PinpointClient::getSegment
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSegment
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetSegmentRequest::GetSegmentRequest(const GetSegmentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentRequest object.
  */
 GetSegmentRequest::GetSegmentRequest()
@@ -53,13 +56,16 @@ GetSegmentRequest::GetSegmentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSegmentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSegmentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetSegmentRequest::response(QNetworkReply * c
     return new GetSegmentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSegmentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetSegmentRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetSegmentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentRequestPrivate object.
@@ -97,7 +103,7 @@ GetSegmentRequestPrivate::GetSegmentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentRequestPrivate object, copying another.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Pricing {
 
-/**
- * @class  PricingResponse
+/*!
+ * \class QtAws::Pricing::PricingResponse
  *
- * @brief  Handles Pricing Pricing responses.
+ * \brief The PricingResponse class is the base class for all Pricing responses.
  *
- * @see    PricingClient::pricing
+ * \ingroup Pricing
  */
 
-/**
+/*!
  * @brief  Constructs a new PricingResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ PricingResponse::PricingResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PricingResponse object.
@@ -63,7 +63,7 @@ PricingResponse::PricingResponse(PricingResponsePrivate * const d, QObject * con
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void PricingResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PricingResponsePrivate
@@ -92,7 +92,7 @@ void PricingResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for PricingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PricingResponsePrivate object.

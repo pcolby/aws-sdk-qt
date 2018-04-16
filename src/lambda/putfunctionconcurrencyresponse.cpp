@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  PutFunctionConcurrencyResponse
+/*!
+ * \class QtAws::Lambda::PutFunctionConcurrencyResponse
  *
- * @brief  Handles Lambda PutFunctionConcurrency responses.
+ * \brief The PutFunctionConcurrencyResponse class encapsulates Lambda PutFunctionConcurrency responses.
  *
- * @see    LambdaClient::putFunctionConcurrency
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::putFunctionConcurrency
  */
 
-/**
+/*!
  * @brief  Constructs a new PutFunctionConcurrencyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const PutFunctionConcurrencyRequest * PutFunctionConcurrencyResponse::request() 
     return static_cast<const PutFunctionConcurrencyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda PutFunctionConcurrency response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void PutFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutFunctionConcurrencyResponsePrivate
+ * \class PutFunctionConcurrencyResponsePrivate
  *
- * @brief  Private implementation for PutFunctionConcurrencyResponse.
+ * \brief Private implementation for PutFunctionConcurrencyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutFunctionConcurrencyResponsePrivate object.
@@ -91,7 +105,7 @@ PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda PutFunctionConcurrencyResponse element.
  *
  * @param  xml  XML stream to parse.

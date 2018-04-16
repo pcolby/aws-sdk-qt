@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceIamInstanceProfileAssociationRequest
+/*!
+ * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationRequest
  *
- * @brief  Implements EC2 ReplaceIamInstanceProfileAssociation requests.
+ * \brief The ReplaceIamInstanceProfileAssociationRequest class encapsulates EC2 ReplaceIamInstanceProfileAssociation requests.
  *
- * @see    EC2Client::replaceIamInstanceProfileAssociation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceIamInstanceProfileAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociatio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequest object.
  */
 ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociationRequest()
@@ -53,13 +60,16 @@ ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociatio
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReplaceIamInstanceProfileAssociationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReplaceIamInstanceProfileAssociationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceIamInstanceProfileAssociationRequest::
     return new ReplaceIamInstanceProfileAssociationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReplaceIamInstanceProfileAssociationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceIamInstanceProfileAssociationRequest::
  * @brief  Private implementation for ReplaceIamInstanceProfileAssociationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequestPrivate object.
@@ -97,7 +107,7 @@ ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAss
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceIamInstanceProfileAssociationRequestPrivate object, copying another.

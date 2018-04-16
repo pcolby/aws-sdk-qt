@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DisableMetricsCollectionRequest
+/*!
+ * \class QtAws::AutoScaling::DisableMetricsCollectionRequest
  *
- * @brief  Implements AutoScaling DisableMetricsCollection requests.
+ * \brief The DisableMetricsCollectionRequest class encapsulates AutoScaling DisableMetricsCollection requests.
  *
- * @see    AutoScalingClient::disableMetricsCollection
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::disableMetricsCollection
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableMetricsCollectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DisableMetricsCollectionRequest::DisableMetricsCollectionRequest(const DisableMe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DisableMetricsCollectionRequest object.
  */
 DisableMetricsCollectionRequest::DisableMetricsCollectionRequest()
@@ -53,13 +61,16 @@ DisableMetricsCollectionRequest::DisableMetricsCollectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DisableMetricsCollectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DisableMetricsCollectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DisableMetricsCollectionRequest::response(QNe
     return new DisableMetricsCollectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DisableMetricsCollectionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DisableMetricsCollectionRequest::response(QNe
  * @brief  Private implementation for DisableMetricsCollectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableMetricsCollectionRequestPrivate object.
@@ -97,7 +108,7 @@ DisableMetricsCollectionRequestPrivate::DisableMetricsCollectionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableMetricsCollectionRequestPrivate object, copying another.

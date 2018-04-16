@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  EnableVgwRoutePropagationResponse
+/*!
+ * \class QtAws::EC2::EnableVgwRoutePropagationResponse
  *
- * @brief  Handles EC2 EnableVgwRoutePropagation responses.
+ * \brief The EnableVgwRoutePropagationResponse class encapsulates EC2 EnableVgwRoutePropagation responses.
  *
- * @see    EC2Client::enableVgwRoutePropagation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::enableVgwRoutePropagation
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableVgwRoutePropagationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const EnableVgwRoutePropagationRequest * EnableVgwRoutePropagationResponse::requ
     return static_cast<const EnableVgwRoutePropagationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 EnableVgwRoutePropagation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void EnableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableVgwRoutePropagationResponsePrivate
+ * \class EnableVgwRoutePropagationResponsePrivate
  *
- * @brief  Private implementation for EnableVgwRoutePropagationResponse.
+ * \brief Private implementation for EnableVgwRoutePropagationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableVgwRoutePropagationResponsePrivate object.
@@ -91,7 +98,7 @@ EnableVgwRoutePropagationResponsePrivate::EnableVgwRoutePropagationResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 EnableVgwRoutePropagationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteSlotTypeVersionRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionRequest
  *
- * @brief  Implements LexModelBuildingService DeleteSlotTypeVersion requests.
+ * \brief The DeleteSlotTypeVersionRequest class encapsulates LexModelBuildingService DeleteSlotTypeVersion requests.
  *
- * @see    LexModelBuildingServiceClient::deleteSlotTypeVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteSlotTypeVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSlotTypeVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest(const DeleteSlotTypeV
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSlotTypeVersionRequest object.
  */
 DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest()
@@ -53,13 +60,16 @@ DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSlotTypeVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSlotTypeVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetwo
     return new DeleteSlotTypeVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSlotTypeVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetwo
  * @brief  Private implementation for DeleteSlotTypeVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSlotTypeVersionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSlotTypeVersionRequestPrivate object, copying another.

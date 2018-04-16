@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListResourceDefinitionVersionsRequest
+/*!
+ * \class QtAws::Greengrass::ListResourceDefinitionVersionsRequest
  *
- * @brief  Implements Greengrass ListResourceDefinitionVersions requests.
+ * \brief The ListResourceDefinitionVersionsRequest class encapsulates Greengrass ListResourceDefinitionVersions requests.
  *
- * @see    GreengrassClient::listResourceDefinitionVersions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listResourceDefinitionVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResourceDefinitionVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListResourceDefinitionVersionsRequest object.
  */
 ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest()
@@ -53,13 +59,16 @@ ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListResourceDefinitionVersionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListResourceDefinitionVersionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceDefinitionVersionsRequest::respon
     return new ListResourceDefinitionVersionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListResourceDefinitionVersionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListResourceDefinitionVersionsRequest::respon
  * @brief  Private implementation for ListResourceDefinitionVersionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceDefinitionVersionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResourceDefinitionVersionsRequestPrivate object, copying another.

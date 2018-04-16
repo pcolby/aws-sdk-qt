@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  PutPermissionPolicyRequest
+/*!
+ * \class QtAws::WAF::PutPermissionPolicyRequest
  *
- * @brief  Implements WAF PutPermissionPolicy requests.
+ * \brief The PutPermissionPolicyRequest class encapsulates WAF PutPermissionPolicy requests.
  *
- * @see    WAFClient::putPermissionPolicy
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::putPermissionPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutPermissionPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicy
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutPermissionPolicyRequest object.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest()
@@ -53,13 +61,16 @@ PutPermissionPolicyRequest::PutPermissionPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutPermissionPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutPermissionPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
     return new PutPermissionPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutPermissionPolicyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
  * @brief  Private implementation for PutPermissionPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutPermissionPolicyRequestPrivate object.
@@ -97,7 +108,7 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutPermissionPolicyRequestPrivate object, copying another.

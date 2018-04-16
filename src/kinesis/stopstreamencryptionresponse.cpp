@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  StopStreamEncryptionResponse
+/*!
+ * \class QtAws::Kinesis::StopStreamEncryptionResponse
  *
- * @brief  Handles Kinesis StopStreamEncryption responses.
+ * \brief The StopStreamEncryptionResponse class encapsulates Kinesis StopStreamEncryption responses.
  *
- * @see    KinesisClient::stopStreamEncryption
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::stopStreamEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new StopStreamEncryptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopStreamEncryptionRequest * StopStreamEncryptionResponse::request() cons
     return static_cast<const StopStreamEncryptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis StopStreamEncryption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopStreamEncryptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopStreamEncryptionResponsePrivate
+ * \class StopStreamEncryptionResponsePrivate
  *
- * @brief  Private implementation for StopStreamEncryptionResponse.
+ * \brief Private implementation for StopStreamEncryptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopStreamEncryptionResponsePrivate object.
@@ -91,7 +97,7 @@ StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis StopStreamEncryptionResponse element.
  *
  * @param  xml  XML stream to parse.

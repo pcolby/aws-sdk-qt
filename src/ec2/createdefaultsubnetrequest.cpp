@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateDefaultSubnetRequest
+/*!
+ * \class QtAws::EC2::CreateDefaultSubnetRequest
  *
- * @brief  Implements EC2 CreateDefaultSubnet requests.
+ * \brief The CreateDefaultSubnetRequest class encapsulates EC2 CreateDefaultSubnet requests.
  *
- * @see    EC2Client::createDefaultSubnet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createDefaultSubnet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDefaultSubnetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateDefaultSubnetRequest::CreateDefaultSubnetRequest(const CreateDefaultSubnet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDefaultSubnetRequest object.
  */
 CreateDefaultSubnetRequest::CreateDefaultSubnetRequest()
@@ -53,13 +60,16 @@ CreateDefaultSubnetRequest::CreateDefaultSubnetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDefaultSubnetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDefaultSubnetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultSubnetRequest::response(QNetwork
     return new CreateDefaultSubnetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDefaultSubnetRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultSubnetRequest::response(QNetwork
  * @brief  Private implementation for CreateDefaultSubnetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDefaultSubnetRequestPrivate object.
@@ -97,7 +107,7 @@ CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDefaultSubnetRequestPrivate object, copying another.

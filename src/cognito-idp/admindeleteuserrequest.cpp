@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDeleteUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDeleteUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminDeleteUser requests.
+ * \brief The AdminDeleteUserRequest class encapsulates CognitoIdentityProvider AdminDeleteUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminDeleteUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDeleteUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDeleteUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminDeleteUserRequest::AdminDeleteUserRequest(const AdminDeleteUserRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminDeleteUserRequest object.
  */
 AdminDeleteUserRequest::AdminDeleteUserRequest()
@@ -53,13 +66,16 @@ AdminDeleteUserRequest::AdminDeleteUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminDeleteUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminDeleteUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserRequest::response(QNetworkRepl
     return new AdminDeleteUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminDeleteUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserRequest::response(QNetworkRepl
  * @brief  Private implementation for AdminDeleteUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDeleteUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDeleteUserRequestPrivate object, copying another.

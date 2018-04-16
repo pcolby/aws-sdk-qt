@@ -27,15 +27,84 @@
 namespace QtAws {
 namespace SQS {
 
-/**
- * @class  CreateQueueResponse
+/*!
+ * \class QtAws::SQS::CreateQueueResponse
  *
- * @brief  Handles SQS CreateQueue responses.
+ * \brief The CreateQueueResponse class encapsulates SQS CreateQueue responses.
  *
- * @see    SQSClient::createQueue
+ * \ingroup SQS
+ *
+ *  Welcome to the <i>Amazon Simple Queue Service API
+ * 
+ *  Reference</i>>
+ * 
+ *  Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
+ *  between applications or microservices. Amazon SQS moves data between distributed application components and helps you
+ *  decouple these
+ * 
+ *  components> <note>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Standard
+ *  queues</a> are available in all regions. <a
+ *  href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html">FIFO queues</a> are
+ *  available in the US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland)
+ * 
+ *  regions> </note>
+ * 
+ *  You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
+ *  language. The SDKs perform tasks such as the following
+ * 
+ *  automatically> <ul> <li>
+ * 
+ *  Cryptographically sign your service
+ * 
+ *  request> </li> <li>
+ * 
+ *  Retry
+ * 
+ *  request> </li> <li>
+ * 
+ *  Handle error
+ * 
+ *  response> </li> </ul>
+ * 
+ *  <b>Additional Information</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/sqs/">Amazon SQS Product Page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <i>Amazon Simple Queue Service Developer Guide</i>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making
+ *  API Requests</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Using
+ *  Amazon SQS Message Attributes</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
+ *  Amazon SQS Dead-Letter Queues</a>
+ * 
+ *  </p </li> </ul> </li> <li>
+ * 
+ *  <i>Amazon Web Services General Reference</i>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
+ *
+ * \sa SQSClient::createQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateQueueResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +127,7 @@ const CreateQueueRequest * CreateQueueResponse::request() const
     return static_cast<const CreateQueueRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SQS CreateQueue response.
  *
  * @param  response  Response to parse.
@@ -70,15 +139,15 @@ void CreateQueueResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateQueueResponsePrivate
+ * \class CreateQueueResponsePrivate
  *
- * @brief  Private implementation for CreateQueueResponse.
+ * \brief Private implementation for CreateQueueResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQueueResponsePrivate object.
@@ -91,7 +160,7 @@ CreateQueueResponsePrivate::CreateQueueResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SQS CreateQueueResponse element.
  *
  * @param  xml  XML stream to parse.

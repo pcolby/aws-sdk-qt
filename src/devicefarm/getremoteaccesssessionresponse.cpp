@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetRemoteAccessSessionResponse
+/*!
+ * \class QtAws::DeviceFarm::GetRemoteAccessSessionResponse
  *
- * @brief  Handles DeviceFarm GetRemoteAccessSession responses.
+ * \brief The GetRemoteAccessSessionResponse class encapsulates DeviceFarm GetRemoteAccessSession responses.
  *
- * @see    DeviceFarmClient::getRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRemoteAccessSessionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetRemoteAccessSessionRequest * GetRemoteAccessSessionResponse::request() 
     return static_cast<const GetRemoteAccessSessionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm GetRemoteAccessSession response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetRemoteAccessSessionResponsePrivate
+ * \class GetRemoteAccessSessionResponsePrivate
  *
- * @brief  Private implementation for GetRemoteAccessSessionResponse.
+ * \brief Private implementation for GetRemoteAccessSessionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRemoteAccessSessionResponsePrivate object.
@@ -91,7 +96,7 @@ GetRemoteAccessSessionResponsePrivate::GetRemoteAccessSessionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm GetRemoteAccessSessionResponse element.
  *
  * @param  xml  XML stream to parse.

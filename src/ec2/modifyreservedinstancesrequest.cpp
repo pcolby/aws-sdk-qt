@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyReservedInstancesRequest
+/*!
+ * \class QtAws::EC2::ModifyReservedInstancesRequest
  *
- * @brief  Implements EC2 ModifyReservedInstances requests.
+ * \brief The ModifyReservedInstancesRequest class encapsulates EC2 ModifyReservedInstances requests.
  *
- * @see    EC2Client::modifyReservedInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyReservedInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyReservedInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyReservedInstancesRequest::ModifyReservedInstancesRequest(const ModifyReser
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyReservedInstancesRequest object.
  */
 ModifyReservedInstancesRequest::ModifyReservedInstancesRequest()
@@ -53,13 +60,16 @@ ModifyReservedInstancesRequest::ModifyReservedInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyReservedInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyReservedInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNet
     return new ModifyReservedInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyReservedInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNet
  * @brief  Private implementation for ModifyReservedInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReservedInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyReservedInstancesRequestPrivate object, copying another.

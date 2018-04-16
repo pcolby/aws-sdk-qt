@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  CreateTrainingJobRequest
+/*!
+ * \class QtAws::SageMaker::CreateTrainingJobRequest
  *
- * @brief  Implements SageMaker CreateTrainingJob requests.
+ * \brief The CreateTrainingJobRequest class encapsulates SageMaker CreateTrainingJob requests.
  *
- * @see    SageMakerClient::createTrainingJob
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::createTrainingJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTrainingJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateTrainingJobRequest::CreateTrainingJobRequest(const CreateTrainingJobReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTrainingJobRequest object.
  */
 CreateTrainingJobRequest::CreateTrainingJobRequest()
@@ -53,13 +56,16 @@ CreateTrainingJobRequest::CreateTrainingJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTrainingJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTrainingJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrainingJobRequest::response(QNetworkRe
     return new CreateTrainingJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTrainingJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateTrainingJobRequest::response(QNetworkRe
  * @brief  Private implementation for CreateTrainingJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTrainingJobRequestPrivate object.
@@ -97,7 +103,7 @@ CreateTrainingJobRequestPrivate::CreateTrainingJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTrainingJobRequestPrivate object, copying another.

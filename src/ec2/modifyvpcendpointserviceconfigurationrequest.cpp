@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointServiceConfigurationRequest
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointServiceConfigurationRequest
  *
- * @brief  Implements EC2 ModifyVpcEndpointServiceConfiguration requests.
+ * \brief The ModifyVpcEndpointServiceConfigurationRequest class encapsulates EC2 ModifyVpcEndpointServiceConfiguration requests.
  *
- * @see    EC2Client::modifyVpcEndpointServiceConfiguration
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpointServiceConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyVpcEndpointServiceConfigurationRequest::ModifyVpcEndpointServiceConfigurat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationRequest object.
  */
 ModifyVpcEndpointServiceConfigurationRequest::ModifyVpcEndpointServiceConfigurationRequest()
@@ -53,13 +60,16 @@ ModifyVpcEndpointServiceConfigurationRequest::ModifyVpcEndpointServiceConfigurat
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyVpcEndpointServiceConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyVpcEndpointServiceConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServiceConfigurationRequest:
     return new ModifyVpcEndpointServiceConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyVpcEndpointServiceConfigurationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServiceConfigurationRequest:
  * @brief  Private implementation for ModifyVpcEndpointServiceConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyVpcEndpointServiceConfigurationRequestPrivate::ModifyVpcEndpointServiceCon
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationRequestPrivate object, copying another.

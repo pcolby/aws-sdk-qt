@@ -87,40 +87,48 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ECS
+ * \brief The QtAws::ECS contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ECS {
 
-/**
- * @class  EcsClient
+/*!
+ * \class QtAws::ECS::EcsClient
  *
- * @brief  Client for Amazon EC2 Container Service ( ECS)
+ * \brief The EcsClient class provides access the Amazon EC2 Container Service ( ECS) service.
  *
- * Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
- * easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
- * that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
- * can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
- * launch type. For more information about launch types, see <a
- * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ * \ingroup ECS
  *
- * Types</a>>
- *
- * Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
- * your cluster from a centralized service, and gives you access to many familiar Amazon EC2
- *
- * features>
- *
- * You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
- * isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
- * management and configuration management systems or worry about scaling your management
+ *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
+ *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
+ *  that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
+ *  can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
+ *  launch type. For more information about launch types, see <a
+ *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ * 
+ *  Types</a>>
+ * 
+ *  Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
+ *  your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ * 
+ *  features>
+ * 
+ *  You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
+ *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
+ *  management and configuration management systems or worry about scaling your management
  */
 
-/**
- * @brief  Constructs a new EcsClient object.
+/*!
+ * \brief Constructs a EcsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 EcsClient::EcsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -139,21 +147,16 @@ EcsClient::EcsClient(
     d->serviceName = QStringLiteral("ecs");
 }
 
-/**
- * @brief  Constructs a new EcsClient object.
+/*!
+ * \overload EcsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 EcsClient::EcsClient(
     const QUrl &endpoint,
@@ -172,7 +175,7 @@ EcsClient::EcsClient(
     d->serviceName = QStringLiteral("ecs");
 }
 
-/**
+/*!
  * Creates a new Amazon ECS cluster. By default, your account receives a <code>default</code> cluster when you launch your
  * first container instance. However, you can create your own cluster with a unique name with the
  * <code>CreateCluster</code>
@@ -196,7 +199,7 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
     return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Runs and maintains a desired number of tasks from a specified task definition. If the number of tasks running in a
  * service drops below <code>desiredCount</code>, Amazon ECS spawns another copy of the task in the specified cluster. To
  * update an existing service, see
@@ -273,7 +276,7 @@ CreateServiceResponse * EcsClient::createService(const CreateServiceRequest &req
     return qobject_cast<CreateServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes one or more custom attributes from an Amazon ECS
  *
  * @param  request Request to send to Amazon EC2 Container Service.
@@ -287,7 +290,7 @@ DeleteAttributesResponse * EcsClient::deleteAttributes(const DeleteAttributesReq
     return qobject_cast<DeleteAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified cluster. You must deregister all container instances from this cluster before you may delete it.
  * You can list the container instances in a cluster with <a>ListContainerInstances</a> and deregister them with
  *
@@ -302,7 +305,7 @@ DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &req
     return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified service within a cluster. You can delete a service if you have no running tasks in it and the
  * desired task count is zero. If the service is actively maintaining tasks, you cannot delete it, and you must update the
  * service to a desired task count of zero. For more information, see
@@ -328,7 +331,7 @@ DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &req
     return qobject_cast<DeleteServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters an Amazon ECS container instance from the specified cluster. This instance is no longer available to run
  *
  * tasks>
@@ -357,7 +360,7 @@ DeregisterContainerInstanceResponse * EcsClient::deregisterContainerInstance(con
     return qobject_cast<DeregisterContainerInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters the specified task definition by family and revision. Upon deregistration, the task definition is marked as
  * <code>INACTIVE</code>. Existing tasks and services that reference an <code>INACTIVE</code> task definition continue to
  * run without disruption. Existing services that reference an <code>INACTIVE</code> task definition can still scale up or
@@ -386,7 +389,7 @@ DeregisterTaskDefinitionResponse * EcsClient::deregisterTaskDefinition(const Der
     return qobject_cast<DeregisterTaskDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes one or more of your
  *
  * @param  request Request to send to Amazon EC2 Container Service.
@@ -400,7 +403,7 @@ DescribeClustersResponse * EcsClient::describeClusters(const DescribeClustersReq
     return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes Amazon Elastic Container Service container instances. Returns metadata about registered and remaining
  * resources on each container instance
  *
@@ -415,7 +418,7 @@ DescribeContainerInstancesResponse * EcsClient::describeContainerInstances(const
     return qobject_cast<DescribeContainerInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified services running in your
  *
  * @param  request Request to send to Amazon EC2 Container Service.
@@ -429,7 +432,7 @@ DescribeServicesResponse * EcsClient::describeServices(const DescribeServicesReq
     return qobject_cast<DescribeServicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a task definition. You can specify a <code>family</code> and <code>revision</code> to find information about a
  * specific task definition, or you can simply specify the family to find the latest <code>ACTIVE</code> revision in that
  *
@@ -448,7 +451,7 @@ DescribeTaskDefinitionResponse * EcsClient::describeTaskDefinition(const Describ
     return qobject_cast<DescribeTaskDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes a specified task or
  *
  * @param  request Request to send to Amazon EC2 Container Service.
@@ -462,7 +465,7 @@ DescribeTasksResponse * EcsClient::describeTasks(const DescribeTasksRequest &req
     return qobject_cast<DescribeTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * <note>
  *
  * This action is only used by the Amazon ECS agent, and it is not intended for use outside of the
@@ -482,7 +485,7 @@ DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPol
     return qobject_cast<DiscoverPollEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the attributes for Amazon ECS resources within a specified target type and cluster. When you specify a target type
  * and cluster, <code>ListAttributes</code> returns a list of attribute objects, one for each attribute on each resource.
  * You can filter the list of results to a single attribute name to only return results that have that name. You can also
@@ -500,7 +503,7 @@ ListAttributesResponse * EcsClient::listAttributes(const ListAttributesRequest &
     return qobject_cast<ListAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of existing
  *
  * @param  request Request to send to Amazon EC2 Container Service.
@@ -514,7 +517,7 @@ ListClustersResponse * EcsClient::listClusters(const ListClustersRequest &reques
     return qobject_cast<ListClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of container instances in a specified cluster. You can filter the results of a
  * <code>ListContainerInstances</code> operation with cluster query language statements inside the <code>filter</code>
  * parameter. For more information, see <a
@@ -532,7 +535,7 @@ ListContainerInstancesResponse * EcsClient::listContainerInstances(const ListCon
     return qobject_cast<ListContainerInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the services that are running in a specified
  *
  * @param  request Request to send to Amazon EC2 Container Service.
@@ -546,7 +549,7 @@ ListServicesResponse * EcsClient::listServices(const ListServicesRequest &reques
     return qobject_cast<ListServicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of task definition families that are registered to your account (which may include task definition
  * families that no longer have any <code>ACTIVE</code> task definition
  *
@@ -567,7 +570,7 @@ ListTaskDefinitionFamiliesResponse * EcsClient::listTaskDefinitionFamilies(const
     return qobject_cast<ListTaskDefinitionFamiliesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of task definitions that are registered to your account. You can filter the results by family name with
  * the <code>familyPrefix</code> parameter or by status with the <code>status</code>
  *
@@ -582,7 +585,7 @@ ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefin
     return qobject_cast<ListTaskDefinitionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of tasks for a specified cluster. You can filter the results by family name, by a particular container
  * instance, or by the desired status of the task with the <code>family</code>, <code>containerInstance</code>, and
  * <code>desiredStatus</code>
@@ -603,7 +606,7 @@ ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
     return qobject_cast<ListTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Create or update an attribute on an Amazon ECS resource. If the attribute does not exist, it is created. If the
  * attribute exists, its value is replaced with the specified value. To delete an attribute, use <a>DeleteAttributes</a>.
  * For more information, see <a
@@ -621,7 +624,7 @@ PutAttributesResponse * EcsClient::putAttributes(const PutAttributesRequest &req
     return qobject_cast<PutAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * <note>
  *
  * This action is only used by the Amazon ECS agent, and it is not intended for use outside of the
@@ -641,7 +644,7 @@ RegisterContainerInstanceResponse * EcsClient::registerContainerInstance(const R
     return qobject_cast<RegisterContainerInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Registers a new task definition from the supplied <code>family</code> and <code>containerDefinitions</code>. Optionally,
  * you can add data volumes to your containers with the <code>volumes</code> parameter. For more information about task
  * definition parameters and defaults, see <a
@@ -677,7 +680,7 @@ RegisterTaskDefinitionResponse * EcsClient::registerTaskDefinition(const Registe
     return qobject_cast<RegisterTaskDefinitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a new task using the specified task
  *
  * definition>
@@ -726,7 +729,7 @@ RunTaskResponse * EcsClient::runTask(const RunTaskRequest &request)
     return qobject_cast<RunTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts a new task from the specified task definition on the specified container instance or
  *
  * instances>
@@ -746,7 +749,7 @@ StartTaskResponse * EcsClient::startTask(const StartTaskRequest &request)
     return qobject_cast<StartTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops a running
  *
  * task>
@@ -774,7 +777,7 @@ StopTaskResponse * EcsClient::stopTask(const StopTaskRequest &request)
     return qobject_cast<StopTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * <note>
  *
  * This action is only used by the Amazon ECS agent, and it is not intended for use outside of the
@@ -794,7 +797,7 @@ SubmitContainerStateChangeResponse * EcsClient::submitContainerStateChange(const
     return qobject_cast<SubmitContainerStateChangeResponse *>(send(request));
 }
 
-/**
+/*!
  * <note>
  *
  * This action is only used by the Amazon ECS agent, and it is not intended for use outside of the
@@ -814,7 +817,7 @@ SubmitTaskStateChangeResponse * EcsClient::submitTaskStateChange(const SubmitTas
     return qobject_cast<SubmitTaskStateChangeResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the Amazon ECS container agent on a specified container instance. Updating the Amazon ECS container agent does
  * not interrupt running tasks or services on the container instance. The process for updating the agent differs depending
  * on whether your container instance was launched with the Amazon ECS-optimized AMI or another operating
@@ -837,7 +840,7 @@ UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateConta
     return qobject_cast<UpdateContainerAgentResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the status of an Amazon ECS container
  *
  * instance>
@@ -901,7 +904,7 @@ UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState
     return qobject_cast<UpdateContainerInstancesStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the desired count, deployment configuration, network configuration, or task definition used in a
  *
  * service>
@@ -1003,7 +1006,7 @@ UpdateServiceResponse * EcsClient::updateService(const UpdateServiceRequest &req
     return qobject_cast<UpdateServiceResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  EcsClientPrivate
@@ -1011,7 +1014,7 @@ UpdateServiceResponse * EcsClient::updateService(const UpdateServiceRequest &req
  * @brief  Private implementation for EcsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EcsClientPrivate object.

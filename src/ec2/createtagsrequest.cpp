@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateTagsRequest
+/*!
+ * \class QtAws::EC2::CreateTagsRequest
  *
- * @brief  Implements EC2 CreateTags requests.
+ * \brief The CreateTagsRequest class encapsulates EC2 CreateTags requests.
  *
- * @see    EC2Client::createTags
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
@@ -53,13 +60,16 @@ CreateTagsRequest::CreateTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
     return new CreateTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTagsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsRequestPrivate object.
@@ -97,7 +107,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkInterfacePermissionResponse
+/*!
+ * \class QtAws::EC2::DeleteNetworkInterfacePermissionResponse
  *
- * @brief  Handles EC2 DeleteNetworkInterfacePermission responses.
+ * \brief The DeleteNetworkInterfacePermissionResponse class encapsulates EC2 DeleteNetworkInterfacePermission responses.
  *
- * @see    EC2Client::deleteNetworkInterfacePermission
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkInterfacePermission
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkInterfacePermissionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteNetworkInterfacePermissionRequest * DeleteNetworkInterfacePermission
     return static_cast<const DeleteNetworkInterfacePermissionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteNetworkInterfacePermission response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNetworkInterfacePermissionResponsePrivate
+ * \class DeleteNetworkInterfacePermissionResponsePrivate
  *
- * @brief  Private implementation for DeleteNetworkInterfacePermissionResponse.
+ * \brief Private implementation for DeleteNetworkInterfacePermissionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkInterfacePermissionResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissio
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteNetworkInterfacePermissionResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVolumeRequest
+/*!
+ * \class QtAws::EC2::CreateVolumeRequest
  *
- * @brief  Implements EC2 CreateVolume requests.
+ * \brief The CreateVolumeRequest class encapsulates EC2 CreateVolume requests.
  *
- * @see    EC2Client::createVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVolumeRequest object.
  */
 CreateVolumeRequest::CreateVolumeRequest()
@@ -53,13 +60,16 @@ CreateVolumeRequest::CreateVolumeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVolumeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVolumeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateVolumeRequest::response(QNetworkReply *
     return new CreateVolumeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVolumeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVolumeRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateVolumeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVolumeRequestPrivate object.
@@ -97,7 +107,7 @@ CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVolumeRequestPrivate object, copying another.

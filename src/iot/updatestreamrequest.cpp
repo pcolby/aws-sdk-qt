@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  UpdateStreamRequest
+/*!
+ * \class QtAws::IoT::UpdateStreamRequest
  *
- * @brief  Implements IoT UpdateStream requests.
+ * \brief The UpdateStreamRequest class encapsulates IoT UpdateStream requests.
  *
- * @see    IoTClient::updateStream
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::updateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UpdateStreamRequest::UpdateStreamRequest(const UpdateStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamRequest object.
  */
 UpdateStreamRequest::UpdateStreamRequest()
@@ -53,13 +67,16 @@ UpdateStreamRequest::UpdateStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
     return new UpdateStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateStreamRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamRequestPrivate object.
@@ -97,7 +114,7 @@ UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamRequestPrivate object, copying another.

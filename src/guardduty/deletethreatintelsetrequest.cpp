@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteThreatIntelSetRequest
+/*!
+ * \class QtAws::GuardDuty::DeleteThreatIntelSetRequest
  *
- * @brief  Implements GuardDuty DeleteThreatIntelSet requests.
+ * \brief The DeleteThreatIntelSetRequest class encapsulates GuardDuty DeleteThreatIntelSet requests.
  *
- * @see    GuardDutyClient::deleteThreatIntelSet
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteThreatIntelSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteThreatIntelSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteThreatIntelSetRequest::DeleteThreatIntelSetRequest(const DeleteThreatIntel
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteThreatIntelSetRequest object.
  */
 DeleteThreatIntelSetRequest::DeleteThreatIntelSetRequest()
@@ -53,13 +56,16 @@ DeleteThreatIntelSetRequest::DeleteThreatIntelSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteThreatIntelSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteThreatIntelSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetwor
     return new DeleteThreatIntelSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteThreatIntelSetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetwor
  * @brief  Private implementation for DeleteThreatIntelSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThreatIntelSetRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteThreatIntelSetRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  DeleteRunRequest
+/*!
+ * \class QtAws::DeviceFarm::DeleteRunRequest
  *
- * @brief  Implements DeviceFarm DeleteRun requests.
+ * \brief The DeleteRunRequest class encapsulates DeviceFarm DeleteRun requests.
  *
- * @see    DeviceFarmClient::deleteRun
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::deleteRun
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteRunRequest::DeleteRunRequest(const DeleteRunRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRunRequest object.
  */
 DeleteRunRequest::DeleteRunRequest()
@@ -53,13 +58,16 @@ DeleteRunRequest::DeleteRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRunRequest::response(QNetworkReply * co
     return new DeleteRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRunRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRunRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRunRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteRunRequestPrivate::DeleteRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRunRequestPrivate object, copying another.

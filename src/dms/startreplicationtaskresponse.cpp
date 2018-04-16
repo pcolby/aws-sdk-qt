@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  StartReplicationTaskResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskResponse
  *
- * @brief  Handles DatabaseMigrationService StartReplicationTask responses.
+ * \brief The StartReplicationTaskResponse class encapsulates DatabaseMigrationService StartReplicationTask responses.
  *
- * @see    DatabaseMigrationServiceClient::startReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::startReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new StartReplicationTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const StartReplicationTaskRequest * StartReplicationTaskResponse::request() cons
     return static_cast<const StartReplicationTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService StartReplicationTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartReplicationTaskResponsePrivate
+ * \class StartReplicationTaskResponsePrivate
  *
- * @brief  Private implementation for StartReplicationTaskResponse.
+ * \brief Private implementation for StartReplicationTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartReplicationTaskResponsePrivate object.
@@ -91,7 +105,7 @@ StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService StartReplicationTaskResponse element.
  *
  * @param  xml  XML stream to parse.

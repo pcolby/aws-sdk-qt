@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  UntagResourceRequest
+/*!
+ * \class QtAws::CloudHSMV2::UntagResourceRequest
  *
- * @brief  Implements CloudHSMV2 UntagResource requests.
+ * \brief The UntagResourceRequest class encapsulates CloudHSMV2 UntagResource requests.
  *
- * @see    CloudHSMV2Client::untagResource
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
@@ -53,13 +58,16 @@ UntagResourceRequest::UntagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
     return new UntagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagResourceRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  * @brief  Private implementation for UntagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object.
@@ -97,7 +105,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.

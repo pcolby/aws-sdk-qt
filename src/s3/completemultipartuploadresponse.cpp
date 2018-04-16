@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CompleteMultipartUploadResponse
+/*!
+ * \class QtAws::S3::CompleteMultipartUploadResponse
  *
- * @brief  Handles S3 CompleteMultipartUpload responses.
+ * \brief The CompleteMultipartUploadResponse class encapsulates S3 CompleteMultipartUpload responses.
  *
- * @see    S3Client::completeMultipartUpload
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::completeMultipartUpload
  */
 
-/**
+/*!
  * @brief  Constructs a new CompleteMultipartUploadResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CompleteMultipartUploadRequest * CompleteMultipartUploadResponse::request(
     return static_cast<const CompleteMultipartUploadRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 CompleteMultipartUpload response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CompleteMultipartUploadResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CompleteMultipartUploadResponsePrivate
+ * \class CompleteMultipartUploadResponsePrivate
  *
- * @brief  Private implementation for CompleteMultipartUploadResponse.
+ * \brief Private implementation for CompleteMultipartUploadResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompleteMultipartUploadResponsePrivate object.
@@ -91,7 +94,7 @@ CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 CompleteMultipartUploadResponse element.
  *
  * @param  xml  XML stream to parse.

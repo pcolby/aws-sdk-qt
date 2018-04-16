@@ -23,14 +23,15 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  Route53Request
+/*!
+ * \class QtAws::Route53::Route53Request
  *
- * @brief  Interface class for providing Route53 requests
+ * \brief The Route53Request class is the base class for all Route53 requests.
+ *
+ * \ingroup Route53
  */
 
-
-/**
+/*!
  * @brief  Constructs a new Route53Request object.
  *
  * @param  action  The Route53 action to request.
@@ -41,7 +42,7 @@ Route53Request::Route53Request(const Action action)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new Route53Request object by copying another.
  *
  * @param  other  Instance to copy.
@@ -52,7 +53,7 @@ Route53Request::Route53Request(const Route53Request &other)
 
 }
 
-/**
+/*!
  * @brief  Assignment operator.
  *
  * Assigns \a other to \c this.
@@ -70,7 +71,7 @@ Route53Request& Route53Request::operator=(const Route53Request &other)
     return *this;
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Route53Request object.
@@ -85,10 +86,8 @@ Route53Request::Route53Request(Route53RequestPrivate * const d) : QtAws::Core::A
 
 }
 
-/**
- * @brief  Get the Route53 action to be performed by this request.
- *
- * @return The Route53 action to be performed by this request.
+/*!
+ * \brief Returns the Route53 action to be performed by this request.
  */
 Route53Request::Action Route53Request::action() const
 {
@@ -96,20 +95,16 @@ Route53Request::Action Route53Request::action() const
     return d->action;
 }
 
-/**
- * @brief Get the name of the Route53 action to be performed by this request.
- *
- * @return The name of the Route53 action to be performed by this request.
+/*!
+ * \brief Returns the name of the Route53 action to be performed by this request.
  */
 QString Route53Request::actionString() const
 {
     return Route53RequestPrivate::toString(action());
 }
 
-/**
- * @brief  Get the Route53 API version implemented by this request.
- *
- * @return The Route53 API version implmented by this request.
+/*!
+ * \brief Returns the Route53 API version implemented by this request.
  */
 QString Route53Request::apiVersion() const
 {
@@ -117,10 +112,8 @@ QString Route53Request::apiVersion() const
     return d->apiVersion;
 }
 
-/**
- * @brief  Set the Route53 action to be performed by this request.
- *
- * @param  action  The action to be performed by this request.
+/*!
+ * @brief Set the Route53 action to be performed by this request to \a action.
  */
 void Route53Request::setAction(const Action action)
 {
@@ -128,10 +121,8 @@ void Route53Request::setAction(const Action action)
     d->action = action;
 }
 
-/**
- * @brief  Set the Route53 API version to include in this request.
- *
- * @param  version  The Route53 API version to include in this request.
+/*!
+ * Set the Route53 API version to include in this request to \a version.
  */
 void Route53Request::setApiVersion(const QString &version)
 {
@@ -139,17 +130,13 @@ void Route53Request::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
-/**
- * @brief  Equality operator.
+/*!
+ * \brief Returns \c true if this request is the same as \a other.
  *
  * Note, most derived *Request classes do not need to provider their own
  * implementations of this function, since most such request classes rely on
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
- *
- * @param  other  Instance to compare \c this to.
- *
- * @return \c true if \c this and \a other are considered equal.
  */
 bool Route53Request::operator==(const Route53Request &other) const
 {
@@ -159,7 +146,7 @@ bool Route53Request::operator==(const Route53Request &other) const
             (QtAws::Core::AwsAbstractRequest::operator ==(other)));
 }
 
-/**
+/*!
  * @brief  Check if \a queueName is a valid Route53 queue name.
  *
  * @par From Route53 FAQs:
@@ -178,12 +165,10 @@ bool Route53Request::operator==(const Route53Request &other) const
     return pattern.exactMatch(queueName);
 }*/
 
-/**
- * @brief  Remove a parameter from the parameters to be included with this request.
+/*!
+ * \brief Removes the a \a name parameter from this request.
  *
- * @param  name  Name of the parameter to remove.
- *
- * @return Count of parameters removed (should be 0 or 1).
+ * Returns the count of paramters removed (typically \c 0 or \c 1).
  */
 int Route53Request::clearParameter(const QString &name)
 {
@@ -191,8 +176,8 @@ int Route53Request::clearParameter(const QString &name)
     return d->parameters.remove(name);
 }
 
-/**
- * @brief  Clear all parameters that were to be included with this request.
+/*!
+ * \brief Removes all parameters from this request.
  */
 void Route53Request::clearParameters()
 {
@@ -200,13 +185,8 @@ void Route53Request::clearParameters()
     d->parameters.clear();
 }
 
-/**
- * @brief  Get the value of a parameter included with this Route53 request.
- *
- * @param name          Name of the parameter to get the value of.
- * @param defaultValue  Default value to return if no such parameter has been set.
- *
- * @return The value of the specified parameter, or \a defaultValue of not set.
+/*!
+ * \brief Returns the value of the \n name pararemter if set, otherwise \a defaultValue.
  */
 QVariant Route53Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
@@ -214,10 +194,8 @@ QVariant Route53Request::parameter(const QString &name, const QVariant &defaultV
     return d->parameters.value(name, defaultValue);
 }
 
-/**
- * @brief  Get all parameters included with this Route53 request.
- *
- * @return A map of parameters included with this request.
+/*!
+ * \brief Returns a map of parameters included in this request.
  */
 const QVariantMap &Route53Request::parameters() const
 {
@@ -225,11 +203,8 @@ const QVariantMap &Route53Request::parameters() const
     return d->parameters;
 }
 
-/**
- * @brief  Set a parameter to include with this Route53 request.
- *
- * @param  name   Name of the parameter to include.
- * @param  value  Value of the parameter to include.
+/*!
+ * \brief Sets the \a name parameter to \a value.
  */
 void Route53Request::setParameter(const QString &name, const QVariant &value)
 {
@@ -237,12 +212,10 @@ void Route53Request::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-/**
- * @brief  Set all parameters to include with this Route53 request.
+/*!
+ * \brief Sets the map of paramters for this request to \a parameters.
  *
  * Any request parameters set previously will be discarded.
- *
- * @param  parameters  New request parameters to inclued with this request.
  */
 void Route53Request::setParameters(const QVariantMap &parameters)
 {
@@ -250,16 +223,12 @@ void Route53Request::setParameters(const QVariantMap &parameters)
     d->parameters = parameters;
 }
 
-/**
- * @brief  Build a network request object for this Route53 request.
+/*!
+ * \brief Returns a network request for this Route53 request using the given \a endpoint.
  *
  * This Route53 implementation builds request URLs by combining the common query
  * parameters (such as Action and Version), with any that have been added (via
  * setParameter) by child classes.
- *
- * @param  endpoint  AWS endpoint to build this request for.
- *
- * @return A network request for this Route53 request using the given \a endpoint.
  */
 QNetworkRequest Route53Request::unsignedRequest(const QUrl &endpoint) const
 {
@@ -269,21 +238,18 @@ QNetworkRequest Route53Request::unsignedRequest(const QUrl &endpoint) const
     return QNetworkRequest(url);
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  Route53RequestPrivate
+ * \class  Route53RequestPrivate
  *
- * @brief  Private implementation for Route53Request.
+ * \brief  Private implementation for Route53Request.
  */
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new Route53RequestPrivate object.
- *
- * @param  action  Route53 action being performed by the \a q request.
- * @param  q       Pointer to this object's public Route53Request instance.
+ * \brief Constructs a new Route53RequestPrivate object.
  */
 Route53RequestPrivate::Route53RequestPrivate(const Route53Request::Action action, Route53Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
@@ -291,18 +257,15 @@ Route53RequestPrivate::Route53RequestPrivate(const Route53Request::Action action
 
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @brief  Constructs a new Route53RequestPrivate object from an existing one.
+ * \brief Constructs a new Route53RequestPrivate object, copying an existing one.
  *
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
  * This is required to support the Route53Request class's copy constructor.
- *
- * @param  other  Instance to copy.
- * @param  q      Pointer to this object's public Route53Request instance.
  */
 Route53RequestPrivate::Route53RequestPrivate(const Route53RequestPrivate &other,
                                      Route53Request * const q)
@@ -312,14 +275,14 @@ Route53RequestPrivate::Route53RequestPrivate(const Route53RequestPrivate &other,
 
 }
 
-/**
- * @brief  Convert and Route53 action to a string.
+/*!
+ * \internal
+ *
+ * \brief Returns a string representing \a action.
  *
  * This function converts Route53Request::Action enumerator values to their respective
  * string representations, appropriate for use with the Route53 service's Action
  * query parameters.
- *
- * @param  action  Route53 action to convert.
  *
  * @return A string representing \a action, or a null string if \a action is invalid.
  */

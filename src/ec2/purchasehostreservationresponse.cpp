@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  PurchaseHostReservationResponse
+/*!
+ * \class QtAws::EC2::PurchaseHostReservationResponse
  *
- * @brief  Handles EC2 PurchaseHostReservation responses.
+ * \brief The PurchaseHostReservationResponse class encapsulates EC2 PurchaseHostReservation responses.
  *
- * @see    EC2Client::purchaseHostReservation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::purchaseHostReservation
  */
 
-/**
+/*!
  * @brief  Constructs a new PurchaseHostReservationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const PurchaseHostReservationRequest * PurchaseHostReservationResponse::request(
     return static_cast<const PurchaseHostReservationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 PurchaseHostReservation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void PurchaseHostReservationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PurchaseHostReservationResponsePrivate
+ * \class PurchaseHostReservationResponsePrivate
  *
- * @brief  Private implementation for PurchaseHostReservationResponse.
+ * \brief Private implementation for PurchaseHostReservationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PurchaseHostReservationResponsePrivate object.
@@ -91,7 +98,7 @@ PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 PurchaseHostReservationResponse element.
  *
  * @param  xml  XML stream to parse.

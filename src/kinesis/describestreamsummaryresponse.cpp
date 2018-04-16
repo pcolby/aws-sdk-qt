@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DescribeStreamSummaryResponse
+/*!
+ * \class QtAws::Kinesis::DescribeStreamSummaryResponse
  *
- * @brief  Handles Kinesis DescribeStreamSummary responses.
+ * \brief The DescribeStreamSummaryResponse class encapsulates Kinesis DescribeStreamSummary responses.
  *
- * @see    KinesisClient::describeStreamSummary
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::describeStreamSummary
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamSummaryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeStreamSummaryRequest * DescribeStreamSummaryResponse::request() co
     return static_cast<const DescribeStreamSummaryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis DescribeStreamSummary response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeStreamSummaryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeStreamSummaryResponsePrivate
+ * \class DescribeStreamSummaryResponsePrivate
  *
- * @brief  Private implementation for DescribeStreamSummaryResponse.
+ * \brief Private implementation for DescribeStreamSummaryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamSummaryResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis DescribeStreamSummaryResponse element.
  *
  * @param  xml  XML stream to parse.

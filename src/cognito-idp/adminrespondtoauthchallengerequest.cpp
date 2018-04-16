@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminRespondToAuthChallengeRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminRespondToAuthChallenge requests.
+ * \brief The AdminRespondToAuthChallengeRequest class encapsulates CognitoIdentityProvider AdminRespondToAuthChallenge requests.
  *
- * @see    CognitoIdentityProviderClient::adminRespondToAuthChallenge
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminRespondToAuthChallenge
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminRespondToAuthChallengeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminRespondToAuthChallengeRequest::AdminRespondToAuthChallengeRequest(const Adm
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminRespondToAuthChallengeRequest object.
  */
 AdminRespondToAuthChallengeRequest::AdminRespondToAuthChallengeRequest()
@@ -53,13 +66,16 @@ AdminRespondToAuthChallengeRequest::AdminRespondToAuthChallengeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminRespondToAuthChallengeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminRespondToAuthChallengeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(
     return new AdminRespondToAuthChallengeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminRespondToAuthChallengeRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminRespondToAuthChallengeRequest::response(
  * @brief  Private implementation for AdminRespondToAuthChallengeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminRespondToAuthChallengeRequestPrivate object.
@@ -97,7 +113,7 @@ AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminRespondToAuthChallengeRequestPrivate object, copying another.

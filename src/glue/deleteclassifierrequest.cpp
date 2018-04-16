@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteClassifierRequest
+/*!
+ * \class QtAws::Glue::DeleteClassifierRequest
  *
- * @brief  Implements Glue DeleteClassifier requests.
+ * \brief The DeleteClassifierRequest class encapsulates Glue DeleteClassifier requests.
  *
- * @see    GlueClient::deleteClassifier
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteClassifier
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteClassifierRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteClassifierRequest::DeleteClassifierRequest(const DeleteClassifierRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteClassifierRequest object.
  */
 DeleteClassifierRequest::DeleteClassifierRequest()
@@ -53,13 +59,16 @@ DeleteClassifierRequest::DeleteClassifierRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteClassifierRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteClassifierResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClassifierRequest::response(QNetworkRep
     return new DeleteClassifierResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteClassifierRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteClassifierRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteClassifierRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClassifierRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteClassifierRequestPrivate object, copying another.

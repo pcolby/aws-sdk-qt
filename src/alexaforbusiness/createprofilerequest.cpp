@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  CreateProfileRequest
+/*!
+ * \class QtAws::AlexaForBusiness::CreateProfileRequest
  *
- * @brief  Implements AlexaForBusiness CreateProfile requests.
+ * \brief The CreateProfileRequest class encapsulates AlexaForBusiness CreateProfile requests.
  *
- * @see    AlexaForBusinessClient::createProfile
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::createProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateProfileRequest::CreateProfileRequest(const CreateProfileRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateProfileRequest object.
  */
 CreateProfileRequest::CreateProfileRequest()
@@ -53,13 +61,16 @@ CreateProfileRequest::CreateProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateProfileRequest::response(QNetworkReply 
     return new CreateProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateProfileRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProfileRequestPrivate object.
@@ -97,7 +108,7 @@ CreateProfileRequestPrivate::CreateProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateProfileRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteLaunchConfigurationResponse
+/*!
+ * \class QtAws::AutoScaling::DeleteLaunchConfigurationResponse
  *
- * @brief  Handles AutoScaling DeleteLaunchConfiguration responses.
+ * \brief The DeleteLaunchConfigurationResponse class encapsulates AutoScaling DeleteLaunchConfiguration responses.
  *
- * @see    AutoScalingClient::deleteLaunchConfiguration
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteLaunchConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLaunchConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteLaunchConfigurationRequest * DeleteLaunchConfigurationResponse::requ
     return static_cast<const DeleteLaunchConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DeleteLaunchConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteLaunchConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteLaunchConfigurationResponsePrivate
+ * \class DeleteLaunchConfigurationResponsePrivate
  *
- * @brief  Private implementation for DeleteLaunchConfigurationResponse.
+ * \brief Private implementation for DeleteLaunchConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLaunchConfigurationResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DeleteLaunchConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

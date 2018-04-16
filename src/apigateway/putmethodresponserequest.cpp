@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  PutMethodResponseRequest
+/*!
+ * \class QtAws::APIGateway::PutMethodResponseRequest
  *
- * @brief  Implements APIGateway PutMethodResponse requests.
+ * \brief The PutMethodResponseRequest class encapsulates APIGateway PutMethodResponse requests.
  *
- * @see    APIGatewayClient::putMethodResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::putMethodResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new PutMethodResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutMethodResponseRequest::PutMethodResponseRequest(const PutMethodResponseReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutMethodResponseRequest object.
  */
 PutMethodResponseRequest::PutMethodResponseRequest()
@@ -53,13 +61,16 @@ PutMethodResponseRequest::PutMethodResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutMethodResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutMethodResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutMethodResponseRequest::response(QNetworkRe
     return new PutMethodResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutMethodResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutMethodResponseRequest::response(QNetworkRe
  * @brief  Private implementation for PutMethodResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutMethodResponseRequestPrivate object.
@@ -97,7 +108,7 @@ PutMethodResponseRequestPrivate::PutMethodResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutMethodResponseRequestPrivate object, copying another.

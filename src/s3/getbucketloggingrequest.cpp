@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketLoggingRequest
+/*!
+ * \class QtAws::S3::GetBucketLoggingRequest
  *
- * @brief  Implements S3 GetBucketLogging requests.
+ * \brief The GetBucketLoggingRequest class encapsulates S3 GetBucketLogging requests.
  *
- * @see    S3Client::getBucketLogging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketLogging
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLoggingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketLoggingRequest::GetBucketLoggingRequest(const GetBucketLoggingRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLoggingRequest object.
  */
 GetBucketLoggingRequest::GetBucketLoggingRequest()
@@ -53,13 +56,16 @@ GetBucketLoggingRequest::GetBucketLoggingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketLoggingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketLoggingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLoggingRequest::response(QNetworkRep
     return new GetBucketLoggingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketLoggingRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLoggingRequest::response(QNetworkRep
  * @brief  Private implementation for GetBucketLoggingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLoggingRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketLoggingRequestPrivate::GetBucketLoggingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLoggingRequestPrivate object, copying another.

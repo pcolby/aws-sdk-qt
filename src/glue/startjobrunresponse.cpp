@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StartJobRunResponse
+/*!
+ * \class QtAws::Glue::StartJobRunResponse
  *
- * @brief  Handles Glue StartJobRun responses.
+ * \brief The StartJobRunResponse class encapsulates Glue StartJobRun responses.
  *
- * @see    GlueClient::startJobRun
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::startJobRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StartJobRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartJobRunRequest * StartJobRunResponse::request() const
     return static_cast<const StartJobRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue StartJobRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartJobRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartJobRunResponsePrivate
+ * \class StartJobRunResponsePrivate
  *
- * @brief  Private implementation for StartJobRunResponse.
+ * \brief Private implementation for StartJobRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartJobRunResponsePrivate object.
@@ -91,7 +97,7 @@ StartJobRunResponsePrivate::StartJobRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue StartJobRunResponse element.
  *
  * @param  xml  XML stream to parse.

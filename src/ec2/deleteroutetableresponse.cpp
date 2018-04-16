@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteRouteTableResponse
+/*!
+ * \class QtAws::EC2::DeleteRouteTableResponse
  *
- * @brief  Handles EC2 DeleteRouteTable responses.
+ * \brief The DeleteRouteTableResponse class encapsulates EC2 DeleteRouteTable responses.
  *
- * @see    EC2Client::deleteRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRouteTableResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteRouteTableRequest * DeleteRouteTableResponse::request() const
     return static_cast<const DeleteRouteTableRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteRouteTable response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteRouteTableResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRouteTableResponsePrivate
+ * \class DeleteRouteTableResponsePrivate
  *
- * @brief  Private implementation for DeleteRouteTableResponse.
+ * \brief Private implementation for DeleteRouteTableResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRouteTableResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteRouteTableResponsePrivate::DeleteRouteTableResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteRouteTableResponse element.
  *
  * @param  xml  XML stream to parse.

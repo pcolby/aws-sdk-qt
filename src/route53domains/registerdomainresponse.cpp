@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  RegisterDomainResponse
+/*!
+ * \class QtAws::Route53Domains::RegisterDomainResponse
  *
- * @brief  Handles Route53Domains RegisterDomain responses.
+ * \brief The RegisterDomainResponse class encapsulates Route53Domains RegisterDomain responses.
  *
- * @see    Route53DomainsClient::registerDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::registerDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const RegisterDomainRequest * RegisterDomainResponse::request() const
     return static_cast<const RegisterDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains RegisterDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterDomainResponsePrivate
+ * \class RegisterDomainResponsePrivate
  *
- * @brief  Private implementation for RegisterDomainResponse.
+ * \brief Private implementation for RegisterDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterDomainResponsePrivate object.
@@ -91,7 +95,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains RegisterDomainResponse element.
  *
  * @param  xml  XML stream to parse.

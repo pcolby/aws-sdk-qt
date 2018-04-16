@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachNetworkInterfaceRequest
+/*!
+ * \class QtAws::EC2::AttachNetworkInterfaceRequest
  *
- * @brief  Implements EC2 AttachNetworkInterface requests.
+ * \brief The AttachNetworkInterfaceRequest class encapsulates EC2 AttachNetworkInterface requests.
  *
- * @see    EC2Client::attachNetworkInterface
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachNetworkInterface
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachNetworkInterfaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest(const AttachNetwork
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachNetworkInterfaceRequest object.
  */
 AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest()
@@ -53,13 +60,16 @@ AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachNetworkInterfaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachNetworkInterfaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetw
     return new AttachNetworkInterfaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachNetworkInterfaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetw
  * @brief  Private implementation for AttachNetworkInterfaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachNetworkInterfaceRequestPrivate object.
@@ -97,7 +107,7 @@ AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachNetworkInterfaceRequestPrivate object, copying another.

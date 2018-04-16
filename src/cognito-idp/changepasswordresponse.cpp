@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ChangePasswordResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ChangePasswordResponse
  *
- * @brief  Handles CognitoIdentityProvider ChangePassword responses.
+ * \brief The ChangePasswordResponse class encapsulates CognitoIdentityProvider ChangePassword responses.
  *
- * @see    CognitoIdentityProviderClient::changePassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::changePassword
  */
 
-/**
+/*!
  * @brief  Constructs a new ChangePasswordResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ChangePasswordRequest * ChangePasswordResponse::request() const
     return static_cast<const ChangePasswordRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ChangePassword response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ChangePasswordResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ChangePasswordResponsePrivate
+ * \class ChangePasswordResponsePrivate
  *
- * @brief  Private implementation for ChangePasswordResponse.
+ * \brief Private implementation for ChangePasswordResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ChangePasswordResponsePrivate object.
@@ -91,7 +104,7 @@ ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ChangePasswordResponse element.
  *
  * @param  xml  XML stream to parse.

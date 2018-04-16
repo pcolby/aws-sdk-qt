@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  VerifySoftwareTokenRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenRequest
  *
- * @brief  Implements CognitoIdentityProvider VerifySoftwareToken requests.
+ * \brief The VerifySoftwareTokenRequest class encapsulates CognitoIdentityProvider VerifySoftwareToken requests.
  *
- * @see    CognitoIdentityProviderClient::verifySoftwareToken
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::verifySoftwareToken
  */
 
-/**
+/*!
  * @brief  Constructs a new VerifySoftwareTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ VerifySoftwareTokenRequest::VerifySoftwareTokenRequest(const VerifySoftwareToken
 
 }
 
-/**
+/*!
  * @brief  Constructs a new VerifySoftwareTokenRequest object.
  */
 VerifySoftwareTokenRequest::VerifySoftwareTokenRequest()
@@ -53,13 +66,16 @@ VerifySoftwareTokenRequest::VerifySoftwareTokenRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool VerifySoftwareTokenRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an VerifySoftwareTokenResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetwork
     return new VerifySoftwareTokenResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  VerifySoftwareTokenRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetwork
  * @brief  Private implementation for VerifySoftwareTokenRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifySoftwareTokenRequestPrivate object.
@@ -97,7 +113,7 @@ VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new VerifySoftwareTokenRequestPrivate object, copying another.

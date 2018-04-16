@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  DeleteElasticsearchDomainResponse
+/*!
+ * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainResponse
  *
- * @brief  Handles ElasticsearchService DeleteElasticsearchDomain responses.
+ * \brief The DeleteElasticsearchDomainResponse class encapsulates ElasticsearchService DeleteElasticsearchDomain responses.
  *
- * @see    ElasticsearchServiceClient::deleteElasticsearchDomain
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::deleteElasticsearchDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteElasticsearchDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const DeleteElasticsearchDomainRequest * DeleteElasticsearchDomainResponse::requ
     return static_cast<const DeleteElasticsearchDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService DeleteElasticsearchDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void DeleteElasticsearchDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteElasticsearchDomainResponsePrivate
+ * \class DeleteElasticsearchDomainResponsePrivate
  *
- * @brief  Private implementation for DeleteElasticsearchDomainResponse.
+ * \brief Private implementation for DeleteElasticsearchDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteElasticsearchDomainResponsePrivate object.
@@ -91,7 +103,7 @@ DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService DeleteElasticsearchDomainResponse element.
  *
  * @param  xml  XML stream to parse.

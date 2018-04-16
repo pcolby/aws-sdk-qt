@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectTextResponse
+/*!
+ * \class QtAws::Rekognition::DetectTextResponse
  *
- * @brief  Handles Rekognition DetectText responses.
+ * \brief The DetectTextResponse class encapsulates Rekognition DetectText responses.
  *
- * @see    RekognitionClient::detectText
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectText
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectTextResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DetectTextRequest * DetectTextResponse::request() const
     return static_cast<const DetectTextRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition DetectText response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DetectTextResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetectTextResponsePrivate
+ * \class DetectTextResponsePrivate
  *
- * @brief  Private implementation for DetectTextResponse.
+ * \brief Private implementation for DetectTextResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectTextResponsePrivate object.
@@ -91,7 +95,7 @@ DetectTextResponsePrivate::DetectTextResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition DetectTextResponse element.
  *
  * @param  xml  XML stream to parse.

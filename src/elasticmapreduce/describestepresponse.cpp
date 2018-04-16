@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeStepResponse
+/*!
+ * \class QtAws::EMR::DescribeStepResponse
  *
- * @brief  Handles EMR DescribeStep responses.
+ * \brief The DescribeStepResponse class encapsulates EMR DescribeStep responses.
  *
- * @see    EMRClient::describeStep
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeStep
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStepResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeStepRequest * DescribeStepResponse::request() const
     return static_cast<const DescribeStepRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR DescribeStep response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeStepResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeStepResponsePrivate
+ * \class DescribeStepResponsePrivate
  *
- * @brief  Private implementation for DescribeStepResponse.
+ * \brief Private implementation for DescribeStepResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStepResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeStepResponsePrivate::DescribeStepResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR DescribeStepResponse element.
  *
  * @param  xml  XML stream to parse.

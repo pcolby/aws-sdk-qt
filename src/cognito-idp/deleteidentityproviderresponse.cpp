@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteIdentityProviderResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteIdentityProviderResponse
  *
- * @brief  Handles CognitoIdentityProvider DeleteIdentityProvider responses.
+ * \brief The DeleteIdentityProviderResponse class encapsulates CognitoIdentityProvider DeleteIdentityProvider responses.
  *
- * @see    CognitoIdentityProviderClient::deleteIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteIdentityProviderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const DeleteIdentityProviderRequest * DeleteIdentityProviderResponse::request() 
     return static_cast<const DeleteIdentityProviderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider DeleteIdentityProvider response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void DeleteIdentityProviderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteIdentityProviderResponsePrivate
+ * \class DeleteIdentityProviderResponsePrivate
  *
- * @brief  Private implementation for DeleteIdentityProviderResponse.
+ * \brief Private implementation for DeleteIdentityProviderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteIdentityProviderResponsePrivate object.
@@ -91,7 +104,7 @@ DeleteIdentityProviderResponsePrivate::DeleteIdentityProviderResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider DeleteIdentityProviderResponse element.
  *
  * @param  xml  XML stream to parse.

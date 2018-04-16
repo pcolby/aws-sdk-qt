@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DeleteCacheSecurityGroupResponse
+/*!
+ * \class QtAws::ElastiCache::DeleteCacheSecurityGroupResponse
  *
- * @brief  Handles ElastiCache DeleteCacheSecurityGroup responses.
+ * \brief The DeleteCacheSecurityGroupResponse class encapsulates ElastiCache DeleteCacheSecurityGroup responses.
  *
- * @see    ElastiCacheClient::deleteCacheSecurityGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::deleteCacheSecurityGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheSecurityGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DeleteCacheSecurityGroupRequest * DeleteCacheSecurityGroupResponse::reques
     return static_cast<const DeleteCacheSecurityGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DeleteCacheSecurityGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DeleteCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCacheSecurityGroupResponsePrivate
+ * \class DeleteCacheSecurityGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteCacheSecurityGroupResponse.
+ * \brief Private implementation for DeleteCacheSecurityGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheSecurityGroupResponsePrivate object.
@@ -91,7 +108,7 @@ DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DeleteCacheSecurityGroupResponse element.
  *
  * @param  xml  XML stream to parse.

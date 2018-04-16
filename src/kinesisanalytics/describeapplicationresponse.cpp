@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DescribeApplicationResponse
+/*!
+ * \class QtAws::KinesisAnalytics::DescribeApplicationResponse
  *
- * @brief  Handles KinesisAnalytics DescribeApplication responses.
+ * \brief The DescribeApplicationResponse class encapsulates KinesisAnalytics DescribeApplication responses.
  *
- * @see    KinesisAnalyticsClient::describeApplication
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::describeApplication
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeApplicationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeApplicationRequest * DescribeApplicationResponse::request() const
     return static_cast<const DescribeApplicationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisAnalytics DescribeApplication response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeApplicationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeApplicationResponsePrivate
+ * \class DescribeApplicationResponsePrivate
  *
- * @brief  Private implementation for DescribeApplicationResponse.
+ * \brief Private implementation for DescribeApplicationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeApplicationResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeApplicationResponsePrivate::DescribeApplicationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisAnalytics DescribeApplicationResponse element.
  *
  * @param  xml  XML stream to parse.

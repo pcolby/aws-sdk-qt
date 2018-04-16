@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  MediaLiveResponse
+/*!
+ * \class QtAws::MediaLive::MediaLiveResponse
  *
- * @brief  Handles MediaLive MediaLive responses.
+ * \brief The MediaLiveResponse class is the base class for all MediaLive responses.
  *
- * @see    MediaLiveClient::mediaLive
+ * \ingroup MediaLive
  */
 
-/**
+/*!
  * @brief  Constructs a new MediaLiveResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ MediaLiveResponse::MediaLiveResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaLiveResponse object.
@@ -63,7 +63,7 @@ MediaLiveResponse::MediaLiveResponse(MediaLiveResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void MediaLiveResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MediaLiveResponsePrivate
@@ -92,7 +92,7 @@ void MediaLiveResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for MediaLiveResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MediaLiveResponsePrivate object.

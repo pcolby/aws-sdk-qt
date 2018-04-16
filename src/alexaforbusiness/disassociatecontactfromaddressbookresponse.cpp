@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DisassociateContactFromAddressBookResponse
+/*!
+ * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookResponse
  *
- * @brief  Handles AlexaForBusiness DisassociateContactFromAddressBook responses.
+ * \brief The DisassociateContactFromAddressBookResponse class encapsulates AlexaForBusiness DisassociateContactFromAddressBook responses.
  *
- * @see    AlexaForBusinessClient::disassociateContactFromAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::disassociateContactFromAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateContactFromAddressBookResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DisassociateContactFromAddressBookRequest * DisassociateContactFromAddress
     return static_cast<const DisassociateContactFromAddressBookRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness DisassociateContactFromAddressBook response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DisassociateContactFromAddressBookResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateContactFromAddressBookResponsePrivate
+ * \class DisassociateContactFromAddressBookResponsePrivate
  *
- * @brief  Private implementation for DisassociateContactFromAddressBookResponse.
+ * \brief Private implementation for DisassociateContactFromAddressBookResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateContactFromAddressBookResponsePrivate object.
@@ -91,7 +99,7 @@ DisassociateContactFromAddressBookResponsePrivate::DisassociateContactFromAddres
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness DisassociateContactFromAddressBookResponse element.
  *
  * @param  xml  XML stream to parse.

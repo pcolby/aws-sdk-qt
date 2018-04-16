@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  ListRegexPatternSetsResponse
+/*!
+ * \class QtAws::WAF::ListRegexPatternSetsResponse
  *
- * @brief  Handles WAF ListRegexPatternSets responses.
+ * \brief The ListRegexPatternSetsResponse class encapsulates WAF ListRegexPatternSets responses.
  *
- * @see    WAFClient::listRegexPatternSets
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::listRegexPatternSets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRegexPatternSetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() cons
     return static_cast<const ListRegexPatternSetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF ListRegexPatternSets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListRegexPatternSetsResponsePrivate
+ * \class ListRegexPatternSetsResponsePrivate
  *
- * @brief  Private implementation for ListRegexPatternSetsResponse.
+ * \brief Private implementation for ListRegexPatternSetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRegexPatternSetsResponsePrivate object.
@@ -91,7 +99,7 @@ ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF ListRegexPatternSetsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  DeleteTagsForDomainRequest
+/*!
+ * \class QtAws::Route53Domains::DeleteTagsForDomainRequest
  *
- * @brief  Implements Route53Domains DeleteTagsForDomain requests.
+ * \brief The DeleteTagsForDomainRequest class encapsulates Route53Domains DeleteTagsForDomain requests.
  *
- * @see    Route53DomainsClient::deleteTagsForDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::deleteTagsForDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsForDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteTagsForDomainRequest::DeleteTagsForDomainRequest(const DeleteTagsForDomain
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsForDomainRequest object.
  */
 DeleteTagsForDomainRequest::DeleteTagsForDomainRequest()
@@ -53,13 +57,16 @@ DeleteTagsForDomainRequest::DeleteTagsForDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTagsForDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTagsForDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsForDomainRequest::response(QNetwork
     return new DeleteTagsForDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTagsForDomainRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsForDomainRequest::response(QNetwork
  * @brief  Private implementation for DeleteTagsForDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsForDomainRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteTagsForDomainRequestPrivate::DeleteTagsForDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsForDomainRequestPrivate object, copying another.

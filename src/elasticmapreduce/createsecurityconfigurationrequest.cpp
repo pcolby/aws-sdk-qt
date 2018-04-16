@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  CreateSecurityConfigurationRequest
+/*!
+ * \class QtAws::EMR::CreateSecurityConfigurationRequest
  *
- * @brief  Implements EMR CreateSecurityConfiguration requests.
+ * \brief The CreateSecurityConfigurationRequest class encapsulates EMR CreateSecurityConfiguration requests.
  *
- * @see    EMRClient::createSecurityConfiguration
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::createSecurityConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSecurityConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest(const Cre
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSecurityConfigurationRequest object.
  */
 CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest()
@@ -53,13 +59,16 @@ CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSecurityConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSecurityConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityConfigurationRequest::response(
     return new CreateSecurityConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSecurityConfigurationRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityConfigurationRequest::response(
  * @brief  Private implementation for CreateSecurityConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSecurityConfigurationRequestPrivate object.
@@ -97,7 +106,7 @@ CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSecurityConfigurationRequestPrivate object, copying another.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ResendConfirmationCodeResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ResendConfirmationCodeResponse
  *
- * @brief  Handles CognitoIdentityProvider ResendConfirmationCode responses.
+ * \brief The ResendConfirmationCodeResponse class encapsulates CognitoIdentityProvider ResendConfirmationCode responses.
  *
- * @see    CognitoIdentityProviderClient::resendConfirmationCode
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::resendConfirmationCode
  */
 
-/**
+/*!
  * @brief  Constructs a new ResendConfirmationCodeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ResendConfirmationCodeRequest * ResendConfirmationCodeResponse::request() 
     return static_cast<const ResendConfirmationCodeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ResendConfirmationCode response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ResendConfirmationCodeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResendConfirmationCodeResponsePrivate
+ * \class ResendConfirmationCodeResponsePrivate
  *
- * @brief  Private implementation for ResendConfirmationCodeResponse.
+ * \brief Private implementation for ResendConfirmationCodeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResendConfirmationCodeResponsePrivate object.
@@ -91,7 +104,7 @@ ResendConfirmationCodeResponsePrivate::ResendConfirmationCodeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ResendConfirmationCodeResponse element.
  *
  * @param  xml  XML stream to parse.

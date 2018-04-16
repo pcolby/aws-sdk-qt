@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
-/**
- * @class  UpdateJobExecutionRequest
+/*!
+ * \class QtAws::IoTJobsDataPlane::UpdateJobExecutionRequest
  *
- * @brief  Implements IoTJobsDataPlane UpdateJobExecution requests.
+ * \brief The UpdateJobExecutionRequest class encapsulates IoTJobsDataPlane UpdateJobExecution requests.
  *
- * @see    IoTJobsDataPlaneClient::updateJobExecution
+ * \ingroup IoTJobsDataPlane
+ *
+ *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
+ *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
+ *  and install application or firmware updates, reboot, rotate certificates, or perform remote troubleshooting
+ * 
+ *  operations>
+ * 
+ *  To create a job, you make a job document which is a description of the remote operations to be performed, and you
+ *  specify a list of targets that should perform the operations. The targets can be individual things, thing groups or
+ * 
+ *  both>
+ * 
+ *  AWS IoT Jobs sends a message to inform the targets that a job is available. The target starts the execution of the job
+ *  by downloading the job document, performing the operations it specifies, and reporting its progress to AWS IoT. The Jobs
+ *  service provides commands to track the progress of a job on a specific target and for all the targets of the
+ *
+ * \sa IoTJobsDataPlaneClient::updateJobExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ UpdateJobExecutionRequest::UpdateJobExecutionRequest(const UpdateJobExecutionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobExecutionRequest object.
  */
 UpdateJobExecutionRequest::UpdateJobExecutionRequest()
@@ -53,13 +70,16 @@ UpdateJobExecutionRequest::UpdateJobExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateJobExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateJobExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkR
     return new UpdateJobExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateJobExecutionRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkR
  * @brief  Private implementation for UpdateJobExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobExecutionRequestPrivate object.
@@ -97,7 +117,7 @@ UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobExecutionRequestPrivate object, copying another.

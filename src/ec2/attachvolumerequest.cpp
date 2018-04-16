@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AttachVolumeRequest
+/*!
+ * \class QtAws::EC2::AttachVolumeRequest
  *
- * @brief  Implements EC2 AttachVolume requests.
+ * \brief The AttachVolumeRequest class encapsulates EC2 AttachVolume requests.
  *
- * @see    EC2Client::attachVolume
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::attachVolume
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AttachVolumeRequest::AttachVolumeRequest(const AttachVolumeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachVolumeRequest object.
  */
 AttachVolumeRequest::AttachVolumeRequest()
@@ -53,13 +60,16 @@ AttachVolumeRequest::AttachVolumeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachVolumeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachVolumeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply *
     return new AttachVolumeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachVolumeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply *
  * @brief  Private implementation for AttachVolumeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachVolumeRequestPrivate object.
@@ -97,7 +107,7 @@ AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachVolumeRequestPrivate object, copying another.

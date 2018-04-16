@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  UpdateFleetResponse
+/*!
+ * \class QtAws::AppStream::UpdateFleetResponse
  *
- * @brief  Handles AppStream UpdateFleet responses.
+ * \brief The UpdateFleetResponse class encapsulates AppStream UpdateFleet responses.
  *
- * @see    AppStreamClient::updateFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::updateFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFleetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateFleetRequest * UpdateFleetResponse::request() const
     return static_cast<const UpdateFleetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream UpdateFleet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateFleetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateFleetResponsePrivate
+ * \class UpdateFleetResponsePrivate
  *
- * @brief  Private implementation for UpdateFleetResponse.
+ * \brief Private implementation for UpdateFleetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFleetResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateFleetResponsePrivate::UpdateFleetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream UpdateFleetResponse element.
  *
  * @param  xml  XML stream to parse.

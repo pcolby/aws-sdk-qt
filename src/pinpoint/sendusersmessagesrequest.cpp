@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  SendUsersMessagesRequest
+/*!
+ * \class QtAws::Pinpoint::SendUsersMessagesRequest
  *
- * @brief  Implements Pinpoint SendUsersMessages requests.
+ * \brief The SendUsersMessagesRequest class encapsulates Pinpoint SendUsersMessages requests.
  *
- * @see    PinpointClient::sendUsersMessages
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::sendUsersMessages
  */
 
-/**
+/*!
  * @brief  Constructs a new SendUsersMessagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ SendUsersMessagesRequest::SendUsersMessagesRequest(const SendUsersMessagesReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendUsersMessagesRequest object.
  */
 SendUsersMessagesRequest::SendUsersMessagesRequest()
@@ -53,13 +56,16 @@ SendUsersMessagesRequest::SendUsersMessagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendUsersMessagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendUsersMessagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkRe
     return new SendUsersMessagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendUsersMessagesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkRe
  * @brief  Private implementation for SendUsersMessagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendUsersMessagesRequestPrivate object.
@@ -97,7 +103,7 @@ SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendUsersMessagesRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  ListTagsResponse
+/*!
+ * \class QtAws::DAX::ListTagsResponse
  *
- * @brief  Handles DAX ListTags responses.
+ * \brief The ListTagsResponse class encapsulates DAX ListTags responses.
  *
- * @see    DAXClient::listTags
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ListTagsRequest * ListTagsResponse::request() const
     return static_cast<const ListTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DAX ListTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsResponsePrivate
+ * \class ListTagsResponsePrivate
  *
- * @brief  Private implementation for ListTagsResponse.
+ * \brief Private implementation for ListTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsResponsePrivate object.
@@ -91,7 +98,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DAX ListTagsResponse element.
  *
  * @param  xml  XML stream to parse.

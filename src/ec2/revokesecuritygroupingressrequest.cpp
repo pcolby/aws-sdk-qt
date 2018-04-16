@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RevokeSecurityGroupIngressRequest
+/*!
+ * \class QtAws::EC2::RevokeSecurityGroupIngressRequest
  *
- * @brief  Implements EC2 RevokeSecurityGroupIngress requests.
+ * \brief The RevokeSecurityGroupIngressRequest class encapsulates EC2 RevokeSecurityGroupIngress requests.
  *
- * @see    EC2Client::revokeSecurityGroupIngress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::revokeSecurityGroupIngress
  */
 
-/**
+/*!
  * @brief  Constructs a new RevokeSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RevokeSecurityGroupIngressRequest::RevokeSecurityGroupIngressRequest(const Revok
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RevokeSecurityGroupIngressRequest object.
  */
 RevokeSecurityGroupIngressRequest::RevokeSecurityGroupIngressRequest()
@@ -53,13 +60,16 @@ RevokeSecurityGroupIngressRequest::RevokeSecurityGroupIngressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RevokeSecurityGroupIngressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RevokeSecurityGroupIngressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupIngressRequest::response(Q
     return new RevokeSecurityGroupIngressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RevokeSecurityGroupIngressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupIngressRequest::response(Q
  * @brief  Private implementation for RevokeSecurityGroupIngressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeSecurityGroupIngressRequestPrivate object.
@@ -97,7 +107,7 @@ RevokeSecurityGroupIngressRequestPrivate::RevokeSecurityGroupIngressRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RevokeSecurityGroupIngressRequestPrivate object, copying another.

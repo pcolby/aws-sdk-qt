@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  APIGatewayResponse
+/*!
+ * \class QtAws::APIGateway::APIGatewayResponse
  *
- * @brief  Handles APIGateway APIGateway responses.
+ * \brief The APIGatewayResponse class is the base class for all APIGateway responses.
  *
- * @see    APIGatewayClient::aPIGateway
+ * \ingroup APIGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new APIGatewayResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ APIGatewayResponse::APIGatewayResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new APIGatewayResponse object.
@@ -63,7 +63,7 @@ APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObj
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void APIGatewayResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  APIGatewayResponsePrivate
@@ -92,7 +92,7 @@ void APIGatewayResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for APIGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new APIGatewayResponsePrivate object.

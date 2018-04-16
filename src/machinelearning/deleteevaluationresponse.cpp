@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DeleteEvaluationResponse
+/*!
+ * \class QtAws::MachineLearning::DeleteEvaluationResponse
  *
- * @brief  Handles MachineLearning DeleteEvaluation responses.
+ * \brief The DeleteEvaluationResponse class encapsulates MachineLearning DeleteEvaluation responses.
  *
- * @see    MachineLearningClient::deleteEvaluation
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::deleteEvaluation
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEvaluationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteEvaluationRequest * DeleteEvaluationResponse::request() const
     return static_cast<const DeleteEvaluationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DeleteEvaluation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteEvaluationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEvaluationResponsePrivate
+ * \class DeleteEvaluationResponsePrivate
  *
- * @brief  Private implementation for DeleteEvaluationResponse.
+ * \brief Private implementation for DeleteEvaluationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEvaluationResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteEvaluationResponsePrivate::DeleteEvaluationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DeleteEvaluationResponse element.
  *
  * @param  xml  XML stream to parse.

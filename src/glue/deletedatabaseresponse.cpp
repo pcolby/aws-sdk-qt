@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteDatabaseResponse
+/*!
+ * \class QtAws::Glue::DeleteDatabaseResponse
  *
- * @brief  Handles Glue DeleteDatabase responses.
+ * \brief The DeleteDatabaseResponse class encapsulates Glue DeleteDatabase responses.
  *
- * @see    GlueClient::deleteDatabase
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteDatabase
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDatabaseResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteDatabaseRequest * DeleteDatabaseResponse::request() const
     return static_cast<const DeleteDatabaseRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteDatabase response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteDatabaseResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDatabaseResponsePrivate
+ * \class DeleteDatabaseResponsePrivate
  *
- * @brief  Private implementation for DeleteDatabaseResponse.
+ * \brief Private implementation for DeleteDatabaseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDatabaseResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteDatabaseResponsePrivate::DeleteDatabaseResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteDatabaseResponse element.
  *
  * @param  xml  XML stream to parse.

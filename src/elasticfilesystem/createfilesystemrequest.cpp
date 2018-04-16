@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  CreateFileSystemRequest
+/*!
+ * \class QtAws::EFS::CreateFileSystemRequest
  *
- * @brief  Implements EFS CreateFileSystem requests.
+ * \brief The CreateFileSystemRequest class encapsulates EFS CreateFileSystem requests.
  *
- * @see    EFSClient::createFileSystem
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::createFileSystem
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFileSystemRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreateFileSystemRequest::CreateFileSystemRequest(const CreateFileSystemRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFileSystemRequest object.
  */
 CreateFileSystemRequest::CreateFileSystemRequest()
@@ -53,13 +62,16 @@ CreateFileSystemRequest::CreateFileSystemRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFileSystemRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFileSystemResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkRep
     return new CreateFileSystemResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFileSystemRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkRep
  * @brief  Private implementation for CreateFileSystemRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFileSystemRequestPrivate object.
@@ -97,7 +109,7 @@ CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFileSystemRequestPrivate object, copying another.

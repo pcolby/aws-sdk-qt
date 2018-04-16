@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateVpcPeeringConnectionRequest
+/*!
+ * \class QtAws::EC2::CreateVpcPeeringConnectionRequest
  *
- * @brief  Implements EC2 CreateVpcPeeringConnection requests.
+ * \brief The CreateVpcPeeringConnectionRequest class encapsulates EC2 CreateVpcPeeringConnection requests.
  *
- * @see    EC2Client::createVpcPeeringConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createVpcPeeringConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcPeeringConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest(const Creat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateVpcPeeringConnectionRequest object.
  */
 CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest()
@@ -53,13 +60,16 @@ CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateVpcPeeringConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateVpcPeeringConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcPeeringConnectionRequest::response(Q
     return new CreateVpcPeeringConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateVpcPeeringConnectionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateVpcPeeringConnectionRequest::response(Q
  * @brief  Private implementation for CreateVpcPeeringConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcPeeringConnectionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateVpcPeeringConnectionRequestPrivate object, copying another.

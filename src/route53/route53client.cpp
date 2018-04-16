@@ -137,23 +137,31 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Route53
+ * \brief The QtAws::Route53 contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  Route53Client
+/*!
+ * \class QtAws::Route53::Route53Client
  *
- * @brief  Client for Amazon Route 53
+ * \brief The Route53Client class provides access the Amazon Route 53 service.
+ *
+ * \ingroup Route53
  *
  */
 
-/**
- * @brief  Constructs a new Route53Client object.
+/*!
+ * \brief Constructs a Route53Client object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 Route53Client::Route53Client(
     const QtAws::Core::AwsRegion::Region region,
@@ -172,21 +180,16 @@ Route53Client::Route53Client(
     d->serviceName = QStringLiteral("route53");
 }
 
-/**
- * @brief  Constructs a new Route53Client object.
+/*!
+ * \overload Route53Client()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 Route53Client::Route53Client(
     const QUrl &endpoint,
@@ -205,7 +208,7 @@ Route53Client::Route53Client(
     d->serviceName = QStringLiteral("route53");
 }
 
-/**
+/*!
  * Associates an Amazon VPC with a private hosted zone.
  *
  * </p <b>
@@ -231,7 +234,7 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
     return qobject_cast<AssociateVPCWithHostedZoneResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates, changes, or deletes a resource record set, which contains authoritative DNS information for a specified domain
  * name or subdomain name. For example, you can use <code>ChangeResourceRecordSets</code> to create a resource record set
  * that routes traffic for test.example.com to a web server that has an IP address of
@@ -346,7 +349,7 @@ ChangeResourceRecordSetsResponse * Route53Client::changeResourceRecordSets(const
     return qobject_cast<ChangeResourceRecordSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds, edits, or deletes tags for a health check or a hosted
  *
  * zone>
@@ -366,7 +369,7 @@ ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const Chang
     return qobject_cast<ChangeTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new health
  *
  * check>
@@ -422,7 +425,7 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
     return qobject_cast<CreateHealthCheckResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new public hosted zone, which you use to specify how the Domain Name System (DNS) routes traffic on the
  * Internet for a domain, such as example.com, and its subdomains.
  *
@@ -479,7 +482,7 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
     return qobject_cast<CreateHostedZoneResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a configuration for DNS query logging. After you create a query logging configuration, Amazon Route 53 begins to
  * publish log data to an Amazon CloudWatch Logs log
  *
@@ -621,7 +624,7 @@ CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const
     return qobject_cast<CreateQueryLoggingConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones. If a hosted zoned
  * ID is specified, <code>CreateReusableDelegationSet</code> marks the delegation set associated with that zone as
  *
@@ -695,7 +698,7 @@ CreateReusableDelegationSetResponse * Route53Client::createReusableDelegationSet
     return qobject_cast<CreateReusableDelegationSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a traffic policy, which you use to create multiple DNS resource record sets for one domain name (such as
  * example.com) or one subdomain name (such as
  *
@@ -710,7 +713,7 @@ CreateTrafficPolicyResponse * Route53Client::createTrafficPolicy(const CreateTra
     return qobject_cast<CreateTrafficPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates resource record sets in a specified hosted zone based on the settings in a specified traffic policy version. In
  * addition, <code>CreateTrafficPolicyInstance</code> associates the resource record sets with a specified domain name
  * (such as example.com) or subdomain name (such as www.example.com). Amazon Route 53 responds to DNS queries for the
@@ -727,7 +730,7 @@ CreateTrafficPolicyInstanceResponse * Route53Client::createTrafficPolicyInstance
     return qobject_cast<CreateTrafficPolicyInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new version of an existing traffic policy. When you create a new version of a traffic policy, you specify the
  * ID of the traffic policy that you want to update and a JSON-formatted document that describes the new version. You use
  * traffic policies to create multiple DNS resource record sets for one domain name (such as example.com) or one subdomain
@@ -745,7 +748,7 @@ CreateTrafficPolicyVersionResponse * Route53Client::createTrafficPolicyVersion(c
     return qobject_cast<CreateTrafficPolicyVersionResponse *>(send(request));
 }
 
-/**
+/*!
  * Authorizes the AWS account that created a specified VPC to submit an <code>AssociateVPCWithHostedZone</code> request to
  * associate the VPC with a specified hosted zone that was created by a different account. To submit a
  * <code>CreateVPCAssociationAuthorization</code> request, you must use the account that created the hosted zone. After you
@@ -767,7 +770,7 @@ CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationA
     return qobject_cast<CreateVPCAssociationAuthorizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a health
  *
  * check> <b>
@@ -790,7 +793,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
     return qobject_cast<DeleteHealthCheckResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a hosted
  *
  * zone> <b>
@@ -836,7 +839,7 @@ DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZon
     return qobject_cast<DeleteHostedZoneResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a configuration for DNS query logging. If you delete a configuration, Amazon Route 53 stops sending query logs
  * to CloudWatch Logs. Amazon Route 53 doesn't delete any logs that are already in CloudWatch
  *
@@ -855,7 +858,7 @@ DeleteQueryLoggingConfigResponse * Route53Client::deleteQueryLoggingConfig(const
     return qobject_cast<DeleteQueryLoggingConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a reusable delegation
  *
  * set> <b>
@@ -878,7 +881,7 @@ DeleteReusableDelegationSetResponse * Route53Client::deleteReusableDelegationSet
     return qobject_cast<DeleteReusableDelegationSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a traffic
  *
  * @param  request Request to send to Amazon Route 53.
@@ -892,7 +895,7 @@ DeleteTrafficPolicyResponse * Route53Client::deleteTrafficPolicy(const DeleteTra
     return qobject_cast<DeleteTrafficPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a traffic policy instance and all of the resource record sets that Amazon Route 53 created when you created the
  *
  * instance> <note>
@@ -910,7 +913,7 @@ DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance
     return qobject_cast<DeleteTrafficPolicyInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes authorization to submit an <code>AssociateVPCWithHostedZone</code> request to associate a specified VPC with a
  * hosted zone that was created by a different account. You must use the account that created the hosted zone to submit a
  * <code>DeleteVPCAssociationAuthorization</code>
@@ -933,7 +936,7 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
     return qobject_cast<DeleteVPCAssociationAuthorizationResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a VPC from a Amazon Route 53 private hosted zone.
  *
  * </p <note>
@@ -956,7 +959,7 @@ DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHosted
     return qobject_cast<DisassociateVPCFromHostedZoneResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the specified limit for the current account, for example, the maximum number of health checks that you can create
  * using the
  *
@@ -979,7 +982,7 @@ GetAccountLimitResponse * Route53Client::getAccountLimit(const GetAccountLimitRe
     return qobject_cast<GetAccountLimitResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the current status of a change batch request. The status is one of the following
  *
  * values> <ul> <li>
@@ -1002,7 +1005,7 @@ GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
     return qobject_cast<GetChangeResponse *>(send(request));
 }
 
-/**
+/*!
  * <code>GetCheckerIpRanges</code> still works, but we recommend that you download ip-ranges.json, which includes IP
  * address ranges for all AWS services. For more information, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP Address Ranges of Amazon
@@ -1019,7 +1022,7 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
     return qobject_cast<GetCheckerIpRangesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about whether a specified geographic location is supported for Amazon Route 53 geolocation resource
  * record
  *
@@ -1059,7 +1062,7 @@ GetGeoLocationResponse * Route53Client::getGeoLocation(const GetGeoLocationReque
     return qobject_cast<GetGeoLocationResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specified health
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1073,7 +1076,7 @@ GetHealthCheckResponse * Route53Client::getHealthCheck(const GetHealthCheckReque
     return qobject_cast<GetHealthCheckResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the number of health checks that are associated with the current AWS
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1087,7 +1090,7 @@ GetHealthCheckCountResponse * Route53Client::getHealthCheckCount(const GetHealth
     return qobject_cast<GetHealthCheckCountResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the reason that a specified health check failed most
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1101,7 +1104,7 @@ GetHealthCheckLastFailureReasonResponse * Route53Client::getHealthCheckLastFailu
     return qobject_cast<GetHealthCheckLastFailureReasonResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets status of a specified health check.
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1115,7 +1118,7 @@ GetHealthCheckStatusResponse * Route53Client::getHealthCheckStatus(const GetHeal
     return qobject_cast<GetHealthCheckStatusResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specified hosted zone including the four name servers assigned to the hosted
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1129,7 +1132,7 @@ GetHostedZoneResponse * Route53Client::getHostedZone(const GetHostedZoneRequest 
     return qobject_cast<GetHostedZoneResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves the number of hosted zones that are associated with the current AWS
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1143,7 +1146,7 @@ GetHostedZoneCountResponse * Route53Client::getHostedZoneCount(const GetHostedZo
     return qobject_cast<GetHostedZoneCountResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the specified limit for a specified hosted zone, for example, the maximum number of records that you can create in
  * the hosted zone.
  *
@@ -1166,7 +1169,7 @@ GetHostedZoneLimitResponse * Route53Client::getHostedZoneLimit(const GetHostedZo
     return qobject_cast<GetHostedZoneLimitResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specified configuration for DNS query
  *
  * logging>
@@ -1185,7 +1188,7 @@ GetQueryLoggingConfigResponse * Route53Client::getQueryLoggingConfig(const GetQu
     return qobject_cast<GetQueryLoggingConfigResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves information about a specified reusable delegation set, including the four name servers that are assigned to
  * the delegation
  *
@@ -1200,7 +1203,7 @@ GetReusableDelegationSetResponse * Route53Client::getReusableDelegationSet(const
     return qobject_cast<GetReusableDelegationSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the maximum number of hosted zones that you can associate with the specified reusable delegation
  *
  * set>
@@ -1222,7 +1225,7 @@ GetReusableDelegationSetLimitResponse * Route53Client::getReusableDelegationSetL
     return qobject_cast<GetReusableDelegationSetLimitResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specific traffic policy
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1236,7 +1239,7 @@ GetTrafficPolicyResponse * Route53Client::getTrafficPolicy(const GetTrafficPolic
     return qobject_cast<GetTrafficPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about a specified traffic policy
  *
  * instance> <note>
@@ -1260,7 +1263,7 @@ GetTrafficPolicyInstanceResponse * Route53Client::getTrafficPolicyInstance(const
     return qobject_cast<GetTrafficPolicyInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the number of traffic policy instances that are associated with the current AWS
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1274,7 +1277,7 @@ GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceC
     return qobject_cast<GetTrafficPolicyInstanceCountResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of supported geo
  *
  * locations>
@@ -1294,7 +1297,7 @@ ListGeoLocationsResponse * Route53Client::listGeoLocations(const ListGeoLocation
     return qobject_cast<ListGeoLocationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieve a list of the health checks that are associated with the current AWS account.
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1308,7 +1311,7 @@ ListHealthChecksResponse * Route53Client::listHealthChecks(const ListHealthCheck
     return qobject_cast<ListHealthChecksResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of the public and private hosted zones that are associated with the current AWS account. The response
  * includes a <code>HostedZones</code> child element for each hosted
  *
@@ -1328,7 +1331,7 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
     return qobject_cast<ListHostedZonesResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of your hosted zones in lexicographic order. The response includes a <code>HostedZones</code> child
  * element for each hosted zone created by the current AWS account.
  *
@@ -1406,7 +1409,7 @@ ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListH
     return qobject_cast<ListHostedZonesByNameResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the configurations for DNS query logging that are associated with the current AWS account or the configuration
  * that is associated with a specified hosted
  *
@@ -1428,7 +1431,7 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
     return qobject_cast<ListQueryLoggingConfigsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the resource record sets in a specified hosted
  *
  * zone>
@@ -1493,7 +1496,7 @@ ListResourceRecordSetsResponse * Route53Client::listResourceRecordSets(const Lis
     return qobject_cast<ListResourceRecordSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves a list of the reusable delegation sets that are associated with the current AWS
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1507,7 +1510,7 @@ ListReusableDelegationSetsResponse * Route53Client::listReusableDelegationSets(c
     return qobject_cast<ListReusableDelegationSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists tags for one health check or hosted zone.
  *
  * </p
@@ -1527,7 +1530,7 @@ ListTagsForResourceResponse * Route53Client::listTagsForResource(const ListTagsF
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists tags for up to 10 health checks or hosted
  *
  * zones>
@@ -1547,7 +1550,7 @@ ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTag
     return qobject_cast<ListTagsForResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the latest version for every traffic policy that is associated with the current AWS account.
  * Policies are listed in the order in which they were created.
  *
@@ -1562,7 +1565,7 @@ ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTraff
     return qobject_cast<ListTrafficPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the traffic policy instances that you created by using the current AWS
  *
  * account> <note>
@@ -1587,7 +1590,7 @@ ListTrafficPolicyInstancesResponse * Route53Client::listTrafficPolicyInstances(c
     return qobject_cast<ListTrafficPolicyInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the traffic policy instances that you created in a specified hosted
  *
  * zone> <note>
@@ -1612,7 +1615,7 @@ ListTrafficPolicyInstancesByHostedZoneResponse * Route53Client::listTrafficPolic
     return qobject_cast<ListTrafficPolicyInstancesByHostedZoneResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about the traffic policy instances that you created by using a specify traffic policy
  *
  * version> <note>
@@ -1637,7 +1640,7 @@ ListTrafficPolicyInstancesByPolicyResponse * Route53Client::listTrafficPolicyIns
     return qobject_cast<ListTrafficPolicyInstancesByPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets information about all of the versions for a specified traffic
  *
  * policy>
@@ -1655,7 +1658,7 @@ ListTrafficPolicyVersionsResponse * Route53Client::listTrafficPolicyVersions(con
     return qobject_cast<ListTrafficPolicyVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a list of the VPCs that were created by other accounts and that can be associated with a specified hosted zone
  * because you've submitted one or more <code>CreateVPCAssociationAuthorization</code> requests.
  *
@@ -1675,7 +1678,7 @@ ListVPCAssociationAuthorizationsResponse * Route53Client::listVPCAssociationAuth
     return qobject_cast<ListVPCAssociationAuthorizationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the value that Amazon Route 53 returns in response to a DNS request for a specified record name and type. You can
  * optionally specify the IP address of a DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
  *
@@ -1690,7 +1693,7 @@ TestDNSAnswerResponse * Route53Client::testDNSAnswer(const TestDNSAnswerRequest 
     return qobject_cast<TestDNSAnswerResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing health check. Note that some values can't be updated.
  *
  * </p
@@ -1710,7 +1713,7 @@ UpdateHealthCheckResponse * Route53Client::updateHealthCheck(const UpdateHealthC
     return qobject_cast<UpdateHealthCheckResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the comment for a specified hosted
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1724,7 +1727,7 @@ UpdateHostedZoneCommentResponse * Route53Client::updateHostedZoneComment(const U
     return qobject_cast<UpdateHostedZoneCommentResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the comment for a specified traffic policy
  *
  * @param  request Request to send to Amazon Route 53.
@@ -1738,7 +1741,7 @@ UpdateTrafficPolicyCommentResponse * Route53Client::updateTrafficPolicyComment(c
     return qobject_cast<UpdateTrafficPolicyCommentResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the resource record sets in a specified hosted zone that were created based on the settings in a specified
  * traffic policy
  *
@@ -1774,7 +1777,7 @@ UpdateTrafficPolicyInstanceResponse * Route53Client::updateTrafficPolicyInstance
     return qobject_cast<UpdateTrafficPolicyInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  Route53ClientPrivate
@@ -1782,7 +1785,7 @@ UpdateTrafficPolicyInstanceResponse * Route53Client::updateTrafficPolicyInstance
  * @brief  Private implementation for Route53Client.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new Route53ClientPrivate object.

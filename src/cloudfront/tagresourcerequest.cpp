@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  TagResourceRequest
+/*!
+ * \class QtAws::CloudFront::TagResourceRequest
  *
- * @brief  Implements CloudFront TagResource requests.
+ * \brief The TagResourceRequest class encapsulates CloudFront TagResource requests.
  *
- * @see    CloudFrontClient::tagResource
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
@@ -53,13 +61,16 @@ TagResourceRequest::TagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
     return new TagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TagResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  * @brief  Private implementation for TagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object.
@@ -97,7 +108,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object, copying another.

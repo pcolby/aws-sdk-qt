@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  InstallToRemoteAccessSessionRequest
+/*!
+ * \class QtAws::DeviceFarm::InstallToRemoteAccessSessionRequest
  *
- * @brief  Implements DeviceFarm InstallToRemoteAccessSession requests.
+ * \brief The InstallToRemoteAccessSessionRequest class encapsulates DeviceFarm InstallToRemoteAccessSession requests.
  *
- * @see    DeviceFarmClient::installToRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::installToRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new InstallToRemoteAccessSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ InstallToRemoteAccessSessionRequest::InstallToRemoteAccessSessionRequest(const I
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InstallToRemoteAccessSessionRequest object.
  */
 InstallToRemoteAccessSessionRequest::InstallToRemoteAccessSessionRequest()
@@ -53,13 +58,16 @@ InstallToRemoteAccessSessionRequest::InstallToRemoteAccessSessionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InstallToRemoteAccessSessionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InstallToRemoteAccessSessionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * InstallToRemoteAccessSessionRequest::response
     return new InstallToRemoteAccessSessionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InstallToRemoteAccessSessionRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * InstallToRemoteAccessSessionRequest::response
  * @brief  Private implementation for InstallToRemoteAccessSessionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InstallToRemoteAccessSessionRequestPrivate object.
@@ -97,7 +105,7 @@ InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InstallToRemoteAccessSessionRequestPrivate object, copying another.

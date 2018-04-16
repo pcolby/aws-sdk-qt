@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetUserAttributeVerificationCodeRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeRequest
  *
- * @brief  Implements CognitoIdentityProvider GetUserAttributeVerificationCode requests.
+ * \brief The GetUserAttributeVerificationCodeRequest class encapsulates CognitoIdentityProvider GetUserAttributeVerificationCode requests.
  *
- * @see    CognitoIdentityProviderClient::getUserAttributeVerificationCode
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getUserAttributeVerificationCode
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUserAttributeVerificationCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ GetUserAttributeVerificationCodeRequest::GetUserAttributeVerificationCodeRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUserAttributeVerificationCodeRequest object.
  */
 GetUserAttributeVerificationCodeRequest::GetUserAttributeVerificationCodeRequest()
@@ -53,13 +66,16 @@ GetUserAttributeVerificationCodeRequest::GetUserAttributeVerificationCodeRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUserAttributeVerificationCodeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUserAttributeVerificationCodeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::resp
     return new GetUserAttributeVerificationCodeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUserAttributeVerificationCodeRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::resp
  * @brief  Private implementation for GetUserAttributeVerificationCodeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserAttributeVerificationCodeRequestPrivate object.
@@ -97,7 +113,7 @@ GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCode
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUserAttributeVerificationCodeRequestPrivate object, copying another.

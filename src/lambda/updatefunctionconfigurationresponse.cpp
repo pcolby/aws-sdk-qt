@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateFunctionConfigurationResponse
+/*!
+ * \class QtAws::Lambda::UpdateFunctionConfigurationResponse
  *
- * @brief  Handles Lambda UpdateFunctionConfiguration responses.
+ * \brief The UpdateFunctionConfigurationResponse class encapsulates Lambda UpdateFunctionConfiguration responses.
  *
- * @see    LambdaClient::updateFunctionConfiguration
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateFunctionConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateFunctionConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateFunctionConfigurationRequest * UpdateFunctionConfigurationResponse::
     return static_cast<const UpdateFunctionConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda UpdateFunctionConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateFunctionConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateFunctionConfigurationResponsePrivate
+ * \class UpdateFunctionConfigurationResponsePrivate
  *
- * @brief  Private implementation for UpdateFunctionConfigurationResponse.
+ * \brief Private implementation for UpdateFunctionConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateFunctionConfigurationResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda UpdateFunctionConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

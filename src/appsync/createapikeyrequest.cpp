@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateApiKeyRequest
+/*!
+ * \class QtAws::AppSync::CreateApiKeyRequest
  *
- * @brief  Implements AppSync CreateApiKey requests.
+ * \brief The CreateApiKeyRequest class encapsulates AppSync CreateApiKey requests.
  *
- * @see    AppSyncClient::createApiKey
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateApiKeyRequest object.
  */
 CreateApiKeyRequest::CreateApiKeyRequest()
@@ -53,13 +57,16 @@ CreateApiKeyRequest::CreateApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
     return new CreateApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateApiKeyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApiKeyRequestPrivate object.
@@ -97,7 +104,7 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateApiKeyRequestPrivate object, copying another.

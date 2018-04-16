@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetApiKeyRequest
+/*!
+ * \class QtAws::APIGateway::GetApiKeyRequest
  *
- * @brief  Implements APIGateway GetApiKey requests.
+ * \brief The GetApiKeyRequest class encapsulates APIGateway GetApiKey requests.
  *
- * @see    APIGatewayClient::getApiKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new GetApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetApiKeyRequest::GetApiKeyRequest(const GetApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetApiKeyRequest object.
  */
 GetApiKeyRequest::GetApiKeyRequest()
@@ -53,13 +61,16 @@ GetApiKeyRequest::GetApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetApiKeyRequest::response(QNetworkReply * co
     return new GetApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetApiKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetApiKeyRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApiKeyRequestPrivate object.
@@ -97,7 +108,7 @@ GetApiKeyRequestPrivate::GetApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApiKeyRequestPrivate object, copying another.

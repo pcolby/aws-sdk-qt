@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeleteFieldLevelEncryptionProfileRequest
+/*!
+ * \class QtAws::CloudFront::DeleteFieldLevelEncryptionProfileRequest
  *
- * @brief  Implements CloudFront DeleteFieldLevelEncryptionProfile requests.
+ * \brief The DeleteFieldLevelEncryptionProfileRequest class encapsulates CloudFront DeleteFieldLevelEncryptionProfile requests.
  *
- * @see    CloudFrontClient::deleteFieldLevelEncryptionProfile
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deleteFieldLevelEncryptionProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFieldLevelEncryptionProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteFieldLevelEncryptionProfileRequest::DeleteFieldLevelEncryptionProfileReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFieldLevelEncryptionProfileRequest object.
  */
 DeleteFieldLevelEncryptionProfileRequest::DeleteFieldLevelEncryptionProfileRequest()
@@ -53,13 +61,16 @@ DeleteFieldLevelEncryptionProfileRequest::DeleteFieldLevelEncryptionProfileReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFieldLevelEncryptionProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFieldLevelEncryptionProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFieldLevelEncryptionProfileRequest::res
     return new DeleteFieldLevelEncryptionProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFieldLevelEncryptionProfileRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFieldLevelEncryptionProfileRequest::res
  * @brief  Private implementation for DeleteFieldLevelEncryptionProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFieldLevelEncryptionProfileRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteFieldLevelEncryptionProfileRequestPrivate::DeleteFieldLevelEncryptionProfi
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFieldLevelEncryptionProfileRequestPrivate object, copying another.

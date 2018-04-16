@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  StartWorkflowExecutionResponse
+/*!
+ * \class QtAws::SWF::StartWorkflowExecutionResponse
  *
- * @brief  Handles SWF StartWorkflowExecution responses.
+ * \brief The StartWorkflowExecutionResponse class encapsulates SWF StartWorkflowExecution responses.
  *
- * @see    SWFClient::startWorkflowExecution
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::startWorkflowExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new StartWorkflowExecutionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const StartWorkflowExecutionRequest * StartWorkflowExecutionResponse::request() 
     return static_cast<const StartWorkflowExecutionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF StartWorkflowExecution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void StartWorkflowExecutionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartWorkflowExecutionResponsePrivate
+ * \class StartWorkflowExecutionResponsePrivate
  *
- * @brief  Private implementation for StartWorkflowExecutionResponse.
+ * \brief Private implementation for StartWorkflowExecutionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartWorkflowExecutionResponsePrivate object.
@@ -91,7 +110,7 @@ StartWorkflowExecutionResponsePrivate::StartWorkflowExecutionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF StartWorkflowExecutionResponse element.
  *
  * @param  xml  XML stream to parse.

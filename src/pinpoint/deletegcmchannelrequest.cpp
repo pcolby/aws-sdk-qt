@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteGcmChannelRequest
+/*!
+ * \class QtAws::Pinpoint::DeleteGcmChannelRequest
  *
- * @brief  Implements Pinpoint DeleteGcmChannel requests.
+ * \brief The DeleteGcmChannelRequest class encapsulates Pinpoint DeleteGcmChannel requests.
  *
- * @see    PinpointClient::deleteGcmChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteGcmChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGcmChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteGcmChannelRequest::DeleteGcmChannelRequest(const DeleteGcmChannelRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteGcmChannelRequest object.
  */
 DeleteGcmChannelRequest::DeleteGcmChannelRequest()
@@ -53,13 +56,16 @@ DeleteGcmChannelRequest::DeleteGcmChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteGcmChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteGcmChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkRep
     return new DeleteGcmChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteGcmChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteGcmChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGcmChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGcmChannelRequestPrivate object, copying another.

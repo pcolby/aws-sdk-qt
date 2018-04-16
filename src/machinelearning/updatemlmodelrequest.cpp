@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  UpdateMLModelRequest
+/*!
+ * \class QtAws::MachineLearning::UpdateMLModelRequest
  *
- * @brief  Implements MachineLearning UpdateMLModel requests.
+ * \brief The UpdateMLModelRequest class encapsulates MachineLearning UpdateMLModel requests.
  *
- * @see    MachineLearningClient::updateMLModel
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::updateMLModel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateMLModelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateMLModelRequest::UpdateMLModelRequest(const UpdateMLModelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateMLModelRequest object.
  */
 UpdateMLModelRequest::UpdateMLModelRequest()
@@ -53,13 +56,16 @@ UpdateMLModelRequest::UpdateMLModelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateMLModelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateMLModelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply 
     return new UpdateMLModelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateMLModelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateMLModelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMLModelRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMLModelRequestPrivate object, copying another.

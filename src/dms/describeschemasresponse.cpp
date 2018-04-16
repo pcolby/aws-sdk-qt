@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeSchemasResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeSchemasResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeSchemas responses.
+ * \brief The DescribeSchemasResponse class encapsulates DatabaseMigrationService DescribeSchemas responses.
  *
- * @see    DatabaseMigrationServiceClient::describeSchemas
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeSchemas
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSchemasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeSchemasRequest * DescribeSchemasResponse::request() const
     return static_cast<const DescribeSchemasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeSchemas response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeSchemasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSchemasResponsePrivate
+ * \class DescribeSchemasResponsePrivate
  *
- * @brief  Private implementation for DescribeSchemasResponse.
+ * \brief Private implementation for DescribeSchemasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSchemasResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeSchemasResponsePrivate::DescribeSchemasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeSchemasResponse element.
  *
  * @param  xml  XML stream to parse.

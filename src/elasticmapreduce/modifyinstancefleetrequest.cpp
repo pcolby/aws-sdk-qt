@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ModifyInstanceFleetRequest
+/*!
+ * \class QtAws::EMR::ModifyInstanceFleetRequest
  *
- * @brief  Implements EMR ModifyInstanceFleet requests.
+ * \brief The ModifyInstanceFleetRequest class encapsulates EMR ModifyInstanceFleet requests.
  *
- * @see    EMRClient::modifyInstanceFleet
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::modifyInstanceFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ModifyInstanceFleetRequest::ModifyInstanceFleetRequest(const ModifyInstanceFleet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceFleetRequest object.
  */
 ModifyInstanceFleetRequest::ModifyInstanceFleetRequest()
@@ -53,13 +59,16 @@ ModifyInstanceFleetRequest::ModifyInstanceFleetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyInstanceFleetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyInstanceFleetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetwork
     return new ModifyInstanceFleetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyInstanceFleetRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetwork
  * @brief  Private implementation for ModifyInstanceFleetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceFleetRequestPrivate object.
@@ -97,7 +106,7 @@ ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceFleetRequestPrivate object, copying another.

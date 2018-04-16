@@ -121,28 +121,36 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::AlexaForBusiness
+ * \brief The QtAws::AlexaForBusiness contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  AlexaForBusinessClient
+/*!
+ * \class QtAws::AlexaForBusiness::AlexaForBusinessClient
  *
- * @brief  Client for Alexa For Business
+ * \brief The AlexaForBusinessClient class provides access the Alexa For Business service.
  *
- * Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
- * need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
- * skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
- * for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
- * context-aware voice experiences for your
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
  */
 
-/**
- * @brief  Constructs a new AlexaForBusinessClient object.
+/*!
+ * \brief Constructs a AlexaForBusinessClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 AlexaForBusinessClient::AlexaForBusinessClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -161,21 +169,16 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     d->serviceName = QStringLiteral("a4b");
 }
 
-/**
- * @brief  Constructs a new AlexaForBusinessClient object.
+/*!
+ * \overload AlexaForBusinessClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 AlexaForBusinessClient::AlexaForBusinessClient(
     const QUrl &endpoint,
@@ -194,7 +197,7 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     d->serviceName = QStringLiteral("a4b");
 }
 
-/**
+/*!
  * Associates a contact to a given address
  *
  * @param  request Request to send to Alexa For Business.
@@ -208,7 +211,7 @@ AssociateContactWithAddressBookResponse * AlexaForBusinessClient::associateConta
     return qobject_cast<AssociateContactWithAddressBookResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the
  * skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is
  * required.
@@ -224,7 +227,7 @@ AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoo
     return qobject_cast<AssociateDeviceWithRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates a skill group to a given room. This enables all skills in the associated skill group on all devices in the
  *
  * @param  request Request to send to Alexa For Business.
@@ -238,7 +241,7 @@ AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGrou
     return qobject_cast<AssociateSkillGroupWithRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an address book with the specified
  *
  * @param  request Request to send to Alexa For Business.
@@ -252,7 +255,7 @@ CreateAddressBookResponse * AlexaForBusinessClient::createAddressBook(const Crea
     return qobject_cast<CreateAddressBookResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a contact with the specified
  *
  * @param  request Request to send to Alexa For Business.
@@ -266,7 +269,7 @@ CreateContactResponse * AlexaForBusinessClient::createContact(const CreateContac
     return qobject_cast<CreateContactResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new room profile with the specified
  *
  * @param  request Request to send to Alexa For Business.
@@ -280,7 +283,7 @@ CreateProfileResponse * AlexaForBusinessClient::createProfile(const CreateProfil
     return qobject_cast<CreateProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a room with the specified
  *
  * @param  request Request to send to Alexa For Business.
@@ -294,7 +297,7 @@ CreateRoomResponse * AlexaForBusinessClient::createRoom(const CreateRoomRequest 
     return qobject_cast<CreateRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a skill group with a specified name and
  *
  * @param  request Request to send to Alexa For Business.
@@ -308,7 +311,7 @@ CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const Create
     return qobject_cast<CreateSkillGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to Alexa For Business.
@@ -322,7 +325,7 @@ CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest 
     return qobject_cast<CreateUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an address book by the address book
  *
  * @param  request Request to send to Alexa For Business.
@@ -336,7 +339,7 @@ DeleteAddressBookResponse * AlexaForBusinessClient::deleteAddressBook(const Dele
     return qobject_cast<DeleteAddressBookResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a contact by the contact
  *
  * @param  request Request to send to Alexa For Business.
@@ -350,7 +353,7 @@ DeleteContactResponse * AlexaForBusinessClient::deleteContact(const DeleteContac
     return qobject_cast<DeleteContactResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a room profile by the profile
  *
  * @param  request Request to send to Alexa For Business.
@@ -364,7 +367,7 @@ DeleteProfileResponse * AlexaForBusinessClient::deleteProfile(const DeleteProfil
     return qobject_cast<DeleteProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a room by the room
  *
  * @param  request Request to send to Alexa For Business.
@@ -378,7 +381,7 @@ DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest 
     return qobject_cast<DeleteRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes room skill parameter details by room, skill, and parameter key
  *
  * @param  request Request to send to Alexa For Business.
@@ -392,7 +395,7 @@ DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParame
     return qobject_cast<DeleteRoomSkillParameterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a skill group by skill group
  *
  * @param  request Request to send to Alexa For Business.
@@ -406,7 +409,7 @@ DeleteSkillGroupResponse * AlexaForBusinessClient::deleteSkillGroup(const Delete
     return qobject_cast<DeleteSkillGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified user by user ARN and enrollment
  *
  * @param  request Request to send to Alexa For Business.
@@ -420,7 +423,7 @@ DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest 
     return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a contact from a given address
  *
  * @param  request Request to send to Alexa For Business.
@@ -434,7 +437,7 @@ DisassociateContactFromAddressBookResponse * AlexaForBusinessClient::disassociat
     return qobject_cast<DisassociateContactFromAddressBookResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a device from its current room. The device continues to be connected to the Wi-Fi network and is still
  * registered to the account. The device settings and skills are removed from the
  *
@@ -449,7 +452,7 @@ DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceF
     return qobject_cast<DisassociateDeviceFromRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates a skill group from a specified room. This disables all skills in the skill group on all devices in the
  *
  * @param  request Request to send to Alexa For Business.
@@ -463,7 +466,7 @@ DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSki
     return qobject_cast<DisassociateSkillGroupFromRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets address the book details by the address book
  *
  * @param  request Request to send to Alexa For Business.
@@ -477,7 +480,7 @@ GetAddressBookResponse * AlexaForBusinessClient::getAddressBook(const GetAddress
     return qobject_cast<GetAddressBookResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the contact details by the contact
  *
  * @param  request Request to send to Alexa For Business.
@@ -491,7 +494,7 @@ GetContactResponse * AlexaForBusinessClient::getContact(const GetContactRequest 
     return qobject_cast<GetContactResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the details of a device by device
  *
  * @param  request Request to send to Alexa For Business.
@@ -505,7 +508,7 @@ GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &re
     return qobject_cast<GetDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets the details of a room profile by profile
  *
  * @param  request Request to send to Alexa For Business.
@@ -519,7 +522,7 @@ GetProfileResponse * AlexaForBusinessClient::getProfile(const GetProfileRequest 
     return qobject_cast<GetProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets room details by room
  *
  * @param  request Request to send to Alexa For Business.
@@ -533,7 +536,7 @@ GetRoomResponse * AlexaForBusinessClient::getRoom(const GetRoomRequest &request)
     return qobject_cast<GetRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets room skill parameter details by room, skill, and parameter key
  *
  * @param  request Request to send to Alexa For Business.
@@ -547,7 +550,7 @@ GetRoomSkillParameterResponse * AlexaForBusinessClient::getRoomSkillParameter(co
     return qobject_cast<GetRoomSkillParameterResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets skill group details by skill group
  *
  * @param  request Request to send to Alexa For Business.
@@ -561,7 +564,7 @@ GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGrou
     return qobject_cast<GetSkillGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all enabled skills in a specific skill
  *
  * @param  request Request to send to Alexa For Business.
@@ -575,7 +578,7 @@ ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest 
     return qobject_cast<ListSkillsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all tags for a specific
  *
  * @param  request Request to send to Alexa For Business.
@@ -589,7 +592,7 @@ ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &reque
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates room skill parameter details by room, skill, and parameter key ID. Not all skills have a room skill
  *
  * @param  request Request to send to Alexa For Business.
@@ -603,7 +606,7 @@ PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(co
     return qobject_cast<PutRoomSkillParameterResponse *>(send(request));
 }
 
-/**
+/*!
  * Determines the details for the room from which a skill request was invoked. This operation is used by skill
  *
  * @param  request Request to send to Alexa For Business.
@@ -617,7 +620,7 @@ ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomReque
     return qobject_cast<ResolveRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes an invitation and invalidates the enrollment
  *
  * @param  request Request to send to Alexa For Business.
@@ -631,7 +634,7 @@ RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const Revoke
     return qobject_cast<RevokeInvitationResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches address books and lists the ones that meet a set of filter and sort
  *
  * @param  request Request to send to Alexa For Business.
@@ -645,7 +648,7 @@ SearchAddressBooksResponse * AlexaForBusinessClient::searchAddressBooks(const Se
     return qobject_cast<SearchAddressBooksResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches contacts and lists the ones that meet a set of filter and sort
  *
  * @param  request Request to send to Alexa For Business.
@@ -659,7 +662,7 @@ SearchContactsResponse * AlexaForBusinessClient::searchContacts(const SearchCont
     return qobject_cast<SearchContactsResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches devices and lists the ones that meet a set of filter
  *
  * @param  request Request to send to Alexa For Business.
@@ -673,7 +676,7 @@ SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevice
     return qobject_cast<SearchDevicesResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches room profiles and lists the ones that meet a set of filter
  *
  * @param  request Request to send to Alexa For Business.
@@ -687,7 +690,7 @@ SearchProfilesResponse * AlexaForBusinessClient::searchProfiles(const SearchProf
     return qobject_cast<SearchProfilesResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches rooms and lists the ones that meet a set of filter and sort
  *
  * @param  request Request to send to Alexa For Business.
@@ -701,7 +704,7 @@ SearchRoomsResponse * AlexaForBusinessClient::searchRooms(const SearchRoomsReque
     return qobject_cast<SearchRoomsResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches skill groups and lists the ones that meet a set of filter and sort
  *
  * @param  request Request to send to Alexa For Business.
@@ -715,7 +718,7 @@ SearchSkillGroupsResponse * AlexaForBusinessClient::searchSkillGroups(const Sear
     return qobject_cast<SearchSkillGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Searches users and lists the ones that meet a set of filter and sort
  *
  * @param  request Request to send to Alexa For Business.
@@ -729,7 +732,7 @@ SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersReque
     return qobject_cast<SearchUsersResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends an enrollment invitation email with a URL to a user. The URL is valid for 72 hours or until you call this
  * operation again, whichever comes first.
  *
@@ -744,7 +747,7 @@ SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvita
     return qobject_cast<SendInvitationResponse *>(send(request));
 }
 
-/**
+/*!
  * Resets a device and its account to the known default settings by clearing all information and settings set by previous
  *
  * @param  request Request to send to Alexa For Business.
@@ -758,7 +761,7 @@ StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDev
     return qobject_cast<StartDeviceSyncResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds metadata tags to a specified
  *
  * @param  request Request to send to Alexa For Business.
@@ -772,7 +775,7 @@ TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceReque
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes metadata tags from a specified
  *
  * @param  request Request to send to Alexa For Business.
@@ -786,7 +789,7 @@ UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourc
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates address book details by the address book
  *
  * @param  request Request to send to Alexa For Business.
@@ -800,7 +803,7 @@ UpdateAddressBookResponse * AlexaForBusinessClient::updateAddressBook(const Upda
     return qobject_cast<UpdateAddressBookResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the contact details by the contact
  *
  * @param  request Request to send to Alexa For Business.
@@ -814,7 +817,7 @@ UpdateContactResponse * AlexaForBusinessClient::updateContact(const UpdateContac
     return qobject_cast<UpdateContactResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the device name by device
  *
  * @param  request Request to send to Alexa For Business.
@@ -828,7 +831,7 @@ UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRe
     return qobject_cast<UpdateDeviceResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates an existing room profile by room profile
  *
  * @param  request Request to send to Alexa For Business.
@@ -842,7 +845,7 @@ UpdateProfileResponse * AlexaForBusinessClient::updateProfile(const UpdateProfil
     return qobject_cast<UpdateProfileResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates room details by room
  *
  * @param  request Request to send to Alexa For Business.
@@ -856,7 +859,7 @@ UpdateRoomResponse * AlexaForBusinessClient::updateRoom(const UpdateRoomRequest 
     return qobject_cast<UpdateRoomResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates skill group details by skill group
  *
  * @param  request Request to send to Alexa For Business.
@@ -870,7 +873,7 @@ UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const Update
     return qobject_cast<UpdateSkillGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AlexaForBusinessClientPrivate
@@ -878,7 +881,7 @@ UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const Update
  * @brief  Private implementation for AlexaForBusinessClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AlexaForBusinessClientPrivate object.

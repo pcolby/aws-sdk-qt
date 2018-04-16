@@ -31,36 +31,44 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudSearchDomain
+ * \brief The QtAws::CloudSearchDomain contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudSearchDomain {
 
-/**
- * @class  CloudSearchDomainClient
+/*!
+ * \class QtAws::CloudSearchDomain::CloudSearchDomainClient
  *
- * @brief  Client for Amazon CloudSearch Domain
+ * \brief The CloudSearchDomainClient class provides access the Amazon CloudSearch Domain service.
  *
- * You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
+ * \ingroup CloudSearchDomain
  *
- * </p
- *
- * The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are
- * domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service
- * <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon
- * CloudSearch console. You submit suggest requests to the search endpoint.
- *
- * </p
- *
- * For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch
- * Developer
+ *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
+ * 
+ *  </p
+ * 
+ *  The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are
+ *  domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service
+ *  <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon
+ *  CloudSearch console. You submit suggest requests to the search endpoint.
+ * 
+ *  </p
+ * 
+ *  For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch
+ *  Developer
  */
 
-/**
- * @brief  Constructs a new CloudSearchDomainClient object.
+/*!
+ * \brief Constructs a CloudSearchDomainClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudSearchDomainClient::CloudSearchDomainClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -79,21 +87,16 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     d->serviceName = QStringLiteral("cloudsearch");
 }
 
-/**
- * @brief  Constructs a new CloudSearchDomainClient object.
+/*!
+ * \overload CloudSearchDomainClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudSearchDomainClient::CloudSearchDomainClient(
     const QUrl &endpoint,
@@ -112,7 +115,7 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     d->serviceName = QStringLiteral("cloudsearch");
 }
 
-/**
+/*!
  * Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on
  * which query parser you use. Amazon CloudSearch supports four query
  *
@@ -145,7 +148,7 @@ SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
     return qobject_cast<SearchResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves autocomplete suggestions for a partial query string. You can use suggestions enable you to display likely
  * matches before users finish typing. In Amazon CloudSearch, suggestions are based on the contents of a particular text
  * field. When you request suggestions, Amazon CloudSearch finds all of the documents whose values in the suggester field
@@ -175,7 +178,7 @@ SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request
     return qobject_cast<SuggestResponse *>(send(request));
 }
 
-/**
+/*!
  * Posts a batch of documents to a search domain for indexing. A document batch is a collection of add and delete
  * operations that represent the documents you want to add, update, or delete from your domain. Batches can be described in
  * either JSON or XML. Each item that you want Amazon CloudSearch to return as a search result (such as a product) is
@@ -209,7 +212,7 @@ UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadD
     return qobject_cast<UploadDocumentsResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudSearchDomainClientPrivate
@@ -217,7 +220,7 @@ UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadD
  * @brief  Private implementation for CloudSearchDomainClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudSearchDomainClientPrivate object.

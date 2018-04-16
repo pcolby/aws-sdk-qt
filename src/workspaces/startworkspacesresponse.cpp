@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  StartWorkspacesResponse
+/*!
+ * \class QtAws::WorkSpaces::StartWorkspacesResponse
  *
- * @brief  Handles WorkSpaces StartWorkspaces responses.
+ * \brief The StartWorkspacesResponse class encapsulates WorkSpaces StartWorkspaces responses.
  *
- * @see    WorkSpacesClient::startWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::startWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new StartWorkspacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartWorkspacesRequest * StartWorkspacesResponse::request() const
     return static_cast<const StartWorkspacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces StartWorkspaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartWorkspacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartWorkspacesResponsePrivate
+ * \class StartWorkspacesResponsePrivate
  *
- * @brief  Private implementation for StartWorkspacesResponse.
+ * \brief Private implementation for StartWorkspacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartWorkspacesResponsePrivate object.
@@ -91,7 +97,7 @@ StartWorkspacesResponsePrivate::StartWorkspacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces StartWorkspacesResponse element.
  *
  * @param  xml  XML stream to parse.

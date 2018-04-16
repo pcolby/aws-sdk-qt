@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachNetworkInterfaceRequest
+/*!
+ * \class QtAws::EC2::DetachNetworkInterfaceRequest
  *
- * @brief  Implements EC2 DetachNetworkInterface requests.
+ * \brief The DetachNetworkInterfaceRequest class encapsulates EC2 DetachNetworkInterface requests.
  *
- * @see    EC2Client::detachNetworkInterface
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachNetworkInterface
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachNetworkInterfaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest(const DetachNetwork
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachNetworkInterfaceRequest object.
  */
 DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest()
@@ -53,13 +60,16 @@ DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachNetworkInterfaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachNetworkInterfaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetw
     return new DetachNetworkInterfaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachNetworkInterfaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetw
  * @brief  Private implementation for DetachNetworkInterfaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachNetworkInterfaceRequestPrivate object.
@@ -97,7 +107,7 @@ DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachNetworkInterfaceRequestPrivate object, copying another.

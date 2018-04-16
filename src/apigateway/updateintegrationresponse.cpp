@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateIntegrationResponse
+/*!
+ * \class QtAws::APIGateway::UpdateIntegrationResponse
  *
- * @brief  Handles APIGateway UpdateIntegration responses.
+ * \brief The UpdateIntegrationResponse class encapsulates APIGateway UpdateIntegration responses.
  *
- * @see    APIGatewayClient::updateIntegration
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateIntegration
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIntegrationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateIntegrationRequest * UpdateIntegrationResponse::request() const
     return static_cast<const UpdateIntegrationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateIntegration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateIntegrationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateIntegrationResponsePrivate
+ * \class UpdateIntegrationResponsePrivate
  *
- * @brief  Private implementation for UpdateIntegrationResponse.
+ * \brief Private implementation for UpdateIntegrationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIntegrationResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateIntegrationResponsePrivate::UpdateIntegrationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateIntegrationResponse element.
  *
  * @param  xml  XML stream to parse.

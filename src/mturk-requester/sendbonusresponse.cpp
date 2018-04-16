@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  SendBonusResponse
+/*!
+ * \class QtAws::MTurk::SendBonusResponse
  *
- * @brief  Handles MTurk SendBonus responses.
+ * \brief The SendBonusResponse class encapsulates MTurk SendBonus responses.
  *
- * @see    MTurkClient::sendBonus
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::sendBonus
  */
 
-/**
+/*!
  * @brief  Constructs a new SendBonusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const SendBonusRequest * SendBonusResponse::request() const
     return static_cast<const SendBonusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk SendBonus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void SendBonusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SendBonusResponsePrivate
+ * \class SendBonusResponsePrivate
  *
- * @brief  Private implementation for SendBonusResponse.
+ * \brief Private implementation for SendBonusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendBonusResponsePrivate object.
@@ -91,7 +94,7 @@ SendBonusResponsePrivate::SendBonusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk SendBonusResponse element.
  *
  * @param  xml  XML stream to parse.

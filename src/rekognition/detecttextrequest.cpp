@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  DetectTextRequest
+/*!
+ * \class QtAws::Rekognition::DetectTextRequest
  *
- * @brief  Implements Rekognition DetectText requests.
+ * \brief The DetectTextRequest class encapsulates Rekognition DetectText requests.
  *
- * @see    RekognitionClient::detectText
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::detectText
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectTextRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DetectTextRequest::DetectTextRequest(const DetectTextRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetectTextRequest object.
  */
 DetectTextRequest::DetectTextRequest()
@@ -53,13 +57,16 @@ DetectTextRequest::DetectTextRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetectTextRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetectTextResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * c
     return new DetectTextResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetectTextRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * c
  * @brief  Private implementation for DetectTextRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectTextRequestPrivate object.
@@ -97,7 +104,7 @@ DetectTextRequestPrivate::DetectTextRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectTextRequestPrivate object, copying another.

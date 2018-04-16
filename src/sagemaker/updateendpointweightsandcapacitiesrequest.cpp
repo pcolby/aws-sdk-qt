@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateEndpointWeightsAndCapacitiesRequest
+/*!
+ * \class QtAws::SageMaker::UpdateEndpointWeightsAndCapacitiesRequest
  *
- * @brief  Implements SageMaker UpdateEndpointWeightsAndCapacities requests.
+ * \brief The UpdateEndpointWeightsAndCapacitiesRequest class encapsulates SageMaker UpdateEndpointWeightsAndCapacities requests.
  *
- * @see    SageMakerClient::updateEndpointWeightsAndCapacities
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateEndpointWeightsAndCapacities
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object.
  */
 UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesRequest()
@@ -53,13 +56,16 @@ UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateEndpointWeightsAndCapacitiesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateEndpointWeightsAndCapacitiesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::re
     return new UpdateEndpointWeightsAndCapacitiesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateEndpointWeightsAndCapacitiesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::re
  * @brief  Private implementation for UpdateEndpointWeightsAndCapacitiesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapaci
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequestPrivate object, copying another.

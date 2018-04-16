@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserPoolDomainRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserPoolDomainRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteUserPoolDomain requests.
+ * \brief The DeleteUserPoolDomainRequest class encapsulates CognitoIdentityProvider DeleteUserPoolDomain requests.
  *
- * @see    CognitoIdentityProviderClient::deleteUserPoolDomain
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUserPoolDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest(const DeleteUserPoolDom
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolDomainRequest object.
  */
 DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest()
@@ -53,13 +66,16 @@ DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserPoolDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserPoolDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolDomainRequest::response(QNetwor
     return new DeleteUserPoolDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserPoolDomainRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolDomainRequest::response(QNetwor
  * @brief  Private implementation for DeleteUserPoolDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolDomainRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolDomainRequestPrivate object, copying another.

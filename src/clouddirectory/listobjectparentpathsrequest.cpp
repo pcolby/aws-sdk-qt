@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListObjectParentPathsRequest
+/*!
+ * \class QtAws::CloudDirectory::ListObjectParentPathsRequest
  *
- * @brief  Implements CloudDirectory ListObjectParentPaths requests.
+ * \brief The ListObjectParentPathsRequest class encapsulates CloudDirectory ListObjectParentPaths requests.
  *
- * @see    CloudDirectoryClient::listObjectParentPaths
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listObjectParentPaths
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectParentPathsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListObjectParentPathsRequest::ListObjectParentPathsRequest(const ListObjectParen
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListObjectParentPathsRequest object.
  */
 ListObjectParentPathsRequest::ListObjectParentPathsRequest()
@@ -53,13 +63,16 @@ ListObjectParentPathsRequest::ListObjectParentPathsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListObjectParentPathsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListObjectParentPathsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetwo
     return new ListObjectParentPathsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListObjectParentPathsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetwo
  * @brief  Private implementation for ListObjectParentPathsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectParentPathsRequestPrivate object.
@@ -97,7 +110,7 @@ ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectParentPathsRequestPrivate object, copying another.

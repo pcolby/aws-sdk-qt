@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateCertificateFromCsrRequest
+/*!
+ * \class QtAws::IoT::CreateCertificateFromCsrRequest
  *
- * @brief  Implements IoT CreateCertificateFromCsr requests.
+ * \brief The CreateCertificateFromCsrRequest class encapsulates IoT CreateCertificateFromCsr requests.
  *
- * @see    IoTClient::createCertificateFromCsr
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createCertificateFromCsr
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCertificateFromCsrRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest(const CreateCer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateCertificateFromCsrRequest object.
  */
 CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest()
@@ -53,13 +67,16 @@ CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateCertificateFromCsrRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateCertificateFromCsrResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNe
     return new CreateCertificateFromCsrResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateCertificateFromCsrRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNe
  * @brief  Private implementation for CreateCertificateFromCsrRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCertificateFromCsrRequestPrivate object.
@@ -97,7 +114,7 @@ CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCertificateFromCsrRequestPrivate object, copying another.

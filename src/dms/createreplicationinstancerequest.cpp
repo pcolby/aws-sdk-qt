@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateReplicationInstanceRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceRequest
  *
- * @brief  Implements DatabaseMigrationService CreateReplicationInstance requests.
+ * \brief The CreateReplicationInstanceRequest class encapsulates DatabaseMigrationService CreateReplicationInstance requests.
  *
- * @see    DatabaseMigrationServiceClient::createReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateReplicationInstanceRequest::CreateReplicationInstanceRequest(const CreateR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationInstanceRequest object.
  */
 CreateReplicationInstanceRequest::CreateReplicationInstanceRequest()
@@ -53,13 +67,16 @@ CreateReplicationInstanceRequest::CreateReplicationInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReplicationInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReplicationInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationInstanceRequest::response(QN
     return new CreateReplicationInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReplicationInstanceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationInstanceRequest::response(QN
  * @brief  Private implementation for CreateReplicationInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationInstanceRequestPrivate object.
@@ -97,7 +114,7 @@ CreateReplicationInstanceRequestPrivate::CreateReplicationInstanceRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationInstanceRequestPrivate object, copying another.

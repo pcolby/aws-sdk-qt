@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteFlowLogsRequest
+/*!
+ * \class QtAws::EC2::DeleteFlowLogsRequest
  *
- * @brief  Implements EC2 DeleteFlowLogs requests.
+ * \brief The DeleteFlowLogsRequest class encapsulates EC2 DeleteFlowLogs requests.
  *
- * @see    EC2Client::deleteFlowLogs
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteFlowLogs
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFlowLogsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteFlowLogsRequest::DeleteFlowLogsRequest(const DeleteFlowLogsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteFlowLogsRequest object.
  */
 DeleteFlowLogsRequest::DeleteFlowLogsRequest()
@@ -53,13 +60,16 @@ DeleteFlowLogsRequest::DeleteFlowLogsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteFlowLogsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteFlowLogsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply
     return new DeleteFlowLogsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteFlowLogsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteFlowLogsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFlowLogsRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFlowLogsRequestPrivate object, copying another.

@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  ModifyMountTargetSecurityGroupsResponse
+/*!
+ * \class QtAws::EFS::ModifyMountTargetSecurityGroupsResponse
  *
- * @brief  Handles EFS ModifyMountTargetSecurityGroups responses.
+ * \brief The ModifyMountTargetSecurityGroupsResponse class encapsulates EFS ModifyMountTargetSecurityGroups responses.
  *
- * @see    EFSClient::modifyMountTargetSecurityGroups
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::modifyMountTargetSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyMountTargetSecurityGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ModifyMountTargetSecurityGroupsRequest * ModifyMountTargetSecurityGroupsRe
     return static_cast<const ModifyMountTargetSecurityGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS ModifyMountTargetSecurityGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ModifyMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyMountTargetSecurityGroupsResponsePrivate
+ * \class ModifyMountTargetSecurityGroupsResponsePrivate
  *
- * @brief  Private implementation for ModifyMountTargetSecurityGroupsResponse.
+ * \brief Private implementation for ModifyMountTargetSecurityGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyMountTargetSecurityGroupsResponsePrivate object.
@@ -91,7 +100,7 @@ ModifyMountTargetSecurityGroupsResponsePrivate::ModifyMountTargetSecurityGroupsR
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS ModifyMountTargetSecurityGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

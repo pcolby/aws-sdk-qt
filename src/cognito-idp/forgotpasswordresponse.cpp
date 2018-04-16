@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  ForgotPasswordResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::ForgotPasswordResponse
  *
- * @brief  Handles CognitoIdentityProvider ForgotPassword responses.
+ * \brief The ForgotPasswordResponse class encapsulates CognitoIdentityProvider ForgotPassword responses.
  *
- * @see    CognitoIdentityProviderClient::forgotPassword
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::forgotPassword
  */
 
-/**
+/*!
  * @brief  Constructs a new ForgotPasswordResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const ForgotPasswordRequest * ForgotPasswordResponse::request() const
     return static_cast<const ForgotPasswordRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider ForgotPassword response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void ForgotPasswordResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ForgotPasswordResponsePrivate
+ * \class ForgotPasswordResponsePrivate
  *
- * @brief  Private implementation for ForgotPasswordResponse.
+ * \brief Private implementation for ForgotPasswordResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ForgotPasswordResponsePrivate object.
@@ -91,7 +104,7 @@ ForgotPasswordResponsePrivate::ForgotPasswordResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider ForgotPasswordResponse element.
  *
  * @param  xml  XML stream to parse.

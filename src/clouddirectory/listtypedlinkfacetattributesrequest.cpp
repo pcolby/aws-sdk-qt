@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListTypedLinkFacetAttributesRequest
+/*!
+ * \class QtAws::CloudDirectory::ListTypedLinkFacetAttributesRequest
  *
- * @brief  Implements CloudDirectory ListTypedLinkFacetAttributes requests.
+ * \brief The ListTypedLinkFacetAttributesRequest class encapsulates CloudDirectory ListTypedLinkFacetAttributes requests.
  *
- * @see    CloudDirectoryClient::listTypedLinkFacetAttributes
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listTypedLinkFacetAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTypedLinkFacetAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListTypedLinkFacetAttributesRequest::ListTypedLinkFacetAttributesRequest(const L
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTypedLinkFacetAttributesRequest object.
  */
 ListTypedLinkFacetAttributesRequest::ListTypedLinkFacetAttributesRequest()
@@ -53,13 +63,16 @@ ListTypedLinkFacetAttributesRequest::ListTypedLinkFacetAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTypedLinkFacetAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTypedLinkFacetAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListTypedLinkFacetAttributesRequest::response
     return new ListTypedLinkFacetAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTypedLinkFacetAttributesRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListTypedLinkFacetAttributesRequest::response
  * @brief  Private implementation for ListTypedLinkFacetAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTypedLinkFacetAttributesRequestPrivate object.
@@ -97,7 +110,7 @@ ListTypedLinkFacetAttributesRequestPrivate::ListTypedLinkFacetAttributesRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTypedLinkFacetAttributesRequestPrivate object, copying another.

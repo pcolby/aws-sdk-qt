@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  CreateDirectoryRequest
+/*!
+ * \class QtAws::CloudDirectory::CreateDirectoryRequest
  *
- * @brief  Implements CloudDirectory CreateDirectory requests.
+ * \brief The CreateDirectoryRequest class encapsulates CloudDirectory CreateDirectory requests.
  *
- * @see    CloudDirectoryClient::createDirectory
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::createDirectory
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDirectoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ CreateDirectoryRequest::CreateDirectoryRequest(const CreateDirectoryRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDirectoryRequest object.
  */
 CreateDirectoryRequest::CreateDirectoryRequest()
@@ -53,13 +63,16 @@ CreateDirectoryRequest::CreateDirectoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDirectoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDirectoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkRepl
     return new CreateDirectoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDirectoryRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateDirectoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDirectoryRequestPrivate object.
@@ -97,7 +110,7 @@ CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDirectoryRequestPrivate object, copying another.

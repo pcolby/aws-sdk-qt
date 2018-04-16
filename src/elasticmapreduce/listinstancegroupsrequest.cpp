@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListInstanceGroupsRequest
+/*!
+ * \class QtAws::EMR::ListInstanceGroupsRequest
  *
- * @brief  Implements EMR ListInstanceGroups requests.
+ * \brief The ListInstanceGroupsRequest class encapsulates EMR ListInstanceGroups requests.
  *
- * @see    EMRClient::listInstanceGroups
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listInstanceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListInstanceGroupsRequest::ListInstanceGroupsRequest(const ListInstanceGroupsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceGroupsRequest object.
  */
 ListInstanceGroupsRequest::ListInstanceGroupsRequest()
@@ -53,13 +59,16 @@ ListInstanceGroupsRequest::ListInstanceGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInstanceGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInstanceGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceGroupsRequest::response(QNetworkR
     return new ListInstanceGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInstanceGroupsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListInstanceGroupsRequest::response(QNetworkR
  * @brief  Private implementation for ListInstanceGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceGroupsRequestPrivate object.
@@ -97,7 +106,7 @@ ListInstanceGroupsRequestPrivate::ListInstanceGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceGroupsRequestPrivate object, copying another.

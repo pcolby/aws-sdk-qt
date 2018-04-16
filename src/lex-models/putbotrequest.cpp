@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  PutBotRequest
+/*!
+ * \class QtAws::LexModelBuildingService::PutBotRequest
  *
- * @brief  Implements LexModelBuildingService PutBot requests.
+ * \brief The PutBotRequest class encapsulates LexModelBuildingService PutBot requests.
  *
- * @see    LexModelBuildingServiceClient::putBot
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::putBot
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ PutBotRequest::PutBotRequest(const PutBotRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBotRequest object.
  */
 PutBotRequest::PutBotRequest()
@@ -53,13 +60,16 @@ PutBotRequest::PutBotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * PutBotRequest::response(QNetworkReply * const
     return new PutBotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBotRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * PutBotRequest::response(QNetworkReply * const
  * @brief  Private implementation for PutBotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBotRequestPrivate object.
@@ -97,7 +107,7 @@ PutBotRequestPrivate::PutBotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBotRequestPrivate object, copying another.

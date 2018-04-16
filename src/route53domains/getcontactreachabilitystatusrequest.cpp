@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  GetContactReachabilityStatusRequest
+/*!
+ * \class QtAws::Route53Domains::GetContactReachabilityStatusRequest
  *
- * @brief  Implements Route53Domains GetContactReachabilityStatus requests.
+ * \brief The GetContactReachabilityStatusRequest class encapsulates Route53Domains GetContactReachabilityStatus requests.
  *
- * @see    Route53DomainsClient::getContactReachabilityStatus
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::getContactReachabilityStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetContactReachabilityStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ GetContactReachabilityStatusRequest::GetContactReachabilityStatusRequest(const G
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetContactReachabilityStatusRequest object.
  */
 GetContactReachabilityStatusRequest::GetContactReachabilityStatusRequest()
@@ -53,13 +57,16 @@ GetContactReachabilityStatusRequest::GetContactReachabilityStatusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetContactReachabilityStatusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetContactReachabilityStatusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * GetContactReachabilityStatusRequest::response
     return new GetContactReachabilityStatusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetContactReachabilityStatusRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * GetContactReachabilityStatusRequest::response
  * @brief  Private implementation for GetContactReachabilityStatusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContactReachabilityStatusRequestPrivate object.
@@ -97,7 +104,7 @@ GetContactReachabilityStatusRequestPrivate::GetContactReachabilityStatusRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContactReachabilityStatusRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkInterfaceAttributeResponse
+/*!
+ * \class QtAws::EC2::DescribeNetworkInterfaceAttributeResponse
  *
- * @brief  Handles EC2 DescribeNetworkInterfaceAttribute responses.
+ * \brief The DescribeNetworkInterfaceAttributeResponse class encapsulates EC2 DescribeNetworkInterfaceAttribute responses.
  *
- * @see    EC2Client::describeNetworkInterfaceAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkInterfaceAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkInterfaceAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeNetworkInterfaceAttributeRequest * DescribeNetworkInterfaceAttribu
     return static_cast<const DescribeNetworkInterfaceAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeNetworkInterfaceAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeNetworkInterfaceAttributeResponsePrivate
+ * \class DescribeNetworkInterfaceAttributeResponsePrivate
  *
- * @brief  Private implementation for DescribeNetworkInterfaceAttributeResponse.
+ * \brief Private implementation for DescribeNetworkInterfaceAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkInterfaceAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeNetworkInterfaceAttributeResponsePrivate::DescribeNetworkInterfaceAttrib
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeNetworkInterfaceAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

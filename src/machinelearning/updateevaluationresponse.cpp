@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  UpdateEvaluationResponse
+/*!
+ * \class QtAws::MachineLearning::UpdateEvaluationResponse
  *
- * @brief  Handles MachineLearning UpdateEvaluation responses.
+ * \brief The UpdateEvaluationResponse class encapsulates MachineLearning UpdateEvaluation responses.
  *
- * @see    MachineLearningClient::updateEvaluation
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::updateEvaluation
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEvaluationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateEvaluationRequest * UpdateEvaluationResponse::request() const
     return static_cast<const UpdateEvaluationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning UpdateEvaluation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateEvaluationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateEvaluationResponsePrivate
+ * \class UpdateEvaluationResponsePrivate
  *
- * @brief  Private implementation for UpdateEvaluationResponse.
+ * \brief Private implementation for UpdateEvaluationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEvaluationResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateEvaluationResponsePrivate::UpdateEvaluationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning UpdateEvaluationResponse element.
  *
  * @param  xml  XML stream to parse.

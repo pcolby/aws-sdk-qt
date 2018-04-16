@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  DescribeOriginEndpointRequest
+/*!
+ * \class QtAws::MediaPackage::DescribeOriginEndpointRequest
  *
- * @brief  Implements MediaPackage DescribeOriginEndpoint requests.
+ * \brief The DescribeOriginEndpointRequest class encapsulates MediaPackage DescribeOriginEndpoint requests.
  *
- * @see    MediaPackageClient::describeOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::describeOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeOriginEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeOriginEndpointRequest::DescribeOriginEndpointRequest(const DescribeOrigi
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeOriginEndpointRequest object.
  */
 DescribeOriginEndpointRequest::DescribeOriginEndpointRequest()
@@ -53,13 +56,16 @@ DescribeOriginEndpointRequest::DescribeOriginEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeOriginEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeOriginEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetw
     return new DescribeOriginEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeOriginEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetw
  * @brief  Private implementation for DescribeOriginEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeOriginEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeOriginEndpointRequestPrivate object, copying another.

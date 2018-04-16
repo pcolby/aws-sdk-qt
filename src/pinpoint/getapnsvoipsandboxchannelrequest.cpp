@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetApnsVoipSandboxChannelRequest
+/*!
+ * \class QtAws::Pinpoint::GetApnsVoipSandboxChannelRequest
  *
- * @brief  Implements Pinpoint GetApnsVoipSandboxChannel requests.
+ * \brief The GetApnsVoipSandboxChannelRequest class encapsulates Pinpoint GetApnsVoipSandboxChannel requests.
  *
- * @see    PinpointClient::getApnsVoipSandboxChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApnsVoipSandboxChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new GetApnsVoipSandboxChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetApnsVoipSandboxChannelRequest::GetApnsVoipSandboxChannelRequest(const GetApns
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetApnsVoipSandboxChannelRequest object.
  */
 GetApnsVoipSandboxChannelRequest::GetApnsVoipSandboxChannelRequest()
@@ -53,13 +56,16 @@ GetApnsVoipSandboxChannelRequest::GetApnsVoipSandboxChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetApnsVoipSandboxChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetApnsVoipSandboxChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetApnsVoipSandboxChannelRequest::response(QN
     return new GetApnsVoipSandboxChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetApnsVoipSandboxChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetApnsVoipSandboxChannelRequest::response(QN
  * @brief  Private implementation for GetApnsVoipSandboxChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApnsVoipSandboxChannelRequestPrivate object.
@@ -97,7 +103,7 @@ GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApnsVoipSandboxChannelRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  RemoveTagsFromStreamResponse
+/*!
+ * \class QtAws::Kinesis::RemoveTagsFromStreamResponse
  *
- * @brief  Handles Kinesis RemoveTagsFromStream responses.
+ * \brief The RemoveTagsFromStreamResponse class encapsulates Kinesis RemoveTagsFromStream responses.
  *
- * @see    KinesisClient::removeTagsFromStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::removeTagsFromStream
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const RemoveTagsFromStreamRequest * RemoveTagsFromStreamResponse::request() cons
     return static_cast<const RemoveTagsFromStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis RemoveTagsFromStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void RemoveTagsFromStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsFromStreamResponsePrivate
+ * \class RemoveTagsFromStreamResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsFromStreamResponse.
+ * \brief Private implementation for RemoveTagsFromStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromStreamResponsePrivate object.
@@ -91,7 +97,7 @@ RemoveTagsFromStreamResponsePrivate::RemoveTagsFromStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis RemoveTagsFromStreamResponse element.
  *
  * @param  xml  XML stream to parse.

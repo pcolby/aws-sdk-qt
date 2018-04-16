@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifySubnetAttributeRequest
+/*!
+ * \class QtAws::EC2::ModifySubnetAttributeRequest
  *
- * @brief  Implements EC2 ModifySubnetAttribute requests.
+ * \brief The ModifySubnetAttributeRequest class encapsulates EC2 ModifySubnetAttribute requests.
  *
- * @see    EC2Client::modifySubnetAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifySubnetAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifySubnetAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifySubnetAttributeRequest::ModifySubnetAttributeRequest(const ModifySubnetAtt
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifySubnetAttributeRequest object.
  */
 ModifySubnetAttributeRequest::ModifySubnetAttributeRequest()
@@ -53,13 +60,16 @@ ModifySubnetAttributeRequest::ModifySubnetAttributeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifySubnetAttributeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifySubnetAttributeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetwo
     return new ModifySubnetAttributeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifySubnetAttributeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetwo
  * @brief  Private implementation for ModifySubnetAttributeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySubnetAttributeRequestPrivate object.
@@ -97,7 +107,7 @@ ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifySubnetAttributeRequestPrivate object, copying another.

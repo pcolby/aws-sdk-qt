@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetQueryLoggingConfigResponse
+/*!
+ * \class QtAws::Route53::GetQueryLoggingConfigResponse
  *
- * @brief  Handles Route53 GetQueryLoggingConfig responses.
+ * \brief The GetQueryLoggingConfigResponse class encapsulates Route53 GetQueryLoggingConfig responses.
  *
- * @see    Route53Client::getQueryLoggingConfig
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getQueryLoggingConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQueryLoggingConfigResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetQueryLoggingConfigRequest * GetQueryLoggingConfigResponse::request() co
     return static_cast<const GetQueryLoggingConfigRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53 GetQueryLoggingConfig response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetQueryLoggingConfigResponsePrivate
+ * \class GetQueryLoggingConfigResponsePrivate
  *
- * @brief  Private implementation for GetQueryLoggingConfigResponse.
+ * \brief Private implementation for GetQueryLoggingConfigResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueryLoggingConfigResponsePrivate object.
@@ -91,7 +94,7 @@ GetQueryLoggingConfigResponsePrivate::GetQueryLoggingConfigResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53 GetQueryLoggingConfigResponse element.
  *
  * @param  xml  XML stream to parse.

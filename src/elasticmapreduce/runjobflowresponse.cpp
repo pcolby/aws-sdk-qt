@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  RunJobFlowResponse
+/*!
+ * \class QtAws::EMR::RunJobFlowResponse
  *
- * @brief  Handles EMR RunJobFlow responses.
+ * \brief The RunJobFlowResponse class encapsulates EMR RunJobFlow responses.
  *
- * @see    EMRClient::runJobFlow
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::runJobFlow
  */
 
-/**
+/*!
  * @brief  Constructs a new RunJobFlowResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const RunJobFlowRequest * RunJobFlowResponse::request() const
     return static_cast<const RunJobFlowRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR RunJobFlow response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void RunJobFlowResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RunJobFlowResponsePrivate
+ * \class RunJobFlowResponsePrivate
  *
- * @brief  Private implementation for RunJobFlowResponse.
+ * \brief Private implementation for RunJobFlowResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RunJobFlowResponsePrivate object.
@@ -91,7 +97,7 @@ RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR RunJobFlowResponse element.
  *
  * @param  xml  XML stream to parse.

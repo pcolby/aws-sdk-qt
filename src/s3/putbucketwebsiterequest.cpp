@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketWebsiteRequest
+/*!
+ * \class QtAws::S3::PutBucketWebsiteRequest
  *
- * @brief  Implements S3 PutBucketWebsite requests.
+ * \brief The PutBucketWebsiteRequest class encapsulates S3 PutBucketWebsite requests.
  *
- * @see    S3Client::putBucketWebsite
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketWebsite
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketWebsiteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketWebsiteRequest::PutBucketWebsiteRequest(const PutBucketWebsiteRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketWebsiteRequest object.
  */
 PutBucketWebsiteRequest::PutBucketWebsiteRequest()
@@ -53,13 +56,16 @@ PutBucketWebsiteRequest::PutBucketWebsiteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketWebsiteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketWebsiteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkRep
     return new PutBucketWebsiteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketWebsiteRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkRep
  * @brief  Private implementation for PutBucketWebsiteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketWebsiteRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketWebsiteRequestPrivate object, copying another.

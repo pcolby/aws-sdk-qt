@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  StopCrawlerRequest
+/*!
+ * \class QtAws::Glue::StopCrawlerRequest
  *
- * @brief  Implements Glue StopCrawler requests.
+ * \brief The StopCrawlerRequest class encapsulates Glue StopCrawler requests.
  *
- * @see    GlueClient::stopCrawler
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::stopCrawler
  */
 
-/**
+/*!
  * @brief  Constructs a new StopCrawlerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StopCrawlerRequest::StopCrawlerRequest(const StopCrawlerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopCrawlerRequest object.
  */
 StopCrawlerRequest::StopCrawlerRequest()
@@ -53,13 +59,16 @@ StopCrawlerRequest::StopCrawlerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopCrawlerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopCrawlerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StopCrawlerRequest::response(QNetworkReply * 
     return new StopCrawlerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopCrawlerRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StopCrawlerRequest::response(QNetworkReply * 
  * @brief  Private implementation for StopCrawlerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopCrawlerRequestPrivate object.
@@ -97,7 +106,7 @@ StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopCrawlerRequestPrivate object, copying another.

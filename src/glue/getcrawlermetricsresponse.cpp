@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetCrawlerMetricsResponse
+/*!
+ * \class QtAws::Glue::GetCrawlerMetricsResponse
  *
- * @brief  Handles Glue GetCrawlerMetrics responses.
+ * \brief The GetCrawlerMetricsResponse class encapsulates Glue GetCrawlerMetrics responses.
  *
- * @see    GlueClient::getCrawlerMetrics
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getCrawlerMetrics
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCrawlerMetricsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetCrawlerMetricsRequest * GetCrawlerMetricsResponse::request() const
     return static_cast<const GetCrawlerMetricsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetCrawlerMetrics response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetCrawlerMetricsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCrawlerMetricsResponsePrivate
+ * \class GetCrawlerMetricsResponsePrivate
  *
- * @brief  Private implementation for GetCrawlerMetricsResponse.
+ * \brief Private implementation for GetCrawlerMetricsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCrawlerMetricsResponsePrivate object.
@@ -91,7 +97,7 @@ GetCrawlerMetricsResponsePrivate::GetCrawlerMetricsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetCrawlerMetricsResponse element.
  *
  * @param  xml  XML stream to parse.

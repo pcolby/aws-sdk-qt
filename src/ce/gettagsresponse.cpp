@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetTagsResponse
+/*!
+ * \class QtAws::CostExplorer::GetTagsResponse
  *
- * @brief  Handles CostExplorer GetTags responses.
+ * \brief The GetTagsResponse class encapsulates CostExplorer GetTags responses.
  *
- * @see    CostExplorerClient::getTags
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getTags
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const GetTagsRequest * GetTagsResponse::request() const
     return static_cast<const GetTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostExplorer GetTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void GetTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetTagsResponsePrivate
+ * \class GetTagsResponsePrivate
  *
- * @brief  Private implementation for GetTagsResponse.
+ * \brief Private implementation for GetTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTagsResponsePrivate object.
@@ -91,7 +107,7 @@ GetTagsResponsePrivate::GetTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CostExplorer GetTagsResponse element.
  *
  * @param  xml  XML stream to parse.

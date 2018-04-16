@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  CreateDataSourceFromRDSResponse
+/*!
+ * \class QtAws::MachineLearning::CreateDataSourceFromRDSResponse
  *
- * @brief  Handles MachineLearning CreateDataSourceFromRDS responses.
+ * \brief The CreateDataSourceFromRDSResponse class encapsulates MachineLearning CreateDataSourceFromRDS responses.
  *
- * @see    MachineLearningClient::createDataSourceFromRDS
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::createDataSourceFromRDS
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDataSourceFromRDSResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateDataSourceFromRDSRequest * CreateDataSourceFromRDSResponse::request(
     return static_cast<const CreateDataSourceFromRDSRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning CreateDataSourceFromRDS response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateDataSourceFromRDSResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDataSourceFromRDSResponsePrivate
+ * \class CreateDataSourceFromRDSResponsePrivate
  *
- * @brief  Private implementation for CreateDataSourceFromRDSResponse.
+ * \brief Private implementation for CreateDataSourceFromRDSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDataSourceFromRDSResponsePrivate object.
@@ -91,7 +94,7 @@ CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning CreateDataSourceFromRDSResponse element.
  *
  * @param  xml  XML stream to parse.

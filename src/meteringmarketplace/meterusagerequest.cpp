@@ -25,15 +25,48 @@
 namespace QtAws {
 namespace MarketplaceMetering {
 
-/**
- * @class  MeterUsageRequest
+/*!
+ * \class QtAws::MarketplaceMetering::MeterUsageRequest
  *
- * @brief  Implements MarketplaceMetering MeterUsage requests.
+ * \brief The MeterUsageRequest class encapsulates MarketplaceMetering MeterUsage requests.
  *
- * @see    MarketplaceMeteringClient::meterUsage
+ * \ingroup MarketplaceMetering
+ *
+ *  <fullname>AWS Marketplace Metering Service</fullname>
+ * 
+ *  This reference provides descriptions of the low-level AWS Marketplace Metering Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace sellers can use this API to submit usage data for custom usage
+ * 
+ *  dimensions>
+ * 
+ *  <b>Submitting Metering Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
+ *  software-as-a-service (SaaS)
+ * 
+ *  application> </li> </ul>
+ * 
+ *  <b>Accepting New Customers</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ *  during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
+ *  resolved through this API to obtain a CustomerIdentifier and Product
+ *
+ * \sa MarketplaceMeteringClient::meterUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new MeterUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +77,7 @@ MeterUsageRequest::MeterUsageRequest(const MeterUsageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MeterUsageRequest object.
  */
 MeterUsageRequest::MeterUsageRequest()
@@ -53,13 +86,16 @@ MeterUsageRequest::MeterUsageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool MeterUsageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an MeterUsageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * MeterUsageRequest::response(QNetworkReply * c
     return new MeterUsageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MeterUsageRequestPrivate
@@ -82,7 +118,7 @@ QtAws::Core::AwsAbstractResponse * MeterUsageRequest::response(QNetworkReply * c
  * @brief  Private implementation for MeterUsageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MeterUsageRequestPrivate object.
@@ -97,7 +133,7 @@ MeterUsageRequestPrivate::MeterUsageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MeterUsageRequestPrivate object, copying another.

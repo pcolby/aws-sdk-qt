@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  ListTagsForStreamResponse
+/*!
+ * \class QtAws::Kinesis::ListTagsForStreamResponse
  *
- * @brief  Handles Kinesis ListTagsForStream responses.
+ * \brief The ListTagsForStreamResponse class encapsulates Kinesis ListTagsForStream responses.
  *
- * @see    KinesisClient::listTagsForStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::listTagsForStream
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
     return static_cast<const ListTagsForStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis ListTagsForStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListTagsForStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTagsForStreamResponsePrivate
+ * \class ListTagsForStreamResponsePrivate
  *
- * @brief  Private implementation for ListTagsForStreamResponse.
+ * \brief Private implementation for ListTagsForStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForStreamResponsePrivate object.
@@ -91,7 +97,7 @@ ListTagsForStreamResponsePrivate::ListTagsForStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis ListTagsForStreamResponse element.
  *
  * @param  xml  XML stream to parse.

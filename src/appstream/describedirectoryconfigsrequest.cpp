@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeDirectoryConfigsRequest
+/*!
+ * \class QtAws::AppStream::DescribeDirectoryConfigsRequest
  *
- * @brief  Implements AppStream DescribeDirectoryConfigs requests.
+ * \brief The DescribeDirectoryConfigsRequest class encapsulates AppStream DescribeDirectoryConfigs requests.
  *
- * @see    AppStreamClient::describeDirectoryConfigs
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeDirectoryConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDirectoryConfigsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeDirectoryConfigsRequest::DescribeDirectoryConfigsRequest(const DescribeD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDirectoryConfigsRequest object.
  */
 DescribeDirectoryConfigsRequest::DescribeDirectoryConfigsRequest()
@@ -53,13 +59,16 @@ DescribeDirectoryConfigsRequest::DescribeDirectoryConfigsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDirectoryConfigsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDirectoryConfigsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNe
     return new DescribeDirectoryConfigsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDirectoryConfigsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNe
  * @brief  Private implementation for DescribeDirectoryConfigsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDirectoryConfigsRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDirectoryConfigsRequestPrivate object, copying another.

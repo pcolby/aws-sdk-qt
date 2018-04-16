@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteDhcpOptionsRequest
+/*!
+ * \class QtAws::EC2::DeleteDhcpOptionsRequest
  *
- * @brief  Implements EC2 DeleteDhcpOptions requests.
+ * \brief The DeleteDhcpOptionsRequest class encapsulates EC2 DeleteDhcpOptions requests.
  *
- * @see    EC2Client::deleteDhcpOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteDhcpOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDhcpOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest(const DeleteDhcpOptionsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteDhcpOptionsRequest object.
  */
 DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest()
@@ -53,13 +60,16 @@ DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteDhcpOptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteDhcpOptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkRe
     return new DeleteDhcpOptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteDhcpOptionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteDhcpOptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDhcpOptionsRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDhcpOptionsRequestPrivate object, copying another.

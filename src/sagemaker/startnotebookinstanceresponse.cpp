@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  StartNotebookInstanceResponse
+/*!
+ * \class QtAws::SageMaker::StartNotebookInstanceResponse
  *
- * @brief  Handles SageMaker StartNotebookInstance responses.
+ * \brief The StartNotebookInstanceResponse class encapsulates SageMaker StartNotebookInstance responses.
  *
- * @see    SageMakerClient::startNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::startNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new StartNotebookInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const StartNotebookInstanceRequest * StartNotebookInstanceResponse::request() co
     return static_cast<const StartNotebookInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker StartNotebookInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void StartNotebookInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartNotebookInstanceResponsePrivate
+ * \class StartNotebookInstanceResponsePrivate
  *
- * @brief  Private implementation for StartNotebookInstanceResponse.
+ * \brief Private implementation for StartNotebookInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartNotebookInstanceResponsePrivate object.
@@ -91,7 +94,7 @@ StartNotebookInstanceResponsePrivate::StartNotebookInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker StartNotebookInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

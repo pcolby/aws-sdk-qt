@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeSubnetGroupsRequest
+/*!
+ * \class QtAws::DAX::DescribeSubnetGroupsRequest
  *
- * @brief  Implements DAX DescribeSubnetGroups requests.
+ * \brief The DescribeSubnetGroupsRequest class encapsulates DAX DescribeSubnetGroups requests.
  *
- * @see    DAXClient::describeSubnetGroups
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeSubnetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubnetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest(const DescribeSubnetGro
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSubnetGroupsRequest object.
  */
 DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest()
@@ -53,13 +60,16 @@ DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSubnetGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSubnetGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
     return new DescribeSubnetGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSubnetGroupsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
  * @brief  Private implementation for DescribeSubnetGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubnetGroupsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSubnetGroupsRequestPrivate object, copying another.

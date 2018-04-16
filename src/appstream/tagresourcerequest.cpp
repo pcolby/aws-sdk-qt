@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  TagResourceRequest
+/*!
+ * \class QtAws::AppStream::TagResourceRequest
  *
- * @brief  Implements AppStream TagResource requests.
+ * \brief The TagResourceRequest class encapsulates AppStream TagResource requests.
  *
- * @see    AppStreamClient::tagResource
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::tagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
@@ -53,13 +59,16 @@ TagResourceRequest::TagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
     return new TagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TagResourceRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  * @brief  Private implementation for TagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object.
@@ -97,7 +106,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TagResourceRequestPrivate object, copying another.

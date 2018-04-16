@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DeleteRepositoryRequest
+/*!
+ * \class QtAws::ECR::DeleteRepositoryRequest
  *
- * @brief  Implements ECR DeleteRepository requests.
+ * \brief The DeleteRepositoryRequest class encapsulates ECR DeleteRepository requests.
  *
- * @see    ECRClient::deleteRepository
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::deleteRepository
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRepositoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRepositoryRequest object.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest()
@@ -53,13 +60,16 @@ DeleteRepositoryRequest::DeleteRepositoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRepositoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRepositoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
     return new DeleteRepositoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRepositoryRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteRepositoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRepositoryRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRepositoryRequestPrivate object, copying another.

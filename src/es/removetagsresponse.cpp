@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  RemoveTagsResponse
+/*!
+ * \class QtAws::ElasticsearchService::RemoveTagsResponse
  *
- * @brief  Handles ElasticsearchService RemoveTags responses.
+ * \brief The RemoveTagsResponse class encapsulates ElasticsearchService RemoveTags responses.
  *
- * @see    ElasticsearchServiceClient::removeTags
+ * \ingroup ElasticsearchService
+ *
+ *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
+ * 
+ *  Use the Amazon Elasticsearch configuration API to create, configure, and manage Elasticsearch
+ * 
+ *  domains>
+ * 
+ *  The endpoint for configuration service requests is region-specific: es.<i>region</i>.amazonaws.com. For example,
+ *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
+ *
+ * \sa ElasticsearchServiceClient::removeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
     return static_cast<const RemoveTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElasticsearchService RemoveTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsResponsePrivate
+ * \class RemoveTagsResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsResponse.
+ * \brief Private implementation for RemoveTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsResponsePrivate object.
@@ -91,7 +103,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElasticsearchService RemoveTagsResponse element.
  *
  * @param  xml  XML stream to parse.

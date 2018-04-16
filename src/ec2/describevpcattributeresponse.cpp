@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcAttributeResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcAttributeResponse
  *
- * @brief  Handles EC2 DescribeVpcAttribute responses.
+ * \brief The DescribeVpcAttributeResponse class encapsulates EC2 DescribeVpcAttribute responses.
  *
- * @see    EC2Client::describeVpcAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcAttributeRequest * DescribeVpcAttributeResponse::request() cons
     return static_cast<const DescribeVpcAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcAttributeResponsePrivate
+ * \class DescribeVpcAttributeResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcAttributeResponse.
+ * \brief Private implementation for DescribeVpcAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcAttributeResponsePrivate::DescribeVpcAttributeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

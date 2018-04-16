@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetCloudFrontOriginAccessIdentityConfigRequest
+/*!
+ * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigRequest
  *
- * @brief  Implements CloudFront GetCloudFrontOriginAccessIdentityConfig requests.
+ * \brief The GetCloudFrontOriginAccessIdentityConfigRequest class encapsulates CloudFront GetCloudFrontOriginAccessIdentityConfig requests.
  *
- * @see    CloudFrontClient::getCloudFrontOriginAccessIdentityConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getCloudFrontOriginAccessIdentityConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetCloudFrontOriginAccessIdentityConfigRequest::GetCloudFrontOriginAccessIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequest object.
  */
 GetCloudFrontOriginAccessIdentityConfigRequest::GetCloudFrontOriginAccessIdentityConfigRequest()
@@ -53,13 +61,16 @@ GetCloudFrontOriginAccessIdentityConfigRequest::GetCloudFrontOriginAccessIdentit
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetCloudFrontOriginAccessIdentityConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetCloudFrontOriginAccessIdentityConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetCloudFrontOriginAccessIdentityConfigReques
     return new GetCloudFrontOriginAccessIdentityConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetCloudFrontOriginAccessIdentityConfigRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetCloudFrontOriginAccessIdentityConfigReques
  * @brief  Private implementation for GetCloudFrontOriginAccessIdentityConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequestPrivate object.
@@ -97,7 +108,7 @@ GetCloudFrontOriginAccessIdentityConfigRequestPrivate::GetCloudFrontOriginAccess
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequestPrivate object, copying another.

@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminUserGlobalSignOutRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminUserGlobalSignOut requests.
+ * \brief The AdminUserGlobalSignOutRequest class encapsulates CognitoIdentityProvider AdminUserGlobalSignOut requests.
  *
- * @see    CognitoIdentityProviderClient::adminUserGlobalSignOut
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminUserGlobalSignOut
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminUserGlobalSignOutRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminUserGlobalSignOutRequest::AdminUserGlobalSignOutRequest(const AdminUserGlob
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminUserGlobalSignOutRequest object.
  */
 AdminUserGlobalSignOutRequest::AdminUserGlobalSignOutRequest()
@@ -53,13 +66,16 @@ AdminUserGlobalSignOutRequest::AdminUserGlobalSignOutRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminUserGlobalSignOutRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminUserGlobalSignOutResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminUserGlobalSignOutRequest::response(QNetw
     return new AdminUserGlobalSignOutResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminUserGlobalSignOutRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminUserGlobalSignOutRequest::response(QNetw
  * @brief  Private implementation for AdminUserGlobalSignOutRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUserGlobalSignOutRequestPrivate object.
@@ -97,7 +113,7 @@ AdminUserGlobalSignOutRequestPrivate::AdminUserGlobalSignOutRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminUserGlobalSignOutRequestPrivate object, copying another.

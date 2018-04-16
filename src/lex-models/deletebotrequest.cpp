@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteBotRequest
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteBotRequest
  *
- * @brief  Implements LexModelBuildingService DeleteBot requests.
+ * \brief The DeleteBotRequest class encapsulates LexModelBuildingService DeleteBot requests.
  *
- * @see    LexModelBuildingServiceClient::deleteBot
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteBot
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteBotRequest::DeleteBotRequest(const DeleteBotRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotRequest object.
  */
 DeleteBotRequest::DeleteBotRequest()
@@ -53,13 +60,16 @@ DeleteBotRequest::DeleteBotRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBotRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBotResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotRequest::response(QNetworkReply * co
     return new DeleteBotResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBotRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBotRequest::response(QNetworkReply * co
  * @brief  Private implementation for DeleteBotRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteBotRequestPrivate::DeleteBotRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotRequestPrivate object, copying another.

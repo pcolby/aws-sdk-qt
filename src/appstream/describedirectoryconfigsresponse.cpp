@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeDirectoryConfigsResponse
+/*!
+ * \class QtAws::AppStream::DescribeDirectoryConfigsResponse
  *
- * @brief  Handles AppStream DescribeDirectoryConfigs responses.
+ * \brief The DescribeDirectoryConfigsResponse class encapsulates AppStream DescribeDirectoryConfigs responses.
  *
- * @see    AppStreamClient::describeDirectoryConfigs
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeDirectoryConfigs
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDirectoryConfigsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeDirectoryConfigsRequest * DescribeDirectoryConfigsResponse::reques
     return static_cast<const DescribeDirectoryConfigsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream DescribeDirectoryConfigs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeDirectoryConfigsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeDirectoryConfigsResponsePrivate
+ * \class DescribeDirectoryConfigsResponsePrivate
  *
- * @brief  Private implementation for DescribeDirectoryConfigsResponse.
+ * \brief Private implementation for DescribeDirectoryConfigsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDirectoryConfigsResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream DescribeDirectoryConfigsResponse element.
  *
  * @param  xml  XML stream to parse.

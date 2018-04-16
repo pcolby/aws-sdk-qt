@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketVersioningResponse
+/*!
+ * \class QtAws::S3::GetBucketVersioningResponse
  *
- * @brief  Handles S3 GetBucketVersioning responses.
+ * \brief The GetBucketVersioningResponse class encapsulates S3 GetBucketVersioning responses.
  *
- * @see    S3Client::getBucketVersioning
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketVersioning
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketVersioningResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketVersioningRequest * GetBucketVersioningResponse::request() const
     return static_cast<const GetBucketVersioningRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketVersioning response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketVersioningResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketVersioningResponsePrivate
+ * \class GetBucketVersioningResponsePrivate
  *
- * @brief  Private implementation for GetBucketVersioningResponse.
+ * \brief Private implementation for GetBucketVersioningResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketVersioningResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketVersioningResponsePrivate::GetBucketVersioningResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketVersioningResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceNetworkAclAssociationResponse
+/*!
+ * \class QtAws::EC2::ReplaceNetworkAclAssociationResponse
  *
- * @brief  Handles EC2 ReplaceNetworkAclAssociation responses.
+ * \brief The ReplaceNetworkAclAssociationResponse class encapsulates EC2 ReplaceNetworkAclAssociation responses.
  *
- * @see    EC2Client::replaceNetworkAclAssociation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceNetworkAclAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceNetworkAclAssociationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ReplaceNetworkAclAssociationRequest * ReplaceNetworkAclAssociationResponse
     return static_cast<const ReplaceNetworkAclAssociationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ReplaceNetworkAclAssociation response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ReplaceNetworkAclAssociationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReplaceNetworkAclAssociationResponsePrivate
+ * \class ReplaceNetworkAclAssociationResponsePrivate
  *
- * @brief  Private implementation for ReplaceNetworkAclAssociationResponse.
+ * \brief Private implementation for ReplaceNetworkAclAssociationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceNetworkAclAssociationResponsePrivate object.
@@ -91,7 +98,7 @@ ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ReplaceNetworkAclAssociationResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreatePlacementGroupRequest
+/*!
+ * \class QtAws::EC2::CreatePlacementGroupRequest
  *
- * @brief  Implements EC2 CreatePlacementGroup requests.
+ * \brief The CreatePlacementGroupRequest class encapsulates EC2 CreatePlacementGroup requests.
  *
- * @see    EC2Client::createPlacementGroup
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createPlacementGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePlacementGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreatePlacementGroupRequest::CreatePlacementGroupRequest(const CreatePlacementGr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePlacementGroupRequest object.
  */
 CreatePlacementGroupRequest::CreatePlacementGroupRequest()
@@ -53,13 +60,16 @@ CreatePlacementGroupRequest::CreatePlacementGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePlacementGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePlacementGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetwor
     return new CreatePlacementGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePlacementGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetwor
  * @brief  Private implementation for CreatePlacementGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePlacementGroupRequestPrivate object.
@@ -97,7 +107,7 @@ CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePlacementGroupRequestPrivate object, copying another.

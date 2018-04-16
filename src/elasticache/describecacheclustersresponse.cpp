@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheClustersResponse
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheClustersResponse
  *
- * @brief  Handles ElastiCache DescribeCacheClusters responses.
+ * \brief The DescribeCacheClustersResponse class encapsulates ElastiCache DescribeCacheClusters responses.
  *
- * @see    ElastiCacheClient::describeCacheClusters
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheClusters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheClustersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeCacheClustersRequest * DescribeCacheClustersResponse::request() co
     return static_cast<const DescribeCacheClustersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DescribeCacheClusters response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeCacheClustersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCacheClustersResponsePrivate
+ * \class DescribeCacheClustersResponsePrivate
  *
- * @brief  Private implementation for DescribeCacheClustersResponse.
+ * \brief Private implementation for DescribeCacheClustersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheClustersResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DescribeCacheClustersResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateEndpointResponse
+/*!
+ * \class QtAws::SageMaker::UpdateEndpointResponse
  *
- * @brief  Handles SageMaker UpdateEndpoint responses.
+ * \brief The UpdateEndpointResponse class encapsulates SageMaker UpdateEndpoint responses.
  *
- * @see    SageMakerClient::updateEndpoint
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateEndpointRequest * UpdateEndpointResponse::request() const
     return static_cast<const UpdateEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker UpdateEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateEndpointResponsePrivate
+ * \class UpdateEndpointResponsePrivate
  *
- * @brief  Private implementation for UpdateEndpointResponse.
+ * \brief Private implementation for UpdateEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateEndpointResponsePrivate::UpdateEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker UpdateEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetApplicationSettingsResponse
+/*!
+ * \class QtAws::Pinpoint::GetApplicationSettingsResponse
  *
- * @brief  Handles Pinpoint GetApplicationSettings responses.
+ * \brief The GetApplicationSettingsResponse class encapsulates Pinpoint GetApplicationSettings responses.
  *
- * @see    PinpointClient::getApplicationSettings
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getApplicationSettings
  */
 
-/**
+/*!
  * @brief  Constructs a new GetApplicationSettingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetApplicationSettingsRequest * GetApplicationSettingsResponse::request() 
     return static_cast<const GetApplicationSettingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetApplicationSettings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetApplicationSettingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetApplicationSettingsResponsePrivate
+ * \class GetApplicationSettingsResponsePrivate
  *
- * @brief  Private implementation for GetApplicationSettingsResponse.
+ * \brief Private implementation for GetApplicationSettingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetApplicationSettingsResponsePrivate object.
@@ -91,7 +94,7 @@ GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetApplicationSettingsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  RestoreObjectResponse
+/*!
+ * \class QtAws::S3::RestoreObjectResponse
  *
- * @brief  Handles S3 RestoreObject responses.
+ * \brief The RestoreObjectResponse class encapsulates S3 RestoreObject responses.
  *
- * @see    S3Client::restoreObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::restoreObject
  */
 
-/**
+/*!
  * @brief  Constructs a new RestoreObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const RestoreObjectRequest * RestoreObjectResponse::request() const
     return static_cast<const RestoreObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 RestoreObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void RestoreObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RestoreObjectResponsePrivate
+ * \class RestoreObjectResponsePrivate
  *
- * @brief  Private implementation for RestoreObjectResponse.
+ * \brief Private implementation for RestoreObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RestoreObjectResponsePrivate object.
@@ -91,7 +94,7 @@ RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 RestoreObjectResponse element.
  *
  * @param  xml  XML stream to parse.

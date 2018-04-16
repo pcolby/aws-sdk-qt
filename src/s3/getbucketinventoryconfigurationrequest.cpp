@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketInventoryConfigurationRequest
+/*!
+ * \class QtAws::S3::GetBucketInventoryConfigurationRequest
  *
- * @brief  Implements S3 GetBucketInventoryConfiguration requests.
+ * \brief The GetBucketInventoryConfigurationRequest class encapsulates S3 GetBucketInventoryConfiguration requests.
  *
- * @see    S3Client::getBucketInventoryConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketInventoryConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketInventoryConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketInventoryConfigurationRequest::GetBucketInventoryConfigurationRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketInventoryConfigurationRequest object.
  */
 GetBucketInventoryConfigurationRequest::GetBucketInventoryConfigurationRequest()
@@ -53,13 +56,16 @@ GetBucketInventoryConfigurationRequest::GetBucketInventoryConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketInventoryConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketInventoryConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketInventoryConfigurationRequest::respo
     return new GetBucketInventoryConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketInventoryConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketInventoryConfigurationRequest::respo
  * @brief  Private implementation for GetBucketInventoryConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketInventoryConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketInventoryConfigurationRequestPrivate::GetBucketInventoryConfigurationRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketInventoryConfigurationRequestPrivate object, copying another.

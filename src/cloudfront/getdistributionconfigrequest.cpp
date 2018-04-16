@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetDistributionConfigRequest
+/*!
+ * \class QtAws::CloudFront::GetDistributionConfigRequest
  *
- * @brief  Implements CloudFront GetDistributionConfig requests.
+ * \brief The GetDistributionConfigRequest class encapsulates CloudFront GetDistributionConfig requests.
  *
- * @see    CloudFrontClient::getDistributionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getDistributionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDistributionConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetDistributionConfigRequest::GetDistributionConfigRequest(const GetDistribution
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDistributionConfigRequest object.
  */
 GetDistributionConfigRequest::GetDistributionConfigRequest()
@@ -53,13 +61,16 @@ GetDistributionConfigRequest::GetDistributionConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDistributionConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDistributionConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetDistributionConfigRequest::response(QNetwo
     return new GetDistributionConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDistributionConfigRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDistributionConfigRequest::response(QNetwo
  * @brief  Private implementation for GetDistributionConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDistributionConfigRequestPrivate object.
@@ -97,7 +108,7 @@ GetDistributionConfigRequestPrivate::GetDistributionConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDistributionConfigRequestPrivate object, copying another.

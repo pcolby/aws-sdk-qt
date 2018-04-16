@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  CreateBrokerRequest
+/*!
+ * \class QtAws::MQ::CreateBrokerRequest
  *
- * @brief  Implements MQ CreateBroker requests.
+ * \brief The CreateBrokerRequest class encapsulates MQ CreateBroker requests.
  *
- * @see    MQClient::createBroker
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::createBroker
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateBrokerRequest::CreateBrokerRequest(const CreateBrokerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateBrokerRequest object.
  */
 CreateBrokerRequest::CreateBrokerRequest()
@@ -53,13 +58,16 @@ CreateBrokerRequest::CreateBrokerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateBrokerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateBrokerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply *
     return new CreateBrokerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateBrokerRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateBrokerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBrokerRequestPrivate object.
@@ -97,7 +105,7 @@ CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBrokerRequestPrivate object, copying another.

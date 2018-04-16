@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ListCustomVerificationEmailTemplatesResponse
+/*!
+ * \class QtAws::SES::ListCustomVerificationEmailTemplatesResponse
  *
- * @brief  Handles SES ListCustomVerificationEmailTemplates responses.
+ * \brief The ListCustomVerificationEmailTemplatesResponse class encapsulates SES ListCustomVerificationEmailTemplates responses.
  *
- * @see    SESClient::listCustomVerificationEmailTemplates
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::listCustomVerificationEmailTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListCustomVerificationEmailTemplatesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListCustomVerificationEmailTemplatesRequest * ListCustomVerificationEmailT
     return static_cast<const ListCustomVerificationEmailTemplatesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES ListCustomVerificationEmailTemplates response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListCustomVerificationEmailTemplatesResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListCustomVerificationEmailTemplatesResponsePrivate
+ * \class ListCustomVerificationEmailTemplatesResponsePrivate
  *
- * @brief  Private implementation for ListCustomVerificationEmailTemplatesResponse.
+ * \brief Private implementation for ListCustomVerificationEmailTemplatesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListCustomVerificationEmailTemplatesResponsePrivate object.
@@ -91,7 +105,7 @@ ListCustomVerificationEmailTemplatesResponsePrivate::ListCustomVerificationEmail
 
 }
 
-/**
+/*!
  * @brief  Parse an SES ListCustomVerificationEmailTemplatesResponse element.
  *
  * @param  xml  XML stream to parse.

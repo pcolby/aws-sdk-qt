@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateStreamingDistributionRequest
+/*!
+ * \class QtAws::CloudFront::CreateStreamingDistributionRequest
  *
- * @brief  Implements CloudFront CreateStreamingDistribution requests.
+ * \brief The CreateStreamingDistributionRequest class encapsulates CloudFront CreateStreamingDistribution requests.
  *
- * @see    CloudFrontClient::createStreamingDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createStreamingDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateStreamingDistributionRequest::CreateStreamingDistributionRequest(const Cre
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateStreamingDistributionRequest object.
  */
 CreateStreamingDistributionRequest::CreateStreamingDistributionRequest()
@@ -53,13 +61,16 @@ CreateStreamingDistributionRequest::CreateStreamingDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateStreamingDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateStreamingDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionRequest::response(
     return new CreateStreamingDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateStreamingDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionRequest::response(
  * @brief  Private implementation for CreateStreamingDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateStreamingDistributionRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StopImageBuilderResponse
+/*!
+ * \class QtAws::AppStream::StopImageBuilderResponse
  *
- * @brief  Handles AppStream StopImageBuilder responses.
+ * \brief The StopImageBuilderResponse class encapsulates AppStream StopImageBuilder responses.
  *
- * @see    AppStreamClient::stopImageBuilder
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::stopImageBuilder
  */
 
-/**
+/*!
  * @brief  Constructs a new StopImageBuilderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopImageBuilderRequest * StopImageBuilderResponse::request() const
     return static_cast<const StopImageBuilderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream StopImageBuilder response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopImageBuilderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopImageBuilderResponsePrivate
+ * \class StopImageBuilderResponsePrivate
  *
- * @brief  Private implementation for StopImageBuilderResponse.
+ * \brief Private implementation for StopImageBuilderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopImageBuilderResponsePrivate object.
@@ -91,7 +97,7 @@ StopImageBuilderResponsePrivate::StopImageBuilderResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream StopImageBuilderResponse element.
  *
  * @param  xml  XML stream to parse.

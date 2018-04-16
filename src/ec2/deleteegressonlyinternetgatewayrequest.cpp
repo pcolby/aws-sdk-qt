@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteEgressOnlyInternetGatewayRequest
+/*!
+ * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayRequest
  *
- * @brief  Implements EC2 DeleteEgressOnlyInternetGateway requests.
+ * \brief The DeleteEgressOnlyInternetGatewayRequest class encapsulates EC2 DeleteEgressOnlyInternetGateway requests.
  *
- * @see    EC2Client::deleteEgressOnlyInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteEgressOnlyInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequest object.
  */
 DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest()
@@ -53,13 +60,16 @@ DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteEgressOnlyInternetGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteEgressOnlyInternetGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::respo
     return new DeleteEgressOnlyInternetGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteEgressOnlyInternetGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::respo
  * @brief  Private implementation for DeleteEgressOnlyInternetGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequestPrivate object, copying another.

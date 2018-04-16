@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  RejectQualificationRequestRequest
+/*!
+ * \class QtAws::MTurk::RejectQualificationRequestRequest
  *
- * @brief  Implements MTurk RejectQualificationRequest requests.
+ * \brief The RejectQualificationRequestRequest class encapsulates MTurk RejectQualificationRequest requests.
  *
- * @see    MTurkClient::rejectQualificationRequest
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::rejectQualificationRequest
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectQualificationRequestRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ RejectQualificationRequestRequest::RejectQualificationRequestRequest(const Rejec
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RejectQualificationRequestRequest object.
  */
 RejectQualificationRequestRequest::RejectQualificationRequestRequest()
@@ -53,13 +56,16 @@ RejectQualificationRequestRequest::RejectQualificationRequestRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RejectQualificationRequestRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RejectQualificationRequestResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * RejectQualificationRequestRequest::response(Q
     return new RejectQualificationRequestResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RejectQualificationRequestRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * RejectQualificationRequestRequest::response(Q
  * @brief  Private implementation for RejectQualificationRequestRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectQualificationRequestRequestPrivate object.
@@ -97,7 +103,7 @@ RejectQualificationRequestRequestPrivate::RejectQualificationRequestRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectQualificationRequestRequestPrivate object, copying another.

@@ -27,15 +27,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  ScanResponse
+/*!
+ * \class QtAws::DynamoDB::ScanResponse
  *
- * @brief  Handles DynamoDB Scan responses.
+ * \brief The ScanResponse class encapsulates DynamoDB Scan responses.
  *
- * @see    DynamoDBClient::scan
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::scan
  */
 
-/**
+/*!
  * @brief  Constructs a new ScanResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +80,7 @@ const ScanRequest * ScanResponse::request() const
     return static_cast<const ScanRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DynamoDB Scan response.
  *
  * @param  response  Response to parse.
@@ -70,15 +92,15 @@ void ScanResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ScanResponsePrivate
+ * \class ScanResponsePrivate
  *
- * @brief  Private implementation for ScanResponse.
+ * \brief Private implementation for ScanResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScanResponsePrivate object.
@@ -91,7 +113,7 @@ ScanResponsePrivate::ScanResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DynamoDB ScanResponse element.
  *
  * @param  xml  XML stream to parse.

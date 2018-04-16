@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketLocationRequest
+/*!
+ * \class QtAws::S3::GetBucketLocationRequest
  *
- * @brief  Implements S3 GetBucketLocation requests.
+ * \brief The GetBucketLocationRequest class encapsulates S3 GetBucketLocation requests.
  *
- * @see    S3Client::getBucketLocation
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketLocation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLocationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketLocationRequest::GetBucketLocationRequest(const GetBucketLocationReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLocationRequest object.
  */
 GetBucketLocationRequest::GetBucketLocationRequest()
@@ -53,13 +56,16 @@ GetBucketLocationRequest::GetBucketLocationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketLocationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketLocationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkRe
     return new GetBucketLocationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketLocationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkRe
  * @brief  Private implementation for GetBucketLocationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLocationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLocationRequestPrivate object, copying another.

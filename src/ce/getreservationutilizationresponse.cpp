@@ -27,15 +27,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetReservationUtilizationResponse
+/*!
+ * \class QtAws::CostExplorer::GetReservationUtilizationResponse
  *
- * @brief  Handles CostExplorer GetReservationUtilization responses.
+ * \brief The GetReservationUtilizationResponse class encapsulates CostExplorer GetReservationUtilization responses.
  *
- * @see    CostExplorerClient::getReservationUtilization
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getReservationUtilization
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReservationUtilizationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +74,7 @@ const GetReservationUtilizationRequest * GetReservationUtilizationResponse::requ
     return static_cast<const GetReservationUtilizationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CostExplorer GetReservationUtilization response.
  *
  * @param  response  Response to parse.
@@ -70,15 +86,15 @@ void GetReservationUtilizationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetReservationUtilizationResponsePrivate
+ * \class GetReservationUtilizationResponsePrivate
  *
- * @brief  Private implementation for GetReservationUtilizationResponse.
+ * \brief Private implementation for GetReservationUtilizationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationUtilizationResponsePrivate object.
@@ -91,7 +107,7 @@ GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an CostExplorer GetReservationUtilizationResponse element.
  *
  * @param  xml  XML stream to parse.

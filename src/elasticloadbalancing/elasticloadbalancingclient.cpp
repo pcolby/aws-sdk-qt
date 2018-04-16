@@ -83,51 +83,59 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ElasticLoadBalancing
+ * \brief The QtAws::ElasticLoadBalancing contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ElasticLoadBalancing {
 
-/**
- * @class  ElasticLoadBalancingClient
+/*!
+ * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingClient
  *
- * @brief  Client for Elastic Load Balancing
+ * \brief The ElasticLoadBalancingClient class provides access the Elastic Load Balancing service.
  *
- * <fullname>Elastic Load Balancing</fullname>
+ * \ingroup ElasticLoadBalancing
  *
- * A load balancer can distribute incoming traffic across your EC2 instances. This enables you to increase the availability
- * of your application. The load balancer also monitors the health of its registered instances and ensures that it routes
- * traffic only to healthy instances. You configure your load balancer to accept incoming traffic by specifying one or more
- * listeners, which are configured with a protocol and port number for connections from clients to the load balancer and a
- * protocol and port number for connections from the load balancer to the
- *
- * instances>
- *
- * Elastic Load Balancing supports three types of load balancers: Application Load Balancers, Network Load Balancers, and
- * Classic Load Balancers. You can select a load balancer based on your application needs. For more information, see the <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
- *
- * Guide</a>>
- *
- * This reference covers the 2012-06-01 API, which supports Classic Load Balancers. The 2015-12-01 API supports Application
- * Load Balancers and Network Load
- *
- * Balancers>
- *
- * To get started, create a load balancer with one or more listeners using <a>CreateLoadBalancer</a>. Register your
- * instances with the load balancer using
- *
- * <a>RegisterInstancesWithLoadBalancer</a>>
- *
- * All Elastic Load Balancing operations are <i>idempotent</i>, which means that they complete at most one time. If you
- * repeat an operation, it succeeds with a 200 OK response
+ *  <fullname>Elastic Load Balancing</fullname>
+ * 
+ *  A load balancer can distribute incoming traffic across your EC2 instances. This enables you to increase the availability
+ *  of your application. The load balancer also monitors the health of its registered instances and ensures that it routes
+ *  traffic only to healthy instances. You configure your load balancer to accept incoming traffic by specifying one or more
+ *  listeners, which are configured with a protocol and port number for connections from clients to the load balancer and a
+ *  protocol and port number for connections from the load balancer to the
+ * 
+ *  instances>
+ * 
+ *  Elastic Load Balancing supports three types of load balancers: Application Load Balancers, Network Load Balancers, and
+ *  Classic Load Balancers. You can select a load balancer based on your application needs. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
+ * 
+ *  Guide</a>>
+ * 
+ *  This reference covers the 2012-06-01 API, which supports Classic Load Balancers. The 2015-12-01 API supports Application
+ *  Load Balancers and Network Load
+ * 
+ *  Balancers>
+ * 
+ *  To get started, create a load balancer with one or more listeners using <a>CreateLoadBalancer</a>. Register your
+ *  instances with the load balancer using
+ * 
+ *  <a>RegisterInstancesWithLoadBalancer</a>>
+ * 
+ *  All Elastic Load Balancing operations are <i>idempotent</i>, which means that they complete at most one time. If you
+ *  repeat an operation, it succeeds with a 200 OK response
  */
 
-/**
- * @brief  Constructs a new ElasticLoadBalancingClient object.
+/*!
+ * \brief Constructs a ElasticLoadBalancingClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -146,21 +154,16 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
-/**
- * @brief  Constructs a new ElasticLoadBalancingClient object.
+/*!
+ * \overload ElasticLoadBalancingClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     const QUrl &endpoint,
@@ -179,7 +182,7 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
-/**
+/*!
  * Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10
  *
  * tags>
@@ -204,7 +207,7 @@ AddTagsResponse * ElasticLoadBalancingClient::addTags(const AddTagsRequest &requ
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Associates one or more security groups with your load balancer in a virtual private cloud (VPC). The specified security
  * groups override the previously associated security
  *
@@ -225,7 +228,7 @@ ApplySecurityGroupsToLoadBalancerResponse * ElasticLoadBalancingClient::applySec
     return qobject_cast<ApplySecurityGroupsToLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds one or more subnets to the set of configured subnets for the specified load
  *
  * balancer>
@@ -245,7 +248,7 @@ AttachLoadBalancerToSubnetsResponse * ElasticLoadBalancingClient::attachLoadBala
     return qobject_cast<AttachLoadBalancerToSubnetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Specifies the health check settings to use when evaluating the health state of your EC2
  *
  * instances>
@@ -265,7 +268,7 @@ ConfigureHealthCheckResponse * ElasticLoadBalancingClient::configureHealthCheck(
     return qobject_cast<ConfigureHealthCheckResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a stickiness policy with sticky session lifetimes that follow that of an application-generated cookie. This
  * policy can be associated only with HTTP/HTTPS
  *
@@ -298,7 +301,7 @@ CreateAppCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createAppC
     return qobject_cast<CreateAppCookieStickinessPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates a stickiness policy with sticky session lifetimes controlled by the lifetime of the browser (user-agent) or a
  * specified expiration period. This policy can be associated only with HTTP/HTTPS
  *
@@ -331,7 +334,7 @@ CreateLBCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createLBCoo
     return qobject_cast<CreateLBCookieStickinessPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Classic Load
  *
  * Balancer>
@@ -363,7 +366,7 @@ CreateLoadBalancerResponse * ElasticLoadBalancingClient::createLoadBalancer(cons
     return qobject_cast<CreateLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates one or more listeners for the specified load balancer. If a listener with the specified port does not already
  * exist, it is created; otherwise, the properties of the new listener must match the properties of the existing
  *
@@ -384,7 +387,7 @@ CreateLoadBalancerListenersResponse * ElasticLoadBalancingClient::createLoadBala
     return qobject_cast<CreateLoadBalancerListenersResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a policy with the specified attributes for the specified load
  *
  * balancer>
@@ -403,7 +406,7 @@ CreateLoadBalancerPolicyResponse * ElasticLoadBalancingClient::createLoadBalance
     return qobject_cast<CreateLoadBalancerPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified load
  *
  * balancer>
@@ -427,7 +430,7 @@ DeleteLoadBalancerResponse * ElasticLoadBalancingClient::deleteLoadBalancer(cons
     return qobject_cast<DeleteLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified listeners from the specified load
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -441,7 +444,7 @@ DeleteLoadBalancerListenersResponse * ElasticLoadBalancingClient::deleteLoadBala
     return qobject_cast<DeleteLoadBalancerListenersResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified policy from the specified load balancer. This policy must not be enabled for any
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -455,7 +458,7 @@ DeleteLoadBalancerPolicyResponse * ElasticLoadBalancingClient::deleteLoadBalance
     return qobject_cast<DeleteLoadBalancerPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deregisters the specified instances from the specified load balancer. After the instance is deregistered, it no longer
  * receives traffic from the load
  *
@@ -480,7 +483,7 @@ DeregisterInstancesFromLoadBalancerResponse * ElasticLoadBalancingClient::deregi
     return qobject_cast<DeregisterInstancesFromLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the current Elastic Load Balancing resource limits for your AWS
  *
  * account>
@@ -500,7 +503,7 @@ DescribeAccountLimitsResponse * ElasticLoadBalancingClient::describeAccountLimit
     return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the state of the specified instances with respect to the specified load balancer. If no instances are
  * specified, the call describes the state of all instances that are currently registered with the load balancer. If
  * instances are specified, their state is returned even if they are no longer registered with the load balancer. The state
@@ -517,7 +520,7 @@ DescribeInstanceHealthResponse * ElasticLoadBalancingClient::describeInstanceHea
     return qobject_cast<DescribeInstanceHealthResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the attributes for the specified load
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -531,7 +534,7 @@ DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingClient::describeLoa
     return qobject_cast<DescribeLoadBalancerAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified
  *
  * policies>
@@ -552,7 +555,7 @@ DescribeLoadBalancerPoliciesResponse * ElasticLoadBalancingClient::describeLoadB
     return qobject_cast<DescribeLoadBalancerPoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified load balancer policy types or all load balancer policy
  *
  * types>
@@ -577,7 +580,7 @@ DescribeLoadBalancerPolicyTypesResponse * ElasticLoadBalancingClient::describeLo
     return qobject_cast<DescribeLoadBalancerPolicyTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified the load balancers. If no load balancers are specified, the call describes all of your load
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -591,7 +594,7 @@ DescribeLoadBalancersResponse * ElasticLoadBalancingClient::describeLoadBalancer
     return qobject_cast<DescribeLoadBalancersResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the tags associated with the specified load
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -605,7 +608,7 @@ DescribeTagsResponse * ElasticLoadBalancingClient::describeTags(const DescribeTa
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified subnets from the set of configured subnets for the load
  *
  * balancer>
@@ -624,7 +627,7 @@ DetachLoadBalancerFromSubnetsResponse * ElasticLoadBalancingClient::detachLoadBa
     return qobject_cast<DetachLoadBalancerFromSubnetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified Availability Zones from the set of Availability Zones for the specified load
  *
  * balancer>
@@ -651,7 +654,7 @@ DisableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::di
     return qobject_cast<DisableAvailabilityZonesForLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified Availability Zones to the set of Availability Zones for the specified load
  *
  * balancer>
@@ -675,7 +678,7 @@ EnableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::ena
     return qobject_cast<EnableAvailabilityZonesForLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the attributes of the specified load
  *
  * balancer>
@@ -717,7 +720,7 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingClient::modifyLoadBal
     return qobject_cast<ModifyLoadBalancerAttributesResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds the specified instances to the specified load
  *
  * balancer>
@@ -760,7 +763,7 @@ RegisterInstancesWithLoadBalancerResponse * ElasticLoadBalancingClient::register
     return qobject_cast<RegisterInstancesWithLoadBalancerResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes one or more tags from the specified load
  *
  * @param  request Request to send to Elastic Load Balancing.
@@ -774,7 +777,7 @@ RemoveTagsResponse * ElasticLoadBalancingClient::removeTags(const RemoveTagsRequ
     return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the certificate that terminates the specified listener's SSL connections. The specified certificate replaces any
  * prior certificate that was used on the same load balancer and
  *
@@ -795,7 +798,7 @@ SetLoadBalancerListenerSSLCertificateResponse * ElasticLoadBalancingClient::setL
     return qobject_cast<SetLoadBalancerListenerSSLCertificateResponse *>(send(request));
 }
 
-/**
+/*!
  * Replaces the set of policies associated with the specified port on which the EC2 instance is listening with a new set of
  * policies. At this time, only the back-end server authentication policy type can be applied to the instance ports; this
  * policy type is composed of multiple public key
@@ -830,7 +833,7 @@ SetLoadBalancerPoliciesForBackendServerResponse * ElasticLoadBalancingClient::se
     return qobject_cast<SetLoadBalancerPoliciesForBackendServerResponse *>(send(request));
 }
 
-/**
+/*!
  * Replaces the current set of policies for the specified load balancer port with the specified set of
  *
  * policies>
@@ -858,7 +861,7 @@ SetLoadBalancerPoliciesOfListenerResponse * ElasticLoadBalancingClient::setLoadB
     return qobject_cast<SetLoadBalancerPoliciesOfListenerResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticLoadBalancingClientPrivate
@@ -866,7 +869,7 @@ SetLoadBalancerPoliciesOfListenerResponse * ElasticLoadBalancingClient::setLoadB
  * @brief  Private implementation for ElasticLoadBalancingClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticLoadBalancingClientPrivate object.

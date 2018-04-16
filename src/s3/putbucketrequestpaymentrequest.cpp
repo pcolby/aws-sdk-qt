@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketRequestPaymentRequest
+/*!
+ * \class QtAws::S3::PutBucketRequestPaymentRequest
  *
- * @brief  Implements S3 PutBucketRequestPayment requests.
+ * \brief The PutBucketRequestPaymentRequest class encapsulates S3 PutBucketRequestPayment requests.
  *
- * @see    S3Client::putBucketRequestPayment
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketRequestPayment
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketRequestPaymentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest(const PutBucketRe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutBucketRequestPaymentRequest object.
  */
 PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest()
@@ -53,13 +56,16 @@ PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutBucketRequestPaymentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutBucketRequestPaymentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNet
     return new PutBucketRequestPaymentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutBucketRequestPaymentRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNet
  * @brief  Private implementation for PutBucketRequestPaymentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketRequestPaymentRequestPrivate object.
@@ -97,7 +103,7 @@ PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketRequestPaymentRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DeleteStreamResponse
+/*!
+ * \class QtAws::Kinesis::DeleteStreamResponse
  *
- * @brief  Handles Kinesis DeleteStream responses.
+ * \brief The DeleteStreamResponse class encapsulates Kinesis DeleteStream responses.
  *
- * @see    KinesisClient::deleteStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::deleteStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteStreamRequest * DeleteStreamResponse::request() const
     return static_cast<const DeleteStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis DeleteStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteStreamResponsePrivate
+ * \class DeleteStreamResponsePrivate
  *
- * @brief  Private implementation for DeleteStreamResponse.
+ * \brief Private implementation for DeleteStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis DeleteStreamResponse element.
  *
  * @param  xml  XML stream to parse.

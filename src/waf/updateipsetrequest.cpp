@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateIPSetRequest
+/*!
+ * \class QtAws::WAF::UpdateIPSetRequest
  *
- * @brief  Implements WAF UpdateIPSet requests.
+ * \brief The UpdateIPSetRequest class encapsulates WAF UpdateIPSet requests.
  *
- * @see    WAFClient::updateIPSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
@@ -53,13 +61,16 @@ UpdateIPSetRequest::UpdateIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
     return new UpdateIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateIPSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIPSetRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIPSetRequestPrivate object, copying another.

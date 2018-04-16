@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateReplicationTaskRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateReplicationTaskRequest
  *
- * @brief  Implements DatabaseMigrationService CreateReplicationTask requests.
+ * \brief The CreateReplicationTaskRequest class encapsulates DatabaseMigrationService CreateReplicationTask requests.
  *
- * @see    DatabaseMigrationServiceClient::createReplicationTask
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createReplicationTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateReplicationTaskRequest::CreateReplicationTaskRequest(const CreateReplicati
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReplicationTaskRequest object.
  */
 CreateReplicationTaskRequest::CreateReplicationTaskRequest()
@@ -53,13 +67,16 @@ CreateReplicationTaskRequest::CreateReplicationTaskRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReplicationTaskRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReplicationTaskResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationTaskRequest::response(QNetwo
     return new CreateReplicationTaskResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReplicationTaskRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationTaskRequest::response(QNetwo
  * @brief  Private implementation for CreateReplicationTaskRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationTaskRequestPrivate object.
@@ -97,7 +114,7 @@ CreateReplicationTaskRequestPrivate::CreateReplicationTaskRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReplicationTaskRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachClassicLinkVpcRequest
+/*!
+ * \class QtAws::EC2::DetachClassicLinkVpcRequest
  *
- * @brief  Implements EC2 DetachClassicLinkVpc requests.
+ * \brief The DetachClassicLinkVpcRequest class encapsulates EC2 DetachClassicLinkVpc requests.
  *
- * @see    EC2Client::detachClassicLinkVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachClassicLinkVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachClassicLinkVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest(const DetachClassicLink
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachClassicLinkVpcRequest object.
  */
 DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest()
@@ -53,13 +60,16 @@ DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachClassicLinkVpcRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachClassicLinkVpcResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetwor
     return new DetachClassicLinkVpcResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachClassicLinkVpcRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetwor
  * @brief  Private implementation for DetachClassicLinkVpcRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachClassicLinkVpcRequestPrivate object.
@@ -97,7 +107,7 @@ DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachClassicLinkVpcRequestPrivate object, copying another.

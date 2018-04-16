@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DetachInstancesRequest
+/*!
+ * \class QtAws::AutoScaling::DetachInstancesRequest
  *
- * @brief  Implements AutoScaling DetachInstances requests.
+ * \brief The DetachInstancesRequest class encapsulates AutoScaling DetachInstances requests.
  *
- * @see    AutoScalingClient::detachInstances
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::detachInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DetachInstancesRequest::DetachInstancesRequest(const DetachInstancesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachInstancesRequest object.
  */
 DetachInstancesRequest::DetachInstancesRequest()
@@ -53,13 +61,16 @@ DetachInstancesRequest::DetachInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkRepl
     return new DetachInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachInstancesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkRepl
  * @brief  Private implementation for DetachInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachInstancesRequestPrivate object.
@@ -97,7 +108,7 @@ DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachInstancesRequestPrivate object, copying another.

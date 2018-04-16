@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  PutScalingPolicyRequest
+/*!
+ * \class QtAws::AutoScaling::PutScalingPolicyRequest
  *
- * @brief  Implements AutoScaling PutScalingPolicy requests.
+ * \brief The PutScalingPolicyRequest class encapsulates AutoScaling PutScalingPolicy requests.
  *
- * @see    AutoScalingClient::putScalingPolicy
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::putScalingPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutScalingPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ PutScalingPolicyRequest::PutScalingPolicyRequest(const PutScalingPolicyRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutScalingPolicyRequest object.
  */
 PutScalingPolicyRequest::PutScalingPolicyRequest()
@@ -53,13 +61,16 @@ PutScalingPolicyRequest::PutScalingPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutScalingPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutScalingPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkRep
     return new PutScalingPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutScalingPolicyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkRep
  * @brief  Private implementation for PutScalingPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutScalingPolicyRequestPrivate object.
@@ -97,7 +108,7 @@ PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutScalingPolicyRequestPrivate object, copying another.

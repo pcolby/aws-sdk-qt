@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DataPipeline {
 
-/**
- * @class  DataPipelineResponse
+/*!
+ * \class QtAws::DataPipeline::DataPipelineResponse
  *
- * @brief  Handles DataPipeline DataPipeline responses.
+ * \brief The DataPipelineResponse class is the base class for all DataPipeline responses.
  *
- * @see    DataPipelineClient::dataPipeline
+ * \ingroup DataPipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new DataPipelineResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DataPipelineResponse::DataPipelineResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DataPipelineResponse object.
@@ -63,7 +63,7 @@ DataPipelineResponse::DataPipelineResponse(DataPipelineResponsePrivate * const d
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DataPipelineResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DataPipelineResponsePrivate
@@ -92,7 +92,7 @@ void DataPipelineResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DataPipelineResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DataPipelineResponsePrivate object.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  CreateBotVersionRequest
+/*!
+ * \class QtAws::LexModelBuildingService::CreateBotVersionRequest
  *
- * @brief  Implements LexModelBuildingService CreateBotVersion requests.
+ * \brief The CreateBotVersionRequest class encapsulates LexModelBuildingService CreateBotVersion requests.
  *
- * @see    LexModelBuildingServiceClient::createBotVersion
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::createBotVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateBotVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateBotVersionRequest::CreateBotVersionRequest(const CreateBotVersionRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateBotVersionRequest object.
  */
 CreateBotVersionRequest::CreateBotVersionRequest()
@@ -53,13 +60,16 @@ CreateBotVersionRequest::CreateBotVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateBotVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateBotVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkRep
     return new CreateBotVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateBotVersionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkRep
  * @brief  Private implementation for CreateBotVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBotVersionRequestPrivate object.
@@ -97,7 +107,7 @@ CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateBotVersionRequestPrivate object, copying another.

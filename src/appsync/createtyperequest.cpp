@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateTypeRequest
+/*!
+ * \class QtAws::AppSync::CreateTypeRequest
  *
- * @brief  Implements AppSync CreateType requests.
+ * \brief The CreateTypeRequest class encapsulates AppSync CreateType requests.
  *
- * @see    AppSyncClient::createType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateTypeRequest::CreateTypeRequest(const CreateTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateTypeRequest object.
  */
 CreateTypeRequest::CreateTypeRequest()
@@ -53,13 +57,16 @@ CreateTypeRequest::CreateTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateTypeRequest::response(QNetworkReply * c
     return new CreateTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateTypeRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateTypeRequest::response(QNetworkReply * c
  * @brief  Private implementation for CreateTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTypeRequestPrivate object.
@@ -97,7 +104,7 @@ CreateTypeRequestPrivate::CreateTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateTypeRequestPrivate object, copying another.

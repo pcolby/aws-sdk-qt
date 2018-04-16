@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateSubscriptionDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionVersionRequest
  *
- * @brief  Implements Greengrass CreateSubscriptionDefinitionVersion requests.
+ * \brief The CreateSubscriptionDefinitionVersionRequest class encapsulates Greengrass CreateSubscriptionDefinitionVersion requests.
  *
- * @see    GreengrassClient::createSubscriptionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createSubscriptionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateSubscriptionDefinitionVersionRequest::CreateSubscriptionDefinitionVersionR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequest object.
  */
 CreateSubscriptionDefinitionVersionRequest::CreateSubscriptionDefinitionVersionRequest()
@@ -53,13 +59,16 @@ CreateSubscriptionDefinitionVersionRequest::CreateSubscriptionDefinitionVersionR
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSubscriptionDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSubscriptionDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionVersionRequest::r
     return new CreateSubscriptionDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSubscriptionDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionDefinitionVersionRequest::r
  * @brief  Private implementation for CreateSubscriptionDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateSubscriptionDefinitionVersionRequestPrivate::CreateSubscriptionDefinitionV
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSubscriptionDefinitionVersionRequestPrivate object, copying another.

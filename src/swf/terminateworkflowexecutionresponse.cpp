@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  TerminateWorkflowExecutionResponse
+/*!
+ * \class QtAws::SWF::TerminateWorkflowExecutionResponse
  *
- * @brief  Handles SWF TerminateWorkflowExecution responses.
+ * \brief The TerminateWorkflowExecutionResponse class encapsulates SWF TerminateWorkflowExecution responses.
  *
- * @see    SWFClient::terminateWorkflowExecution
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::terminateWorkflowExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateWorkflowExecutionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::re
     return static_cast<const TerminateWorkflowExecutionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF TerminateWorkflowExecution response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  TerminateWorkflowExecutionResponsePrivate
+ * \class TerminateWorkflowExecutionResponsePrivate
  *
- * @brief  Private implementation for TerminateWorkflowExecutionResponse.
+ * \brief Private implementation for TerminateWorkflowExecutionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateWorkflowExecutionResponsePrivate object.
@@ -91,7 +110,7 @@ TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF TerminateWorkflowExecutionResponse element.
  *
  * @param  xml  XML stream to parse.

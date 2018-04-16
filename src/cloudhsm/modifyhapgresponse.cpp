@@ -27,15 +27,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  ModifyHapgResponse
+/*!
+ * \class QtAws::CloudHSM::ModifyHapgResponse
  *
- * @brief  Handles CloudHSM ModifyHapg responses.
+ * \brief The ModifyHapgResponse class encapsulates CloudHSM ModifyHapg responses.
  *
- * @see    CloudHSMClient::modifyHapg
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::modifyHapg
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyHapgResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +73,7 @@ const ModifyHapgRequest * ModifyHapgResponse::request() const
     return static_cast<const ModifyHapgRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudHSM ModifyHapg response.
  *
  * @param  response  Response to parse.
@@ -70,15 +85,15 @@ void ModifyHapgResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyHapgResponsePrivate
+ * \class ModifyHapgResponsePrivate
  *
- * @brief  Private implementation for ModifyHapgResponse.
+ * \brief Private implementation for ModifyHapgResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyHapgResponsePrivate object.
@@ -91,7 +106,7 @@ ModifyHapgResponsePrivate::ModifyHapgResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudHSM ModifyHapgResponse element.
  *
  * @param  xml  XML stream to parse.

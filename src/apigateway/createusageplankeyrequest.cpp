@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateUsagePlanKeyRequest
+/*!
+ * \class QtAws::APIGateway::CreateUsagePlanKeyRequest
  *
- * @brief  Implements APIGateway CreateUsagePlanKey requests.
+ * \brief The CreateUsagePlanKeyRequest class encapsulates APIGateway CreateUsagePlanKey requests.
  *
- * @see    APIGatewayClient::createUsagePlanKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createUsagePlanKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUsagePlanKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateUsagePlanKeyRequest::CreateUsagePlanKeyRequest(const CreateUsagePlanKeyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateUsagePlanKeyRequest object.
  */
 CreateUsagePlanKeyRequest::CreateUsagePlanKeyRequest()
@@ -53,13 +61,16 @@ CreateUsagePlanKeyRequest::CreateUsagePlanKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateUsagePlanKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateUsagePlanKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanKeyRequest::response(QNetworkR
     return new CreateUsagePlanKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateUsagePlanKeyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanKeyRequest::response(QNetworkR
  * @brief  Private implementation for CreateUsagePlanKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUsagePlanKeyRequestPrivate object.
@@ -97,7 +108,7 @@ CreateUsagePlanKeyRequestPrivate::CreateUsagePlanKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUsagePlanKeyRequestPrivate object, copying another.

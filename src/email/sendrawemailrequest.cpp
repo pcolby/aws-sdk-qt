@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SendRawEmailRequest
+/*!
+ * \class QtAws::SES::SendRawEmailRequest
  *
- * @brief  Implements SES SendRawEmail requests.
+ * \brief The SendRawEmailRequest class encapsulates SES SendRawEmail requests.
  *
- * @see    SESClient::sendRawEmail
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::sendRawEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new SendRawEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ SendRawEmailRequest::SendRawEmailRequest(const SendRawEmailRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendRawEmailRequest object.
  */
 SendRawEmailRequest::SendRawEmailRequest()
@@ -53,13 +67,16 @@ SendRawEmailRequest::SendRawEmailRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendRawEmailRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendRawEmailResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SendRawEmailRequest::response(QNetworkReply *
     return new SendRawEmailResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendRawEmailRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * SendRawEmailRequest::response(QNetworkReply *
  * @brief  Private implementation for SendRawEmailRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendRawEmailRequestPrivate object.
@@ -97,7 +114,7 @@ SendRawEmailRequestPrivate::SendRawEmailRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendRawEmailRequestPrivate object, copying another.

@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  RemoveTagsFromResourceResponse
+/*!
+ * \class QtAws::ElastiCache::RemoveTagsFromResourceResponse
  *
- * @brief  Handles ElastiCache RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class encapsulates ElastiCache RemoveTagsFromResource responses.
  *
- * @see    ElastiCacheClient::removeTagsFromResource
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::removeTagsFromResource
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
     return static_cast<const RemoveTagsFromResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache RemoveTagsFromResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsFromResourceResponsePrivate
+ * \class RemoveTagsFromResourceResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsFromResourceResponse.
+ * \brief Private implementation for RemoveTagsFromResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromResourceResponsePrivate object.
@@ -91,7 +108,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache RemoveTagsFromResourceResponse element.
  *
  * @param  xml  XML stream to parse.

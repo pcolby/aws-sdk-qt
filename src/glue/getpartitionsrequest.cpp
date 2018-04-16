@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetPartitionsRequest
+/*!
+ * \class QtAws::Glue::GetPartitionsRequest
  *
- * @brief  Implements Glue GetPartitions requests.
+ * \brief The GetPartitionsRequest class encapsulates Glue GetPartitions requests.
  *
- * @see    GlueClient::getPartitions
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getPartitions
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPartitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetPartitionsRequest::GetPartitionsRequest(const GetPartitionsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetPartitionsRequest object.
  */
 GetPartitionsRequest::GetPartitionsRequest()
@@ -53,13 +59,16 @@ GetPartitionsRequest::GetPartitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetPartitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetPartitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetPartitionsRequest::response(QNetworkReply 
     return new GetPartitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetPartitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetPartitionsRequest::response(QNetworkReply 
  * @brief  Private implementation for GetPartitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPartitionsRequestPrivate object.
@@ -97,7 +106,7 @@ GetPartitionsRequestPrivate::GetPartitionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPartitionsRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  StopChannelRequest
+/*!
+ * \class QtAws::MediaLive::StopChannelRequest
  *
- * @brief  Implements MediaLive StopChannel requests.
+ * \brief The StopChannelRequest class encapsulates MediaLive StopChannel requests.
  *
- * @see    MediaLiveClient::stopChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::stopChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new StopChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ StopChannelRequest::StopChannelRequest(const StopChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopChannelRequest object.
  */
 StopChannelRequest::StopChannelRequest()
@@ -53,13 +56,16 @@ StopChannelRequest::StopChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * 
     return new StopChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * 
  * @brief  Private implementation for StopChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopChannelRequestPrivate object.
@@ -97,7 +103,7 @@ StopChannelRequestPrivate::StopChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopChannelRequestPrivate object, copying another.

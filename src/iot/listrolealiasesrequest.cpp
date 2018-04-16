@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListRoleAliasesRequest
+/*!
+ * \class QtAws::IoT::ListRoleAliasesRequest
  *
- * @brief  Implements IoT ListRoleAliases requests.
+ * \brief The ListRoleAliasesRequest class encapsulates IoT ListRoleAliases requests.
  *
- * @see    IoTClient::listRoleAliases
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listRoleAliases
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRoleAliasesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListRoleAliasesRequest::ListRoleAliasesRequest(const ListRoleAliasesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRoleAliasesRequest object.
  */
 ListRoleAliasesRequest::ListRoleAliasesRequest()
@@ -53,13 +67,16 @@ ListRoleAliasesRequest::ListRoleAliasesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRoleAliasesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRoleAliasesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListRoleAliasesRequest::response(QNetworkRepl
     return new ListRoleAliasesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRoleAliasesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListRoleAliasesRequest::response(QNetworkRepl
  * @brief  Private implementation for ListRoleAliasesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRoleAliasesRequestPrivate object.
@@ -97,7 +114,7 @@ ListRoleAliasesRequestPrivate::ListRoleAliasesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRoleAliasesRequestPrivate object, copying another.

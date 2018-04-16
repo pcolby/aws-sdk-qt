@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteTriggerResponse
+/*!
+ * \class QtAws::Glue::DeleteTriggerResponse
  *
- * @brief  Handles Glue DeleteTrigger responses.
+ * \brief The DeleteTriggerResponse class encapsulates Glue DeleteTrigger responses.
  *
- * @see    GlueClient::deleteTrigger
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteTrigger
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTriggerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteTriggerRequest * DeleteTriggerResponse::request() const
     return static_cast<const DeleteTriggerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeleteTrigger response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteTriggerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTriggerResponsePrivate
+ * \class DeleteTriggerResponsePrivate
  *
- * @brief  Private implementation for DeleteTriggerResponse.
+ * \brief Private implementation for DeleteTriggerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTriggerResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteTriggerResponsePrivate::DeleteTriggerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeleteTriggerResponse element.
  *
  * @param  xml  XML stream to parse.

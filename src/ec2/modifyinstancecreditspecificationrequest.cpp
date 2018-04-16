@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyInstanceCreditSpecificationRequest
+/*!
+ * \class QtAws::EC2::ModifyInstanceCreditSpecificationRequest
  *
- * @brief  Implements EC2 ModifyInstanceCreditSpecification requests.
+ * \brief The ModifyInstanceCreditSpecificationRequest class encapsulates EC2 ModifyInstanceCreditSpecification requests.
  *
- * @see    EC2Client::modifyInstanceCreditSpecification
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyInstanceCreditSpecification
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceCreditSpecificationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ModifyInstanceCreditSpecificationRequest object.
  */
 ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationRequest()
@@ -53,13 +60,16 @@ ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool ModifyInstanceCreditSpecificationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ModifyInstanceCreditSpecificationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::res
     return new ModifyInstanceCreditSpecificationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ModifyInstanceCreditSpecificationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::res
  * @brief  Private implementation for ModifyInstanceCreditSpecificationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceCreditSpecificationRequestPrivate object.
@@ -97,7 +107,7 @@ ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificati
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyInstanceCreditSpecificationRequestPrivate object, copying another.

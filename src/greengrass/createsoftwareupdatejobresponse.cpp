@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateSoftwareUpdateJobResponse
+/*!
+ * \class QtAws::Greengrass::CreateSoftwareUpdateJobResponse
  *
- * @brief  Handles Greengrass CreateSoftwareUpdateJob responses.
+ * \brief The CreateSoftwareUpdateJobResponse class encapsulates Greengrass CreateSoftwareUpdateJob responses.
  *
- * @see    GreengrassClient::createSoftwareUpdateJob
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createSoftwareUpdateJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSoftwareUpdateJobResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateSoftwareUpdateJobRequest * CreateSoftwareUpdateJobResponse::request(
     return static_cast<const CreateSoftwareUpdateJobRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateSoftwareUpdateJob response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateSoftwareUpdateJobResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSoftwareUpdateJobResponsePrivate
+ * \class CreateSoftwareUpdateJobResponsePrivate
  *
- * @brief  Private implementation for CreateSoftwareUpdateJobResponse.
+ * \brief Private implementation for CreateSoftwareUpdateJobResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSoftwareUpdateJobResponsePrivate object.
@@ -91,7 +97,7 @@ CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateSoftwareUpdateJobResponse element.
  *
  * @param  xml  XML stream to parse.

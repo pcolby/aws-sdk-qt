@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SendBounceResponse
+/*!
+ * \class QtAws::SES::SendBounceResponse
  *
- * @brief  Handles SES SendBounce responses.
+ * \brief The SendBounceResponse class encapsulates SES SendBounce responses.
  *
- * @see    SESClient::sendBounce
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::sendBounce
  */
 
-/**
+/*!
  * @brief  Constructs a new SendBounceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SendBounceRequest * SendBounceResponse::request() const
     return static_cast<const SendBounceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SendBounce response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SendBounceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SendBounceResponsePrivate
+ * \class SendBounceResponsePrivate
  *
- * @brief  Private implementation for SendBounceResponse.
+ * \brief Private implementation for SendBounceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendBounceResponsePrivate object.
@@ -91,7 +105,7 @@ SendBounceResponsePrivate::SendBounceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SendBounceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  ListPresetsResponse
+/*!
+ * \class QtAws::MediaConvert::ListPresetsResponse
  *
- * @brief  Handles MediaConvert ListPresets responses.
+ * \brief The ListPresetsResponse class encapsulates MediaConvert ListPresets responses.
  *
- * @see    MediaConvertClient::listPresets
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::listPresets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPresetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListPresetsRequest * ListPresetsResponse::request() const
     return static_cast<const ListPresetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert ListPresets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListPresetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPresetsResponsePrivate
+ * \class ListPresetsResponsePrivate
  *
- * @brief  Private implementation for ListPresetsResponse.
+ * \brief Private implementation for ListPresetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPresetsResponsePrivate object.
@@ -91,7 +94,7 @@ ListPresetsResponsePrivate::ListPresetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert ListPresetsResponse element.
  *
  * @param  xml  XML stream to parse.

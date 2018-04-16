@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  GetReplicationRunsResponse
+/*!
+ * \class QtAws::SMS::GetReplicationRunsResponse
  *
- * @brief  Handles SMS GetReplicationRuns responses.
+ * \brief The GetReplicationRunsResponse class encapsulates SMS GetReplicationRuns responses.
  *
- * @see    SMSClient::getReplicationRuns
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::getReplicationRuns
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReplicationRunsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetReplicationRunsRequest * GetReplicationRunsResponse::request() const
     return static_cast<const GetReplicationRunsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS GetReplicationRuns response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetReplicationRunsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetReplicationRunsResponsePrivate
+ * \class GetReplicationRunsResponsePrivate
  *
- * @brief  Private implementation for GetReplicationRunsResponse.
+ * \brief Private implementation for GetReplicationRunsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReplicationRunsResponsePrivate object.
@@ -91,7 +94,7 @@ GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS GetReplicationRunsResponse element.
  *
  * @param  xml  XML stream to parse.

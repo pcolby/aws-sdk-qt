@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  DescribeStreamRequest
+/*!
+ * \class QtAws::Kinesis::DescribeStreamRequest
  *
- * @brief  Implements Kinesis DescribeStream requests.
+ * \brief The DescribeStreamRequest class encapsulates Kinesis DescribeStream requests.
  *
- * @see    KinesisClient::describeStream
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::describeStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamRequest object.
  */
 DescribeStreamRequest::DescribeStreamRequest()
@@ -53,13 +59,16 @@ DescribeStreamRequest::DescribeStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
     return new DescribeStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStreamRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CreateReservedInstancesListingRequest
+/*!
+ * \class QtAws::EC2::CreateReservedInstancesListingRequest
  *
- * @brief  Implements EC2 CreateReservedInstancesListing requests.
+ * \brief The CreateReservedInstancesListingRequest class encapsulates EC2 CreateReservedInstancesListing requests.
  *
- * @see    EC2Client::createReservedInstancesListing
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::createReservedInstancesListing
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateReservedInstancesListingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateReservedInstancesListingRequest object.
  */
 CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest()
@@ -53,13 +60,16 @@ CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateReservedInstancesListingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateReservedInstancesListingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CreateReservedInstancesListingRequest::respon
     return new CreateReservedInstancesListingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateReservedInstancesListingRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CreateReservedInstancesListingRequest::respon
  * @brief  Private implementation for CreateReservedInstancesListingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReservedInstancesListingRequestPrivate object.
@@ -97,7 +107,7 @@ CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateReservedInstancesListingRequestPrivate object, copying another.

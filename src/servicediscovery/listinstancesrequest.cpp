@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ListInstancesRequest
+/*!
+ * \class QtAws::ServiceDiscovery::ListInstancesRequest
  *
- * @brief  Implements ServiceDiscovery ListInstances requests.
+ * \brief The ListInstancesRequest class encapsulates ServiceDiscovery ListInstances requests.
  *
- * @see    ServiceDiscoveryClient::listInstances
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::listInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListInstancesRequest::ListInstancesRequest(const ListInstancesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInstancesRequest object.
  */
 ListInstancesRequest::ListInstancesRequest()
@@ -53,13 +60,16 @@ ListInstancesRequest::ListInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
     return new ListInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
  * @brief  Private implementation for ListInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ ListInstancesRequestPrivate::ListInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstancesRequestPrivate object, copying another.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateThingTypeRequest
+/*!
+ * \class QtAws::IoT::CreateThingTypeRequest
  *
- * @brief  Implements IoT CreateThingType requests.
+ * \brief The CreateThingTypeRequest class encapsulates IoT CreateThingType requests.
  *
- * @see    IoTClient::createThingType
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createThingType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateThingTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateThingTypeRequest::CreateThingTypeRequest(const CreateThingTypeRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateThingTypeRequest object.
  */
 CreateThingTypeRequest::CreateThingTypeRequest()
@@ -53,13 +67,16 @@ CreateThingTypeRequest::CreateThingTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateThingTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateThingTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkRepl
     return new CreateThingTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateThingTypeRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateThingTypeRequest::response(QNetworkRepl
  * @brief  Private implementation for CreateThingTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingTypeRequestPrivate object.
@@ -97,7 +114,7 @@ CreateThingTypeRequestPrivate::CreateThingTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateThingTypeRequestPrivate object, copying another.

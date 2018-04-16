@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  ListTrainingJobsResponse
+/*!
+ * \class QtAws::SageMaker::ListTrainingJobsResponse
  *
- * @brief  Handles SageMaker ListTrainingJobs responses.
+ * \brief The ListTrainingJobsResponse class encapsulates SageMaker ListTrainingJobs responses.
  *
- * @see    SageMakerClient::listTrainingJobs
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::listTrainingJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTrainingJobsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListTrainingJobsRequest * ListTrainingJobsResponse::request() const
     return static_cast<const ListTrainingJobsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker ListTrainingJobs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListTrainingJobsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListTrainingJobsResponsePrivate
+ * \class ListTrainingJobsResponsePrivate
  *
- * @brief  Private implementation for ListTrainingJobsResponse.
+ * \brief Private implementation for ListTrainingJobsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrainingJobsResponsePrivate object.
@@ -91,7 +94,7 @@ ListTrainingJobsResponsePrivate::ListTrainingJobsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker ListTrainingJobsResponse element.
  *
  * @param  xml  XML stream to parse.

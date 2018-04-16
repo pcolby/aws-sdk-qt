@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListInstancesRequest
+/*!
+ * \class QtAws::EMR::ListInstancesRequest
  *
- * @brief  Implements EMR ListInstances requests.
+ * \brief The ListInstancesRequest class encapsulates EMR ListInstances requests.
  *
- * @see    EMRClient::listInstances
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListInstancesRequest::ListInstancesRequest(const ListInstancesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListInstancesRequest object.
  */
 ListInstancesRequest::ListInstancesRequest()
@@ -53,13 +59,16 @@ ListInstancesRequest::ListInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
     return new ListInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListInstancesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
  * @brief  Private implementation for ListInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstancesRequestPrivate object.
@@ -97,7 +106,7 @@ ListInstancesRequestPrivate::ListInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstancesRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateAdditionalAssignmentsForHITRequest
+/*!
+ * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITRequest
  *
- * @brief  Implements MTurk CreateAdditionalAssignmentsForHIT requests.
+ * \brief The CreateAdditionalAssignmentsForHITRequest class encapsulates MTurk CreateAdditionalAssignmentsForHIT requests.
  *
- * @see    MTurkClient::createAdditionalAssignmentsForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createAdditionalAssignmentsForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequest object.
  */
 CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITRequest()
@@ -53,13 +56,16 @@ CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateAdditionalAssignmentsForHITRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateAdditionalAssignmentsForHITResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::res
     return new CreateAdditionalAssignmentsForHITResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateAdditionalAssignmentsForHITRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::res
  * @brief  Private implementation for CreateAdditionalAssignmentsForHITRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequestPrivate object.
@@ -97,7 +103,7 @@ CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForH
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequestPrivate object, copying another.

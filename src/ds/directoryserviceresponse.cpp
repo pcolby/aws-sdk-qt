@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DirectoryServiceResponse
+/*!
+ * \class QtAws::DirectoryService::DirectoryServiceResponse
  *
- * @brief  Handles DirectoryService DirectoryService responses.
+ * \brief The DirectoryServiceResponse class is the base class for all DirectoryService responses.
  *
- * @see    DirectoryServiceClient::directoryService
+ * \ingroup DirectoryService
  */
 
-/**
+/*!
  * @brief  Constructs a new DirectoryServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DirectoryServiceResponse::DirectoryServiceResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectoryServiceResponse object.
@@ -63,7 +63,7 @@ DirectoryServiceResponse::DirectoryServiceResponse(DirectoryServiceResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DirectoryServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DirectoryServiceResponsePrivate
@@ -92,7 +92,7 @@ void DirectoryServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DirectoryServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DirectoryServiceResponsePrivate object.

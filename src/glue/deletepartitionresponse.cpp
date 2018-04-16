@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeletePartitionResponse
+/*!
+ * \class QtAws::Glue::DeletePartitionResponse
  *
- * @brief  Handles Glue DeletePartition responses.
+ * \brief The DeletePartitionResponse class encapsulates Glue DeletePartition responses.
  *
- * @see    GlueClient::deletePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deletePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePartitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeletePartitionRequest * DeletePartitionResponse::request() const
     return static_cast<const DeletePartitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue DeletePartition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeletePartitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePartitionResponsePrivate
+ * \class DeletePartitionResponsePrivate
  *
- * @brief  Private implementation for DeletePartitionResponse.
+ * \brief Private implementation for DeletePartitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePartitionResponsePrivate object.
@@ -91,7 +97,7 @@ DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue DeletePartitionResponse element.
  *
  * @param  xml  XML stream to parse.

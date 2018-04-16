@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  CreateChannelRequest
+/*!
+ * \class QtAws::MediaLive::CreateChannelRequest
  *
- * @brief  Implements MediaLive CreateChannel requests.
+ * \brief The CreateChannelRequest class encapsulates MediaLive CreateChannel requests.
  *
- * @see    MediaLiveClient::createChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::createChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateChannelRequest::CreateChannelRequest(const CreateChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateChannelRequest object.
  */
 CreateChannelRequest::CreateChannelRequest()
@@ -53,13 +56,16 @@ CreateChannelRequest::CreateChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateChannelRequest::response(QNetworkReply 
     return new CreateChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateChannelRequest::response(QNetworkReply 
  * @brief  Private implementation for CreateChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateChannelRequestPrivate object.
@@ -97,7 +103,7 @@ CreateChannelRequestPrivate::CreateChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateChannelRequestPrivate object, copying another.

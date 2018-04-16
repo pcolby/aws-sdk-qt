@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  SetRiskConfigurationRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationRequest
  *
- * @brief  Implements CognitoIdentityProvider SetRiskConfiguration requests.
+ * \brief The SetRiskConfigurationRequest class encapsulates CognitoIdentityProvider SetRiskConfiguration requests.
  *
- * @see    CognitoIdentityProviderClient::setRiskConfiguration
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::setRiskConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new SetRiskConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ SetRiskConfigurationRequest::SetRiskConfigurationRequest(const SetRiskConfigurat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetRiskConfigurationRequest object.
  */
 SetRiskConfigurationRequest::SetRiskConfigurationRequest()
@@ -53,13 +66,16 @@ SetRiskConfigurationRequest::SetRiskConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetRiskConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetRiskConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * SetRiskConfigurationRequest::response(QNetwor
     return new SetRiskConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetRiskConfigurationRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * SetRiskConfigurationRequest::response(QNetwor
  * @brief  Private implementation for SetRiskConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetRiskConfigurationRequestPrivate object.
@@ -97,7 +113,7 @@ SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetRiskConfigurationRequestPrivate object, copying another.

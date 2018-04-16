@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListWorkerBlocksResponse
+/*!
+ * \class QtAws::MTurk::ListWorkerBlocksResponse
  *
- * @brief  Handles MTurk ListWorkerBlocks responses.
+ * \brief The ListWorkerBlocksResponse class encapsulates MTurk ListWorkerBlocks responses.
  *
- * @see    MTurkClient::listWorkerBlocks
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listWorkerBlocks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListWorkerBlocksResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListWorkerBlocksRequest * ListWorkerBlocksResponse::request() const
     return static_cast<const ListWorkerBlocksRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListWorkerBlocks response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListWorkerBlocksResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListWorkerBlocksResponsePrivate
+ * \class ListWorkerBlocksResponsePrivate
  *
- * @brief  Private implementation for ListWorkerBlocksResponse.
+ * \brief Private implementation for ListWorkerBlocksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkerBlocksResponsePrivate object.
@@ -91,7 +94,7 @@ ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListWorkerBlocksResponse element.
  *
  * @param  xml  XML stream to parse.

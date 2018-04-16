@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  EnableEnhancedMonitoringResponse
+/*!
+ * \class QtAws::Kinesis::EnableEnhancedMonitoringResponse
  *
- * @brief  Handles Kinesis EnableEnhancedMonitoring responses.
+ * \brief The EnableEnhancedMonitoringResponse class encapsulates Kinesis EnableEnhancedMonitoring responses.
  *
- * @see    KinesisClient::enableEnhancedMonitoring
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::enableEnhancedMonitoring
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableEnhancedMonitoringResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const EnableEnhancedMonitoringRequest * EnableEnhancedMonitoringResponse::reques
     return static_cast<const EnableEnhancedMonitoringRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis EnableEnhancedMonitoring response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void EnableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableEnhancedMonitoringResponsePrivate
+ * \class EnableEnhancedMonitoringResponsePrivate
  *
- * @brief  Private implementation for EnableEnhancedMonitoringResponse.
+ * \brief Private implementation for EnableEnhancedMonitoringResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableEnhancedMonitoringResponsePrivate object.
@@ -91,7 +97,7 @@ EnableEnhancedMonitoringResponsePrivate::EnableEnhancedMonitoringResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis EnableEnhancedMonitoringResponse element.
  *
  * @param  xml  XML stream to parse.

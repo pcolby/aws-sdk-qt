@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateFunctionDefinitionVersionResponse
+/*!
+ * \class QtAws::Greengrass::CreateFunctionDefinitionVersionResponse
  *
- * @brief  Handles Greengrass CreateFunctionDefinitionVersion responses.
+ * \brief The CreateFunctionDefinitionVersionResponse class encapsulates Greengrass CreateFunctionDefinitionVersion responses.
  *
- * @see    GreengrassClient::createFunctionDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createFunctionDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFunctionDefinitionVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateFunctionDefinitionVersionRequest * CreateFunctionDefinitionVersionRe
     return static_cast<const CreateFunctionDefinitionVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass CreateFunctionDefinitionVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateFunctionDefinitionVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateFunctionDefinitionVersionResponsePrivate
+ * \class CreateFunctionDefinitionVersionResponsePrivate
  *
- * @brief  Private implementation for CreateFunctionDefinitionVersionResponse.
+ * \brief Private implementation for CreateFunctionDefinitionVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFunctionDefinitionVersionResponsePrivate object.
@@ -91,7 +97,7 @@ CreateFunctionDefinitionVersionResponsePrivate::CreateFunctionDefinitionVersionR
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass CreateFunctionDefinitionVersionResponse element.
  *
  * @param  xml  XML stream to parse.

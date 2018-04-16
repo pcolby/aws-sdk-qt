@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateDistributionRequest
+/*!
+ * \class QtAws::CloudFront::UpdateDistributionRequest
  *
- * @brief  Implements CloudFront UpdateDistribution requests.
+ * \brief The UpdateDistributionRequest class encapsulates CloudFront UpdateDistribution requests.
  *
- * @see    CloudFrontClient::updateDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateDistributionRequest::UpdateDistributionRequest(const UpdateDistributionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDistributionRequest object.
  */
 UpdateDistributionRequest::UpdateDistributionRequest()
@@ -53,13 +61,16 @@ UpdateDistributionRequest::UpdateDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkR
     return new UpdateDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkR
  * @brief  Private implementation for UpdateDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDistributionRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcPeeringConnectionRequest
+/*!
+ * \class QtAws::EC2::DeleteVpcPeeringConnectionRequest
  *
- * @brief  Implements EC2 DeleteVpcPeeringConnection requests.
+ * \brief The DeleteVpcPeeringConnectionRequest class encapsulates EC2 DeleteVpcPeeringConnection requests.
  *
- * @see    EC2Client::deleteVpcPeeringConnection
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpcPeeringConnection
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const Delet
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest()
@@ -53,13 +60,16 @@ DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpcPeeringConnectionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpcPeeringConnectionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
     return new DeleteVpcPeeringConnectionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpcPeeringConnectionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
  * @brief  Private implementation for DeleteVpcPeeringConnectionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object, copying another.

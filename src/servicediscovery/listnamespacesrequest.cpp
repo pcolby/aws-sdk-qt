@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ListNamespacesRequest
+/*!
+ * \class QtAws::ServiceDiscovery::ListNamespacesRequest
  *
- * @brief  Implements ServiceDiscovery ListNamespaces requests.
+ * \brief The ListNamespacesRequest class encapsulates ServiceDiscovery ListNamespaces requests.
  *
- * @see    ServiceDiscoveryClient::listNamespaces
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::listNamespaces
  */
 
-/**
+/*!
  * @brief  Constructs a new ListNamespacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListNamespacesRequest::ListNamespacesRequest(const ListNamespacesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListNamespacesRequest object.
  */
 ListNamespacesRequest::ListNamespacesRequest()
@@ -53,13 +60,16 @@ ListNamespacesRequest::ListNamespacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListNamespacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListNamespacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply
     return new ListNamespacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListNamespacesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply
  * @brief  Private implementation for ListNamespacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNamespacesRequestPrivate object.
@@ -97,7 +107,7 @@ ListNamespacesRequestPrivate::ListNamespacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListNamespacesRequestPrivate object, copying another.

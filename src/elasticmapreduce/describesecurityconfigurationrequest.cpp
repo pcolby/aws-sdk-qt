@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeSecurityConfigurationRequest
+/*!
+ * \class QtAws::EMR::DescribeSecurityConfigurationRequest
  *
- * @brief  Implements EMR DescribeSecurityConfiguration requests.
+ * \brief The DescribeSecurityConfigurationRequest class encapsulates EMR DescribeSecurityConfiguration requests.
  *
- * @see    EMRClient::describeSecurityConfiguration
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeSecurityConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSecurityConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeSecurityConfigurationRequest object.
  */
 DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest()
@@ -53,13 +59,16 @@ DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeSecurityConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeSecurityConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::respons
     return new DescribeSecurityConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeSecurityConfigurationRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::respons
  * @brief  Private implementation for DescribeSecurityConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSecurityConfigurationRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSecurityConfigurationRequestPrivate object, copying another.

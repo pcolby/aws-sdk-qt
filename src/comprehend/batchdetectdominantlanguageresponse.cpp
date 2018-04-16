@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  BatchDetectDominantLanguageResponse
+/*!
+ * \class QtAws::Comprehend::BatchDetectDominantLanguageResponse
  *
- * @brief  Handles Comprehend BatchDetectDominantLanguage responses.
+ * \brief The BatchDetectDominantLanguageResponse class encapsulates Comprehend BatchDetectDominantLanguage responses.
  *
- * @see    ComprehendClient::batchDetectDominantLanguage
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::batchDetectDominantLanguage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDetectDominantLanguageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const BatchDetectDominantLanguageRequest * BatchDetectDominantLanguageResponse::
     return static_cast<const BatchDetectDominantLanguageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Comprehend BatchDetectDominantLanguage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void BatchDetectDominantLanguageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchDetectDominantLanguageResponsePrivate
+ * \class BatchDetectDominantLanguageResponsePrivate
  *
- * @brief  Private implementation for BatchDetectDominantLanguageResponse.
+ * \brief Private implementation for BatchDetectDominantLanguageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDetectDominantLanguageResponsePrivate object.
@@ -91,7 +97,7 @@ BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Comprehend BatchDetectDominantLanguageResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListTrafficPolicyInstancesByPolicyRequest
+/*!
+ * \class QtAws::Route53::ListTrafficPolicyInstancesByPolicyRequest
  *
- * @brief  Implements Route53 ListTrafficPolicyInstancesByPolicy requests.
+ * \brief The ListTrafficPolicyInstancesByPolicyRequest class encapsulates Route53 ListTrafficPolicyInstancesByPolicy requests.
  *
- * @see    Route53Client::listTrafficPolicyInstancesByPolicy
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listTrafficPolicyInstancesByPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequest object.
  */
 ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyRequest()
@@ -53,13 +56,16 @@ ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTrafficPolicyInstancesByPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTrafficPolicyInstancesByPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByPolicyRequest::re
     return new ListTrafficPolicyInstancesByPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTrafficPolicyInstancesByPolicyRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesByPolicyRequest::re
  * @brief  Private implementation for ListTrafficPolicyInstancesByPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequestPrivate object.
@@ -97,7 +103,7 @@ ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPo
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequestPrivate object, copying another.

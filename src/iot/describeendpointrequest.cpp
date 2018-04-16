@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeEndpointRequest
+/*!
+ * \class QtAws::IoT::DescribeEndpointRequest
  *
- * @brief  Implements IoT DescribeEndpoint requests.
+ * \brief The DescribeEndpointRequest class encapsulates IoT DescribeEndpoint requests.
  *
- * @see    IoTClient::describeEndpoint
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEndpointRequest::DescribeEndpointRequest(const DescribeEndpointRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointRequest object.
  */
 DescribeEndpointRequest::DescribeEndpointRequest()
@@ -53,13 +67,16 @@ DescribeEndpointRequest::DescribeEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
     return new DescribeEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEndpointRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointRequestPrivate object, copying another.

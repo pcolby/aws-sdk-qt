@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  AssociateQualificationWithWorkerRequest
+/*!
+ * \class QtAws::MTurk::AssociateQualificationWithWorkerRequest
  *
- * @brief  Implements MTurk AssociateQualificationWithWorker requests.
+ * \brief The AssociateQualificationWithWorkerRequest class encapsulates MTurk AssociateQualificationWithWorker requests.
  *
- * @see    MTurkClient::associateQualificationWithWorker
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::associateQualificationWithWorker
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateQualificationWithWorkerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AssociateQualificationWithWorkerRequest::AssociateQualificationWithWorkerRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateQualificationWithWorkerRequest object.
  */
 AssociateQualificationWithWorkerRequest::AssociateQualificationWithWorkerRequest()
@@ -53,13 +56,16 @@ AssociateQualificationWithWorkerRequest::AssociateQualificationWithWorkerRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateQualificationWithWorkerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateQualificationWithWorkerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AssociateQualificationWithWorkerRequest::resp
     return new AssociateQualificationWithWorkerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateQualificationWithWorkerRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AssociateQualificationWithWorkerRequest::resp
  * @brief  Private implementation for AssociateQualificationWithWorkerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateQualificationWithWorkerRequestPrivate object.
@@ -97,7 +103,7 @@ AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorker
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateQualificationWithWorkerRequestPrivate object, copying another.

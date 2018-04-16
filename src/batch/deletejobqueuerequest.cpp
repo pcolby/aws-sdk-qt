@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace Batch {
 
-/**
- * @class  DeleteJobQueueRequest
+/*!
+ * \class QtAws::Batch::DeleteJobQueueRequest
  *
- * @brief  Implements Batch DeleteJobQueue requests.
+ * \brief The DeleteJobQueueRequest class encapsulates Batch DeleteJobQueue requests.
  *
- * @see    BatchClient::deleteJobQueue
+ * \ingroup Batch
+ *
+ *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
+ *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
+ *  lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
+ *  batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
+ *  eliminate capacity constraints, reduce compute costs, and deliver results
+ * 
+ *  quickly>
+ * 
+ *  As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
+ *  any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
+ *  quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
+ *  which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
+ *  time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
+ *  AWS
+ *
+ * \sa BatchClient::deleteJobQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteJobQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ DeleteJobQueueRequest::DeleteJobQueueRequest(const DeleteJobQueueRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteJobQueueRequest object.
  */
 DeleteJobQueueRequest::DeleteJobQueueRequest()
@@ -53,13 +70,16 @@ DeleteJobQueueRequest::DeleteJobQueueRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteJobQueueRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteJobQueueResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobQueueRequest::response(QNetworkReply
     return new DeleteJobQueueResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteJobQueueRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * DeleteJobQueueRequest::response(QNetworkReply
  * @brief  Private implementation for DeleteJobQueueRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteJobQueueRequestPrivate object.
@@ -97,7 +117,7 @@ DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteJobQueueRequestPrivate object, copying another.

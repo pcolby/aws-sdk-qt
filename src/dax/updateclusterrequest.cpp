@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  UpdateClusterRequest
+/*!
+ * \class QtAws::DAX::UpdateClusterRequest
  *
- * @brief  Implements DAX UpdateCluster requests.
+ * \brief The UpdateClusterRequest class encapsulates DAX UpdateCluster requests.
  *
- * @see    DAXClient::updateCluster
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::updateCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateClusterRequest object.
  */
 UpdateClusterRequest::UpdateClusterRequest()
@@ -53,13 +60,16 @@ UpdateClusterRequest::UpdateClusterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateClusterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateClusterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
     return new UpdateClusterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateClusterRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
  * @brief  Private implementation for UpdateClusterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClusterRequestPrivate object.
@@ -97,7 +107,7 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateClusterRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  GetContactReachabilityStatusResponse
+/*!
+ * \class QtAws::Route53Domains::GetContactReachabilityStatusResponse
  *
- * @brief  Handles Route53Domains GetContactReachabilityStatus responses.
+ * \brief The GetContactReachabilityStatusResponse class encapsulates Route53Domains GetContactReachabilityStatus responses.
  *
- * @see    Route53DomainsClient::getContactReachabilityStatus
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::getContactReachabilityStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new GetContactReachabilityStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetContactReachabilityStatusRequest * GetContactReachabilityStatusResponse
     return static_cast<const GetContactReachabilityStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains GetContactReachabilityStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetContactReachabilityStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetContactReachabilityStatusResponsePrivate
+ * \class GetContactReachabilityStatusResponsePrivate
  *
- * @brief  Private implementation for GetContactReachabilityStatusResponse.
+ * \brief Private implementation for GetContactReachabilityStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetContactReachabilityStatusResponsePrivate object.
@@ -91,7 +95,7 @@ GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains GetContactReachabilityStatusResponse element.
  *
  * @param  xml  XML stream to parse.

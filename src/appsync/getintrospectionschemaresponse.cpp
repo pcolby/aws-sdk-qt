@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  GetIntrospectionSchemaResponse
+/*!
+ * \class QtAws::AppSync::GetIntrospectionSchemaResponse
  *
- * @brief  Handles AppSync GetIntrospectionSchema responses.
+ * \brief The GetIntrospectionSchemaResponse class encapsulates AppSync GetIntrospectionSchema responses.
  *
- * @see    AppSyncClient::getIntrospectionSchema
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::getIntrospectionSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIntrospectionSchemaResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetIntrospectionSchemaRequest * GetIntrospectionSchemaResponse::request() 
     return static_cast<const GetIntrospectionSchemaRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync GetIntrospectionSchema response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetIntrospectionSchemaResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIntrospectionSchemaResponsePrivate
+ * \class GetIntrospectionSchemaResponsePrivate
  *
- * @brief  Private implementation for GetIntrospectionSchemaResponse.
+ * \brief Private implementation for GetIntrospectionSchemaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIntrospectionSchemaResponsePrivate object.
@@ -91,7 +95,7 @@ GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync GetIntrospectionSchemaResponse element.
  *
  * @param  xml  XML stream to parse.

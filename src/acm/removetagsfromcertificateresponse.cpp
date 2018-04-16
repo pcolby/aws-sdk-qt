@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  RemoveTagsFromCertificateResponse
+/*!
+ * \class QtAws::ACM::RemoveTagsFromCertificateResponse
  *
- * @brief  Handles ACM RemoveTagsFromCertificate responses.
+ * \brief The RemoveTagsFromCertificateResponse class encapsulates ACM RemoveTagsFromCertificate responses.
  *
- * @see    ACMClient::removeTagsFromCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::removeTagsFromCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RemoveTagsFromCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const RemoveTagsFromCertificateRequest * RemoveTagsFromCertificateResponse::requ
     return static_cast<const RemoveTagsFromCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM RemoveTagsFromCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RemoveTagsFromCertificateResponsePrivate
+ * \class RemoveTagsFromCertificateResponsePrivate
  *
- * @brief  Private implementation for RemoveTagsFromCertificateResponse.
+ * \brief Private implementation for RemoveTagsFromCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RemoveTagsFromCertificateResponsePrivate object.
@@ -91,7 +103,7 @@ RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM RemoveTagsFromCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

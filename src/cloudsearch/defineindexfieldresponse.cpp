@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  DefineIndexFieldResponse
+/*!
+ * \class QtAws::CloudSearch::DefineIndexFieldResponse
  *
- * @brief  Handles CloudSearch DefineIndexField responses.
+ * \brief The DefineIndexFieldResponse class encapsulates CloudSearch DefineIndexField responses.
  *
- * @see    CloudSearchClient::defineIndexField
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::defineIndexField
  */
 
-/**
+/*!
  * @brief  Constructs a new DefineIndexFieldResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DefineIndexFieldRequest * DefineIndexFieldResponse::request() const
     return static_cast<const DefineIndexFieldRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch DefineIndexField response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DefineIndexFieldResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DefineIndexFieldResponsePrivate
+ * \class DefineIndexFieldResponsePrivate
  *
- * @brief  Private implementation for DefineIndexFieldResponse.
+ * \brief Private implementation for DefineIndexFieldResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DefineIndexFieldResponsePrivate object.
@@ -91,7 +105,7 @@ DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch DefineIndexFieldResponse element.
  *
  * @param  xml  XML stream to parse.

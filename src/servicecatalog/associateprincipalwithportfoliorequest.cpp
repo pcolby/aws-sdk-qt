@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  AssociatePrincipalWithPortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::AssociatePrincipalWithPortfolioRequest
  *
- * @brief  Implements ServiceCatalog AssociatePrincipalWithPortfolio requests.
+ * \brief The AssociatePrincipalWithPortfolioRequest class encapsulates ServiceCatalog AssociatePrincipalWithPortfolio requests.
  *
- * @see    ServiceCatalogClient::associatePrincipalWithPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::associatePrincipalWithPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociatePrincipalWithPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ AssociatePrincipalWithPortfolioRequest::AssociatePrincipalWithPortfolioRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociatePrincipalWithPortfolioRequest object.
  */
 AssociatePrincipalWithPortfolioRequest::AssociatePrincipalWithPortfolioRequest()
@@ -53,13 +62,16 @@ AssociatePrincipalWithPortfolioRequest::AssociatePrincipalWithPortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociatePrincipalWithPortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociatePrincipalWithPortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * AssociatePrincipalWithPortfolioRequest::respo
     return new AssociatePrincipalWithPortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociatePrincipalWithPortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AssociatePrincipalWithPortfolioRequest::respo
  * @brief  Private implementation for AssociatePrincipalWithPortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociatePrincipalWithPortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ AssociatePrincipalWithPortfolioRequestPrivate::AssociatePrincipalWithPortfolioRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociatePrincipalWithPortfolioRequestPrivate object, copying another.

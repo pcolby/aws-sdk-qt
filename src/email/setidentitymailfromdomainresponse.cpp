@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SetIdentityMailFromDomainResponse
+/*!
+ * \class QtAws::SES::SetIdentityMailFromDomainResponse
  *
- * @brief  Handles SES SetIdentityMailFromDomain responses.
+ * \brief The SetIdentityMailFromDomainResponse class encapsulates SES SetIdentityMailFromDomain responses.
  *
- * @see    SESClient::setIdentityMailFromDomain
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::setIdentityMailFromDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new SetIdentityMailFromDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SetIdentityMailFromDomainRequest * SetIdentityMailFromDomainResponse::requ
     return static_cast<const SetIdentityMailFromDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SetIdentityMailFromDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetIdentityMailFromDomainResponsePrivate
+ * \class SetIdentityMailFromDomainResponsePrivate
  *
- * @brief  Private implementation for SetIdentityMailFromDomainResponse.
+ * \brief Private implementation for SetIdentityMailFromDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetIdentityMailFromDomainResponsePrivate object.
@@ -91,7 +105,7 @@ SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SetIdentityMailFromDomainResponse element.
  *
  * @param  xml  XML stream to parse.

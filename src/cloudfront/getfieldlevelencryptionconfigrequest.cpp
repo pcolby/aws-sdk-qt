@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  GetFieldLevelEncryptionConfigRequest
+/*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionConfigRequest
  *
- * @brief  Implements CloudFront GetFieldLevelEncryptionConfig requests.
+ * \brief The GetFieldLevelEncryptionConfigRequest class encapsulates CloudFront GetFieldLevelEncryptionConfig requests.
  *
- * @see    CloudFrontClient::getFieldLevelEncryptionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::getFieldLevelEncryptionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetFieldLevelEncryptionConfigRequest::GetFieldLevelEncryptionConfigRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFieldLevelEncryptionConfigRequest object.
  */
 GetFieldLevelEncryptionConfigRequest::GetFieldLevelEncryptionConfigRequest()
@@ -53,13 +61,16 @@ GetFieldLevelEncryptionConfigRequest::GetFieldLevelEncryptionConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFieldLevelEncryptionConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFieldLevelEncryptionConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionConfigRequest::respons
     return new GetFieldLevelEncryptionConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFieldLevelEncryptionConfigRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionConfigRequest::respons
  * @brief  Private implementation for GetFieldLevelEncryptionConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionConfigRequestPrivate object.
@@ -97,7 +108,7 @@ GetFieldLevelEncryptionConfigRequestPrivate::GetFieldLevelEncryptionConfigReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFieldLevelEncryptionConfigRequestPrivate object, copying another.

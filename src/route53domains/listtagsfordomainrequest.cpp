@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ListTagsForDomainRequest
+/*!
+ * \class QtAws::Route53Domains::ListTagsForDomainRequest
  *
- * @brief  Implements Route53Domains ListTagsForDomain requests.
+ * \brief The ListTagsForDomainRequest class encapsulates Route53Domains ListTagsForDomain requests.
  *
- * @see    Route53DomainsClient::listTagsForDomain
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::listTagsForDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListTagsForDomainRequest::ListTagsForDomainRequest(const ListTagsForDomainReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsForDomainRequest object.
  */
 ListTagsForDomainRequest::ListTagsForDomainRequest()
@@ -53,13 +57,16 @@ ListTagsForDomainRequest::ListTagsForDomainRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsForDomainRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsForDomainResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForDomainRequest::response(QNetworkRe
     return new ListTagsForDomainResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsForDomainRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsForDomainRequest::response(QNetworkRe
  * @brief  Private implementation for ListTagsForDomainRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForDomainRequestPrivate object.
@@ -97,7 +104,7 @@ ListTagsForDomainRequestPrivate::ListTagsForDomainRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsForDomainRequestPrivate object, copying another.

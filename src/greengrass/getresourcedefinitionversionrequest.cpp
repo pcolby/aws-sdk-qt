@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetResourceDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::GetResourceDefinitionVersionRequest
  *
- * @brief  Implements Greengrass GetResourceDefinitionVersion requests.
+ * \brief The GetResourceDefinitionVersionRequest class encapsulates Greengrass GetResourceDefinitionVersion requests.
  *
- * @see    GreengrassClient::getResourceDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getResourceDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new GetResourceDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetResourceDefinitionVersionRequest::GetResourceDefinitionVersionRequest(const G
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetResourceDefinitionVersionRequest object.
  */
 GetResourceDefinitionVersionRequest::GetResourceDefinitionVersionRequest()
@@ -53,13 +59,16 @@ GetResourceDefinitionVersionRequest::GetResourceDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetResourceDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetResourceDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetResourceDefinitionVersionRequest::response
     return new GetResourceDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetResourceDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetResourceDefinitionVersionRequest::response
  * @brief  Private implementation for GetResourceDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourceDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ GetResourceDefinitionVersionRequestPrivate::GetResourceDefinitionVersionRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetResourceDefinitionVersionRequestPrivate object, copying another.

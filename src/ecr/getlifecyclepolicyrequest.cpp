@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetLifecyclePolicyRequest
+/*!
+ * \class QtAws::ECR::GetLifecyclePolicyRequest
  *
- * @brief  Implements ECR GetLifecyclePolicy requests.
+ * \brief The GetLifecyclePolicyRequest class encapsulates ECR GetLifecyclePolicy requests.
  *
- * @see    ECRClient::getLifecyclePolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getLifecyclePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLifecyclePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetLifecyclePolicyRequest::GetLifecyclePolicyRequest(const GetLifecyclePolicyReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLifecyclePolicyRequest object.
  */
 GetLifecyclePolicyRequest::GetLifecyclePolicyRequest()
@@ -53,13 +60,16 @@ GetLifecyclePolicyRequest::GetLifecyclePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLifecyclePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLifecyclePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyRequest::response(QNetworkR
     return new GetLifecyclePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLifecyclePolicyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyRequest::response(QNetworkR
  * @brief  Private implementation for GetLifecyclePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLifecyclePolicyRequestPrivate object.
@@ -97,7 +107,7 @@ GetLifecyclePolicyRequestPrivate::GetLifecyclePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLifecyclePolicyRequestPrivate object, copying another.

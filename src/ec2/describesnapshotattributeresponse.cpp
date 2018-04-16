@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSnapshotAttributeResponse
+/*!
+ * \class QtAws::EC2::DescribeSnapshotAttributeResponse
  *
- * @brief  Handles EC2 DescribeSnapshotAttribute responses.
+ * \brief The DescribeSnapshotAttributeResponse class encapsulates EC2 DescribeSnapshotAttribute responses.
  *
- * @see    EC2Client::describeSnapshotAttribute
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSnapshotAttribute
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSnapshotAttributeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeSnapshotAttributeRequest * DescribeSnapshotAttributeResponse::requ
     return static_cast<const DescribeSnapshotAttributeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeSnapshotAttribute response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeSnapshotAttributeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSnapshotAttributeResponsePrivate
+ * \class DescribeSnapshotAttributeResponsePrivate
  *
- * @brief  Private implementation for DescribeSnapshotAttributeResponse.
+ * \brief Private implementation for DescribeSnapshotAttributeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSnapshotAttributeResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeSnapshotAttributeResponsePrivate::DescribeSnapshotAttributeResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeSnapshotAttributeResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DescribeImagesRequest
+/*!
+ * \class QtAws::AppStream::DescribeImagesRequest
  *
- * @brief  Implements AppStream DescribeImages requests.
+ * \brief The DescribeImagesRequest class encapsulates AppStream DescribeImages requests.
  *
- * @see    AppStreamClient::describeImages
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::describeImages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
@@ -53,13 +59,16 @@ DescribeImagesRequest::DescribeImagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
     return new DescribeImagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImagesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeImagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesRequestPrivate object, copying another.

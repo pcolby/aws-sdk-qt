@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  DeleteRoomSkillParameterRequest
+/*!
+ * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterRequest
  *
- * @brief  Implements AlexaForBusiness DeleteRoomSkillParameter requests.
+ * \brief The DeleteRoomSkillParameterRequest class encapsulates AlexaForBusiness DeleteRoomSkillParameter requests.
  *
- * @see    AlexaForBusinessClient::deleteRoomSkillParameter
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::deleteRoomSkillParameter
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoomSkillParameterRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteRoomSkillParameterRequest::DeleteRoomSkillParameterRequest(const DeleteRoo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRoomSkillParameterRequest object.
  */
 DeleteRoomSkillParameterRequest::DeleteRoomSkillParameterRequest()
@@ -53,13 +61,16 @@ DeleteRoomSkillParameterRequest::DeleteRoomSkillParameterRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRoomSkillParameterRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRoomSkillParameterResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNe
     return new DeleteRoomSkillParameterResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRoomSkillParameterRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNe
  * @brief  Private implementation for DeleteRoomSkillParameterRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoomSkillParameterRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRoomSkillParameterRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreatePortfolioShareRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreatePortfolioShareRequest
  *
- * @brief  Implements ServiceCatalog CreatePortfolioShare requests.
+ * \brief The CreatePortfolioShareRequest class encapsulates ServiceCatalog CreatePortfolioShare requests.
  *
- * @see    ServiceCatalogClient::createPortfolioShare
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createPortfolioShare
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePortfolioShareRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreatePortfolioShareRequest::CreatePortfolioShareRequest(const CreatePortfolioSh
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePortfolioShareRequest object.
  */
 CreatePortfolioShareRequest::CreatePortfolioShareRequest()
@@ -53,13 +62,16 @@ CreatePortfolioShareRequest::CreatePortfolioShareRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePortfolioShareRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePortfolioShareResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetwor
     return new CreatePortfolioShareResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePortfolioShareRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreatePortfolioShareRequest::response(QNetwor
  * @brief  Private implementation for CreatePortfolioShareRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePortfolioShareRequestPrivate object.
@@ -97,7 +109,7 @@ CreatePortfolioShareRequestPrivate::CreatePortfolioShareRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePortfolioShareRequestPrivate object, copying another.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeThingGroupResponse
+/*!
+ * \class QtAws::IoT::DescribeThingGroupResponse
  *
- * @brief  Handles IoT DescribeThingGroup responses.
+ * \brief The DescribeThingGroupResponse class encapsulates IoT DescribeThingGroup responses.
  *
- * @see    IoTClient::describeThingGroup
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeThingGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeThingGroupRequest * DescribeThingGroupResponse::request() const
     return static_cast<const DescribeThingGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DescribeThingGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeThingGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeThingGroupResponsePrivate
+ * \class DescribeThingGroupResponsePrivate
  *
- * @brief  Private implementation for DescribeThingGroupResponse.
+ * \brief Private implementation for DescribeThingGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingGroupResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeThingGroupResponsePrivate::DescribeThingGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DescribeThingGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListTagsRequest
+/*!
+ * \class QtAws::Lambda::ListTagsRequest
  *
- * @brief  Implements Lambda ListTags requests.
+ * \brief The ListTagsRequest class encapsulates Lambda ListTags requests.
  *
- * @see    LambdaClient::listTags
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listTags
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
@@ -53,13 +67,16 @@ ListTagsRequest::ListTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
     return new ListTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTagsRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object.
@@ -97,7 +114,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTagsRequestPrivate object, copying another.

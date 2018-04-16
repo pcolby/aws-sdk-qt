@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  ListInstanceFleetsResponse
+/*!
+ * \class QtAws::EMR::ListInstanceFleetsResponse
  *
- * @brief  Handles EMR ListInstanceFleets responses.
+ * \brief The ListInstanceFleetsResponse class encapsulates EMR ListInstanceFleets responses.
  *
- * @see    EMRClient::listInstanceFleets
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::listInstanceFleets
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInstanceFleetsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListInstanceFleetsRequest * ListInstanceFleetsResponse::request() const
     return static_cast<const ListInstanceFleetsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR ListInstanceFleets response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListInstanceFleetsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListInstanceFleetsResponsePrivate
+ * \class ListInstanceFleetsResponsePrivate
  *
- * @brief  Private implementation for ListInstanceFleetsResponse.
+ * \brief Private implementation for ListInstanceFleetsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInstanceFleetsResponsePrivate object.
@@ -91,7 +97,7 @@ ListInstanceFleetsResponsePrivate::ListInstanceFleetsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR ListInstanceFleetsResponse element.
  *
  * @param  xml  XML stream to parse.

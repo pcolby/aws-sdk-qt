@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteVpcLinkResponse
+/*!
+ * \class QtAws::APIGateway::DeleteVpcLinkResponse
  *
- * @brief  Handles APIGateway DeleteVpcLink responses.
+ * \brief The DeleteVpcLinkResponse class encapsulates APIGateway DeleteVpcLink responses.
  *
- * @see    APIGatewayClient::deleteVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcLinkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteVpcLinkRequest * DeleteVpcLinkResponse::request() const
     return static_cast<const DeleteVpcLinkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteVpcLink response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteVpcLinkResponsePrivate
+ * \class DeleteVpcLinkResponsePrivate
  *
- * @brief  Private implementation for DeleteVpcLinkResponse.
+ * \brief Private implementation for DeleteVpcLinkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcLinkResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteVpcLinkResponsePrivate::DeleteVpcLinkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteVpcLinkResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribeLifecycleHookTypesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribeLifecycleHookTypesResponse
  *
- * @brief  Handles AutoScaling DescribeLifecycleHookTypes responses.
+ * \brief The DescribeLifecycleHookTypesResponse class encapsulates AutoScaling DescribeLifecycleHookTypes responses.
  *
- * @see    AutoScalingClient::describeLifecycleHookTypes
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describeLifecycleHookTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLifecycleHookTypesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeLifecycleHookTypesRequest * DescribeLifecycleHookTypesResponse::re
     return static_cast<const DescribeLifecycleHookTypesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribeLifecycleHookTypes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeLifecycleHookTypesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeLifecycleHookTypesResponsePrivate
+ * \class DescribeLifecycleHookTypesResponsePrivate
  *
- * @brief  Private implementation for DescribeLifecycleHookTypesResponse.
+ * \brief Private implementation for DescribeLifecycleHookTypesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLifecycleHookTypesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeLifecycleHookTypesResponsePrivate::DescribeLifecycleHookTypesResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribeLifecycleHookTypesResponse element.
  *
  * @param  xml  XML stream to parse.

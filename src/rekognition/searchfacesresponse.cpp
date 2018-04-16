@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  SearchFacesResponse
+/*!
+ * \class QtAws::Rekognition::SearchFacesResponse
  *
- * @brief  Handles Rekognition SearchFaces responses.
+ * \brief The SearchFacesResponse class encapsulates Rekognition SearchFaces responses.
  *
- * @see    RekognitionClient::searchFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::searchFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new SearchFacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const SearchFacesRequest * SearchFacesResponse::request() const
     return static_cast<const SearchFacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition SearchFaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void SearchFacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SearchFacesResponsePrivate
+ * \class SearchFacesResponsePrivate
  *
- * @brief  Private implementation for SearchFacesResponse.
+ * \brief Private implementation for SearchFacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SearchFacesResponsePrivate object.
@@ -91,7 +95,7 @@ SearchFacesResponsePrivate::SearchFacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition SearchFacesResponse element.
  *
  * @param  xml  XML stream to parse.

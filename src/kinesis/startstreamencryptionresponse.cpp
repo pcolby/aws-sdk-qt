@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  StartStreamEncryptionResponse
+/*!
+ * \class QtAws::Kinesis::StartStreamEncryptionResponse
  *
- * @brief  Handles Kinesis StartStreamEncryption responses.
+ * \brief The StartStreamEncryptionResponse class encapsulates Kinesis StartStreamEncryption responses.
  *
- * @see    KinesisClient::startStreamEncryption
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::startStreamEncryption
  */
 
-/**
+/*!
  * @brief  Constructs a new StartStreamEncryptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StartStreamEncryptionRequest * StartStreamEncryptionResponse::request() co
     return static_cast<const StartStreamEncryptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis StartStreamEncryption response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StartStreamEncryptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartStreamEncryptionResponsePrivate
+ * \class StartStreamEncryptionResponsePrivate
  *
- * @brief  Private implementation for StartStreamEncryptionResponse.
+ * \brief Private implementation for StartStreamEncryptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartStreamEncryptionResponsePrivate object.
@@ -91,7 +97,7 @@ StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis StartStreamEncryptionResponse element.
  *
  * @param  xml  XML stream to parse.

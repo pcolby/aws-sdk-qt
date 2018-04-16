@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkInterfacePermissionRequest
+/*!
+ * \class QtAws::EC2::DeleteNetworkInterfacePermissionRequest
  *
- * @brief  Implements EC2 DeleteNetworkInterfacePermission requests.
+ * \brief The DeleteNetworkInterfacePermissionRequest class encapsulates EC2 DeleteNetworkInterfacePermission requests.
  *
- * @see    EC2Client::deleteNetworkInterfacePermission
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkInterfacePermission
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkInterfacePermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteNetworkInterfacePermissionRequest::DeleteNetworkInterfacePermissionRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkInterfacePermissionRequest object.
  */
 DeleteNetworkInterfacePermissionRequest::DeleteNetworkInterfacePermissionRequest()
@@ -53,13 +60,16 @@ DeleteNetworkInterfacePermissionRequest::DeleteNetworkInterfacePermissionRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteNetworkInterfacePermissionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteNetworkInterfacePermissionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfacePermissionRequest::resp
     return new DeleteNetworkInterfacePermissionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteNetworkInterfacePermissionRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfacePermissionRequest::resp
  * @brief  Private implementation for DeleteNetworkInterfacePermissionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkInterfacePermissionRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteNetworkInterfacePermissionRequestPrivate::DeleteNetworkInterfacePermission
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkInterfacePermissionRequestPrivate object, copying another.

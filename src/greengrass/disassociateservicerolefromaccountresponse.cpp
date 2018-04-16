@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DisassociateServiceRoleFromAccountResponse
+/*!
+ * \class QtAws::Greengrass::DisassociateServiceRoleFromAccountResponse
  *
- * @brief  Handles Greengrass DisassociateServiceRoleFromAccount responses.
+ * \brief The DisassociateServiceRoleFromAccountResponse class encapsulates Greengrass DisassociateServiceRoleFromAccount responses.
  *
- * @see    GreengrassClient::disassociateServiceRoleFromAccount
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::disassociateServiceRoleFromAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateServiceRoleFromAccountResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DisassociateServiceRoleFromAccountRequest * DisassociateServiceRoleFromAcc
     return static_cast<const DisassociateServiceRoleFromAccountRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass DisassociateServiceRoleFromAccount response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DisassociateServiceRoleFromAccountResponse::parseSuccess(QIODevice &respons
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateServiceRoleFromAccountResponsePrivate
+ * \class DisassociateServiceRoleFromAccountResponsePrivate
  *
- * @brief  Private implementation for DisassociateServiceRoleFromAccountResponse.
+ * \brief Private implementation for DisassociateServiceRoleFromAccountResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateServiceRoleFromAccountResponsePrivate object.
@@ -91,7 +97,7 @@ DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAc
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass DisassociateServiceRoleFromAccountResponse element.
  *
  * @param  xml  XML stream to parse.

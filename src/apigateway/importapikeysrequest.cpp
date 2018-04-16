@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  ImportApiKeysRequest
+/*!
+ * \class QtAws::APIGateway::ImportApiKeysRequest
  *
- * @brief  Implements APIGateway ImportApiKeys requests.
+ * \brief The ImportApiKeysRequest class encapsulates APIGateway ImportApiKeys requests.
  *
- * @see    APIGatewayClient::importApiKeys
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::importApiKeys
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportApiKeysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ImportApiKeysRequest::ImportApiKeysRequest(const ImportApiKeysRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportApiKeysRequest object.
  */
 ImportApiKeysRequest::ImportApiKeysRequest()
@@ -53,13 +61,16 @@ ImportApiKeysRequest::ImportApiKeysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportApiKeysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportApiKeysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply 
     return new ImportApiKeysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportApiKeysRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply 
  * @brief  Private implementation for ImportApiKeysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportApiKeysRequestPrivate object.
@@ -97,7 +108,7 @@ ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportApiKeysRequestPrivate object, copying another.

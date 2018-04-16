@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  DeleteStreamResponse
+/*!
+ * \class QtAws::KinesisVideo::DeleteStreamResponse
  *
- * @brief  Handles KinesisVideo DeleteStream responses.
+ * \brief The DeleteStreamResponse class encapsulates KinesisVideo DeleteStream responses.
  *
- * @see    KinesisVideoClient::deleteStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::deleteStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteStreamRequest * DeleteStreamResponse::request() const
     return static_cast<const DeleteStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideo DeleteStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteStreamResponsePrivate
+ * \class DeleteStreamResponsePrivate
  *
- * @brief  Private implementation for DeleteStreamResponse.
+ * \brief Private implementation for DeleteStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStreamResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideo DeleteStreamResponse element.
  *
  * @param  xml  XML stream to parse.

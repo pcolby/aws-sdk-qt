@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace LexRuntimeService {
 
-/**
- * @class  PostContentRequest
+/*!
+ * \class QtAws::LexRuntimeService::PostContentRequest
  *
- * @brief  Implements LexRuntimeService PostContent requests.
+ * \brief The PostContentRequest class encapsulates LexRuntimeService PostContent requests.
  *
- * @see    LexRuntimeServiceClient::postContent
+ * \ingroup LexRuntimeService
+ *
+ *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
+ *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
+ *  user says "I want pizza", your bot sends this input to Amazon Lex using the runtime API. Amazon Lex recognizes that the
+ *  user request is for the OrderPizza intent (one of the intents defined in the bot). Then Amazon Lex engages in user
+ *  conversation on behalf of the bot to elicit required information (slot values, such as pizza size and crust type), and
+ *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
+ *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
+ *
+ * \sa LexRuntimeServiceClient::postContent
  */
 
-/**
+/*!
  * @brief  Constructs a new PostContentRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ PostContentRequest::PostContentRequest(const PostContentRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PostContentRequest object.
  */
 PostContentRequest::PostContentRequest()
@@ -53,13 +63,16 @@ PostContentRequest::PostContentRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PostContentRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PostContentResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * PostContentRequest::response(QNetworkReply * 
     return new PostContentResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PostContentRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * PostContentRequest::response(QNetworkReply * 
  * @brief  Private implementation for PostContentRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PostContentRequestPrivate object.
@@ -97,7 +110,7 @@ PostContentRequestPrivate::PostContentRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PostContentRequestPrivate object, copying another.

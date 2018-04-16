@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  AddTagsToResourceResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::AddTagsToResourceResponse
  *
- * @brief  Handles DatabaseMigrationService AddTagsToResource responses.
+ * \brief The AddTagsToResourceResponse class encapsulates DatabaseMigrationService AddTagsToResource responses.
  *
- * @see    DatabaseMigrationServiceClient::addTagsToResource
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::addTagsToResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
     return static_cast<const AddTagsToResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService AddTagsToResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsToResourceResponsePrivate
+ * \class AddTagsToResourceResponsePrivate
  *
- * @brief  Private implementation for AddTagsToResourceResponse.
+ * \brief Private implementation for AddTagsToResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceResponsePrivate object.
@@ -91,7 +105,7 @@ AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService AddTagsToResourceResponse element.
  *
  * @param  xml  XML stream to parse.

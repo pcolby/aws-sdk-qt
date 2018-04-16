@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetGroupRequest
+/*!
+ * \class QtAws::Greengrass::GetGroupRequest
  *
- * @brief  Implements Greengrass GetGroup requests.
+ * \brief The GetGroupRequest class encapsulates Greengrass GetGroup requests.
  *
- * @see    GreengrassClient::getGroup
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetGroupRequest::GetGroupRequest(const GetGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGroupRequest object.
  */
 GetGroupRequest::GetGroupRequest()
@@ -53,13 +59,16 @@ GetGroupRequest::GetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
     return new GetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGroupRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupRequestPrivate object.
@@ -97,7 +106,7 @@ GetGroupRequestPrivate::GetGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupRequestPrivate object, copying another.

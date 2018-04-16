@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  UpdateStreamingDistributionRequest
+/*!
+ * \class QtAws::CloudFront::UpdateStreamingDistributionRequest
  *
- * @brief  Implements CloudFront UpdateStreamingDistribution requests.
+ * \brief The UpdateStreamingDistributionRequest class encapsulates CloudFront UpdateStreamingDistribution requests.
  *
- * @see    CloudFrontClient::updateStreamingDistribution
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::updateStreamingDistribution
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamingDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateStreamingDistributionRequest::UpdateStreamingDistributionRequest(const Upd
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamingDistributionRequest object.
  */
 UpdateStreamingDistributionRequest::UpdateStreamingDistributionRequest()
@@ -53,13 +61,16 @@ UpdateStreamingDistributionRequest::UpdateStreamingDistributionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateStreamingDistributionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateStreamingDistributionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamingDistributionRequest::response(
     return new UpdateStreamingDistributionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateStreamingDistributionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamingDistributionRequest::response(
  * @brief  Private implementation for UpdateStreamingDistributionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamingDistributionRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateStreamingDistributionRequestPrivate::UpdateStreamingDistributionRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamingDistributionRequestPrivate object, copying another.

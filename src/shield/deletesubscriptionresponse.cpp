@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DeleteSubscriptionResponse
+/*!
+ * \class QtAws::Shield::DeleteSubscriptionResponse
  *
- * @brief  Handles Shield DeleteSubscription responses.
+ * \brief The DeleteSubscriptionResponse class encapsulates Shield DeleteSubscription responses.
  *
- * @see    ShieldClient::deleteSubscription
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::deleteSubscription
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriptionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteSubscriptionRequest * DeleteSubscriptionResponse::request() const
     return static_cast<const DeleteSubscriptionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Shield DeleteSubscription response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteSubscriptionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSubscriptionResponsePrivate
+ * \class DeleteSubscriptionResponsePrivate
  *
- * @brief  Private implementation for DeleteSubscriptionResponse.
+ * \brief Private implementation for DeleteSubscriptionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriptionResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteSubscriptionResponsePrivate::DeleteSubscriptionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Shield DeleteSubscriptionResponse element.
  *
  * @param  xml  XML stream to parse.

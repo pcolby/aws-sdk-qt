@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProvisioningParametersRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProvisioningParametersRequest
  *
- * @brief  Implements ServiceCatalog DescribeProvisioningParameters requests.
+ * \brief The DescribeProvisioningParametersRequest class encapsulates ServiceCatalog DescribeProvisioningParameters requests.
  *
- * @see    ServiceCatalogClient::describeProvisioningParameters
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProvisioningParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisioningParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProvisioningParametersRequest object.
  */
 DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest()
@@ -53,13 +62,16 @@ DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProvisioningParametersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProvisioningParametersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningParametersRequest::respon
     return new DescribeProvisioningParametersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProvisioningParametersRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningParametersRequest::respon
  * @brief  Private implementation for DescribeProvisioningParametersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisioningParametersRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProvisioningParametersRequestPrivate object, copying another.

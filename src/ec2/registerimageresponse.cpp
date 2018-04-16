@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RegisterImageResponse
+/*!
+ * \class QtAws::EC2::RegisterImageResponse
  *
- * @brief  Handles EC2 RegisterImage responses.
+ * \brief The RegisterImageResponse class encapsulates EC2 RegisterImage responses.
  *
- * @see    EC2Client::registerImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::registerImage
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterImageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RegisterImageRequest * RegisterImageResponse::request() const
     return static_cast<const RegisterImageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RegisterImage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RegisterImageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterImageResponsePrivate
+ * \class RegisterImageResponsePrivate
  *
- * @brief  Private implementation for RegisterImageResponse.
+ * \brief Private implementation for RegisterImageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterImageResponsePrivate object.
@@ -91,7 +98,7 @@ RegisterImageResponsePrivate::RegisterImageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RegisterImageResponse element.
  *
  * @param  xml  XML stream to parse.

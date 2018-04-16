@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminGetUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminGetUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminGetUser requests.
+ * \brief The AdminGetUserRequest class encapsulates CognitoIdentityProvider AdminGetUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminGetUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminGetUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminGetUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminGetUserRequest::AdminGetUserRequest(const AdminGetUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminGetUserRequest object.
  */
 AdminGetUserRequest::AdminGetUserRequest()
@@ -53,13 +66,16 @@ AdminGetUserRequest::AdminGetUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminGetUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminGetUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminGetUserRequest::response(QNetworkReply *
     return new AdminGetUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminGetUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminGetUserRequest::response(QNetworkReply *
  * @brief  Private implementation for AdminGetUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminGetUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminGetUserRequestPrivate::AdminGetUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminGetUserRequestPrivate object, copying another.

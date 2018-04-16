@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  CreateEndpointResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::CreateEndpointResponse
  *
- * @brief  Handles DatabaseMigrationService CreateEndpoint responses.
+ * \brief The CreateEndpointResponse class encapsulates DatabaseMigrationService CreateEndpoint responses.
  *
- * @see    DatabaseMigrationServiceClient::createEndpoint
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::createEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateEndpointRequest * CreateEndpointResponse::request() const
     return static_cast<const CreateEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService CreateEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateEndpointResponsePrivate
+ * \class CreateEndpointResponsePrivate
  *
- * @brief  Private implementation for CreateEndpointResponse.
+ * \brief Private implementation for CreateEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEndpointResponsePrivate object.
@@ -91,7 +105,7 @@ CreateEndpointResponsePrivate::CreateEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService CreateEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

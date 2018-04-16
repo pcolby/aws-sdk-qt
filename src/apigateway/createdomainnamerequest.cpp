@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateDomainNameRequest
+/*!
+ * \class QtAws::APIGateway::CreateDomainNameRequest
  *
- * @brief  Implements APIGateway CreateDomainName requests.
+ * \brief The CreateDomainNameRequest class encapsulates APIGateway CreateDomainName requests.
  *
- * @see    APIGatewayClient::createDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDomainNameRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateDomainNameRequest::CreateDomainNameRequest(const CreateDomainNameRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateDomainNameRequest object.
  */
 CreateDomainNameRequest::CreateDomainNameRequest()
@@ -53,13 +61,16 @@ CreateDomainNameRequest::CreateDomainNameRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateDomainNameRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateDomainNameResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkRep
     return new CreateDomainNameResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateDomainNameRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkRep
  * @brief  Private implementation for CreateDomainNameRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDomainNameRequestPrivate object.
@@ -97,7 +108,7 @@ CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDomainNameRequestPrivate object, copying another.

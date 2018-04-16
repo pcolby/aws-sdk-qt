@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ImportExport {
 
-/**
- * @class  ListJobsRequest
+/*!
+ * \class QtAws::ImportExport::ListJobsRequest
  *
- * @brief  Implements ImportExport ListJobs requests.
+ * \brief The ListJobsRequest class encapsulates ImportExport ListJobs requests.
  *
- * @see    ImportExportClient::listJobs
+ * \ingroup ImportExport
+ *
+ *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
+ *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
+ *  of your storage devices using Amazon's high-speed internal network and bypassing the Internet. For large data sets, AWS
+ *
+ * \sa ImportExportClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
@@ -53,13 +59,16 @@ ListJobsRequest::ListJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
     return new ListJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object.
@@ -97,7 +106,7 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object, copying another.

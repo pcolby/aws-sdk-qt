@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  DeleteOriginEndpointResponse
+/*!
+ * \class QtAws::MediaPackage::DeleteOriginEndpointResponse
  *
- * @brief  Handles MediaPackage DeleteOriginEndpoint responses.
+ * \brief The DeleteOriginEndpointResponse class encapsulates MediaPackage DeleteOriginEndpoint responses.
  *
- * @see    MediaPackageClient::deleteOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::deleteOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteOriginEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteOriginEndpointRequest * DeleteOriginEndpointResponse::request() cons
     return static_cast<const DeleteOriginEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaPackage DeleteOriginEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteOriginEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteOriginEndpointResponsePrivate
+ * \class DeleteOriginEndpointResponsePrivate
  *
- * @brief  Private implementation for DeleteOriginEndpointResponse.
+ * \brief Private implementation for DeleteOriginEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteOriginEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaPackage DeleteOriginEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

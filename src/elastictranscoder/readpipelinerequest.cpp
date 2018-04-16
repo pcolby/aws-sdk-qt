@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace ElasticTranscoder {
 
-/**
- * @class  ReadPipelineRequest
+/*!
+ * \class QtAws::ElasticTranscoder::ReadPipelineRequest
  *
- * @brief  Implements ElasticTranscoder ReadPipeline requests.
+ * \brief The ReadPipelineRequest class encapsulates ElasticTranscoder ReadPipeline requests.
  *
- * @see    ElasticTranscoderClient::readPipeline
+ * \ingroup ElasticTranscoder
+ *
+ *  <fullname>AWS Elastic Transcoder Service</fullname>
+ * 
+ *  The AWS Elastic Transcoder
+ *
+ * \sa ElasticTranscoderClient::readPipeline
  */
 
-/**
+/*!
  * @brief  Constructs a new ReadPipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ReadPipelineRequest::ReadPipelineRequest(const ReadPipelineRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReadPipelineRequest object.
  */
 ReadPipelineRequest::ReadPipelineRequest()
@@ -53,13 +59,16 @@ ReadPipelineRequest::ReadPipelineRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReadPipelineRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReadPipelineResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply *
     return new ReadPipelineResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReadPipelineRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply *
  * @brief  Private implementation for ReadPipelineRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadPipelineRequestPrivate object.
@@ -97,7 +106,7 @@ ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReadPipelineRequestPrivate object, copying another.

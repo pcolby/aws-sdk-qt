@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  CreateDatabaseResponse
+/*!
+ * \class QtAws::Glue::CreateDatabaseResponse
  *
- * @brief  Handles Glue CreateDatabase responses.
+ * \brief The CreateDatabaseResponse class encapsulates Glue CreateDatabase responses.
  *
- * @see    GlueClient::createDatabase
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::createDatabase
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDatabaseResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CreateDatabaseRequest * CreateDatabaseResponse::request() const
     return static_cast<const CreateDatabaseRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue CreateDatabase response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CreateDatabaseResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDatabaseResponsePrivate
+ * \class CreateDatabaseResponsePrivate
  *
- * @brief  Private implementation for CreateDatabaseResponse.
+ * \brief Private implementation for CreateDatabaseResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDatabaseResponsePrivate object.
@@ -91,7 +97,7 @@ CreateDatabaseResponsePrivate::CreateDatabaseResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue CreateDatabaseResponse element.
  *
  * @param  xml  XML stream to parse.

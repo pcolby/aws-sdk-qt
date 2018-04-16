@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateDevEndpointResponse
+/*!
+ * \class QtAws::Glue::UpdateDevEndpointResponse
  *
- * @brief  Handles Glue UpdateDevEndpoint responses.
+ * \brief The UpdateDevEndpointResponse class encapsulates Glue UpdateDevEndpoint responses.
  *
- * @see    GlueClient::updateDevEndpoint
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateDevEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDevEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateDevEndpointRequest * UpdateDevEndpointResponse::request() const
     return static_cast<const UpdateDevEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateDevEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateDevEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDevEndpointResponsePrivate
+ * \class UpdateDevEndpointResponsePrivate
  *
- * @brief  Private implementation for UpdateDevEndpointResponse.
+ * \brief Private implementation for UpdateDevEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDevEndpointResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateDevEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

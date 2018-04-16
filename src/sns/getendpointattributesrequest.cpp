@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  GetEndpointAttributesRequest
+/*!
+ * \class QtAws::SNS::GetEndpointAttributesRequest
  *
- * @brief  Implements SNS GetEndpointAttributes requests.
+ * \brief The GetEndpointAttributesRequest class encapsulates SNS GetEndpointAttributes requests.
  *
- * @see    SNSClient::getEndpointAttributes
+ * \ingroup SNS
+ *
+ *  <fullname>Amazon Simple Notification Service</fullname>
+ * 
+ *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
+ *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
+ *  over multiple delivery protocols. For more information about this product see <a
+ *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain
+ *  functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying
+ *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
+ *  for Amazon Web Services</a>.
+ *
+ * \sa SNSClient::getEndpointAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEndpointAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ GetEndpointAttributesRequest::GetEndpointAttributesRequest(const GetEndpointAttr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetEndpointAttributesRequest object.
  */
 GetEndpointAttributesRequest::GetEndpointAttributesRequest()
@@ -53,13 +70,16 @@ GetEndpointAttributesRequest::GetEndpointAttributesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetEndpointAttributesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetEndpointAttributesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetEndpointAttributesRequest::response(QNetwo
     return new GetEndpointAttributesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetEndpointAttributesRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * GetEndpointAttributesRequest::response(QNetwo
  * @brief  Private implementation for GetEndpointAttributesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEndpointAttributesRequestPrivate object.
@@ -97,7 +117,7 @@ GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEndpointAttributesRequestPrivate object, copying another.

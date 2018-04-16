@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListApiKeysResponse
+/*!
+ * \class QtAws::AppSync::ListApiKeysResponse
  *
- * @brief  Handles AppSync ListApiKeys responses.
+ * \brief The ListApiKeysResponse class encapsulates AppSync ListApiKeys responses.
  *
- * @see    AppSyncClient::listApiKeys
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listApiKeys
  */
 
-/**
+/*!
  * @brief  Constructs a new ListApiKeysResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListApiKeysRequest * ListApiKeysResponse::request() const
     return static_cast<const ListApiKeysRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync ListApiKeys response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListApiKeysResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListApiKeysResponsePrivate
+ * \class ListApiKeysResponsePrivate
  *
- * @brief  Private implementation for ListApiKeysResponse.
+ * \brief Private implementation for ListApiKeysResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListApiKeysResponsePrivate object.
@@ -91,7 +95,7 @@ ListApiKeysResponsePrivate::ListApiKeysResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync ListApiKeysResponse element.
  *
  * @param  xml  XML stream to parse.

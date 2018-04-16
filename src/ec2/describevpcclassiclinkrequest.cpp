@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcClassicLinkRequest
+/*!
+ * \class QtAws::EC2::DescribeVpcClassicLinkRequest
  *
- * @brief  Implements EC2 DescribeVpcClassicLink requests.
+ * \brief The DescribeVpcClassicLinkRequest class encapsulates EC2 DescribeVpcClassicLink requests.
  *
- * @see    EC2Client::describeVpcClassicLink
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcClassicLink
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcClassicLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest(const DescribeVpcCl
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcClassicLinkRequest object.
  */
 DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest()
@@ -53,13 +60,16 @@ DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpcClassicLinkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpcClassicLinkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkRequest::response(QNetw
     return new DescribeVpcClassicLinkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpcClassicLinkRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkRequest::response(QNetw
  * @brief  Private implementation for DescribeVpcClassicLinkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcClassicLinkRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcClassicLinkRequestPrivate object, copying another.

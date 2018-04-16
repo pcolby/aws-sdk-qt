@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Snowball {
 
-/**
- * @class  CreateClusterResponse
+/*!
+ * \class QtAws::Snowball::CreateClusterResponse
  *
- * @brief  Handles Snowball CreateCluster responses.
+ * \brief The CreateClusterResponse class encapsulates Snowball CreateCluster responses.
  *
- * @see    SnowballClient::createCluster
+ * \ingroup Snowball
+ *
+ *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
+ *  here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables
+ *  you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the
+ *  Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
+ *
+ * \sa SnowballClient::createCluster
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateClusterResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const CreateClusterRequest * CreateClusterResponse::request() const
     return static_cast<const CreateClusterRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Snowball CreateCluster response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateClusterResponsePrivate
+ * \class CreateClusterResponsePrivate
  *
- * @brief  Private implementation for CreateClusterResponse.
+ * \brief Private implementation for CreateClusterResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateClusterResponsePrivate object.
@@ -91,7 +100,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Snowball CreateClusterResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ElasticsearchService {
 
-/**
- * @class  ElasticsearchServiceResponse
+/*!
+ * \class QtAws::ElasticsearchService::ElasticsearchServiceResponse
  *
- * @brief  Handles ElasticsearchService ElasticsearchService responses.
+ * \brief The ElasticsearchServiceResponse class is the base class for all ElasticsearchService responses.
  *
- * @see    ElasticsearchServiceClient::elasticsearchService
+ * \ingroup ElasticsearchService
  */
 
-/**
+/*!
  * @brief  Constructs a new ElasticsearchServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const paren
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticsearchServiceResponse object.
@@ -63,7 +63,7 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceR
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElasticsearchServiceResponsePrivate
@@ -92,7 +92,7 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ElasticsearchServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElasticsearchServiceResponsePrivate object.

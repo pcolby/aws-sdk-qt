@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  GetAssessmentReportResponse
+/*!
+ * \class QtAws::Inspector::GetAssessmentReportResponse
  *
- * @brief  Handles Inspector GetAssessmentReport responses.
+ * \brief The GetAssessmentReportResponse class encapsulates Inspector GetAssessmentReport responses.
  *
- * @see    InspectorClient::getAssessmentReport
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::getAssessmentReport
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAssessmentReportResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetAssessmentReportRequest * GetAssessmentReportResponse::request() const
     return static_cast<const GetAssessmentReportRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector GetAssessmentReport response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetAssessmentReportResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAssessmentReportResponsePrivate
+ * \class GetAssessmentReportResponsePrivate
  *
- * @brief  Private implementation for GetAssessmentReportResponse.
+ * \brief Private implementation for GetAssessmentReportResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssessmentReportResponsePrivate object.
@@ -91,7 +99,7 @@ GetAssessmentReportResponsePrivate::GetAssessmentReportResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector GetAssessmentReportResponse element.
  *
  * @param  xml  XML stream to parse.

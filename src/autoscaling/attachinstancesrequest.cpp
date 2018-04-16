@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AttachInstancesRequest
+/*!
+ * \class QtAws::AutoScaling::AttachInstancesRequest
  *
- * @brief  Implements AutoScaling AttachInstances requests.
+ * \brief The AttachInstancesRequest class encapsulates AutoScaling AttachInstances requests.
  *
- * @see    AutoScalingClient::attachInstances
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::attachInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ AttachInstancesRequest::AttachInstancesRequest(const AttachInstancesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AttachInstancesRequest object.
  */
 AttachInstancesRequest::AttachInstancesRequest()
@@ -53,13 +61,16 @@ AttachInstancesRequest::AttachInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AttachInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AttachInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkRepl
     return new AttachInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AttachInstancesRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkRepl
  * @brief  Private implementation for AttachInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInstancesRequestPrivate object.
@@ -97,7 +108,7 @@ AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInstancesRequestPrivate object, copying another.

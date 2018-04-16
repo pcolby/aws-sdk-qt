@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  ListContainersResponse
+/*!
+ * \class QtAws::MediaStore::ListContainersResponse
  *
- * @brief  Handles MediaStore ListContainers responses.
+ * \brief The ListContainersResponse class encapsulates MediaStore ListContainers responses.
  *
- * @see    MediaStoreClient::listContainers
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::listContainers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListContainersResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListContainersRequest * ListContainersResponse::request() const
     return static_cast<const ListContainersRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore ListContainers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListContainersResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListContainersResponsePrivate
+ * \class ListContainersResponsePrivate
  *
- * @brief  Private implementation for ListContainersResponse.
+ * \brief Private implementation for ListContainersResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListContainersResponsePrivate object.
@@ -91,7 +96,7 @@ ListContainersResponsePrivate::ListContainersResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore ListContainersResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  GetAuthorizationTokenRequest
+/*!
+ * \class QtAws::ECR::GetAuthorizationTokenRequest
  *
- * @brief  Implements ECR GetAuthorizationToken requests.
+ * \brief The GetAuthorizationTokenRequest class encapsulates ECR GetAuthorizationToken requests.
  *
- * @see    ECRClient::getAuthorizationToken
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::getAuthorizationToken
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizationTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizatio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAuthorizationTokenRequest object.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest()
@@ -53,13 +60,16 @@ GetAuthorizationTokenRequest::GetAuthorizationTokenRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAuthorizationTokenRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAuthorizationTokenResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
     return new GetAuthorizationTokenResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAuthorizationTokenRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
  * @brief  Private implementation for GetAuthorizationTokenRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizationTokenRequestPrivate object.
@@ -97,7 +107,7 @@ GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAuthorizationTokenRequestPrivate object, copying another.

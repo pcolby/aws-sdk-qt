@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  UploadLayerPartResponse
+/*!
+ * \class QtAws::ECR::UploadLayerPartResponse
  *
- * @brief  Handles ECR UploadLayerPart responses.
+ * \brief The UploadLayerPartResponse class encapsulates ECR UploadLayerPart responses.
  *
- * @see    ECRClient::uploadLayerPart
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::uploadLayerPart
  */
 
-/**
+/*!
  * @brief  Constructs a new UploadLayerPartResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UploadLayerPartRequest * UploadLayerPartResponse::request() const
     return static_cast<const UploadLayerPartRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ECR UploadLayerPart response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UploadLayerPartResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UploadLayerPartResponsePrivate
+ * \class UploadLayerPartResponsePrivate
  *
- * @brief  Private implementation for UploadLayerPartResponse.
+ * \brief Private implementation for UploadLayerPartResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UploadLayerPartResponsePrivate object.
@@ -91,7 +98,7 @@ UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ECR UploadLayerPartResponse element.
  *
  * @param  xml  XML stream to parse.

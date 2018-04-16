@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  GetIdentityMailFromDomainAttributesResponse
+/*!
+ * \class QtAws::SES::GetIdentityMailFromDomainAttributesResponse
  *
- * @brief  Handles SES GetIdentityMailFromDomainAttributes responses.
+ * \brief The GetIdentityMailFromDomainAttributesResponse class encapsulates SES GetIdentityMailFromDomainAttributes responses.
  *
- * @see    SESClient::getIdentityMailFromDomainAttributes
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::getIdentityMailFromDomainAttributes
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttr
     return static_cast<const GetIdentityMailFromDomainAttributesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES GetIdentityMailFromDomainAttributes response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &respon
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetIdentityMailFromDomainAttributesResponsePrivate
+ * \class GetIdentityMailFromDomainAttributesResponsePrivate
  *
- * @brief  Private implementation for GetIdentityMailFromDomainAttributesResponse.
+ * \brief Private implementation for GetIdentityMailFromDomainAttributesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponsePrivate object.
@@ -91,7 +105,7 @@ GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAtt
 
 }
 
-/**
+/*!
  * @brief  Parse an SES GetIdentityMailFromDomainAttributesResponse element.
  *
  * @param  xml  XML stream to parse.

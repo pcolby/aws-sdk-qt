@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DeleteTagsResponse
+/*!
+ * \class QtAws::WorkSpaces::DeleteTagsResponse
  *
- * @brief  Handles WorkSpaces DeleteTags responses.
+ * \brief The DeleteTagsResponse class encapsulates WorkSpaces DeleteTags responses.
  *
- * @see    WorkSpacesClient::deleteTags
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
     return static_cast<const DeleteTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces DeleteTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagsResponsePrivate
+ * \class DeleteTagsResponsePrivate
  *
- * @brief  Private implementation for DeleteTagsResponse.
+ * \brief Private implementation for DeleteTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsResponsePrivate object.
@@ -91,7 +97,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces DeleteTagsResponse element.
  *
  * @param  xml  XML stream to parse.

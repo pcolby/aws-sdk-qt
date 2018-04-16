@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  GetCorsPolicyResponse
+/*!
+ * \class QtAws::MediaStore::GetCorsPolicyResponse
  *
- * @brief  Handles MediaStore GetCorsPolicy responses.
+ * \brief The GetCorsPolicyResponse class encapsulates MediaStore GetCorsPolicy responses.
  *
- * @see    MediaStoreClient::getCorsPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::getCorsPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCorsPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetCorsPolicyRequest * GetCorsPolicyResponse::request() const
     return static_cast<const GetCorsPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore GetCorsPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetCorsPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCorsPolicyResponsePrivate
+ * \class GetCorsPolicyResponsePrivate
  *
- * @brief  Private implementation for GetCorsPolicyResponse.
+ * \brief Private implementation for GetCorsPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCorsPolicyResponsePrivate object.
@@ -91,7 +96,7 @@ GetCorsPolicyResponsePrivate::GetCorsPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore GetCorsPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

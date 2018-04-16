@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketAccelerateConfigurationResponse
+/*!
+ * \class QtAws::S3::GetBucketAccelerateConfigurationResponse
  *
- * @brief  Handles S3 GetBucketAccelerateConfiguration responses.
+ * \brief The GetBucketAccelerateConfigurationResponse class encapsulates S3 GetBucketAccelerateConfiguration responses.
  *
- * @see    S3Client::getBucketAccelerateConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketAccelerateConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketAccelerateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketAccelerateConfigurationRequest * GetBucketAccelerateConfiguration
     return static_cast<const GetBucketAccelerateConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketAccelerateConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketAccelerateConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketAccelerateConfigurationResponsePrivate
+ * \class GetBucketAccelerateConfigurationResponsePrivate
  *
- * @brief  Private implementation for GetBucketAccelerateConfigurationResponse.
+ * \brief Private implementation for GetBucketAccelerateConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketAccelerateConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfiguratio
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketAccelerateConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

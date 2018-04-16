@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  RejectPortfolioShareRequest
+/*!
+ * \class QtAws::ServiceCatalog::RejectPortfolioShareRequest
  *
- * @brief  Implements ServiceCatalog RejectPortfolioShare requests.
+ * \brief The RejectPortfolioShareRequest class encapsulates ServiceCatalog RejectPortfolioShare requests.
  *
- * @see    ServiceCatalogClient::rejectPortfolioShare
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::rejectPortfolioShare
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectPortfolioShareRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ RejectPortfolioShareRequest::RejectPortfolioShareRequest(const RejectPortfolioSh
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RejectPortfolioShareRequest object.
  */
 RejectPortfolioShareRequest::RejectPortfolioShareRequest()
@@ -53,13 +62,16 @@ RejectPortfolioShareRequest::RejectPortfolioShareRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RejectPortfolioShareRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RejectPortfolioShareResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetwor
     return new RejectPortfolioShareResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RejectPortfolioShareRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetwor
  * @brief  Private implementation for RejectPortfolioShareRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectPortfolioShareRequestPrivate object.
@@ -97,7 +109,7 @@ RejectPortfolioShareRequestPrivate::RejectPortfolioShareRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectPortfolioShareRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpnGatewayRequest
+/*!
+ * \class QtAws::EC2::DeleteVpnGatewayRequest
  *
- * @brief  Implements EC2 DeleteVpnGateway requests.
+ * \brief The DeleteVpnGatewayRequest class encapsulates EC2 DeleteVpnGateway requests.
  *
- * @see    EC2Client::deleteVpnGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpnGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpnGatewayRequest::DeleteVpnGatewayRequest(const DeleteVpnGatewayRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnGatewayRequest object.
  */
 DeleteVpnGatewayRequest::DeleteVpnGatewayRequest()
@@ -53,13 +60,16 @@ DeleteVpnGatewayRequest::DeleteVpnGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpnGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpnGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnGatewayRequest::response(QNetworkRep
     return new DeleteVpnGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpnGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnGatewayRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteVpnGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnGatewayRequestPrivate object, copying another.

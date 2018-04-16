@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListSubscriptionDefinitionsResponse
+/*!
+ * \class QtAws::Greengrass::ListSubscriptionDefinitionsResponse
  *
- * @brief  Handles Greengrass ListSubscriptionDefinitions responses.
+ * \brief The ListSubscriptionDefinitionsResponse class encapsulates Greengrass ListSubscriptionDefinitions responses.
  *
- * @see    GreengrassClient::listSubscriptionDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listSubscriptionDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListSubscriptionDefinitionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ListSubscriptionDefinitionsRequest * ListSubscriptionDefinitionsResponse::
     return static_cast<const ListSubscriptionDefinitionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ListSubscriptionDefinitions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ListSubscriptionDefinitionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListSubscriptionDefinitionsResponsePrivate
+ * \class ListSubscriptionDefinitionsResponsePrivate
  *
- * @brief  Private implementation for ListSubscriptionDefinitionsResponse.
+ * \brief Private implementation for ListSubscriptionDefinitionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListSubscriptionDefinitionsResponsePrivate object.
@@ -91,7 +97,7 @@ ListSubscriptionDefinitionsResponsePrivate::ListSubscriptionDefinitionsResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ListSubscriptionDefinitionsResponse element.
  *
  * @param  xml  XML stream to parse.

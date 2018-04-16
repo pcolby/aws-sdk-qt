@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  UpdateJobTemplateRequest
+/*!
+ * \class QtAws::MediaConvert::UpdateJobTemplateRequest
  *
- * @brief  Implements MediaConvert UpdateJobTemplate requests.
+ * \brief The UpdateJobTemplateRequest class encapsulates MediaConvert UpdateJobTemplate requests.
  *
- * @see    MediaConvertClient::updateJobTemplate
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::updateJobTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateJobTemplateRequest::UpdateJobTemplateRequest(const UpdateJobTemplateReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateJobTemplateRequest object.
  */
 UpdateJobTemplateRequest::UpdateJobTemplateRequest()
@@ -53,13 +56,16 @@ UpdateJobTemplateRequest::UpdateJobTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateJobTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateJobTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobTemplateRequest::response(QNetworkRe
     return new UpdateJobTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateJobTemplateRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateJobTemplateRequest::response(QNetworkRe
  * @brief  Private implementation for UpdateJobTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobTemplateRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateJobTemplateRequestPrivate::UpdateJobTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateJobTemplateRequestPrivate object, copying another.

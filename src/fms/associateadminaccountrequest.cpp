@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  AssociateAdminAccountRequest
+/*!
+ * \class QtAws::FMS::AssociateAdminAccountRequest
  *
- * @brief  Implements FMS AssociateAdminAccount requests.
+ * \brief The AssociateAdminAccountRequest class encapsulates FMS AssociateAdminAccount requests.
  *
- * @see    FMSClient::associateAdminAccount
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::associateAdminAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateAdminAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ AssociateAdminAccountRequest::AssociateAdminAccountRequest(const AssociateAdminA
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateAdminAccountRequest object.
  */
 AssociateAdminAccountRequest::AssociateAdminAccountRequest()
@@ -53,13 +62,16 @@ AssociateAdminAccountRequest::AssociateAdminAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateAdminAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateAdminAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * AssociateAdminAccountRequest::response(QNetwo
     return new AssociateAdminAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateAdminAccountRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AssociateAdminAccountRequest::response(QNetwo
  * @brief  Private implementation for AssociateAdminAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateAdminAccountRequestPrivate object.
@@ -97,7 +109,7 @@ AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateAdminAccountRequestPrivate object, copying another.

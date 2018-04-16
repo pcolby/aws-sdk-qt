@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SNS {
 
-/**
- * @class  SNSResponse
+/*!
+ * \class QtAws::SNS::SNSResponse
  *
- * @brief  Handles SNS SNS responses.
+ * \brief The SNSResponse class is the base class for all SNS responses.
  *
- * @see    SNSClient::sNS
+ * \ingroup SNS
  */
 
-/**
+/*!
  * @brief  Constructs a new SNSResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SNSResponse::SNSResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SNSResponse object.
@@ -63,7 +63,7 @@ SNSResponse::SNSResponse(SNSResponsePrivate * const d, QObject * const parent)
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SNSResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SNSResponsePrivate
@@ -92,7 +92,7 @@ void SNSResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SNSResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SNSResponsePrivate object.

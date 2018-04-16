@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  GetOperationDetailResponse
+/*!
+ * \class QtAws::Route53Domains::GetOperationDetailResponse
  *
- * @brief  Handles Route53Domains GetOperationDetail responses.
+ * \brief The GetOperationDetailResponse class encapsulates Route53Domains GetOperationDetail responses.
  *
- * @see    Route53DomainsClient::getOperationDetail
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::getOperationDetail
  */
 
-/**
+/*!
  * @brief  Constructs a new GetOperationDetailResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetOperationDetailRequest * GetOperationDetailResponse::request() const
     return static_cast<const GetOperationDetailRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains GetOperationDetail response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetOperationDetailResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetOperationDetailResponsePrivate
+ * \class GetOperationDetailResponsePrivate
  *
- * @brief  Private implementation for GetOperationDetailResponse.
+ * \brief Private implementation for GetOperationDetailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetOperationDetailResponsePrivate object.
@@ -91,7 +95,7 @@ GetOperationDetailResponsePrivate::GetOperationDetailResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains GetOperationDetailResponse element.
  *
  * @param  xml  XML stream to parse.

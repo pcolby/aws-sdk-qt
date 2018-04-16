@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListWorkersWithQualificationTypeRequest
+/*!
+ * \class QtAws::MTurk::ListWorkersWithQualificationTypeRequest
  *
- * @brief  Implements MTurk ListWorkersWithQualificationType requests.
+ * \brief The ListWorkersWithQualificationTypeRequest class encapsulates MTurk ListWorkersWithQualificationType requests.
  *
- * @see    MTurkClient::listWorkersWithQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listWorkersWithQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new ListWorkersWithQualificationTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListWorkersWithQualificationTypeRequest::ListWorkersWithQualificationTypeRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListWorkersWithQualificationTypeRequest object.
  */
 ListWorkersWithQualificationTypeRequest::ListWorkersWithQualificationTypeRequest()
@@ -53,13 +56,16 @@ ListWorkersWithQualificationTypeRequest::ListWorkersWithQualificationTypeRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListWorkersWithQualificationTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListWorkersWithQualificationTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkersWithQualificationTypeRequest::resp
     return new ListWorkersWithQualificationTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListWorkersWithQualificationTypeRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkersWithQualificationTypeRequest::resp
  * @brief  Private implementation for ListWorkersWithQualificationTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkersWithQualificationTypeRequestPrivate object.
@@ -97,7 +103,7 @@ ListWorkersWithQualificationTypeRequestPrivate::ListWorkersWithQualificationType
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkersWithQualificationTypeRequestPrivate object, copying another.

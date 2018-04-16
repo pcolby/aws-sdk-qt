@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListBucketAnalyticsConfigurationsResponse
+/*!
+ * \class QtAws::S3::ListBucketAnalyticsConfigurationsResponse
  *
- * @brief  Handles S3 ListBucketAnalyticsConfigurations responses.
+ * \brief The ListBucketAnalyticsConfigurationsResponse class encapsulates S3 ListBucketAnalyticsConfigurations responses.
  *
- * @see    S3Client::listBucketAnalyticsConfigurations
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listBucketAnalyticsConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListBucketAnalyticsConfigurationsRequest * ListBucketAnalyticsConfiguratio
     return static_cast<const ListBucketAnalyticsConfigurationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 ListBucketAnalyticsConfigurations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListBucketAnalyticsConfigurationsResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListBucketAnalyticsConfigurationsResponsePrivate
+ * \class ListBucketAnalyticsConfigurationsResponsePrivate
  *
- * @brief  Private implementation for ListBucketAnalyticsConfigurationsResponse.
+ * \brief Private implementation for ListBucketAnalyticsConfigurationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsResponsePrivate object.
@@ -91,7 +94,7 @@ ListBucketAnalyticsConfigurationsResponsePrivate::ListBucketAnalyticsConfigurati
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 ListBucketAnalyticsConfigurationsResponse element.
  *
  * @param  xml  XML stream to parse.

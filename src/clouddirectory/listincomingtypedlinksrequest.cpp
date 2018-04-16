@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListIncomingTypedLinksRequest
+/*!
+ * \class QtAws::CloudDirectory::ListIncomingTypedLinksRequest
  *
- * @brief  Implements CloudDirectory ListIncomingTypedLinks requests.
+ * \brief The ListIncomingTypedLinksRequest class encapsulates CloudDirectory ListIncomingTypedLinks requests.
  *
- * @see    CloudDirectoryClient::listIncomingTypedLinks
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listIncomingTypedLinks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIncomingTypedLinksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListIncomingTypedLinksRequest::ListIncomingTypedLinksRequest(const ListIncomingT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListIncomingTypedLinksRequest object.
  */
 ListIncomingTypedLinksRequest::ListIncomingTypedLinksRequest()
@@ -53,13 +63,16 @@ ListIncomingTypedLinksRequest::ListIncomingTypedLinksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListIncomingTypedLinksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListIncomingTypedLinksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListIncomingTypedLinksRequest::response(QNetw
     return new ListIncomingTypedLinksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListIncomingTypedLinksRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListIncomingTypedLinksRequest::response(QNetw
  * @brief  Private implementation for ListIncomingTypedLinksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIncomingTypedLinksRequestPrivate object.
@@ -97,7 +110,7 @@ ListIncomingTypedLinksRequestPrivate::ListIncomingTypedLinksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIncomingTypedLinksRequestPrivate object, copying another.

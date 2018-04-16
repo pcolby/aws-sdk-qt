@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  ResolveRoomRequest
+/*!
+ * \class QtAws::AlexaForBusiness::ResolveRoomRequest
  *
- * @brief  Implements AlexaForBusiness ResolveRoom requests.
+ * \brief The ResolveRoomRequest class encapsulates AlexaForBusiness ResolveRoom requests.
  *
- * @see    AlexaForBusinessClient::resolveRoom
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::resolveRoom
  */
 
-/**
+/*!
  * @brief  Constructs a new ResolveRoomRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ResolveRoomRequest::ResolveRoomRequest(const ResolveRoomRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ResolveRoomRequest object.
  */
 ResolveRoomRequest::ResolveRoomRequest()
@@ -53,13 +61,16 @@ ResolveRoomRequest::ResolveRoomRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ResolveRoomRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ResolveRoomResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ResolveRoomRequest::response(QNetworkReply * 
     return new ResolveRoomResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResolveRoomRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ResolveRoomRequest::response(QNetworkReply * 
  * @brief  Private implementation for ResolveRoomRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResolveRoomRequestPrivate object.
@@ -97,7 +108,7 @@ ResolveRoomRequestPrivate::ResolveRoomRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResolveRoomRequestPrivate object, copying another.

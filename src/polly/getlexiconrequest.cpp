@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace Polly {
 
-/**
- * @class  GetLexiconRequest
+/*!
+ * \class QtAws::Polly::GetLexiconRequest
  *
- * @brief  Implements Polly GetLexicon requests.
+ * \brief The GetLexiconRequest class encapsulates Polly GetLexicon requests.
  *
- * @see    PollyClient::getLexicon
+ * \ingroup Polly
+ *
+ *  Amazon Polly is a web service that makes it easy to synthesize speech from
+ * 
+ *  text>
+ * 
+ *  The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech
+ *  Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results
+ *  for your application
+ *
+ * \sa PollyClient::getLexicon
  */
 
-/**
+/*!
  * @brief  Constructs a new GetLexiconRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ GetLexiconRequest::GetLexiconRequest(const GetLexiconRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetLexiconRequest object.
  */
 GetLexiconRequest::GetLexiconRequest()
@@ -53,13 +63,16 @@ GetLexiconRequest::GetLexiconRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetLexiconRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetLexiconResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * GetLexiconRequest::response(QNetworkReply * c
     return new GetLexiconResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetLexiconRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * GetLexiconRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetLexiconRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLexiconRequestPrivate object.
@@ -97,7 +110,7 @@ GetLexiconRequestPrivate::GetLexiconRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetLexiconRequestPrivate object, copying another.

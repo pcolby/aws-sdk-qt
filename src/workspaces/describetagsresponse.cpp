@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeTagsResponse
+/*!
+ * \class QtAws::WorkSpaces::DescribeTagsResponse
  *
- * @brief  Handles WorkSpaces DescribeTags responses.
+ * \brief The DescribeTagsResponse class encapsulates WorkSpaces DescribeTags responses.
  *
- * @see    WorkSpacesClient::describeTags
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
     return static_cast<const DescribeTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WorkSpaces DescribeTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeTagsResponsePrivate
+ * \class DescribeTagsResponsePrivate
  *
- * @brief  Private implementation for DescribeTagsResponse.
+ * \brief Private implementation for DescribeTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsResponsePrivate object.
@@ -91,7 +97,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WorkSpaces DescribeTagsResponse element.
  *
  * @param  xml  XML stream to parse.

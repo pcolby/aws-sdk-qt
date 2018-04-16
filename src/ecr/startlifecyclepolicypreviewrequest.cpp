@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  StartLifecyclePolicyPreviewRequest
+/*!
+ * \class QtAws::ECR::StartLifecyclePolicyPreviewRequest
  *
- * @brief  Implements ECR StartLifecyclePolicyPreview requests.
+ * \brief The StartLifecyclePolicyPreviewRequest class encapsulates ECR StartLifecyclePolicyPreview requests.
  *
- * @see    ECRClient::startLifecyclePolicyPreview
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::startLifecyclePolicyPreview
  */
 
-/**
+/*!
  * @brief  Constructs a new StartLifecyclePolicyPreviewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ StartLifecyclePolicyPreviewRequest::StartLifecyclePolicyPreviewRequest(const Sta
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartLifecyclePolicyPreviewRequest object.
  */
 StartLifecyclePolicyPreviewRequest::StartLifecyclePolicyPreviewRequest()
@@ -53,13 +60,16 @@ StartLifecyclePolicyPreviewRequest::StartLifecyclePolicyPreviewRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartLifecyclePolicyPreviewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartLifecyclePolicyPreviewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * StartLifecyclePolicyPreviewRequest::response(
     return new StartLifecyclePolicyPreviewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartLifecyclePolicyPreviewRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StartLifecyclePolicyPreviewRequest::response(
  * @brief  Private implementation for StartLifecyclePolicyPreviewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartLifecyclePolicyPreviewRequestPrivate object.
@@ -97,7 +107,7 @@ StartLifecyclePolicyPreviewRequestPrivate::StartLifecyclePolicyPreviewRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartLifecyclePolicyPreviewRequestPrivate object, copying another.

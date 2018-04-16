@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  SplitShardRequest
+/*!
+ * \class QtAws::Kinesis::SplitShardRequest
  *
- * @brief  Implements Kinesis SplitShard requests.
+ * \brief The SplitShardRequest class encapsulates Kinesis SplitShard requests.
  *
- * @see    KinesisClient::splitShard
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::splitShard
  */
 
-/**
+/*!
  * @brief  Constructs a new SplitShardRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ SplitShardRequest::SplitShardRequest(const SplitShardRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SplitShardRequest object.
  */
 SplitShardRequest::SplitShardRequest()
@@ -53,13 +59,16 @@ SplitShardRequest::SplitShardRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SplitShardRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SplitShardResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * c
     return new SplitShardResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SplitShardRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * c
  * @brief  Private implementation for SplitShardRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SplitShardRequestPrivate object.
@@ -97,7 +106,7 @@ SplitShardRequestPrivate::SplitShardRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SplitShardRequestPrivate object, copying another.

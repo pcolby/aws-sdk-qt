@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListAttachedIndicesRequest
+/*!
+ * \class QtAws::CloudDirectory::ListAttachedIndicesRequest
  *
- * @brief  Implements CloudDirectory ListAttachedIndices requests.
+ * \brief The ListAttachedIndicesRequest class encapsulates CloudDirectory ListAttachedIndices requests.
  *
- * @see    CloudDirectoryClient::listAttachedIndices
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listAttachedIndices
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAttachedIndicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListAttachedIndicesRequest::ListAttachedIndicesRequest(const ListAttachedIndices
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListAttachedIndicesRequest object.
  */
 ListAttachedIndicesRequest::ListAttachedIndicesRequest()
@@ -53,13 +63,16 @@ ListAttachedIndicesRequest::ListAttachedIndicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListAttachedIndicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListAttachedIndicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListAttachedIndicesRequest::response(QNetwork
     return new ListAttachedIndicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListAttachedIndicesRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListAttachedIndicesRequest::response(QNetwork
  * @brief  Private implementation for ListAttachedIndicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttachedIndicesRequestPrivate object.
@@ -97,7 +110,7 @@ ListAttachedIndicesRequestPrivate::ListAttachedIndicesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAttachedIndicesRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetHealthCheckCountRequest
+/*!
+ * \class QtAws::Route53::GetHealthCheckCountRequest
  *
- * @brief  Implements Route53 GetHealthCheckCount requests.
+ * \brief The GetHealthCheckCountRequest class encapsulates Route53 GetHealthCheckCount requests.
  *
- * @see    Route53Client::getHealthCheckCount
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getHealthCheckCount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHealthCheckCountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetHealthCheckCountRequest::GetHealthCheckCountRequest(const GetHealthCheckCount
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetHealthCheckCountRequest object.
  */
 GetHealthCheckCountRequest::GetHealthCheckCountRequest()
@@ -53,13 +56,16 @@ GetHealthCheckCountRequest::GetHealthCheckCountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetHealthCheckCountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetHealthCheckCountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckCountRequest::response(QNetwork
     return new GetHealthCheckCountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetHealthCheckCountRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckCountRequest::response(QNetwork
  * @brief  Private implementation for GetHealthCheckCountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHealthCheckCountRequestPrivate object.
@@ -97,7 +103,7 @@ GetHealthCheckCountRequestPrivate::GetHealthCheckCountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHealthCheckCountRequestPrivate object, copying another.

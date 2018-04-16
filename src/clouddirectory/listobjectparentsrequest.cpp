@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  ListObjectParentsRequest
+/*!
+ * \class QtAws::CloudDirectory::ListObjectParentsRequest
  *
- * @brief  Implements CloudDirectory ListObjectParents requests.
+ * \brief The ListObjectParentsRequest class encapsulates CloudDirectory ListObjectParents requests.
  *
- * @see    CloudDirectoryClient::listObjectParents
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::listObjectParents
  */
 
-/**
+/*!
  * @brief  Constructs a new ListObjectParentsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ ListObjectParentsRequest::ListObjectParentsRequest(const ListObjectParentsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListObjectParentsRequest object.
  */
 ListObjectParentsRequest::ListObjectParentsRequest()
@@ -53,13 +63,16 @@ ListObjectParentsRequest::ListObjectParentsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListObjectParentsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListObjectParentsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentsRequest::response(QNetworkRe
     return new ListObjectParentsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListObjectParentsRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentsRequest::response(QNetworkRe
  * @brief  Private implementation for ListObjectParentsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectParentsRequestPrivate object.
@@ -97,7 +110,7 @@ ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListObjectParentsRequestPrivate object, copying another.

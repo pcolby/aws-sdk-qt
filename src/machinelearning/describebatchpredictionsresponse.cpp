@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeBatchPredictionsResponse
+/*!
+ * \class QtAws::MachineLearning::DescribeBatchPredictionsResponse
  *
- * @brief  Handles MachineLearning DescribeBatchPredictions responses.
+ * \brief The DescribeBatchPredictionsResponse class encapsulates MachineLearning DescribeBatchPredictions responses.
  *
- * @see    MachineLearningClient::describeBatchPredictions
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeBatchPredictions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeBatchPredictionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DescribeBatchPredictionsRequest * DescribeBatchPredictionsResponse::reques
     return static_cast<const DescribeBatchPredictionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MachineLearning DescribeBatchPredictions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DescribeBatchPredictionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeBatchPredictionsResponsePrivate
+ * \class DescribeBatchPredictionsResponsePrivate
  *
- * @brief  Private implementation for DescribeBatchPredictionsResponse.
+ * \brief Private implementation for DescribeBatchPredictionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeBatchPredictionsResponsePrivate object.
@@ -91,7 +94,7 @@ DescribeBatchPredictionsResponsePrivate::DescribeBatchPredictionsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an MachineLearning DescribeBatchPredictionsResponse element.
  *
  * @param  xml  XML stream to parse.

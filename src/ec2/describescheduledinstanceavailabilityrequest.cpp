@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeScheduledInstanceAvailabilityRequest
+/*!
+ * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityRequest
  *
- * @brief  Implements EC2 DescribeScheduledInstanceAvailability requests.
+ * \brief The DescribeScheduledInstanceAvailabilityRequest class encapsulates EC2 DescribeScheduledInstanceAvailability requests.
  *
- * @see    EC2Client::describeScheduledInstanceAvailability
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeScheduledInstanceAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabil
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequest object.
  */
 DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest()
@@ -53,13 +60,16 @@ DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabil
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeScheduledInstanceAvailabilityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeScheduledInstanceAvailabilityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest:
     return new DescribeScheduledInstanceAvailabilityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeScheduledInstanceAvailabilityRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest:
  * @brief  Private implementation for DescribeScheduledInstanceAvailabilityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAv
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequestPrivate object, copying another.

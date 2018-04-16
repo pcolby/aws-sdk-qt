@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchStopJobRunRequest
+/*!
+ * \class QtAws::Glue::BatchStopJobRunRequest
  *
- * @brief  Implements Glue BatchStopJobRun requests.
+ * \brief The BatchStopJobRunRequest class encapsulates Glue BatchStopJobRun requests.
  *
- * @see    GlueClient::batchStopJobRun
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchStopJobRun
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchStopJobRunRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchStopJobRunRequest::BatchStopJobRunRequest(const BatchStopJobRunRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchStopJobRunRequest object.
  */
 BatchStopJobRunRequest::BatchStopJobRunRequest()
@@ -53,13 +59,16 @@ BatchStopJobRunRequest::BatchStopJobRunRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchStopJobRunRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchStopJobRunResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkRepl
     return new BatchStopJobRunResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchStopJobRunRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkRepl
  * @brief  Private implementation for BatchStopJobRunRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchStopJobRunRequestPrivate object.
@@ -97,7 +106,7 @@ BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchStopJobRunRequestPrivate object, copying another.

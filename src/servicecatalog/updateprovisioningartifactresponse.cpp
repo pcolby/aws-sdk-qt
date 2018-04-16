@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  UpdateProvisioningArtifactResponse
+/*!
+ * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactResponse
  *
- * @brief  Handles ServiceCatalog UpdateProvisioningArtifact responses.
+ * \brief The UpdateProvisioningArtifactResponse class encapsulates ServiceCatalog UpdateProvisioningArtifact responses.
  *
- * @see    ServiceCatalogClient::updateProvisioningArtifact
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::updateProvisioningArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateProvisioningArtifactResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const UpdateProvisioningArtifactRequest * UpdateProvisioningArtifactResponse::re
     return static_cast<const UpdateProvisioningArtifactRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog UpdateProvisioningArtifact response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void UpdateProvisioningArtifactResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateProvisioningArtifactResponsePrivate
+ * \class UpdateProvisioningArtifactResponsePrivate
  *
- * @brief  Private implementation for UpdateProvisioningArtifactResponse.
+ * \brief Private implementation for UpdateProvisioningArtifactResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateProvisioningArtifactResponsePrivate object.
@@ -91,7 +100,7 @@ UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponsePri
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog UpdateProvisioningArtifactResponse element.
  *
  * @param  xml  XML stream to parse.

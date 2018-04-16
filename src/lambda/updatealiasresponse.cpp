@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UpdateAliasResponse
+/*!
+ * \class QtAws::Lambda::UpdateAliasResponse
  *
- * @brief  Handles Lambda UpdateAlias responses.
+ * \brief The UpdateAliasResponse class encapsulates Lambda UpdateAlias responses.
  *
- * @see    LambdaClient::updateAlias
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::updateAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const UpdateAliasRequest * UpdateAliasResponse::request() const
     return static_cast<const UpdateAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda UpdateAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void UpdateAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateAliasResponsePrivate
+ * \class UpdateAliasResponsePrivate
  *
- * @brief  Private implementation for UpdateAliasResponse.
+ * \brief Private implementation for UpdateAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateAliasResponsePrivate object.
@@ -91,7 +105,7 @@ UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda UpdateAliasResponse element.
  *
  * @param  xml  XML stream to parse.

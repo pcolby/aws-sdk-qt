@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  AssociateTagOptionWithResourceRequest
+/*!
+ * \class QtAws::ServiceCatalog::AssociateTagOptionWithResourceRequest
  *
- * @brief  Implements ServiceCatalog AssociateTagOptionWithResource requests.
+ * \brief The AssociateTagOptionWithResourceRequest class encapsulates ServiceCatalog AssociateTagOptionWithResource requests.
  *
- * @see    ServiceCatalogClient::associateTagOptionWithResource
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::associateTagOptionWithResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateTagOptionWithResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ AssociateTagOptionWithResourceRequest::AssociateTagOptionWithResourceRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateTagOptionWithResourceRequest object.
  */
 AssociateTagOptionWithResourceRequest::AssociateTagOptionWithResourceRequest()
@@ -53,13 +62,16 @@ AssociateTagOptionWithResourceRequest::AssociateTagOptionWithResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateTagOptionWithResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateTagOptionWithResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTagOptionWithResourceRequest::respon
     return new AssociateTagOptionWithResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateTagOptionWithResourceRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * AssociateTagOptionWithResourceRequest::respon
  * @brief  Private implementation for AssociateTagOptionWithResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateTagOptionWithResourceRequestPrivate object.
@@ -97,7 +109,7 @@ AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateTagOptionWithResourceRequestPrivate object, copying another.

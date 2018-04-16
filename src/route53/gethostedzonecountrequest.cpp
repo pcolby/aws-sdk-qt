@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetHostedZoneCountRequest
+/*!
+ * \class QtAws::Route53::GetHostedZoneCountRequest
  *
- * @brief  Implements Route53 GetHostedZoneCount requests.
+ * \brief The GetHostedZoneCountRequest class encapsulates Route53 GetHostedZoneCount requests.
  *
- * @see    Route53Client::getHostedZoneCount
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getHostedZoneCount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHostedZoneCountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetHostedZoneCountRequest::GetHostedZoneCountRequest(const GetHostedZoneCountReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetHostedZoneCountRequest object.
  */
 GetHostedZoneCountRequest::GetHostedZoneCountRequest()
@@ -53,13 +56,16 @@ GetHostedZoneCountRequest::GetHostedZoneCountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetHostedZoneCountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetHostedZoneCountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkR
     return new GetHostedZoneCountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetHostedZoneCountRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkR
  * @brief  Private implementation for GetHostedZoneCountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostedZoneCountRequestPrivate object.
@@ -97,7 +103,7 @@ GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHostedZoneCountRequestPrivate object, copying another.

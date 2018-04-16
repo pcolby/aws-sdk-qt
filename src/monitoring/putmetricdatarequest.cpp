@@ -25,15 +25,32 @@
 namespace QtAws {
 namespace CloudWatch {
 
-/**
- * @class  PutMetricDataRequest
+/*!
+ * \class QtAws::CloudWatch::PutMetricDataRequest
  *
- * @brief  Implements CloudWatch PutMetricData requests.
+ * \brief The PutMetricDataRequest class encapsulates CloudWatch PutMetricData requests.
  *
- * @see    CloudWatchClient::putMetricData
+ * \ingroup CloudWatch
+ *
+ *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+ *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ * 
+ *  applications>
+ * 
+ *  CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you
+ *  define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use
+ *  this data to determine whether you should launch additional instances to handle increased load. You can also use this
+ *  data to stop under-used instances to save
+ * 
+ *  money>
+ * 
+ *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
+ *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *
+ * \sa CloudWatchClient::putMetricData
  */
 
-/**
+/*!
  * @brief  Constructs a new PutMetricDataRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +61,7 @@ PutMetricDataRequest::PutMetricDataRequest(const PutMetricDataRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutMetricDataRequest object.
  */
 PutMetricDataRequest::PutMetricDataRequest()
@@ -53,13 +70,16 @@ PutMetricDataRequest::PutMetricDataRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutMetricDataRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutMetricDataResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * PutMetricDataRequest::response(QNetworkReply 
     return new PutMetricDataResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutMetricDataRequestPrivate
@@ -82,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * PutMetricDataRequest::response(QNetworkReply 
  * @brief  Private implementation for PutMetricDataRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutMetricDataRequestPrivate object.
@@ -97,7 +117,7 @@ PutMetricDataRequestPrivate::PutMetricDataRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutMetricDataRequestPrivate object, copying another.

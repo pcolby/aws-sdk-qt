@@ -27,15 +27,40 @@
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  ListStackInstancesResponse
+/*!
+ * \class QtAws::CloudFormation::ListStackInstancesResponse
  *
- * @brief  Handles CloudFormation ListStackInstances responses.
+ * \brief The ListStackInstancesResponse class encapsulates CloudFormation ListStackInstances responses.
  *
- * @see    CloudFormationClient::listStackInstances
+ * \ingroup CloudFormation
+ *
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
+ *
+ * \sa CloudFormationClient::listStackInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ListStackInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +83,7 @@ const ListStackInstancesRequest * ListStackInstancesResponse::request() const
     return static_cast<const ListStackInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFormation ListStackInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +95,15 @@ void ListStackInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListStackInstancesResponsePrivate
+ * \class ListStackInstancesResponsePrivate
  *
- * @brief  Private implementation for ListStackInstancesResponse.
+ * \brief Private implementation for ListStackInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListStackInstancesResponsePrivate object.
@@ -91,7 +116,7 @@ ListStackInstancesResponsePrivate::ListStackInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFormation ListStackInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

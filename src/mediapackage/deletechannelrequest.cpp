@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  DeleteChannelRequest
+/*!
+ * \class QtAws::MediaPackage::DeleteChannelRequest
  *
- * @brief  Implements MediaPackage DeleteChannel requests.
+ * \brief The DeleteChannelRequest class encapsulates MediaPackage DeleteChannel requests.
  *
- * @see    MediaPackageClient::deleteChannel
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::deleteChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteChannelRequest::DeleteChannelRequest(const DeleteChannelRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteChannelRequest object.
  */
 DeleteChannelRequest::DeleteChannelRequest()
@@ -53,13 +56,16 @@ DeleteChannelRequest::DeleteChannelRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteChannelRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteChannelResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply 
     return new DeleteChannelResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteChannelRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply 
  * @brief  Private implementation for DeleteChannelRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteChannelRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteChannelRequestPrivate object, copying another.

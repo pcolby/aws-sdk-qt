@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeHostReservationsRequest
+/*!
+ * \class QtAws::EC2::DescribeHostReservationsRequest
  *
- * @brief  Implements EC2 DescribeHostReservations requests.
+ * \brief The DescribeHostReservationsRequest class encapsulates EC2 DescribeHostReservations requests.
  *
- * @see    EC2Client::describeHostReservations
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeHostReservations
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeHostReservationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeHostReservationsRequest::DescribeHostReservationsRequest(const DescribeH
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeHostReservationsRequest object.
  */
 DescribeHostReservationsRequest::DescribeHostReservationsRequest()
@@ -53,13 +60,16 @@ DescribeHostReservationsRequest::DescribeHostReservationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeHostReservationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeHostReservationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHostReservationsRequest::response(QNe
     return new DescribeHostReservationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeHostReservationsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeHostReservationsRequest::response(QNe
  * @brief  Private implementation for DescribeHostReservationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHostReservationsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeHostReservationsRequestPrivate::DescribeHostReservationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeHostReservationsRequestPrivate object, copying another.

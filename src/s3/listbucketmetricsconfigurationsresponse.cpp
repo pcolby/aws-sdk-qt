@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListBucketMetricsConfigurationsResponse
+/*!
+ * \class QtAws::S3::ListBucketMetricsConfigurationsResponse
  *
- * @brief  Handles S3 ListBucketMetricsConfigurations responses.
+ * \brief The ListBucketMetricsConfigurationsResponse class encapsulates S3 ListBucketMetricsConfigurations responses.
  *
- * @see    S3Client::listBucketMetricsConfigurations
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listBucketMetricsConfigurations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListBucketMetricsConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListBucketMetricsConfigurationsRequest * ListBucketMetricsConfigurationsRe
     return static_cast<const ListBucketMetricsConfigurationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 ListBucketMetricsConfigurations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListBucketMetricsConfigurationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListBucketMetricsConfigurationsResponsePrivate
+ * \class ListBucketMetricsConfigurationsResponsePrivate
  *
- * @brief  Private implementation for ListBucketMetricsConfigurationsResponse.
+ * \brief Private implementation for ListBucketMetricsConfigurationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListBucketMetricsConfigurationsResponsePrivate object.
@@ -91,7 +94,7 @@ ListBucketMetricsConfigurationsResponsePrivate::ListBucketMetricsConfigurationsR
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 ListBucketMetricsConfigurationsResponse element.
  *
  * @param  xml  XML stream to parse.

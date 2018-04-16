@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DeleteFileSystemResponse
+/*!
+ * \class QtAws::EFS::DeleteFileSystemResponse
  *
- * @brief  Handles EFS DeleteFileSystem responses.
+ * \brief The DeleteFileSystemResponse class encapsulates EFS DeleteFileSystem responses.
  *
- * @see    EFSClient::deleteFileSystem
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::deleteFileSystem
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteFileSystemResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteFileSystemRequest * DeleteFileSystemResponse::request() const
     return static_cast<const DeleteFileSystemRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DeleteFileSystem response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteFileSystemResponsePrivate
+ * \class DeleteFileSystemResponsePrivate
  *
- * @brief  Private implementation for DeleteFileSystemResponse.
+ * \brief Private implementation for DeleteFileSystemResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteFileSystemResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DeleteFileSystemResponse element.
  *
  * @param  xml  XML stream to parse.

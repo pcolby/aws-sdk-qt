@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CopyFpgaImageRequest
+/*!
+ * \class QtAws::EC2::CopyFpgaImageRequest
  *
- * @brief  Implements EC2 CopyFpgaImage requests.
+ * \brief The CopyFpgaImageRequest class encapsulates EC2 CopyFpgaImage requests.
  *
- * @see    EC2Client::copyFpgaImage
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::copyFpgaImage
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyFpgaImageRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ CopyFpgaImageRequest::CopyFpgaImageRequest(const CopyFpgaImageRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CopyFpgaImageRequest object.
  */
 CopyFpgaImageRequest::CopyFpgaImageRequest()
@@ -53,13 +60,16 @@ CopyFpgaImageRequest::CopyFpgaImageRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CopyFpgaImageRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CopyFpgaImageResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply 
     return new CopyFpgaImageResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CopyFpgaImageRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply 
  * @brief  Private implementation for CopyFpgaImageRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyFpgaImageRequestPrivate object.
@@ -97,7 +107,7 @@ CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyFpgaImageRequestPrivate object, copying another.

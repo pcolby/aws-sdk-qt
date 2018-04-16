@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace XRay {
 
-/**
- * @class  XRayResponse
+/*!
+ * \class QtAws::XRay::XRayResponse
  *
- * @brief  Handles XRay XRay responses.
+ * \brief The XRayResponse class is the base class for all XRay responses.
  *
- * @see    XRayClient::xRay
+ * \ingroup XRay
  */
 
-/**
+/*!
  * @brief  Constructs a new XRayResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ XRayResponse::XRayResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new XRayResponse object.
@@ -63,7 +63,7 @@ XRayResponse::XRayResponse(XRayResponsePrivate * const d, QObject * const parent
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void XRayResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  XRayResponsePrivate
@@ -92,7 +92,7 @@ void XRayResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for XRayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new XRayResponsePrivate object.

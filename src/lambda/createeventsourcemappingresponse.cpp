@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  CreateEventSourceMappingResponse
+/*!
+ * \class QtAws::Lambda::CreateEventSourceMappingResponse
  *
- * @brief  Handles Lambda CreateEventSourceMapping responses.
+ * \brief The CreateEventSourceMappingResponse class encapsulates Lambda CreateEventSourceMapping responses.
  *
- * @see    LambdaClient::createEventSourceMapping
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::createEventSourceMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateEventSourceMappingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateEventSourceMappingRequest * CreateEventSourceMappingResponse::reques
     return static_cast<const CreateEventSourceMappingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda CreateEventSourceMapping response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateEventSourceMappingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateEventSourceMappingResponsePrivate
+ * \class CreateEventSourceMappingResponsePrivate
  *
- * @brief  Private implementation for CreateEventSourceMappingResponse.
+ * \brief Private implementation for CreateEventSourceMappingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateEventSourceMappingResponsePrivate object.
@@ -91,7 +105,7 @@ CreateEventSourceMappingResponsePrivate::CreateEventSourceMappingResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda CreateEventSourceMappingResponse element.
  *
  * @param  xml  XML stream to parse.

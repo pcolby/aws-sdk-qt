@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListLaunchPathsResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListLaunchPathsResponse
  *
- * @brief  Handles ServiceCatalog ListLaunchPaths responses.
+ * \brief The ListLaunchPathsResponse class encapsulates ServiceCatalog ListLaunchPaths responses.
  *
- * @see    ServiceCatalogClient::listLaunchPaths
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listLaunchPaths
  */
 
-/**
+/*!
  * @brief  Constructs a new ListLaunchPathsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListLaunchPathsRequest * ListLaunchPathsResponse::request() const
     return static_cast<const ListLaunchPathsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListLaunchPaths response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListLaunchPathsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListLaunchPathsResponsePrivate
+ * \class ListLaunchPathsResponsePrivate
  *
- * @brief  Private implementation for ListLaunchPathsResponse.
+ * \brief Private implementation for ListLaunchPathsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListLaunchPathsResponsePrivate object.
@@ -91,7 +100,7 @@ ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListLaunchPathsResponse element.
  *
  * @param  xml  XML stream to parse.

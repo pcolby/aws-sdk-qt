@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteNetworkInterfaceResponse
+/*!
+ * \class QtAws::EC2::DeleteNetworkInterfaceResponse
  *
- * @brief  Handles EC2 DeleteNetworkInterface responses.
+ * \brief The DeleteNetworkInterfaceResponse class encapsulates EC2 DeleteNetworkInterface responses.
  *
- * @see    EC2Client::deleteNetworkInterface
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteNetworkInterface
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteNetworkInterfaceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteNetworkInterfaceRequest * DeleteNetworkInterfaceResponse::request() 
     return static_cast<const DeleteNetworkInterfaceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteNetworkInterface response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteNetworkInterfaceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteNetworkInterfaceResponsePrivate
+ * \class DeleteNetworkInterfaceResponsePrivate
  *
- * @brief  Private implementation for DeleteNetworkInterfaceResponse.
+ * \brief Private implementation for DeleteNetworkInterfaceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteNetworkInterfaceResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteNetworkInterfaceResponse element.
  *
  * @param  xml  XML stream to parse.

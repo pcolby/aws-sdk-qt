@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  CreateLoadBalancerTlsCertificateResponse
+/*!
+ * \class QtAws::Lightsail::CreateLoadBalancerTlsCertificateResponse
  *
- * @brief  Handles Lightsail CreateLoadBalancerTlsCertificate responses.
+ * \brief The CreateLoadBalancerTlsCertificateResponse class encapsulates Lightsail CreateLoadBalancerTlsCertificate responses.
  *
- * @see    LightsailClient::createLoadBalancerTlsCertificate
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::createLoadBalancerTlsCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateLoadBalancerTlsCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const CreateLoadBalancerTlsCertificateRequest * CreateLoadBalancerTlsCertificate
     return static_cast<const CreateLoadBalancerTlsCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lightsail CreateLoadBalancerTlsCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void CreateLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateLoadBalancerTlsCertificateResponsePrivate
+ * \class CreateLoadBalancerTlsCertificateResponsePrivate
  *
- * @brief  Private implementation for CreateLoadBalancerTlsCertificateResponse.
+ * \brief Private implementation for CreateLoadBalancerTlsCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateLoadBalancerTlsCertificateResponsePrivate object.
@@ -91,7 +110,7 @@ CreateLoadBalancerTlsCertificateResponsePrivate::CreateLoadBalancerTlsCertificat
 
 }
 
-/**
+/*!
  * @brief  Parse an Lightsail CreateLoadBalancerTlsCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

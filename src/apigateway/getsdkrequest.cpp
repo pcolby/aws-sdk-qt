@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetSdkRequest
+/*!
+ * \class QtAws::APIGateway::GetSdkRequest
  *
- * @brief  Implements APIGateway GetSdk requests.
+ * \brief The GetSdkRequest class encapsulates APIGateway GetSdk requests.
  *
- * @see    APIGatewayClient::getSdk
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getSdk
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSdkRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetSdkRequest::GetSdkRequest(const GetSdkRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetSdkRequest object.
  */
 GetSdkRequest::GetSdkRequest()
@@ -53,13 +61,16 @@ GetSdkRequest::GetSdkRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetSdkRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetSdkResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetSdkRequest::response(QNetworkReply * const
     return new GetSdkResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetSdkRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetSdkRequest::response(QNetworkReply * const
  * @brief  Private implementation for GetSdkRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSdkRequestPrivate object.
@@ -97,7 +108,7 @@ GetSdkRequestPrivate::GetSdkRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSdkRequestPrivate object, copying another.

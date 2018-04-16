@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeImagesRequest
+/*!
+ * \class QtAws::EC2::DescribeImagesRequest
  *
- * @brief  Implements EC2 DescribeImages requests.
+ * \brief The DescribeImagesRequest class encapsulates EC2 DescribeImages requests.
  *
- * @see    EC2Client::describeImages
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeImages
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
@@ -53,13 +60,16 @@ DescribeImagesRequest::DescribeImagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeImagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeImagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
     return new DescribeImagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeImagesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeImagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeImagesRequestPrivate object, copying another.

@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  ListResolversResponse
+/*!
+ * \class QtAws::AppSync::ListResolversResponse
  *
- * @brief  Handles AppSync ListResolvers responses.
+ * \brief The ListResolversResponse class encapsulates AppSync ListResolvers responses.
  *
- * @see    AppSyncClient::listResolvers
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::listResolvers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListResolversResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListResolversRequest * ListResolversResponse::request() const
     return static_cast<const ListResolversRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync ListResolvers response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListResolversResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListResolversResponsePrivate
+ * \class ListResolversResponsePrivate
  *
- * @brief  Private implementation for ListResolversResponse.
+ * \brief Private implementation for ListResolversResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListResolversResponsePrivate object.
@@ -91,7 +95,7 @@ ListResolversResponsePrivate::ListResolversResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync ListResolversResponse element.
  *
  * @param  xml  XML stream to parse.

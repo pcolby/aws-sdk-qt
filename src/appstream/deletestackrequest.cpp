@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  DeleteStackRequest
+/*!
+ * \class QtAws::AppStream::DeleteStackRequest
  *
- * @brief  Implements AppStream DeleteStack requests.
+ * \brief The DeleteStackRequest class encapsulates AppStream DeleteStack requests.
  *
- * @see    AppStreamClient::deleteStack
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::deleteStack
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteStackRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteStackRequest::DeleteStackRequest(const DeleteStackRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteStackRequest object.
  */
 DeleteStackRequest::DeleteStackRequest()
@@ -53,13 +59,16 @@ DeleteStackRequest::DeleteStackRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteStackRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteStackResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * 
     return new DeleteStackResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteStackRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteStackRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStackRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteStackRequestPrivate::DeleteStackRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteStackRequestPrivate object, copying another.

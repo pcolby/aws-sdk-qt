@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DatabaseMigrationServiceResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponse
  *
- * @brief  Handles DatabaseMigrationService DatabaseMigrationService responses.
+ * \brief The DatabaseMigrationServiceResponse class is the base class for all DatabaseMigrationService responses.
  *
- * @see    DatabaseMigrationServiceClient::databaseMigrationService
+ * \ingroup DatabaseMigrationService
  */
 
-/**
+/*!
  * @brief  Constructs a new DatabaseMigrationServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * con
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DatabaseMigrationServiceResponse object.
@@ -63,7 +63,7 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigra
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DatabaseMigrationServiceResponsePrivate
@@ -92,7 +92,7 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DatabaseMigrationServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DatabaseMigrationServiceResponsePrivate object.

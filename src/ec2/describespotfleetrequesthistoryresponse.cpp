@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeSpotFleetRequestHistoryResponse
+/*!
+ * \class QtAws::EC2::DescribeSpotFleetRequestHistoryResponse
  *
- * @brief  Handles EC2 DescribeSpotFleetRequestHistory responses.
+ * \brief The DescribeSpotFleetRequestHistoryResponse class encapsulates EC2 DescribeSpotFleetRequestHistory responses.
  *
- * @see    EC2Client::describeSpotFleetRequestHistory
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeSpotFleetRequestHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeSpotFleetRequestHistoryResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeSpotFleetRequestHistoryRequest * DescribeSpotFleetRequestHistoryRe
     return static_cast<const DescribeSpotFleetRequestHistoryRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeSpotFleetRequestHistory response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeSpotFleetRequestHistoryResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeSpotFleetRequestHistoryResponsePrivate
+ * \class DescribeSpotFleetRequestHistoryResponsePrivate
  *
- * @brief  Private implementation for DescribeSpotFleetRequestHistoryResponse.
+ * \brief Private implementation for DescribeSpotFleetRequestHistoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeSpotFleetRequestHistoryResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeSpotFleetRequestHistoryResponsePrivate::DescribeSpotFleetRequestHistoryR
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeSpotFleetRequestHistoryResponse element.
  *
  * @param  xml  XML stream to parse.

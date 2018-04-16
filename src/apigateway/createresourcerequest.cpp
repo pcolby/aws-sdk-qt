@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateResourceRequest
+/*!
+ * \class QtAws::APIGateway::CreateResourceRequest
  *
- * @brief  Implements APIGateway CreateResource requests.
+ * \brief The CreateResourceRequest class encapsulates APIGateway CreateResource requests.
  *
- * @see    APIGatewayClient::createResource
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createResource
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceRequest object.
  */
 CreateResourceRequest::CreateResourceRequest()
@@ -53,13 +61,16 @@ CreateResourceRequest::CreateResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply
     return new CreateResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateResourceRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply
  * @brief  Private implementation for CreateResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceRequestPrivate object.
@@ -97,7 +108,7 @@ CreateResourceRequestPrivate::CreateResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetQueryLoggingConfigRequest
+/*!
+ * \class QtAws::Route53::GetQueryLoggingConfigRequest
  *
- * @brief  Implements Route53 GetQueryLoggingConfig requests.
+ * \brief The GetQueryLoggingConfigRequest class encapsulates Route53 GetQueryLoggingConfig requests.
  *
- * @see    Route53Client::getQueryLoggingConfig
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getQueryLoggingConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new GetQueryLoggingConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest(const GetQueryLogging
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetQueryLoggingConfigRequest object.
  */
 GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest()
@@ -53,13 +56,16 @@ GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetQueryLoggingConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetQueryLoggingConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetwo
     return new GetQueryLoggingConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetQueryLoggingConfigRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetwo
  * @brief  Private implementation for GetQueryLoggingConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueryLoggingConfigRequestPrivate object.
@@ -97,7 +103,7 @@ GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetQueryLoggingConfigRequestPrivate object, copying another.

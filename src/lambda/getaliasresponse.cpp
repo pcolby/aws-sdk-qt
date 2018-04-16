@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  GetAliasResponse
+/*!
+ * \class QtAws::Lambda::GetAliasResponse
  *
- * @brief  Handles Lambda GetAlias responses.
+ * \brief The GetAliasResponse class encapsulates Lambda GetAlias responses.
  *
- * @see    LambdaClient::getAlias
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::getAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const GetAliasRequest * GetAliasResponse::request() const
     return static_cast<const GetAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda GetAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void GetAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetAliasResponsePrivate
+ * \class GetAliasResponsePrivate
  *
- * @brief  Private implementation for GetAliasResponse.
+ * \brief Private implementation for GetAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAliasResponsePrivate object.
@@ -91,7 +105,7 @@ GetAliasResponsePrivate::GetAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda GetAliasResponse element.
  *
  * @param  xml  XML stream to parse.

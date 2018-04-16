@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  AddApplicationReferenceDataSourceRequest
+/*!
+ * \class QtAws::KinesisAnalytics::AddApplicationReferenceDataSourceRequest
  *
- * @brief  Implements KinesisAnalytics AddApplicationReferenceDataSource requests.
+ * \brief The AddApplicationReferenceDataSourceRequest class encapsulates KinesisAnalytics AddApplicationReferenceDataSource requests.
  *
- * @see    KinesisAnalyticsClient::addApplicationReferenceDataSource
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::addApplicationReferenceDataSource
  */
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationReferenceDataSourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ AddApplicationReferenceDataSourceRequest::AddApplicationReferenceDataSourceReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddApplicationReferenceDataSourceRequest object.
  */
 AddApplicationReferenceDataSourceRequest::AddApplicationReferenceDataSourceRequest()
@@ -53,13 +56,16 @@ AddApplicationReferenceDataSourceRequest::AddApplicationReferenceDataSourceReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddApplicationReferenceDataSourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddApplicationReferenceDataSourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationReferenceDataSourceRequest::res
     return new AddApplicationReferenceDataSourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddApplicationReferenceDataSourceRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * AddApplicationReferenceDataSourceRequest::res
  * @brief  Private implementation for AddApplicationReferenceDataSourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationReferenceDataSourceRequestPrivate object.
@@ -97,7 +103,7 @@ AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSour
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddApplicationReferenceDataSourceRequestPrivate object, copying another.

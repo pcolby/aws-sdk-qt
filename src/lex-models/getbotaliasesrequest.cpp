@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotAliasesRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotAliasesRequest
  *
- * @brief  Implements LexModelBuildingService GetBotAliases requests.
+ * \brief The GetBotAliasesRequest class encapsulates LexModelBuildingService GetBotAliases requests.
  *
- * @see    LexModelBuildingServiceClient::getBotAliases
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBotAliases
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotAliasesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetBotAliasesRequest::GetBotAliasesRequest(const GetBotAliasesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBotAliasesRequest object.
  */
 GetBotAliasesRequest::GetBotAliasesRequest()
@@ -53,13 +60,16 @@ GetBotAliasesRequest::GetBotAliasesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBotAliasesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBotAliasesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply 
     return new GetBotAliasesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBotAliasesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply 
  * @brief  Private implementation for GetBotAliasesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotAliasesRequestPrivate object.
@@ -97,7 +107,7 @@ GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotAliasesRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  UpdateShardCountRequest
+/*!
+ * \class QtAws::Kinesis::UpdateShardCountRequest
  *
- * @brief  Implements Kinesis UpdateShardCount requests.
+ * \brief The UpdateShardCountRequest class encapsulates Kinesis UpdateShardCount requests.
  *
- * @see    KinesisClient::updateShardCount
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::updateShardCount
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateShardCountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateShardCountRequest::UpdateShardCountRequest(const UpdateShardCountRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateShardCountRequest object.
  */
 UpdateShardCountRequest::UpdateShardCountRequest()
@@ -53,13 +59,16 @@ UpdateShardCountRequest::UpdateShardCountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateShardCountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateShardCountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkRep
     return new UpdateShardCountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateShardCountRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkRep
  * @brief  Private implementation for UpdateShardCountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateShardCountRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateShardCountRequestPrivate object, copying another.

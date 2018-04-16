@@ -27,15 +27,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  UpdateCertificateOptionsResponse
+/*!
+ * \class QtAws::ACM::UpdateCertificateOptionsResponse
  *
- * @brief  Handles ACM UpdateCertificateOptions responses.
+ * \brief The UpdateCertificateOptionsResponse class encapsulates ACM UpdateCertificateOptions responses.
  *
- * @see    ACMClient::updateCertificateOptions
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::updateCertificateOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCertificateOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +70,7 @@ const UpdateCertificateOptionsRequest * UpdateCertificateOptionsResponse::reques
     return static_cast<const UpdateCertificateOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ACM UpdateCertificateOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +82,15 @@ void UpdateCertificateOptionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateCertificateOptionsResponsePrivate
+ * \class UpdateCertificateOptionsResponsePrivate
  *
- * @brief  Private implementation for UpdateCertificateOptionsResponse.
+ * \brief Private implementation for UpdateCertificateOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCertificateOptionsResponsePrivate object.
@@ -91,7 +103,7 @@ UpdateCertificateOptionsResponsePrivate::UpdateCertificateOptionsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an ACM UpdateCertificateOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

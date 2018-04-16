@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeEgressOnlyInternetGatewaysRequest
+/*!
+ * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysRequest
  *
- * @brief  Implements EC2 DescribeEgressOnlyInternetGateways requests.
+ * \brief The DescribeEgressOnlyInternetGatewaysRequest class encapsulates EC2 DescribeEgressOnlyInternetGateways requests.
  *
- * @see    EC2Client::describeEgressOnlyInternetGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeEgressOnlyInternetGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequest object.
  */
 DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest()
@@ -53,13 +60,16 @@ DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysReq
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEgressOnlyInternetGatewaysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEgressOnlyInternetGatewaysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEgressOnlyInternetGatewaysRequest::re
     return new DescribeEgressOnlyInternetGatewaysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEgressOnlyInternetGatewaysRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEgressOnlyInternetGatewaysRequest::re
  * @brief  Private implementation for DescribeEgressOnlyInternetGatewaysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequestPrivate object, copying another.

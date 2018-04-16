@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetIPSetRequest
+/*!
+ * \class QtAws::WAF::GetIPSetRequest
  *
- * @brief  Implements WAF GetIPSet requests.
+ * \brief The GetIPSetRequest class encapsulates WAF GetIPSet requests.
  *
- * @see    WAFClient::getIPSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getIPSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetIPSetRequest object.
  */
 GetIPSetRequest::GetIPSetRequest()
@@ -53,13 +61,16 @@ GetIPSetRequest::GetIPSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetIPSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetIPSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
     return new GetIPSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetIPSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetIPSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIPSetRequestPrivate object.
@@ -97,7 +108,7 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetIPSetRequestPrivate object, copying another.

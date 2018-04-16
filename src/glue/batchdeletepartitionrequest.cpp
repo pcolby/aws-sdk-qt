@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchDeletePartitionRequest
+/*!
+ * \class QtAws::Glue::BatchDeletePartitionRequest
  *
- * @brief  Implements Glue BatchDeletePartition requests.
+ * \brief The BatchDeletePartitionRequest class encapsulates Glue BatchDeletePartition requests.
  *
- * @see    GlueClient::batchDeletePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchDeletePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeletePartitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ BatchDeletePartitionRequest::BatchDeletePartitionRequest(const BatchDeletePartit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchDeletePartitionRequest object.
  */
 BatchDeletePartitionRequest::BatchDeletePartitionRequest()
@@ -53,13 +59,16 @@ BatchDeletePartitionRequest::BatchDeletePartitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchDeletePartitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchDeletePartitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetwor
     return new BatchDeletePartitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchDeletePartitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetwor
  * @brief  Private implementation for BatchDeletePartitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeletePartitionRequestPrivate object.
@@ -97,7 +106,7 @@ BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeletePartitionRequestPrivate object, copying another.

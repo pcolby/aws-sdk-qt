@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  FlushStageAuthorizersCacheRequest
+/*!
+ * \class QtAws::APIGateway::FlushStageAuthorizersCacheRequest
  *
- * @brief  Implements APIGateway FlushStageAuthorizersCache requests.
+ * \brief The FlushStageAuthorizersCacheRequest class encapsulates APIGateway FlushStageAuthorizersCache requests.
  *
- * @see    APIGatewayClient::flushStageAuthorizersCache
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::flushStageAuthorizersCache
  */
 
-/**
+/*!
  * @brief  Constructs a new FlushStageAuthorizersCacheRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest(const Flush
 
 }
 
-/**
+/*!
  * @brief  Constructs a new FlushStageAuthorizersCacheRequest object.
  */
 FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest()
@@ -53,13 +61,16 @@ FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool FlushStageAuthorizersCacheRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an FlushStageAuthorizersCacheResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(Q
     return new FlushStageAuthorizersCacheResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  FlushStageAuthorizersCacheRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(Q
  * @brief  Private implementation for FlushStageAuthorizersCacheRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FlushStageAuthorizersCacheRequestPrivate object.
@@ -97,7 +108,7 @@ FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new FlushStageAuthorizersCacheRequestPrivate object, copying another.

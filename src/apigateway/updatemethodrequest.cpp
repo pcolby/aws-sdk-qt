@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateMethodRequest
+/*!
+ * \class QtAws::APIGateway::UpdateMethodRequest
  *
- * @brief  Implements APIGateway UpdateMethod requests.
+ * \brief The UpdateMethodRequest class encapsulates APIGateway UpdateMethod requests.
  *
- * @see    APIGatewayClient::updateMethod
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateMethod
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateMethodRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateMethodRequest::UpdateMethodRequest(const UpdateMethodRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateMethodRequest object.
  */
 UpdateMethodRequest::UpdateMethodRequest()
@@ -53,13 +61,16 @@ UpdateMethodRequest::UpdateMethodRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateMethodRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateMethodResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodRequest::response(QNetworkReply *
     return new UpdateMethodResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateMethodRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateMethodRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMethodRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateMethodRequestPrivate::UpdateMethodRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMethodRequestPrivate object, copying another.

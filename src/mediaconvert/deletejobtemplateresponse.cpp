@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  DeleteJobTemplateResponse
+/*!
+ * \class QtAws::MediaConvert::DeleteJobTemplateResponse
  *
- * @brief  Handles MediaConvert DeleteJobTemplate responses.
+ * \brief The DeleteJobTemplateResponse class encapsulates MediaConvert DeleteJobTemplate responses.
  *
- * @see    MediaConvertClient::deleteJobTemplate
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::deleteJobTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteJobTemplateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteJobTemplateRequest * DeleteJobTemplateResponse::request() const
     return static_cast<const DeleteJobTemplateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert DeleteJobTemplate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteJobTemplateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteJobTemplateResponsePrivate
+ * \class DeleteJobTemplateResponsePrivate
  *
- * @brief  Private implementation for DeleteJobTemplateResponse.
+ * \brief Private implementation for DeleteJobTemplateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteJobTemplateResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert DeleteJobTemplateResponse element.
  *
  * @param  xml  XML stream to parse.

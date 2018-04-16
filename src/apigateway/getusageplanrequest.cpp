@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetUsagePlanRequest
+/*!
+ * \class QtAws::APIGateway::GetUsagePlanRequest
  *
- * @brief  Implements APIGateway GetUsagePlan requests.
+ * \brief The GetUsagePlanRequest class encapsulates APIGateway GetUsagePlan requests.
  *
- * @see    APIGatewayClient::getUsagePlan
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getUsagePlan
  */
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetUsagePlanRequest::GetUsagePlanRequest(const GetUsagePlanRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetUsagePlanRequest object.
  */
 GetUsagePlanRequest::GetUsagePlanRequest()
@@ -53,13 +61,16 @@ GetUsagePlanRequest::GetUsagePlanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetUsagePlanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetUsagePlanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanRequest::response(QNetworkReply *
     return new GetUsagePlanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetUsagePlanRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanRequest::response(QNetworkReply *
  * @brief  Private implementation for GetUsagePlanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlanRequestPrivate object.
@@ -97,7 +108,7 @@ GetUsagePlanRequestPrivate::GetUsagePlanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetUsagePlanRequestPrivate object, copying another.

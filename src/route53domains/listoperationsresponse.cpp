@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  ListOperationsResponse
+/*!
+ * \class QtAws::Route53Domains::ListOperationsResponse
  *
- * @brief  Handles Route53Domains ListOperations responses.
+ * \brief The ListOperationsResponse class encapsulates Route53Domains ListOperations responses.
  *
- * @see    Route53DomainsClient::listOperations
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::listOperations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOperationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const ListOperationsRequest * ListOperationsResponse::request() const
     return static_cast<const ListOperationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains ListOperations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void ListOperationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListOperationsResponsePrivate
+ * \class ListOperationsResponsePrivate
  *
- * @brief  Private implementation for ListOperationsResponse.
+ * \brief Private implementation for ListOperationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOperationsResponsePrivate object.
@@ -91,7 +95,7 @@ ListOperationsResponsePrivate::ListOperationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains ListOperationsResponse element.
  *
  * @param  xml  XML stream to parse.

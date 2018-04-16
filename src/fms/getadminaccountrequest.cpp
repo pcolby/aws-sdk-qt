@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace FMS {
 
-/**
- * @class  GetAdminAccountRequest
+/*!
+ * \class QtAws::FMS::GetAdminAccountRequest
  *
- * @brief  Implements FMS GetAdminAccount requests.
+ * \brief The GetAdminAccountRequest class encapsulates FMS GetAdminAccount requests.
  *
- * @see    FMSClient::getAdminAccount
+ * \ingroup FMS
+ *
+ *  <fullname>AWS Firewall Manager</fullname>
+ * 
+ *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
+ *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  Developer
+ *
+ * \sa FMSClient::getAdminAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAdminAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetAdminAccountRequest::GetAdminAccountRequest(const GetAdminAccountRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAdminAccountRequest object.
  */
 GetAdminAccountRequest::GetAdminAccountRequest()
@@ -53,13 +62,16 @@ GetAdminAccountRequest::GetAdminAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAdminAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAdminAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetAdminAccountRequest::response(QNetworkRepl
     return new GetAdminAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAdminAccountRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetAdminAccountRequest::response(QNetworkRepl
  * @brief  Private implementation for GetAdminAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAdminAccountRequestPrivate object.
@@ -97,7 +109,7 @@ GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAdminAccountRequestPrivate object, copying another.

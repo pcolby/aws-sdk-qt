@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace CloudWatch {
 
-/**
- * @class  DisableAlarmActionsResponse
+/*!
+ * \class QtAws::CloudWatch::DisableAlarmActionsResponse
  *
- * @brief  Handles CloudWatch DisableAlarmActions responses.
+ * \brief The DisableAlarmActionsResponse class encapsulates CloudWatch DisableAlarmActions responses.
  *
- * @see    CloudWatchClient::disableAlarmActions
+ * \ingroup CloudWatch
+ *
+ *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+ *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ * 
+ *  applications>
+ * 
+ *  CloudWatch alarms send notifications or automatically change the resources you are monitoring based on rules that you
+ *  define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use
+ *  this data to determine whether you should launch additional instances to handle increased load. You can also use this
+ *  data to stop under-used instances to save
+ * 
+ *  money>
+ * 
+ *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
+ *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *
+ * \sa CloudWatchClient::disableAlarmActions
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableAlarmActionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DisableAlarmActionsRequest * DisableAlarmActionsResponse::request() const
     return static_cast<const DisableAlarmActionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudWatch DisableAlarmActions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DisableAlarmActionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableAlarmActionsResponsePrivate
+ * \class DisableAlarmActionsResponsePrivate
  *
- * @brief  Private implementation for DisableAlarmActionsResponse.
+ * \brief Private implementation for DisableAlarmActionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableAlarmActionsResponsePrivate object.
@@ -91,7 +108,7 @@ DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudWatch DisableAlarmActionsResponse element.
  *
  * @param  xml  XML stream to parse.

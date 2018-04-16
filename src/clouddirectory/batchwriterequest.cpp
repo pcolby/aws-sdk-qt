@@ -25,15 +25,25 @@
 namespace QtAws {
 namespace CloudDirectory {
 
-/**
- * @class  BatchWriteRequest
+/*!
+ * \class QtAws::CloudDirectory::BatchWriteRequest
  *
- * @brief  Implements CloudDirectory BatchWrite requests.
+ * \brief The BatchWriteRequest class encapsulates CloudDirectory BatchWrite requests.
  *
- * @see    CloudDirectoryClient::batchWrite
+ * \ingroup CloudDirectory
+ *
+ *  <fullname>Amazon Cloud Directory</fullname>
+ * 
+ *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
+ *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
+ *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
+ *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *
+ * \sa CloudDirectoryClient::batchWrite
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchWriteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +54,7 @@ BatchWriteRequest::BatchWriteRequest(const BatchWriteRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new BatchWriteRequest object.
  */
 BatchWriteRequest::BatchWriteRequest()
@@ -53,13 +63,16 @@ BatchWriteRequest::BatchWriteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool BatchWriteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an BatchWriteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * c
     return new BatchWriteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  BatchWriteRequestPrivate
@@ -82,7 +95,7 @@ QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * c
  * @brief  Private implementation for BatchWriteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchWriteRequestPrivate object.
@@ -97,7 +110,7 @@ BatchWriteRequestPrivate::BatchWriteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchWriteRequestPrivate object, copying another.

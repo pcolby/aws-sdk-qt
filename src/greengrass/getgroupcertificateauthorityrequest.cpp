@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetGroupCertificateAuthorityRequest
+/*!
+ * \class QtAws::Greengrass::GetGroupCertificateAuthorityRequest
  *
- * @brief  Implements Greengrass GetGroupCertificateAuthority requests.
+ * \brief The GetGroupCertificateAuthorityRequest class encapsulates Greengrass GetGroupCertificateAuthority requests.
  *
- * @see    GreengrassClient::getGroupCertificateAuthority
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getGroupCertificateAuthority
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGroupCertificateAuthorityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest(const G
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetGroupCertificateAuthorityRequest object.
  */
 GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest()
@@ -53,13 +59,16 @@ GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetGroupCertificateAuthorityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetGroupCertificateAuthorityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupCertificateAuthorityRequest::response
     return new GetGroupCertificateAuthorityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetGroupCertificateAuthorityRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetGroupCertificateAuthorityRequest::response
  * @brief  Private implementation for GetGroupCertificateAuthorityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupCertificateAuthorityRequestPrivate object.
@@ -97,7 +106,7 @@ GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGroupCertificateAuthorityRequestPrivate object, copying another.

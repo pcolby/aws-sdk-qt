@@ -105,37 +105,45 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::ElastiCache
+ * \brief The QtAws::ElastiCache contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  ElastiCacheClient
+/*!
+ * \class QtAws::ElastiCache::ElastiCacheClient
  *
- * @brief  Client for Amazon ElastiCache
+ * \brief The ElastiCacheClient class provides access the Amazon ElastiCache service.
  *
- * <fullname>Amazon ElastiCache</fullname>
+ * \ingroup ElastiCache
  *
- * Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
- *
- * cloud>
- *
- * With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
- * administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
- * cluster failure handling much simpler than in a self-managed cache
- *
- * deployment>
- *
- * In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
- * statistics associated with their cache and can receive alarms if a part of their cache runs
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
  */
 
-/**
- * @brief  Constructs a new ElastiCacheClient object.
+/*!
+ * \brief Constructs a ElastiCacheClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 ElastiCacheClient::ElastiCacheClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -154,21 +162,16 @@ ElastiCacheClient::ElastiCacheClient(
     d->serviceName = QStringLiteral("elasticache");
 }
 
-/**
- * @brief  Constructs a new ElastiCacheClient object.
+/*!
+ * \overload ElastiCacheClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 ElastiCacheClient::ElastiCacheClient(
     const QUrl &endpoint,
@@ -187,7 +190,7 @@ ElastiCacheClient::ElastiCacheClient(
     d->serviceName = QStringLiteral("elasticache");
 }
 
-/**
+/*!
  * Adds up to 50 cost allocation tags to the named resource. A cost allocation tag is a key-value pair where the key and
  * value are case-sensitive. You can use cost allocation tags to categorize and track your AWS
  *
@@ -210,7 +213,7 @@ AddTagsToResourceResponse * ElastiCacheClient::addTagsToResource(const AddTagsTo
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows network ingress to a cache security group. Applications using ElastiCache must be running on Amazon EC2, and
  * Amazon EC2 security groups are used as the authorization
  *
@@ -229,7 +232,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
     return qobject_cast<AuthorizeCacheSecurityGroupIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * Makes a copy of an existing
  *
  * snapshot> <note>
@@ -339,7 +342,7 @@ CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest
     return qobject_cast<CopySnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a cluster. All nodes in the cluster run the same protocol-compliant cache engine software, either Memcached or
  *
  * Redis> <b>
@@ -358,7 +361,7 @@ CreateCacheClusterResponse * ElastiCacheClient::createCacheCluster(const CreateC
     return qobject_cast<CreateCacheClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new Amazon ElastiCache cache parameter group. An ElastiCache cache parameter group is a collection of
  * parameters and their values that are applied to all of the nodes in any cluster or replication group using the
  *
@@ -390,7 +393,7 @@ CreateCacheParameterGroupResponse * ElastiCacheClient::createCacheParameterGroup
     return qobject_cast<CreateCacheParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new cache security group. Use a cache security group to control access to one or more
  *
  * clusters>
@@ -409,7 +412,7 @@ CreateCacheSecurityGroupResponse * ElastiCacheClient::createCacheSecurityGroup(c
     return qobject_cast<CreateCacheSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new cache subnet
  *
  * group>
@@ -427,7 +430,7 @@ CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const
     return qobject_cast<CreateCacheSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication
  *
  * group>
@@ -465,7 +468,7 @@ CreateReplicationGroupResponse * ElastiCacheClient::createReplicationGroup(const
     return qobject_cast<CreateReplicationGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a copy of an entire cluster or replication group at a specific moment in
  *
  * time> <note>
@@ -483,7 +486,7 @@ CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotR
     return qobject_cast<CreateSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a previously provisioned cluster. <code>DeleteCacheCluster</code> deletes all associated cache nodes, node
  * endpoints and the cluster itself. When you receive a successful response from this operation, Amazon ElastiCache
  * immediately begins deleting the cluster; you cannot cancel or revert this
@@ -509,7 +512,7 @@ DeleteCacheClusterResponse * ElastiCacheClient::deleteCacheCluster(const DeleteC
     return qobject_cast<DeleteCacheClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified cache parameter group. You cannot delete a cache parameter group if it is associated with any
  * cache
  *
@@ -524,7 +527,7 @@ DeleteCacheParameterGroupResponse * ElastiCacheClient::deleteCacheParameterGroup
     return qobject_cast<DeleteCacheParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a cache security
  *
  * group> <note>
@@ -542,7 +545,7 @@ DeleteCacheSecurityGroupResponse * ElastiCacheClient::deleteCacheSecurityGroup(c
     return qobject_cast<DeleteCacheSecurityGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a cache subnet
  *
  * group> <note>
@@ -560,7 +563,7 @@ DeleteCacheSubnetGroupResponse * ElastiCacheClient::deleteCacheSubnetGroup(const
     return qobject_cast<DeleteCacheSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing replication group. By default, this operation deletes the entire replication group, including the
  * primary/primaries and all of the read replicas. If the replication group has only one primary, you can optionally delete
  * only the read replicas, while retaining the primary by setting
@@ -585,7 +588,7 @@ DeleteReplicationGroupResponse * ElastiCacheClient::deleteReplicationGroup(const
     return qobject_cast<DeleteReplicationGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes an existing snapshot. When you receive a successful response from this operation, ElastiCache immediately begins
  * deleting the snapshot; you cannot cancel or revert this
  *
@@ -604,7 +607,7 @@ DeleteSnapshotResponse * ElastiCacheClient::deleteSnapshot(const DeleteSnapshotR
     return qobject_cast<DeleteSnapshotResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cache
  * cluster if a cluster identifier is
  *
@@ -644,7 +647,7 @@ DescribeCacheClustersResponse * ElastiCacheClient::describeCacheClusters(const D
     return qobject_cast<DescribeCacheClustersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of the available cache engines and their
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -658,7 +661,7 @@ DescribeCacheEngineVersionsResponse * ElastiCacheClient::describeCacheEngineVers
     return qobject_cast<DescribeCacheEngineVersionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of cache parameter group descriptions. If a cache parameter group name is specified, the list contains
  * only the descriptions for that
  *
@@ -673,7 +676,7 @@ DescribeCacheParameterGroupsResponse * ElastiCacheClient::describeCacheParameter
     return qobject_cast<DescribeCacheParameterGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the detailed parameter list for a particular cache parameter
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -687,7 +690,7 @@ DescribeCacheParametersResponse * ElastiCacheClient::describeCacheParameters(con
     return qobject_cast<DescribeCacheParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of cache security group descriptions. If a cache security group name is specified, the list contains only
  * the description of that
  *
@@ -702,7 +705,7 @@ DescribeCacheSecurityGroupsResponse * ElastiCacheClient::describeCacheSecurityGr
     return qobject_cast<DescribeCacheSecurityGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a list of cache subnet group descriptions. If a subnet group name is specified, the list contains only the
  * description of that
  *
@@ -717,7 +720,7 @@ DescribeCacheSubnetGroupsResponse * ElastiCacheClient::describeCacheSubnetGroups
     return qobject_cast<DescribeCacheSubnetGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the default engine and system parameter information for the specified cache
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -731,7 +734,7 @@ DescribeEngineDefaultParametersResponse * ElastiCacheClient::describeEngineDefau
     return qobject_cast<DescribeEngineDefaultParametersResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns events related to clusters, cache security groups, and cache parameter groups. You can obtain events specific to
  * a particular cluster, cache security group, or cache parameter group by providing the name as a
  *
@@ -751,7 +754,7 @@ DescribeEventsResponse * ElastiCacheClient::describeEvents(const DescribeEventsR
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a particular replication group. If no identifier is specified,
  * <code>DescribeReplicationGroups</code> returns information about all replication
  *
@@ -770,7 +773,7 @@ DescribeReplicationGroupsResponse * ElastiCacheClient::describeReplicationGroups
     return qobject_cast<DescribeReplicationGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about reserved cache nodes for this account, or about a specified reserved cache
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -784,7 +787,7 @@ DescribeReservedCacheNodesResponse * ElastiCacheClient::describeReservedCacheNod
     return qobject_cast<DescribeReservedCacheNodesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists available reserved cache node
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -798,7 +801,7 @@ DescribeReservedCacheNodesOfferingsResponse * ElastiCacheClient::describeReserve
     return qobject_cast<DescribeReservedCacheNodesOfferingsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about cluster or replication group snapshots. By default, <code>DescribeSnapshots</code> lists all
  * of your snapshots; it can optionally describe a single snapshot, or just the snapshots associated with a particular
  * cache
@@ -818,7 +821,7 @@ DescribeSnapshotsResponse * ElastiCacheClient::describeSnapshots(const DescribeS
     return qobject_cast<DescribeSnapshotsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all available node types that you can scale your Redis cluster's or replication group's current node type up
  *
  * to>
@@ -838,7 +841,7 @@ ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTyp
     return qobject_cast<ListAllowedNodeTypeModificationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all cost allocation tags currently on the named resource. A <code>cost allocation tag</code> is a key-value pair
  * where the key is case-sensitive and the value is optional. You can use cost allocation tags to categorize and track your
  * AWS
@@ -860,7 +863,7 @@ ListTagsForResourceResponse * ElastiCacheClient::listTagsForResource(const ListT
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the settings for a cluster. You can use this operation to change one or more cluster configuration parameters
  * by specifying the parameters and the new
  *
@@ -875,7 +878,7 @@ ModifyCacheClusterResponse * ElastiCacheClient::modifyCacheCluster(const ModifyC
     return qobject_cast<ModifyCacheClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a cache parameter group. You can modify up to 20 parameters in a single request by submitting
  * a list parameter name and value
  *
@@ -890,7 +893,7 @@ ModifyCacheParameterGroupResponse * ElastiCacheClient::modifyCacheParameterGroup
     return qobject_cast<ModifyCacheParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies an existing cache subnet
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -904,7 +907,7 @@ ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const
     return qobject_cast<ModifyCacheSubnetGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the settings for a replication
  *
  * group> <b>
@@ -927,7 +930,7 @@ ModifyReplicationGroupResponse * ElastiCacheClient::modifyReplicationGroup(const
     return qobject_cast<ModifyReplicationGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Performs horizontal scaling on a Redis (cluster mode enabled) cluster with no downtime. Requires Redis engine version
  * 3.2.10 or newer. For information on upgrading your engine to a newer version, see <a
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/VersionManagement.html">Upgrading Engine
@@ -950,7 +953,7 @@ ModifyReplicationGroupShardConfigurationResponse * ElastiCacheClient::modifyRepl
     return qobject_cast<ModifyReplicationGroupShardConfigurationResponse *>(send(request));
 }
 
-/**
+/*!
  * Allows you to purchase a reserved cache node
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -964,7 +967,7 @@ PurchaseReservedCacheNodesOfferingResponse * ElastiCacheClient::purchaseReserved
     return qobject_cast<PurchaseReservedCacheNodesOfferingResponse *>(send(request));
 }
 
-/**
+/*!
  * Reboots some, or all, of the cache nodes within a provisioned cluster. This operation applies any modified cache
  * parameter groups to the cluster. The reboot operation takes place as soon as possible, and results in a momentary outage
  * to the cluster. During the reboot, the cluster status is set to
@@ -999,7 +1002,7 @@ RebootCacheClusterResponse * ElastiCacheClient::rebootCacheCluster(const RebootC
     return qobject_cast<RebootCacheClusterResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the tags identified by the <code>TagKeys</code> list from the named
  *
  * @param  request Request to send to Amazon ElastiCache.
@@ -1013,7 +1016,7 @@ RemoveTagsFromResourceResponse * ElastiCacheClient::removeTagsFromResource(const
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Modifies the parameters of a cache parameter group to the engine or system default value. You can reset specific
  * parameters by submitting a list of parameter names. To reset the entire cache parameter group, specify the
  * <code>ResetAllParameters</code> and <code>CacheParameterGroupName</code>
@@ -1029,7 +1032,7 @@ ResetCacheParameterGroupResponse * ElastiCacheClient::resetCacheParameterGroup(c
     return qobject_cast<ResetCacheParameterGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Revokes ingress from a cache security group. Use this operation to disallow access from an Amazon EC2 security group
  * that had been previously
  *
@@ -1044,7 +1047,7 @@ RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurity
     return qobject_cast<RevokeCacheSecurityGroupIngressResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents the input of a <code>TestFailover</code> operation which test automatic failover on a specified node group
  * (called shard in the console) in a replication group (called cluster in the
  *
@@ -1126,7 +1129,7 @@ TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest
     return qobject_cast<TestFailoverResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ElastiCacheClientPrivate
@@ -1134,7 +1137,7 @@ TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest
  * @brief  Private implementation for ElastiCacheClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ElastiCacheClientPrivate object.

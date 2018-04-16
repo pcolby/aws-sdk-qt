@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  UpdateRoomResponse
+/*!
+ * \class QtAws::AlexaForBusiness::UpdateRoomResponse
  *
- * @brief  Handles AlexaForBusiness UpdateRoom responses.
+ * \brief The UpdateRoomResponse class encapsulates AlexaForBusiness UpdateRoom responses.
  *
- * @see    AlexaForBusinessClient::updateRoom
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::updateRoom
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRoomResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateRoomRequest * UpdateRoomResponse::request() const
     return static_cast<const UpdateRoomRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness UpdateRoom response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateRoomResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRoomResponsePrivate
+ * \class UpdateRoomResponsePrivate
  *
- * @brief  Private implementation for UpdateRoomResponse.
+ * \brief Private implementation for UpdateRoomResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRoomResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateRoomResponsePrivate::UpdateRoomResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness UpdateRoomResponse element.
  *
  * @param  xml  XML stream to parse.

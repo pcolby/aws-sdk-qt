@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DescribeCacheEngineVersionsResponse
+/*!
+ * \class QtAws::ElastiCache::DescribeCacheEngineVersionsResponse
  *
- * @brief  Handles ElastiCache DescribeCacheEngineVersions responses.
+ * \brief The DescribeCacheEngineVersionsResponse class encapsulates ElastiCache DescribeCacheEngineVersions responses.
  *
- * @see    ElastiCacheClient::describeCacheEngineVersions
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::describeCacheEngineVersions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeCacheEngineVersionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DescribeCacheEngineVersionsRequest * DescribeCacheEngineVersionsResponse::
     return static_cast<const DescribeCacheEngineVersionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DescribeCacheEngineVersions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DescribeCacheEngineVersionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeCacheEngineVersionsResponsePrivate
+ * \class DescribeCacheEngineVersionsResponsePrivate
  *
- * @brief  Private implementation for DescribeCacheEngineVersionsResponse.
+ * \brief Private implementation for DescribeCacheEngineVersionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeCacheEngineVersionsResponsePrivate object.
@@ -91,7 +108,7 @@ DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DescribeCacheEngineVersionsResponse element.
  *
  * @param  xml  XML stream to parse.

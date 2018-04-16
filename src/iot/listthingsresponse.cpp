@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  ListThingsResponse
+/*!
+ * \class QtAws::IoT::ListThingsResponse
  *
- * @brief  Handles IoT ListThings responses.
+ * \brief The ListThingsResponse class encapsulates IoT ListThings responses.
  *
- * @see    IoTClient::listThings
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::listThings
  */
 
-/**
+/*!
  * @brief  Constructs a new ListThingsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListThingsRequest * ListThingsResponse::request() const
     return static_cast<const ListThingsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT ListThings response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListThingsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListThingsResponsePrivate
+ * \class ListThingsResponsePrivate
  *
- * @brief  Private implementation for ListThingsResponse.
+ * \brief Private implementation for ListThingsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListThingsResponsePrivate object.
@@ -91,7 +105,7 @@ ListThingsResponsePrivate::ListThingsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT ListThingsResponse element.
  *
  * @param  xml  XML stream to parse.

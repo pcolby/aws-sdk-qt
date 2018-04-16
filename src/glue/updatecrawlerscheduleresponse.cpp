@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdateCrawlerScheduleResponse
+/*!
+ * \class QtAws::Glue::UpdateCrawlerScheduleResponse
  *
- * @brief  Handles Glue UpdateCrawlerSchedule responses.
+ * \brief The UpdateCrawlerScheduleResponse class encapsulates Glue UpdateCrawlerSchedule responses.
  *
- * @see    GlueClient::updateCrawlerSchedule
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updateCrawlerSchedule
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateCrawlerScheduleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdateCrawlerScheduleRequest * UpdateCrawlerScheduleResponse::request() co
     return static_cast<const UpdateCrawlerScheduleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdateCrawlerSchedule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdateCrawlerScheduleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateCrawlerScheduleResponsePrivate
+ * \class UpdateCrawlerScheduleResponsePrivate
  *
- * @brief  Private implementation for UpdateCrawlerScheduleResponse.
+ * \brief Private implementation for UpdateCrawlerScheduleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateCrawlerScheduleResponsePrivate object.
@@ -91,7 +97,7 @@ UpdateCrawlerScheduleResponsePrivate::UpdateCrawlerScheduleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdateCrawlerScheduleResponse element.
  *
  * @param  xml  XML stream to parse.

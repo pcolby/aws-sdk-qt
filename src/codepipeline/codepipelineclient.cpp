@@ -79,186 +79,194 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CodePipeline
+ * \brief The QtAws::CodePipeline contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CodePipeline {
 
-/**
- * @class  CodePipelineClient
- *
- * @brief  Client for AWS CodePipeline
- *
- * <fullname>AWS CodePipeline</fullname>
- *
- * <b>Overview</b>
- *
- * </p
- *
- * This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS
- * CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see
- * the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
- *
- * Guide</a>>
- *
- * You can use the AWS CodePipeline API to work with pipelines, stages, actions, gates, and transitions, as described
- *
- * below>
- *
- * <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of actions,
- * gates, and stages.
- *
- * </p
- *
- * You can work with pipelines by
- *
- * calling> <ul> <li>
- *
- * <a>CreatePipeline</a>, which creates a uniquely-named
- *
- * pipeline> </li> <li>
- *
- * <a>DeletePipeline</a>, which deletes the specified
- *
- * pipeline> </li> <li>
- *
- * <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline
- * Amazon Resource Name
- *
- * (ARN)> </li> <li>
- *
- * <a>GetPipelineExecution</a>, which returns information about a specific execution of a
- *
- * pipeline> </li> <li>
- *
- * <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a
- *
- * pipeline> </li> <li>
- *
- * <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your
- *
- * account> </li> <li>
- *
- * <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a
- *
- * pipeline> </li> <li>
- *
- * <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the
- *
- * pipeline> </li> <li>
- *
- * <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the
- *
- * pipeline> </li> </ul>
- *
- * Pipelines include <i>stages</i>, which are logical groupings of gates and actions. Each stage contains one or more
- * actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails,
- * then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the
- * source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call
- * <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or
- * <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more
- * information about the structure of stages and actions, also refer to the <a
- * href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline
- * Structure
- *
- * Reference</a>>
- *
- * Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed
- * within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source
- * such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with
- * actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>.
- *
- * </p
- *
- * Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a
- * pipeline after the actions in one stage
- *
- * complete>
- *
- * You can work with transitions by
- *
- * calling> <ul> <li>
- *
- * <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a
- *
- * pipeline> </li> <li>
- *
- * <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline.
- *
- * </p </li> </ul>
- *
- * <b>Using the API to integrate with AWS CodePipeline</b>
- *
- * </p
- *
- * For third-party integrators or developers who want to create their own integrations with AWS CodePipeline, the expected
- * sequence varies from the standard API user. In order to integrate with AWS CodePipeline, developers will need to work
- * with the following
- *
- * items>
- *
- * <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an
- * artifact from a source.
- *
- * </p
- *
- * You can work with jobs by
- *
- * calling> <ul> <li>
- *
- * <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified
- *
- * job> </li> <li>
- *
- * <a>GetJobDetails</a>, which returns the details of a
- *
- * job> </li> <li>
- *
- * <a>PollForJobs</a>, which determines whether there are any jobs to act upon,
- *
- * </p </li> <li>
- *
- * <a>PutJobFailureResult</a>, which provides details of a job failure,
- *
- * an> </li> <li>
- *
- * <a>PutJobSuccessResult</a>, which provides details of a job
- *
- * success> </li> </ul>
- *
- * <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into AWS
- * CodePipeline. Partner actions are created by members of the AWS Partner
- *
- * Network>
- *
- * You can work with third party jobs by
- *
- * calling> <ul> <li>
- *
- * <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified
- *
- * job> </li> <li>
- *
- * <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner
- *
- * action> </li> <li>
- *
- * <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act upon,
- *
- * </p </li> <li>
- *
- * <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure,
- *
- * an> </li> <li>
- *
- * <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job
+/*!
+ * \class QtAws::CodePipeline::CodePipelineClient
+ *
+ * \brief The CodePipelineClient class provides access the AWS CodePipeline service.
+ *
+ * \ingroup CodePipeline
+ *
+ *  <fullname>AWS CodePipeline</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS
+ *  CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see
+ *  the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
+ * 
+ *  Guide</a>>
+ * 
+ *  You can use the AWS CodePipeline API to work with pipelines, stages, actions, gates, and transitions, as described
+ * 
+ *  below>
+ * 
+ *  <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of actions,
+ *  gates, and stages.
+ * 
+ *  </p
+ * 
+ *  You can work with pipelines by
+ * 
+ *  calling> <ul> <li>
+ * 
+ *  <a>CreatePipeline</a>, which creates a uniquely-named
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>DeletePipeline</a>, which deletes the specified
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline
+ *  Amazon Resource Name
+ * 
+ *  (ARN)> </li> <li>
+ * 
+ *  <a>GetPipelineExecution</a>, which returns information about a specific execution of a
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your
+ * 
+ *  account> </li> <li>
+ * 
+ *  <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the
+ * 
+ *  pipeline> </li> </ul>
+ * 
+ *  Pipelines include <i>stages</i>, which are logical groupings of gates and actions. Each stage contains one or more
+ *  actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails,
+ *  then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the
+ *  source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call
+ *  <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or
+ *  <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more
+ *  information about the structure of stages and actions, also refer to the <a
+ *  href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline
+ *  Structure
+ * 
+ *  Reference</a>>
+ * 
+ *  Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed
+ *  within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source
+ *  such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with
+ *  actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>.
+ * 
+ *  </p
+ * 
+ *  Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a
+ *  pipeline after the actions in one stage
+ * 
+ *  complete>
+ * 
+ *  You can work with transitions by
+ * 
+ *  calling> <ul> <li>
+ * 
+ *  <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline.
+ * 
+ *  </p </li> </ul>
+ * 
+ *  <b>Using the API to integrate with AWS CodePipeline</b>
+ * 
+ *  </p
+ * 
+ *  For third-party integrators or developers who want to create their own integrations with AWS CodePipeline, the expected
+ *  sequence varies from the standard API user. In order to integrate with AWS CodePipeline, developers will need to work
+ *  with the following
+ * 
+ *  items>
+ * 
+ *  <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an
+ *  artifact from a source.
+ * 
+ *  </p
+ * 
+ *  You can work with jobs by
+ * 
+ *  calling> <ul> <li>
+ * 
+ *  <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified
+ * 
+ *  job> </li> <li>
+ * 
+ *  <a>GetJobDetails</a>, which returns the details of a
+ * 
+ *  job> </li> <li>
+ * 
+ *  <a>PollForJobs</a>, which determines whether there are any jobs to act upon,
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a>PutJobFailureResult</a>, which provides details of a job failure,
+ * 
+ *  an> </li> <li>
+ * 
+ *  <a>PutJobSuccessResult</a>, which provides details of a job
+ * 
+ *  success> </li> </ul>
+ * 
+ *  <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into AWS
+ *  CodePipeline. Partner actions are created by members of the AWS Partner
+ * 
+ *  Network>
+ * 
+ *  You can work with third party jobs by
+ * 
+ *  calling> <ul> <li>
+ * 
+ *  <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified
+ * 
+ *  job> </li> <li>
+ * 
+ *  <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner
+ * 
+ *  action> </li> <li>
+ * 
+ *  <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act upon,
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure,
+ * 
+ *  an> </li> <li>
+ * 
+ *  <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job
  */
 
-/**
- * @brief  Constructs a new CodePipelineClient object.
+/*!
+ * \brief Constructs a CodePipelineClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CodePipelineClient::CodePipelineClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -277,21 +285,16 @@ CodePipelineClient::CodePipelineClient(
     d->serviceName = QStringLiteral("codepipeline");
 }
 
-/**
- * @brief  Constructs a new CodePipelineClient object.
+/*!
+ * \overload CodePipelineClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CodePipelineClient::CodePipelineClient(
     const QUrl &endpoint,
@@ -310,7 +313,7 @@ CodePipelineClient::CodePipelineClient(
     d->serviceName = QStringLiteral("codepipeline");
 }
 
-/**
+/*!
  * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -324,7 +327,7 @@ AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJob
     return qobject_cast<AcknowledgeJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Confirms a job worker has received the specified job. Only used for partner
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -338,7 +341,7 @@ AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(
     return qobject_cast<AcknowledgeThirdPartyJobResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a new custom action that can be used in all pipelines associated with the AWS account. Only used for custom
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -352,7 +355,7 @@ CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(cons
     return qobject_cast<CreateCustomActionTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -366,7 +369,7 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
     return qobject_cast<CreatePipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * Marks a custom action as deleted. PollForJobs for the custom action will fail after the action is marked for deletion.
  * Only used for custom
  *
@@ -385,7 +388,7 @@ DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(cons
     return qobject_cast<DeleteCustomActionTypeResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -399,7 +402,7 @@ DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipeline
     return qobject_cast<DeletePipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * Prevents artifacts in a pipeline from transitioning to the next stage in the
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -413,7 +416,7 @@ DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(cons
     return qobject_cast<DisableStageTransitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables artifacts in a pipeline to transition to a stage in a
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -427,7 +430,7 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
     return qobject_cast<EnableStageTransitionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a job. Only used for custom
  *
  * actions> <b>
@@ -447,7 +450,7 @@ GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsReq
     return qobject_cast<GetJobDetailsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the metadata, structure, stages, and actions of a pipeline. Can be used to return the entire structure of a
  * pipeline in JSON format, which can then be modified and used to update the pipeline structure with
  *
@@ -462,7 +465,7 @@ GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &
     return qobject_cast<GetPipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about an execution of a pipeline, including details about artifacts, the pipeline execution ID, and
  * the name, version, and status of the
  *
@@ -477,7 +480,7 @@ GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const Ge
     return qobject_cast<GetPipelineExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about the state of a pipeline, including the stages and
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -491,7 +494,7 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
     return qobject_cast<GetPipelineStateResponse *>(send(request));
 }
 
-/**
+/*!
  * Requests the details of a job for a third party action. Only used for partner
  *
  * actions> <b>
@@ -511,7 +514,7 @@ GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(co
     return qobject_cast<GetThirdPartyJobDetailsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a summary of all AWS CodePipeline action types associated with your
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -525,7 +528,7 @@ ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTy
     return qobject_cast<ListActionTypesResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a summary of the most recent executions for a
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -539,7 +542,7 @@ ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(cons
     return qobject_cast<ListPipelineExecutionsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets a summary of all of the pipelines associated with your
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -553,7 +556,7 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
     return qobject_cast<ListPipelinesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about any jobs for AWS CodePipeline to act
  *
  * upon> <b>
@@ -573,7 +576,7 @@ PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &
     return qobject_cast<PollForJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Determines whether there are any third party jobs for a job worker to act on. Only used for partner
  *
  * actions> <b>
@@ -592,7 +595,7 @@ PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const 
     return qobject_cast<PollForThirdPartyJobsResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides information to AWS CodePipeline about new revisions to a
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -606,7 +609,7 @@ PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActio
     return qobject_cast<PutActionRevisionResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides the response to a manual approval request to AWS CodePipeline. Valid responses include Approved and
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -620,7 +623,7 @@ PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutAppro
     return qobject_cast<PutApprovalResultResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents the failure of a job as returned to the pipeline by a job worker. Only used for custom
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -634,7 +637,7 @@ PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJ
     return qobject_cast<PutJobFailureResultResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents the success of a job as returned to the pipeline by a job worker. Only used for custom
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -648,7 +651,7 @@ PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJ
     return qobject_cast<PutJobSuccessResultResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents the failure of a third party job as returned to the pipeline by a job worker. Only used for partner
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -662,7 +665,7 @@ PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFail
     return qobject_cast<PutThirdPartyJobFailureResultResponse *>(send(request));
 }
 
-/**
+/*!
  * Represents the success of a third party job as returned to the pipeline by a job worker. Only used for partner
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -676,7 +679,7 @@ PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSucc
     return qobject_cast<PutThirdPartyJobSuccessResultResponse *>(send(request));
 }
 
-/**
+/*!
  * Resumes the pipeline execution by retrying the last failed actions in a
  *
  * @param  request Request to send to AWS CodePipeline.
@@ -690,7 +693,7 @@ RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const Retr
     return qobject_cast<RetryStageExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Starts the specified pipeline. Specifically, it begins processing the latest commit to the source location specified as
  * part of the
  *
@@ -705,7 +708,7 @@ StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(cons
     return qobject_cast<StartPipelineExecutionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure in
  * conjunction with UpdatePipeline to provide the full structure of the pipeline. Updating the pipeline increases the
  * version number of the pipeline by
@@ -721,7 +724,7 @@ UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipeline
     return qobject_cast<UpdatePipelineResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodePipelineClientPrivate
@@ -729,7 +732,7 @@ UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipeline
  * @brief  Private implementation for CodePipelineClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodePipelineClientPrivate object.

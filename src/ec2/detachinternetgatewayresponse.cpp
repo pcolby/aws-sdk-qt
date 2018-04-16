@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachInternetGatewayResponse
+/*!
+ * \class QtAws::EC2::DetachInternetGatewayResponse
  *
- * @brief  Handles EC2 DetachInternetGateway responses.
+ * \brief The DetachInternetGatewayResponse class encapsulates EC2 DetachInternetGateway responses.
  *
- * @see    EC2Client::detachInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachInternetGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DetachInternetGatewayRequest * DetachInternetGatewayResponse::request() co
     return static_cast<const DetachInternetGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DetachInternetGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetachInternetGatewayResponsePrivate
+ * \class DetachInternetGatewayResponsePrivate
  *
- * @brief  Private implementation for DetachInternetGatewayResponse.
+ * \brief Private implementation for DetachInternetGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachInternetGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DetachInternetGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

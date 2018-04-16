@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  ImportServerCatalogRequest
+/*!
+ * \class QtAws::SMS::ImportServerCatalogRequest
  *
- * @brief  Implements SMS ImportServerCatalog requests.
+ * \brief The ImportServerCatalogRequest class encapsulates SMS ImportServerCatalog requests.
  *
- * @see    SMSClient::importServerCatalog
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::importServerCatalog
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportServerCatalogRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ImportServerCatalogRequest::ImportServerCatalogRequest(const ImportServerCatalog
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ImportServerCatalogRequest object.
  */
 ImportServerCatalogRequest::ImportServerCatalogRequest()
@@ -53,13 +56,16 @@ ImportServerCatalogRequest::ImportServerCatalogRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ImportServerCatalogRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ImportServerCatalogResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetwork
     return new ImportServerCatalogResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ImportServerCatalogRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetwork
  * @brief  Private implementation for ImportServerCatalogRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportServerCatalogRequestPrivate object.
@@ -97,7 +103,7 @@ ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportServerCatalogRequestPrivate object, copying another.

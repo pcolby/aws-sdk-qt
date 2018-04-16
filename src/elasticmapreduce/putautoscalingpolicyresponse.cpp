@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  PutAutoScalingPolicyResponse
+/*!
+ * \class QtAws::EMR::PutAutoScalingPolicyResponse
  *
- * @brief  Handles EMR PutAutoScalingPolicy responses.
+ * \brief The PutAutoScalingPolicyResponse class encapsulates EMR PutAutoScalingPolicy responses.
  *
- * @see    EMRClient::putAutoScalingPolicy
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::putAutoScalingPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutAutoScalingPolicyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const PutAutoScalingPolicyRequest * PutAutoScalingPolicyResponse::request() cons
     return static_cast<const PutAutoScalingPolicyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR PutAutoScalingPolicy response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutAutoScalingPolicyResponsePrivate
+ * \class PutAutoScalingPolicyResponsePrivate
  *
- * @brief  Private implementation for PutAutoScalingPolicyResponse.
+ * \brief Private implementation for PutAutoScalingPolicyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutAutoScalingPolicyResponsePrivate object.
@@ -91,7 +97,7 @@ PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR PutAutoScalingPolicyResponse element.
  *
  * @param  xml  XML stream to parse.

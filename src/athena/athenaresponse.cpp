@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  AthenaResponse
+/*!
+ * \class QtAws::Athena::AthenaResponse
  *
- * @brief  Handles Athena Athena responses.
+ * \brief The AthenaResponse class is the base class for all Athena responses.
  *
- * @see    AthenaClient::athena
+ * \ingroup Athena
  */
 
-/**
+/*!
  * @brief  Constructs a new AthenaResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ AthenaResponse::AthenaResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AthenaResponse object.
@@ -63,7 +63,7 @@ AthenaResponse::AthenaResponse(AthenaResponsePrivate * const d, QObject * const 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void AthenaResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AthenaResponsePrivate
@@ -92,7 +92,7 @@ void AthenaResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for AthenaResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AthenaResponsePrivate object.

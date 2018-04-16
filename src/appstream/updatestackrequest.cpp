@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  UpdateStackRequest
+/*!
+ * \class QtAws::AppStream::UpdateStackRequest
  *
- * @brief  Implements AppStream UpdateStack requests.
+ * \brief The UpdateStackRequest class encapsulates AppStream UpdateStack requests.
  *
- * @see    AppStreamClient::updateStack
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::updateStack
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStackRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateStackRequest::UpdateStackRequest(const UpdateStackRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateStackRequest object.
  */
 UpdateStackRequest::UpdateStackRequest()
@@ -53,13 +59,16 @@ UpdateStackRequest::UpdateStackRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateStackRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateStackResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * 
     return new UpdateStackResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateStackRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * 
  * @brief  Private implementation for UpdateStackRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStackRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateStackRequestPrivate::UpdateStackRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStackRequestPrivate object, copying another.

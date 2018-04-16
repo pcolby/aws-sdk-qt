@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  UpdateDestinationResponse
+/*!
+ * \class QtAws::Firehose::UpdateDestinationResponse
  *
- * @brief  Handles Firehose UpdateDestination responses.
+ * \brief The UpdateDestinationResponse class encapsulates Firehose UpdateDestination responses.
  *
- * @see    FirehoseClient::updateDestination
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::updateDestination
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDestinationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const UpdateDestinationRequest * UpdateDestinationResponse::request() const
     return static_cast<const UpdateDestinationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Firehose UpdateDestination response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void UpdateDestinationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateDestinationResponsePrivate
+ * \class UpdateDestinationResponsePrivate
  *
- * @brief  Private implementation for UpdateDestinationResponse.
+ * \brief Private implementation for UpdateDestinationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDestinationResponsePrivate object.
@@ -91,7 +98,7 @@ UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Firehose UpdateDestinationResponse element.
  *
  * @param  xml  XML stream to parse.

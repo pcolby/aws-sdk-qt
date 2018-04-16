@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteModelResponse
+/*!
+ * \class QtAws::SageMaker::DeleteModelResponse
  *
- * @brief  Handles SageMaker DeleteModel responses.
+ * \brief The DeleteModelResponse class encapsulates SageMaker DeleteModel responses.
  *
- * @see    SageMakerClient::deleteModel
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteModel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteModelRequest * DeleteModelResponse::request() const
     return static_cast<const DeleteModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker DeleteModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteModelResponsePrivate
+ * \class DeleteModelResponsePrivate
  *
- * @brief  Private implementation for DeleteModelResponse.
+ * \brief Private implementation for DeleteModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteModelResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteModelResponsePrivate::DeleteModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker DeleteModelResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetDocumentationPartRequest
+/*!
+ * \class QtAws::APIGateway::GetDocumentationPartRequest
  *
- * @brief  Implements APIGateway GetDocumentationPart requests.
+ * \brief The GetDocumentationPartRequest class encapsulates APIGateway GetDocumentationPart requests.
  *
- * @see    APIGatewayClient::getDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDocumentationPartRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetDocumentationPartRequest::GetDocumentationPartRequest(const GetDocumentationP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDocumentationPartRequest object.
  */
 GetDocumentationPartRequest::GetDocumentationPartRequest()
@@ -53,13 +61,16 @@ GetDocumentationPartRequest::GetDocumentationPartRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDocumentationPartRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDocumentationPartResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationPartRequest::response(QNetwor
     return new GetDocumentationPartResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDocumentationPartRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationPartRequest::response(QNetwor
  * @brief  Private implementation for GetDocumentationPartRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDocumentationPartRequestPrivate object.
@@ -97,7 +108,7 @@ GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDocumentationPartRequestPrivate object, copying another.

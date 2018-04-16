@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeRegionsRequest
+/*!
+ * \class QtAws::EC2::DescribeRegionsRequest
  *
- * @brief  Implements EC2 DescribeRegions requests.
+ * \brief The DescribeRegionsRequest class encapsulates EC2 DescribeRegions requests.
  *
- * @see    EC2Client::describeRegions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeRegions
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRegionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeRegionsRequest::DescribeRegionsRequest(const DescribeRegionsRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeRegionsRequest object.
  */
 DescribeRegionsRequest::DescribeRegionsRequest()
@@ -53,13 +60,16 @@ DescribeRegionsRequest::DescribeRegionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeRegionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeRegionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkRepl
     return new DescribeRegionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeRegionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeRegionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRegionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRegionsRequestPrivate object, copying another.

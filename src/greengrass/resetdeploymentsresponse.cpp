@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ResetDeploymentsResponse
+/*!
+ * \class QtAws::Greengrass::ResetDeploymentsResponse
  *
- * @brief  Handles Greengrass ResetDeployments responses.
+ * \brief The ResetDeploymentsResponse class encapsulates Greengrass ResetDeployments responses.
  *
- * @see    GreengrassClient::resetDeployments
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::resetDeployments
  */
 
-/**
+/*!
  * @brief  Constructs a new ResetDeploymentsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const ResetDeploymentsRequest * ResetDeploymentsResponse::request() const
     return static_cast<const ResetDeploymentsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Greengrass ResetDeployments response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void ResetDeploymentsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ResetDeploymentsResponsePrivate
+ * \class ResetDeploymentsResponsePrivate
  *
- * @brief  Private implementation for ResetDeploymentsResponse.
+ * \brief Private implementation for ResetDeploymentsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResetDeploymentsResponsePrivate object.
@@ -91,7 +97,7 @@ ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Greengrass ResetDeploymentsResponse element.
  *
  * @param  xml  XML stream to parse.

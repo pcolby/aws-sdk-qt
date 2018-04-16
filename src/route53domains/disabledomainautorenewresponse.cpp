@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  DisableDomainAutoRenewResponse
+/*!
+ * \class QtAws::Route53Domains::DisableDomainAutoRenewResponse
  *
- * @brief  Handles Route53Domains DisableDomainAutoRenew responses.
+ * \brief The DisableDomainAutoRenewResponse class encapsulates Route53Domains DisableDomainAutoRenew responses.
  *
- * @see    Route53DomainsClient::disableDomainAutoRenew
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::disableDomainAutoRenew
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableDomainAutoRenewResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const DisableDomainAutoRenewRequest * DisableDomainAutoRenewResponse::request() 
     return static_cast<const DisableDomainAutoRenewRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains DisableDomainAutoRenew response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void DisableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableDomainAutoRenewResponsePrivate
+ * \class DisableDomainAutoRenewResponsePrivate
  *
- * @brief  Private implementation for DisableDomainAutoRenewResponse.
+ * \brief Private implementation for DisableDomainAutoRenewResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableDomainAutoRenewResponsePrivate object.
@@ -91,7 +95,7 @@ DisableDomainAutoRenewResponsePrivate::DisableDomainAutoRenewResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains DisableDomainAutoRenewResponse element.
  *
  * @param  xml  XML stream to parse.

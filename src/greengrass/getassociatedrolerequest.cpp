@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  GetAssociatedRoleRequest
+/*!
+ * \class QtAws::Greengrass::GetAssociatedRoleRequest
  *
- * @brief  Implements Greengrass GetAssociatedRole requests.
+ * \brief The GetAssociatedRoleRequest class encapsulates Greengrass GetAssociatedRole requests.
  *
- * @see    GreengrassClient::getAssociatedRole
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::getAssociatedRole
  */
 
-/**
+/*!
  * @brief  Constructs a new GetAssociatedRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetAssociatedRoleRequest::GetAssociatedRoleRequest(const GetAssociatedRoleReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetAssociatedRoleRequest object.
  */
 GetAssociatedRoleRequest::GetAssociatedRoleRequest()
@@ -53,13 +59,16 @@ GetAssociatedRoleRequest::GetAssociatedRoleRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetAssociatedRoleRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetAssociatedRoleResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkRe
     return new GetAssociatedRoleResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetAssociatedRoleRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkRe
  * @brief  Private implementation for GetAssociatedRoleRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssociatedRoleRequestPrivate object.
@@ -97,7 +106,7 @@ GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetAssociatedRoleRequestPrivate object, copying another.

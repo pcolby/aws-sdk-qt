@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  RegisterCACertificateResponse
+/*!
+ * \class QtAws::IoT::RegisterCACertificateResponse
  *
- * @brief  Handles IoT RegisterCACertificate responses.
+ * \brief The RegisterCACertificateResponse class encapsulates IoT RegisterCACertificate responses.
  *
- * @see    IoTClient::registerCACertificate
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::registerCACertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterCACertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const RegisterCACertificateRequest * RegisterCACertificateResponse::request() co
     return static_cast<const RegisterCACertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT RegisterCACertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void RegisterCACertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterCACertificateResponsePrivate
+ * \class RegisterCACertificateResponsePrivate
  *
- * @brief  Private implementation for RegisterCACertificateResponse.
+ * \brief Private implementation for RegisterCACertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterCACertificateResponsePrivate object.
@@ -91,7 +105,7 @@ RegisterCACertificateResponsePrivate::RegisterCACertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT RegisterCACertificateResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpnConnectionsRequest
+/*!
+ * \class QtAws::EC2::DescribeVpnConnectionsRequest
  *
- * @brief  Implements EC2 DescribeVpnConnections requests.
+ * \brief The DescribeVpnConnectionsRequest class encapsulates EC2 DescribeVpnConnections requests.
  *
- * @see    EC2Client::describeVpnConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpnConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpnConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeVpnConnectionsRequest::DescribeVpnConnectionsRequest(const DescribeVpnCo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpnConnectionsRequest object.
  */
 DescribeVpnConnectionsRequest::DescribeVpnConnectionsRequest()
@@ -53,13 +60,16 @@ DescribeVpnConnectionsRequest::DescribeVpnConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeVpnConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeVpnConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnConnectionsRequest::response(QNetw
     return new DescribeVpnConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeVpnConnectionsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnConnectionsRequest::response(QNetw
  * @brief  Private implementation for DescribeVpnConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpnConnectionsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpnConnectionsRequestPrivate object, copying another.

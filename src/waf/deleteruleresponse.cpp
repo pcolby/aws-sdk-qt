@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteRuleResponse
+/*!
+ * \class QtAws::WAF::DeleteRuleResponse
  *
- * @brief  Handles WAF DeleteRule responses.
+ * \brief The DeleteRuleResponse class encapsulates WAF DeleteRule responses.
  *
- * @see    WAFClient::deleteRule
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteRule
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteRuleRequest * DeleteRuleResponse::request() const
     return static_cast<const DeleteRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF DeleteRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteRuleResponsePrivate
+ * \class DeleteRuleResponsePrivate
  *
- * @brief  Private implementation for DeleteRuleResponse.
+ * \brief Private implementation for DeleteRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRuleResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF DeleteRuleResponse element.
  *
  * @param  xml  XML stream to parse.

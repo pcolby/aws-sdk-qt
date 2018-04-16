@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  UpdateNotebookInstanceResponse
+/*!
+ * \class QtAws::SageMaker::UpdateNotebookInstanceResponse
  *
- * @brief  Handles SageMaker UpdateNotebookInstance responses.
+ * \brief The UpdateNotebookInstanceResponse class encapsulates SageMaker UpdateNotebookInstance responses.
  *
- * @see    SageMakerClient::updateNotebookInstance
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::updateNotebookInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateNotebookInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateNotebookInstanceRequest * UpdateNotebookInstanceResponse::request() 
     return static_cast<const UpdateNotebookInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SageMaker UpdateNotebookInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateNotebookInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateNotebookInstanceResponsePrivate
+ * \class UpdateNotebookInstanceResponsePrivate
  *
- * @brief  Private implementation for UpdateNotebookInstanceResponse.
+ * \brief Private implementation for UpdateNotebookInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateNotebookInstanceResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SageMaker UpdateNotebookInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  UpdateHITTypeOfHITResponse
+/*!
+ * \class QtAws::MTurk::UpdateHITTypeOfHITResponse
  *
- * @brief  Handles MTurk UpdateHITTypeOfHIT responses.
+ * \brief The UpdateHITTypeOfHITResponse class encapsulates MTurk UpdateHITTypeOfHIT responses.
  *
- * @see    MTurkClient::updateHITTypeOfHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::updateHITTypeOfHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateHITTypeOfHITResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateHITTypeOfHITRequest * UpdateHITTypeOfHITResponse::request() const
     return static_cast<const UpdateHITTypeOfHITRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk UpdateHITTypeOfHIT response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateHITTypeOfHITResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateHITTypeOfHITResponsePrivate
+ * \class UpdateHITTypeOfHITResponsePrivate
  *
- * @brief  Private implementation for UpdateHITTypeOfHITResponse.
+ * \brief Private implementation for UpdateHITTypeOfHITResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateHITTypeOfHITResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk UpdateHITTypeOfHITResponse element.
  *
  * @param  xml  XML stream to parse.

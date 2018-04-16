@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  RenewOfferingRequest
+/*!
+ * \class QtAws::DeviceFarm::RenewOfferingRequest
  *
- * @brief  Implements DeviceFarm RenewOffering requests.
+ * \brief The RenewOfferingRequest class encapsulates DeviceFarm RenewOffering requests.
  *
- * @see    DeviceFarmClient::renewOffering
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::renewOffering
  */
 
-/**
+/*!
  * @brief  Constructs a new RenewOfferingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ RenewOfferingRequest::RenewOfferingRequest(const RenewOfferingRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RenewOfferingRequest object.
  */
 RenewOfferingRequest::RenewOfferingRequest()
@@ -53,13 +58,16 @@ RenewOfferingRequest::RenewOfferingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RenewOfferingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RenewOfferingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * RenewOfferingRequest::response(QNetworkReply 
     return new RenewOfferingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RenewOfferingRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * RenewOfferingRequest::response(QNetworkReply 
  * @brief  Private implementation for RenewOfferingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RenewOfferingRequestPrivate object.
@@ -97,7 +105,7 @@ RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RenewOfferingRequestPrivate object, copying another.

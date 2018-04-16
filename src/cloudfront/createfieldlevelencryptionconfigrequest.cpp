@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  CreateFieldLevelEncryptionConfigRequest
+/*!
+ * \class QtAws::CloudFront::CreateFieldLevelEncryptionConfigRequest
  *
- * @brief  Implements CloudFront CreateFieldLevelEncryptionConfig requests.
+ * \brief The CreateFieldLevelEncryptionConfigRequest class encapsulates CloudFront CreateFieldLevelEncryptionConfig requests.
  *
- * @see    CloudFrontClient::createFieldLevelEncryptionConfig
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::createFieldLevelEncryptionConfig
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateFieldLevelEncryptionConfigRequest::CreateFieldLevelEncryptionConfigRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequest object.
  */
 CreateFieldLevelEncryptionConfigRequest::CreateFieldLevelEncryptionConfigRequest()
@@ -53,13 +61,16 @@ CreateFieldLevelEncryptionConfigRequest::CreateFieldLevelEncryptionConfigRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateFieldLevelEncryptionConfigRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateFieldLevelEncryptionConfigResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateFieldLevelEncryptionConfigRequest::resp
     return new CreateFieldLevelEncryptionConfigResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateFieldLevelEncryptionConfigRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateFieldLevelEncryptionConfigRequest::resp
  * @brief  Private implementation for CreateFieldLevelEncryptionConfigRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequestPrivate object.
@@ -97,7 +108,7 @@ CreateFieldLevelEncryptionConfigRequestPrivate::CreateFieldLevelEncryptionConfig
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateFieldLevelEncryptionConfigRequestPrivate object, copying another.

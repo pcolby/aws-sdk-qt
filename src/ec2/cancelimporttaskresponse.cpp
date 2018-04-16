@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  CancelImportTaskResponse
+/*!
+ * \class QtAws::EC2::CancelImportTaskResponse
  *
- * @brief  Handles EC2 CancelImportTask responses.
+ * \brief The CancelImportTaskResponse class encapsulates EC2 CancelImportTask responses.
  *
- * @see    EC2Client::cancelImportTask
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::cancelImportTask
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelImportTaskResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const CancelImportTaskRequest * CancelImportTaskResponse::request() const
     return static_cast<const CancelImportTaskRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 CancelImportTask response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void CancelImportTaskResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelImportTaskResponsePrivate
+ * \class CancelImportTaskResponsePrivate
  *
- * @brief  Private implementation for CancelImportTaskResponse.
+ * \brief Private implementation for CancelImportTaskResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelImportTaskResponsePrivate object.
@@ -91,7 +98,7 @@ CancelImportTaskResponsePrivate::CancelImportTaskResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 CancelImportTaskResponse element.
  *
  * @param  xml  XML stream to parse.

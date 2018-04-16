@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  GetThingShadowRequest
+/*!
+ * \class QtAws::IoTDataPlane::GetThingShadowRequest
  *
- * @brief  Implements IoTDataPlane GetThingShadow requests.
+ * \brief The GetThingShadowRequest class encapsulates IoTDataPlane GetThingShadow requests.
  *
- * @see    IoTDataPlaneClient::getThingShadow
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::getThingShadow
  */
 
-/**
+/*!
  * @brief  Constructs a new GetThingShadowRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ GetThingShadowRequest::GetThingShadowRequest(const GetThingShadowRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetThingShadowRequest object.
  */
 GetThingShadowRequest::GetThingShadowRequest()
@@ -53,13 +62,16 @@ GetThingShadowRequest::GetThingShadowRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetThingShadowRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetThingShadowResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply
     return new GetThingShadowResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetThingShadowRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply
  * @brief  Private implementation for GetThingShadowRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetThingShadowRequestPrivate object.
@@ -97,7 +109,7 @@ GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetThingShadowRequestPrivate object, copying another.

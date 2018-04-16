@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  CreateResourceServerRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::CreateResourceServerRequest
  *
- * @brief  Implements CognitoIdentityProvider CreateResourceServer requests.
+ * \brief The CreateResourceServerRequest class encapsulates CognitoIdentityProvider CreateResourceServer requests.
  *
- * @see    CognitoIdentityProviderClient::createResourceServer
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::createResourceServer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceServerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ CreateResourceServerRequest::CreateResourceServerRequest(const CreateResourceSer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateResourceServerRequest object.
  */
 CreateResourceServerRequest::CreateResourceServerRequest()
@@ -53,13 +66,16 @@ CreateResourceServerRequest::CreateResourceServerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateResourceServerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateResourceServerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceServerRequest::response(QNetwor
     return new CreateResourceServerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateResourceServerRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * CreateResourceServerRequest::response(QNetwor
  * @brief  Private implementation for CreateResourceServerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceServerRequestPrivate object.
@@ -97,7 +113,7 @@ CreateResourceServerRequestPrivate::CreateResourceServerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResourceServerRequestPrivate object, copying another.

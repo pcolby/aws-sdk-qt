@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  CompareFacesResponse
+/*!
+ * \class QtAws::Rekognition::CompareFacesResponse
  *
- * @brief  Handles Rekognition CompareFaces responses.
+ * \brief The CompareFacesResponse class encapsulates Rekognition CompareFaces responses.
  *
- * @see    RekognitionClient::compareFaces
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::compareFaces
  */
 
-/**
+/*!
  * @brief  Constructs a new CompareFacesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CompareFacesRequest * CompareFacesResponse::request() const
     return static_cast<const CompareFacesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition CompareFaces response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CompareFacesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CompareFacesResponsePrivate
+ * \class CompareFacesResponsePrivate
  *
- * @brief  Private implementation for CompareFacesResponse.
+ * \brief Private implementation for CompareFacesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CompareFacesResponsePrivate object.
@@ -91,7 +95,7 @@ CompareFacesResponsePrivate::CompareFacesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition CompareFacesResponse element.
  *
  * @param  xml  XML stream to parse.

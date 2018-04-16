@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DeleteSubnetGroupRequest
+/*!
+ * \class QtAws::DAX::DeleteSubnetGroupRequest
  *
- * @brief  Implements DAX DeleteSubnetGroup requests.
+ * \brief The DeleteSubnetGroupRequest class encapsulates DAX DeleteSubnetGroup requests.
  *
- * @see    DAXClient::deleteSubnetGroup
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::deleteSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteSubnetGroupRequest::DeleteSubnetGroupRequest(const DeleteSubnetGroupReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubnetGroupRequest object.
  */
 DeleteSubnetGroupRequest::DeleteSubnetGroupRequest()
@@ -53,13 +60,16 @@ DeleteSubnetGroupRequest::DeleteSubnetGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteSubnetGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteSubnetGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
     return new DeleteSubnetGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteSubnetGroupRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteSubnetGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubnetGroupRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubnetGroupRequestPrivate object, copying another.

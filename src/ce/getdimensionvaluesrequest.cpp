@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetDimensionValuesRequest
+/*!
+ * \class QtAws::CostExplorer::GetDimensionValuesRequest
  *
- * @brief  Implements CostExplorer GetDimensionValues requests.
+ * \brief The GetDimensionValuesRequest class encapsulates CostExplorer GetDimensionValues requests.
  *
- * @see    CostExplorerClient::getDimensionValues
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getDimensionValues
  */
 
-/**
+/*!
  * @brief  Constructs a new GetDimensionValuesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ GetDimensionValuesRequest::GetDimensionValuesRequest(const GetDimensionValuesReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetDimensionValuesRequest object.
  */
 GetDimensionValuesRequest::GetDimensionValuesRequest()
@@ -53,13 +69,16 @@ GetDimensionValuesRequest::GetDimensionValuesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetDimensionValuesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetDimensionValuesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkR
     return new GetDimensionValuesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetDimensionValuesRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkR
  * @brief  Private implementation for GetDimensionValuesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDimensionValuesRequestPrivate object.
@@ -97,7 +116,7 @@ GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetDimensionValuesRequestPrivate object, copying another.

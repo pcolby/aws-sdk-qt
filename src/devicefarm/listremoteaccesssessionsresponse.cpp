@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListRemoteAccessSessionsResponse
+/*!
+ * \class QtAws::DeviceFarm::ListRemoteAccessSessionsResponse
  *
- * @brief  Handles DeviceFarm ListRemoteAccessSessions responses.
+ * \brief The ListRemoteAccessSessionsResponse class encapsulates DeviceFarm ListRemoteAccessSessions responses.
  *
- * @see    DeviceFarmClient::listRemoteAccessSessions
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listRemoteAccessSessions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRemoteAccessSessionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListRemoteAccessSessionsRequest * ListRemoteAccessSessionsResponse::reques
     return static_cast<const ListRemoteAccessSessionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm ListRemoteAccessSessions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListRemoteAccessSessionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListRemoteAccessSessionsResponsePrivate
+ * \class ListRemoteAccessSessionsResponsePrivate
  *
- * @brief  Private implementation for ListRemoteAccessSessionsResponse.
+ * \brief Private implementation for ListRemoteAccessSessionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRemoteAccessSessionsResponsePrivate object.
@@ -91,7 +96,7 @@ ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm ListRemoteAccessSessionsResponse element.
  *
  * @param  xml  XML stream to parse.

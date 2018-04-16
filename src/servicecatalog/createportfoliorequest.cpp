@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CreatePortfolioRequest
+/*!
+ * \class QtAws::ServiceCatalog::CreatePortfolioRequest
  *
- * @brief  Implements ServiceCatalog CreatePortfolio requests.
+ * \brief The CreatePortfolioRequest class encapsulates ServiceCatalog CreatePortfolio requests.
  *
- * @see    ServiceCatalogClient::createPortfolio
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::createPortfolio
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CreatePortfolioRequest::CreatePortfolioRequest(const CreatePortfolioRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePortfolioRequest object.
  */
 CreatePortfolioRequest::CreatePortfolioRequest()
@@ -53,13 +62,16 @@ CreatePortfolioRequest::CreatePortfolioRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePortfolioRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePortfolioResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CreatePortfolioRequest::response(QNetworkRepl
     return new CreatePortfolioResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePortfolioRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CreatePortfolioRequest::response(QNetworkRepl
  * @brief  Private implementation for CreatePortfolioRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePortfolioRequestPrivate object.
@@ -97,7 +109,7 @@ CreatePortfolioRequestPrivate::CreatePortfolioRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePortfolioRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  DescribeDefaultParametersRequest
+/*!
+ * \class QtAws::DAX::DescribeDefaultParametersRequest
  *
- * @brief  Implements DAX DescribeDefaultParameters requests.
+ * \brief The DescribeDefaultParametersRequest class encapsulates DAX DescribeDefaultParameters requests.
  *
- * @see    DAXClient::describeDefaultParameters
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::describeDefaultParameters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDefaultParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeDefaultParametersRequest::DescribeDefaultParametersRequest(const Describ
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDefaultParametersRequest object.
  */
 DescribeDefaultParametersRequest::DescribeDefaultParametersRequest()
@@ -53,13 +60,16 @@ DescribeDefaultParametersRequest::DescribeDefaultParametersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDefaultParametersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDefaultParametersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QN
     return new DescribeDefaultParametersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDefaultParametersRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QN
  * @brief  Private implementation for DescribeDefaultParametersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDefaultParametersRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDefaultParametersRequestPrivate object, copying another.

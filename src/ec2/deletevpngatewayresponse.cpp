@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpnGatewayResponse
+/*!
+ * \class QtAws::EC2::DeleteVpnGatewayResponse
  *
- * @brief  Handles EC2 DeleteVpnGateway responses.
+ * \brief The DeleteVpnGatewayResponse class encapsulates EC2 DeleteVpnGateway responses.
  *
- * @see    EC2Client::deleteVpnGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpnGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpnGatewayResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteVpnGatewayRequest * DeleteVpnGatewayResponse::request() const
     return static_cast<const DeleteVpnGatewayRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteVpnGateway response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteVpnGatewayResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteVpnGatewayResponsePrivate
+ * \class DeleteVpnGatewayResponsePrivate
  *
- * @brief  Private implementation for DeleteVpnGatewayResponse.
+ * \brief Private implementation for DeleteVpnGatewayResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpnGatewayResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteVpnGatewayResponse element.
  *
  * @param  xml  XML stream to parse.

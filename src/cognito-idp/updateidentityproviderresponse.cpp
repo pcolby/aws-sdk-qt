@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateIdentityProviderResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateIdentityProviderResponse
  *
- * @brief  Handles CognitoIdentityProvider UpdateIdentityProvider responses.
+ * \brief The UpdateIdentityProviderResponse class encapsulates CognitoIdentityProvider UpdateIdentityProvider responses.
  *
- * @see    CognitoIdentityProviderClient::updateIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIdentityProviderResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const UpdateIdentityProviderRequest * UpdateIdentityProviderResponse::request() 
     return static_cast<const UpdateIdentityProviderRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider UpdateIdentityProvider response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void UpdateIdentityProviderResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateIdentityProviderResponsePrivate
+ * \class UpdateIdentityProviderResponsePrivate
  *
- * @brief  Private implementation for UpdateIdentityProviderResponse.
+ * \brief Private implementation for UpdateIdentityProviderResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIdentityProviderResponsePrivate object.
@@ -91,7 +104,7 @@ UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider UpdateIdentityProviderResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateRoleAliasResponse
+/*!
+ * \class QtAws::IoT::CreateRoleAliasResponse
  *
- * @brief  Handles IoT CreateRoleAlias responses.
+ * \brief The CreateRoleAliasResponse class encapsulates IoT CreateRoleAlias responses.
  *
- * @see    IoTClient::createRoleAlias
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createRoleAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateRoleAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateRoleAliasRequest * CreateRoleAliasResponse::request() const
     return static_cast<const CreateRoleAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT CreateRoleAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateRoleAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateRoleAliasResponsePrivate
+ * \class CreateRoleAliasResponsePrivate
  *
- * @brief  Private implementation for CreateRoleAliasResponse.
+ * \brief Private implementation for CreateRoleAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateRoleAliasResponsePrivate object.
@@ -91,7 +105,7 @@ CreateRoleAliasResponsePrivate::CreateRoleAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT CreateRoleAliasResponse element.
  *
  * @param  xml  XML stream to parse.

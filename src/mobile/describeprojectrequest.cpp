@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  DescribeProjectRequest
+/*!
+ * \class QtAws::Mobile::DescribeProjectRequest
  *
- * @brief  Implements Mobile DescribeProject requests.
+ * \brief The DescribeProjectRequest class encapsulates Mobile DescribeProject requests.
  *
- * @see    MobileClient::describeProject
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
+ *
+ * \sa MobileClient::describeProject
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeProjectRequest::DescribeProjectRequest(const DescribeProjectRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProjectRequest object.
  */
 DescribeProjectRequest::DescribeProjectRequest()
@@ -53,13 +59,16 @@ DescribeProjectRequest::DescribeProjectRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProjectRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProjectResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkRepl
     return new DescribeProjectResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProjectRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkRepl
  * @brief  Private implementation for DescribeProjectRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProjectRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProjectRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  DeleteLifecyclePolicyRequest
+/*!
+ * \class QtAws::ECR::DeleteLifecyclePolicyRequest
  *
- * @brief  Implements ECR DeleteLifecyclePolicy requests.
+ * \brief The DeleteLifecyclePolicyRequest class encapsulates ECR DeleteLifecyclePolicy requests.
  *
- * @see    ECRClient::deleteLifecyclePolicy
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::deleteLifecyclePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLifecyclePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest(const DeleteLifecycle
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLifecyclePolicyRequest object.
  */
 DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest()
@@ -53,13 +60,16 @@ DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLifecyclePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLifecyclePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
     return new DeleteLifecyclePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLifecyclePolicyRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
  * @brief  Private implementation for DeleteLifecyclePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLifecyclePolicyRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLifecyclePolicyRequestPrivate object, copying another.

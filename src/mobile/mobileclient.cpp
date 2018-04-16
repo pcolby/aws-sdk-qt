@@ -43,26 +43,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Mobile
+ * \brief The QtAws::Mobile contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Mobile {
 
-/**
- * @class  MobileClient
+/*!
+ * \class QtAws::Mobile::MobileClient
  *
- * @brief  Client for AWS Mobile
+ * \brief The MobileClient class provides access the AWS Mobile service.
  *
- * AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
- * bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
- * resources.
+ * \ingroup Mobile
+ *
+ *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
+ *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
+ *  resources.
  */
 
-/**
- * @brief  Constructs a new MobileClient object.
+/*!
+ * \brief Constructs a MobileClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 MobileClient::MobileClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -81,21 +89,16 @@ MobileClient::MobileClient(
     d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
-/**
- * @brief  Constructs a new MobileClient object.
+/*!
+ * \overload MobileClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 MobileClient::MobileClient(
     const QUrl &endpoint,
@@ -114,7 +117,7 @@ MobileClient::MobileClient(
     d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
-/**
+/*!
  * Creates an AWS Mobile Hub project.
  *
  * @param  request Request to send to AWS Mobile.
@@ -128,7 +131,7 @@ CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &
     return qobject_cast<CreateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Delets a project in AWS Mobile Hub.
  *
  * @param  request Request to send to AWS Mobile.
@@ -142,7 +145,7 @@ DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &
     return qobject_cast<DeleteProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Get the bundle details for the requested bundle id.
  *
  * @param  request Request to send to AWS Mobile.
@@ -156,7 +159,7 @@ DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleReques
     return qobject_cast<DescribeBundleResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets details about a project in AWS Mobile Hub.
  *
  * @param  request Request to send to AWS Mobile.
@@ -170,7 +173,7 @@ DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectReq
     return qobject_cast<DescribeProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app
  * clients with backend AWS resources.
  *
@@ -185,7 +188,7 @@ ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &req
     return qobject_cast<ExportBundleResponse *>(send(request));
 }
 
-/**
+/*!
  * Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials
  * are encrypted in exported projects, so they can only be shared successfully within the same AWS account.
  *
@@ -200,7 +203,7 @@ ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &
     return qobject_cast<ExportProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * List all available bundles.
  *
  * @param  request Request to send to AWS Mobile.
@@ -214,7 +217,7 @@ ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &reques
     return qobject_cast<ListBundlesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists projects in AWS Mobile Hub.
  *
  * @param  request Request to send to AWS Mobile.
@@ -228,7 +231,7 @@ ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &req
     return qobject_cast<ListProjectsResponse *>(send(request));
 }
 
-/**
+/*!
  * Update an existing project.
  *
  * @param  request Request to send to AWS Mobile.
@@ -242,7 +245,7 @@ UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &
     return qobject_cast<UpdateProjectResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MobileClientPrivate
@@ -250,7 +253,7 @@ UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &
  * @brief  Private implementation for MobileClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MobileClientPrivate object.

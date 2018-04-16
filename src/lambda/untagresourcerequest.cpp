@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  UntagResourceRequest
+/*!
+ * \class QtAws::Lambda::UntagResourceRequest
  *
- * @brief  Implements Lambda UntagResource requests.
+ * \brief The UntagResourceRequest class encapsulates Lambda UntagResource requests.
  *
- * @see    LambdaClient::untagResource
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::untagResource
  */
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
@@ -53,13 +67,16 @@ UntagResourceRequest::UntagResourceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UntagResourceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UntagResourceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
     return new UntagResourceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UntagResourceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  * @brief  Private implementation for UntagResourceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object.
@@ -97,7 +114,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.

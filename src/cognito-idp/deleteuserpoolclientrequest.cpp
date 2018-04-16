@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteUserPoolClientRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserPoolClientRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteUserPoolClient requests.
+ * \brief The DeleteUserPoolClientRequest class encapsulates CognitoIdentityProvider DeleteUserPoolClient requests.
  *
- * @see    CognitoIdentityProviderClient::deleteUserPoolClient
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteUserPoolClient
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteUserPoolClientRequest::DeleteUserPoolClientRequest(const DeleteUserPoolCli
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserPoolClientRequest object.
  */
 DeleteUserPoolClientRequest::DeleteUserPoolClientRequest()
@@ -53,13 +66,16 @@ DeleteUserPoolClientRequest::DeleteUserPoolClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserPoolClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserPoolClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolClientRequest::response(QNetwor
     return new DeleteUserPoolClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserPoolClientRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolClientRequest::response(QNetwor
  * @brief  Private implementation for DeleteUserPoolClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolClientRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteUserPoolClientRequestPrivate::DeleteUserPoolClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserPoolClientRequestPrivate object, copying another.

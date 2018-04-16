@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  DeleteCacheSubnetGroupResponse
+/*!
+ * \class QtAws::ElastiCache::DeleteCacheSubnetGroupResponse
  *
- * @brief  Handles ElastiCache DeleteCacheSubnetGroup responses.
+ * \brief The DeleteCacheSubnetGroupResponse class encapsulates ElastiCache DeleteCacheSubnetGroup responses.
  *
- * @see    ElastiCacheClient::deleteCacheSubnetGroup
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::deleteCacheSubnetGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteCacheSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DeleteCacheSubnetGroupRequest * DeleteCacheSubnetGroupResponse::request() 
     return static_cast<const DeleteCacheSubnetGroupRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache DeleteCacheSubnetGroup response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DeleteCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteCacheSubnetGroupResponsePrivate
+ * \class DeleteCacheSubnetGroupResponsePrivate
  *
- * @brief  Private implementation for DeleteCacheSubnetGroupResponse.
+ * \brief Private implementation for DeleteCacheSubnetGroupResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteCacheSubnetGroupResponsePrivate object.
@@ -91,7 +108,7 @@ DeleteCacheSubnetGroupResponsePrivate::DeleteCacheSubnetGroupResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache DeleteCacheSubnetGroupResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetBotsResponse
+/*!
+ * \class QtAws::LexModelBuildingService::GetBotsResponse
  *
- * @brief  Handles LexModelBuildingService GetBots responses.
+ * \brief The GetBotsResponse class encapsulates LexModelBuildingService GetBots responses.
  *
- * @see    LexModelBuildingServiceClient::getBots
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getBots
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBotsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const GetBotsRequest * GetBotsResponse::request() const
     return static_cast<const GetBotsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService GetBots response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void GetBotsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBotsResponsePrivate
+ * \class GetBotsResponsePrivate
  *
- * @brief  Private implementation for GetBotsResponse.
+ * \brief Private implementation for GetBotsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBotsResponsePrivate object.
@@ -91,7 +98,7 @@ GetBotsResponsePrivate::GetBotsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService GetBotsResponse element.
  *
  * @param  xml  XML stream to parse.

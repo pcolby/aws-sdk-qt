@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreatePolicyRequest
+/*!
+ * \class QtAws::IoT::CreatePolicyRequest
  *
- * @brief  Implements IoT CreatePolicy requests.
+ * \brief The CreatePolicyRequest class encapsulates IoT CreatePolicy requests.
  *
- * @see    IoTClient::createPolicy
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new CreatePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreatePolicyRequest::CreatePolicyRequest(const CreatePolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreatePolicyRequest object.
  */
 CreatePolicyRequest::CreatePolicyRequest()
@@ -53,13 +67,16 @@ CreatePolicyRequest::CreatePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreatePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreatePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply *
     return new CreatePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreatePolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for CreatePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePolicyRequestPrivate object.
@@ -97,7 +114,7 @@ CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreatePolicyRequestPrivate object, copying another.

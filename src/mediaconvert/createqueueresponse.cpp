@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  CreateQueueResponse
+/*!
+ * \class QtAws::MediaConvert::CreateQueueResponse
  *
- * @brief  Handles MediaConvert CreateQueue responses.
+ * \brief The CreateQueueResponse class encapsulates MediaConvert CreateQueue responses.
  *
- * @see    MediaConvertClient::createQueue
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::createQueue
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateQueueResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CreateQueueRequest * CreateQueueResponse::request() const
     return static_cast<const CreateQueueRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaConvert CreateQueue response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CreateQueueResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateQueueResponsePrivate
+ * \class CreateQueueResponsePrivate
  *
- * @brief  Private implementation for CreateQueueResponse.
+ * \brief Private implementation for CreateQueueResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateQueueResponsePrivate object.
@@ -91,7 +94,7 @@ CreateQueueResponsePrivate::CreateQueueResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaConvert CreateQueueResponse element.
  *
  * @param  xml  XML stream to parse.

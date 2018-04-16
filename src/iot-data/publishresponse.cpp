@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace IoTDataPlane {
 
-/**
- * @class  PublishResponse
+/*!
+ * \class QtAws::IoTDataPlane::PublishResponse
  *
- * @brief  Handles IoTDataPlane Publish responses.
+ * \brief The PublishResponse class encapsulates IoTDataPlane Publish responses.
  *
- * @see    IoTDataPlaneClient::publish
+ * \ingroup IoTDataPlane
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
+ *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
+ *  representation of your things and their state in the AWS
+ *
+ * \sa IoTDataPlaneClient::publish
  */
 
-/**
+/*!
  * @brief  Constructs a new PublishResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const PublishRequest * PublishResponse::request() const
     return static_cast<const PublishRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoTDataPlane Publish response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void PublishResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PublishResponsePrivate
+ * \class PublishResponsePrivate
  *
- * @brief  Private implementation for PublishResponse.
+ * \brief Private implementation for PublishResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishResponsePrivate object.
@@ -91,7 +100,7 @@ PublishResponsePrivate::PublishResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoTDataPlane PublishResponse element.
  *
  * @param  xml  XML stream to parse.

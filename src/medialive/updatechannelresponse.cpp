@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MediaLive {
 
-/**
- * @class  UpdateChannelResponse
+/*!
+ * \class QtAws::MediaLive::UpdateChannelResponse
  *
- * @brief  Handles MediaLive UpdateChannel responses.
+ * \brief The UpdateChannelResponse class encapsulates MediaLive UpdateChannel responses.
  *
- * @see    MediaLiveClient::updateChannel
+ * \ingroup MediaLive
+ *
+ *
+ * \sa MediaLiveClient::updateChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateChannelRequest * UpdateChannelResponse::request() const
     return static_cast<const UpdateChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaLive UpdateChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateChannelResponsePrivate
+ * \class UpdateChannelResponsePrivate
  *
- * @brief  Private implementation for UpdateChannelResponse.
+ * \brief Private implementation for UpdateChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateChannelResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateChannelResponsePrivate::UpdateChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaLive UpdateChannelResponse element.
  *
  * @param  xml  XML stream to parse.

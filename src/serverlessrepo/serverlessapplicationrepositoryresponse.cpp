@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ServerlessApplicationRepository {
 
-/**
- * @class  ServerlessApplicationRepositoryResponse
+/*!
+ * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryResponse
  *
- * @brief  Handles ServerlessApplicationRepository ServerlessApplicationRepository responses.
+ * \brief The ServerlessApplicationRepositoryResponse class is the base class for all ServerlessApplicationRepository responses.
  *
- * @see    ServerlessApplicationRepositoryClient::serverlessApplicationRepository
+ * \ingroup ServerlessApplicationRepository
  */
 
-/**
+/*!
  * @brief  Constructs a new ServerlessApplicationRepositoryResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServerlessApplicationRepositoryResponse object.
@@ -63,7 +63,7 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ServerlessApplicationRepositoryResponsePrivate
@@ -92,7 +92,7 @@ void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ServerlessApplicationRepositoryResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ServerlessApplicationRepositoryResponsePrivate object.

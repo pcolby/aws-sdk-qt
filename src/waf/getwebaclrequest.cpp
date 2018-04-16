@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetWebACLRequest
+/*!
+ * \class QtAws::WAF::GetWebACLRequest
  *
- * @brief  Implements WAF GetWebACL requests.
+ * \brief The GetWebACLRequest class encapsulates WAF GetWebACL requests.
  *
- * @see    WAFClient::getWebACL
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new GetWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetWebACLRequest::GetWebACLRequest(const GetWebACLRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetWebACLRequest object.
  */
 GetWebACLRequest::GetWebACLRequest()
@@ -53,13 +61,16 @@ GetWebACLRequest::GetWebACLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetWebACLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetWebACLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
     return new GetWebACLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetWebACLRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetWebACLRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetWebACLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetWebACLRequestPrivate object.
@@ -97,7 +108,7 @@ GetWebACLRequestPrivate::GetWebACLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetWebACLRequestPrivate object, copying another.

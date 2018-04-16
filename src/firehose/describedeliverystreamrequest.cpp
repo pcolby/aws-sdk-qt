@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace Firehose {
 
-/**
- * @class  DescribeDeliveryStreamRequest
+/*!
+ * \class QtAws::Firehose::DescribeDeliveryStreamRequest
  *
- * @brief  Implements Firehose DescribeDeliveryStream requests.
+ * \brief The DescribeDeliveryStreamRequest class encapsulates Firehose DescribeDeliveryStream requests.
  *
- * @see    FirehoseClient::describeDeliveryStream
+ * \ingroup Firehose
+ *
+ *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
+ * 
+ *  Amazon Kinesis Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
+ *  Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon
+ *
+ * \sa FirehoseClient::describeDeliveryStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDeliveryStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeDeliveryStreamRequest::DescribeDeliveryStreamRequest(const DescribeDeliv
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDeliveryStreamRequest object.
  */
 DescribeDeliveryStreamRequest::DescribeDeliveryStreamRequest()
@@ -53,13 +60,16 @@ DescribeDeliveryStreamRequest::DescribeDeliveryStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDeliveryStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDeliveryStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryStreamRequest::response(QNetw
     return new DescribeDeliveryStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDeliveryStreamRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryStreamRequest::response(QNetw
  * @brief  Private implementation for DescribeDeliveryStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDeliveryStreamRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDeliveryStreamRequestPrivate object, copying another.

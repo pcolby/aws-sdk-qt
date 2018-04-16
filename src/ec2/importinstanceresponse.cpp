@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ImportInstanceResponse
+/*!
+ * \class QtAws::EC2::ImportInstanceResponse
  *
- * @brief  Handles EC2 ImportInstance responses.
+ * \brief The ImportInstanceResponse class encapsulates EC2 ImportInstance responses.
  *
- * @see    EC2Client::importInstance
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::importInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new ImportInstanceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ImportInstanceRequest * ImportInstanceResponse::request() const
     return static_cast<const ImportInstanceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ImportInstance response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ImportInstanceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ImportInstanceResponsePrivate
+ * \class ImportInstanceResponsePrivate
  *
- * @brief  Private implementation for ImportInstanceResponse.
+ * \brief Private implementation for ImportInstanceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ImportInstanceResponsePrivate object.
@@ -91,7 +98,7 @@ ImportInstanceResponsePrivate::ImportInstanceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ImportInstanceResponse element.
  *
  * @param  xml  XML stream to parse.

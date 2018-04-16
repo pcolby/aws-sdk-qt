@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisAnalytics {
 
-/**
- * @class  DiscoverInputSchemaRequest
+/*!
+ * \class QtAws::KinesisAnalytics::DiscoverInputSchemaRequest
  *
- * @brief  Implements KinesisAnalytics DiscoverInputSchema requests.
+ * \brief The DiscoverInputSchemaRequest class encapsulates KinesisAnalytics DiscoverInputSchema requests.
  *
- * @see    KinesisAnalyticsClient::discoverInputSchema
+ * \ingroup KinesisAnalytics
+ *
+ *
+ * \sa KinesisAnalyticsClient::discoverInputSchema
  */
 
-/**
+/*!
  * @brief  Constructs a new DiscoverInputSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DiscoverInputSchemaRequest::DiscoverInputSchemaRequest(const DiscoverInputSchema
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DiscoverInputSchemaRequest object.
  */
 DiscoverInputSchemaRequest::DiscoverInputSchemaRequest()
@@ -53,13 +56,16 @@ DiscoverInputSchemaRequest::DiscoverInputSchemaRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DiscoverInputSchemaRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DiscoverInputSchemaResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DiscoverInputSchemaRequest::response(QNetwork
     return new DiscoverInputSchemaResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DiscoverInputSchemaRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DiscoverInputSchemaRequest::response(QNetwork
  * @brief  Private implementation for DiscoverInputSchemaRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DiscoverInputSchemaRequestPrivate object.
@@ -97,7 +103,7 @@ DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DiscoverInputSchemaRequestPrivate object, copying another.

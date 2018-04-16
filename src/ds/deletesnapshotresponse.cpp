@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace DirectoryService {
 
-/**
- * @class  DeleteSnapshotResponse
+/*!
+ * \class QtAws::DirectoryService::DeleteSnapshotResponse
  *
- * @brief  Handles DirectoryService DeleteSnapshot responses.
+ * \brief The DeleteSnapshotResponse class encapsulates DirectoryService DeleteSnapshot responses.
  *
- * @see    DirectoryServiceClient::deleteSnapshot
+ * \ingroup DirectoryService
+ *
+ *  <fullname>AWS Directory Service</fullname>
+ * 
+ *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
+ *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
+ *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
+ *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ * 
+ *  Guide</a>> <note>
+ * 
+ *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
+ *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
+ *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
+ *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *
+ * \sa DirectoryServiceClient::deleteSnapshot
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSnapshotResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
     return static_cast<const DeleteSnapshotRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DirectoryService DeleteSnapshot response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSnapshotResponsePrivate
+ * \class DeleteSnapshotResponsePrivate
  *
- * @brief  Private implementation for DeleteSnapshotResponse.
+ * \brief Private implementation for DeleteSnapshotResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSnapshotResponsePrivate object.
@@ -91,7 +108,7 @@ DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DirectoryService DeleteSnapshotResponse element.
  *
  * @param  xml  XML stream to parse.

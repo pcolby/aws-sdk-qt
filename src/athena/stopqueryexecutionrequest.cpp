@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace Athena {
 
-/**
- * @class  StopQueryExecutionRequest
+/*!
+ * \class QtAws::Athena::StopQueryExecutionRequest
  *
- * @brief  Implements Athena StopQueryExecution requests.
+ * \brief The StopQueryExecutionRequest class encapsulates Athena StopQueryExecution requests.
  *
- * @see    AthenaClient::stopQueryExecution
+ * \ingroup Athena
+ *
+ *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
+ *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
+ *  there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales
+ *  automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more
+ *  information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What is Amazon Athena</a> in the
+ *  <i>Amazon Athena User
+ * 
+ *  Guide</i>>
+ * 
+ *  For code samples using the AWS SDK for Java, see <a
+ *  href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
+ *  Athena User
+ *
+ * \sa AthenaClient::stopQueryExecution
  */
 
-/**
+/*!
  * @brief  Constructs a new StopQueryExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ StopQueryExecutionRequest::StopQueryExecutionRequest(const StopQueryExecutionReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StopQueryExecutionRequest object.
  */
 StopQueryExecutionRequest::StopQueryExecutionRequest()
@@ -53,13 +68,16 @@ StopQueryExecutionRequest::StopQueryExecutionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StopQueryExecutionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StopQueryExecutionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * StopQueryExecutionRequest::response(QNetworkR
     return new StopQueryExecutionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StopQueryExecutionRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * StopQueryExecutionRequest::response(QNetworkR
  * @brief  Private implementation for StopQueryExecutionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopQueryExecutionRequestPrivate object.
@@ -97,7 +115,7 @@ StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopQueryExecutionRequestPrivate object, copying another.

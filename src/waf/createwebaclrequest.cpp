@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateWebACLRequest
+/*!
+ * \class QtAws::WAF::CreateWebACLRequest
  *
- * @brief  Implements WAF CreateWebACL requests.
+ * \brief The CreateWebACLRequest class encapsulates WAF CreateWebACL requests.
  *
- * @see    WAFClient::createWebACL
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateWebACLRequest object.
  */
 CreateWebACLRequest::CreateWebACLRequest()
@@ -53,13 +61,16 @@ CreateWebACLRequest::CreateWebACLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateWebACLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateWebACLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
     return new CreateWebACLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateWebACLRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
  * @brief  Private implementation for CreateWebACLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateWebACLRequestPrivate object.
@@ -97,7 +108,7 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateWebACLRequestPrivate object, copying another.

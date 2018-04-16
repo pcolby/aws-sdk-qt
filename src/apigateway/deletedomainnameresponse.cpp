@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDomainNameResponse
+/*!
+ * \class QtAws::APIGateway::DeleteDomainNameResponse
  *
- * @brief  Handles APIGateway DeleteDomainName responses.
+ * \brief The DeleteDomainNameResponse class encapsulates APIGateway DeleteDomainName responses.
  *
- * @see    APIGatewayClient::deleteDomainName
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDomainName
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDomainNameResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteDomainNameRequest * DeleteDomainNameResponse::request() const
     return static_cast<const DeleteDomainNameRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteDomainName response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteDomainNameResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDomainNameResponsePrivate
+ * \class DeleteDomainNameResponsePrivate
  *
- * @brief  Private implementation for DeleteDomainNameResponse.
+ * \brief Private implementation for DeleteDomainNameResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDomainNameResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteDomainNameResponsePrivate::DeleteDomainNameResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteDomainNameResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  CopyProductRequest
+/*!
+ * \class QtAws::ServiceCatalog::CopyProductRequest
  *
- * @brief  Implements ServiceCatalog CopyProduct requests.
+ * \brief The CopyProductRequest class encapsulates ServiceCatalog CopyProduct requests.
  *
- * @see    ServiceCatalogClient::copyProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::copyProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyProductRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ CopyProductRequest::CopyProductRequest(const CopyProductRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CopyProductRequest object.
  */
 CopyProductRequest::CopyProductRequest()
@@ -53,13 +62,16 @@ CopyProductRequest::CopyProductRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CopyProductRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CopyProductResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * 
     return new CopyProductResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CopyProductRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * 
  * @brief  Private implementation for CopyProductRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyProductRequestPrivate object.
@@ -97,7 +109,7 @@ CopyProductRequestPrivate::CopyProductRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyProductRequestPrivate object, copying another.

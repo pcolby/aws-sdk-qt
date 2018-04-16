@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace ResourceGroups {
 
-/**
- * @class  ResourceGroupsResponse
+/*!
+ * \class QtAws::ResourceGroups::ResourceGroupsResponse
  *
- * @brief  Handles ResourceGroups ResourceGroups responses.
+ * \brief The ResourceGroupsResponse class is the base class for all ResourceGroups responses.
  *
- * @see    ResourceGroupsClient::resourceGroups
+ * \ingroup ResourceGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new ResourceGroupsResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResourceGroupsResponse object.
@@ -63,7 +63,7 @@ ResourceGroupsResponse::ResourceGroupsResponse(ResourceGroupsResponsePrivate * c
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void ResourceGroupsResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ResourceGroupsResponsePrivate
@@ -92,7 +92,7 @@ void ResourceGroupsResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for ResourceGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ResourceGroupsResponsePrivate object.

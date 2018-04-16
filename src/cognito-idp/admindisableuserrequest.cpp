@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  AdminDisableUserRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::AdminDisableUserRequest
  *
- * @brief  Implements CognitoIdentityProvider AdminDisableUser requests.
+ * \brief The AdminDisableUserRequest class encapsulates CognitoIdentityProvider AdminDisableUser requests.
  *
- * @see    CognitoIdentityProviderClient::adminDisableUser
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::adminDisableUser
  */
 
-/**
+/*!
  * @brief  Constructs a new AdminDisableUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ AdminDisableUserRequest::AdminDisableUserRequest(const AdminDisableUserRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AdminDisableUserRequest object.
  */
 AdminDisableUserRequest::AdminDisableUserRequest()
@@ -53,13 +66,16 @@ AdminDisableUserRequest::AdminDisableUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AdminDisableUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AdminDisableUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AdminDisableUserRequest::response(QNetworkRep
     return new AdminDisableUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AdminDisableUserRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * AdminDisableUserRequest::response(QNetworkRep
  * @brief  Private implementation for AdminDisableUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDisableUserRequestPrivate object.
@@ -97,7 +113,7 @@ AdminDisableUserRequestPrivate::AdminDisableUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AdminDisableUserRequestPrivate object, copying another.

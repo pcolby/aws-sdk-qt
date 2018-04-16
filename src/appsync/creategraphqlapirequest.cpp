@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateGraphqlApiRequest
+/*!
+ * \class QtAws::AppSync::CreateGraphqlApiRequest
  *
- * @brief  Implements AppSync CreateGraphqlApi requests.
+ * \brief The CreateGraphqlApiRequest class encapsulates AppSync CreateGraphqlApi requests.
  *
- * @see    AppSyncClient::createGraphqlApi
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createGraphqlApi
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateGraphqlApiRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ CreateGraphqlApiRequest::CreateGraphqlApiRequest(const CreateGraphqlApiRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateGraphqlApiRequest object.
  */
 CreateGraphqlApiRequest::CreateGraphqlApiRequest()
@@ -53,13 +57,16 @@ CreateGraphqlApiRequest::CreateGraphqlApiRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateGraphqlApiRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateGraphqlApiResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * CreateGraphqlApiRequest::response(QNetworkRep
     return new CreateGraphqlApiResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateGraphqlApiRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * CreateGraphqlApiRequest::response(QNetworkRep
  * @brief  Private implementation for CreateGraphqlApiRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGraphqlApiRequestPrivate object.
@@ -97,7 +104,7 @@ CreateGraphqlApiRequestPrivate::CreateGraphqlApiRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateGraphqlApiRequestPrivate object, copying another.

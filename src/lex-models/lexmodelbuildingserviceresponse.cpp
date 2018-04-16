@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  LexModelBuildingServiceResponse
+/*!
+ * \class QtAws::LexModelBuildingService::LexModelBuildingServiceResponse
  *
- * @brief  Handles LexModelBuildingService LexModelBuildingService responses.
+ * \brief The LexModelBuildingServiceResponse class is the base class for all LexModelBuildingService responses.
  *
- * @see    LexModelBuildingServiceClient::lexModelBuildingService
+ * \ingroup LexModelBuildingService
  */
 
-/**
+/*!
  * @brief  Constructs a new LexModelBuildingServiceResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(QObject * const
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexModelBuildingServiceResponse object.
@@ -63,7 +63,7 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildin
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  LexModelBuildingServiceResponsePrivate
@@ -92,7 +92,7 @@ void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for LexModelBuildingServiceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new LexModelBuildingServiceResponsePrivate object.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CognitoSync {
 
-/**
- * @class  CognitoSyncResponse
+/*!
+ * \class QtAws::CognitoSync::CognitoSyncResponse
  *
- * @brief  Handles CognitoSync CognitoSync responses.
+ * \brief The CognitoSyncResponse class is the base class for all CognitoSync responses.
  *
- * @see    CognitoSyncClient::cognitoSync
+ * \ingroup CognitoSync
  */
 
-/**
+/*!
  * @brief  Constructs a new CognitoSyncResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CognitoSyncResponse::CognitoSyncResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CognitoSyncResponse object.
@@ -63,7 +63,7 @@ CognitoSyncResponse::CognitoSyncResponse(CognitoSyncResponsePrivate * const d, Q
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CognitoSyncResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CognitoSyncResponsePrivate
@@ -92,7 +92,7 @@ void CognitoSyncResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CognitoSyncResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CognitoSyncResponsePrivate object.

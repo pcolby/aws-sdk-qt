@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  CreateAssessmentTargetResponse
+/*!
+ * \class QtAws::Inspector::CreateAssessmentTargetResponse
  *
- * @brief  Handles Inspector CreateAssessmentTarget responses.
+ * \brief The CreateAssessmentTargetResponse class encapsulates Inspector CreateAssessmentTarget responses.
  *
- * @see    InspectorClient::createAssessmentTarget
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::createAssessmentTarget
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateAssessmentTargetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateAssessmentTargetRequest * CreateAssessmentTargetResponse::request() 
     return static_cast<const CreateAssessmentTargetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector CreateAssessmentTarget response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateAssessmentTargetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateAssessmentTargetResponsePrivate
+ * \class CreateAssessmentTargetResponsePrivate
  *
- * @brief  Private implementation for CreateAssessmentTargetResponse.
+ * \brief Private implementation for CreateAssessmentTargetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateAssessmentTargetResponsePrivate object.
@@ -91,7 +99,7 @@ CreateAssessmentTargetResponsePrivate::CreateAssessmentTargetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector CreateAssessmentTargetResponse element.
  *
  * @param  xml  XML stream to parse.

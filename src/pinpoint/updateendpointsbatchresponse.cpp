@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateEndpointsBatchResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateEndpointsBatchResponse
  *
- * @brief  Handles Pinpoint UpdateEndpointsBatch responses.
+ * \brief The UpdateEndpointsBatchResponse class encapsulates Pinpoint UpdateEndpointsBatch responses.
  *
- * @see    PinpointClient::updateEndpointsBatch
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateEndpointsBatch
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateEndpointsBatchResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateEndpointsBatchRequest * UpdateEndpointsBatchResponse::request() cons
     return static_cast<const UpdateEndpointsBatchRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateEndpointsBatch response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateEndpointsBatchResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateEndpointsBatchResponsePrivate
+ * \class UpdateEndpointsBatchResponsePrivate
  *
- * @brief  Private implementation for UpdateEndpointsBatchResponse.
+ * \brief Private implementation for UpdateEndpointsBatchResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateEndpointsBatchResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateEndpointsBatchResponse element.
  *
  * @param  xml  XML stream to parse.

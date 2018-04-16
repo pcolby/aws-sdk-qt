@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  EnableDomainAutoRenewResponse
+/*!
+ * \class QtAws::Route53Domains::EnableDomainAutoRenewResponse
  *
- * @brief  Handles Route53Domains EnableDomainAutoRenew responses.
+ * \brief The EnableDomainAutoRenewResponse class encapsulates Route53Domains EnableDomainAutoRenew responses.
  *
- * @see    Route53DomainsClient::enableDomainAutoRenew
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::enableDomainAutoRenew
  */
 
-/**
+/*!
  * @brief  Constructs a new EnableDomainAutoRenewResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const EnableDomainAutoRenewRequest * EnableDomainAutoRenewResponse::request() co
     return static_cast<const EnableDomainAutoRenewRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains EnableDomainAutoRenew response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void EnableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  EnableDomainAutoRenewResponsePrivate
+ * \class EnableDomainAutoRenewResponsePrivate
  *
- * @brief  Private implementation for EnableDomainAutoRenewResponse.
+ * \brief Private implementation for EnableDomainAutoRenewResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new EnableDomainAutoRenewResponsePrivate object.
@@ -91,7 +95,7 @@ EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains EnableDomainAutoRenewResponse element.
  *
  * @param  xml  XML stream to parse.

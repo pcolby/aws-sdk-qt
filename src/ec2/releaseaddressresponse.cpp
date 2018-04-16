@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReleaseAddressResponse
+/*!
+ * \class QtAws::EC2::ReleaseAddressResponse
  *
- * @brief  Handles EC2 ReleaseAddress responses.
+ * \brief The ReleaseAddressResponse class encapsulates EC2 ReleaseAddress responses.
  *
- * @see    EC2Client::releaseAddress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::releaseAddress
  */
 
-/**
+/*!
  * @brief  Constructs a new ReleaseAddressResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ReleaseAddressRequest * ReleaseAddressResponse::request() const
     return static_cast<const ReleaseAddressRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ReleaseAddress response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ReleaseAddressResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReleaseAddressResponsePrivate
+ * \class ReleaseAddressResponsePrivate
  *
- * @brief  Private implementation for ReleaseAddressResponse.
+ * \brief Private implementation for ReleaseAddressResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReleaseAddressResponsePrivate object.
@@ -91,7 +98,7 @@ ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ReleaseAddressResponse element.
  *
  * @param  xml  XML stream to parse.

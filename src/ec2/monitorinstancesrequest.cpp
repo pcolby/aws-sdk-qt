@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  MonitorInstancesRequest
+/*!
+ * \class QtAws::EC2::MonitorInstancesRequest
  *
- * @brief  Implements EC2 MonitorInstances requests.
+ * \brief The MonitorInstancesRequest class encapsulates EC2 MonitorInstances requests.
  *
- * @see    EC2Client::monitorInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::monitorInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new MonitorInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ MonitorInstancesRequest::MonitorInstancesRequest(const MonitorInstancesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new MonitorInstancesRequest object.
  */
 MonitorInstancesRequest::MonitorInstancesRequest()
@@ -53,13 +60,16 @@ MonitorInstancesRequest::MonitorInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool MonitorInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an MonitorInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkRep
     return new MonitorInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  MonitorInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkRep
  * @brief  Private implementation for MonitorInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MonitorInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MonitorInstancesRequestPrivate object, copying another.

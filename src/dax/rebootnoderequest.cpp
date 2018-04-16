@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace DAX {
 
-/**
- * @class  RebootNodeRequest
+/*!
+ * \class QtAws::DAX::RebootNodeRequest
  *
- * @brief  Implements DAX RebootNode requests.
+ * \brief The RebootNodeRequest class encapsulates DAX RebootNode requests.
  *
- * @see    DAXClient::rebootNode
+ * \ingroup DAX
+ *
+ *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
+ *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
+ *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
+ *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
+ *
+ * \sa DAXClient::rebootNode
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootNodeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RebootNodeRequest::RebootNodeRequest(const RebootNodeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RebootNodeRequest object.
  */
 RebootNodeRequest::RebootNodeRequest()
@@ -53,13 +60,16 @@ RebootNodeRequest::RebootNodeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RebootNodeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RebootNodeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
     return new RebootNodeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RebootNodeRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
  * @brief  Private implementation for RebootNodeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootNodeRequestPrivate object.
@@ -97,7 +107,7 @@ RebootNodeRequestPrivate::RebootNodeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootNodeRequestPrivate object, copying another.

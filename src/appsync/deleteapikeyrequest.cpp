@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  DeleteApiKeyRequest
+/*!
+ * \class QtAws::AppSync::DeleteApiKeyRequest
  *
- * @brief  Implements AppSync DeleteApiKey requests.
+ * \brief The DeleteApiKeyRequest class encapsulates AppSync DeleteApiKey requests.
  *
- * @see    AppSyncClient::deleteApiKey
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::deleteApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteApiKeyRequest object.
  */
 DeleteApiKeyRequest::DeleteApiKeyRequest()
@@ -53,13 +57,16 @@ DeleteApiKeyRequest::DeleteApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
     return new DeleteApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteApiKeyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for DeleteApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApiKeyRequestPrivate object.
@@ -97,7 +104,7 @@ DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApiKeyRequestPrivate object, copying another.

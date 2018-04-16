@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeTagsRequest
+/*!
+ * \class QtAws::EC2::DescribeTagsRequest
  *
- * @brief  Implements EC2 DescribeTags requests.
+ * \brief The DescribeTagsRequest class encapsulates EC2 DescribeTags requests.
  *
- * @see    EC2Client::describeTags
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
@@ -53,13 +60,16 @@ DescribeTagsRequest::DescribeTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
     return new DescribeTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTagsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.

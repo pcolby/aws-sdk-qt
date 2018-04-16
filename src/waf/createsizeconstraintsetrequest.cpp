@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  CreateSizeConstraintSetRequest
+/*!
+ * \class QtAws::WAF::CreateSizeConstraintSetRequest
  *
- * @brief  Implements WAF CreateSizeConstraintSet requests.
+ * \brief The CreateSizeConstraintSetRequest class encapsulates WAF CreateSizeConstraintSet requests.
  *
- * @see    WAFClient::createSizeConstraintSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::createSizeConstraintSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSizeConstraintSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest(const CreateSizeC
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateSizeConstraintSetRequest object.
  */
 CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest()
@@ -53,13 +61,16 @@ CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateSizeConstraintSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateSizeConstraintSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNet
     return new CreateSizeConstraintSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateSizeConstraintSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNet
  * @brief  Private implementation for CreateSizeConstraintSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSizeConstraintSetRequestPrivate object.
@@ -97,7 +108,7 @@ CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSizeConstraintSetRequestPrivate object, copying another.

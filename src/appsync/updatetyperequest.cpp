@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateTypeRequest
+/*!
+ * \class QtAws::AppSync::UpdateTypeRequest
  *
- * @brief  Implements AppSync UpdateType requests.
+ * \brief The UpdateTypeRequest class encapsulates AppSync UpdateType requests.
  *
- * @see    AppSyncClient::updateType
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateType
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateTypeRequest::UpdateTypeRequest(const UpdateTypeRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateTypeRequest object.
  */
 UpdateTypeRequest::UpdateTypeRequest()
@@ -53,13 +57,16 @@ UpdateTypeRequest::UpdateTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * c
     return new UpdateTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateTypeRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * c
  * @brief  Private implementation for UpdateTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTypeRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateTypeRequestPrivate object, copying another.

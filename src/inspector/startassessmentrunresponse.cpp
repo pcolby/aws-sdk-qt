@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  StartAssessmentRunResponse
+/*!
+ * \class QtAws::Inspector::StartAssessmentRunResponse
  *
- * @brief  Handles Inspector StartAssessmentRun responses.
+ * \brief The StartAssessmentRunResponse class encapsulates Inspector StartAssessmentRun responses.
  *
- * @see    InspectorClient::startAssessmentRun
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::startAssessmentRun
  */
 
-/**
+/*!
  * @brief  Constructs a new StartAssessmentRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
     return static_cast<const StartAssessmentRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector StartAssessmentRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void StartAssessmentRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartAssessmentRunResponsePrivate
+ * \class StartAssessmentRunResponsePrivate
  *
- * @brief  Private implementation for StartAssessmentRunResponse.
+ * \brief Private implementation for StartAssessmentRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartAssessmentRunResponsePrivate object.
@@ -91,7 +99,7 @@ StartAssessmentRunResponsePrivate::StartAssessmentRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector StartAssessmentRunResponse element.
  *
  * @param  xml  XML stream to parse.

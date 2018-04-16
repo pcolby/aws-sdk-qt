@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  PutBucketLifecycleConfigurationResponse
+/*!
+ * \class QtAws::S3::PutBucketLifecycleConfigurationResponse
  *
- * @brief  Handles S3 PutBucketLifecycleConfiguration responses.
+ * \brief The PutBucketLifecycleConfigurationResponse class encapsulates S3 PutBucketLifecycleConfiguration responses.
  *
- * @see    S3Client::putBucketLifecycleConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::putBucketLifecycleConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new PutBucketLifecycleConfigurationResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const PutBucketLifecycleConfigurationRequest * PutBucketLifecycleConfigurationRe
     return static_cast<const PutBucketLifecycleConfigurationRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 PutBucketLifecycleConfiguration response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void PutBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutBucketLifecycleConfigurationResponsePrivate
+ * \class PutBucketLifecycleConfigurationResponsePrivate
  *
- * @brief  Private implementation for PutBucketLifecycleConfigurationResponse.
+ * \brief Private implementation for PutBucketLifecycleConfigurationResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutBucketLifecycleConfigurationResponsePrivate object.
@@ -91,7 +94,7 @@ PutBucketLifecycleConfigurationResponsePrivate::PutBucketLifecycleConfigurationR
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 PutBucketLifecycleConfigurationResponse element.
  *
  * @param  xml  XML stream to parse.

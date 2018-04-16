@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  CreateJobRequest
+/*!
+ * \class QtAws::IoT::CreateJobRequest
  *
- * @brief  Implements IoT CreateJob requests.
+ * \brief The CreateJobRequest class encapsulates IoT CreateJob requests.
  *
- * @see    IoTClient::createJob
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::createJob
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ CreateJobRequest::CreateJobRequest(const CreateJobRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateJobRequest object.
  */
 CreateJobRequest::CreateJobRequest()
@@ -53,13 +67,16 @@ CreateJobRequest::CreateJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
     return new CreateJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateJobRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
  * @brief  Private implementation for CreateJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobRequestPrivate object.
@@ -97,7 +114,7 @@ CreateJobRequestPrivate::CreateJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateJobRequestPrivate object, copying another.

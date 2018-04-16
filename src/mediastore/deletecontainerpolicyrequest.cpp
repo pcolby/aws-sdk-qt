@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  DeleteContainerPolicyRequest
+/*!
+ * \class QtAws::MediaStore::DeleteContainerPolicyRequest
  *
- * @brief  Implements MediaStore DeleteContainerPolicy requests.
+ * \brief The DeleteContainerPolicyRequest class encapsulates MediaStore DeleteContainerPolicy requests.
  *
- * @see    MediaStoreClient::deleteContainerPolicy
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::deleteContainerPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteContainerPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteContainerPolicyRequest::DeleteContainerPolicyRequest(const DeleteContainer
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteContainerPolicyRequest object.
  */
 DeleteContainerPolicyRequest::DeleteContainerPolicyRequest()
@@ -53,13 +58,16 @@ DeleteContainerPolicyRequest::DeleteContainerPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteContainerPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteContainerPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetwo
     return new DeleteContainerPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteContainerPolicyRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetwo
  * @brief  Private implementation for DeleteContainerPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteContainerPolicyRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteContainerPolicyRequestPrivate object, copying another.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetTableRequest
+/*!
+ * \class QtAws::Glue::GetTableRequest
  *
- * @brief  Implements Glue GetTable requests.
+ * \brief The GetTableRequest class encapsulates Glue GetTable requests.
  *
- * @see    GlueClient::getTable
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getTable
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetTableRequest::GetTableRequest(const GetTableRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTableRequest object.
  */
 GetTableRequest::GetTableRequest()
@@ -53,13 +59,16 @@ GetTableRequest::GetTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetTableRequest::response(QNetworkReply * con
     return new GetTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTableRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetTableRequest::response(QNetworkReply * con
  * @brief  Private implementation for GetTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTableRequestPrivate object.
@@ -97,7 +106,7 @@ GetTableRequestPrivate::GetTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTableRequestPrivate object, copying another.

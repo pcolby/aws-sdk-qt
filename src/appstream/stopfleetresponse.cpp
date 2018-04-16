@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  StopFleetResponse
+/*!
+ * \class QtAws::AppStream::StopFleetResponse
  *
- * @brief  Handles AppStream StopFleet responses.
+ * \brief The StopFleetResponse class encapsulates AppStream StopFleet responses.
  *
- * @see    AppStreamClient::stopFleet
+ * \ingroup AppStream
+ *
+ *  <fullname>Amazon AppStream 2.0</fullname>
+ * 
+ *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *
+ * \sa AppStreamClient::stopFleet
  */
 
-/**
+/*!
  * @brief  Constructs a new StopFleetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const StopFleetRequest * StopFleetResponse::request() const
     return static_cast<const StopFleetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppStream StopFleet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void StopFleetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StopFleetResponsePrivate
+ * \class StopFleetResponsePrivate
  *
- * @brief  Private implementation for StopFleetResponse.
+ * \brief Private implementation for StopFleetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StopFleetResponsePrivate object.
@@ -91,7 +97,7 @@ StopFleetResponsePrivate::StopFleetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppStream StopFleetResponse element.
  *
  * @param  xml  XML stream to parse.

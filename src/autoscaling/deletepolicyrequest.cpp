@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeletePolicyRequest
+/*!
+ * \class QtAws::AutoScaling::DeletePolicyRequest
  *
- * @brief  Implements AutoScaling DeletePolicy requests.
+ * \brief The DeletePolicyRequest class encapsulates AutoScaling DeletePolicy requests.
  *
- * @see    AutoScalingClient::deletePolicy
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deletePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
@@ -53,13 +61,16 @@ DeletePolicyRequest::DeletePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeletePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeletePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
     return new DeletePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeletePolicyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
  * @brief  Private implementation for DeletePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyRequestPrivate object.
@@ -97,7 +108,7 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyRequestPrivate object, copying another.

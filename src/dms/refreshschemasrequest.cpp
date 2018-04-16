@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  RefreshSchemasRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::RefreshSchemasRequest
  *
- * @brief  Implements DatabaseMigrationService RefreshSchemas requests.
+ * \brief The RefreshSchemasRequest class encapsulates DatabaseMigrationService RefreshSchemas requests.
  *
- * @see    DatabaseMigrationServiceClient::refreshSchemas
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::refreshSchemas
  */
 
-/**
+/*!
  * @brief  Constructs a new RefreshSchemasRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ RefreshSchemasRequest::RefreshSchemasRequest(const RefreshSchemasRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RefreshSchemasRequest object.
  */
 RefreshSchemasRequest::RefreshSchemasRequest()
@@ -53,13 +67,16 @@ RefreshSchemasRequest::RefreshSchemasRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RefreshSchemasRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RefreshSchemasResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply
     return new RefreshSchemasResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RefreshSchemasRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply
  * @brief  Private implementation for RefreshSchemasRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RefreshSchemasRequestPrivate object.
@@ -97,7 +114,7 @@ RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RefreshSchemasRequestPrivate object, copying another.

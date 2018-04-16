@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  GetRoomResponse
+/*!
+ * \class QtAws::AlexaForBusiness::GetRoomResponse
  *
- * @brief  Handles AlexaForBusiness GetRoom responses.
+ * \brief The GetRoomResponse class encapsulates AlexaForBusiness GetRoom responses.
  *
- * @see    AlexaForBusinessClient::getRoom
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::getRoom
  */
 
-/**
+/*!
  * @brief  Constructs a new GetRoomResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetRoomRequest * GetRoomResponse::request() const
     return static_cast<const GetRoomRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AlexaForBusiness GetRoom response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetRoomResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetRoomResponsePrivate
+ * \class GetRoomResponsePrivate
  *
- * @brief  Private implementation for GetRoomResponse.
+ * \brief Private implementation for GetRoomResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetRoomResponsePrivate object.
@@ -91,7 +99,7 @@ GetRoomResponsePrivate::GetRoomResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AlexaForBusiness GetRoomResponse element.
  *
  * @param  xml  XML stream to parse.

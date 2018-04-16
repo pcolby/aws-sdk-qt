@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  UpdatePresetRequest
+/*!
+ * \class QtAws::MediaConvert::UpdatePresetRequest
  *
- * @brief  Implements MediaConvert UpdatePreset requests.
+ * \brief The UpdatePresetRequest class encapsulates MediaConvert UpdatePreset requests.
  *
- * @see    MediaConvertClient::updatePreset
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::updatePreset
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePresetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdatePresetRequest::UpdatePresetRequest(const UpdatePresetRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdatePresetRequest object.
  */
 UpdatePresetRequest::UpdatePresetRequest()
@@ -53,13 +56,16 @@ UpdatePresetRequest::UpdatePresetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdatePresetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdatePresetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePresetRequest::response(QNetworkReply *
     return new UpdatePresetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdatePresetRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdatePresetRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdatePresetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePresetRequestPrivate object.
@@ -97,7 +103,7 @@ UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePresetRequestPrivate object, copying another.

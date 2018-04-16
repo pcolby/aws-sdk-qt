@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetCampaignActivitiesResponse
+/*!
+ * \class QtAws::Pinpoint::GetCampaignActivitiesResponse
  *
- * @brief  Handles Pinpoint GetCampaignActivities responses.
+ * \brief The GetCampaignActivitiesResponse class encapsulates Pinpoint GetCampaignActivities responses.
  *
- * @see    PinpointClient::getCampaignActivities
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getCampaignActivities
  */
 
-/**
+/*!
  * @brief  Constructs a new GetCampaignActivitiesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetCampaignActivitiesRequest * GetCampaignActivitiesResponse::request() co
     return static_cast<const GetCampaignActivitiesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetCampaignActivities response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetCampaignActivitiesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetCampaignActivitiesResponsePrivate
+ * \class GetCampaignActivitiesResponsePrivate
  *
- * @brief  Private implementation for GetCampaignActivitiesResponse.
+ * \brief Private implementation for GetCampaignActivitiesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetCampaignActivitiesResponsePrivate object.
@@ -91,7 +94,7 @@ GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetCampaignActivitiesResponse element.
  *
  * @param  xml  XML stream to parse.

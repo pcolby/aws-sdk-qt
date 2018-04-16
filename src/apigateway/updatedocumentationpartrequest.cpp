@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateDocumentationPartRequest
+/*!
+ * \class QtAws::APIGateway::UpdateDocumentationPartRequest
  *
- * @brief  Implements APIGateway UpdateDocumentationPart requests.
+ * \brief The UpdateDocumentationPartRequest class encapsulates APIGateway UpdateDocumentationPart requests.
  *
- * @see    APIGatewayClient::updateDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateDocumentationPartRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateDocumentationPartRequest::UpdateDocumentationPartRequest(const UpdateDocum
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateDocumentationPartRequest object.
  */
 UpdateDocumentationPartRequest::UpdateDocumentationPartRequest()
@@ -53,13 +61,16 @@ UpdateDocumentationPartRequest::UpdateDocumentationPartRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateDocumentationPartRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateDocumentationPartResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNet
     return new UpdateDocumentationPartResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateDocumentationPartRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNet
  * @brief  Private implementation for UpdateDocumentationPartRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDocumentationPartRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateDocumentationPartRequestPrivate object, copying another.

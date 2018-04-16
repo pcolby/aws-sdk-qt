@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribePlacementGroupsResponse
+/*!
+ * \class QtAws::EC2::DescribePlacementGroupsResponse
  *
- * @brief  Handles EC2 DescribePlacementGroups responses.
+ * \brief The DescribePlacementGroupsResponse class encapsulates EC2 DescribePlacementGroups responses.
  *
- * @see    EC2Client::describePlacementGroups
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describePlacementGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePlacementGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribePlacementGroupsRequest * DescribePlacementGroupsResponse::request(
     return static_cast<const DescribePlacementGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribePlacementGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribePlacementGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribePlacementGroupsResponsePrivate
+ * \class DescribePlacementGroupsResponsePrivate
  *
- * @brief  Private implementation for DescribePlacementGroupsResponse.
+ * \brief Private implementation for DescribePlacementGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePlacementGroupsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribePlacementGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

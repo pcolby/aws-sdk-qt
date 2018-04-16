@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReplaceRouteTableAssociationRequest
+/*!
+ * \class QtAws::EC2::ReplaceRouteTableAssociationRequest
  *
- * @brief  Implements EC2 ReplaceRouteTableAssociation requests.
+ * \brief The ReplaceRouteTableAssociationRequest class encapsulates EC2 ReplaceRouteTableAssociation requests.
  *
- * @see    EC2Client::replaceRouteTableAssociation
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::replaceRouteTableAssociation
  */
 
-/**
+/*!
  * @brief  Constructs a new ReplaceRouteTableAssociationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest(const R
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ReplaceRouteTableAssociationRequest object.
  */
 ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest()
@@ -53,13 +60,16 @@ ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ReplaceRouteTableAssociationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ReplaceRouteTableAssociationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response
     return new ReplaceRouteTableAssociationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ReplaceRouteTableAssociationRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response
  * @brief  Private implementation for ReplaceRouteTableAssociationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceRouteTableAssociationRequestPrivate object.
@@ -97,7 +107,7 @@ ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReplaceRouteTableAssociationRequestPrivate object, copying another.

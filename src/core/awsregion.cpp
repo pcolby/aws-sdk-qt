@@ -25,8 +25,8 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsRegion
+/*!
+ * \class QtAws::Core::AwsRegion
  *
  * @brief  Provides AWS region information.
  *
@@ -41,7 +41,7 @@ namespace Core {
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-/**
+/*!
  * @brief  Constructs a new AwsRegion object.
  *
  * @param  region  AWS region for this object to represent.
@@ -52,7 +52,7 @@ AwsRegion::AwsRegion(const Region region)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AwsRegion object.
  *
  * If \p regionName is not recognised as a valid AWS region, AwsRegion::isValid
@@ -66,7 +66,7 @@ AwsRegion::AwsRegion(const QString &regionName)
 
 }
 
-/**
+/*!
  * @brief  AwsRegion destructor.
  */
 AwsRegion::~AwsRegion()
@@ -74,7 +74,7 @@ AwsRegion::~AwsRegion()
     delete d_ptr;
 }
 
-/**
+/*!
  * @brief  Get the region this object represents.
  *
  * If this object was given an AwsRegion::Region value during construction, this
@@ -94,7 +94,7 @@ AwsRegion::Region AwsRegion::region() const
     return static_cast<AwsRegion::Region>(d->region);
 }
 
-/**
+/*!
  * @brief  Is this AWS region object valid?
  *
  * Any AwsRegion object created using one of the valid AwsRegion::Region enumeration
@@ -111,7 +111,7 @@ bool AwsRegion::isValid() const
     return (region() != AwsRegion::InvalidRegion);
 }
 
-/**
+/*!
  * @brief  Get the canonical AWS name for this region.
  *
  * @return The canonical AWS name for this region, or null string if this object is invalid.
@@ -124,7 +124,7 @@ QString AwsRegion::name() const
     return name(static_cast<AwsRegion::Region>(d->region));
 }
 
-/**
+/*!
  * @brief  Get the canonical AWS name for a region.
  *
  * @param  region  AWS region to get the canonical name of.
@@ -149,7 +149,7 @@ QString AwsRegion::name(const Region &region)
     return QString();
 }
 
-/**
+/*!
  * @brief  Get the full name for this region.
  *
  * This returns a humand-readable name for this object's region.  For example,
@@ -170,7 +170,7 @@ QString AwsRegion::fullName() const
     return fullName(region());
 }
 
-/**
+/*!
  * @brief  Get the full name for an AWS region.
  *
  * This returns a humand-readable name for the specified AWS region.  For example,
@@ -206,7 +206,7 @@ QString AwsRegion::fullName(const Region &region)
     return QString();
 }
 
-/**
+/*!
  * @brief  Get name of the host the supports a given service for this region.
  *
  * @param  serviceName  The service to get the hostname for.
@@ -219,7 +219,7 @@ QString AwsRegion::hostName(const QString &serviceName) const
     return AwsEndpoint::getEndpoint(name(), serviceName).host();
 }
 
-/**
+/*!
  * @brief  Is a given service supported for this region?
  *
  * @param  serviceName  The service to check support for.
@@ -234,7 +234,7 @@ bool AwsRegion::isSupported(const QString &serviceName, const AwsEndpoint::Trans
     return AwsEndpoint::isSupported(name(), serviceName, transports);
 }
 
-/**
+/*!
  * @brief  Get a list of services supported by this region.
  *
  * @param  transports  Optional set of transports to test for support.
@@ -247,7 +247,7 @@ QStringList AwsRegion::supportedServices(const AwsEndpoint::Transports transport
     return AwsEndpoint::supportedServices(name(), transports);
 }
 
-/**
+/*!
  * @brief  Get an AwsRegion::Region enumeration value from a region name.
  *
  * @note   The region name is evaluated in a case-insensitve manner.
@@ -274,15 +274,15 @@ AwsRegion::Region AwsRegion::fromName(const QString &regionName)
     return InvalidRegion;
 }
 
-/**
+/*!
  * @internal
  *
- * @class  AwsRegionPrivate
+ * \class QtAws::Core::AwsRegionPrivate
  *
  * @brief  Private implementation for AwsRegion.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsRegionPrivate object.

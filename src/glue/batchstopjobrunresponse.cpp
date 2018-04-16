@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchStopJobRunResponse
+/*!
+ * \class QtAws::Glue::BatchStopJobRunResponse
  *
- * @brief  Handles Glue BatchStopJobRun responses.
+ * \brief The BatchStopJobRunResponse class encapsulates Glue BatchStopJobRun responses.
  *
- * @see    GlueClient::batchStopJobRun
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchStopJobRun
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchStopJobRunResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const BatchStopJobRunRequest * BatchStopJobRunResponse::request() const
     return static_cast<const BatchStopJobRunRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue BatchStopJobRun response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void BatchStopJobRunResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchStopJobRunResponsePrivate
+ * \class BatchStopJobRunResponsePrivate
  *
- * @brief  Private implementation for BatchStopJobRunResponse.
+ * \brief Private implementation for BatchStopJobRunResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchStopJobRunResponsePrivate object.
@@ -91,7 +97,7 @@ BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue BatchStopJobRunResponse element.
  *
  * @param  xml  XML stream to parse.

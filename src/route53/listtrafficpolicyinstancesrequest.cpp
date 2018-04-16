@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  ListTrafficPolicyInstancesRequest
+/*!
+ * \class QtAws::Route53::ListTrafficPolicyInstancesRequest
  *
- * @brief  Implements Route53 ListTrafficPolicyInstances requests.
+ * \brief The ListTrafficPolicyInstancesRequest class encapsulates Route53 ListTrafficPolicyInstances requests.
  *
- * @see    Route53Client::listTrafficPolicyInstances
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::listTrafficPolicyInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPolicyInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListTrafficPolicyInstancesRequest::ListTrafficPolicyInstancesRequest(const ListT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTrafficPolicyInstancesRequest object.
  */
 ListTrafficPolicyInstancesRequest::ListTrafficPolicyInstancesRequest()
@@ -53,13 +56,16 @@ ListTrafficPolicyInstancesRequest::ListTrafficPolicyInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTrafficPolicyInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTrafficPolicyInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesRequest::response(Q
     return new ListTrafficPolicyInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTrafficPolicyInstancesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListTrafficPolicyInstancesRequest::response(Q
  * @brief  Private implementation for ListTrafficPolicyInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPolicyInstancesRequestPrivate object.
@@ -97,7 +103,7 @@ ListTrafficPolicyInstancesRequestPrivate::ListTrafficPolicyInstancesRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTrafficPolicyInstancesRequestPrivate object, copying another.

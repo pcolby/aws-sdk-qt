@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  InvokeAsyncRequest
+/*!
+ * \class QtAws::Lambda::InvokeAsyncRequest
  *
- * @brief  Implements Lambda InvokeAsync requests.
+ * \brief The InvokeAsyncRequest class encapsulates Lambda InvokeAsync requests.
  *
- * @see    LambdaClient::invokeAsync
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::invokeAsync
  */
 
-/**
+/*!
  * @brief  Constructs a new InvokeAsyncRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ InvokeAsyncRequest::InvokeAsyncRequest(const InvokeAsyncRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new InvokeAsyncRequest object.
  */
 InvokeAsyncRequest::InvokeAsyncRequest()
@@ -53,13 +67,16 @@ InvokeAsyncRequest::InvokeAsyncRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool InvokeAsyncRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an InvokeAsyncResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * InvokeAsyncRequest::response(QNetworkReply * 
     return new InvokeAsyncResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  InvokeAsyncRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * InvokeAsyncRequest::response(QNetworkReply * 
  * @brief  Private implementation for InvokeAsyncRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InvokeAsyncRequestPrivate object.
@@ -97,7 +114,7 @@ InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InvokeAsyncRequestPrivate object, copying another.

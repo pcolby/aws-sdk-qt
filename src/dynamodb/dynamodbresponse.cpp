@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  DynamoDBResponse
+/*!
+ * \class QtAws::DynamoDB::DynamoDBResponse
  *
- * @brief  Handles DynamoDB DynamoDB responses.
+ * \brief The DynamoDBResponse class is the base class for all DynamoDB responses.
  *
- * @see    DynamoDBClient::dynamoDB
+ * \ingroup DynamoDB
  */
 
-/**
+/*!
  * @brief  Constructs a new DynamoDBResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ DynamoDBResponse::DynamoDBResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DynamoDBResponse object.
@@ -63,7 +63,7 @@ DynamoDBResponse::DynamoDBResponse(DynamoDBResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void DynamoDBResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DynamoDBResponsePrivate
@@ -92,7 +92,7 @@ void DynamoDBResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for DynamoDBResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DynamoDBResponsePrivate object.

@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  GetGeoMatchSetResponse
+/*!
+ * \class QtAws::WAFRegional::GetGeoMatchSetResponse
  *
- * @brief  Handles WAFRegional GetGeoMatchSet responses.
+ * \brief The GetGeoMatchSetResponse class encapsulates WAFRegional GetGeoMatchSet responses.
  *
- * @see    WAFRegionalClient::getGeoMatchSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::getGeoMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetGeoMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const GetGeoMatchSetRequest * GetGeoMatchSetResponse::request() const
     return static_cast<const GetGeoMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional GetGeoMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void GetGeoMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetGeoMatchSetResponsePrivate
+ * \class GetGeoMatchSetResponsePrivate
  *
- * @brief  Private implementation for GetGeoMatchSetResponse.
+ * \brief Private implementation for GetGeoMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetGeoMatchSetResponsePrivate object.
@@ -91,7 +101,7 @@ GetGeoMatchSetResponsePrivate::GetGeoMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional GetGeoMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

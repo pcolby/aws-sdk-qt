@@ -27,15 +27,56 @@
 namespace QtAws {
 namespace Budgets {
 
-/**
- * @class  DeleteSubscriberResponse
+/*!
+ * \class QtAws::Budgets::DeleteSubscriberResponse
  *
- * @brief  Handles Budgets DeleteSubscriber responses.
+ * \brief The DeleteSubscriberResponse class encapsulates Budgets DeleteSubscriber responses.
  *
- * @see    BudgetsClient::deleteSubscriber
+ * \ingroup Budgets
+ *
+ *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
+ *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
+ *  usage-to-date and current estimated charges from AWS and to see how much your predicted usage accrues in charges by the
+ *  end of the month. Budgets also compare current estimates and charges to the amount that you indicated you want to use or
+ *  spend and lets you see how much of your budget has been used. AWS updates your budget status several times a day.
+ *  Budgets track your unblended costs, subscriptions, and refunds. You can create the following types of
+ * 
+ *  budgets> <ul> <li>
+ * 
+ *  Cost budgets allow you to say how much you want to spend on a
+ * 
+ *  service> </li> <li>
+ * 
+ *  Usage budgets allow you to say how many hours you want to use for one or more
+ * 
+ *  services> </li> <li>
+ * 
+ *  RI utilization budgets allow you to define a utilization threshold and receive alerts when RIs are tracking below that
+ * 
+ *  threshold> </li> </ul>
+ * 
+ *  You can create up to 20,000 budgets per AWS master account. Your first two budgets are free of charge. Each additional
+ *  budget costs $0.02 per day. You can set up optional notifications that warn you if you exceed, or are forecasted to
+ *  exceed, your budgeted amount. You can have notifications sent to an Amazon SNS topic, to an email address, or to both.
+ *  For more information, see <a
+ *  href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-sns-policy.html">Creating an Amazon SNS Topic
+ *  for Budget Notifications</a>. AWS Free Tier usage alerts via AWS Budgets are provided for you, and do not count toward
+ *  your budget
+ * 
+ *  limits>
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The AWS Budgets API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa BudgetsClient::deleteSubscriber
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubscriberResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +99,7 @@ const DeleteSubscriberRequest * DeleteSubscriberResponse::request() const
     return static_cast<const DeleteSubscriberRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Budgets DeleteSubscriber response.
  *
  * @param  response  Response to parse.
@@ -70,15 +111,15 @@ void DeleteSubscriberResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSubscriberResponsePrivate
+ * \class DeleteSubscriberResponsePrivate
  *
- * @brief  Private implementation for DeleteSubscriberResponse.
+ * \brief Private implementation for DeleteSubscriberResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubscriberResponsePrivate object.
@@ -91,7 +132,7 @@ DeleteSubscriberResponsePrivate::DeleteSubscriberResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Budgets DeleteSubscriberResponse element.
  *
  * @param  xml  XML stream to parse.

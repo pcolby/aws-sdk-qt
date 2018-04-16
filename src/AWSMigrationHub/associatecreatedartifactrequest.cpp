@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  AssociateCreatedArtifactRequest
+/*!
+ * \class QtAws::MigrationHub::AssociateCreatedArtifactRequest
  *
- * @brief  Implements MigrationHub AssociateCreatedArtifact requests.
+ * \brief The AssociateCreatedArtifactRequest class encapsulates MigrationHub AssociateCreatedArtifact requests.
  *
- * @see    MigrationHubClient::associateCreatedArtifact
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::associateCreatedArtifact
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateCreatedArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ AssociateCreatedArtifactRequest::AssociateCreatedArtifactRequest(const Associate
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateCreatedArtifactRequest object.
  */
 AssociateCreatedArtifactRequest::AssociateCreatedArtifactRequest()
@@ -53,13 +58,16 @@ AssociateCreatedArtifactRequest::AssociateCreatedArtifactRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateCreatedArtifactRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateCreatedArtifactResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNe
     return new AssociateCreatedArtifactResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateCreatedArtifactRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNe
  * @brief  Private implementation for AssociateCreatedArtifactRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateCreatedArtifactRequestPrivate object.
@@ -97,7 +105,7 @@ AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateCreatedArtifactRequestPrivate object, copying another.

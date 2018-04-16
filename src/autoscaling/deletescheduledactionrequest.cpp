@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DeleteScheduledActionRequest
+/*!
+ * \class QtAws::AutoScaling::DeleteScheduledActionRequest
  *
- * @brief  Implements AutoScaling DeleteScheduledAction requests.
+ * \brief The DeleteScheduledActionRequest class encapsulates AutoScaling DeleteScheduledAction requests.
  *
- * @see    AutoScalingClient::deleteScheduledAction
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::deleteScheduledAction
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteScheduledActionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DeleteScheduledActionRequest::DeleteScheduledActionRequest(const DeleteScheduled
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteScheduledActionRequest object.
  */
 DeleteScheduledActionRequest::DeleteScheduledActionRequest()
@@ -53,13 +61,16 @@ DeleteScheduledActionRequest::DeleteScheduledActionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteScheduledActionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteScheduledActionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetwo
     return new DeleteScheduledActionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteScheduledActionRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetwo
  * @brief  Private implementation for DeleteScheduledActionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteScheduledActionRequestPrivate object.
@@ -97,7 +108,7 @@ DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteScheduledActionRequestPrivate object, copying another.

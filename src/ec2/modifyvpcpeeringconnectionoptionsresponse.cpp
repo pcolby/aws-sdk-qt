@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcPeeringConnectionOptionsResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsResponse
  *
- * @brief  Handles EC2 ModifyVpcPeeringConnectionOptions responses.
+ * \brief The ModifyVpcPeeringConnectionOptionsResponse class encapsulates EC2 ModifyVpcPeeringConnectionOptions responses.
  *
- * @see    EC2Client::modifyVpcPeeringConnectionOptions
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcPeeringConnectionOptions
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcPeeringConnectionOptionsRequest * ModifyVpcPeeringConnectionOptio
     return static_cast<const ModifyVpcPeeringConnectionOptionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcPeeringConnectionOptions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcPeeringConnectionOptionsResponse::parseSuccess(QIODevice &response
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcPeeringConnectionOptionsResponsePrivate
+ * \class ModifyVpcPeeringConnectionOptionsResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcPeeringConnectionOptionsResponse.
+ * \brief Private implementation for ModifyVpcPeeringConnectionOptionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcPeeringConnectionOptionsResponsePrivate::ModifyVpcPeeringConnectionOpti
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcPeeringConnectionOptionsResponse element.
  *
  * @param  xml  XML stream to parse.

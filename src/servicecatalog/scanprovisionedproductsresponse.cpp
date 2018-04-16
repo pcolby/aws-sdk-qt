@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ScanProvisionedProductsResponse
+/*!
+ * \class QtAws::ServiceCatalog::ScanProvisionedProductsResponse
  *
- * @brief  Handles ServiceCatalog ScanProvisionedProducts responses.
+ * \brief The ScanProvisionedProductsResponse class encapsulates ServiceCatalog ScanProvisionedProducts responses.
  *
- * @see    ServiceCatalogClient::scanProvisionedProducts
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::scanProvisionedProducts
  */
 
-/**
+/*!
  * @brief  Constructs a new ScanProvisionedProductsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ScanProvisionedProductsRequest * ScanProvisionedProductsResponse::request(
     return static_cast<const ScanProvisionedProductsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ScanProvisionedProducts response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ScanProvisionedProductsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ScanProvisionedProductsResponsePrivate
+ * \class ScanProvisionedProductsResponsePrivate
  *
- * @brief  Private implementation for ScanProvisionedProductsResponse.
+ * \brief Private implementation for ScanProvisionedProductsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScanProvisionedProductsResponsePrivate object.
@@ -91,7 +100,7 @@ ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ScanProvisionedProductsResponse element.
  *
  * @param  xml  XML stream to parse.

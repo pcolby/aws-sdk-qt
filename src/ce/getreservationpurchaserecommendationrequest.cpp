@@ -25,15 +25,31 @@
 namespace QtAws {
 namespace CostExplorer {
 
-/**
- * @class  GetReservationPurchaseRecommendationRequest
+/*!
+ * \class QtAws::CostExplorer::GetReservationPurchaseRecommendationRequest
  *
- * @brief  Implements CostExplorer GetReservationPurchaseRecommendation requests.
+ * \brief The GetReservationPurchaseRecommendationRequest class encapsulates CostExplorer GetReservationPurchaseRecommendation requests.
  *
- * @see    CostExplorerClient::getReservationPurchaseRecommendation
+ * \ingroup CostExplorer
+ *
+ *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
+ *  write operations for DynamoDB database tables in your production environment.
+ * 
+ *  </p
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The Cost Explorer API provides the following
+ * 
+ *  endpoint> <ul> <li>
+ *
+ * \sa CostExplorerClient::getReservationPurchaseRecommendation
  */
 
-/**
+/*!
  * @brief  Constructs a new GetReservationPurchaseRecommendationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +60,7 @@ GetReservationPurchaseRecommendationRequest::GetReservationPurchaseRecommendatio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetReservationPurchaseRecommendationRequest object.
  */
 GetReservationPurchaseRecommendationRequest::GetReservationPurchaseRecommendationRequest()
@@ -53,13 +69,16 @@ GetReservationPurchaseRecommendationRequest::GetReservationPurchaseRecommendatio
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetReservationPurchaseRecommendationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetReservationPurchaseRecommendationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::
     return new GetReservationPurchaseRecommendationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetReservationPurchaseRecommendationRequestPrivate
@@ -82,7 +101,7 @@ QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::
  * @brief  Private implementation for GetReservationPurchaseRecommendationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationPurchaseRecommendationRequestPrivate object.
@@ -97,7 +116,7 @@ GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecomm
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetReservationPurchaseRecommendationRequestPrivate object, copying another.

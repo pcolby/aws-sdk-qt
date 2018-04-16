@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ListTemplatesRequest
+/*!
+ * \class QtAws::SES::ListTemplatesRequest
  *
- * @brief  Implements SES ListTemplates requests.
+ * \brief The ListTemplatesRequest class encapsulates SES ListTemplates requests.
  *
- * @see    SESClient::listTemplates
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::listTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new ListTemplatesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListTemplatesRequest::ListTemplatesRequest(const ListTemplatesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListTemplatesRequest object.
  */
 ListTemplatesRequest::ListTemplatesRequest()
@@ -53,13 +67,16 @@ ListTemplatesRequest::ListTemplatesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListTemplatesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListTemplatesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply 
     return new ListTemplatesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListTemplatesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply 
  * @brief  Private implementation for ListTemplatesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTemplatesRequestPrivate object.
@@ -97,7 +114,7 @@ ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListTemplatesRequestPrivate object, copying another.

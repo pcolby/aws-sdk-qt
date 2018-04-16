@@ -27,15 +27,48 @@
 namespace QtAws {
 namespace Redshift {
 
-/**
- * @class  DisableLoggingResponse
+/*!
+ * \class QtAws::Redshift::DisableLoggingResponse
  *
- * @brief  Handles Redshift DisableLogging responses.
+ * \brief The DisableLoggingResponse class encapsulates Redshift DisableLogging responses.
  *
- * @see    RedshiftClient::disableLogging
+ * \ingroup Redshift
+ *
+ *  <fullname>Amazon Redshift</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is an interface reference for Amazon Redshift. It contains documentation for one of the programming or command line
+ *  interfaces you can use to manage Amazon Redshift clusters. Note that Amazon Redshift is asynchronous, which means that
+ *  some interfaces may require techniques, such as polling or asynchronous callback handlers, to determine when a command
+ *  has been applied. In this reference, the parameter descriptions indicate whether a change is applied immediately, on the
+ *  next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster management
+ *  interfaces, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html">Using the Amazon Redshift
+ *  Management
+ * 
+ *  Interfaces</a>>
+ * 
+ *  Amazon Redshift manages all the work of setting up, operating, and scaling a data warehouse: provisioning capacity,
+ *  monitoring and backing up the cluster, and applying patches and upgrades to the Amazon Redshift engine. You can focus on
+ *  using your data to acquire new insights for your business and
+ * 
+ *  customers>
+ * 
+ *  If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the <a
+ *  href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html">Amazon Redshift Getting Started
+ * 
+ *  Guide</a>>
+ * 
+ *  If you are a database developer, the <a href="http://docs.aws.amazon.com/redshift/latest/dg/welcome.html">Amazon
+ *  Redshift Database Developer Guide</a> explains how to design, build, query, and maintain the databases that make up your
+ *  data warehouse.
+ *
+ * \sa RedshiftClient::disableLogging
  */
 
-/**
+/*!
  * @brief  Constructs a new DisableLoggingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +91,7 @@ const DisableLoggingRequest * DisableLoggingResponse::request() const
     return static_cast<const DisableLoggingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Redshift DisableLogging response.
  *
  * @param  response  Response to parse.
@@ -70,15 +103,15 @@ void DisableLoggingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisableLoggingResponsePrivate
+ * \class DisableLoggingResponsePrivate
  *
- * @brief  Private implementation for DisableLoggingResponse.
+ * \brief Private implementation for DisableLoggingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisableLoggingResponsePrivate object.
@@ -91,7 +124,7 @@ DisableLoggingResponsePrivate::DisableLoggingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Redshift DisableLoggingResponse element.
  *
  * @param  xml  XML stream to parse.

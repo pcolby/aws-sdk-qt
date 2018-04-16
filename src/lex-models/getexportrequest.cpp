@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  GetExportRequest
+/*!
+ * \class QtAws::LexModelBuildingService::GetExportRequest
  *
- * @brief  Implements LexModelBuildingService GetExport requests.
+ * \brief The GetExportRequest class encapsulates LexModelBuildingService GetExport requests.
  *
- * @see    LexModelBuildingServiceClient::getExport
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::getExport
  */
 
-/**
+/*!
  * @brief  Constructs a new GetExportRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetExportRequest::GetExportRequest(const GetExportRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetExportRequest object.
  */
 GetExportRequest::GetExportRequest()
@@ -53,13 +60,16 @@ GetExportRequest::GetExportRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetExportRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetExportResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
     return new GetExportResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetExportRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetExportRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExportRequestPrivate object.
@@ -97,7 +107,7 @@ GetExportRequestPrivate::GetExportRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetExportRequestPrivate object, copying another.

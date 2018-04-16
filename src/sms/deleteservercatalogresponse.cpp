@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  DeleteServerCatalogResponse
+/*!
+ * \class QtAws::SMS::DeleteServerCatalogResponse
  *
- * @brief  Handles SMS DeleteServerCatalog responses.
+ * \brief The DeleteServerCatalogResponse class encapsulates SMS DeleteServerCatalog responses.
  *
- * @see    SMSClient::deleteServerCatalog
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::deleteServerCatalog
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteServerCatalogResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteServerCatalogRequest * DeleteServerCatalogResponse::request() const
     return static_cast<const DeleteServerCatalogRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS DeleteServerCatalog response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteServerCatalogResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteServerCatalogResponsePrivate
+ * \class DeleteServerCatalogResponsePrivate
  *
- * @brief  Private implementation for DeleteServerCatalogResponse.
+ * \brief Private implementation for DeleteServerCatalogResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteServerCatalogResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS DeleteServerCatalogResponse element.
  *
  * @param  xml  XML stream to parse.

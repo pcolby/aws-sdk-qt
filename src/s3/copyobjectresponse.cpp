@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  CopyObjectResponse
+/*!
+ * \class QtAws::S3::CopyObjectResponse
  *
- * @brief  Handles S3 CopyObject responses.
+ * \brief The CopyObjectResponse class encapsulates S3 CopyObject responses.
  *
- * @see    S3Client::copyObject
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::copyObject
  */
 
-/**
+/*!
  * @brief  Constructs a new CopyObjectResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const CopyObjectRequest * CopyObjectResponse::request() const
     return static_cast<const CopyObjectRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 CopyObject response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void CopyObjectResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CopyObjectResponsePrivate
+ * \class CopyObjectResponsePrivate
  *
- * @brief  Private implementation for CopyObjectResponse.
+ * \brief Private implementation for CopyObjectResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CopyObjectResponsePrivate object.
@@ -91,7 +94,7 @@ CopyObjectResponsePrivate::CopyObjectResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 CopyObjectResponse element.
  *
  * @param  xml  XML stream to parse.

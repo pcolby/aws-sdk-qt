@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListOfferingTransactionsResponse
+/*!
+ * \class QtAws::DeviceFarm::ListOfferingTransactionsResponse
  *
- * @brief  Handles DeviceFarm ListOfferingTransactions responses.
+ * \brief The ListOfferingTransactionsResponse class encapsulates DeviceFarm ListOfferingTransactions responses.
  *
- * @see    DeviceFarmClient::listOfferingTransactions
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listOfferingTransactions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOfferingTransactionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const ListOfferingTransactionsRequest * ListOfferingTransactionsResponse::reques
     return static_cast<const ListOfferingTransactionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm ListOfferingTransactions response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void ListOfferingTransactionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListOfferingTransactionsResponsePrivate
+ * \class ListOfferingTransactionsResponsePrivate
  *
- * @brief  Private implementation for ListOfferingTransactionsResponse.
+ * \brief Private implementation for ListOfferingTransactionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOfferingTransactionsResponsePrivate object.
@@ -91,7 +96,7 @@ ListOfferingTransactionsResponsePrivate::ListOfferingTransactionsResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm ListOfferingTransactionsResponse element.
  *
  * @param  xml  XML stream to parse.

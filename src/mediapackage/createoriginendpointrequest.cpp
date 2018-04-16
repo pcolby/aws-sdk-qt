@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaPackage {
 
-/**
- * @class  CreateOriginEndpointRequest
+/*!
+ * \class QtAws::MediaPackage::CreateOriginEndpointRequest
  *
- * @brief  Implements MediaPackage CreateOriginEndpoint requests.
+ * \brief The CreateOriginEndpointRequest class encapsulates MediaPackage CreateOriginEndpoint requests.
  *
- * @see    MediaPackageClient::createOriginEndpoint
+ * \ingroup MediaPackage
+ *
+ *
+ * \sa MediaPackageClient::createOriginEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateOriginEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateOriginEndpointRequest::CreateOriginEndpointRequest(const CreateOriginEndpo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateOriginEndpointRequest object.
  */
 CreateOriginEndpointRequest::CreateOriginEndpointRequest()
@@ -53,13 +56,16 @@ CreateOriginEndpointRequest::CreateOriginEndpointRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateOriginEndpointRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateOriginEndpointResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetwor
     return new CreateOriginEndpointResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateOriginEndpointRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetwor
  * @brief  Private implementation for CreateOriginEndpointRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOriginEndpointRequestPrivate object.
@@ -97,7 +103,7 @@ CreateOriginEndpointRequestPrivate::CreateOriginEndpointRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOriginEndpointRequestPrivate object, copying another.

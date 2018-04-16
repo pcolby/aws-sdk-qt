@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ECR {
 
-/**
- * @class  ListImagesRequest
+/*!
+ * \class QtAws::ECR::ListImagesRequest
  *
- * @brief  Implements ECR ListImages requests.
+ * \brief The ListImagesRequest class encapsulates ECR ListImages requests.
  *
- * @see    ECRClient::listImages
+ * \ingroup ECR
+ *
+ *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
+ *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
+ *  supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
+ *  instances can access repositories and images. Developers can use the Docker CLI to author and manage
+ *
+ * \sa ECRClient::listImages
  */
 
-/**
+/*!
  * @brief  Constructs a new ListImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListImagesRequest object.
  */
 ListImagesRequest::ListImagesRequest()
@@ -53,13 +60,16 @@ ListImagesRequest::ListImagesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListImagesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListImagesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
     return new ListImagesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListImagesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
  * @brief  Private implementation for ListImagesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListImagesRequestPrivate object.
@@ -97,7 +107,7 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListImagesRequestPrivate object, copying another.

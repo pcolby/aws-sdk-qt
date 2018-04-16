@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  ExecutePolicyRequest
+/*!
+ * \class QtAws::AutoScaling::ExecutePolicyRequest
  *
- * @brief  Implements AutoScaling ExecutePolicy requests.
+ * \brief The ExecutePolicyRequest class encapsulates AutoScaling ExecutePolicy requests.
  *
- * @see    AutoScalingClient::executePolicy
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::executePolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new ExecutePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ExecutePolicyRequest::ExecutePolicyRequest(const ExecutePolicyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ExecutePolicyRequest object.
  */
 ExecutePolicyRequest::ExecutePolicyRequest()
@@ -53,13 +61,16 @@ ExecutePolicyRequest::ExecutePolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ExecutePolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ExecutePolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply 
     return new ExecutePolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ExecutePolicyRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply 
  * @brief  Private implementation for ExecutePolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExecutePolicyRequestPrivate object.
@@ -97,7 +108,7 @@ ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ExecutePolicyRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  DeleteWebACLResponse
+/*!
+ * \class QtAws::WAF::DeleteWebACLResponse
  *
- * @brief  Handles WAF DeleteWebACL responses.
+ * \brief The DeleteWebACLResponse class encapsulates WAF DeleteWebACL responses.
  *
- * @see    WAFClient::deleteWebACL
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::deleteWebACL
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteWebACLResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteWebACLRequest * DeleteWebACLResponse::request() const
     return static_cast<const DeleteWebACLRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF DeleteWebACL response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteWebACLResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteWebACLResponsePrivate
+ * \class DeleteWebACLResponsePrivate
  *
- * @brief  Private implementation for DeleteWebACLResponse.
+ * \brief Private implementation for DeleteWebACLResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteWebACLResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF DeleteWebACLResponse element.
  *
  * @param  xml  XML stream to parse.

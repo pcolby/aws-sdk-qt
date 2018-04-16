@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  MoveAddressToVpcResponse
+/*!
+ * \class QtAws::EC2::MoveAddressToVpcResponse
  *
- * @brief  Handles EC2 MoveAddressToVpc responses.
+ * \brief The MoveAddressToVpcResponse class encapsulates EC2 MoveAddressToVpc responses.
  *
- * @see    EC2Client::moveAddressToVpc
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::moveAddressToVpc
  */
 
-/**
+/*!
  * @brief  Constructs a new MoveAddressToVpcResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const MoveAddressToVpcRequest * MoveAddressToVpcResponse::request() const
     return static_cast<const MoveAddressToVpcRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 MoveAddressToVpc response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void MoveAddressToVpcResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  MoveAddressToVpcResponsePrivate
+ * \class MoveAddressToVpcResponsePrivate
  *
- * @brief  Private implementation for MoveAddressToVpcResponse.
+ * \brief Private implementation for MoveAddressToVpcResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MoveAddressToVpcResponsePrivate object.
@@ -91,7 +98,7 @@ MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 MoveAddressToVpcResponse element.
  *
  * @param  xml  XML stream to parse.

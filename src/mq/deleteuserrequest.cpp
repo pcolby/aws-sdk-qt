@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  DeleteUserRequest
+/*!
+ * \class QtAws::MQ::DeleteUserRequest
  *
- * @brief  Implements MQ DeleteUser requests.
+ * \brief The DeleteUserRequest class encapsulates MQ DeleteUser requests.
  *
- * @see    MQClient::deleteUser
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::deleteUser
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
@@ -53,13 +58,16 @@ DeleteUserRequest::DeleteUserRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteUserRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteUserResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
     return new DeleteUserResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteUserRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteUserRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserRequestPrivate object.
@@ -97,7 +105,7 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteUserRequestPrivate object, copying another.

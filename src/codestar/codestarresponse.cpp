@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace CodeStar {
 
-/**
- * @class  CodeStarResponse
+/*!
+ * \class QtAws::CodeStar::CodeStarResponse
  *
- * @brief  Handles CodeStar CodeStar responses.
+ * \brief The CodeStarResponse class is the base class for all CodeStar responses.
  *
- * @see    CodeStarClient::codeStar
+ * \ingroup CodeStar
  */
 
-/**
+/*!
  * @brief  Constructs a new CodeStarResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ CodeStarResponse::CodeStarResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeStarResponse object.
@@ -63,7 +63,7 @@ CodeStarResponse::CodeStarResponse(CodeStarResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void CodeStarResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CodeStarResponsePrivate
@@ -92,7 +92,7 @@ void CodeStarResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for CodeStarResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CodeStarResponsePrivate object.

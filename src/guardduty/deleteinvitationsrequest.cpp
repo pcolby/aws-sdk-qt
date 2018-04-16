@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  DeleteInvitationsRequest
+/*!
+ * \class QtAws::GuardDuty::DeleteInvitationsRequest
  *
- * @brief  Implements GuardDuty DeleteInvitations requests.
+ * \brief The DeleteInvitationsRequest class encapsulates GuardDuty DeleteInvitations requests.
  *
- * @see    GuardDutyClient::deleteInvitations
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::deleteInvitations
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteInvitationsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteInvitationsRequest::DeleteInvitationsRequest(const DeleteInvitationsReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteInvitationsRequest object.
  */
 DeleteInvitationsRequest::DeleteInvitationsRequest()
@@ -53,13 +56,16 @@ DeleteInvitationsRequest::DeleteInvitationsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteInvitationsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteInvitationsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInvitationsRequest::response(QNetworkRe
     return new DeleteInvitationsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteInvitationsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteInvitationsRequest::response(QNetworkRe
  * @brief  Private implementation for DeleteInvitationsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInvitationsRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteInvitationsRequestPrivate object, copying another.

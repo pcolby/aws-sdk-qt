@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  ListMultipartUploadsResponse
+/*!
+ * \class QtAws::S3::ListMultipartUploadsResponse
  *
- * @brief  Handles S3 ListMultipartUploads responses.
+ * \brief The ListMultipartUploadsResponse class encapsulates S3 ListMultipartUploads responses.
  *
- * @see    S3Client::listMultipartUploads
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::listMultipartUploads
  */
 
-/**
+/*!
  * @brief  Constructs a new ListMultipartUploadsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() cons
     return static_cast<const ListMultipartUploadsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 ListMultipartUploads response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListMultipartUploadsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListMultipartUploadsResponsePrivate
+ * \class ListMultipartUploadsResponsePrivate
  *
- * @brief  Private implementation for ListMultipartUploadsResponse.
+ * \brief Private implementation for ListMultipartUploadsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMultipartUploadsResponsePrivate object.
@@ -91,7 +94,7 @@ ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 ListMultipartUploadsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SageMakerRuntime {
 
-/**
- * @class  SageMakerRuntimeResponse
+/*!
+ * \class QtAws::SageMakerRuntime::SageMakerRuntimeResponse
  *
- * @brief  Handles SageMakerRuntime SageMakerRuntime responses.
+ * \brief The SageMakerRuntimeResponse class is the base class for all SageMakerRuntime responses.
  *
- * @see    SageMakerRuntimeClient::sageMakerRuntime
+ * \ingroup SageMakerRuntime
  */
 
-/**
+/*!
  * @brief  Constructs a new SageMakerRuntimeResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SageMakerRuntimeResponse::SageMakerRuntimeResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SageMakerRuntimeResponse object.
@@ -63,7 +63,7 @@ SageMakerRuntimeResponse::SageMakerRuntimeResponse(SageMakerRuntimeResponsePriva
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SageMakerRuntimeResponsePrivate
@@ -92,7 +92,7 @@ void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SageMakerRuntimeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SageMakerRuntimeResponsePrivate object.

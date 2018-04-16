@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketReplicationRequest
+/*!
+ * \class QtAws::S3::GetBucketReplicationRequest
  *
- * @brief  Implements S3 GetBucketReplication requests.
+ * \brief The GetBucketReplicationRequest class encapsulates S3 GetBucketReplication requests.
  *
- * @see    S3Client::getBucketReplication
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketReplication
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketReplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetBucketReplicationRequest::GetBucketReplicationRequest(const GetBucketReplicat
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBucketReplicationRequest object.
  */
 GetBucketReplicationRequest::GetBucketReplicationRequest()
@@ -53,13 +56,16 @@ GetBucketReplicationRequest::GetBucketReplicationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBucketReplicationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBucketReplicationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketReplicationRequest::response(QNetwor
     return new GetBucketReplicationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBucketReplicationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetBucketReplicationRequest::response(QNetwor
  * @brief  Private implementation for GetBucketReplicationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketReplicationRequestPrivate object.
@@ -97,7 +103,7 @@ GetBucketReplicationRequestPrivate::GetBucketReplicationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketReplicationRequestPrivate object, copying another.

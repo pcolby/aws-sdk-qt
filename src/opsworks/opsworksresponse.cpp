@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace OpsWorks {
 
-/**
- * @class  OpsWorksResponse
+/*!
+ * \class QtAws::OpsWorks::OpsWorksResponse
  *
- * @brief  Handles OpsWorks OpsWorks responses.
+ * \brief The OpsWorksResponse class is the base class for all OpsWorks responses.
  *
- * @see    OpsWorksClient::opsWorks
+ * \ingroup OpsWorks
  */
 
-/**
+/*!
  * @brief  Constructs a new OpsWorksResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ OpsWorksResponse::OpsWorksResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new OpsWorksResponse object.
@@ -63,7 +63,7 @@ OpsWorksResponse::OpsWorksResponse(OpsWorksResponsePrivate * const d, QObject * 
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void OpsWorksResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  OpsWorksResponsePrivate
@@ -92,7 +92,7 @@ void OpsWorksResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for OpsWorksResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new OpsWorksResponsePrivate object.

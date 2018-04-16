@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  DescribeJobFlowsRequest
+/*!
+ * \class QtAws::EMR::DescribeJobFlowsRequest
  *
- * @brief  Implements EMR DescribeJobFlows requests.
+ * \brief The DescribeJobFlowsRequest class encapsulates EMR DescribeJobFlows requests.
  *
- * @see    EMRClient::describeJobFlows
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::describeJobFlows
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobFlowsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeJobFlowsRequest::DescribeJobFlowsRequest(const DescribeJobFlowsRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeJobFlowsRequest object.
  */
 DescribeJobFlowsRequest::DescribeJobFlowsRequest()
@@ -53,13 +59,16 @@ DescribeJobFlowsRequest::DescribeJobFlowsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeJobFlowsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeJobFlowsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
     return new DescribeJobFlowsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeJobFlowsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeJobFlowsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobFlowsRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeJobFlowsRequestPrivate object, copying another.

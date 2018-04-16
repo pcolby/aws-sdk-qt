@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateModelResponse
+/*!
+ * \class QtAws::APIGateway::UpdateModelResponse
  *
- * @brief  Handles APIGateway UpdateModel responses.
+ * \brief The UpdateModelResponse class encapsulates APIGateway UpdateModel responses.
  *
- * @see    APIGatewayClient::updateModel
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateModel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateModelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateModelRequest * UpdateModelResponse::request() const
     return static_cast<const UpdateModelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateModel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateModelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateModelResponsePrivate
+ * \class UpdateModelResponsePrivate
  *
- * @brief  Private implementation for UpdateModelResponse.
+ * \brief Private implementation for UpdateModelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateModelResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateModelResponsePrivate::UpdateModelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateModelResponse element.
  *
  * @param  xml  XML stream to parse.

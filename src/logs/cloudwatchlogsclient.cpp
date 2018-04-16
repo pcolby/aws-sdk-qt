@@ -91,52 +91,60 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudWatchLogs
+ * \brief The QtAws::CloudWatchLogs contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudWatchLogs {
 
-/**
- * @class  CloudWatchLogsClient
+/*!
+ * \class QtAws::CloudWatchLogs::CloudWatchLogsClient
  *
- * @brief  Client for Amazon CloudWatch Logs
+ * \brief The CloudWatchLogsClient class provides access the Amazon CloudWatch Logs service.
  *
- * You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
- * CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
- * console, CloudWatch Logs commands in the AWS CLI, CloudWatch Logs API, or CloudWatch Logs
+ * \ingroup CloudWatchLogs
  *
- * SDK>
- *
- * You can use CloudWatch Logs
- *
- * to> <ul> <li>
- *
- * <b>Monitor logs from EC2 instances in real-time</b>: You can use CloudWatch Logs to monitor applications and systems
- * using log data. For example, CloudWatch Logs can track the number of errors that occur in your application logs and send
- * you a notification whenever the rate of errors exceeds a threshold that you specify. CloudWatch Logs uses your log data
- * for monitoring; so, no code changes are required. For example, you can monitor application logs for specific literal
- * terms (such as "NullReferenceException") or count the number of occurrences of a literal term at a particular position
- * in log data (such as "404" status codes in an Apache access log). When the term you are searching for is found,
- * CloudWatch Logs reports the data to a CloudWatch metric that you
- *
- * specify> </li> <li>
- *
- * <b>Monitor AWS CloudTrail logged events</b>: You can create alarms in CloudWatch and receive notifications of particular
- * API activity as captured by CloudTrail and use the notification to perform
- *
- * troubleshooting> </li> <li>
- *
- * <b>Archive log data</b>: You can use CloudWatch Logs to store your log data in highly durable storage. You can change
- * the log retention setting so that any log events older than this setting are automatically deleted. The CloudWatch Logs
- * agent makes it easy to quickly send both rotated and non-rotated log data off of a host and into the log service. You
- * can then access the raw log data when you need
+ *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
+ *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
+ *  console, CloudWatch Logs commands in the AWS CLI, CloudWatch Logs API, or CloudWatch Logs
+ * 
+ *  SDK>
+ * 
+ *  You can use CloudWatch Logs
+ * 
+ *  to> <ul> <li>
+ * 
+ *  <b>Monitor logs from EC2 instances in real-time</b>: You can use CloudWatch Logs to monitor applications and systems
+ *  using log data. For example, CloudWatch Logs can track the number of errors that occur in your application logs and send
+ *  you a notification whenever the rate of errors exceeds a threshold that you specify. CloudWatch Logs uses your log data
+ *  for monitoring; so, no code changes are required. For example, you can monitor application logs for specific literal
+ *  terms (such as "NullReferenceException") or count the number of occurrences of a literal term at a particular position
+ *  in log data (such as "404" status codes in an Apache access log). When the term you are searching for is found,
+ *  CloudWatch Logs reports the data to a CloudWatch metric that you
+ * 
+ *  specify> </li> <li>
+ * 
+ *  <b>Monitor AWS CloudTrail logged events</b>: You can create alarms in CloudWatch and receive notifications of particular
+ *  API activity as captured by CloudTrail and use the notification to perform
+ * 
+ *  troubleshooting> </li> <li>
+ * 
+ *  <b>Archive log data</b>: You can use CloudWatch Logs to store your log data in highly durable storage. You can change
+ *  the log retention setting so that any log events older than this setting are automatically deleted. The CloudWatch Logs
+ *  agent makes it easy to quickly send both rotated and non-rotated log data off of a host and into the log service. You
+ *  can then access the raw log data when you need
  */
 
-/**
- * @brief  Constructs a new CloudWatchLogsClient object.
+/*!
+ * \brief Constructs a CloudWatchLogsClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudWatchLogsClient::CloudWatchLogsClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -155,21 +163,16 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     d->serviceName = QStringLiteral("logs");
 }
 
-/**
- * @brief  Constructs a new CloudWatchLogsClient object.
+/*!
+ * \overload CloudWatchLogsClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudWatchLogsClient::CloudWatchLogsClient(
     const QUrl &endpoint,
@@ -188,7 +191,7 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     d->serviceName = QStringLiteral("logs");
 }
 
-/**
+/*!
  * Associates the specified AWS Key Management Service (AWS KMS) customer master key (CMK) with the specified log
  *
  * group>
@@ -218,7 +221,7 @@ AssociateKmsKeyResponse * CloudWatchLogsClient::associateKmsKey(const AssociateK
     return qobject_cast<AssociateKmsKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Cancels the specified export
  *
  * task>
@@ -236,7 +239,7 @@ CancelExportTaskResponse * CloudWatchLogsClient::cancelExportTask(const CancelEx
     return qobject_cast<CancelExportTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates an export task, which allows you to efficiently export data from a log group to an Amazon S3
  *
  * bucket>
@@ -262,7 +265,7 @@ CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateEx
     return qobject_cast<CreateExportTaskResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a log group with the specified
  *
  * name>
@@ -308,7 +311,7 @@ CreateLogGroupResponse * CloudWatchLogsClient::createLogGroup(const CreateLogGro
     return qobject_cast<CreateLogGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a log stream for the specified log
  *
  * group>
@@ -342,7 +345,7 @@ CreateLogStreamResponse * CloudWatchLogsClient::createLogStream(const CreateLogS
     return qobject_cast<CreateLogStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified destination, and eventually disables all the subscription filters that publish to it. This
  * operation does not delete the physical resource encapsulated by the
  *
@@ -357,7 +360,7 @@ DeleteDestinationResponse * CloudWatchLogsClient::deleteDestination(const Delete
     return qobject_cast<DeleteDestinationResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified log group and permanently deletes all the archived log events associated with the log
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -371,7 +374,7 @@ DeleteLogGroupResponse * CloudWatchLogsClient::deleteLogGroup(const DeleteLogGro
     return qobject_cast<DeleteLogGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified log stream and permanently deletes all the archived log events associated with the log
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -385,7 +388,7 @@ DeleteLogStreamResponse * CloudWatchLogsClient::deleteLogStream(const DeleteLogS
     return qobject_cast<DeleteLogStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified metric
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -399,7 +402,7 @@ DeleteMetricFilterResponse * CloudWatchLogsClient::deleteMetricFilter(const Dele
     return qobject_cast<DeleteMetricFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a resource policy from this account. This revokes the access of the identities in that policy to put log events
  * to this
  *
@@ -414,7 +417,7 @@ DeleteResourcePolicyResponse * CloudWatchLogsClient::deleteResourcePolicy(const 
     return qobject_cast<DeleteResourcePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified retention
  *
  * policy>
@@ -432,7 +435,7 @@ DeleteRetentionPolicyResponse * CloudWatchLogsClient::deleteRetentionPolicy(cons
     return qobject_cast<DeleteRetentionPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified subscription
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -446,7 +449,7 @@ DeleteSubscriptionFilterResponse * CloudWatchLogsClient::deleteSubscriptionFilte
     return qobject_cast<DeleteSubscriptionFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all your destinations. The results are ASCII-sorted by destination
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -460,7 +463,7 @@ DescribeDestinationsResponse * CloudWatchLogsClient::describeDestinations(const 
     return qobject_cast<DescribeDestinationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the specified export tasks. You can list all your export tasks or filter the results based on task ID or task
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -474,7 +477,7 @@ DescribeExportTasksResponse * CloudWatchLogsClient::describeExportTasks(const De
     return qobject_cast<DescribeExportTasksResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the specified log groups. You can list all your log groups or filter the results by prefix. The results are
  * ASCII-sorted by log group
  *
@@ -489,7 +492,7 @@ DescribeLogGroupsResponse * CloudWatchLogsClient::describeLogGroups(const Descri
     return qobject_cast<DescribeLogGroupsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the log streams for the specified log group. You can list all the log streams or filter the results by prefix. You
  * can also control how the results are
  *
@@ -508,7 +511,7 @@ DescribeLogStreamsResponse * CloudWatchLogsClient::describeLogStreams(const Desc
     return qobject_cast<DescribeLogStreamsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the specified metric filters. You can list all the metric filters or filter the results by log name, prefix,
  * metric name, or metric namespace. The results are ASCII-sorted by filter
  *
@@ -523,7 +526,7 @@ DescribeMetricFiltersResponse * CloudWatchLogsClient::describeMetricFilters(cons
     return qobject_cast<DescribeMetricFiltersResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the resource policies in this
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -537,7 +540,7 @@ DescribeResourcePoliciesResponse * CloudWatchLogsClient::describeResourcePolicie
     return qobject_cast<DescribeResourcePoliciesResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the subscription filters for the specified log group. You can list all the subscription filters or filter the
  * results by prefix. The results are ASCII-sorted by filter
  *
@@ -552,7 +555,7 @@ DescribeSubscriptionFiltersResponse * CloudWatchLogsClient::describeSubscription
     return qobject_cast<DescribeSubscriptionFiltersResponse *>(send(request));
 }
 
-/**
+/*!
  * Disassociates the associated AWS Key Management Service (AWS KMS) customer master key (CMK) from the specified log
  *
  * group>
@@ -576,7 +579,7 @@ DisassociateKmsKeyResponse * CloudWatchLogsClient::disassociateKmsKey(const Disa
     return qobject_cast<DisassociateKmsKeyResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists log events from the specified log group. You can list all the log events or filter the results using a filter
  * pattern, a time range, and the name of the log
  *
@@ -597,7 +600,7 @@ FilterLogEventsResponse * CloudWatchLogsClient::filterLogEvents(const FilterLogE
     return qobject_cast<FilterLogEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists log events from the specified log stream. You can list all the log events or filter using a time
  *
  * range>
@@ -616,7 +619,7 @@ GetLogEventsResponse * CloudWatchLogsClient::getLogEvents(const GetLogEventsRequ
     return qobject_cast<GetLogEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags for the specified log
  *
  * @param  request Request to send to Amazon CloudWatch Logs.
@@ -630,7 +633,7 @@ ListTagsLogGroupResponse * CloudWatchLogsClient::listTagsLogGroup(const ListTags
     return qobject_cast<ListTagsLogGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a destination. A destination encapsulates a physical resource (such as an Amazon Kinesis stream) and
  * enables you to subscribe to a real-time stream of log events for a different account, ingested using
  * <a>PutLogEvents</a>. Currently, the only supported physical resource is a Kinesis stream belonging to the same account
@@ -654,7 +657,7 @@ PutDestinationResponse * CloudWatchLogsClient::putDestination(const PutDestinati
     return qobject_cast<PutDestinationResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates an access policy associated with an existing destination. An access policy is an <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies_overview.html">IAM policy document</a> that is used to
  * authorize claims to register a subscription filter against a given
@@ -670,7 +673,7 @@ PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const 
     return qobject_cast<PutDestinationPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Uploads a batch of log events to the specified log
  *
  * stream>
@@ -721,7 +724,7 @@ PutLogEventsResponse * CloudWatchLogsClient::putLogEvents(const PutLogEventsRequ
     return qobject_cast<PutLogEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a metric filter and associates it with the specified log group. Metric filters allow you to configure
  * rules to extract metric data from log events ingested through
  *
@@ -740,7 +743,7 @@ PutMetricFilterResponse * CloudWatchLogsClient::putMetricFilter(const PutMetricF
     return qobject_cast<PutMetricFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a resource policy allowing other AWS services to put log events to this account, such as Amazon Route
  * 53. An account can have up to 50 resource policies per
  *
@@ -755,7 +758,7 @@ PutResourcePolicyResponse * CloudWatchLogsClient::putResourcePolicy(const PutRes
     return qobject_cast<PutResourcePolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets the retention of the specified log group. A retention policy allows you to configure the number of days for which
  * to retain log events in the specified log
  *
@@ -770,7 +773,7 @@ PutRetentionPolicyResponse * CloudWatchLogsClient::putRetentionPolicy(const PutR
     return qobject_cast<PutRetentionPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates or updates a subscription filter and associates it with the specified log group. Subscription filters allow you
  * to subscribe to a real-time stream of log events ingested through <a>PutLogEvents</a> and have them delivered to a
  * specific destination. Currently, the supported destinations
@@ -808,7 +811,7 @@ PutSubscriptionFilterResponse * CloudWatchLogsClient::putSubscriptionFilter(cons
     return qobject_cast<PutSubscriptionFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Adds or updates the specified tags for the specified log
  *
  * group>
@@ -832,7 +835,7 @@ TagLogGroupResponse * CloudWatchLogsClient::tagLogGroup(const TagLogGroupRequest
     return qobject_cast<TagLogGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * Tests the filter pattern of a metric filter against a sample of log event messages. You can use this operation to
  * validate the correctness of a metric filter
  *
@@ -847,7 +850,7 @@ TestMetricFilterResponse * CloudWatchLogsClient::testMetricFilter(const TestMetr
     return qobject_cast<TestMetricFilterResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes the specified tags from the specified log
  *
  * group>
@@ -865,7 +868,7 @@ UntagLogGroupResponse * CloudWatchLogsClient::untagLogGroup(const UntagLogGroupR
     return qobject_cast<UntagLogGroupResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudWatchLogsClientPrivate
@@ -873,7 +876,7 @@ UntagLogGroupResponse * CloudWatchLogsClient::untagLogGroup(const UntagLogGroupR
  * @brief  Private implementation for CloudWatchLogsClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudWatchLogsClientPrivate object.

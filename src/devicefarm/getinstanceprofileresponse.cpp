@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  GetInstanceProfileResponse
+/*!
+ * \class QtAws::DeviceFarm::GetInstanceProfileResponse
  *
- * @brief  Handles DeviceFarm GetInstanceProfile responses.
+ * \brief The GetInstanceProfileResponse class encapsulates DeviceFarm GetInstanceProfile responses.
  *
- * @see    DeviceFarmClient::getInstanceProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::getInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new GetInstanceProfileResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const GetInstanceProfileRequest * GetInstanceProfileResponse::request() const
     return static_cast<const GetInstanceProfileRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm GetInstanceProfile response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void GetInstanceProfileResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetInstanceProfileResponsePrivate
+ * \class GetInstanceProfileResponsePrivate
  *
- * @brief  Private implementation for GetInstanceProfileResponse.
+ * \brief Private implementation for GetInstanceProfileResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetInstanceProfileResponsePrivate object.
@@ -91,7 +96,7 @@ GetInstanceProfileResponsePrivate::GetInstanceProfileResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm GetInstanceProfileResponse element.
  *
  * @param  xml  XML stream to parse.

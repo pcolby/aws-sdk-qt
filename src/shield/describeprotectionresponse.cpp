@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace Shield {
 
-/**
- * @class  DescribeProtectionResponse
+/*!
+ * \class QtAws::Shield::DescribeProtectionResponse
  *
- * @brief  Handles Shield DescribeProtection responses.
+ * \brief The DescribeProtectionResponse class encapsulates Shield DescribeProtection responses.
  *
- * @see    ShieldClient::describeProtection
+ * \ingroup Shield
+ *
+ *  <fullname>AWS Shield Advanced</fullname>
+ * 
+ *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
+ *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
+ *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *
+ * \sa ShieldClient::describeProtection
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProtectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DescribeProtectionRequest * DescribeProtectionResponse::request() const
     return static_cast<const DescribeProtectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Shield DescribeProtection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DescribeProtectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeProtectionResponsePrivate
+ * \class DescribeProtectionResponsePrivate
  *
- * @brief  Private implementation for DescribeProtectionResponse.
+ * \brief Private implementation for DescribeProtectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProtectionResponsePrivate object.
@@ -91,7 +100,7 @@ DescribeProtectionResponsePrivate::DescribeProtectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Shield DescribeProtectionResponse element.
  *
  * @param  xml  XML stream to parse.

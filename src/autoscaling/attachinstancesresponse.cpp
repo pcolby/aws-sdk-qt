@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AttachInstancesResponse
+/*!
+ * \class QtAws::AutoScaling::AttachInstancesResponse
  *
- * @brief  Handles AutoScaling AttachInstances responses.
+ * \brief The AttachInstancesResponse class encapsulates AutoScaling AttachInstances responses.
  *
- * @see    AutoScalingClient::attachInstances
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::attachInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachInstancesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const AttachInstancesRequest * AttachInstancesResponse::request() const
     return static_cast<const AttachInstancesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling AttachInstances response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void AttachInstancesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachInstancesResponsePrivate
+ * \class AttachInstancesResponsePrivate
  *
- * @brief  Private implementation for AttachInstancesResponse.
+ * \brief Private implementation for AttachInstancesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachInstancesResponsePrivate object.
@@ -91,7 +99,7 @@ AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling AttachInstancesResponse element.
  *
  * @param  xml  XML stream to parse.

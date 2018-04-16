@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteApnsVoipSandboxChannelResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteApnsVoipSandboxChannelResponse
  *
- * @brief  Handles Pinpoint DeleteApnsVoipSandboxChannel responses.
+ * \brief The DeleteApnsVoipSandboxChannelResponse class encapsulates Pinpoint DeleteApnsVoipSandboxChannel responses.
  *
- * @see    PinpointClient::deleteApnsVoipSandboxChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteApnsVoipSandboxChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteApnsVoipSandboxChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteApnsVoipSandboxChannelRequest * DeleteApnsVoipSandboxChannelResponse
     return static_cast<const DeleteApnsVoipSandboxChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteApnsVoipSandboxChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteApnsVoipSandboxChannelResponsePrivate
+ * \class DeleteApnsVoipSandboxChannelResponsePrivate
  *
- * @brief  Private implementation for DeleteApnsVoipSandboxChannelResponse.
+ * \brief Private implementation for DeleteApnsVoipSandboxChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteApnsVoipSandboxChannelResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteApnsVoipSandboxChannelResponsePrivate::DeleteApnsVoipSandboxChannelRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteApnsVoipSandboxChannelResponse element.
  *
  * @param  xml  XML stream to parse.

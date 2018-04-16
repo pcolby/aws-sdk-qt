@@ -27,15 +27,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  RegisterActivityTypeResponse
+/*!
+ * \class QtAws::SWF::RegisterActivityTypeResponse
  *
- * @brief  Handles SWF RegisterActivityType responses.
+ * \brief The RegisterActivityTypeResponse class encapsulates SWF RegisterActivityType responses.
  *
- * @see    SWFClient::registerActivityType
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::registerActivityType
  */
 
-/**
+/*!
  * @brief  Constructs a new RegisterActivityTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +77,7 @@ const RegisterActivityTypeRequest * RegisterActivityTypeResponse::request() cons
     return static_cast<const RegisterActivityTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SWF RegisterActivityType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +89,15 @@ void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RegisterActivityTypeResponsePrivate
+ * \class RegisterActivityTypeResponsePrivate
  *
- * @brief  Private implementation for RegisterActivityTypeResponse.
+ * \brief Private implementation for RegisterActivityTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RegisterActivityTypeResponsePrivate object.
@@ -91,7 +110,7 @@ RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SWF RegisterActivityTypeResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,48 @@
 namespace QtAws {
 namespace MarketplaceMetering {
 
-/**
- * @class  BatchMeterUsageResponse
+/*!
+ * \class QtAws::MarketplaceMetering::BatchMeterUsageResponse
  *
- * @brief  Handles MarketplaceMetering BatchMeterUsage responses.
+ * \brief The BatchMeterUsageResponse class encapsulates MarketplaceMetering BatchMeterUsage responses.
  *
- * @see    MarketplaceMeteringClient::batchMeterUsage
+ * \ingroup MarketplaceMetering
+ *
+ *  <fullname>AWS Marketplace Metering Service</fullname>
+ * 
+ *  This reference provides descriptions of the low-level AWS Marketplace Metering Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace sellers can use this API to submit usage data for custom usage
+ * 
+ *  dimensions>
+ * 
+ *  <b>Submitting Metering Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ * 
+ *  instance> </li> <li>
+ * 
+ *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
+ *  software-as-a-service (SaaS)
+ * 
+ *  application> </li> </ul>
+ * 
+ *  <b>Accepting New Customers</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ *  during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
+ *  resolved through this API to obtain a CustomerIdentifier and Product
+ *
+ * \sa MarketplaceMeteringClient::batchMeterUsage
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchMeterUsageResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +91,7 @@ const BatchMeterUsageRequest * BatchMeterUsageResponse::request() const
     return static_cast<const BatchMeterUsageRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MarketplaceMetering BatchMeterUsage response.
  *
  * @param  response  Response to parse.
@@ -70,15 +103,15 @@ void BatchMeterUsageResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchMeterUsageResponsePrivate
+ * \class BatchMeterUsageResponsePrivate
  *
- * @brief  Private implementation for BatchMeterUsageResponse.
+ * \brief Private implementation for BatchMeterUsageResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchMeterUsageResponsePrivate object.
@@ -91,7 +124,7 @@ BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MarketplaceMetering BatchMeterUsageResponse element.
  *
  * @param  xml  XML stream to parse.

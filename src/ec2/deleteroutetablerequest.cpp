@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteRouteTableRequest
+/*!
+ * \class QtAws::EC2::DeleteRouteTableRequest
  *
- * @brief  Implements EC2 DeleteRouteTable requests.
+ * \brief The DeleteRouteTableRequest class encapsulates EC2 DeleteRouteTable requests.
  *
- * @see    EC2Client::deleteRouteTable
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteRouteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteRouteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteRouteTableRequest::DeleteRouteTableRequest(const DeleteRouteTableRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteRouteTableRequest object.
  */
 DeleteRouteTableRequest::DeleteRouteTableRequest()
@@ -53,13 +60,16 @@ DeleteRouteTableRequest::DeleteRouteTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteRouteTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteRouteTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteTableRequest::response(QNetworkRep
     return new DeleteRouteTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteRouteTableRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteTableRequest::response(QNetworkRep
  * @brief  Private implementation for DeleteRouteTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRouteTableRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteRouteTableRequestPrivate::DeleteRouteTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteRouteTableRequestPrivate object, copying another.

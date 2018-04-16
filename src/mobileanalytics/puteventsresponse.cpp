@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace MobileAnalytics {
 
-/**
- * @class  PutEventsResponse
+/*!
+ * \class QtAws::MobileAnalytics::PutEventsResponse
  *
- * @brief  Handles MobileAnalytics PutEvents responses.
+ * \brief The PutEventsResponse class encapsulates MobileAnalytics PutEvents responses.
  *
- * @see    MobileAnalyticsClient::putEvents
+ * \ingroup MobileAnalytics
+ *
+ *  Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
+ *
+ * \sa MobileAnalyticsClient::putEvents
  */
 
-/**
+/*!
  * @brief  Constructs a new PutEventsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const PutEventsRequest * PutEventsResponse::request() const
     return static_cast<const PutEventsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MobileAnalytics PutEvents response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void PutEventsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PutEventsResponsePrivate
+ * \class PutEventsResponsePrivate
  *
- * @brief  Private implementation for PutEventsResponse.
+ * \brief Private implementation for PutEventsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutEventsResponsePrivate object.
@@ -91,7 +95,7 @@ PutEventsResponsePrivate::PutEventsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MobileAnalytics PutEventsResponse element.
  *
  * @param  xml  XML stream to parse.

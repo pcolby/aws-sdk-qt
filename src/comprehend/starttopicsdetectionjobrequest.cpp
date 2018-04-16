@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  StartTopicsDetectionJobRequest
+/*!
+ * \class QtAws::Comprehend::StartTopicsDetectionJobRequest
  *
- * @brief  Implements Comprehend StartTopicsDetectionJob requests.
+ * \brief The StartTopicsDetectionJobRequest class encapsulates Comprehend StartTopicsDetectionJob requests.
  *
- * @see    ComprehendClient::startTopicsDetectionJob
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::startTopicsDetectionJob
  */
 
-/**
+/*!
  * @brief  Constructs a new StartTopicsDetectionJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest(const StartTopics
 
 }
 
-/**
+/*!
  * @brief  Constructs a new StartTopicsDetectionJobRequest object.
  */
 StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest()
@@ -53,13 +59,16 @@ StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool StartTopicsDetectionJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an StartTopicsDetectionJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNet
     return new StartTopicsDetectionJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  StartTopicsDetectionJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNet
  * @brief  Private implementation for StartTopicsDetectionJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTopicsDetectionJobRequestPrivate object.
@@ -97,7 +106,7 @@ StartTopicsDetectionJobRequestPrivate::StartTopicsDetectionJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartTopicsDetectionJobRequestPrivate object, copying another.

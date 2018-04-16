@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  CreateCoreDefinitionVersionRequest
+/*!
+ * \class QtAws::Greengrass::CreateCoreDefinitionVersionRequest
  *
- * @brief  Implements Greengrass CreateCoreDefinitionVersion requests.
+ * \brief The CreateCoreDefinitionVersionRequest class encapsulates Greengrass CreateCoreDefinitionVersion requests.
  *
- * @see    GreengrassClient::createCoreDefinitionVersion
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::createCoreDefinitionVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateCoreDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ CreateCoreDefinitionVersionRequest::CreateCoreDefinitionVersionRequest(const Cre
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateCoreDefinitionVersionRequest object.
  */
 CreateCoreDefinitionVersionRequest::CreateCoreDefinitionVersionRequest()
@@ -53,13 +59,16 @@ CreateCoreDefinitionVersionRequest::CreateCoreDefinitionVersionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateCoreDefinitionVersionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateCoreDefinitionVersionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionVersionRequest::response(
     return new CreateCoreDefinitionVersionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateCoreDefinitionVersionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionVersionRequest::response(
  * @brief  Private implementation for CreateCoreDefinitionVersionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCoreDefinitionVersionRequestPrivate object.
@@ -97,7 +106,7 @@ CreateCoreDefinitionVersionRequestPrivate::CreateCoreDefinitionVersionRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateCoreDefinitionVersionRequestPrivate object, copying another.

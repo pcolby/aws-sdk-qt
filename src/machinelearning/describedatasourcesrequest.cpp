@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  DescribeDataSourcesRequest
+/*!
+ * \class QtAws::MachineLearning::DescribeDataSourcesRequest
  *
- * @brief  Implements MachineLearning DescribeDataSources requests.
+ * \brief The DescribeDataSourcesRequest class encapsulates MachineLearning DescribeDataSources requests.
  *
- * @see    MachineLearningClient::describeDataSources
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::describeDataSources
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeDataSourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeDataSourcesRequest::DescribeDataSourcesRequest(const DescribeDataSources
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeDataSourcesRequest object.
  */
 DescribeDataSourcesRequest::DescribeDataSourcesRequest()
@@ -53,13 +56,16 @@ DescribeDataSourcesRequest::DescribeDataSourcesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeDataSourcesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeDataSourcesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDataSourcesRequest::response(QNetwork
     return new DescribeDataSourcesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeDataSourcesRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeDataSourcesRequest::response(QNetwork
  * @brief  Private implementation for DescribeDataSourcesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDataSourcesRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeDataSourcesRequestPrivate object, copying another.

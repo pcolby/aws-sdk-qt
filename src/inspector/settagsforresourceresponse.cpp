@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  SetTagsForResourceResponse
+/*!
+ * \class QtAws::Inspector::SetTagsForResourceResponse
  *
- * @brief  Handles Inspector SetTagsForResource responses.
+ * \brief The SetTagsForResourceResponse class encapsulates Inspector SetTagsForResource responses.
  *
- * @see    InspectorClient::setTagsForResource
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::setTagsForResource
  */
 
-/**
+/*!
  * @brief  Constructs a new SetTagsForResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const SetTagsForResourceRequest * SetTagsForResourceResponse::request() const
     return static_cast<const SetTagsForResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector SetTagsForResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void SetTagsForResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SetTagsForResourceResponsePrivate
+ * \class SetTagsForResourceResponsePrivate
  *
- * @brief  Private implementation for SetTagsForResourceResponse.
+ * \brief Private implementation for SetTagsForResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetTagsForResourceResponsePrivate object.
@@ -91,7 +99,7 @@ SetTagsForResourceResponsePrivate::SetTagsForResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector SetTagsForResourceResponse element.
  *
  * @param  xml  XML stream to parse.

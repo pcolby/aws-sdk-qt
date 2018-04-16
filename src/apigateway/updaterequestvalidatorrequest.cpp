@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateRequestValidatorRequest
+/*!
+ * \class QtAws::APIGateway::UpdateRequestValidatorRequest
  *
- * @brief  Implements APIGateway UpdateRequestValidator requests.
+ * \brief The UpdateRequestValidatorRequest class encapsulates APIGateway UpdateRequestValidator requests.
  *
- * @see    APIGatewayClient::updateRequestValidator
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateRequestValidator
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRequestValidatorRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateRequestValidatorRequest::UpdateRequestValidatorRequest(const UpdateRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateRequestValidatorRequest object.
  */
 UpdateRequestValidatorRequest::UpdateRequestValidatorRequest()
@@ -53,13 +61,16 @@ UpdateRequestValidatorRequest::UpdateRequestValidatorRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateRequestValidatorRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateRequestValidatorResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRequestValidatorRequest::response(QNetw
     return new UpdateRequestValidatorResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateRequestValidatorRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateRequestValidatorRequest::response(QNetw
  * @brief  Private implementation for UpdateRequestValidatorRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRequestValidatorRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRequestValidatorRequestPrivate object, copying another.

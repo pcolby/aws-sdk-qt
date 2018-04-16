@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  ListIdentityPoliciesRequest
+/*!
+ * \class QtAws::SES::ListIdentityPoliciesRequest
  *
- * @brief  Implements SES ListIdentityPolicies requests.
+ * \brief The ListIdentityPoliciesRequest class encapsulates SES ListIdentityPolicies requests.
  *
- * @see    SESClient::listIdentityPolicies
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::listIdentityPolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListIdentityPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ ListIdentityPoliciesRequest::ListIdentityPoliciesRequest(const ListIdentityPolic
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListIdentityPoliciesRequest object.
  */
 ListIdentityPoliciesRequest::ListIdentityPoliciesRequest()
@@ -53,13 +67,16 @@ ListIdentityPoliciesRequest::ListIdentityPoliciesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListIdentityPoliciesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListIdentityPoliciesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetwor
     return new ListIdentityPoliciesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListIdentityPoliciesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetwor
  * @brief  Private implementation for ListIdentityPoliciesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIdentityPoliciesRequestPrivate object.
@@ -97,7 +114,7 @@ ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListIdentityPoliciesRequestPrivate object, copying another.

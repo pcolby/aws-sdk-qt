@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetTrafficPolicyInstanceCountRequest
+/*!
+ * \class QtAws::Route53::GetTrafficPolicyInstanceCountRequest
  *
- * @brief  Implements Route53 GetTrafficPolicyInstanceCount requests.
+ * \brief The GetTrafficPolicyInstanceCountRequest class encapsulates Route53 GetTrafficPolicyInstanceCount requests.
  *
- * @see    Route53Client::getTrafficPolicyInstanceCount
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getTrafficPolicyInstanceCount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest(const
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object.
  */
 GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest()
@@ -53,13 +56,16 @@ GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTrafficPolicyInstanceCountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTrafficPolicyInstanceCountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::respons
     return new GetTrafficPolicyInstanceCountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTrafficPolicyInstanceCountRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::respons
  * @brief  Private implementation for GetTrafficPolicyInstanceCountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTrafficPolicyInstanceCountRequestPrivate object.
@@ -97,7 +103,7 @@ GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountReques
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTrafficPolicyInstanceCountRequestPrivate object, copying another.

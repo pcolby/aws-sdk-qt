@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketRequestPaymentResponse
+/*!
+ * \class QtAws::S3::GetBucketRequestPaymentResponse
  *
- * @brief  Handles S3 GetBucketRequestPayment responses.
+ * \brief The GetBucketRequestPaymentResponse class encapsulates S3 GetBucketRequestPayment responses.
  *
- * @see    S3Client::getBucketRequestPayment
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketRequestPayment
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketRequestPaymentResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketRequestPaymentRequest * GetBucketRequestPaymentResponse::request(
     return static_cast<const GetBucketRequestPaymentRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketRequestPayment response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketRequestPaymentResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketRequestPaymentResponsePrivate
+ * \class GetBucketRequestPaymentResponsePrivate
  *
- * @brief  Private implementation for GetBucketRequestPaymentResponse.
+ * \brief Private implementation for GetBucketRequestPaymentResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketRequestPaymentResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketRequestPaymentResponse element.
  *
  * @param  xml  XML stream to parse.

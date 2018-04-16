@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  UpdateApnsChannelResponse
+/*!
+ * \class QtAws::Pinpoint::UpdateApnsChannelResponse
  *
- * @brief  Handles Pinpoint UpdateApnsChannel responses.
+ * \brief The UpdateApnsChannelResponse class encapsulates Pinpoint UpdateApnsChannel responses.
  *
- * @see    PinpointClient::updateApnsChannel
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::updateApnsChannel
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApnsChannelResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateApnsChannelRequest * UpdateApnsChannelResponse::request() const
     return static_cast<const UpdateApnsChannelRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint UpdateApnsChannel response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateApnsChannelResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateApnsChannelResponsePrivate
+ * \class UpdateApnsChannelResponsePrivate
  *
- * @brief  Private implementation for UpdateApnsChannelResponse.
+ * \brief Private implementation for UpdateApnsChannelResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApnsChannelResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateApnsChannelResponsePrivate::UpdateApnsChannelResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint UpdateApnsChannelResponse element.
  *
  * @param  xml  XML stream to parse.

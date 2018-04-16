@@ -25,15 +25,40 @@
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-/**
- * @class  CheckDNSAvailabilityRequest
+/*!
+ * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityRequest
  *
- * @brief  Implements ElasticBeanstalk CheckDNSAvailability requests.
+ * \brief The CheckDNSAvailabilityRequest class encapsulates ElasticBeanstalk CheckDNSAvailability requests.
  *
- * @see    ElasticBeanstalkClient::checkDNSAvailability
+ * \ingroup ElasticBeanstalk
+ *
+ *  <fullname>AWS Elastic Beanstalk</fullname>
+ * 
+ *  AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running
+ *  on the Amazon Web Services
+ * 
+ *  cloud>
+ * 
+ *  For more information about this product, go to the <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic
+ *  Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
+ *  href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
+ *  To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
+ *  tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * 
+ *  Services</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p
+ * 
+ *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services
+ *
+ * \sa ElasticBeanstalkClient::checkDNSAvailability
  */
 
-/**
+/*!
  * @brief  Constructs a new CheckDNSAvailabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +69,7 @@ CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest(const CheckDNSAvailabil
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CheckDNSAvailabilityRequest object.
  */
 CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest()
@@ -53,13 +78,16 @@ CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CheckDNSAvailabilityRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CheckDNSAvailabilityResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +102,7 @@ QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetwor
     return new CheckDNSAvailabilityResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CheckDNSAvailabilityRequestPrivate
@@ -82,7 +110,7 @@ QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetwor
  * @brief  Private implementation for CheckDNSAvailabilityRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDNSAvailabilityRequestPrivate object.
@@ -97,7 +125,7 @@ CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CheckDNSAvailabilityRequestPrivate object, copying another.

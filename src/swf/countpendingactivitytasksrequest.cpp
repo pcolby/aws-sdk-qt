@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace SWF {
 
-/**
- * @class  CountPendingActivityTasksRequest
+/*!
+ * \class QtAws::SWF::CountPendingActivityTasksRequest
  *
- * @brief  Implements SWF CountPendingActivityTasks requests.
+ * \brief The CountPendingActivityTasksRequest class encapsulates SWF CountPendingActivityTasks requests.
  *
- * @see    SWFClient::countPendingActivityTasks
+ * \ingroup SWF
+ *
+ *  <fullname>Amazon Simple Workflow Service</fullname>
+ * 
+ *  The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to
+ *  coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is
+ *  performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies,
+ *  scheduling, and concurrency in accordance with the logical flow of the
+ * 
+ *  application>
+ * 
+ *  Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying
+ *  complexities such as tracking their progress and maintaining their
+ * 
+ *  state>
+ * 
+ *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
+ *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *
+ * \sa SWFClient::countPendingActivityTasks
  */
 
-/**
+/*!
  * @brief  Constructs a new CountPendingActivityTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ CountPendingActivityTasksRequest::CountPendingActivityTasksRequest(const CountPe
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CountPendingActivityTasksRequest object.
  */
 CountPendingActivityTasksRequest::CountPendingActivityTasksRequest()
@@ -53,13 +72,16 @@ CountPendingActivityTasksRequest::CountPendingActivityTasksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CountPendingActivityTasksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CountPendingActivityTasksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QN
     return new CountPendingActivityTasksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CountPendingActivityTasksRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QN
  * @brief  Private implementation for CountPendingActivityTasksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountPendingActivityTasksRequestPrivate object.
@@ -97,7 +119,7 @@ CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CountPendingActivityTasksRequestPrivate object, copying another.

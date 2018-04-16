@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  DeletePublicKeyResponse
+/*!
+ * \class QtAws::CloudFront::DeletePublicKeyResponse
  *
- * @brief  Handles CloudFront DeletePublicKey responses.
+ * \brief The DeletePublicKeyResponse class encapsulates CloudFront DeletePublicKey responses.
  *
- * @see    CloudFrontClient::deletePublicKey
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::deletePublicKey
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePublicKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeletePublicKeyRequest * DeletePublicKeyResponse::request() const
     return static_cast<const DeletePublicKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront DeletePublicKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeletePublicKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePublicKeyResponsePrivate
+ * \class DeletePublicKeyResponsePrivate
  *
- * @brief  Private implementation for DeletePublicKeyResponse.
+ * \brief Private implementation for DeletePublicKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePublicKeyResponsePrivate object.
@@ -91,7 +99,7 @@ DeletePublicKeyResponsePrivate::DeletePublicKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront DeletePublicKeyResponse element.
  *
  * @param  xml  XML stream to parse.

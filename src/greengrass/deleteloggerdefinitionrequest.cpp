@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  DeleteLoggerDefinitionRequest
+/*!
+ * \class QtAws::Greengrass::DeleteLoggerDefinitionRequest
  *
- * @brief  Implements Greengrass DeleteLoggerDefinition requests.
+ * \brief The DeleteLoggerDefinitionRequest class encapsulates Greengrass DeleteLoggerDefinition requests.
  *
- * @see    GreengrassClient::deleteLoggerDefinition
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::deleteLoggerDefinition
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteLoggerDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest(const DeleteLoggerD
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteLoggerDefinitionRequest object.
  */
 DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest()
@@ -53,13 +59,16 @@ DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteLoggerDefinitionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteLoggerDefinitionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetw
     return new DeleteLoggerDefinitionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteLoggerDefinitionRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetw
  * @brief  Private implementation for DeleteLoggerDefinitionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLoggerDefinitionRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteLoggerDefinitionRequestPrivate object, copying another.

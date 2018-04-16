@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  CreateHITWithHITTypeRequest
+/*!
+ * \class QtAws::MTurk::CreateHITWithHITTypeRequest
  *
- * @brief  Implements MTurk CreateHITWithHITType requests.
+ * \brief The CreateHITWithHITTypeRequest class encapsulates MTurk CreateHITWithHITType requests.
  *
- * @see    MTurkClient::createHITWithHITType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::createHITWithHITType
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateHITWithHITTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ CreateHITWithHITTypeRequest::CreateHITWithHITTypeRequest(const CreateHITWithHITT
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateHITWithHITTypeRequest object.
  */
 CreateHITWithHITTypeRequest::CreateHITWithHITTypeRequest()
@@ -53,13 +56,16 @@ CreateHITWithHITTypeRequest::CreateHITWithHITTypeRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateHITWithHITTypeRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateHITWithHITTypeResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * CreateHITWithHITTypeRequest::response(QNetwor
     return new CreateHITWithHITTypeResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateHITWithHITTypeRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * CreateHITWithHITTypeRequest::response(QNetwor
  * @brief  Private implementation for CreateHITWithHITTypeRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHITWithHITTypeRequestPrivate object.
@@ -97,7 +103,7 @@ CreateHITWithHITTypeRequestPrivate::CreateHITWithHITTypeRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateHITWithHITTypeRequestPrivate object, copying another.

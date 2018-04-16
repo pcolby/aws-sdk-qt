@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  GetSegmentImportJobsResponse
+/*!
+ * \class QtAws::Pinpoint::GetSegmentImportJobsResponse
  *
- * @brief  Handles Pinpoint GetSegmentImportJobs responses.
+ * \brief The GetSegmentImportJobsResponse class encapsulates Pinpoint GetSegmentImportJobs responses.
  *
- * @see    PinpointClient::getSegmentImportJobs
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::getSegmentImportJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSegmentImportJobsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetSegmentImportJobsRequest * GetSegmentImportJobsResponse::request() cons
     return static_cast<const GetSegmentImportJobsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint GetSegmentImportJobs response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetSegmentImportJobsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSegmentImportJobsResponsePrivate
+ * \class GetSegmentImportJobsResponsePrivate
  *
- * @brief  Private implementation for GetSegmentImportJobsResponse.
+ * \brief Private implementation for GetSegmentImportJobsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSegmentImportJobsResponsePrivate object.
@@ -91,7 +94,7 @@ GetSegmentImportJobsResponsePrivate::GetSegmentImportJobsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint GetSegmentImportJobsResponse element.
  *
  * @param  xml  XML stream to parse.

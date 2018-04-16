@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  CreateSizeConstraintSetResponse
+/*!
+ * \class QtAws::WAFRegional::CreateSizeConstraintSetResponse
  *
- * @brief  Handles WAFRegional CreateSizeConstraintSet responses.
+ * \brief The CreateSizeConstraintSetResponse class encapsulates WAFRegional CreateSizeConstraintSet responses.
  *
- * @see    WAFRegionalClient::createSizeConstraintSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::createSizeConstraintSet
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateSizeConstraintSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const CreateSizeConstraintSetRequest * CreateSizeConstraintSetResponse::request(
     return static_cast<const CreateSizeConstraintSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional CreateSizeConstraintSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateSizeConstraintSetResponsePrivate
+ * \class CreateSizeConstraintSetResponsePrivate
  *
- * @brief  Private implementation for CreateSizeConstraintSetResponse.
+ * \brief Private implementation for CreateSizeConstraintSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateSizeConstraintSetResponsePrivate object.
@@ -91,7 +101,7 @@ CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional CreateSizeConstraintSetResponse element.
  *
  * @param  xml  XML stream to parse.

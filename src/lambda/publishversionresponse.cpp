@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  PublishVersionResponse
+/*!
+ * \class QtAws::Lambda::PublishVersionResponse
  *
- * @brief  Handles Lambda PublishVersion responses.
+ * \brief The PublishVersionResponse class encapsulates Lambda PublishVersion responses.
  *
- * @see    LambdaClient::publishVersion
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::publishVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new PublishVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const PublishVersionRequest * PublishVersionResponse::request() const
     return static_cast<const PublishVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda PublishVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void PublishVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  PublishVersionResponsePrivate
+ * \class PublishVersionResponsePrivate
  *
- * @brief  Private implementation for PublishVersionResponse.
+ * \brief Private implementation for PublishVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PublishVersionResponsePrivate object.
@@ -91,7 +105,7 @@ PublishVersionResponsePrivate::PublishVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda PublishVersionResponse element.
  *
  * @param  xml  XML stream to parse.

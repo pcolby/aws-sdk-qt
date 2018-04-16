@@ -25,15 +25,37 @@
 namespace QtAws {
 namespace DynamoDB {
 
-/**
- * @class  ScanRequest
+/*!
+ * \class QtAws::DynamoDB::ScanRequest
  *
- * @brief  Implements DynamoDB Scan requests.
+ * \brief The ScanRequest class encapsulates DynamoDB Scan requests.
  *
- * @see    DynamoDBClient::scan
+ * \ingroup DynamoDB
+ *
+ *  <fullname>Amazon DynamoDB</fullname>
+ * 
+ *  Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless
+ *  scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so
+ *  that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or
+ *  cluster
+ * 
+ *  scaling>
+ * 
+ *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
+ *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
+ *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ * 
+ *  metrics>
+ * 
+ *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
+ *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
+ *  built-in high availability and data durability.
+ *
+ * \sa DynamoDBClient::scan
  */
 
-/**
+/*!
  * @brief  Constructs a new ScanRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +66,7 @@ ScanRequest::ScanRequest(const ScanRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ScanRequest object.
  */
 ScanRequest::ScanRequest()
@@ -53,13 +75,16 @@ ScanRequest::ScanRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ScanRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ScanResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const r
     return new ScanResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ScanRequestPrivate
@@ -82,7 +107,7 @@ QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const r
  * @brief  Private implementation for ScanRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScanRequestPrivate object.
@@ -97,7 +122,7 @@ ScanRequestPrivate::ScanRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ScanRequestPrivate object, copying another.

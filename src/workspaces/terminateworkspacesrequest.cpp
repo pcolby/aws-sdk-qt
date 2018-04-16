@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  TerminateWorkspacesRequest
+/*!
+ * \class QtAws::WorkSpaces::TerminateWorkspacesRequest
  *
- * @brief  Implements WorkSpaces TerminateWorkspaces requests.
+ * \brief The TerminateWorkspacesRequest class encapsulates WorkSpaces TerminateWorkspaces requests.
  *
- * @see    WorkSpacesClient::terminateWorkspaces
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::terminateWorkspaces
  */
 
-/**
+/*!
  * @brief  Constructs a new TerminateWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ TerminateWorkspacesRequest::TerminateWorkspacesRequest(const TerminateWorkspaces
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TerminateWorkspacesRequest object.
  */
 TerminateWorkspacesRequest::TerminateWorkspacesRequest()
@@ -53,13 +59,16 @@ TerminateWorkspacesRequest::TerminateWorkspacesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TerminateWorkspacesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TerminateWorkspacesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetwork
     return new TerminateWorkspacesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TerminateWorkspacesRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkspacesRequest::response(QNetwork
  * @brief  Private implementation for TerminateWorkspacesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateWorkspacesRequestPrivate object.
@@ -97,7 +106,7 @@ TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TerminateWorkspacesRequestPrivate object, copying another.

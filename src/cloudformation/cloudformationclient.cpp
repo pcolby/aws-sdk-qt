@@ -107,45 +107,53 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::CloudFormation
+ * \brief The QtAws::CloudFormation contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace CloudFormation {
 
-/**
- * @class  CloudFormationClient
+/*!
+ * \class QtAws::CloudFormation::CloudFormationClient
  *
- * @brief  Client for AWS CloudFormation
+ * \brief The CloudFormationClient class provides access the AWS CloudFormation service.
  *
- * <fullname>AWS CloudFormation</fullname>
+ * \ingroup CloudFormation
  *
- * AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
- * use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
- * Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
- * cost-effective applications without creating or configuring the underlying AWS
- *
- * infrastructure>
- *
- * With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
- * collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
- * the stack together and manages all dependencies between the resources for
- *
- * you>
- *
- * For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
- * CloudFormation Product
- *
- * Page</a>>
- *
- * Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
- * product, you can find the product's technical documentation at <a
+ *  <fullname>AWS CloudFormation</fullname>
+ * 
+ *  AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
+ *  use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
+ *  Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly scalable,
+ *  cost-effective applications without creating or configuring the underlying AWS
+ * 
+ *  infrastructure>
+ * 
+ *  With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ *  collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of
+ *  the stack together and manages all dependencies between the resources for
+ * 
+ *  you>
+ * 
+ *  For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
+ *  CloudFormation Product
+ * 
+ *  Page</a>>
+ * 
+ *  Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS
+ *  product, you can find the product's technical documentation at <a
  */
 
-/**
- * @brief  Constructs a new CloudFormationClient object.
+/*!
+ * \brief Constructs a CloudFormationClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 CloudFormationClient::CloudFormationClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -164,21 +172,16 @@ CloudFormationClient::CloudFormationClient(
     d->serviceName = QStringLiteral("cloudformation");
 }
 
-/**
- * @brief  Constructs a new CloudFormationClient object.
+/*!
+ * \overload CloudFormationClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 CloudFormationClient::CloudFormationClient(
     const QUrl &endpoint,
@@ -197,7 +200,7 @@ CloudFormationClient::CloudFormationClient(
     d->serviceName = QStringLiteral("cloudformation");
 }
 
-/**
+/*!
  * Cancels an update on the specified stack. If the call completes successfully, the stack rolls back the update and
  * reverts to the previous stack
  *
@@ -216,7 +219,7 @@ CancelUpdateStackResponse * CloudFormationClient::cancelUpdateStack(const Cancel
     return qobject_cast<CancelUpdateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * For a specified stack that is in the <code>UPDATE_ROLLBACK_FAILED</code> state, continues rolling it back to the
  * <code>UPDATE_ROLLBACK_COMPLETE</code> state. Depending on the cause of the failure, you can manually <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed">
@@ -241,7 +244,7 @@ ContinueUpdateRollbackResponse * CloudFormationClient::continueUpdateRollback(co
     return qobject_cast<ContinueUpdateRollbackResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a list of changes that will be applied to a stack so that you can review the changes before executing them. You
  * can create a change set for a stack that doesn't exist or an existing stack. If you create a change set for a stack that
  * doesn't exist, the change set shows all of the resources that AWS CloudFormation will create. If you create a change set
@@ -273,7 +276,7 @@ CreateChangeSetResponse * CloudFormationClient::createChangeSet(const CreateChan
     return qobject_cast<CreateChangeSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a stack as specified in the template. After the call completes successfully, the stack creation starts. You can
  * check the status of the stack via the <a>DescribeStacks</a>
  *
@@ -288,7 +291,7 @@ CreateStackResponse * CloudFormationClient::createStack(const CreateStackRequest
     return qobject_cast<CreateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates stack instances for the specified accounts, within the specified regions. A stack instance refers to a stack in
  * a specific account and region. <code>Accounts</code> and <code>Regions</code> are required parameters—you must specify
  * at least one account and one region.
@@ -304,7 +307,7 @@ CreateStackInstancesResponse * CloudFormationClient::createStackInstances(const 
     return qobject_cast<CreateStackInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a stack
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -318,7 +321,7 @@ CreateStackSetResponse * CloudFormationClient::createStackSet(const CreateStackS
     return qobject_cast<CreateStackSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes the specified change set. Deleting change sets ensures that no one executes the wrong change
  *
  * set>
@@ -336,7 +339,7 @@ DeleteChangeSetResponse * CloudFormationClient::deleteChangeSet(const DeleteChan
     return qobject_cast<DeleteChangeSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a specified stack. Once the call completes successfully, stack deletion starts. Deleted stacks do not show up in
  * the <a>DescribeStacks</a> API if the deletion has been completed
  *
@@ -351,7 +354,7 @@ DeleteStackResponse * CloudFormationClient::deleteStack(const DeleteStackRequest
     return qobject_cast<DeleteStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes stack instances for the specified accounts, in the specified regions.
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -365,7 +368,7 @@ DeleteStackInstancesResponse * CloudFormationClient::deleteStackInstances(const 
     return qobject_cast<DeleteStackInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a stack set. Before you can delete a stack set, all of its member stack instances must be deleted. For more
  * information about how to do this, see <a>DeleteStackInstances</a>.
  *
@@ -380,7 +383,7 @@ DeleteStackSetResponse * CloudFormationClient::deleteStackSet(const DeleteStackS
     return qobject_cast<DeleteStackSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Retrieves your account's AWS CloudFormation limits, such as the maximum number of stacks that you can create in your
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -394,7 +397,7 @@ DescribeAccountLimitsResponse * CloudFormationClient::describeAccountLimits(cons
     return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the inputs for the change set and a list of changes that AWS CloudFormation will make if you execute the change
  * set. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html">Updating
@@ -411,7 +414,7 @@ DescribeChangeSetResponse * CloudFormationClient::describeChangeSet(const Descri
     return qobject_cast<DescribeChangeSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns all stack related events for a specified stack in reverse chronological order. For more information about a
  * stack's event history, go to <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the AWS
@@ -433,7 +436,7 @@ DescribeStackEventsResponse * CloudFormationClient::describeStackEvents(const De
     return qobject_cast<DescribeStackEventsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the stack instance that's associated with the specified stack set, AWS account, and
  *
  * region>
@@ -451,7 +454,7 @@ DescribeStackInstanceResponse * CloudFormationClient::describeStackInstance(cons
     return qobject_cast<DescribeStackInstanceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns a description of the specified resource in the specified
  *
  * stack>
@@ -469,7 +472,7 @@ DescribeStackResourceResponse * CloudFormationClient::describeStackResource(cons
     return qobject_cast<DescribeStackResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns AWS resource descriptions for running and deleted stacks. If <code>StackName</code> is specified, all the
  * associated resources that are part of the stack are returned. If <code>PhysicalResourceId</code> is specified, the
  * associated resources of the stack that the resource belongs to are
@@ -507,7 +510,7 @@ DescribeStackResourcesResponse * CloudFormationClient::describeStackResources(co
     return qobject_cast<DescribeStackResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description of the specified stack set.
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -521,7 +524,7 @@ DescribeStackSetResponse * CloudFormationClient::describeStackSet(const Describe
     return qobject_cast<DescribeStackSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description of the specified stack set operation.
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -535,7 +538,7 @@ DescribeStackSetOperationResponse * CloudFormationClient::describeStackSetOperat
     return qobject_cast<DescribeStackSetOperationResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the description for the specified stack; if no stack name was specified, then it returns the description for all
  * the stacks
  *
@@ -554,7 +557,7 @@ DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStac
     return qobject_cast<DescribeStacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the estimated monthly cost of a template. The return value is an AWS Simple Monthly Calculator URL with a query
  * string that describes the resources required to run the
  *
@@ -569,7 +572,7 @@ EstimateTemplateCostResponse * CloudFormationClient::estimateTemplateCost(const 
     return qobject_cast<EstimateTemplateCostResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a stack using the input information that was provided when the specified change set was created. After the call
  * successfully completes, AWS CloudFormation starts updating the stack. Use the <a>DescribeStacks</a> action to view the
  * status of the
@@ -595,7 +598,7 @@ ExecuteChangeSetResponse * CloudFormationClient::executeChangeSet(const ExecuteC
     return qobject_cast<ExecuteChangeSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the stack policy for a specified stack. If a stack doesn't have a policy, a null value is
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -609,7 +612,7 @@ GetStackPolicyResponse * CloudFormationClient::getStackPolicy(const GetStackPoli
     return qobject_cast<GetStackPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the template body for a specified stack. You can get the template for running or deleted
  *
  * stacks>
@@ -631,7 +634,7 @@ GetTemplateResponse * CloudFormationClient::getTemplate(const GetTemplateRequest
     return qobject_cast<GetTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns information about a new or existing template. The <code>GetTemplateSummary</code> action is useful for viewing
  * parameter information, such as default parameter values and parameter types, before you create or update a stack or
  * stack
@@ -657,7 +660,7 @@ GetTemplateSummaryResponse * CloudFormationClient::getTemplateSummary(const GetT
     return qobject_cast<GetTemplateSummaryResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the ID and status of each active change set for a stack. For example, AWS CloudFormation lists change sets that
  * are in the <code>CREATE_IN_PROGRESS</code> or <code>CREATE_PENDING</code>
  *
@@ -672,7 +675,7 @@ ListChangeSetsResponse * CloudFormationClient::listChangeSets(const ListChangeSe
     return qobject_cast<ListChangeSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all exported output values in the account and region in which you call this action. Use this action to see the
  * exported output values that you can import into other stacks. To import values, use the <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
@@ -695,7 +698,7 @@ ListExportsResponse * CloudFormationClient::listExports(const ListExportsRequest
     return qobject_cast<ListExportsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists all stacks that are importing an exported output value. To modify or remove an exported output value, first use
  * this action to see which stacks are using it. To see the exported output values in your account, see <a>ListExports</a>.
  *
@@ -716,7 +719,7 @@ ListImportsResponse * CloudFormationClient::listImports(const ListImportsRequest
     return qobject_cast<ListImportsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns summary information about stack instances that are associated with the specified stack set. You can filter for
  * stack instances that are associated with a specific AWS account name or
  *
@@ -731,7 +734,7 @@ ListStackInstancesResponse * CloudFormationClient::listStackInstances(const List
     return qobject_cast<ListStackInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns descriptions of all resources of the specified
  *
  * stack>
@@ -749,7 +752,7 @@ ListStackResourcesResponse * CloudFormationClient::listStackResources(const List
     return qobject_cast<ListStackResourcesResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns summary information about the results of a stack set operation.
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -763,7 +766,7 @@ ListStackSetOperationResultsResponse * CloudFormationClient::listStackSetOperati
     return qobject_cast<ListStackSetOperationResultsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns summary information about operations performed on a stack set.
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -777,7 +780,7 @@ ListStackSetOperationsResponse * CloudFormationClient::listStackSetOperations(co
     return qobject_cast<ListStackSetOperationsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns summary information about stack sets that are associated with the
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -791,7 +794,7 @@ ListStackSetsResponse * CloudFormationClient::listStackSets(const ListStackSetsR
     return qobject_cast<ListStackSetsResponse *>(send(request));
 }
 
-/**
+/*!
  * Returns the summary information for stacks whose status matches the specified StackStatusFilter. Summary information for
  * stacks that have been deleted is kept for 90 days after the stack is deleted. If no StackStatusFilter is specified,
  * summary information for all stacks is returned (including existing stacks and stacks that have been
@@ -807,7 +810,7 @@ ListStacksResponse * CloudFormationClient::listStacks(const ListStacksRequest &r
     return qobject_cast<ListStacksResponse *>(send(request));
 }
 
-/**
+/*!
  * Sets a stack policy for a specified
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -821,7 +824,7 @@ SetStackPolicyResponse * CloudFormationClient::setStackPolicy(const SetStackPoli
     return qobject_cast<SetStackPolicyResponse *>(send(request));
 }
 
-/**
+/*!
  * Sends a signal to the specified resource with a success or failure status. You can use the SignalResource API in
  * conjunction with a creation policy or update policy. AWS CloudFormation doesn't proceed with a stack creation or update
  * until resources receive the required number of signals or the timeout period is exceeded. The SignalResource API is
@@ -838,7 +841,7 @@ SignalResourceResponse * CloudFormationClient::signalResource(const SignalResour
     return qobject_cast<SignalResourceResponse *>(send(request));
 }
 
-/**
+/*!
  * Stops an in-progress operation on a stack set and its associated stack instances.
  *
  * @param  request Request to send to AWS CloudFormation.
@@ -852,7 +855,7 @@ StopStackSetOperationResponse * CloudFormationClient::stopStackSetOperation(cons
     return qobject_cast<StopStackSetOperationResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates a stack as specified in the template. After the call completes successfully, the stack update starts. You can
  * check the status of the stack via the <a>DescribeStacks</a>
  *
@@ -876,7 +879,7 @@ UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest
     return qobject_cast<UpdateStackResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the parameter values for stack instances for the specified accounts, within the specified regions. A stack
  * instance refers to a stack in a specific account and region.
  *
@@ -912,7 +915,7 @@ UpdateStackInstancesResponse * CloudFormationClient::updateStackInstances(const 
     return qobject_cast<UpdateStackInstancesResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the stack set and <i>all</i> associated stack
  *
  * instances>
@@ -932,7 +935,7 @@ UpdateStackSetResponse * CloudFormationClient::updateStackSet(const UpdateStackS
     return qobject_cast<UpdateStackSetResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates termination protection for the specified stack. If a user attempts to delete a stack with termination protection
  * enabled, the operation fails and the stack remains unchanged. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack
@@ -954,7 +957,7 @@ UpdateTerminationProtectionResponse * CloudFormationClient::updateTerminationPro
     return qobject_cast<UpdateTerminationProtectionResponse *>(send(request));
 }
 
-/**
+/*!
  * Validates a specified template. AWS CloudFormation first checks if the template is valid JSON. If it isn't, AWS
  * CloudFormation checks if the template is valid YAML. If both these checks fail, AWS CloudFormation returns a template
  * validation
@@ -970,7 +973,7 @@ ValidateTemplateResponse * CloudFormationClient::validateTemplate(const Validate
     return qobject_cast<ValidateTemplateResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CloudFormationClientPrivate
@@ -978,7 +981,7 @@ ValidateTemplateResponse * CloudFormationClient::validateTemplate(const Validate
  * @brief  Private implementation for CloudFormationClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CloudFormationClientPrivate object.

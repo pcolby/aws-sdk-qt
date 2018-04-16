@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MigrationHub {
 
-/**
- * @class  DescribeApplicationStateResponse
+/*!
+ * \class QtAws::MigrationHub::DescribeApplicationStateResponse
  *
- * @brief  Handles MigrationHub DescribeApplicationState responses.
+ * \brief The DescribeApplicationStateResponse class encapsulates MigrationHub DescribeApplicationState responses.
  *
- * @see    MigrationHubClient::describeApplicationState
+ * \ingroup MigrationHub
+ *
+ *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
+ *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *
+ * \sa MigrationHubClient::describeApplicationState
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeApplicationStateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const DescribeApplicationStateRequest * DescribeApplicationStateResponse::reques
     return static_cast<const DescribeApplicationStateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MigrationHub DescribeApplicationState response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void DescribeApplicationStateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeApplicationStateResponsePrivate
+ * \class DescribeApplicationStateResponsePrivate
  *
- * @brief  Private implementation for DescribeApplicationStateResponse.
+ * \brief Private implementation for DescribeApplicationStateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeApplicationStateResponsePrivate object.
@@ -91,7 +96,7 @@ DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an MigrationHub DescribeApplicationStateResponse element.
  *
  * @param  xml  XML stream to parse.

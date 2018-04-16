@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ReportInstanceStatusResponse
+/*!
+ * \class QtAws::EC2::ReportInstanceStatusResponse
  *
- * @brief  Handles EC2 ReportInstanceStatus responses.
+ * \brief The ReportInstanceStatusResponse class encapsulates EC2 ReportInstanceStatus responses.
  *
- * @see    EC2Client::reportInstanceStatus
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::reportInstanceStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new ReportInstanceStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ReportInstanceStatusRequest * ReportInstanceStatusResponse::request() cons
     return static_cast<const ReportInstanceStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ReportInstanceStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ReportInstanceStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ReportInstanceStatusResponsePrivate
+ * \class ReportInstanceStatusResponsePrivate
  *
- * @brief  Private implementation for ReportInstanceStatusResponse.
+ * \brief Private implementation for ReportInstanceStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ReportInstanceStatusResponsePrivate object.
@@ -91,7 +98,7 @@ ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ReportInstanceStatusResponse element.
  *
  * @param  xml  XML stream to parse.

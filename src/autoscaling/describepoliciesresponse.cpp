@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DescribePoliciesResponse
+/*!
+ * \class QtAws::AutoScaling::DescribePoliciesResponse
  *
- * @brief  Handles AutoScaling DescribePolicies responses.
+ * \brief The DescribePoliciesResponse class encapsulates AutoScaling DescribePolicies responses.
  *
- * @see    AutoScalingClient::describePolicies
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::describePolicies
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribePoliciesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribePoliciesRequest * DescribePoliciesResponse::request() const
     return static_cast<const DescribePoliciesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling DescribePolicies response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribePoliciesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribePoliciesResponsePrivate
+ * \class DescribePoliciesResponsePrivate
  *
- * @brief  Private implementation for DescribePoliciesResponse.
+ * \brief Private implementation for DescribePoliciesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribePoliciesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribePoliciesResponsePrivate::DescribePoliciesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling DescribePoliciesResponse element.
  *
  * @param  xml  XML stream to parse.

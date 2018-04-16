@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DetachInternetGatewayRequest
+/*!
+ * \class QtAws::EC2::DetachInternetGatewayRequest
  *
- * @brief  Implements EC2 DetachInternetGateway requests.
+ * \brief The DetachInternetGatewayRequest class encapsulates EC2 DetachInternetGateway requests.
  *
- * @see    EC2Client::detachInternetGateway
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::detachInternetGateway
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DetachInternetGatewayRequest::DetachInternetGatewayRequest(const DetachInternetG
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachInternetGatewayRequest object.
  */
 DetachInternetGatewayRequest::DetachInternetGatewayRequest()
@@ -53,13 +60,16 @@ DetachInternetGatewayRequest::DetachInternetGatewayRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachInternetGatewayRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachInternetGatewayResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetwo
     return new DetachInternetGatewayResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachInternetGatewayRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetwo
  * @brief  Private implementation for DetachInternetGatewayRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachInternetGatewayRequestPrivate object.
@@ -97,7 +107,7 @@ DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachInternetGatewayRequestPrivate object, copying another.

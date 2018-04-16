@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  DeleteReceiptRuleSetRequest
+/*!
+ * \class QtAws::SES::DeleteReceiptRuleSetRequest
  *
- * @brief  Implements SES DeleteReceiptRuleSet requests.
+ * \brief The DeleteReceiptRuleSetRequest class encapsulates SES DeleteReceiptRuleSet requests.
  *
- * @see    SESClient::deleteReceiptRuleSet
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::deleteReceiptRuleSet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteReceiptRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DeleteReceiptRuleSetRequest::DeleteReceiptRuleSetRequest(const DeleteReceiptRule
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteReceiptRuleSetRequest object.
  */
 DeleteReceiptRuleSetRequest::DeleteReceiptRuleSetRequest()
@@ -53,13 +67,16 @@ DeleteReceiptRuleSetRequest::DeleteReceiptRuleSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteReceiptRuleSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteReceiptRuleSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleSetRequest::response(QNetwor
     return new DeleteReceiptRuleSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteReceiptRuleSetRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleSetRequest::response(QNetwor
  * @brief  Private implementation for DeleteReceiptRuleSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReceiptRuleSetRequestPrivate object.
@@ -97,7 +114,7 @@ DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteReceiptRuleSetRequestPrivate object, copying another.

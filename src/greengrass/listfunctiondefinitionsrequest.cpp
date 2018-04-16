@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  ListFunctionDefinitionsRequest
+/*!
+ * \class QtAws::Greengrass::ListFunctionDefinitionsRequest
  *
- * @brief  Implements Greengrass ListFunctionDefinitions requests.
+ * \brief The ListFunctionDefinitionsRequest class encapsulates Greengrass ListFunctionDefinitions requests.
  *
- * @see    GreengrassClient::listFunctionDefinitions
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::listFunctionDefinitions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ ListFunctionDefinitionsRequest::ListFunctionDefinitionsRequest(const ListFunctio
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListFunctionDefinitionsRequest object.
  */
 ListFunctionDefinitionsRequest::ListFunctionDefinitionsRequest()
@@ -53,13 +59,16 @@ ListFunctionDefinitionsRequest::ListFunctionDefinitionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListFunctionDefinitionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListFunctionDefinitionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionsRequest::response(QNet
     return new ListFunctionDefinitionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListFunctionDefinitionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionsRequest::response(QNet
  * @brief  Private implementation for ListFunctionDefinitionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionDefinitionsRequestPrivate object.
@@ -97,7 +106,7 @@ ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListFunctionDefinitionsRequestPrivate object, copying another.

@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  DescribeConfigurationRequest
+/*!
+ * \class QtAws::MQ::DescribeConfigurationRequest
  *
- * @brief  Implements MQ DescribeConfiguration requests.
+ * \brief The DescribeConfigurationRequest class encapsulates MQ DescribeConfiguration requests.
  *
- * @see    MQClient::describeConfiguration
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::describeConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeConfigurationRequest::DescribeConfigurationRequest(const DescribeConfigu
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeConfigurationRequest object.
  */
 DescribeConfigurationRequest::DescribeConfigurationRequest()
@@ -53,13 +58,16 @@ DescribeConfigurationRequest::DescribeConfigurationRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRequest::response(QNetwo
     return new DescribeConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeConfigurationRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRequest::response(QNetwo
  * @brief  Private implementation for DescribeConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConfigurationRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeConfigurationRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteSubnetResponse
+/*!
+ * \class QtAws::EC2::DeleteSubnetResponse
  *
- * @brief  Handles EC2 DeleteSubnet responses.
+ * \brief The DeleteSubnetResponse class encapsulates EC2 DeleteSubnet responses.
  *
- * @see    EC2Client::deleteSubnet
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteSubnet
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteSubnetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteSubnetRequest * DeleteSubnetResponse::request() const
     return static_cast<const DeleteSubnetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DeleteSubnet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteSubnetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteSubnetResponsePrivate
+ * \class DeleteSubnetResponsePrivate
  *
- * @brief  Private implementation for DeleteSubnetResponse.
+ * \brief Private implementation for DeleteSubnetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteSubnetResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteSubnetResponsePrivate::DeleteSubnetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DeleteSubnetResponse element.
  *
  * @param  xml  XML stream to parse.

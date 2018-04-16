@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  DisassociateConnectorResponse
+/*!
+ * \class QtAws::SMS::DisassociateConnectorResponse
  *
- * @brief  Handles SMS DisassociateConnector responses.
+ * \brief The DisassociateConnectorResponse class encapsulates SMS DisassociateConnector responses.
  *
- * @see    SMSClient::disassociateConnector
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::disassociateConnector
  */
 
-/**
+/*!
  * @brief  Constructs a new DisassociateConnectorResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DisassociateConnectorRequest * DisassociateConnectorResponse::request() co
     return static_cast<const DisassociateConnectorRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SMS DisassociateConnector response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DisassociateConnectorResponsePrivate
+ * \class DisassociateConnectorResponsePrivate
  *
- * @brief  Private implementation for DisassociateConnectorResponse.
+ * \brief Private implementation for DisassociateConnectorResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DisassociateConnectorResponsePrivate object.
@@ -91,7 +94,7 @@ DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SMS DisassociateConnectorResponse element.
  *
  * @param  xml  XML stream to parse.

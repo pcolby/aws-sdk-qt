@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace LexModelBuildingService {
 
-/**
- * @class  DeleteBotAliasResponse
+/*!
+ * \class QtAws::LexModelBuildingService::DeleteBotAliasResponse
  *
- * @brief  Handles LexModelBuildingService DeleteBotAlias responses.
+ * \brief The DeleteBotAliasResponse class encapsulates LexModelBuildingService DeleteBotAlias responses.
  *
- * @see    LexModelBuildingServiceClient::deleteBotAlias
+ * \ingroup LexModelBuildingService
+ *
+ *  <fullname>Amazon Lex Build-Time Actions</fullname>
+ * 
+ *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
+ *  and delete conversational bots for new and existing client applications.
+ *
+ * \sa LexModelBuildingServiceClient::deleteBotAlias
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBotAliasResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DeleteBotAliasRequest * DeleteBotAliasResponse::request() const
     return static_cast<const DeleteBotAliasRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a LexModelBuildingService DeleteBotAlias response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DeleteBotAliasResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteBotAliasResponsePrivate
+ * \class DeleteBotAliasResponsePrivate
  *
- * @brief  Private implementation for DeleteBotAliasResponse.
+ * \brief Private implementation for DeleteBotAliasResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBotAliasResponsePrivate object.
@@ -91,7 +98,7 @@ DeleteBotAliasResponsePrivate::DeleteBotAliasResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an LexModelBuildingService DeleteBotAliasResponse element.
  *
  * @param  xml  XML stream to parse.

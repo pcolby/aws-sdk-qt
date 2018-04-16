@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  SageMakerResponse
+/*!
+ * \class QtAws::SageMaker::SageMakerResponse
  *
- * @brief  Handles SageMaker SageMaker responses.
+ * \brief The SageMakerResponse class is the base class for all SageMaker responses.
  *
- * @see    SageMakerClient::sageMaker
+ * \ingroup SageMaker
  */
 
-/**
+/*!
  * @brief  Constructs a new SageMakerResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ SageMakerResponse::SageMakerResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SageMakerResponse object.
@@ -63,7 +63,7 @@ SageMakerResponse::SageMakerResponse(SageMakerResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void SageMakerResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SageMakerResponsePrivate
@@ -92,7 +92,7 @@ void SageMakerResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for SageMakerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SageMakerResponsePrivate object.

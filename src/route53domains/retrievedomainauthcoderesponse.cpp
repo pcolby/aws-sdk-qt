@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Route53Domains {
 
-/**
- * @class  RetrieveDomainAuthCodeResponse
+/*!
+ * \class QtAws::Route53Domains::RetrieveDomainAuthCodeResponse
  *
- * @brief  Handles Route53Domains RetrieveDomainAuthCode responses.
+ * \brief The RetrieveDomainAuthCodeResponse class encapsulates Route53Domains RetrieveDomainAuthCode responses.
  *
- * @see    Route53DomainsClient::retrieveDomainAuthCode
+ * \ingroup Route53Domains
+ *
+ *  Amazon Route 53 API actions let you register domain names and perform related
+ *
+ * \sa Route53DomainsClient::retrieveDomainAuthCode
  */
 
-/**
+/*!
  * @brief  Constructs a new RetrieveDomainAuthCodeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const RetrieveDomainAuthCodeRequest * RetrieveDomainAuthCodeResponse::request() 
     return static_cast<const RetrieveDomainAuthCodeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Route53Domains RetrieveDomainAuthCode response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void RetrieveDomainAuthCodeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RetrieveDomainAuthCodeResponsePrivate
+ * \class RetrieveDomainAuthCodeResponsePrivate
  *
- * @brief  Private implementation for RetrieveDomainAuthCodeResponse.
+ * \brief Private implementation for RetrieveDomainAuthCodeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RetrieveDomainAuthCodeResponsePrivate object.
@@ -91,7 +95,7 @@ RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Route53Domains RetrieveDomainAuthCodeResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetMappingRequest
+/*!
+ * \class QtAws::Glue::GetMappingRequest
  *
- * @brief  Implements Glue GetMapping requests.
+ * \brief The GetMappingRequest class encapsulates Glue GetMapping requests.
  *
- * @see    GlueClient::getMapping
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getMapping
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetMappingRequest::GetMappingRequest(const GetMappingRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMappingRequest object.
  */
 GetMappingRequest::GetMappingRequest()
@@ -53,13 +59,16 @@ GetMappingRequest::GetMappingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMappingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMappingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * c
     return new GetMappingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMappingRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * c
  * @brief  Private implementation for GetMappingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMappingRequestPrivate object.
@@ -97,7 +106,7 @@ GetMappingRequestPrivate::GetMappingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMappingRequestPrivate object, copying another.

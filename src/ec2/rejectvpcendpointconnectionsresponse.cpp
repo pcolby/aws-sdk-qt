@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RejectVpcEndpointConnectionsResponse
+/*!
+ * \class QtAws::EC2::RejectVpcEndpointConnectionsResponse
  *
- * @brief  Handles EC2 RejectVpcEndpointConnections responses.
+ * \brief The RejectVpcEndpointConnectionsResponse class encapsulates EC2 RejectVpcEndpointConnections responses.
  *
- * @see    EC2Client::rejectVpcEndpointConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::rejectVpcEndpointConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new RejectVpcEndpointConnectionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const RejectVpcEndpointConnectionsRequest * RejectVpcEndpointConnectionsResponse
     return static_cast<const RejectVpcEndpointConnectionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 RejectVpcEndpointConnections response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void RejectVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  RejectVpcEndpointConnectionsResponsePrivate
+ * \class RejectVpcEndpointConnectionsResponsePrivate
  *
- * @brief  Private implementation for RejectVpcEndpointConnectionsResponse.
+ * \brief Private implementation for RejectVpcEndpointConnectionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RejectVpcEndpointConnectionsResponsePrivate object.
@@ -91,7 +98,7 @@ RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 RejectVpcEndpointConnectionsResponse element.
  *
  * @param  xml  XML stream to parse.

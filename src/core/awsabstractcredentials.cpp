@@ -25,13 +25,13 @@
 namespace QtAws {
 namespace Core {
 
-/**
- * @class  AwsAbstractCredentials
+/*!
+ * \class QtAws::Core::AwsAbstractCredentials
  *
  * @brief  Interface class for providing AWS credentials.
  */
 
-/**
+/*!
  * @brief  Construct an AwsAbstractCredentials object.
  *
  * @param  parent
@@ -42,7 +42,7 @@ AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Construct an AwsAbstractCredentials object.
@@ -60,7 +60,7 @@ AwsAbstractCredentials::AwsAbstractCredentials(
 
 }
 
-/**
+/*!
  * @brief  AwsAbstractCredentials destructor.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
@@ -71,7 +71,7 @@ AwsAbstractCredentials::~AwsAbstractCredentials()
     delete d_ptr;
 }
 
-/**
+/*!
  * @fn       QString AwsAbstractCredentials::accessKeyId() const
  *
  * @brief    AWS access key ID for this credentials object.
@@ -79,7 +79,7 @@ AwsAbstractCredentials::~AwsAbstractCredentials()
  * @returns  The AWS access key ID for this credentials object.
  */
 
-/**
+/*!
  * @fn       QString AwsAbstractCredentials::secretKey() const
  *
  * @brief    AWS secret access key for this credentials object.
@@ -87,7 +87,7 @@ AwsAbstractCredentials::~AwsAbstractCredentials()
  * @returns  The AWS secret access key for this credentials object.
  */
 
-/**
+/*!
  * @fn       QString AwsAbstractCredentials::token() const
  *
  * @brief    AWS security token for this credentials object.
@@ -95,7 +95,7 @@ AwsAbstractCredentials::~AwsAbstractCredentials()
  * @returns  The AWS security token for this credentials object.
  */
 
-/**
+/*!
  * @brief    DateTime at which the credentials will expire.
  *
  * This method should not be invoked unless the object is known to be refreshable
@@ -122,7 +122,7 @@ QDateTime AwsAbstractCredentials::expiration() const
     return QDateTime(); // A null QDateTime.
 }
 
-/**
+/*!
  * @brief    Is this credentials object currently expired.
  *
  * In this base implementation, non-refreshable credentials (ie those for which
@@ -147,7 +147,7 @@ bool AwsAbstractCredentials::isExpired() const
     return false; // Non-refreshable credentials do not expire, by default.
 }
 
-/**
+/*!
  * @brief    Is this credentials object refreshable.
  *
  * This base implementation always returns \c false - ie credentials are not refreshable
@@ -168,7 +168,7 @@ bool AwsAbstractCredentials::isRefreshable() const
     return false;
 }
 
-/**
+/*!
  * @brief  Refresh this object's credentials.
  *
  * This slot begins an asynchronous refresh transaction, and should be followed by a
@@ -196,7 +196,7 @@ bool AwsAbstractCredentials::refresh()
     return false;
 }
 
-/**
+/*!
  * @fn     void AwsAbstractCredentials::changed()
  *
  * @brief  Signal emitted when this object's credentials have been updated.
@@ -204,15 +204,15 @@ bool AwsAbstractCredentials::refresh()
  * @see    refresh()
  */
 
-/**
+/*!
  * @internal
  *
- * @class  AwsAbstractCredentialsPrivate
+ * \class QtAws::Core::AwsAbstractCredentialsPrivate
  *
  * @brief  Private implementation for AwsAbstractCredentials.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AwsAbstractCredentialsPrivate object.
@@ -225,7 +225,7 @@ AwsAbstractCredentialsPrivate::AwsAbstractCredentialsPrivate(AwsAbstractCredenti
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  AwsAbstractCredentialsPrivate destructor.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateByteMatchSetRequest
+/*!
+ * \class QtAws::WAF::UpdateByteMatchSetRequest
  *
- * @brief  Implements WAF UpdateByteMatchSet requests.
+ * \brief The UpdateByteMatchSetRequest class encapsulates WAF UpdateByteMatchSet requests.
  *
- * @see    WAFClient::updateByteMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateByteMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateByteMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateByteMatchSetRequest::UpdateByteMatchSetRequest(const UpdateByteMatchSetReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateByteMatchSetRequest object.
  */
 UpdateByteMatchSetRequest::UpdateByteMatchSetRequest()
@@ -53,13 +61,16 @@ UpdateByteMatchSetRequest::UpdateByteMatchSetRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateByteMatchSetRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateByteMatchSetResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
     return new UpdateByteMatchSetResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateByteMatchSetRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
  * @brief  Private implementation for UpdateByteMatchSetRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateByteMatchSetRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateByteMatchSetRequestPrivate object, copying another.

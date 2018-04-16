@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeMountTargetSecurityGroupsRequest
+/*!
+ * \class QtAws::EFS::DescribeMountTargetSecurityGroupsRequest
  *
- * @brief  Implements EFS DescribeMountTargetSecurityGroups requests.
+ * \brief The DescribeMountTargetSecurityGroupsRequest class encapsulates EFS DescribeMountTargetSecurityGroups requests.
  *
- * @see    EFSClient::describeMountTargetSecurityGroups
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeMountTargetSecurityGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsReque
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequest object.
  */
 DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsRequest()
@@ -53,13 +62,16 @@ DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsReque
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeMountTargetSecurityGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeMountTargetSecurityGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::res
     return new DescribeMountTargetSecurityGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeMountTargetSecurityGroupsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::res
  * @brief  Private implementation for DescribeMountTargetSecurityGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGrou
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequestPrivate object, copying another.

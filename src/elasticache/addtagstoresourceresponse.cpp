@@ -27,15 +27,32 @@
 namespace QtAws {
 namespace ElastiCache {
 
-/**
- * @class  AddTagsToResourceResponse
+/*!
+ * \class QtAws::ElastiCache::AddTagsToResourceResponse
  *
- * @brief  Handles ElastiCache AddTagsToResource responses.
+ * \brief The AddTagsToResourceResponse class encapsulates ElastiCache AddTagsToResource responses.
  *
- * @see    ElastiCacheClient::addTagsToResource
+ * \ingroup ElastiCache
+ *
+ *  <fullname>Amazon ElastiCache</fullname>
+ * 
+ *  Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the
+ * 
+ *  cloud>
+ * 
+ *  With ElastiCache, customers get all of the benefits of a high-performance, in-memory cache with less of the
+ *  administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and
+ *  cluster failure handling much simpler than in a self-managed cache
+ * 
+ *  deployment>
+ * 
+ *  In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance
+ *  statistics associated with their cache and can receive alarms if a part of their cache runs
+ *
+ * \sa ElastiCacheClient::addTagsToResource
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToResourceResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +75,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
     return static_cast<const AddTagsToResourceRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ElastiCache AddTagsToResource response.
  *
  * @param  response  Response to parse.
@@ -70,15 +87,15 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AddTagsToResourceResponsePrivate
+ * \class AddTagsToResourceResponsePrivate
  *
- * @brief  Private implementation for AddTagsToResourceResponse.
+ * \brief Private implementation for AddTagsToResourceResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToResourceResponsePrivate object.
@@ -91,7 +108,7 @@ AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an ElastiCache AddTagsToResourceResponse element.
  *
  * @param  xml  XML stream to parse.

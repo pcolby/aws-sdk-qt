@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SageMaker {
 
-/**
- * @class  DeleteTagsRequest
+/*!
+ * \class QtAws::SageMaker::DeleteTagsRequest
  *
- * @brief  Implements SageMaker DeleteTags requests.
+ * \brief The DeleteTagsRequest class encapsulates SageMaker DeleteTags requests.
  *
- * @see    SageMakerClient::deleteTags
+ * \ingroup SageMaker
+ *
+ *
+ * \sa SageMakerClient::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
@@ -53,13 +56,16 @@ DeleteTagsRequest::DeleteTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
     return new DeleteTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTagsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  * @brief  Private implementation for DeleteTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsRequestPrivate object, copying another.

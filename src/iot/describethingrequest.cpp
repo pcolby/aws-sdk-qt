@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DescribeThingRequest
+/*!
+ * \class QtAws::IoT::DescribeThingRequest
  *
- * @brief  Implements IoT DescribeThing requests.
+ * \brief The DescribeThingRequest class encapsulates IoT DescribeThing requests.
  *
- * @see    IoTClient::describeThing
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::describeThing
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeThingRequest::DescribeThingRequest(const DescribeThingRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeThingRequest object.
  */
 DescribeThingRequest::DescribeThingRequest()
@@ -53,13 +67,16 @@ DescribeThingRequest::DescribeThingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeThingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeThingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRequest::response(QNetworkReply 
     return new DescribeThingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeThingRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeThingRequest::response(QNetworkReply 
  * @brief  Private implementation for DescribeThingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeThingRequestPrivate::DescribeThingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeThingRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace Route53 {
 
-/**
- * @class  GetHealthCheckLastFailureReasonRequest
+/*!
+ * \class QtAws::Route53::GetHealthCheckLastFailureReasonRequest
  *
- * @brief  Implements Route53 GetHealthCheckLastFailureReason requests.
+ * \brief The GetHealthCheckLastFailureReasonRequest class encapsulates Route53 GetHealthCheckLastFailureReason requests.
  *
- * @see    Route53Client::getHealthCheckLastFailureReason
+ * \ingroup Route53
+ *
+ *
+ * \sa Route53Client::getHealthCheckLastFailureReason
  */
 
-/**
+/*!
  * @brief  Constructs a new GetHealthCheckLastFailureReasonRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetHealthCheckLastFailureReasonRequest::GetHealthCheckLastFailureReasonRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetHealthCheckLastFailureReasonRequest object.
  */
 GetHealthCheckLastFailureReasonRequest::GetHealthCheckLastFailureReasonRequest()
@@ -53,13 +56,16 @@ GetHealthCheckLastFailureReasonRequest::GetHealthCheckLastFailureReasonRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetHealthCheckLastFailureReasonRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetHealthCheckLastFailureReasonResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::respo
     return new GetHealthCheckLastFailureReasonResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetHealthCheckLastFailureReasonRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::respo
  * @brief  Private implementation for GetHealthCheckLastFailureReasonRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHealthCheckLastFailureReasonRequestPrivate object.
@@ -97,7 +103,7 @@ GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetHealthCheckLastFailureReasonRequestPrivate object, copying another.

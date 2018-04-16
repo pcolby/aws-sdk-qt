@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  CreateInstanceProfileRequest
+/*!
+ * \class QtAws::DeviceFarm::CreateInstanceProfileRequest
  *
- * @brief  Implements DeviceFarm CreateInstanceProfile requests.
+ * \brief The CreateInstanceProfileRequest class encapsulates DeviceFarm CreateInstanceProfile requests.
  *
- * @see    DeviceFarmClient::createInstanceProfile
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::createInstanceProfile
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ CreateInstanceProfileRequest::CreateInstanceProfileRequest(const CreateInstanceP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new CreateInstanceProfileRequest object.
  */
 CreateInstanceProfileRequest::CreateInstanceProfileRequest()
@@ -53,13 +58,16 @@ CreateInstanceProfileRequest::CreateInstanceProfileRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool CreateInstanceProfileRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an CreateInstanceProfileResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetwo
     return new CreateInstanceProfileResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  CreateInstanceProfileRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetwo
  * @brief  Private implementation for CreateInstanceProfileRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInstanceProfileRequestPrivate object.
@@ -97,7 +105,7 @@ CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateInstanceProfileRequestPrivate object, copying another.

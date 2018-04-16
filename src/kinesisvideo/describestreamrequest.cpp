@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  DescribeStreamRequest
+/*!
+ * \class QtAws::KinesisVideo::DescribeStreamRequest
  *
- * @brief  Implements KinesisVideo DescribeStream requests.
+ * \brief The DescribeStreamRequest class encapsulates KinesisVideo DescribeStream requests.
  *
- * @see    KinesisVideoClient::describeStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::describeStream
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeStreamRequest object.
  */
 DescribeStreamRequest::DescribeStreamRequest()
@@ -53,13 +56,16 @@ DescribeStreamRequest::DescribeStreamRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeStreamRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeStreamResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
     return new DescribeStreamResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeStreamRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
  * @brief  Private implementation for DescribeStreamRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamRequestPrivate object.
@@ -97,7 +103,7 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeStreamRequestPrivate object, copying another.

@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetConnectionsResponse
+/*!
+ * \class QtAws::Glue::GetConnectionsResponse
  *
- * @brief  Handles Glue GetConnections responses.
+ * \brief The GetConnectionsResponse class encapsulates Glue GetConnections responses.
  *
- * @see    GlueClient::getConnections
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConnectionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const GetConnectionsRequest * GetConnectionsResponse::request() const
     return static_cast<const GetConnectionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue GetConnections response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void GetConnectionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetConnectionsResponsePrivate
+ * \class GetConnectionsResponsePrivate
  *
- * @brief  Private implementation for GetConnectionsResponse.
+ * \brief Private implementation for GetConnectionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectionsResponsePrivate object.
@@ -91,7 +97,7 @@ GetConnectionsResponsePrivate::GetConnectionsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue GetConnectionsResponse element.
  *
  * @param  xml  XML stream to parse.

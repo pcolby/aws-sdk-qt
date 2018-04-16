@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  RebootInstancesRequest
+/*!
+ * \class QtAws::EC2::RebootInstancesRequest
  *
- * @brief  Implements EC2 RebootInstances requests.
+ * \brief The RebootInstancesRequest class encapsulates EC2 RebootInstances requests.
  *
- * @see    EC2Client::rebootInstances
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::rebootInstances
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ RebootInstancesRequest::RebootInstancesRequest(const RebootInstancesRequest &oth
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RebootInstancesRequest object.
  */
 RebootInstancesRequest::RebootInstancesRequest()
@@ -53,13 +60,16 @@ RebootInstancesRequest::RebootInstancesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RebootInstancesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RebootInstancesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkRepl
     return new RebootInstancesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RebootInstancesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkRepl
  * @brief  Private implementation for RebootInstancesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootInstancesRequestPrivate object.
@@ -97,7 +107,7 @@ RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootInstancesRequestPrivate object, copying another.

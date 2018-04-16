@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DescribeMountTargetsRequest
+/*!
+ * \class QtAws::EFS::DescribeMountTargetsRequest
  *
- * @brief  Implements EFS DescribeMountTargets requests.
+ * \brief The DescribeMountTargetsRequest class encapsulates EFS DescribeMountTargets requests.
  *
- * @see    EFSClient::describeMountTargets
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::describeMountTargets
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeMountTargetsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeMountTargetsRequest::DescribeMountTargetsRequest(const DescribeMountTarg
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeMountTargetsRequest object.
  */
 DescribeMountTargetsRequest::DescribeMountTargetsRequest()
@@ -53,13 +62,16 @@ DescribeMountTargetsRequest::DescribeMountTargetsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeMountTargetsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeMountTargetsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetwor
     return new DescribeMountTargetsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeMountTargetsRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetwor
  * @brief  Private implementation for DescribeMountTargetsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMountTargetsRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeMountTargetsRequestPrivate object, copying another.

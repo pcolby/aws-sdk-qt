@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  SetInstanceHealthRequest
+/*!
+ * \class QtAws::AutoScaling::SetInstanceHealthRequest
  *
- * @brief  Implements AutoScaling SetInstanceHealth requests.
+ * \brief The SetInstanceHealthRequest class encapsulates AutoScaling SetInstanceHealth requests.
  *
- * @see    AutoScalingClient::setInstanceHealth
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::setInstanceHealth
  */
 
-/**
+/*!
  * @brief  Constructs a new SetInstanceHealthRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ SetInstanceHealthRequest::SetInstanceHealthRequest(const SetInstanceHealthReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SetInstanceHealthRequest object.
  */
 SetInstanceHealthRequest::SetInstanceHealthRequest()
@@ -53,13 +61,16 @@ SetInstanceHealthRequest::SetInstanceHealthRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SetInstanceHealthRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SetInstanceHealthResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkRe
     return new SetInstanceHealthResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SetInstanceHealthRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkRe
  * @brief  Private implementation for SetInstanceHealthRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetInstanceHealthRequestPrivate object.
@@ -97,7 +108,7 @@ SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SetInstanceHealthRequestPrivate object, copying another.

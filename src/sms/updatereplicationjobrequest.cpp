@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace SMS {
 
-/**
- * @class  UpdateReplicationJobRequest
+/*!
+ * \class QtAws::SMS::UpdateReplicationJobRequest
  *
- * @brief  Implements SMS UpdateReplicationJob requests.
+ * \brief The UpdateReplicationJobRequest class encapsulates SMS UpdateReplicationJob requests.
  *
- * @see    SMSClient::updateReplicationJob
+ * \ingroup SMS
+ *
+ *
+ * \sa SMSClient::updateReplicationJob
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateReplicationJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateReplicationJobRequest::UpdateReplicationJobRequest(const UpdateReplication
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateReplicationJobRequest object.
  */
 UpdateReplicationJobRequest::UpdateReplicationJobRequest()
@@ -53,13 +56,16 @@ UpdateReplicationJobRequest::UpdateReplicationJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateReplicationJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateReplicationJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetwor
     return new UpdateReplicationJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateReplicationJobRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetwor
  * @brief  Private implementation for UpdateReplicationJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateReplicationJobRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateReplicationJobRequestPrivate object, copying another.

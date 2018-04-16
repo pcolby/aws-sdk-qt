@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace Lambda {
 
-/**
- * @class  ListVersionsByFunctionResponse
+/*!
+ * \class QtAws::Lambda::ListVersionsByFunctionResponse
  *
- * @brief  Handles Lambda ListVersionsByFunction responses.
+ * \brief The ListVersionsByFunctionResponse class encapsulates Lambda ListVersionsByFunction responses.
  *
- * @see    LambdaClient::listVersionsByFunction
+ * \ingroup Lambda
+ *
+ *  <fullname>AWS Lambda</fullname>
+ * 
+ *  <b>Overview</b>
+ * 
+ *  </p
+ * 
+ *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
+ *  service overview, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for
+ *  information about how the service works, see <a
+ *  href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
+ *  Lambda Developer
+ *
+ * \sa LambdaClient::listVersionsByFunction
  */
 
-/**
+/*!
  * @brief  Constructs a new ListVersionsByFunctionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const ListVersionsByFunctionRequest * ListVersionsByFunctionResponse::request() 
     return static_cast<const ListVersionsByFunctionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Lambda ListVersionsByFunction response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void ListVersionsByFunctionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListVersionsByFunctionResponsePrivate
+ * \class ListVersionsByFunctionResponsePrivate
  *
- * @brief  Private implementation for ListVersionsByFunctionResponse.
+ * \brief Private implementation for ListVersionsByFunctionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListVersionsByFunctionResponsePrivate object.
@@ -91,7 +105,7 @@ ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Lambda ListVersionsByFunctionResponse element.
  *
  * @param  xml  XML stream to parse.

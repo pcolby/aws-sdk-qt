@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  CreateOrUpdateTagsResponse
+/*!
+ * \class QtAws::AutoScaling::CreateOrUpdateTagsResponse
  *
- * @brief  Handles AutoScaling CreateOrUpdateTags responses.
+ * \brief The CreateOrUpdateTagsResponse class encapsulates AutoScaling CreateOrUpdateTags responses.
  *
- * @see    AutoScalingClient::createOrUpdateTags
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::createOrUpdateTags
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateOrUpdateTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateOrUpdateTagsRequest * CreateOrUpdateTagsResponse::request() const
     return static_cast<const CreateOrUpdateTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling CreateOrUpdateTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateOrUpdateTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateOrUpdateTagsResponsePrivate
+ * \class CreateOrUpdateTagsResponsePrivate
  *
- * @brief  Private implementation for CreateOrUpdateTagsResponse.
+ * \brief Private implementation for CreateOrUpdateTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateOrUpdateTagsResponsePrivate object.
@@ -91,7 +99,7 @@ CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling CreateOrUpdateTagsResponse element.
  *
  * @param  xml  XML stream to parse.

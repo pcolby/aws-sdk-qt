@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  RebootReplicationInstanceRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceRequest
  *
- * @brief  Implements DatabaseMigrationService RebootReplicationInstance requests.
+ * \brief The RebootReplicationInstanceRequest class encapsulates DatabaseMigrationService RebootReplicationInstance requests.
  *
- * @see    DatabaseMigrationServiceClient::rebootReplicationInstance
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::rebootReplicationInstance
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootReplicationInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ RebootReplicationInstanceRequest::RebootReplicationInstanceRequest(const RebootR
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RebootReplicationInstanceRequest object.
  */
 RebootReplicationInstanceRequest::RebootReplicationInstanceRequest()
@@ -53,13 +67,16 @@ RebootReplicationInstanceRequest::RebootReplicationInstanceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RebootReplicationInstanceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RebootReplicationInstanceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QN
     return new RebootReplicationInstanceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RebootReplicationInstanceRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QN
  * @brief  Private implementation for RebootReplicationInstanceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootReplicationInstanceRequestPrivate object.
@@ -97,7 +114,7 @@ RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootReplicationInstanceRequestPrivate object, copying another.

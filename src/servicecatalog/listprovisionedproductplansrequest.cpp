@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListProvisionedProductPlansRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListProvisionedProductPlansRequest
  *
- * @brief  Implements ServiceCatalog ListProvisionedProductPlans requests.
+ * \brief The ListProvisionedProductPlansRequest class encapsulates ServiceCatalog ListProvisionedProductPlans requests.
  *
- * @see    ServiceCatalogClient::listProvisionedProductPlans
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listProvisionedProductPlans
  */
 
-/**
+/*!
  * @brief  Constructs a new ListProvisionedProductPlansRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListProvisionedProductPlansRequest::ListProvisionedProductPlansRequest(const Lis
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListProvisionedProductPlansRequest object.
  */
 ListProvisionedProductPlansRequest::ListProvisionedProductPlansRequest()
@@ -53,13 +62,16 @@ ListProvisionedProductPlansRequest::ListProvisionedProductPlansRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListProvisionedProductPlansRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListProvisionedProductPlansResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListProvisionedProductPlansRequest::response(
     return new ListProvisionedProductPlansResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListProvisionedProductPlansRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListProvisionedProductPlansRequest::response(
  * @brief  Private implementation for ListProvisionedProductPlansRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProvisionedProductPlansRequestPrivate object.
@@ -97,7 +109,7 @@ ListProvisionedProductPlansRequestPrivate::ListProvisionedProductPlansRequestPri
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListProvisionedProductPlansRequestPrivate object, copying another.

@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  DescribeProductViewRequest
+/*!
+ * \class QtAws::ServiceCatalog::DescribeProductViewRequest
  *
- * @brief  Implements ServiceCatalog DescribeProductView requests.
+ * \brief The DescribeProductViewRequest class encapsulates ServiceCatalog DescribeProductView requests.
  *
- * @see    ServiceCatalogClient::describeProductView
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::describeProductView
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductViewRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ DescribeProductViewRequest::DescribeProductViewRequest(const DescribeProductView
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeProductViewRequest object.
  */
 DescribeProductViewRequest::DescribeProductViewRequest()
@@ -53,13 +62,16 @@ DescribeProductViewRequest::DescribeProductViewRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeProductViewRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeProductViewResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductViewRequest::response(QNetwork
     return new DescribeProductViewResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeProductViewRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * DescribeProductViewRequest::response(QNetwork
  * @brief  Private implementation for DescribeProductViewRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductViewRequestPrivate object.
@@ -97,7 +109,7 @@ DescribeProductViewRequestPrivate::DescribeProductViewRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeProductViewRequestPrivate object, copying another.

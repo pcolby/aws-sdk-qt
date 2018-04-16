@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace CloudSearch {
 
-/**
- * @class  CreateDomainResponse
+/*!
+ * \class QtAws::CloudSearch::CreateDomainResponse
  *
- * @brief  Handles CloudSearch CreateDomain responses.
+ * \brief The CreateDomainResponse class encapsulates CloudSearch CreateDomain responses.
  *
- * @see    CloudSearchClient::createDomain
+ * \ingroup CloudSearch
+ *
+ *  <fullname>Amazon CloudSearch Configuration Service</fullname>
+ * 
+ *  You use the Amazon CloudSearch configuration service to create, configure, and manage search domains. Configuration
+ *  service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via
+ *  HTTP GET or POST with a query parameter named
+ * 
+ *  Action>
+ * 
+ *  The endpoint for configuration service requests is region-specific: cloudsearch.<i>region</i>.amazonaws.com. For
+ *  example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region" target="_blank">Regions and
+ *
+ * \sa CloudSearchClient::createDomain
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateDomainResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const CreateDomainRequest * CreateDomainResponse::request() const
     return static_cast<const CreateDomainRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudSearch CreateDomain response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void CreateDomainResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateDomainResponsePrivate
+ * \class CreateDomainResponsePrivate
  *
- * @brief  Private implementation for CreateDomainResponse.
+ * \brief Private implementation for CreateDomainResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateDomainResponsePrivate object.
@@ -91,7 +105,7 @@ CreateDomainResponsePrivate::CreateDomainResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudSearch CreateDomainResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  InstallToRemoteAccessSessionResponse
+/*!
+ * \class QtAws::DeviceFarm::InstallToRemoteAccessSessionResponse
  *
- * @brief  Handles DeviceFarm InstallToRemoteAccessSession responses.
+ * \brief The InstallToRemoteAccessSessionResponse class encapsulates DeviceFarm InstallToRemoteAccessSession responses.
  *
- * @see    DeviceFarmClient::installToRemoteAccessSession
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::installToRemoteAccessSession
  */
 
-/**
+/*!
  * @brief  Constructs a new InstallToRemoteAccessSessionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const InstallToRemoteAccessSessionRequest * InstallToRemoteAccessSessionResponse
     return static_cast<const InstallToRemoteAccessSessionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DeviceFarm InstallToRemoteAccessSession response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void InstallToRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  InstallToRemoteAccessSessionResponsePrivate
+ * \class InstallToRemoteAccessSessionResponsePrivate
  *
- * @brief  Private implementation for InstallToRemoteAccessSessionResponse.
+ * \brief Private implementation for InstallToRemoteAccessSessionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new InstallToRemoteAccessSessionResponsePrivate object.
@@ -91,7 +96,7 @@ InstallToRemoteAccessSessionResponsePrivate::InstallToRemoteAccessSessionRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an DeviceFarm InstallToRemoteAccessSessionResponse element.
  *
  * @param  xml  XML stream to parse.

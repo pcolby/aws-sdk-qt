@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace TranscribeService {
 
-/**
- * @class  ListVocabulariesRequest
+/*!
+ * \class QtAws::TranscribeService::ListVocabulariesRequest
  *
- * @brief  Implements TranscribeService ListVocabularies requests.
+ * \brief The ListVocabulariesRequest class encapsulates TranscribeService ListVocabularies requests.
  *
- * @see    TranscribeServiceClient::listVocabularies
+ * \ingroup TranscribeService
+ *
+ *  Operations and objects for transcribing speech to
+ *
+ * \sa TranscribeServiceClient::listVocabularies
  */
 
-/**
+/*!
  * @brief  Constructs a new ListVocabulariesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ ListVocabulariesRequest::ListVocabulariesRequest(const ListVocabulariesRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListVocabulariesRequest object.
  */
 ListVocabulariesRequest::ListVocabulariesRequest()
@@ -53,13 +57,16 @@ ListVocabulariesRequest::ListVocabulariesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListVocabulariesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListVocabulariesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * ListVocabulariesRequest::response(QNetworkRep
     return new ListVocabulariesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListVocabulariesRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * ListVocabulariesRequest::response(QNetworkRep
  * @brief  Private implementation for ListVocabulariesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListVocabulariesRequestPrivate object.
@@ -97,7 +104,7 @@ ListVocabulariesRequestPrivate::ListVocabulariesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListVocabulariesRequestPrivate object, copying another.

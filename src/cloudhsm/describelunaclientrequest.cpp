@@ -25,15 +25,30 @@
 namespace QtAws {
 namespace CloudHSM {
 
-/**
- * @class  DescribeLunaClientRequest
+/*!
+ * \class QtAws::CloudHSM::DescribeLunaClientRequest
  *
- * @brief  Implements CloudHSM DescribeLunaClient requests.
+ * \brief The DescribeLunaClientRequest class encapsulates CloudHSM DescribeLunaClient requests.
  *
- * @see    CloudHSMClient::describeLunaClient
+ * \ingroup CloudHSM
+ *
+ *  <fullname>AWS CloudHSM Service</fullname>
+ * 
+ *  This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
+ *  href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/classic/APIReference/">AWS CloudHSM Classic API
+ * 
+ *  Reference</a>>
+ * 
+ *  <b>For information about the current version of AWS CloudHSM</b>, see <a href="http://aws.amazon.com/cloudhsm/">AWS
+ *  CloudHSM</a>, the <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
+ *  <a href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
+ *
+ * \sa CloudHSMClient::describeLunaClient
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeLunaClientRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +59,7 @@ DescribeLunaClientRequest::DescribeLunaClientRequest(const DescribeLunaClientReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeLunaClientRequest object.
  */
 DescribeLunaClientRequest::DescribeLunaClientRequest()
@@ -53,13 +68,16 @@ DescribeLunaClientRequest::DescribeLunaClientRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeLunaClientRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeLunaClientResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLunaClientRequest::response(QNetworkR
     return new DescribeLunaClientResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeLunaClientRequestPrivate
@@ -82,7 +100,7 @@ QtAws::Core::AwsAbstractResponse * DescribeLunaClientRequest::response(QNetworkR
  * @brief  Private implementation for DescribeLunaClientRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLunaClientRequestPrivate object.
@@ -97,7 +115,7 @@ DescribeLunaClientRequestPrivate::DescribeLunaClientRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeLunaClientRequestPrivate object, copying another.

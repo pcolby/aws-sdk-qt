@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AlexaForBusiness {
 
-/**
- * @class  AssociateContactWithAddressBookRequest
+/*!
+ * \class QtAws::AlexaForBusiness::AssociateContactWithAddressBookRequest
  *
- * @brief  Implements AlexaForBusiness AssociateContactWithAddressBook requests.
+ * \brief The AssociateContactWithAddressBookRequest class encapsulates AlexaForBusiness AssociateContactWithAddressBook requests.
  *
- * @see    AlexaForBusinessClient::associateContactWithAddressBook
+ * \ingroup AlexaForBusiness
+ *
+ *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
+ *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
+ *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
+ *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
+ *  context-aware voice experiences for your
+ *
+ * \sa AlexaForBusinessClient::associateContactWithAddressBook
  */
 
-/**
+/*!
  * @brief  Constructs a new AssociateContactWithAddressBookRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ AssociateContactWithAddressBookRequest::AssociateContactWithAddressBookRequest(c
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AssociateContactWithAddressBookRequest object.
  */
 AssociateContactWithAddressBookRequest::AssociateContactWithAddressBookRequest()
@@ -53,13 +61,16 @@ AssociateContactWithAddressBookRequest::AssociateContactWithAddressBookRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AssociateContactWithAddressBookRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AssociateContactWithAddressBookResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * AssociateContactWithAddressBookRequest::respo
     return new AssociateContactWithAddressBookResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AssociateContactWithAddressBookRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * AssociateContactWithAddressBookRequest::respo
  * @brief  Private implementation for AssociateContactWithAddressBookRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateContactWithAddressBookRequestPrivate object.
@@ -97,7 +108,7 @@ AssociateContactWithAddressBookRequestPrivate::AssociateContactWithAddressBookRe
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssociateContactWithAddressBookRequestPrivate object, copying another.

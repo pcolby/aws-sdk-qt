@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListRemoteAccessSessionsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListRemoteAccessSessionsRequest
  *
- * @brief  Implements DeviceFarm ListRemoteAccessSessions requests.
+ * \brief The ListRemoteAccessSessionsRequest class encapsulates DeviceFarm ListRemoteAccessSessions requests.
  *
- * @see    DeviceFarmClient::listRemoteAccessSessions
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listRemoteAccessSessions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRemoteAccessSessionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest(const ListRemot
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRemoteAccessSessionsRequest object.
  */
 ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest()
@@ -53,13 +58,16 @@ ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRemoteAccessSessionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRemoteAccessSessionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNe
     return new ListRemoteAccessSessionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRemoteAccessSessionsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNe
  * @brief  Private implementation for ListRemoteAccessSessionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRemoteAccessSessionsRequestPrivate object.
@@ -97,7 +105,7 @@ ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRemoteAccessSessionsRequestPrivate object, copying another.

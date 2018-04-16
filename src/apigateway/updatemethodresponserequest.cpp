@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateMethodResponseRequest
+/*!
+ * \class QtAws::APIGateway::UpdateMethodResponseRequest
  *
- * @brief  Implements APIGateway UpdateMethodResponse requests.
+ * \brief The UpdateMethodResponseRequest class encapsulates APIGateway UpdateMethodResponse requests.
  *
- * @see    APIGatewayClient::updateMethodResponse
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateMethodResponse
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateMethodResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ UpdateMethodResponseRequest::UpdateMethodResponseRequest(const UpdateMethodRespo
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateMethodResponseRequest object.
  */
 UpdateMethodResponseRequest::UpdateMethodResponseRequest()
@@ -53,13 +61,16 @@ UpdateMethodResponseRequest::UpdateMethodResponseRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateMethodResponseRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateMethodResponseResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodResponseRequest::response(QNetwor
     return new UpdateMethodResponseResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateMethodResponseRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodResponseRequest::response(QNetwor
  * @brief  Private implementation for UpdateMethodResponseRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMethodResponseRequestPrivate object.
@@ -97,7 +108,7 @@ UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateMethodResponseRequestPrivate object, copying another.

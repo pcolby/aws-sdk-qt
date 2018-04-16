@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  GetSqlInjectionMatchSetResponse
+/*!
+ * \class QtAws::WAF::GetSqlInjectionMatchSetResponse
  *
- * @brief  Handles WAF GetSqlInjectionMatchSet responses.
+ * \brief The GetSqlInjectionMatchSetResponse class encapsulates WAF GetSqlInjectionMatchSet responses.
  *
- * @see    WAFClient::getSqlInjectionMatchSet
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::getSqlInjectionMatchSet
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSqlInjectionMatchSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const GetSqlInjectionMatchSetRequest * GetSqlInjectionMatchSetResponse::request(
     return static_cast<const GetSqlInjectionMatchSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF GetSqlInjectionMatchSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void GetSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSqlInjectionMatchSetResponsePrivate
+ * \class GetSqlInjectionMatchSetResponsePrivate
  *
- * @brief  Private implementation for GetSqlInjectionMatchSetResponse.
+ * \brief Private implementation for GetSqlInjectionMatchSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSqlInjectionMatchSetResponsePrivate object.
@@ -91,7 +99,7 @@ GetSqlInjectionMatchSetResponsePrivate::GetSqlInjectionMatchSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF GetSqlInjectionMatchSetResponse element.
  *
  * @param  xml  XML stream to parse.

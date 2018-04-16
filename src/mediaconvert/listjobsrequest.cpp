@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MediaConvert {
 
-/**
- * @class  ListJobsRequest
+/*!
+ * \class QtAws::MediaConvert::ListJobsRequest
  *
- * @brief  Implements MediaConvert ListJobs requests.
+ * \brief The ListJobsRequest class encapsulates MediaConvert ListJobs requests.
  *
- * @see    MediaConvertClient::listJobs
+ * \ingroup MediaConvert
+ *
+ *
+ * \sa MediaConvertClient::listJobs
  */
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListJobsRequest object.
  */
 ListJobsRequest::ListJobsRequest()
@@ -53,13 +56,16 @@ ListJobsRequest::ListJobsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListJobsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListJobsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
     return new ListJobsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListJobsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  * @brief  Private implementation for ListJobsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object.
@@ -97,7 +103,7 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListJobsRequestPrivate object, copying another.

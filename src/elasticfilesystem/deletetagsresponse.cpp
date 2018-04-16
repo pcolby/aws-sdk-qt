@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace EFS {
 
-/**
- * @class  DeleteTagsResponse
+/*!
+ * \class QtAws::EFS::DeleteTagsResponse
  *
- * @brief  Handles EFS DeleteTags responses.
+ * \brief The DeleteTagsResponse class encapsulates EFS DeleteTags responses.
  *
- * @see    EFSClient::deleteTags
+ * \ingroup EFS
+ *
+ *  <fullname>Amazon Elastic File System</fullname>
+ * 
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
+ *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
+ *  files, so your applications have the storage they need, when they need it. For more information, see the <a
+ *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *
+ * \sa EFSClient::deleteTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTagsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
     return static_cast<const DeleteTagsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EFS DeleteTags response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteTagsResponsePrivate
+ * \class DeleteTagsResponsePrivate
  *
- * @brief  Private implementation for DeleteTagsResponse.
+ * \brief Private implementation for DeleteTagsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTagsResponsePrivate object.
@@ -91,7 +100,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EFS DeleteTagsResponse element.
  *
  * @param  xml  XML stream to parse.

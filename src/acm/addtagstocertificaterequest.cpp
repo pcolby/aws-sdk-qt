@@ -25,15 +25,27 @@
 namespace QtAws {
 namespace ACM {
 
-/**
- * @class  AddTagsToCertificateRequest
+/*!
+ * \class QtAws::ACM::AddTagsToCertificateRequest
  *
- * @brief  Implements ACM AddTagsToCertificate requests.
+ * \brief The AddTagsToCertificateRequest class encapsulates ACM AddTagsToCertificate requests.
  *
- * @see    ACMClient::addTagsToCertificate
+ * \ingroup ACM
+ *
+ *  <fullname>AWS Certificate Manager</fullname>
+ * 
+ *  Welcome to the AWS Certificate Manager (ACM) API
+ * 
+ *  documentation>
+ * 
+ *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ *  Certificate Manager User Guide</i>
+ *
+ * \sa ACMClient::addTagsToCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +56,7 @@ AddTagsToCertificateRequest::AddTagsToCertificateRequest(const AddTagsToCertific
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AddTagsToCertificateRequest object.
  */
 AddTagsToCertificateRequest::AddTagsToCertificateRequest()
@@ -53,13 +65,16 @@ AddTagsToCertificateRequest::AddTagsToCertificateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AddTagsToCertificateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AddTagsToCertificateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetwor
     return new AddTagsToCertificateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AddTagsToCertificateRequestPrivate
@@ -82,7 +97,7 @@ QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetwor
  * @brief  Private implementation for AddTagsToCertificateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToCertificateRequestPrivate object.
@@ -97,7 +112,7 @@ AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AddTagsToCertificateRequestPrivate object, copying another.

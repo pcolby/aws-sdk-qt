@@ -71,26 +71,34 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::Kinesis
+ * \brief The QtAws::Kinesis contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  KinesisClient
+/*!
+ * \class QtAws::Kinesis::KinesisClient
  *
- * @brief  Client for Amazon Kinesis
+ * \brief The KinesisClient class provides access the Amazon Kinesis service.
  *
- * <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * \ingroup Kinesis
  *
- * Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
  */
 
-/**
- * @brief  Constructs a new KinesisClient object.
+/*!
+ * \brief Constructs a KinesisClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 KinesisClient::KinesisClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -109,21 +117,16 @@ KinesisClient::KinesisClient(
     d->serviceName = QStringLiteral("kinesis");
 }
 
-/**
- * @brief  Constructs a new KinesisClient object.
+/*!
+ * \overload KinesisClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 KinesisClient::KinesisClient(
     const QUrl &endpoint,
@@ -142,7 +145,7 @@ KinesisClient::KinesisClient(
     d->serviceName = QStringLiteral("kinesis");
 }
 
-/**
+/*!
  * Adds or updates tags for the specified Kinesis data stream. Each stream can have up to 10
  *
  * tags>
@@ -165,7 +168,7 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
     return qobject_cast<AddTagsToStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Creates a Kinesis data stream. A stream captures and transports data records that are continuously emitted from
  * different data sources or <i>producers</i>. Scale-out within a stream is explicitly supported by means of shards, which
  * are uniquely identified groups of data records in a
@@ -229,7 +232,7 @@ CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &re
     return qobject_cast<CreateStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Decreases the Kinesis data stream's retention period, which is the length of time data records are accessible after they
  * are added to the stream. The minimum value of a stream's retention period is 24
  *
@@ -249,7 +252,7 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
     return qobject_cast<DecreaseStreamRetentionPeriodResponse *>(send(request));
 }
 
-/**
+/*!
  * Deletes a Kinesis data stream and all its shards and data. You must shut down any applications that are operating on the
  * stream before you delete the stream. If an application attempts to operate on a deleted stream, it receives the
  * exception
@@ -287,7 +290,7 @@ DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &re
     return qobject_cast<DeleteStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the shard limits and usage for the
  *
  * account>
@@ -309,7 +312,7 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
     return qobject_cast<DescribeLimitsResponse *>(send(request));
 }
 
-/**
+/*!
  * Describes the specified Kinesis data
  *
  * stream>
@@ -346,7 +349,7 @@ DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamReque
     return qobject_cast<DescribeStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Provides a summarized description of the specified Kinesis data stream without the shard
  *
  * list>
@@ -365,7 +368,7 @@ DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const Descr
     return qobject_cast<DescribeStreamSummaryResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables enhanced
  *
  * @param  request Request to send to Amazon Kinesis.
@@ -379,7 +382,7 @@ DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(con
     return qobject_cast<DisableEnhancedMonitoringResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables enhanced Kinesis data stream monitoring for shard-level
  *
  * @param  request Request to send to Amazon Kinesis.
@@ -393,7 +396,7 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
     return qobject_cast<EnableEnhancedMonitoringResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets data records from a Kinesis data stream's
  *
  * shard>
@@ -459,7 +462,7 @@ GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
     return qobject_cast<GetRecordsResponse *>(send(request));
 }
 
-/**
+/*!
  * Gets an Amazon Kinesis shard iterator. A shard iterator expires five minutes after it is returned to the
  *
  * requester>
@@ -514,7 +517,7 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
     return qobject_cast<GetShardIteratorResponse *>(send(request));
 }
 
-/**
+/*!
  * Increases the Kinesis data stream's retention period, which is the length of time data records are accessible after they
  * are added to the stream. The maximum value of a stream's retention period is 168 hours (7
  *
@@ -536,7 +539,7 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
     return qobject_cast<IncreaseStreamRetentionPeriodResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the shards in a stream and provides information about each
  *
  * shard> <b>
@@ -557,7 +560,7 @@ ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
     return qobject_cast<ListShardsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists your Kinesis data
  *
  * streams>
@@ -589,7 +592,7 @@ ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &reque
     return qobject_cast<ListStreamsResponse *>(send(request));
 }
 
-/**
+/*!
  * Lists the tags for the specified Kinesis data stream. This operation has a limit of five transactions per second per
  *
  * @param  request Request to send to Amazon Kinesis.
@@ -603,7 +606,7 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
     return qobject_cast<ListTagsForStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Merges two adjacent shards in a Kinesis data stream and combines them into a single shard to reduce the stream's
  * capacity to ingest and transport data. Two shards are considered adjacent if the union of the hash key ranges for the
  * two shards form a contiguous set with no gaps. For example, if you have two shards, one with a hash key range of
@@ -661,7 +664,7 @@ MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &reque
     return qobject_cast<MergeShardsResponse *>(send(request));
 }
 
-/**
+/*!
  * Writes a single data record into an Amazon Kinesis data stream. Call <code>PutRecord</code> to send data into the stream
  * for real-time ingestion and subsequent processing, one record at a time. Each shard can support writes up to 1,000
  * records per second, up to a maximum data write total of 1 MB per
@@ -725,7 +728,7 @@ PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
     return qobject_cast<PutRecordResponse *>(send(request));
 }
 
-/**
+/*!
  * Writes multiple data records into a Kinesis data stream in a single call (also referred to as a <code>PutRecords</code>
  * request). Use this operation to send data into the stream for data ingestion and processing.
  *
@@ -808,7 +811,7 @@ PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
     return qobject_cast<PutRecordsResponse *>(send(request));
 }
 
-/**
+/*!
  * Removes tags from the specified Kinesis data stream. Removed tags are deleted and cannot be recovered after this
  * operation successfully
  *
@@ -831,7 +834,7 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
     return qobject_cast<RemoveTagsFromStreamResponse *>(send(request));
 }
 
-/**
+/*!
  * Splits a shard into two new shards in the Kinesis data stream, to increase the stream's capacity to ingest and transport
  * data. <code>SplitShard</code> is called when there is a need to increase the overall capacity of a stream because of an
  * expected increase in the volume of data records being ingested.
@@ -902,7 +905,7 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
     return qobject_cast<SplitShardResponse *>(send(request));
 }
 
-/**
+/*!
  * Enables or updates server-side encryption using an AWS KMS key for a specified stream.
  *
  * </p
@@ -935,7 +938,7 @@ StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const Start
     return qobject_cast<StartStreamEncryptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Disables server-side encryption for a specified stream.
  *
  * </p
@@ -968,7 +971,7 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
     return qobject_cast<StopStreamEncryptionResponse *>(send(request));
 }
 
-/**
+/*!
  * Updates the shard count of the specified stream to the specified number of
  *
  * shards>
@@ -1031,7 +1034,7 @@ UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCoun
     return qobject_cast<UpdateShardCountResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  KinesisClientPrivate
@@ -1039,7 +1042,7 @@ UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCoun
  * @brief  Private implementation for KinesisClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new KinesisClientPrivate object.

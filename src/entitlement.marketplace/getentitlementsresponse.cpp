@@ -27,15 +27,35 @@
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
-/**
- * @class  GetEntitlementsResponse
+/*!
+ * \class QtAws::MarketplaceEntitlementService::GetEntitlementsResponse
  *
- * @brief  Handles MarketplaceEntitlementService GetEntitlements responses.
+ * \brief The GetEntitlementsResponse class encapsulates MarketplaceEntitlementService GetEntitlements responses.
  *
- * @see    MarketplaceEntitlementServiceClient::getEntitlements
+ * \ingroup MarketplaceEntitlementService
+ *
+ *  <fullname>AWS Marketplace Entitlement Service</fullname>
+ * 
+ *  This reference provides descriptions of the AWS Marketplace Entitlement Service
+ * 
+ *  API>
+ * 
+ *  AWS Marketplace Entitlement Service is used to determine the entitlement of a customer to a given product. An
+ *  entitlement represents capacity in a product owned by the customer. For example, a customer might own some number of
+ *  users or seats in an SaaS application or some amount of data capacity in a multi-tenant
+ * 
+ *  database>
+ * 
+ *  <b>Getting Entitlement Records</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <i>GetEntitlements</i>- Gets the entitlements for a Marketplace
+ *
+ * \sa MarketplaceEntitlementServiceClient::getEntitlements
  */
 
-/**
+/*!
  * @brief  Constructs a new GetEntitlementsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +78,7 @@ const GetEntitlementsRequest * GetEntitlementsResponse::request() const
     return static_cast<const GetEntitlementsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MarketplaceEntitlementService GetEntitlements response.
  *
  * @param  response  Response to parse.
@@ -70,15 +90,15 @@ void GetEntitlementsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetEntitlementsResponsePrivate
+ * \class GetEntitlementsResponsePrivate
  *
- * @brief  Private implementation for GetEntitlementsResponse.
+ * \brief Private implementation for GetEntitlementsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetEntitlementsResponsePrivate object.
@@ -91,7 +111,7 @@ GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MarketplaceEntitlementService GetEntitlementsResponse element.
  *
  * @param  xml  XML stream to parse.

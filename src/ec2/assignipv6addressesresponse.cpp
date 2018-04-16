@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AssignIpv6AddressesResponse
+/*!
+ * \class QtAws::EC2::AssignIpv6AddressesResponse
  *
- * @brief  Handles EC2 AssignIpv6Addresses responses.
+ * \brief The AssignIpv6AddressesResponse class encapsulates EC2 AssignIpv6Addresses responses.
  *
- * @see    EC2Client::assignIpv6Addresses
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::assignIpv6Addresses
  */
 
-/**
+/*!
  * @brief  Constructs a new AssignIpv6AddressesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const AssignIpv6AddressesRequest * AssignIpv6AddressesResponse::request() const
     return static_cast<const AssignIpv6AddressesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 AssignIpv6Addresses response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void AssignIpv6AddressesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AssignIpv6AddressesResponsePrivate
+ * \class AssignIpv6AddressesResponsePrivate
  *
- * @brief  Private implementation for AssignIpv6AddressesResponse.
+ * \brief Private implementation for AssignIpv6AddressesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AssignIpv6AddressesResponsePrivate object.
@@ -91,7 +98,7 @@ AssignIpv6AddressesResponsePrivate::AssignIpv6AddressesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 AssignIpv6AddressesResponse element.
  *
  * @param  xml  XML stream to parse.

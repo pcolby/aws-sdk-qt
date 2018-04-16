@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace Pinpoint {
 
-/**
- * @class  DeleteEndpointResponse
+/*!
+ * \class QtAws::Pinpoint::DeleteEndpointResponse
  *
- * @brief  Handles Pinpoint DeleteEndpoint responses.
+ * \brief The DeleteEndpointResponse class encapsulates Pinpoint DeleteEndpoint responses.
  *
- * @see    PinpointClient::deleteEndpoint
+ * \ingroup Pinpoint
+ *
+ *
+ * \sa PinpointClient::deleteEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const DeleteEndpointRequest * DeleteEndpointResponse::request() const
     return static_cast<const DeleteEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Pinpoint DeleteEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void DeleteEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteEndpointResponsePrivate
+ * \class DeleteEndpointResponsePrivate
  *
- * @brief  Private implementation for DeleteEndpointResponse.
+ * \brief Private implementation for DeleteEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteEndpointResponsePrivate object.
@@ -91,7 +94,7 @@ DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Pinpoint DeleteEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

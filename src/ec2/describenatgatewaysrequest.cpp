@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNatGatewaysRequest
+/*!
+ * \class QtAws::EC2::DescribeNatGatewaysRequest
  *
- * @brief  Implements EC2 DescribeNatGateways requests.
+ * \brief The DescribeNatGatewaysRequest class encapsulates EC2 DescribeNatGateways requests.
  *
- * @see    EC2Client::describeNatGateways
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNatGateways
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNatGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeNatGatewaysRequest::DescribeNatGatewaysRequest(const DescribeNatGateways
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNatGatewaysRequest object.
  */
 DescribeNatGatewaysRequest::DescribeNatGatewaysRequest()
@@ -53,13 +60,16 @@ DescribeNatGatewaysRequest::DescribeNatGatewaysRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNatGatewaysRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNatGatewaysResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetwork
     return new DescribeNatGatewaysResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNatGatewaysRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetwork
  * @brief  Private implementation for DescribeNatGatewaysRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNatGatewaysRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNatGatewaysRequestPrivate object, copying another.

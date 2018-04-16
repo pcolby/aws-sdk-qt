@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  TestRenderTemplateRequest
+/*!
+ * \class QtAws::SES::TestRenderTemplateRequest
  *
- * @brief  Implements SES TestRenderTemplate requests.
+ * \brief The TestRenderTemplateRequest class encapsulates SES TestRenderTemplate requests.
  *
- * @see    SESClient::testRenderTemplate
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::testRenderTemplate
  */
 
-/**
+/*!
  * @brief  Constructs a new TestRenderTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ TestRenderTemplateRequest::TestRenderTemplateRequest(const TestRenderTemplateReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TestRenderTemplateRequest object.
  */
 TestRenderTemplateRequest::TestRenderTemplateRequest()
@@ -53,13 +67,16 @@ TestRenderTemplateRequest::TestRenderTemplateRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TestRenderTemplateRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TestRenderTemplateResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
     return new TestRenderTemplateResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TestRenderTemplateRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
  * @brief  Private implementation for TestRenderTemplateRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestRenderTemplateRequestPrivate object.
@@ -97,7 +114,7 @@ TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TestRenderTemplateRequestPrivate object, copying another.

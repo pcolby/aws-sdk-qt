@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  CreateUserResponse
+/*!
+ * \class QtAws::MQ::CreateUserResponse
  *
- * @brief  Handles MQ CreateUser responses.
+ * \brief The CreateUserResponse class encapsulates MQ CreateUser responses.
  *
- * @see    MQClient::createUser
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::createUser
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUserResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateUserRequest * CreateUserResponse::request() const
     return static_cast<const CreateUserRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MQ CreateUser response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateUserResponsePrivate
+ * \class CreateUserResponsePrivate
  *
- * @brief  Private implementation for CreateUserResponse.
+ * \brief Private implementation for CreateUserResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUserResponsePrivate object.
@@ -91,7 +96,7 @@ CreateUserResponsePrivate::CreateUserResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MQ CreateUserResponse element.
  *
  * @param  xml  XML stream to parse.

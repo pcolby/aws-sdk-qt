@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  StartLabelDetectionResponse
+/*!
+ * \class QtAws::Rekognition::StartLabelDetectionResponse
  *
- * @brief  Handles Rekognition StartLabelDetection responses.
+ * \brief The StartLabelDetectionResponse class encapsulates Rekognition StartLabelDetection responses.
  *
- * @see    RekognitionClient::startLabelDetection
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::startLabelDetection
  */
 
-/**
+/*!
  * @brief  Constructs a new StartLabelDetectionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const StartLabelDetectionRequest * StartLabelDetectionResponse::request() const
     return static_cast<const StartLabelDetectionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition StartLabelDetection response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void StartLabelDetectionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  StartLabelDetectionResponsePrivate
+ * \class StartLabelDetectionResponsePrivate
  *
- * @brief  Private implementation for StartLabelDetectionResponse.
+ * \brief Private implementation for StartLabelDetectionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new StartLabelDetectionResponsePrivate object.
@@ -91,7 +95,7 @@ StartLabelDetectionResponsePrivate::StartLabelDetectionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition StartLabelDetectionResponse element.
  *
  * @param  xml  XML stream to parse.

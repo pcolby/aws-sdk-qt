@@ -27,24 +27,32 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+/*!
+ * \namespace QtAws::SageMakerRuntime
+ * \brief The QtAws::SageMakerRuntime contains stuff...
+ * @todo Move this to a separate template file.
+ */
+
 namespace QtAws {
 namespace SageMakerRuntime {
 
-/**
- * @class  SageMakerRuntimeClient
+/*!
+ * \class QtAws::SageMakerRuntime::SageMakerRuntimeClient
  *
- * @brief  Client for Amazon SageMaker Runtime
+ * \brief The SageMakerRuntimeClient class provides access the Amazon SageMaker Runtime service.
  *
- * Amazon SageMaker runtime API.
+ * \ingroup SageMakerRuntime
+ *
+ *  Amazon SageMaker runtime API.
  */
 
-/**
- * @brief  Constructs a new SageMakerRuntimeClient object.
+/*!
+ * \brief Constructs a SageMakerRuntimeClient object.
  *
- * @param  region       AWS region for this client to service requests for.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
+ * The new client object will \a region, \a credentials, and \a manager for
+ * network operations.
+ *
+ * The new object will be owned by \a parent, if set.
  */
 SageMakerRuntimeClient::SageMakerRuntimeClient(
     const QtAws::Core::AwsRegion::Region region,
@@ -63,21 +71,16 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     d->serviceName = QStringLiteral("sagemaker");
 }
 
-/**
- * @brief  Constructs a new SageMakerRuntimeClient object.
+/*!
+ * \overload SageMakerRuntimeClient()
  *
- * This overload allows the caller to specify the specific endpoint to send
+ * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
  * which allows the caller to specify an AWS region instead, in which case this
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * @param  endpoint     Endpoint for building requests URLs.
- * @param  credentials  AWS credentials to use for signing requests.
- * @param  manager      Network access manager for sending requests.
- * @param  parent       This object's parent.
- *
- * @see  AwsEndpoint::getEndpoint
+ * \a  AwsEndpoint::getEndpoint()
  */
 SageMakerRuntimeClient::SageMakerRuntimeClient(
     const QUrl &endpoint,
@@ -96,7 +99,7 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     d->serviceName = QStringLiteral("sagemaker");
 }
 
-/**
+/*!
  * After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API
  * to get inferences from the model hosted at the specified endpoint.
  *
@@ -121,7 +124,7 @@ InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndp
     return qobject_cast<InvokeEndpointResponse *>(send(request));
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SageMakerRuntimeClientPrivate
@@ -129,7 +132,7 @@ InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndp
  * @brief  Private implementation for SageMakerRuntimeClient.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SageMakerRuntimeClientPrivate object.

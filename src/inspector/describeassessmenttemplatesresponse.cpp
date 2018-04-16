@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  DescribeAssessmentTemplatesResponse
+/*!
+ * \class QtAws::Inspector::DescribeAssessmentTemplatesResponse
  *
- * @brief  Handles Inspector DescribeAssessmentTemplates responses.
+ * \brief The DescribeAssessmentTemplatesResponse class encapsulates Inspector DescribeAssessmentTemplates responses.
  *
- * @see    InspectorClient::describeAssessmentTemplates
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::describeAssessmentTemplates
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeAssessmentTemplatesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DescribeAssessmentTemplatesRequest * DescribeAssessmentTemplatesResponse::
     return static_cast<const DescribeAssessmentTemplatesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Inspector DescribeAssessmentTemplates response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DescribeAssessmentTemplatesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeAssessmentTemplatesResponsePrivate
+ * \class DescribeAssessmentTemplatesResponsePrivate
  *
- * @brief  Private implementation for DescribeAssessmentTemplatesResponse.
+ * \brief Private implementation for DescribeAssessmentTemplatesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeAssessmentTemplatesResponsePrivate object.
@@ -91,7 +99,7 @@ DescribeAssessmentTemplatesResponsePrivate::DescribeAssessmentTemplatesResponseP
 
 }
 
-/**
+/*!
  * @brief  Parse an Inspector DescribeAssessmentTemplatesResponse element.
  *
  * @param  xml  XML stream to parse.

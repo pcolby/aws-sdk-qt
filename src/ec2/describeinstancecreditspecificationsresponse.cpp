@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeInstanceCreditSpecificationsResponse
+/*!
+ * \class QtAws::EC2::DescribeInstanceCreditSpecificationsResponse
  *
- * @brief  Handles EC2 DescribeInstanceCreditSpecifications responses.
+ * \brief The DescribeInstanceCreditSpecificationsResponse class encapsulates EC2 DescribeInstanceCreditSpecifications responses.
  *
- * @see    EC2Client::describeInstanceCreditSpecifications
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeInstanceCreditSpecifications
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeInstanceCreditSpecificationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeInstanceCreditSpecificationsRequest * DescribeInstanceCreditSpecif
     return static_cast<const DescribeInstanceCreditSpecificationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeInstanceCreditSpecifications response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeInstanceCreditSpecificationsResponse::parseSuccess(QIODevice &respo
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeInstanceCreditSpecificationsResponsePrivate
+ * \class DescribeInstanceCreditSpecificationsResponsePrivate
  *
- * @brief  Private implementation for DescribeInstanceCreditSpecificationsResponse.
+ * \brief Private implementation for DescribeInstanceCreditSpecificationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeInstanceCreditSpecificationsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCreditSpeci
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeInstanceCreditSpecificationsResponse element.
  *
  * @param  xml  XML stream to parse.

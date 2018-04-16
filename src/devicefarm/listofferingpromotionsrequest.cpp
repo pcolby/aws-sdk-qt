@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace DeviceFarm {
 
-/**
- * @class  ListOfferingPromotionsRequest
+/*!
+ * \class QtAws::DeviceFarm::ListOfferingPromotionsRequest
  *
- * @brief  Implements DeviceFarm ListOfferingPromotions requests.
+ * \brief The ListOfferingPromotionsRequest class encapsulates DeviceFarm ListOfferingPromotions requests.
  *
- * @see    DeviceFarmClient::listOfferingPromotions
+ * \ingroup DeviceFarm
+ *
+ *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
+ *  phones, tablets, and other devices in the
+ *
+ * \sa DeviceFarmClient::listOfferingPromotions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListOfferingPromotionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListOfferingPromotionsRequest::ListOfferingPromotionsRequest(const ListOfferingP
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListOfferingPromotionsRequest object.
  */
 ListOfferingPromotionsRequest::ListOfferingPromotionsRequest()
@@ -53,13 +58,16 @@ ListOfferingPromotionsRequest::ListOfferingPromotionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListOfferingPromotionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListOfferingPromotionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListOfferingPromotionsRequest::response(QNetw
     return new ListOfferingPromotionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListOfferingPromotionsRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListOfferingPromotionsRequest::response(QNetw
  * @brief  Private implementation for ListOfferingPromotionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOfferingPromotionsRequestPrivate object.
@@ -97,7 +105,7 @@ ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListOfferingPromotionsRequestPrivate object, copying another.

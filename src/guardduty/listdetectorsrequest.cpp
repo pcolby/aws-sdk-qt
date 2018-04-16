@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListDetectorsRequest
+/*!
+ * \class QtAws::GuardDuty::ListDetectorsRequest
  *
- * @brief  Implements GuardDuty ListDetectors requests.
+ * \brief The ListDetectorsRequest class encapsulates GuardDuty ListDetectors requests.
  *
- * @see    GuardDutyClient::listDetectors
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listDetectors
  */
 
-/**
+/*!
  * @brief  Constructs a new ListDetectorsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListDetectorsRequest::ListDetectorsRequest(const ListDetectorsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListDetectorsRequest object.
  */
 ListDetectorsRequest::ListDetectorsRequest()
@@ -53,13 +56,16 @@ ListDetectorsRequest::ListDetectorsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListDetectorsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListDetectorsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply 
     return new ListDetectorsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListDetectorsRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply 
  * @brief  Private implementation for ListDetectorsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDetectorsRequestPrivate object.
@@ -97,7 +103,7 @@ ListDetectorsRequestPrivate::ListDetectorsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListDetectorsRequestPrivate object, copying another.

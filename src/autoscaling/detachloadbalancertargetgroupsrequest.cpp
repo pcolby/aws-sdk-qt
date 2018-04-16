@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  DetachLoadBalancerTargetGroupsRequest
+/*!
+ * \class QtAws::AutoScaling::DetachLoadBalancerTargetGroupsRequest
  *
- * @brief  Implements AutoScaling DetachLoadBalancerTargetGroups requests.
+ * \brief The DetachLoadBalancerTargetGroupsRequest class encapsulates AutoScaling DetachLoadBalancerTargetGroups requests.
  *
- * @see    AutoScalingClient::detachLoadBalancerTargetGroups
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::detachLoadBalancerTargetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new DetachLoadBalancerTargetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ DetachLoadBalancerTargetGroupsRequest::DetachLoadBalancerTargetGroupsRequest(con
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DetachLoadBalancerTargetGroupsRequest object.
  */
 DetachLoadBalancerTargetGroupsRequest::DetachLoadBalancerTargetGroupsRequest()
@@ -53,13 +61,16 @@ DetachLoadBalancerTargetGroupsRequest::DetachLoadBalancerTargetGroupsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DetachLoadBalancerTargetGroupsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DetachLoadBalancerTargetGroupsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancerTargetGroupsRequest::respon
     return new DetachLoadBalancerTargetGroupsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DetachLoadBalancerTargetGroupsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancerTargetGroupsRequest::respon
  * @brief  Private implementation for DetachLoadBalancerTargetGroupsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachLoadBalancerTargetGroupsRequestPrivate object.
@@ -97,7 +108,7 @@ DetachLoadBalancerTargetGroupsRequestPrivate::DetachLoadBalancerTargetGroupsRequ
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetachLoadBalancerTargetGroupsRequestPrivate object, copying another.

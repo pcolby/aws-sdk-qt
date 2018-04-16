@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  ListMembersRequest
+/*!
+ * \class QtAws::GuardDuty::ListMembersRequest
  *
- * @brief  Implements GuardDuty ListMembers requests.
+ * \brief The ListMembersRequest class encapsulates GuardDuty ListMembers requests.
  *
- * @see    GuardDutyClient::listMembers
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::listMembers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListMembersRequest::ListMembersRequest(const ListMembersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListMembersRequest object.
  */
 ListMembersRequest::ListMembersRequest()
@@ -53,13 +56,16 @@ ListMembersRequest::ListMembersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListMembersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListMembersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * 
     return new ListMembersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListMembersRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListMembersRequest::response(QNetworkReply * 
  * @brief  Private implementation for ListMembersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMembersRequestPrivate object.
@@ -97,7 +103,7 @@ ListMembersRequestPrivate::ListMembersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListMembersRequestPrivate object, copying another.

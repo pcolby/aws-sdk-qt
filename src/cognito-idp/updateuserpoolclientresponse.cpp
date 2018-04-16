@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateUserPoolClientResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateUserPoolClientResponse
  *
- * @brief  Handles CognitoIdentityProvider UpdateUserPoolClient responses.
+ * \brief The UpdateUserPoolClientResponse class encapsulates CognitoIdentityProvider UpdateUserPoolClient responses.
  *
- * @see    CognitoIdentityProviderClient::updateUserPoolClient
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateUserPoolClient
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateUserPoolClientResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const UpdateUserPoolClientRequest * UpdateUserPoolClientResponse::request() cons
     return static_cast<const UpdateUserPoolClientRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider UpdateUserPoolClient response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void UpdateUserPoolClientResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateUserPoolClientResponsePrivate
+ * \class UpdateUserPoolClientResponsePrivate
  *
- * @brief  Private implementation for UpdateUserPoolClientResponse.
+ * \brief Private implementation for UpdateUserPoolClientResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateUserPoolClientResponsePrivate object.
@@ -91,7 +104,7 @@ UpdateUserPoolClientResponsePrivate::UpdateUserPoolClientResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider UpdateUserPoolClientResponse element.
  *
  * @param  xml  XML stream to parse.

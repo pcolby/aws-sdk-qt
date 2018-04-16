@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Greengrass {
 
-/**
- * @class  UpdateConnectivityInfoRequest
+/*!
+ * \class QtAws::Greengrass::UpdateConnectivityInfoRequest
  *
- * @brief  Implements Greengrass UpdateConnectivityInfo requests.
+ * \brief The UpdateConnectivityInfoRequest class encapsulates Greengrass UpdateConnectivityInfo requests.
  *
- * @see    GreengrassClient::updateConnectivityInfo
+ * \ingroup Greengrass
+ *
+ *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
+ *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *
+ * \sa GreengrassClient::updateConnectivityInfo
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateConnectivityInfoRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ UpdateConnectivityInfoRequest::UpdateConnectivityInfoRequest(const UpdateConnect
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateConnectivityInfoRequest object.
  */
 UpdateConnectivityInfoRequest::UpdateConnectivityInfoRequest()
@@ -53,13 +59,16 @@ UpdateConnectivityInfoRequest::UpdateConnectivityInfoRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateConnectivityInfoRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateConnectivityInfoResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetw
     return new UpdateConnectivityInfoResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateConnectivityInfoRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetw
  * @brief  Private implementation for UpdateConnectivityInfoRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConnectivityInfoRequestPrivate object.
@@ -97,7 +106,7 @@ UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateConnectivityInfoRequestPrivate object, copying another.

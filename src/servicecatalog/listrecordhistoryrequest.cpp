@@ -25,15 +25,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListRecordHistoryRequest
+/*!
+ * \class QtAws::ServiceCatalog::ListRecordHistoryRequest
  *
- * @brief  Implements ServiceCatalog ListRecordHistory requests.
+ * \brief The ListRecordHistoryRequest class encapsulates ServiceCatalog ListRecordHistory requests.
  *
- * @see    ServiceCatalogClient::listRecordHistory
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listRecordHistory
  */
 
-/**
+/*!
  * @brief  Constructs a new ListRecordHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +53,7 @@ ListRecordHistoryRequest::ListRecordHistoryRequest(const ListRecordHistoryReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListRecordHistoryRequest object.
  */
 ListRecordHistoryRequest::ListRecordHistoryRequest()
@@ -53,13 +62,16 @@ ListRecordHistoryRequest::ListRecordHistoryRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListRecordHistoryRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListRecordHistoryResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +86,7 @@ QtAws::Core::AwsAbstractResponse * ListRecordHistoryRequest::response(QNetworkRe
     return new ListRecordHistoryResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListRecordHistoryRequestPrivate
@@ -82,7 +94,7 @@ QtAws::Core::AwsAbstractResponse * ListRecordHistoryRequest::response(QNetworkRe
  * @brief  Private implementation for ListRecordHistoryRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRecordHistoryRequestPrivate object.
@@ -97,7 +109,7 @@ ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListRecordHistoryRequestPrivate object, copying another.

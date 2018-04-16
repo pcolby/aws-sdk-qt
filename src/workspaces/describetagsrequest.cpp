@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace WorkSpaces {
 
-/**
- * @class  DescribeTagsRequest
+/*!
+ * \class QtAws::WorkSpaces::DescribeTagsRequest
  *
- * @brief  Implements WorkSpaces DescribeTags requests.
+ * \brief The DescribeTagsRequest class encapsulates WorkSpaces DescribeTags requests.
  *
- * @see    WorkSpacesClient::describeTags
+ * \ingroup WorkSpaces
+ *
+ *  <fullname>Amazon WorkSpaces Service</fullname>
+ * 
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *
+ * \sa WorkSpacesClient::describeTags
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
@@ -53,13 +59,16 @@ DescribeTagsRequest::DescribeTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
     return new DescribeTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTagsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  * @brief  Private implementation for DescribeTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.

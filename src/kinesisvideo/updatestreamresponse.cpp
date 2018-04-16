@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace KinesisVideo {
 
-/**
- * @class  UpdateStreamResponse
+/*!
+ * \class QtAws::KinesisVideo::UpdateStreamResponse
  *
- * @brief  Handles KinesisVideo UpdateStream responses.
+ * \brief The UpdateStreamResponse class encapsulates KinesisVideo UpdateStream responses.
  *
- * @see    KinesisVideoClient::updateStream
+ * \ingroup KinesisVideo
+ *
+ *
+ * \sa KinesisVideoClient::updateStream
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateStreamResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const UpdateStreamRequest * UpdateStreamResponse::request() const
     return static_cast<const UpdateStreamRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a KinesisVideo UpdateStream response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void UpdateStreamResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateStreamResponsePrivate
+ * \class UpdateStreamResponsePrivate
  *
- * @brief  Private implementation for UpdateStreamResponse.
+ * \brief Private implementation for UpdateStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateStreamResponsePrivate object.
@@ -91,7 +94,7 @@ UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an KinesisVideo UpdateStreamResponse element.
  *
  * @param  xml  XML stream to parse.

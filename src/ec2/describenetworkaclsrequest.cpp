@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeNetworkAclsRequest
+/*!
+ * \class QtAws::EC2::DescribeNetworkAclsRequest
  *
- * @brief  Implements EC2 DescribeNetworkAcls requests.
+ * \brief The DescribeNetworkAclsRequest class encapsulates EC2 DescribeNetworkAcls requests.
  *
- * @see    EC2Client::describeNetworkAcls
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeNetworkAcls
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkAclsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DescribeNetworkAclsRequest::DescribeNetworkAclsRequest(const DescribeNetworkAcls
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeNetworkAclsRequest object.
  */
 DescribeNetworkAclsRequest::DescribeNetworkAclsRequest()
@@ -53,13 +60,16 @@ DescribeNetworkAclsRequest::DescribeNetworkAclsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeNetworkAclsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeNetworkAclsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetwork
     return new DescribeNetworkAclsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeNetworkAclsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetwork
  * @brief  Private implementation for DescribeNetworkAclsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkAclsRequestPrivate object.
@@ -97,7 +107,7 @@ DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeNetworkAclsRequestPrivate object, copying another.

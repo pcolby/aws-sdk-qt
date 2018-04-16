@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace IoT {
 
-/**
- * @class  DeletePolicyVersionResponse
+/*!
+ * \class QtAws::IoT::DeletePolicyVersionResponse
  *
- * @brief  Handles IoT DeletePolicyVersion responses.
+ * \brief The DeletePolicyVersionResponse class encapsulates IoT DeletePolicyVersion responses.
  *
- * @see    IoTClient::deletePolicyVersion
+ * \ingroup IoT
+ *
+ *  <fullname>AWS IoT</fullname>
+ * 
+ *  AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
+ *  with, configure rules for data processing and integration with other services, organize resources associated with each
+ *  thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate
+ * 
+ *  things>
+ * 
+ *  For more information about how AWS IoT works, see the <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *
+ * \sa IoTClient::deletePolicyVersion
  */
 
-/**
+/*!
  * @brief  Constructs a new DeletePolicyVersionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
     return static_cast<const DeletePolicyVersionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a IoT DeletePolicyVersion response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeletePolicyVersionResponsePrivate
+ * \class DeletePolicyVersionResponsePrivate
  *
- * @brief  Private implementation for DeletePolicyVersionResponse.
+ * \brief Private implementation for DeletePolicyVersionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeletePolicyVersionResponsePrivate object.
@@ -91,7 +105,7 @@ DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an IoT DeletePolicyVersionResponse element.
  *
  * @param  xml  XML stream to parse.

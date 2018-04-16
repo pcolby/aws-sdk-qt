@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  ListServicesRequest
+/*!
+ * \class QtAws::ServiceDiscovery::ListServicesRequest
  *
- * @brief  Implements ServiceDiscovery ListServices requests.
+ * \brief The ListServicesRequest class encapsulates ServiceDiscovery ListServices requests.
  *
- * @see    ServiceDiscoveryClient::listServices
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::listServices
  */
 
-/**
+/*!
  * @brief  Constructs a new ListServicesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListServicesRequest object.
  */
 ListServicesRequest::ListServicesRequest()
@@ -53,13 +60,16 @@ ListServicesRequest::ListServicesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListServicesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListServicesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply *
     return new ListServicesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListServicesRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply *
  * @brief  Private implementation for ListServicesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListServicesRequestPrivate object.
@@ -97,7 +107,7 @@ ListServicesRequestPrivate::ListServicesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListServicesRequestPrivate object, copying another.

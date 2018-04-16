@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MQ {
 
-/**
- * @class  RebootBrokerRequest
+/*!
+ * \class QtAws::MQ::RebootBrokerRequest
  *
- * @brief  Implements MQ RebootBroker requests.
+ * \brief The RebootBrokerRequest class encapsulates MQ RebootBroker requests.
  *
- * @see    MQClient::rebootBroker
+ * \ingroup MQ
+ *
+ *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
+ *  brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *
+ * \sa MQClient::rebootBroker
  */
 
-/**
+/*!
  * @brief  Constructs a new RebootBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ RebootBrokerRequest::RebootBrokerRequest(const RebootBrokerRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new RebootBrokerRequest object.
  */
 RebootBrokerRequest::RebootBrokerRequest()
@@ -53,13 +58,16 @@ RebootBrokerRequest::RebootBrokerRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool RebootBrokerRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an RebootBrokerResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
     return new RebootBrokerResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  RebootBrokerRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
  * @brief  Private implementation for RebootBrokerRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootBrokerRequestPrivate object.
@@ -97,7 +105,7 @@ RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new RebootBrokerRequestPrivate object, copying another.

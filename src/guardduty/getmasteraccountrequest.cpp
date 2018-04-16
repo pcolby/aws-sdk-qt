@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace GuardDuty {
 
-/**
- * @class  GetMasterAccountRequest
+/*!
+ * \class QtAws::GuardDuty::GetMasterAccountRequest
  *
- * @brief  Implements GuardDuty GetMasterAccount requests.
+ * \brief The GetMasterAccountRequest class encapsulates GuardDuty GetMasterAccount requests.
  *
- * @see    GuardDutyClient::getMasterAccount
+ * \ingroup GuardDuty
+ *
+ *
+ * \sa GuardDutyClient::getMasterAccount
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMasterAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetMasterAccountRequest::GetMasterAccountRequest(const GetMasterAccountRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMasterAccountRequest object.
  */
 GetMasterAccountRequest::GetMasterAccountRequest()
@@ -53,13 +56,16 @@ GetMasterAccountRequest::GetMasterAccountRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMasterAccountRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMasterAccountResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkRep
     return new GetMasterAccountResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMasterAccountRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkRep
  * @brief  Private implementation for GetMasterAccountRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMasterAccountRequestPrivate object.
@@ -97,7 +103,7 @@ GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMasterAccountRequestPrivate object, copying another.

@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace AutoScaling {
 
-/**
- * @class  AttachLoadBalancerTargetGroupsResponse
+/*!
+ * \class QtAws::AutoScaling::AttachLoadBalancerTargetGroupsResponse
  *
- * @brief  Handles AutoScaling AttachLoadBalancerTargetGroups responses.
+ * \brief The AttachLoadBalancerTargetGroupsResponse class encapsulates AutoScaling AttachLoadBalancerTargetGroups responses.
  *
- * @see    AutoScalingClient::attachLoadBalancerTargetGroups
+ * \ingroup AutoScaling
+ *
+ *  <fullname>Amazon EC2 Auto Scaling</fullname>
+ * 
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
+ *  schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic
+ *  Load Balancing
+ *
+ * \sa AutoScalingClient::attachLoadBalancerTargetGroups
  */
 
-/**
+/*!
  * @brief  Constructs a new AttachLoadBalancerTargetGroupsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const AttachLoadBalancerTargetGroupsRequest * AttachLoadBalancerTargetGroupsResp
     return static_cast<const AttachLoadBalancerTargetGroupsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AutoScaling AttachLoadBalancerTargetGroups response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void AttachLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  AttachLoadBalancerTargetGroupsResponsePrivate
+ * \class AttachLoadBalancerTargetGroupsResponsePrivate
  *
- * @brief  Private implementation for AttachLoadBalancerTargetGroupsResponse.
+ * \brief Private implementation for AttachLoadBalancerTargetGroupsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AttachLoadBalancerTargetGroupsResponsePrivate object.
@@ -91,7 +99,7 @@ AttachLoadBalancerTargetGroupsResponsePrivate::AttachLoadBalancerTargetGroupsRes
 
 }
 
-/**
+/*!
  * @brief  Parse an AutoScaling AttachLoadBalancerTargetGroupsResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -27,15 +27,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  GetSigningCertificateResponse
+/*!
+ * \class QtAws::CognitoIdentityProvider::GetSigningCertificateResponse
  *
- * @brief  Handles CognitoIdentityProvider GetSigningCertificate responses.
+ * \brief The GetSigningCertificateResponse class encapsulates CognitoIdentityProvider GetSigningCertificate responses.
  *
- * @see    CognitoIdentityProviderClient::getSigningCertificate
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::getSigningCertificate
  */
 
-/**
+/*!
  * @brief  Constructs a new GetSigningCertificateResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +71,7 @@ const GetSigningCertificateRequest * GetSigningCertificateResponse::request() co
     return static_cast<const GetSigningCertificateRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CognitoIdentityProvider GetSigningCertificate response.
  *
  * @param  response  Response to parse.
@@ -70,15 +83,15 @@ void GetSigningCertificateResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetSigningCertificateResponsePrivate
+ * \class GetSigningCertificateResponsePrivate
  *
- * @brief  Private implementation for GetSigningCertificateResponse.
+ * \brief Private implementation for GetSigningCertificateResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetSigningCertificateResponsePrivate object.
@@ -91,7 +104,7 @@ GetSigningCertificateResponsePrivate::GetSigningCertificateResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CognitoIdentityProvider GetSigningCertificateResponse element.
  *
  * @param  xml  XML stream to parse.

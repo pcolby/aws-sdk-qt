@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeEndpointTypesRequest
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeEndpointTypesRequest
  *
- * @brief  Implements DatabaseMigrationService DescribeEndpointTypes requests.
+ * \brief The DescribeEndpointTypesRequest class encapsulates DatabaseMigrationService DescribeEndpointTypes requests.
  *
- * @see    DatabaseMigrationServiceClient::describeEndpointTypes
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeEndpointTypes
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ DescribeEndpointTypesRequest::DescribeEndpointTypesRequest(const DescribeEndpoin
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeEndpointTypesRequest object.
  */
 DescribeEndpointTypesRequest::DescribeEndpointTypesRequest()
@@ -53,13 +67,16 @@ DescribeEndpointTypesRequest::DescribeEndpointTypesRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeEndpointTypesRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeEndpointTypesResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointTypesRequest::response(QNetwo
     return new DescribeEndpointTypesResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeEndpointTypesRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointTypesRequest::response(QNetwo
  * @brief  Private implementation for DescribeEndpointTypesRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointTypesRequestPrivate object.
@@ -97,7 +114,7 @@ DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeEndpointTypesRequestPrivate object, copying another.

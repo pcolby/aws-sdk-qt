@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  PutAutoScalingPolicyRequest
+/*!
+ * \class QtAws::EMR::PutAutoScalingPolicyRequest
  *
- * @brief  Implements EMR PutAutoScalingPolicy requests.
+ * \brief The PutAutoScalingPolicyRequest class encapsulates EMR PutAutoScalingPolicy requests.
  *
- * @see    EMRClient::putAutoScalingPolicy
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::putAutoScalingPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutAutoScalingPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ PutAutoScalingPolicyRequest::PutAutoScalingPolicyRequest(const PutAutoScalingPol
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutAutoScalingPolicyRequest object.
  */
 PutAutoScalingPolicyRequest::PutAutoScalingPolicyRequest()
@@ -53,13 +59,16 @@ PutAutoScalingPolicyRequest::PutAutoScalingPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutAutoScalingPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutAutoScalingPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetwor
     return new PutAutoScalingPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutAutoScalingPolicyRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetwor
  * @brief  Private implementation for PutAutoScalingPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutAutoScalingPolicyRequestPrivate object.
@@ -97,7 +106,7 @@ PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutAutoScalingPolicyRequestPrivate object, copying another.

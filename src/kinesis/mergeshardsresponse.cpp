@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Kinesis {
 
-/**
- * @class  MergeShardsResponse
+/*!
+ * \class QtAws::Kinesis::MergeShardsResponse
  *
- * @brief  Handles Kinesis MergeShards responses.
+ * \brief The MergeShardsResponse class encapsulates Kinesis MergeShards responses.
  *
- * @see    KinesisClient::mergeShards
+ * \ingroup Kinesis
+ *
+ *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
+ * 
+ *  Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big
+ *
+ * \sa KinesisClient::mergeShards
  */
 
-/**
+/*!
  * @brief  Constructs a new MergeShardsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const MergeShardsRequest * MergeShardsResponse::request() const
     return static_cast<const MergeShardsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Kinesis MergeShards response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void MergeShardsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  MergeShardsResponsePrivate
+ * \class MergeShardsResponsePrivate
  *
- * @brief  Private implementation for MergeShardsResponse.
+ * \brief Private implementation for MergeShardsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new MergeShardsResponsePrivate object.
@@ -91,7 +97,7 @@ MergeShardsResponsePrivate::MergeShardsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Kinesis MergeShardsResponse element.
  *
  * @param  xml  XML stream to parse.

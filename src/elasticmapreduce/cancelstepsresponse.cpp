@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace EMR {
 
-/**
- * @class  CancelStepsResponse
+/*!
+ * \class QtAws::EMR::CancelStepsResponse
  *
- * @brief  Handles EMR CancelSteps responses.
+ * \brief The CancelStepsResponse class encapsulates EMR CancelSteps responses.
  *
- * @see    EMRClient::cancelSteps
+ * \ingroup EMR
+ *
+ *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data
+ *
+ * \sa EMRClient::cancelSteps
  */
 
-/**
+/*!
  * @brief  Constructs a new CancelStepsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const CancelStepsRequest * CancelStepsResponse::request() const
     return static_cast<const CancelStepsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EMR CancelSteps response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void CancelStepsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CancelStepsResponsePrivate
+ * \class CancelStepsResponsePrivate
  *
- * @brief  Private implementation for CancelStepsResponse.
+ * \brief Private implementation for CancelStepsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CancelStepsResponsePrivate object.
@@ -91,7 +97,7 @@ CancelStepsResponsePrivate::CancelStepsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EMR CancelStepsResponse element.
  *
  * @param  xml  XML stream to parse.

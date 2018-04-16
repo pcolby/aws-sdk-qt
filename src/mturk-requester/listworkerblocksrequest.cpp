@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListWorkerBlocksRequest
+/*!
+ * \class QtAws::MTurk::ListWorkerBlocksRequest
  *
- * @brief  Implements MTurk ListWorkerBlocks requests.
+ * \brief The ListWorkerBlocksRequest class encapsulates MTurk ListWorkerBlocks requests.
  *
- * @see    MTurkClient::listWorkerBlocks
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listWorkerBlocks
  */
 
-/**
+/*!
  * @brief  Constructs a new ListWorkerBlocksRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ ListWorkerBlocksRequest::ListWorkerBlocksRequest(const ListWorkerBlocksRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListWorkerBlocksRequest object.
  */
 ListWorkerBlocksRequest::ListWorkerBlocksRequest()
@@ -53,13 +56,16 @@ ListWorkerBlocksRequest::ListWorkerBlocksRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListWorkerBlocksRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListWorkerBlocksResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkRep
     return new ListWorkerBlocksResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListWorkerBlocksRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkRep
  * @brief  Private implementation for ListWorkerBlocksRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkerBlocksRequestPrivate object.
@@ -97,7 +103,7 @@ ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkerBlocksRequestPrivate object, copying another.

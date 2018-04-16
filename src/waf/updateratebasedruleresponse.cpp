@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace WAF {
 
-/**
- * @class  UpdateRateBasedRuleResponse
+/*!
+ * \class QtAws::WAF::UpdateRateBasedRuleResponse
  *
- * @brief  Handles WAF UpdateRateBasedRule responses.
+ * \brief The UpdateRateBasedRuleResponse class encapsulates WAF UpdateRateBasedRule responses.
  *
- * @see    WAFClient::updateRateBasedRule
+ * \ingroup WAF
+ *
+ *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
+ *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
+ *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
+ *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
+ *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFClient::updateRateBasedRule
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateRateBasedRuleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateRateBasedRuleRequest * UpdateRateBasedRuleResponse::request() const
     return static_cast<const UpdateRateBasedRuleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAF UpdateRateBasedRule response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateRateBasedRuleResponsePrivate
+ * \class UpdateRateBasedRuleResponsePrivate
  *
- * @brief  Private implementation for UpdateRateBasedRuleResponse.
+ * \brief Private implementation for UpdateRateBasedRuleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateRateBasedRuleResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAF UpdateRateBasedRuleResponse element.
  *
  * @param  xml  XML stream to parse.

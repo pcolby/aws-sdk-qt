@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  CreateUsagePlanKeyResponse
+/*!
+ * \class QtAws::APIGateway::CreateUsagePlanKeyResponse
  *
- * @brief  Handles APIGateway CreateUsagePlanKey responses.
+ * \brief The CreateUsagePlanKeyResponse class encapsulates APIGateway CreateUsagePlanKey responses.
  *
- * @see    APIGatewayClient::createUsagePlanKey
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::createUsagePlanKey
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateUsagePlanKeyResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const CreateUsagePlanKeyRequest * CreateUsagePlanKeyResponse::request() const
     return static_cast<const CreateUsagePlanKeyRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway CreateUsagePlanKey response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void CreateUsagePlanKeyResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateUsagePlanKeyResponsePrivate
+ * \class CreateUsagePlanKeyResponsePrivate
  *
- * @brief  Private implementation for CreateUsagePlanKeyResponse.
+ * \brief Private implementation for CreateUsagePlanKeyResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateUsagePlanKeyResponsePrivate object.
@@ -91,7 +99,7 @@ CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway CreateUsagePlanKeyResponse element.
  *
  * @param  xml  XML stream to parse.

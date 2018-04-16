@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  DeleteTableRequest
+/*!
+ * \class QtAws::Glue::DeleteTableRequest
  *
- * @brief  Implements Glue DeleteTable requests.
+ * \brief The DeleteTableRequest class encapsulates Glue DeleteTable requests.
  *
- * @see    GlueClient::deleteTable
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::deleteTable
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DeleteTableRequest::DeleteTableRequest(const DeleteTableRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteTableRequest object.
  */
 DeleteTableRequest::DeleteTableRequest()
@@ -53,13 +59,16 @@ DeleteTableRequest::DeleteTableRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteTableRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteTableResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * 
     return new DeleteTableResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteTableRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteTableRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTableRequestPrivate object.
@@ -97,7 +106,7 @@ DeleteTableRequestPrivate::DeleteTableRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteTableRequestPrivate object, copying another.

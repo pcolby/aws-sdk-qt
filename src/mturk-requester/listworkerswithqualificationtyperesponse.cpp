@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListWorkersWithQualificationTypeResponse
+/*!
+ * \class QtAws::MTurk::ListWorkersWithQualificationTypeResponse
  *
- * @brief  Handles MTurk ListWorkersWithQualificationType responses.
+ * \brief The ListWorkersWithQualificationTypeResponse class encapsulates MTurk ListWorkersWithQualificationType responses.
  *
- * @see    MTurkClient::listWorkersWithQualificationType
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listWorkersWithQualificationType
  */
 
-/**
+/*!
  * @brief  Constructs a new ListWorkersWithQualificationTypeResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListWorkersWithQualificationTypeRequest * ListWorkersWithQualificationType
     return static_cast<const ListWorkersWithQualificationTypeRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListWorkersWithQualificationType response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListWorkersWithQualificationTypeResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListWorkersWithQualificationTypeResponsePrivate
+ * \class ListWorkersWithQualificationTypeResponsePrivate
  *
- * @brief  Private implementation for ListWorkersWithQualificationTypeResponse.
+ * \brief Private implementation for ListWorkersWithQualificationTypeResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListWorkersWithQualificationTypeResponsePrivate object.
@@ -91,7 +94,7 @@ ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificationTyp
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListWorkersWithQualificationTypeResponse element.
  *
  * @param  xml  XML stream to parse.

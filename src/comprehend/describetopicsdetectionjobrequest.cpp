@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DescribeTopicsDetectionJobRequest
+/*!
+ * \class QtAws::Comprehend::DescribeTopicsDetectionJobRequest
  *
- * @brief  Implements Comprehend DescribeTopicsDetectionJob requests.
+ * \brief The DescribeTopicsDetectionJobRequest class encapsulates Comprehend DescribeTopicsDetectionJob requests.
  *
- * @see    ComprehendClient::describeTopicsDetectionJob
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::describeTopicsDetectionJob
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeTopicsDetectionJobRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest(const Descr
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeTopicsDetectionJobRequest object.
  */
 DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest()
@@ -53,13 +59,16 @@ DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeTopicsDetectionJobRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeTopicsDetectionJobResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(Q
     return new DescribeTopicsDetectionJobResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeTopicsDetectionJobRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(Q
  * @brief  Private implementation for DescribeTopicsDetectionJobRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTopicsDetectionJobRequestPrivate object.
@@ -97,7 +106,7 @@ DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPriva
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeTopicsDetectionJobRequestPrivate object, copying another.

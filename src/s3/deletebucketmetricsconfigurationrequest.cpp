@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketMetricsConfigurationRequest
+/*!
+ * \class QtAws::S3::DeleteBucketMetricsConfigurationRequest
  *
- * @brief  Implements S3 DeleteBucketMetricsConfiguration requests.
+ * \brief The DeleteBucketMetricsConfigurationRequest class encapsulates S3 DeleteBucketMetricsConfiguration requests.
  *
- * @see    S3Client::deleteBucketMetricsConfiguration
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketMetricsConfiguration
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketMetricsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketMetricsConfigurationRequest::DeleteBucketMetricsConfigurationRequest
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketMetricsConfigurationRequest object.
  */
 DeleteBucketMetricsConfigurationRequest::DeleteBucketMetricsConfigurationRequest()
@@ -53,13 +56,16 @@ DeleteBucketMetricsConfigurationRequest::DeleteBucketMetricsConfigurationRequest
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketMetricsConfigurationRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketMetricsConfigurationResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::resp
     return new DeleteBucketMetricsConfigurationResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketMetricsConfigurationRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketMetricsConfigurationRequest::resp
  * @brief  Private implementation for DeleteBucketMetricsConfigurationRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketMetricsConfigurationRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfiguration
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketMetricsConfigurationRequestPrivate object, copying another.

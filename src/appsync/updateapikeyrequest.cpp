@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  UpdateApiKeyRequest
+/*!
+ * \class QtAws::AppSync::UpdateApiKeyRequest
  *
- * @brief  Implements AppSync UpdateApiKey requests.
+ * \brief The UpdateApiKeyRequest class encapsulates AppSync UpdateApiKey requests.
  *
- * @see    AppSyncClient::updateApiKey
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::updateApiKey
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ UpdateApiKeyRequest::UpdateApiKeyRequest(const UpdateApiKeyRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateApiKeyRequest object.
  */
 UpdateApiKeyRequest::UpdateApiKeyRequest()
@@ -53,13 +57,16 @@ UpdateApiKeyRequest::UpdateApiKeyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateApiKeyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateApiKeyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
     return new UpdateApiKeyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateApiKeyRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * UpdateApiKeyRequest::response(QNetworkReply *
  * @brief  Private implementation for UpdateApiKeyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApiKeyRequestPrivate object.
@@ -97,7 +104,7 @@ UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateApiKeyRequestPrivate object, copying another.

@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DescribeVpcEndpointConnectionsResponse
+/*!
+ * \class QtAws::EC2::DescribeVpcEndpointConnectionsResponse
  *
- * @brief  Handles EC2 DescribeVpcEndpointConnections responses.
+ * \brief The DescribeVpcEndpointConnectionsResponse class encapsulates EC2 DescribeVpcEndpointConnections responses.
  *
- * @see    EC2Client::describeVpcEndpointConnections
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::describeVpcEndpointConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeVpcEndpointConnectionsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const DescribeVpcEndpointConnectionsRequest * DescribeVpcEndpointConnectionsResp
     return static_cast<const DescribeVpcEndpointConnectionsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 DescribeVpcEndpointConnections response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void DescribeVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeVpcEndpointConnectionsResponsePrivate
+ * \class DescribeVpcEndpointConnectionsResponsePrivate
  *
- * @brief  Private implementation for DescribeVpcEndpointConnectionsResponse.
+ * \brief Private implementation for DescribeVpcEndpointConnectionsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeVpcEndpointConnectionsResponsePrivate object.
@@ -91,7 +98,7 @@ DescribeVpcEndpointConnectionsResponsePrivate::DescribeVpcEndpointConnectionsRes
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 DescribeVpcEndpointConnectionsResponse element.
  *
  * @param  xml  XML stream to parse.

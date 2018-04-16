@@ -26,15 +26,15 @@
 namespace QtAws {
 namespace AppStream {
 
-/**
- * @class  AppStreamResponse
+/*!
+ * \class QtAws::AppStream::AppStreamResponse
  *
- * @brief  Handles AppStream AppStream responses.
+ * \brief The AppStreamResponse class is the base class for all AppStream responses.
  *
- * @see    AppStreamClient::appStream
+ * \ingroup AppStream
  */
 
-/**
+/*!
  * @brief  Constructs a new AppStreamResponse object.
  *
  * @param  parent   This object's parent.
@@ -45,7 +45,7 @@ AppStreamResponse::AppStreamResponse(QObject * const parent)
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppStreamResponse object.
@@ -63,7 +63,7 @@ AppStreamResponse::AppStreamResponse(AppStreamResponsePrivate * const d, QObject
 
 }
 
-/**
+/*!
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.
@@ -84,7 +84,7 @@ void AppStreamResponse::parseFailure(QIODevice &response)
     setXmlError(xml);*/
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AppStreamResponsePrivate
@@ -92,7 +92,7 @@ void AppStreamResponse::parseFailure(QIODevice &response)
  * @brief  Private implementation for AppStreamResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AppStreamResponsePrivate object.

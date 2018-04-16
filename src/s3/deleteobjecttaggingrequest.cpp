@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteObjectTaggingRequest
+/*!
+ * \class QtAws::S3::DeleteObjectTaggingRequest
  *
- * @brief  Implements S3 DeleteObjectTagging requests.
+ * \brief The DeleteObjectTaggingRequest class encapsulates S3 DeleteObjectTagging requests.
  *
- * @see    S3Client::deleteObjectTagging
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteObjectTagging
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteObjectTaggingRequest::DeleteObjectTaggingRequest(const DeleteObjectTagging
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteObjectTaggingRequest object.
  */
 DeleteObjectTaggingRequest::DeleteObjectTaggingRequest()
@@ -53,13 +56,16 @@ DeleteObjectTaggingRequest::DeleteObjectTaggingRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteObjectTaggingRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteObjectTaggingResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectTaggingRequest::response(QNetwork
     return new DeleteObjectTaggingResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteObjectTaggingRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectTaggingRequest::response(QNetwork
  * @brief  Private implementation for DeleteObjectTaggingRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectTaggingRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteObjectTaggingRequestPrivate::DeleteObjectTaggingRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteObjectTaggingRequestPrivate object, copying another.

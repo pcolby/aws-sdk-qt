@@ -27,15 +27,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  ModifyVpcEndpointResponse
+/*!
+ * \class QtAws::EC2::ModifyVpcEndpointResponse
  *
- * @brief  Handles EC2 ModifyVpcEndpoint responses.
+ * \brief The ModifyVpcEndpointResponse class encapsulates EC2 ModifyVpcEndpoint responses.
  *
- * @see    EC2Client::modifyVpcEndpoint
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::modifyVpcEndpoint
  */
 
-/**
+/*!
  * @brief  Constructs a new ModifyVpcEndpointResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +65,7 @@ const ModifyVpcEndpointRequest * ModifyVpcEndpointResponse::request() const
     return static_cast<const ModifyVpcEndpointRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a EC2 ModifyVpcEndpoint response.
  *
  * @param  response  Response to parse.
@@ -70,15 +77,15 @@ void ModifyVpcEndpointResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ModifyVpcEndpointResponsePrivate
+ * \class ModifyVpcEndpointResponsePrivate
  *
- * @brief  Private implementation for ModifyVpcEndpointResponse.
+ * \brief Private implementation for ModifyVpcEndpointResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ModifyVpcEndpointResponsePrivate object.
@@ -91,7 +98,7 @@ ModifyVpcEndpointResponsePrivate::ModifyVpcEndpointResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an EC2 ModifyVpcEndpointResponse element.
  *
  * @param  xml  XML stream to parse.

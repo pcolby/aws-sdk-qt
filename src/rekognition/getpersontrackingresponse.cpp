@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace Rekognition {
 
-/**
- * @class  GetPersonTrackingResponse
+/*!
+ * \class QtAws::Rekognition::GetPersonTrackingResponse
  *
- * @brief  Handles Rekognition GetPersonTracking responses.
+ * \brief The GetPersonTrackingResponse class encapsulates Rekognition GetPersonTracking responses.
  *
- * @see    RekognitionClient::getPersonTracking
+ * \ingroup Rekognition
+ *
+ *  This is the Amazon Rekognition API
+ *
+ * \sa RekognitionClient::getPersonTracking
  */
 
-/**
+/*!
  * @brief  Constructs a new GetPersonTrackingResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const GetPersonTrackingRequest * GetPersonTrackingResponse::request() const
     return static_cast<const GetPersonTrackingRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Rekognition GetPersonTracking response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void GetPersonTrackingResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetPersonTrackingResponsePrivate
+ * \class GetPersonTrackingResponsePrivate
  *
- * @brief  Private implementation for GetPersonTrackingResponse.
+ * \brief Private implementation for GetPersonTrackingResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetPersonTrackingResponsePrivate object.
@@ -91,7 +95,7 @@ GetPersonTrackingResponsePrivate::GetPersonTrackingResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Rekognition GetPersonTrackingResponse element.
  *
  * @param  xml  XML stream to parse.

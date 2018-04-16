@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  DeleteBucketWebsiteRequest
+/*!
+ * \class QtAws::S3::DeleteBucketWebsiteRequest
  *
- * @brief  Implements S3 DeleteBucketWebsite requests.
+ * \brief The DeleteBucketWebsiteRequest class encapsulates S3 DeleteBucketWebsite requests.
  *
- * @see    S3Client::deleteBucketWebsite
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::deleteBucketWebsite
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketWebsiteRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ DeleteBucketWebsiteRequest::DeleteBucketWebsiteRequest(const DeleteBucketWebsite
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteBucketWebsiteRequest object.
  */
 DeleteBucketWebsiteRequest::DeleteBucketWebsiteRequest()
@@ -53,13 +56,16 @@ DeleteBucketWebsiteRequest::DeleteBucketWebsiteRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteBucketWebsiteRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteBucketWebsiteResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetwork
     return new DeleteBucketWebsiteResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteBucketWebsiteRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketWebsiteRequest::response(QNetwork
  * @brief  Private implementation for DeleteBucketWebsiteRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketWebsiteRequestPrivate object.
@@ -97,7 +103,7 @@ DeleteBucketWebsiteRequestPrivate::DeleteBucketWebsiteRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteBucketWebsiteRequestPrivate object, copying another.

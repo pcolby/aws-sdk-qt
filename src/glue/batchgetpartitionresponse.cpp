@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchGetPartitionResponse
+/*!
+ * \class QtAws::Glue::BatchGetPartitionResponse
  *
- * @brief  Handles Glue BatchGetPartition responses.
+ * \brief The BatchGetPartitionResponse class encapsulates Glue BatchGetPartition responses.
  *
- * @see    GlueClient::batchGetPartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchGetPartition
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchGetPartitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const BatchGetPartitionRequest * BatchGetPartitionResponse::request() const
     return static_cast<const BatchGetPartitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue BatchGetPartition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void BatchGetPartitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchGetPartitionResponsePrivate
+ * \class BatchGetPartitionResponsePrivate
  *
- * @brief  Private implementation for BatchGetPartitionResponse.
+ * \brief Private implementation for BatchGetPartitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchGetPartitionResponsePrivate object.
@@ -91,7 +97,7 @@ BatchGetPartitionResponsePrivate::BatchGetPartitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue BatchGetPartitionResponse element.
  *
  * @param  xml  XML stream to parse.

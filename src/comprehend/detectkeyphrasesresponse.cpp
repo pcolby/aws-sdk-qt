@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Comprehend {
 
-/**
- * @class  DetectKeyPhrasesResponse
+/*!
+ * \class QtAws::Comprehend::DetectKeyPhrasesResponse
  *
- * @brief  Handles Comprehend DetectKeyPhrases responses.
+ * \brief The DetectKeyPhrasesResponse class encapsulates Comprehend DetectKeyPhrases responses.
  *
- * @see    ComprehendClient::detectKeyPhrases
+ * \ingroup Comprehend
+ *
+ *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
+ *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
+ *  predominant language used, and
+ *
+ * \sa ComprehendClient::detectKeyPhrases
  */
 
-/**
+/*!
  * @brief  Constructs a new DetectKeyPhrasesResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const DetectKeyPhrasesRequest * DetectKeyPhrasesResponse::request() const
     return static_cast<const DetectKeyPhrasesRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Comprehend DetectKeyPhrases response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void DetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DetectKeyPhrasesResponsePrivate
+ * \class DetectKeyPhrasesResponsePrivate
  *
- * @brief  Private implementation for DetectKeyPhrasesResponse.
+ * \brief Private implementation for DetectKeyPhrasesResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DetectKeyPhrasesResponsePrivate object.
@@ -91,7 +97,7 @@ DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Comprehend DetectKeyPhrasesResponse element.
  *
  * @param  xml  XML stream to parse.

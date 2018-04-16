@@ -27,15 +27,19 @@
 namespace QtAws {
 namespace AppSync {
 
-/**
- * @class  CreateResolverResponse
+/*!
+ * \class QtAws::AppSync::CreateResolverResponse
  *
- * @brief  Handles AppSync CreateResolver responses.
+ * \brief The CreateResolverResponse class encapsulates AppSync CreateResolver responses.
  *
- * @see    AppSyncClient::createResolver
+ * \ingroup AppSync
+ *
+ *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *
+ * \sa AppSyncClient::createResolver
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateResolverResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +62,7 @@ const CreateResolverRequest * CreateResolverResponse::request() const
     return static_cast<const CreateResolverRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a AppSync CreateResolver response.
  *
  * @param  response  Response to parse.
@@ -70,15 +74,15 @@ void CreateResolverResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateResolverResponsePrivate
+ * \class CreateResolverResponsePrivate
  *
- * @brief  Private implementation for CreateResolverResponse.
+ * \brief Private implementation for CreateResolverResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateResolverResponsePrivate object.
@@ -91,7 +95,7 @@ CreateResolverResponsePrivate::CreateResolverResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an AppSync CreateResolverResponse element.
  *
  * @param  xml  XML stream to parse.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  AuthorizeSecurityGroupEgressRequest
+/*!
+ * \class QtAws::EC2::AuthorizeSecurityGroupEgressRequest
  *
- * @brief  Implements EC2 AuthorizeSecurityGroupEgress requests.
+ * \brief The AuthorizeSecurityGroupEgressRequest class encapsulates EC2 AuthorizeSecurityGroupEgress requests.
  *
- * @see    EC2Client::authorizeSecurityGroupEgress
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::authorizeSecurityGroupEgress
  */
 
-/**
+/*!
  * @brief  Constructs a new AuthorizeSecurityGroupEgressRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest(const A
 
 }
 
-/**
+/*!
  * @brief  Constructs a new AuthorizeSecurityGroupEgressRequest object.
  */
 AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest()
@@ -53,13 +60,16 @@ AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool AuthorizeSecurityGroupEgressRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an AuthorizeSecurityGroupEgressResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response
     return new AuthorizeSecurityGroupEgressResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  AuthorizeSecurityGroupEgressRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response
  * @brief  Private implementation for AuthorizeSecurityGroupEgressRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AuthorizeSecurityGroupEgressRequestPrivate object.
@@ -97,7 +107,7 @@ AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestP
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new AuthorizeSecurityGroupEgressRequestPrivate object, copying another.

@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace Inspector {
 
-/**
- * @class  ListEventSubscriptionsRequest
+/*!
+ * \class QtAws::Inspector::ListEventSubscriptionsRequest
  *
- * @brief  Implements Inspector ListEventSubscriptions requests.
+ * \brief The ListEventSubscriptionsRequest class encapsulates Inspector ListEventSubscriptions requests.
  *
- * @see    InspectorClient::listEventSubscriptions
+ * \ingroup Inspector
+ *
+ *  <fullname>Amazon Inspector</fullname>
+ * 
+ *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
+ *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  Amazon Inspector User
+ *
+ * \sa InspectorClient::listEventSubscriptions
  */
 
-/**
+/*!
  * @brief  Constructs a new ListEventSubscriptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ ListEventSubscriptionsRequest::ListEventSubscriptionsRequest(const ListEventSubs
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListEventSubscriptionsRequest object.
  */
 ListEventSubscriptionsRequest::ListEventSubscriptionsRequest()
@@ -53,13 +61,16 @@ ListEventSubscriptionsRequest::ListEventSubscriptionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListEventSubscriptionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListEventSubscriptionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetw
     return new ListEventSubscriptionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListEventSubscriptionsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetw
  * @brief  Private implementation for ListEventSubscriptionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEventSubscriptionsRequestPrivate object.
@@ -97,7 +108,7 @@ ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListEventSubscriptionsRequestPrivate object, copying another.

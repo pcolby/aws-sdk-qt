@@ -25,15 +25,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  PutIdentityPolicyRequest
+/*!
+ * \class QtAws::SES::PutIdentityPolicyRequest
  *
- * @brief  Implements SES PutIdentityPolicy requests.
+ * \brief The PutIdentityPolicyRequest class encapsulates SES PutIdentityPolicy requests.
  *
- * @see    SESClient::putIdentityPolicy
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::putIdentityPolicy
  */
 
-/**
+/*!
  * @brief  Constructs a new PutIdentityPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +58,7 @@ PutIdentityPolicyRequest::PutIdentityPolicyRequest(const PutIdentityPolicyReques
 
 }
 
-/**
+/*!
  * @brief  Constructs a new PutIdentityPolicyRequest object.
  */
 PutIdentityPolicyRequest::PutIdentityPolicyRequest()
@@ -53,13 +67,16 @@ PutIdentityPolicyRequest::PutIdentityPolicyRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool PutIdentityPolicyRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an PutIdentityPolicyResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkRe
     return new PutIdentityPolicyResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  PutIdentityPolicyRequestPrivate
@@ -82,7 +99,7 @@ QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkRe
  * @brief  Private implementation for PutIdentityPolicyRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIdentityPolicyRequestPrivate object.
@@ -97,7 +114,7 @@ PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new PutIdentityPolicyRequestPrivate object, copying another.

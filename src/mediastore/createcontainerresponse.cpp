@@ -27,15 +27,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  CreateContainerResponse
+/*!
+ * \class QtAws::MediaStore::CreateContainerResponse
  *
- * @brief  Handles MediaStore CreateContainer responses.
+ * \brief The CreateContainerResponse class encapsulates MediaStore CreateContainer responses.
  *
- * @see    MediaStoreClient::createContainer
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::createContainer
  */
 
-/**
+/*!
  * @brief  Constructs a new CreateContainerResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +63,7 @@ const CreateContainerRequest * CreateContainerResponse::request() const
     return static_cast<const CreateContainerRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MediaStore CreateContainer response.
  *
  * @param  response  Response to parse.
@@ -70,15 +75,15 @@ void CreateContainerResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  CreateContainerResponsePrivate
+ * \class CreateContainerResponsePrivate
  *
- * @brief  Private implementation for CreateContainerResponse.
+ * \brief Private implementation for CreateContainerResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new CreateContainerResponsePrivate object.
@@ -91,7 +96,7 @@ CreateContainerResponsePrivate::CreateContainerResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MediaStore CreateContainerResponse element.
  *
  * @param  xml  XML stream to parse.

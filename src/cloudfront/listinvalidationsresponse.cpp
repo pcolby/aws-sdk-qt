@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace CloudFront {
 
-/**
- * @class  ListInvalidationsResponse
+/*!
+ * \class QtAws::CloudFront::ListInvalidationsResponse
  *
- * @brief  Handles CloudFront ListInvalidations responses.
+ * \brief The ListInvalidationsResponse class encapsulates CloudFront ListInvalidations responses.
  *
- * @see    CloudFrontClient::listInvalidations
+ * \ingroup CloudFront
+ *
+ *  <fullname>Amazon CloudFront</fullname>
+ * 
+ *  This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
+ *  CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
+ *  CloudFront Developer
+ *
+ * \sa CloudFrontClient::listInvalidations
  */
 
-/**
+/*!
  * @brief  Constructs a new ListInvalidationsResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const ListInvalidationsRequest * ListInvalidationsResponse::request() const
     return static_cast<const ListInvalidationsRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a CloudFront ListInvalidations response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void ListInvalidationsResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListInvalidationsResponsePrivate
+ * \class ListInvalidationsResponsePrivate
  *
- * @brief  Private implementation for ListInvalidationsResponse.
+ * \brief Private implementation for ListInvalidationsResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListInvalidationsResponsePrivate object.
@@ -91,7 +99,7 @@ ListInvalidationsResponsePrivate::ListInvalidationsResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an CloudFront ListInvalidationsResponse element.
  *
  * @param  xml  XML stream to parse.

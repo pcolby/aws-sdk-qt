@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace MediaStore {
 
-/**
- * @class  ListContainersRequest
+/*!
+ * \class QtAws::MediaStore::ListContainersRequest
  *
- * @brief  Implements MediaStore ListContainers requests.
+ * \brief The ListContainersRequest class encapsulates MediaStore ListContainers requests.
  *
- * @see    MediaStoreClient::listContainers
+ * \ingroup MediaStore
+ *
+ *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
+ *  create, read, and delete objects.
+ *
+ * \sa MediaStoreClient::listContainers
  */
 
-/**
+/*!
  * @brief  Constructs a new ListContainersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ ListContainersRequest::ListContainersRequest(const ListContainersRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new ListContainersRequest object.
  */
 ListContainersRequest::ListContainersRequest()
@@ -53,13 +58,16 @@ ListContainersRequest::ListContainersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool ListContainersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an ListContainersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * ListContainersRequest::response(QNetworkReply
     return new ListContainersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  ListContainersRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * ListContainersRequest::response(QNetworkReply
  * @brief  Private implementation for ListContainersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListContainersRequestPrivate object.
@@ -97,7 +105,7 @@ ListContainersRequestPrivate::ListContainersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListContainersRequestPrivate object, copying another.

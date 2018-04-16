@@ -25,15 +25,34 @@
 namespace QtAws {
 namespace Lightsail {
 
-/**
- * @class  GetBlueprintsRequest
+/*!
+ * \class QtAws::Lightsail::GetBlueprintsRequest
  *
- * @brief  Implements Lightsail GetBlueprints requests.
+ * \brief The GetBlueprintsRequest class encapsulates Lightsail GetBlueprints requests.
  *
- * @see    LightsailClient::getBlueprints
+ * \ingroup Lightsail
+ *
+ *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
+ *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
+ *  Lightsail console or by using the API or command-line interface
+ * 
+ *  (CLI)>
+ * 
+ *  For more information about Lightsail concepts and tasks, see the <a
+ *  href="https://lightsail.aws.amazon.com/ls/docs/all">Lightsail Dev
+ * 
+ *  Guide</a>>
+ * 
+ *  To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access
+ *  keys. For details about how to set this up, see the <a
+ *  href="http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli">Lightsail
+ *  Dev
+ *
+ * \sa LightsailClient::getBlueprints
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBlueprintsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +63,7 @@ GetBlueprintsRequest::GetBlueprintsRequest(const GetBlueprintsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetBlueprintsRequest object.
  */
 GetBlueprintsRequest::GetBlueprintsRequest()
@@ -53,13 +72,16 @@ GetBlueprintsRequest::GetBlueprintsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetBlueprintsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetBlueprintsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +96,7 @@ QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply 
     return new GetBlueprintsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetBlueprintsRequestPrivate
@@ -82,7 +104,7 @@ QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply 
  * @brief  Private implementation for GetBlueprintsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBlueprintsRequestPrivate object.
@@ -97,7 +119,7 @@ GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBlueprintsRequestPrivate object, copying another.

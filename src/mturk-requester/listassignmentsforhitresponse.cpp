@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  ListAssignmentsForHITResponse
+/*!
+ * \class QtAws::MTurk::ListAssignmentsForHITResponse
  *
- * @brief  Handles MTurk ListAssignmentsForHIT responses.
+ * \brief The ListAssignmentsForHITResponse class encapsulates MTurk ListAssignmentsForHIT responses.
  *
- * @see    MTurkClient::listAssignmentsForHIT
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::listAssignmentsForHIT
  */
 
-/**
+/*!
  * @brief  Constructs a new ListAssignmentsForHITResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const ListAssignmentsForHITRequest * ListAssignmentsForHITResponse::request() co
     return static_cast<const ListAssignmentsForHITRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a MTurk ListAssignmentsForHIT response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void ListAssignmentsForHITResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListAssignmentsForHITResponsePrivate
+ * \class ListAssignmentsForHITResponsePrivate
  *
- * @brief  Private implementation for ListAssignmentsForHITResponse.
+ * \brief Private implementation for ListAssignmentsForHITResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListAssignmentsForHITResponsePrivate object.
@@ -91,7 +94,7 @@ ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an MTurk ListAssignmentsForHITResponse element.
  *
  * @param  xml  XML stream to parse.

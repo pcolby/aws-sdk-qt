@@ -27,15 +27,24 @@
 namespace QtAws {
 namespace ServiceCatalog {
 
-/**
- * @class  ListPortfoliosForProductResponse
+/*!
+ * \class QtAws::ServiceCatalog::ListPortfoliosForProductResponse
  *
- * @brief  Handles ServiceCatalog ListPortfoliosForProduct responses.
+ * \brief The ListPortfoliosForProductResponse class encapsulates ServiceCatalog ListPortfoliosForProduct responses.
  *
- * @see    ServiceCatalogClient::listPortfoliosForProduct
+ * \ingroup ServiceCatalog
+ *
+ *  <fullname>AWS Service Catalog</fullname>
+ * 
+ *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *
+ * \sa ServiceCatalogClient::listPortfoliosForProduct
  */
 
-/**
+/*!
  * @brief  Constructs a new ListPortfoliosForProductResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +67,7 @@ const ListPortfoliosForProductRequest * ListPortfoliosForProductResponse::reques
     return static_cast<const ListPortfoliosForProductRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a ServiceCatalog ListPortfoliosForProduct response.
  *
  * @param  response  Response to parse.
@@ -70,15 +79,15 @@ void ListPortfoliosForProductResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  ListPortfoliosForProductResponsePrivate
+ * \class ListPortfoliosForProductResponsePrivate
  *
- * @brief  Private implementation for ListPortfoliosForProductResponse.
+ * \brief Private implementation for ListPortfoliosForProductResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new ListPortfoliosForProductResponsePrivate object.
@@ -91,7 +100,7 @@ ListPortfoliosForProductResponsePrivate::ListPortfoliosForProductResponsePrivate
 
 }
 
-/**
+/*!
  * @brief  Parse an ServiceCatalog ListPortfoliosForProductResponse element.
  *
  * @param  xml  XML stream to parse.

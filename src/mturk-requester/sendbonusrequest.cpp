@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  SendBonusRequest
+/*!
+ * \class QtAws::MTurk::SendBonusRequest
  *
- * @brief  Implements MTurk SendBonus requests.
+ * \brief The SendBonusRequest class encapsulates MTurk SendBonus requests.
  *
- * @see    MTurkClient::sendBonus
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::sendBonus
  */
 
-/**
+/*!
  * @brief  Constructs a new SendBonusRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ SendBonusRequest::SendBonusRequest(const SendBonusRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new SendBonusRequest object.
  */
 SendBonusRequest::SendBonusRequest()
@@ -53,13 +56,16 @@ SendBonusRequest::SendBonusRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool SendBonusRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an SendBonusResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * co
     return new SendBonusResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  SendBonusRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * co
  * @brief  Private implementation for SendBonusRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendBonusRequestPrivate object.
@@ -97,7 +103,7 @@ SendBonusRequestPrivate::SendBonusRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendBonusRequestPrivate object, copying another.

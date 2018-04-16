@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetTagsRequest
+/*!
+ * \class QtAws::APIGateway::GetTagsRequest
  *
- * @brief  Implements APIGateway GetTags requests.
+ * \brief The GetTagsRequest class encapsulates APIGateway GetTags requests.
  *
- * @see    APIGatewayClient::getTags
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getTags
  */
 
-/**
+/*!
  * @brief  Constructs a new GetTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetTagsRequest object.
  */
 GetTagsRequest::GetTagsRequest()
@@ -53,13 +61,16 @@ GetTagsRequest::GetTagsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetTagsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetTagsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
     return new GetTagsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetTagsRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
  * @brief  Private implementation for GetTagsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTagsRequestPrivate object.
@@ -97,7 +108,7 @@ GetTagsRequestPrivate::GetTagsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetTagsRequestPrivate object, copying another.

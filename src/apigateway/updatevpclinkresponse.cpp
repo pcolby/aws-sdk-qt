@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  UpdateVpcLinkResponse
+/*!
+ * \class QtAws::APIGateway::UpdateVpcLinkResponse
  *
- * @brief  Handles APIGateway UpdateVpcLink responses.
+ * \brief The UpdateVpcLinkResponse class encapsulates APIGateway UpdateVpcLink responses.
  *
- * @see    APIGatewayClient::updateVpcLink
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::updateVpcLink
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateVpcLinkResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const UpdateVpcLinkRequest * UpdateVpcLinkResponse::request() const
     return static_cast<const UpdateVpcLinkRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway UpdateVpcLink response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateVpcLinkResponsePrivate
+ * \class UpdateVpcLinkResponsePrivate
  *
- * @brief  Private implementation for UpdateVpcLinkResponse.
+ * \brief Private implementation for UpdateVpcLinkResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateVpcLinkResponsePrivate object.
@@ -91,7 +99,7 @@ UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway UpdateVpcLinkResponse element.
  *
  * @param  xml  XML stream to parse.

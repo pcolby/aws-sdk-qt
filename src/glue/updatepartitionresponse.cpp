@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  UpdatePartitionResponse
+/*!
+ * \class QtAws::Glue::UpdatePartitionResponse
  *
- * @brief  Handles Glue UpdatePartition responses.
+ * \brief The UpdatePartitionResponse class encapsulates Glue UpdatePartition responses.
  *
- * @see    GlueClient::updatePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::updatePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdatePartitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const UpdatePartitionRequest * UpdatePartitionResponse::request() const
     return static_cast<const UpdatePartitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue UpdatePartition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void UpdatePartitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdatePartitionResponsePrivate
+ * \class UpdatePartitionResponsePrivate
  *
- * @brief  Private implementation for UpdatePartitionResponse.
+ * \brief Private implementation for UpdatePartitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdatePartitionResponsePrivate object.
@@ -91,7 +97,7 @@ UpdatePartitionResponsePrivate::UpdatePartitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue UpdatePartitionResponse element.
  *
  * @param  xml  XML stream to parse.

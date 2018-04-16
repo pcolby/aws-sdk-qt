@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MTurk {
 
-/**
- * @class  GetFileUploadURLRequest
+/*!
+ * \class QtAws::MTurk::GetFileUploadURLRequest
  *
- * @brief  Implements MTurk GetFileUploadURL requests.
+ * \brief The GetFileUploadURLRequest class encapsulates MTurk GetFileUploadURL requests.
  *
- * @see    MTurkClient::getFileUploadURL
+ * \ingroup MTurk
+ *
+ *
+ * \sa MTurkClient::getFileUploadURL
  */
 
-/**
+/*!
  * @brief  Constructs a new GetFileUploadURLRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ GetFileUploadURLRequest::GetFileUploadURLRequest(const GetFileUploadURLRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetFileUploadURLRequest object.
  */
 GetFileUploadURLRequest::GetFileUploadURLRequest()
@@ -53,13 +56,16 @@ GetFileUploadURLRequest::GetFileUploadURLRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetFileUploadURLRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetFileUploadURLResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkRep
     return new GetFileUploadURLResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetFileUploadURLRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkRep
  * @brief  Private implementation for GetFileUploadURLRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFileUploadURLRequestPrivate object.
@@ -97,7 +103,7 @@ GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetFileUploadURLRequestPrivate object, copying another.

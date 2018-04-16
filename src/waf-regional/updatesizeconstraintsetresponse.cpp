@@ -27,15 +27,25 @@
 namespace QtAws {
 namespace WAFRegional {
 
-/**
- * @class  UpdateSizeConstraintSetResponse
+/*!
+ * \class QtAws::WAFRegional::UpdateSizeConstraintSetResponse
  *
- * @brief  Handles WAFRegional UpdateSizeConstraintSet responses.
+ * \brief The UpdateSizeConstraintSetResponse class encapsulates WAFRegional UpdateSizeConstraintSet responses.
  *
- * @see    WAFRegionalClient::updateSizeConstraintSet
+ * \ingroup WAFRegional
+ *
+ *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
+ *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
+ *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
+ *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
+ *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
+ *  href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *
+ * \sa WAFRegionalClient::updateSizeConstraintSet
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateSizeConstraintSetResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +68,7 @@ const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request(
     return static_cast<const UpdateSizeConstraintSetRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a WAFRegional UpdateSizeConstraintSet response.
  *
  * @param  response  Response to parse.
@@ -70,15 +80,15 @@ void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  UpdateSizeConstraintSetResponsePrivate
+ * \class UpdateSizeConstraintSetResponsePrivate
  *
- * @brief  Private implementation for UpdateSizeConstraintSetResponse.
+ * \brief Private implementation for UpdateSizeConstraintSetResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateSizeConstraintSetResponsePrivate object.
@@ -91,7 +101,7 @@ UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an WAFRegional UpdateSizeConstraintSetResponse element.
  *
  * @param  xml  XML stream to parse.

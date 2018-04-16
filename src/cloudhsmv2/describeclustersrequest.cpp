@@ -25,15 +25,20 @@
 namespace QtAws {
 namespace CloudHSMV2 {
 
-/**
- * @class  DescribeClustersRequest
+/*!
+ * \class QtAws::CloudHSMV2::DescribeClustersRequest
  *
- * @brief  Implements CloudHSMV2 DescribeClusters requests.
+ * \brief The DescribeClustersRequest class encapsulates CloudHSMV2 DescribeClusters requests.
  *
- * @see    CloudHSMV2Client::describeClusters
+ * \ingroup CloudHSMV2
+ *
+ *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
+ *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *
+ * \sa CloudHSMV2Client::describeClusters
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeClustersRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +49,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
@@ -53,13 +58,16 @@ DescribeClustersRequest::DescribeClustersRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DescribeClustersRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DescribeClustersResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +82,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
     return new DescribeClustersResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DescribeClustersRequestPrivate
@@ -82,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  * @brief  Private implementation for DescribeClustersRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClustersRequestPrivate object.
@@ -97,7 +105,7 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeClustersRequestPrivate object, copying another.

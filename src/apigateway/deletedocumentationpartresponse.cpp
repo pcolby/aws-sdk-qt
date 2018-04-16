@@ -27,15 +27,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  DeleteDocumentationPartResponse
+/*!
+ * \class QtAws::APIGateway::DeleteDocumentationPartResponse
  *
- * @brief  Handles APIGateway DeleteDocumentationPart responses.
+ * \brief The DeleteDocumentationPartResponse class encapsulates APIGateway DeleteDocumentationPart responses.
  *
- * @see    APIGatewayClient::deleteDocumentationPart
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::deleteDocumentationPart
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteDocumentationPartResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +66,7 @@ const DeleteDocumentationPartRequest * DeleteDocumentationPartResponse::request(
     return static_cast<const DeleteDocumentationPartRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a APIGateway DeleteDocumentationPart response.
  *
  * @param  response  Response to parse.
@@ -70,15 +78,15 @@ void DeleteDocumentationPartResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DeleteDocumentationPartResponsePrivate
+ * \class DeleteDocumentationPartResponsePrivate
  *
- * @brief  Private implementation for DeleteDocumentationPartResponse.
+ * \brief Private implementation for DeleteDocumentationPartResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteDocumentationPartResponsePrivate object.
@@ -91,7 +99,7 @@ DeleteDocumentationPartResponsePrivate::DeleteDocumentationPartResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an APIGateway DeleteDocumentationPartResponse element.
  *
  * @param  xml  XML stream to parse.

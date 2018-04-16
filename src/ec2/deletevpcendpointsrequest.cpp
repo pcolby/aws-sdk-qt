@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace EC2 {
 
-/**
- * @class  DeleteVpcEndpointsRequest
+/*!
+ * \class QtAws::EC2::DeleteVpcEndpointsRequest
  *
- * @brief  Implements EC2 DeleteVpcEndpoints requests.
+ * \brief The DeleteVpcEndpointsRequest class encapsulates EC2 DeleteVpcEndpoints requests.
  *
- * @see    EC2Client::deleteVpcEndpoints
+ * \ingroup EC2
+ *
+ *  <fullname>Amazon Elastic Compute Cloud</fullname>
+ * 
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *
+ * \sa EC2Client::deleteVpcEndpoints
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest(const DeleteVpcEndpointsReq
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteVpcEndpointsRequest object.
  */
 DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest()
@@ -53,13 +60,16 @@ DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteVpcEndpointsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteVpcEndpointsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkR
     return new DeleteVpcEndpointsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteVpcEndpointsRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkR
  * @brief  Private implementation for DeleteVpcEndpointsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointsRequestPrivate object.
@@ -97,7 +107,7 @@ DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteVpcEndpointsRequestPrivate object, copying another.

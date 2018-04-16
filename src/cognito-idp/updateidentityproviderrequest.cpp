@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  UpdateIdentityProviderRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::UpdateIdentityProviderRequest
  *
- * @brief  Implements CognitoIdentityProvider UpdateIdentityProvider requests.
+ * \brief The UpdateIdentityProviderRequest class encapsulates CognitoIdentityProvider UpdateIdentityProvider requests.
  *
- * @see    CognitoIdentityProviderClient::updateIdentityProvider
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::updateIdentityProvider
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateIdentityProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ UpdateIdentityProviderRequest::UpdateIdentityProviderRequest(const UpdateIdentit
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateIdentityProviderRequest object.
  */
 UpdateIdentityProviderRequest::UpdateIdentityProviderRequest()
@@ -53,13 +66,16 @@ UpdateIdentityProviderRequest::UpdateIdentityProviderRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateIdentityProviderRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateIdentityProviderResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetw
     return new UpdateIdentityProviderResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateIdentityProviderRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetw
  * @brief  Private implementation for UpdateIdentityProviderRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIdentityProviderRequestPrivate object.
@@ -97,7 +113,7 @@ UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateIdentityProviderRequestPrivate object, copying another.

@@ -25,15 +25,22 @@
 namespace QtAws {
 namespace ServiceDiscovery {
 
-/**
- * @class  GetNamespaceRequest
+/*!
+ * \class QtAws::ServiceDiscovery::GetNamespaceRequest
  *
- * @brief  Implements ServiceDiscovery GetNamespace requests.
+ * \brief The GetNamespaceRequest class encapsulates ServiceDiscovery GetNamespace requests.
  *
- * @see    ServiceDiscoveryClient::getNamespace
+ * \ingroup ServiceDiscovery
+ *
+ *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
+ *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
+ *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
+ *  service receive an answer that contains up to eight healthy
+ *
+ * \sa ServiceDiscoveryClient::getNamespace
  */
 
-/**
+/*!
  * @brief  Constructs a new GetNamespaceRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +51,7 @@ GetNamespaceRequest::GetNamespaceRequest(const GetNamespaceRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetNamespaceRequest object.
  */
 GetNamespaceRequest::GetNamespaceRequest()
@@ -53,13 +60,16 @@ GetNamespaceRequest::GetNamespaceRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetNamespaceRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetNamespaceResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +84,7 @@ QtAws::Core::AwsAbstractResponse * GetNamespaceRequest::response(QNetworkReply *
     return new GetNamespaceResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetNamespaceRequestPrivate
@@ -82,7 +92,7 @@ QtAws::Core::AwsAbstractResponse * GetNamespaceRequest::response(QNetworkReply *
  * @brief  Private implementation for GetNamespaceRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetNamespaceRequestPrivate object.
@@ -97,7 +107,7 @@ GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetNamespaceRequestPrivate object, copying another.

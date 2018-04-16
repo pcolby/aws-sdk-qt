@@ -27,15 +27,18 @@
 namespace QtAws {
 namespace S3 {
 
-/**
- * @class  GetBucketLifecycleResponse
+/*!
+ * \class QtAws::S3::GetBucketLifecycleResponse
  *
- * @brief  Handles S3 GetBucketLifecycle responses.
+ * \brief The GetBucketLifecycleResponse class encapsulates S3 GetBucketLifecycle responses.
  *
- * @see    S3Client::getBucketLifecycle
+ * \ingroup S3
+ *
+ *
+ * \sa S3Client::getBucketLifecycle
  */
 
-/**
+/*!
  * @brief  Constructs a new GetBucketLifecycleResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +61,7 @@ const GetBucketLifecycleRequest * GetBucketLifecycleResponse::request() const
     return static_cast<const GetBucketLifecycleRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a S3 GetBucketLifecycle response.
  *
  * @param  response  Response to parse.
@@ -70,15 +73,15 @@ void GetBucketLifecycleResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  GetBucketLifecycleResponsePrivate
+ * \class GetBucketLifecycleResponsePrivate
  *
- * @brief  Private implementation for GetBucketLifecycleResponse.
+ * \brief Private implementation for GetBucketLifecycleResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetBucketLifecycleResponsePrivate object.
@@ -91,7 +94,7 @@ GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an S3 GetBucketLifecycleResponse element.
  *
  * @param  xml  XML stream to parse.

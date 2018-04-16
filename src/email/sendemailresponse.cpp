@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace SES {
 
-/**
- * @class  SendEmailResponse
+/*!
+ * \class QtAws::SES::SendEmailResponse
  *
- * @brief  Handles SES SendEmail responses.
+ * \brief The SendEmailResponse class encapsulates SES SendEmail responses.
  *
- * @see    SESClient::sendEmail
+ * \ingroup SES
+ *
+ *  <fullname>Amazon Simple Email Service</fullname>
+ * 
+ *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
+ *  documentation is intended to be used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * 
+ *  </p <note>
+ * 
+ *  For a list of Amazon SES endpoints to use in service requests, see <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ * \sa SESClient::sendEmail
  */
 
-/**
+/*!
  * @brief  Constructs a new SendEmailResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const SendEmailRequest * SendEmailResponse::request() const
     return static_cast<const SendEmailRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a SES SendEmail response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void SendEmailResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  SendEmailResponsePrivate
+ * \class SendEmailResponsePrivate
  *
- * @brief  Private implementation for SendEmailResponse.
+ * \brief Private implementation for SendEmailResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new SendEmailResponsePrivate object.
@@ -91,7 +105,7 @@ SendEmailResponsePrivate::SendEmailResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an SES SendEmailResponse element.
  *
  * @param  xml  XML stream to parse.

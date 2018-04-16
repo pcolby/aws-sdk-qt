@@ -25,15 +25,23 @@
 namespace QtAws {
 namespace APIGateway {
 
-/**
- * @class  GetMethodRequest
+/*!
+ * \class QtAws::APIGateway::GetMethodRequest
  *
- * @brief  Implements APIGateway GetMethod requests.
+ * \brief The GetMethodRequest class encapsulates APIGateway GetMethod requests.
  *
- * @see    APIGatewayClient::getMethod
+ * \ingroup APIGateway
+ *
+ *  <fullname>Amazon API Gateway</fullname>
+ * 
+ *  Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API
+ *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
+ *  other publicly addressable web services that are hosted outside of
+ *
+ * \sa APIGatewayClient::getMethod
  */
 
-/**
+/*!
  * @brief  Constructs a new GetMethodRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +52,7 @@ GetMethodRequest::GetMethodRequest(const GetMethodRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetMethodRequest object.
  */
 GetMethodRequest::GetMethodRequest()
@@ -53,13 +61,16 @@ GetMethodRequest::GetMethodRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetMethodRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetMethodResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * GetMethodRequest::response(QNetworkReply * co
     return new GetMethodResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetMethodRequestPrivate
@@ -82,7 +93,7 @@ QtAws::Core::AwsAbstractResponse * GetMethodRequest::response(QNetworkReply * co
  * @brief  Private implementation for GetMethodRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMethodRequestPrivate object.
@@ -97,7 +108,7 @@ GetMethodRequestPrivate::GetMethodRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetMethodRequestPrivate object, copying another.

@@ -25,15 +25,19 @@
 namespace QtAws {
 namespace Translate {
 
-/**
- * @class  TranslateTextRequest
+/*!
+ * \class QtAws::Translate::TranslateTextRequest
  *
- * @brief  Implements Translate TranslateText requests.
+ * \brief The TranslateTextRequest class encapsulates Translate TranslateText requests.
  *
- * @see    TranslateClient::translateText
+ * \ingroup Translate
+ *
+ *  Provides translation between English and one of six languages, or between one of the six languages and
+ *
+ * \sa TranslateClient::translateText
  */
 
-/**
+/*!
  * @brief  Constructs a new TranslateTextRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +48,7 @@ TranslateTextRequest::TranslateTextRequest(const TranslateTextRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new TranslateTextRequest object.
  */
 TranslateTextRequest::TranslateTextRequest()
@@ -53,13 +57,16 @@ TranslateTextRequest::TranslateTextRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool TranslateTextRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an TranslateTextResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +81,7 @@ QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply 
     return new TranslateTextResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  TranslateTextRequestPrivate
@@ -82,7 +89,7 @@ QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply 
  * @brief  Private implementation for TranslateTextRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateTextRequestPrivate object.
@@ -97,7 +104,7 @@ TranslateTextRequestPrivate::TranslateTextRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new TranslateTextRequestPrivate object, copying another.

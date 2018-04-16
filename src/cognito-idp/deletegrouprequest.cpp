@@ -25,15 +25,28 @@
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
-/**
- * @class  DeleteGroupRequest
+/*!
+ * \class QtAws::CognitoIdentityProvider::DeleteGroupRequest
  *
- * @brief  Implements CognitoIdentityProvider DeleteGroup requests.
+ * \brief The DeleteGroupRequest class encapsulates CognitoIdentityProvider DeleteGroup requests.
  *
- * @see    CognitoIdentityProviderClient::deleteGroup
+ * \ingroup CognitoIdentityProvider
+ *
+ *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
+ *  authenticate a user to obtain tokens related to user identity and access
+ * 
+ *  policies>
+ * 
+ *  This API reference provides information about user pools in Amazon Cognito User
+ * 
+ *  Pools>
+ * 
+ *  For more information, see the Amazon Cognito
+ *
+ * \sa CognitoIdentityProviderClient::deleteGroup
  */
 
-/**
+/*!
  * @brief  Constructs a new DeleteGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +57,7 @@ DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new DeleteGroupRequest object.
  */
 DeleteGroupRequest::DeleteGroupRequest()
@@ -53,13 +66,16 @@ DeleteGroupRequest::DeleteGroupRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool DeleteGroupRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an DeleteGroupResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +90,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
     return new DeleteGroupResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  DeleteGroupRequestPrivate
@@ -82,7 +98,7 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
  * @brief  Private implementation for DeleteGroupRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGroupRequestPrivate object.
@@ -97,7 +113,7 @@ DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DeleteGroupRequestPrivate object, copying another.

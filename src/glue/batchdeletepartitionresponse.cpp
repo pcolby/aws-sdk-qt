@@ -27,15 +27,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  BatchDeletePartitionResponse
+/*!
+ * \class QtAws::Glue::BatchDeletePartitionResponse
  *
- * @brief  Handles Glue BatchDeletePartition responses.
+ * \brief The BatchDeletePartitionResponse class encapsulates Glue BatchDeletePartition responses.
  *
- * @see    GlueClient::batchDeletePartition
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::batchDeletePartition
  */
 
-/**
+/*!
  * @brief  Constructs a new BatchDeletePartitionResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +64,7 @@ const BatchDeletePartitionRequest * BatchDeletePartitionResponse::request() cons
     return static_cast<const BatchDeletePartitionRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a Glue BatchDeletePartition response.
  *
  * @param  response  Response to parse.
@@ -70,15 +76,15 @@ void BatchDeletePartitionResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  BatchDeletePartitionResponsePrivate
+ * \class BatchDeletePartitionResponsePrivate
  *
- * @brief  Private implementation for BatchDeletePartitionResponse.
+ * \brief Private implementation for BatchDeletePartitionResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new BatchDeletePartitionResponsePrivate object.
@@ -91,7 +97,7 @@ BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponsePrivate(
 
 }
 
-/**
+/*!
  * @brief  Parse an Glue BatchDeletePartitionResponse element.
  *
  * @param  xml  XML stream to parse.

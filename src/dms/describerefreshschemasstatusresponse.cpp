@@ -27,15 +27,29 @@
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-/**
- * @class  DescribeRefreshSchemasStatusResponse
+/*!
+ * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusResponse
  *
- * @brief  Handles DatabaseMigrationService DescribeRefreshSchemasStatus responses.
+ * \brief The DescribeRefreshSchemasStatusResponse class encapsulates DatabaseMigrationService DescribeRefreshSchemasStatus responses.
  *
- * @see    DatabaseMigrationServiceClient::describeRefreshSchemasStatus
+ * \ingroup DatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see the AWS DMS user guide at <a
+ *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *
+ * \sa DatabaseMigrationServiceClient::describeRefreshSchemasStatus
  */
 
-/**
+/*!
  * @brief  Constructs a new DescribeRefreshSchemasStatusResponse object.
  *
  * @param  request  Original AWS request.
@@ -58,7 +72,7 @@ const DescribeRefreshSchemasStatusRequest * DescribeRefreshSchemasStatusResponse
     return static_cast<const DescribeRefreshSchemasStatusRequest *>(d->request);
 }
 
-/**
+/*!
  * @brief  Parse a DatabaseMigrationService DescribeRefreshSchemasStatus response.
  *
  * @param  response  Response to parse.
@@ -70,15 +84,15 @@ void DescribeRefreshSchemasStatusResponse::parseSuccess(QIODevice &response)
     /// @todo
 }
 
-/**
- * @internal
+/*!
+ * \internal
  *
- * @class  DescribeRefreshSchemasStatusResponsePrivate
+ * \class DescribeRefreshSchemasStatusResponsePrivate
  *
- * @brief  Private implementation for DescribeRefreshSchemasStatusResponse.
+ * \brief Private implementation for DescribeRefreshSchemasStatusResponse.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new DescribeRefreshSchemasStatusResponsePrivate object.
@@ -91,7 +105,7 @@ DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusRespons
 
 }
 
-/**
+/*!
  * @brief  Parse an DatabaseMigrationService DescribeRefreshSchemasStatusResponse element.
  *
  * @param  xml  XML stream to parse.

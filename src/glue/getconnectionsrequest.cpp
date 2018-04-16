@@ -25,15 +25,21 @@
 namespace QtAws {
 namespace Glue {
 
-/**
- * @class  GetConnectionsRequest
+/*!
+ * \class QtAws::Glue::GetConnectionsRequest
  *
- * @brief  Implements Glue GetConnections requests.
+ * \brief The GetConnectionsRequest class encapsulates Glue GetConnections requests.
  *
- * @see    GlueClient::getConnections
+ * \ingroup Glue
+ *
+ *  <fullname>AWS Glue</fullname>
+ * 
+ *  Defines the public endpoint for the AWS Glue
+ *
+ * \sa GlueClient::getConnections
  */
 
-/**
+/*!
  * @brief  Constructs a new GetConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +50,7 @@ GetConnectionsRequest::GetConnectionsRequest(const GetConnectionsRequest &other)
 
 }
 
-/**
+/*!
  * @brief  Constructs a new GetConnectionsRequest object.
  */
 GetConnectionsRequest::GetConnectionsRequest()
@@ -53,13 +59,16 @@ GetConnectionsRequest::GetConnectionsRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool GetConnectionsRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an GetConnectionsResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +83,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectionsRequest::response(QNetworkReply
     return new GetConnectionsResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  GetConnectionsRequestPrivate
@@ -82,7 +91,7 @@ QtAws::Core::AwsAbstractResponse * GetConnectionsRequest::response(QNetworkReply
  * @brief  Private implementation for GetConnectionsRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectionsRequestPrivate object.
@@ -97,7 +106,7 @@ GetConnectionsRequestPrivate::GetConnectionsRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new GetConnectionsRequestPrivate object, copying another.

@@ -25,15 +25,18 @@
 namespace QtAws {
 namespace MachineLearning {
 
-/**
- * @class  UpdateBatchPredictionRequest
+/*!
+ * \class QtAws::MachineLearning::UpdateBatchPredictionRequest
  *
- * @brief  Implements MachineLearning UpdateBatchPrediction requests.
+ * \brief The UpdateBatchPredictionRequest class encapsulates MachineLearning UpdateBatchPrediction requests.
  *
- * @see    MachineLearningClient::updateBatchPrediction
+ * \ingroup MachineLearning
+ *
+ *
+ * \sa MachineLearningClient::updateBatchPrediction
  */
 
-/**
+/*!
  * @brief  Constructs a new UpdateBatchPredictionRequest object by copying another.
  *
  * @param  other  Instance to copy.
@@ -44,7 +47,7 @@ UpdateBatchPredictionRequest::UpdateBatchPredictionRequest(const UpdateBatchPred
 
 }
 
-/**
+/*!
  * @brief  Constructs a new UpdateBatchPredictionRequest object.
  */
 UpdateBatchPredictionRequest::UpdateBatchPredictionRequest()
@@ -53,13 +56,16 @@ UpdateBatchPredictionRequest::UpdateBatchPredictionRequest()
 
 }
 
+/*!
+ * \reimp
+ */
 bool UpdateBatchPredictionRequest::isValid() const
 {
     return false;
 }
 
 
-/**
+/*!
  * @brief  Construct an UpdateBatchPredictionResponse object.
  *
  * @param  reply  Network reply this response should observe.
@@ -74,7 +80,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBatchPredictionRequest::response(QNetwo
     return new UpdateBatchPredictionResponse(*this, reply);
 }
 
-/**
+/*!
  * @internal
  *
  * @class  UpdateBatchPredictionRequestPrivate
@@ -82,7 +88,7 @@ QtAws::Core::AwsAbstractResponse * UpdateBatchPredictionRequest::response(QNetwo
  * @brief  Private implementation for UpdateBatchPredictionRequest.
  */
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBatchPredictionRequestPrivate object.
@@ -97,7 +103,7 @@ UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
 
 }
 
-/**
+/*!
  * @internal
  *
  * @brief  Constructs a new UpdateBatchPredictionRequestPrivate object, copying another.
