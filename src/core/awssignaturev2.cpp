@@ -30,7 +30,6 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsSignatureV2
- *
  * \brief The AwsSignatureV2 class provides V2 AWS signatures.
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html

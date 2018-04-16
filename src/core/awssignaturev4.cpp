@@ -30,10 +30,9 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsSignatureV4
- *
  * \brief The AwsSignatureV4 class provides V4 AWS signatures.
  *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \sa http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
 /*!

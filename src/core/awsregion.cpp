@@ -27,7 +27,6 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsRegion
- *
  * \brief The AwsRegion class provides information about AWS regions.
  *
  * Basic usage example:

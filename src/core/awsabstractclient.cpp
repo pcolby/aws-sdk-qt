@@ -38,23 +38,26 @@ namespace Core {
  */
 
 /*!
- \namespace QtAws::Core
-\brief Encapsulates stuff..
- Stuff and things.
-\ingroup Core
+ * \namespace QtAws::Core
+ * \brief Encapsulates stuff..
+ *
+ * \ingroup client
+ * \inmodule QtAws::Core
+ *
+ * @todo move this to a separate qdoc file.
  */
 
 /*!
  * \class QtAws::Core::AwsAbstractClient
+ * \brief The AwsAbstractClient class provides an interface for accessing AWS services.
  *
- * \brief  The AwsAbstractClient class provides an interface for accessing AWS services.
- * \ingroup Core
+ * \ingroup client
+ * \inmodule QtAws::Core
  */
 
+
 /*!
- * @brief  Constructs a new AwsAbstractClient object.
- *
- * @param  parent This object's parent.
+ * Constructs an AwsAbstractClient object with parent \a parent.
  */
 AwsAbstractClient::AwsAbstractClient(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractClientPrivate(this))
@@ -63,15 +66,10 @@ AwsAbstractClient::AwsAbstractClient(QObject * const parent)
 }
 
 /*!
- * @internal
+ * \internal
+ * \overload
  *
- * @brief  Constructs a new AwsAbstractClient object.
- *
- * This overload allows derived classes to provide their own private class
- * implementation that inherits from AwsAbstractClientPrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
+ * Constructs an AwsAbstractClient object with private implementation \a d, and parent \a parent.
  */
 AwsAbstractClient::AwsAbstractClient(AwsAbstractClientPrivate * const d,
                                      QObject * const parent)
@@ -81,7 +79,7 @@ AwsAbstractClient::AwsAbstractClient(AwsAbstractClientPrivate * const d,
 }
 
 /*!
- * @brief  AwsAbstractClient destructor.
+ * Destroys the AWS client.
  */
 AwsAbstractClient::~AwsAbstractClient()
 {
@@ -91,35 +89,22 @@ AwsAbstractClient::~AwsAbstractClient()
 }
 
 /*!
- * @brief  Get the serivce API version this client implementts.
- *
- * @return An Amazon service API version, such as "2012-11-05".
- *
- * @see  endpoint
- * @see  serviceName
+ * Returns the AWS service API version, such as "2017-01-02".
  */
 QString AwsAbstractClient::apiVersion() const
 {
     Q_D(const AwsAbstractClient);
-    Q_ASSERT(!d->endpointPrefix.isEmpty());
-    return d->endpointPrefix;
+    Q_ASSERT(!d->apiVersion.isEmpty());
+    return d->apiVersion;
 }
 
 /*!
- * @brief  Get the endpoint associated with this AWS client.
+ * Returns the AWS endpoint URL.
  *
  * If a valid QUrl has been set (usually via setEndpoint), then this base
  * implementation will return that QUrl.  Otherwise, this base implementation
  * will use the AwsEndpoint class to determine the endpoint to use based on this
  * object's region and serviceName.
- *
- * @return A QUrl specifying this AWS client's endpoint, or an invalid QUrl if
- *         none has been set.
- *
- * @see  setEndpoint
- * @see  region
- * @see  serviceName
- * @see  AwsEndpoint::getEndpoint
  */
 QUrl AwsAbstractClient::endpoint() const
 {
@@ -130,15 +115,10 @@ QUrl AwsAbstractClient::endpoint() const
 }
 
 /*!
- * @brief  Get the endpoint prefix associated with this AWS client.
+ * Returns the AWS endpoint prefix, such as "sqs" or "sns".
  *
  * This is the standard endpoint prefix associated with this AWS service, is not
  * affected by any explicit endpoint URL that may have beem set via setEndpoint.
- *
- * @return An Amazon service endpoint prefix, such as "sqs" or "sns".
- *
- * @see  endpoint
- * @see  serviceName
  */
 QString AwsAbstractClient::endpointPrefix() const
 {
@@ -148,9 +128,7 @@ QString AwsAbstractClient::endpointPrefix() const
 }
 
 /*!
- * @brief Get the network access manager for this AWS service object.
- *
- * @return The QNetworkAccessManager that handles requests for this object.
+ * Returns the network access manager.
  */
 QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
 {
@@ -159,13 +137,7 @@ QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
 }
 
 /*!
- * @brief  Get the AWS region associated with this client.
- *
- * @return The AWS region for this client, or AwsRegion::InvalidRegion if none
- *         has been set.
- *
- * @see  setRegion
- * @see  endpoint
+ * Returns the AWS region, or AwsRegion::InvalidRegion if none has been set.
  */
 AwsRegion::Region AwsAbstractClient::region() const
 {
@@ -174,7 +146,7 @@ AwsRegion::Region AwsAbstractClient::region() const
 }
 
 /*!
- * @brief  Send an AWS request.
+ * Sends an AWS request.
  *
  * This base implementation simply uses the \a request's \c send method,
  * supplying the necessary resources (ie the credentials, network access
@@ -182,9 +154,7 @@ AwsRegion::Region AwsAbstractClient::region() const
  *
  * Derived classes would not normally need to override this method.
  *
- * @param  request  The AWS request to send.
- *
- * @return An object representing the AWS service's response.
+ * Returns an object representing the AWS service's response.
  */
 AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &request)
 {
@@ -213,9 +183,7 @@ AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &request)
 }
 
 /*!
- * @brief  Get the full name of the Amazon service this client accesses.
- *
- * @return An Amazon full service name, such as "Amazon Simple Queue Service".
+ * Return the Amazon full sercvice name, such as "Amazon Simple Queue Service".
  */
 QString AwsAbstractClient::serviceFullName() const
 {
@@ -225,11 +193,9 @@ QString AwsAbstractClient::serviceFullName() const
 }
 
 /*!
- * @brief  Get the name of the Amazon service this client accesses.
+ * Returns the Amazon service name, such as "sqs" or "sns".
  *
  * This is name is suitable for generating V4 signatures.
- *
- * @return An Amazon service name, such as "sqs" or "sns".
  */
 QString AwsAbstractClient::serviceName() const
 {
@@ -239,16 +205,12 @@ QString AwsAbstractClient::serviceName() const
 }
 
 /*!
- * @brief  Set the credentials object for this client to use for signing requests.
+ * Sets the \a credentials for signing AWS requests.
  *
  * This object will not take ownership of the supplied \a credentials pointer.
  * It is the caller's responsibility to ensure that the pointer remains valid
  * for the life of this object, or until setCredentials is used to set a new
  * pointer.
- *
- * @param  credentials  Credentials to use for signing requests.
- *
- * @see  sign
  */
 void AwsAbstractClient::setCredentials(AwsAbstractCredentials * const credentials)
 {
@@ -257,18 +219,12 @@ void AwsAbstractClient::setCredentials(AwsAbstractCredentials * const credential
 }
 
 /*!
- * @brief  Set the AWS endpoint to use with this client.
+ * Sets the AWS \a endpoint to send AWS requests.
  *
  * Typically, it is simpler for the user to set this client's region instead
  * (via setRegion), and allow this object to then determine the endpoint based
  * on the serviceName and region.  However, this method may be used to set an
  * explicit endpoint URL if desired.
- *
- * @param  endpoint  Endpoint URL to use for sending AWS requests.
- *
- * @see  region
- * @see  send
- * @see  setRegion
  */
 void AwsAbstractClient::setEndpoint(const QUrl &endpoint)
 {
@@ -277,14 +233,12 @@ void AwsAbstractClient::setEndpoint(const QUrl &endpoint)
 }
 
 /*!
- * \brief Set the network access manager for this AWS service object.
+ * Sets the network access \a manager for this AWS service object.
  *
  * This object will not take ownership of the supplied \a manager pointer.
  * It is the caller's responsibility to ensure that the pointer remains valid
  * for the life of this object, or until setNetworkAccessManager is used to set
  * a new pointer.
- *
- * \param  manager  Network access manager for this AWS service object to use.
  */
 void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const manager)
 {
@@ -305,16 +259,11 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
 }
 
 /*!
- * @brief  Set the AWS region this client accesses.
+ * Sets the AWS \a region.
  *
  * If an endpoint is not explicitly set (eg via setEndpoint), then the supplied
  * value may be used (in conjuction with serviceName) to determine the endpoint
  * URL when sending requests to the AWS service.
- *
- * @param  region  Amazon region for this client to use.
- *
- * @see  send
- * @see  setEndpoint
  */
 void AwsAbstractClient::setRegion(const AwsRegion::Region region)
 {
@@ -323,9 +272,7 @@ void AwsAbstractClient::setRegion(const AwsRegion::Region region)
 }
 
 /*!
- * @brief  Get the credentials object to be used for signing requests.
- *
- * @return An AWS credentials object.
+ * Returns credentials for signing requests.
  */
 AwsAbstractCredentials * AwsAbstractClient::credentials() const
 {
@@ -334,9 +281,7 @@ AwsAbstractCredentials * AwsAbstractClient::credentials() const
 }
 
 /*!
- * @brief  Get the signature object to be used for signing requests.
- *
- * @return An AWS signature object.
+ * Returns signature object for signing requests.
  */
 AwsAbstractSignature * AwsAbstractClient::signature() const
 {
@@ -345,19 +290,16 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsAbstractClientPrivate
+ * \brief The AwsAbstractClientPrivate class provides private implementation for the AwsAbstractClient class.
+ * \internal
  *
- * @brief  Private implementation for AwsAbstractClient.
+ * \ingroup client
+ * \inmodule QtAws::Core
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsAbstractClientPrivate object.
- *
- * @param  q  Pointer to this object's public AwsAbstractClient instance.
+ * Constructs a AwsAbstractClientPrivate object with public implementation \a q.
  */
 AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
     : credentials(NULL), networkAccessManager(NULL),
@@ -367,9 +309,7 @@ AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
 }
 
 /*!
- * @internal
- *
- * @brief  AwsAbstractClientPrivate destructor.
+ * Destroys the AWS client's private object.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
  * polymorphic destruction.

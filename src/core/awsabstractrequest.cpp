@@ -31,7 +31,6 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsAbstractRequest
- *
  * \brief The AwsAbstractRequest class provides an interface for AWS requests.
  *
  * Typically, a user would pass a derived class (such as SqsCreateQueueRequest)

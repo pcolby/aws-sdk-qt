@@ -31,7 +31,6 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsSignatureV1
- *
  * \brief The AwsSignatureV1 class provides V1 AWS signatures.
  *
  * @deprecated  Amazon has officially deprecated signature Version 1 in favor of later,

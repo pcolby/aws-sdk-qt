@@ -30,7 +30,6 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsAbstractResponse
- *
  * \brief The AwsAbstractResponse class provides an interface for AWS responses.
  *
  * Typically instances of AwsAbstractResponse-derviced classes are returned by

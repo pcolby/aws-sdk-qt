@@ -25,12 +25,11 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsBasicCredentials
- *
  * \brief The AwsBasicCredentials class provides basic (non-refreshable) AWS credentials.
  */
 
 /*!
- * @brief  Constructs a new AwsBasicCredentials object.
+ * @brief Constructs a new AwsBasicCredentials object.
  *
  * Constructs a new AwsBasicCredentials object, with the specified AWS access
  * key, AWS secret key, and AWS security token.

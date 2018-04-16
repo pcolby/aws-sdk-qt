@@ -31,7 +31,6 @@ namespace Core {
 
 /*!
  * \class QtAws::Core::AwsSignatureV3
- *
  * \brief The AwsSignatureV3 class provides V3 AWS signatures.
  *
  * This class implements both `AWS3` and `AWS3-HTTPS` varieties.
