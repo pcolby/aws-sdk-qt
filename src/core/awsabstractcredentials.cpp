@@ -34,9 +34,7 @@ namespace Core {
 */
 
 /*!
- * @brief  Construct an AwsAbstractCredentials object.
- *
- * @param  parent
+ * Constructs an AwsAbstractCredentials object with parent \a parent.
  */
 AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractCredentialsPrivate(this))
@@ -45,15 +43,10 @@ AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
 }
 
 /*!
- * @internal
+ * \internal
+ * \overload
  *
- * @brief  Construct an AwsAbstractCredentials object.
- *
- * This overload allows derived classes to provide their own private class
- * implementation that inherits from AwsAbstractCredentialsPrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
+ * Constructs an AwsAbstractCredentials object with private implementation \a d, and parent \a parent.
  */
 AwsAbstractCredentials::AwsAbstractCredentials(
     AwsAbstractCredentialsPrivate * const d, QObject * const parent)

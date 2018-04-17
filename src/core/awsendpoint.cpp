@@ -69,9 +69,7 @@ namespace Core {
  */
 
 /*!
- * @brief  Constructs a new AwsEndpoint object.
- *
- * @param  hostName  Name of an AWS host, encoded as UTF-8.
+ * Constructs an AwsEndpoint object for a UTF-8 encoded AWS \a hostName.
  */
 AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     : d_ptr(new AwsEndpointPrivate(this))
@@ -88,9 +86,7 @@ AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
 }
 
 /*!
- * @brief  Constructs a new AwsEndpoint object.
- *
- * @param  hostName  Name of an AWS host.
+ * Constructs an AwsEndpoint object for AWS \a hostName.
  */
 AwsEndpoint::AwsEndpoint(const QString &hostName)
     : d_ptr(new AwsEndpointPrivate(this))

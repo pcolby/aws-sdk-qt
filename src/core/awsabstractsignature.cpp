@@ -35,12 +35,9 @@ namespace Core {
  */
 
 /*!
- * @internal
+ * \internal
  *
- * @brief  Initialises an AwsAbstractSignature object.
- *
- * This internal constructor is used by derived classes that do not wish to
- * provider their own private implementations.
+ * Constructs an AwsAbstractSignature object.
  */
 AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePrivate(this))
 {
@@ -48,14 +45,9 @@ AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePri
 }
 
 /*!
- * @internal
+ * \internal
  *
- * @brief  Initialises an AwsAbstractSignature object.
- *
- * This internal constructor is used by derived classes to provide their own
- * private implementations if they wish to.
- *
- * @param  d  Internal private implementation to use.
+ * Constructs an AwsAbstractSignature object with private implementation \a d.
  */
 AwsAbstractSignature::AwsAbstractSignature(AwsAbstractSignaturePrivate * const d) : d_ptr(d)
 {

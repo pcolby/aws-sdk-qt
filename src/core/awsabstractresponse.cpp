@@ -46,7 +46,7 @@ namespace Core {
  */
 
 /*!
- * \brief  Constructs a new AwsAbstractResponse parent object \a parent
+ * Constructs an AwsAbstractResponse object with parent \a parent.
  */
 AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractResponsePrivate(this))
@@ -56,10 +56,9 @@ AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
 
 /*!
  * \internal
- * \overload AwsAbstractResponse()
+ * \overload
  *
- * This overload allows derived classes to provide their own private class
- * implementation that inherits from AwsAbstractRequestPrivate.
+ * Constructs an AwsAbstractResponse object with private implementation \a d, and parent \a parent.
  */
 AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
                                          QObject * const parent)

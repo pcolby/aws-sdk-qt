@@ -32,15 +32,8 @@ namespace Core {
  */
 
 /*!
- * @brief Constructs a new AwsBasicCredentials object.
- *
- * Constructs a new AwsBasicCredentials object, with the specified AWS access
- * key, AWS secret key, and AWS security token.
- *
- * @param accessKeyId  The AWS access key ID to use for this credentials object.
- * @param secretKey    The AWS secret access key to use for this credentials object.
- * @param token        The AWS security token to use for this credentials object.
- * @param parent       This object's parent.
+ * Constructs an AwsBasicCredentials object with \a accessKeyId, \a secretKey and \a token
+ * AWS credentials, and parent \a parent.
  */
 AwsBasicCredentials::AwsBasicCredentials(
         const QString &accessKeyId,
@@ -56,14 +49,10 @@ AwsBasicCredentials::AwsBasicCredentials(
 }
 
 /*!
- * @brief  Constructs a new AwsBasicCredentials object.
+ * Constructs an AwsBasicCredentials object with \a accessKeyId and \a secretKey AWS credentials,
+ * and parent \a parent.
  *
- * Constructs a new AwsBasicCredentials object, with the specified AWS access key and AWS secret
- * key.  The object's security token will be left as null string, unless set later via setToken().
- *
- * @param accessKeyId  The AWS access key ID to use for this credentials object.
- * @param secretKey    The AWS secret access key to use for this credentials object.
- * @param parent       This object's parent.
+ * The object's security token will be left as null string, unless set later via setToken().
  */
 AwsBasicCredentials::AwsBasicCredentials(
         const QString &accessKeyId,

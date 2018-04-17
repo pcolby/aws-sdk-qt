@@ -39,13 +39,11 @@ namespace Core {
  */
 
 /*!
- * @brief  Constructs a new AwsSignatureV4 object.
+ * Constructs an AwsSignatureV4 object, with cryptographic hash algorithm \a hashAlgorithm.
  *
- * Use instances of this object to provide Version 4 signatures for AWS services.
+ * Use an instance of this object to provide Version 4 signatures for AWS services.
  *
- * @param  hashAlgorithm  The algorithm to use during various stages of signing.
- *
- * @note  The AWS Signature Version 4 documentation is not explcit about which hash
+ * \note  The AWS Signature Version 4 documentation is not explcit about which hash
  *        algorithms are supported by Amazon, however all documented examples use
  *        SHA256.
  */

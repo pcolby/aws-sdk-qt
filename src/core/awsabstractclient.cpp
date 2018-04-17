@@ -57,7 +57,6 @@ namespace Core {
  * \inmodule QtAwsCore
  */
 
-
 /*!
  * Constructs an AwsAbstractClient object with parent \a parent.
  */

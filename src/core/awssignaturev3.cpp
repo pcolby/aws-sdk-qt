@@ -36,19 +36,18 @@ namespace Core {
  * \ingroup aws-authentication
  * \inmodule QtAwsCore
  *
- * This class implements both `AWS3` and `AWS3-HTTPS` varieties.
+ * This class implements both \c AWS3 and \c AWS3-HTTPS varieties.
  *
  * \sa http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
  * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
  */
 
 /*!
- * @brief  Constructs a new AwsSignatureV3 object.
+ * Constructs an AwsSignatureV3 object, with cryptographic hash algorithm \a hashAlgorithm.
  *
- * Use instances of this object to provide Version 3 signatures for AWS services.
+ * Use an instance of this object to provide Version 3 signatures for AWS services.
  *
- * @param  hashAlgorithm  Hash algorithm for signatures.  Must be either QCryptographicHash::Sha1
- *                        or QCryptographicHash::Sha256 (default, recommended).
+ * \note \a hashAlgorithm must be either QCryptographicHash::Sha1 or QCryptographicHash::Sha256.
  */
 AwsSignatureV3::AwsSignatureV3(const QCryptographicHash::Algorithm hashAlgorithm)
     : AwsAbstractSignature(new AwsSignatureV3Private(hashAlgorithm, this))

@@ -39,12 +39,11 @@ namespace Core {
  */
 
 /*!
- * @brief  Constructs a new AwsSignatureV2 object.
+ * Constructs an AwsSignatureV2 object, with cryptographic hash algorithm \a hashAlgorithm.
  *
- * Use instances of this object to provide Version 2 signatures for AWS services.
+ * Use an instance of this object to provide Version 2 signatures for AWS services.
  *
- * @param  hashAlgorithm  Hash algorithm for signatures.  Must be either QCryptographicHash::Sha1
- *                        or QCryptographicHash::Sha256 (default, recommended).
+ * \note \a hashAlgorithm must be either QCryptographicHash::Sha1 or QCryptographicHash::Sha256.
  */
 AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)
         : AwsAbstractSignature(new AwsSignatureV2Private(hashAlgorithm, this))

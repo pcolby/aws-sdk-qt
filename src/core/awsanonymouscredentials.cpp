@@ -31,14 +31,11 @@ namespace Core {
  */
 
 /*!
- * @brief  Constructs a new AwsAnonymousCredentials object.
- *
- * Constructs a new AwsAnonymousCredentials object, with no credentials at all.
- *
- * @param  parent  The constructed object's optional parent.
+ * Constructs an AwsAnonymousCredentials object with parent \a parent.
  */
 AwsAnonymousCredentials::AwsAnonymousCredentials(QObject * const parent) : AwsAbstractCredentials(parent)
 {
+
 }
 
 QString AwsAnonymousCredentials::accessKeyId() const

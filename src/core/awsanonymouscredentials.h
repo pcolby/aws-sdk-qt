@@ -31,9 +31,9 @@ class QTAWS_EXPORT AwsAnonymousCredentials : public AwsAbstractCredentials {
 public:
     AwsAnonymousCredentials(QObject * const parent = 0);
 
-    virtual QString accessKeyId() const;
-    virtual QString secretKey() const;
-    virtual QString token() const;
+    virtual QString accessKeyId() const override;
+    virtual QString secretKey() const override;
+    virtual QString token() const override;
 
 private:
     Q_DISABLE_COPY(AwsAnonymousCredentials)

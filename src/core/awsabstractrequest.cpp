@@ -49,7 +49,7 @@ namespace Core {
  */
 
 /*!
- * @brief  Constructs a new AwsAbstractRequest object.
+ * Constructs an AwsAbstractRequest object.
  */
 AwsAbstractRequest::AwsAbstractRequest()
     : d_ptr(new AwsAbstractRequestPrivate(this))
@@ -58,7 +58,7 @@ AwsAbstractRequest::AwsAbstractRequest()
 }
 
 /*!
- * @brief  Constructs a new AwsAbstractRequest object by copying another.
+ * Constructs a copy of \a other.
  */
 AwsAbstractRequest::AwsAbstractRequest(const AwsAbstractRequest &other)
     : d_ptr(new AwsAbstractRequestPrivate(*other.d_ptr, this))

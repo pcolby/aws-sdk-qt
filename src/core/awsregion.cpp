@@ -43,9 +43,7 @@ namespace Core {
  */
 
 /*!
- * @brief  Constructs a new AwsRegion object.
- *
- * @param  region  AWS region for this object to represent.
+ * Constructs an AwsRegion object for AWS \a region.
  */
 AwsRegion::AwsRegion(const Region region)
     : d_ptr(new AwsRegionPrivate(region, this))
@@ -54,12 +52,9 @@ AwsRegion::AwsRegion(const Region region)
 }
 
 /*!
- * @brief  Constructs a new AwsRegion object.
+ * Constructs an AwsRegion object for AWS \a regionName.
  *
- * If \p regionName is not recognised as a valid AWS region, AwsRegion::isValid
- * will return `false` for the created object.
- *
- * @param  regionName  Name of the AWS region for this object to represent.
+ * If \a regionName is not recognised as a valid AWS region, isValid() will return \c false.
  */
 AwsRegion::AwsRegion(const QString &regionName)
     : d_ptr(new AwsRegionPrivate(fromName(regionName), this))

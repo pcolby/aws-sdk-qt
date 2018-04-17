@@ -36,19 +36,19 @@ namespace Core {
  * \ingroup aws-authentication
  * \inmodule QtAwsCore
  *
- * \deprecated  Amazon has officially deprecated signature Version 0 in favor of later,
- *              more secure signatures, such as AwsSignatureV2 and AwsSignatureV4.
+ * \note Amazon has officially deprecated signature Version 0 in favor of later, more secure
+ * signatures, such as AwsSignatureV2 and AwsSignatureV4.
  *
- * As version 0 signatures are rightly regarded as *insecure*, this class will refuse to sign
+ * As version 0 signatures are rightly regarded as \e insecure, this class will refuse to sign
  * requests that use insecure transports such as HTTP instead of HTTPS. However, insecure
- * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
+ * signatures can be enabled (why would you want to?) by defining \c QTAWS_ALLOW_INSECURE_SIGNATURES
  * when compiling this library.
  *
  * \sa http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
  */
 
 /*!
- * @brief  Constructs a new AwsSignatureV0 object.
+ * Constructs an AwsSignatureV0 object.
  *
  * Use instances of this object to provide Version 0 signatures for AWS services.
  */
@@ -58,17 +58,11 @@ AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Privat
 }
 
 /*!
- * @internal
+ * \internal
  *
- * @brief  Constructs a new AwsSignatureV0 object with a specific private implementation.
+ * Constructs an AwsSignatureV0 object with private implementation \a d.
  *
- * This internal constructor allows derived classes to provide their own derived
- * private implementation.  Specifically, AwsSignatureV1 uses this constructor to
- * extend this class.
- *
- * @param  d  Internal private implementation to use.
- *
- * @see    AwsSignatureV1
+ * \note AwsSignatureV1 uses this constructor to extend this class.
  */
 AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSignature(d)
 {
