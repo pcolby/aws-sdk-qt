@@ -67,13 +67,12 @@ int AwsSignatureV4::version() const
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsSignatureV4Private
+ * \brief The AwsSignatureV4Private class provides private implementation for the AwsSignatureV4 class.
+ * \internal
  *
- * @brief  Private implementation for AwsSignatureV4.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /// Format V4 signatures use to represent dates in canonical form.
@@ -83,10 +82,7 @@ const QLatin1String AwsSignatureV4Private::DateFormat("yyyyMMdd");
 const QLatin1String AwsSignatureV4Private::DateTimeFormat("yyyyMMddThhmmssZ");
 
 /*!
- * @brief  Constructs a new AwsSignatureV4Private object.
- *
- * @param  hashAlgorithm  The algorithm to use during various stages of signing.
- * @param  q              Pointer to this object's public AwsSignatureV4 instance.
+ * Constructs an AwsSignatureV4Private object with \a hashAlgorithm, and public implementation \a q.
  */
 AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,
                                              AwsSignatureV4 * const q)

@@ -106,24 +106,16 @@ int AwsSignatureV0::version() const
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsSignatureV0Private
+ * \brief The AwsSignatureV0Private class provides private implementation for the AwsSignatureV0 class.
+ * \internal
  *
- * @brief  Private implementation for AwsSignatureV0.
- *
- * @warning  This is an internal private implementation class, and as such external should
- *           code should **not** depend directly on anything contained within this class.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsSignatureV0Private object.
- *
- * @param  q  Pointer to this object's public AwsSignatureV0 instance.
+ * Constructs an AwsSignatureV0Private object with public implementation \a q.
  */
 AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbstractSignaturePrivate(q)
 {

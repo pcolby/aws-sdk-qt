@@ -177,17 +177,16 @@ bool AwsAbstractCredentials::refresh()
  */
 
 /*!
+ * \class QtAws::Core::AwsAbstractCredentialsPrivate
+ * \brief The AwsAbstractCredentialsPrivate class provides private implementation for the AwsAbstractCredentials class.
  * \internal
  *
- * \class QtAws::Core::AwsAbstractCredentialsPrivate
- *
- * @brief  Private implementation for AwsAbstractCredentials.
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @brief  Constructs a new AwsAbstractCredentialsPrivate object.
- *
- * @param  q  Pointer to this object's public AwsAbstractCredentials instance.
+ * Constructs an AwsAbstractCredentialsPrivate object with public implementation \a q.
  */
 AwsAbstractCredentialsPrivate::AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q)
     : q_ptr(q)

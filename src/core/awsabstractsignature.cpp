@@ -78,22 +78,16 @@ AwsAbstractSignature::~AwsAbstractSignature() {
  */
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsAbstractSignaturePrivate
+ * \brief The AwsAbstractSignaturePrivate class provides private implementation for the AwsAbstractSignature class.
+ * \internal
  *
- * @brief  Private implementation for AwsAbstractSignature.
- *
- * @warning  This is an internal private implementation class, and as such external should
- *           code should **not** depend directly on anything contained within this class.
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsAbstractSignaturePrivate object.
- *
- * @param  q  Pointer to this object's public AwsAbstractSignature instance.
+ * Constructs an AwsAbstractSignaturePrivate object with public implementation \a q.
  */
 AwsAbstractSignaturePrivate::AwsAbstractSignaturePrivate(AwsAbstractSignature * const q) : q_ptr(q)
 {

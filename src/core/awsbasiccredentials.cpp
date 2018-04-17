@@ -120,21 +120,16 @@ void AwsBasicCredentials::setToken(const QString &token)
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsBasicCredentialsPrivate
+ * \brief The AwsBasicCredentialsPrivate class provides private implementation for the AwsBasicCredentials class.
+ * \internal
  *
- * @brief  Private implementation for AwsBasicCredentials.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsBasicCredentialsPrivate object.
- *
- * @param  q  Pointer to this object's public AwsBasicCredentials instance.
+ * Constructs an AwsBasicCredentialsPrivate object with public implementation \a q.
  */
 AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * const q)
     : AwsAbstractCredentialsPrivate(q)

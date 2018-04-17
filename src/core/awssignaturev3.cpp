@@ -77,20 +77,16 @@ int AwsSignatureV3::version() const
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsSignatureV3Private
+ * \brief The AwsSignatureV3Private class provides private implementation for the AwsSignatureV3 class.
+ * \internal
  *
- * @brief  Private implementation for AwsSignatureV3.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @brief  Constructs a new AwsSignatureV3Private object.
- *
- * @param  hashAlgorithm  The algorithm to use during various stages of signing.
- * @param  q              Pointer to this object's public AwsSignatureV3 instance.
+ * Constructs an AwsSignatureV2Private object with \a hashAlgorithm, and public implementation \a q.
  */
 AwsSignatureV3Private::AwsSignatureV3Private(const QCryptographicHash::Algorithm hashAlgorithm,
                                              AwsSignatureV3 * const q)

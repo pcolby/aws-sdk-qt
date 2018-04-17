@@ -78,29 +78,19 @@ int AwsSignatureV2::version() const
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsSignatureV2Private
+ * \brief The AwsSignatureV2Private class provides private implementation for the AwsSignatureV2 class.
+ * \internal
  *
- * @brief  Private implementation for AwsSignatureV2.
- *
- * @warning  This is an internal private implementation class, and as such external should
- *           code should **not** depend directly on anything contained within this class.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsSignatureV2Private object.
- *
- * @param  algorithm  Hash algorithm for signatures.
- * @param  q          Pointer to this object's public AwsSignatureV2 instance.
+ * Constructs an AwsSignatureV2Private object with hash \a algorithm, and public implementation \a q.
  */
-AwsSignatureV2Private::AwsSignatureV2Private(
-        const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
-    : AwsAbstractSignaturePrivate(q), hashAlgorithm(algorithm)
+AwsSignatureV2Private::AwsSignatureV2Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV2 * const q)
+    : AwsAbstractSignaturePrivate(q), hashAlgorithm(hashAlgorithm)
 {
 
 }

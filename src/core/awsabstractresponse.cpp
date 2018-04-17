@@ -455,19 +455,15 @@ void AwsAbstractResponse::replyFinished()
  */
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsAbstractResponsePrivate
+ * \brief The AwsAbstractResponsePrivate class provides private implementation for the AwsAbstractResponse class.
+ * \internal
  *
- * @brief  Private implementation for AwsAbstractResponse.
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsAbstractResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AwsAbstractResponse instance.
+ * Constructs an AwsAbstractResponsePrivate object with public implementation \a q.
  */
 AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
     : reply(NULL), request(NULL), xmlError(QXmlStreamReader::NoError), q_ptr(q)

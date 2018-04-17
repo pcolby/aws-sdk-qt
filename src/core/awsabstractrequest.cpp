@@ -286,19 +286,15 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
  */
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsAbstractRequestPrivate
+ * \brief The AwsAbstractRequestPrivate class provides private implementation for the AwsAbstractRequest class.
+ * \internal
  *
- * @brief  Private implementation for AwsAbstractRequest.
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsAbstractRequestPrivate object.
- *
- * @param  q  Pointer to this object's public AwsAbstractRequest instance.
+ * Constructs an AwsAbstractRequestPrivate object with public implementation \a q.
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
     : operation(QNetworkAccessManager::GetOperation), q_ptr(q)

@@ -271,25 +271,20 @@ AwsRegion::Region AwsRegion::fromName(const QString &regionName)
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsRegionPrivate
+ * \brief The AwsRegionPrivate class provides private implementation for the AwsRegion class.
+ * \internal
  *
- * @brief  Private implementation for AwsRegion.
+ * \inmodule QtAwsCore
  */
 
 /*!
- * @internal
+ * Constructs an AwsRegionPrivate object for \a region, with public implementation \a q.
  *
- * @brief  Constructs a new AwsRegionPrivate object.
- *
- * @param  region  AwsRegion::Region represented by this object.
- * @param  q       Pointer to this object's public AwsRegion instance.
- *
- * @note  The \a region parameter is type \p int to avoid cyclic dependencies
- *        between \p AwsRegion and \p AwsRegionPrivate.  However it must always
- *        be set to valid \p AwsRegion::Region enumerator value.
+ * \note \a region is type \c int to avoid cyclic dependencies between AwsRegion and
+ * AwsRegionPrivate. However it must always be set to valid AwsRegion::Region value.
  */
+
 AwsRegionPrivate::AwsRegionPrivate(const int region, AwsRegion * const q)
     : region(region), q_ptr(q)
 {

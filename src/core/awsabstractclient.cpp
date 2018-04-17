@@ -296,11 +296,11 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAws::Core
+ * \inmodule QtAwsCore
  */
 
 /*!
- * Constructs a AwsAbstractClientPrivate object with public implementation \a q.
+ * Constructs an AwsAbstractClientPrivate object with public implementation \a q.
  */
 AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
     : credentials(NULL), networkAccessManager(NULL),
