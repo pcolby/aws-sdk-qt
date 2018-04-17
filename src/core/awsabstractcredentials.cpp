@@ -28,7 +28,10 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsAbstractCredentials
  * \brief The AwsAbstractCredentials class provides an interface for AWS credentials.
- */
+ *
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
+*/
 
 /*!
  * @brief  Construct an AwsAbstractCredentials object.

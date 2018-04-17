@@ -25,6 +25,9 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsAnonymousCredentials
  * \brief The AwsAnonymousCredentials class provides anonymous AWS credentials.
+ *
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!

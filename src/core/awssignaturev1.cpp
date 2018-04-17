@@ -33,6 +33,9 @@ namespace Core {
  * \class QtAws::Core::AwsSignatureV1
  * \brief The AwsSignatureV1 class provides V1 AWS signatures.
  *
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
+ *
  * @deprecated  Amazon has officially deprecated signature Version 1 in favor of later,
  *              more secure signatures, such as AwsSignatureV2 and AwsSignatureV4.
  *
@@ -41,8 +44,8 @@ namespace Core {
  * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
  * when compiling this library.
  *
- * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
- * @see  http://lmgtfy.com/?q=aws+signature+version+1+is+insecure
+ * \sa http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+ * \sa http://lmgtfy.com/?q=aws+signature+version+1+is+insecure
  */
 
 /*!

@@ -29,6 +29,9 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsAbstractSignature
  * \brief The AwsAbstractSignature class provides an interface for generating AWS signatures.
+ *
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
  */
 
 /*!

@@ -31,6 +31,8 @@ namespace Core {
  * \class QtAws::Core::AwsEndpoint
  * \brief The AwsEndpoint class provides information about AWS endpoints.
  *
+ * \inmodule QtAwsCore
+ *
  * \note  This class provides fairly low-level access to AWS endpoint data.
  *        You should consider using the AwsRegion and/or various
  *        AwsService-derived classes in preference to using this class

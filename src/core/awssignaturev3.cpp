@@ -33,10 +33,13 @@ namespace Core {
  * \class QtAws::Core::AwsSignatureV3
  * \brief The AwsSignatureV3 class provides V3 AWS signatures.
  *
+ * \ingroup aws-authentication
+ * \inmodule QtAwsCore
+ *
  * This class implements both `AWS3` and `AWS3-HTTPS` varieties.
  *
- * @see    http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
- * @see    http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
+ * \sa http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
+ * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
  */
 
 /*!
