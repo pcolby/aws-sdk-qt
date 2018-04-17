@@ -56,7 +56,7 @@ AwsAbstractCredentials::AwsAbstractCredentials(
 }
 
 /*!
- * @brief  AwsAbstractCredentials destructor.
+ * Destroys the AWS credentials.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
  * polymorphic destruction.
@@ -221,9 +221,7 @@ AwsAbstractCredentialsPrivate::AwsAbstractCredentialsPrivate(AwsAbstractCredenti
 }
 
 /*!
- * @internal
- *
- * @brief  AwsAbstractCredentialsPrivate destructor.
+ * Destroys the AWS credential's private object.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
  * polymorphic destruction.

@@ -63,7 +63,7 @@ AwsRegion::AwsRegion(const QString &regionName)
 }
 
 /*!
- * @brief  AwsRegion destructor.
+ * Destroys the AWS region.
  */
 AwsRegion::~AwsRegion()
 {

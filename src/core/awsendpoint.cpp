@@ -103,7 +103,7 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
 }
 
 /*!
- * @brief AwsEndpoint destructor.
+ * Destroys the AWS endpoint.
  */
 AwsEndpoint::~AwsEndpoint()
 {

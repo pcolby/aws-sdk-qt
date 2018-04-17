@@ -99,7 +99,7 @@ AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d) : d_
 }
 
 /*!
- * @brief AwsAbstractRequest destructor.
+ * Destroys the AWS request.
  */
 AwsAbstractRequest::~AwsAbstractRequest()
 {
@@ -327,9 +327,7 @@ AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(
 }
 
 /*!
- * @internal
- *
- * @brief  AwsAbstractRequestPrivate destructor.
+ * Destroys the AWS request's private object.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
  * polymorphic destruction.

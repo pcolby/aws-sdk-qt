@@ -55,7 +55,7 @@ AwsAbstractSignature::AwsAbstractSignature(AwsAbstractSignaturePrivate * const d
 }
 
 /*!
- * @brief  AwsAbstractSignature destructor.
+ * Destroys the AWS signature.
  */
 AwsAbstractSignature::~AwsAbstractSignature() {
     delete d_ptr;
@@ -101,9 +101,7 @@ AwsAbstractSignaturePrivate::AwsAbstractSignaturePrivate(AwsAbstractSignature * 
 }
 
 /*!
- * @internal
- *
- * @brief  AwsAbstractSignaturePrivate destructor.
+ * Destroys the AWS signatures's private object.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
  * polymorphic destruction.

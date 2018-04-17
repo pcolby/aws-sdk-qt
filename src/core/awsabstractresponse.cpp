@@ -68,7 +68,7 @@ AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
 }
 
 /*!
- * \brief Destroys the object.
+ * Destroys the AWS response.
  */
 AwsAbstractResponse::~AwsAbstractResponse()
 {
@@ -476,9 +476,7 @@ AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * con
 }
 
 /*!
- * @internal
- *
- * @brief  AwsAbstractResponsePrivate destructor.
+ * Destroys the AWS response's private object.
  *
  * This virtual destructor does nothing (yet) - its here to allow for safe
  * polymorphic destruction.
