@@ -55,6 +55,9 @@ AwsSignatureV3::AwsSignatureV3(const QCryptographicHash::Algorithm hashAlgorithm
 
 }
 
+/*!
+ * \reimp
+ */
 void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials,
                           const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const
@@ -71,6 +74,10 @@ void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials,
     d->setAuthorizationHeader(credentials, operation, request, data);
 }
 
+/*!
+ * \reimp
+ * Returns \c 3.
+ */
 int AwsSignatureV3::version() const
 {
     return 3;

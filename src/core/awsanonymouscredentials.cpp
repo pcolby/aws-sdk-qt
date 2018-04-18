@@ -38,16 +38,25 @@ AwsAnonymousCredentials::AwsAnonymousCredentials(QObject * const parent) : AwsAb
 
 }
 
+/*!
+ * \reimp
+ */
 QString AwsAnonymousCredentials::accessKeyId() const
 {
     return QString();
 }
 
+/*!
+ * \reimp
+ */
 QString AwsAnonymousCredentials::secretKey() const
 {
     return QString();
 }
 
+/*!
+ * \reimp
+ */
 QString AwsAnonymousCredentials::token() const
 {
     return QString();

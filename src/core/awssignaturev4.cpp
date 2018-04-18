@@ -53,6 +53,9 @@ AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm
 
 }
 
+/*!
+ * \reimp
+ */
 void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
                           const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const
@@ -61,6 +64,10 @@ void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
     d->setAuthorizationHeader(credentials, operation, request, data, d->setDateHeader(request));
 }
 
+/*!
+ * \reimp
+ * Returns \c 4.
+ */
 int AwsSignatureV4::version() const
 {
     return 4;

@@ -58,6 +58,10 @@ AwsSignatureV1::AwsSignatureV1() : AwsSignatureV0(new AwsSignatureV1Private(this
 
 }
 
+/*!
+ * \reimp
+ * Returns \c 1.
+ */
 int AwsSignatureV1::version() const
 {
     return 1;

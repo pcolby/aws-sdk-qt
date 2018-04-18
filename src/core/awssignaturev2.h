@@ -36,9 +36,9 @@ public:
     AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);
 
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
+                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const override;
 
-    virtual int version() const;
+    virtual int version() const override;
 
 private:
     Q_DECLARE_PRIVATE(AwsSignatureV2)

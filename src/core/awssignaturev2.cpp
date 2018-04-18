@@ -51,6 +51,9 @@ AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm
     Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));
 }
 
+/*!
+ * \reimp
+ */
 void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const
 {
@@ -72,6 +75,10 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
     request.setUrl(url);
 }
 
+/*!
+ * \reimp
+ * Returns \c 2.
+ */
 int AwsSignatureV2::version() const
 {
     return 2;

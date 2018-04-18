@@ -69,6 +69,9 @@ AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSig
 
 }
 
+/*!
+ * \reimp
+ */
 void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const
 {
@@ -100,6 +103,10 @@ void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetw
     request.setUrl(url);
 }
 
+/*!
+ * \reimp
+ * Returns \c 0.
+ */
 int AwsSignatureV0::version() const
 {
     return 0;

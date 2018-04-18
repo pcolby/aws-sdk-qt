@@ -34,9 +34,9 @@ public:
     AwsSignatureV0();
 
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
+                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const override;
 
-    virtual int version() const;
+    virtual int version() const override;
 
 protected:
     /// @cond internal

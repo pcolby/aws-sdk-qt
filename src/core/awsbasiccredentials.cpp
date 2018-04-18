@@ -65,18 +65,27 @@ AwsBasicCredentials::AwsBasicCredentials(
     d->secretKey = secretKey;
 }
 
+/*!
+ * \reimp
+ */
 QString AwsBasicCredentials::accessKeyId() const
 {
     Q_D(const AwsBasicCredentials);
     return d->accessKeyId;
 }
 
+/*!
+ * \reimp
+ */
 QString AwsBasicCredentials::secretKey() const
 {
     Q_D(const AwsBasicCredentials);
     return d->secretKey;
 }
 
+/*!
+ * \reimp
+ */
 QString AwsBasicCredentials::token() const
 {
     Q_D(const AwsBasicCredentials);
@@ -84,9 +93,7 @@ QString AwsBasicCredentials::token() const
 }
 
 /*!
- * @brief Set the AWS access key ID for this credentials object.
- *
- * @param accessKeyId  The AWS access key ID to set for this credentials object.
+ * Sets the AWS access key ID to \a accessKeyId, and emits changed.
  */
 void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId)
 {
@@ -96,9 +103,7 @@ void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId)
 }
 
 /*!
- * @brief Set the AWS secret access key for this credentials object.
- *
- * @param secretKey  The AWS secret access key to set for this credentials object.
+ * Sets the AWS secret access key to \a secretKey, and emits changed.
  */
 void AwsBasicCredentials::setSecretKey(const QString &secretKey)
 {
@@ -108,9 +113,7 @@ void AwsBasicCredentials::setSecretKey(const QString &secretKey)
 }
 
 /*!
- * @brief Set the AWS security token for this credentials object.
- *
- * @param token  The AWS security token to set for this credentials object.
+ * Sets the AWS security token to \a token, and emits changed.
  */
 void AwsBasicCredentials::setToken(const QString &token)
 {
