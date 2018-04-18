@@ -44,7 +44,7 @@ public:
     virtual QString secretKey() const override;
     virtual QString token() const override;
 
-public slots:
+public Q_SLOTS:
     virtual void setAccessKeyId(const QString &accessKeyId);
     virtual void setSecretKey(const QString &secretKey);
     virtual void setToken(const QString &token);

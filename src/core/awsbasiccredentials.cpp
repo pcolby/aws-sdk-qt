@@ -93,7 +93,7 @@ QString AwsBasicCredentials::token() const
 }
 
 /*!
- * Sets the AWS access key ID to \a accessKeyId, and emits changed.
+ * Sets the AWS access key ID to \a accessKeyId, and emits AwsAbstractCredentials::changed().
  */
 void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId)
 {
@@ -103,7 +103,7 @@ void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId)
 }
 
 /*!
- * Sets the AWS secret access key to \a secretKey, and emits changed.
+ * Sets the AWS secret access key to \a secretKey, and emits AwsAbstractCredentials::changed().
  */
 void AwsBasicCredentials::setSecretKey(const QString &secretKey)
 {
@@ -113,7 +113,7 @@ void AwsBasicCredentials::setSecretKey(const QString &secretKey)
 }
 
 /*!
- * Sets the AWS security token to \a token, and emits changed.
+ * Sets the AWS security token to \a token, and emits AwsAbstractCredentials::changed().
  */
 void AwsBasicCredentials::setToken(const QString &token)
 {

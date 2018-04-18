@@ -53,6 +53,9 @@ public:
                                  const QString &prefix = QLatin1String("."),
                                  const int maxDepth = 1024);
 
+Q_SIGNALS:
+    void finished();
+
 protected:
     /// @cond internal
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
@@ -68,16 +71,13 @@ protected:
     virtual void parseFailure(QIODevice &response) = 0;
     virtual void parseSuccess(QIODevice &response) = 0;
 
-protected slots:
+protected Q_SLOTS:
     virtual void replyFinished();
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
     Q_DISABLE_COPY(AwsAbstractResponse)
     friend class TestAwsAbstractResponse;
-
-signals:
-    void finished();
 
 };
 

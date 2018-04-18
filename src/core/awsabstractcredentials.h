@@ -46,8 +46,11 @@ public:
     virtual bool isExpired() const;
     virtual bool isRefreshable() const;
 
-public slots:
+public Q_SLOTS:
     virtual bool refresh();
+
+Q_SIGNALS:
+    void changed();
 
 protected:
     /// @cond internal
@@ -58,9 +61,6 @@ protected:
 private:
     Q_DISABLE_COPY(AwsAbstractCredentials)
     Q_DECLARE_PRIVATE(AwsAbstractCredentials)
-
-signals:
-    void changed();
 
 };
 
