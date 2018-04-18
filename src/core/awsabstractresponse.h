@@ -60,7 +60,7 @@ protected:
     /// @endcond
 
     virtual bool isSuccess(QNetworkReply * const reply) const;
-    void setReply(QNetworkReply * reply);
+    void setReply(QNetworkReply * const reply);
     void setRequest(const AwsAbstractRequest * const request);
     void setXmlError(const QXmlStreamReader &xml);
 
