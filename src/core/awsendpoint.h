@@ -34,7 +34,6 @@ class AwsEndpointPrivate;
 class QTAWS_EXPORT AwsEndpoint {
 
 public:
-    /// Network transport supported by one or more AWS endpoints.
     enum Transport {
         HTTP  = 0x01,
         HTTPS = 0x02,

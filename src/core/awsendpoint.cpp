@@ -64,8 +64,20 @@ namespace Core {
  * iam.host(); // "iam.amazonaws.com"
  * \endcode
  *
- * \sa AwsRegion
- * \sa AwsService
+ * \sa QtAws::Core::AwsRegion
+ */
+
+/*!
+ * \enum AwsEndpoint::Transport
+ *
+ * This emum describes types of network transports supported by AWS endpoints.
+ *
+ * \value HTTP         Hypertext Transfer Protocol.
+ * \value HTTPS        Hypertext Transfer Protocol with transport layer security.
+ * \value SMTP         Simple Mail Transfer Protocol.
+ * \value AnyTransport Any available transport.
+ *
+ * Not all transports are supported by all endpoints. See isSupported for example.
  */
 
 /*!
@@ -111,7 +123,8 @@ AwsEndpoint::~AwsEndpoint()
 }
 
 /*!
- * @brief  Get a QUrl for an AWS endpoint.
+ * Returns the endpoint QUrl for AWS service \a serviceName in region
+ * \a regionName, or an invalid QUrl if there is no such endpoint.
  *
  * This function will return a QUrl object for accessing an AWS service.  The
  * region and service names must match those used by Amazon.
@@ -120,43 +133,36 @@ AwsEndpoint::~AwsEndpoint()
  * the service is not supported in the specified region, then an invalid QUrl
  * will be returned.
  *
- * @note   An invalid QUrl is one for which QUrl::isValid returns `false`.
+ * \note An invalid QUrl is one for which QUrl::isValid() returns \c false.
  *
- * The \p transport parameter may be used to specify one or more transports to
- * consider.  If the specified AWS endpoint exists, but does not support //any//
+ * The \a transport parameter may be used to specify one or more transports to
+ * consider.  If the specified AWS endpoint exists, but does not support \e any
  * of the given transports, then an invalid QUrl is returned.
  *
  * Where it makes sense to do so, the resulting QUrl's scheme will be set
  * according to the requested transport.  For example, if the selected transport
  * is AwsEndpoint::HTTPS, then the resulting QUrl's schems will be set to
- * "https".
+ * \c "https".
  *
- * If \p transport includes both AwsEndpoint::HTTP //and// AwsEndpoint::HTTPS,
- * and both are supported by the AWS endpoint, then "https" will be chosed in
- * preference to "http".
+ * If \a transport includes both AwsEndpoint::HTTP \e and AwsEndpoint::HTTPS,
+ * and both are supported by the AWS endpoint, then \c "https" will be used in
+ * preference to \c "http".
  *
- * @note   It is possible for the returned QUrl to specify a host that is not
+ * \note   It is possible for the returned QUrl to specify a host that is not
  *         located in, nor dedicated to the specified region.  For examepl, if
- *         requesting an endpoint for the `iam` service in `ap-southeast-2`, the
- *         return endpoint is for a host (`iam.amazonaws.com`) which provides
- *         the `ami` services for all regions, not just `ap-southeast-2`.
- *         Services known to behave like this include: `cloudfront`, `iam`,
- *         `importexport`, `route53`, and `sts`.
+ *         requesting an endpoint for the \c iam service in \c ap-southeast-2,
+ *         the returned endpoint is for a host (\c iam.amazonaws.com) which provides
+ *         the \c ami services for all regions, not just \c ap-southeast-2.
+ *         Services known to behave like this include: \c cloudfront, \c iam,
+ *         \c importexport, \c route53, and \c sts.
  *
  * Example usage:
- * @code
+ * \code
  * QUrl ec2 = AwsEndpoint::getEndpoint("ap-southeast-2", "ec2");
  * QUrl iam = AwsEndpoint::getEndpoint("ap-southeast-2", "iam");
  * ec2.host(); // "ec2.ap-southeast-2.amazonaws.com"
  * iam.host(); // "iam.amazonaws.com"
- * @endcode
- *
- * @param  regionName   Endpoint's region name.
- * @param  serviceName  Endpoint's service name.
- * @param  transport    Optional network transport(s) for the endpoint.
- *
- * @return  A QUrl representing the AWS endpoint, or an invalid QUrl if there
- *          is no such _known_ AWS endpoint.
+ * \endcode
  */
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
@@ -184,9 +190,7 @@ QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceN
 }
 
 /*!
- * @brief   Get the name of host represented by this endpoint.
- *
- * @return  Name of host represented by this endpoint.
+ * Returns the name of the host represented by this endpoint.
  */
 QString AwsEndpoint::hostName() const
 {
@@ -195,14 +199,8 @@ QString AwsEndpoint::hostName() const
 }
 
 /*!
- * @brief  Is a region / service / transport combination supported by Amazon?
- *
- * @param regionName   AWS region name to check support for.
- * @param serviceName  AWS service name to check support for.
- * @param transport    Optional transport to check support for.
- *
- * @return `true` if the service is supported in the \p regionName region for at least
- *         one of the specified transports, `false` otherwise.
+ * Returns \c true if the given \a regionName, \a serviceName, and \a transport
+ * combination supported by AWS; \c false otherwise.
  */
 bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceName, const Transports transport)
 {
@@ -214,11 +212,7 @@ bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceN
 }
 
 /*!
- * @brief  Is the given transport supported by this endpoint?
- *
- * @param  transport  Transport to check for support for.
- *
- * @return `true` if the transport is supported by this endpoint, `false` otherwise.
+ * Returns \c true if the given \c transport is supported by this endpoint; \c false otherwise.
  */
 bool AwsEndpoint::isSupported(const Transport transport) const
 {
@@ -226,20 +220,18 @@ bool AwsEndpoint::isSupported(const Transport transport) const
 }
 
 /*!
- * @brief  Is this endpoint valid?
+ * Returns \c true is this endpoint is valid; \c false otherwise.
  *
- * An endpoint is considered valid if the host specified during construction is
+ * The endpoint is considered valid if the host specified during construction is
  * a known AWS host, and thus we know what region and service(s) it supports.
  *
  * For example:
- * @code
+ * \code
  * AwsEndpoint good(QLatin1String("cloudformation.us-east-1.amazonaws.com"));
  * AwsEndpoint bad(QLatin1String("example.com"));
  * Q_ASSERT(good.isValid()); // good is valid.
  * Q_ASSERT(!bad.isValid()); // bad is not.
- * @endcode
- *
- * @return `true` if this endpoint is valid, `false` otherwise.
+ * \endcode
  */
 bool AwsEndpoint::isValid() const
 {
@@ -247,15 +239,13 @@ bool AwsEndpoint::isValid() const
 }
 
 /*!
- * @brief  Get this endpoint's full service name.
+ * Returns the endpoint's full service name.
  *
  * The full service name is a human-readbale form.  For example, the full name for
  * the `cloudsearch` service is `Amazon CloudSearch`.  Likewise, the full name for
  * the `rds` service is `Amazon Relational Database Service`.
  *
- * @return This endpoint's full service name.
- *
- * @see    serviceName
+ * \sa serviceName
  */
 QString AwsEndpoint::fullServiceName() const
 {
@@ -263,17 +253,13 @@ QString AwsEndpoint::fullServiceName() const
 }
 
 /*!
- * @brief  Get the full name for given service.
+ * Returns the full service name for the given \a serviceName.
  *
  * The full service name is a human-readbale form.  For example, the full name for
  * the `cloudsearch` service is `Amazon CloudSearch`.  Likewise, the full name for
  * the `rds` service is `Amazon Relational Database Service`.
  *
- * @param  serviceName  Canonical AWS service name to get the full name of.
- *
- * @return This endpoint's full service name.
- *
- * @see    serviceName
+ * \sa serviceName
  */
 QString AwsEndpoint::fullServiceName(const QString &serviceName)
 {
@@ -285,19 +271,17 @@ QString AwsEndpoint::fullServiceName(const QString &serviceName)
 }
 
 /*!
- * @brief  Get this endpoint's _primary_ region name.
+ * Returns the endpoint's \e primary region name.
  *
  * It is possible for a single endpiont to support multuple regions, such as
- * `iam.amazonaws.com`, which provides the `ami` servive for all (non-government)
+ * \c iam.amazonaws.com, which provides the \c ami servive for all (non-government)
  * regions.
  *
  * In these cases, this function returns the primary region in which the service
  * is located.  The AwsEndpoint::supportedRegions function may be used to fetch
  * the full list of regions this endpoint supports.
  *
- * @return This endpoint's region name.
- *
- * @see supportedRegions
+ * \sa supportedRegions
  */
 QString AwsEndpoint::regionName() const
 {
@@ -306,11 +290,9 @@ QString AwsEndpoint::regionName() const
 }
 
 /*!
- * @brief  Get this endpoint's service name.
+ * Returns the endpoint's service name.
  *
- * @return This endpoint's service name.
- *
- * @see    fullServiceName
+ * \sa fullServiceName
  */
 QString AwsEndpoint::serviceName() const
 {
@@ -319,17 +301,11 @@ QString AwsEndpoint::serviceName() const
 }
 
 /*!
- * @brief  Get the full list of regions this endpoint supports.
+ * Returns a list of regions the endpoint supports for \e {at least one} of the
+ * the given \a {transport}s.
  *
  * Alternatvely, AwsEndpoint::regionName may be used to get this endpoint's
- * _primary_ region.
- *
- * @param  transport  Optional transport to check for support.
- *
- * @return A list of all regions this endpoint supports for //at least one// of
- *         the specified transports.
- *
- * @see    regionName
+ * \e primary region.
  */
 QStringList AwsEndpoint::supportedRegions(const Transports transport) const
 {
@@ -337,13 +313,8 @@ QStringList AwsEndpoint::supportedRegions(const Transports transport) const
 }
 
 /*!
- * @brief  Get a list of regions that supported for a given service.
- *
- * @param  serviceName  AWS service to get the supported regions for.
- * @param  transport    Optional transport(s) to check for support.
- *
- * @return A list of AWS regions supported for the given service, for
- *         _at least one_ of the specified transports.
+ * Returns a list \a serviceName regions that support \e {at least one} of the
+ * the given \a {transport}s.
  */
 QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Transports transport)
 {
@@ -363,13 +334,8 @@ QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Tran
 }
 
 /*!
- * @brief  Get a list of services that support a given region.
- *
- * @param  regionName  AWS region to get the supported services for.
- * @param  transport   Optional transport(s) to check for support.
- *
- * @return A list of AWS services supported for the given region, for
- *         _at least one_ of the specified transports.
+ * Returns a list \a regionName services that support \e {at least one} of the
+ * the given \a {transport}s.
  */
 QStringList AwsEndpoint::supportedServices(const QString &regionName, const Transports transport)
 {
@@ -390,11 +356,11 @@ QStringList AwsEndpoint::supportedServices(const QString &regionName, const Tran
 }
 
 /*!
- * @internal
- *
  * \class QtAws::Core::AwsEndpointPrivate
+ * \brief The AwsEndpointPrivate class provides private implementation for AwsEndpoint.
+ * \internal
  *
- * @brief  Private implementation for AwsEndpoint.
+ * \inmodule QtAwsCore
  */
 
 QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;       ///< Hash of hostnames to HostInfo.
@@ -404,13 +370,7 @@ QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services; //
 QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); ///< Mutex for protecting access to static members.
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AwsEndpointPrivate object.
- *
- * @param  q  Pointer to this object's public AwsEndpoint instance.
- *
- * @see   http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+ * Constructs an AwsEndpointPrivate object with public implementation \a q.
  */
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     : q_ptr(q)
@@ -419,18 +379,20 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
 }
 
 /*!
- * @internal
+ * \typedef QtAws::Core::AwsEndpointPrivate::RegionServices
  *
- * @brief  Load endpoint data
+ * Synonym for QHash<QString, RegionEndpointInfo>.
+ */
+
+/*!
+ * Loads AWS endpoint data from \a fileName.
  *
  * This function parses AWS endpoint data in XML format.  The XML data is
  * expected to match the same format as the file provided by Amazon at
  * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
  *
- * If _any_ data has been loaded previously, this function will return
+ * If \e any data has been loaded previously, this function will return
  * immediately with no parsing performed.
- *
- * @param  fileName  Name of the endpoint XML data file to load.
  */
 void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 {
@@ -445,18 +407,14 @@ void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 }
 
 /*!
- * @internal
- *
- * @brief  Load endpoint data
+ * Loads AWS endpoint data from \a device.
  *
  * This function parses AWS endpoint data in XML format.  The XML data is
  * expected to match the same format as the file provided by Amazon at
  * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
  *
- * If _any_ data has been loaded previously, this function will return
+ * If \e any data has been loaded previously, this function will return
  * immediately with no parsing performed.
- *
- * @param  device Device to parse XML data from.
  */
 void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 {
@@ -477,18 +435,14 @@ void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 }
 
 /*!
- * @internal
- *
- * @brief  Load endpoint data
+ * Loads AWS endpoint data from \a xml.
  *
  * This function parses AWS endpoint data in XML format.  The XML data is
  * expected to match the same format as the file provided by Amazon at
  * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
  *
- * If _any_ data has been loaded previously, this function will return
+ * If \e any data has been loaded previously, this function will return
  * immediately with no parsing performed.
- *
- * @param  xml  XML document to parse.
  */
 void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
 {
@@ -517,13 +471,11 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
 }
 
 /*!
- * @internal
- *
- * @brief  Parse a `Region` element from Amazon's endpoint XML data
+ * Parses a \c Region element from the Amazon endpoint XML data \a xml.
  *
  * This function parses XML elements like:
  *
- * @code{xml}
+ * \code{xml}
  * <Region>
  *   <Name>us-east-1</Name>
  *   <Endpoint>
@@ -539,14 +491,12 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
  *     <Hostname>cloudfront.amazonaws.com</Hostname>
  *   </Endpoint>
  * </Region>
- * @endcode
+ * \endcode
  *
  * The parsed entries are automatically added to AwsEndpointPrivate::hosts
  * and AwsEndpointPrivate::regions.
  *
- * @param  xml  XML element to parse.
- *
- * @see    parseRegion
+ * \sa parseRegions
  */
 void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
@@ -595,19 +545,15 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 }
 
 /*!
- * @internal
+ * Parses a \c Regions element from the Amazon endpoint XML data \a xml.
  *
- * @brief  Parse a `Regions` element from Amazon's endpoint XML data
- *
- * This function parse an XML element containing a list of `Region` elements.
- * See AwsEndpointPrivate::parseRegion for the `Region` element format.
+ * This function parse an XML element containing a list of \c Region elements.
+ * See AwsEndpointPrivate::parseRegion for the \c Region element format.
  *
  * The parsed entries are automatically added to AwsEndpointPrivate::hosts
  * and AwsEndpointPrivate::regions.
  *
- * @param  xml  XML element containing regions to parse.
- *
- * @see    parseRegion
+ * \sa parseRegion
  */
 void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 {
@@ -622,13 +568,11 @@ void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 }
 
 /*!
- * @internal
- *
- * @brief  Parse a `Service` element from Amazon's endpoint XML data
+ * Parses a \c Service element the Amazon endpoint XML data \a xml.
  *
  * This function parses XML elements like:
  *
- * @code{xml}
+ * \code{xml}
  * <Service>
  *   <Name>cloudformation</Name>
  *   <FullName>Amazon CloudFormation</FullName>
@@ -641,13 +585,11 @@ void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
  *   <RegionName>ap-southeast-2</RegionName>
  *   <RegionName>sa-east-1</RegionName>
  * </Service>
- * @endcode
+ * \endcode
  *
  * The parsed entries are automatically added to AwsEndpointPrivate::services.
  *
- * @param  xml  XML element to parse.
- *
- * @see    parseServices
+ * \sa parseServices
  */
 void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
 {
@@ -671,18 +613,14 @@ void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
 }
 
 /*!
- * @internal
+ * Parses a \c Services element the Amazon endpoint XML data \a xml.
  *
- * @brief  Parse a `Services` element from Amazon's endpoint XML data
- *
- * This function parses an XML element containing a list of `Service` elements.
- * See AwsEndpointPrivate::parseServices for the `Service` element format.
+ * This function parses an XML element containing a list of \c Service elements.
+ * See AwsEndpointPrivate::parseServices for the \c Service element format.
  *
  * The parsed entries are automatically added to AwsEndpointPrivate::services.
  *
- * @param  xml  XML element containing services to parse.
- *
- * @see    parseService
+ * \sa parseService
  */
 void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
 {
