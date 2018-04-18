@@ -70,7 +70,7 @@ namespace Core {
 /*!
  * \enum AwsEndpoint::Transport
  *
- * This emum describes types of network transports supported by AWS endpoints.
+ * This enum describes types of network transports supported by AWS endpoints.
  *
  * \value HTTP         Hypertext Transfer Protocol.
  * \value HTTPS        Hypertext Transfer Protocol with transport layer security.

@@ -43,6 +43,58 @@ namespace Core {
  */
 
 /*!
+ * \enum AwsRegion::CardinalDirection
+ *
+ * This enum describes cardinal direction bit-flags for AWS regions.
+ *
+ * \value North          North.
+ * \value NorthNorthEast North-north-east.
+ * \value NorthEast      North-east.
+ * \value EastNorthEast  East-north-east.
+ * \value East           East.
+ * \value EastSouthEast  East-south-east.
+ * \value SouthEast      South-east.
+ * \value SouthSouthEast South-south-east.
+ * \value South          South.
+ * \value SouthSouthWest South-sputh-west.
+ * \value SouthWest      South-west.
+ * \value WestSouthWest  West-south-west.
+ * \value West           West.
+ * \value WestNorthWest  West-north-west.
+ * \value NorthWest      North-west.
+ * \value NortNorthWest  Nort-north-west.
+ */
+
+/*!
+ * \enum AwsRegion::MacroRegion
+ *
+ * This enum describes macro region bit-flags for AWS regions.
+ *
+ * \value AsiaPacific     Asia-Pacific.
+ * \value Europe          Europe.
+ * \value SouthAmerica    South America.
+ * \value UnitedStates    United States of America.
+ * \value UnitedStatesGov United States Government.
+ */
+
+/*!
+ * \enum AwsRegion::Region
+ *
+ * This enum describes the available AWS regions.
+ *
+ * \value InvalidRegion  Not a valid AWS region.
+ * \value AP_Northeast_1 Asia Pacific (Tokyo) Region.
+ * \value AP_Southeast_1 Asia Pacific (Singapore) Region.
+ * \value AP_Southeast_2 Asia Pacific (Sydney) Region.
+ * \value EU_West_1      EU (Ireland) Region.
+ * \value SA_East_1      São Paulo Region.
+ * \value US_East_1      US East (Northern Virginia) Region.
+ * \value US_Gov_West_1  AWS GovCloud (US) Region.
+ * \value US_West_1      US West (Northern California) Region.
+ * \value US_West_2      US West (Oregon) Region.
+ */
+
+/*!
  * Constructs an AwsRegion object for AWS \a region.
  */
 AwsRegion::AwsRegion(const Region region)
@@ -71,7 +123,8 @@ AwsRegion::~AwsRegion()
 }
 
 /*!
- * @brief  Get the region this object represents.
+ * Returns the region as an AwsRegion::Region enum, or AwsRegion::InvalidRegion
+ * if the region is invalid.
  *
  * If this object was given an AwsRegion::Region value during construction, this
  * function will simply return that enumeration value.
@@ -80,9 +133,6 @@ AwsRegion::~AwsRegion()
  * return the AwsRegion::Region enumeration value corresponding to that AWS region
  * name, or AwsRegion::InvalidRegion if the given region name did not name a known,
  * valid AWS region.
- *
- * @return The region this object represents, or AwsRegion::InvalidRegion if this
- *         object does not represent a valid region.
  */
 AwsRegion::Region AwsRegion::region() const
 {
@@ -91,7 +141,7 @@ AwsRegion::Region AwsRegion::region() const
 }
 
 /*!
- * @brief  Is this AWS region object valid?
+ * Returns \c true if this region is valid; \c false otherwise.
  *
  * Any AwsRegion object created using one of the valid AwsRegion::Region enumeration
  * values (ie any but AwsRegion::InvalidRegion) will be considered valid.
@@ -99,8 +149,6 @@ AwsRegion::Region AwsRegion::region() const
  * However, if an unknown region name is supplied to the overloaded
  * AwsRegion(const QString &regionName) constructor, then the constructed object will
  * be considered invalid.
- *
- * @return `true` if this object is valid, `false` otherwise.
  */
 bool AwsRegion::isValid() const
 {
@@ -108,11 +156,9 @@ bool AwsRegion::isValid() const
 }
 
 /*!
- * @brief  Get the canonical AWS name for this region.
+ * Returns the canonical AWS name for this region, or a null string if invalid.
  *
- * @return The canonical AWS name for this region, or null string if this object is invalid.
- *
- * @see    isValid
+ * \sa isValid
  */
 QString AwsRegion::name() const
 {
@@ -121,11 +167,7 @@ QString AwsRegion::name() const
 }
 
 /*!
- * @brief  Get the canonical AWS name for a region.
- *
- * @param  region  AWS region to get the canonical name of.
- *
- * @return The canonical AWS name for \p region, or null string if \p region is invalid.
+ * Returns the canonical AWS name for \a region.
  */
 QString AwsRegion::name(const Region &region)
 {
@@ -146,7 +188,7 @@ QString AwsRegion::name(const Region &region)
 }
 
 /*!
- * @brief  Get the full name for this region.
+ * Returns the full name for this AWS region.
  *
  * This returns a humand-readable name for this object's region.  For example,
  * for the AwsRegion::US_East_1 region, this will return something like
@@ -155,11 +197,6 @@ QString AwsRegion::name(const Region &region)
  * These full names were gleaned from
  * http://aws.amazon.com/about-aws/globalinfrastructure/ and
  * http://docs.aws.amazon.com/general/latest/gr/rande.html.
- *
- * @return The full name for this region.
- *
- * @see    http://aws.amazon.com/about-aws/globalinfrastructure/
- * @see    http://docs.aws.amazon.com/general/latest/gr/rande.html
  */
 QString AwsRegion::fullName() const
 {
@@ -167,7 +204,7 @@ QString AwsRegion::fullName() const
 }
 
 /*!
- * @brief  Get the full name for an AWS region.
+ * Returns the full name for AWS \a region.
  *
  * This returns a humand-readable name for the specified AWS region.  For example,
  * for the AwsRegion::US_East_1 region, this will return something like
@@ -176,13 +213,6 @@ QString AwsRegion::fullName() const
  * These full names were gleaned from
  * http://aws.amazon.com/about-aws/globalinfrastructure/ and
  * http://docs.aws.amazon.com/general/latest/gr/rande.html.
- *
- * @param  region  AWS region to get the full name of.
- *
- * @return The full name for the specified AWS region.
- *
- * @see    http://aws.amazon.com/about-aws/globalinfrastructure/
- * @see    http://docs.aws.amazon.com/general/latest/gr/rande.html
  */
 QString AwsRegion::fullName(const Region &region)
 {
@@ -203,12 +233,8 @@ QString AwsRegion::fullName(const Region &region)
 }
 
 /*!
- * @brief  Get name of the host the supports a given service for this region.
- *
- * @param  serviceName  The service to get the hostname for.
- *
- * @return The name of the host that supports the given service for this region,
- *         or a null string if the this service is not supported for this region.
+ * Returns the name of the host that supports \a serviceName for this region, or
+ * a null string if the service is not supported for this region.
  */
 QString AwsRegion::hostName(const QString &serviceName) const
 {
@@ -216,14 +242,8 @@ QString AwsRegion::hostName(const QString &serviceName) const
 }
 
 /*!
- * @brief  Is a given service supported for this region?
- *
- * @param  serviceName  The service to check support for.
- * @param  transports   An optional set of transports to test for support.
- *
- * @return The name of the host that supports the given service for this region for
- *         _at least one_ of the specified transports, or a null string if the this
- *         service is not supported for this region with any such transports.
+ * Returns \c true if \a serviceName is supported for this region, for \b {at
+ * least one} of the specified \a transports; \c false otherwise.
  */
 bool AwsRegion::isSupported(const QString &serviceName, const AwsEndpoint::Transports transports) const
 {
@@ -231,12 +251,8 @@ bool AwsRegion::isSupported(const QString &serviceName, const AwsEndpoint::Trans
 }
 
 /*!
- * @brief  Get a list of services supported by this region.
- *
- * @param  transports  Optional set of transports to test for support.
- *
- * @return A list of the names of all AWS services support by this region for
- *         _at least one_ of the specified transports. The list may be empty.
+ * Returns the list of the names of all AWS services support by this region for
+ * \b {at least one} of the specified \a transports. The list may be empty.
  */
 QStringList AwsRegion::supportedServices(const AwsEndpoint::Transports transports) const
 {
@@ -244,15 +260,10 @@ QStringList AwsRegion::supportedServices(const AwsEndpoint::Transports transport
 }
 
 /*!
- * @brief  Get an AwsRegion::Region enumeration value from a region name.
+ * Returns the AwsRegion::Region enum value for \a regionName, or InvalidRegion
+ * if not a valid region name.
  *
- * @note   The region name is evaluated in a case-insensitve manner.
- *
- * @param  regionName  AWS region name to get an enumeration value for.
- *
- * @return An AwsRegion::Region enumeration value corresponding to the specified
- *         AWS region name, or AwsRegion::InvalidRegion if the region name is not
- *         valid or not recognised.
+ * \a regionName is not case sensitive.
  */
 AwsRegion::Region AwsRegion::fromName(const QString &regionName)
 {
