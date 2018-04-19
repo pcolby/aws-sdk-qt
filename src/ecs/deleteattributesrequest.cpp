@@ -49,7 +49,7 @@ namespace ECS {
  *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
  *  management and configuration management systems or worry about scaling your management
  *
- * \sa ECSClient::deleteAttributes
+ * \sa EcsClient::deleteAttributes
  */
 
 /*!

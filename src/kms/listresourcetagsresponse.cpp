@@ -133,7 +133,7 @@ namespace KMS {
  * 
  *  <a>GenerateDataKeyWithoutPlaintext</a>
  *
- * \sa KMSClient::listResourceTags
+ * \sa KmsClient::listResourceTags
  */
 
 /*!

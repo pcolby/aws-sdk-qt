@@ -38,7 +38,7 @@ namespace FMS {
  *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
  *  Developer
  *
- * \sa FMSClient::putPolicy
+ * \sa FmsClient::putPolicy
  */
 
 /*!

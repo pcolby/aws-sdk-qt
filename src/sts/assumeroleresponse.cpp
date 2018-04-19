@@ -92,7 +92,7 @@ namespace STS {
  *  and find your log files, see the <a
  *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  *
- * \sa STSClient::assumeRole
+ * \sa StsClient::assumeRole
  */
 
 /*!

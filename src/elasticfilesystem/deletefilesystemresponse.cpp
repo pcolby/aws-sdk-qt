@@ -40,7 +40,7 @@ namespace EFS {
  *  files, so your applications have the storage they need, when they need it. For more information, see the <a
  *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
  *
- * \sa EFSClient::deleteFileSystem
+ * \sa EfsClient::deleteFileSystem
  */
 
 /*!

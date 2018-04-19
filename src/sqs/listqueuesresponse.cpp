@@ -100,7 +100,7 @@ namespace SQS {
  * 
  *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
  *
- * \sa SQSClient::listQueues
+ * \sa SqsClient::listQueues
  */
 
 /*!

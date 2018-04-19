@@ -96,7 +96,7 @@ namespace RDS {
  *  For more information about how to use the Query API, see <a
  *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
  *
- * \sa RDSClient::describeReservedDBInstancesOfferings
+ * \sa RdsClient::describeReservedDBInstancesOfferings
  */
 
 /*!

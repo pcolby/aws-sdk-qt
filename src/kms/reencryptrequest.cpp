@@ -131,7 +131,7 @@ namespace KMS {
  * 
  *  <a>GenerateDataKeyWithoutPlaintext</a>
  *
- * \sa KMSClient::reEncrypt
+ * \sa KmsClient::reEncrypt
  */
 
 /*!

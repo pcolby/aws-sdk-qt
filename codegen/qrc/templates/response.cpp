@@ -19,7 +19,7 @@ namespace {{NameSpaceName}} {
  * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
- * \sa {{ServiceName}}Client::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
+ * \sa {{ClientClassName}}::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
  */
 
 /*!

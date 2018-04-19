@@ -32,7 +32,7 @@ namespace SMS {
  * \inmodule QtAwsSMS
  *
  *
- * \sa SMSClient::deleteReplicationJob
+ * \sa SmsClient::deleteReplicationJob
  */
 
 /*!

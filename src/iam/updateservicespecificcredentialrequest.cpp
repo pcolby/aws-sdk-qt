@@ -97,7 +97,7 @@ namespace IAM {
  *  <a href="http://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html">Signing AWS API Requests</a>. This
  *  set of topics walk you through the process of signing a request using an access key ID and secret access key.
  *
- * \sa IAMClient::updateServiceSpecificCredential
+ * \sa IamClient::updateServiceSpecificCredential
  */
 
 /*!

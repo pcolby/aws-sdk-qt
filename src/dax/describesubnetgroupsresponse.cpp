@@ -38,7 +38,7 @@ namespace DAX {
  *  create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your
  *  application can begin taking advantage of the DAX cluster and realize significant improvements in read
  *
- * \sa DAXClient::describeSubnetGroups
+ * \sa DaxClient::describeSubnetGroups
  */
 
 /*!

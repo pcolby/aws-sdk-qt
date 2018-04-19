@@ -45,7 +45,7 @@ namespace SES {
  *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
  *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
  *
- * \sa SESClient::createReceiptRuleSet
+ * \sa SesClient::createReceiptRuleSet
  */
 
 /*!

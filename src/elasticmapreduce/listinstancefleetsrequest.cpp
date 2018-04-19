@@ -35,7 +35,7 @@ namespace EMR {
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
  *  learning, scientific simulation, and data
  *
- * \sa EMRClient::listInstanceFleets
+ * \sa EmrClient::listInstanceFleets
  */
 
 /*!

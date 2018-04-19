@@ -50,7 +50,7 @@ namespace SWF {
  *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
  *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
  *
- * \sa SWFClient::countClosedWorkflowExecutions
+ * \sa SwfClient::countClosedWorkflowExecutions
  */
 
 /*!

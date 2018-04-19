@@ -41,7 +41,7 @@ namespace ACM {
  *  about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
  *  Certificate Manager User Guide</i>
  *
- * \sa ACMClient::addTagsToCertificate
+ * \sa AcmClient::addTagsToCertificate
  */
 
 /*!

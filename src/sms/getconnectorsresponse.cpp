@@ -34,7 +34,7 @@ namespace SMS {
  * \inmodule QtAwsSMS
  *
  *
- * \sa SMSClient::getConnectors
+ * \sa SmsClient::getConnectors
  */
 
 /*!

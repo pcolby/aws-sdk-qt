@@ -133,7 +133,7 @@ namespace KMS {
  * 
  *  <a>GenerateDataKeyWithoutPlaintext</a>
  *
- * \sa KMSClient::enableKeyRotation
+ * \sa KmsClient::enableKeyRotation
  */
 
 /*!

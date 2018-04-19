@@ -51,7 +51,7 @@ namespace SFN {
  *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
  *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
  *
- * \sa SFNClient::describeStateMachine
+ * \sa SfnClient::describeStateMachine
  */
 
 /*!

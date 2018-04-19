@@ -34,7 +34,7 @@ namespace SMS {
  * \inmodule QtAwsSMS
  *
  *
- * \sa SMSClient::disassociateConnector
+ * \sa SmsClient::disassociateConnector
  */
 
 /*!

@@ -48,7 +48,7 @@ namespace SNS {
  *  requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools
  *  for Amazon Web Services</a>.
  *
- * \sa SNSClient::subscribe
+ * \sa SnsClient::subscribe
  */
 
 /*!

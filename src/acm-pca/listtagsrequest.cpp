@@ -62,7 +62,7 @@ namespace ACMPCA {
  *  time the CA private key is used. The private key is used for signing when the <b>IssueCertificate</b> or
  *  <b>RevokeCertificate</b> function is called.
  *
- * \sa ACMPCAClient::listTags
+ * \sa AcmpcaClient::listTags
  */
 
 /*!

@@ -131,7 +131,7 @@ namespace KMS {
  * 
  *  <a>GenerateDataKeyWithoutPlaintext</a>
  *
- * \sa KMSClient::listRetirableGrants
+ * \sa KmsClient::listRetirableGrants
  */
 
 /*!

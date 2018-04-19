@@ -58,7 +58,7 @@ namespace SSM {
  *  use a Query API, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html">Making API
  *  Requests</a>.
  *
- * \sa SSMClient::deregisterTaskFromMaintenanceWindow
+ * \sa SsmClient::deregisterTaskFromMaintenanceWindow
  */
 
 /*!

@@ -32,7 +32,7 @@ namespace SMS {
  * \inmodule QtAwsSMS
  *
  *
- * \sa SMSClient::startOnDemandReplicationRun
+ * \sa SmsClient::startOnDemandReplicationRun
  */
 
 /*!

@@ -34,7 +34,7 @@ namespace SMS {
  * \inmodule QtAwsSMS
  *
  *
- * \sa SMSClient::deleteServerCatalog
+ * \sa SmsClient::deleteServerCatalog
  */
 
 /*!
