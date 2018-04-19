@@ -87,7 +87,7 @@ int Generator::generate(const QString &serviceFileName,
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
     const QString classNamePrefix = getClassNamePrefix(metaData);
-    const QString className =
+    const QString clientClassName =
         ((classNamePrefix.contains(QRegularExpression(QSL("^[^a-z]+$"))))
         ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
         + QSL("Client");
@@ -96,12 +96,12 @@ int Generator::generate(const QString &serviceFileName,
     context.insert(QSL("ServiceName"), classNamePrefix);
     context.insert(QSL("TargetLibName"), serviceFileName);
     context.insert(QSL("NameSpaceName"), classNamePrefix);
-    context.insert(QSL("ClassName"), className);
     context.insert(QSL("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
     // Generate model classes.
     context.push();
+    context.insert(QSL("ClientClassName"), clientClassName);
     renderClassFiles(QSL("requestbase"),  context, projectDir, classNamePrefix + QSL("Request"));
     renderClassFiles(QSL("responsebase"), context, projectDir, classNamePrefix + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
@@ -121,7 +121,7 @@ int Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QSL("operations"), operations);
-    renderClassFiles(QSL("client"), context, projectDir, className);
+    renderClassFiles(QSL("client"), context, projectDir, clientClassName);
     context.pop();
 
     // Generate ancillary project files.
